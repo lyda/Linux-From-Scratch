@@ -475,7 +475,7 @@ chown root.root /usr/bin/which
 cat > /usr/bin/lex << "EOF"
 #!/bin/bash
 
-/usr/bin/flex -l "$@"
+exec /usr/bin/flex -l "$@"
 
 EOF
 chmod 755 /usr/bin/lex
