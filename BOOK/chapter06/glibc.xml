@@ -285,7 +285,7 @@ EOF</userinput></screen>
 <segtitle>Installed programs</segtitle>
 <segtitle>Installed libraries</segtitle>
 <seglistitem><seg>catchsegv, gencat, getconf,
-getent, glibcbug, iconv, iconvconfig, ldconfig, ldd, lddlibc4, locale,
+getent, iconv, iconvconfig, ldconfig, ldd, lddlibc4, locale,
 localedef, mtrace, nscd, nscd_nischeck, pcprofiledump, pt_chown, rpcgen,
 rpcinfo, sln, sprof, tzselect, xtrace, zdump, and zic</seg>
 <seg>ld.so, libBrokenLocale.[a,so],
@@ -330,14 +330,6 @@ terminates with a segmentation fault.</para>
 <listitem>
 <para>gets entries from an administrative database.</para>
 <indexterm zone="ch-system-glibc getent"><primary sortas="b-getent">getent</primary></indexterm>
-</listitem>
-</varlistentry>
-
-<varlistentry id="glibcbug">
-<term><command>glibcbug</command></term>
-<listitem>
-<para>creates a bug report and mails it to the bug email address.</para>
-<indexterm zone="ch-system-glibc glibcbug"><primary sortas="b-glibcbug">glibcbug</primary></indexterm>
 </listitem>
 </varlistentry>
 
