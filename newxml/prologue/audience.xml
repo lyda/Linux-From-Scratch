@@ -33,13 +33,13 @@ programs are installed.</para>
 system. When installing a regular distribution, you are usually forced to 
 install several programs which you are likely never to use. They're just 
 sitting there wasting precious disk space (or worse, CPU cycles). It isn't 
-difficult to build an LFS system less than 100 MB. Does that still sound like a
+difficult to build an LFS system of less than 100 MB. Does that still sound like a
 lot? A few of us have been working on creating a very small embedded LFS 
 system. We successfully built a system that was just enough to run the Apache 
 web server with approximately 8MB of disk space used. Further stripping could 
 bring that down to 5 MB or less. Try that with a regular distribution.</para>
 
-<para>We could compare distributed Linux to a hamburger you buy at a
+<para>We could compare Linux distributions to a hamburger you buy at a
 fast-food restaurant -- you have no idea what you are eating. LFS, on the
 other hand, doesn't give you a hamburger, but the recipe to make a hamburger. 
 This allows you to review it, to omit unwanted ingredients, and to
