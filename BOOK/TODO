@@ -1,8 +1,6 @@
  - Apply Jim's iproute2 patch & remove net-tools
    http://archives.linuxfromscratch.org/mail-archives/lfs-dev/2004-July/047121.html
 
- - remove ed (it's in BLFS now)
-
  - Fix the print stylesheet to meet the publishers' requirements
    http://archives.linuxfromscratch.org/mail-archives/lfs-dev/2004-July/047225.html
 
