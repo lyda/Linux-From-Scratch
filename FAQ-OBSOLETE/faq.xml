@@ -98,6 +98,7 @@
 	<qandadiv id="fee-runtime"><title>Run Time Errors</title>
 		&net-pf-x;
 		&char-major-10-135;
+		&no-dev-rtc;
 		&unable-to-mount-root;
 		&lilo-errors;
 		&f-hostname;
