@@ -28,6 +28,13 @@ case "${1}" in
 
 		(exit ${failed})
 		evaluate_retval
+
+		if [ -f "/etc/sysctl.conf" ]
+		then
+			boot_mesg "Setting kernel runtime parameters..."
+			sysctl -p
+			evaluate_retval
+		fi
 		;;
 	*)
 		echo "Usage: ${0} {start}"
