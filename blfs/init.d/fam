@@ -1,0 +1,42 @@
+#!/bin/sh
+# Begin $rc_base/init.d/fam
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case "$1" in
+	start)
+		echo "Starting File Alteration Monitor..."
+		loadproc fam -T 0
+		;;
+
+	stop)
+		echo "Stopping File Alteration Monitor..."
+		killproc fam
+		;;
+
+	reload)
+		echo "Reloading File Alteration Monitor..."
+		reloadproc fam
+		;;
+
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+
+	status)
+		statusproc fam
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|reload|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/fam
