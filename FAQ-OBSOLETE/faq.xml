@@ -189,13 +189,14 @@ even with just the packages in the book.
 </para></answer>
 </qandaentry>
 
-<!-- elist: ,lfs-dev,new -->
+<!-- elist: ,lfs-dev,new --><!-- 2002-04-20: I'm hoping everyone who cares
+                                             will notice the new version.
 <qandaentry id="add-gawk">
 <question><para>Why not use gawk instead of mawk?</para></question>
-<answer><para>The book is switching to gawk.
-It's in the CVS version of the book now.
+<answer><para>As of version 3.3, the book uses gawk.
 </para></answer>
 </qandaentry>
+-->
 
 <!-- elist: ,lfs-dev -->
 <qandaentry id="add-grub"><question><para>Why not use GRUB instead of LILO?</para></question>
