@@ -1,7 +1,0 @@
-<qandaentry id="config-hang-size_t">
-<question><para>Why does configure hang at
-"checking for signed size_t type..."?</para></question>
-<answer><para>You over optimized gcc.
-</para></answer>
-</qandaentry>
-
