@@ -29,12 +29,12 @@ Gettext, Glibc, Grep, Make, Perl, and Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Coreutils</title>
 
-<para>A known issue with the <command>uname</command> program from
+<para arch="x86">A known issue with the <command>uname</command> program from
 this package is that the <parameter>-p</parameter> switch always
 returns <computeroutput>unknown</computeroutput>. The following patch
 fixes this behavior for Intel architectures:</para>
 
-<screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-uname-2.patch</userinput></screen>
+<screen arch="x86"><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-uname-2.patch</userinput></screen>
 
 <para>Prevent Coreutils from installing binaries that will be later be
 installed by other packages:</para>

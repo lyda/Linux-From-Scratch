@@ -56,12 +56,18 @@ problem. The above command takes care of this issue.</para>
 <para>Next, amend the GCC specs file so that it points to the new
 dynamic linker. A perl command accomplishes this:</para>
 
-<screen><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
+<screen arch="x86"><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/@g;' \
         `gcc --print-file specs`</userinput></screen>
 
+<screen arch="raq2"><userinput>perl -pi -e 's@ /tools/lib/ld.so.1@ /lib/ld.so.1@g;' \
+    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/@g;' \
+    `gcc --print-file specs`</userinput></screen>
+
 <para>It is a good idea to visually inspect the specs file to verify the intended 
 change was actually made.</para>
+
+<!-- For specific arch books, the next para isn't needed, IMHO.
 
 <important><para>If working on a platform where the name of the
 dynamic linker is something other than
@@ -70,6 +76,7 @@ dynamic linker is something other than
 dynamic linker in the above commands. Refer back to <xref
 linkend="ch-tools-toolchaintechnotes" role=","/> if
 necessary.</para></important>
+-->
 
 <caution><para>It is imperative at this point to stop and ensure that
 the basic functions (compiling and linking) of the adjusted toolchain
@@ -84,7 +91,9 @@ readelf -l a.out | grep ': /lib'</userinput></screen>
 and the output of the last command will be (allowing for
 platform-specific differences in dynamic linker name):</para>
 
-<screen><computeroutput>[Requesting program interpreter: /lib/ld-linux.so.2]</computeroutput></screen>
+<screen arch="x86"><computeroutput>[Requesting program interpreter: /lib/ld-linux.so.2]</computeroutput></screen>
+
+<screen arch="raq2"><computeroutput>[Requesting program interpreter: /lib/ld.so.1]</computeroutput></screen>
 
 <para>Note that <filename class="directory">/lib</filename> is now
 the prefix of our dynamic linker.</para>

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-grub" role="wrap">
+<sect1 id="ch-system-grub" role="wrap" arch="x86">
 <title>Grub-&grub-version;</title>
 <?dbhtml filename="grub.html"?>
 
