@@ -37,7 +37,6 @@
 <!ENTITY net-pf-x SYSTEM "net-pf-x.xml">
 <!ENTITY netiquette SYSTEM "netiquette.xml">
 <!ENTITY new-version SYSTEM "new-version.xml">
-<!ENTITY nls-info SYSTEM "nls-info.xml">
 <!ENTITY no-dev-eth0 SYSTEM "no-dev-eth0.xml">
 <!ENTITY no-dev-rtc SYSTEM "no-dev-rtc.xml">
 <!ENTITY no-linuxthreads SYSTEM "no-linuxthreads.xml">
