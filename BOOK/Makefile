@@ -1,8 +1,13 @@
 BASEDIR=~/lfs-book
+CHUNK_QUIET=0
+PDF_OUTPUT=LFS-BOOK.pdf
+PRINT_OUTPUT=LFS-BOOK-PRINTABLE.pdf
+NOCHUNKS_OUTPUT=LFS-BOOK.html
 
 lfs:
-	xsltproc --xinclude --nonet -stringparam base.dir $(BASEDIR)/ \
-	  stylesheets/lfs-chunked.xsl index.xml
+	xsltproc --xinclude --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
+	  -stringparam base.dir $(BASEDIR)/ stylesheets/lfs-chunked.xsl \
+	  index.xml
 
 	if [ ! -e $(BASEDIR)/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/stylesheets; \
@@ -25,18 +30,18 @@ pdf:
 	xsltproc --xinclude --nonet --output lfs.fo stylesheets/lfs-pdf.xsl \
 	  index.xml
 	sed -i -e "s/inherit/all/" lfs.fo
-	fop.sh lfs.fo lfs.pdf
+	fop.sh lfs.fo $(PDF_OUTPUT)
 
 print:
 	xsltproc --xinclude --nonet --output lfs-print.fo \
 	  stylesheets/lfs-print.xsl index.xml
 	sed -i -e "s/inherit/all/" lfs-print.fo
-	fop.sh lfs-print.fo lfs-print.pdf
+	fop.sh lfs-print.fo $(PRINT_OUTPUT)
 
 nochunks:
-	xsltproc --xinclude --nonet --output lfs.html \
+	xsltproc --xinclude --nonet --output $(NOCHUNKS_OUTPUT) \
 	  stylesheets/lfs-nochunks.xsl index.xml
-	tidy -config tidy.conf lfs.html || true
+	tidy -config tidy.conf $(NOCHUNKS_OUTPUT) || true
 
 validate:
 	xmllint --noout --nonet --xinclude --postvalid index.xml
