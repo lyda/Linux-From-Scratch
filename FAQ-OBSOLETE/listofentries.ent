@@ -31,6 +31,7 @@
 <!ENTITY old-sources SYSTEM "old-sources.xml">
 <!ENTITY optimizations SYSTEM "optimizations.xml">
 <!ENTITY optimized-glibc-fail SYSTEM "optimized-glibc-fail.xml">
+<!ENTITY perl-missing-separator SYSTEM "perl-missing-separator.xml">
 <!ENTITY perm-denied SYSTEM "perm-denied.xml">
 <!ENTITY portmap SYSTEM "portmap.xml">
 <!ENTITY really-small SYSTEM "really-small.xml">
