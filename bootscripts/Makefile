@@ -1,11 +1,17 @@
 ETCDIR=/etc
 EXTDIR=${DESTDIR}${ETCDIR}
-SHELL=/bin/sh
 
 all: install
 
 create-dirs:
-	/bin/bash -c 'install -d -m 755 ${EXTDIR}/rc.d/rc{0,1,2,3,4,5,6,sysinit}.d'
+	install -d -m 755 ${EXTDIR}/rc.d/rc0.d
+	install -d -m 755 ${EXTDIR}/rc.d/rc1.d
+	install -d -m 755 ${EXTDIR}/rc.d/rc2.d
+	install -d -m 755 ${EXTDIR}/rc.d/rc3.d
+	install -d -m 755 ${EXTDIR}/rc.d/rc4.d
+	install -d -m 755 ${EXTDIR}/rc.d/rc5.d
+	install -d -m 755 ${EXTDIR}/rc.d/rc6.d
+	install -d -m 755 ${EXTDIR}/rc.d/rcsysinit.d
 	install -d -m 755 ${EXTDIR}/rc.d/init.d
 	install -d -m 755 ${EXTDIR}/sysconfig
 
