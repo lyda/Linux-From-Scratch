@@ -70,7 +70,7 @@ cp ../udev-config-1.rules /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 <varlistentry id="udev">
 <term><command>udev</command></term>
 <listitem>
-<para>creates device nodes in <filename
+<para>Creates device nodes in <filename
 class="directory">/dev</filename> or renames network interfaces (not
 in LFS) in response to hotplug events</para>
 <indexterm zone="ch-system-udev udev"><primary sortas="b-udev">udev</primary></indexterm>
@@ -79,7 +79,7 @@ in LFS) in response to hotplug events</para>
 <varlistentry id="udevd">
 <term><command>udevd</command></term>
 <listitem>
-<para>a daemon that reorders hotplug events before submitting them to
+<para>A daemon that reorders hotplug events before submitting them to
 <command>udev</command>,
 thus avoiding various race conditions</para>
 <indexterm zone="ch-system-udev udevd"><primary sortas="b-udevd">udevd</primary></indexterm>
@@ -88,14 +88,14 @@ thus avoiding various race conditions</para>
 <varlistentry id="udevsend">
 <term><command>udevsend</command></term>
 <listitem>
-<para>delivers hotplug events to <command>udevd</command></para>
+<para>Delivers hotplug events to <command>udevd</command></para>
 <indexterm zone="ch-system-udev udevsend"><primary sortas="b-udevsend">udevsend</primary></indexterm>
 </listitem></varlistentry>
 
 <varlistentry id="udevstart">
 <term><command>udevstart</command></term>
 <listitem>
-<para>creates device nodes in <filename
+<para>Creates device nodes in <filename
 class="directory">/dev</filename> that correspond to drivers compiled directly
 into the kernel; it performs that task by simulating hotplug events presumably
 dropped by the kernel before invocation of this program (e.g., because the root
@@ -108,7 +108,7 @@ to <command>udev</command></para>
 <varlistentry id="udevinfo">
 <term><command>udevinfo</command></term>
 <listitem>
-<para>allows users to query the <command>udev</command> database for
+<para>Allows users to query the <command>udev</command> database for
 information on any device currently present on the system; it also
 provides a way to query any device in the <systemitem
 class="filesystem">sysfs</systemitem> tree to help create udev
@@ -119,7 +119,7 @@ rules</para>
 <varlistentry id="udevtest">
 <term><command>udevtest</command></term>
 <listitem>
-<para>simulates a <command>udev</command> run for the given device,
+<para>Simulates a <command>udev</command> run for the given device,
 and prints out the name of the node the real <command>udev</command> would
 have created or (not in LFS) the name of the renamed network interface</para>
 <indexterm zone="ch-system-udev udevtest"><primary sortas="b-udevtest">udevtest</primary></indexterm>
@@ -128,7 +128,7 @@ have created or (not in LFS) the name of the renamed network interface</para>
 <varlistentry id="etc-udev">
 <term><filename class="directory">/etc/udev</filename></term>
 <listitem>
-<para>contains <command>udev</command> configuation files,
+<para>Contains <command>udev</command> configuation files,
 device permissions, and rules for device naming</para>
 <indexterm zone="ch-system-udev etc-udev"><primary sortas="e-etc-udev">/etc/udev</primary></indexterm>
 </listitem></varlistentry>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "6.0-testing-20041006">
+<!ENTITY version "6.0">
 <!ENTITY releasedate "October 06, 2004">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -7,7 +7,7 @@
 <!ENTITY faq-root "&lfs-root;faq/">
 <!ENTITY hints-root "&lfs-root;hints/downloads/files/">
 <!ENTITY hints-index "&lfs-root;hints/list.html">
-<!ENTITY patches-root "&lfs-root;patches/lfs/cvs/testing/">
+<!ENTITY patches-root "&lfs-root;patches/lfs/&version;/">
 <!ENTITY wiki-root "http://wiki.linuxfromscratch.org/">
 <!ENTITY freshmeat "http://freshmeat.net/projects/">
 
