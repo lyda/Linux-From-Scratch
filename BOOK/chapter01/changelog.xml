@@ -77,6 +77,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July 3, 2004 [alexander]: Moved Hotplug to Chapter 8 and
+marked it as optional. Added the Configuration section to this
+package.</para></listitem>
+
 <listitem><para>July 2, 2004 [alexander]: Marked module-init-tools as
 optional. Moved them to Chapter 8. Dropped nvidia example from the modules
 page because hotplug-related problems are fixed upstream.</para></listitem>
