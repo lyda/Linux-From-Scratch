@@ -124,16 +124,16 @@
 </varlistentry>
 
 <varlistentry>
-<term>Gettext (&gettext-version;) - 6,397 KB:</term>
+<term>GCC (&gcc-version;) - ~27,000KB:</term>
 <listitem>
-<para><ulink url="&gnu;gettext/gettext-&gettext-version;.tar.gz"/></para>
+<para><ulink url="&gnu;gcc/gcc-&gcc-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>GCC (&gcc-version;) - ~27,000KB:</term>
+<term>Gettext (&gettext-version;) - 6,397 KB:</term>
 <listitem>
-<para><ulink url="&gnu;gcc/gcc-&gcc-version;.tar.bz2"/></para>
+<para><ulink url="&gnu;gettext/gettext-&gettext-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
@@ -144,17 +144,17 @@
 </listitem>
 </varlistentry>
 
-<varlistentry arch="raq2">
-<term>Glibc Linuxthreads (&glibc-version;) - 231  KB:</term>
-<listitem>
-<para><ulink url="&gnu;/glibc/glibc-linuxthreads-&glibc-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
-
 <varlistentry>
 <term>Glibc Libidn (&glibc-version;) - 99 KB:</term>
 <listitem>
 <para><ulink url="&gnu;/glibc/glibc-libidn-&glibc-version;.tar.bz2"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Glibc Linuxthreads (&glibc-version;) - 231  KB:</term>
+<listitem>
+<para><ulink url="&gnu;/glibc/glibc-linuxthreads-&glibc-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
@@ -256,17 +256,24 @@
 </listitem>
 </varlistentry>
 
-<varlistentry arch="raq2">
-<term>Linux (&linux-version;) - 34,793 KB:</term>
+<varlistentry arch="alpha">
+<term>Linux (&linux-alpha-version;) - 34,793 KB:</term>
 <listitem>
-<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-raq2-version;.tar.bz2"/></para>
+<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-alpha-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="ppc">
-<term>Linux (&linux-version;) - 34,793 KB:</term>
+<term>Linux (&linux-ppc-version;) - 34,793 KB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-version;.tar.bz2"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Linux (&linux-raq2-version;) - 34,793 KB:</term>
+<listitem>
+<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-raq2-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
@@ -277,17 +284,24 @@
 </listitem>
 </varlistentry>
 
-<varlistentry arch="raq2">
-<term>Linux-Libc-Headers (&linux-libc-headers-raq2-version;) - 2,381 KB:</term>
+<varlistentry arch="alpha">
+<term>Linux-Libc-Headers (&linux-libc-headers-alpha-version;) - 2,381 KB:</term>
 <listitem>
-<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-raq2-version;.tar.bz2"/></para>
+<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-alpha-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="ppc">
-<term>Linux-Libc-Headers (&linux-libc-headers-version;) - 2,381 KB:</term>
+<term>Linux-Libc-Headers (&linux-libc-headers-ppc-version;) - 2,381 KB:</term>
 <listitem>
-<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-version;.tar.bz2"/></para>
+<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-ppc-version;.tar.bz2"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Linux-Libc-Headers (&linux-libc-headers-raq2-version;) - 2,381 KB:</term>
+<listitem>
+<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-raq2-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
@@ -341,16 +355,16 @@
 </varlistentry>
 
 <varlistentry arch="raq2">
-<term>OpenSSL (&openssl-version;) - 3.0 MB:</term>
+<term>OpenSSH (&openssh-version;) - 854 KB:</term>
 <listitem>
-<para><ulink url="http://www.openssl.org/source/openssl-&openssl-version;.tar.gz"/></para>
+<para><ulink url="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-&openssh-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="raq2">
-<term>OpenSSH (&openssh-version;) - 854 KB:</term>
+<term>OpenSSL (&openssl-version;) - 3.0 MB:</term>
 <listitem>
-<para><ulink url="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-&openssh-version;.tar.gz"/></para>
+<para><ulink url="http://www.openssl.org/source/openssl-&openssl-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
@@ -499,4 +513,3 @@
 <para>Total size of these packages: 135 MB</para>
 
 </sect1>
-
