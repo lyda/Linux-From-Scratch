@@ -560,25 +560,20 @@ statusproc()
 
 	if [ -n "${pidlist}" ]
 	then
-		echo -e -n "${INFO}"
-		echo "${base} is running with Process ID(s) ${pidlist}."
-		echo -e -n "${NORMAL}"
+		echo -e "${INFO}${base} is running with Process"\
+			"ID(s)${pidlist}.${NORMAL}"
 	else
 		if [ -n "${base}" -a -e "/var/run/${base}.pid" ]
 		then
-			echo -e -n "${INFO}"
-			echo "${1} is not running but/var/run/${base}.pid exists." ${WARNING}
-			echo -e -n "${NORMAL}"
+			echo -e "${WARNING}${1} is not running but"\
+				"/var/run/${base}.pid exists.${NORMAL}"
 		else
 			if [ -n "${PIDFILE}" -a -e "${PIDFILE}" ]
 			then
-				echo -e -n "${INFO}"
-				echo "${1} is not running but ${PIDFILE} exists." ${WARNING}
-				echo -e -n "${NORMAL}"
+				echo -e "${WARNING}${1} is not running"\
+					"but ${PIDFILE} exists.${NORMAL}"
 			else
-				echo -e -n "${INFO}"
-				echo "${1} is not running." ${INFO}
-				echo -e -n "${NORMAL}"
+				echo -e "${INFO}${1} is not running.${NORMAL}"
 			fi
 		fi
 	fi
