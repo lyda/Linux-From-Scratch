@@ -1,6 +1,9 @@
 n/a - March 23, 2004
 
 	* Cleaned the /tmp directory on bootup.  find command supplied by Zack
+	* Added a script which can automatically create files and directories
+	  on startup.  [Handles files/directories, permissions, and user/group].
+	  Created by Zack
 
 n/a - March 20, 2004
 
