@@ -1,3 +1,11 @@
+2.2.3 - September 04, 2004
+	* Tagged as 2.2.3
+
+n/a - September 04, 2004
+	* Added new script to contrib for syslog-ng, which is now part of
+	  LFS-Unstable, and a new Makefile target install-syslog-ng which
+	  removes the sysklogd links, and replaces them with syslog-ng (JU)
+
 2.2.2 - August 11, 2004
 	* Tagged as 2.2.2
 
