@@ -16,6 +16,9 @@
   <xsl:include href="pdf/lfs-mixed.xsl"/>
   <xsl:include href="pdf/lfs-xref.xsl"/>
 
+    <!-- This file contains our localization strings (for internationalization) -->
+  <xsl:param name="local.l10n.xml" select="document('lfs-l10n.xml')"/>
+
     <!-- Paper size required by the publisher -->
   <xsl:param name="paper.type" select="'Customized'"/>
   <xsl:param name="page.width">7.25in</xsl:param>

@@ -16,6 +16,9 @@
   <xsl:include href="xhtml/lfs-toc.xsl"/>
   <xsl:include href="xhtml/lfs-xref.xsl"/>
 
+    <!-- This file contains our localization strings (for internationalization) -->
+  <xsl:param name="local.l10n.xml" select="document('lfs-l10n.xml')"/>
+
     <!-- The CSS Stylesheet -->
   <xsl:param name="html.stylesheet" select="'../stylesheets/lfs.css'"/>
   <xsl:template name='user.head.content'>
