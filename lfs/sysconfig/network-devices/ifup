@@ -55,7 +55,7 @@ for file in $FILES; do
 		fi
 
 		if [ -n "$SERVICE" -a -x "$network_devices/services/$SERVICE" ]; then
-			if ip link | grep -q $1;then
+			if ip link show $1 > /dev/null 2>&1; then
 				bring_link_up $1
 				IFCONFIG=$file $network_devices/services/${SERVICE} $1 up
 			else
