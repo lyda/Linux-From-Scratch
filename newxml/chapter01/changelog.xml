@@ -24,6 +24,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>man-pages-1.66</para></listitem>
 <listitem><para>ncurses-5.4</para></listitem>
 <listitem><para>procps-3.2.0</para></listitem>
+<listitem><para>lfs-bootscripts-2.0.2</para></listitem>
 </itemizedlist>
 </listitem>
 
@@ -42,6 +43,10 @@ first a summary, then a detailed log.</para>
 <listitem><para>ncurses-5.3-etip-2.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>March 24th, 2004 [jeremy]: Chapter 7 - Updated to the new
+lfs-bootscripts-2.0.2, and all necessary changes to the bootscript
+configuration</para></listitem>
 
 <listitem><para>March 21st, 2004 [winkie]: Chapter 6 - Replaced Lfs-Utils
 with Iana-Etc and Mktemp.</para></listitem>
