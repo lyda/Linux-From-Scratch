@@ -45,6 +45,7 @@
 	-->
 	&wrong-ln-s-command;
 	&its-hardlink-not-copy;
+	&why-not-version;
 	&new-version;
 	&delete_key_not_work;
 	&shutdown-on-fsck-error;
