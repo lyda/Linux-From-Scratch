@@ -1,0 +1,43 @@
+#!/bin/sh
+# Begin $rc_base/init.d/bind
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case "$1" in
+	start)
+		echo "Starting named..."
+		loadproc /usr/sbin/named -u named -t /home/named -c \
+			/etc/named.conf
+		;;
+
+	stop)
+		echo "Stopping named..."
+		killproc /usr/sbin/named
+		;;
+
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+
+	reload)
+		echo "Reloading named..."
+		/usr/sbin/rndc -c /etc/rndc.conf reload
+		;;
+
+	status)
+		statusproc /usr/sbin/named
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/bind

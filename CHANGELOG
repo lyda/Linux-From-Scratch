@@ -1,11 +1,11 @@
-2.0.0 - March 19, 2004
+n/a - March 19, 2004
 
 	* Renamed mountproc to mountkernfs
 	* Updated the README file
 	* Coloured the print_error_message in functions red
 	* added stop to the setclock script
 	* changed echo > to > in cleanfs, suggested by winkie
-	* Tagged as release 2.0.0
+	* Initial additions of some BLFS Scripts
 
 1.99.4 - March 17, 2004
 

@@ -1,0 +1,46 @@
+#!/bin/sh
+# Begin $rc_base/init.d/nfs-server
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case "$1" in
+	start)
+		echo "Starting NFS Server..."
+		loadproc /usr/sbin/rpc.mountd
+		loadproc /usr/sbin/rpc.nfsd 8
+		loadproc /usr/sbin/rpc.statd
+		;;
+
+	stop)
+		echo "Stopping NFS Server..."
+		killproc /usr/sbin/rpc.nfsd
+		killproc /usr/sbin/rpc.mountd
+		;;
+
+	reload)
+		echo "Reloading NFS Server..."
+		/usr/sbin/exportfs -ra
+		;;
+
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+
+	status)
+		statusproc /usr/sbin/rpc.mountd
+		statusproc /usr/sbin/rpc.nfsd
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|reload|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/nfs-server

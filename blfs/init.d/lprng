@@ -1,0 +1,42 @@
+#!/bin/sh
+# Begin $rc_base/init.d/lprng
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case "$1" in
+	start)
+		echo "Starting lpd..."
+		loadproc /usr/sbin/lpd
+		;;
+
+	stop)
+		echo "Stopping lpd..."
+		killproc /usr/sbin/lpd
+		;;
+
+	reload)
+		echo "Reloading lpd..."
+		reloadproc /usr/sbin/lpd
+		;;
+
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+
+	status)
+		statusproc /usr/sbin/lpd
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|reload|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/lprng

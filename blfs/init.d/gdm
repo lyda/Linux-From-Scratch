@@ -1,0 +1,39 @@
+#!/bin/sh
+# Begin $rc_base/init.d/gdm
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case "$1" in
+	start)
+		echo "Starting GDM..."
+		loadproc /opt/gnome-2.4/bin/gdm
+		;;
+
+	stop)
+		echo "Stopping GDM..."
+		if [ -f /var/run/gdm.pid ]; then
+			loadproc /opt/gnome-2.4/sbin/gdm-stop
+		fi
+		;;
+
+	reload)
+		echo "Reloading GDM..."
+		reloadproc /opt/gnome-2.4/sbin/gdm-safe-restart
+		;;
+
+	restart)
+		echo "Restarting GDM..."
+		loadproc /opt/gnome-2.4/sbin/gdm-restart
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|reload|restart}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/gdm

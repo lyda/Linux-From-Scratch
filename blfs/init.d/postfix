@@ -1,0 +1,53 @@
+#!/bin/sh
+# Begin $rc_base/init.d/postfix
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case "$1" in
+	start)
+		echo "Starting Postfix..."
+		loadproc postfix start
+		;;
+
+	stop)
+		echo "Stopping Postfix..."
+		loadproc postfix stop
+		;;
+
+	reload)
+		echo "Reloading Postfix..."
+		loadproc postfix reload
+		;;
+
+	abort)
+		echo "Aborting Postfix..."
+		loadproc postfix abort
+		;;
+
+	flush)
+		echo "Flushing Postfix..."
+		loadproc postfix flush
+		;;
+
+	check)
+		echo "Checking Postfix..."
+		loadproc postfix check
+		;;
+
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|reload|abort|flush|check|restart}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/postfix
