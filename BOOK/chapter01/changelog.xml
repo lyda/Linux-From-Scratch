@@ -63,6 +63,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>December 5, 2004 [jeremy]: Added the DOCBOOKTOMAN parameter
+to Module-init-utils - without this, compilation fails.  Thanks Boris Buegling</para></listitem>
+
 <listitem><para>December 2, 2004 [jeremy]: Removed the old display_wrap bash
 patch, in favor of the newer fixes patch, and added the avoid_WCONTINUED
 patch as well</para></listitem>
