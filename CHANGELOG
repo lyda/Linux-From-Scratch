@@ -1,5 +1,9 @@
 n/a - June 21, 2004
 
+	* Added a FIXME in the udev initscript
+
+n/a - June 21, 2004
+
 	* Re-ordered the "mount" and "echo" commands in the udev script, to
 	  prevent a possible race
 
