@@ -50,7 +50,7 @@ CURS_UP="\\033[1A\\033[0G"   # Up one line, at the 0'th char
 
 # Set color commands, used via echo -e
 # Please consult `man console_codes for more information
-# under the "Set Graphics Resolution" section
+# under the "ECMA-48 Set Graphics Rendition" section
 #
 # Warning, when switching from a 8bit to a 9bit font,
 # the linux console will reinterpret the bold (1;) to
