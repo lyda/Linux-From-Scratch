@@ -13,7 +13,7 @@ system.  The CD is bootable and provides a stable working environment
 for building LFS.  This book refers to this system as the
 <quote>host system.</quote>  The CD images are actively maintained and
 updated versions can be found at
-<ulink url="ftp://ftp.lfs-matrix.de/pub/lfs-livecd/"/></para>
+<ulink url="ftp://ftp.lfs-matrix.net/pub/lfs-livecd/"/></para>
 
 <para>In addition to the tools required to build LFS, the host system
 on the CD has a number of other helpful tools installed:</para>
