@@ -1,6 +1,8 @@
 n/a - June 2, 2004
 
 	* Reorganize what goes on in the udev script
+	* Moved setting /sbin/hotplug as the default hotplug manager into the
+	  hotplug script
 
 n/a - June 1, 2004
 

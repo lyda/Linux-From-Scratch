@@ -6,8 +6,13 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
-# Assure that hotplug is actually present.
-[ -x /sbin/hotplug ] || exit 0
+# If hotplug is actually present, then set it to be the default manager of
+# hotplug events, otherwise quietly exit.
+if [ -x /sbin/hotplug ]; then
+	echo /sbin/hotplug > /proc/sys/kernel/hotplug
+else
+	exit 0
+fi
 
 case "$1" in
 	start|restart|status)
