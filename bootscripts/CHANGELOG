@@ -1,6 +1,6 @@
 n/a - June 21, 2004
 
-	* Added a FIXME in the udev initscript
+	* Converted the udev script to use udevsend/udevd
 
 n/a - June 21, 2004
 
