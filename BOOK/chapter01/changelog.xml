@@ -23,7 +23,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>bash-3.0</para></listitem>
 <listitem><para>binutils-2.15</para></listitem>
 <listitem><para>bison-1.875a</para></listitem>
-<listitem><para>expect-5.42.0</para></listitem>
+<listitem><para>expect-5.42.1</para></listitem>
 <listitem><para>file-4.10</para></listitem>
 <listitem><para>flex-2.5.31</para></listitem>
 <listitem><para>gcc-3.4.1</para></listitem>
@@ -83,7 +83,7 @@ first a summary, then a detailed log.</para>
 edits.</para></listitem>
 
 <listitem><para>August 7th, 2004 [gerard]: Upgraded to
-expect-5.42.0.</para></listitem>
+expect-5.42.1.</para></listitem>
 
 <listitem><para>August 7th, 2004 [gerard]: hostname binary moved to
 /bin as well.</para></listitem>
