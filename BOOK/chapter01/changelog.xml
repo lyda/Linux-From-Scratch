@@ -74,6 +74,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>January 27, 2005 [matt]: Added bison, flex and m4 to binutils
+dependency list.  Fixes Bug 1018.</para></listitem>
+
 <listitem><para>January 27, 2005 [manuel]: Updated to gcc-3.4.3-specs-2.patch.</para></listitem>
 
 <listitem><para>January 19, 2005 [jeremy]: Added an extra symlink for
