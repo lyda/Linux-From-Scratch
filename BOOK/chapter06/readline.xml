@@ -59,18 +59,22 @@ Readline author.</para>
 
 <para>Give Readline's dynamic libraries more appropriate permissions:</para>
 
-<screen><userinput>chmod 755 /usr/lib/*.&readline-version;</userinput></screen>
+<screen><userinput>chmod 755 /lib/lib{readline,history}.so*</userinput></screen>
 
 <beginpage/>
-<para>Move the dynamic libraries to a more appropriate location:</para>
 
-<screen><userinput>mv /usr/lib/lib{readline,history}.so.5* /lib</userinput></screen>
+<para>Now we move the static libraries to a more appropriate
+location:</para>
 
-<para>Because the libraries have been moved, a few symlinks are now pointing to
-non-existent files. Recreate those symlinks:</para>
+<screen><userinput>mv /lib/lib{readline,history}.a /usr/lib</userinput></screen>
 
-<screen><userinput>ln -sf ../../lib/libhistory.so.5 /usr/lib/libhistory.so
-ln -sf ../../lib/libreadline.so.5 /usr/lib/libreadline.so</userinput></screen>
+<para>Next we will remove the old, <filename>.so</filename> files in
+<filename class="directory">/lib</filename> and relink them into
+<filename class="directory">/usr/lib</filename>.</para>
+
+<screen><userinput>rm /lib/lib{readline,history}.so
+ln -sf ../../lib/libreadline.so.5 /usr/lib/libreadline.so
+ln -sf ../../lib/libhistory.so.5 /usr/lib/libhistory.so</userinput></screen>
 
 </sect2>
 
