@@ -42,19 +42,7 @@ issues).</para>
 <para>Even if not using a network card, an FQDN is still required.
 This is necessary for certain programs to operate correctly.</para>
 
-<para>If a network card is not going to be configured, create the
-<filename>/etc/hosts</filename> file by running:</para>
-
-<screen><userinput>cat &gt; /etc/hosts &lt;&lt; "EOF"
-<literal># Begin /etc/hosts (no network card version)
-
-127.0.0.1 <replaceable>[&lt;HOSTNAME&gt;.example.org]</replaceable> <replaceable>[HOSTNAME]</replaceable> localhost
-
-# End /etc/hosts (no network card version)</literal>
-EOF</userinput></screen>
-
-<para>If a network card is to be configured, create the 
-<filename>/etc/hosts</filename> file by running:</para>
+<para>Create the  <filename>/etc/hosts</filename> file by running:</para>
 
 <screen><userinput>cat &gt; /etc/hosts &lt;&lt; "EOF"
 <literal># Begin /etc/hosts (network card version)
@@ -70,6 +58,17 @@ EOF</userinput></screen>
 values need to be changed for specific users or requirements (if
 assigned an IP address by a network/system administrator and the
 machine will be connected to an existing network).</para>
+
+<para>If a network card is not going to be configured, create the
+<filename>/etc/hosts</filename> file by running:</para>
+
+<screen><userinput>cat &gt; /etc/hosts &lt;&lt; "EOF"
+<literal># Begin /etc/hosts (no network card version)
+
+127.0.0.1 <replaceable>[&lt;HOSTNAME&gt;.example.org]</replaceable> <replaceable>[HOSTNAME]</replaceable> localhost
+
+# End /etc/hosts (no network card version)</literal>
+EOF</userinput></screen>
 
 </sect1>
 

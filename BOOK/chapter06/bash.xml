@@ -32,7 +32,7 @@ GCC, Glibc, Grep, Make, Ncurse, and Sed.</seg></seglistitem>
 installed as suggested.  This patch fixes a problem where Bash
 sometimes limits 33 characters to a line before wrapping to the next
 line. If Readline has been installed per the instructions, this patch
-is not necessary because the patch applied to the Readine package
+is not necessary because the patch applied to the Readline package
 already resolves this issue.</para>
 
 <screen><userinput>patch -Np1 -i ../bash-&bash-version;-display_wrap-1.patch</userinput></screen>

@@ -49,11 +49,11 @@ ready:</para>
 
 <screen><userinput>sed -i 's@/sbin/hotplug@/bin/true@' kernel/kmod.c</userinput></screen>
 
-<para>If, in <xref linkend="ch-scripts-console"/> the keymap was
-compiled into the kernel, issue the command below:</para>
+<para>If, in <xref linkend="ch-scripts-console"/> it was decided to
+compile the keymap into the kernel, issue the command below:</para>
 
 <screen><userinput>loadkeys -m /usr/share/kbd/keymaps/<replaceable>[path to  keymap]</replaceable> &gt; \
-    <replaceable>[sources dir]</replaceable>/linux-&linux-version;/drivers/char/defkeymap.c</userinput></screen>
+    /linux-&linux-version;/drivers/char/defkeymap.c</userinput></screen>
 
 <para>For example, if using a Dutch keyboard, use
 <filename>/usr/share/kbd/keymaps/i386/qwerty/nl.map.gz</filename>.</para>
