@@ -38,7 +38,7 @@ unset them when building Glibc.</para>
 the method suggested in this book puts the stability of the system at
 risk.</para>
 
-<para arch="ppc;raq2">Unpack the glibc-linuxthreads-&glibc-version; <emphasis>and</emphasis> the
+<para arch="raq2">Unpack the glibc-linuxthreads-&glibc-version; <emphasis>and</emphasis> the
 glibc-libidn-&glibc-version; tarball -- they will unfold into the same directory.</para>
 
 <para arch="alpha;x86">Unpack the glibc-libidn-&glibc-version; tarball -- it
@@ -48,10 +48,10 @@ will unfold into the same directory.</para>
 
 <screen arch="raq2"><userinput>patch -Np1 -i ../glibc-&glibc-version;-mips_syscall-2.patch</userinput></screen>
 
-<para arch="ppc;raq2">NPTL is not supported under this architecture, so we are going to
+<para arch="raq2">NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
 
-<screen arch="ppc;raq2"><userinput>rm -rf nptl*</userinput></screen>
+<screen arch="raq2"><userinput>rm -rf nptl*</userinput></screen>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>

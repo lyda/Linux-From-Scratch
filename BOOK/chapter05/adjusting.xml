@@ -42,7 +42,7 @@ sed 's@ /lib/ld-linux.so.2@ /tools/lib/ld-linux.so.2@g' \
 mv -f tempspecfile $SPECFILE &amp;&amp;
 unset SPECFILE</userinput></screen>
 
-<screen arch="raq2"><userinput>SPECFILE=`gcc --print-file specs` &amp;&amp;
+<screen arch="ppc;raq2"><userinput>SPECFILE=`gcc --print-file specs` &amp;&amp;
 sed 's@ /lib/ld.so.1@ /tools/lib/ld.so.1@g' \
     $SPECFILE &gt; tempspecfile &amp;&amp;
 mv -f tempspecfile $SPECFILE &amp;&amp;
@@ -52,8 +52,8 @@ unset SPECFILE</userinput></screen>
 command be copy-and-pasted in order to ensure accuracy.
 Alternatively, the specs file can be edited by hand. This is done by
 replacing every occurrence of <quote arch="x86">/lib/ld-linux.so.2</quote> 
-<quote arch="raq2">/lib/ld.so.1</quote> with <quote arch="x86">/tools/lib/ld-linux.so.2</quote>
-<quote arch="raq2">/tools/lib/ld.so.2</quote></para>
+<quote arch="ppc;raq2">/lib/ld.so.1</quote> with <quote arch="x86">/tools/lib/ld-linux.so.2</quote>
+<quote arch="ppc;raq2">/tools/lib/ld.so.2</quote></para>
 
 <para>Be sure to visually inspect the specs file in order to verify the
 intended changes have been made.</para>
@@ -95,7 +95,7 @@ and the output of the last command will be of the form:</para>
 <screen arch="x86"><computeroutput>[Requesting program interpreter: 
     /tools/lib/ld-linux.so.2]</computeroutput></screen>
 
-<screen arch="raq2"><computeroutput>[Requesting program interpreter: 
+<screen arch="ppc;raq2"><computeroutput>[Requesting program interpreter: 
     /tools/lib/ld.so.1]</computeroutput></screen>
 
 <para>Note that <filename class="directory">/tools/lib</filename>

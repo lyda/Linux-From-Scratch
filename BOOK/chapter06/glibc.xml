@@ -54,10 +54,10 @@ of achieving a clean build.</para>
 
 <screen arch="raq2"><userinput>patch -Np1 -i ../glibc-&glibc-version;-mips_syscall-2.patch</userinput></screen>
 
-<para arch="ppc;raq2">NPTL is not supported under this architecture, so we are going to
+<para arch="raq2">NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
 
-<screen arch="ppc;raq2"><userinput>rm -rf nptl*</userinput></screen>
+<screen arch="raq2"><userinput>rm -rf nptl*</userinput></screen>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>

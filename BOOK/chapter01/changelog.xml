@@ -85,6 +85,14 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>March 23, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: PPC - Updated based on Jermey Huntwork's livecd build.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>March 22, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - E2fsprogs to 1.37.</para></listitem>
