@@ -1,7 +1,8 @@
 <qandaentry id="why-not-new-lilo">
 <question><para>Why not upgrade LILO to the latest version?</para></question>
 <answer><para>For now, the book is staying with LILO 22.2
-because versions of LILO after 22.2 require nasm.
+because versions of LILO after 22.2 require
+<ulink url="http://nasm.2y.net/">nasm</ulink>.
 While there should be no problem installing nasm,
 the book and many users are reluctant to install an extra package just for LILO.
 Many users are switching to GRUB.
