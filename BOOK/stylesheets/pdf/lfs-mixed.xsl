@@ -11,6 +11,25 @@
   <xsl:template match="beginpage">
     <fo:block break-after="page"/>
   </xsl:template>
+  
+    <!-- Allow forced line breaks inside paragraphs emulating literallayout. -->
+ <xsl:template match="para">
+    <xsl:choose>
+      <xsl:when test="./@remap='verbatim'">
+        <fo:block wrap-option="no-wrap"
+                    white-space-collapse="false"
+                    white-space-treatment="preserve"
+                    text-align="start"
+                    linefeed-treatment="preserve">
+          <xsl:call-template name="anchor"/>
+          <xsl:apply-templates/>
+        </fo:block>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-imports/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
 
     <!-- Show URLs in italic font -->
   <xsl:template match="ulink" name="ulink">
