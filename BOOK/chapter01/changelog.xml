@@ -74,6 +74,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>January 19, 2005 [jeremy]: Added an extra symlink for
+libgcc_s.so to chapter 6 - this never migrated from unstable until now.</para></listitem>
+
 <listitem><para>January 9, 2005 [matt]: Added a security patch for the kernel</para></listitem>
 
 <listitem><para>January 9, 2005 [matt]: Added a security patch for vim</para></listitem>
