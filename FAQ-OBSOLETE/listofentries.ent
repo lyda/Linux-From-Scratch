@@ -55,6 +55,7 @@
 <!ENTITY should-i-keep-sources SYSTEM "should-i-keep-sources.xml">
 <!ENTITY shutdown-on-fsck-error SYSTEM "shutdown-on-fsck-error.xml">
 <!ENTITY sig11 SYSTEM "sig11.xml">
+<!ENTITY thanks SYSTEM "thanks.xml">
 <!ENTITY unable-to-mount-root SYSTEM "unable-to-mount-root.xml">
 <!ENTITY undefined-deflate SYSTEM "undefined-deflate.xml">
 <!ENTITY unknown-pseudo-op-hidden SYSTEM "unknown-pseudo-op-hidden.xml">

@@ -32,6 +32,7 @@
 <qandadiv id="intro"><title>Introduction</title>
 	&why-faq;
 	&what-is-lfs;
+	&thanks;
 </qandadiv>
 <qandadiv id="how-to"><title>How-To</title>
 	&netiquette;
