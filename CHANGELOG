@@ -1,3 +1,11 @@
+n/a - March 20, 2004
+	* Added create-service-dir target and removed from create-dirs
+	* Changed service script install targets to use
+	  create-service-dir
+	* Added check for dhcpcd service script for stale pid file 
+	  Suggested by Jeremy
+	* Added ifconfig to ipx service script for hosting device not up
+
 n/a - March 19, 2004
 
 	* Added support for ETCDIR, and DESTDIR in the Makefile,
