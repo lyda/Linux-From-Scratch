@@ -1,5 +1,8 @@
 n/a - September 23, 2004
 	* Fixed boot_log so it output's $@'s contents, not @$
+	* Added support for colors in boot_mesg
+	* Modified udev's error checking
+	* Modified hotplug's error checking
 
 n/a - September 22, 2004
 	* Removed the dependency on wl by replacing it with grep (Bryan Kadzban)
