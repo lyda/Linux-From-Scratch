@@ -3,9 +3,13 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-scatter-acknowledgments">
-<title>Acknowledgments</title>
+<appendix id="appendixa" xreflabel="Appendix A">
+<?dbhtml dir="appendixa"?>
+<title/>
 <?dbhtml filename="acknowledgements.html"?>
+
+<sect1 id="appendixa-acknowledgments">
+<title>Acknowledgments</title>
 
 <para>We would like to thank the following people and organizations
 for their contributions to the Linux From Scratch Project.</para>
@@ -303,4 +307,6 @@ linuxfromscratch.org server</para></listitem>
 </sect2>
 
 </sect1>
+
+</appendix>
 

@@ -11,7 +11,6 @@
 -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/preface.xml"/>
 
-
 <part id="part1">
 <title>Introduction</title>
 <?dbhtml filename="part1.html"?>
@@ -35,6 +34,14 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter08/chapter08.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter09/chapter09.xml"/>
 </part>
+
+<part id="part4">
+<title>Appendices</title>
+<?dbhtml filename="part4.html"?>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="appendixa/acknowledgments.xml"/>
+</part>
+
 <index/>
 
 </book>
+
