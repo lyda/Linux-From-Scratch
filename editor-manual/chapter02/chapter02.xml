@@ -1,9 +1,0 @@
-<chapter id="chapter02">
-<title>CVS Access</title>
-<?dbhtml filename="chapter02.html" dir="chapter02"?>
-
-&c2-introduction;
-&c2-anoncvs;
-&c2-cvsssh;
-
-</chapter>

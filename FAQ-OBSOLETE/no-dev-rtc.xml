@@ -1,6 +1,0 @@
-<qandaentry id="no-dev-rtc">
-<question><para>modprobe: Can't locate module /dev/rtc</para></question>
-<answer><para>See the question <link linkend="char-major-10-135">"modprobe: Can't locate module
-char-major-10-135"</link>.
-</para></answer>
-</qandaentry>
