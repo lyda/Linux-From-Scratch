@@ -114,6 +114,13 @@ hr {
           </li>
           <li>
             <h4>
+              <a href="alpha">
+                <xsl:text>Alpha</xsl:text>
+              </a>
+	    </h4>
+	  </li>
+          <li>
+            <h4>
               <a href="ppc">
                 <xsl:text>PowerPC</xsl:text>
               </a>

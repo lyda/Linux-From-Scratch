@@ -28,23 +28,23 @@ lfs:
 	cd $(BASEDIR)/x86/; sed -i -e "s@../images@images@g" \
 	  *.html
 
-# raq2
-	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch raq2 \
-	  -stringparam base.dir $(BASEDIR)/raq2/ stylesheets/lfs-chunked.xsl index.xml
+# alpha
+	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch alpha \
+	  -stringparam base.dir $(BASEDIR)/alpha/ stylesheets/lfs-chunked.xsl index.xml
 
-	if [ ! -e $(BASEDIR)/raq2/stylesheets ]; then \
-	  mkdir -p $(BASEDIR)/raq2/stylesheets; \
+	if [ ! -e $(BASEDIR)/alpha/stylesheets ]; then \
+	  mkdir -p $(BASEDIR)/alpha/stylesheets; \
 	fi;
-	cp stylesheets/*.css $(BASEDIR)/raq2/stylesheets
+	cp stylesheets/*.css $(BASEDIR)/alpha/stylesheets
 
-	if [ ! -e $(BASEDIR)/raq2/images ]; then \
-	  mkdir -p $(BASEDIR)/raq2/images; \
+	if [ ! -e $(BASEDIR)/alpha/images ]; then \
+	  mkdir -p $(BASEDIR)/alpha/images; \
 	fi;
 	cp $(XSLROOTDIR)/images/*.png \
-	  $(BASEDIR)/raq2/images
-	cd $(BASEDIR)/raq2/; sed -i -e "s@../stylesheets@stylesheets@g" \
+	  $(BASEDIR)/alpha/images
+	cd $(BASEDIR)/alpha/; sed -i -e "s@../stylesheets@stylesheets@g" \
 	  *.html
-	cd $(BASEDIR)/raq2/; sed -i -e "s@../images@images@g" \
+	cd $(BASEDIR)/alpha/; sed -i -e "s@../images@images@g" \
 	  *.html
 
 # ppc
@@ -66,6 +66,24 @@ lfs:
 	cd $(BASEDIR)/ppc/; sed -i -e "s@../images@images@g" \
 	  *.html
 
+# raq2
+	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch raq2 \
+	  -stringparam base.dir $(BASEDIR)/raq2/ stylesheets/lfs-chunked.xsl index.xml
+
+	if [ ! -e $(BASEDIR)/raq2/stylesheets ]; then \
+	  mkdir -p $(BASEDIR)/raq2/stylesheets; \
+	fi;
+	cp stylesheets/*.css $(BASEDIR)/raq2/stylesheets
+
+	if [ ! -e $(BASEDIR)/raq2/images ]; then \
+	  mkdir -p $(BASEDIR)/raq2/images; \
+	fi;
+	cp $(XSLROOTDIR)/images/*.png \
+	  $(BASEDIR)/raq2/images
+	cd $(BASEDIR)/raq2/; sed -i -e "s@../stylesheets@stylesheets@g" \
+	  *.html
+	cd $(BASEDIR)/raq2/; sed -i -e "s@../images@images@g" \
+	  *.html
 
 # common stuff
 	for filename in `find $(BASEDIR) -name "*.html"`; do \
