@@ -433,7 +433,7 @@ alias net-pf-7 loop
 					<simplelist>
 						<member>
 							The official reason is that patch uses it to process ed
-							scripts. However, these seldom used anymore;
+							scripts. However, these are seldom used recently;
 							everyone uses diff.
 						</member>
 						<member>
