@@ -63,6 +63,8 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>December 19, 2004 [manuel]: Added the irc.lfs-matrix.de IRC server.</para></listitem>
+
 <listitem><para>December 5, 2004 [jeremy]: Added the DOCBOOKTOMAN parameter
 to Module-init-utils - without this, compilation fails.  Thanks Boris Buegling</para></listitem>
 
