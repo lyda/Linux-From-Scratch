@@ -33,7 +33,7 @@ WCOL=$(($COLUMNS - 30))
 # Set Cursur Position Commands, used via echo -e
 SET_COL="\\033[${COL}G"      # at the $COL char
 SET_WCOL="\\033[${WCOL}G"    # at the $WCOL char
-CURS_UP="\\033[1A \\033[0G"  # Up one line, at the 0'th char
+CURS_UP="\\033[1A\\033[0G"  # Up one line, at the 0'th char
 
 # Set color commands, used via echo -e
 NORMAL="\\033[0;39m"         # Standard console grey
@@ -48,10 +48,30 @@ BOOTSERVICE=""
 
 boot_mesg()
 {
+	local nlBOOTMESG=""
+
+	# First call to boot_mesg, set BOOTMESG normally
 	if [ -z "$BOOTMESG" ]; then
 		BOOTMESG="$@"
-		echo -e "${NORMAL}${BOOTMESG}"
+	# Subsequent calls will overwrite the text already on the screen
+	# with replacement text by counting the lines in the last BOOTMESG
+	# and calling CURS_UP that many times
+	# It will also append our new text onto the BOOTMESG variable
+	else
+		local length=`echo -e "$BOOTMESG" | wc -l`
+		local count=0
+		BOOTMESG="$BOOTMESG $@"
+		while [ "${count}" -lt "${length}" ]; do
+			echo -e -n "$CURS_UP"
+			count=$((${count}+1))
+		done
 	fi
+
+	# This will limit BOOTMESG to be no longer then what WCOL is set to,
+	# by adding \n's where appropriate.
+	BOOTMESG=`echo ${BOOTMESG} | sed -n -e "s/\\\\n/\n/g;L ${WCOL}"`
+
+	echo -e "${NORMAL}${BOOTMESG}"
 }
 
 echo_ok()
