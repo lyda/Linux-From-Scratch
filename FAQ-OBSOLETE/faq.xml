@@ -245,6 +245,12 @@ ln -s ../X11/include/X11 X11
 		</section>
 	</chapter>
 	<chapter id="specific-packages"><title>Questions about specific packages.</title>
+		<section id="ncurses-streampos"><title>I'm getting errors about "struct streampos" when compiling ncurses.</title>
+			<para>
+				You're using GCC 2.95.2 with GLIBC 2.2.x. That doesn't work.
+				You need GCC 2.95.2.1 with GLIBC 2.2.x.
+			</para>
+		</section>
 		<section id="lesscharset"><title>Why does less print &lt;AD&gt; instead of hyphens?</title>
 			<para>
 				Because the LESSCHARSET environment variable isn't set. To fix
