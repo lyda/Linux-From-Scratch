@@ -4,6 +4,7 @@
 
   <!-- We use XHTML -->
   <xsl:import href="/usr/share/xml/docbook/xsl-stylesheets-1.65.0/xhtml/chunk.xsl"/>
+  <xsl:param name="chunker.output.encoding" select="'ISO-8859-1'"/>
 
   <!-- The CSS Stylesheet -->
   <xsl:param name="html.stylesheet" select="'../stylesheets/lfs.css'"/>
