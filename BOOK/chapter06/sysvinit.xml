@@ -182,8 +182,8 @@ user's terminal</para>
 <varlistentry id="mountpoint">
 <term><command>mountpoint</command></term>
 <listitem>
+<para>Checks if the directory is a mountpoint</para>
 <indexterm zone="ch-system-sysvinit mountpoint"><primary sortas="b-mountpoint">mountpoint</primary></indexterm>
-<para>checks if the directory is a mountpoint.</para>
 </listitem>
 </varlistentry>
 
