@@ -70,6 +70,7 @@
 	&really-small;
 	&cross-compile;
 	&old-sources;
+	&quake3;
 </qandadiv>
 <qandadiv id="fsc"><title>Frequently Sought Cluebits</title>
 	&how-to-compile;

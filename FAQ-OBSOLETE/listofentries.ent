@@ -45,6 +45,7 @@
 <!ENTITY perl-missing-separator SYSTEM "perl-missing-separator.xml">
 <!ENTITY perm-denied SYSTEM "perm-denied.xml">
 <!ENTITY portmap SYSTEM "portmap.xml">
+<!ENTITY quake3 SYSTEM "quake3.xml">
 <!ENTITY really-small SYSTEM "really-small.xml">
 <!ENTITY sh-utils-getloadavg SYSTEM "sh-utils-getloadavg.xml">
 <!ENTITY should-i-keep-sources SYSTEM "should-i-keep-sources.xml">
