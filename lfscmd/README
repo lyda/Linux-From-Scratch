@@ -32,6 +32,8 @@ OPTIONS
 
        -f     Write commands to their own file.
 
+       -a     Strip '&&' in commands.
+       
        -q query
               Output pages matching regex query.
 
