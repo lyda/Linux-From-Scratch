@@ -21,9 +21,14 @@
         <xsl:otherwise>Note</xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
+    <xsl:variable name="alt">
+      <xsl:call-template name="gentext">
+        <xsl:with-param name="key" select="$admon.type"/>
+      </xsl:call-template>
+    </xsl:variable>
     <div class="{name(.)}">
       <div class ="admonhead">
-        <img alt="[{$admon.type}]">
+        <img alt="[{$alt}]">
           <xsl:attribute name="src">
             <xsl:call-template name="admon.graphic"/>
           </xsl:attribute>
