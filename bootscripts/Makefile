@@ -138,6 +138,16 @@ install-exim: create-dirs
 	ln -s  ../init.d/exim ${EXTDIR}/rc.d/rc5.d/S35exim
 	ln -s  ../init.d/exim ${EXTDIR}/rc.d/rc6.d/K25exim
 
+install-fam: create-dirs
+	install -m 754 blfs/init.d/fam      ${EXTDIR}/rc.d/init.d/
+	ln -s  ../init.d/fam ${EXTDIR}/rc.d/rc0.d/K37fam
+	ln -s  ../init.d/fam ${EXTDIR}/rc.d/rc1.d/K37fam
+	ln -s  ../init.d/fam ${EXTDIR}/rc.d/rc2.d/S23fam
+	ln -s  ../init.d/fam ${EXTDIR}/rc.d/rc3.d/S23fam
+	ln -s  ../init.d/fam ${EXTDIR}/rc.d/rc4.d/S23fam
+	ln -s  ../init.d/fam ${EXTDIR}/rc.d/rc5.d/S23fam
+	ln -s  ../init.d/fam ${EXTDIR}/rc.d/rc6.d/K39fam
+
 install-fcron: create-dirs
 	install -m 754 blfs/init.d/fcron      ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/fcron ${EXTDIR}/rc.d/rc0.d/K08fcron

@@ -4,6 +4,7 @@ n/a - March 23, 2004
 	* Added a script which can automatically create files and directories
 	  on startup.  [Handles files/directories, permissions, and user/group].
 	  Created by Zack
+	* Added blfs/init.d/fam script
 
 n/a - March 20, 2004
 
