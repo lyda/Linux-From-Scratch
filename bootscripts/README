@@ -30,6 +30,7 @@ Network Configuration:
 		- IP: static IP Address
 		- GATEWAY: Specifies the IP Address of the gateway server
 		- PREFIX: CIDR prefix of IP Address, defaults to 24 if not set
+		- PEER: IP Address of peer (for point-to-point connections and tunnels)
 		- BROADCAST: broadcast address
 		ipv4-static-route:
 		- TYPE: network (default type if not specified), default, host or
