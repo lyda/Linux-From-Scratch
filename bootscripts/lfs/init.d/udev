@@ -42,9 +42,9 @@ case "${1}" in
 		mount -n -t tmpfs tmpfs /dev
 		if [ ${?} != 0 ]
 		then
-			boot_log "Unable to mount a ramfs onto /dev."
+			boot_log "Unable to mount a tmpfs onto /dev."
 			echo_failure
-			boot_mesg "FAILURE:\n\nCannot mount a ramfs" ${FAILURE}
+			boot_mesg "FAILURE:\n\nCannot mount a tmpfs" ${FAILURE}
 			boot_mesg " onto /dev, this system will be halted."
 			boot_mesg "\n\nAfter you press Enter, this system"
 			boot_mesg " will be halted and powered off."
