@@ -114,7 +114,7 @@ to the information in the documentation.
 	</qandadiv><!-- Introduction -->
 
 
-<!-- dlist: ,lfs-dev,lfs-support,blfs-support -->
+<!-- dlist: ,lfs-dev,lfs-support,blfs-support,new -->
 <qandadiv id="frb"><title>Frequently Reported Bugs</title>
 
 <!-- elist: ,lfs-dev -->
@@ -123,6 +123,19 @@ to the information in the documentation.
 </para></question>
 <answer><para>That is correct. Dependencies sections are only updated
 occasionally due to the amount of manual labor required.
+</para></answer>
+</qandaentry>
+
+<!-- elist: ,lfs-dev,new -->
+<qandaentry id="new-version">
+<question><para>There's a new version of package Foo.</para></question>
+<answer><para>Excellent. If you wish to help, please report it to lfs-book
+(or blfs-book for packages in BLFS)
+unless the automated freshmeat announcements have already done so.
+</para>
+<para>If you wish to do even better,
+you can test the new version and report if it works
+or what is necessary to make it work.
 </para></answer>
 </qandaentry>
 
@@ -981,15 +994,6 @@ make: *** [all-recursive-am] Error 2
 	</qandadiv><!-- specific-packages -->
 <!-- dlist: ,lfs-dev,lfs-support,xblfs-support -->
 	<qandadiv id="additions"><title>Additions / Changes to LFS.</title>
-<!-- elist: ,lfs-dev -->
-		<qandaentry id="new-version"><question><para>There's a new version of package Foo.</para></question>
-			<answer><para>There's no need to mention it unless you have something
-				useful to add such as changes in the compile instructions.
-				If it isn't already in CVS, it's on the todo list or
-				we've chosen not to use it for some reason. A search of
-				the list archives may reveal the reason.
-			</para></answer>
-		</qandaentry>
 
 <!-- elist: ,lfs-dev -->
 <qandaentry id="kernel-header-copy"><question><para>Why copy the kernel headers instead of linking them?</para></question>
