@@ -1,6 +1,0 @@
-<!ENTITY chapter06 SYSTEM "../chapter06/chapter06.xml">
-<!ENTITY c6-introduction SYSTEM "../chapter06/introduction.xml">
-<!ENTITY c6-updatebugzilla SYSTEM "../chapter06/updatebugzilla.xml">
-<!ENTITY c6-updatebook SYSTEM "../chapter06/updatebook.xml">
-<!ENTITY c6-updateftp SYSTEM "../chapter06/updateftp.xml">
-<!ENTITY c6-renderchecklinks SYSTEM "../chapter06/renderchecklinks.xml">
