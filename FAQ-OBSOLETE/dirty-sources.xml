@@ -1,9 +1,0 @@
-<qandaentry id="dirty-sources">
-<question><para>I didn't delete the source tree after my last attempt.
-Do I need to?</para></question>
-<answer><para>Yes, but see 
-"<link linkend="how-to-compile">How do i compile a package?</link>"
-for the details including an exception to that rule.
-</para></answer>
-</qandaentry>
-

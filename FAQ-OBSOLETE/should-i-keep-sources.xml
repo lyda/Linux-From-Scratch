@@ -1,8 +1,0 @@
-<qandaentry id="should-i-keep-sources">
-<question><para>Do I need to keep the source after installing?</para></question>
-<answer><para>No, but see
-"<link linkend="how-to-compile">How do i compile a package?</link>"
-for the details including an exception to that rule.
-</para></answer>
-</qandaentry>
-
