@@ -80,10 +80,10 @@ boot_mesg()
 	# and calling CURS_UP that many times
 	# It will also append our new text onto the BOOTMESG variable
 	else
-		local length=`echo -e "$BOOTMESG" | sed -n -e "L ${WCOL}" |grep -c \$`
+		local length=`echo -e "$BOOTMESGCON" | sed -n -e "s/\$/\n/g;L ${WCOL}" |grep -c \$`
 		local count=0
 		BOOTMESG="${BOOTMESG}${1}"
-		BOOTMESGCON="${BOOTMESGCON}${2}${1}"
+		BOOTMESGCON="${BOOTMESGCON} \b${2} \b${1}"
 		while [ "${count}" -lt "${length}" ]; do
 			echo -e -n "$CURS_UP"
 			count=$((${count}+1))
@@ -91,7 +91,7 @@ boot_mesg()
 	fi
 
 	# This will wrap BOOTMESG to a maximum of $WCOL characters
-	echo -e "${BOOTMESGCON}" | sed -n -e "L ${WCOL}"
+	echo -e "${BOOTMESGCON}" | sed -n -e "s/\$/\n/g;L ${WCOL}"
 }
 
 boot_log()
