@@ -1,3 +1,8 @@
+n/a - July 8, 2004
+
+	* Changed iso01 to lat1 everywhere in /etc/sysconfig/console. This
+	  fixes the problem with line-drawing characters.
+
 n/a - July 7, 2004
 
 	* Halted the computer, if unable to mount /dev as a ramfs

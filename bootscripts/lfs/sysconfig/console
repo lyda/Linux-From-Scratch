@@ -19,7 +19,7 @@
 #
 # KEYMAP="be-latin1"
 # KEYMAP_CORRECTIONS="euro"
-# FONT="lat9-16 -u iso01"
+# FONT="lat9-16 -u lat1"
 
 # Chinese is not supported by LFS and needs special tools
 
@@ -58,7 +58,7 @@
 #
 # KEYMAP="es"
 # KEYMAP_CORRECTIONS="euro"
-# FONT="lat9-16 -u iso01"
+# FONT="lat9-16 -u lat1"
 
 # Slovenia
 #
