@@ -62,9 +62,18 @@ pdf:
 	rm $(BASEDIR)/lfs-pdf.xml $(BASEDIR)/lfs-pdf.fo
 
 nochunks:
-	xsltproc --xinclude --nonet --output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
-	  stylesheets/lfs-nochunks.xsl index.xml
+	xsltproc --xinclude --nonet -stringparam profile.condition html \
+	  --output $(BASEDIR)/lfs-nochunk.xml stylesheets/lfs-profile.xsl index.xml
+
+	xsltproc --nonet --output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
+	  stylesheets/lfs-nochunks.xsl $(BASEDIR)/lfs-nochunk.xml
+
+	rm $(BASEDIR)/lfs-nochunk.xml
+
 	$(TIDY) -config tidy.conf $(BASEDIR)/$(NOCHUNKS_OUTPUT) || true
+
+	sed -i -e "s@text/html@application/xhtml+xml@g"  \
+	  $(BASEDIR)/$(NOCHUNKS_OUTPUT)
 
 validate:
 	xmllint --noout --nonet --xinclude --postvalid index.xml
