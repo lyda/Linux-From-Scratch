@@ -52,6 +52,7 @@ The following command creates a sample ifconfig.eth0 file:</para>
 
 <screen><userinput>cat &gt; /etc/sysconfig/network-devices/ifconfig.eth0 &lt;&lt; "EOF"</userinput>
 ONBOOT=yes
+SERVICE=static
 IP=192.168.1.1
 NETMASK=255.255.255.0
 BROADCAST=192.168.1.255
@@ -62,6 +63,12 @@ in every file to match the proper setup. If the ONBOOT variable is set
 to yes, the network script will bring it up during the booting of the system.
 If set to anything else but yes, it will be ignored by the network script
 and thus not brought up.</para>
+
+<para>The SERVICE entry defines the method of obtaining the IP address.
+The LFS bootscripts have a modular IP assignment format, and by creating
+additional files in /etc/sysconfig/network-devices/services, you can allow
+other IP assignment methods.  This would commonly be used if you need DHCP,
+which is addressed in the BLFS book.</para>
 
 </sect2>
 

@@ -19,14 +19,9 @@
 <sect2>
 <title>Installation of LFS-Bootscripts</title>
 
-<para>Install the boot scripts simply by copying them to their
-destination:</para>
+<para>Installation of the bootscripts is very simple:</para>
 
-<screen><userinput>cp -a rc.d sysconfig /etc</userinput></screen>
-
-<para>Make sure <emphasis>root</emphasis> is owner of the scripts:</para>
-
-<screen><userinput>chown -R root:root /etc/rc.d /etc/sysconfig</userinput></screen>
+<screen><userinput>make install</userinput></screen>
 
 </sect2>
 
@@ -34,8 +29,8 @@ destination:</para>
 <sect2 id="contents-bootscripts"><title>Contents of LFS-bootscripts</title>
 
 <para><emphasis>Installed scripts</emphasis>: checkfs, cleanfs, functions,
-halt, ifdown, ifup, loadkeys, localnet, mountfs, mountproc, network, rc,
-reboot, sendsignals, setclock, swap, sysklogd and template</para>
+halt, ifdown, ifup, loadkeys, localnet, mountfs, mountkernfs, network, rc,
+reboot, sendsignals, setclock, static, swap, sysklogd and template</para>
 
 </sect2>
 
@@ -69,8 +64,8 @@ local loopback device.</para>
 <para>The <command>mountfs</command> script mounts all file systems that
 aren't marked <emphasis>noauto</emphasis> or aren't network based.</para>
 
-<para>The <command>mountproc</command> script is used to mount the proc
-file system.</para>
+<para>The <command>mountkernfs</command> script is used to mount
+kernel-provided file systems, such as /proc.</para>
 
 <para>The <command>network</command> script sets up network interfaces, such
 as network cards, and sets up the default gateway where applicable.</para>
@@ -86,6 +81,9 @@ terminated before the system reboots or halts.</para>
 
 <para>The <command>setclock</command> script resets the kernel clock to
 localtime in case the hardware clock isn't set to GMT time.</para>
+
+<para>The <command>static</command> script provides the functionality needed
+to assign a static IP address to a network interface.</para>
 
 <para>The <command>swap</command> script enables and disables swap files and
 partitions.</para>
