@@ -147,13 +147,30 @@ you'll want to change that boot script before it's too late.
 <!-- elist: ,lfs-dev,new -->
 <qandaentry id="new-version">
 <question><para>There's a new version of package Foo.</para></question>
-<answer><para>Excellent. If you wish to help, please report it to lfs-book
-(or blfs-book for packages in BLFS)
-unless the automated freshmeat announcements have already done so.
-</para>
-<para>If you wish to do even better,
-you can test the new version and report if it works
-or what is necessary to make it work.
+<answer><para>If you'd like to report a new release of a package,
+here's how:
+<itemizedlist>
+<listitem><para>Check the <ulink url="http://freshmeat.net/">freshmeat</ulink>
+page for the project to see if it has been updated.
+If it hasn't, report the new release there
+and the automated freshmeat announcements will report it to the LFS lists.
+</para></listitem>
+<listitem><para>If freshmeat has been updated,
+check the list
+<ulink url="http://archive.linuxfromscratch.org/mail-archives/">archives</ulink>
+to see if freshmeat (or someone else)
+has reported it to lfs-book (or blfs-book for packages in BLFS).
+</para></listitem>
+<listitem><para>If no one has reported it to the lists,
+check LFS <ulink url="http://bugs.linuxfromscratch.org/">bugzilla</ulink>
+to see if it's there.
+</para></listitem>
+<listitem><para>If it's not in bugzilla,
+report it to lfs-book (or blfs-book for packages in BLFS).
+And if you like, test the new release and report any problems
+or changes in compilation instructions too.
+</para></listitem>
+</itemizedlist>
 </para></answer>
 </qandaentry>
 
