@@ -67,11 +67,13 @@
 	&gcc-warnings;
 </qandadiv>
 <qandadiv id="fee"><title>Frequently Encountered Errors</title>
+	<qandadiv id="fee-anytime"><title>Errors Seen at Any Time</title>
+		&any-no-such-file;
+	</qandadiv>
 	<qandadiv id="fee-compile"><title>Compile Time Errors</title>
 		<qandadiv id="fee-compile-any">
 				<title>Compile Time Errors From Any Package</title>
 			&bad-interpreter-permission-denied;
-			&env-bash-no-such-file;
 			&conf-guess-fail;
 			&config-not-gnu-c;
 			&config-hang-size_t;
