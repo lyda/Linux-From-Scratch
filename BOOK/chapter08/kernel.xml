@@ -117,7 +117,7 @@ a user-written script inserts the corresponding module into the
 kernel, and not all modules are detectable by Hotplug. Note that
 statements like <screen>alias char-major-XXX some-module</screen> in
 the <filename>/etc/modprobe.conf</filename> file do not work with
-Udev, and other aliases are often unnecessary with Hotplug.</para>
+Udev.</para>
 
 <para>Because of the complications with Hotplug, Udev, and modules, we
 strongly recommend starting with a completely non-modular kernel

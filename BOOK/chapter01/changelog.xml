@@ -87,6 +87,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>September 29th, 2004 [matt]: chapter08/kernel - Removed
+redundant comment regarding hotplug configuration (fixes bug 914 - Alexander E.
+Patrakov).</para></listitem>
+
 <listitem><para>September 28th, 2004 [matt]: chapter06/texinfo - Added a
 description for the texinfo segfault patch (fixes bug 917 - Randy McMurchy).</para></listitem>
 
