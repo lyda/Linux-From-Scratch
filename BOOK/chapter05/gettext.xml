@@ -70,7 +70,7 @@ patch to disable Java is available from the LFS Patches project at
 </sect2>
 
 <sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-gettext"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-gettext" role="."/></para>
 </sect2>
 
 </sect1>
