@@ -30,7 +30,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>grub-0.94</para></listitem>
 <listitem><para>kbd-1.12</para></listitem>
 <listitem><para>less-382</para></listitem>
-<listitem><para>lfs-bootscripts-2.0.2</para></listitem>
+<listitem><para>lfs-bootscripts-2.0.3</para></listitem>
 <listitem><para>libtool-2.5.6</para></listitem>
 <listitem><para>linux-2.4.26</para></listitem>
 <listitem><para>man-pages-1.66</para></listitem>
@@ -72,6 +72,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>zlib-1.1.4-vsnprintf.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>April 14th, 2004 [jeremy]: Updated to lfs-bootscripts-2.0.3, no
+textual changes needed</para></listitem>
 
 <listitem><para>March 24th, 2004 [jeremy]: Chapter 7 - Updated to the new
 lfs-bootscripts-2.0.2, and all necessary changes to the bootscript
