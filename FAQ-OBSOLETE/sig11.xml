@@ -1,7 +1,0 @@
-<qandaentry id="sig11">
-<question><para>I'm getting fatal errors about signal 11
-(segmentation fault).</para></question>
-<answer><para>See <ulink url="http://www.bitwizard.nl/sig11/"/>.
-</para></answer>
-</qandaentry>
-
