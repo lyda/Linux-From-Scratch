@@ -74,6 +74,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 15th, 2004 [matt]: Chapter 6 - Added a clearer warning that
+make_devices needs to be customised</para></listitem>
+
 <listitem><para>May 14th, 2004 [matt]: Chapter 3 - Added glibc's md5sum</para>
 </listitem>
 

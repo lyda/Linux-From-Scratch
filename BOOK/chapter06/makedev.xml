@@ -67,6 +67,10 @@ commented out. You should open <filename>make_devices</filename> in an editor
 and customize it to your needs. This takes some time, but is very simple. When
 you are satisfied, run the script to create the device files:</para>
 
+<warning><para>Failure to properly edit the <command>make_devices</command> to
+match your systems's setup (eg. number of partitions) can lead to boot errors.
+</para></warning>
+
 <screen><userinput>cd /dev
 ./make_devices</userinput></screen>
 
