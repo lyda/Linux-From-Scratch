@@ -84,6 +84,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 30th, 2004 [matt]: Drop optimisation level of util-linux
+from O2 to O1, so as sfdisk works properly when compiled with gcc-3.4.1</para>
+</listitem>
+
 <listitem><para>August 29th, 2004 [matt]: Upgraded to
 linux-libc-headers-2.6.8.1</para></listitem>
 
