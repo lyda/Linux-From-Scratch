@@ -155,7 +155,7 @@ loadproc()
                 exit 1
         fi
 
-	if [ -n "$PIDFILE" -a -r $PIDFILE ]; then
+	if [ -n "$PIDFILE" -a -r "$PIDFILE" ]; then
 		pidlist=`cat $PIDFILE`
 	else
 		getpids $1
@@ -188,7 +188,7 @@ killproc()
                 fallback=""
         fi
 
-	if [ -n "$PIDFILE" -a -r $PIDFILE ]; then
+	if [ -n "$PIDFILE" -a -r "$PIDFILE" ]; then
 		pidlist=`cat $PIDFILE`
 	else
 		getpids $1
