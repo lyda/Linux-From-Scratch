@@ -1,3 +1,7 @@
+n/a - December 5, 2004
+	* Moved bootlog to use local2 service to avoide conflict with
+	  dhcpcd (DJ Lucas)
+
 3.0-rc1 - December 1, 2004
 	* rc-Interactive added (DJ Lucas)
 	* rc-Interactive moved to contrib (Nathan Coulson)
