@@ -93,6 +93,8 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 18th, 2004 [winkie]: Re-added Flex, M4 and Bison to Chapter 5.</para></listitem>
+
 <listitem><para>May 17th, 2004 [winkie]: Upgraded to Binutils 2.15. Removed Flex,
 M4 and Bison from Chapter 5. Upgraded to GCC 3.3.4-20040517.</para></listitem>
 
