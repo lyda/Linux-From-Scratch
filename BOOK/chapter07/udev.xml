@@ -11,7 +11,7 @@
 <primary sortas="a-Udev">Udev</primary>
 <secondary>usage</secondary></indexterm>
 
-<para>In <xref linkend="chapter-building-system"/>, we installed the udev
+<para>In <xref linkend="chapter-building-system"/>, we installed the Udev
 package.  Before we go into the details regarding how this works,
 a brief history of previous methods of handling devices is in
 order.</para>
@@ -22,7 +22,7 @@ creation method, whereby a great many device nodes are created under
 thousands of nodes), regardless of whether the corresponding hardware
 devices actually exist. This is typically done via a
 <command>MAKEDEV</command> script, which contains a number of
-calls to the 'mknod' program with the relevant major and minor device
+calls to the <command>mknod</command> program with the relevant major and minor device
 numbers for every possible device that might exist in the world. Using
 the udev method, only those devices which are detected by the kernel
 get device nodes created for them. Because these device nodes will be
@@ -181,7 +181,8 @@ this device available by creating the device node(s) for it.</para>
 <para>There are a few known problems when it comes to automatically creating
 devices nodes:</para>
 
-<para>1) A kernel driver may not export its data to sysfs</para>
+<para>1) A kernel driver may not export its data to <systemitem
+class="filesystem">sysfs</systemitem>.</para>
    
 <para>This is most common with third party drivers from outside the
 kernel tree.  These drivers will not end up having their device nodes
@@ -204,8 +205,8 @@ handled in one of two ways:</para>
 <listitem><para>Using an
 <quote>install</quote> line in
 <filename>/etc/modprobe.conf</filename>. This tells the
-modprobe command <quote>when loading this module, also load this other
-module, at the same time.</quote>  For example:</para>
+<command>modprobe</command> command <quote>when loading this module, 
+also load this other module, at the same time.</quote>  For example:</para>
 
 <screen><userinput>install snd-pcm modprobe -i snd-pcm ; modprobe \
     snd-pcm-oss ; true</userinput></screen>

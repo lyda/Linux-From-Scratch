@@ -45,13 +45,13 @@ correct:</para>
 FONT="lat9-16 -u iso01"</literal>
 EOF</userinput></screen>
 
-<note><para>The FONT line above is correct only for the ISO 8859-15
+<note><para>The <envar>FONT</envar> line above is correct only for the ISO 8859-15
 character set. If using ISO 8859-1 and, therefore, a pound sign
-instead of Euro, the correct FONT line is:</para>
+instead of Euro, the correct <envar>FONT</envar> line is:</para>
 
 <screen><userinput>FONT="lat1-16"</userinput></screen></note>
 
-<para>If the KEYMAP or FONT variable is not set, the
+<para>If the <envar>KEYMAP</envar> or <envar>FONT</envar> variable is not set, the
 <command>console</command> initscript will not run the corresponding
 program.</para>
 
@@ -87,7 +87,7 @@ EOF</userinput></screen>
 
 <para>To compile the keymap directly into the kernel instead of
 setting it every time from the <command>console</command> bootscript,
-follow the instructions given in <xref linkend="ch-bootable-kernel"/>.
+follow the instructions given in <xref linkend="ch-bootable-kernel" role="."/>
 Doing this ensures that the keyboard will always work as expected,
 even when booting into maintenance mode (by passing
 <parameter>init=/bin/sh</parameter> to the kernel), because the
@@ -98,7 +98,7 @@ will be handled correctly, and it is unlikely that a user would need
 to rely on non-ASCII characters while in maintenance mode.</para>
 
 <para>Since the kernel will set up the keymap, it is possible to omit
-the KEYMAP variable from the
+the <envar>KEYMAP</envar> variable from the
 <filename>/etc/sysconfig/console</filename> configuration file. It can
 also be left in place, if desired, without consequence.  Keeping it
 could be beneficial if running several different kernels where it is

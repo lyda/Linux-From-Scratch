@@ -11,7 +11,7 @@
 
 <para>The <filename>/etc/inputrc</filename> file deals with mapping
 the keyboard for specific situations. This file is the start-up file
-used by <application>readline</application>, the input-related
+used by <application>Readline</application>, the input-related
 library used by <application>Bash</application> and most other
 shells.</para>
 

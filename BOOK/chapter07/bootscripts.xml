@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-scripts-bootscripts" xreflabel="Bootscripts" role="wrap">
+<sect1 id="ch-scripts-bootscripts" role="wrap">
 <title>LFS-Bootscripts-&bootscripts-version;</title>
 <?dbhtml filename="bootscripts.html"?>
 

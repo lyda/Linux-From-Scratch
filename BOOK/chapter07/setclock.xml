@@ -34,7 +34,7 @@ time. Then, account for Daylight Savings Time, which requires
 substracting an hour (or only add six in the first place) during the summer
 months.</para>
 
-<para>Change the value of the <emphasis>UTC</emphasis> variable below
+<para>Change the value of the <envar>UTC</envar> variable below
 to a value of <parameter>0</parameter> (zero) if the hardware clock
 is <emphasis>not</emphasis> set to UTC time.</para>
 
@@ -51,7 +51,7 @@ EOF</userinput></screen>
 
 <para>A good hint explaining how to deal with time on LFS is available
 at <ulink url="&hints-root;time.txt"/>. It explains issues such as
-time zones, UTC, and the TZ environment variable.</para>
+time zones, UTC, and the <envar>TZ</envar> environment variable.</para>
 
 </sect1>
 
