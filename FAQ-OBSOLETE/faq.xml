@@ -80,23 +80,23 @@ to the information in the documentation.
 				and insure that you know enough not to embarrass yourself
 				if you have to ask someone.
 			</para></answer>
-			<answer><para><ulink url="http://www.linuxdoc.org/">http://www.linuxdoc.org/</ulink>
+			<answer><para><ulink url="http://www.tldp.org/"/>
 				has the HOW-TOs and a great deal of other documentation.
 				You might find something there.
 			</para></answer>
 			<answer><para>The linuxfromscratch.org site search includes the mailing lists.
 				Many questions have been discussed there at least once.  It's at
-				<ulink url="http://search.linuxfromscratch.org/">http://search.linuxfromscratch.org/</ulink>.
+				<ulink url="http://search.linuxfromscratch.org/"/>.
 			</para></answer>
 			<answer><para>For support type help, IRC is often best. It's faster,
 				and doesn't clog the mailinglists.
 				Information on the LFS IRC channel is at
-				<ulink url="http://www.linuxfromscratch.org/misc/irc.shtml">http://www.linuxfromscratch.org/misc/irc.shtml</ulink>.
+				<ulink url="http://www.linuxfromscratch.org/misc/irc.shtml"/>.
 			</para></answer>
 			<answer><para>As a last resort, there are the mailing lists.
 				People will get frustrated with you if you use the wrong one or cross post.
 				Mailing list information is at
-				<ulink url="http://www.linuxfromscratch.org/mailinglists/info.shtml">http://www.linuxfromscratch.org/mailinglists/info.shtml</ulink>:
+				<ulink url="http://www.linuxfromscratch.org/mailinglists/info.shtml"/>.
 				and tells which list to use.
 			</para></answer>
 		</qandaentry>
@@ -108,7 +108,7 @@ to the information in the documentation.
 			</para>
 			<para>For why you might want to do this, how to do it, and other
 				useful stuff, see the website at
-				<ulink url="http://www.linuxfromscratch.org/">http://www.linuxfromscratch.org/</ulink>.
+				<ulink url="http://www.linuxfromscratch.org/"/>.
 			</para></answer>
 		</qandaentry>
 	</qandadiv><!-- Introduction -->
@@ -143,7 +143,8 @@ or what is necessary to make it work.
 <qandaentry id="delete_key_not_work">
 <question><para>The Delete key doesn't work.
 </para></question>
-<answer><para>See: <ulink url="http://beyond.linuxfromscratch.org/view/cvs/chapter03/inputrc.html">http://beyond.linuxfromscratch.org/view/cvs/chapter03/inputrc.html</ulink>.
+<answer><para>See:
+<ulink url="http://beyond.linuxfromscratch.org/view/cvs/chapter03/inputrc.html"/>.
 </para></answer>
 </qandaentry>
 
@@ -164,8 +165,7 @@ When you're done with LFS, you've just started building your system.
 and want a typical install with X and a web browser
 but have no idea what packages you need.
 For this reason, there is the Beyond Linux From Scratch, or BLFS, project.
-It is at <ulink
-url="http://beyond.linuxfromscratch.org/">http://beyond.linuxfromscratch.org/</ulink>.
+It is at <ulink url="http://beyond.linuxfromscratch.org/"/>.
 </para>
 
 <!-- elist: ,lfs-dev,new -->
@@ -195,8 +195,8 @@ as is often the case with closed source software.
 (The most recent version of Netscape is reported to be fine.)
 </para>
 <para>If you want to try gcc 3, make sure you're using glibc 2.2.5 or later
-and get the ncurses patch from <ulink
-url="http://www.linuxfromscratch.org/~gerard/">http://www.linuxfromscratch.org/~gerard/</ulink>.
+and get the ncurses patch from
+<ulink url="http://www.linuxfromscratch.org/~gerard/"/>.
 </para></answer>
 </qandaentry>
 
@@ -215,8 +215,8 @@ url="http://www.linuxfromscratch.org/~gerard/">http://www.linuxfromscratch.org/~
 When it is, it will be considered and, if it seems better than LILO, used.
 </para>
 <para>If your current setup uses GRUB, there's no need to switch.
-In addition to the GRUB documentation, see the LFS "GRUB-Howto" Hint at <ulink
-url="http://hints.linuxfromscratch.org/hints/grub-howto.txt">http://hints.linuxfromscratch.org/hints/grub-howto.txt</ulink>
+In addition to the GRUB documentation, see the LFS "GRUB-Howto" Hint at
+<ulink url="http://hints.linuxfromscratch.org/hints/grub-howto.txt"/>.
 </para></answer>
 </qandaentry>
 
@@ -264,20 +264,20 @@ from the bottom up.
 </para></listitem>
 <listitem><para>RPM, the Redhat Package Manager,
 is used by a number of distributions.
-It is available from <ulink
-url="http://www.rpm.org/">http://www.rpm.org/</ulink>
-and there is an RPM Hint to help with installation at <ulink
-url="http://hints.linuxfromscratch.org/hints/rpm.txt">http://hints.linuxfromscratch.org/hints/rpm.txt</ulink>
+It is available from
+<ulink url="http://www.rpm.org/"/>,
+and there is an RPM Hint to help with installation at
+<ulink url="http://hints.linuxfromscratch.org/hints/rpm.txt"/>.
 </para></listitem>
 <listitem><para>Originally based on a script
 written by LFS' own Gerard Beekmans,
 install-log records a list of files installed by a package
 as the package is installed.
-It is available from <ulink
-url="http://install-log.sourceforge.net/">http://install-log.sourceforge.net/</ulink>
+It is available from
+<ulink url="http://install-log.sourceforge.net/"/>.
 </para></listitem>
-<listitem><para>GNU Stow is an interesting concept. See <ulink
-url="http://www.gnu.org/software/stow/">http://www.gnu.org/software/stow/</ulink>
+<listitem><para>GNU Stow is an interesting concept. See
+<ulink url="http://www.gnu.org/software/stow/"/>.
 </para></listitem>
 </itemizedlist>
 Do you know of one missing from that list?
@@ -651,15 +651,13 @@ It's located in make menuconfig under
 Here are some steps:
 <orderedlist>
 
-<listitem><para><ulink
-url="http://freshmeat.net/">http://freshmeat.net/</ulink>:
+<listitem><para><ulink url="http://freshmeat.net/"/>:
 Searching for <screen>foo</screen> will usually turn up a freshmeat page
 with links to an URL
 where you can check for newer releases not reported to freshmeat.
 </para></listitem>
 
-<listitem><para><ulink
-url="http://www.google.com/">http://www.google.com/</ulink>:
+<listitem><para><ulink url="http://www.google.com/"/>:
 Use a search string like
 <screen>+foo +index</screen>
 which tends to find "Index of /pub/foo" type pages, or even
@@ -667,8 +665,8 @@ which tends to find "Index of /pub/foo" type pages, or even
 to eliminate links to RPM packages and Debian's archives.
 </para></listitem>
 
-<listitem><para>Google may well turn up a link to something under <ulink
-url="http://www.ibiblio.org/pub/">http://www.ibiblio.org/pub/</ulink>.
+<listitem><para>Google may well turn up a link to something under
+<ulink url="http://www.ibiblio.org/pub/"/>.
 (If you want to look specifically on ibiblio.org use
 <screen>foo site:ibiblio.org</screen>)
 Beware that ibiblio.org may not have the most recent version.
@@ -686,24 +684,24 @@ which may list a primary site where more recent versions may be found.
 <!-- elist: ,lfs-support,blfs-support -->
 <qandaentry id="bootcd">
 <question><para>How do I make a bootable CD?</para></question>
-<answer><para>See the Boot-CD Hint and <ulink
-url="http://hints.linuxfromscratch.org/hints/bootcd.txt">http://hints.linuxfromscratch.org/hints/bootcd.txt</ulink>
+<answer><para>See the Boot-CD Hint and
+<ulink url="http://hints.linuxfromscratch.org/hints/bootcd.txt"/>.
 </para></answer>
 </qandaentry>
 
 <!-- elist: ,blfs-support -->
 <qandaentry id="portmap">
 <question><para>Where's portmap?</para></question>
-<answer><para>There are instructions in the NFS Hint at <ulink
-url="http://hints.linuxfromscratch.org/hints/nfs.txt">http://hints.linuxfromscratch.org/hints/nfs.txt</ulink>.
+<answer><para>There are instructions in the NFS Hint at
+<ulink url="http://hints.linuxfromscratch.org/hints/nfs.txt"/>.
 </para></answer>
 <answer><para>Also, Marc Heerdink writes:
 <blockquote><para>I have a version of tcp_wrappers and portmap up that have both
 been patched with the debian patches, adapted Makefiles for LFS plus all
 compile warnings/problems were fixed. Additionally, an lfs-install.sh is
 included in both tarballs that provides a really quick and dirty way to
-install them. They can be found at <ulink
-url="http://www.linuxfromscratch.org/~gimli/">http://www.linuxfromscratch.org/~gimli/</ulink>.
+install them. They can be found at
+<ulink url="http://www.linuxfromscratch.org/~gimli/"/>.
 You may want to add a note about these packages for people who want to do
 it the easy way :)
 </para></blockquote>
@@ -721,8 +719,8 @@ it the easy way :)
 <!-- elist: ,lfs-support -->
 		<qandaentry id="really-small"><question><para>How do I make that really small install the book mentions?</para></question>
 			<answer><para>Gerard describes the process of making a 5MB LFS install
-				in an email archived at <ulink
-				url="http://archive.linuxfromscratch.org/mail-archives/lfs-support/2001/10/0072.html">http://archive.linuxfromscratch.org/mail-archives/lfs-support/2001/10/0072.html</ulink>
+				in an email archived at
+				<ulink url="http://archive.linuxfromscratch.org/mail-archives/lfs-support/2001/10/0072.html"/>.
 			</para></answer>
 		</qandaentry>
 
@@ -794,7 +792,7 @@ and are left as an exercise for the reader.
 	<qandadiv id="compiling"><title>Compiling</title>
 <!-- elist: ,lfs-compile,blfs-support -->
 		<qandaentry id="sig11"><question><para>I'm getting fatal errors about signal 11.</para></question>
-			<answer><para>See <ulink url="http://www.bitwizard.nl/sig11/">http://www.bitwizard.nl/sig11/</ulink>.
+			<answer><para>See <ulink url="http://www.bitwizard.nl/sig11/"/>.
 			</para></answer>
 		</qandaentry>
 <!-- elist: ,lfs-compile,blfs-support -->
@@ -807,8 +805,8 @@ and are left as an exercise for the reader.
 				because binaries compiled for the newer processor
 				use features the older processor doesn't have.
 				To make the newer system compile for the older,
-				follow the hint at <ulink
-				url="http://hints.linuxfromscratch.org/hints/crosscompiling-x86.txt">http://hints.linuxfromscratch.org/hints/crosscompiling-x86.txt</ulink>
+				follow the hint at
+				<ulink url="http://hints.linuxfromscratch.org/hints/crosscompiling-x86.txt"/>.
 			</para></answer>
 		</qandaentry>
 <!-- elist: ,lfs-compile,blfs-support -->
@@ -919,14 +917,14 @@ make: *** [all-recursive-am] Error 2
 				a tested solution, but two solutions have been posted by others.
 				I suggest trying them in the following order:
 				<itemizedlist>
-					<listitem><para><ulink url="http://archive.linuxfromscratch.org/mail-archives/blfs-support/2001/06/0507.html">http://archive.linuxfromscratch.org/mail-archives/blfs-support/2001/06/0507.html</ulink>:
+					<listitem><para><ulink url="http://archive.linuxfromscratch.org/mail-archives/blfs-support/2001/06/0507.html"/>:
 					This attempts to correct the incorrectly generated config.h
 					and should be the correct solution if you can get it to work
 					by following the description given in the post.
 					</para></listitem>
 					<listitem><para>If that doesn't work, delete the sources,
 					re-extract, and try this:
-					<ulink url="http://archive.linuxfromscratch.org/mail-archives/blfs-support/2001/06/0495.html">http://archive.linuxfromscratch.org/mail-archives/blfs-support/2001/06/0495.html</ulink>
+					<ulink url="http://archive.linuxfromscratch.org/mail-archives/blfs-support/2001/06/0495.html"/>.
 					This attempts to avoid compiling uptime at all
 					since it won't be needed in chroot
 					and compiling uptime dynamically in chroot
@@ -949,15 +947,15 @@ make: *** [all-recursive-am] Error 2
 		</qandaentry>
 <!-- elist: ,lfs-support,blfs-support -->
 		<qandaentry id="kernel-modules"><question><para>How do I setup kernel modules?</para></question>
-			<answer><para>Follow the Module-HOWTO at <ulink
-				url="http://www.linuxdoc.org/HOWTO/Module-HOWTO/">http://www.linuxdoc.org/HOWTO/Module-HOWTO/</ulink>.
+			<answer><para>Follow the Module-HOWTO at
+			<ulink url="http://www.tldp.org/HOWTO/Module-HOWTO/"/>.
 			</para></answer>
 		</qandaentry>
 <!-- elist: ,lfs-compile --><!--
 		<qandaentry id="fileutils-error"><question><para>I'm getting errors when compiling fileutils.</para></question>
 			<answer><para>You may need to upgrade to the latest version or apply the fileutils patch.
-				Both are available from <ulink
-				url="http://download.linuxfromscratch.org/conglomeration/">http://download.linuxfromscratch.org/conglomeration/</ulink>.
+				Both are available from
+				<ulink url="http://download.linuxfromscratch.org/conglomeration/"/>.
 			</para></answer>
 		</qandaentry>
 -->
@@ -973,8 +971,8 @@ make: *** [all-recursive-am] Error 2
 		<qandaentry id="lilo-errors"><question><para>What do those LILO errors mean?</para></question>
 			<answer><para>The documentation in the LILO distribution lists all errors
 				(such as when it prints "LI" and stops),
-				but a quick overview is available at <ulink
-				url="http://sdb.suse.de/sdb/en/html/kgw_lilo_errmsg.html">http://sdb.suse.de/sdb/en/html/kgw_lilo_errmsg.html</ulink>.
+				but a quick overview is available at
+				<ulink url="http://sdb.suse.de/sdb/en/html/kgw_lilo_errmsg.html"/>.
 			</para></answer>
 		</qandaentry>
 <!-- elist: ,lfs-support -->
@@ -1030,11 +1028,12 @@ not the currently running kernel.
 </para></answer>
 <answer><para>For the long answer see these:
 <itemizedlist>
-<listitem><para>A post by Linus himself: <ulink
-url="http://www.uwsg.iu.edu/hypermail/linux/kernel/0007.3/0587.html">http://www.uwsg.iu.edu/hypermail/linux/kernel/0007.3/0587.html</ulink>
+<listitem><para>A post by Linus himself:
+<ulink url="http://www.uwsg.iu.edu/hypermail/linux/kernel/0007.3/0587.html"/>.
 </para></listitem>
-<listitem><para>Kernel Traffic #80, 4. Symlinks In The Kernel; Kernel/Library/etc Interface Dispute: <ulink
-url="http://kt.zork.net/kernel-traffic/kt20000814_80.txt">http://kt.zork.net/kernel-traffic/kt20000814_80.txt</ulink>
+<listitem><para>Kernel Traffic #80, 4. Symlinks In The Kernel;
+Kernel/Library/etc Interface Dispute:
+<ulink url="http://kt.zork.net/kernel-traffic/kt20000814_80.txt"/>
 (This covers the thread in which the above post occurred.)
 </para></listitem>
 </itemizedlist>
@@ -1073,9 +1072,9 @@ there isn't needed.
 			<qandaentry id="which"><question><para>Where's which?</para></question>
 				<answer><para>It's not in there! A proper which is available
 					from the GNU Project at
-					<ulink url="ftp://ftp.gnu.org/gnu/which/">ftp://ftp.gnu.org/gnu/which/</ulink>
+					<ulink url="ftp://ftp.gnu.org/gnu/which/"/>
 					or at
-					<ulink url="http://www.xs4all.nl/~carlo17/which/">http://www.xs4all.nl/~carlo17/which/</ulink>.
+					<ulink url="http://www.xs4all.nl/~carlo17/which/"/>.
 					Or for systems that don't require a good user environment
 					the simplest thing is probably to create a shell script
 					using these commands:
