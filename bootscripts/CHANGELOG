@@ -1,3 +1,7 @@
+n/a - March 26, 2004
+
+	* Updated fam daemon script.  It now uses the famd daemon instead of fam
+
 n/a - March 24, 2004
 
 	* Removed mount command out of nfs.  the netfs script already handles
