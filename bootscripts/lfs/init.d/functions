@@ -76,7 +76,7 @@ boot_mesg()
 	# and calling CURS_UP that many times
 	# It will also append our new text onto the BOOTMESG variable
 	else
-		local length=`echo -e "$BOOTMESG" | grep -c \$`
+		local length=`echo -e "$BOOTMESG" | sed -n -e "L ${WCOL}" |grep -c \$`
 		local count=0
 		BOOTMESG="$BOOTMESG$@"
 		while [ "${count}" -lt "${length}" ]; do
@@ -85,11 +85,8 @@ boot_mesg()
 		done
 	fi
 
-	# This will limit BOOTMESG to be no longer then what WCOL is set to,
-	# by adding \n's where appropriate.
-	BOOTMESG=`echo ${BOOTMESG} | sed -n -e "s/\\\\n/\n/g;L ${WCOL}"`
-
-	echo -e "${BOOTMESG}"
+	# This will wrap BOOTMESG to a maximum of $WCOL characters
+	echo -e "${BOOTMESG}" | sed -n -e "L ${WCOL}"
 }
 
 echo_ok()
