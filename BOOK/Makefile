@@ -1,58 +1,37 @@
-BASEDIR=~/lfs-book
-CHUNK_QUIET=0
-PDF_OUTPUT=LFS-BOOK.pdf
-NOCHUNKS_OUTPUT=LFS-BOOK.html
-XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
+BASEDIR=/home/macana/tmp/test-book-LFS/
 
 lfs:
-	xsltproc --xinclude --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
-	  -stringparam base.dir $(BASEDIR)/ stylesheets/lfs-chunked.xsl \
-	  index.xml
+	xsltproc --xinclude --nonet --stringparam base.dir $(BASEDIR) \
+	  stylesheets/lfs-chunked.xsl index.xml
 
-	if [ ! -e $(BASEDIR)/stylesheets ]; then \
-	  mkdir -p $(BASEDIR)/stylesheets; \
-	fi;
-	cp stylesheets/*.css $(BASEDIR)/stylesheets
+	mkdir -p $(BASEDIR)stylesheets && \
+	cp stylesheets/*.css $(BASEDIR)stylesheets
 
-	if [ ! -e $(BASEDIR)/images ]; then \
-	  mkdir -p $(BASEDIR)/images; \
-	fi;
-	cp $(XSLROOTDIR)/images/*.png \
-	  $(BASEDIR)/images
-	cd $(BASEDIR)/; sed -i -e "s@../stylesheets@stylesheets@g" \
+	mkdir -p $(BASEDIR)images && \
+	cp /usr/share/xml/docbook/xsl-stylesheets-1.65.1/images/*.png \
+	  $(BASEDIR)images
+
+	cd $(BASEDIR); sed -i -e "s@../stylesheets@stylesheets@g" \
 	  *.html
-	cd $(BASEDIR)/; sed -i -e "s@../images@images@g" \
+	cd $(BASEDIR); sed -i -e "s@../images@images@g" \
 	  *.html
 
-	sh goTidy $(BASEDIR)/
-
-#
-# This is the old "pdf" target. The old "print" target below has been  
-# renamed to "pdf" and will be used. This commented out previous_pdf
-# target can be removed eventually. It'll remain here for a bit for
-# historical reasons
-#
-#previous_pdf:
-#	xsltproc --xinclude --nonet --output $(BASEDIR)/lfs.fo stylesheets/lfs-pdf.xsl \
-#	  index.xml
-#	sed -i -e "s/inherit/all/" $(BASEDIR)/lfs.fo
-#	fop.sh $(BASEDIR)/lfs.fo $(BASEDIR)/$(PDF_OUTPUT)
-#	rm lfs.fo
+	cd $(BASEDIR); goTidy
 
 pdf:
-	xsltproc --xinclude --nonet --stringparam profile.condition print \
-		--output $(BASEDIR)/lfs-pdf.xml stylesheets/lfs-profile.xsl index.xml
-	xsltproc --nonet --output $(BASEDIR)/lfs-pdf.fo stylesheets/lfs-pdf.xsl \
-		$(BASEDIR)/lfs-pdf.xml
-	sed -i -e "s/inherit/all/" $(BASEDIR)/lfs-pdf.fo
-	fop.sh $(BASEDIR)/lfs-pdf.fo $(BASEDIR)/$(PDF_OUTPUT)
-	rm $(BASEDIR)/lfs-pdf.xml $(BASEDIR)/lfs-pdf.fo
+	xsltproc --xinclude --nonet --stringparam profile.condition print --output $(BASEDIR)lfs-pdf.xml \
+    stylesheets/lfs-profile.xsl index.xml
+	xsltproc --nonet --output $(BASEDIR)lfs-pdf.fo stylesheets/lfs-pdf.xsl $(BASEDIR)lfs-pdf.xml
+	cd $(BASEDIR); sed -i -e "s@inherit@all@" lfs-pdf.fo
+	cd $(BASEDIR); JAVA_HOME=/opt/java/jre1.3.1_02 FOP_HOME=/home/macana/tmp/fop \
+  /home/macana/tmp/fop/fop.sh lfs-pdf.fo lfs-pdf.pdf
 
 nochunks:
-	xsltproc --xinclude --nonet --output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
+	xsltproc --xinclude --nonet --output $(BASEDIR)lfs-nochunk.html \
 	  stylesheets/lfs-nochunks.xsl index.xml
-	tidy -config tidy.conf $(BASEDIR)/$(NOCHUNKS_OUTPUT) || true
+	tidy -config tidy.conf $(BASEDIR)lfs-nochunk.html || true
 
 validate:
 	xmllint --noout --nonet --xinclude --postvalid index.xml
+ 
 
