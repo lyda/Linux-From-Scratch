@@ -30,7 +30,7 @@
 <para>Prepare Gettext for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools --disable-libasprintf \
-    --disable-csharp</userinput></screen>
+    --without-csharp</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
@@ -44,7 +44,7 @@ exclude it to save time and space.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><parameter>--disable-csharp</parameter></term>
+<term><parameter>--without-csharp</parameter></term>
 <listitem><para>This tells Gettext not to use a C# compiler, even if a
 C# compiler is installed on the host. This needs to be done because
 once we enter the chroot environment, C# will no longer be

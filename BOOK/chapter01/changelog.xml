@@ -78,6 +78,7 @@ first a summary, then a detailed log.</para>
 
 <listitem><para>Feburary 24, 2005 [jim]</para>
 <itemizedlist>
+<listitem><para>Fixed: Arch: All - Bugzilla 1033 Gettext.</para></listitem>
 <listitem><para>Updated: Arch: Raq2 - Updated Colo to 1.1.7</para></listitem>
 <listitem><para>Updated: Arch: All - Updated Bzip2 to 1.0.3.</para></listitem>
 <listitem><para>Updated: Arch: All - Download file sizes.</para></listitem>
