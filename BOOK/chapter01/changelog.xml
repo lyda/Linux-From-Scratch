@@ -88,6 +88,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>March 26, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Linux to 2.6.11.6.</para></listitem>
+<listitem><para>Updated: Arch: All - Linux-libc-headers to 2.6.11.1.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
