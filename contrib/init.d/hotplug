@@ -7,27 +7,33 @@
 . $rc_functions
 
 # Exit quietly if you do not have hotplug installed
-if [ ! -x /sbin/hotplug ]; then
-	exit 0
-fi
+[ -x /sbin/hotplug ] || exit 0
 
 case "$1" in
-	start|restart|status)
-		# Set hotplug as the default manager of hotplug events
-		echo /sbin/hotplug > /proc/sys/kernel/hotplug
-
+	start|restart)
 		echo "Loading modules for system devices..."
 		for rc in /etc/hotplug/*.rc; do
 			$rc $1
 		done
 		print_status success
+
+		# Set hotplug as the default manager of hotplug events
+		echo /sbin/hotplug > /proc/sys/kernel/hotplug
 		;;
 	stop)
+		# Remove hotplug as the default manager of hotplug events
+		echo /bin/true > /proc/sys/kernel/hotplug
+
 		echo "Unloading modules for system devices..."
 		for rc in /etc/hotplug/*.rc; do
-			$rc $1
+			$rc stop
 		done
 		print_status success
+		;;
+	status)
+		for rc in /etc/hotplug/*.rc; do
+			$rc status
+		done
 		;;
 	*)
 		echo "Usage: $0 {start|stop|restart|status}"
