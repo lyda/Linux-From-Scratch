@@ -4,9 +4,9 @@
 # Based on localnet sysklogd script from LFS-3.1 and earlier.
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
-source /etc/sysconfig/rc
-source $rc_functions
-source /etc/sysconfig/network
+. /etc/sysconfig/rc
+. $rc_functions
+. /etc/sysconfig/network
 
 case "$1" in
 	start)
@@ -40,4 +40,3 @@ case "$1" in
 esac
 
 # End $rc_base/init.d/localnet
-

@@ -1,27 +1,35 @@
-#!/bin/bash
+#!/bin/sh
 # Begin $rc_base/init.d/setclock - Setting Linux Clock
 
 # Based on setclock script from LFS-3.1 and earlier.
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
-source /etc/sysconfig/rc
-source $rc_functions
-source /etc/sysconfig/clock
+. /etc/sysconfig/rc
+. $rc_functions
+. /etc/sysconfig/clock
 
-CLOCKPARAMS="--hctosys"
+CLOCKPARAMS=
 
 case "$UTC" in
 	yes|true|1)
 		CLOCKPARAMS="$CLOCKPARAMS --utc"
 		;;
+
 	no|false|0)
 		CLOCKPARAMS="$CLOCKPARAMS --localtime"
 		;;
+
 esac
 
-echo "Setting clock..."
-hwclock $CLOCKPARAMS
-evaluate_retval
+case $1 in
+	start)
+		echo "Setting clock..."
+		hwclock --hctosys $CLOCKPARAMS
+		evaluate_retval
+		;;
 
-# End $rc_base/init.d/setclock
+	*)
+		echo "Usage: $0 {start}"
+		;;
 
+esac

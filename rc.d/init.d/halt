@@ -1,12 +1,19 @@
-#!/bin/bash
+#!/bin/sh
 # Begin $rc_base/init.d/halt - Halt Script
 
 # Written by Gerard Beekmans  - gerard@linuxfromscratch.org
 
-source /etc/sysconfig/rc
-source $rc_functions
+. /etc/sysconfig/rc
+. $rc_functions
 
-halt -d -f -i -p
+case "$1" in
+	stop)
+		halt -d -f -i -p
+		;;
+	*)
+		echo "Usage: {stop}"
+		exit 1
+		;;
+esac
 
 # End $rc_base/init.d/halt
-

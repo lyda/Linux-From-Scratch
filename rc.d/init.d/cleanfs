@@ -1,22 +1,29 @@
-#!/bin/bash
+#!/bin/sh
 # Begin $rc_base/init.d/cleanfs - Clean file system
 
 # Written by Gerard Beekmans  - gerard@linuxfromscratch.org
 
-source /etc/sysconfig/rc
-source $rc_functions
+. /etc/sysconfig/rc
+. $rc_functions
 
-echo "Removing /var/run/* and /var/lock/*"
-rm -rf /var/run/* /var/lock/*
-evaluate_retval
+case "$1" in
+	start)
+		echo "Removing /var/run/* and /var/lock/*"
+		rm -rf /var/run/* /var/lock/*
+		evaluate_retval
 
-echo "Creating new /var/run/utmp..."
-touch /var/run/utmp && chmod 644 /var/run/utmp
-evaluate_retval
+		echo "Creating new /var/run/utmp..."
+		echo > /var/run/utmp && chmod 644 /var/run/utmp
+		evaluate_retval
 
-echo "Removing possible /etc/nologin /fastboot and /forcefsck..."
-rm -f /etc/nologin /fastboot /forcefsck
-evaluate_retval
+		echo "Removing possible /etc/nologin /fastboot and /forcefsck..."
+		rm -f /etc/nologin /fastboot /forcefsck
+		evaluate_retval
+		;;
+	*)
+		echo "Usage: $0 {start}"
+		exit 1
+		;;
+esac
 
 # End $rc_base/init.d/cleanfs
-

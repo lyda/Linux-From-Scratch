@@ -1,15 +1,22 @@
-#!/bin/bash
+#!/bin/sh
 # Begin $rc_base/init.d/loadkeys - Loadkeys Script
 
 # Based on loadkeys script from LFS-3.1 and earlier.
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
-source /etc/sysconfig/rc
-source $rc_functions
+. /etc/sysconfig/rc
+. $rc_functions
 
-echo -n "Loading keymap..."
-loadkeys -d
-evaluate_retval
+case "$1" in
+	start)
+		echo -n "Loading keymap..."
+		loadkeys -d
+		evaluate_retval
+		;;
+	*)
+		echo "Usage: $0 {start}"
+		exit 1
+		;;
+esac
 
 # End $rc_base/init.d/loadkeys
-
