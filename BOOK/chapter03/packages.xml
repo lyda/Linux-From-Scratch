@@ -117,9 +117,9 @@
 </varlistentry>
 
 <varlistentry>
-<term>GCC (&gcc-version;) - ~27,000KB:</term>
+<term>GCC (&gcc-version;) - ~22,000KB:</term>
 <listitem>
-<para><ulink url="&freshmeat;gcc/"/></para>
+<para><ulink url="ftp://gcc.gnu.org/pub/gcc/prerelease-3.3.4-20040517"/></para>
 </listitem>
 </varlistentry>
 
