@@ -35,7 +35,7 @@ Colo. Here is a simpe default.colo to use.</para>
 #
 lcd 'Booting 2.6.9...'
 load vmlinux-2.6.9.gz
-execute root=/dev/hda2 console=ttyS0,115200
+execute root=/dev/hda2 console=ttyS0,115200 ide1=noprobe
 EOF</userinput></screen>
 
 <para>Included in /usr/lib/colo/examples are more examples of a

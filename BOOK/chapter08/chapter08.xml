@@ -11,6 +11,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="fstab.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernel.xml"/> <!-- x86 -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernel-alpha.xml"/> <!-- alpha -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernel-ppc.xml"/> <!-- ppc -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernel-raq2.xml"/> <!-- raq2 -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grub.xml"/> <!-- x86 -->
