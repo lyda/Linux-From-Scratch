@@ -1,6 +1,9 @@
 n/a - May 4, 2004
 
 	* Update to the console script, prevent install of the console script
+	* chgrp's udev, /var/run/udev, if udev is a valid group, suggested by
+	  Zack
+	* Moved udev from contrib to lfs
 
 n/a - April 30, 2004
 

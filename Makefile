@@ -28,6 +28,7 @@ install: create-dirs create-service-dir
 	install -m 754 lfs/init.d/swap         ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/sysklogd     ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/template     ${EXTDIR}/rc.d/init.d/
+	install -m 754 lfs/init.d/udev         ${EXTDIR}/rc.d/init.d
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc0.d/K40sysklogd
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc0.d/K50network
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/K60sendsignals
@@ -53,6 +54,7 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc6.d/K90localnet
 	ln -sf ../init.d/reboot      ${EXTDIR}/rc.d/rc6.d/K99reboot
 	ln -sf ../init.d/mountkernfs ${EXTDIR}/rc.d/rcsysinit.d/S00mountkernfs
+	ln -sf ../init.d/udev        ${EXTDIR}/rc.d/rcsysinit.d/S10udev
 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rcsysinit.d/S20swap
 	ln -sf ../init.d/checkfs     ${EXTDIR}/rc.d/rcsysinit.d/S30checkfs
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rcsysinit.d/S40mountfs
@@ -366,11 +368,7 @@ install-modules: create-dirs
 	install -m 644 contrib/sysconfig/modules ${EXTDIR}/rc.d/sysconfig
 	ln -sf  ../init.d/modules ${EXTDIR}/rc.d/rcsysinit.d/S15modules
 
-install-udev: create-dirs
-	install -m 754 contrib/init.d/udev ${EXTDIR}/rc.d/init.d
-	ln -sf  ../init.d/udev ${EXTDIR}/rc.d/rcsysinit.d/S10udev
-
 .PHONY: install \
 	install-service-dhclient install-service-dhcpcd install-service-ipx install-service-pppoe \
 	install-alsa install-apache install-bind install-cups install-dhcp install-exim install-fcron install-gdm install-gpm install-heimdal install-lprng install-mysql install-netfs install-nfs-client install-nfs-server install-ntp install-portmap install-postfix install-postgresql install-proftpd install-random install-rsync install-samba install-sendmail install-sshd install-xinetd \
-	install-modules install-udev
+	install-modules
