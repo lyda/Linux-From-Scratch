@@ -32,6 +32,16 @@
     </div>
   </xsl:template>
 
+  <xsl:template name="appendix.titlepage">
+    <div class="titlepage">
+      <h1 class="{name(.)}">
+        <xsl:apply-templates select="." mode="label.markup"/>
+        <xsl:text>. </xsl:text>
+        <xsl:value-of select="title"/>
+      </h1>
+    </div>
+  </xsl:template>
+
   <xsl:template name="sect1.titlepage">
     <xsl:choose>
         <!-- I should find a better test -->
@@ -85,7 +95,7 @@
     </div>
   </xsl:template>
 
-    <!-- Harcoded a period for proper punctuation in xrefs. -->
+    <!-- Added the role param for proper punctuation in xref calls. -->
   <xsl:template match="*" mode="insert.title.markup">
     <xsl:param name="purpose"/>
     <xsl:param name="xrefstyle"/>

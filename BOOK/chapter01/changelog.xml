@@ -84,6 +84,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>September 10th, 2004 [manuel]: Appendix{a,b} - Changes in
+the XML, XSL and CSS code to do a better output.</para></listitem>
+
 <listitem><para>September 9th, 2004 [gerard]: Added missing colon to
 group name in Chapter 6-Coreutils used by the test
 suite.</para></listitem>

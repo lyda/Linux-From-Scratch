@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
 <appendix id="appendixb" xreflabel="Appendix B">
 <?dbhtml dir="appendixb"?>
-<title/>
-<?dbhtml filename="acknowledgements.html"?>
-
-<sect1 id="appendixb-acknowledgments">
 <title>Acknowledgments</title>
+<?dbhtml filename="acknowledgements.html"?>
 
 <para>We would like to thank the following people and organizations
 for their contributions to the Linux From Scratch Project.</para>
 
-<sect2> <title>Project Team Members</title>
+<bridgehead renderas="sect2">Project Team Members</bridgehead>
 
 <itemizedlist>
 
@@ -100,9 +97,7 @@ experiences with installing various packages.</para></listitem>
 
 </itemizedlist>
 
-</sect2>
-
-<sect2> <title>Translators</title>
+<bridgehead renderas="sect2">Translators</bridgehead>
 
 <itemizedlist>
 
@@ -125,11 +120,9 @@ translation project</para> </listitem>
 
 </itemizedlist>
 
-</sect2>
+<bridgehead renderas="sect2">Mirror Maintainers</bridgehead>
 
-<sect2> <title>Mirror Maintainers</title>
-
-<sect3> <title>North American Mirrors</title>
+<bridgehead renderas="sect3">North American Mirrors</bridgehead>
 
 <itemizedlist>
 
@@ -159,9 +152,7 @@ mirror</para></listitem>
 
 </itemizedlist>
 
-</sect3>
-
-<sect3> <title>South American Mirrors</title>
+<bridgehead renderas="sect3">South American Mirrors</bridgehead>
 
 <itemizedlist>
 
@@ -179,9 +170,7 @@ br.linuxfromscratch.org mirror</para></listitem>
 
 </itemizedlist>
 
-</sect3>
-
-<sect3> <title>European Mirrors</title>
+<bridgehead renderas="sect3">European Mirrors</bridgehead>
 
 <itemizedlist>
 
@@ -250,9 +239,7 @@ mirror</para></listitem>
 
 </itemizedlist>
 
-</sect3>
-
-<sect3> <title>Asian Mirrors</title>
+<bridgehead renderas="sect3">Asian Mirrors</bridgehead>
 
 <itemizedlist>
 
@@ -266,9 +253,7 @@ lfs.mirror.intermedia.com.sg mirror</para></listitem>
 
 </itemizedlist>
 
-</sect3>
-
-<sect3> <title>Australian Mirrors</title>
+<bridgehead renderas="sect3">Australian Mirrors</bridgehead>
 
 <itemizedlist>
 
@@ -278,11 +263,7 @@ mirror</para></listitem>
 
 </itemizedlist>
 
-</sect3>
-
-</sect2>
-
-<sect2><title>A very special thank you to our donators</title>
+<bridgehead renderas="sect2">A very special thank you to our donators</bridgehead>
 
 <itemizedlist>
 
@@ -303,10 +284,6 @@ url="http://www.linux.com">Linux.com</ulink>, donated a VA Linux 420
 linuxfromscratch.org server</para></listitem>
 
 </itemizedlist>
-
-</sect2>
-
-</sect1>
 
 </appendix>
 

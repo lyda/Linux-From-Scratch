@@ -93,6 +93,23 @@
           <xsl:apply-templates select="." mode="titleabbrev.markup"/>
         </a>
       </xsl:when>
+      <xsl:when test="local-name(.) = 'appendix'">
+        <a>
+          <xsl:attribute name="href">
+            <xsl:call-template name="href.target">
+              <xsl:with-param name="context" select="$toc-context"/>
+            </xsl:call-template>
+          </xsl:attribute>
+          <xsl:variable name="label">
+            <xsl:apply-templates select="." mode="label.markup"/>
+          </xsl:variable>
+          <xsl:copy-of select="$label"/>
+          <xsl:if test="$label != ''">
+            <xsl:value-of select="$autotoc.label.separator"/>
+          </xsl:if>
+          <xsl:apply-templates select="." mode="titleabbrev.markup"/>
+        </a>
+      </xsl:when>
       <xsl:when test="local-name(.) = 'chapter' or local-name(.) = 'preface'">
         <h4>
           <xsl:variable name="label">
