@@ -6,9 +6,6 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
-# Assure that sysfs is mounted and that udev is present.
-[ -d /sys/block -a -x /sbin/udev ] || exit 0
-
 # Create some things that sysfs does not, and should not export for us.  Feel
 # free to add devices to this list.
 make_extra_nodes() {
@@ -28,6 +25,15 @@ case "$1" in
 		[ -f /dev/.udev.tdb ] && exit 0
 
 		boot_mesg "Populating /dev with device nodes..."
+		if ! grep -q '[[:space:]]sysfs' /proc/mounts ; then
+			boot_log " sysfs filesystem not found.  Unable to continue"
+			evaluate_retval
+			boot_mesg "\nUnable to create devices without a sysfs filesystem" $FAILURE
+			boot_mesg "\nWhen you press Enter, this system will be halted."
+			boot_mesg "\n\nPress Enter to continue..." $NORMAL
+			read ENTER
+			halt -f
+		fi
 
 		# Mount a temporary file system over /dev, so that any devices
 		# made or removed during this boot don't affect the next one.
@@ -36,16 +42,11 @@ case "$1" in
 		mount -n -t ramfs ramfs /dev
 		if [ $? != 0 ]
 		then
-			print_status failure
 			boot_log "Unable to mount a ramfs onto /dev"
-			echo -n -e $FAILURE
-			echo
-			echo "Cannot mount a ramfs onto /dev, this system will be halted."
-			echo
-			echo -n "When you press Enter, this system will be halted."
-			echo -n -e $NORMAL
-			echo
-			echo "Press Enter to continue..."
+			print_status failure
+			boot_mesg "\nCannot mount a ramfs onto /dev, this system will be halted." $FAILURE
+			boot_mesg "\n\nWhen you press Enter, this system will be halted."
+			boot_mesg "\n\nPress Enter to continue..." $NORMAL
 			read ENTER
 
 			halt -f

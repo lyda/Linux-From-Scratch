@@ -43,7 +43,8 @@ FAILURE="\\033[1;31m"        # Failures are red
 BRACKET="\\033[1;34m"        # Brackets are blue
 
 # Set screen and bootlog message values to ero
-BOOTMESG=""
+BOOTMESG=""    #buffer for text meant for the logfile
+BOOTMESGCON="" #buffer for text meant for the console
 BOOTSERVICE=""
 
 #*******************************************************************************
@@ -51,7 +52,8 @@ BOOTSERVICE=""
 #
 # Purpose:      Sending information from bootup scripts to the console
 #
-# Inputs:       $@ is the message
+# Inputs:       $1 is the message
+#               $2 is the colorcode for the console
 #
 # Outputs:      Standard Output
 #
@@ -70,7 +72,8 @@ boot_mesg()
 {
 	# First call to boot_mesg, set BOOTMESG normally
 	if [ -z "$BOOTMESG" ]; then
-		BOOTMESG="$@"
+		BOOTMESG="${1}"
+		BOOTMESGCON="${2}${1}"
 	# Subsequent calls will overwrite the text already on the screen
 	# with replacement text by counting the lines in the last BOOTMESG
 	# and calling CURS_UP that many times
@@ -78,7 +81,8 @@ boot_mesg()
 	else
 		local length=`echo -e "$BOOTMESG" | sed -n -e "L ${WCOL}" |grep -c \$`
 		local count=0
-		BOOTMESG="$BOOTMESG$@"
+		BOOTMESG="${BOOTMESG}${1}"
+		BOOTMESGCON="${BOOTMESGCON}${2}${1}"
 		while [ "${count}" -lt "${length}" ]; do
 			echo -e -n "$CURS_UP"
 			count=$((${count}+1))
@@ -86,7 +90,7 @@ boot_mesg()
 	fi
 
 	# This will wrap BOOTMESG to a maximum of $WCOL characters
-	echo -e "${BOOTMESG}" | sed -n -e "L ${WCOL}"
+	echo -e "${BOOTMESGCON}" | sed -n -e "L ${WCOL}"
 }
 
 boot_log()
@@ -102,8 +106,9 @@ echo_ok()
 	else
 		boot_log "${BOOTSERVICE}""  [  OK  ]"
 	fi
-	# Reset BOOTMESG to keep from bleeding over again
+	# Reset BOOTMESG and BOOTMESGCON to keep from bleeding over again
 	BOOTMESG=""
+  BOOTMESGCON=""
 }
 
 echo_failure()
@@ -116,6 +121,7 @@ echo_failure()
 	fi
 	# Reset BOOTMESG to keep from bleeding over again
 	BOOTMESG=""
+  BOOTMESGCON=""
 }
 
 echo_warning()
@@ -128,6 +134,7 @@ echo_warning()
 	fi
 	# Reset BOOTMESG to keep from bleeding over again
 	BOOTMESG=""
+  BOOTMESGCON=""
 }
 
 print_error_msg()
