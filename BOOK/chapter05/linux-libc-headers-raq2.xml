@@ -28,8 +28,8 @@
 
 <para>Install the header files:</para>
 
-<screen><userinput>cp -R include/asm-mips /usr/include/asm
-cp -R include/linux /usr/include</userinput></screen>
+<screen><userinput>cp -R include/asm-mips /tools/include/asm
+cp -R include/linux /tools/include</userinput></screen>
 
 </sect2>
 

@@ -32,18 +32,10 @@
 <sect2 role="installation">
 <title>Installation of Linux-Libc-Headers</title>
 
-<para>For years it has been common practice to use <quote>raw</quote> kernel
-headers (straight from a kernel tarball) in <filename
-class="directory">/usr/include</filename>, but over the
-last few years, the kernel developers have taken a strong stance that
-this should not be done. This gave birth to the Linux-Libc-Headers
-Project, which was designed to maintain an Application Programming
-Interface (API) stable version of the Linux headers.</para>
-
 <para>Install the header files:</para>
 
-<screen><userinput>cp -R include/asm-i386 /usr/include/asm
-cp -R include/linux /usr/include</userinput></screen>
+<screen><userinput>cp -R include/asm-i386 /tools/include/asm
+cp -R include/linux /tools/include</userinput></screen>
 
 </sect2>
 
