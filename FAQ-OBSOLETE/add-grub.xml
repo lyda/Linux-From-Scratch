@@ -1,8 +1,8 @@
 <qandaentry id="add-grub">
 <question><para>Why not use GRUB instead of LILO?</para></question>
 <answer><para>GRUB will very likely replace LILO in the book
-when it reaches a stable release.
-If you'd like to see that happen, bug the GRUB maintainers,
+when the GRUB maintainers made a release they call stable.
+If you'd like to see that happen, you could bug the GRUB maintainers,
 since current releases seem perfectly stable.
 </para>
 <para>If your current setup uses GRUB or you'd like to use it anyway,
