@@ -13,7 +13,7 @@ lfs:
 	if [ ! -e $(BASEDIR)images ]; then \
 	  mkdir -p $(BASEDIR)images; \
 	fi;
-	cp /usr/share/xml/docbook/xsl-stylesheets-1.65.0/images/*.png \
+	cp /usr/share/xml/docbook/xsl-stylesheets-1.65.1/images/*.png \
 	  $(BASEDIR)images
 	sed -i -e "s@../stylesheets@stylesheets@" \
 	  $(BASEDIR){index,part1,part2,part3,part4}.html
