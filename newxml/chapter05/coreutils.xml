@@ -32,7 +32,7 @@ will reject their traditional syntax, a syntax that has been in use for
 approximately 30 years. This old syntax is so pervasive that compatibility
 should be preserved until the many places where it is used can be
 updated.  Backwards compatibility is achieved by setting the
-DEFAULT_POSIX2_VERSION environment variable to "199209" in the above
+DEFAULT_POSIX2_VERSION environment variable to &quot;199209&quot; in the above
 command.  If you don&apos;t want coreutils to be backwards compatible
 with the traditional syntax, then simply omit setting the DEFAULT_POSIX2_VERSION
 environment variable.  Realise though, that doing so will mean you&apos;ll have
