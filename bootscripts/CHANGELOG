@@ -4,6 +4,11 @@ n/a - January 30, 2004:
 	* Ash Compliancy
 	* Modified some scripts to follow template
 	* Reorganized functions, based upon Ash Compliancy Patch
+	* Added a sleep 5 to failure for evaulate_retval, and changed
+	  evaulate_retval to return true instead of false.  Instead, a
+	  exit 1 will indicate the script terminated abnormally, causing
+	  your system to wait until you hit ctrl-J
+	* Switched "Press enter to continue" to "Press <ctrl-j> to continue"
 	* replaced 3 with $KILLDELAY in sendsignals
 	* mountfs does not mount network filesystems [identified by _netdev
 	  in /etc/fstab]
