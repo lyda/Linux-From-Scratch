@@ -1,24 +1,24 @@
-n/a - May 4, 2004
+2.1.0 - May 4, 2004
 
 	* Update to the console script, prevent install of the console script
-	* chgrp's udev, /var/run/utmp, if utmp is a valid group, suggested by
-	  Zack
+	* Chgrp /var/run/utmp to group utmp if it exists.
 	* Moved udev from contrib to lfs
 	* Moved GATEWAY setup from /etc/rc.d/init.d/network to
 	  /etc/sysconfig/network-devices/services/static
 	* Use the contents of $PIDFILE, if it is set in the script
+	* Tagged as 2.1.0.
 
 n/a - April 30, 2004
 
 	* Moved the loadkeys script to console, and added setfont.  Contributed
 	  by Alexander E. Patrakov
 
-n/a - April 29, 2004
+2.0.5 - April 29, 2004
 
 	* Added the heimdal init script.
 	* Tagged as 2.0.5
 
-n/a - April 27, 2004
+2.0.4 - April 27, 2004
 
 	* Tagged as 2.0.4
 
