@@ -24,9 +24,9 @@ create_files() {
                         	        dir)    mkdir "$name"   ;;
                                 	file)   :> "$name"      ;;
 	                                dev)    case "$dtype" in
-        	                                char)   mknod "$name" c $maj $min
-                	                        block)  mknod "$name" b $maj $min
-                        	                pipe)   mknod "$name" p
+        	                                char)   mknod "$name" c $maj $min	;;
+                	                        block)  mknod "$name" b $maj $min	;;
+                        	                pipe)   mknod "$name" p			;;
 	                               	        esac            ;;
         	                        *)      echo "Unknown type: $type" >&2
                 	                        continue        ;;
