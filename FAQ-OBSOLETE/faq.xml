@@ -284,7 +284,8 @@ to the FAQ maintainer or an apropriate LFS mailing list so it can be added here.
 <qandadiv id="fee-compile"><title>Compile Time Errors</title>
 
 <!-- dlist: ,lfs-compile,blfs-support,new -->
-<qandadiv id="fee-compile-any"><title>Errors From Any Package</title>
+<qandadiv id="fee-compile-any">
+<title>Compile Time Errors From Any Package</title>
 
 <!-- elist: ,lfs-compile -->
 <qandaentry id="bad-interpreter-permission-denied">
@@ -375,7 +376,8 @@ You can install GTK+ (and GLIB) 1.2.x next to 2.x.
 </qandadiv><!-- fee-compile-any -->
 
 <!-- dlist: ,lfs-compile -->
-<qandadiv id="fee-compile-specific"><title>Errors From Specific Packages</title>
+<qandadiv id="fee-compile-specific">
+<title>Compile Time Errors From Specific Packages</title>
 
 <!-- elist: ,lfs-compile -->
 <qandaentry id="optimized-glibc-fail">
@@ -457,7 +459,7 @@ but others like ext3, reiser, jfs, and xfs are not.
 </qandadiv><!-- fee-compile-specific -->
 
 <!-- dlist: ,lfs-compile,blfs-support,new -->
-<qandadiv id="fee-compile-notlisted"><title>Errors Not Listed Above</title>
+<qandadiv id="fee-compile-notlisted"><title>Compile Time Errors Not Listed Above</title>
 
 <!-- elist: ,lfs-compile,new -->
 <qandaentry id="gnu-patches">
@@ -575,6 +577,34 @@ The Hitchhiker's Guide to the Galaxy, by Douglas Adams in the example.
 </qandadiv><!-- fee-compile-notlisted -->
 
 </qandadiv><!-- fee-compile -->
+
+<!-- dlist: ,new -->
+<qandadiv id="fee-runtime"><title>Run Time Errors</title>
+
+<!-- dlist: ,new -->
+<qandadiv id="fee-runtime-specific"><title>Run Time Errors From Specific Packages</title>
+
+<!-- elist: ,lfs-support,new -->
+<qandaentry id="char-major-10-135">
+<question><para>modprobe: Can't locate module char-major-10-135</para></question>
+<answer><para>"char-major-10-135" refers to the character device,
+major 10, minor 135, which is /dev/rtc.
+It provides access to the BIOS clock, or RTC, the Real Time Clock.
+See /usr/src/linux/Documentation/rtc.txt for more information.
+</para>
+<para>The error is because something, most likely hwclock,
+is trying to use /dev/rtc
+but you haven't configured kernel support for it in your kernel.
+Either delete /dev/rtc so hwclock won't try to use it
+or enable RTC support in your kernel.
+It's located in make menuconfig under
+"Character devices" -&gt; "Enhanced Real Time Clock Support".
+</para></answer>
+</qandaentry>
+
+</qandadiv><!-- fee-runtime-specific -->
+
+</qandadiv><!-- fee-runtime -->
 
 </qandadiv><!-- fee -->
 
@@ -976,21 +1006,6 @@ make: *** [all-recursive-am] Error 2
 			</para>
 			<screen>alias net-pf-7 loop
 			</screen></answer>
-		</qandaentry>
-<!-- elist: ,lfs-support -->
-		<qandaentry id="char-major-10-135"><question><para>I'm getting errors about char-major-10-135.</para></question>
-			<answer><para>Errors about char-major-10-135 refer to the character device,
-				major 10, minor 135, which is /dev/rtc.
-				It provides access to the BIOS clock, or RTC, the Real Time Clock.
-				Check /usr/src/linux/Documentation/rtc.txt for more information.
-			</para>
-			<para>Something, most likely hwclock, is trying to use it
-				but you haven't configured kernel support for it in your kernel.
-				Either delete /dev/rtc so hwclock won't try to use it
-				or enable RTC support in your kernel.
-				It's located in make menuconfig under
-				"Character devices" -&gt; "Enhanced Real Time Clock Support".
-			</para></answer>
 		</qandaentry>
 	</qandadiv><!-- specific-packages -->
 <!-- dlist: ,lfs-dev,lfs-support,xblfs-support -->
