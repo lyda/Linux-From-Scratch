@@ -67,8 +67,8 @@ case "${1}" in
 
 		boot_mesg " /tmp" ${NORMAL}
 		cd /tmp &&
-		find . -mindepth 1 ! -name lost+found \
-			-delete -xdev || failed=1
+		find . -xdev -mindepth 1 ! -name lost+found \
+			-delete || failed=1
 
 		boot_mesg " /var/lock" ${NORMAL}
 		cd /var/lock &&
