@@ -1,3 +1,7 @@
+n/a - June 1, 2004
+
+	* removed usbfs from mountkernfs, and mountfs
+
 n/a - May 24, 2004
 
 	* Added more example keymaps and font settings to /etc/sysconfig/console
