@@ -20,7 +20,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Upgraded to:</para>
 <itemizedlist>
 <listitem><para>autoconf-2.59</para></listitem>
-<listitem><para>automake-1.8.3</para></listitem>
+<listitem><para>automake-1.8.4</para></listitem>
 <listitem><para>coreutils-5.2.1</para></listitem>
 <listitem><para>e2fsprogs-1.35</para></listitem>
 <listitem><para>expect-5.40.1</para></listitem>
