@@ -1,4 +1,7 @@
 n/a - January 30, 2004:
+	* Reorganized the network system to accept multiple services.
+
+n/a - January 30, 2004:
 
 	* New maintainers for the lfs-bootscripts package are:
 	Jeremy Utley (jeremy@linuxfromscratch.org)
