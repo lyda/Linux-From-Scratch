@@ -48,7 +48,7 @@ case "${1}" in
 		# made or removed during this boot don't affect the next one.
 		# The reason we don't write to mtab is because we don't ever
 		# want /dev to be unavailable (such as by `umount -a').
-		mount -n -t tmpfs tmpfs /dev -o mode=775
+		mount -n -t tmpfs tmpfs /dev -o mode=755
 		if [ ${?} != 0 ]
 		then
 			boot_log "Unable to mount a tmpfs onto /dev."
