@@ -7,11 +7,11 @@
   <title>Iproute2-&iproute2-version;</title>
 <?dbhtml filename="iproute2.html"?>
   <indexterm zone="ch-system-iproute2">
-    <primary sortas="a-iproute2">iproute2</primary>
+    <primary sortas="a-iproute2">Iproute2</primary>
   </indexterm>
   <sect2 role="package">
     <title/>
-    <para>The iproute2 package contains programs for basic and advanced
+    <para>The Iproute2 package contains programs for basic and advanced
           IPV4-based networking.
     </para>
     <segmentedlist>
@@ -36,13 +36,13 @@
           common requirement on a base Linux system, remove the dependency on
           Berkeley DB by applying the patch using the command below.  If 
           the <command>arpd</command> binary is needed, instructions for
-          compiling Berkeley DB can be found in the BLFS Book at<ulink
+          compiling Berkeley DB can be found in the BLFS Book at <ulink
           url="&blfs-root;view/svn/content/databases.html#db"/>.
     </para>
 
     <screen><userinput>patch -Np1 -i ../iproute2-&iproute2-patch-version;-remove_db-1.patch</userinput></screen>
 
-    <para>Prepare iproute2 for compilation:</para>
+    <para>Prepare Iproute2 for compilation:</para>
     <screen><userinput>./configure </userinput></screen>
 
     <para>Compile the package:</para>
@@ -54,9 +54,9 @@
     <variablelist>
     <varlistentry>
     <term><parameter>SBINDIR=/sbin</parameter></term>
-    <listitem><para>This makes sure that the iproute2 binaries will install into
+    <listitem><para>This makes sure that the Iproute2 binaries will install into
       <filename class="directory">/sbin</filename>.  This is the correct
-      location according to the FHS, because some of the iproute2 binaries are used
+      location according to the FHS, because some of the Iproute2 binaries are used
       in the bootscripts.</para>
     </listitem>
     </varlistentry>
@@ -122,7 +122,7 @@
                 table and change routing table rules.
           </para>
 
-          <para><command>ip tunnel</command> allows user to look at the ip
+          <para><command>ip tunnel</command> allows user to look at the IP
                 tunnels and their properties, and change them.
           </para>
 
@@ -160,7 +160,7 @@
           <command>routef</command>
         </term>
         <listitem>
-          <para>a component of ip route. This is for flushing the routing
+          <para>a component of <command>ip route</command>. This is for flushing the routing
                 tables.
           </para>
           <indexterm zone="ch-system-iproute2 routef">
@@ -174,7 +174,7 @@
           <command>routel</command>
         </term>
         <listitem>
-          <para>a component of ip route. This is for listing the routing
+          <para>a component of <command>ip route</command>. This is for listing the routing
                 tables.
           </para>
           <indexterm zone="ch-system-iproute2 routel">
@@ -212,7 +212,7 @@
           <command>ss</command>
         </term>
         <listitem>
-          <para>similar to the netstat command. Shows active connections.</para>
+          <para>similar to the <command>netstat</command> command. Shows active connections.</para>
           <indexterm zone="ch-system-iproute2 ss">
             <primary sortas="b-ss">ss</primary>
           </indexterm>

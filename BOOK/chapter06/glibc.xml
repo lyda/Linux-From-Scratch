@@ -36,7 +36,7 @@ optimization flags (including the <parameter>-march</parameter> and
 <parameter>-mcpu</parameter> options) are changed. If any environment
 variables that override default optimizations have been defined, such
 as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
-unset them when building GCC.</para>
+unset them when building Glibc.</para>
 
 <para>The Glibc build system is self-contained and will install
 perfectly, even though the compiler specs file and linker are still
@@ -226,7 +226,7 @@ running:</para>
 <screen><userinput>cp --remove-destination /usr/share/zoneinfo/<replaceable>[xxx]</replaceable> \
     /etc/localtime</userinput></screen>
 
-<para>Replace [xxx] with the name of the time zone that the
+<para>Replace <replaceable>[xxx]</replaceable> with the name of the time zone that the
 <command>tzselect</command> provided (e.g., Canada/Eastern).</para>
 
 <para>The meaning of the cp option:</para>
