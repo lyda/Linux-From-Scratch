@@ -363,6 +363,15 @@ alias net-pf-7 loop
 			LFS Hint. It is one of the LFS Hints which can be found at <ulink
 			url="http://www.linuxfromscratch.org/services/lfshints.php">http://www.linuxfromscratch.org/services/lfshints.php</ulink>.
 		</para>
+		<section id="new-version"><title>There's a new version of package Foo.</title>
+			<para>
+				There's no need to mention it unless you have something
+				useful to add such as changes in the compile instructions.
+				If it isn't already in CVS, it's on the todo list or
+				we've chosen not to use it for some reason. A search of
+				the list archives may reveal the reason.
+			</para>
+		</section>
 		<section id="why-not-add"><title>Why not add / use package X?</title>
 			<section id="add-grub"><title>GRUB instead of LILO</title>
 				<para>
