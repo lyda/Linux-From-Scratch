@@ -1,3 +1,7 @@
+n/a - March 31, 2004
+
+	* Changed "Press Enter" on unknown error to whote
+
 n/a - March 29, 2004
 
 	* Fixed the rc5.d symlink for ntp so it creates S26ntp instead
