@@ -1,3 +1,8 @@
+CVS - May 26th, 2002:
+
+	* Fixed up checklfs to work with non-ext2 filesystems too (such as
+	minix).
+
 1.9 - April 5th, 2002:
 
 	* reloadproc function had a missing '=' in the "failure 1" command (it
