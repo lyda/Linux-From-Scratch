@@ -103,3 +103,7 @@ div.important {
 div.caution {
     padding-left: 0.2in
 }
+
+.command {
+    font-family: courier, monospace;
+}
