@@ -1,3 +1,12 @@
+n/a - May 24, 2004
+
+	* Added more example keymaps and font settings to /etc/sysconfig/console
+
+n/a - May 23, 2004
+
+	* Changed the symlink for the optional modules script
+	* Removed depmod from the optional modules script
+
 n/a - May 20, 2004
 
 	* Removed the random script.  There is not a strong enough case for

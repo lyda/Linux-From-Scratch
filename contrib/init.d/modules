@@ -11,14 +11,6 @@
 
 case "$1" in
 	start)
-		# Figure out the kernel module dependencies if we have write
-		# permission to the modules directory.
-		if [ -w /lib/modules/`uname -r` ]; then
-			echo "Calculating module dependencies..."
-			depmod --quick
-			evaluate_retval
-		fi
-
 		# Only try to load modules if the user has actually given us
 		# some modules to load.
 		if egrep -qv '^(#|$)' /etc/sysconfig/modules 2>/dev/null; then
