@@ -25,17 +25,20 @@ run-level directories
 
 <para>Which interfaces are brought up and down by the network script depends on
 the files in the <filename class="directory">/etc/sysconfig/network-devices</filename> directory. This
-directory should contain files in the form of <filename>ifconfig.xyz</filename>, where <quote>xyz</quote> is a
-network interface name (such as eth0 or eth0:1)</para>
+directory should contain subdirectories in the form of
+<filename>ifconfig.xyz</filename>, where <quote>xyz</quote> is a network
+interface name (such as eth0 or eth0:1)</para>
 
-<para>If you decide to rename or move this <filename class="directory">/etc/sysconfig/network-devices</filename>
-directory, make sure you update the <filename>/etc/sysconfig/rc</filename> file as well and
+<para>If you decide to rename or move this
+<filename class="directory">/etc/sysconfig/network-devices</filename> directory,
+make sure you update the <filename>/etc/sysconfig/rc</filename> file as well and
 update the <quote>network_devices</quote> by providing it with the new path.</para>
 
-<para>Now, new files are created in that directory.
-The following command creates a sample <filename>ifconfig.eth0</filename> file:</para>
+<para>Now, new files are created in that directory.  The following command
+creates a sample <filename>ipv4</filename> file for the
+<filename>eth0</filename> device:</para>
 
-<screen><userinput>cat &gt; /etc/sysconfig/network-devices/ifconfig.eth0 &lt;&lt; "EOF"
+<screen><userinput>cat &gt; /etc/sysconfig/network-devices/ifconfig.eth0/ipv4 &lt;&lt; "EOF"
 ONBOOT=yes
 SERVICE=ipv4-static
 IP=192.168.1.1
