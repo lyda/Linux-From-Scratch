@@ -206,6 +206,10 @@ sklein ~/tmp-0.0 $
 cd /usr/bin
 ln -s gcc cc
 			</screen>
+			<para>
+				If that doesn't do it, check the file config.log created by configure.
+				Errors go here and may indicate the problem.
+			</para>
 		</section>
 		<section id="missing-x-includes"><title>A package can't find my X headers.</title>
 			<para>
