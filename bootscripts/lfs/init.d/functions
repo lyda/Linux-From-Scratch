@@ -112,7 +112,7 @@ echo_ok()
 	fi
 	# Reset BOOTMESG and BOOTMESGCON to keep from bleeding over again
 	BOOTMESG=""
-  BOOTMESGCON=""
+	BOOTMESGCON=""
 }
 
 echo_failure()
@@ -125,7 +125,7 @@ echo_failure()
 	fi
 	# Reset BOOTMESG to keep from bleeding over again
 	BOOTMESG=""
-  BOOTMESGCON=""
+	BOOTMESGCON=""
 }
 
 echo_warning()
@@ -138,7 +138,7 @@ echo_warning()
 	fi
 	# Reset BOOTMESG to keep from bleeding over again
 	BOOTMESG=""
-  BOOTMESGCON=""
+	BOOTMESGCON=""
 }
 
 print_error_msg()
