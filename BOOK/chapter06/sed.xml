@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-sed" xreflabel="Sed" role="wrap">
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-sed" xreflabel="Sed" role="wrap">
 <title>Sed-&sed-version;</title>
 <?dbhtml filename="sed.html"?>
 
 <indexterm zone="ch-system-sed"><primary sortas="a-Sed">Sed</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><title/>
 <para>The Sed package contains a stream editor.</para>
 
 <segmentedlist>
@@ -23,9 +24,9 @@
 <seglistitem><seg>Bash, Binutils, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Texinfo</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
+<section role="installation">
 <title>Installation of Sed</title>
 
 <para>Prepare Sed for compilation:</para>
@@ -43,10 +44,10 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Texinfo</seg></seglistitem>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-sed" role="content"><title>Contents of Sed</title>
+<section xml:id="contents-sed" role="content"><title>Contents of Sed</title>
 
 <segmentedlist>
 <segtitle>Installed program</segtitle>
@@ -55,7 +56,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Texinfo</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="sed">
+<varlistentry xml:id="sed">
 <term><command>sed</command></term>
 <listitem>
 <indexterm zone="ch-system-sed sed"><primary sortas="b-sed">sed</primary></indexterm>
@@ -64,8 +65,8 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Texinfo</seg></seglistitem>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
 
 
-</sect1>
+</section>

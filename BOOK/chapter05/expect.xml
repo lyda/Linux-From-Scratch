@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-expect" xreflabel="Expect" role="wrap">
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-tools-expect" xreflabel="Expect" role="wrap">
 <title>Expect-&expect-version;</title>
 <?dbhtml filename="expect.html"?>
 
 <indexterm zone="ch-tools-expect"><primary sortas="a-Expect">Expect</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><title/>
 <para>The Expect package contains a program for carrying out scripted dialogues
 with other interactive programs.</para>
 
@@ -24,9 +25,9 @@ with other interactive programs.</para>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed, Tcl</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
+<section role="installation">
 <title>Installation of Expect</title>
 
 <para>First fix a bug that can result in bogus failures during the GCC test
@@ -83,10 +84,10 @@ of the supplementary expect scripts which are not needed.</para></listitem>
 
 <para>You can now remove the source directories of both Tcl and Expect.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-expect" role="content"><title>Contents of Expect</title>
+<section xml:id="contents-expect" role="content"><title>Contents of Expect</title>
 
 <segmentedlist>
 <segtitle>Installed program</segtitle>
@@ -96,7 +97,7 @@ of the supplementary expect scripts which are not needed.</para></listitem>
 
 <variablelist><title>Short description</title>
 
-<varlistentry id="expect">
+<varlistentry xml:id="expect">
 <term><command>expect</command></term>
 <listitem>
 <indexterm zone="ch-tools-expect expect"><primary sortas="b-expect">expect</primary></indexterm>
@@ -105,7 +106,7 @@ programs according to a script.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="libexpect">
+<varlistentry xml:id="libexpect">
 <term><filename class="libraryfile">libexpect-5.42.a</filename></term>
 <listitem>
 <para>contains functions that allow Expect to be used as a Tcl extension or to
@@ -116,7 +117,7 @@ sortas="c-libexpect-5.42">libexpect-5.42</primary></indexterm>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
 
-</sect1>
+</section>
