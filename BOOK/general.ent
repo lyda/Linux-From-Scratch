@@ -76,6 +76,7 @@
 <!ENTITY openssl-version "0.9.7e">
 <!ENTITY openssh-version "3.9p1">
 <!ENTITY patch-version "2.5.9">
+<!ENTITY parted-version "1.6.22">
 <!ENTITY perl-version "5.8.6">
 <!ENTITY procps-version "3.2.5">
 <!ENTITY psmisc-version "21.6">

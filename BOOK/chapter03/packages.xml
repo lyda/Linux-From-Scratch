@@ -368,6 +368,13 @@
 </listitem>
 </varlistentry>
 
+<varlistentry arch="ppc">
+<term>Parted (&parted-version;) - 1.4 MB:</term>
+<listitem>
+<para><ulink url="&gnu;/parted-&parted-version;.tar.gz"/></para>
+</listitem>
+</varlistentry>
+
 <varlistentry>
 <term>Perl (&perl-version;) - 12 MB:</term>
 <listitem>

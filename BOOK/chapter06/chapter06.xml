@@ -70,6 +70,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sysklogd.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sysvinit.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="tar.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="parted.xml"/> <!-- ppc -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="udev.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="util-linux.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="openssl.xml"/> <!-- raq2 -->

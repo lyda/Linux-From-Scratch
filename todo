@@ -2,6 +2,7 @@ TODO List
 
 validate ppc instructions
 fix yaboot instructions
+update sizes, SBU and files installed for parted
 fix alpha instructions
 get alpha bootloader information
 geting OSX to LFS hint writer involved
