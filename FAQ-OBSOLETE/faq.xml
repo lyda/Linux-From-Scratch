@@ -95,6 +95,7 @@
 		</qandadiv>
 		<qandadiv id="fee-compile-specific">
 				<title>Compile Time Errors From Specific Packages</title>
+			&conflicting-gethostname;
 			&no-linuxthreads;
 			&perl-missing-separator;
 			&unknown-pseudo-op-hidden;

@@ -8,6 +8,7 @@
 <!ENTITY conf-guess-fail SYSTEM "conf-guess-fail.xml">
 <!ENTITY config-hang-size_t SYSTEM "config-hang-size_t.xml">
 <!ENTITY config-not-gnu-c SYSTEM "config-not-gnu-c.xml">
+<!ENTITY conflicting-gethostname SYSTEM "conflicting-gethostname.xml">
 <!ENTITY contributing-to-faq SYSTEM "contributing-to-faq.xml">
 <!ENTITY cross-compile SYSTEM "cross-compile.xml">
 <!ENTITY delete_key_not_work SYSTEM "delete_key_not_work.xml">
