@@ -1,6 +1,6 @@
-# Begin /etc/sysconfig/createfiles 
+# Begin /etc/sysconfig/console
 
 KEYMAP=
 FONT=
 
-# End /etc/sysconfig/createfiles 
+# End /etc/sysconfig/console
