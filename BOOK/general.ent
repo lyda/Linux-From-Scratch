@@ -51,7 +51,7 @@
 <!ENTITY linux-libc-headers-version "2.6.10.0">
 <!ENTITY m4-version "1.4.2">
 <!ENTITY make-version "3.80">
-<!ENTITY man-version "1.5o1">
+<!ENTITY man-version "1.5p">
 <!ENTITY man-pages-version "2.01">
 <!ENTITY mktemp-version "1.5">
 <!ENTITY module-init-tools-version "3.1">
