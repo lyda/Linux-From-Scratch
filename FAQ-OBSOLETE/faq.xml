@@ -17,15 +17,25 @@
 <qandaset>
 <!-- dlist: ,lfs-dev,lfs-support,blfs-support -->
 	<qandadiv><title>Introduction</title>
+
 <!-- elist: ,lfs-dev,lfs-support,blfs-support -->
-		<qandaentry><question><para>Why this FAQ?</para></question>
-			<answer><para>I started this FAQ in an attempt to make the traffic on
-				the LFS mailing lists more manageable and improve the signal
-				to noise ratio. I'm going to limit myself to things that come
-				up often there leaving tips and such for
-				<ulink url="http://hints.linuxfromscratch.org">LFS-Hints</ulink>.
-			</para></answer>
-		</qandaentry>
+<qandaentry id="why-faq">
+<question><para>Why this FAQ?</para></question>
+<answer><para>The FAQ tries to answer questions before they're asked.
+This saves the trouble of asking them,
+and sometimes, the trouble of encountering a problem.
+</para>
+<para>This does reduce traffic and improve the signal to noise ratio
+but that is merely a useful side effect.
+</para>
+<para>Since the FAQ isn't the natural place to look for information,
+items should be added to it
+only if they can't be added to the appropriate documentation,
+although sometimes it will be necessary to add a pointer
+to the information in the documentation.
+</para></answer>
+</qandaentry>
+
 <!-- elist: ,lfs-support -->
 		<qandaentry><question><para>What is appropriate for lfs-support?</para></question>
 			<answer><para>From the
