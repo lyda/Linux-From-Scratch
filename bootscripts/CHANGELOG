@@ -1,6 +1,6 @@
-CVS - May 26th, 2002:
+1.10 - September 12th, 2002:
 
-	* Fixed up checklfs to work with non-ext2 filesystems too (such as
+	* Fixed up checkfs to work with non-ext2 filesystems too (such as
 	minix).
 
 1.9 - April 5th, 2002:
