@@ -42,8 +42,7 @@ case "$1" in
 			echo
 			echo "Press Enter to continue..."
 			read ENTER
-			echo "gonna run: $rc_base/init.d/halt"
-			$rc_base/init.d/halt stop
+			halt -f
 		fi
 
 		if [ -f /forcefsck ]
