@@ -1,3 +1,7 @@
+n/a - May 4, 2004
+
+	* Update to the console script, prevent install of the console script
+
 n/a - April 30, 2004
 
 	* Moved the loadkeys script to console, and added setfont.  Contributed
@@ -6,6 +10,7 @@ n/a - April 30, 2004
 n/a - April 29, 2004
 
 	* Added the heimdal init script.
+	* Tagged as 2.0.5
 
 n/a - April 27, 2004
 
