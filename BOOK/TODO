@@ -18,3 +18,13 @@
 
  - update the LFS development web page reflecting how we *should* use the
    testing & unstable trees
+
+ - Fix up the networking stuff.  See:
+
+ - Fix up the bootscript descriptions.  /etc/rc.d/init.d and /etc/sysconfig
+   scripts are intermingled.  Either separate them out or make it clear which
+   ones are installed where.
+
+ - Chapter05/hotreqs.html contains "experimental nature" - our testing/stable
+   books shouldn't be experimental!  The link to chapter08/chapter08.html should
+   be to chapter08/kernel.html
