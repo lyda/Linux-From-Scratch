@@ -6,6 +6,10 @@ n/a - June 21, 2004
 	* Moved removal of /fastboot and /forcefsck to just after the root fs
 	  becomes writable, and dropped the removal of /etc/nologin
 	* Cleaned and tweaked both the output and actions of cleanfs
+	* Removed the disabling of hotplug from sendsignals
+	* Removed anything that might call "rmmod" in hotplug, since rmmod is
+	  notoriously troublesome in the 2.6.x kernels, and call it with the
+	  stop argument from runlevels 0 and 6
 
 n/a - June 20, 2004
 
