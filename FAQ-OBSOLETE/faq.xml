@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
--- openjade (as of 1.3) doesn't support getting DTDs from the net
-	"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
---
 	"/usr/share/docbook/docbookx.dtd"
 	[
 
@@ -10,6 +7,12 @@
 %listofentries;
 
 ]>
+<!-- the correct network DTD location is:
+	"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
+	the local location used above avoids the need for network access
+	and allows use of openjade which (as of 1.3) doesn't support
+	getting DTDs from the net
+-->
 
 <article class="faq"><title>The LFS FAQ</title>
 	<articleinfo>
