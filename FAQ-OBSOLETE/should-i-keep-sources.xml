@@ -1,6 +1,7 @@
 <qandaentry id="should-i-keep-sources">
 <question><para>Do I need to keep the source after installing?</para></question>
-<answer><para>No. You should delete the source after installing.
+<answer><para>No. You should delete the source after installing each package.
+The only exception to this is the Linux Kernel.
 The source is only useful for reinstalling without recompiling.
 To recompile, always delete the old source and start fresh
 because "make clean" and friends are not always trustworthy.
