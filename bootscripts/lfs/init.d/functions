@@ -83,7 +83,7 @@ boot_mesg()
 	# and calling CURS_UP that many times
 	# It will also append our new text onto the BOOTMESG variable
 	else
-		local length=`echo -e "$BOOTMESGCON" | sed -n -e "s/\$/\n/g;L ${WCOL}" |grep -c \$`
+		local length=`echo -e -n "$BOOTMESGCON" | sed -n -e "s/\$/\n/g;L ${WCOL}" |grep -c \$`
 		local count=0
 		BOOTMESG="${BOOTMESG} \b${1}"
 		BOOTMESGCON="${BOOTMESGCON} \b${2} \b${1}"
@@ -94,7 +94,7 @@ boot_mesg()
 	fi
 
 	# This will wrap BOOTMESG to a maximum of $WCOL characters
-	echo -e "${BOOTMESGCON}" | sed -n -e "s/\$/\n/g;L ${WCOL}"
+	echo -e -n "${BOOTMESGCON}" | sed -n -e "s/\$/\n/g;L ${WCOL}"
 }
 
 boot_log()
@@ -104,7 +104,7 @@ boot_log()
 
 echo_ok()
 {
-	echo -e "${CURS_UP}""${SET_COL}""${BRACKET}""[""${SUCCESS}""  OK  ""${BRACKET}""]""${NORMAL}"
+	echo -e "${SET_COL}""${BRACKET}""[""${SUCCESS}""  OK  ""${BRACKET}""]""${NORMAL}"
 	if [ -z "${BOOTSERVICE}" ]; then
 		boot_log "${BOOTMESG}""  [  OK  ]"
 	else
@@ -117,7 +117,7 @@ echo_ok()
 
 echo_failure()
 {
-	echo -e "${CURS_UP}""${SET_COL}""${BRACKET}""[""${FAILURE}""FAILED""${BRACKET}""]""${NORMAL}"
+	echo -e "${SET_COL}""${BRACKET}""[""${FAILURE}""FAILED""${BRACKET}""]""${NORMAL}"
 	if [ -z "${BOOTSERVICE}" ]; then
 		boot_log "${BOOTMESG}""  [FAILED]"
 	else
@@ -130,7 +130,7 @@ echo_failure()
 
 echo_warning()
 {
-	echo -e "${CURS_UP}""${SET_WCOL}""$@""${SET_COL}""${BRACKET}""[""${WARNING}"" WARN ""${BRACKET}""]""${NORMAL}"
+	echo -e "${SET_WCOL}""$@""${SET_COL}""${BRACKET}""[""${WARNING}"" WARN ""${BRACKET}""]""${NORMAL}"
 	if [ -z "${BOOTSERVICE}" ]; then
 		boot_log "${BOOTMESG}""$@""  [ WARN ]"
 	else
