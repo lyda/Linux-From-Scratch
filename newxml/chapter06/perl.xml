@@ -12,7 +12,7 @@
 <screen>&buildtime; 2.9 SBU
 &diskspace; 143 MB</screen>
 
-<para>For its installation Perl depends on: Bash, Binutils, Coreutils, Diffutils,
+<para>Perl installation depends on: Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 
 
@@ -22,7 +22,7 @@ Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 
 <para>If you want full control over the way Perl is set up, you can run the
 interactive <command>Configure</command> script and hand-pick the way this
-package is built. If, however, you guess you can live with the (sensible)
+package is built. If you think you can live with the (sensible)
 defaults it auto-detects, then prepare Perl for compilation with:</para>
 
 <screen><userinput>./configure.gnu --prefix=/usr -Dpager="/bin/less -isR"</userinput></screen>
@@ -49,7 +49,7 @@ resolve the name <emphasis>localhost</emphasis>:</para>
 
 <screen><userinput>make test</userinput></screen>
 
-<para>And install the package:</para>
+<para>Finally, install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 

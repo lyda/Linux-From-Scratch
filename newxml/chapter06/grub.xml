@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.2 SBU
 &diskspace; 10 MB</screen>
 
-<para>For its installation Grub depends on: Bash, Binutils, Coreutils, Diffutils,
+<para>Grub installation depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
@@ -23,7 +23,7 @@ GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 <para>This package is known to behave badly when you have changed its default
 optimization flags (including the -march and -mcpu options). Therefore, if you
 have defined any environment variables that override default optimizations,
-such as CFLAGS and CXXFLAGS, we recommend unsetting them when building
+such as CFLAGS and CXXFLAGS, we recommend un-setting them when building
 Grub.</para>
 
 <para>First prepare Grub for compilation:</para>
@@ -34,7 +34,7 @@ Grub.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Now install it:</para>
 
 <screen><userinput>make install
 mkdir /boot/grub
@@ -62,7 +62,7 @@ grub-md5-crypt, grub-terminfo and mbchk</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>grub</command> is the GRand Unified Bootloader'sRequired disk space:      command
+<para><command>grub</command> is the GRand Unified Bootloader's command
 shell.</para>
 
 <para><command>grub-install</command> installs GRUB on the given device.</para>
@@ -73,7 +73,7 @@ format.</para>
 <para><command>grub-terminfo</command> generates a terminfo command from a
 terminfo name. It can be used if you have an uncommon terminal.</para>
 
-<para><command>mbchk</command> checks the format of a multiboot kernel.</para>
+<para><command>mbchk</command> checks the format of a multi-boot kernel.</para>
 
 </sect2>
 

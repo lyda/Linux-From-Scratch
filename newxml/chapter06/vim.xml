@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.4 SBU
 &diskspace; 34 MB</screen>
 
-<para>For its installation Vim depends on: Bash, Binutils, Coreutils, Diffutils,
+<para>Vim installation depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
@@ -42,18 +42,19 @@ echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput><
 
 <screen><userinput>make</userinput></screen>
 
-<para>To have the results tested, you can issue:
+<para>To test the results, you can issue:
 <userinput>make check</userinput>. However, this test suite outputs a lot of
 seemingly garbage characters to the screen, and this can wreak havoc with the
 settings of the current terminal. Therefore the running of the test suite here
 is strictly optional.</para>
 
-<para>And install the package:</para>
+<para>Now install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>When called as <command>vi</command>, <command>vim</command>
-will run in old-fashioned vi-mode. To allow this, create a symlink:</para>
+<para>Many users are used to using <command>vi</command>, instead of
+<command>vim</command>. To let them execute <command>vim</command> when
+they habitually enter <command>vi</command>, create a symlink:</para>
 
 <screen><userinput>ln -s vim /usr/bin/vi</userinput></screen>
 
@@ -67,10 +68,14 @@ installed. For more information read the Vim documentation.</para>
 
 <sect2><title>Configuring Vim</title>
 
-<para>By default, <command>vim</command> runs in vi-compatible mode. Some
-people might like this, but we prefer to run <command>vim</command> in its
+<para>By default, <command>vim</command> runs in vi-incompatible mode. Some
+people might not like this, but we prefer to run <command>vim</command> in its
 own mode (else we wouldn't have included it in this book, but the original
-<command>vi</command>). Create a default vim configuration file by running
+<command>vi</command>). We've included the setting of "nocompatible"
+below to high-light the fact that the new behavior is being used. It
+also reminds those who would change to "compatible" mode that it should
+appear first because it changes other settings and overrides must come
+after this setting. Create a default vim configuration file by running
 the following:</para>
 
 <screen><userinput>cat &gt; /etc/vimrc &lt;&lt; "EOF"</userinput>
@@ -83,12 +88,13 @@ syntax on
 " End /etc/vimrc
 <userinput>EOF</userinput></screen>
 
-<para>The <emphasis>set nocompatible</emphasis> will make
-<command>vim</command> behave in a more useful way than the default
-vi-compatible manner. The <emphasis>set backspace=2</emphasis> allows
-backspacing over line breaks, autoindent and the start of insert. And the
-<emphasis>syntax on</emphasis> switches on <command>vim</command>'s
-semantic colouring.</para>
+<para>The <emphasis>set nocompatible</emphasis> makes
+<command>vim</command> behave in a more useful way (the default) than the
+vi-compatible manner. Remove the "no" if you want the old <command>vi</command>
+behavior. The <emphasis>set backspace=2</emphasis> allows
+backspacing over line breaks, autoindents and the start of insert. The
+<emphasis>syntax on</emphasis> enables <command>vim</command>'s
+semantic coloring.</para>
 
 </sect2>
 
@@ -109,7 +115,7 @@ and xxd</para>
 file that can be read by vim.</para>
 
 <para><command>efm_perl.pl</command> reformats the error messages of the
-Perl interpreter for use with the quickfix mode of vim.</para>
+Perl interpreter for use with the <quote>quickfix</quote> mode of vim.</para>
 
 <para><command>ex</command> starts vim in ex mode.</para>
 
@@ -131,8 +137,6 @@ commands can be started and vim can't be suspended.</para>
 <para><command>shtags.pl</command> generates a tag file for perl scripts.</para>
 
 <para><command>tcltags</command> generates a tag file for TCL code.</para>
-
-<para><command>vi</command> starts vim in vi-compatible mode.</para>
 
 <para><command>view</command> starts vim in read-only mode.</para>
 
@@ -156,7 +160,7 @@ statements necessary to highlight in vim.</para>
 <para><command>vimtutor</command> teaches you the basic keys and commands
 of vim.</para>
 
-<para><command>xxd</command> makes a hexdump of the given file. It can
+<para><command>xxd</command> makes a hex dump of the given file. It can
 also do the reverse, so it can be used for binary patching.</para>
 
 </sect2>

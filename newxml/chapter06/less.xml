@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 3.4 MB</screen>
 
-<para>For its installation Less depends on: Bash, Binutils, Coreutils, Diffutils,
+<para>Less installation depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
@@ -36,7 +36,7 @@ configuration files.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Now install it:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -56,7 +56,7 @@ configuration files.</para></listitem>
 contents of the given file, letting you scroll around, find strings, and jump
 to marks.</para>
 
-<para><command>lessecho</command> is needed to expand metacharacters,
+<para><command>lessecho</command> is needed to expand meta-characters,
 such as * and ?, in filenames on Unix systems.</para>
 
 <para><command>lesskey</command> is used to specify the key bindings

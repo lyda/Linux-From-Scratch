@@ -13,7 +13,7 @@ file system. It also supports the ext3 journaling file system.</para>
 <screen>&buildtime; 0.6 SBU
 &diskspace; 48.4 MB</screen>
 
-<para>For its installation E2fsprogs depends on: Bash, Binutils, Coreutils,
+<para>E2fsprogs installation depends on: Bash, Binutils, Coreutils,
 Diffutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, Texinfo.</para>
 
 
@@ -46,15 +46,14 @@ to E2fsprogs's configure, the programs are placed in the
 want.</para></listitem>
 
 <listitem><para><userinput>--enable-elf-shlibs</userinput>: This creates
-the shared libraries which some programs in this package make use
-of.</para></listitem>
+the shared libraries which some programs in this package use.</para></listitem>
 </itemizedlist>
 
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>If you wish to have the results tested, first make sure an mtab file
+<para>If you to test the results, first make sure an mtab file
 exists with <userinput>touch /etc/mtab</userinput> to prevent some sixty tests
 from failing, and (if it doesn't already exist) fake the presence of an old
 pager with <userinput>ln -s /tools/bin/cat /bin/more</userinput> to prevent one
@@ -64,7 +63,7 @@ test from failing, then issue: <userinput>make check</userinput>.</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And install also the shared libraries:</para>
+<para>Also install also the shared libraries:</para>
 
 <screen><userinput>make install-libs</userinput></screen>
 
@@ -95,7 +94,7 @@ partition) for bad blocks.</para>
 print block device attributes.</para>
 
 <para><command>chattr</command> changes the attributes of files on a
-second extended (ext2) file system.</para>
+second extended (ext2) file system, and also ext3 file systems, the journaling version of ext2 file systems.</para>
 
 <para><command>compile_et</command> is an error table compiler. It
 converts a table of error-code names and messages into a C source file
@@ -116,13 +115,13 @@ data to a file.</para>
 <para><command>e2label</command> will display or change the file system
 label on the ext2 file system present on a given device.</para>
 
-<para><command>findfs</command> finds a file system by label or UUID.</para>
+<para><command>findfs</command> finds a file system by label or UUID (Universally Unique Identifier).</para>
 
 <para><command>fsck</command> is used to check, and optionally repair,
 file systems. By default it checks the file systems listed in
 <filename>/etc/fstab</filename></para>
 
-<para><command>logsave</command> saves the output of a command in a logfile.</para>
+<para><command>logsave</command> saves the output of a command in a log file.</para>
 
 <para><command>lsattr</command> lists the attributes of files on a second
 extended file system.</para>
@@ -144,8 +143,8 @@ ext2 file system.</para>
 <para><command>tune2fs</command> is used adjust tunable file system
 parameters on a second extended file system.</para>
 
-<para><command>uuidgen</command> creates new universally unique
-identifiers (UUID). Each new UUID can reasonably be considered unique
+<para><command>uuidgen</command> creates new
+UUID. Each new UUID can reasonably be considered unique
 among all UUIDs created, on the local system and on other systems, in the
 past and in the future.</para>
 

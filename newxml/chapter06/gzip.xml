@@ -13,7 +13,7 @@ files.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 2.6 MB</screen>
 
-<para>For its installation Gzip depends on: Bash, Binutils, Coreutils, Diffutils,
+<para>Gzip installation depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed.</para>
 
 
@@ -27,7 +27,7 @@ GCC, Glibc, Grep, Make, Sed.</para>
 
 <para>The <command>gzexe</command> script has the location of the
 <command>gzip</command> binary hard-wired into it. Because we later change
-the location of the binary, the following command assures that the new
+the location of the binary, the following command ensures that the new
 location gets placed into the script:</para>
 
 <screen><userinput>cp gzexe.in{,.backup}
@@ -41,7 +41,7 @@ sed 's%"BINDIR"%/bin%' gzexe.in.backup &gt; gzexe.in</userinput></screen>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And move the programs to the <filename class="directory">/bin</filename> directory:</para>
+<para>Move the programs to the <filename class="directory">/bin</filename> directory:</para>
 
 <screen><userinput>mv /usr/bin/gzip /bin
 rm /usr/bin/{gunzip,zcat}
@@ -91,7 +91,7 @@ useful when file names were truncated during a file transfer.</para>
 
 <para><command>zmore</command> runs more on gzipped files.</para>
 
-<para><command>znew</command> recompresses files from compress format
+<para><command>znew</command> re-compresses files from compress format
 to gzip format -- .Z to .gz.</para>
 
 </sect2>

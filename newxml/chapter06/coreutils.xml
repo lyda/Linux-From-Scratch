@@ -13,7 +13,7 @@ basic system characteristics.</para>
 <screen>&buildtime; 0.9 SBU
 &diskspace; 69 MB</screen>
 
-<para>For its installation Coreutils depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
+<para>Coreutils installation depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
 Gettext, Glibc, Grep, Make, Perl, Sed.</para>
 
 
@@ -23,7 +23,7 @@ Gettext, Glibc, Grep, Make, Perl, Sed.</para>
 
 <para>Normally the functionality of <command>uname</command> is somewhat
 broken, in that the <emphasis>-p</emphasis> switch always returns
-<quote>unknown</quote>.  The following patch fixes this behaviour for Intel
+<quote>unknown</quote>.  The following patch fixes this behavior for Intel
 architectures:</para>
 
 <screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-uname-1.patch</userinput></screen>
@@ -43,7 +43,7 @@ provided by Net-tools. Prevent its installation by applying a patch:</para>
 <screen><userinput>make</userinput></screen>
 
 <para>The test suite of Coreutils makes several assumptions about the presence
-of files and users that aren't valid yet this early in the LFS build. We will
+of files and users that aren't valid this early in the LFS build. We will
 therefore have to set up a few things before being able to run the tests. If
 you choose not to run these tests, skip down to <quote>Install the
 package</quote>.</para>
@@ -143,7 +143,7 @@ directory as the <filename>/</filename> directory. The given command can be an
 interactive shell. On most systems only <emphasis>root</emphasis> can do
 this.</para>
 
-<para><command>cksum</command> prints the CRC checksum and the byte
+<para><command>cksum</command> prints the CRC (Cyclic Redundancy Check) checksum and the byte
 counts of each specified file.</para>
 
 <para><command>comm</command> compares two sorted files, outputting in
@@ -161,7 +161,7 @@ according to given fields or positions.</para>
 <para><command>date</command> displays the current time in the given
 format, or sets the system date.</para>
 
-<para><command>dd</command> copies a file using the given blocksize and
+<para><command>dd</command> copies a file using the given block size and
 count, while optionally performing conversions on it.</para>
 
 <para><command>df</command> reports the amount of disk space available
@@ -228,11 +228,11 @@ to the given file.</para>
 <para><command>ls</command> lists the contents of each given directory.
 By default it orders the files and subdirectories alphabetically.</para>
 
-<para><command>md5sum</command> reports or checks MD5 checksums.</para>
+<para><command>md5sum</command> reports or checks MD5 (Message Digest 5) checksums.</para>
 
 <para><command>mkdir</command> creates directories with the given names.</para>
 
-<para><command>mkfifo</command> creates FIFOs with the given names.</para>
+<para><command>mkfifo</command> creates FIFOs (First-In, First-Out, a "named pipe" in UNIX parlance) with the given names.</para>
 
 <para><command>mknod</command> creates device nodes with the given names.
 A device node is a character special file, or a block special file, or a FIFO.</para>
@@ -249,7 +249,7 @@ output redirected to a log file.</para>
 <para><command>od</command> dumps files in octal and other formats.</para>
 
 <para><command>paste</command> merges the given files, joining
-sequentially corresponding lines side by side, separated by TABs.</para>
+sequentially corresponding lines side by side, separated by tab characters.</para>
 
 <para><command>pathchk</command> checks whether file names are valid
 or portable.</para>

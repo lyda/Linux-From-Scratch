@@ -13,7 +13,7 @@ between files or directories.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 7.5 MB</screen>
 
-<para>For its installation Diffutils depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
+<para>Diffutils installation depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
 Gettext, Glibc, Grep, Make, Sed.</para>
 
 
@@ -29,7 +29,7 @@ Gettext, Glibc, Grep, Make, Sed.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Install it:</para>
 
 <screen><userinput>make install</userinput></screen>
 

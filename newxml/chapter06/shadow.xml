@@ -13,7 +13,7 @@ way.</para>
 <screen>&buildtime; 0.4 SBU
 &diskspace; 11 MB</screen>
 
-<para>For its installation Shadow depends on: Bash, Binutils, Bison, Coreutils,
+<para>Shadow installation depends on: Bash, Binutils, Bison, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed.</para>
 
 
@@ -45,7 +45,7 @@ working:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Then install it:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -56,10 +56,10 @@ system. Install these two config files:</para>
 
 <para>Instead of using the default <emphasis>crypt</emphasis> method, we want
 to use the more secure <emphasis>MD5</emphasis> method of password encryption,
-which in addition allows passwords longer than 8 characters. We also need to
+which also allows passwords longer than 8 characters. We also need to
 change the obsolete <filename class="directory">/var/spool/mail</filename>
 location for user mailboxes that Shadow uses by default to the <filename 
-class="directory">/var/mail</filename> location used nowadays. We accomplish
+class="directory">/var/mail</filename> location used currently. We accomplish
 both these things by changing the relevant configuration file while copying it
 to its destination (it's probably better to cut-and-paste this rather than try
 and type it all in):</para>
@@ -112,7 +112,7 @@ need to be able to work with shadowed passwords.</para>
 
 <screen><userinput>pwconv</userinput></screen>
 
-<para>And to enable shadowed group passwords, run:</para>
+<para>To enable shadowed group passwords, run:</para>
 
 <screen><userinput>grpconv</userinput></screen>
 
@@ -195,7 +195,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 <para><command>lastlog</command> reports the most recent login of all
 users, or of a given user.</para>
 
-<para><command>login</command> is used by the system let users sign on.</para>
+<para><command>login</command> is used by the system to let users sign on.</para>
 
 <para><command>logoutd</command> is a daemon used to enforce restrictions
 on log-on time and ports.</para>
@@ -230,7 +230,7 @@ or updates the default new-user information.</para>
 <para><command>userdel</command> deletes the given user account.</para>
 
 <para><command>usermod</command> is used to modify the given user's
-login name, UID, shell, initial group, home directory, and the like.</para>
+login name, UID (User Identification), shell, initial group, home directory, and the like.</para>
 
 <para><command>vigr</command> can be used to edit the
 <filename>/etc/group</filename> or <filename>/etc/gshadow</filename>

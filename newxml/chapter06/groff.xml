@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.5 SBU
 &diskspace; 43 MB</screen>
 
-<para>For its installation Groff depends on: Bash, Binutils, Coreutils, Diffutils,
+<para>Groff installation depends on: Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 
 
@@ -33,7 +33,7 @@ live elsewhere, you may want to change <emphasis>PAGE=letter</emphasis> to
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Now install it:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -81,7 +81,7 @@ formatting system. Normally it runs the troff program and a post-processor
 appropriate for the selected device.</para>
 
 <para><command>groffer</command> displays groff files and man pages on X
-and tty.</para>
+and tty terminals.</para>
 <para><command>grog</command> reads files and guesses which of the groff
 options -e, -man, -me, -mm, -ms, -p, -s, and -t are required for printing
 files, and reports the groff command including those options.</para>
@@ -119,7 +119,7 @@ end of input.</para>
 
 <para><command>mmroff</command> is a simple preprocessor for groff.</para>
 
-<para><command>neqn</command> formats equations for ascii output.</para>
+<para><command>neqn</command> formats equations for ASCII (American Standard Code for Information Interchange) output.</para>
 
 <para><command>nroff</command> is a script that emulates the nroff command
 using groff.</para>

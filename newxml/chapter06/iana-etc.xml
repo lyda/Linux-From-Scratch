@@ -7,7 +7,7 @@
 <title>Installing Iana-Etc-&iana-etc-version;</title>
 <?dbhtml filename="iana-etc.html"?>
 
-<para>The Iana-Etc package network services and protocols data.</para>
+<para>The Iana-Etc package provides data for network services and protocols.</para>
 
 <screen>&buildtime; 0.1 SBU
 &diskspace; 641 KB</screen>
@@ -23,7 +23,7 @@
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Now install it:</para>
 
 <screen><userinput>make install</userinput></screen>
 

@@ -13,7 +13,7 @@ with Autoconf.</para>
 <screen>&buildtime; 0.2 SBU
 &diskspace; 6.8 MB</screen>
 
-<para>For its installation Automake depends on: Autoconf, Bash, Coreutils,
+<para>Automake installation depends on: Autoconf, Bash, Coreutils,
 Diffutils, Grep, M4, Make, Perl, Sed.</para>
 
 
@@ -29,7 +29,7 @@ Diffutils, Grep, M4, Make, Perl, Sed.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>To have the results tested, issue:
+<para>To test the results, issue:
 <userinput>make check</userinput>. This takes a long time, about 5 SBUs.</para>
 
 <para>Install the package:</para>
@@ -60,7 +60,7 @@ files based on the contents of <filename>configure.in</filename> files.</para>
 <filename>Makefile.in</filename>'s from files called
 <filename>Makefile.am</filename>. To create all the
 <filename>Makefile.in</filename> files for a package, run this program in the
-top level directory. By scanning the <filename>configure.in</filename>s it
+top-level directory. By scanning the <filename>configure.in</filename>s it
 automatically finds each appropriate <filename>Makefile.am</filename> and
 generate the corresponding <filename>Makefile.in</filename>.</para>
 
@@ -73,7 +73,7 @@ the canonical triplet for the given build, host, or target architecture.</para>
 subroutine script.</para>
 
 <para><command>depcomp</command> is a script for compiling a program
-so that not only the desired output is generated but also dependency
+so that not only the desired output is generated, but also dependency
 information.</para>
 
 <para><command>elisp-comp</command> byte-compiles Emacs Lisp code.</para>

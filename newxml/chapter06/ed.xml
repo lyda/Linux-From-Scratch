@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 3.1 MB</screen>
 
-<para>For its installation Ed depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
+<para>Ed installation depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
 Glibc, Grep, Make, Sed.</para>
 
 
@@ -51,7 +51,7 @@ the programs available there is useful in the event of the
 
 <screen><userinput>make</userinput></screen>
 
-<para>To have the results tested, issue:
+<para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
 <para>Install the package:</para>

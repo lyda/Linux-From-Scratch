@@ -7,12 +7,12 @@
 <title>Installing Kbd-&kbd-version;</title>
 <?dbhtml filename="kbd.html"?>
 
-<para>The Kbd package contains keytable files and keyboard utilities.</para>
+<para>The Kbd package contains key-table files and keyboard utilities.</para>
 
 <screen>&buildtime; 0.1 SBU
 &diskspace; 12 MB</screen>
 
-<para>For its installation Kbd depends on: Bash, Binutils, Bison, Coreutils,
+<para>Kbd installation depends on: Bash, Binutils, Bison, Coreutils,
 Diffutils, Flex, GCC, Gettext, Glibc, Grep, Gzip, M4, Make, Sed.</para>
 
 
@@ -34,7 +34,7 @@ not installed. First enable the compilation of these utilities:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Now install it:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -55,7 +55,7 @@ symlink by running the following command:</para>
 
 <para>Of course, replace <filename>path/to/keymap</filename> with the path and
 name of your keyboard's map file. For example, if you have a Dutch keyboard,
-you would use <filename>i386/qwerty/nl.map.gz</filename>.</para>
+you would use <filename>/usr/share/kbd/keymaps/i386/qwerty/nl.map.gz</filename>.</para>
 
 <para>Another way to set your keyboard's layout is to compile the keymap
 into the kernel. This ensures that your keyboard will always work as expected,
@@ -125,11 +125,11 @@ character tables for console fonts.</para>
 mapping table entries, useful if you have some unusual keys on your keyboard.</para>
 
 <para><command>setleds</command> sets the keyboard flags and LEDs. Many
-people find it useful to have NumLock on by default, setleds +num achieves this.</para>
+people find it useful to have "Num Lock" on by default, setleds +num achieves this.</para>
 
 <para><command>setlogcons</command> sends kernel messages to the console.</para>
 
-<para><command>setmetamode</command> defines the keyboard meta key handling.</para>
+<para><command>setmetamode</command> defines the keyboard meta-key handling.</para>
 
 <para><command>setvesablank</command> lets you fiddle with the built-in
 hardware screensaver (no toasters, just a blank screen).</para>

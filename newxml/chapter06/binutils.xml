@@ -13,7 +13,7 @@ handling object files.</para>
 <screen>&buildtime; 1.4 SBU
 &diskspace; 167 MB</screen>
 
-<para>For its installation Binutils depends on: Bash, Coreutils, Diffutils, GCC, Gettext,
+<para>Binutils installation depends on: Bash, Coreutils, Diffutils, GCC, Gettext,
 Glibc, Grep, Make, Perl, Sed, Texinfo.</para>
 
 
@@ -39,7 +39,7 @@ to fix the problem.</para>
 <para>This package is known to behave badly when you have changed its
 default optimization flags (including the -march and -mcpu options).
 Therefore, if you have defined any environment variables that override
-default optimizations, such as CFLAGS and CXXFLAGS, we recommend unsetting
+default optimizations, such as CFLAGS and CXXFLAGS, we recommend un-setting
 or modifying them when building Binutils.</para>
 
 <para>The Binutils documentation recommends building Binutils outside of the
@@ -115,7 +115,7 @@ the archive).</para>
 <para><command>as</command> is an assembler. It assembles the output of
 gcc into object files.</para>
 
-<para><command>c++filt</command> is used by the linker to demangle C++ and
+<para><command>c++filt</command> is used by the linker to de-mangle C++ and
 Java symbols, to keep overloaded functions from clashing.</para>
 
 <para><command>gprof</command> displays call graph profile data.</para>
@@ -143,9 +143,9 @@ by archive members that are relocatable object files.</para>
 <para><command>size</command> lists the section sizes -- and the grand
 total -- for the given object files.</para>
 
-<para><command>strings</command> outputs for each file given the sequences
-of printable characters that are of at least the specified length (defaulting to 4)
-For object files it prints by default only the strings from the initializing
+<para><command>strings</command> outputs, for each given file, the sequences
+of printable characters that are of at least the specified length (defaulting to 4).
+For object files it prints, by default, only the strings from the initializing
 and loading sections. For other types of files it scans the whole file.</para>
 
 <para><command>strip</command> discards symbols from object files.</para>

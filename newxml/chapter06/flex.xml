@@ -13,7 +13,7 @@ recognize patterns in text.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 3.4 MB</screen>
 
-<para>For its installation Flex depends on: Bash, Binutils, Bison, Coreutils, Diffutils,
+<para>Flex installation depends on: Bash, Binutils, Bison, Coreutils, Diffutils,
 GCC, Gettext, Glibc, Grep, M4, Make, Sed.</para>
 
 
@@ -29,10 +29,10 @@ GCC, Gettext, Glibc, Grep, M4, Make, Sed.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>To have the results tested, issue:
+<para>To test the results, issue:
 <userinput>make bigcheck</userinput>.</para>
 
-<para>And install the package:</para>
+<para>Now install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -74,9 +74,9 @@ and lex</para>
 
 <para><command>flex</command> is a tool for generating programs that
 recognize patterns in text. Pattern recognition is useful in many applications.
-From a set of rules on what to look for flex makes a program that looks for
+From a set of rules on what to look for, flex makes a program that looks for
 those patterns. The reason to use flex is that it is much easier to specify
-the rules for than to write the actual pattern-finding program.</para>
+the rules for a pattern-finding program than to write the program.</para>
 
 <para><command>flex++</command> invokes a version of flex that is used
 exclusively for C++ scanners.</para>

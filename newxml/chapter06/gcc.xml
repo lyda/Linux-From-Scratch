@@ -7,13 +7,13 @@
 <title>Installing GCC-&gcc-version;</title>
 <?dbhtml filename="gcc.html"?>
 
-<para>The GCC package contains the GNU compiler collection, among them
+<para>The GCC package contains the GNU compiler collection, which includes
 the C and C++ compilers.</para>
 
 <screen>&buildtime; 11.7 SBU
 &diskspace; 294 MB</screen>
 
-<para>For its installation GCC depends on: Bash, Binutils, Coreutils, Diffutils, Findutils,
+<para>GCC installation depends on: Bash, Binutils, Coreutils, Diffutils, Findutils,
 Gawk, Gettext, Glibc, Grep, Make, Perl, Sed, Texinfo.</para>
 
 
@@ -24,7 +24,7 @@ Gawk, Gettext, Glibc, Grep, Make, Perl, Sed, Texinfo.</para>
 <para>This package is known to behave badly when you have changed its
 default optimization flags (including the -march and -mcpu options).
 Therefore, if you have defined any environment variables that override
-default optimizations, such as CFLAGS and CXXFLAGS, we recommend unsetting
+default optimizations, such as CFLAGS and CXXFLAGS, we recommend un-setting
 or modifying them when building GCC.</para>
 
 <para>Unpack the GCC-core <emphasis>and</emphasis> the GCC-g++ tarball -- they
@@ -74,13 +74,13 @@ known ones):</para>
 much appropriate here. Be sure to refer back there should you have any
 doubts.</para>
 
-<para>And install the package:</para>
+<para>Now install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
 <para>Some packages expect the C PreProcessor to be installed in the
 <filename>/lib</filename> directory.
-To honor those packages, create this symlink:</para>
+To support those packages, create this symlink:</para>
 
 <screen><userinput>ln -s ../usr/bin/cpp /lib</userinput></screen>
 

@@ -7,13 +7,13 @@
 <title>Installing Ncurses-&ncurses-version;</title>
 <?dbhtml filename="ncurses.html"?>
 
-<para>The Ncurses package contains libraries for the terminal-independent
+<para>The Ncurses package contains libraries for terminal-independent
 handling of character screens.</para>
 
 <screen>&buildtime; 0.6 SBU
 &diskspace; 27 MB</screen>
 
-<para>For its installation Ncurses depends on: Bash, Binutils, Coreutils, Diffutils,
+<para>Ncurses installation depends on: Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 
 
@@ -37,7 +37,7 @@ Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 
 <screen><userinput>chmod 755 /usr/lib/*.&ncurses-version;</userinput></screen>
 
-<para>And fix a library that shouldn't be executable:</para>
+<para>Now fix a library that shouldn't be executable:</para>
 
 <screen><userinput>chmod 644 /usr/lib/libncurses++.a</userinput></screen>
 
@@ -46,7 +46,7 @@ where they're expected to reside:</para>
 
 <screen><userinput>mv /usr/lib/libncurses.so.5* /lib</userinput></screen>
 
-<para>Now the libraries have been moved, a few symlinks are pointing to
+<para>Because the libraries have been moved, a few symlinks are pointing to
 non-existent files. Recreate those symlinks:</para>
 
 <screen><userinput>ln -sf ../../lib/libncurses.so.5 /usr/lib/libncurses.so
@@ -99,15 +99,15 @@ a terminal, or report its long name.</para>
 
 <para><command>tset</command> can be used to initialize terminals.</para>
 
-<para><command>libncurses*</command> contain functions to display text in
+<para><command>libncurses*</command> contains functions to display text in
 many complicated ways on a terminal screen. A good example of the use of these
 functions is the menu displayed during the kernel's make menuconfig.</para>
 
-<para><command>libform*</command> contain functions to implement forms.</para>
+<para><command>libform*</command> contains functions to implement forms.</para>
 
-<para><command>libmenu*</command> contain functions to implement menus.</para>
+<para><command>libmenu*</command> contains functions to implement menus.</para>
 
-<para><command>libpanel*</command> contain functions to implement panels.</para>
+<para><command>libpanel*</command> contains functions to implement panels.</para>
 
 </sect2>
 

@@ -13,7 +13,7 @@ as those given by the kernel when unusual things happen.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 0.5 MB</screen>
 
-<para>For its installation Sysklogd depends on: Binutils, Coreutils, GCC, Glibc, Make.</para>
+<para>Sysklogd installation depends on: Binutils, Coreutils, GCC, Glibc, Make.</para>
 
 
 
@@ -24,7 +24,7 @@ as those given by the kernel when unusual things happen.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Now install it:</para>
 
 <screen><userinput>make install</userinput></screen>
 

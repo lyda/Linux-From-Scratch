@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 6.2 MB</screen>
 
-<para>For its installation Procps depends on: Bash, Binutils, Coreutils, GCC, Glibc,
+<para>Procps installation depends on: Bash, Binutils, Coreutils, GCC, Glibc,
 Make, Ncurses.</para>
 
 
@@ -28,7 +28,7 @@ Make, Ncurses.</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And remove a spurious library link:</para>
+<para>Remove a spurious library link:</para>
 
 <screen><userinput>rm /lib/libproc.so</userinput></screen>
 
@@ -88,7 +88,7 @@ activity.</para>
 where and since when.</para>
 
 <para><command>watch</command> runs a given command repeatedly,
-displaying the first screenful of its output. This allows you to watch the
+displaying the first screen-full of its output. This allows you to watch the
 output change over time.</para>
 
 <para><command>libproc</command> contains the functions used by most

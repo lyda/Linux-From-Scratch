@@ -12,7 +12,7 @@
 <screen>Approximate build time:  1.2 SBU
 Required disk space:     27 MB</screen>
 
-<para>For its installation Bash depends on: Binutils, Coreutils, Diffutils, Gawk,
+<para>Bash installation depends on: Binutils, Coreutils, Diffutils, Gawk,
 GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
@@ -21,7 +21,7 @@ GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 <title>Installation of Bash</title>
 
 <para>Bash has a number of bugs in it that cause it to not behave the 
-way it is expected at times. Fix this behaviour with the following
+way it is expected at times. Fix this behavior with the following
 patch:</para>
 
 <screen><userinput>patch -Np1 -i ../bash-&bash-version;-2.patch</userinput></screen>
@@ -34,16 +34,22 @@ patch:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>To have the results tested, issue:
+<para>To test the results, issue:
 <userinput>make tests</userinput>.</para>
 
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And reload the newly compiled <command>bash</command> program:</para>
+<para>Now run the newly compiled <command>bash</command> program (replacing the one you are currently executing):</para>
 
 <screen><userinput>exec /bin/bash --login +h</userinput></screen>
+
+<para>Note that the parameters used make it an interactive login instance
+(so /etc/profile is read, if it exists, and the first found
+~/.bash_profile, ~/.bash_login or and ~/.profile) and continue to
+disable hashing so that new programs are found as they become
+available.</para>
 
 </sect2>
 
@@ -59,7 +65,7 @@ bashbug</para>
 <sect2><title>Short descriptions</title>
 
 <para><command>bash</command> is a widely-used command interpreter. It
-performs all kinds of expansions and substitutions on a given command line
+performs many kinds of expansions and substitutions on a given command line
 before executing it, thus making this interpreter a powerful tool.</para>
 
 <para><command>bashbug</command> is a shell script to help the user

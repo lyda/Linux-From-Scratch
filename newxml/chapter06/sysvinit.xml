@@ -13,21 +13,20 @@ running, and shutdown of your system.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 0.9 MB</screen>
 
-<para>For its installation Sysvinit depends on: Binutils, Coreutils, GCC, Glibc, Make.</para>
+<para>Sysvinit installation depends on: Binutils, Coreutils, GCC, Glibc, Make.</para>
 
 
 
 <sect2>
 <title>Installation of Sysvinit</title>
 
-<para>When runlevels are changed (for example, when halting the system),
-<command>init</command> sends termination signals to those processes that it
-itself started and that shouldn't be running in the new runlevel. While doing
-this, <command>init</command> outputs messages like <quote>Sending processes
-the TERM signal</quote> which seem to imply that it is sending these signals to
-all currently running processes. To avoid this misinterpretation, you can modify
-the source so that these messages read like <quote>Sending processes started by
-init the TERM signal</quote> instead:</para>
+<para>When run-levels are changed (for example, when halting the system),
+<command>init</command> sends termination signals to those processes that
+<command>init</command> itself started and that shouldn't be running in the new
+run-level. While doing this, <command>init</command> outputs messages like
+<quote>Sending processes the TERM signal</quote> which seem to imply that it is sending these signals to all currently running processes. To avoid this
+misinterpretation, you can modify the source so that these messages read like
+<quote>Sending processes started by init the TERM signal</quote> instead:</para>
 
 <screen><userinput>cp src/init.c{,.backup}
 sed 's/Sending processes/&amp; started by init/g' \
@@ -37,7 +36,7 @@ sed 's/Sending processes/&amp; started by init/g' \
 
 <screen><userinput>make -C src</userinput></screen>
 
-<para>And install it:</para>
+<para>Then install it:</para>
 
 <screen><userinput>make -C src install</userinput></screen>
 
@@ -94,13 +93,13 @@ utmpdump and wall</para>
 <sect2><title>Short descriptions</title>
 
 <para><command>halt</command> normally invokes shutdown with the -h flag,
-except when already in runlevel 0, then it tells the kernel to halt the system.
+except when already in run-level 0, then it tells the kernel to halt the system.
 But first it notes in the file <filename>/var/log/wtmp</filename> that the
 system is being brought down.</para>
 
 <para><command>init</command> is the mother of all processes. It reads its
 commands from <filename>/etc/inittab</filename>, which normally tell it which
-scripts to run for which runlevel, and how many gettys to spawn.</para>
+scripts to run for which run-level, and how many gettys to spawn.</para>
 
 <para><command>killall5</command> sends a signal to all processes, except
 the processes in its own session -- so it won't kill the shell running the
@@ -108,7 +107,7 @@ script that called it.</para>
 
 <para><command>last</command> shows which users last logged in (and out),
 searching back through the file <filename>/var/log/wtmp</filename>. It can
-also show system boots and shutdowns, and runlevel changes.</para>
+also show system boots and shutdowns, and run-level changes.</para>
 
 <para><command>lastb</command> shows the failed login attempts, as logged
 in <filename>/var/log/btmp</filename>.</para>
@@ -125,7 +124,7 @@ switch off the computer. But see halt.</para>
 But see halt.</para>
 
 <para><command>runlevel</command> reports the previous and the current
-runlevel, as noted in the last runlevel record in
+run-level, as noted in the last run-level record in
 <filename>/var/run/utmp</filename>.</para>
 
 <para><command>shutdown</command> brings the system down in a secure way,
@@ -134,7 +133,7 @@ signaling all processes and notifying all logged-in users.</para>
 <para><command>sulogin</command> allows the superuser to log in. It is
 normally invoked by init when the system goes into single user mode.</para>
 
-<para><command>telinit</command> tells init which runlevel to enter.</para>
+<para><command>telinit</command> tells init which run-level to enter.</para>
 
 <para><command>utmpdump</command> displays the content of the given login
 file in a friendlier format.</para>

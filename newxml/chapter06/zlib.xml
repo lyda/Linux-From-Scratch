@@ -7,13 +7,13 @@
 <title>Installing Zlib-&zlib-version;</title>
 <?dbhtml filename="zlib.html"?>
 
-<para>The Zlib package contains compression and uncompression routines used by
+<para>The Zlib package contains compression and un-compression routines used by
 some programs.</para>
 
 <screen>&buildtime; 0.1 SBU
 &diskspace; 1.5 MB</screen>
 
-<para>For its installation Zlib depends on: Binutils, Coreutils, GCC, Glibc, Make, Sed.</para>
+<para>Zlib installation depends on: Binutils, Coreutils, GCC, Glibc, Make, Sed.</para>
 
 
 
@@ -34,7 +34,7 @@ afterwards.</para></note>
 
 <screen><userinput>make</userinput></screen>
 
-<para>To have the results tested, issue:
+<para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
 <para>Install the shared library:</para>
@@ -46,7 +46,7 @@ afterwards.</para></note>
 ./configure --prefix=/usr
 make</userinput></screen>
 
-<para>To have the results tested again, issue:
+<para>To again test the results, issue:
 <userinput>make check</userinput>.</para>
 
 <para>Install the static library:</para>
@@ -89,7 +89,7 @@ because we just moved the file it points to:</para>
 
 <sect2><title>Short description</title>
 
-<para><command>libz*</command> contains compression and uncompression
+<para><command>libz*</command> contains compression and un-compression
 functions used by some programs.</para>
 
 </sect2>

@@ -14,7 +14,7 @@ localization. These allow programs to be compiled with Native Language Support
 <screen>&buildtime; 0.5 SBU
 &diskspace; 55 MB</screen>
 
-<para>For its installation Gettext depends on: Bash, Binutils, Bison, Coreutils,
+<para>Gettext installation depends on: Bash, Binutils, Bison, Coreutils,
 Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 
 
@@ -30,11 +30,11 @@ Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>To have the results tested, issue:
+<para>To test the results, issue:
 <userinput>make check</userinput>. This takes a very long time, around
 7 SBUs.</para>
 
-<para>And install the package:</para>
+<para>Now install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -73,7 +73,7 @@ format strings.</para>
 the user's language, by looking up the translation in a message catalog.</para>
 
 <para><command>gettextize</command> copies all standard Gettext files into
-the given top-level directory of a package, to begin internationalizing it.</para>
+the given top-level directory of a package, to begin inter-nationalizing it.</para>
 
 <para><command>hostname</command> displays a network hostname in various
 forms.</para>
@@ -126,7 +126,7 @@ textual message whose grammatical form depends on a number.</para>
 <para><command>xgettext</command> extracts the translatable message lines
 from the given source files, to make the first translation template.</para>
 
-<para><command>libasprintf</command> defines the autosprintf class which
+<para><command>libasprintf</command> defines the autosprintf class, which
 makes C formatted output routines usable in C++ programs, for use with the
 &lt;string&gt; strings and the &lt;iostream&gt; streams.</para>
 

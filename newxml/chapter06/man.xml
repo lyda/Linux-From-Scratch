@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 1.9MB</screen>
 
-<para>For its installation Man depends on: Bash, Binutils, Coreutils, Gawk, GCC,
+<para>Man installation depends on: Bash, Binutils, Coreutils, Gawk, GCC,
 Glibc, Grep, Make, Sed.</para>
 
 
@@ -51,8 +51,8 @@ redundant results when using programs such as <command>whatis</command>:</para>
 to select a sensible set of default options. For example: only English man
 pages, no message catalogs, man not suid, handle compressed man pages, compress
 cat pages, create cat pages whenever the appropriate directory exists, follow
-FHS by putting cat pages under /var/cache/man provided that that directory
-exists.</para></listitem>
+FHS by putting cat pages under /var/cache/man (provided that directory
+exists).</para></listitem>
 
 <listitem><para><userinput>-confdir=/etc</userinput>: This tells the
 <command>man</command> program to look for the <filename>man.conf</filename>
@@ -63,11 +63,11 @@ configuration file in the <filename>/etc</filename> directory.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Lastly, install it:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<note><para>If you wish to disable SGR escape sequences, you should edit the
+<note><para>If you wish to disable SGR (Select Graphic Rendition) escape sequences, you should edit the
 <filename>man.conf</filename> file and add the <emphasis>-c</emphasis> switch
 to NROFF.</para></note>
 

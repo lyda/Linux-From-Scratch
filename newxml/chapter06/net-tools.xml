@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 9.4 MB</screen>
 
-<para>For its installation Net-tools depends on: Bash, Binutils, Coreutils, GCC,
+<para>Net-tools installation depends on: Bash, Binutils, Coreutils, GCC,
 Glibc, Make.</para>
 
 
@@ -45,7 +45,7 @@ make config</userinput> instead):</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Now install it:</para>
 
 <screen><userinput>make update</userinput></screen>
 
@@ -67,7 +67,7 @@ ypdomainname (link to hostname)</para>
 <para><command>arp</command> is used to manipulate the kernel's ARP cache,
 usually to add or delete an entry, or to dump the entire cache.</para>
 
-<para><command>dnsdomainname</command> reports the system's DNS domain
+<para><command>dnsdomainname</command> reports the system's DNS (Domain Name Server) domain
 name.</para>
 
 <para><command>domainname</command> reports or sets the system's NIS/YP

@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.2 SBU
 &diskspace; 11 MB</screen>
 
-<para>For its installation Inetutils depends on: Bash, Binutils, Coreutils,
+<para>Inetutils installation depends on: Bash, Binutils, Coreutils,
 Diffutils, GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
@@ -66,7 +66,7 @@ replacements are available for many of these servers.</para></listitem>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And move the <command>ping</command> program to its FHS-compliant
+<para>Move the <command>ping</command> program to its FHS-compliant
 place:</para>
 
 <screen><userinput>mv /usr/bin/ping /bin</userinput></screen>

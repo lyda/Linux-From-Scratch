@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 0.2 MB</screen>
 
-<para>For its installation Procinfo depends on: Binutils, GCC, Glibc, Make, Ncurses.</para>
+<para>Procinfo installation depends on: Binutils, GCC, Glibc, Make, Ncurses.</para>
 
 
 
@@ -30,7 +30,7 @@ to use the <filename>libncurses</filename> library instead of the
 long-obsolete <filename>libtermcap</filename>.</para></listitem>
 </itemizedlist>
 
-<para>And install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -48,13 +48,13 @@ socklist</para>
 <sect2><title>Short descriptions</title>
 
 <para><command>lsdev</command> lists the devices present in your system,
-and which IRQs and IO ports they use.</para>
+and which IRQs (Interrupt ReQuest) and IO ports they use.</para>
 
-<para><command>procinfo</command> displays an overview of some of the info
+<para><command>procinfo</command> displays an overview of some of the information
 present in the virtual proc file system.</para>
 
 <para><command>socklist</command> lists the open sockets, reporting their
-type, portnumber, and other specifics.</para>
+type, port number, and other specifics.</para>
 
 </sect2>
 

@@ -13,7 +13,7 @@ processes.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 2.2 MB</screen>
 
-<para>For its installation Psmisc depends on: Bash, Binutils, Coreutils, Diffutils,
+<para>Psmisc installation depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
@@ -29,7 +29,7 @@ GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 <itemizedlist>
 <listitem><para><userinput>--exec-prefix=/</userinput>: This causes the
-binaries to be installed in <filename>/bin</filename> and not in
+binaries to be installed in <filename>/bin</filename> instead of
 <filename>/usr/bin</filename>. As the Psmisc programs are often used in
 bootscripts, they should be available also when the <filename>/usr</filename>
 file system isn't mounted.</para></listitem>
@@ -39,7 +39,7 @@ file system isn't mounted.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Now install it:</para>
 
 <screen><userinput>make install</userinput></screen>
 

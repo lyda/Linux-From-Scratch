@@ -15,7 +15,7 @@ arithmetic, and so on.</para>
 <screen>&buildtime; 12.3 SBU
 &diskspace; 784 MB</screen>
 
-<para>For its installation Glibc depends on: Bash, Binutils, Coreutils, Diffutils,
+<para>Glibc installation depends on: Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Gettext, Grep, Make, Perl, Sed, Texinfo.</para>
 
 

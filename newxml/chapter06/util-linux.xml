@@ -14,7 +14,7 @@ messages.</para>
 <screen>&buildtime; 0.2 SBU
 &diskspace; 16 MB</screen>
 
-<para>For its installation Util-linux depends on: Bash, Binutils, Coreutils,
+<para>Util-linux installation depends on: Bash, Binutils, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, Zlib.</para>
 
 
@@ -54,11 +54,11 @@ built and installed again.</para></listitem>
 
 <listitem><para><userinput>HAVE_SLN=yes</userinput>: This prevents the
 <command>sln</command> program (a statically linked
-<command>ln</command>, already installed by Glibc) from being built and
+<command>ln</command> already installed by Glibc) from being built and
 installed again.</para></listitem>
 </itemizedlist>
 
-<para>And install the package:</para>
+<para>Now install the package:</para>
 
 <screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes install</userinput></screen>
 
@@ -89,7 +89,7 @@ and then invokes the login program.</para>
 <para><command>blockdev</command> allows you to call block device ioctls
 from the command line.</para>
 
-<para><command>cal</command> displays a simple calender.</para>
+<para><command>cal</command> displays a simple calendar.</para>
 
 <para><command>cfdisk</command> is used to manipulate the partition table
 of the given device.</para>
@@ -107,7 +107,7 @@ that lack some capabilities such as overstriking and half-lines.</para>
 columns.</para>
 
 <para><command>ctrlaltdel</command> sets the function of the Ctrl+Alt+Del
- key combination, to a hard or a soft reset.</para>
+ key combination to a hard or a soft reset.</para>
 
 <para><command>cytune</command> was used to tune the parameters of the
 serial line drivers for Cyclades cards.</para>
@@ -118,7 +118,7 @@ given Gregorian date to a Discordian one.</para>
 <para><command>dmesg</command> dumps the kernel boot messages.</para>
 
 <para><command>elvtune</command> can be used to tune the performance
-and interactiveness of a block device.</para>
+and interactivity of a block device.</para>
 
 <para><command>fdformat</command> low-level formats a floppy disk.</para>
 
@@ -137,7 +137,7 @@ Minix file system on the given device.</para>
 in another given format.</para>
 
 <para><command>hwclock</command> is used to read or set the system's
-hardware clock (also called the RTC or BIOS clock).</para>
+hardware clock, also called the RTC (Real-Time Clock) or BIOS (Basic Input-Output System) clock.</para>
 
 <para><command>ipcrm</command> removes the given IPC resource.</para>
 
@@ -160,9 +160,9 @@ string.</para>
 hexadecimal numbers, for xauth.</para>
 
 <para><command>mkfs</command> is used to build a file system on a device
-(usually a harddisk partition).</para>
+(usually a hard disk partition).</para>
 
-<para><command>mkfs.bfs</command> creates an SCO bfs file system.</para>
+<para><command>mkfs.bfs</command> creates an SCO (Santa Cruz Operations) bfs file system.</para>
 
 <para><command>mkfs.cramfs</command> creates a cramfs file system.</para>
 
@@ -172,24 +172,24 @@ hexadecimal numbers, for xauth.</para>
 used as a swap area.</para>
 
 <para><command>more</command> is a filter for paging through text one
-screenful at a time. But less is much better.</para>
+screen full at a time. But less is much better.</para>
 
 <para><command>mount</command> attaches the file system on the given device
-to the given directory in the system's file tree.</para>
+to a specified directory (thus hiding the contents of that directory) in the file-system tree.</para>
 
 <para><command>namei</command> shows the symbolic links in the given
 pathnames.</para>
 
-<para><command>pg</command> displays a text file one screenful at a
+<para><command>pg</command> displays a text file one screen full at a
 time.</para>
 
 <para><command>pivot_root</command> makes the given file system the new
 root file system of the current process.</para>
 
-<para><command>ramsize</command> could be used to set the size of the
+<para><command>ramsize</command> is used to set the size of the
 RAM disk in a bootable image.</para>
 
-<para><command>rdev</command> could be used to query and set the root
+<para><command>rdev</command> is used to query and set the root
 device and other things in a bootable image.</para>
 
 <para><command>readprofile</command> reads kernel profiling information.</para>
@@ -202,7 +202,7 @@ processes.</para>
 
 <para><command>rev</command> reverses the lines of a given file.</para>
 
-<para><command>rootflags</command> could be used to set the rootflags
+<para><command>rootflags</command> is used to set the rootflags
 in a bootable image.</para>
 
 <para><command>script</command> makes a typescript of a terminal
@@ -217,7 +217,7 @@ parameters.</para>
 
 <para><command>sfdisk</command> is a disk partition table manipulator.</para>
 
-<para><command>swapdev</command> could be used to set the swap device
+<para><command>swapdev</command> is used to set the swap device
 in a bootable image.</para>
 
 <para><command>swapoff</command> disables devices and files for paging
@@ -241,8 +241,8 @@ in a bootable image.</para>
 <para><command>whereis</command> reports the location of binary, the
 source, and the manual page for the given command.</para>
 
-<para><command>write</command> sends a message to the given user. That is,
-if that user has not disabled such messages.</para>
+<para><command>write</command> sends a message to the given user,
+<emphasis>if</emphasis> that user has not disabled such messages.</para>
 
 </sect2>
 

@@ -13,7 +13,7 @@ converting Info documents.</para>
 <screen>&buildtime; 0.2 SBU
 &diskspace; 17 MB</screen>
 
-<para>For its installation Texinfo depends on: Bash, Binutils, Coreutils,
+<para>Texinfo installation depends on: Bash, Binutils, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
@@ -29,14 +29,14 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>To have the results tested, issue:
+<para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And optionally install the components belonging in a TeX installation:</para>
+<para>Optionally install the components belonging in a TeX installation:</para>
 
 <screen><userinput>make TEXMF=/usr/share/texmf install-tex</userinput></screen>
 
