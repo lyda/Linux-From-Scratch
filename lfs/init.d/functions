@@ -55,8 +55,8 @@ BOOTSERVICE=""
 #
 # Outputs:      Standard Output
 #
-# Dependencies: - wc, for counting \n's in a variable
-#               - $WCOL, from functions
+# Dependencies: - grep, for counting \n's in a variable
+#               - $WCOL, for max line length, from functions
 #
 # Todo:         - This function was created for the purpose of storing
 #               information to be passed to a bootup log.  The logging support
@@ -76,7 +76,7 @@ boot_mesg()
 	# and calling CURS_UP that many times
 	# It will also append our new text onto the BOOTMESG variable
 	else
-		local length=`echo -e "$BOOTMESG" | wc -l`
+		local length=`echo -e "$BOOTMESG" | grep -c \$`
 		local count=0
 		BOOTMESG="$BOOTMESG $@"
 		while [ "${count}" -lt "${length}" ]; do

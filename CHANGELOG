@@ -1,3 +1,6 @@
+n/a - September 22, 2004
+	* Removed the dependency on wl by replacing it with grep (Bryan Kadzban)
+
 n/a - September 21, 2004
 	* boot_mesg has been enhanced.  Subsequent calls will overwrite previous text,
 	  and it will wrap text based upon the variable ${WCOL}.
