@@ -82,7 +82,7 @@
 			</para>
 		</section>
 	</section>
-	<section id="preparing"><title>Preparing to build?</title>
+	<section id="preparing"><title>Preparing to Build</title>
 		<section id="what-dist"><title>What distribution should I use to start from?</title>
 			<para>
 				Most distributions are fine, and even the worst aren't guarenteed to fail;
