@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "&milestone;-20040507">
-<!ENTITY releasedate "May 7, 2004">
+<!ENTITY version "&milestone;-20040513">
+<!ENTITY releasedate "May 13, 2004">
 <!ENTITY milestone "5.1">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
