@@ -57,7 +57,7 @@ for file in ${FILES}; do
 		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]; then
 			if ip link show ${1} > /dev/null 2>&1
 			then
-				IFCONFIG=${file} ${network_devices}/services/${SERVICE} ${1} down ${ESSID}
+				IFCONFIG=${file} ${network_devices}/services/${SERVICE} ${1} down
 			else
 				boot_mesg "Interface ${1} doesn't exist." ${WARNING}
 				echo_warning
