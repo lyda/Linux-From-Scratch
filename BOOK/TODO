@@ -1,10 +1,25 @@
- - Mention --enable-kernel=... where appropriate.
- - POSIX compliance patches (aka, removing the coreutils hack).
- - Pass --enable-const (and maybe --enable-widec) to ncurses.
- - Use that E2fsprogs patch to include Readline support in debugfs.
- - See about removing some things from Chapter 5, like patch. We can build
-   those at the beginning of chapter 6 and have one less package to compile.
-   We need to be sure this doens't break the pureness though.
- - Check for pureness and fix any occurrences of breakage.
- - Add more index terms to hotplug page.
- - Convert some patches to seds (only sane ones, though).
+ - Apply Jim's iproute2 patch & remove net-tools
+   http://archives.linuxfromscratch.org/mail-archives/lfs-dev/2004-July/047121.html
+
+ - remove ed (it's in BLFS now)
+
+ - Fix the print stylesheet to meet the publishers' requirements
+   http://archives.linuxfromscratch.org/mail-archives/lfs-dev/2004-July/047225.html
+
+ - udev documentation based (loosely) on
+   http://www.linuxfromscratch.org/~matthew/lfs_udev.txt
+
+ - kernel documentation/chapter 8 rewrite based on
+   http://wiki.linuxfromscratch.org/index.php?pagename=BuildingHostKernel,
+   http://wiki.linuxfromscratch.org/index.php?pagename=BuildingKernel &
+   http://wiki.linuxfromscratch.org/index.php?pagename=BuildingUdevKernel
+
+ - "What is LFS" & "What Packages in LFS" rewrite based on
+    http://wiki.linuxfromscratch.org/index.php?pagename=WhatIsLFS &
+    http://wiki.linuxfromscratch.org/index.php?pagename=WhatPackagesInLFS
+
+ - Update the Acknowledgements based on
+   http://wiki.linuxfromscratch.org/index.php?pagename=LFS-Acknowledgements
+
+ - update the LFS development web page reflecting how we *should* use the
+   testing & unstable trees
