@@ -1,42 +1,46 @@
 ETCDIR=/etc
 EXTDIR=${DESTDIR}${ETCDIR}
+MODE=754
+DIRMODE=755
+CONFMODE=644
+
 
 all: install
 
 create-dirs:
-	install -d -m 755 ${EXTDIR}/rc.d/rc0.d
-	install -d -m 755 ${EXTDIR}/rc.d/rc1.d
-	install -d -m 755 ${EXTDIR}/rc.d/rc2.d
-	install -d -m 755 ${EXTDIR}/rc.d/rc3.d
-	install -d -m 755 ${EXTDIR}/rc.d/rc4.d
-	install -d -m 755 ${EXTDIR}/rc.d/rc5.d
-	install -d -m 755 ${EXTDIR}/rc.d/rc6.d
-	install -d -m 755 ${EXTDIR}/rc.d/rcsysinit.d
-	install -d -m 755 ${EXTDIR}/rc.d/init.d
-	install -d -m 755 ${EXTDIR}/sysconfig
+	install -d -m ${DIRMODE} ${EXTDIR}/rc.d/rc0.d
+	install -d -m ${DIRMODE} ${EXTDIR}/rc.d/rc1.d
+	install -d -m ${DIRMODE} ${EXTDIR}/rc.d/rc2.d
+	install -d -m ${DIRMODE} ${EXTDIR}/rc.d/rc3.d
+	install -d -m ${DIRMODE} ${EXTDIR}/rc.d/rc4.d
+	install -d -m ${DIRMODE} ${EXTDIR}/rc.d/rc5.d
+	install -d -m ${DIRMODE} ${EXTDIR}/rc.d/rc6.d
+	install -d -m ${DIRMODE} ${EXTDIR}/rc.d/rcsysinit.d
+	install -d -m ${DIRMODE} ${EXTDIR}/rc.d/init.d
+	install -d -m ${DIRMODE} ${EXTDIR}/sysconfig
 
 create-service-dir:
-	install -d -m 755 ${EXTDIR}/sysconfig/network-devices/services
+	install -d -m ${DIRMODE} ${EXTDIR}/sysconfig/network-devices/services
 
 install: create-dirs create-service-dir
-	install -m 754 lfs/init.d/checkfs      ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/cleanfs      ${EXTDIR}/rc.d/init.d/
-	install -m 644 lfs/init.d/functions    ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/halt         ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/console      ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/localnet     ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/modules      ${EXTDIR}/rc.d/init.d
-	install -m 754 lfs/init.d/mountfs      ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/mountkernfs  ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/network      ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/rc           ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/reboot       ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/sendsignals  ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/setclock     ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/swap         ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/sysklogd     ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/template     ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/udev         ${EXTDIR}/rc.d/init.d
+	install -m ${MODE} lfs/init.d/checkfs      ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/cleanfs      ${EXTDIR}/rc.d/init.d/
+	install -m ${CONFMODE} lfs/init.d/functions    ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/halt         ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/console      ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/localnet     ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/modules      ${EXTDIR}/rc.d/init.d
+	install -m ${MODE} lfs/init.d/mountfs      ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/mountkernfs  ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/network      ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/rc           ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/reboot       ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/sendsignals  ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/setclock     ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/swap         ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/sysklogd     ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/template     ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/udev         ${EXTDIR}/rc.d/init.d
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc0.d/K90sysklogd
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc0.d/K80network
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S60sendsignals
@@ -71,22 +75,25 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
-	install --backup=numbered -m 644 lfs/sysconfig/console                                    ${EXTDIR}/sysconfig/
-	install --backup=numbered -m 644 lfs/sysconfig/createfiles                                ${EXTDIR}/sysconfig/
-	install --backup=numbered -m 644 lfs/sysconfig/modules                                    ${EXTDIR}/sysconfig
-	install --backup=numbered -m 644 lfs/sysconfig/rc                                         ${EXTDIR}/sysconfig/
-	install --backup=numbered -m 644 lfs/sysconfig/sysklogd                                   ${EXTDIR}/sysconfig/
-	install                   -m 754 lfs/sysconfig/network-devices/ifup                       ${EXTDIR}/sysconfig/network-devices
-	install                   -m 754 lfs/sysconfig/network-devices/ifdown                     ${EXTDIR}/sysconfig/network-devices
-	install                   -m 754 lfs/sysconfig/network-devices/services/ipv4-static       ${EXTDIR}/sysconfig/network-devices/services
-	install                   -m 754 lfs/sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services
+	install --backup=numbered -m ${CONFMODE} lfs/sysconfig/console                                    ${EXTDIR}/sysconfig/
+	install --backup=numbered -m ${CONFMODE} lfs/sysconfig/createfiles                                ${EXTDIR}/sysconfig/
+	install --backup=numbered -m ${CONFMODE} lfs/sysconfig/modules                                    ${EXTDIR}/sysconfig
+	install --backup=numbered -m ${CONFMODE} lfs/sysconfig/rc                                         ${EXTDIR}/sysconfig/
+	install --backup=numbered -m ${CONFMODE} lfs/sysconfig/sysklogd                                   ${EXTDIR}/sysconfig/
+	install                   -m ${MODE} lfs/sysconfig/network-devices/ifup                       ${EXTDIR}/sysconfig/network-devices
+	install                   -m ${MODE} lfs/sysconfig/network-devices/ifdown                     ${EXTDIR}/sysconfig/network-devices
+	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static       ${EXTDIR}/sysconfig/network-devices/services
+	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services
 
 install-hotplug: create-dirs
-	install -m 754 contrib/init.d/hotplug      ${EXTDIR}/rc.d/init.d
+	install -m ${MODE} contrib/init.d/hotplug      ${EXTDIR}/rc.d/init.d
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 
 install-service-mtu: create-service-dir
-	install -m 754 contrib/sysconfig/network-devices/services/mtu ${EXTDIR}/sysconfig/network-devices/services
-.PHONY: all create-dirs create-service-dir install install-hotplug
+	install -m ${MODE} contrib/sysconfig/network-devices/services/mtu ${EXTDIR}/sysconfig/network-devices/services
+
+.PHONY: all create-dirs create-service-dir \
+	install install-hotplug install-service-mtu
+
