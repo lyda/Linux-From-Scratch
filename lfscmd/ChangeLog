@@ -1,3 +1,7 @@
+o [jon] December 12th 2003
+  Fixed SEGV when error() function is called. A free was being called
+  on memory allocated on the stack.
+  
 o [jon] November 24th 2003
   Reorganized much of lfscmd.c
   
