@@ -1,10 +1,11 @@
-n/a - March 23, 2004
+2.0.0-pre2 - March 23, 2004
 
 	* Cleaned the /tmp directory on bootup.  find command supplied by Zack
 	* Added a script which can automatically create files and directories
 	  on startup.  [Handles files/directories, permissions, and user/group].
 	  Created by Zack
 	* Added blfs/init.d/fam script
+	* Tagged as 2.0.0-pre2
 
 n/a - March 20, 2004
 
