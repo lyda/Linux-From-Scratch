@@ -33,15 +33,11 @@ case "$1" in
 
 		if [ $? != 0 ]
 		then
-			echo -n -e $FAILURE
-			echo
-			echo "Cannot check root file system because it could not"
-			echo "be mounted in read-only mode."
-			echo
-			echo -n "When you press Enter, this system will be halted."
-			echo -n -e $NORMAL
-			echo
-			echo "Press Enter to continue..."
+			print_status failure
+			boot_mesg "\nCannot check root filesystem because it could not" $FAILURE
+			boot_mesg " be mounted in read-only mode."
+			boot_mesg "\n\nWhen you press Enter, this system will be halted."
+			boot_mesg "\n\nPress enter to continue..." $NORMAL
 			read ENTER
 			halt -f
 		fi
@@ -62,12 +58,10 @@ case "$1" in
 
 		if [ "$error_value" = 1 ]
 		then
-			
-			echo -n -e $WARNING
-			boot_mesg "\nFile system errors were found and have been corrected."
+			boot_mesg "\nFile system errors were found and have been corrected." $WARNING
 			boot_mesg "  You may want to double-check that everything was fixed"
 			boot_mesg " properly"
-			echo -n -e $NORMAL
+			boot_mesg "" $NORMAL
 			print_status warning
 		fi
 
@@ -78,41 +72,32 @@ case "$1" in
 
 		if [ "$error_value" = 2 -o "$error_value" = 3 ]
 		then
-			echo -n -e $WARNING
-			echo "\nFile system errors were found and have been corrected, but"
-			echo "the nature of the errors require this system to be rebooted."
-			echo
-			echo -n "When you press Enter, this system will be rebooted."
-			echo -n -e $NORMAL
-			print_status warning
-			echo
-			echo "Please Enter to continue..."
+			print_status failure
+			boot_mesg "\nFile system errors were found and have been corrected, but" $WARNING
+			boot_mesg " the nature of the errors require this system to be rebooted."
+			boot_mesg "\n\nWhen you press enter, this system will be rebooted."
+			boot_mesg "\n\nPress Enter to continue..." $NORMAL
 			read ENTER
 			reboot -f
 		fi
 
 		if [ "$error_value" -gt 3 -a "$error_value" -lt 16 ]
 		then
-			echo -n -e $FAILURE
-			echo "File system errors were encountered that couldn't be"
-			echo "fixed automatically. This system cannot continue to boot"
-			echo "and will therefore be halted until those errors fixed manually"
-			echo "by a System Administrator."
-			echo
-			echo -n "When you press Enter, this system will be halted."
-			echo -n -e $NORMAL
 			print_status failure
-			echo
-			echo "Press Enter to continue..."
+			boot_mesg "File system errors were encountered that couldn't be" $FAILURE
+			boot_mesg " fixed automatically.  This system cannot continue to boot"
+			boot_mesg " and will therefore be halted until those errors are fixed manually"
+			boot_mesg " by a System Administrator"
+			boot_mesg "\n\nWhen you press Enter, this system will be halted."
+			boot_mesg "\n\nPress Enter to continue..." $NORMAL
 			read ENTER
 			halt -f
 		fi
 
 		if [ "$error_value" -ge 16 ]
 		then 
-			echo -n -e $FAILURE
-			boot_mesg "\nUnexpected Failure running fsck. Exited with "$error_value
-			echo -n -e $NORMAL
+			boot_mesg "\nUnexpected Failure running fsck. Exited with $error_value" $FAILURE
+			boot_mesg "" $NORMAL
 			print_status failure
 			exit $error_value
 		fi
