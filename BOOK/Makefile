@@ -6,11 +6,8 @@ XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
 
 lfs:
 	xsltproc --xinclude --nonet -stringparam profile.condition html \
-	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
-
-	xsltproc --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
-	  -stringparam base.dir $(BASEDIR)/ stylesheets/lfs-chunked.xsl \
-	  $(BASEDIR)/lfs-html.xml
+	-stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/ \
+	stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/stylesheets; \
@@ -26,8 +23,6 @@ lfs:
 	  *.html
 	cd $(BASEDIR)/; sed -i -e "s@../images@images@g" \
 	  *.html
-
-	rm $(BASEDIR)/lfs-html.xml
 
 	for filename in `find $(BASEDIR) -name "*.html"`; do \
 	  tidy -config tidy.conf $$filename; \
@@ -62,12 +57,8 @@ pdf:
 
 nochunks:
 	xsltproc --xinclude --nonet -stringparam profile.condition html \
-	  --output $(BASEDIR)/lfs-nochunk.xml stylesheets/lfs-profile.xsl index.xml
-
-	xsltproc --nonet --output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
-	  stylesheets/lfs-nochunks.xsl $(BASEDIR)/lfs-nochunk.xml
-
-	rm $(BASEDIR)/lfs-nochunk.xml
+	--output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
+	  stylesheets/lfs-nochunks.xsl index.xml
 
 	tidy -config tidy.conf $(BASEDIR)/$(NOCHUNKS_OUTPUT) || true
 
