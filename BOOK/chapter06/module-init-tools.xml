@@ -64,7 +64,7 @@ insmod), and rmmod (link to insmod)</seg></seglistitem>
 <term><command>depmod</command></term>
 <listitem>
 <para>creates a dependency file based on the symbols it finds in the
-existing set of modules. This dependency file is used by modprobe to
+existing set of modules. This dependency file is used by <command>modprobe</command> to
 automatically load the required modules.</para>
 <indexterm zone="ch-system-module-init-tools depmod"><primary sortas="b-depmod">depmod</primary></indexterm>
 </listitem>

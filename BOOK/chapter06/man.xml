@@ -58,7 +58,7 @@ using programs such as <command>whatis</command>:</para>
 <variablelist>
 <varlistentry>
 <term><parameter>-confdir=/etc</parameter></term>
-<listitem><para>This tells the man program to look for the
+<listitem><para>This tells the <command>man</command> program to look for the
 <filename>man.conf</filename> configuration file in the <filename
 class="directory">/etc</filename> directory.</para></listitem>
 </varlistentry>

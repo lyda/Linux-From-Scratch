@@ -93,7 +93,7 @@ to c2ph), s2p, splain, and xsubpp</seg>
 <varlistentry id="c2ph">
 <term><command>c2ph</command></term>
 <listitem>
-<para>dumps C structures as generated from <quote>cc -g -S</quote>.</para>
+<para>dumps C structures as generated from <command>cc -g -S</command>.</para>
 <indexterm zone="ch-system-perl c2ph"><primary sortas="b-c2ph">c2ph</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -118,7 +118,7 @@ Unicode Character Mappings or Tcl Encoding Files.</para>
 <varlistentry id="find2perl">
 <term><command>find2perl</command></term>
 <listitem>
-<para>translates find commands to Perl.</para>
+<para>translates <command>find</command> commands to Perl.</para>
 <indexterm zone="ch-system-perl find2perl"><primary sortas="b-find2perl">find2perl</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -160,7 +160,7 @@ single swiss-army language.</para>
 <varlistentry id="perl-version">
 <term><command>perl&perl-version;</command></term>
 <listitem>
-<para>hard link to perl.</para>
+<para>hard link to <command>perl</command>.</para>
 <indexterm zone="ch-system-perl perl-version"><primary
 sortas="b-perl&perl-version;">perl&perl-version;</primary></indexterm>
 </listitem>
@@ -288,7 +288,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 <varlistentry id="pstruct">
 <term><command>pstruct</command></term>
 <listitem>
-<para>dumps C structures as generated from <quote>cc -g -S</quote> stabs.</para>
+<para>dumps C structures as generated from <command>cc -g -S</command> stabs.</para>
 <indexterm zone="ch-system-perl pstruct"><primary sortas="b-pstruct">pstruct</primary></indexterm>
 </listitem>
 </varlistentry>

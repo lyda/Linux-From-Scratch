@@ -70,7 +70,7 @@ GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 <varlistentry id="libtoolize">
 <term><command>libtoolize</command></term>
 <listitem>
-<para>provides a standard way to add libtool support to a package.</para>
+<para>provides a standard way to add <command>libtool</command> support to a package.</para>
 <indexterm zone="ch-system-libtool libtoolize"><primary sortas="b-libtoolize">libtoolize</primary></indexterm>
 </listitem>
 </varlistentry>

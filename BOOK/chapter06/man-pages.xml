@@ -45,7 +45,7 @@
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="manual-pages">
-<term><command>manual pages</command></term>
+<term><emphasis role="bold">manual pages</emphasis></term>
 <listitem>
 <para>describe the C and C++ functions, important
 device files, and significant configuration files.</para>
