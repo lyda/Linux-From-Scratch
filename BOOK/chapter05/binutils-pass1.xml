@@ -36,7 +36,7 @@ enable.</para>
 optimization flags (including the <parameter>-march</parameter> and
 <parameter>-mcpu</parameter> options) are changed. If any environment
 variables that override default optimizations have been defined, such
-as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
 unset them when building Binutils.</para>
 
 <para>The Binutils documentation recommends building Binutils outside of the
@@ -129,8 +129,9 @@ subdirectory.</para></listitem>
 <term><parameter>-C ld LDFLAGS="-all-static"
 LIB_PATH=/tools/lib</parameter></term>
 <listitem><para>This option rebuilds everything in the
-<filename class="directory">ld</filename> subdirectory. Specifying the LIB_PATH
-Makefile variable on the command line allows us to override the default value
+<filename class="directory">ld</filename> subdirectory. Specifying 
+the <envar>LIB_PATH</envar> Makefile variable on the command 
+line allows us to override the default value
 and point it to the temporary tools location. The value of this variable
 specifies the linker's default library search path. This preparation
 is used later in the chapter.</para></listitem>

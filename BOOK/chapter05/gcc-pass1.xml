@@ -34,7 +34,7 @@ compiler nor the test suite will be needed here.</para>
 optimization flags (including the <parameter>-march</parameter> and
 <parameter>-mcpu</parameter> options) are changed. If any environment
 variables that override default optimizations have been defined, such
-as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
 unset them when building GCC.</para>
 
 <para>The GCC documentation recommends building GCC outside of the
@@ -64,13 +64,13 @@ system.</para></listitem>
 <term><parameter>--enable-shared</parameter></term>
 <listitem><para>This switch may seem counter-intuitive at first.
 However, this switch allows the building of
-<filename>libgcc_s.so.1</filename> and
-<filename>libgcc_eh.a</filename>, and having
-<filename>libgcc_eh.a</filename> available ensures that the configure
+<filename class="libraryfile">libgcc_s.so.1</filename> and
+<filename class="libraryfile">libgcc_eh.a</filename>, and having
+<filename class="libraryfile">libgcc_eh.a</filename> available ensures that the configure
 script for Glibc (the next package we compile) produces the proper
 results. Note that the GCC binaries will still be linked statically
 because this is controlled by the <parameter>-static</parameter> value of
-the <emphasis>BOOT_LDFLAGS</emphasis> variable in the next
+the <envar>BOOT_LDFLAGS</envar> variable in the next
 step.</para></listitem>
 </varlistentry>
 

@@ -31,7 +31,7 @@
 optimization flags (including the <parameter>-march</parameter> and
 <parameter>-mcpu</parameter> options) are changed. If any environment
 variables that override default optimizations have been defined, such
-as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
 unset them when building Glibc.</para>
 
 <para>It should be noted that compiling Glibc in any way other than
@@ -147,7 +147,7 @@ command will do so:</para>
 <screen><userinput>make check</userinput></screen>
 
 <para>For a discussion of test failures that are of particular
-importance, please see <xref linkend="ch-system-glibc"/>.</para>
+importance, please see <xref linkend="ch-system-glibc" role="."/></para>
 
 <para>In this chapter, some tests can be adversely effected by
 existing tools or environmental issues on the host system. Glibc test
@@ -164,8 +164,8 @@ issuing a <command>make -k check</command> command. If using this option, be sur
 output so that the log file can be examined for failures later.</para>
 
 <para>The install stage of Glibc will issue a harmless warning at the
-end about the absence of /tools/etc/ld.so.conf. Prevent this warning
-with:</para>
+end about the absence of <filename>/tools/etc/ld.so.conf</filename>. 
+Prevent this warning with:</para>
 
 <screen><userinput>mkdir /tools/etc
 touch /tools/etc/ld.so.conf</userinput></screen>
@@ -199,7 +199,7 @@ command. Information on this command is located in the
 are a number of locales that are essential in order for the tests of
 future packages to pass, in particular, the
 <emphasis>libstdc++</emphasis> tests from GCC. The following
-instructions, instead of the <emphasis>install-locales</emphasis>
+instructions, instead of the <parameter>install-locales</parameter>
 target used above, will install the minimum set of locales necessary
 for the tests to run successfully:</para>
 

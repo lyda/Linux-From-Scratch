@@ -55,8 +55,8 @@ retain the source and build directories in order for their contents to
 be used by later commands. Pay special attention to these
 reminders.</para>
 
-<para>Check one last time that the LFS environment variable is set up
-properly:</para>
+<para>Check one last time that the <envar>LFS</envar> environment 
+variable is set up properly:</para>
 
 <screen><userinput>echo $LFS</userinput></screen>
 

@@ -35,7 +35,7 @@
 optimization flags (including the <parameter>-march</parameter> and
 <parameter>-mcpu</parameter> options) are changed. If any environment
 variables that override default optimizations have been defined, such
-as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
 unset them when building Binutils.</para>
 
 <para>Create a separate build directory again:</para>

@@ -45,7 +45,8 @@ recommended that this command be issued prior to
 <emphasis>each</emphasis> kernel compilation. Do not assume that the
 source tree is automatically clean after un-tarring.</para>
 
-<para>Create the <filename>include/linux/version.h</filename> file:</para>
+<para>Create the <filename class="headerfile">include/linux/version.h</filename>
+file:</para>
 
 <screen><userinput>make include/linux/version.h</userinput></screen>
 

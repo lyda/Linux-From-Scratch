@@ -30,7 +30,7 @@
 optimization flags (including the <parameter>-march</parameter> and
 <parameter>-mcpu</parameter> options) are changed. If any environment
 variables that override default optimizations have been defined, such
-as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
 unset them when building GCC.</para>
 
 <para>The tools required to test GCC and Binutils&mdash;Tcl, Expect
@@ -81,7 +81,7 @@ headers from the host system, which most likely will not match the
 Glibc version used for the LFS system.</para>
 
 <para>The second patch changes GCC's default location of the dynamic
-linker (typically <filename>ld-linux.so.2</filename>). It also removes
+linker (typically <filename class="libraryfile">ld-linux.so.2</filename>). It also removes
 <filename class="directory">/usr/include</filename> from GCC's include
 search path. Patching now rather than adjusting the specs file after
 installation ensures that the new dynamic linker is used during the
@@ -150,8 +150,8 @@ ensures that both the C and C++ compilers are built.</para></listitem>
 <varlistentry>
 <term><parameter>--disable-libstdcxx-pch</parameter></term>
 <listitem><para>Do not build the pre-compiled header (PCH) for
-libstdc++. It takes up a lot of space, and we have no use for
-it.</para></listitem>
+<filename class="libraryfile">libstdc++</filename>. It takes up a lot of space,
+and we have no use for it.</para></listitem>
 </varlistentry>
 </variablelist>
 

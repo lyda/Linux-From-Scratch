@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-expect" xreflabel="Expect" role="wrap">
+<sect1 id="ch-tools-expect" role="wrap">
 <title>Expect-&expect-version;</title>
 <?dbhtml filename="expect.html"?>
 

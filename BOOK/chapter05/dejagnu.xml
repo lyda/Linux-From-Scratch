@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-dejagnu" xreflabel="DejaGNU" role="wrap">
+<sect1 id="ch-tools-dejagnu" role="wrap">
 <title>DejaGNU-&dejagnu-version;</title>
 <?dbhtml filename="dejagnu.html"?>
 

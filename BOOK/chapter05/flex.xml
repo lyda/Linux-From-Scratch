@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-flex" xreflabel="Flex" role="wrap">
+<sect1 id="ch-tools-flex" role="wrap">
 <title>Flex-&flex-version;</title>
 <?dbhtml filename="flex.html"?>
 

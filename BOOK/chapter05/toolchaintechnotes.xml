@@ -39,9 +39,9 @@ standard linker <command>ld</command> that is part of Binutils). The
 dynamic linker provided by Glibc finds and loads the shared libraries
 needed by a program, prepares the program to run, and then runs it.
 The name of the dynamic linker will usually be
-<filename>ld-linux.so.2</filename>. On platforms that are less
-prevalent, the name might be <filename>ld.so.1</filename>, and newer
-64 bit platforms might be named something else entirely. The name of
+<filename class="libraryfile">ld-linux.so.2</filename>. On platforms that are less
+prevalent, the name might be <filename class="libraryfile">ld.so.1</filename>, 
+and newer 64 bit platforms might be named something else entirely. The name of
 the platform's dynamic linker can be determined by looking in the
 <filename class="directory">/lib</filename> directory on the host
 system. A sure-fire way to determine the name is to inspect a random
@@ -86,8 +86,8 @@ class="directory">/tools/$TARGET_TRIPLET/bin</filename>. The tools in
 one location are hard linked to the other. An important facet of the
 linker is its library search order. Detailed information can be
 obtained from <command>ld</command> by passing it the
-<parameter>--verbose</parameter> flag. For example, an <command>ld
---verbose | grep SEARCH</command> will illustrate the current search
+<parameter>--verbose</parameter> flag. For example, an <userinput>ld
+--verbose | grep SEARCH</userinput> will illustrate the current search
 paths and their order. It shows which files are linked by
 <command>ld</command> by compiling a dummy program and passing the
 <parameter>--verbose</parameter> switch to the linker. For example,
@@ -119,7 +119,8 @@ order.</para>
 <para>The next package installed is Glibc. The most important
 considerations for building Glibc are the compiler, binary tools, and
 kernel headers. The compiler is generally not an issue since Glibc
-will always use the <command>gcc</command> found in a PATH directory.
+will always use the <command>gcc</command> found in a 
+<envar>PATH</envar> directory.
 The binary tools and kernel headers can be a bit more complicated.
 Therefore, take no risks and use the available configure switches to
 enforce the correct selections. After the run of
