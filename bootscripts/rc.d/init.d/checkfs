@@ -22,13 +22,13 @@ case "$1" in
 
 		if [ $? != 0 ]
 		then
-			echo -ne $FAILURE
+			echo -n -e $FAILURE
 			echo
 			echo "Cannot check root file system because it could not"
 			echo "be mounted in read-only mode."
 			echo
 			echo -n "When you press enter, this system will be halted."
-			echo -ne $NORMAL
+			echo -n -e $NORMAL
 			echo
 			echo "Press <ctrl-j> to continue..."
 			read ENTER
@@ -51,11 +51,11 @@ case "$1" in
 
 		if [ "$error_value" = 1 ]
 		then
-			echo -ne $WARNING
+			echo -n -e $WARNING
 			echo "File system errors were found and have been corrected."
 			echo "You may want to double-check that everything was fixed"
 			echo -n "properly"
-			echo -ne $NORMAL
+			echo -n -e $NORMAL
 			print_status warning
 		fi
 
@@ -66,12 +66,12 @@ case "$1" in
 
 		if [ "$error_value" = 2 -o "$error_value" = 3 ]
 		then
-			echo -ne $WARNING
+			echo -n -e $WARNING
 			echo "File system errors were found and have been corrected, but"
 			echo "the nature of the errors require this system to be rebooted."
 			echo
 			echo -n "When you press enter, this system will be rebooted."
-			echo -ne $NORMAL
+			echo -n -e $NORMAL
 			print_status warning
 			echo
 			echo "Please <ctrl-j> enter to continue..."
@@ -81,14 +81,14 @@ case "$1" in
 
 		if [ "$error_value" -gt 3 -a "$error_value" -lt 16 ]
 		then
-			echo -ne $FAILURE
+			echo -n -e $FAILURE
 			echo "File system errors were encountered that couldn't be"
 			echo "fixed automatically. This system cannot continue to boot"
 			echo "and will therefore be halted until those errors fixed manually"
 			echo "by a System Administrator."
 			echo
 			echo -n "When you press enter, this system will be halted."
-			echo -ne $NORMAL
+			echo -n -e $NORMAL
 			print_status failure
 			echo
 			echo "Press <ctrl-j> to continue..."
