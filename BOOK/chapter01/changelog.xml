@@ -85,6 +85,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>March 19, 2005 [jim]</para>
 <itemizedlist>
+<listitem><para>Updated: Arch: x86, PPC, Alpha - Linux to 2.6.11.5.</para></listitem>
 <listitem><para>Updated: Arch: All - Made the bootloader FHS symlink generic to all bootloaders.</para></listitem>
 </itemizedlist>
 </listitem>
