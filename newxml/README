@@ -27,10 +27,10 @@ The easiest way to do this is to follow the BLFS instructions for the 4.2
 version of the DTD.  Simply substitute 4.3CR2 in place of every occurence of 4.2
 in the commands given.
 
-Following this then run the commands listed under the "In order to install
-ScrollKeeper" again, but replace every occurence of 4.1.2 with 4.2.  This will
-allow any documents requiring the 4.2 version of the DTD to be processed
-against the newer version of the DTD.
+After this, run just the commands listed under the "In order to install
+ScrollKeeper" section again, but this time replace every occurence of
+4.1.2 with 4.2.  This will allow any documents requiring the 4.2 version
+of the DTD to be processed against the newer version of the DTD.
 
 Additionally there's just two more commands to run:
 
