@@ -63,3 +63,13 @@ CleanFS configuration:
 			Used by character and block devices.
 		Minor#:
 			Used by character and block devices.
+
+Sysklogd configuration:
+	Script Files:
+		rc.d/init.d/sysklogd
+
+	Configuration Files:
+		/etc/sysconfig/sysklogd
+		- SYSLOGD_OPTIONS: Options to pass to the syslogd daemon
+		- KLOGD_OPTIONS: Options to pass to the klogd daemon
+
