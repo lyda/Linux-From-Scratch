@@ -28,7 +28,7 @@ running a command like
 file.</para></listitem>
 
 <listitem><para>Recreate the <filename>00MD5SUMS</filename> file by running
-the <userinput>md5sums * > 00MD5SUMS</userinput> command.</para></listitem>
+the <userinput>md5sum * > 00MD5SUMS</userinput> command.</para></listitem>
 
 <listitem><para>Run <userinput>date</userinput> to get the current date and
 time on the server.</para></listitem>
