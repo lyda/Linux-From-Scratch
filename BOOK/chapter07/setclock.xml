@@ -22,7 +22,7 @@ needs to be manually configured.</para>
 
 <para>If you cannot remember whether or not the hardware
 clock is set to UTC time, find out by running
-the <userinput>hwclock --show</userinput> command. This will tell
+the <userinput>hwclock --localtime --show</userinput> command. This will tell
 what the current time is according to the hardware clock. If this time
 matches whatever your watch says, then the hardware clock is set to
 local time. If the output from <command>hwclock</command> is not local
