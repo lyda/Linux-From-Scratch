@@ -63,6 +63,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>December 20, 2004 [manuel]: Made Grub's configuration location 
+FHS compliant.</para></listitem>
+
 <listitem><para>December 19, 2004 [manuel]: Added the irc.lfs-matrix.de IRC server.</para></listitem>
 
 <listitem><para>December 5, 2004 [jeremy]: Added the DOCBOOKTOMAN parameter
