@@ -7,31 +7,26 @@
 <title>About $LFS</title>
 <?dbhtml filename="aboutlfs.html"?>
 
-<para>Please read the following paragraphs carefully. Throughout this book the
-variable LFS will be used frequently. $LFS must at all times be replaced with
-the directory where the partition that contains the LFS system is mounted. How
-to create and where to mount the partition is explained in full detail in
-<xref linkend="chapter-partitioning"/>. For the moment let's assume that the LFS partition
-is mounted on <filename>/mnt/lfs</filename>.</para>
+<para>Throughout this book the environment variable LFS will be used several
+times. It is paramount that this variable is always defined. It should be set
+to the mount point you chose for your LFS partition. Check that your LFS
+variable is set up properly with:</para>
 
-<para>When you are told to run a command like
-<userinput>./configure --prefix=$LFS/tools</userinput>, you actually have to
-execute <userinput>./configure --prefix=/mnt/lfs/tools</userinput>.</para>
+<screen><userinput>echo $LFS</userinput></screen>
 
-<para>It's important that this is done no matter where it is read; be it in
-commands entered in a shell, or in a file edited or created.</para>
-
-<para>A possible solution is to set the environment variable LFS.
-This way $LFS can be entered literally instead of replacing it with 
-/mnt/lfs. This is accomplished by running: </para>
+<para>Make sure the output shows the path to your LFS partition's mount
+point, which is <filename class="directory">/mnt/lfs</filename> if you
+followed our example. If the output is wrong, you can always set the variable
+with:</para>
 
 <screen><userinput>export LFS=/mnt/lfs</userinput></screen>
 
-<para>Now, if you are told to run a command such as
-<userinput>./configure --prefix=$LFS/tools</userinput>, then you may type it
-literally. Your shell will replace "$LFS" with "/mnt/lfs" when it processes
-the command line (that is, when you hit Enter after having typed the
-command). Don't forget to check that <quote>$LFS</quote> is set whenever you leave and
+<para>Having this variable set means that if you are told to run a command like
+<userinput>mkdir $LFS/tools</userinput>, you can type it literally. Your shell
+will replace "$LFS" with "/mnt/lfs" (or whatever you set the variable to) when
+it processes the command line.</para>
+
+<para>Don't forget to check that <quote>$LFS</quote> is set whenever you leave and
 reenter the environment (as when doing an <quote>su</quote> to root or another user).
 </para>
 

@@ -24,8 +24,8 @@ to keep them separate from the files installed in the next chapter and your host
 Since the packages compiled here are merely temporary, we don't want
 them to pollute the soon-to-be LFS system.</para>
 
-<para>Before issuing the build instructions for a package you are expected to
-have already unpacked it as user <emphasis>lfs</emphasis> (explained shortly),
+<para>Before issuing the build instructions for a package, you are expected to
+have already unpacked it (explained shortly) as user <emphasis>lfs</emphasis>,
 and to have performed a <userinput>cd</userinput> into the created directory.
 The build instructions assume that you are using the <command>bash</command>
 shell.</para>
