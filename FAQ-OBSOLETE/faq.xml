@@ -82,6 +82,7 @@
 		<qandadiv id="fee-compile-specific">
 				<title>Compile Time Errors From Specific Packages</title>
 			&optimized-glibc-fail;
+			&glibc-no-ld_map;
 			&perl-missing-separator;
 			&sh-utils-getloadavg;
 		</qandadiv>
