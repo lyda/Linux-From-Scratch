@@ -69,7 +69,7 @@ installed with the Sysklogd package.</para></listitem>
 <term><parameter>--disable-whois</parameter></term>
 <listitem><para>This option disables
 the building of the Inetutils <command>whois</command> client, which is out of date.
-Instructions for a better <command>whois<command> client are in the BLFS book.</para></listitem>
+Instructions for a better <command>whois</command> client are in the BLFS book.</para></listitem>
 </varlistentry>
 
 <varlistentry>
