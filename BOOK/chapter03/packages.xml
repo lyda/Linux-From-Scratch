@@ -202,15 +202,15 @@ sites:</para>
 <literallayout><ulink
 url="ftp://gaosu.rave.org/pub/linux/lfs/packages/conglomeration/glibc-&glibc-version;.tar.bz2"/>
 <ulink
-url="ftp://lfs.mirror.intermedia.com.sg/pub/lfs/glibc/glibc-&glibc-version;.tar.bz2"/>
+url="ftp://lfs.mirror.intermedia.com.sg/pub/lfs/lfs-packages/conglomeration/glibc-&glibc-version;.tar.bz2"/>
 <ulink url="http://packages.lfs-es.org/glibc/glibc-&glibc-version;.tar.bz2"/>
 <ulink url="http://mirror.averse.net/lfs-packages/glibc-&glibc-version;.tar.bz2"/>
 <ulink
 url="ftp://mirror.averse.net/pub/lfs-packages/glibc-&glibc-version;.tar.bz2"/>
 <ulink
-url="ftp://ftp.lfs-matrix.de/lfs/packages/conglomeration/glibc-&glibc-version;.tar.bz2"/>
-<ulink url="ftp://ftp.sg.linuxfromscratch.org/pub/lfs-packages/libc-2.3.3-lfs-5.1.tar.bz2"/>
-<ulink url="http://ftp.sg.linuxfromscratch.org/glibc-2.3.3-lfs-5.1.tar.bz2"/></literallayout>
+url="ftp://ftp.lfs-matrix.de/lfs-packages/conglomeration/glibc-&glibc-version;.tar.bz2"/>
+<ulink url="ftp://ftp.sg.linuxfromscratch.org/pub/lfs-packages/glibc-&glibc-version;.tar.bz2"/>
+<ulink url="http://ftp.sg.linuxfromscratch.org/glibc-&glibc-version;.tar.bz2"/></literallayout>
 <para>If you wish to verify the integrity of the tarball, its MD5 digest
 is <computeroutput>cd11fabdf5162ad68329e7b28b308278</computeroutput>, which can
 be verified using <command>md5sum</command>.</para>
