@@ -52,6 +52,8 @@ are needed, build only those:</para>
 <screen><userinput>make -C mount mount umount
 make -C text-utils more</userinput></screen>
 
+<para>This package does not come with a test suite.</para>
+
 <para>Now copy these programs to the temporary tools directory:</para>
 
 <screen><userinput>cp mount/{,u}mount text-utils/more /tools/bin</userinput></screen>

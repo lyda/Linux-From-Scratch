@@ -45,10 +45,10 @@ exclude it to save time and space.</para></listitem>
 
 <varlistentry>
 <term><parameter>--disable-csharp</parameter></term>
-<listitem><para>Gettext has an unwanted habit of searching for a C#
-compiler on the host, and building bindings for it. We have already
-<quote>locked</quote> ourselves into the temporary tools which does
-not include a C# compiler.</para></listitem>
+<listitem><para>This tells Gettext not to use a C# compiler, even if a
+C# compiler is installed on the host. This needs to be done because
+once we enter the chroot environment, C# will no longer be
+available.</para></listitem>
 </varlistentry>
 </variablelist>
 

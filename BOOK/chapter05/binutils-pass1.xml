@@ -136,8 +136,8 @@ is used later in the chapter.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<warning><para><emphasis>Do not yet</emphasis> remove the Binutils
-build and source directories. These will be needed again in their
+<warning><para><emphasis>Do not</emphasis> remove the Binutils
+build and source directories yet. These will be needed again in their
 current state later in this chapter.</para></warning>
 
 </sect2>
