@@ -1,6 +1,7 @@
 n/a - June 1, 2004
 
 	* removed usbfs from mountkernfs, and mountfs
+	* Edited the udev script, so it'll always set /proc/sys/kernel/hotplug
 
 n/a - May 24, 2004
 
