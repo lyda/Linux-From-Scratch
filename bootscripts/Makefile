@@ -6,9 +6,11 @@ all: install
 create-dirs:
 	install -d -m 755 ${EXTDIR}/rc.d/rc{0,1,2,3,4,5,6,sysinit}.d
 	install -d -m 755 ${EXTDIR}/rc.d/init.d
+
+create-service-dir:
 	install -d -m 755 ${EXTDIR}/sysconfig/network-devices/services
 
-install: create-dirs
+install: create-dirs create-service-dir
 	install -m 754 lfs/init.d/checkfs      ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/cleanfs      ${EXTDIR}/rc.d/init.d/
 	install -m 644 lfs/init.d/functions    ${EXTDIR}/rc.d/init.d/
@@ -63,16 +65,16 @@ install: create-dirs
 	install -m 754 lfs/sysconfig/network-devices/services/static ${EXTDIR}/sysconfig/network-devices/services
 
 
-install-service-dhclient: create-dirs
+install-service-dhclient: create-service-dir
 	install -m 754 blfs/sysconfig/network-devices/services/dhclient ${EXTDIR}/sysconfig/network-devices/services
 
-install-service-dhcpcd: create-dirs
+install-service-dhcpcd: create-service-dir
 	install -m 754 blfs/sysconfig/network-devices/services/dhcpcd   ${EXTDIR}/sysconfig/network-devices/services
 
-install-service-ipx: create-dirs
+install-service-ipx: create-service-dir
 	install -m 754 blfs/sysconfig/network-devices/services/ipx      ${EXTDIR}/sysconfig/network-devices/services
 
-install-service-pppoe: create-dirs
+install-service-pppoe: create-service-dir
 	install -m 754 blfs/sysconfig/network-devices/services/pppoe    ${EXTDIR}/sysconfig/network-devices/services
 
 

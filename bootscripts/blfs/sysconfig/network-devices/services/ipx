@@ -12,6 +12,7 @@
 case $2 in
         up)
                 echo "Setting up the IPX protocol on $IPXDEV"
+                /sbin/ifconfig $IPXDEV up > /dev/null
                 /bin/ipx_interface add $IPXDEV $FRAME &&
                 /bin/ipx_configure --auto_interface=on --auto_primary=on
                 evaluate_retval

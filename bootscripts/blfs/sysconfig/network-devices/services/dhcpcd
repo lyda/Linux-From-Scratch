@@ -12,6 +12,18 @@
 case "$2" in
         up)
                 echo "Bringing up the $1 interface (dhcpcd)..."
+                # Test to see if there is a stale pid file
+                if [ -f /var/run/dhcpcd-$1.pid ]
+                then
+                    ps $(cat /var/run/dhcpcd-$1.pid) | grep dhcpcd > /dev/null
+                    if [ $? != 0 ]
+                    then
+                        rm -f /var/run/dhcpcd-$1.pid > /dev/null
+                    else
+                        print_status warning running
+                        exit 2
+                    fi
+                fi
                 /sbin/dhcpcd $1 $DHCP_START
                 evaluate_retval
         ;;
