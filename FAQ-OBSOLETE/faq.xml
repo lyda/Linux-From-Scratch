@@ -275,6 +275,23 @@ ln -s ../X11/include/X11 X11
 			LFS Hint. It is one of the LFS Hints which can be found at <ulink
 			url="http://www.linuxfromscratch.org/services/lfshints.php">http://www.linuxfromscratch.org/services/lfshints.php</ulink>.
 		</para>
+		<section id="why-not-add"><title>Why not add / use package X?</title>
+			<section id="add-grub"><title>GRUB instead of LILO</title>
+				<para>
+					GRUB has not yet been released as stable.
+					When it is, it will be considered
+					and, if it seems better than LILO, used.
+				</para>
+				<para>
+					If your current setup is using GRUB,
+					there's no need to switch to LILO.
+					In addition to the GRUB documentation,
+					there is an LFS Hint for GRUB.
+					The LFS Hints are at <ulink
+					url="http://www.linuxfromscratch.org/services/lfshints.php">http://www.linuxfromscratch.org/services/lfshints.php</ulink>.
+				</para>
+			</section>
+		</section>
 		<section id="setup-polishing"><title>Polishing your setup.</title>
 			<para>
 				These don't really belong in the FAQ,
