@@ -96,7 +96,7 @@ boot_mesg()
 	if [ -z "${BOOTMESG}" ]
 	then
 		BOOTMESG="${1}"
-		# the color codes in ${2} could get messed up if not seperated
+		# the color codes in ${2} could get messed up if not separated
 		BOOTMESGCON=" \b${2} \b${BOOTMESG_PREFIX}${1}"
 
 	# Subsequent calls will overwrite the text already on the screen
@@ -109,7 +109,7 @@ boot_mesg()
 		local count=0
 		local i=0
 		BOOTMESG="${BOOTMESG}${1}"
-		# the color codes in ${2} could get messed up if not seperated
+		# the color codes in ${2} could get messed up if not separated
 		BOOTMESGCON="${BOOTMESGCON} \b${2} \b${1}"
 		while [ "${count}" -lt "${length}" ]
 		do
