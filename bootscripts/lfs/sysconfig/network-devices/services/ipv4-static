@@ -6,7 +6,7 @@
 
 . /etc/sysconfig/rc 
 . $rc_functions 
-. $IPCONFIG
+. $IFCONFIG
 
 case "$2" in
 	up)
