@@ -109,6 +109,12 @@
 				ending in "-dev".)
 			</para>
 		</section>
+		<section id="really-small"><title>How do I make that really small install the book mentions?</title>
+			<para>Gerard describes the process of making a 5MB LFS install
+				in an email archived at <ulink
+				url="http://archive.linuxfromscratch.org/mail-archives/lfs-support/2001/10/0072.html">http://archive.linuxfromscratch.org/mail-archives/lfs-support/2001/10/0072.html</ulink>
+			</para>
+		</section>
 	</chapter>
 	<chapter id="compiling"><title>Compiling</title>
 		<section id="before-ask-comp"><title>Before you ask on the list...</title>
