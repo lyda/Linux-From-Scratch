@@ -279,6 +279,7 @@ ln -s ../X11/include/X11 X11
 				url="http://www.linuxdoc.org/HOWTO/Module-HOWTO/">http://www.linuxdoc.org/HOWTO/Module-HOWTO/</ulink>.
 			</para>
 		</section>
+<!--
 		<section id="fileutils-error"><title>I'm getting errors when compiling fileutils.</title>
 			<para>
 				You may need to upgrade to the latest version or apply the fileutils patch.
@@ -286,6 +287,7 @@ ln -s ../X11/include/X11 X11
 				url="http://download.linuxfromscratch.org/conglomeration/">http://download.linuxfromscratch.org/conglomeration/</ulink>.
 			</para>
 		</section>
+-->
 		<section id="glibc-crypt"><title>Where is glibc-crypt-2.2.x?</title>
 			<para>
 				As of glibc-2.2, you no longer need to get glibc-crypt separately.
