@@ -38,13 +38,13 @@ install: create-dirs create-service-dir
 	install -m ${MODE} lfs/init.d/reboot        ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/sendsignals   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/setclock      ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/syslog-ng	    ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/sysklogd	    ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/swap          ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/sysctl        ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/template      ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/udev          ${EXTDIR}/rc.d/init.d/
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc0.d/K80network
-	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc0.d/K90syslog-ng
+	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc0.d/K90sysklogd
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S60sendsignals
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rc0.d/S70mountfs
@@ -52,17 +52,17 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc0.d/S90localnet
 	ln -sf ../init.d/halt        ${EXTDIR}/rc.d/rc0.d/S99halt
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc1.d/K80network
-	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc1.d/K90syslog-ng
+	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc1.d/K90sysklogd
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc2.d/K80network
-	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc2.d/K90syslog-ng
-	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc3.d/S10syslog-ng
+	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc2.d/K90sysklogd
+	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc3.d/S10sysklogd
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc3.d/S20network
-	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc4.d/S10syslog-ng
+	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc4.d/S10sysklogd
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc4.d/S20network
-	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc5.d/S10syslog-ng
+	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc5.d/S10sysklogd
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc5.d/S20network
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc6.d/K80network
-	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc6.d/K90syslog-ng
+	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc6.d/K90sysklogd
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc6.d/S60sendsignals
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rc6.d/S70mountfs
@@ -112,7 +112,7 @@ install-livecd: create-dirs create-service-dir
 	install -m ${MODE} lfs/init.d/sendsignals   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/setclock      ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/sysctl        ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/syslog-ng	    ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/sysklogd	    ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/startup   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/mountsqfs ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/network   ${EXTDIR}/rc.d/init.d/
