@@ -78,13 +78,13 @@ bzegrep, bzfgrep, bzgrep, bzip2, bzip2recover, bzless, and bzmore</seg>
 libbz2.so.&bzip2-version;), and libbz2.so.&bzip2-version;</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="bunzip2">
 <term><command>bunzip2</command></term>
 <listitem>
-<para>decompresses bzipped files.</para>
+<para>Decompresses bzipped files</para>
 <indexterm zone="ch-system-bzip2 bunzip2"><primary sortas="b-bunzip2">bunzip2</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -92,7 +92,7 @@ libbz2.so.&bzip2-version;), and libbz2.so.&bzip2-version;</seg></seglistitem>
 <varlistentry id="bzcat">
 <term><command>bzcat</command></term>
 <listitem>
-<para>decompresses to standard output.</para>
+<para>Decompresses to standard output</para>
 <indexterm zone="ch-system-bzip2 bzcat"><primary sortas="b-bzcat">bzcat</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -100,7 +100,7 @@ libbz2.so.&bzip2-version;), and libbz2.so.&bzip2-version;</seg></seglistitem>
 <varlistentry id="bzcmp">
 <term><command>bzcmp</command></term>
 <listitem>
-<para>runs <command>cmp</command> on bzipped files.</para>
+<para>Runs <command>cmp</command> on bzipped files</para>
 <indexterm zone="ch-system-bzip2 bzcmp"><primary sortas="b-bzcmp">bzcmp</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -108,7 +108,7 @@ libbz2.so.&bzip2-version;), and libbz2.so.&bzip2-version;</seg></seglistitem>
 <varlistentry id="bzdiff">
 <term><command>bzdiff</command></term>
 <listitem>
-<para>runs <command>diff</command> on bzipped files.</para>
+<para>Runs <command>diff</command> on bzipped files</para>
 <indexterm zone="ch-system-bzip2 bzdiff"><primary sortas="b-bzdiff">bzdiff</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -116,7 +116,7 @@ libbz2.so.&bzip2-version;), and libbz2.so.&bzip2-version;</seg></seglistitem>
 <varlistentry id="bzgrep">
 <term><command>bzgrep</command></term>
 <listitem>
-<para>runs <command>grep</command> on bzipped files.</para>
+<para>Runs <command>grep</command> on bzipped files</para>
 <indexterm zone="ch-system-bzip2 bzgrep"><primary sortas="b-bzgrep">bzgrep</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -124,7 +124,7 @@ libbz2.so.&bzip2-version;), and libbz2.so.&bzip2-version;</seg></seglistitem>
 <varlistentry id="bzegrep">
 <term><command>bzegrep</command></term>
 <listitem>
-<para>runs <command>egrep</command> on bzipped files.</para>
+<para>Runs <command>egrep</command> on bzipped files</para>
 <indexterm zone="ch-system-bzip2 bzegrep"><primary sortas="b-bzegrep">bzegrep</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -132,7 +132,7 @@ libbz2.so.&bzip2-version;), and libbz2.so.&bzip2-version;</seg></seglistitem>
 <varlistentry id="bzfgrep">
 <term><command>bzfgrep</command></term>
 <listitem>
-<para>runs <command>fgrep</command> on bzipped files.</para>
+<para>Runs <command>fgrep</command> on bzipped files</para>
 <indexterm zone="ch-system-bzip2 bzfgrep"><primary sortas="b-bzfgrep">bzfgrep</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -140,10 +140,10 @@ libbz2.so.&bzip2-version;), and libbz2.so.&bzip2-version;</seg></seglistitem>
 <varlistentry id="bzip2">
 <term><command>bzip2</command></term>
 <listitem>
-<para>compresses files using the Burrows-Wheeler block sorting text
-compression algorithm with Huffman coding. The compression rate is
+<para>Compresses files using the Burrows-Wheeler block sorting text
+compression algorithm with Huffman coding; the compression rate is
 better than that achieved by more conventional compressors using
-<quote>Lempel-Ziv</quote> algorithms, like <command>gzip</command>.</para>
+<quote>Lempel-Ziv</quote> algorithms, like <command>gzip</command></para>
 <indexterm zone="ch-system-bzip2 bzip2"><primary sortas="b-bzip2">bzip2</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -151,7 +151,7 @@ better than that achieved by more conventional compressors using
 <varlistentry id="bzip2recover">
 <term><command>bzip2recover</command></term>
 <listitem>
-<para>tries to recover data from damaged bzipped files.</para>
+<para>Tries to recover data from damaged bzipped files</para>
 <indexterm zone="ch-system-bzip2 bzip2recover"><primary sortas="b-bzip2recover">bzip2recover</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -159,7 +159,7 @@ better than that achieved by more conventional compressors using
 <varlistentry id="bzless">
 <term><command>bzless</command></term>
 <listitem>
-<para>runs <command>less</command> on bzipped files.</para>
+<para>Runs <command>less</command> on bzipped files</para>
 <indexterm zone="ch-system-bzip2 bzless"><primary sortas="b-bzless">bzless</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -167,7 +167,7 @@ better than that achieved by more conventional compressors using
 <varlistentry id="bzmore">
 <term><command>bzmore</command></term>
 <listitem>
-<para>runs <command>more</command> on bzipped files.</para>
+<para>Runs <command>more</command> on bzipped files</para>
 <indexterm zone="ch-system-bzip2 bzmore"><primary sortas="b-bzmore">bzmore</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -175,8 +175,8 @@ better than that achieved by more conventional compressors using
 <varlistentry id="libbz2">
 <term><filename class="libraryfile">libbz2*</filename></term>
 <listitem>
-<para>the library implementing lossless, block-sorting data
-compression, using the Burrows-Wheeler algorithm.</para>
+<para>The library implementing lossless, block-sorting data
+compression, using the Burrows-Wheeler algorithm</para>
 <indexterm zone="ch-system-bzip2 libbz2"><primary sortas="c-libbz2*">libbz2*</primary></indexterm>
 </listitem>
 </varlistentry>

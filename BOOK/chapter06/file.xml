@@ -51,15 +51,15 @@ GCC, Glibc, Grep, Make, Sed, and Zlib</seg></seglistitem>
 <seglistitem><seg>file</seg><seg>libmagic.[a,so]</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="file">
 <term><command>file</command></term>
 <listitem>
-<para>tries to classify each given file. It does this by performing
+<para>Tries to classify each given file; it does this by performing
 several tests&mdash;file system tests, magic number tests, and language
-tests. The first test that succeeds determines the result.</para>
+tests</para>
 <indexterm zone="ch-system-file file"><primary sortas="b-file">file</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -67,8 +67,8 @@ tests. The first test that succeeds determines the result.</para>
 <varlistentry id="libmagic">
 <term><filename class="libraryfile">libmagic</filename></term>
 <listitem>
-<para>contains routines for magic number recognition, used by the
-<command>file</command> program.</para>
+<para>Contains routines for magic number recognition, used by the
+<command>file</command> program</para>
 <indexterm zone="ch-system-file libmagic"><primary sortas="c-libmagic">libmagic</primary></indexterm>
 </listitem>
 </varlistentry>

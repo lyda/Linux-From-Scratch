@@ -39,7 +39,7 @@ Fix this bug by applying another patch:</para>
 
 <screen><userinput>patch -Np1 -i ../sysklogd-&sysklogd-version;-signal-1.patch</userinput></screen>
 
-<para>Compile Sysklogd:</para>
+<para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
@@ -85,13 +85,13 @@ EOF</userinput></screen>
 <seglistitem><seg>klogd and syslogd</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="klogd">
 <term><command>klogd</command></term>
 <listitem>
-<para>a system daemon for intercepting and logging kernel messages.</para>
+<para>A system daemon for intercepting and logging kernel messages</para>
 <indexterm zone="ch-system-sysklogd klogd"><primary sortas="b-klogd">klogd</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -99,10 +99,7 @@ EOF</userinput></screen>
 <varlistentry id="syslogd">
 <term><command>syslogd</command></term>
 <listitem>
-<para>logs the messages that system programs offer for logging. Every
-logged message contains at least a date stamp and a hostname, and
-normally the program's name too depending on how
-<quote>trusting</quote> the logging daemon is told to be.</para>
+<para>Logs the messages that system programs offer for logging</para>
 <indexterm zone="ch-system-sysklogd syslogd"><primary sortas="b-syslogd">syslogd</primary></indexterm>
 </listitem>
 </varlistentry>

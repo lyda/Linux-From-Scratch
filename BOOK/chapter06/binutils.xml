@@ -69,9 +69,11 @@ cd ../binutils-build</userinput></screen>
 <para>Normally, the tooldir (the directory where the executables will
 ultimately be located) is set to <filename
 class="directory">$(exec_prefix)/$(target_alias)</filename>, which
-expands into <filename
-class="directory">/usr/i686-pc-linux-gnu</filename>. Because this is a
-custom system, this target-specific directory in <filename
+expands into <phrase condition="html"><filename
+class="directory">/usr/i686-pc-linux-gnu</filename></phrase><phrase
+condition="pdf"><filename class="directory">/usr/i686-pc-
+linux-gnu</filename></phrase>. Because this is a custom system, this
+target-specific directory in <filename
 class="directory">/usr</filename> is not required. This setup would be
 used if the system was used to cross-compile (for example, compiling a
 package on an Intel machine that generates code that can be executed
@@ -107,16 +109,16 @@ ranlib, readelf, size, strings, and strip</seg>
 <seg>libiberty.a, libbfd.[a,so], and libopcodes.[a,so]</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="addr2line">
 <term><command>addr2line</command></term>
 <listitem>
-<para>translates program addresses to file names and line numbers.
-Given an address and the name of an executable, it uses the debugging
+<para>Translates program addresses to file names and line numbers;
+given an address and the name of an executable, it uses the debugging
 information in the executable to determine which source file and line
-number are associated with the address.</para>
+number are associated with the address</para>
 <indexterm zone="ch-system-binutils addr2line"><primary sortas="b-addr2line">addr2line</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -124,10 +126,7 @@ number are associated with the address.</para>
 <varlistentry id="ar">
 <term><command>ar</command></term>
 <listitem>
-<para>creates, modifies, and extracts from archives. An archive is a
-single file holding a collection of other files in a structure that
-makes it possible to retrieve the original individual files (called
-members of the archive).</para>
+<para>Creates, modifies, and extracts from archives</para>
 <indexterm zone="ch-system-binutils ar"><primary sortas="b-ar">ar</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -135,8 +134,8 @@ members of the archive).</para>
 <varlistentry id="as">
 <term><command>as</command></term>
 <listitem>
-<para>an assembler that assembles the output of <command>gcc</command>
-into object files.</para>
+<para>An assembler that assembles the output of <command>gcc</command>
+into object files</para>
 <indexterm zone="ch-system-binutils as"><primary sortas="b-as">as</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -144,8 +143,8 @@ into object files.</para>
 <varlistentry id="c-filt">
 <term><command>c++filt</command></term>
 <listitem>
-<para>used by the linker to de-mangle C++ and Java symbols and to keep
-overloaded functions from clashing.</para>
+<para>Used by the linker to de-mangle C++ and Java symbols and to keep
+overloaded functions from clashing</para>
 <indexterm zone="ch-system-binutils c-filt"><primary sortas="b-c++filt">c++filt</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -153,7 +152,7 @@ overloaded functions from clashing.</para>
 <varlistentry id="gprof">
 <term><command>gprof</command></term>
 <listitem>
-<para>displays call graph profile data.</para>
+<para>Displays call graph profile data</para>
 <indexterm zone="ch-system-binutils gprof"><primary sortas="b-gprof">gprof</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -161,8 +160,8 @@ overloaded functions from clashing.</para>
 <varlistentry id="ld">
 <term><command>ld</command></term>
 <listitem>
-<para>a linker that combines a number of object and archive files into a single file, 
-relocating their data and tying up symbol references.</para>
+<para>A linker that combines a number of object and archive files into a single file, 
+relocating their data and tying up symbol references</para>
 <indexterm zone="ch-system-binutils ld"><primary sortas="b-ld">ld</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -170,7 +169,7 @@ relocating their data and tying up symbol references.</para>
 <varlistentry id="nm">
 <term><command>nm</command></term>
 <listitem>
-<para>lists the symbols occurring in a given object file.</para>
+<para>Lists the symbols occurring in a given object file</para>
 <indexterm zone="ch-system-binutils nm"><primary sortas="b-nm">nm</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -178,7 +177,7 @@ relocating their data and tying up symbol references.</para>
 <varlistentry id="objcopy">
 <term><command>objcopy</command></term>
 <listitem>
-<para>translates one type of object file into another.</para>
+<para>Translates one type of object file into another</para>
 <indexterm zone="ch-system-binutils objcopy"><primary sortas="b-objcopy">objcopy</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -186,10 +185,10 @@ relocating their data and tying up symbol references.</para>
 <varlistentry id="objdump">
 <term><command>objdump</command></term>
 <listitem>
-<para>displays information about the given object file, with options
-controlling the particular information to display. The information
+<para>Displays information about the given object file, with options
+controlling the particular information to display; the information
 shown is useful to programmers who are working on the compilation
-tools.</para>
+tools</para>
 <indexterm zone="ch-system-binutils objdump"><primary sortas="b-objdump">objdump</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -197,9 +196,9 @@ tools.</para>
 <varlistentry id="ranlib">
 <term><command>ranlib</command></term>
 <listitem>
-<para>generates an index of the contents of an archive and stores it
-in the archive. The index lists all of the symbols defined by archive
-members that are relocatable object files.</para>
+<para>Generates an index of the contents of an archive and stores it
+in the archive; the index lists all of the symbols defined by archive
+members that are relocatable object files</para>
 <indexterm zone="ch-system-binutils ranlib"><primary sortas="b-ranlib">ranlib</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -207,7 +206,7 @@ members that are relocatable object files.</para>
 <varlistentry id="readelf">
 <term><command>readelf</command></term>
 <listitem>
-<para>displays information about ELF type binaries.</para>
+<para>Displays information about ELF type binaries</para>
 <indexterm zone="ch-system-binutils readelf"><primary sortas="b-readelf">readelf</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -215,7 +214,7 @@ members that are relocatable object files.</para>
 <varlistentry id="size">
 <term><command>size</command></term>
 <listitem>
-<para>lists the section sizes and the total size for the given object files.</para>
+<para>Lists the section sizes and the total size for the given object files</para>
 <indexterm zone="ch-system-binutils size"><primary sortas="b-size">size</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -223,11 +222,11 @@ members that are relocatable object files.</para>
 <varlistentry id="strings">
 <term><command>strings</command></term>
 <listitem>
-<para>outputs, for each given file, the sequences of printable
+<para>Outputs, for each given file, the sequences of printable
 characters that are of at least the specified length (defaulting to
-four). For object files, it prints, by default, only the strings from
-the initializing and loading sections. For other types of files, it
-scans the entire file.</para>
+four); for object files, it prints, by default, only the strings from
+the initializing and loading sections while for other types of files, it
+scans the entire file</para>
 <indexterm zone="ch-system-binutils strings"><primary sortas="b-strings">strings</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -235,7 +234,7 @@ scans the entire file.</para>
 <varlistentry id="strip">
 <term><command>strip</command></term>
 <listitem>
-<para>discards symbols from object files.</para>
+<para>Discards symbols from object files</para>
 <indexterm zone="ch-system-binutils strip"><primary sortas="b-strip">strip</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -243,10 +242,10 @@ scans the entire file.</para>
 <varlistentry id="libiberty">
 <term><filename class="libraryfile">libiberty</filename></term>
 <listitem>
-<para>contains routines used by various GNU programs, including
+<para>Contains routines used by various GNU programs, including
 <command>getopt</command>, <command>obstack</command>,
 <command>strerror</command>, <command>strtol</command>, and
-<command>strtoul</command>.</para>
+<command>strtoul</command></para>
 <indexterm zone="ch-system-binutils libiberty"><primary sortas="c-libiberty">libiberty</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -254,7 +253,7 @@ scans the entire file.</para>
 <varlistentry id="libbfd">
 <term><filename class="libraryfile">libbfd</filename></term>
 <listitem>
-<para>the Binary File Descriptor library.</para>
+<para>The Binary File Descriptor library</para>
 <indexterm zone="ch-system-binutils libbfd"><primary sortas="c-libbfd">libbfd</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -262,9 +261,10 @@ scans the entire file.</para>
 <varlistentry id="libopcodes">
 <term><filename class="libraryfile">libopcodes</filename></term>
 <listitem>
-<para>a library for dealing with opcodes.
-It is used for building utilities like <command>objdump</command>. Opcodes are the <quote>readable
-text</quote> versions of instructions for the processor.</para>
+<para>A library for dealing with opcodes&mdash;the <quote>readable
+text</quote> versions of instructions for the processor;
+it is used for building utilities like
+<command>objdump</command>.</para>
 <indexterm zone="ch-system-binutils libopcodes"><primary sortas="c-libopcodes">libopcodes</primary></indexterm>
 </listitem>
 </varlistentry>

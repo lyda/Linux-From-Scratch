@@ -57,15 +57,15 @@ insmod_ksymoops_clean, kallsyms (link to insmod), kernelversion, ksyms
 insmod), and rmmod (link to insmod)</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="depmod">
 <term><command>depmod</command></term>
 <listitem>
-<para>creates a dependency file based on the symbols it finds in the
-existing set of modules. This dependency file is used by <command>modprobe</command> to
-automatically load the required modules.</para>
+<para>Creates a dependency file based on the symbols it finds in the
+existing set of modules; this dependency file is used by <command>modprobe</command> to
+automatically load the required modules</para>
 <indexterm zone="ch-system-module-init-tools depmod"><primary sortas="b-depmod">depmod</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -73,7 +73,7 @@ automatically load the required modules.</para>
 <varlistentry id="genksyms">
 <term><command>genksyms</command></term>
 <listitem>
-<para>generates symbol version information.</para>
+<para>Generates symbol version information</para>
 <indexterm zone="ch-system-module-init-tools genksyms"><primary sortas="b-genksyms">genksyms</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -81,7 +81,7 @@ automatically load the required modules.</para>
 <varlistentry id="insmod">
 <term><command>insmod</command></term>
 <listitem>
-<para>installs a loadable module in the running kernel.</para>
+<para>Installs a loadable module in the running kernel</para>
 <indexterm zone="ch-system-module-init-tools insmod"><primary sortas="b-insmod">insmod</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -89,7 +89,7 @@ automatically load the required modules.</para>
 <varlistentry id="insmod_ksymoops_clean">
 <term><command>insmod_ksymoops_clean</command></term>
 <listitem>
-<para>deletes saved ksyms and modules not accessed for two days.</para>
+<para>Deletes saved ksyms and modules not accessed for two days</para>
 <indexterm zone="ch-system-module-init-tools insmod_ksymoops_clean"><primary sortas="b-insmod_ksymoops_clean">insmod_ksymoops_clean</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -97,7 +97,7 @@ automatically load the required modules.</para>
 <varlistentry id="kallsyms">
 <term><command>kallsyms</command></term>
 <listitem>
-<para>extracts all kernel symbols for debugging.</para>
+<para>Extracts all kernel symbols for debugging</para>
 <indexterm zone="ch-system-module-init-tools kallsyms"><primary sortas="b-kallsyms">kallsyms</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -105,7 +105,7 @@ automatically load the required modules.</para>
 <varlistentry id="kernelversion">
 <term><command>kernelversion</command></term>
 <listitem>
-<para>reports the major version of the running kernel.</para>
+<para>Reports the major version of the running kernel</para>
 <indexterm zone="ch-system-module-init-tools kernelversion"><primary sortas="b-kernelversion">kernelversion</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -113,7 +113,7 @@ automatically load the required modules.</para>
 <varlistentry id="ksyms">
 <term><command>ksyms</command></term>
 <listitem>
-<para>displays exported kernel symbols.</para>
+<para>Displays exported kernel symbols</para>
 <indexterm zone="ch-system-module-init-tools ksyms"><primary sortas="b-ksyms">ksyms</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -121,7 +121,7 @@ automatically load the required modules.</para>
 <varlistentry id="lsmod">
 <term><command>lsmod</command></term>
 <listitem>
-<para>lists currently loaded modules.</para>
+<para>Lists currently loaded modules</para>
 <indexterm zone="ch-system-module-init-tools lsmod"><primary sortas="b-lsmod">lsmod</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -129,8 +129,8 @@ automatically load the required modules.</para>
 <varlistentry id="modinfo">
 <term><command>modinfo</command></term>
 <listitem>
-<para>examines an object file associated with a kernel module and
-displays any information that it can glean.</para>
+<para>Examines an object file associated with a kernel module and
+displays any information that it can glean</para>
 <indexterm zone="ch-system-module-init-tools modinfo"><primary sortas="b-modinfo">modinfo</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -138,8 +138,8 @@ displays any information that it can glean.</para>
 <varlistentry id="modprobe">
 <term><command>modprobe</command></term>
 <listitem>
-<para>uses a dependency file, created by
-<command>depmod</command>, to automatically load relevant modules.</para>
+<para>Uses a dependency file, created by
+<command>depmod</command>, to automatically load relevant modules</para>
 <indexterm zone="ch-system-module-init-tools modprobe"><primary sortas="b-modprobe">modprobe</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -147,7 +147,7 @@ displays any information that it can glean.</para>
 <varlistentry id="rmmod">
 <term><command>rmmod</command></term>
 <listitem>
-<para>unloads modules from the running kernel.</para>
+<para>Unloads modules from the running kernel</para>
 <indexterm zone="ch-system-module-init-tools rmmod"><primary sortas="b-rmmod">rmmod</primary></indexterm>
 </listitem>
 </varlistentry>

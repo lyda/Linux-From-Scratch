@@ -57,13 +57,13 @@ compile, config.guess, config.sub, depcomp, elisp-comp, install-sh, mdate-sh,
 missing, mkinstalldirs, py-compile, symlink-tree, and ylwrap</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="acinstall">
 <term><command>acinstall</command></term>
 <listitem>
-<para>a script that installs aclocal-style M4 files.</para>
+<para>A script that installs aclocal-style M4 files</para>
 <indexterm zone="ch-system-automake acinstall"><primary sortas="b-acinstall">acinstall</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -71,8 +71,8 @@ missing, mkinstalldirs, py-compile, symlink-tree, and ylwrap</seg></seglistitem>
 <varlistentry id="aclocal">
 <term><command>aclocal</command></term>
 <listitem>
-<para>generates <filename>aclocal.m4</filename>
-files based on the contents of <filename>configure.in</filename> files.</para>
+<para>Generates <filename>aclocal.m4</filename>
+files based on the contents of <filename>configure.in</filename> files</para>
 <indexterm zone="ch-system-automake aclocal"><primary sortas="b-aclocal">aclocal</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -80,7 +80,7 @@ files based on the contents of <filename>configure.in</filename> files.</para>
 <varlistentry id="aclocal-version">
 <term><command>aclocal-&automake-version;</command></term>
 <listitem>
-<para>hard link to <command>aclocal</command>.</para>
+<para>A hard link to <command>aclocal</command></para>
 <indexterm zone="ch-system-automake aclocal-version"><primary
 sortas="b-aclocal-&automake-version;">aclocal-&automake-version;</primary></indexterm>
 </listitem>
@@ -89,14 +89,14 @@ sortas="b-aclocal-&automake-version;">aclocal-&automake-version;</primary></inde
 <varlistentry id="automake">
 <term><command>automake</command></term>
 <listitem>
-<para>a tool for automatically generating
+<para>A tool for automatically generating
 <filename>Makefile.in</filename> files from
 <filename>Makefile.am</filename> files. To create all the
 <filename>Makefile.in</filename> files for a package, run this program
 in the top-level directory. By scanning the
 <filename>configure.in</filename> file, it automatically finds each
 appropriate <filename>Makefile.am</filename> file and generate the
-corresponding <filename>Makefile.in</filename> file.</para>
+corresponding <filename>Makefile.in</filename> file</para>
 <indexterm zone="ch-system-automake automake"><primary sortas="b-automake">automake</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -104,7 +104,7 @@ corresponding <filename>Makefile.in</filename> file.</para>
 <varlistentry id="automake-version">
 <term><command>automake-&automake-version;</command></term>
 <listitem>
-<para>hard link to <command>automake</command>.</para>
+<para>A hard link to <command>automake</command></para>
 <indexterm zone="ch-system-automake automake-version"><primary
 sortas="b-automake-&automake-version;">automake-&automake-version;</primary></indexterm>
 </listitem>
@@ -113,16 +113,16 @@ sortas="b-automake-&automake-version;">automake-&automake-version;</primary></in
 <varlistentry id="compile">
 <term><command>compile</command></term>
 <listitem>
-<para>a wrapper for compilers.</para>
+<para>A wrapper for compilers</para>
 <indexterm zone="ch-system-automake compile"><primary sortas="b-compile">compile</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="config.guess">
-<term><command>config.guess</command> </term>
+<term><command>config.guess</command></term>
 <listitem>
-<para>a script that attempts to guess
-the canonical triplet for the given build, host, or target architecture.</para>
+<para>A script that attempts to guess
+the canonical triplet for the given build, host, or target architecture</para>
 <indexterm zone="ch-system-automake config.guess"><primary sortas="b-config.guess">config.guess</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -130,7 +130,7 @@ the canonical triplet for the given build, host, or target architecture.</para>
 <varlistentry id="config.su">
 <term><command>config.sub</command></term>
 <listitem>
-<para>a configuration validation subroutine script.</para>
+<para>A configuration validation subroutine script</para>
 <indexterm zone="ch-system-automake config.su"><primary sortas="b-config.su">config.su</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -138,8 +138,8 @@ the canonical triplet for the given build, host, or target architecture.</para>
 <varlistentry id="depcomp">
 <term><command>depcomp</command></term>
 <listitem>
-<para>a script for compiling a program so that dependency information
-is generated in addition to the desired output.</para>
+<para>A script for compiling a program so that dependency information
+is generated in addition to the desired output</para>
 <indexterm zone="ch-system-automake depcomp"><primary sortas="b-depcomp">depcomp</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -147,7 +147,7 @@ is generated in addition to the desired output.</para>
 <varlistentry id="elisp-comp">
 <term><command>elisp-comp</command></term>
 <listitem>
-<para>byte-compiles Emacs Lisp code.</para>
+<para>Byte-compiles Emacs Lisp code</para>
 <indexterm zone="ch-system-automake elisp-comp"><primary sortas="b-elisp-comp">elisp-comp</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -155,7 +155,7 @@ is generated in addition to the desired output.</para>
 <varlistentry id="install-sh">
 <term><command>install-sh</command></term>
 <listitem>
-<para>a script that installs a program, script, or data file.</para>
+<para>A script that installs a program, script, or data file</para>
 <indexterm zone="ch-system-automake install-sh"><primary sortas="b-install-sh">install-sh</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -163,7 +163,7 @@ is generated in addition to the desired output.</para>
 <varlistentry id="mdate-sh">
 <term><command>mdate-sh</command></term>
 <listitem>
-<para>a script that prints the modification time of a file or directory.</para>
+<para>A script that prints the modification time of a file or directory</para>
 <indexterm zone="ch-system-automake mdate-sh"><primary sortas="b-mdate-sh">mdate-sh</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -171,8 +171,8 @@ is generated in addition to the desired output.</para>
 <varlistentry id="missing">
 <term><command>missing</command></term>
 <listitem>
-<para>a script acting as a common stub for missing GNU programs during
-an installation.</para>
+<para>A script acting as a common stub for missing GNU programs during
+an installation</para>
 <indexterm zone="ch-system-automake missing"><primary sortas="b-missing">missing</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -180,7 +180,7 @@ an installation.</para>
 <varlistentry id="mkinstalldirs">
 <term><command>mkinstalldirs</command></term>
 <listitem>
-<para>a script that creates a directory tree.</para>
+<para>A script that creates a directory tree</para>
 <indexterm zone="ch-system-automake mkinstalldirs"><primary sortas="b-mkinstalldirs">mkinstalldirs</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -188,7 +188,7 @@ an installation.</para>
 <varlistentry id="py-compile">
 <term><command>py-compile</command></term>
 <listitem>
-<para>compiles a Python program.</para>
+<para>Compiles a Python program</para>
 <indexterm zone="ch-system-automake py-compile"><primary sortas="b-py-compile">py-compile</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -196,7 +196,7 @@ an installation.</para>
 <varlistentry id="symlink-tree">
 <term><command>symlink-tree</command></term>
 <listitem>
-<para>a script to create a symlink tree of a directory tree.</para>
+<para>A script to create a symlink tree of a directory tree</para>
 <indexterm zone="ch-system-automake symlink-tree"><primary sortas="b-symlink-tree">symlink-tree</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -204,7 +204,7 @@ an installation.</para>
 <varlistentry id="ylwrap">
 <term><command>ylwrap</command></term>
 <listitem>
-<para>a wrapper for <command>lex</command> and <command>yacc</command>.</para>
+<para>A wrapper for <command>lex</command> and <command>yacc</command></para>
 <indexterm zone="ch-system-automake ylwrap"><primary sortas="b-ylwrap">ylwrap</primary></indexterm>
 </listitem>
 </varlistentry>

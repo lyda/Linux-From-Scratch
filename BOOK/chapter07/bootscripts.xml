@@ -43,14 +43,14 @@ localnet, mountfs, mountkernfs, network, rc, reboot, sendsignals, setclock, stat
 swap, sysklogd, template, and udev</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="checkfs-bootscripts">
 <term><command>checkfs</command></term>
 <listitem>
-<para>checks the file systems before they are mounted (with the exception of journal
-and network based file systems).</para>
+<para>Checks the file systems before they are mounted (with the exception of journal
+and network based file systems)</para>
 <indexterm zone="ch-scripts-bootscripts checkfs-bootscripts"><primary sortas="d-checkfs">checkfs</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -58,11 +58,11 @@ and network based file systems).</para>
 <varlistentry id="cleanfs-bootscripts">
 <term><command>cleanfs</command></term>
 <listitem>
-<para>removes files that should not be
+<para>Removes files that should not be
 preserved between reboots, such as those in <filename class="directory">/var/run/</filename> and
-<filename class="directory">/var/lock/</filename>. It re-creates <filename>/var/run/utmp</filename>
+<filename class="directory">/var/lock/</filename>; it re-creates <filename>/var/run/utmp</filename>
 and removes the possibly present <filename>/etc/nologin</filename>,
-<filename>/fastboot</filename>, and <filename>/forcefsck</filename> files.</para>
+<filename>/fastboot</filename>, and <filename>/forcefsck</filename> files</para>
 <indexterm zone="ch-scripts-bootscripts cleanfs-bootscripts"><primary sortas="d-cleanfs">cleanfs</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -70,8 +70,8 @@ and removes the possibly present <filename>/etc/nologin</filename>,
 <varlistentry id="console-bootscripts">
 <term><command>console</command></term>
 <listitem>
-<para>loads the keymap table specified as proper for the keyboard
-layout.  It also sets the screen font.</para>
+<para>Loads the keymap table specified as proper for the keyboard
+layout; it also sets the screen font</para>
 <indexterm zone="ch-scripts-bootscripts console-bootscripts"><primary sortas="d-console">console</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -79,8 +79,8 @@ layout.  It also sets the screen font.</para>
 <varlistentry id="functions-bootscripts">
 <term><command>functions</command></term>
 <listitem>
-<para>contains functions shared among different scripts, such as error
-and status checking.</para>
+<para>Contains functions shared among different scripts, such as error
+and status checking</para>
 <indexterm zone="ch-scripts-bootscripts functions-bootscripts"><primary sortas="d-functions">functions</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -88,7 +88,7 @@ and status checking.</para>
 <varlistentry id="halt-bootscripts">
 <term><command>halt</command></term>
 <listitem>
-<para>halts the system.</para>
+<para>Halts the system</para>
 <indexterm zone="ch-scripts-bootscripts halt-bootscripts"><primary sortas="d-halt">halt</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -96,7 +96,7 @@ and status checking.</para>
 <varlistentry id="ifdown-bootscripts">
 <term><command>ifdown</command></term>
 <listitem>
-<para>assists the network script with network devices.</para>
+<para>Assists the network script with network devices</para>
 <indexterm zone="ch-scripts-bootscripts ifdown-bootscripts"><primary sortas="d-ifdown">ifdown</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -104,7 +104,7 @@ and status checking.</para>
 <varlistentry id="ifup-bootscripts">
 <term><command>ifup</command></term>
 <listitem>
-<para>assists the network script with network devices.</para>
+<para>Assists the network script with network devices</para>
 <indexterm zone="ch-scripts-bootscripts ifup-bootscripts"><primary sortas="d-ifup">ifup</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -112,7 +112,7 @@ and status checking.</para>
 <varlistentry id="localnet-bootscripts">
 <term><command>localnet</command></term>
 <listitem>
-<para>sets up the system's hostname and local loopback device.</para>
+<para>Sets up the system's hostname and local loopback device</para>
 <indexterm zone="ch-scripts-bootscripts localnet-bootscripts"><primary sortas="d-localnet">localnet</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -120,8 +120,8 @@ and status checking.</para>
 <varlistentry id="mountfs-bootscripts">
 <term><command>mountfs</command></term>
 <listitem>
-<para>mounts all file systems, except ones that are marked
-<emphasis>noauto</emphasis> or are network based.</para>
+<para>Mounts all file systems, except ones that are marked
+<emphasis>noauto</emphasis> or are network based</para>
 <indexterm zone="ch-scripts-bootscripts mountfs-bootscripts"><primary sortas="d-mountfs">mountfs</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -129,8 +129,8 @@ and status checking.</para>
 <varlistentry id="mountkernfs-bootscripts">
 <term><command>mountkernfs</command></term>
 <listitem>
-<para>is used to mount kernel-provided file systems, such as
-<systemitem class="filesystem">proc</systemitem>.</para>
+<para>Is used to mount kernel-provided file systems, such as
+<systemitem class="filesystem">proc</systemitem></para>
 <indexterm zone="ch-scripts-bootscripts mountkernfs-bootscripts"><primary sortas="d-mountkernfs">mountkernfs</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -138,8 +138,8 @@ and status checking.</para>
 <varlistentry id="network-bootscripts">
 <term><command>network</command></term>
 <listitem>
-<para>sets up network interfaces, such as network cards, and sets up
-the default gateway (where applicable).</para>
+<para>Sets up network interfaces, such as network cards, and sets up
+the default gateway (where applicable)</para>
 <indexterm zone="ch-scripts-bootscripts network-bootscripts"><primary sortas="d-network">network</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -147,9 +147,9 @@ the default gateway (where applicable).</para>
 <varlistentry id="rc-bootscripts">
 <term><command>rc</command></term>
 <listitem>
-<para>the master run-level control script.  It is responsible for
+<para>The master run-level control script; it is responsible for
 running all other scripts one-by-one, in a sequence determined by
-the name of the symbolic links being processed.</para>
+the name of the symbolic links being processed</para>
 <indexterm zone="ch-scripts-bootscripts rc-bootscripts"><primary sortas="d-rc">rc</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -157,7 +157,7 @@ the name of the symbolic links being processed.</para>
 <varlistentry id="reboot-bootscripts">
 <term><command>reboot</command></term>
 <listitem>
-<para>reboots the system.</para>
+<para>Reboots the system</para>
 <indexterm zone="ch-scripts-bootscripts reboot-bootscripts"><primary sortas="d-reboot">reboot</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -165,8 +165,8 @@ the name of the symbolic links being processed.</para>
 <varlistentry id="sendsignals-bootscripts">
 <term><command>sendsignals</command></term>
 <listitem>
-<para>makes sure every process is terminated before the system reboots
-or halts.</para>
+<para>Makes sure every process is terminated before the system reboots
+or halts</para>
 <indexterm zone="ch-scripts-bootscripts sendsignals-bootscripts"><primary sortas="d-sendsignals">sendsignals</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -174,8 +174,8 @@ or halts.</para>
 <varlistentry id="setclock-bootscripts">
 <term><command>setclock</command></term>
 <listitem>
-<para>resets the kernel clock to local time in case the hardware clock
-is not set to UTC time.</para>
+<para>Resets the kernel clock to local time in case the hardware clock
+is not set to UTC time</para>
 <indexterm zone="ch-scripts-bootscripts setclock-bootscripts"><primary sortas="d-setclock">setclock</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -183,8 +183,8 @@ is not set to UTC time.</para>
 <varlistentry id="static-bootscripts">
 <term><command>static</command></term>
 <listitem>
-<para>provides the functionality needed to assign a static Internet
-Protocol (IP) address to a network interface.</para>
+<para>Provides the functionality needed to assign a static Internet
+Protocol (IP) address to a network interface</para>
 <indexterm zone="ch-scripts-bootscripts static-bootscripts"><primary sortas="d-static">static</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -192,7 +192,7 @@ Protocol (IP) address to a network interface.</para>
 <varlistentry id="swap-bootscripts">
 <term><command>swap</command></term>
 <listitem>
-<para>enables and disables swap files and partitions.</para>
+<para>Enables and disables swap files and partitions</para>
 <indexterm zone="ch-scripts-bootscripts swap-bootscripts"><primary sortas="d-swap">swap</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -200,7 +200,7 @@ Protocol (IP) address to a network interface.</para>
 <varlistentry id="sysklogd-bootscripts">
 <term><command>sysklogd</command></term>
 <listitem>
-<para>starts and stops the system and kernel log daemons.</para>
+<para>Starts and stops the system and kernel log daemons</para>
 <indexterm zone="ch-scripts-bootscripts sysklogd-bootscripts"><primary sortas="d-sysklogd">sysklogd</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -208,8 +208,8 @@ Protocol (IP) address to a network interface.</para>
 <varlistentry id="template-bootscripts">
 <term><command>template</command></term>
 <listitem>
-<para>a template to create custom bootscripts for other
-daemons.</para>
+<para>A template to create custom bootscripts for other
+daemons</para>
 <indexterm zone="ch-scripts-bootscripts template-bootscripts"><primary sortas="d-template">template</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -217,7 +217,7 @@ daemons.</para>
 <varlistentry id="udev-bootscripts">
 <term><command>udev</command></term>
 <listitem>
-<para>sets up udev and create the devices nodes in <filename
+<para>Sets up udev and create the devices nodes in <filename
 class="directory">/dev</filename></para>
 <indexterm zone="ch-scripts-bootscripts udev-bootscripts"><primary sortas="d-udev">udev</primary></indexterm>
 </listitem>

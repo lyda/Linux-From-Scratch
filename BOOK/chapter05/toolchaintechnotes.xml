@@ -60,7 +60,7 @@ method works:</para>
 <listitem><para>The process is similar in principle to
 cross-compiling, whereby tools installed in the same prefix work in
 cooperation, and thus utilize a little GNU
-<quote>magic.</quote></para></listitem>
+<quote>magic</quote></para></listitem>
 
 <listitem><para>Careful manipulation of the standard linker's library
 search path ensures programs are linked only against chosen
@@ -109,13 +109,14 @@ directories to find which tools to use. However, during the actual
 operation of <command>gcc</command> itself, the same
 search paths are not necessarily used. To find out which standard
 linker <command>gcc</command> will use, run: <userinput>gcc
--print-prog-name=ld</userinput>. Detailed
-information can be obtained from <command>gcc</command> by passing it
-the <parameter>-v</parameter> command line option while compiling a
-dummy program. For example, <userinput>gcc -v dummy.c</userinput> will show detailed
-information about the preprocessor, compilation, and assembly stages,
-including <command>gcc</command>'s included search paths and their
-order.</para>
+-print-prog-name=ld</userinput>.</para>
+
+<para>Detailed information can be obtained from <command>gcc</command>
+by passing it the <parameter>-v</parameter> command line option while
+compiling a dummy program. For example, <userinput>gcc -v
+dummy.c</userinput> will show detailed information about the
+preprocessor, compilation, and assembly stages, including
+<command>gcc</command>'s included search paths and their order.</para>
 
 <para>The next package installed is Glibc. The most important
 considerations for building Glibc are the compiler, binary tools, and

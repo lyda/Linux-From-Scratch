@@ -91,13 +91,13 @@ done</userinput></screen>
 makeinfo, texi2dvi, and texindex</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="info">
 <term><command>info</command></term>
 <listitem>
-<para>used to read Info documents. Info documents are similar to man
+<para>Used to read Info documents which are similar to man
 pages, but often go much deeper than just explaining all the command
 line options. For example, compare <command>man bison</command> and
 <command>info bison</command>.</para>
@@ -108,8 +108,8 @@ line options. For example, compare <command>man bison</command> and
 <varlistentry id="infokey">
 <term><command>infokey</command></term>
 <listitem>
-<para>compiles a source file containing Info customizations into a
-binary format.</para>
+<para>Compiles a source file containing Info customizations into a
+binary format</para>
 <indexterm zone="ch-system-texinfo infokey"><primary sortas="b-infokey">infokey</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -117,8 +117,8 @@ binary format.</para>
 <varlistentry id="install-info">
 <term><command>install-info</command></term>
 <listitem>
-<para>used to install Info files. It updates entries in the Info index
-file.</para>
+<para>Used to install Info files; it updates entries in the Info index
+file</para>
 <indexterm zone="ch-system-texinfo install-info"><primary sortas="b-install-info">install-info</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -126,8 +126,8 @@ file.</para>
 <varlistentry id="makeinfo">
 <term><command>makeinfo</command></term>
 <listitem>
-<para>translates the given Texinfo source documents into
-info files, plain text, or HTML.</para>
+<para>Translates the given Texinfo source documents into
+info files, plain text, or HTML</para>
 <indexterm zone="ch-system-texinfo makeinfo"><primary sortas="b-makeinfo">makeinfo</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -135,8 +135,8 @@ info files, plain text, or HTML.</para>
 <varlistentry id="texi2dvi">
 <term><command>texi2dvi</command></term>
 <listitem>
-<para>used to format the given Texinfo document into a
-device-independent file that can be printed.</para>
+<para>Used to format the given Texinfo document into a
+device-independent file that can be printed</para>
 <indexterm zone="ch-system-texinfo texi2dvi"><primary sortas="b-texi2dvi">texi2dvi</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -144,7 +144,7 @@ device-independent file that can be printed.</para>
 <varlistentry id="texindex">
 <term><command>texindex</command></term>
 <listitem>
-<para>used to sort Texinfo index files.</para>
+<para>Used to sort Texinfo index files</para>
 <indexterm zone="ch-system-texinfo texindex"><primary sortas="b-texindex">texindex</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -69,7 +69,7 @@ loader. Do not run the command if this is not desired, for example, if
 using a third party boot manager to manage the Master Boot Record
 (MBR). In this scenario, it would make more sense to install
 Grub into the <quote>boot sector</quote> of the LFS partition. In this
-case, this next command would become: <userinput>setup
+case, this next command would become <userinput>setup
 (hd0,3)</userinput>.</para></warning>
 
 <para>Tell Grub to install itself into the MBR of

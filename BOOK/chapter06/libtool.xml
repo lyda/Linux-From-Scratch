@@ -56,13 +56,13 @@ GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 <seglistitem><seg>libtool and libtoolize</seg><seg>libltdl.[a,so]</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="libtool">
 <term><command>libtool</command></term>
 <listitem>
-<para>provides generalized library-building support services.</para>
+<para>Provides generalized library-building support services</para>
 <indexterm zone="ch-system-libtool libtool"><primary sortas="b-libtool">libtool</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -70,7 +70,7 @@ GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 <varlistentry id="libtoolize">
 <term><command>libtoolize</command></term>
 <listitem>
-<para>provides a standard way to add <command>libtool</command> support to a package.</para>
+<para>Provides a standard way to add <command>libtool</command> support to a package</para>
 <indexterm zone="ch-system-libtool libtoolize"><primary sortas="b-libtoolize">libtoolize</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -78,7 +78,7 @@ GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 <varlistentry id="libltdl">
 <term><filename class="libraryfile">libltdl</filename></term>
 <listitem>
-<para>hides the various difficulties of dlopening libraries.</para>
+<para>Hides the various difficulties of dlopening libraries</para>
 <indexterm zone="ch-system-libtool libltdl"><primary sortas="c-libltdl">libltdl</primary></indexterm>
 </listitem>
 </varlistentry>

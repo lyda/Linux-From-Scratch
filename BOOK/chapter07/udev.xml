@@ -136,7 +136,8 @@ this method will not work because the device node does not exist until
 the module is loaded.  To solve this, the
 <command>S05modules</command> bootscript was added to the
 lfs-bootscripts package, along with the
-<filename>/etc/sysconfig/modules</filename> file.  By adding module
+<filename>/etc/sysconfig/modules</filename> file.  By
+<beginpage/> adding module
 names to the <filename>modules</filename> file, these modules will be
 loaded when the computer is starting up. This allows
 <command>udev</command> to detect the devices and create the
@@ -194,6 +195,7 @@ manually create the devices. Consult the
 or the documentation for that driver to find the proper major/minor
 numbers.</para>
 
+<beginpage/>
 <para>2) A non-hardware device is required.  This is most common with
 the Advanced Linux Sound Architecture (ALSA) project's Open Sound
 System (OSS) compatibility module.  These types of devices can be
@@ -226,15 +228,15 @@ modules when any request is made to load the driver
 sites:</para>
 
 <itemizedlist>
-<listitem><para remap="verbatim">A Userspace Implementation of devfs &ndash; 
+<listitem><para remap="verbatim">A Userspace Implementation of devfs
 <ulink url="http://www.kroah.com/linux/talks/ols_2003_udev_paper/Reprint-Kroah-Hartman-OLS2003.pdf"><phrase
 condition="pdf">http://www.kroah.com/linux/talks/ols_2003_udev_paper/
 Reprint-Kroah-Hartman-OLS2003.pdf</phrase></ulink></para></listitem>
 
-<listitem><para remap="verbatim">udev FAQ &ndash;
+<listitem><para remap="verbatim">udev FAQ
 <ulink url="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev-FAQ"/></para></listitem>
 
-<listitem><para remap="verbatim">The Linux Kernel Driver Model &ndash; 
+<listitem><para remap="verbatim">The Linux Kernel Driver Model
 <ulink url="http://public.planetmirror.com/pub/lca/2003/proceedings/papers/Patrick_Mochel/Patrick_Mochel.pdf"><phrase  
 condition="pdf">http://public.planetmirror.com/pub/lca/2003/proceedings/papers/
 Patrick_Mochel/Patrick_Mochel.pdf</phrase></ulink></para></listitem>

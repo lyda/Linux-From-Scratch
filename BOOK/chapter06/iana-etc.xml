@@ -45,9 +45,28 @@
 <seglistitem><seg>/etc/protocols and /etc/services</seg></seglistitem>
 </segmentedlist>
 
-<indexterm zone="ch-system-iana-etc"><primary sortas="e-/etc/protocols">/etc/protocols</primary></indexterm>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
+<varlistentry id="protocols">
+<term><filename>/etc/protocols</filename></term>
+<listitem>
+<para>Describes the various DARPA Internet protocols that are
+available from the TCP/IP subsystem</para>
+<indexterm zone="ch-system-iana-etc"><primary sortas="e-/etc/protocols">/etc/protocols</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="services">
+<term><filename>/etc/services</filename></term>
+<listitem>
+<para>Provides a mapping between friendly textual names for internet
+services, and their underlying assigned port numbers and protocol
+types</para>
 <indexterm zone="ch-system-iana-etc"><primary sortas="e-/etc/services">/etc/services</primary></indexterm>
+</listitem>
+</varlistentry>
+</variablelist>
 
 </sect2>
 

@@ -77,7 +77,7 @@
       </seglistitem>
     </segmentedlist>
 
-    <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+    <variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
       <varlistentry id="ifstat">
@@ -85,7 +85,7 @@
           <command>ifstat</command>
         </term>
         <listitem>
-          <para>shows the interfaces statistic, including the amount of transmitted
+          <para>Shows the interfaces statistic, including the amount of transmitted
                 and received packages by interface.</para>
           <indexterm zone="ch-system-iproute2 ifstat">
             <primary sortas="b-ifstat">ifstat</primary>
@@ -148,7 +148,7 @@
           <command>nstat</command>
         </term>
         <listitem>
-          <para>shows network statistics.</para>
+          <para>Shows network statistics.</para>
           <indexterm zone="ch-system-iproute2 nstat">
             <primary sortas="b-nstat">nstat</primary>
           </indexterm>
@@ -160,7 +160,7 @@
           <command>routef</command>
         </term>
         <listitem>
-          <para>a component of <command>ip route</command>. This is for flushing the routing
+          <para>A component of <command>ip route</command>. This is for flushing the routing
                 tables.
           </para>
           <indexterm zone="ch-system-iproute2 routef">
@@ -174,7 +174,7 @@
           <command>routel</command>
         </term>
         <listitem>
-          <para>a component of <command>ip route</command>. This is for listing the routing
+          <para>A component of <command>ip route</command>. This is for listing the routing
                 tables.
           </para>
           <indexterm zone="ch-system-iproute2 routel">
@@ -188,7 +188,7 @@
           <command>rtmon</command>
         </term>
         <listitem>
-          <para>Route Monitoring Utility.</para>
+          <para>Route monitoring utility.</para>
           <indexterm zone="ch-system-iproute2 rtmon">
             <primary sortas="b-rtmon">rtmon</primary>
           </indexterm>
@@ -200,7 +200,7 @@
           <command>rtstat</command>
         </term>
         <listitem>
-          <para>Route Status Utility</para>
+          <para>Route status utility</para>
           <indexterm zone="ch-system-iproute2 rtstat">
             <primary sortas="b-rtstat">rtstat</primary>
           </indexterm>
@@ -212,7 +212,7 @@
           <command>ss</command>
         </term>
         <listitem>
-          <para>similar to the <command>netstat</command> command. Shows active connections.</para>
+          <para>Similar to the <command>netstat</command> command; shows active connections</para>
           <indexterm zone="ch-system-iproute2 ss">
             <primary sortas="b-ss">ss</primary>
           </indexterm>
@@ -224,29 +224,29 @@
           <command>tc</command>
         </term>
         <listitem>
-          <para>Traffic Controlling Executable. This is for Quality Of
+          <para>Traffic Controlling Executable; this is for Quality Of
 Service (QOS) and Class Of Service (COS)
-                implementations.
+                implementations
           </para>
 
           <para><command>tc qdisc</command> allows users to setup the queueing
-                discipline.
+                discipline
           </para>
 
           <para><command>tc class</command> allows users to setup classes based on
-                the queuing discipline scheduling.
+                the queuing discipline scheduling
           </para>
 
           <para><command>tc estimator</command> allows users to estimate the
-                network flow into a network.
+                network flow into a network
           </para>
 
           <para><command>tc filter</command> allows users to setup the QOS/COS
-                packet filtering.
+                packet filtering
           </para>
 
           <para><command>tc policy</command> allows users to setup the QOS/COS
-                policies.
+                policies
           </para>
           <indexterm zone="ch-system-iproute2 ss">
             <primary sortas="b-tc">tc</primary>

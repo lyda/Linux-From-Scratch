@@ -78,8 +78,9 @@ Instructions for a better <command>whois</command> client are in the BLFS book.<
 servers included as part of the Inetutils package. These servers are
 deemed not appropriate in a basic LFS system. Some are insecure by
 nature and are only considered safe on trusted networks. More
-information can be found at <ulink
-url="&blfs-root;view/svn/basicnet/inetutils.html"/>. Note that
+information can be found at <phrase condition="html"><ulink
+url="&blfs-root;view/svn/basicnet/inetutils.html"/></phrase><phrase
+condition="pdf"><ulink url="&blfs-root;view/svn/ basicnet/inetutils.html"/></phrase>. Note that
 better replacements are available for many of these
 servers.</para></listitem>
 </varlistentry>
@@ -97,7 +98,7 @@ servers.</para></listitem>
 place:</para>
 
 <screen><userinput>mv /usr/bin/ping /bin</userinput></screen>
-
+<beginpage/>
 </sect2>
 
 
@@ -108,13 +109,13 @@ place:</para>
 <seglistitem><seg>ftp, ping, rcp, rlogin, rsh, talk, telnet, and tftp</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="ftp">
 <term><command>ftp</command></term>
 <listitem>
-<para>is the file transfer protocol program.</para>
+<para>Is the file transfer protocol program</para>
 <indexterm zone="ch-system-inetutils ftp"><primary sortas="b-ftp">ftp</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -122,7 +123,7 @@ place:</para>
 <varlistentry id="ping">
 <term><command>ping</command></term>
 <listitem>
-<para>sends echo-request packets and reports how long the replies take.</para>
+<para>Sends echo-request packets and reports how long the replies take</para>
 <indexterm zone="ch-system-inetutils ping"><primary sortas="b-ping">ping</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -130,7 +131,7 @@ place:</para>
 <varlistentry id="rcp">
 <term><command>rcp</command></term>
 <listitem>
-<para>performs remote file copy.</para>
+<para>Performs remote file copy</para>
 <indexterm zone="ch-system-inetutils rcp"><primary sortas="b-rcp">rcp</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -138,7 +139,7 @@ place:</para>
 <varlistentry id="rlogin">
 <term><command>rlogin</command></term>
 <listitem>
-<para>performs remote login.</para>
+<para>Performs remote login</para>
 <indexterm zone="ch-system-inetutils rlogin"><primary sortas="b-rlogin">rlogin</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -146,7 +147,7 @@ place:</para>
 <varlistentry id="rsh">
 <term><command>rsh</command></term>
 <listitem>
-<para>runs a remote shell.</para>
+<para>Runs a remote shell</para>
 <indexterm zone="ch-system-inetutils rsh"><primary sortas="b-rsh">rsh</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -154,7 +155,7 @@ place:</para>
 <varlistentry id="talk">
 <term><command>talk</command></term>
 <listitem>
-<para>is used to chat with another user.</para>
+<para>Is used to chat with another user</para>
 <indexterm zone="ch-system-inetutils talk"><primary sortas="b-talk">talk</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -162,7 +163,7 @@ place:</para>
 <varlistentry id="telnet">
 <term><command>telnet</command></term>
 <listitem>
-<para>an interface to the TELNET protocol.</para>
+<para>An interface to the TELNET protocol</para>
 <indexterm zone="ch-system-inetutils telnet"><primary sortas="b-telnet">telnet</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -170,7 +171,7 @@ place:</para>
 <varlistentry id="tftp">
 <term><command>tftp</command></term>
 <listitem>
-<para>a trivial file transfer program.</para>
+<para>A trivial file transfer program</para>
 <indexterm zone="ch-system-inetutils tftp"><primary sortas="b-tftp">tftp</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -47,7 +47,7 @@ unset them when building Grub.</para>
 <userinput>make check</userinput>.</para>
 
 <para>Note that the test results will always show the error
-<quote>ufs2_stage1_5 is too big</quote>.  This is due to a compiler
+<quote>ufs2_stage1_5 is too big.</quote> This is due to a compiler
 issue, but can be ignored unless you plan to boot from an UFS
 partition. The partitions are normally only used by Sun
 workstations.</para>
@@ -81,13 +81,13 @@ copy the <filename>e2fs_stage1_5</filename> and/or
 grub-md5-crypt, grub-terminfo, and mbchk</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="grub">
 <term><command>grub</command></term>
 <listitem>
-<para>the Grand Unified Bootloader's command shell.</para>
+<para>The Grand Unified Bootloader's command shell</para>
 <indexterm zone="ch-system-grub grub"><primary sortas="b-grub">grub</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -95,7 +95,7 @@ grub-md5-crypt, grub-terminfo, and mbchk</seg></seglistitem>
 <varlistentry id="grub-install">
 <term><command>grub-install</command></term>
 <listitem>
-<para>installs GRUB on the given device.</para>
+<para>Installs GRUB on the given device</para>
 <indexterm zone="ch-system-grub grub-install"><primary sortas="b-grub-install">grub-install</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -103,7 +103,7 @@ grub-md5-crypt, grub-terminfo, and mbchk</seg></seglistitem>
 <varlistentry id="grub-md5-crypt">
 <term><command>grub-md5-crypt</command></term>
 <listitem>
-<para>encrypts a password in MD5 format.</para>
+<para>Encrypts a password in MD5 format</para>
 <indexterm zone="ch-system-grub grub-md5-crypt"><primary sortas="b-grub-md5-crypt">grub-md5-crypt</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -111,8 +111,8 @@ grub-md5-crypt, grub-terminfo, and mbchk</seg></seglistitem>
 <varlistentry id="grub-terminfo">
 <term><command>grub-terminfo</command></term>
 <listitem>
-<para>generates a terminfo command from a terminfo name. It can be
-employed if an unknown terminal is being used.</para>
+<para>Generates a terminfo command from a terminfo name; it can be
+employed if an unknown terminal is being used</para>
 <indexterm zone="ch-system-grub grub-terminfo"><primary sortas="b-grub-terminfo">grub-terminfo</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -120,7 +120,7 @@ employed if an unknown terminal is being used.</para>
 <varlistentry id="mbchk">
 <term><command>mbchk</command></term>
 <listitem>
-<para>checks the format of a multi-boot kernel.</para>
+<para>Checks the format of a multi-boot kernel</para>
 <indexterm zone="ch-system-grub mbchk"><primary sortas="b-mbchk">mbchk</primary></indexterm>
 </listitem>
 </varlistentry>

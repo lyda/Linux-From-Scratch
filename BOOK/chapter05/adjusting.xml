@@ -44,14 +44,13 @@ unset SPECFILE</userinput></screen>
 
 <para><phrase condition="html">It is recommended that the above
 command be copy-and-pasted in order to ensure accuracy.</phrase>
+<beginpage/>
 Alternatively, the specs file can be edited by hand. This is done by
 replacing every occurrence of <quote>/lib/ld-linux.so.2</quote> with
 <quote>/tools/lib/ld-linux.so.2</quote></para>
 
 <para>Be sure to visually inspect the specs file in order to verify the
 intended changes have been made.</para>
-
-<beginpage/>
 
 <important><para>If working on a platform where the name of the
 dynamic linker is something other than
@@ -69,6 +68,8 @@ chapter. Run the following command to eliminate this
 possibility:</para>
 
 <screen><userinput>rm -f /tools/lib/gcc/*/*/include/{pthread.h,bits/sigthread.h}</userinput></screen>
+
+<beginpage/>
 
 <caution><para>At this point, it is imperative to stop and ensure that
 the basic functions (compiling and linking) of the new toolchain are

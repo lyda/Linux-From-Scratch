@@ -41,10 +41,12 @@ warnings, as the patch was still successfully applied.</para>
 
 <para>During the compilation of most packages, there will be several
 warnings that scroll by on the screen. These are normal and can safely
-be ignored. These warnings are as they appear -- warnings about
+be ignored. These warnings are as they appear&mdash;warnings about
 deprecated, but not invalid, use of the C or C++ syntax. C standards
 change fairly often, and some packages still use the older standard.
 This is not a problem, but does prompt the warning.</para>
+
+<beginpage/>
 
 <para>After installing each package, delete its source and build
 directories, unless specifically instructed otherwise. Deleting the
@@ -53,8 +55,6 @@ package is reinstalled later. Only three of the packages need to
 retain the source and build directories in order for their contents to
 be used by later commands. Pay special attention to these
 reminders.</para>
-
-<beginpage/>
 
 <para>Check one last time that the <envar>LFS</envar> environment 
 variable is set up properly:</para>

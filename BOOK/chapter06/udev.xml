@@ -28,7 +28,7 @@
 <sect2 role="installation">
 <title>Installation of Udev</title>
 
-<para>Compile Udev:</para>
+<para>Compile the package:</para>
 
 <screen><userinput>make udevdir=/dev</userinput></screen>
 
@@ -59,10 +59,12 @@ cp ../udev-config-1.rules /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
-<seglistitem><seg>udev, udevd, udevsend, udevstart, udevinfo, and udevtest</seg></seglistitem>
+<segtitle>Installed directory</segtitle>
+<seglistitem><seg>udev, udevd, udevsend, udevstart, udevinfo, and udevtest</seg>
+<seg>/etc/udev</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
                                                                                 
 <varlistentry id="udev">
@@ -70,7 +72,7 @@ cp ../udev-config-1.rules /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 <listitem>
 <para>creates device nodes in <filename
 class="directory">/dev</filename> or renames network interfaces (not
-in LFS) in response to hotplug events.</para>
+in LFS) in response to hotplug events</para>
 <indexterm zone="ch-system-udev udev"><primary sortas="b-udev">udev</primary></indexterm>
 <beginpage/></listitem></varlistentry>
 
@@ -79,14 +81,14 @@ in LFS) in response to hotplug events.</para>
 <listitem>
 <para>a daemon that reorders hotplug events before submitting them to
 <command>udev</command>,
-thus avoiding various race conditions.</para>
+thus avoiding various race conditions</para>
 <indexterm zone="ch-system-udev udevd"><primary sortas="b-udevd">udevd</primary></indexterm>
 </listitem></varlistentry>
 
 <varlistentry id="udevsend">
 <term><command>udevsend</command></term>
 <listitem>
-<para>delivers hotplug events to <command>udevd</command>.</para>
+<para>delivers hotplug events to <command>udevd</command></para>
 <indexterm zone="ch-system-udev udevsend"><primary sortas="b-udevsend">udevsend</primary></indexterm>
 </listitem></varlistentry>
 
@@ -95,10 +97,10 @@ thus avoiding various race conditions.</para>
 <listitem>
 <para>creates device nodes in <filename
 class="directory">/dev</filename> that correspond to drivers compiled directly
-into the kernel. It performs that task by simulating hotplug events presumably
+into the kernel; it performs that task by simulating hotplug events presumably
 dropped by the kernel before invocation of this program (e.g., because the root
 filesystem has not been mounted) and submitting such synthetic hotplug events
-to <command>udev</command>.</para>
+to <command>udev</command></para>
 <indexterm zone="ch-system-udev udevstart"><primary sortas="b-udevstart">udevstart</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -107,10 +109,10 @@ to <command>udev</command>.</para>
 <term><command>udevinfo</command></term>
 <listitem>
 <para>allows users to query the <command>udev</command> database for
-information on any device currently present on the system. It also
+information on any device currently present on the system; it also
 provides a way to query any device in the <systemitem
 class="filesystem">sysfs</systemitem> tree to help create udev
-rules.</para>
+rules</para>
 <indexterm zone="ch-system-udev udevinfo"><primary sortas="b-udevinfo">udevinfo</primary></indexterm>
 </listitem></varlistentry>
 
@@ -119,23 +121,15 @@ rules.</para>
 <listitem>
 <para>simulates a <command>udev</command> run for the given device,
 and prints out the name of the node the real <command>udev</command> would
-have created or (not in LFS) the name of the renamed network interface.</para>
+have created or (not in LFS) the name of the renamed network interface</para>
 <indexterm zone="ch-system-udev udevtest"><primary sortas="b-udevtest">udevtest</primary></indexterm>
-</listitem></varlistentry>
-
-<varlistentry id="etc-dev-d">
-<term><filename class="directory">/etc/dev.d</filename></term>
-<listitem>
-<para>contains user-written handlers for device
-creation hotplug events.</para>
-<indexterm zone="ch-system-udev etc-dev-d"><primary sortas="e-etc-dev-d">/etc/dev.d</primary></indexterm>
 </listitem></varlistentry>
 
 <varlistentry id="etc-udev">
 <term><filename class="directory">/etc/udev</filename></term>
 <listitem>
 <para>contains <command>udev</command> configuation files,
-device permissions, and rules for device naming.</para>
+device permissions, and rules for device naming</para>
 <indexterm zone="ch-system-udev etc-udev"><primary sortas="e-etc-udev">/etc/udev</primary></indexterm>
 </listitem></varlistentry>
 </variablelist>

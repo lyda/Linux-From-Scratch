@@ -89,19 +89,16 @@ chmod 755 /usr/bin/lex</userinput></screen>
 <seg>libfl.a</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="flex">
 <term><command>flex</command></term>
 <listitem>
-<para>a tool for generating programs that recognize patterns in text.
-Pattern recognition is useful in many applications.
-<application>Flex</application> makes a program that looks for those
-patterns from a set of established rules.
-<application>Flex</application> allows for the versatility to specify
-the rules for pattern-finding, eradicating the need to develop a
-specialized program.</para>
+<para>A tool for generating programs that recognize patterns in text;
+it allows for the versatility to specify the rules for
+pattern-finding, eradicating the need to develop a specialized
+program</para>
 <indexterm zone="ch-system-flex flex"><primary sortas="b-flex">flex</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -109,7 +106,7 @@ specialized program.</para>
 <varlistentry id="flex-">
 <term><command>flex++</command></term>
 <listitem>
-<para>invokes a version of <command>flex</command> that is used exclusively for C++ scanners.</para>
+<para>Invokes a version of <command>flex</command> that is used exclusively for C++ scanners</para>
 <indexterm zone="ch-system-flex flex-"><primary sortas="b-flex++">flex++</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -117,8 +114,8 @@ specialized program.</para>
 <varlistentry id="lex">
 <term><command>lex</command></term>
 <listitem>
-<para>script that runs <command>flex</command> in <command>lex</command>
-emulation mode.</para>
+<para>Script that runs <command>flex</command> in <command>lex</command>
+emulation mode</para>
 <indexterm zone="ch-system-flex lex"><primary sortas="b-lex">lex</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -126,7 +123,7 @@ emulation mode.</para>
 <varlistentry id="libfl.a">
 <term><filename class="libraryfile">libfl.a</filename></term>
 <listitem>
-<para>the <filename class="libraryfile">flex</filename> library.</para>
+<para>The <filename class="libraryfile">flex</filename> library</para>
 <indexterm zone="ch-system-flex libfl.a"><primary sortas="c-libfl.a">libfl.a</primary></indexterm>
 </listitem>
 </varlistentry>

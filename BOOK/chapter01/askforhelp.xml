@@ -54,7 +54,7 @@ for help.</para>
 </sect2>
 
 <sect2>
-<title>Compile problems</title>
+<title>Compile Problems</title>
 
 <para>Both the screen output and the contents of various files are
 useful in determining the cause of compile issues. The screen output
@@ -88,6 +88,8 @@ section:</para>
 
 <screen><computeroutput>make [2]: *** [make] Error 1</computeroutput></screen>
 
+<beginpage/>
+
 <para>This is not enough information to properly diagnose the problem
 because it only notes that something went wrong, not
 <emphasis>what</emphasis> went wrong.  The entire section, as in the
@@ -99,7 +101,6 @@ available online at <ulink
 url="http://catb.org/~esr/faqs/smart-questions.html"/>.  Read and
 follow the hints in this document to increase the likelihood of getting
 the help you need.</para>
-<beginpage/>
 </sect2>
 
 <sect2>

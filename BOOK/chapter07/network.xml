@@ -42,9 +42,9 @@ command creates a sample <filename>ipv4</filename> file for the
 <emphasis>eth0</emphasis> device:</para>
 
 <screen><userinput>cd /etc/sysconfig/network-devices &amp;&amp;
-<literal>mkdir ifconfig.eth0 &amp;&amp;
+mkdir ifconfig.eth0 &amp;&amp;
 cat &gt; ifconfig.eth0/ipv4 &lt;&lt; "EOF"
-ONBOOT=yes
+<literal>ONBOOT=yes
 SERVICE=ipv4-static
 IP=192.168.1.1
 GATEWAY=192.168.1.2

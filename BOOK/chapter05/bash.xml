@@ -43,7 +43,7 @@ from Glibc which are more stable.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<para>Compile the program:</para>
+<para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 

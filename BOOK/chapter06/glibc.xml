@@ -297,14 +297,14 @@ libpthread.[a,so], libresolv.[a,so], librpcsvc.a, librt.[a,so],
 libthread_db.so, and libutil.[a,so]</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="catchsegv">
 <term><command>catchsegv</command></term>
 <listitem>
-<para>can be used to create a stack trace when a program
-terminates with a segmentation fault.</para>
+<para>Can be used to create a stack trace when a program
+terminates with a segmentation fault</para>
 <indexterm zone="ch-system-glibc catchsegv"><primary sortas="b-catchsegv">catchsegv</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -312,7 +312,7 @@ terminates with a segmentation fault.</para>
 <varlistentry id="gencat">
 <term><command>gencat</command></term>
 <listitem>
-<para>generates message catalogues.</para>
+<para>Generates message catalogues</para>
 <indexterm zone="ch-system-glibc gencat"><primary sortas="b-gencat">gencat</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -320,7 +320,7 @@ terminates with a segmentation fault.</para>
 <varlistentry id="getconf">
 <term><command>getconf</command></term>
 <listitem>
-<para>displays the system configuration values for file system specific variables.</para>
+<para>Displays the system configuration values for file system specific variables</para>
 <indexterm zone="ch-system-glibc getconf"><primary sortas="b-getconf">getconf</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -328,7 +328,7 @@ terminates with a segmentation fault.</para>
 <varlistentry id="getent">
 <term><command>getent</command></term>
 <listitem>
-<para>gets entries from an administrative database.</para>
+<para>Gets entries from an administrative database</para>
 <indexterm zone="ch-system-glibc getent"><primary sortas="b-getent">getent</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -336,7 +336,7 @@ terminates with a segmentation fault.</para>
 <varlistentry id="iconv">
 <term><command>iconv</command></term>
 <listitem>
-<para>performs character set conversion.</para>
+<para>Performs character set conversion</para>
 <indexterm zone="ch-system-glibc iconv"><primary sortas="b-iconv">iconv</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -344,7 +344,7 @@ terminates with a segmentation fault.</para>
 <varlistentry id="iconvconfig">
 <term><command>iconvconfig</command></term>
 <listitem>
-<para>creates fastloading <command>iconv</command> module configuration files.</para>
+<para>Creates fastloading <command>iconv</command> module configuration files</para>
 <indexterm zone="ch-system-glibc iconvconfig"><primary sortas="b-iconvconfig">iconvconfig</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -352,7 +352,7 @@ terminates with a segmentation fault.</para>
 <varlistentry id="ldconfig">
 <term><command>ldconfig</command></term>
 <listitem>
-<para>configures the dynamic linker runtime bindings.</para>
+<para>Configures the dynamic linker runtime bindings</para>
 <indexterm zone="ch-system-glibc ldconfig"><primary sortas="b-ldconfig">ldconfig</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -360,8 +360,8 @@ terminates with a segmentation fault.</para>
 <varlistentry id="ldd">
 <term><command>ldd</command></term>
 <listitem>
-<para>reports which shared libraries are required
-by each given program or shared library.</para>
+<para>Reports which shared libraries are required
+by each given program or shared library</para>
 <indexterm zone="ch-system-glibc ldd"><primary sortas="b-ldd">ldd</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -369,7 +369,7 @@ by each given program or shared library.</para>
 <varlistentry id="lddlibc4">
 <term><command>lddlibc4</command></term>
 <listitem>
-<para>assists <command>ldd</command> with object files.</para>
+<para>Assists <command>ldd</command> with object files</para>
 <indexterm zone="ch-system-glibc lddlibc4"><primary sortas="b-lddlibc4">lddlibc4</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -377,8 +377,8 @@ by each given program or shared library.</para>
 <varlistentry id="locale">
 <term><command>locale</command></term>
 <listitem>
-<para>tells the compiler to enable or disable the use of POSIX locales
-for built-in operations.</para>
+<para>Tells the compiler to enable or disable the use of POSIX locales
+for built-in operations</para>
 <indexterm zone="ch-system-glibc locale"><primary sortas="b-locale">locale</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -386,7 +386,7 @@ for built-in operations.</para>
 <varlistentry id="localedef">
 <term><command>localedef</command></term>
 <listitem>
-<para>compiles locale specifications.</para>
+<para>Compiles locale specifications</para>
 <indexterm zone="ch-system-glibc localedef"><primary sortas="b-localedef">localedef</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -394,8 +394,8 @@ for built-in operations.</para>
 <varlistentry id="mtrace">
 <term><command>mtrace</command></term>
 <listitem>
-<para>reads and interprets a memory trace file and
-ouputs a summary in human-readable format.</para>
+<para>Reads and interprets a memory trace file and
+ouputs a summary in human-readable format</para>
 <indexterm zone="ch-system-glibc mtrace"><primary sortas="b-mtrace">mtrace</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -403,8 +403,8 @@ ouputs a summary in human-readable format.</para>
 <varlistentry id="nscd">
 <term><command>nscd</command></term>
 <listitem>
-<para>a daemon that provides a cache for the most common name
-service requests.</para>
+<para>A daemon that provides a cache for the most common name
+service requests</para>
 <indexterm zone="ch-system-glibc nscd"><primary sortas="b-nscd">nscd</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -412,7 +412,7 @@ service requests.</para>
 <varlistentry id="nscd_nischeck">
 <term><command>nscd_nischeck</command></term>
 <listitem>
-<para>checks whether or not secure mode is necessary for NIS+ lookup.</para>
+<para>Checks whether or not secure mode is necessary for NIS+ lookup</para>
 <indexterm zone="ch-system-glibc nscd_nischeck"><primary sortas="b-nscd_nischeck">nscd_nischeck</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -420,7 +420,7 @@ service requests.</para>
 <varlistentry id="pcprofiledump">
 <term><command>pcprofiledump</command></term>
 <listitem>
-<para>dumps information generated by PC profiling.</para>
+<para>Dumps information generated by PC profiling</para>
 <indexterm zone="ch-system-glibc pcprofiledump"><primary sortas="b-pcprofiledump">pcprofiledump</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -428,8 +428,8 @@ service requests.</para>
 <varlistentry id="pt_chown">
 <term><command>pt_chown</command></term>
 <listitem>
-<para>a helper program for <command>grantpt</command> to set
-the owner, group and access permissions of a slave pseudo terminal.</para>
+<para>A helper program for <command>grantpt</command> to set
+the owner, group and access permissions of a slave pseudo terminal</para>
 <indexterm zone="ch-system-glibc pt_chown"><primary sortas="b-pt_chown">pt_chown</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -437,7 +437,7 @@ the owner, group and access permissions of a slave pseudo terminal.</para>
 <varlistentry id="rpcgen">
 <term><command>rpcgen</command></term>
 <listitem>
-<para>generates C code to implement the Remote Procecure Call (RPC) protocol.</para>
+<para>Generates C code to implement the Remote Procecure Call (RPC) protocol</para>
 <indexterm zone="ch-system-glibc rpcgen"><primary sortas="b-rpcgen">rpcgen</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -445,7 +445,7 @@ the owner, group and access permissions of a slave pseudo terminal.</para>
 <varlistentry id="rpcinfo">
 <term><command>rpcinfo</command></term>
 <listitem>
-<para>makes an RPC call to an RPC server.</para>
+<para>Makes an RPC call to an RPC server</para>
 <indexterm zone="ch-system-glibc rpcinfo"><primary sortas="b-rpcinfo">rpcinfo</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -453,7 +453,7 @@ the owner, group and access permissions of a slave pseudo terminal.</para>
 <varlistentry id="sln">
 <term><command>sln</command></term>
 <listitem>
-<para>a statically linked <command>ln</command> program.</para>
+<para>A statically linked <command>ln</command> program</para>
 <indexterm zone="ch-system-glibc sln"><primary sortas="b-sln">sln</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -461,7 +461,7 @@ the owner, group and access permissions of a slave pseudo terminal.</para>
 <varlistentry id="sprof">
 <term><command>sprof</command></term>
 <listitem>
-<para>reads and displays shared object profiling data.</para>
+<para>Reads and displays shared object profiling data</para>
 <indexterm zone="ch-system-glibc sprof"><primary sortas="b-sprof">sprof</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -469,8 +469,8 @@ the owner, group and access permissions of a slave pseudo terminal.</para>
 <varlistentry id="tzselect">
 <term><command>tzselect</command></term>
 <listitem>
-<para>asks the user about the location of the
-system and reports the corresponding time zone description.</para>
+<para>Asks the user about the location of the
+system and reports the corresponding time zone description</para>
 <indexterm zone="ch-system-glibc tzselect"><primary sortas="b-tzselect">tzselect</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -478,8 +478,8 @@ system and reports the corresponding time zone description.</para>
 <varlistentry id="xtrace">
 <term><command>xtrace</command></term>
 <listitem>
-<para>traces the execution of a program by
-printing the currently executed function.</para>
+<para>Traces the execution of a program by
+printing the currently executed function</para>
 <indexterm zone="ch-system-glibc xtrace"><primary sortas="b-xtrace">xtrace</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -487,7 +487,7 @@ printing the currently executed function.</para>
 <varlistentry id="zdump">
 <term><command>zdump</command></term>
 <listitem>
-<para>the time zone dumper.</para>
+<para>The time zone dumper</para>
 <indexterm zone="ch-system-glibc zdump"><primary sortas="b-zdump">zdump</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -495,7 +495,7 @@ printing the currently executed function.</para>
 <varlistentry id="zic">
 <term><command>zic</command></term>
 <listitem>
-<para>the time zone compiler.</para>
+<para>The time zone compiler</para>
 <indexterm zone="ch-system-glibc zic"><primary sortas="b-zic">zic</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -503,7 +503,7 @@ printing the currently executed function.</para>
 <varlistentry id="ld.so">
 <term><filename class="libraryfile">ld.so</filename></term>
 <listitem>
-<para>the helper program for shared library executables.</para>
+<para>The helper program for shared library executables</para>
 <indexterm zone="ch-system-glibc ld.so"><primary sortas="c-ld.so">ld.so</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -511,7 +511,7 @@ printing the currently executed function.</para>
 <varlistentry id="libBrokenLocale">
 <term><filename class="libraryfile">libBrokenLocale</filename></term>
 <listitem>
-<para>used by programs, such as Mozilla, to solve broken locales.</para>
+<para>Used by programs, such as Mozilla, to solve broken locales</para>
 <indexterm zone="ch-system-glibc libBrokenLocale"><primary sortas="c-libBrokenLocale">libBrokenLocale</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -519,7 +519,7 @@ printing the currently executed function.</para>
 <varlistentry id="libSegFault">
 <term><filename class="libraryfile">libSegFault</filename></term>
 <listitem>
-<para>the segmentation fault signal handler.</para>
+<para>The segmentation fault signal handler</para>
 <indexterm zone="ch-system-glibc libSegFault"><primary sortas="c-libSegFault">libSegFault</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -527,7 +527,7 @@ printing the currently executed function.</para>
 <varlistentry id="libanl">
 <term><filename class="libraryfile">libanl</filename></term>
 <listitem>
-<para>an asynchronous name lookup library.</para>
+<para>An asynchronous name lookup library</para>
 <indexterm zone="ch-system-glibc libanl"><primary sortas="c-libanl">libanl</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -535,8 +535,8 @@ printing the currently executed function.</para>
 <varlistentry id="libbsd-compat">
 <term><filename class="libraryfile">libbsd-compat</filename></term>
 <listitem>
-<para>provides the portability needed
-in order to run certain Berkey Software Distribution (BSD) programs under Linux.</para>
+<para>Provides the portability needed
+in order to run certain Berkey Software Distribution (BSD) programs under Linux</para>
 <indexterm zone="ch-system-glibc libbsd-compat"><primary sortas="c-libbsd-compat">libbsd-compat</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -544,7 +544,7 @@ in order to run certain Berkey Software Distribution (BSD) programs under Linux.
 <varlistentry id="libc">
 <term><filename class="libraryfile">libc</filename></term>
 <listitem>
-<para>the main C library.</para>
+<para>The main C library</para>
 <indexterm zone="ch-system-glibc libc"><primary sortas="c-libc">libc</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -552,7 +552,7 @@ in order to run certain Berkey Software Distribution (BSD) programs under Linux.
 <varlistentry id="libcrypt">
 <term><filename class="libraryfile">libcrypt</filename></term>
 <listitem>
-<para>the cryptography library.</para>
+<para>The cryptography library</para>
 <indexterm zone="ch-system-glibc libcrypt"><primary sortas="c-libcrypt">libcrypt</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -560,7 +560,7 @@ in order to run certain Berkey Software Distribution (BSD) programs under Linux.
 <varlistentry id="libdl">
 <term><filename class="libraryfile">libdl</filename></term>
 <listitem>
-<para>the dynamic linking interface library.</para>
+<para>The dynamic linking interface library</para>
 <indexterm zone="ch-system-glibc libdl"><primary sortas="c-libdl">libdl</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -568,7 +568,7 @@ in order to run certain Berkey Software Distribution (BSD) programs under Linux.
 <varlistentry id="libg">
 <term><filename class="libraryfile">libg</filename></term>
 <listitem>
-<para>a runtime library for <command>g++</command>.</para>
+<para>A runtime library for <command>g++</command></para>
 <indexterm zone="ch-system-glibc libg"><primary sortas="c-libg">libg</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -576,7 +576,7 @@ in order to run certain Berkey Software Distribution (BSD) programs under Linux.
 <varlistentry id="libieee">
 <term><filename class="libraryfile">libieee</filename></term>
 <listitem>
-<para>the Institute of Electrical and Electronic Engineers (IEEE) floating point library.</para>
+<para>The Institute of Electrical and Electronic Engineers (IEEE) floating point library</para>
 <indexterm zone="ch-system-glibc libieee"><primary sortas="c-libieee">libieee</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -584,7 +584,7 @@ in order to run certain Berkey Software Distribution (BSD) programs under Linux.
 <varlistentry id="libm">
 <term><filename class="libraryfile">libm</filename></term>
 <listitem>
-<para>the mathematical library.</para>
+<para>The mathematical library</para>
 <indexterm zone="ch-system-glibc libm"><primary sortas="c-libm">libm</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -592,7 +592,7 @@ in order to run certain Berkey Software Distribution (BSD) programs under Linux.
 <varlistentry id="libmcheck">
 <term><filename class="libraryfile">libmcheck</filename></term>
 <listitem>
-<para>contains code run at boot.</para>
+<para>Contains code run at boot</para>
 <indexterm zone="ch-system-glibc libmcheck"><primary sortas="c-libmcheck">libmcheck</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -600,8 +600,8 @@ in order to run certain Berkey Software Distribution (BSD) programs under Linux.
 <varlistentry id="libmemusage">
 <term><filename class="libraryfile">libmemusage</filename></term>
 <listitem>
-<para>used by <command>memusage</command> to help collect
-information about the memory usage of a program.</para>
+<para>Used by <command>memusage</command> to help collect
+information about the memory usage of a program</para>
 <indexterm zone="ch-system-glibc libmemusage"><primary sortas="c-libmemusage">libmemusage</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -609,26 +609,26 @@ information about the memory usage of a program.</para>
 <varlistentry id="libnsl">
 <term><filename class="libraryfile">libnsl</filename></term>
 <listitem>
-<para>the network services library.</para>
+<para>The network services library</para>
 <indexterm zone="ch-system-glibc libnsl"><primary sortas="c-libnsl">libnsl</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="libnss">
-<term><filename class="libraryfile">libnss*</filename></term>
+<term><filename class="libraryfile">libnss</filename></term>
 <listitem>
-<para>the Name Service Switch libraries,
+<para>The Name Service Switch libraries,
 containing functions for resolving host names, user names, group names,
-aliases, services, protocols, etc.</para>
-<indexterm zone="ch-system-glibc libnss"><primary sortas="c-libnss*">libnss*</primary></indexterm>
+aliases, services, protocols, etc</para>
+<indexterm zone="ch-system-glibc libnss"><primary sortas="c-libnss">libnss</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="libpcprofile">
 <term><filename class="libraryfile">libpcprofile</filename></term>
 <listitem>
-<para>contains profiling functions used
-to track the amount of CPU time spent in specific source code lines.</para>
+<para>Contains profiling functions used
+to track the amount of CPU time spent in specific source code lines</para>
 <indexterm zone="ch-system-glibc libpcprofile"><primary sortas="c-libpcprofile">libpcprofile</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -636,7 +636,7 @@ to track the amount of CPU time spent in specific source code lines.</para>
 <varlistentry id="libpthread">
 <term><filename class="libraryfile">libpthread</filename></term>
 <listitem>
-<para>the POSIX threads library.</para>
+<para>The POSIX threads library</para>
 <indexterm zone="ch-system-glibc libpthread"><primary sortas="c-libpthread">libpthread</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -644,8 +644,8 @@ to track the amount of CPU time spent in specific source code lines.</para>
 <varlistentry id="libresolv">
 <term><filename class="libraryfile">libresolv</filename></term>
 <listitem>
-<para>contains functions for creating,
-sending, and interpreting packets to the Internet domain name servers.</para>
+<para>Contains functions for creating,
+sending, and interpreting packets to the Internet domain name servers</para>
 <indexterm zone="ch-system-glibc libresolv"><primary sortas="c-libresolv">libresolv</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -653,7 +653,7 @@ sending, and interpreting packets to the Internet domain name servers.</para>
 <varlistentry id="librpcsvc">
 <term><filename class="libraryfile">librpcsvc</filename></term>
 <listitem>
-<para>contains functions providing miscellaneous RPC services.</para>
+<para>Contains functions providing miscellaneous RPC services</para>
 <indexterm zone="ch-system-glibc librpcsvc"><primary sortas="c-librpcsvc">librpcsvc</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -661,8 +661,8 @@ sending, and interpreting packets to the Internet domain name servers.</para>
 <varlistentry id="librt">
 <term><filename class="libraryfile">librt</filename></term>
 <listitem>
-<para>contains functions providing most of the
-interfaces specified by the POSIX.1b Realtime Extension.</para>
+<para>Contains functions providing most of the
+interfaces specified by the POSIX.1b Realtime Extension</para>
 <indexterm zone="ch-system-glibc librt"><primary sortas="c-librt">librt</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -670,8 +670,8 @@ interfaces specified by the POSIX.1b Realtime Extension.</para>
 <varlistentry id="libthread_db">
 <term><filename class="libraryfile">libthread_db</filename></term>
 <listitem>
-<para>contains functions useful for
-building debuggers for multi-threaded programs.</para>
+<para>Contains functions useful for
+building debuggers for multi-threaded programs</para>
 <indexterm zone="ch-system-glibc libthread_db"><primary sortas="c-libthread_db">libthread_db</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -679,7 +679,7 @@ building debuggers for multi-threaded programs.</para>
 <varlistentry id="libutil">
 <term><filename class="libraryfile">libutil</filename></term>
 <listitem>
-<para>contains code for <quote>standard</quote> functions used in many different Unix utilities.</para>
+<para>Contains code for <quote>standard</quote> functions used in many different Unix utilities</para>
 <indexterm zone="ch-system-glibc libutil"><primary sortas="c-libutil">libutil</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -32,7 +32,7 @@ the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../perl-&perl-version;-libc-1.patch</userinput></screen>
 
-<para>Now prepare Perl for compilation (make sure to get the 'IO Fcntl POSIX'
+<para>Prepare Perl for compilation (make sure to get the 'IO Fcntl POSIX'
 part of the command correct&mdash;they are all letters):</para>
 
 <screen><userinput>./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX'</userinput></screen>
@@ -48,6 +48,7 @@ the next chapter.</para></listitem>
 </varlistentry>
 </variablelist>
 
+<beginpage/>
 <para>Compile only the required tools:</para>
 
 <screen><userinput>make perl utilities</userinput></screen>
@@ -58,7 +59,6 @@ run it at this point. Only part of Perl was built and running
 built as well, which is unnecessary at this point. The test suite can
 be run in the next chapter if desired.</para>
 
-<beginpage/>
 <para>Copy these tools and their libraries:</para>
 
 <screen><userinput>cp perl pod/pod2man /tools/bin

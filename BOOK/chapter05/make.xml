@@ -31,7 +31,7 @@
 
 <screen><userinput>./configure --prefix=/tools</userinput></screen>
 
-<para>Compile the program:</para>
+<para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 

@@ -7,7 +7,7 @@
 <title>What Now?</title>
 <?dbhtml filename="whatnow.html"?>
 
-<para>Thank you for reading this LFS book!  We hope that you have
+<para>Thank you for reading this LFS book. We hope that you have
 found this book helpful and have learned more about the system
 creation process.</para>
 
@@ -25,7 +25,7 @@ Book. The BLFS project is located at <ulink url="&blfs-root;"/>.</para></listite
 <listitem><para>LFS Hints</para>
 
 <para>The LFS Hints are a collection of educational documents
-submitted by volunteers in the LFS community. The Hints are available
+submitted by volunteers in the LFS community. The hints are available
 at <ulink url="&hints-index;"/>.</para></listitem>
 
 <listitem><para>Mailing lists</para>

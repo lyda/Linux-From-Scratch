@@ -49,7 +49,7 @@ GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
-
+<beginpage/>
 </sect2>
 
 <sect2 id="contents-less" role="content"><title>Contents of Less</title>
@@ -59,14 +59,14 @@ GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 <seglistitem><seg>less, lessecho, and lesskey</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="less">
 <term><command>less</command></term>
 <listitem>
-<para>a file viewer or pager. It displays the contents of the given
-file, letting the user scroll, find strings, and jump to marks.</para>
+<para>a file viewer or pager; it displays the contents of the given
+file, letting the user scroll, find strings, and jump to marks</para>
 <indexterm zone="ch-system-less less"><primary sortas="b-less">less</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -75,7 +75,7 @@ file, letting the user scroll, find strings, and jump to marks.</para>
 <term><command>lessecho</command></term>
 <listitem>
 <para>needed to expand meta-characters, such as <emphasis>*</emphasis>
-and <emphasis>?</emphasis>, in filenames on Unix systems.</para>
+and <emphasis>?</emphasis>, in filenames on Unix systems</para>
 <indexterm zone="ch-system-less lessecho"><primary sortas="b-lessecho">lessecho</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -83,7 +83,7 @@ and <emphasis>?</emphasis>, in filenames on Unix systems.</para>
 <varlistentry id="lesskey">
 <term><command>lesskey</command></term>
 <listitem>
-<para>used to specify the key bindings for <command>less</command>.</para>
+<para>used to specify the key bindings for <command>less</command></para>
 <indexterm zone="ch-system-less lesskey"><primary sortas="b-lesskey">lesskey</primary></indexterm>
 </listitem>
 </varlistentry>

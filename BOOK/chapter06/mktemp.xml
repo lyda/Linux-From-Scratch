@@ -50,6 +50,8 @@ functions from the system C library.</para></listitem>
 </varlistentry>
 </variablelist>
 
+<beginpage/>
+
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
@@ -59,7 +61,6 @@ functions from the system C library.</para></listitem>
 <screen><userinput>make install
 make install-tempfile</userinput></screen>
 
-<beginpage/>
 </sect2>
 
 
@@ -70,13 +71,13 @@ make install-tempfile</userinput></screen>
 <seglistitem><seg>mktemp and tempfile</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="mktemp">
 <term><command>mktemp</command></term>
 <listitem>
-<para>creates temporary files in a secure manner. It is used in scripts.</para>
+<para>Creates temporary files in a secure manner; it is used in scripts</para>
 <indexterm zone="ch-system-mktemp mktemp"><primary sortas="b-mktemp">mktemp</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -84,8 +85,8 @@ make install-tempfile</userinput></screen>
 <varlistentry id="tempfile">
 <term><command>tempfile</command></term>
 <listitem>
-<para>creates temporary files in a less secure manner than 
-<command>mktemp</command>. It is installed for backwards-compatibility.</para>
+<para>Creates temporary files in a less secure manner than 
+<command>mktemp</command>; it is installed for backwards-compatibility</para>
 <indexterm zone="ch-system-mktemp tempfile"><primary sortas="b-tempfile">tempfile</primary></indexterm>
 </listitem>
 </varlistentry>

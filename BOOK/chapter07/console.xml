@@ -47,7 +47,7 @@ EOF</userinput></screen>
 
 <note><para>The <envar>FONT</envar> line above is correct only for the ISO 8859-15
 character set. If using ISO 8859-1 and, therefore, a pound sign
-instead of Euro, the correct <envar>FONT</envar> line is:</para>
+instead of Euro, the correct <envar>FONT</envar> line would be:</para>
 
 <screen><userinput>FONT="lat1-16"</userinput></screen></note>
 

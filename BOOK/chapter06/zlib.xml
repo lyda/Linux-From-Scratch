@@ -55,6 +55,8 @@ configure command below, then remove it afterwards.</para></note>
 
 <screen><userinput>make install</userinput></screen>
 
+<beginpage/>
+
 <para>Build the static library:</para>
 
 <screen><userinput>make clean
@@ -103,15 +105,15 @@ symlink:</para>
 <seglistitem><seg>libz[a,so]</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="libz">
-<term><filename class="libraryfile">libz*</filename></term>
+<term><filename class="libraryfile">libz</filename></term>
 <listitem>
-<para>contains compression and un-compression
-functions used by some programs.</para>
-<indexterm zone="ch-system-zlib libz"><primary sortas="c-libz*">libz*</primary></indexterm>
+<para>Contains compression and un-compression
+functions used by some programs</para>
+<indexterm zone="ch-system-zlib libz"><primary sortas="c-libz">libz</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

@@ -5,7 +5,7 @@
 ]>
 <appendix id="appendixa" xreflabel="Appendix A">
 <?dbhtml dir="appendixa"?>
-<title>Acronyms and terms</title>
+<title>Acronyms and Terms</title>
 <?dbhtml filename="acronymlist.html"?>
 
 <variablelist>
@@ -100,7 +100,7 @@ Metal Oxide Semiconductor</para></listitem>
 
 <varlistentry>
 <term><emphasis role="bold">EOF</emphasis></term>
-<listitem><para>End Of File</para></listitem>
+<listitem><para>End of File</para></listitem>
 </varlistentry>
 
 <varlistentry>

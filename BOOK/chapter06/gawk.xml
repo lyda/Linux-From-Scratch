@@ -42,7 +42,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
-
+<beginpage/>
 </sect2>
 
 
@@ -54,13 +54,13 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 pgawk, pgawk-&gawk-version;, and pwcat</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="awk">
 <term><command>awk</command></term>
 <listitem>
-<para>link to <command>gawk</command></para>
+<para>A link to <command>gawk</command></para>
 <indexterm zone="ch-system-gawk awk"><primary sortas="b-awk">awk</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -68,8 +68,8 @@ pgawk, pgawk-&gawk-version;, and pwcat</seg></seglistitem>
 <varlistentry id="gawk">
 <term><command>gawk</command></term>
 <listitem>
-<para>a program for manipulating text files.  It is the GNU
-implementation of <command>awk</command>.</para>
+<para>A program for manipulating text files; it is the GNU
+implementation of <command>awk</command></para>
 <indexterm zone="ch-system-gawk gawk"><primary sortas="b-gawk">gawk</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -77,7 +77,7 @@ implementation of <command>awk</command>.</para>
 <varlistentry id="gawk-version">
 <term><command>gawk-&gawk-version;</command></term>
 <listitem>
-<para>hard link to <command>gawk</command>.</para>
+<para>A hard link to <command>gawk</command></para>
 <indexterm zone="ch-system-gawk gawk-version"><primary sortas="b-gawk-&gawk-version;">gawk-&gawk-version;</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -85,7 +85,7 @@ implementation of <command>awk</command>.</para>
 <varlistentry id="grcat">
 <term><command>grcat</command></term>
 <listitem>
-<para>dumps the group database <filename>/etc/group</filename>.</para>
+<para>Dumps the group database <filename>/etc/group</filename></para>
 <indexterm zone="ch-system-gawk grcat"><primary sortas="b-grcat">grcat</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -93,7 +93,7 @@ implementation of <command>awk</command>.</para>
 <varlistentry id="igawk">
 <term><command>igawk</command></term>
 <listitem>
-<para>gives <command>gawk</command> the ability to include files.</para>
+<para>Gives <command>gawk</command> the ability to include files</para>
 <indexterm zone="ch-system-gawk igawk"><primary sortas="b-igawk">igawk</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -101,7 +101,7 @@ implementation of <command>awk</command>.</para>
 <varlistentry id="pgawk">
 <term><command>pgawk</command></term>
 <listitem>
-<para>the profiling version of <command>gawk</command>.</para>
+<para>The profiling version of <command>gawk</command></para>
 <indexterm zone="ch-system-gawk pgawk"><primary sortas="b-pgawk">pgawk</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -109,7 +109,7 @@ implementation of <command>awk</command>.</para>
 <varlistentry id="pgawk-version">
 <term><command>pgawk-&gawk-version;</command></term>
 <listitem>
-<para>hard link to <command>pgawk</command>.</para>
+<para>Hard link to <command>pgawk</command></para>
 <indexterm zone="ch-system-gawk pgawk-version"><primary sortas="b-pgawk-&gawk-version;">pgawk-&gawk-version;</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -117,7 +117,7 @@ implementation of <command>awk</command>.</para>
 <varlistentry id="pwcat">
 <term><command>pwcat</command></term>
 <listitem>
-<para>dumps the password database <filename>/etc/passwd</filename>.</para>
+<para>Dumps the password database <filename>/etc/passwd</filename></para>
 <indexterm zone="ch-system-gawk pwcat"><primary sortas="b-pwcat">pwcat</primary></indexterm>
 </listitem>
 </varlistentry>

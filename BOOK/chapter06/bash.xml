@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Bash installation depends on</segtitle>
 <seglistitem><seg>Binutils, Coreutils, Diffutils, Gawk,
-GCC, Glibc, Grep, Make, Ncurse, and Sed.</seg></seglistitem>
+GCC, Glibc, Grep, Make, Ncurses, and Sed.</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -83,15 +83,15 @@ that new programs are found as they become available.</para></note>
 <seglistitem><seg>bash, bashbug, and sh (link to bash)</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="bash">
 <term><command>bash</command></term>
 <listitem>
-<para>a widely-used command interpreter. It performs many types of
+<para>A widely-used command interpreter; it performs many types of
 expansions and substitutions on a given command line before executing
-it, thus making this interpreter a powerful tool.</para>
+it, thus making this interpreter a powerful tool</para>
 <indexterm zone="ch-system-bash bash"><primary sortas="b-bash">bash</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -99,8 +99,8 @@ it, thus making this interpreter a powerful tool.</para>
 <varlistentry id="bashbug">
 <term><command>bashbug</command></term>
 <listitem>
-<para>a shell script to help the user compose and mail bug reports
-concerning <command>bash</command> in a standard format.</para>
+<para>A shell script to help the user compose and mail bug reports
+concerning <command>bash</command> in a standard format</para>
 <indexterm zone="ch-system-bash bashbug"><primary sortas="b-bashbug">bashbug</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -108,10 +108,10 @@ concerning <command>bash</command> in a standard format.</para>
 <varlistentry id="sh">
 <term><command>sh</command></term>
 <listitem>
-<para>a symlink to the <command>bash</command> program. When invoked
+<para>A symlink to the <command>bash</command> program; when invoked
 as <command>sh</command>, <command>bash</command> tries to mimic the
 startup behavior of historical versions of <command>sh</command> as
-closely as possible, while conforming to the POSIX standard as well.</para>
+closely as possible, while conforming to the POSIX standard as well</para>
 <indexterm zone="ch-system-bash sh"><primary sortas="b-sh">sh</primary></indexterm>
 </listitem>
 </varlistentry>

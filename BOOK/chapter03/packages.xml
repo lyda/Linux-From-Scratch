@@ -89,9 +89,16 @@
 </varlistentry>
 
 <varlistentry>
-<term>File (&file-version;) - 356 KB: <emphasis>(see Note 1)</emphasis></term>
+<term>File (&file-version;) - 356 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;file/"/></para>
+<beginpage/>
+<note><para>File (&file-version;) may no longer be available at the
+listed location. The site administrators of the master download
+location occasionally remove older versions when new ones are
+released. An alternate download location that may have the correct
+version available is <ulink
+url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </listitem>
 </varlistentry>
 
@@ -99,7 +106,6 @@
 <term>Findutils (&findutils-version;) - 760 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;findutils/"/></para>
-<beginpage/>
 </listitem>
 </varlistentry>
 
@@ -132,9 +138,35 @@
 </varlistentry>
 
 <varlistentry>
-<term>Glibc (&glibc-version;) - 13,101 KB: <emphasis>(see Note 2)</emphasis></term>
+<term>Glibc (&glibc-version;) - 13,101 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;glibc/"/></para>
+<note><para>Released packages of Glibc are not new enough for our
+purposes, so create a tarball of an appropriate Concurrent Versions
+System (CVS) snapshot with the following
+commands:</para>
+
+<screen><userinput>cvs -z 3 -d \
+    :pserver:anoncvs@sources.redhat.com:/cvs/glibc \
+    export -d glibc-2.3.4-20040701 \
+    -D "2004-07-01 17:30 UTC" libc
+sed -i -e "s/stable/2004-07-01/" \
+    -e "s/2\.3\.3/2.3.4/" \
+    glibc-2.3.4-20040701/version.h
+tar jcvf glibc-2.3.4-20040701.tar.bz2 \
+    glibc-2.3.4-20040701</userinput></screen>
+
+<para></para>
+<para>Alternatively, the LFS team developed a tarball which can be
+downloaded from any of the File Transfer Protocol (FTP) mirrors listed
+on the LFS Website at <ulink url="&lfs-root;lfs/packages.html#http"/>.
+It is located under the <filename
+class="directory">/pub/lfs/packages/conglomeration/glibc</filename>
+directory.  The tarball is signed using GNU Privacy Guard (GPG), and
+it is strongly recommended that its authenticity be verified before
+use. Instructions for installing GPG, which enables verification, are
+provided in the Beyond Linux From Scratch (BLFS) book at <ulink
+url="&lfs-root;blfs/view/svn/postlfs/gnupg.html"/>.</para></note>
 </listitem>
 </varlistentry>
 
@@ -314,7 +346,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>Sed (&sed-version;) - 749KB:</term>
+<term>Sed (&sed-version;) - 749 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;sed/"/></para>
 </listitem>
@@ -414,39 +446,6 @@
 </variablelist>
 
 <para>Total size of these packages: 135 MB</para>
-
-<note><para>1) File (&file-version;) may no longer be available at the
-listed location. The site administrators of the master download
-location occasionally remove older versions when new ones are
-released. An alternate download location that may have the correct
-version available is <ulink
-url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
-
-<note><para>2) Released packages of Glibc are not new enough for our
-purposes, so create a tarball of an appropriate Concurrent Versions
-System (CVS) snapshot with the following
-commands:</para>
-
-<screen><userinput>cvs -z 3 -d \
-    :pserver:anoncvs@sources.redhat.com:/cvs/glibc \
-    export -d glibc-2.3.4-20040701 \
-    -D "2004-07-01 17:30 UTC" libc
-sed -i -e "s/stable/2004-07-01/" \
-    -e "s/2\.3\.3/2.3.4/" \
-    glibc-2.3.4-20040701/version.h
-tar jcvf glibc-2.3.4-20040701.tar.bz2 \
-    glibc-2.3.4-20040701</userinput></screen>
-
-<para> Alternatively, the LFS team developed a tarball which can be
-downloaded from any of the File Transfer Protocol (FTP) mirrors listed
-on the LFS Website at <ulink url="&lfs-root;lfs/packages.html#http"/>.
-It is located under the <filename
-class="directory">/pub/lfs/packages/conglomeration/glibc</filename>
-directory.  The tarball is signed using GNU Privacy Guard (GPG), and
-it is strongly recommended that its authenticity be verified before
-use. Instructions for installing GPG, which enables verification, are
-provided in the Beyond Linux From Scratch (BLFS) book at <ulink
-url="&lfs-root;blfs/view/svn/postlfs/gnupg.html"/>.</para></note>
 
 </sect1>
 

@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>DejaGNU installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make and Sed</seg></seglistitem>
+GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -46,14 +46,14 @@ GCC, Glibc, Grep, Make and Sed</seg></seglistitem>
 <seglistitem><seg>runtest</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="runtest">
 <term><command>runtest</command></term>
 <listitem>
-<para>a wrapper script that locates the proper
-<command>expect</command> shell and then runs DejaGNU.</para>
+<para>A wrapper script that locates the proper
+<command>expect</command> shell and then runs DejaGNU</para>
 <indexterm zone="ch-tools-dejagnu runtest"><primary sortas="b-runtest">runtest</primary></indexterm>
 </listitem>
 </varlistentry>

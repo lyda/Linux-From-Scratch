@@ -56,13 +56,16 @@ compile the keymap into the kernel, issue the command below:</para>
     drivers/char/defkeymap.c</userinput></screen>
 
 <para>For example, if using a Dutch keyboard, use
-<filename>/usr/share/kbd/keymaps/i386/qwerty/nl.map.gz</filename>.</para>
+<phrase
+condition="html"><filename>/usr/share/kbd/keymaps/i386/qwerty/nl.map.gz</filename></phrase><phrase
+condition="pdf"><filename>/usr/share/kbd/keymaps/i386/
+qwerty/nl.map.gz</filename></phrase>.</para>
 
 <para>Configure the kernel via a menu-driven interface:</para>
 
 <screen><userinput>make menuconfig</userinput></screen>
 
-<para><command>make oldconfig</command> may be more appropriate in some
+<para>Alternatively, <command>make oldconfig</command> may be more appropriate in some
 situations. See the <filename>README</filename> file for more
 information.</para>
 
@@ -115,9 +118,11 @@ configuration issues specific to Hotplug and Udev are not documented.
 The problem is that Udev will create a device node only if Hotplug or
 a user-written script inserts the corresponding module into the
 kernel, and not all modules are detectable by Hotplug. Note that
-statements like <screen>alias char-major-XXX some-module</screen> in
-the <filename>/etc/modprobe.conf</filename> file do not work with
-Udev.</para>
+statements like the one below in the
+<filename>/etc/modprobe.conf</filename> file do not work with
+Udev:</para>
+
+<para><screen>alias char-major-XXX some-module</screen></para>
 
 <para>Because of the complications with Hotplug, Udev, and modules, we
 strongly recommend starting with a completely non-modular kernel
@@ -149,9 +154,9 @@ kernel. Issue the following command to install the map file:</para>
 
 <screen><userinput>cp System.map /boot/System.map-&linux-version;</userinput></screen>
 
-<para><filename>.config</filename> is the kernel's configuration file
-that was produced by the <command>make menuconfig</command> step
-above. It contains all the configuration selections for the kernel
+<para>The kernel configuration file <filename>.config</filename>
+produced by the <command>make menuconfig</command> step
+above contains all the configuration selections for the kernel
 that was just compiled. It is a good idea to keep this file for future
 reference:</para>
 
@@ -184,13 +189,13 @@ all files are owned by user <emphasis>root</emphasis>.</para>
 and System.map</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="kernel">
-<term><command>kernel</command></term>
+<term><filename>kernel</filename></term>
 <listitem>
-<para>the engine of the Linux system. When turning on the computer,
+<para>The engine of the Linux system. When turning on the computer,
 the kernel is the first part of the operating system that gets loaded.
 It detects and initializes all components of the computer's hardware,
 then makes these components available as a tree of files to the
@@ -201,9 +206,9 @@ of running scores of programs seemingly at the same time.</para>
 </varlistentry>
 
 <varlistentry id="kernel-headers">
-<term><command>kernel headers</command></term>
+<term><filename>kernel headers</filename></term>
 <listitem>
-<para>defines the interface to the services that the kernel provides.
+<para>Defines the interface to the services that the kernel provides.
 The headers in the system's <filename
 class="directory">include</filename> directory should
 <emphasis>always</emphasis> be the ones against which Glibc was
@@ -216,9 +221,9 @@ when upgrading the kernel.</para>
 <varlistentry id="System.map">
 <term><filename>System.map</filename></term>
 <listitem>
-<para>a list of addresses and symbols. It maps the entry points and
+<para>A list of addresses and symbols; it maps the entry points and
 addresses of all the functions and data structures in the
-kernel.</para>
+kernel</para>
 <indexterm zone="ch-bootable-kernel System.map"><primary sortas="e-/boot/System.map">/boot/System.map</primary></indexterm>
 </listitem>
 </varlistentry>

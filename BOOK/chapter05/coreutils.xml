@@ -48,6 +48,8 @@ have consequences, including the need to patch the many packages that
 still use the old syntax. Therefore, it is recommended that the
 instructions be followed exactly as given above.</para>
 
+<beginpage/>
+
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
@@ -59,7 +61,6 @@ test suite to run several additional tests that are considered
 relatively expensive (in terms of CPU power and memory usage) on some
 platforms, but generally are not a problem on Linux.</para>
 
-<beginpage/>
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>

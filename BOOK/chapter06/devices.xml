@@ -36,7 +36,7 @@ necessary to do what the bootscripts would otherwise do and populate
 
 <screen><userinput>mount -n -t ramfs none /dev</userinput></screen>
 
-<para>Now run the installed <command>udevstart</command> program to
+<para>Run the installed <command>udevstart</command> program to
 create the initial devices based on all the information in <filename
 class="directory">/sys</filename>:</para>
 

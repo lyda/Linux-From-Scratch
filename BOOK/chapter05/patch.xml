@@ -35,7 +35,7 @@
 only needed on the PowerPC platform. It can be left out on other
 architectures.</para>
 
-<para>Compile the program:</para>
+<para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 

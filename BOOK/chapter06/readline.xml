@@ -80,14 +80,14 @@ ln -sf ../../lib/libreadline.so.5 /usr/lib/libreadline.so</userinput></screen>
 <seglistitem><seg>libhistory.[a,so], and libreadline.[a,so]</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="libhistory">
 <term><filename class="libraryfile">libhistory</filename></term>
 <listitem>
-<para>provides a consistent user interface
-for recalling lines of history.</para>
+<para>Provides a consistent user interface
+for recalling lines of history</para>
 <indexterm zone="ch-system-readline libhistory"><primary sortas="c-libhistory">libhistory</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -95,9 +95,9 @@ for recalling lines of history.</para>
 <varlistentry id="libreadline">
 <term><filename class="libraryfile">libreadline</filename></term>
 <listitem>
-<para>aids in the consistency of user interface
+<para>Aids in the consistency of user interface
 across discrete programs that need to provide a command line
-interface.</para>
+interface</para>
 <indexterm zone="ch-system-readline libreadline"><primary sortas="c-libreadline">libreadline</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Tcl installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make and Sed</seg></seglistitem>
+GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 
 </sect2>
@@ -54,14 +54,15 @@ Therefore, test suite failures here are not surprising, and are not
 considered critical. The <parameter>TZ=UTC</parameter> parameter sets
 the time zone to Coordinated Universal Time (UTC), also known as
 Greenwich Mean Time (GMT), but only for the duration of the test suite
-run. This ensures that the clock tests are exercised correctly. More
-information on the <envar>TZ</envar> environment variable is provided in <xref
-linkend="chapter-bootscripts"/>.</para>
+run. This ensures that the clock tests are exercised correctly.
+Details on the <envar>TZ</envar> environment variable is provided in
+<xref linkend="chapter-bootscripts"/>.</para>
 
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
+<beginpage/>
 <warning><para><emphasis>Do not</emphasis> remove the
 <filename class="directory">tcl&tcl-version;</filename> source directory yet, as the next package
 will need its internal headers.</para></warning>
@@ -80,13 +81,13 @@ will need its internal headers.</para></warning>
 <seglistitem><seg>tclsh (link to tclsh8.4) and tclsh8.4</seg><seg>libtcl8.4.so</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="tclsh8.4">
 <term><command>tclsh8.4</command></term>
 <listitem>
-<para>the Tcl command shell.</para>
+<para>The Tcl command shell</para>
 <indexterm zone="ch-tools-tcl tclsh8.4"><primary sortas="b-tclsh8.4">tclsh8.4</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -94,7 +95,7 @@ will need its internal headers.</para></warning>
 <varlistentry id="tclsh">
 <term><command>tclsh</command></term>
 <listitem>
-<para>link to tclsh8.4</para>
+<para>A link to tclsh8.4</para>
 <indexterm zone="ch-tools-tcl tclsh"><primary sortas="b-tclsh">tclsh</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -102,7 +103,7 @@ will need its internal headers.</para></warning>
 <varlistentry id="libtcl8.4.so">
 <term><filename class="libraryfile">libtcl8.4.so</filename></term>
 <listitem>
-<para>the Tcl library.</para>
+<para>The Tcl library</para>
 <indexterm zone="ch-tools-tcl libtcl8.4.so"><primary sortas="c-libtcl8.4.so">libtcl8.4.so</primary></indexterm>
 </listitem>
 </varlistentry>

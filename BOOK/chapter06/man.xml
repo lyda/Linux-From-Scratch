@@ -104,7 +104,7 @@ The second issue is not of concern because the LFS installation does
 not support multibyte character sets.</para>
 
 <para>Additional information with regards to the compression of
-man&mdash;and info&mdash;pages can be found in the BLFS book at
+man and info pages can be found in the BLFS book at
 <ulink url="&blfs-root;view/cvs/postlfs/compressdoc.html"><phrase 
 condition="pdf">http://www.linuxfromscratch.org/blfs/view/cvs/postlfs/
 compressdoc.html</phrase></ulink>.</para>
@@ -121,14 +121,14 @@ compressdoc.html</phrase></ulink>.</para>
 man2dvi, man2html, and whatis</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="apropos">
 <term><command>apropos</command></term>
 <listitem>
-<para>searches the whatis database and displays the short descriptions
-of system commands that contain a given string.</para>
+<para>Searches the whatis database and displays the short descriptions
+of system commands that contain a given string</para>
 <indexterm zone="ch-system-man apropos"><primary sortas="b-apropos">apropos</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -136,9 +136,9 @@ of system commands that contain a given string.</para>
 <varlistentry id="makewhatis">
 <term><command>makewhatis</command></term>
 <listitem>
-<para>builds the whatis database. It reads all the manual pages in the
+<para>Builds the whatis database; it reads all the manual pages in the
 manpath and writes the name and a short description in the whatis
-database for each page.</para>
+database for each page</para>
 <indexterm zone="ch-system-man makewhatis"><primary sortas="b-makewhatis">makewhatis</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -146,7 +146,7 @@ database for each page.</para>
 <varlistentry id="man">
 <term><command>man</command></term>
 <listitem>
-<para>formats and displays the requested on-line manual page.</para>
+<para>Formats and displays the requested on-line manual page</para>
 <indexterm zone="ch-system-man man"><primary sortas="b-man">man</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -154,7 +154,7 @@ database for each page.</para>
 <varlistentry id="man2dvi">
 <term><command>man2dvi</command></term>
 <listitem>
-<para>converts a manual page into dvi format.</para>
+<para>Converts a manual page into dvi format</para>
 <indexterm zone="ch-system-man man2dvi"><primary sortas="b-man2dvi">man2dvi</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -162,7 +162,7 @@ database for each page.</para>
 <varlistentry id="man2html">
 <term><command>man2html</command></term>
 <listitem>
-<para>converts a manual page into HTML.</para>
+<para>Converts a manual page into HTML</para>
 <indexterm zone="ch-system-man man2html"><primary sortas="b-man2html">man2html</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -170,9 +170,9 @@ database for each page.</para>
 <varlistentry id="whatis">
 <term><command>whatis</command></term>
 <listitem>
-<para>searches the whatis database and displays the short descriptions
+<para>Searches the whatis database and displays the short descriptions
 of system commands that contain the given keyword as a separate
-word.</para>
+word</para>
 <indexterm zone="ch-system-man whatis"><primary sortas="b-whatis">whatis</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -53,14 +53,14 @@ GCC, Gettext, Glibc, Grep, and Sed</seg></seglistitem>
 <seglistitem><seg>make</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="make">
 <term><command>make</command></term>
 <listitem>
-<para>automatically determines which pieces of a large package need to
-be recompiled and then issues the relevant commands.</para>
+<para>Automatically determines which pieces of a large package need to
+be recompiled and then issues the relevant commands</para>
 <indexterm zone="ch-system-make make"><primary sortas="b-make">make</primary></indexterm>
 </listitem>
 </varlistentry>

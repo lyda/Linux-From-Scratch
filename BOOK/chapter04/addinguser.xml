@@ -33,7 +33,7 @@ useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput></screen>
 <varlistentry>
 <term><parameter>-g lfs</parameter></term>
 <listitem><para>This option adds user <emphasis>lfs</emphasis> to group
-<emphasis>lfs</emphasis></para></listitem>
+<emphasis>lfs</emphasis>.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -53,7 +53,7 @@ the special null device.</para></listitem>
 <varlistentry>
 <term><parameter>lfs</parameter></term>
 <listitem><para>This is the actual name for the created group and
-user</para></listitem>
+user.</para></listitem>
 </varlistentry>
 </variablelist>
 

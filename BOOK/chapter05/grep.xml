@@ -52,7 +52,7 @@ Glibc, which is known to be buggy.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<para>Compile the programs:</para>
+<para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 

@@ -53,7 +53,7 @@ Gettext, Glibc, Grep, Make, Perl, and Sed</seg></seglistitem>
 <seglistitem><seg>m4</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="m4">

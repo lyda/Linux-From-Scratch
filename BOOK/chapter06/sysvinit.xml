@@ -48,7 +48,7 @@ instead:</para>
 <screen><userinput>sed -i 's@Sending processes@&amp; started by init@g' \
     src/init.c</userinput></screen>
 
-<para>Compile Sysvinit:</para>
+<para>Compile the package:</para>
 
 <screen><userinput>make -C src</userinput></screen>
 
@@ -122,17 +122,17 @@ killall5), poweroff (link to halt), reboot (link to halt), runlevel, shutdown, s
 (link to init), utmpdump, and wall</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="halt">
 <term><command>halt</command></term>
 <listitem>
-<para>normally invokes <command>shutdown</command> with the
+<para>Normally invokes <command>shutdown</command> with the
 <parameter>-h</parameter> option, except when already in run-level 0,
-then it tells the kernel to halt the system.  It notes in the
+then it tells the kernel to halt the system; it notes in the
 file <filename>/var/log/wtmp</filename> that the system is being
-brought down.</para>
+brought down</para>
 <indexterm zone="ch-system-sysvinit halt"><primary sortas="b-halt">halt</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -140,9 +140,9 @@ brought down.</para>
 <varlistentry id="init">
 <term><command>init</command></term>
 <listitem>
-<para>the first process to be started when the kernel has initialized
-the hardware. <command>init</command> takes over the boot process and 
-starts all the proceses it is instructed to.</para>
+<para>The first process to be started when the kernel has initialized
+the hardware which takes over the boot process and 
+starts all the proceses it is instructed to</para>
 <indexterm zone="ch-system-sysvinit init"><primary sortas="b-init">init</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -150,9 +150,9 @@ starts all the proceses it is instructed to.</para>
 <varlistentry id="killall5">
 <term><command>killall5</command></term>
 <listitem>
-<para>sends a signal to all processes, except the processes in its own
+<para>Sends a signal to all processes, except the processes in its own
 session so it will not kill the shell running the script that called
-it.</para>
+it</para>
 <indexterm zone="ch-system-sysvinit killall5"><primary sortas="b-killall5">killall5</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -160,9 +160,9 @@ it.</para>
 <varlistentry id="last">
 <term><command>last</command></term>
 <listitem>
-<para>shows which users last logged in (and out),
-searching back through the <filename>/var/log/wtmp</filename> file. It
-also shows system boots, shutdowns, and run-level changes.</para>
+<para>Shows which users last logged in (and out),
+searching back through the <filename>/var/log/wtmp</filename> file; it
+also shows system boots, shutdowns, and run-level changes</para>
 <indexterm zone="ch-system-sysvinit last"><primary sortas="b-last">last</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -170,8 +170,8 @@ also shows system boots, shutdowns, and run-level changes.</para>
 <varlistentry id="lastb">
 <term><command>lastb</command></term>
 <listitem>
-<para>shows the failed login attempts, as logged in
-<filename>/var/log/btmp</filename>.</para>
+<para>Shows the failed login attempts, as logged in
+<filename>/var/log/btmp</filename></para>
 <indexterm zone="ch-system-sysvinit lastb"><primary sortas="b-lastb">lastb</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -179,8 +179,8 @@ also shows system boots, shutdowns, and run-level changes.</para>
 <varlistentry id="mesg">
 <term><command>mesg</command></term>
 <listitem>
-<para>controls whether other users can send messages to the current
-user's terminal.</para>
+<para>Controls whether other users can send messages to the current
+user's terminal</para>
 <indexterm zone="ch-system-sysvinit mesg"><primary sortas="b-mesg">mesg</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -188,7 +188,7 @@ user's terminal.</para>
 <varlistentry id="pidof">
 <term><command>pidof</command></term>
 <listitem>
-<para>reports the PIDs of the given programs.</para>
+<para>Reports the PIDs of the given programs</para>
 <indexterm zone="ch-system-sysvinit pidof"><primary sortas="b-pidof">pidof</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -196,8 +196,8 @@ user's terminal.</para>
 <varlistentry id="poweroff">
 <term><command>poweroff</command></term>
 <listitem>
-<para>tells the kernel to halt the system and switch off the computer
-(see <command>halt</command>).</para>
+<para>Tells the kernel to halt the system and switch off the computer
+(see <command>halt</command>)</para>
 <indexterm zone="ch-system-sysvinit poweroff"><primary sortas="b-poweroff">poweroff</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -205,8 +205,8 @@ user's terminal.</para>
 <varlistentry id="reboot">
 <term><command>reboot</command></term>
 <listitem>
-<para>tells the kernel to reboot the system (see
-<command>halt</command>).</para>
+<para>Tells the kernel to reboot the system (see
+<command>halt</command>)</para>
 <indexterm zone="ch-system-sysvinit reboot"><primary sortas="b-reboot">reboot</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -214,8 +214,8 @@ user's terminal.</para>
 <varlistentry id="runlevel">
 <term><command>runlevel</command></term>
 <listitem>
-<para>reports the previous and the current run-level, as noted in the last run-level 
-record in <filename>/var/run/utmp</filename>.</para>
+<para>Reports the previous and the current run-level, as noted in the last run-level 
+record in <filename>/var/run/utmp</filename></para>
 <indexterm zone="ch-system-sysvinit runlevel"><primary sortas="b-runlevel">runlevel</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -223,8 +223,8 @@ record in <filename>/var/run/utmp</filename>.</para>
 <varlistentry id="shutdown">
 <term><command>shutdown</command></term>
 <listitem>
-<para>brings the system down in a secure way, signaling all processes
-and notifying all logged-in users.</para>
+<para>Brings the system down in a secure way, signaling all processes
+and notifying all logged-in users</para>
 <indexterm zone="ch-system-sysvinit shutdown"><primary sortas="b-shutdown">shutdown</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -232,8 +232,8 @@ and notifying all logged-in users.</para>
 <varlistentry id="sulogin">
 <term><command>sulogin</command></term>
 <listitem>
-<para>allows <emphasis>root</emphasis> to log in. It is
-normally invoked by <command>init</command> when the system goes into single user mode.</para>
+<para>Allows <emphasis>root</emphasis> to log in; it is
+normally invoked by <command>init</command> when the system goes into single user mode</para>
 <indexterm zone="ch-system-sysvinit sulogin"><primary sortas="b-sulogin">sulogin</primary></indexterm>
 <beginpage/></listitem>
 </varlistentry>
@@ -241,7 +241,7 @@ normally invoked by <command>init</command> when the system goes into single use
 <varlistentry id="telinit">
 <term><command>telinit</command></term>
 <listitem>
-<para>tells <command>init</command> which run-level to change to.</para>
+<para>Tells <command>init</command> which run-level to change to</para>
 <indexterm zone="ch-system-sysvinit telinit"><primary sortas="b-telinit">telinit</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -249,8 +249,8 @@ normally invoked by <command>init</command> when the system goes into single use
 <varlistentry id="utmpdump">
 <term><command>utmpdump</command></term>
 <listitem>
-<para>displays the content of the given login file in a more
-user-friendly format.</para>
+<para>Displays the content of the given login file in a more
+user-friendly format</para>
 <indexterm zone="ch-system-sysvinit utmpdump"><primary sortas="b-utmpdump">utmpdump</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -258,7 +258,7 @@ user-friendly format.</para>
 <varlistentry id="wall">
 <term><command>wall</command></term>
 <listitem>
-<para>writes a message to all logged-in users.</para>
+<para>Writes a message to all logged-in users</para>
 <indexterm zone="ch-system-sysvinit wall"><primary sortas="b-wall">wall</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -76,13 +76,13 @@ reset (link to tset), tack, tic, toe, tput, and tset</seg>
 libncurses++.a, libncurses.[a,so], and libpanel.[a,so]</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
 <varlistentry id="captoinfo">
 <term><command>captoinfo</command></term>
 <listitem>
-<para>converts a termcap description into a terminfo description.</para>
+<para>Converts a termcap description into a terminfo description</para>
 <indexterm zone="ch-system-ncurses captoinfo"><primary sortas="b-captoinfo">captoinfo</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -90,7 +90,7 @@ libncurses++.a, libncurses.[a,so], and libpanel.[a,so]</seg></seglistitem>
 <varlistentry id="clear">
 <term><command>clear</command></term>
 <listitem>
-<para>clears the screen, if possible.</para>
+<para>Clears the screen, if possible</para>
 <indexterm zone="ch-system-ncurses clear"><primary sortas="b-clear">clear</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -98,7 +98,7 @@ libncurses++.a, libncurses.[a,so], and libpanel.[a,so]</seg></seglistitem>
 <varlistentry id="infocmp">
 <term><command>infocmp</command></term>
 <listitem>
-<para>compares or prints out terminfo descriptions.</para>
+<para>Compares or prints out terminfo descriptions</para>
 <indexterm zone="ch-system-ncurses infocmp"><primary sortas="b-infocmp">infocmp</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -106,7 +106,7 @@ libncurses++.a, libncurses.[a,so], and libpanel.[a,so]</seg></seglistitem>
 <varlistentry id="infotocap">
 <term><command>infotocap</command></term>
 <listitem>
-<para>converts a terminfo description into a termcap description.</para>
+<para>Converts a terminfo description into a termcap description</para>
 <indexterm zone="ch-system-ncurses infotocap"><primary sortas="b-infotocap">infotocap</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -114,7 +114,7 @@ libncurses++.a, libncurses.[a,so], and libpanel.[a,so]</seg></seglistitem>
 <varlistentry id="reset">
 <term><command>reset</command></term>
 <listitem>
-<para>reinitializes a terminal to its default values.</para>
+<para>Reinitializes a terminal to its default values</para>
 <indexterm zone="ch-system-ncurses reset"><primary sortas="b-reset">reset</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -122,8 +122,8 @@ libncurses++.a, libncurses.[a,so], and libpanel.[a,so]</seg></seglistitem>
 <varlistentry id="tack">
 <term><command>tack</command></term>
 <listitem>
-<para>the terminfo action checker. It is mainly used to test the
-accuracy of an entry in the terminfo database.</para>
+<para>The terminfo action checker; it is mainly used to test the
+accuracy of an entry in the terminfo database</para>
 <indexterm zone="ch-system-ncurses tack"><primary sortas="b-tack">tack</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -131,10 +131,10 @@ accuracy of an entry in the terminfo database.</para>
 <varlistentry id="tic">
 <term><command>tic</command></term>
 <listitem>
-<para>the terminfo entry-description compiler. It translates a
+<para>The terminfo entry-description compiler that translates a
 terminfo file from source format into the binary format needed for the
 ncurses library routines. A terminfo file contains information on the
-capabilities of a certain terminal.</para>
+capabilities of a certain terminal</para>
 <indexterm zone="ch-system-ncurses tic"><primary sortas="b-tic">tic</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -142,8 +142,8 @@ capabilities of a certain terminal.</para>
 <varlistentry id="toe">
 <term><command>toe</command></term>
 <listitem>
-<para>lists all available terminal types, giving the primary name and
-description for each.</para>
+<para>Lists all available terminal types, giving the primary name and
+description for each</para>
 <indexterm zone="ch-system-ncurses toe"><primary sortas="b-toe">toe</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -151,9 +151,9 @@ description for each.</para>
 <varlistentry id="tput">
 <term><command>tput</command></term>
 <listitem>
-<para>makes the values of terminal-dependent capabilities available to
-the shell. It can also be used to reset or initialize a terminal or
-report its long name.</para>
+<para>Makes the values of terminal-dependent capabilities available to
+the shell; it can also be used to reset or initialize a terminal or
+report its long name</para>
 <indexterm zone="ch-system-ncurses tput"><primary sortas="b-tput">tput</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -161,42 +161,50 @@ report its long name.</para>
 <varlistentry id="tset">
 <term><command>tset</command></term>
 <listitem>
-<para>can be used to initialize terminals.</para>
+<para>Can be used to initialize terminals</para>
 <indexterm zone="ch-system-ncurses tset"><primary sortas="b-tset">tset</primary></indexterm>
 <beginpage/></listitem>
 </varlistentry>
 
-<varlistentry id="libncurses">
-<term><filename class="libraryfile">libncurses*</filename></term>
+<varlistentry id="libcurses">
+<term><filename class="libraryfile">libcurses</filename></term>
 <listitem>
-<para>contains functions to display text in many complex ways on a
-terminal screen. A good example of the use of these functions is the
-menu displayed during the kernel's <command>make menuconfig</command>.</para>
-<indexterm zone="ch-system-ncurses libncurses"><primary sortas="c-libncurses*">libncurses*</primary></indexterm>
+<para>A link to <filename>libncurses</filename></para>
+<indexterm zone="ch-system-ncurses libcurses"><primary sortas="c-libcurses">libcurses</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="libncurses">
+<term><filename class="libraryfile">libncurses</filename></term>
+<listitem>
+<para>Contains functions to display text in many complex ways on a
+terminal screen; a good example of the use of these functions is the
+menu displayed during the kernel's <command>make menuconfig</command></para>
+<indexterm zone="ch-system-ncurses libncurses"><primary sortas="c-libncurses">libncurses</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="libform">
-<term><filename class="libraryfile">libform*</filename></term>
+<term><filename class="libraryfile">libform</filename></term>
 <listitem>
-<para>contains functions to implement forms.</para>
-<indexterm zone="ch-system-ncurses libform"><primary sortas="c-libform*">libform*</primary></indexterm>
+<para>Contains functions to implement forms</para>
+<indexterm zone="ch-system-ncurses libform"><primary sortas="c-libform">libform</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="libmenu">
-<term><filename class="libraryfile">libmenu*</filename></term>
+<term><filename class="libraryfile">libmenu</filename></term>
 <listitem>
-<para>contains functions to implement menus.</para>
-<indexterm zone="ch-system-ncurses libmenu"><primary sortas="c-libmenu*">libmenu*</primary></indexterm>
+<para>Contains functions to implement menus</para>
+<indexterm zone="ch-system-ncurses libmenu"><primary sortas="c-libmenu">libmenu</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="libpanel">
-<term><filename class="libraryfile">libpanel*</filename></term>
+<term><filename class="libraryfile">libpanel</filename></term>
 <listitem>
-<para>contains functions to implement panels.</para>
-<indexterm zone="ch-system-ncurses libpanel"><primary sortas="c-libpanel*">libpanel*</primary></indexterm>
+<para>Contains functions to implement panels</para>
+<indexterm zone="ch-system-ncurses libpanel"><primary sortas="c-libpanel">libpanel</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>
