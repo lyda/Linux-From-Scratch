@@ -9,16 +9,19 @@ SOURCEDIR=.
 #     You should now have a working xsltproc command.
 #  2) Extract, move, and rename
 #     http://www.oasis-open.org/docbook/xml/4.2/docbook-xml-4.2.zip
-#     so that /usr/share/docbook/docbookx.dtd exists.
+#     so that /usr/share/xml/docbook/docbookx.dtd exists.
 #  3) Extract, move, and rename
 #     http://unc.dl.sourceforge.net/sourceforge/docbook/docbook-xsl-1.57.0.tar.gz
 #     so that /usr/share/xsl/docbook/html/docbook.xsl exists
 
-faq.html: $(SOURCEDIR)/*.xml $(SOURCEDIR)/*.ent
-	xsltproc --output faq.html /usr/share/xsl/docbook/html/docbook.xsl $(SOURCEDIR)/faq.xml
+faq.html: $(SOURCEDIR)/*.xml $(SOURCEDIR)/*.ent $(SOURCEDIR)/lfs.xsl
+	xsltproc --output faq.html $(SOURCEDIR)/lfs.xsl $(SOURCEDIR)/faq.xml
+
+index.html: faq.html
+	cp faq.html index.html
 
 clean:
-	rm -rf faq.html faq.openjade.html
+	rm -rf faq.html index.html faq.openjade.html
 
 .PHONY: clean
 
