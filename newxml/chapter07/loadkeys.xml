@@ -7,12 +7,12 @@
 <title>Do I need the loadkeys script?</title>
 <?dbhtml filename="loadkeys.html"?>
 
-<para>If back in <xref linkend="chapter-building-system"/> you decided to go
-compile your keymap directly into the kernel (later on in <xref linkend="chapter-mixture"/>),
-then strictly speaking you don't need to run this
+<para>If, when installing <xref linkend="ch-system-kbd"/>, you decided that you
+will be compiling your keymap directly into the kernel during <xref
+linkend="chapter-mixture"/>, then strictly speaking you don't need to run this
 loadkeys script, since the kernel will set up the keymap for you. If you wish,
 you can still run the script, it isn't going to hurt you. Keeping it could even
-be beneficial, in case you run a lot of different kernels and can't be sure
+be beneficial, in case you run a lot of different kernels and can&apos;t be sure
 that the keymap is compiled into every one of them.</para>
 
 <para>If you decided you don't need or don't want to use the loadkeys script,
