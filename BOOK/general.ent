@@ -63,11 +63,11 @@
 <!ENTITY linux-dl-version "2.6">
 <!ENTITY linux-alpha-version "2.6.11.5">
 <!ENTITY linux-ppc-version "2.6.11.5">
-<!ENTITY linux-raq2-version "2.6.9">
+<!ENTITY linux-raq2-version "2.6.11.5">
 <!ENTITY linux-libc-headers-version "2.6.11.0">
 <!ENTITY linux-libc-headers-alpha-version "2.6.11.0">
 <!ENTITY linux-libc-headers-ppc-version "2.6.11.0">
-<!ENTITY linux-libc-headers-raq2-version "2.6.9.1">
+<!ENTITY linux-libc-headers-raq2-version "2.6.11.0">
 <!ENTITY m4-version "1.4.2">
 <!ENTITY make-version "3.80">
 <!ENTITY man-version "1.5p">

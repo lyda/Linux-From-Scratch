@@ -135,7 +135,7 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry arch="raq2">
-<term>Linux RaQ2 Patch - 1.9 MB:</term>
+<term>Linux RaQ2 Patch - 156 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;linux/linux-&linux-version;-raq2_fix-1.patch"/></para>
 </listitem>
