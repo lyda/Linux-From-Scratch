@@ -1,3 +1,6 @@
+n/a - August 7, 2004
+	* Added missing error redirect (/dev/null) in getpids. (DJ)
+
 n/a - August 4, 2004
 	* Added MODE, DIRMODE, and CONFMODE variables to the makefile 
 	  to allow permissions to be set at install. (DJ)
