@@ -4,6 +4,8 @@ n/a - April 12, 2004
 	  submitted by Zack
 	* Edited mountkernfs, so that if you can mount sysfs on /sys, it will
 	  be mounted at boottime.  Should not affect 2.4 systems
+	* Since all entries are added to /etc/mtab, we should not require
+	  the NO_FS variable.  It has been removed from mountfs
 
 2.0.3 - April 8, 2004
 
