@@ -462,7 +462,7 @@
 <varlistentry>
 <term>Udev Rules Configuration - 1 KB:</term>
 <listitem>
-<para><ulink url="http://downloads.linuxfromscratch.org/25-lfs-1.rules"/></para>
+<para><ulink url="http://downloads.linuxfromscratch.org/udev-config-2.rules"/></para>
 </listitem>
 </varlistentry>
 
