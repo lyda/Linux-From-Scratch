@@ -65,6 +65,7 @@ install: create-dirs create-service-dir
 	#install -m 644 lfs/sysconfig/console                         ${EXTDIR}/sysconfig/
 	install -m 644 lfs/sysconfig/createfiles                     ${EXTDIR}/sysconfig/
 	install -m 644 lfs/sysconfig/rc                              ${EXTDIR}/sysconfig/
+	install -m 644 lfs/sysconfig/sysklogd                        ${EXTDIR}/sysconfig/
 	install -m 754 lfs/sysconfig/network-devices/ifup            ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/ifdown          ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/services/static ${EXTDIR}/sysconfig/network-devices/services

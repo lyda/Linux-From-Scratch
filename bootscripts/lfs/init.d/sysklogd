@@ -7,13 +7,16 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
+# Include the boot-time configuration options.
+[ -f /etc/sysconfig/sysklogd ] && . /etc/sysconfig/sysklogd
+
 case "$1" in
 	start)
 		echo "Starting system log daemon..."
-		loadproc syslogd -m 0
+		loadproc syslogd $SYSLOGD_OPTIONS
 
 		echo "Starting kernel log daemon..."
-		loadproc klogd
+		loadproc klogd $KLOGD_OPTIONS
 		;;
 
 	stop)
