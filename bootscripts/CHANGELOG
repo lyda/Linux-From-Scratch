@@ -1,6 +1,7 @@
 1.99.4 - March 17, 2004
 
 	* Fixed one last halt line in checkfs script
+	* Moved the directory structure around
 	* Tagged as development release 1.99.4
 
 n/a - February 28, 2004
