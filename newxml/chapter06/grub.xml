@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % grub-entities SYSTEM "../ent/grub.ent">
   %grub-entities;
 ]>
-<sect1 id="ch06-grub">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-grub" xreflabel="Grub">
 <title>Installing Grub-&grub-version;</title>
 <?dbhtml filename="grub.html"?>
 
-<screen>Estimated build time:           0.2 SBU
-Estimated required disk space:  10 MB</screen>
+<para>The Grub package contains the GRand Unified Bootloader.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/grub-contents.xml"/>
+<screen>Approximate build time:  0.2 SBU
+Required disk space:     10 MB</screen>
 
+<literallayout>Official download location for Grub (&grub-version;):
+<ulink url="ftp://alpha.gnu.org/gnu/grub/"/></literallayout>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/grub-deps.xml"/>
+<para>For its installation Grub depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
 
@@ -49,11 +52,37 @@ directory is appropriate for your hardware.</para>
 
 <para>The <filename class="directory">i386-pc</filename> directory also
 contains a number of <filename>*stage1_5</filename> files, different ones
-for different filesystems. Have a look at the ones available and copy the
+for different file systems. Have a look at the ones available and copy the
 appropriate ones to the <filename class="directory">/boot/grub</filename>
 directory. Most people will copy the <filename>e2fs_stage1_5</filename>
 and/or <filename>reiserfs_stage1_5</filename> files.</para>
 
 </sect2>
+
+
+<sect2 id="contents-grub"><title>Contents of Grub</title>
+
+<para><emphasis>Installed programs</emphasis>: grub, grub-install,
+grub-md5-crypt, grub-terminfo and mbchk</para>
+
+</sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>grub</command> is the GRand Unified Bootloader's command
+shell.</para>
+
+<para><command>grub-install</command> installs GRUB on the given device.</para>
+
+<para><command>grub-md5-crypt</command> encrypts a password in MD5
+format.</para>
+
+<para><command>grub-terminfo</command> generates a terminfo command from a
+terminfo name. It can be used if you have an uncommon terminal.</para>
+
+<para><command>mbchk</command> checks the format of a multiboot kernel.</para>
+
+</sect2>
+
 
 </sect1>

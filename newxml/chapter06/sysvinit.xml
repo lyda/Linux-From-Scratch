@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % sysvinit-entities SYSTEM "../ent/sysvinit.ent">
   %sysvinit-entities;
 ]>
-<sect1 id="ch06-sysvinit">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-sysvinit" xreflabel="Sysvinit">
 <title>Installing Sysvinit-&sysvinit-version;</title>
 <?dbhtml filename="sysvinit.html"?>
 
-<screen>Estimated build time:           0.1 SBU
-Estimated required disk space:  0.9 MB</screen>
+<para>The Sysvinit package contains programs for controlling the startup,
+running, and shutdown of your system.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/sysvinit-contents.xml"/>
+<screen>Approximate build time:  0.1 SBU
+Required disk space:     0.9 MB</screen>
 
+<literallayout>Official download location for Sysvinit (&sysvinit-version;):
+<ulink url="ftp://ftp.cistron.nl/pub/people/miquels/sysvinit/"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/sysvinit-deps.xml"/>
-
+<para>For its installation Sysvinit depends on: Binutils, Coreutils, GCC, Glibc, Make.</para>
 
 
 
 <sect2>
 <title>Installation of Sysvinit</title>
 
-<para>When run levels are changed (for example, when halting the system),
-init sends the TERM and KILL signals to the processes which it started.
-Init prints "Sending processes the TERM signal" to the screen. This seems
-to imply that init is sending these signals to all the currently running
-processes. To avoid this confusion, the init.c file can be modified, so
-that the sentence reads "Sending processes started by init the TERM
-signal".</para>
-
-<para>Edit the halt message:</para>
+<para>When runlevels are changed (for example, when halting the system),
+<command>init</command> sends termination signals to those processes that it
+itself started and that shouldn't be running in the new runlevel. While doing
+this, <command>init</command> outputs messages like "Sending processes the TERM
+signal" which seem to imply that it is sending these signals to all currently
+running processes. To avoid this misinterpretation, you can modify the source
+so that these messages read like "Sending processes started by init the TERM
+signal" instead:</para>
 
 <screen><userinput>cp src/init.c{,.backup}
 sed 's/Sending processes/&amp; started by init/g' \
@@ -46,9 +46,10 @@ sed 's/Sending processes/&amp; started by init/g' \
 
 </sect2>
 
+
 <sect2><title>Configuring Sysvinit</title>
 
-<para>Create a new file <filename>/etc/inittab</filename> by running the
+<para>Create a new <filename>/etc/inittab</filename> file by running the
 following:</para>
 
 <screen><userinput>cat &gt; /etc/inittab &lt;&lt; "EOF"</userinput>
@@ -81,6 +82,70 @@ su:S016:once:/sbin/sulogin
 <userinput>EOF</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-sysvinit"><title>Contents of Sysvinit</title>
+
+<para><emphasis>Installed programs</emphasis>: halt, init, killall5, last,
+lastb (link to last), mesg, pidof (link to killall5), poweroff (link to halt),
+reboot (link to halt), runlevel, shutdown, sulogin, telinit (link to init),
+utmpdump and wall</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>halt</command> normally invokes shutdown with the -h flag,
+except when already in runlevel 0, then it tells the kernel to halt the system.
+But first it notes in the file <filename>/var/log/wtmp</filename> that the
+system is being brought down.</para>
+
+<para><command>init</command> is the mother of all processes. It reads its
+commands from <filename>/etc/inittab</filename>, which normally tell it which
+scripts to run for which runlevel, and how many gettys to spawn.</para>
+
+<para><command>killall5</command> sends a signal to all processes, except
+the processes in its own session -- so it won't kill the shell running the
+script that called it.</para>
+
+<para><command>last</command> shows which users last logged in (and out),
+searching back through the file <filename>/var/log/wtmp</filename>. It can
+also show system boots and shutdowns, and runlevel changes.</para>
+
+<para><command>lastb</command> shows the failed login attempts, as logged
+in <filename>/var/log/btmp</filename>.</para>
+
+<para><command>mesg</command> controls whether other users can send
+messages to the current user's terminal.</para>
+
+<para><command>pidof</command> reports the PIDs of the given programs.</para>
+
+<para><command>poweroff</command> tells the kernel to halt the system and
+switch off the computer. But see halt.</para>
+
+<para><command>reboot</command> tells the kernel to reboot the system.
+But see halt.</para>
+
+<para><command>runlevel</command> reports the previous and the current
+runlevel, as noted in the last runlevel record in
+<filename>/var/run/utmp</filename>.</para>
+
+<para><command>shutdown</command> brings the system down in a secure way,
+signaling all processes and notifying all logged-in users.</para>
+
+<para><command>sulogin</command> allows the superuser to log in. It is
+normally invoked by init when the system goes into single user mode.</para>
+
+<para><command>telinit</command> tells init which runlevel to enter.</para>
+
+<para><command>utmpdump</command> displays the content of the given login
+file in a friendlier format.</para>
+
+<para><command>wall</command> writes a message to all logged-in users.</para>
+
+</sect2>
+
 
 
 </sect1>

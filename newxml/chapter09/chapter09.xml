@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<chapter id="chapter09" xreflabel="Chapter 9">
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-finalizing" xreflabel="Chapter 9">
 <?dbhtml dir="chapter09"?>
 <title>The End</title>
 <?dbhtml filename="chapter09.html"?>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="theend.xml"/>
+<xi:include href="theend.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="getcounted.xml"/>
+<xi:include href="getcounted.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="reboot.xml"/>
+<xi:include href="reboot.xml"/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="whatnow.xml"/>
+<xi:include href="whatnow.xml"/>
 
 
 </chapter>

@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % perl-entities SYSTEM "../ent/perl.ent">
   %perl-entities;
 ]>
-<sect1 id="ch06-perl">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-perl" xreflabel="Perl">
 <title>Installing Perl-&perl-version;</title>
 <?dbhtml filename="perl.html"?>
 
-<screen>Estimated build time:           2.9 SBU
-Estimated required disk space:  143 MB</screen>
+<para>The Perl package contains the Practical Extraction and Report Language.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/perl-contents.xml"/>
+<screen>Approximate build time:  2.9 SBU
+Required disk space:     143 MB</screen>
 
+<literallayout>Official download location for Perl (&perl-version;):
+<ulink url="http://www.perl.com/"/></literallayout>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/perl-deps.xml"/>
+<para>For its installation Perl depends on: Bash, Binutils, Coreutils, Diffutils,
+Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 
 
 
 <sect2>
 <title>Installation of Perl</title>
 
-<para>Prepare Perl for compilation:</para>
+<para>If you want full control over the way Perl is set up, you can run the
+interactive <command>Configure</command> script and hand-pick the way this
+package is built. If, however, you guess you can live with the (sensible)
+defaults it auto-detects, then prepare Perl for compilation with:</para>
 
 <screen><userinput>./configure.gnu --prefix=/usr -Dpager="/bin/less -isR"</userinput></screen>
-
-<para>If you want more control over the way Perl sets itself up to be
-built, you can run the interactive <userinput>Configure</userinput> script
-instead and modify the way Perl is built. If you think you can live with the
-(sensible) defaults Perl auto-detects, then just use the command listed
-above.</para>
 
 <para>The meaning of the configure option:</para>
 
@@ -42,10 +42,9 @@ program.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which can perform a number of
-checks to ensure it built correctly.  Should you choose to run it, you first
-have to create a basic <filename>/etc/hosts</filename> file, needed by a
-couple of tests to resolve the name <emphasis>localhost</emphasis>:</para>
+<para>If you wish to run the test suite, you first have to create a basic
+<filename>/etc/hosts</filename> file, which is needed by a couple of tests to
+resolve the name <emphasis>localhost</emphasis>:</para>
 
 <screen><userinput>echo "127.0.0.1 localhost $(hostname)" &gt; /etc/hosts</userinput></screen>
 
@@ -58,5 +57,97 @@ couple of tests to resolve the name <emphasis>localhost</emphasis>:</para>
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-perl"><title>Contents of Perl</title>
+
+<para><emphasis>Installed programs</emphasis>: a2p, c2ph, dprofpp, enc2xs,
+find2perl, h2ph, h2xs, libnetcfg, perl, perl&perl-version; (link to perl),
+perlbug, perlcc, perldoc, perlivp, piconv, pl2pm, pod2html, pod2latex, pod2man,
+pod2text, pod2usage, podchecker, podselect, psed (link to s2p), pstruct (link
+to c2ph), s2p, splain and xsubpp</para> 
+
+<para><emphasis>Installed libraries</emphasis>: (too many to name)</para>
+
+</sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>a2p</command> translates awk to perl.</para>
+
+<para><command>c2ph</command> dumps C structures as generated from
+"cc -g -S" stabs.</para>
+
+<para><command>dprofpp</command> displays perl profile data.</para>
+
+<para><command>en2cxs</command> builds a Perl extension for the Encode module,
+from either Unicode Character Mappings or Tcl Encoding Files.</para>
+
+<para><command>find2perl</command> translates find commands to perl.</para>
+
+<para><command>h2ph</command> converts .h C header files to .ph Perl header files.</para>
+
+<para><command>h2xs</command> converts .h C header files to Perl extensions.</para>
+
+<para><command>libnetcfg</command> can be used to configure the libnet.</para>
+
+<para><command>perl</command> combines some of the best features of C, sed,
+awk and sh into a single swiss-army language.</para>
+
+<para><command>perlbug</command> is used to generate bug reports about
+Perl or the modules that come with it, and mail them.</para>
+
+<para><command>perlcc</command> generates executables from Perl programs.</para>
+
+<para><command>perldoc</command> displays a piece of documentation in pod
+format that is embedded in the perl installation tree or in a perl script.</para>
+
+<para><command>perlivp</command> is the Perl Installation Verification
+Procedure. It can be used to verify that Perl and its libraries have been
+installed correctly.</para>
+
+<para><command>piconv</command> is a Perl version of the character encoding
+converter <command>iconv</command>.</para>
+
+<para><command>pl2pm</command> is a rough tool for converting Perl4 .pl
+files to Perl5 .pm modules.</para>
+
+<para><command>pod2html</command> converts files from pod format to HTML
+format.</para>
+
+<para><command>pod2latex</command> converts files from pod format to LaTeX
+format.</para>
+
+<para><command>pod2man</command> converts pod data to formatted *roff
+input.</para>
+
+<para><command>pod2text</command> converts pod data to formatted ASCII
+text.</para>
+
+<para><command>pod2usage</command> prints usage messages from embedded
+pod docs in files.</para>
+
+<para><command>podchecker</command> checks the syntax of pod format
+documentation files.</para>
+
+<para><command>podselect</command> displays selected sections of pod
+documentation.</para>
+
+<para><command>psed</command> is a Perl version of the stream editor
+<userinput>sed</userinput>.</para>
+
+<para><command>pstruct</command> dumps C structures as generated from
+"cc -g -S" stabs.</para>
+
+<para><command>s2p</command> translates sed to perl.</para>
+
+<para><command>splain</command> is used to force verbose warning
+diagnostics in perl.</para>
+
+<para><command>xsubpp</command> converts Perl XS code into C code.</para>
+
+</sect2>
+
+
 
 </sect1>

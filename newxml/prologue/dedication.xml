@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE dedication PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<dedication>
+<!DOCTYPE dedication PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<dedication xmlns:xi="http://www.w3.org/2003/XInclude">
 <?dbhtml dir="prologue"?>
 <title>Dedication</title>
 <para>This book is dedicated to my loving and supportive wife

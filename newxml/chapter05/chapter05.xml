@@ -1,112 +1,109 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<chapter id="chapter05" xreflabel="Chapter 5">
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-temporary-tools" xreflabel="Chapter 5">
 <?dbhtml dir="chapter05"?>
 <title>Constructing a temporary system</title>
 <?dbhtml filename="chapter05.html"?>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
+<xi:include href="introduction.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="toolchaintechnotes.xml"/>
+<xi:include href="toolchaintechnotes.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="creatingtoolsdir.xml"/>
+<xi:include href="creatingtoolsdir.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="addinguser.xml"/>
+<xi:include href="addinguser.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="settingenviron.xml"/>
+<xi:include href="settingenviron.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="binutils-pass1.xml"/>
+<xi:include href="binutils-pass1.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gcc-pass1.xml"/>
+<xi:include href="gcc-pass1.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernel-headers.xml"/>
+<xi:include href="kernel-headers.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc.xml"/>
+<xi:include href="glibc.xml"/>
 
 
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="locking-glibc.xml"/>
+<xi:include href="adjusting.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="tcl.xml"/>
+<xi:include href="tcl.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="expect.xml"/>
+<xi:include href="expect.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="dejagnu.xml"/>
+<xi:include href="dejagnu.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gcc-pass2.xml"/>
+<xi:include href="gcc-pass2.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="binutils-pass2.xml"/>
+<xi:include href="binutils-pass2.xml"/>
 
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gawk.xml"/>
+<xi:include href="gawk.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="coreutils.xml"/>
+<xi:include href="coreutils.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bzip2.xml"/>
+<xi:include href="bzip2.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gzip.xml"/>
+<xi:include href="gzip.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="diffutils.xml"/>
+<xi:include href="diffutils.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="findutils.xml"/>
+<xi:include href="findutils.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="make.xml"/>
+<xi:include href="make.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grep.xml"/>
+<xi:include href="grep.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sed.xml"/>
+<xi:include href="sed.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gettext.xml"/>
+<xi:include href="gettext.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ncurses.xml"/>
+<xi:include href="ncurses.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="patch.xml"/>
+<xi:include href="patch.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="tar.xml"/>
+<xi:include href="tar.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="texinfo.xml"/>
+<xi:include href="texinfo.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bash.xml"/>
+<xi:include href="bash.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="util-linux.xml"/>
+<xi:include href="perl.xml"/>
 
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="perl.xml"/>
 
 
-
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="stripping.xml"/>
+<xi:include href="stripping.xml"/>
 
 </chapter>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect1 id="ch04-packages">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="materials-packages">
 <title>All the packages</title>
 <?dbhtml filename="packages.html"?>
 
@@ -10,7 +10,7 @@
 Autoconf (2.59) - 903 KB:
 <ulink url="http://freshmeat.net/projects/autoconf/"/>
 
-Automake (1.8) - 694 KB:
+Automake (1.8.2) - 623 KB:
 <ulink url="http://freshmeat.net/projects/automake/"/>
 
 Bash (2.05b) - 1,910 KB:
@@ -28,7 +28,7 @@ Bzip2 (1.0.2) - 650 KB:
 Coreutils (5.0) - 3,860 KB:
 <ulink url="http://freshmeat.net/projects/coreutils/"/>
 
-DejaGnu (1.4.3) - 1,775 KB:
+DejaGnu (1.4.4) - 1,055 KB:
 <ulink url="http://freshmeat.net/projects/dejagnu/"/>
 
 Diffutils (2.8.1) - 762 KB:
@@ -40,10 +40,10 @@ E2fsprogs (1.34) - 3,003 KB:
 Ed (0.2) - 182 KB:
 <ulink url="http://freshmeat.net/projects/ed/"/>
 
-Expect (5.39.0) - 508 KB:
+Expect (5.40.0) - 509 KB:
 <ulink url="http://freshmeat.net/projects/expect/"/>
 
-File (4.07) - 347 KB: (*) See Note Below
+File (4.07) - 347 KB: -- <emphasis>(see Note 1 below)</emphasis>
 <ulink url="http://freshmeat.net/projects/file/"/>
 
 Findutils (4.1.20) - 760 KB:
@@ -67,13 +67,10 @@ GCC-g++ (3.3.2) - 2,019 KB:
 GCC-testsuite (3.3.2) - 1,042 KB:
 <ulink url="http://freshmeat.net/projects/gcc/"/>
 
-Gettext (0.13.1) - 6,306 KB:
+Gettext (0.14.1) - 6,397 KB:
 <ulink url="http://freshmeat.net/projects/gettext/"/>
 
-Glibc (2.3.2) - 13,064 KB:
-<ulink url="http://freshmeat.net/projects/glibc/"/>
-
-Glibc-linuxthreads (2.3.2) - 211 KB:
+Glibc (2.3.3) - 13,101 KB: -- <emphasis>(see Note 2 below)</emphasis>
 <ulink url="http://freshmeat.net/projects/glibc/"/>
 
 Grep (2.5.1) - 545 KB:
@@ -82,7 +79,7 @@ Grep (2.5.1) - 545 KB:
 Groff (1.19) - 2,360 KB:
 <ulink url="http://freshmeat.net/projects/groff/"/>
 
-Grub (0.93) - 870 KB:
+Grub (0.94) - 902 KB:
 <ulink url="ftp://alpha.gnu.org/pub/gnu/grub/"/>
 
 Gzip (1.3.5) - 324 KB:
@@ -91,43 +88,43 @@ Gzip (1.3.5) - 324 KB:
 Inetutils (1.4.2) - 1,019 KB:
 <ulink url="http://freshmeat.net/projects/inetutils/"/>
 
-Kbd (1.10) - 869 KB:
+Kbd (1.12) - 617 KB:
 <ulink url="http://freshmeat.net/projects/kbd/"/>
 
-Less (381) - 259 KB:
+Less (382) - 259 KB:
 <ulink url="http://freshmeat.net/projects/less/"/>
 
 LFS-Bootscripts (1.12) - 25 KB:
 <ulink url="http://downloads.linuxfromscratch.org/lfs-bootscripts-1.12.tar.bz2"/>
 
-Lfs-Utils (0.4.2) - 221 KB:
+Lfs-Utils (0.5) - 221 KB:
 <ulink url="http://www.linuxfromscratch.org/~winkie/downloads/lfs-utils/"/>
 
-Libtool (1.5) - 2,751 KB:
+Libtool (1.5.2) - 2,591 KB:
 <ulink url="http://freshmeat.net/projects/libtool/"/>
 
-Linux (2.4.24) - 29,138 KB:
+Linux (2.4.25) - 29,138 KB:
 <ulink url="http://freshmeat.net/projects/linux/"/>
 
 M4 (1.4) - 310 KB:
 <ulink url="http://freshmeat.net/projects/gnum4/"/>
 
 Make (3.80) - 899 KB:
-<ulink url="http://freshmeat.net/projects/gnumake"/>
+<ulink url="http://freshmeat.net/projects/gnumake/"/>
 
-MAKEDEV (1.7) - 8 KB:
-<ulink url="http://downloads.linuxfromscratch.org/MAKEDEV-1.7.bz2"/>
+Make_devices (1.2) - 20 KB:
+<ulink url="http://www.linuxfromscratch.org/~alex/make_devices-1.2.bz2"/>
 
 Man (1.5m2) - 196 KB:
 <ulink url="http://freshmeat.net/projects/man/"/>
 
-Man-pages (1.64) - 645 KB:
+Man-pages (1.66) - 1,582 KB:
 <ulink url="http://freshmeat.net/projects/man-pages/"/>
 
 Modutils (2.4.26) - 229 KB:
 <ulink url="http://freshmeat.net/projects/modutils/"/>
 
-Ncurses (5.3) - 2,019 KB:
+Ncurses (5.4) - 2,019 KB:
 <ulink url="http://freshmeat.net/projects/ncurses/"/>
 
 Net-tools (1.60) - 194 KB:
@@ -136,22 +133,22 @@ Net-tools (1.60) - 194 KB:
 Patch (2.5.4) - 182 KB:
 <ulink url="http://freshmeat.net/projects/patch/"/>
 
-Perl (5.8.2) - 11,617 KB:
+Perl (5.8.3) - 11,721 KB:
 <ulink url="http://freshmeat.net/projects/perl/"/>
 
 Procinfo (18) - 24 KB:
 <ulink url="http://freshmeat.net/projects/procinfo/"/>
 
-Procps (3.1.15) - 260 KB:
+Procps (3.2.0) - 260 KB:
 <ulink url="http://freshmeat.net/projects/procps/"/>
 
 Psmisc (21.4) - 375 KB:
 <ulink url="http://freshmeat.net/projects/psmisc/"/>
 
-Sed (4.0.8) - 717 KB:
+Sed (4.0.9) - 751 KB:
 <ulink url="http://freshmeat.net/projects/sed/"/>
 
-Shadow (4.0.3) - 760 KB:
+Shadow (4.0.4.1) - 795 KB:
 <ulink url="http://freshmeat.net/projects/shadow/"/>
 
 Sysklogd (1.4.1) - 80 KB:
@@ -181,9 +178,24 @@ Zlib (1.2.1) - 277 KB:
 Total size of these packages: 134 MB
 </literallayout>
 
-<note><para>File (4.07) may not be available by the time you read
-this. The master download location is known to remove old versions when new
-ones are released. Please refer to the corresponding section in
-<xref linkend="appendixa"/> for an alternate download location.</para></note>
+<note><para>1) File (4.07) may not be available by the time you read
+this. The site admins of the master download location are known to occasionally
+remove old versions when new ones are released. Please refer to the
+<xref linkend="ch-system-file"/> section for an alternate download
+location.</para></note>
+
+<note><para>2) As of this writing, the Glibc maintainers have decided in their
+wisdom not to make available new release tarballs for download. The only way to
+obtain the current Glibc release from pristine upstream sources is to pull it
+from the Glibc CVS repository. The following commands will download the current
+release and make a tarball from it:</para>
+
+<screen><userinput>cvs -z 9 -d :pserver:anoncvs@sources.redhat.com:/cvs/glibc \
+    export -d glibc-2.3.3-20031202 -D "2003-12-02 UTC" libc
+tar jcvf glibc-2.3.3-20031202.tar.bz2 glibc-2.3.3-20031202</userinput></screen>
+
+<para>Alternatively, we've made our own tarball available which you can
+download courtesy of the generous LFS mirror sites. Please refer to the
+<xref linkend="ch-tools-glibc"/> section for the download links.</para></note>
 
 </sect1>

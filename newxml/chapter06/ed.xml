@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % ed-entities SYSTEM "../ent/ed.ent">
   %ed-entities;
 ]>
-<sect1 id="ch06-ed">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-ed" xreflabel="Ed">
 <title>Installing Ed-&ed-version;</title>
 <?dbhtml filename="ed.html"?>
 
-<screen>Estimated build time:           0.1 SBU
-Estimated required disk space:  3.1 MB</screen>
+<para>The Ed package contains a spartan line editor.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/ed-contents.xml"/>
+<screen>Approximate build time:  0.1 SBU
+Required disk space:     3.1 MB</screen>
 
+<literallayout>Official download location for Ed (&ed-version;): 
+<ulink url="ftp://ftp.gnu.org/gnu/ed/"/>
+And for the patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/ed-&ed-version;-mkstemp.patch"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/ed-deps.xml"/>
+<para>For its installation Ed depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
+Glibc, Grep, Make, Sed.</para>
 
 
 
@@ -26,13 +30,11 @@ because it can be used by the patch program if you encounter an ed-based patch
 file. This happens rarely because diff-based patches are preferred these
 days.</para></note>
 
-<para>Ed normally uses the mktemp function to create temporary files in
-<filename class="directory">/tmp</filename>, but this function contains a
-vulnerability (see the section on Temporary Files in <ulink url="http://en.tldp.org/HOWTO/Secure-Programs-HOWTO/avoid-race.html"/>). The
-following patch makes Ed use mkstemp instead, which is the recommended way to
-create temporary files.</para>
-
-<para>Apply the patch:</para>
+<para>Ed normally uses the <emphasis>mktemp</emphasis> function to create
+temporary files in <filename class="directory">/tmp</filename>, but this
+function contains a vulnerability (see the section on Temporary Files in <ulink url="http://en.tldp.org/HOWTO/Secure-Programs-HOWTO/avoid-race.html"/>). Apply
+the following patch to make Ed use <emphasis>mkstemp</emphasis> instead, a
+secure way to create temporary files:</para>
 
 <screen><userinput>patch -Np1 -i ../ed-&ed-version;-mkstemp.patch</userinput></screen>
 
@@ -53,16 +55,33 @@ the programs available there is useful in the event of the
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which can perform a number of
-checks to ensure it built correctly.  Should you choose to run it, the 
-following command will do so:</para>
-
-<screen><userinput>make check</userinput></screen>
+<para>To have the results tested, issue:
+<userinput>make check</userinput>.</para>
 
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-ed"><title>Contents of Ed</title>
+
+<para><emphasis>Installed programs</emphasis>: ed and red (link to ed)</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>ed</command> is a line-oriented text editor. It can be used
+to create, display, modify and otherwise manipulate text files.</para>
+
+<para><command>red</command> is a restricted ed -- it can only edit files
+in the current directory and cannot execute shell commands.</para>
+
+</sect2>
+
+
 
 </sect1>

@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % vim-entities SYSTEM "../ent/vim.ent">
   %vim-entities;
 ]>
-<sect1 id="ch06-vim">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-vim" xreflabel="Vim">
 <title>Installing Vim-&vim-version;</title>
 <?dbhtml filename="vim.html"?>
 
-<screen>Estimated build time:           0.4 SBU
-Estimated required disk space:  34 MB</screen>
+<para>The Vim package contains a powerful text editor.</para>
+
+<screen>Approximate build time:  0.4 SBU
+Required disk space:     34 MB</screen>
+
+<literallayout>Official download location for Vim (&vim-version;):
+<ulink url="ftp://ftp.vim.org/pub/editors/vim/unix/"/></literallayout>
+
+<para>For its installation Vim depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
+
+
 
 <sect2>
 <title>Alternatives to Vim</title>
-
 <para>If you prefer another editor -- like Emacs, Joe, or Nano -- to Vim,
 have a look at <ulink url="http://www.linuxfromscratch.org/blfs/view/stable/postlfs/editors.html"/> for
 suggested installation instructions.</para>
-
 </sect2>
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/vim-contents.xml"/>
-
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/vim-deps.xml"/>
-
 
 
 <sect2>
 <title>Installation of Vim</title>
 
 <para>First change the default locations of the <filename>vimrc</filename> and
-<filename>gvimrc</filename> files to <filename class="directory">/etc</filename>.</para>
+<filename>gvimrc</filename> configuration files to <filename class="directory">/etc</filename>.</para>
 
 <screen><userinput>echo '#define SYS_VIMRC_FILE "/etc/vimrc"' &gt;&gt; src/feature.h
 echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput></screen>
@@ -43,20 +45,17 @@ echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput><
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which performs a number of
-checks to ensure it will function correctly. However, the Vim test suite will
-output a whole lot of seemingly garbage characters to screen which can
-sometimes wreak havoc with the running terminal. Accordingly, the running of
-the test suite here is optional. Should you choose to run the Vim test suite,
-the following command will do so:</para>
-
-<screen><userinput>make test</userinput></screen>
+<para>To have the results tested, you can issue:
+<userinput>make check</userinput>. However, this test suite outputs a lot of
+seemingly garbage characters to the screen, and this can wreak havoc with the
+settings of the current terminal. Therefore the running of the test suite here
+is strictly optional.</para>
 
 <para>And install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>When called as <userinput>vi</userinput>, <userinput>vim</userinput>
+<para>When called as <command>vi</command>, <command>vim</command>
 will run in old-fashioned vi-mode. To allow this, create a symlink:</para>
 
 <screen><userinput>ln -s vim /usr/bin/vi</userinput></screen>
@@ -71,10 +70,10 @@ installed. For more information read the Vim documentation.</para>
 
 <sect2><title>Configuring Vim</title>
 
-<para>By default, <userinput>vim</userinput> runs in vi-compatible mode. Some
-people might like this, but we prefer to run <userinput>vim</userinput> in its
+<para>By default, <command>vim</command> runs in vi-compatible mode. Some
+people might like this, but we prefer to run <command>vim</command> in its
 own mode (else we wouldn't have included it in this book, but the original
-<userinput>vi</userinput>). Create a default vim configuration file by running
+<command>vi</command>). Create a default vim configuration file by running
 the following:</para>
 
 <screen><userinput>cat &gt; /etc/vimrc &lt;&lt; "EOF"</userinput>
@@ -87,12 +86,81 @@ syntax on
 " End /etc/vimrc
 <userinput>EOF</userinput></screen>
 
-<para>The <userinput>set nocompatible</userinput> will make
-<userinput>vim</userinput> behave in a more useful way than the default
-vi-compatible manner. The <userinput>set backspace=2</userinput> allows
+<para>The <emphasis>set nocompatible</emphasis> will make
+<command>vim</command> behave in a more useful way than the default
+vi-compatible manner. The <emphasis>set backspace=2</emphasis> allows
 backspacing over line breaks, autoindent and the start of insert. And the
-<userinput>syntax on</userinput> switches on <userinput>vim</userinput>'s
+<emphasis>syntax on</emphasis> switches on <command>vim</command>'s
 semantic colouring.</para>
+
+</sect2>
+
+
+<sect2 id="contents-vim"><title>Contents of Vim</title>
+
+<para><emphasis>Installed programs</emphasis>: efm_filter.pl, efm_perl.pl, ex
+(link to vim), less.sh, mve.awk, pltags.pl, ref, rview (link to vim), rvim
+(link to vim), shtags.pl, tcltags, vi (link to vim), view (link to vim), vim,
+vim132, vim2html.pl, vimdiff (link to vim), vimm, vimspell.sh, vimtutor
+and xxd</para>
+
+</sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>efm_filter.pl</command> is a filter for creating an error
+file that can be read by vim.</para>
+
+<para><command>efm_perl.pl</command> reformats the error messages of the
+Perl interpreter for use with the quickfix mode of vim.</para>
+
+<para><command>ex</command> starts vim in ex mode.</para>
+
+<para><command>less.sh</command> is a script that starts vim with less.vim.</para>
+
+<para><command>mve.awk</command> processes vim errors.</para>
+
+<para><command>pltags.pl</command> creates a tags file for perl code,
+for use by vim.</para>
+
+<para><command>ref</command> checks the spelling of arguments.</para>
+
+<para><command>rview</command> is a restricted version of view: no shell
+commands can be started and view can't be suspended.</para>
+
+<para><command>rvim</command> is a restricted version of vim: no shell
+commands can be started and vim can't be suspended.</para>
+
+<para><command>shtags.pl</command> generates a tag file for perl scripts.</para>
+
+<para><command>tcltags</command> generates a tag file for TCL code.</para>
+
+<para><command>vi</command> starts vim in vi-compatible mode.</para>
+
+<para><command>view</command> starts vim in read-only mode.</para>
+
+<para><command>vim</command> is the editor.</para>
+
+<para><command>vim132</command> starts vim with the terminal in
+132-column mode.</para>
+
+<para><command>vim2html.pl</command> converts vim documentation to
+HTML.</para>
+
+<para><command>vimdiff</command> edits two or three versions of a file with
+vim and show differences.</para>
+
+<para><command>vimm</command> enables the DEC locator input model on a
+remote terminal.</para>
+
+<para><command>vimspell.sh</command> is a script which spells a file and generates the syntax
+statements necessary to highlight in vim.</para>
+
+<para><command>vimtutor</command> teaches you the basic keys and commands
+of vim.</para>
+
+<para><command>xxd</command> makes a hexdump of the given file. It can
+also do the reverse, so it can be used for binary patching.</para>
 
 </sect2>
 

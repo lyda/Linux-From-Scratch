@@ -1,21 +1,21 @@
 TODO
 ~~~~
 
-1. Reintroduce some entities that were removed during the cleanup
-   * Version entities are now in
-   * Decide what other entities we need
-2. Provide a css file to provide nicer output than whatever the UA's default is.
+1. Decide on a validation method to use.  DTD's are not namespace aware
+   which may cause us problems in the future.  RelaxNG looks promising but
+   there's also the W3C's "XML Schema".  Docbook is available in both, and
+   libxml2 supports both.
+2. Decide what entities are required, other than the version entities that are
+   currently in place.
+3. Provide a css file to provide nicer output than whatever the UA's default is.
    * Started - needs some comments regarding layout.
-3. Decide whether we want to use the strict or traditional XHTML DTD.  Note in
+4. Decide whether we want to use the strict or transitional XHTML DTD.  Note in
    particular http://www.sagehill.net/docbookxsl/OtherOutputForms.html#d0e23340.
-4. Move the legalinfo off the titlepage.
-     * Started
+5. The legalinfo page:
      * It generates it's own hyperlink ("Legal Notice") but the current book has
-       it linked to via the "Copyright" message above
-     * It writes the legalnotice out to a randomly named file under ${base.dir}
-       instead of the more preferable ${base.dir}/prologue/legalnotice.html.
-5. Decide on what levels the TOCs should go down to.
+       it linked to via the "Copyright" message above. The hyperlink also links
+       to prologue/legalnotice.html which isn't produced.
+6. Decide on what levels the TOCs should go down to.
    * Section elements now no longer have a TOC generated for them - the book TOC
      remains unchanged as do the part and appendix level TOCs.
-6. Incorporate Alex's restructuring?
 7. Write some more stylesheets to produce alternative output formats.

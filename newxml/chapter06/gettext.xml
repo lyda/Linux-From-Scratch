@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % gettext-entities SYSTEM "../ent/gettext.ent">
   %gettext-entities;
 ]>
-<sect1 id="ch06-gettext">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-gettext" xreflabel="Gettext">
 <title>Installing Gettext-&gettext-version;</title>
 <?dbhtml filename="gettext.html"?>
 
-<screen>Estimated build time:           6.9 SBU
-Estimated required disk space:  55 MB</screen>
+<para>The Gettext package contains utilities for internationalization and
+localization. These allow programs to be compiled with Native Language Support
+(NLS), enabling them to output messages in the user's native language.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/gettext-contents.xml"/>
+<screen>Approximate build time:  0.5 SBU
+Required disk space:     55 MB</screen>
 
+<literallayout>Official download location for Gettext (&gettext-version;): 
+<ulink url="ftp://ftp.gnu.org/gnu/gettext/"/></literallayout>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/gettext-deps.xml"/>
+<para>For its installation Gettext depends on: Bash, Binutils, Bison, Coreutils,
+Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 
 
 
@@ -28,20 +33,121 @@ Estimated required disk space:  55 MB</screen>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which performs a number of
-checks to ensure it will function correctly. It's worth noting that Gettext
-does not play a critical role in the overall operation of an LFS system. In
-addition, the Gettext test suite runs for quite a long period of time.
-Accordingly, the running of the test suite here is not crucial. Should you
-choose to run the Gettext test suite, the following command will do
-so:</para>
-
-<screen><userinput>make check</userinput></screen>
+<para>To have the results tested, issue:
+<userinput>make check</userinput>. This takes a very long time, around
+7 SBUs.</para>
 
 <para>And install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-gettext"><title>Contents of Gettext</title>
+
+<para><emphasis>Installed programs</emphasis>: autopoint, config.charset,
+config.rpath, envsubst, gettext, gettextize, hostname, msgattrib, msgcat,
+msgcmp, msgcomm, msgconv, msgen, msgexec, msgfilter, msgfmt, msggrep, msginit,
+msgmerge, msgunfmt, msguniq, ngettext, project-id, team-address, trigger,
+urlget, user-email and xgettext</para>
+
+<para><emphasis>Installed libraries</emphasis>: libasprintf[a,so],
+libgettextlib[a,so], libgettextpo[a,so] and libgettextsrc[a,so]</para>
+
+</sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>autopoint</command> copies standard gettext infrastructure
+files into a source package.</para>
+
+<para><command>config.charset</command> outputs a system-dependent table of
+character encoding aliases.</para>
+
+<para><command>config.rpath</command> outputs a system-dependent set of
+variables, describing how to set the runtime search path of shared libraries in an
+executable.</para>
+
+<para><command>envsubst</command> substitutes environment variables in shell
+format strings.</para>
+
+<para><command>gettext</command> translates a natural language message into
+the user's language, by looking up the translation in a message catalog.</para>
+
+<para><command>gettextize</command> copies all standard Gettext files into
+the given top-level directory of a package, to begin internationalizing it.</para>
+
+<para><command>hostname</command> displays a network hostname in various
+forms.</para>
+
+<para><command>msgattrib</command> filters the messages of a translation
+catalog according to their attributes and manipulates the attributes.</para>
+
+<para><command>msgcat</command> concatenates and merges the given
+<filename>.po</filename> files.</para>
+
+<para><command>msgcmp</command> compares two <filename>.po</filename>
+files to check that both contain the same set of msgid strings.</para>
+
+<para><command>msgcomm</command> finds the messages that are common to
+to the given <filename>.po</filename> files.</para>
+
+<para><command>msgconv</command> converts a translation catalog to a
+different character encoding.</para>
+
+<para><command>msgen</command> creates an English translation catalog.</para>
+
+<para><command>msgexec</command> applies a command to all translations of a
+translation catalog.</para>
+
+<para><command>msgfilter</command> applies a filter to all translations of a
+translation catalog.</para>
+
+<para><command>msgfmt</command> generates a binary message catalog from
+from a translation catalog.</para>
+
+<para><command>msggrep</command> extracts all messages of a translation
+catalog that match a given pattern or belong to some given source files.</para>
+
+<para><command>msginit</command> creates a new <filename>.po</filename>
+file, initializing the meta information with values from the user's
+environment.</para>
+
+<para><command>msgmerge</command> combines two raw translations into a
+single file.</para>
+
+<para><command>msgunfmt</command> decompiles a binary message catalog
+into raw translation text.</para>
+
+<para><command>msguniq</command> unifies duplicate translations in a
+translation catalog.</para>
+
+<para><command>ngettext</command> displays native language translations of a
+textual message whose grammatical form depends on a number.</para>
+
+<para><command>xgettext</command> extracts the translatable message lines
+from the given source files, to make the first translation template.</para>
+
+<para><command>libasprintf</command> defines the autosprintf class which
+makes C formatted output routines usable in C++ programs, for use with the
+&lt;string&gt; strings and the &lt;iostream&gt; streams.</para>
+
+<para><command>libgettextlib</command> is a private library containing
+common routines used by the various gettext programs. They're not meant for
+general use.</para>
+
+<para><command>libgettextpo</command> is used to write specialized
+programs that process PO files. This library is used when the standard
+applications shipped with gettext won't suffice (such as msgcomm, msgcmp,
+msgattrib and msgen).</para>
+
+<para><command>libgettextsrc</command> is a private library containing
+common routines used by the various gettext programs. They're not meant for
+general use.</para>
+
+</sect2>
+
+
 
 </sect1>

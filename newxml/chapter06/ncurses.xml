@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % ncurses-entities SYSTEM "../ent/ncurses.ent">
   %ncurses-entities;
 ]>
-<sect1 id="ch06-ncurses">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-ncurses" xreflabel="Ncurses">
 <title>Installing Ncurses-&ncurses-version;</title>
 <?dbhtml filename="ncurses.html"?>
 
-<screen>Estimated build time:           0.6 SBU
-Estimated required disk space:  27 MB</screen>
+<para>The Ncurses package contains libraries for the terminal-independent
+handling of character screens.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/ncurses-contents.xml"/>
+<screen>Approximate build time:  0.6 SBU
+Required disk space:     27 MB</screen>
 
+<literallayout>Official download location for Ncurses (&ncurses-version;): 
+<ulink url="ftp://ftp.gnu.org/gnu/ncurses/"/></literallayout>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/ncurses-deps.xml"/>
+<para>For its installation Ncurses depends on: Bash, Binutils, Coreutils, Diffutils,
+Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 
 
 
 <sect2>
 <title>Installation of Ncurses</title>
 
-<para>Fix a minor problem related to the <filename>etip.h</filename> header
-file:</para>
+<para>Prepare Ncurses for compilation:</para>
 
-<screen><userinput>patch -Np1 -i ../ncurses-&ncurses-version;-etip-2.patch</userinput></screen>
-
-<para>Now prepare Ncurses for compilation:</para>
-
-<screen><userinput>./configure --prefix=/usr --with-shared \
-    --without-debug</userinput></screen>
+<screen><userinput>./configure --prefix=/usr --with-shared --without-debug</userinput></screen>
 
 <para>Compile the package:</para>
 
@@ -51,12 +49,71 @@ where they're expected to reside:</para>
 
 <screen><userinput>mv /usr/lib/libncurses.so.5* /lib</userinput></screen>
 
-<para>Since the libraries have been moved to
-<filename>/lib</filename>, a few symlinks are currently pointing
-towards non-existing files. Recreate those symlinks:</para>
+<para>Now the libraries have been moved, a few symlinks are pointing to
+non-existent files. Recreate those symlinks:</para>
 
 <screen><userinput>ln -sf ../../lib/libncurses.so.5 /usr/lib/libncurses.so
 ln -sf libncurses.so /usr/lib/libcurses.so</userinput></screen>
 </sect2>
+
+
+<sect2 id="contents-ncurses"><title>Contents of Ncurses</title>
+
+<para><emphasis>Installed programs</emphasis>: captoinfo (link to tic), clear,
+infocmp, infotocap (link to tic), reset (link to tset), tack, tic, toe, tput
+and tset</para>
+
+<para><emphasis>Installed libraries</emphasis>: libcurses.[a,so] (link to
+libncurses.[a,so]), libform.[a,so], libmenu.[a,so], libncurses++.a,
+libncurses.[a,so], libpanel.[a,so]</para>
+
+</sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>captoinfo</command> converts a termcap description into a
+terminfo description.</para>
+
+<para><command>clear</command> clears the screen, if this is possible.</para>
+
+<para><command>infocmp</command> compares or prints out terminfo
+descriptions.</para>
+
+<para><command>infotocap</command> converts a terminfo description into
+a termcap description.</para>
+
+<para><command>reset</command> reinitializes a terminal to its default
+values.</para>
+
+<para><command>tack</command> is the terminfo action checker. It is mainly
+used to test the correctness of an entry in the terminfo database.</para>
+
+<para><command>tic</command> is the terminfo entry-description compiler.
+It translates a terminfo file from source format into the binary format needed
+for the ncurses library routines. A terminfo file contains information on the
+capabilities of a certain terminal.</para>
+
+<para><command>toe</command> lists all available terminal types, for each
+giving its primary name and its description.</para>
+
+<para><command>tput</command> makes the values of terminal-dependent
+capabilities available to the shell. It can also be used to reset or initialize
+a terminal, or report its long name.</para>
+
+<para><command>tset</command> can be used to initialize terminals.</para>
+
+<para><command>libncurses*</command> contain functions to display text in
+many complicated ways on a terminal screen. A good example of the use of these
+functions is the menu displayed during the kernel's make menuconfig.</para>
+
+<para><command>libform*</command> contain functions to implement forms.</para>
+
+<para><command>libmenu*</command> contain functions to implement menus.</para>
+
+<para><command>libpanel*</command> contain functions to implement panels.</para>
+
+</sect2>
+
+
 
 </sect1>

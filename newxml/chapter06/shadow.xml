@@ -1,63 +1,48 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % shadow-entities SYSTEM "../ent/shadow.ent">
   %shadow-entities;
 ]>
-<sect1 id="ch06-shadow">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-shadow" xreflabel="Shadow">
 <title>Installing Shadow-&shadow-version;</title>
 <?dbhtml filename="shadow.html"?>
 
-<screen>Estimated build time:           0.4 SBU
-Estimated required disk space:  11 MB</screen>
+<para>The Shadow package contains programs for handling passwords in a secure
+way.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/shadow-contents.xml"/>
+<screen>Approximate build time:  0.4 SBU
+Required disk space:     11 MB</screen>
 
+<literallayout>Official download location for Shadow (&shadow-version;):
+<ulink url="ftp://ftp.pld.org.pl/software/shadow/"/></literallayout>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/shadow-deps.xml"/>
+<para>For its installation Shadow depends on: Bash, Binutils, Bison, Coreutils,
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed.</para>
 
 
 
 <sect2>
 <title>Installation of Shadow</title>
 
-<para>The <userinput>login</userinput>, <userinput>getty</userinput> and
-<userinput>init</userinput> programs (and some others) maintain a number
-of logfiles to record who are and who were logged in to the system.  These
-programs, however, don't create these logfiles when they don't exist, so if
-you want this logging to occur you will have to create the files yourself.
-The Shadow package needs to detect these files in their proper place, so we
-create them now, with their proper permissions:</para>
-
-<screen><userinput>touch /var/run/utmp /var/log/{btmp,lastlog,wtmp}
-chmod 644 /var/run/utmp /var/log/{btmp,lastlog,wtmp}</userinput></screen>
-
-<para>The <filename>/var/run/utmp</filename> file lists the users that are
-currently logged in, the <filename>/var/log/wtmp</filename> file who
-<emphasis>were</emphasis> logged in and when.
-The <filename>/var/log/lastlog</filename> file shows for each user when he
-or she last logged in, and the <filename>/var/log/btmp</filename> lists the
-bad login attempts.</para>
-
-<para>Shadow hard-wires the path to the <userinput>passwd</userinput> binary
-within the binary itself, but does this the wrong way. If a
-<userinput>passwd</userinput> binary is not present before installing Shadow,
-the package incorrectly assumes it is going to be located at
-<filename>/bin/passwd</filename>, but then installs it in
-<filename>/usr/bin/passwd</filename>. This will lead to errors about not finding
-<filename>/bin/passwd</filename>. To work around this bug, create a dummy
-<filename>passwd</filename> file, so that it gets hard-wired properly:</para>
+<para>Shadow hard-wires the path to the <command>passwd</command> binary within
+the binary itself, but does this the wrong way. If a <command>passwd</command>
+binary is not present before installing Shadow, the package incorrectly assumes
+it is going to be located at <filename>/bin/passwd</filename>, but then
+installs it as <filename>/usr/bin/passwd</filename>. This will lead to errors
+about not finding <filename>/bin/passwd</filename>. To work around this bug,
+create a dummy <filename>passwd</filename> file, so that it gets hard-wired
+properly:</para>
 
 <screen><userinput>touch /usr/bin/passwd</userinput></screen>
 
-<para>The current Shadow suite has a problem that causes the
-<userinput>newgrp</userinput> command to fail.  The following patch (also
-appearing in Shadow's CVS code) fixes this problem:</para>
-
-<screen><userinput>patch -Np1 -i ../shadow-&shadow-version;-newgrp-fix.patch</userinput></screen>
-
 <para>Now prepare Shadow for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --libdir=/usr/lib --enable-shared</userinput></screen>
+<screen><userinput>./configure --libdir=/usr/lib --enable-shared</userinput></screen>
+
+<para>Work around a problem that prevents Shadow's internationalization from
+working:</para>
+
+<screen><userinput>echo '#define HAVE_SETLOCALE 1' &gt;&gt; config.h</userinput></screen>
 
 <para>Compile the package:</para>
 
@@ -72,35 +57,23 @@ system. Install these two config files:</para>
 
 <screen><userinput>cp etc/{limits,login.access} /etc</userinput></screen>
 
-<para>We want to change the password method to enable MD5 passwords which are
-theoretically more secure than the default "crypt" method and also allow
-password lengths greater than 8 characters. We also need to change the old
-<filename class="directory">/var/spool/mail</filename> location for user
-mailboxes to the current location at
-<filename class="directory">/var/mail</filename>. We do this by changing the
-relevant configuration file while copying it to its destination:</para>
+<para>Instead of using the default <emphasis>crypt</emphasis> method, we want
+to use the more secure <emphasis>MD5</emphasis> method of password encryption,
+which in addition allows passwords longer than 8 characters. We also need to
+change the obsolete <filename class="directory">/var/spool/mail</filename>
+location for user mailboxes that Shadow uses by default to the <filename class="directory">/var/mail</filename> location used nowadays. We accomplish
+both these things by changing the relevant configuration file while copying it
+to its destination (it's probably better to cut-and-paste this rather than try
+and type it all in):</para>
 
-<screen><userinput>sed -e 's%/var/spool/mail%/var/mail%' \
-    -e 's%#MD5_CRYPT_ENAB.no%MD5_CRYPT_ENAB yes%' \
+<screen><userinput>sed -e 's%#MD5_CRYPT_ENAB.no%MD5_CRYPT_ENAB yes%' \
+    -e 's%/var/spool/mail%/var/mail%' \
     etc/login.defs.linux &gt; /etc/login.defs</userinput></screen>
 
-<note><para>Be extra careful when typing all of the above. It is probably safer
-to cut-and-paste it rather than try and type it all in.</para></note>
+<para>Move some misplaced symlinks to their proper locations:</para>
 
-<para>According to the man page of <userinput>vipw</userinput>, a
-<userinput>vigr</userinput> program should exist too. Since the installation
-procedure doesn't create this program, create a symlink manually:</para>
-
-<screen><userinput>ln -s vipw /usr/sbin/vigr</userinput></screen>
-
-<para>As the <filename>/bin/vipw</filename> symlink is redundant (and even
-pointing to a non-existent file), remove it:</para>
-
-<screen><userinput>rm /bin/vipw</userinput></screen>
-
-<para>Now move the <userinput>sg</userinput> program to its proper place:</para>
-
-<screen><userinput>mv /bin/sg /usr/bin</userinput></screen>
+<screen><userinput>mv /bin/sg /usr/bin
+mv /bin/vigr /usr/sbin</userinput></screen>
 
 <para>And move Shadow's dynamic libraries to a more appropriate location:</para>
 
@@ -117,8 +90,8 @@ directory for it to work properly:</para>
 
 <screen><userinput>mkdir /etc/default</userinput></screen>
 
-<para>Coreutils has already installed a <userinput>groups</userinput> program
-in <filename>/usr/bin</filename>. If you wish, you can remove the one
+<para>Coreutils has already installed a better <command>groups</command>
+program in <filename class="directory">/usr/bin</filename>. Remove the one
 installed by Shadow:</para>
 
 <screen><userinput>rm /bin/groups</userinput></screen>
@@ -128,39 +101,151 @@ installed by Shadow:</para>
 
 <sect2><title>Configuring Shadow</title>
 
-<para>This package contains utilities to modify users' passwords, add
-or delete users and groups, and the like. We're not going to explain what
-'password shadowing' means. A full explanation can be found in the
-<filename>doc/HOWTO</filename>
-file within the unpacked Shadow source tree. There's one 
-thing to keep in mind if you decide to use Shadow support: programs that
-need to verify passwords (for example xdm, ftp daemons, pop3 daemons) need
-to be 'shadow-compliant', that is they need to be able to work with 
-shadowed passwords.</para>
+<para>This package contains utilities to add, modify and delete users and
+groups, set and change their passwords, and other such administrative tasks.
+For a full explanation of what <emphasis>password shadowing</emphasis> means,
+see the <filename>doc/HOWTO</filename> file within the unpacked source tree.
+There's one thing to keep in mind if you decide to use Shadow support: programs
+that need to verify passwords (display managers, ftp programs, pop3 daemons,
+and the like) need to be <emphasis>shadow-compliant</emphasis>, that is they
+need to be able to work with shadowed passwords.</para>
 
 <para>To enable shadowed passwords, run the following command:</para>
 
-<screen><userinput>/usr/sbin/pwconv</userinput></screen>
+<screen><userinput>pwconv</userinput></screen>
 
-<para>And to enable shadowed group passwords, run the following
-command:</para>
+<para>And to enable shadowed group passwords, run:</para>
 
-<screen><userinput>/usr/sbin/grpconv</userinput></screen>
+<screen><userinput>grpconv</userinput></screen>
 
 <para>Under normal circumstances, you won't have created any passwords yet.
-However, if returning to this section to enable shadowing, you should reset any
-current user passwords with the <userinput>passwd</userinput> command or any
-group passwords with the <userinput>gpasswd</userinput> command.</para>
+However, if returning to this section later to enable shadowing, you should
+reset any current user passwords with the <command>passwd</command> command or
+any group passwords with the <command>gpasswd</command> command.</para>
+
 </sect2>
 
 
 <sect2>
 <title>Setting the root password</title>
 
-<para>Choose a password for user root and set it by running the following
-command:</para>
+<para>Choose a password for user root and set it via:</para>
 
 <screen><userinput>passwd root</userinput></screen>
+
+</sect2>
+
+
+<sect2 id="contents-shadow"><title>Contents of Shadow</title>
+
+<para><emphasis>Installed programs</emphasis>: chage, chfn, chpasswd, chsh,
+dpasswd, expiry, faillog, gpasswd, groupadd, groupdel, groupmod, groups, grpck,
+grpconv, grpunconv, lastlog, login, logoutd, mkpasswd, newgrp, newusers,
+passwd, pwck, pwconv, pwunconv, sg (link to newgrp), useradd, userdel, usermod,
+vigr (link to vipw) and vipw</para>
+
+</sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>chage</command> is used to change the maximum number of
+days between obligatory password changes.</para>
+
+<para><command>chfn</command> is used to change a user's full name and
+some other info.</para>
+
+<para><command>chpasswd</command> is used to update the passwords of a
+whole series of user accounts in one go.</para>
+
+<para><command>chsh</command> is used to change a user's default
+ login shell.</para>
+
+<para><command>dpasswd</command> is used to change dial-up passwords for
+user login shells.</para>
+
+<para><command>expiry</command> checks and enforces the current password
+expiration policy.</para>
+
+<para><command>faillog</command> is used to examine the log of login
+failures, to set a maximum number of failures before an account is blocked,
+or to reset the failure count.</para>
+
+<para><command>gpasswd</command> is used to add and delete members and
+administrators to groups.</para>
+
+<para><command>groupadd</command> creates a group with the given
+name.</para>
+
+<para><command>groupdel</command> deletes the group with the given
+name.</para>
+
+<para><command>groupmod</command> is used to modify the given group's
+name or GID.</para>
+
+<para><command>groups</command> reports the groups of which the given
+users are members.</para>
+
+<para><command>grpck</command> verifies the integrity of the group files,
+<filename>/etc/group</filename> and <filename>/etc/gshadow</filename>.</para>
+
+<para><command>grpconv</command> creates or updates the shadow group file
+from the normal group file.</para>
+
+<para><command>grpunconv</command> updates <filename>/etc/group</filename>
+from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
+
+<para><command>lastlog</command> reports the most recent login of all
+users, or of a given user.</para>
+
+<para><command>login</command> is used by the system let users sign on.</para>
+
+<para><command>logoutd</command> is a daemon used to enforce restrictions
+on log-on time and ports.</para>
+
+<para><command>mkpasswd</command> encrypts the given password using the
+also given perturbation.</para>
+
+<para><command>newgrp</command> is used to change the current GID during
+a login session.</para>
+
+<para><command>newusers</command> is used to create or update a whole
+series of user accounts in one go.</para>
+
+<para><command>passwd</command> is used to change the password for a user
+or group account.</para>
+
+<para><command>pwck</command> verifies the integrity of the password files,
+<filename>/etc/passwd</filename> and <filename>/etc/shadow</filename>.</para>
+
+<para><command>pwconv</command> creates or updates the shadow password file
+from the normal password file.</para>
+
+<para><command>pwunconv</command> updates <filename>/etc/passwd</filename>
+from <filename>/etc/shadow</filename> and then deletes the latter.</para>
+
+<para><command>sg</command> executes a given command while the user's GID
+is set to that of the given group.</para>
+
+<para><command>useradd</command> creates a new user with the given name,
+or updates the default new-user information.</para>
+
+<para><command>userdel</command> deletes the given user account.</para>
+
+<para><command>usermod</command> is used to modify the given user's
+login name, UID, shell, initial group, home directory, and the like.</para>
+
+<para><command>vigr</command> can be used to edit the
+<filename>/etc/group</filename> or <filename>/etc/gshadow</filename>
+files.</para>
+
+<para><command>vipw</command> can be used to edit the
+<filename>/etc/passwd</filename> or <filename>/etc/shadow</filename>
+files.</para>
+
+<para><command>libmisc</command>...</para>
+
+<para><command>libshadow</command> contains functions used by most
+programs in this package.</para>
 
 </sect2>
 

@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % e2fsprogs-entities SYSTEM "../ent/e2fsprogs.ent">
   %e2fsprogs-entities;
 ]>
-<sect1 id="ch06-e2fsprogs">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-e2fsprogs" xreflabel="E2fsprogs">
 <title>Installing E2fsprogs-&e2fsprogs-version;</title>
 <?dbhtml filename="e2fsprogs.html"?>
 
-<screen>Estimated build time:           0.6 SBU
-Estimated required disk space:  48.4 MB</screen>
+<para>The E2fsprogs package contains the utilities for handling the ext2
+file system. It also supports the ext3 journaling file system.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/e2fsprogs-contents.xml"/>
+<screen>Approximate build time:  0.6 SBU
+Required disk space:     48.4 MB</screen>
 
+<literallayout>Official download location for E2fsprogs (&e2fsprogs-version;):
+<ulink url="http://download.sourceforge.net/e2fsprogs/"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/e2fsprogs-deps.xml"/>
+<para>For its installation E2fsprogs depends on: Bash, Binutils, Coreutils,
+Diffutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, Texinfo.</para>
 
 
 
@@ -54,11 +57,11 @@ of.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which can perform a number of
-checks to ensure it built correctly.  Should you choose to run it, the 
-following command will do so:</para>
-
-<screen><userinput>make check</userinput></screen>
+<para>If you wish to have the results tested, first make sure an mtab file
+exists with <userinput>touch /etc/mtab</userinput> to prevent some sixty tests
+from failing, and (if it doesn't already exist) fake the presence of an old
+pager with <userinput>ln -s /tools/bin/cat /bin/more</userinput> to prevent one
+test from failing, then issue: <userinput>make check</userinput>.</para>
 
 <para>Install most of the package:</para>
 
@@ -69,6 +72,103 @@ following command will do so:</para>
 <screen><userinput>make install-libs</userinput></screen>
 
 </sect2>
+
+
+
+<sect2 id="contents-e2fsprogs"><title>Contents of E2fsprogs</title>
+
+<para><emphasis>Installed programs</emphasis>: badblocks, blkid, chattr,
+compile_et, debugfs, dumpe2fs, e2fsck, e2image, e2label, findfs, fsck,
+fsck.ext2, fsck.ext3, logsave, lsattr, mk_cmds, mke2fs, mkfs.ext2, mkfs.ext3,
+mklost+found, resize2fs, tune2fs and uuidgen.</para>
+
+<para><emphasis>Installed libraries</emphasis>: libblkid.[a,so],
+libcom_err.[a,so], libe2p.[a,so], libext2fs.[a,so], libss.[a,so] and
+libuuid.[a,so]</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>badblocks</command> searches a device (usually a disk
+partition) for bad blocks.</para>
+
+<para><command>blkid</command> is a command line utility to locate and
+print block device attributes.</para>
+
+<para><command>chattr</command> changes the attributes of files on a
+second extended (ext2) file system.</para>
+
+<para><command>compile_et</command> is an error table compiler. It
+converts a table of error-code names and messages into a C source file
+suitable for use with the com_err library.</para>
+
+<para><command>debugfs</command> is a file system debugger. It can be
+used to examine and change the state of an ext2 file system.</para>
+
+<para><command>dumpe2fs</command> prints the super block and blocks group
+information for the file system present on a given device.</para>
+
+<para><command>e2fsck</command> is used to check, and optionally repair,
+second extended (ext2) file systems, and also ext3 file systems.</para>
+
+<para><command>e2image</command> is used to save critical ext2 file system
+data to a file.</para>
+
+<para><command>e2label</command> will display or change the file system
+label on the ext2 file system present on a given device.</para>
+
+<para><command>findfs</command> finds a file system by label or UUID.</para>
+
+<para><command>fsck</command> is used to check, and optionally repair,
+file systems. By default it checks the file systems listed in
+<filename>/etc/fstab</filename></para>
+
+<para><command>logsave</command> saves the output of a command in a logfile.</para>
+
+<para><command>lsattr</command> lists the attributes of files on a second
+extended file system.</para>
+
+<para><command>mk_cmds</command> converts a table of command names
+and help messages into a C source file suitable for use with the
+<filename>libss</filename> subsystem library.</para>
+
+<para><command>mke2fs</command> is used to create a second extended
+file system on the given device.</para>
+
+<para><command>mklost+found</command> is used to create a
+<filename>lost+found</filename> directory on a second extended file system.
+It pre-allocates disk blocks to this directory to lighten the task of e2fsck.</para>
+
+<para><command>resize2fs</command> can be used to enlarge or shrink an
+ext2 file system.</para>
+
+<para><command>tune2fs</command> is used adjust tunable file system
+parameters on a second extended file system.</para>
+
+<para><command>uuidgen</command> creates new universally unique
+identifiers (UUID). Each new UUID can reasonably be considered unique
+among all UUIDs created, on the local system and on other systems, in the
+past and in the future.</para>
+
+<para><command>libblkid</command> contains routines for device
+identification and token extraction.</para>
+
+<para><command>libcom_err</command> is the common error display routine.</para>
+
+<para><command>libe2p</command> is used by dumpe2fs, chattr, and lsattr.</para>
+
+<para><command>libext2fs</command> contains routines to enable user-level
+programs to manipulate an ext2 file system.</para>
+
+<para><command>libss</command> is used by debugfs.</para>
+
+<para><command>libuuid</command> contains routines for generating unique
+identifiers for objects that may be accessible beyond the local system.</para>
+
+</sect2>
+
 
 
 </sect1>

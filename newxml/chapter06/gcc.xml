@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % gcc-entities SYSTEM "../ent/gcc.ent">
   %gcc-entities;
 ]>
-<sect1 id="ch06-gcc">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-gcc" xreflabel="GCC">
 <title>Installing GCC-&gcc-version;</title>
 <?dbhtml filename="gcc.html"?>
 
-<screen>Estimated build time:           11.7 SBU
-Estimated required disk space:  294 MB</screen>
+<para>The GCC package contains the GNU compiler collection, among them
+the C and C++ compilers.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/gcc-contents.xml"/>
+<screen>Approximate build time:  11.7 SBU
+Required disk space:     294 MB</screen>
 
+<literallayout>Official download location for GCC (&gcc-version;): 
+<ulink url="ftp://ftp.gnu.org/pub/gnu/gcc/"/>
+And for the patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-&gcc-version;-no_fixincludes-1.patch"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/gcc-deps.xml"/>
+<para>For its installation GCC depends on: Bash, Binutils, Coreutils, Diffutils, Findutils,
+Gawk, Gettext, Glibc, Grep, Make, Perl, Sed, Texinfo.</para>
 
 
 
 <sect2>
 <title>Installation of GCC</title>
-
-<note><para>The test suite for GCC in this section is considered
-<emphasis>critical</emphasis>. Our advice is to not skip it under any
-circumstance.</para></note>
 
 <para>This package is known to behave badly when you have changed its
 default optimization flags (including the -march and -mcpu options).
@@ -37,11 +38,8 @@ GCC-testsuite package. The full GCC package contains even more
 compilers. Instructions for building these can be found at
 <ulink url="http://www.linuxfromscratch.org/blfs/view/stable/general/gcc.html"/>.</para>
 
-<note><para>Be careful <emphasis role="strong">not</emphasis> to apply the GCC
-Specs patch from Chapter 5 here.</para></note>
-
-<para>First apply the No-Fixincludes patch that we also used in the previous
-chapter:</para>
+<para>First apply only the No-Fixincludes patch (and <emphasis>not</emphasis>
+the Specs patch) also used in the previous chapter:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-no_fixincludes-1.patch</userinput></screen>
 
@@ -68,12 +66,16 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput>make</userinput></screen>
 
+<important><para>The test suite for GCC in this section is considered
+<emphasis>critical</emphasis>. Our advice is to not skip it under any
+circumstance.</para></important>
+
 <para>Test the results, but don't stop at errors (you'll remember the few
 known ones):</para>
 
 <screen><userinput>make -k check</userinput></screen>
 
-<para>The test suite notes from <xref linkend="ch05-gcc-pass2"/> are still very
+<para>The test suite notes from <xref linkend="ch-tools-gcc-pass2"/> are still very
 much appropriate here. Be sure to refer back there should you have any
 doubts.</para>
 
@@ -87,17 +89,58 @@ To honor those packages, create this symlink:</para>
 
 <screen><userinput>ln -s ../usr/bin/cpp /lib</userinput></screen>
 
-<para>Many packages use the name <userinput>cc</userinput> to call the C
+<para>Many packages use the name <command>cc</command> to call the C
 compiler. To satisfy those packages, create a symlink:</para>
 
 <screen><userinput>ln -s gcc /usr/bin/cc</userinput></screen>
 
 <note><para>At this point it is strongly recommended to repeat the sanity check
 we performed earlier in this chapter. Refer back to
-<xref linkend="ch06-adjustingtoolchain"/> and repeat the check. If the results
+<xref linkend="ch-system-readjusting"/> and repeat the check. If the results
 are wrong, then most likely you erroneously applied the GCC Specs patch from
-Chapter 5.</para></note>
+<xref linkend="chapter-temporary-tools"/>.</para></note>
 
 </sect2>
+
+
+<sect2 id="contents-gcc"><title>Contents of GCC</title>
+
+<para><emphasis>Installed programs</emphasis>: c++, cc (link to gcc),
+cc1, cc1plus, collect2, cpp, g++, gcc, gccbug, and gcov</para>
+
+<para><emphasis>Installed libraries</emphasis>: libgcc.a, libgcc_eh.a,
+libgcc_s.so, libstdc++.[a,so] and libsupc++.a</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>cpp</command> is the C preprocessor. It is used by the
+compiler to have the #include and #define and such statements expanded in
+the source files.</para>
+
+<para><command>g++</command> is the C++ compiler.</para>
+
+<para><command>gcc</command> is the C compiler. It is used to translate
+the source code of a program into assembly code.</para>
+
+<para><command>gccbug</command> is a shell script used to help create
+good bug reports.</para>
+
+<para><command>gcov</command> is a coverage testing tool. It is used to
+analyze programs to find out where optimizations will have the most effect.</para>
+
+<para><command>libgcc*</command> contains run-time support for gcc.</para>
+
+<para><command>libstdc++</command> is the standard C++ library. It contains
+many frequently-used functions.</para>
+
+<para><command>libsupc++</command> provides supporting routines
+for the c++ programming language.</para>
+
+</sect2>
+
+
 
 </sect1>

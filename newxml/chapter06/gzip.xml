@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % gzip-entities SYSTEM "../ent/gzip.ent">
   %gzip-entities;
 ]>
-<sect1 id="ch06-gzip">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-gzip" xreflabel="Gzip">
 <title>Installing Gzip-&gzip-version;</title>
 <?dbhtml filename="gzip.html"?>
 
-<screen>Estimated build time:           0.1 SBU
-Estimated required disk space:  2.6 MB</screen>
+<para>The Gzip package contains programs for compressing and decompressing
+files.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/gzip-contents.xml"/>
+<screen>Approximate build time:  0.1 SBU
+Required disk space:     2.6 MB</screen>
 
+<literallayout>Official download location for Gzip (&gzip-version;): 
+<ulink url="ftp://alpha.gnu.org/gnu/gzip/"/></literallayout>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/gzip-deps.xml"/>
+<para>For its installation Gzip depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Sed.</para>
 
 
 
@@ -24,8 +28,8 @@ Estimated required disk space:  2.6 MB</screen>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
 
-<para>The <userinput>gzexe</userinput> script has the location of the
-<userinput>gzip</userinput> binary hard-wired into it. Because we later change
+<para>The <command>gzexe</command> script has the location of the
+<command>gzip</command> binary hard-wired into it. Because we later change
 the location of the binary, the following command assures that the new
 location gets placed into the script:</para>
 
@@ -49,5 +53,52 @@ ln -s gzip /bin/zcat
 ln -s gunzip /bin/uncompress</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-gzip"><title>Contents of Gzip</title>
+
+<para><emphasis>Installed programs</emphasis>: gunzip (link to gzip), gzexe,
+gzip, uncompress (link to gunzip), zcat (link to gzip), zcmp, zdiff,
+zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</para>
+
+</sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>gunzip</command> decompresses gzipped files.</para>
+
+<para><command>gzexe</command> is used to create self-uncompressing
+executable files.</para>
+
+<para><command>gzip</command> compresses the given files, using
+Lempel-Ziv (LZ77) coding.</para>
+
+<para><command>zcat</command> uncompresses the given gzipped files to
+standard output.</para>
+
+<para><command>zcmp</command> runs cmp on gzipped files.</para>
+
+<para><command>zdiff</command> runs diff on gzipped files.</para>
+
+<para><command>zegrep</command> runs egrep on gzipped files.</para>
+
+<para><command>zfgrep</command> runs fgrep on gzipped files.</para>
+
+<para><command>zforce</command> forces a .gz extension on all given files
+that are gzipped files, so that gzip will not compress them again. This can be
+useful when file names were truncated during a file transfer.</para>
+
+<para><command>zgrep</command> runs grep on gzipped files.</para>
+
+<para><command>zless</command> runs less on gzipped files.</para>
+
+<para><command>zmore</command> runs more on gzipped files.</para>
+
+<para><command>znew</command> recompresses files from compress format
+to gzip format -- .Z to .gz.</para>
+
+</sect2>
+
+
 
 </sect1>

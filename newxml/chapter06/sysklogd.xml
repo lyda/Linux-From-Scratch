@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % sysklogd-entities SYSTEM "../ent/sysklogd.ent">
   %sysklogd-entities;
 ]>
-<sect1 id="ch06-sysklogd">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-sysklogd" xreflabel="Sysklogd">
 <title>Installing Sysklogd-&sysklogd-version;</title>
 <?dbhtml filename="sysklogd.html"?>
 
-<screen>Estimated build time:           0.1 SBU
-Estimated required disk space:  0.5 MB</screen>
+<para>The Sysklogd package contains programs for logging system messages, such
+as those given by the kernel when unusual things happen.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/sysklogd-contents.xml"/>
+<screen>Approximate build time:  0.1 SBU
+Required disk space:     0.5 MB</screen>
 
+<literallayout>Official download location for Sysklogd (&sysklogd-version;):
+<ulink url="http://www.infodrom.org/projects/sysklogd/download/"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/sysklogd-deps.xml"/>
-
+<para>For its installation Sysklogd depends on: Binutils, Coreutils, GCC, Glibc, Make.</para>
 
 
 
@@ -32,9 +33,10 @@ Estimated required disk space:  0.5 MB</screen>
 
 </sect2>
 
+
 <sect2><title>Configuring Sysklogd</title>
 
-<para>Create a new file <filename>/etc/syslog.conf</filename> by running the
+<para>Create a new <filename>/etc/syslog.conf</filename> file by running the
 following:</para>
 
 <screen><userinput>cat &gt; /etc/syslog.conf &lt;&lt; "EOF"</userinput>
@@ -52,6 +54,27 @@ user.* -/var/log/user.log
 <userinput>EOF</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-sysklogd"><title>Contents of Sysklogd</title>
+
+<para><emphasis>Installed programs</emphasis>: klogd and syslogd</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>klogd</command> is a system daemon for intercepting and
+logging kernel messages.</para>
+
+<para><command>syslogd</command> logs the messages that system programs
+offer for logging. Every logged message contains at least a date stamp and a
+hostname, and normally the program's name too, but that depends on how
+trusting the logging daemon is told to be.</para>
+
+</sect2>
+
 
 
 </sect1>

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % bison-entities SYSTEM "../ent/bison.ent">
   %bison-entities;
 ]>
-<sect1 id="ch06-bison">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-bison" xreflabel="Bison">
 <title>Installing Bison-&bison-version;</title>
 <?dbhtml filename="bison.html"?>
 
-<screen>Estimated build time:           0.6 SBU
-Estimated required disk space:  10.6 MB</screen>
+<para>The Bison package contains a parser generator.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/bison-contents.xml"/>
+<screen>Approximate build time:  0.6 SBU
+Required disk space:     10.6 MB</screen>
 
+<literallayout>Official download location for Bison (&bison-version;): 
+<ulink url="ftp://ftp.gnu.org/gnu/bison/"/>
+And for the patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/bison-&bison-version;-attribute.patch"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/bison-deps.xml"/>
+<para>For its installation Bison depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Gettext, Glibc, Grep, M4, Make, Sed.</para>
 
 
 
@@ -34,16 +38,40 @@ the patch is backported from CVS:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which can perform a number of
-checks to ensure it built correctly.  Should you choose to run it, the 
-following command will do so (and takes a long time):</para>
-
-<screen><userinput>make check</userinput></screen>
+<para>To have the results tested, issue:
+<userinput>make check</userinput>.</para>
 
 <para>And install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-bison"><title>Contents of Bison</title>
+
+<para><emphasis>Installed programs</emphasis>: bison and yacc</para>
+
+<para><emphasis>Installed library</emphasis>: liby.a</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>bison</command> generates, from a series of rules, a program
+for analyzing the structure of text files. Bison is a replacement for yacc
+(Yet Another Compiler Compiler).</para>
+
+<para><command>yacc</command> is a wrapper for bison, meant for programs
+that still call yacc instead of bison. It calls bison with the -y option.</para>
+
+<para><command>liby.a</command> is the Yacc library containing
+implementations of Yacc-compatible yyerror and main functions. This library
+is normally not very useful, but POSIX requires it.</para>
+
+</sect2>
+
+
 
 </sect1>

@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % binutils-entities SYSTEM "../ent/binutils.ent">
   %binutils-entities;
 ]>
-<sect1 id="ch06-binutils">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-binutils" xreflabel="Binutils">
 <title>Installing Binutils-&binutils-version;</title>
 <?dbhtml filename="binutils.html"?>
 
-<screen>Estimated build time:           1.4 SBU
-Estimated required disk space:  167 MB</screen>
+<para>The Binutils package contains a linker, an assembler, and other tools for
+handling object files.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/binutils-contents.xml"/>
+<screen>Approximate build time:  1.4 SBU
+Required disk space:     167 MB</screen>
 
+<literallayout>Official download location for Binutils (&binutils-version;): 
+<ulink url="ftp://ftp.gnu.org/gnu/binutils/"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/binutils-deps.xml"/>
+<para>For its installation Binutils depends on: Bash, Coreutils, Diffutils, GCC, Gettext,
+Glibc, Grep, Make, Perl, Sed, Texinfo.</para>
 
 
 
@@ -32,13 +35,9 @@ everything is set up correctly by performing a simple test:</para>
 
 <para>Your chroot environment is not set up for proper PTY operation. In this
 case there is no point in running the test suites for Binutils and GCC until you
-are able to resolve the issue. Please refer back to <xref linkend="ch06-proc"/>
-and <xref linkend="ch06-MAKEDEV"/> and perform the recommended steps to fix the
-problem.</para>
-
-<note><para>The test suite for Binutils in this section is considered
-<emphasis>critical</emphasis>. Our advice is to not skip it under any
-circumstances.</para> </note>
+are able to resolve the issue. Please refer back to <xref linkend="ch-system-proc"/>
+and the <xref linkend="ch-system-MAKEDEV"/> section and perform the recommended steps
+to fix the problem.</para>
 
 <para>This package is known to behave badly when you have changed its
 default optimization flags (including the -march and -mcpu options).
@@ -54,8 +53,7 @@ cd ../binutils-build</userinput></screen>
 
 <para>Now prepare Binutils for compilation:</para>
 
-<screen><userinput>../binutils-&binutils-version;/configure \
-    --prefix=/usr --enable-shared</userinput></screen>
+<screen><userinput>../binutils-&binutils-version;/configure --prefix=/usr --enable-shared</userinput></screen>
 
 <para>Compile the package:</para>
 
@@ -69,11 +67,15 @@ build for our own system, we don't need this target specific directory in
 cross-compile (for example compiling a package on an Intel machine that
 generates code that can be executed on PowerPC machines).</para>
 
+<important><para>The test suite for Binutils in this section is considered
+<emphasis>critical</emphasis>. Our advice is to not skip it under any
+circumstances.</para></important>
+
 <para>Test the results:</para>
 
 <screen><userinput>make check</userinput></screen>
 
-<para>The test suite notes from <xref linkend="ch05-binutils-pass2"/> are still
+<para>The test suite notes from <xref linkend="ch-tools-binutils-pass2"/> are still
 very much appropriate here. Be sure to refer back there should you have any
 doubts.</para>
 
@@ -87,5 +89,81 @@ some packages:</para>
 <screen><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /usr/include</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-binutils"><title>Contents of Binutils</title>
+
+<para><emphasis>Installed programs</emphasis>: addr2line, ar, as, c++filt,
+gprof, ld, nm, objcopy, objdump, ranlib, readelf, size, strings and
+strip</para>
+
+<para><emphasis>Installed libraries</emphasis>: libiberty.a, libbfd.[a,so] and
+libopcodes.[a,so]</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>addr2line</command> translates program addresses to file
+names and line numbers. Given an address and the name of an executable, it
+uses the debugging information in the executable to figure out which source
+file and line number are associated with the address.</para>
+
+<para><command>ar</command> creates, modifies, and extracts from archives. An archive
+is a single file holding a collection of other files in a structure that makes
+it possible to retrieve the original individual files (called members of
+the archive).</para>
+
+<para><command>as</command> is an assembler. It assembles the output of
+gcc into object files.</para>
+
+<para><command>c++filt</command> is used by the linker to demangle C++ and
+Java symbols, to keep overloaded functions from clashing.</para>
+
+<para><command>gprof</command> displays call graph profile data.</para>
+
+<para><command>ld</command> is a linker. It combines a number of object
+and archive files into a single file, relocating their data and tying up symbol
+references.</para>
+
+<para><command>nm</command> lists the symbols occurring in a given object file.</para>
+
+<para><command>objcopy</command> is used to translate one type of object
+file into another.</para>
+
+<para><command>objdump</command> displays information about the given
+object file, with options controlling what particular information to display.
+The information shown is mostly only useful to programmers who are working on
+the compilation tools.</para>
+
+<para><command>ranlib</command> generates an index of the contents of an
+archive, and stores it in the archive. The index lists all the symbols defined
+by archive members that are relocatable object files.</para>
+
+<para><command>readelf</command> displays information about elf type binaries.</para>
+
+<para><command>size</command> lists the section sizes -- and the grand
+total -- for the given object files.</para>
+
+<para><command>strings</command> outputs for each file given the sequences
+of printable characters that are of at least the specified length (defaulting to 4)
+For object files it prints by default only the strings from the initializing
+and loading sections. For other types of files it scans the whole file.</para>
+
+<para><command>strip</command> discards symbols from object files.</para>
+
+<para><command>libiberty</command> contains routines used by various GNU
+programs, including getopt, obstack, strerror, strtol and strtoul.</para>
+
+<para><command>libbfd</command> is the Binary File Descriptor library.</para>
+
+<para><command>libopcodes</command> is a library for dealing with opcodes.
+It is used for building utilities like objdump. Opcodes are the "readable text"
+versions of instructions for the processor.</para>
+
+</sect2>
+
+
 
 </sect1>

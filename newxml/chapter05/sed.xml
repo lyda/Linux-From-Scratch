@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % sed-entities SYSTEM "../ent/sed.ent">
   %sed-entities;
 ]>
-<sect1 id="ch05-sed">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-sed">
 <title>Installing Sed-&sed-version;</title>
 <?dbhtml filename="sed.html"?>
 
-<screen>Estimated build time:           0.2 SBU
-Estimated required disk space:  5.2 MB</screen>
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/sed-contents.xml"/>
-
-
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/sed-deps.xml"/>
+<xi:include href="../chapter06/sed.xml" xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[2]))"/>
 
 
 
@@ -29,16 +22,17 @@ Estimated required disk space:  5.2 MB</screen>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which can perform a number of
-checks to ensure it built correctly.  Should you choose to run it, the 
-following command will do so:</para>
-
-<screen><userinput>make check</userinput></screen>
+<para>(If you insist on testing the results, then issue:
+<userinput>make check</userinput>.)</para>
 
 <para>Then install it and its documentation:</para>
 
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+<sect2><title> </title><para> </para>
+<para>The details on this package are found in <xref linkend="contents-sed"/>.</para>
+<para> </para></sect2>
 
 </sect1>

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % libtool-entities SYSTEM "../ent/libtool.ent">
   %libtool-entities;
 ]>
-<sect1 id="ch06-libtool">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-libtool" xreflabel="Libtool">
 <title>Installing Libtool-&libtool-version;</title>
 <?dbhtml filename="libtool.html"?>
 
-<screen>Estimated build time:           &libtool-version; SBU
-Estimated required disk space:  20 MB</screen>
+<para>The Libtool package contains the GNU generic library support script.
+It wraps the complexity of using shared libraries in a consistent, portable
+interface.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/libtool-contents.xml"/>
+<screen>Approximate build time:  1.5 SBU
+Required disk space:     20 MB</screen>
 
+<literallayout>Official download location for Libtool (&libtool-version;): 
+<ulink url="ftp://ftp.gnu.org/gnu/libtool/"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/libtool-deps.xml"/>
+<para>For its installation Libtool depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Sed.</para>
 
 
 
@@ -29,16 +33,38 @@ Estimated required disk space:  20 MB</screen>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which can perform a number of
-checks to ensure it built correctly.  Should you choose to run it, the 
-following command will do so:</para>
-
-<screen><userinput>make check</userinput></screen>
+<para>To have the results tested, issue:
+<userinput>make check</userinput>.</para>
 
 <para>And install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-libtool"><title>Contents of Libtool</title>
+
+<para><emphasis>Installed programs</emphasis>: libtool and libtoolize</para>
+
+<para><emphasis>Installed libraries</emphasis>: libltdl.[a,so].</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>libtool</command> provides generalized library-building
+support services.</para>
+
+<para><command>libtoolize</command> provides a standard way to add
+libtool support to a package.</para>
+
+<para><command>libltdl</command> hides the various difficulties of
+dlopening libraries.</para>
+
+</sect2>
+
+
 
 </sect1>

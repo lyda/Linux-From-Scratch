@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % ncurses-entities SYSTEM "../ent/ncurses.ent">
   %ncurses-entities;
 ]>
-<sect1 id="ch05-ncurses">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-ncurses">
 <title>Installing Ncurses-&ncurses-version;</title>
 <?dbhtml filename="ncurses.html"?>
 
-<screen>Estimated build time:           0.7 SBU
-Estimated required disk space:  26 MB</screen>
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/ncurses-contents.xml"/>
-
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/ncurses-deps.xml"/>
+<xi:include href="../chapter06/ncurses.xml" xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[2]))"/>
 
 
 
 <sect2>
 <title>Installation of Ncurses</title>
 
-<para>Fix a minor problem related to the <filename>etip.h</filename> header
-file:</para>
-
-<screen><userinput>patch -Np1 -i ../ncurses-&ncurses-version;-etip-2.patch</userinput></screen>
-
-<para>Now prepare Ncurses for compilation:</para>
+<para>Prepare Ncurses for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools --with-shared \
     --without-debug --without-ada --enable-overwrite</userinput></screen>
@@ -53,5 +42,9 @@ ensure that other packages can find the Ncurses headers successfully.</para>
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+<sect2><title> </title><para> </para>
+<para>The details on this package are found in <xref linkend="contents-ncurses"/>.</para>
+<para> </para></sect2>
 
 </sect1>

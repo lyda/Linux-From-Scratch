@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % bash-entities SYSTEM "../ent/bash.ent">
   %bash-entities;
 ]>
-<sect1 id="ch06-bash">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-bash" xreflabel="Bash">
 <title>Installing Bash-&bash-version;</title>
 <?dbhtml filename="bash.html"?>
 
-<screen>Estimated build time:           1.2 SBU
-Estimated required disk space:  27 MB</screen>
+<para>The Bash package contains the Bourne-Again SHell.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/bash-contents.xml"/>
+<screen>Approximate build time:  1.2 SBU
+Required disk space:     27 MB</screen>
 
+<literallayout>Official download location for Bash (&bash-version;): 
+<ulink url="ftp://ftp.gnu.org/gnu/bash/"/>
+And for the patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/bash-&bash-version;-2.patch"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/bash-deps.xml"/>
+<para>For its installation Bash depends on: Binutils, Coreutils, Diffutils, Gawk,
+GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
 
@@ -27,7 +31,7 @@ patch:</para>
 
 <screen><userinput>patch -Np1 -i ../bash-&bash-version;-2.patch</userinput></screen>
 
-<para>Prepare Bash for compilation:</para>
+<para>Now prepare Bash for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --bindir=/bin</userinput></screen>
 
@@ -35,20 +39,43 @@ patch:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which can perform a number of
-checks to ensure it built correctly.  Should you choose to run it, the 
-following command will do so:</para>
-
-<screen><userinput>make tests</userinput></screen>
+<para>To have the results tested, issue:
+<userinput>make tests</userinput>.</para>
 
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And reload the newly compiled <userinput>bash</userinput> program:</para>
+<para>And reload the newly compiled <command>bash</command> program:</para>
 
 <screen><userinput>exec /bin/bash --login +h</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-bash"><title>Contents of Bash</title>
+
+<para><emphasis>Installed programs</emphasis>: bash, sh (link to bash) and
+bashbug</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>bash</command> is a widely-used command interpreter. It
+performs all kinds of expansions and substitutions on a given command line
+before executing it, thus making this interpreter a powerful tool.</para>
+
+<para><command>bashbug</command> is a shell script to help the user
+compose and mail bug reports concerning bash in a standard format.</para>
+
+<para><command>sh</command> is a symlink to the bash program. When invoked
+as sh, bash tries to mimic the startup behavior of historical versions of sh as
+closely as possible, while conforming to the POSIX standard as well.</para>
+
+</sect2>
+
+
 
 </sect1>

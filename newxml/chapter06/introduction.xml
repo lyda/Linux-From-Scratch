@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect1 id="ch06-introduction">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-introduction">
 <title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
 
@@ -16,6 +16,12 @@ installation of those packages that require an alternate method.
 Although we agree with that, we nevertheless choose to give the 
 full instructions for each and every package, simply to minimize
 the possibilities for mistakes.</para>
+
+<para>The key to learning what makes a Linux system work is to know
+what each package is used for and why the user (or the system) needs it.
+For this purpose for every installed package a summary of its content is
+given followed by concise descriptions of each program and library it
+installed.</para>
 
 <para>If you plan to use compiler optimizations in this chapter, take a look at
 the optimization hint at <ulink url="http://www.linuxfromscratch.org/hints/downloads/files/optimization.txt"/>. Compiler
@@ -39,5 +45,20 @@ dual-CPU machines), but it could result in a program containing a
 hard-wired path to <filename class="directory">/tools</filename>,
 which will cause the program to stop working when that directory
 is removed.</para>
+
+<para>Before the installation instructions each installation page gives some
+information about the package: a concise description of what it contains, how
+long it will approximately take to build it, how much disk space it needs
+during this building process, the official download location of the package
+(in case you just want to update a few of them), and which other packages it
+needs in order to be built successfully. After the installation instructions
+follows a list of programs and libraries that the package installs, together
+with a series of short descriptions of these.</para>
+
+<para>If you wish to keep track of which package installs what files, you may
+want to use a package manager. For a general overview of package managers have
+a look at <ulink url="http://www.linuxfromscratch.org/blfs/view/cvs/introduction/pkgmgt.html"/>. And for
+a package management method specifically geared towards LFS see
+<ulink url="http://www.linuxfromscratch.org/hints/downloads/files/more_control_and_pkg_man.txt"/>.</para>
 
 </sect1>

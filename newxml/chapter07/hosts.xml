@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect1 id="ch07-hosts">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-scripts-hosts">
 <title>Creating the /etc/hosts file</title>
 <?dbhtml filename="hosts.html"?>
 
@@ -8,7 +8,7 @@
 IP-address, FQDN and possible aliases for use in the /etc/hosts file. The
 syntax is:</para>
 
-<screen>&lt;IP address&gt; myhost.mydomain.org aliases</screen>
+<screen>&lt;IP address&gt; myhost.example.org aliases</screen>
 
 <para>You should make sure that the IP-address is in the private network
 IP-address range. Valid ranges are:</para>
@@ -31,7 +31,7 @@ correctly.</para>
 <screen><userinput>cat &gt; /etc/hosts &lt;&lt; "EOF"</userinput>
 # Begin /etc/hosts (no network card version)
 
-127.0.0.1 &lt;value of HOSTNAME&gt;.mydomain.com &lt;value of HOSTNAME&gt; localhost
+127.0.0.1 &lt;value of HOSTNAME&gt;.example.org &lt;value of HOSTNAME&gt; localhost
 
 # End /etc/hosts (no network card version)
 <userinput>EOF</userinput></screen>
@@ -42,13 +42,13 @@ correctly.</para>
 <screen><userinput>cat &gt; /etc/hosts &lt;&lt; "EOF"</userinput>
 # Begin /etc/hosts (network card version)
 
-127.0.0.1 localhost.localdomain localhost
-192.168.1.1 &lt;value of HOSTNAME&gt;.mydomain.org &lt;value of HOSTNAME&gt;
+127.0.0.1 localhost
+192.168.1.1 &lt;value of HOSTNAME&gt;.example.org &lt;value of HOSTNAME&gt;
 
 # End /etc/hosts (network card version)
 <userinput>EOF</userinput></screen>
 
-<para>Of course, the 192.168.1.1 and &lt;value of HOSTNAME&gt;.mydomain.org
+<para>Of course, the 192.168.1.1 and &lt;value of HOSTNAME&gt;.example.org
 have to be changed to your liking (or requirements if assigned an IP-address
 by a network/system administrator and this machine is planned to be connected
 to an existing network).</para>

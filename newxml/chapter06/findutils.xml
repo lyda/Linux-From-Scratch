@@ -1,50 +1,87 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % findutils-entities SYSTEM "../ent/findutils.ent">
   %findutils-entities;
 ]>
-<sect1 id="ch06-findutils">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-findutils" xreflabel="Findutils">
 <title>Installing Findutils-&findutils-version;</title>
 <?dbhtml filename="findutils.html"?>
 
-<screen>Estimated build time:           0.2 SBU
-Estimated required disk space:  7.5 MB</screen>
+<para>The Findutils package contains programs to find files. The finding is
+done either by doing a live recursive search through a directory tree, or by
+consulting a previously set up database.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/findutils-contents.xml"/>
+<screen>Approximate build time:  0.2 SBU
+Required disk space:     7.5 MB</screen>
 
+<literallayout>Official download location for Findutils (&findutils-version;):
+<ulink url="ftp://alpha.gnu.org/gnu/findutils/"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/findutils-deps.xml"/>
+<para>For its installation Findutils depends on: Bash, Binutils, Coreutils,
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed.</para>
 
 
 
 <sect2>
-<title>Installing Findutils</title>
+<title>Installation of Findutils</title>
 
 <para>Prepare Findutils for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --libexecdir=/usr/lib/locate</userinput></screen>
+<screen><userinput>./configure --prefix=/usr --libexecdir=/usr/lib/locate \
+	--localstatedir=/var/lib/misc</userinput></screen>
 
-<para>By default, the location of the updatedb database is in
-<filename>/usr/var</filename>. To make the location of
-<filename>/var/lib/misc/locatedb</filename> file FHS compliant, pass the
-<emphasis>--localstatedir=/var/lib/misc</emphasis> option to
-<userinput>configure</userinput>.</para>
+<para>The localstatedir directive above changes the location of the locate
+database to be in /var/lib/misc, which is FHS-compliant.</para>
 
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which can perform a number of
-checks to ensure it built correctly.  Should you choose to run it, the 
-following command will do so:</para>
-
-<screen><userinput>make check</userinput></screen>
+<para>To have the results tested, issue:
+<userinput>make check</userinput>.</para>
 
 <para>And install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-findutils"><title>Contents of Findutils</title>
+
+<para><emphasis>Installed programs</emphasis>: bigram, code, find, frcode,
+locate, updatedb and xargs</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>bigram</command> was formerly used to produce locate
+databases.</para>
+
+<para><command>code</command> was formerly used to produce locate
+databases. It is the ancestor of frcode.</para>
+
+<para><command>find</command> searches given directory trees for files
+matching the specified criteria.</para>
+
+<para><command>frcode</command> is called by updatedb to compress the
+list of file names. It uses front-compression, reducing the database size by a
+factor of 4 to 5.</para>
+
+<para><command>locate</command> searches through a database of file names,
+and reports the names that contain a given string or match a given pattern.</para>
+
+<para><command>updatedb</command> updates the locate database. It scans
+the entire file system (including other file systems that are currently mounted,
+unless told not to) and puts every file name it finds in the database.</para>
+
+<para><command>xargs</command> can be used to apply a given command to
+a list of files.</para>
+
+</sect2>
+
+
 
 </sect1>

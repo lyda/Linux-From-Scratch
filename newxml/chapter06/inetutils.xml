@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % inetutils-entities SYSTEM "../ent/inetutils.ent">
   %inetutils-entities;
 ]>
-<sect1 id="ch06-inetutils">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-inetutils" xreflabel="Inetutils">
 <title>Installing Inetutils-&inetutils-version;</title>
 <?dbhtml filename="inetutils.html"?>
 
-<screen>Estimated build time:           0.2 SBU
-Estimated required disk space:  11 MB</screen>
+<para>The Inetutils package contains programs for basic networking.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/inetutils-contents.xml"/>
+<screen>Approximate build time:  0.2 SBU
+Required disk space:     11 MB</screen>
 
+<literallayout>Official download location for Inetutils (&inetutils-version;):
+<ulink url="ftp://ftp.gnu.org/gnu/inetutils/"/>
+And for the patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></literallayout>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/inetutils-deps.xml"/>
+<para>For its installation Inetutils depends on: Bash, Binutils, Coreutils,
+Diffutils, GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
 
@@ -28,25 +33,25 @@ pages anyway. The following patch will correct this situation:</para>
 
 <para>Now prepare Inetutils for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --disable-syslogd \
-    --libexecdir=/usr/sbin --disable-logger \
+<screen><userinput>./configure --prefix=/usr --libexecdir=/usr/sbin \
     --sysconfdir=/etc --localstatedir=/var \
+    --disable-logger --disable-syslogd \
     --disable-whois --disable-servers</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
 <itemizedlist>
-<listitem><para><userinput>--disable-syslogd</userinput>: This option
-prevents inetutils from installing the System Log Daemon, which is
-installed with the Sysklogd package.</para></listitem>
-
 <listitem><para><userinput>--disable-logger</userinput>: This option
-prevents inetutils from installing the logger program, which is used by
+prevents Inetutils from installing the logger program, which is used by
 scripts to pass messages to the System Log Daemon. We do not install it
 because Util-linux installs a better version later.</para></listitem>
 
+<listitem><para><userinput>--disable-syslogd</userinput>: This option
+prevents Inetutils from installing the System Log Daemon, which is
+installed with the Sysklogd package.</para></listitem>
+
 <listitem><para><userinput>--disable-whois</userinput>: This option disables
-the building of the inetutils whois client, which is woefully out of date.
+the building of the Inetutils whois client, which is woefully out of date.
 Instructions for a better whois client are in the BLFS book.</para></listitem>
 
 <listitem><para><userinput>--disable-servers</userinput>: This disables the
@@ -66,10 +71,42 @@ replacements are available for many of these servers.</para></listitem>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And move the <userinput>ping</userinput> program to its proper place:</para>
+<para>And move the <command>ping</command> program to its FHS-compliant
+place:</para>
 
 <screen><userinput>mv /usr/bin/ping /bin</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-inetutils"><title>Contents of Inetutils</title>
+
+<para><emphasis>Installed programs</emphasis>: ftp, ping, rcp, rlogin, rsh,
+talk, telnet and tftp</para>
+
+</sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>ftp</command> is the ARPANET file transfer program.</para>
+
+<para><command>ping</command> sends echo-request packets and reports how
+long the replies take.</para>
+
+<para><command>rcp</command> does remote file copy.</para>
+
+<para><command>rlogin</command> does remote login.</para>
+
+<para><command>rsh</command> runs a remote shell.</para>
+
+<para><command>talk</command> is used to chat up another user.</para>
+
+<para><command>telnet</command> is an interface to the TELNET protocol.</para>
+
+<para><command>tftp</command> is a trivial file transfer program.</para>
+
+</sect2>
+
+
 
 </sect1>

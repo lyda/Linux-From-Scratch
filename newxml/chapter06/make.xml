@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % make-entities SYSTEM "../ent/make.ent">
   %make-entities;
 ]>
-<sect1 id="ch06-make">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-make" xreflabel="Make">
 <title>Installing Make-&make-version;</title>
 <?dbhtml filename="make.html"?>
 
-<screen>Estimated build time:           0.2 SBU
-Estimated required disk space:  8.8 MB</screen>
+<para>The Make package contains a program for compiling large packages.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/make-contents.xml"/>
+<screen>Approximate build time:  0.2 SBU
+Required disk space:     8.8 MB</screen>
 
+<literallayout>Official download location for Make (&make-version;): 
+<ulink url="ftp://ftp.gnu.org/gnu/make/"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/make-deps.xml"/>
+<para>For its installation Make depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Gettext, Glibc, Grep, Sed.</para>
 
 
 
@@ -29,16 +31,30 @@ Estimated required disk space:  8.8 MB</screen>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which can perform a number of
-checks to ensure it built correctly.  Should you choose to run it, the 
-following command will do so:</para>
-
-<screen><userinput>make check</userinput></screen>
+<para>To have the results tested, issue:
+<userinput>make check</userinput>.</para>
 
 <para>And install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-make"><title>Contents of Make</title>
+
+<para><emphasis>Installed program</emphasis>: make</para>
+
+</sect2>
+
+
+<sect2><title>Short description</title>
+
+<para><command>make</command> automatically determines which pieces of a
+large package need to be recompiled, and then issues the relevant commands.</para>
+
+</sect2>
+
+
 
 </sect1>

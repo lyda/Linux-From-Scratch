@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % binutils-entities SYSTEM "../ent/binutils.ent">
   %binutils-entities;
 ]>
-<sect1 id="ch05-binutils-pass2">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-binutils-pass2">
 <title>Installing Binutils-&binutils-version; - Pass 2</title>
 <?dbhtml filename="binutils-pass2.html"?>
 
-<screen>Estimated build time:           1.5 SBU
-Estimated required disk space:  108 MB</screen>
+<xi:include href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[2]))"/>
 
 
 
@@ -29,9 +28,10 @@ cd ../binutils-build</userinput></screen>
 
 <itemizedlist>
 <listitem><para><userinput>--with-lib-path=/tools/lib</userinput>: This tells
-the configure script to specify the default library search path. We don't want
-the library search path to contain library directories from the host
-system.</para></listitem>
+the configure script to specify the library search path during the compilation
+of Binutils, resulting in <emphasis>/tools/lib</emphasis> to be passed to the
+linker. This prevents the linker from searching through library directories on
+the host.</para></listitem>
 </itemizedlist>
 
 <para>Before starting to build Binutils, remember to unset any environment
@@ -41,37 +41,40 @@ variables that override the default optimization flags.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<note><para>It's worth pointing out that running the Binutils test suite here
-is considered not as important as running it in
-<xref linkend="chapter06"/>.</para></note>
-
-<para>Test the results (there should be no unexpected failures here, expected
-failures are fine):</para>
+<para>Compilation is now complete. As discussed earlier, we don't recommend
+running the test suites for the temporary tools here in this chapter. If
+nevertheless you want to run the Binutils test suite, the following command
+will do so:</para>
 
 <screen><userinput>make check</userinput></screen>
 
-<para>Unfortunately, there is no easy way to view the test results summary like
-there was for the previous GCC package. However, if a failure occurs here, it
-should be easy to spot. The output shown will contain something like:</para>
+<para>There should be no unexpected failures here, expected failures are fine.
+Unfortunately, there is no easy way to view the test results summary like there
+was for the GCC package. However, if a failure occurs here, it should be easy
+to spot. The output shown will contain something like:</para>
 
 <blockquote><screen>make[1]: *** [check-binutils] Error 2</screen></blockquote>
 
-<para>And install the package:</para>                                              
+<para>And install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Now prepare Binutils for the re-adjusting of the toolchain in the next
+<para>Now prepare the linker for the "Re-adjusting" phase in the next
 chapter:</para>
 
 <screen><userinput>make -C ld clean
 make -C ld LIB_PATH=/usr/lib:/lib</userinput></screen>
 
 
-<warning><para>Do not yet remove the Binutils source and build directories.
-We'll need these directories again in the next chapter in the state they are in
-now.</para></warning>
+<warning><para><emphasis>Do not yet remove</emphasis> the Binutils source and
+build directories. You will need these directories again in the next chapter
+in the state they are in now.</para></warning>
 
 
 </sect2>
+
+<sect2><title> </title><para> </para>
+<para>The details on this package are found in <xref linkend="contents-binutils"/>.</para>
+<para> </para></sect2>
 
 </sect1>

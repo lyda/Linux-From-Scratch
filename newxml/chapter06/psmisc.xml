@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % psmisc-entities SYSTEM "../ent/psmisc.ent">
   %psmisc-entities;
 ]>
-<sect1 id="ch06-psmisc">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-psmisc" xreflabel="Psmisc">
 <title>Installing Psmisc-&psmisc-version;</title>
 <?dbhtml filename="psmisc.html"?>
 
-<screen>Estimated build time:           0.1 SBU
-Estimated required disk space:  2.2 MB</screen>
+<para>The Psmisc package contains programs for displaying information on
+processes.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/psmisc-contents.xml"/>
+<screen>Approximate build time:  0.1 SBU
+Required disk space:     2.2 MB</screen>
 
+<literallayout>Official download location for Psmisc (&psmisc-version;):
+<ulink url="http://download.sourceforge.net/psmisc/"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/psmisc-deps.xml"/>
+<para>For its installation Psmisc depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed.</para>
 
 
 
@@ -32,7 +35,7 @@ Estimated required disk space:  2.2 MB</screen>
 binaries to be installed in <filename>/bin</filename> and not in
 <filename>/usr/bin</filename>. As the Psmisc programs are often used in
 bootscripts, they should be available also when the <filename>/usr</filename>
-filesystem isn't mounted.</para></listitem>
+file system isn't mounted.</para></listitem>
 </itemizedlist>
 
 <para>Compile the package:</para>
@@ -53,14 +56,40 @@ therefore make it a symbolic link to <filename>pstree</filename>:</para>
 <screen><userinput>mv /bin/pstree* /usr/bin
 ln -sf pstree /usr/bin/pstree.x11</userinput></screen>
 
-<para>By default Psmisc's <userinput>pidof</userinput> program isn't installed.
+<para>By default Psmisc's <command>pidof</command> program isn't installed.
 Generally, this isn't a problem because we later install the Sysvinit package,
-which provides a better <userinput>pidof</userinput> program. But if you're not
+which provides a better <command>pidof</command> program. But if you're not
 going to use Sysvinit, you should complete the installation of Psmisc by
 creating the following symlink:</para>
 
 <screen><userinput>ln -s killall /bin/pidof</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-psmisc"><title>Contents of Psmisc</title>
+
+<para><emphasis>Installed programs</emphasis>: fuser, killall, pstree and
+pstree.x11 (link to pstree)</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>fuser</command> reports the PIDs of processes that use
+the given files or file systems.</para>
+
+<para><command>killall</command> kills processes by name. It sends a signal
+to all processes running any of the given commands.</para>
+
+<para><command>pstree</command> displays running processes as a tree.</para>
+
+<para><command>pstree.x11</command> same as pstree except that it waits for
+confirmation before exiting.</para>
+
+</sect2>
+
+
 
 </sect1>

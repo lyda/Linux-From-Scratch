@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % linux-entities SYSTEM "../ent/linux.ent">
   %linux-entities;
 ]>
-<sect1 id="ch05-kernel-headers">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-kernel-headers">
 <title>Installing Linux-&linux-version; headers</title>
 <?dbhtml filename="kernel-headers.html"?>
 
-<screen>Estimated build time:           0.1 SBU
-Estimated required disk space:  186 MB</screen>
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/kernel-contents.xml"/>
-
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/kernel-deps.xml"/>
-
+<screen>Approximate build time:  0.1 SBU
+Required disk space:     186 MB</screen>
 
 
 <sect2>
@@ -22,15 +16,15 @@ Estimated required disk space:  186 MB</screen>
 
 <para>As some packages need to refer to the kernel header files, we're going
 to unpack the kernel archive now, set it up, and copy the required files to a
-place where <userinput>gcc</userinput> can later find them.</para>
+place where <command>gcc</command> can later find them.</para>
 
 <para>Prepare for the header installation with:</para>
 
 <screen><userinput>make mrproper</userinput></screen>
 
 <para>This ensures that the kernel tree is absolutely clean. The kernel team
-recommends that this command be issued prior to <emphasis>each</emphasis> kernel
-compilation. You shouldn't rely on the source tree being clean after
+recommends that this command be issued prior to <emphasis>each</emphasis>
+kernel compilation. You shouldn't rely on the source tree being clean after
 untarring.</para>
 
 <para>Create the <filename>include/linux/version.h</filename> file:</para>
@@ -48,16 +42,9 @@ symlink:</para>
 cp include/asm/* /tools/include/asm
 cp -R include/asm-generic /tools/include</userinput></screen>
 
-<para>Install the cross-platform kernel header files:</para>
+<para>And finally install the cross-platform kernel header files:</para>
 
 <screen><userinput>cp -R include/linux /tools/include</userinput></screen>
-
-<para>There are a few kernel header files which make use of the
-<filename>autoconf.h</filename> header file. Since we do not yet configure the
-kernel, we need to create this file ourselves in order to avoid compilation
-failures. Create an empty <filename>autoconf.h</filename> file:</para>
-
-<screen><userinput>touch /tools/include/linux/autoconf.h</userinput></screen>
 
 </sect2>
 

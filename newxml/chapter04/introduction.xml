@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect1 id="ch04-introduction">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="materials-introduction">
 <title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
 
@@ -21,10 +21,9 @@ project websites, mailing lists, FAQs, changelogs and more.</para>
 <para>We can't guarantee that these download locations are always available.
 In case a download location has changed since this book was published, please
 try to google for the package. Should you remain unsuccessful with this, you
-can consult the book's errata page at
-<ulink url="http://linuxfromscratch.org/lfs/print/"/> or, better yet, try one
-of the alternative means of downloading listed on
-<ulink url="http://linuxfromscratch.org/lfs/packages.html"/>.</para>
+can consult the book's errata page at <ulink url="http://www.linuxfromscratch.org/lfs/print/"/>
+or, better yet, try one of the alternative means of downloading listed on
+<ulink url="http://www.linuxfromscratch.org/lfs/packages.html"/>.</para>
 
 <para>You'll need to store all the downloaded packages and patches somewhere
 that is conveniently available throughout the entire build. You'll also need a
@@ -47,7 +46,7 @@ you won't do the downloading as <emphasis>root</emphasis>, we guess:</para>
 <!--
 <para>For your convenience the top of the list contains a link to a file
 you can use with the <ulink url="http://wget.sunsite.dk">wget</ulink>
-program. Using this file and the <userinput>wget</userinput> program will
+program. Using this file and the <command>wget</command> program will
 make it easy to download all the files at once, rather than downloading each
 and every individual file manually.</para>
 -->

@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % perl-entities SYSTEM "../ent/perl.ent">
   %perl-entities;
 ]>
-<sect1 id="ch05-perl">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-perl">
 <title>Installing Perl-&perl-version;</title>
 <?dbhtml filename="perl.html"?>
 
-<screen>Estimated build time:           0.8 SBU
-Estimated required disk space:  74 MB</screen>
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/perl-contents.xml"/>
-
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/perl-deps.xml"/>
+<xi:include href="../chapter06/perl.xml" xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[2]))"/>
 
 
 
@@ -24,7 +18,14 @@ Estimated required disk space:  74 MB</screen>
 
 <screen><userinput>patch -Np1 -i ../perl-&perl-version;-libc-1.patch</userinput></screen>
 
-<para>Now prepare Perl for compilation:</para>
+<para>Perl insists on using the <command>arch</command> program to find out
+the machine type. Create a little script to mimic this command:</para>
+
+<screen><userinput>echo "uname -m" &gt; /tools/bin/arch
+chmod 755 /tools/bin/arch</userinput></screen>
+
+<para>Now prepare Perl for compilation (make sure you get the 'IO Fcntl'
+right, they are all letters):</para>
 
 <screen><userinput>./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl'</userinput></screen>
 
@@ -47,5 +48,9 @@ mkdir -p /tools/lib/perl5/&perl-version;
 cp -R lib/* /tools/lib/perl5/&perl-version;</userinput></screen>
 
 </sect2>
+
+<sect2><title> </title><para> </para>
+<para>The details on this package are found in <xref linkend="contents-perl"/>.</para>
+<para> </para></sect2>
 
 </sect1>

@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % diffutils-entities SYSTEM "../ent/diffutils.ent">
   %diffutils-entities;
 ]>
-<sect1 id="ch05-diffutils">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-diffutils">
 <title>Installing Diffutils-&diffutils-version;</title>
 <?dbhtml filename="diffutils.html"?>
 
-<screen>Estimated build time:           0.1 SBU
-Estimated required disk space:  7.5 MB</screen>
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/diffutils-contents.xml"/>
-
-
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/diffutils-deps.xml"/>
+<xi:include href="../chapter06/diffutils.xml" xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[2]))"/>
 
 
 
@@ -34,5 +27,9 @@ Estimated required disk space:  7.5 MB</screen>
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+<sect2><title> </title><para> </para>
+<para>The details on this package are found in <xref linkend="contents-diffutils"/>.</para>
+<para> </para></sect2>
 
 </sect1>

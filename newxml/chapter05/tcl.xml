@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % tcl-entities SYSTEM "../ent/tcl.ent">
   %tcl-entities;
 ]>
-<sect1 id="ch05-tcl">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-tcl" xreflabel="Tcl">
 <title>Installing Tcl-&tcl-version;</title>
 <?dbhtml filename="tcl.html"?>
 
-<screen>Estimated build time:           0.9 SBU 
-Estimated required disk space:  23 MB</screen>
+<para>The Tcl package contains the Tool Command Language.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/tcl-contents.xml"/>
+<screen>Approximate build time:  0.9 SBU 
+Required disk space:     23 MB</screen>
 
+<literallayout>Official download location for Tcl (&tcl-version;):
+<ulink url="http://download.sourceforge.net/tcl/"/></literallayout>
 
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/tcl-deps.xml"/>
+<para>For its installation Tcl depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Sed.</para>
 
 
 
 <sect2>
 <title>Installation of Tcl</title>
 
-<para>This package and the next two are only installed to be able to run the 
-test suites for GCC and Binutils. Installing three packages just for testing 
-purposes may seem like overkill, but it is very reassuring, if not essential, 
-to know that our most important tools are working properly.</para>
+<para>This package and the next two are only installed to be able to run the
+test suites for GCC and Binutils. Installing three packages just for testing
+purposes may seem like overkill, but it is very reassuring, if not essential,
+to know that our most important tools are working properly. Even if you are
+not running the test suites here in this chapter as per our recommendation,
+these packages are still required for running the test suites in the next
+chapter.</para>
 
 <para>Prepare Tcl for compilation:</para>
 
@@ -35,42 +40,50 @@ to know that our most important tools are working properly.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which can perform a number of
-checks to ensure it built correctly. However, the Tcl test suite in this
-chapter is known to experience failures under certain host conditions that are
-not fully understood. Therefore, test suite failures here are not surprising,
-but are not considered critical. Should you choose to run the test suite, the
-following command will do so:</para>
-
-<screen><userinput>TZ=UTC make test</userinput></screen>
-
-<para>The meaning of the make parameter:</para>
-
-<itemizedlist>
-<listitem><para><userinput>TZ=UTC</userinput>: This sets the time zone to
-Coordinated Universal Time (UTC) also known as Greenwich Mean Time (GMT), but
-only for the duration of the test suite run. This ensures the clock tests are
-exercised correctly. More information on the TZ environment variable is
-available later on in <xref linkend="chapter07"/>.</para></listitem>
-</itemizedlist>
-
-<para>Sometimes, package test suites will give false failures.  You can
-consult the LFS Wiki at <ulink url="http://wiki.linuxfromscratch.org/"/>
-to verify that these failures are normal.  This applies to all tests
-throughout the book.</para>
+<para>(If you insist on testing the results, then issue:
+<userinput>TZ=UTC make test</userinput>. However, the Tcl test suite is known
+to experience failures under certain host conditions that are not fully
+understood. Therefore, test suite failures here are not surprising, and are not
+considered critical. The <emphasis>TZ=UTC</emphasis> parameter sets the time
+zone to Coordinated Universal Time (UTC) also known as Greenwich Mean Time
+(GMT), but only for the duration of the test suite run. This ensures the clock
+tests are exercised correctly. More information on the TZ environment variable
+will be given later on in <xref linkend="chapter-bootscripts"/>.)</para>
 
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<important><para><emphasis>Do not remove</emphasis> the
-<filename>tcl&tcl-version;</filename> source directory yet, as the next package
-will need its internal headers.</para></important>
 
-<para>Make a necessary symbolic link:</para>
+<warning><para><emphasis>Do not remove</emphasis> the
+<filename>tcl&tcl-version;</filename> source directory yet, as the next package
+will need its internal headers.</para></warning>
+
+
+<para>And make a necessary symbolic link:</para>
 
 <screen><userinput>ln -s tclsh8.4 /tools/bin/tclsh</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-tcl"><title>Contents of Tcl</title>
+
+<para><emphasis>Installed programs</emphasis>: tclsh (link to tclsh8.4),
+tclsh8.4</para>
+
+<para><emphasis>Installed library</emphasis>: libtcl8.4.so</para>
+
+</sect2>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>tclsh8.4</command> is the Tcl command shell.</para>
+
+<para><command>libtcl8.4.so</command> is the Tcl library.</para>
+
+</sect2>
+
 
 </sect1>

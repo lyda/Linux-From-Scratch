@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect1 id="ch06-pwdgroup">
-<title>Creating the passwd and group files</title>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-pwdgroup">
+<title>Creating the passwd, group and log files</title>
 <?dbhtml filename="pwdgroup.html"?>
 
 <para>In order for <emphasis>root</emphasis> to be able to login and for the 
@@ -36,26 +36,42 @@ dialout:x:10:
 audio:x:11:
 <userinput>EOF</userinput></screen>
 
-<para>The created groups aren't part of any standard -- they are the groups 
-that the MAKEDEV script in the next section uses. Besides the group "root", the 
-LSB (<ulink url="http://www.linuxbase.org"/>) recommends only a group "bin", 
-with a GID of 1, be present. All other group names and GIDs can be chosen 
-freely by the user, as well-written packages don't depend on GID numbers but 
-use the group's name.</para>
+<para>The created groups aren't part of any standard -- they are some of the
+groups that the <command>make_devices</command> script in the next section
+uses. The LSB (<ulink url="http://www.linuxbase.org/">Linux Standard
+Base</ulink>) recommends only that, beside the group "root" with a GID of 0, a
+group "bin" with a GID of 1 be present. All other group names and GIDs can
+be chosen freely by the system administrator, since well-written packages don't
+depend on GID numbers but use the group's name.</para>
 
-<para>Lastly, we re-login to the chroot environment.  User name and group name
-resolution will start working immediately after the 
-<filename>/etc/passwd</filename> and <filename>/etc/group</filename> files are 
-created, because we installed a full Glibc in Chapter 5.  This will get rid of 
-the <quote>I have no name!</quote> prompt.</para>
+<para>To get rid of the "I have no name!" prompt, we will start a new shell.
+Since we installed a full Glibc in <xref linkend="chapter-temporary-tools"/>,
+and have just created the <filename>/etc/passwd</filename> and
+<filename>/etc/group</filename> files, user name and group name resolution
+will now work.</para>
 
 <screen><userinput>exec /tools/bin/bash --login +h</userinput></screen>
 
-<para>Note the use of the <userinput>+h</userinput> directive. This tells
-<userinput>bash</userinput> not to use its internal path hashing. Without this
-directive, <userinput>bash</userinput> would remember the paths to binaries it
+<para>Note the use of the <emphasis>+h</emphasis> directive. This tells
+<command>bash</command> not to use its internal path hashing. Without this
+directive, <command>bash</command> would remember the paths to binaries it
 has executed. Since we want to use our newly compiled binaries as soon as
 they are installed, we turn off this function for the duration of this
 chapter.</para>
+
+<para>The <command>login</command>, <command>agetty</command> and
+<command>init</command> programs (and some others) use a number of log
+files to record information such as who was logged into the system and when.
+These programs, however, won't write to the log files if they don't already
+exist. Initialize the log files and give them their proper permissions:</para>
+
+<screen><userinput>touch /var/run/utmp /var/log/{btmp,lastlog,wtmp}
+chmod 644 /var/run/utmp /var/log/{btmp,lastlog,wtmp}</userinput></screen>
+
+<para>The <filename>/var/run/utmp</filename> file records the users that are
+currently logged in. The <filename>/var/log/wtmp</filename> file records all
+logins and logouts. The <filename>/var/log/lastlog</filename> file records for
+each user when he or she last logged in. The <filename>/var/log/btmp</filename>
+file records the bad login attempts.</para>
 
 </sect1>

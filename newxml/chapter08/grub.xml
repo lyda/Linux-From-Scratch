@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect1 id="ch08-grub">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-bootable-grub">
 <title>Making the LFS system bootable</title>
 <?dbhtml filename="grub.html"?>
 
 <para>Your shiny new LFS system is almost complete. One of the last things to
-do is ensure you can boot it. The instructions below apply only to computers
-of IA-32 architecture, i.e. mainstream PC's. Information on "boot loading" for
+do is ensure you can boot it. The instructions below apply only to computers of
+IA-32 architecture, meaning mainstream PCs. Information on "boot loading" for
 other architectures should be available in the usual resource specific
 locations for those architectures.</para>
 
@@ -41,8 +41,9 @@ doesn't consider CD-ROM drives to be hard drives, so if you have a CD on
 <filename>hdc</filename>, that second hard drive would still be (hd1).</para>
 
 <para>Using the above information, determine the appropriate designator for
-your root partition. For the following example, we'll assume your root
-partition is <filename>hda4</filename>.</para>
+your root partition (or boot partition, if you use a separate one). For the
+following example, we'll assume your root (or separate boot) partition is
+<filename>hda4</filename>.</para>
 
 <para>First, tell Grub where to search for its <filename>stage{1,2}</filename>
 files -- you can use Tab everywhere to make Grub show the alternatives:</para>
@@ -84,18 +85,18 @@ timeout 30
 color green/black light-green/black
 
 # The first entry is for LFS.
-title LFS 5.1
+title LFS 5.2
 root (hd0,3)
 kernel --no-mem-option /boot/lfskernel root=/dev/hda4
 <userinput>EOF</userinput></screen>
 
 <note><para>By default, Grub will automatically pass a "mem=xxx" command line
-argument to the kernel. However, Grub sometimes gets the amount of memory wrong
-which can lead to problems in some circumstances. It's best to disable this
-functionality and let the kernel determine the amount of memory itself, hence
-the use of the <emphasis>--no-mem-option</emphasis> above.</para></note>
+argument to the kernel. However, Grub occasionally gets the amount of memory
+wrong which can lead to problems in some circumstances. It's best to disable
+this functionality and let the kernel determine the amount of memory itself,
+hence the use of the <emphasis>--no-mem-option</emphasis> above.</para></note>
 
-<para>You may want to add an entry for your host distribution.  It might look
+<para>You may want to add an entry for your host distribution. It might look
 like this:</para>
 
 <screen><userinput>cat &gt;&gt; /boot/grub/menu.lst &lt;&lt; "EOF"</userinput>
@@ -114,8 +115,8 @@ rootnoverify (hd0,0)
 chainloader +1
 <userinput>EOF</userinput></screen>
 
-<para>If <userinput>info grub</userinput> doesn't tell you all you want to
+<para>If <command>info grub</command> doesn't tell you all you want to
 know, you can find more information regarding Grub on its website, located at:
-<ulink url="http://www.gnu.org/software/grub"/>.</para>
+<ulink url="http://www.gnu.org/software/grub/"/>.</para>
 
 </sect1>

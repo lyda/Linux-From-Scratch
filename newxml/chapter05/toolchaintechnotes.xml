@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect1 id="ch05-toolchaintechnotes">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-toolchaintechnotes">
 <title>Toolchain technical notes</title>
 <?dbhtml filename="toolchaintechnotes.html"?>
 
@@ -9,10 +9,10 @@ details behind the overall build method. It's not essential that you understand
 everything here immediately. Most of it will make sense once you have performed
 an actual build. Feel free to refer back here at any time.</para>
 
-<para>The overall goal of <xref linkend="chapter05"/> is to provide a sane,
+<para>The overall goal of <xref linkend="chapter-temporary-tools"/> is to provide a sane,
 temporary environment that we can chroot into, and from which we can produce a
 clean, trouble-free build of the target LFS system in
-<xref linkend="chapter06"/>. Along the way, we attempt to divorce ourselves
+<xref linkend="chapter-building-system"/>. Along the way, we attempt to divorce ourselves
 from the host system as much as possible, and in so doing build a
 self-contained and self-hosted toolchain. It should be noted that the
 build process has been designed in such a way so as to minimize the risks for
@@ -22,7 +22,7 @@ words, more advanced techniques could be used to build the system.</para>
 <important>
 <para>Before continuing, you really should be aware of the name of your working
 platform, often also referred to as the <emphasis>target triplet</emphasis>. For
-many folks the target triplet will be, for example:
+many folks the target triplet will probably be
 <emphasis>i686-pc-linux-gnu</emphasis>. A simple way to determine your target
 triplet is to run the <filename>config.guess</filename> script that comes with
 the source for many packages. Unpack the Binutils sources and run the script:
@@ -33,7 +33,7 @@ the source for many packages. Unpack the Binutils sources and run the script:
 <emphasis>dynamic loader</emphasis>, not to be confused with the standard linker
 <emphasis>ld</emphasis> that is part of Binutils. The dynamic linker is provided
 by Glibc and has the job of finding and loading the shared libraries needed by a
-program, preparing the program to run and then running it. For most folks, the
+program, preparing the program to run and then running it. For most folks the
 name of the dynamic linker will be <emphasis>ld-linux.so.2</emphasis>. On
 platforms that are less prevalent, the name might be
 <emphasis>ld.so.1</emphasis> and newer 64 bit platforms might even have
@@ -41,13 +41,13 @@ something completely different. You should be able to determine the name
 of your platform's dynamic linker by looking in the
 <filename class="directory">/lib</filename> directory on your host system. A
 surefire way is to inspect a random binary from your host system by running:
-<userinput>'readelf -l &lt;name of binary&gt; | grep interpreter'</userinput>
+<userinput>readelf -l &lt;name of binary&gt; | grep interpreter</userinput>
 and noting the output. The authoritative reference covering all platforms is in
 the <filename>shlib-versions</filename> file in the root of the Glibc source
 tree.</para>
 </important>
 
-<para>Some key technical points of how the <xref linkend="chapter05"/> build
+<para>Some key technical points of how the <xref linkend="chapter-temporary-tools"/> build
 method works:</para>
 
 <itemizedlist>
@@ -59,14 +59,14 @@ into the same prefix work in cooperation and thus utilize a little GNU
 path to ensure programs are linked only against libraries we
 choose.</para></listitem>
 
-<listitem><para>Careful manipulation of <userinput>gcc</userinput>'s
+<listitem><para>Careful manipulation of <command>gcc</command>'s
 <emphasis>specs</emphasis> file to tell the compiler which target dynamic
 linker will be used.</para></listitem>
 </itemizedlist>
 
 <para>Binutils is installed first because both GCC and Glibc perform various
 feature tests on the assembler and linker during their respective runs of
-<userinput>./configure</userinput> to determine which software features to enable
+<command>./configure</command> to determine which software features to enable
 or disable. This is more important than one might first realize. An incorrectly
 configured GCC or Glibc can result in a subtly broken toolchain where the impact
 of such breakage might not show up until near the end of the build of a whole
@@ -78,43 +78,43 @@ much time is wasted.</para>
 <filename class="directory">/tools/$TARGET_TRIPLET/bin</filename>. In reality,
 the tools in one location are hard linked to the other. An important facet of
 the linker is its library search order. Detailed information can be obtained
-from <userinput>ld</userinput> by passing it the <emphasis>--verbose</emphasis>
-flag. For example: <userinput>'ld --verbose | grep SEARCH'</userinput> will
+from <command>ld</command> by passing it the <emphasis>--verbose</emphasis>
+flag. For example: <command>ld --verbose | grep SEARCH</command> will
 show you the current search paths and their order. You can see what files are
-actually linked by <userinput>ld</userinput> by compiling a dummy program and
-passing the <emphasis>--verbose</emphasis> switch. For example:
-<userinput>'gcc dummy.c -Wl,--verbose 2&gt;&amp;1 | grep succeeded'</userinput>
-will show you all the files successfully opened during the link.</para>
+actually linked by <command>ld</command> by compiling a dummy program and
+passing the <emphasis>--verbose</emphasis> switch to the linker. For example:
+<command>gcc dummy.c -Wl,--verbose 2&gt;&amp;1 | grep succeeded</command>
+will show you all the files successfully opened during the linking.</para>
 
 <para>The next package installed is GCC and during its run of
-<userinput>./configure</userinput> you'll see, for example:</para>
+<command>./configure</command> you'll see, for example:</para>
 
 <blockquote><screen>checking what assembler to use... /tools/i686-pc-linux-gnu/bin/as
 checking what linker to use... /tools/i686-pc-linux-gnu/bin/ld</screen></blockquote>
 
 <para>This is important for the reasons mentioned above. It also demonstrates
-that GCC's configure script does not search the $PATH directories to find which
-tools to use. However, during the actual operation of <userinput>gcc</userinput>
+that GCC's configure script does not search the PATH directories to find which
+tools to use. However, during the actual operation of <command>gcc</command>
 itself, the same search paths are not necessarily used. You can find out which
-standard linker <userinput>gcc</userinput> will use by running:
-<userinput>'gcc -print-prog-name=ld'</userinput>.
-Detailed information can be obtained from <userinput>gcc</userinput> by passing
+standard linker <command>gcc</command> will use by running:
+<command>gcc -print-prog-name=ld</command>.
+Detailed information can be obtained from <command>gcc</command> by passing
 it the <emphasis>-v</emphasis> flag while compiling a dummy program. For
-example: <userinput>'gcc -v dummy.c'</userinput> will show you detailed
+example: <command>gcc -v dummy.c</command> will show you detailed
 information about the preprocessor, compilation and assembly stages, including
-<userinput>gcc</userinput>'s include search paths and their order.</para>
+<command>gcc</command>'s include search paths and their order.</para>
  
 <para>The next package installed is Glibc. The most important considerations for
 building Glibc are the compiler, binary tools and kernel headers. The compiler
-is generally no problem as Glibc will always use the <userinput>gcc</userinput>
-found in a $PATH directory. The binary tools and kernel headers can be a little
+is generally no problem as Glibc will always use the <command>gcc</command>
+found in a PATH directory. The binary tools and kernel headers can be a little
 more troublesome. Therefore we take no risks and use the available configure
 switches to enforce the correct selections. After the run of
-<userinput>./configure</userinput> you can check the contents of the
+<command>./configure</command> you can check the contents of the
 <filename>config.make</filename> file in the
 <filename class="directory">glibc-build</filename> directory for all the
 important details. You'll note some interesting items like the use of
-<userinput>CC="gcc -B/tools/bin/"</userinput> to control which binary tools are
+<emphasis>CC="gcc -B/tools/bin/"</emphasis> to control which binary tools are
 used, and also the use of the <emphasis>-nostdinc</emphasis> and
 <emphasis>-isystem</emphasis> flags to control the compiler's include search
 path. These items help to highlight an important aspect of the Glibc package:
@@ -123,18 +123,17 @@ not rely on toolchain defaults.</para>
 
 <para>After the Glibc installation, we make some adjustments to ensure that
 searching and linking take place only within our <filename>/tools</filename>
-prefix. We install an adjusted <userinput>ld</userinput>, which has a hard-wired
+prefix. We install an adjusted <command>ld</command>, which has a hard-wired
 search path limited to <filename class="directory">/tools/lib</filename>. Then
-we amend <userinput>gcc</userinput>'s specs file to point to our new dynamic
+we amend <command>gcc</command>'s specs file to point to our new dynamic
 linker in <filename class="directory">/tools/lib</filename>. This last step is
 <emphasis>vital</emphasis> to the whole process. As mentioned above, a
 hard-wired path to a dynamic linker is embedded into every ELF shared
 executable. You can inspect this by running:
-<userinput>'readelf -l &lt;name of binary&gt; | grep interpreter'</userinput>.
-By amending <userinput>gcc</userinput>'s specs file, we are ensuring that every
-program compiled from here through the end of <xref linkend="chapter05"/> will
-use our new dynamic linker in
-<filename class="directory">/tools/lib</filename>.</para>
+<command>readelf -l &lt;name of binary&gt; | grep interpreter</command>.
+By amending <command>gcc</command>'s specs file, we are ensuring that every
+program compiled from here through the end of this chapter will use our new
+dynamic linker in <filename class="directory">/tools/lib</filename>.</para>
 
 <para>The need to use the new dynamic linker is also the reason why we apply the
 Specs patch for the second pass of GCC. Failure to do so will result in the GCC
@@ -144,17 +143,17 @@ would defeat our goal of getting away from the host.</para>
 
 <para>During the second pass of Binutils, we are able to utilize the
 <emphasis>--with-lib-path</emphasis> configure switch to control
-<userinput>ld</userinput>'s library search path. From this point onwards, the
+<command>ld</command>'s library search path. From this point onwards, the
 core toolchain is self-contained and self-hosted. The remainder of the
-<xref linkend="chapter05"/> packages all build against the new Glibc in
+<xref linkend="chapter-temporary-tools"/> packages all build against the new Glibc in
 <filename class="directory">/tools</filename> and all is well.</para>
 
-<para>Upon entering the chroot environment in <xref linkend="chapter06"/>, the
+<para>Upon entering the chroot environment in <xref linkend="chapter-building-system"/>, the
 first major package we install is Glibc, due to its self-sufficient nature that
 we mentioned above. Once this Glibc is installed into
 <filename class="directory">/usr</filename>, we perform a quick changeover of
 the toolchain defaults, then proceed for real in building the rest of the
-target <xref linkend="chapter06"/> LFS system.</para>
+target LFS system.</para>
 
 <sect2>
 <title>Notes on static linking</title>

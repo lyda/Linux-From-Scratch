@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
   <!ENTITY % automake-entities SYSTEM "../ent/automake.ent">
   %automake-entities;
 ]>
-<sect1 id="ch06-automake">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-automake" xreflabel="Automake">
 <title>Installing Automake-&automake-version;</title>
 <?dbhtml filename="automake.html"?>
 
-<screen>Estimated build time:           5.3 SBU
-Estimated required disk space:  6.8 MB</screen>
+<para>The Automake package contains programs for generating Makefiles for use
+with Autoconf.</para>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/automake-contents.xml"/>
+<screen>Approximate build time:  0.2 SBU
+Required disk space:     6.8 MB</screen>
 
+<literallayout>Official download location for Automake (&automake-version;): 
+<ulink url="ftp://ftp.gnu.org/gnu/automake/"/></literallayout>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/automake-deps.xml"/>
+<para>For its installation Automake depends on: Autoconf, Bash, Coreutils,
+Diffutils, Grep, M4, Make, Perl, Sed.</para>
 
 
 
@@ -28,20 +32,76 @@ Estimated required disk space:  6.8 MB</screen>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package has a test suite available which performs a number of 
-checks to ensure it will function correctly. It's worth noting that Automake
-does not play a critical role in the overall operation of an LFS system. In 
-addition, the Automake test suite runs for quite a long period of time. 
-Accordingly, the running of the test suite here is not crucial. Should you 
-choose to run the Automake test suite, the following command will do 
-so:</para>
-
-<screen><userinput>make check</userinput></screen>
+<para>To have the results tested, issue:
+<userinput>make check</userinput>. This takes a long time, about 5 SBUs.</para>
 
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
+
+
+<sect2 id="contents-automake"><title>Contents of Automake</title>
+
+<para><emphasis>Installed programs</emphasis>: acinstall, aclocal,
+aclocal-1.8, automake, automake-1.8, compile, config.guess, config.sub,
+depcomp, elisp-comp, install-sh, mdate-sh, missing, mkinstalldirs, py-compile,
+symlink-tree, ylwrap</para>
+
+</sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>acinstall</command> is a script that installs
+aclocal-style M4 files.</para>
+
+<para><command>aclocal</command> generates <filename>aclocal.m4</filename>
+files based on the contents of <filename>configure.in</filename> files.</para>
+
+<para><command>automake</command> is a tool for automatically generating
+<filename>Makefile.in</filename>'s from files called
+<filename>Makefile.am</filename>. To create all the
+<filename>Makefile.in</filename> files for a package, run this program in the
+top level directory. By scanning the <filename>configure.in</filename>s it
+automatically finds each appropriate <filename>Makefile.am</filename> and
+generate the corresponding <filename>Makefile.in</filename>.</para>
+
+<para><command>compile</command> is a wrapper for compilers.</para>
+
+<para><command>config.guess</command> is a script that attempts to guess
+the canonical triplet for the given build, host, or target architecture.</para>
+
+<para><command>config.sub</command> is a configuration validation
+subroutine script.</para>
+
+<para><command>depcomp</command> is a script for compiling a program
+so that not only the desired output is generated but also dependency
+information.</para>
+
+<para><command>elisp-comp</command> byte-compiles Emacs Lisp code.</para>
+
+<para><command>install-sh</command> is a script that installs a program,
+a script, or a datafile.</para>
+
+<para><command>mdate-sh</command> is a script that prints the modification
+time of a file or directory.</para>
+
+<para><command>missing</command> is a script acting as a common stub for
+missing GNU programs during an installation.</para>
+
+<para><command>mkinstalldirs</command> is a script that creates a directory
+tree.</para>
+
+<para><command>py-compile</command> compiles a Python program.</para>
+
+<para><command>symlink-tree</command> is a script to create a symlink tree of
+a directory tree.</para>
+
+<para><command>ylwrap</command> is a wrapper for lex and yacc.</para>
+
+</sect2>
+
+
 
 </sect1>
