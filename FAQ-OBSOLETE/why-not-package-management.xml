@@ -1,7 +1,7 @@
 <qandaentry id="why-not-package-management">
 <question><para>Why isn't some package manager in the book?</para></question>
 <answer><para>Package management -
-beyond that profided by tarballs and makefiles -
+beyond that provided by tarballs and makefiles -
 is beyond the scope of the book.
 If nothing else does,
 the number of different "solutions" should hint at some of the reasons.
@@ -74,7 +74,7 @@ It is available from
 </para></listitem>
 
 <listitem><para>More information about these systems
-and a few others is at
+and information about other interesting systems is at
 <ulink url="http://hints.linuxfromscratch.org/hints.shtml#package"/>.
 </para></listitem>
 
