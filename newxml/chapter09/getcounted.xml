@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-finish-getcounted">
+<sect1 id="ch-finish-getcounted">
 <title>Get Counted</title>
 <?dbhtml filename="getcounted.html"?>
 

@@ -23,3 +23,6 @@ pdf:
 	xsltproc --xinclude --nonet --output lfs.fo stylesheets/lfs-pdf.xsl \
 	  index.xml
 	fop.sh lfs.fo lfs.pdf
+
+validate:
+	xmllint --noout --nonet --xinclude --postvalid index.xml

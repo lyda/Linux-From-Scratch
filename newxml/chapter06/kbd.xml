@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-kbd" xreflabel="Kbd">
+<sect1 id="ch-system-kbd" xreflabel="Kbd">
 <title>Kbd-&kbd-version;</title>
 <?dbhtml filename="kbd.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-MAKEDEV" xreflabel="Make_devices">
+<sect1 id="ch-system-MAKEDEV" xreflabel="Make_devices">
 <title>Creating devices with Make_devices-&makedev-version;</title>
 <?dbhtml filename="makedevices.html"?>
 

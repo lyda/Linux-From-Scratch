@@ -3,20 +3,20 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-finalizing" xreflabel="Chapter 9">
+<chapter id="chapter-finalizing" xreflabel="Chapter 9">
 <?dbhtml dir="chapter09"?>
 <title>The End</title>
 <?dbhtml filename="chapter09.html"?>
 
-<xi:include href="theend.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="theend.xml"/>
 
 
-<xi:include href="getcounted.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="getcounted.xml"/>
 
 
-<xi:include href="reboot.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="reboot.xml"/>
 
-<xi:include href="whatnow.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="whatnow.xml"/>
 
 
 </chapter>

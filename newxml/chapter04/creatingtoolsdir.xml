@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-creatingtoolsdir">
+<sect1 id="ch-tools-creatingtoolsdir">
 <title>Creating the $LFS/tools directory</title>
 <?dbhtml filename="creatingtoolsdir.html"?>
 

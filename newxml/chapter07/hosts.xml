@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-scripts-hosts">
+<sect1 id="ch-scripts-hosts">
 <title>Creating the /etc/hosts file</title>
 <?dbhtml filename="hosts.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-kernel-headers">
+<sect1 id="ch-system-kernel-headers">
 <title>Linux-&linux-version; headers</title>
 <?dbhtml filename="kernelheaders.html"?>
 

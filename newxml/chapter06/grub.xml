@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-grub" xreflabel="Grub">
+<sect1 id="ch-system-grub" xreflabel="Grub">
 <title>Grub-&grub-version;</title>
 <?dbhtml filename="grub.html"?>
 

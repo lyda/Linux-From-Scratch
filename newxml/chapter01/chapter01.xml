@@ -3,19 +3,19 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-intro" xreflabel="Chapter 1">
+<chapter id="chapter-intro" xreflabel="Chapter 1">
 <?dbhtml dir="chapter01"?>
 <title>Introduction</title>
 <?dbhtml filename="chapter01.html"?>
 
-<xi:include href="how.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="how.xml"/>
 
 
-<xi:include href="changelog.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="changelog.xml"/>
 
 
-<xi:include href="administrativa.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="administrativa.xml"/>
 
-<xi:include href="askforhelp.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="askforhelp.xml"/>
 
 </chapter>

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="prepare-aboutsbus">
+<sect1 id="prepare-aboutsbus">
 <title>About SBUs</title>
 <?dbhtml filename="aboutsbus.html"?>
 

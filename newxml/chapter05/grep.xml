@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-grep">
+<sect1 id="ch-tools-grep">
 <title>Grep-&grep-version;</title>
 <?dbhtml filename="grep.html"?>
 
@@ -11,12 +11,12 @@
 <primary sortas="a-Grep">Grep</primary>
 <secondary>tools</secondary></indexterm>
 
-<xi:include href="../chapter06/grep.xml" xpointer="xpointer(/sect1/para[1])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/grep.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 0.1 SBU
 &diskspace; 5.8 MB</screen>
 
-<xi:include href="../chapter06/grep.xml" xpointer="xpointer(/sect1/para[2])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/grep.xml" xpointer="xpointer(/sect1/para[2])"/>
 
 
 <sect2>

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-scripts-usage">
+<sect1 id="ch-scripts-usage">
 <title>How does the booting process with these scripts work?</title>
 <?dbhtml filename="usage.html"?>
 

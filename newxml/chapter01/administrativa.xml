@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-scatter-administrativa">
+<sect1 id="ch-scatter-administrativa">
 <title>Resources</title>
 <?dbhtml filename="resources.html"?>
 

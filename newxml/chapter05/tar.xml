@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-tar">
+<sect1 id="ch-tools-tar">
 <title>Tar-&tar-version;</title>
 <?dbhtml filename="tar.html"?>
 
@@ -11,12 +11,12 @@
 <primary sortas="a-Tar">Tar</primary>
 <secondary>tools</secondary></indexterm>
 
-<xi:include href="../chapter06/tar.xml" xpointer="xpointer(/sect1/para[1])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/tar.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 0.2 SBU
 &diskspace; 10 MB</screen>
 
-<xi:include href="../chapter06/tar.xml" xpointer="xpointer(/sect1/para[2])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/tar.xml" xpointer="xpointer(/sect1/para[2])"/>
 
 
 <sect2>

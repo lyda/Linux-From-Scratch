@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-iana-etc" xreflabel="Iana-Etc">
+<sect1 id="ch-system-iana-etc" xreflabel="Iana-Etc">
 <title>Iana-Etc-&iana-etc-version;</title>
 <?dbhtml filename="iana-etc.html"?>
 

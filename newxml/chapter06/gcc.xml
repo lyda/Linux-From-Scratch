@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-gcc" xreflabel="GCC">
+<sect1 id="ch-system-gcc" xreflabel="GCC">
 <title>GCC-&gcc-version;</title>
 <?dbhtml filename="gcc.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-binutils-pass1">
+<sect1 id="ch-tools-binutils-pass1">
 <title>Binutils-&binutils-version; - Pass 1</title>
 <?dbhtml filename="binutils-pass1.html"?>
 
@@ -11,12 +11,12 @@
 <primary sortas="a-Binutils">Binutils</primary>
 <secondary>tools, pass 1</secondary></indexterm>
 
-<xi:include href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/para[1])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 1.0 SBU
 &diskspace; 194 MB</screen>
 
-<xi:include href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/para[2])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/para[2])"/>
 
 
 <sect2>

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-pwdgroup">
+<sect1 id="ch-system-pwdgroup">
 <title>Creating the passwd, group and log files</title>
 <?dbhtml filename="pwdgroup.html"?>
 

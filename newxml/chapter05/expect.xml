@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-expect" xreflabel="Expect">
+<sect1 id="ch-tools-expect" xreflabel="Expect">
 <title>Expect-&expect-version;</title>
 <?dbhtml filename="expect.html"?>
 

@@ -3,18 +3,18 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-getting-materials" xreflabel="Chapter 3">
+<chapter id="chapter-getting-materials" xreflabel="Chapter 3">
 <?dbhtml dir="chapter03"?>
 <title>The materials: packages and patches</title>
 <?dbhtml filename="chapter03.html"?>
 
 
-<xi:include href="introduction.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
 
 
-<xi:include href="packages.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="packages.xml"/>
 
 
-<xi:include href="patches.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="patches.xml"/>
 
 </chapter>

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-scatter-changelog">
+<sect1 id="ch-scatter-changelog">
 <title>Changelog</title>
 <?dbhtml filename="changelog.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-gettext" xreflabel="Gettext">
+<sect1 id="ch-system-gettext" xreflabel="Gettext">
 <title>Gettext-&gettext-version;</title>
 <?dbhtml filename="gettext.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-gzip">
+<sect1 id="ch-tools-gzip">
 <title>Gzip-&gzip-version;</title>
 <?dbhtml filename="gzip.html"?>
 
@@ -11,12 +11,12 @@
 <primary sortas="a-Gzip">Gzip</primary>
 <secondary>tools</secondary></indexterm>
 
-<xi:include href="../chapter06/gzip.xml" xpointer="xpointer(/sect1/para[1])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/gzip.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 0.1 SBU
 &diskspace; 2.6 MB</screen>
 
-<xi:include href="../chapter06/gzip.xml" xpointer="xpointer(/sect1/para[2])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/gzip.xml" xpointer="xpointer(/sect1/para[2])"/>
 
 
 <sect2>

@@ -3,20 +3,20 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-bootable" xreflabel="Chapter 8">
+<chapter id="chapter-bootable" xreflabel="Chapter 8">
 <?dbhtml dir="chapter08"?>
 <title>Making the LFS system bootable</title>
 <?dbhtml filename="chapter08.html"?>
 
-<xi:include href="introduction.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
 
 
-<xi:include href="fstab.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="fstab.xml"/>
 
 
-<xi:include href="kernel.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernel.xml"/>
 
-<xi:include href="grub.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grub.xml"/>
 
 
 

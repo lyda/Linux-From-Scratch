@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-shadow" xreflabel="Shadow">
+<sect1 id="ch-system-shadow" xreflabel="Shadow">
 <title>Shadow-&shadow-version;</title>
 <?dbhtml filename="shadow.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-bzip2" xreflabel="Bzip2">
+<sect1 id="ch-system-bzip2" xreflabel="Bzip2">
 <title>Bzip2-&bzip2-version;</title>
 <?dbhtml filename="bzip2.html"?>
 
