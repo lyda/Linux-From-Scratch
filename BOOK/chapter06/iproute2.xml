@@ -122,7 +122,7 @@
                 table and change routing table rules.
           </para>
 
-          <para><command>ip tunnel</command> allows user to look at the IP
+          <para><command>ip tunnel</command> allows users to look at the IP
                 tunnels and their properties, and change them.
           </para>
 
