@@ -20,7 +20,6 @@ install: create-dirs
 	install -m 754 lfs/init.d/network      ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/rc           ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/reboot       ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/rc           ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/sendsignals  ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/setclock     ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/swap         ${EXTDIR}/rc.d/init.d/
