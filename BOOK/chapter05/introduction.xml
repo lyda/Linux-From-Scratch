@@ -26,10 +26,9 @@ temporary, we do not want them to pollute the soon-to-be LFS
 system.</para>
 
 <para>Before issuing the build instructions for a package, the package
-should be unpacked (explained shortly) as user
-<emphasis>lfs</emphasis>, and a <command>cd</command> into the
-created directory should be performed. The build instructions assume
-that the <command>bash</command> shell is in use.</para>
+should be unpacked as user <emphasis>lfs</emphasis>, and a
+<command>cd</command> into the created directory should be performed. The build
+instructions assume that the <command>bash</command> shell is in use.</para>
 
 <para>Several of the packages are patched before compilation, but only
 when the patch is needed to circumvent a problem. A patch is often
