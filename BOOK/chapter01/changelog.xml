@@ -90,6 +90,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 6th, 2004 [winkie]: Added Alexander Patrakov's I18n patch.
+</para></listitem>
+
 <listitem><para>May 4th, 2004 [winkie]: Chapter 6 - Create and use the
 <quote>utmp</quote> group.</para></listitem>
 
