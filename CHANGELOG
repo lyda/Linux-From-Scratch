@@ -7,6 +7,7 @@ n/a - July 10, 2004
 	* Removed the "assume SERVICE=static if SERVICE is unset" compatibility
 	* pass the SOURCE environmental variable to services, so they can locate
 		the file with the parameters they must read
+	* rename static to ipv4-static
 
 n/a - July 8, 2004
 
