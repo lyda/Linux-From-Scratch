@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 echo "Creating rc*.d directories..."
 mkdir -p rc.d/rc{0,1,2,3,4,5,6,sysinit}.d
 
@@ -59,5 +60,5 @@ ln -s ../init.d/setclock S60setclock &&
 ln -s ../init.d/loadkeys S70loadkeys &&
 ln -s ../init.d/localnet S80localnet &&
 
-echo "Done."
+echo "Finished setting up Symlinks."
 
