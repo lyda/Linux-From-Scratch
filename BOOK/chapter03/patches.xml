@@ -62,7 +62,7 @@ Udev Configuration Patch - 6 KB:
 <ulink url="&patches-root;udev-&udev-version;-config-1.patch"/>
 
 Util-Linux Kernel Headers Patch - 3 KB:
-<ulink url="&patches-root;util-linux-&util-linux-version;-kernel-dj-2.6-1.patch"/>
+<ulink url="&patches-root;util-linux-&util-linux-version;-kernel-jg-2.6-1.patch"/>
 </literallayout>
 
 <para>In addition to the above required patches, there exist a number of
