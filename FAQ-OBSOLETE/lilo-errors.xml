@@ -1,9 +1,0 @@
-<qandaentry id="lilo-errors">
-<question><para>What do those LILO errors mean?</para></question>
-<answer><para>The documentation in the LILO distribution lists all errors
-(such as when it prints "LI" and stops),
-but a quick overview is available at
-<ulink url="http://sdb.suse.de/sdb/en/html/kgw_lilo_errmsg.html"/>.
-</para></answer>
-</qandaentry>
-

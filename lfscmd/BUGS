@@ -1,8 +1,0 @@
-Entity `nbsp` not defined
-=========================
-
-If `nbsp` is not defined, several Entity-related
-error messages will appear. To solve this problem,
-define nbsp as an entity in the index.xml file:
-
-<!ENTITY nbsp " ">

@@ -1,7 +1,0 @@
-<qandaentry id="configure-no-such-file">
-<question><para>bash: ./configure: No such file or directory</para></question>
-<answer><para>Reread Chapter 2 of the LFS Book
-or the FAQ entry
-<link linkend="how-to-compile">"Exactly how do i compile this?"</link>
-</para></answer>
-</qandaentry>

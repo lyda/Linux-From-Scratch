@@ -1,9 +1,0 @@
-<qandaentry id="lfs-logos">
-<question><para>Where can I get LFS Logos?</para></question>
-<answer><itemizedlist>
-<listitem><ulink
-url="http://linuxfromscratch.org/~gerard/lfslogos/"/></listitem>
-<listitem><ulink
-url="http://files.ichilton.co.uk/oldlfslogos/"/></listitem>
-</itemizedlist></answer>
-</qandaentry>
