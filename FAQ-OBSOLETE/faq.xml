@@ -59,7 +59,7 @@ to the information in the documentation.
 			<answer><para>If you have an addition or suggestion, please, let me know.
 				I can be reached at
 				<ulink url="mailto:sk@sethwklein.net">sk@sethwklein.net</ulink>,
-				and i read the lists thoroughly (but not always promptly).
+				and I read the lists thoroughly (but not always promptly).
 			</para></answer>
 			<answer><para>I want to stick to questions that have been asked at least
 				twice and to remove items that are no longer an issue.
@@ -588,7 +588,7 @@ See the entry "<link linkend="gcc-3_0">Why isn't GCC 3.0.x in the book?</link>".
 <!-- elist: ,lfs-compile,blfs-support,new -->
 <qandaentry id="dirty-sources">
 <question><para>I didn't delete the source tree after my last attempt.
-Do i need to?</para></question>
+Do I need to?</para></question>
 <answer><para>Yes. You should always delete the source tree after installing
 and delete it and start over if anything fails.
 </para>
@@ -776,8 +776,29 @@ reread the book's instructions for bash more carefully.)
 
 	</qandadiv><!-- resources -->
 
-<!-- dlist: ,lfs-support -->
+<!-- dlist: ,lfs-support,lfs-compile,new -->
 <qandadiv id="fsc"><title>Frequently Sought Cluebits</title>
+
+<!-- elist: ,lfs-compile,new -->
+<qandaentry id="should-i-keep-sources">
+<question><para>Do I need to keep the source after installing?</para></question>
+<answer><para>No. You should delete the source after installing.
+The source is only useful for reinstalling without recompiling.
+To recompile, always delete the old source and start fresh
+because "make clean" and friends are not always trustworthy.
+Deleting compiled source trees also frees considerable disk space.
+</para>
+<para>Here's an example:
+<screen>tar xvjf foo-0.0.tar.bz2
+cd foo-0.0
+./configure --prefix=/usr
+make
+make install
+<emphasis role="strong">cd ..
+rm -rf foo-0.0</emphasis>
+</screen>
+</para></answer>
+</qandaentry>
 
 <!-- elist: ,lfs-support -->
 <qandaentry id="dos-text">
