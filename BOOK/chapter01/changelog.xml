@@ -74,6 +74,8 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>January 27, 2005 [manuel]: Updated to gcc-3.4.3-specs-2.patch.</para></listitem>
+
 <listitem><para>January 19, 2005 [jeremy]: Added an extra symlink for
 libgcc_s.so to chapter 6 - this never migrated from unstable until now.</para></listitem>
 
