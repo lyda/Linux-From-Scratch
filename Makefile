@@ -6,6 +6,7 @@ all: install
 create-dirs:
 	install -d -m 755 ${EXTDIR}/rc.d/rc{0,1,2,3,4,5,6,sysinit}.d
 	install -d -m 755 ${EXTDIR}/rc.d/init.d
+	install -d -m 755 ${EXTDIR}/sysconfig/network-devices/services
 
 install: create-dirs
 	install -m 754 lfs/init.d/checkfs      ${EXTDIR}/rc.d/init.d/
@@ -57,21 +58,24 @@ install: create-dirs
 	ln -s ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	ln -s ../init.d/loadkeys    ${EXTDIR}/rc.d/rcsysinit.d/S70loadkeys
 	ln -s ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
-	install -d -m 755 ${EXTDIR}/sysconfig/network-devices/services
 	install -m 644 lfs/sysconfig/rc                              ${EXTDIR}/sysconfig/
 	install -m 754 lfs/sysconfig/network-devices/ifup            ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/ifdown          ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/services/static ${EXTDIR}/sysconfig/network-devices/services
 
-install-adsl: create-dirs
-	install -m 754 blfs/init.d/adsl       ${EXTDIR}/rc.d/init.d/
-	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc0.d/K49adsl
-	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc1.d/K49adsl
-	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc2.d/K49adsl
-	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc3.d/S24adsl
-	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc4.d/S24adsl
-	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc5.d/S24adsl
-	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc6.d/K49adsl
+
+install-service-dhclient: create-dirs
+	install -m 754 blfs/sysconfig/network-devices/services/dhclient ${EXTDIR}/sysconfig/network-devices/services
+
+install-service-dhcpcd: create-dirs
+	install -m 754 blfs/sysconfig/network-devices/services/dhcpcd   ${EXTDIR}/sysconfig/network-devices/services
+
+install-service-ipx: create-dirs
+	install -m 754 blfs/sysconfig/network-devices/services/ipx      ${EXTDIR}/sysconfig/network-devices/services
+
+install-service-pppoe: create-dirs
+	install -m 754 blfs/sysconfig/network-devices/services/pppoe    ${EXTDIR}/sysconfig/network-devices/services
+
 
 install-alsa: create-dirs
 	install -m 754 blfs/init.d/alsa       ${EXTDIR}/rc.d/init.d/
@@ -323,4 +327,4 @@ install-xinetd: create-dirs
 	ln -s  ../init.d/xinetd ${EXTDIR}/rc.d/rc5.d/S23xinetd
 	ln -s  ../init.d/xinetd ${EXTDIR}/rc.d/rc6.d/K49xinetd
 
-.PHONY: install install-adsl install-alsa install-apache install-bind install-cups install-dhcp install-exim install-fcron install-gdm install-gpm install-lprng install-mysql install-netfs install-nfs-client install-nfs-server install-ntp install-portmap install-postfix install-postgresql install-proftpd install-random install-rsync install-samba install-sendmail install-sshd install-xinetd
+.PHONY: install install-alsa install-apache install-bind install-cups install-dhcp install-exim install-fcron install-gdm install-gpm install-lprng install-mysql install-netfs install-nfs-client install-nfs-server install-ntp install-portmap install-postfix install-postgresql install-proftpd install-random install-rsync install-samba install-sendmail install-sshd install-xinetd
