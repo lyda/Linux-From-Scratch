@@ -3,9 +3,9 @@
 
 # Written by Nathan Coulson <nathan@linuxfromscratch.org>
 
-#. /etc/sysconfig/rc 
-#. $rc_functions 
-#. $network_devices/ifconfig.$1 
+. /etc/sysconfig/rc 
+. $rc_functions 
+. $network_devices/ifconfig.$1 
 
 # Will exit if it is started by the hotplug system, but the configuration file
 # does not mention ONHOTPLUG=yes
