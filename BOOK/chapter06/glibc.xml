@@ -50,7 +50,7 @@ and linker cannot be adjusted before the Glibc install because the
 Glibc autoconf tests would give false results and defeat the goal
 of achieving a clean build.</para>
 
-<para arch="raq2">The following patch corrects the building of syscall.h::</para>
+<para arch="raq2">The following patch corrects the building of syscall.h:</para>
 
 <screen arch="raq2"><userinput>patch -Np1 -i ../glibc-&glibc-version;-mips_syscall-2.patch</userinput></screen>
 
