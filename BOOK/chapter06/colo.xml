@@ -68,6 +68,7 @@ elf2rfx, flash-tool, e2fsck-lcd, paneld and putlcd</seg></seglistitem>
 
 <variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
+<?dbhtml list-presentation="table"?>
 
 <varlistentry id="colo-chain.elf">
 <term><command>colo</command></term>
