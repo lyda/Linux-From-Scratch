@@ -2,6 +2,7 @@ n/a - July 12, 2004
 
 	* Hotplug was moved from rcsysinit.d to rc{1,2,3,4,5} to help bring up/down
 	  network interfaces started by hotplug.  This has been revoked at this time
+	* Networking interfaces are now brought down in reverse order
 
 2.2.0 - July 12, 2004
 
