@@ -73,6 +73,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 1st, 2004 [jeremy]: Added creation of the /media and /srv
+directories, as well as 2 directories under /media for floppy and cdrom, as per
+FHS - fixes bugzilla bug #785 and #819.</para></listitem>
+
 <listitem><para>April 14th, 2004 [jeremy]: Updated to lfs-bootscripts-2.0.3, no
 textual changes needed</para></listitem>
 
