@@ -49,6 +49,12 @@ do
 	(
 		. ${file}
 
+		# Will not process this service if started by boot, and ONBOOT
+		# is not set to yes
+		if [ "${IN_BOOT}" = "1" -a "${ONBOOT}" != "yes" ]; then
+			continue
+		fi
+
 		# Will not process this service if started by hotplug, and 
 		# ONHOTPLUG is not set to yes
 		if [ "${IN_HOTPLUG}" = "1" -a "${ONHOTPLUG}" != "yes" ]; then
