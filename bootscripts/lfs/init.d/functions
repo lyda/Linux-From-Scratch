@@ -78,7 +78,7 @@ boot_mesg()
 	else
 		local length=`echo -e "$BOOTMESG" | grep -c \$`
 		local count=0
-		BOOTMESG="$BOOTMESG $@"
+		BOOTMESG="$BOOTMESG$@"
 		while [ "${count}" -lt "${length}" ]; do
 			echo -e -n "$CURS_UP"
 			count=$((${count}+1))
@@ -89,7 +89,7 @@ boot_mesg()
 	# by adding \n's where appropriate.
 	BOOTMESG=`echo ${BOOTMESG} | sed -n -e "s/\\\\n/\n/g;L ${WCOL}"`
 
-	echo -e "${NORMAL}${BOOTMESG}"
+	echo -e "${BOOTMESG}"
 }
 
 echo_ok()
