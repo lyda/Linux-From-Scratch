@@ -58,7 +58,7 @@ would.</para>
 
 <para>To finish the installation, the bootscripts are set up in
 <xref linkend="chapter-bootscripts"/>, the kernel and bootloader are set up in
-<xref linkend="chapter-mixture"/>, and <xref linkend="chapter-finalizing"/> contains some
+<xref linkend="chapter-bootable"/>, and <xref linkend="chapter-finalizing"/> contains some
 pointers to help you after you finish the book. Then, finally, you're ready to
 reboot your computer into your new LFS system.</para>
 

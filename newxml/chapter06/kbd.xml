@@ -67,7 +67,7 @@ into the kernel. This ensures that your keyboard will always work as expected,
 even when you boot into maintenance mode (by passing `init=/bin/sh' to the
 kernel), as then the bootscript that normally sets up your keymap isn't run.</para>
 
-<para>When in <xref linkend="chapter-mixture"/> you're ready to compile the
+<para>When in <xref linkend="chapter-bootable"/> you're ready to compile the
 kernel, run the following command to patch the current default keymap into the
 source (you will have to repeat this command whenever you unpack a new
 kernel):</para>

@@ -32,12 +32,12 @@ default optimizations, such as CFLAGS and CXXFLAGS, we recommend unsetting
 or modifying them when building GCC.</para>
 
 <para>This is an older release of GCC which we are going to install for the
-purpose of compiling the Linux kernel in <xref linkend="chapter-mixture"/>. This
-version is recommended
-by the kernel developers when you need absolute stability. Later versions of
-GCC have not received as much testing for Linux kernel compilation. Using a
-later version is likely to work, however, we recommend adhering to the kernel
-developer's advice and using the version here to compile your kernel.</para>
+purpose of compiling the Linux kernel in <xref linkend="chapter-bootable"/>.
+This version is recommended by the kernel developers when you need absolute
+stability. Later versions of GCC have not received as much testing for Linux
+kernel compilation. Using a later version is likely to work, however, we
+recommend adhering to the kernel developer's advice and using the version here
+to compile your kernel.</para>
 
 <note><para>We don't install the C++ compiler or libraries here. However, there
 may be reasons why you would want to install them. More information can be found

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-mixture" xreflabel="Chapter 8">
+<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-bootable" xreflabel="Chapter 8">
 <?dbhtml dir="chapter08"?>
 <title>Making the LFS system bootable</title>
 <?dbhtml filename="chapter08.html"?>
