@@ -204,11 +204,11 @@ Protocol (IP) address to a network interface</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="sysklogd-bootscripts">
-<term><command>sysklogd</command></term>
+<varlistentry id="syslog-ng-bootscripts">
+<term><command>syslog-ng</command></term>
 <listitem>
 <para>Starts and stops the system and kernel log daemons</para>
-<indexterm zone="ch-scripts-bootscripts sysklogd-bootscripts"><primary sortas="d-sysklogd">sysklogd</primary></indexterm>
+<indexterm zone="ch-scripts-bootscripts syslog-ng-bootscripts"><primary sortas="d-syslog-ng">syslog-ng</primary></indexterm>
 </listitem>
 </varlistentry>
 
