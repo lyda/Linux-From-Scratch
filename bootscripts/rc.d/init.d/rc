@@ -7,7 +7,7 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
-# This sets a few default options.  Consult sane's man page for further info
+# This sets a few default terminal options.
 stty sane
 
 # These 3 signals will not cause our script to exit
