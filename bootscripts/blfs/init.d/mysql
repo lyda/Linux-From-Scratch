@@ -53,7 +53,7 @@ case "$1" in
 				then failure=1
 			fi
 			(exit $failure)
-			evalate_retval
+			evaluate_retval
 		else
 			print_status warning not_running
 		fi
