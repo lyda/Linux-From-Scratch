@@ -11,11 +11,7 @@ lfs:
 
 # x86
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch x86 \
-	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
-
-	xsltproc --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
-	  -stringparam base.dir $(BASEDIR)/x86/ stylesheets/lfs-chunked.xsl \
-	  $(BASEDIR)/lfs-html.xml
+	  -stringparam base.dir $(BASEDIR)/x86/ stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/x86/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/x86/stylesheets; \
@@ -32,15 +28,9 @@ lfs:
 	cd $(BASEDIR)/x86/; sed -i -e "s@../images@images@g" \
 	  *.html
 
-	rm $(BASEDIR)/lfs-html.xml
-
 # raq2
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch raq2 \
-	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
-
-	xsltproc --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
-	  -stringparam base.dir $(BASEDIR)/raq2/ stylesheets/lfs-chunked.xsl \
-	  $(BASEDIR)/lfs-html.xml
+	  -stringparam base.dir $(BASEDIR)/raq2/ stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/raq2/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/raq2/stylesheets; \
@@ -57,15 +47,9 @@ lfs:
 	cd $(BASEDIR)/raq2/; sed -i -e "s@../images@images@g" \
 	  *.html
 
-	rm $(BASEDIR)/lfs-html.xml
-
 # ppc
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch ppc \
-	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
-
-	xsltproc --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
-	  -stringparam base.dir $(BASEDIR)/ppc/ stylesheets/lfs-chunked.xsl \
-	  $(BASEDIR)/lfs-html.xml
+	  -stringparam base.dir $(BASEDIR)/ppc/ stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/ppc/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/ppc/stylesheets; \
@@ -82,8 +66,6 @@ lfs:
 	cd $(BASEDIR)/ppc/; sed -i -e "s@../images@images@g" \
 	  *.html
 
-	rm $(BASEDIR)/lfs-html.xml
-
 
 # common stuff
 	for filename in `find $(BASEDIR) -name "*.html"`; do \
@@ -97,11 +79,7 @@ lfs:
 
 html:
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch $(ARCH) \
-	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
-
-	xsltproc --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
-	  -stringparam base.dir $(BASEDIR)/ stylesheets/lfs-chunked.xsl \
-	  $(BASEDIR)/lfs-html.xml
+	  -stringparam base.dir $(BASEDIR)/ stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/stylesheets; \
@@ -117,8 +95,6 @@ html:
 	  *.html
 	cd $(BASEDIR)/; sed -i -e "s@../images@images@g" \
 	  *.html
-
-	rm $(BASEDIR)/lfs-html.xml
 
 	for filename in `find $(BASEDIR) -name "*.html"`; do \
 	  tidy -config tidy.conf $$filename; \
@@ -144,21 +120,20 @@ html:
 
 pdf:
 	xsltproc --xinclude --nonet --stringparam profile.condition pdf -stringparam profile.arch $(ARCH) \
-		--output $(BASEDIR)/lfs-pdf.xml stylesheets/lfs-profile.xsl index.xml
+		 --output $(BASEDIR)/lfs-pdf.xml stylesheets/lfs-profile.xsl index.xml
+
 	xsltproc --nonet --output $(BASEDIR)/lfs-pdf.fo stylesheets/lfs-pdf.xsl \
 		$(BASEDIR)/lfs-pdf.xml
+    
 	sed -i -e "s/inherit/all/" $(BASEDIR)/lfs-pdf.fo
+  
 	fop.sh $(BASEDIR)/lfs-pdf.fo $(BASEDIR)/$(PDF_OUTPUT)
+  
 	rm $(BASEDIR)/lfs-pdf.xml $(BASEDIR)/lfs-pdf.fo
 
 nochunks:
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch $(ARCH) \
-	  --output $(BASEDIR)/lfs-nochunk.xml stylesheets/lfs-profile.xsl index.xml
-
-	xsltproc --nonet --output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
-	  stylesheets/lfs-nochunks.xsl $(BASEDIR)/lfs-nochunk.xml
-
-	rm $(BASEDIR)/lfs-nochunk.xml
+	  --output  $(BASEDIR)/$(NOCHUNKS_OUTPUT) stylesheets/lfs-nochunks.xsl index.xml
 
 	tidy -config tidy.conf $(BASEDIR)/$(NOCHUNKS_OUTPUT) || true
 
