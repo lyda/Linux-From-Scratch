@@ -1,7 +1,7 @@
 BASEDIR=~/lfs-book/
 
 lfs:
-	./entResolver output
+	bash entResolver output
 	cd ../output && xsltproc --xinclude --nonet -stringparam base.dir \
 	$(BASEDIR) stylesheets/lfs-chunked.xsl index.xml
 
