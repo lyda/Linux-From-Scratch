@@ -58,7 +58,7 @@
 <!ENTITY patch-version "2.5.4">
 <!ENTITY perl-version "5.8.3">
 <!ENTITY procinfo-version "18">
-<!ENTITY procps-version "3.2.0">
+<!ENTITY procps-version "3.2.1">
 <!ENTITY psmisc-version "21.4">
 <!ENTITY sed-version "4.0.9">
 <!ENTITY shadow-version "4.0.4.1">
