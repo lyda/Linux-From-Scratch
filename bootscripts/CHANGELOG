@@ -2,6 +2,7 @@ n/a - March 16, 2005
 	* Reverted the change from loadproc to start_daemon,
 	  Moved compatibility code into one single function.
 	  (Nathan Coulson)
+	* Readded the ONHOTPLUG option for ifup/ifdown (Nathan Coulson)
 
 n/a - March 01, 2005
 	* Added CHECK_LINK variable in ifconfig.*/*, so if the

@@ -49,6 +49,12 @@ do
 	(
 		. ${file}
 
+		# Will not process this service if started by hotplug, and 
+		# ONHOTPLUG is not set to yes
+		if [ "${IN_HOTPLUG}" = "1" -a "${ONHOTPLUG}" != "yes" ]; then
+			continue
+		fi
+
 		# This will run the service script, if SERVICE is set
 		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]; then
 			if ip link show ${1} > /dev/null 2>&1; then
