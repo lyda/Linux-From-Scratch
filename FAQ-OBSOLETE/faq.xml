@@ -96,6 +96,19 @@
 			</para></answer>
 		</qandaentry>
 	</qandadiv>
+
+
+<qandadiv id="frb"><title>Frequently Reported Bugs</title>
+
+<qandaentry id="deps_version_not_match_package">
+<question><para>The Dependencies section for Foo 2.0 says "Foo 1.0".
+</para></question>
+<answer><para>That is correct. Dependencies sections are only updated
+occasionally due to the amount of manual labor required.
+</para></answer>
+</qandaentry>
+</qandadiv>
+
 	<qandadiv id="resources"><title>Resources</title>
 		<qandaentry id="how-to-find"><question><para>How do I find package Foo?</para></question>	
 			<answer><para>Always try Freshmeat at <ulink
