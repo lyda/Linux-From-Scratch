@@ -1,0 +1,55 @@
+#!/bin/sh
+# Begin $rc_base/init.d/console - Sets keymap and screen font
+
+# Based on loadkeys script from LFS-3.1 and earlier.
+# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+# Screen font and backspace-delete handling added by Alexander E. Patrakov
+
+. /etc/sysconfig/rc
+. $rc_functions
+if [ -f /etc/sysconfig/console ]; then
+	. /etc/sysconfig/console
+fi
+
+case "$1" in
+	start)
+		echo -n "Loading keymap..."
+		if [ -z $KEYMAP ]; then
+			loadkeys -d
+			evaluate_retval
+		else
+( loadkeys $KEYMAP &&
+cat <<"EOK" | loadkeys
+                keycode 14 =    Delete  Delete          Delete  Delete
+        alt     keycode 14 =    Meta_Delete
+altgr   alt     keycode 14 =    Meta_Delete
+                keycode 111 =   Remove
+altgr   control keycode 111 =   Boot
+control alt     keycode 111 =   Boot
+altgr   control alt keycode 111 = Boot
+EOK
+) 2>/dev/null
+		evaluate_retval
+		fi
+
+		if [ -z $FONT ]; then
+			echo "FONT variable missing from /etc/sysconfig/console, using vga rom font"
+		else
+		echo "Setting screen font..."
+			setfont $FONT
+			evaluate_retval
+
+			# The code below switches all virtual consoles to the alternate character set
+			# For details, "man console_codes"
+			for tty in /dev/tty[1-6]
+			do
+				echo -e -n '\033(K' >$tty 2>/dev/null
+			done
+		;;
+	*)
+		echo "Usage: $0 {start}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/console

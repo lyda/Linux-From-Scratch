@@ -16,7 +16,7 @@ install: create-dirs create-service-dir
 	install -m 754 lfs/init.d/cleanfs      ${EXTDIR}/rc.d/init.d/
 	install -m 644 lfs/init.d/functions    ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/halt         ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/loadkeys     ${EXTDIR}/rc.d/init.d/
+	install -m 754 lfs/init.d/console      ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/localnet     ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/mountfs      ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/mountkernfs  ${EXTDIR}/rc.d/init.d/
@@ -58,7 +58,7 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rcsysinit.d/S40mountfs
 	ln -sf ../init.d/cleanfs     ${EXTDIR}/rc.d/rcsysinit.d/S50cleanfs
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
-	ln -sf ../init.d/loadkeys    ${EXTDIR}/rc.d/rcsysinit.d/S70loadkeys
+	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
 	install -m 644 lfs/sysconfig/createfiles                     ${EXTDIR}/sysconfig/
 	install -m 644 lfs/sysconfig/rc                              ${EXTDIR}/sysconfig/
