@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+                        "/usr/share/docbook/docbookx.dtd" [
+
+<!ENTITY version "20020510">
+<!ENTITY releasedate "May 10th, 2002">
+
+<!ENTITY blfs-bugzilla-url "http://blfs-bugs.linuxfromscratch.org">
+]>
+
+<book>
+<bookinfo>
+<title>BLFS Editors Guide</title>
+<subtitle>Version &version;</subtitle>
+
+<editor>
+<firstname>Mark</firstname><surname>Hymers</surname>
+<affiliation><address>
+<email>markh@linuxfromscratch.org</email></address></affiliation>
+</editor>
+
+<copyright id="copyright">
+<year>2002</year>
+<holder>Mark Hymers</holder>
+</copyright>
+
+</bookinfo>
+
+<!-- Preface - Welcome to BLFS -->
+<preface id="preface">
+<title>Welcome to the BLFS Editors Guide</title>
+<para>This document is designed to be a friendly introduction to BLFS
+editing.  I've put it together in order to remove myself from being the
+single "point of failure/delay" (so to speak) in the BLFS Project.</para>
+
+<para>This document covers (or will soon cover) a few things.  Firstly,
+basic admin issues like accessing CVS over SSH, committing changes and
+BLFS logging policy.  Then I intend to briefly discuss a little bit of
+general BLFS policy (which is liable to change over time as we sort it
+out).  Later, I hope to add features to BLFS such as filelists similar
+to those use with <filename>checklfs</filename> in the LFS book and a
+section will be added to discuss the processes for creating
+those.</para>
+
+<para>I hope this little document will be helpful not only to all of the 
+(co)editors but also to all people thinking about contributing to
+BLFS.</para>
+
+<para>Mark <userinput>&lt;markh@linuxfromscratch.org&gt;</userinput></para>
+
+</preface>
+
+<!-- PART: Accessing the BLFS CVS Rep and CVS chores-->
+<part>
+<title>The BLFS Development System</title>
+
+<!-- CHAPTER: BLFS Tools and Lists-->
+<chapter>
+<title>BLFS Development</title>
+<para>BLFS development takes place using three main systems.  Firstly,
+the mailing lists <userinput>blfs-book</userinput>,
+<userinput>blfs-dev</userinput> and (to a lesser extent) 
+<userinput>blfs-support</userinput>.  Secondly the Bugzilla tracking
+system, and thirdly the CVS server where the book itself is
+stored.  All of these services are provided by the server
+<userinput>linuxfromscratch.org</userinput> also known as
+<userinput>shadowfax.linuxfromscratch.org</userinput> or more usually,
+<userinput>shadowfax</userinput>.  This single server provides mailing
+lists, web hosting, CVS hosting, ftp hosting, the Bugzilla system and
+basically everything we use to work on the BLFS project.</para>
+
+<para>The actual BLFS book itself is written using Docbook-XML and at
+first can seem to be a daunting tangle of files.  Basically, if you're
+confused, start by looking at <filename>index.xml</filename>.  At the
+bottom, you will notice that it will reference the entity &amp;book;.
+Look up the entity &amp;book; and you will see that it points to the
+file <filename>book/book.xml</filename>.  Continue in this way and
+you'll soon be finding your way around the book like a pro!</para>
+
+<para>Anyone can subscribe to any of the mailing lists provided by
+shadowfax.  I'm not going to describe that (or the lists in detail)
+here as there is a good description at 
+<ulink
+url="http://www.linuxfromscratch.org/mailinglists/info.shtml"/>.</para>
+
+<para>The Bugzilla bug-tracking system for BLFS can be found at <ulink
+url="&blfs-bugzilla-url;"/>.  In order to be able to
+add, remove and edit bugs, you need to add an account and make sure you
+are logged in whenever you wish to perform such an action.  You can
+query and read the bug database without logging in or creating a user.
+Note that all bugzilla messages are copied to the
+<userinput>blfs-book</userinput> mailing list and that all editors
+should be subscribed to this and the <userinput>blfs-dev</userinput>
+list at a minimum.</para>
+
+<para>Finally, there is the CVS server which will be discussed in the
+following chapters.</para>
+
+</chapter>
+<!-- END CHAPTER: BLFS Tools and Lists-->
+
+<!-- CHAPTER: Accessing CVS-->
+<chapter>
+<title>CVS Access</title>
+<para>The shadowfax CVS server provides services for all of the *LFS
+projects (and some others).  The tree which we are interested in for
+BLFS editing is (unsurprisingly) the BLFS tree.  A complete list of the
+modules which are available can be found using the cvsweb interface at
+<ulink url="http://cvs.linuxfromscratch.org/index.cgi/"/>.</para> 
+
+<para>There are two types of CVS access provided to the BLFS tree.
+Firstly, there is anonymous read-only access which anyone can use.
+Secondly, there is read-write access granted to active editors who have
+shadowfax accounts.</para>
+
+<sect1><title>Anonymous Access</title>
+<para>To get anonymous access, simply use the following commands (note
+that these assume you are using bash or a similar shell.  csh users may
+have to modify the export command):
+<screen><userinput>export CVSROOT=:pserver:anonymous@cvs.linuxfromscratch.org:/home/cvsroot
+cvs login</userinput></screen>
+[just press return when prompted for a password]
+<screen><userinput>cvs checkout BLFS</userinput></screen></para>
+
+<para>This will create a BLFS directory and copy the current working
+tree into it.  When you wish to update your local copy (often called a
+sandbox), simply cd into the directory and run:
+<screen><userinput>cvs update</userinput></screen></para>
+</sect1>
+
+<sect1><title>CVS SSH Access (for editors)</title>
+<para>For editors, access is slightly more complicated.  You first of
+all need to generate yourself an ssh key-pair.  You then need to upload
+your public key into your <filename>~/.ssh</filename> directory on
+shadowfax.  To generate the keys run:
+<screen><userinput>ssh-keygen -t dsa</userinput></screen>
+When prompted as to where to save them, it's probably best to leave them
+in .ssh (as <filename>id_dsa</filename> and
+<filename>id_dsa.pub</filename>) unless you already have ssh keys there.
+When prompted for a passphrase just press enter (unless you want to have
+to give the phrase <emphasis>every</emphasis> time you perform a cvs
+operation.  Having generated your keys, upload
+<filename>~/.ssh/id_dsa.pub</filename> to shadowfax and move it to
+<filename>~/.ssh/authorized_keys2</filename> <emphasis>on
+shadowfax</emphasis>.  (Your local copy of <filename>id_dsa</filename>
+and <filename>id_dsa.pub</filename> should remain untouched by
+this.)</para>
+
+<para>Once you've done this, you need to set environment variables like
+this:
+<screen><userinput>export CVS_RSH=ssh
+export CVSROOT=:ext:USERNAME@cvs.linuxfromscratch.org:/home/cvsroot</userinput></screen>
+But obviously replacing <emphasis>USERNAME</emphasis> with your
+shadowfax username.  I tend to place this into a script which I then
+source from my .bash_profile or .bashrc script as appropriate.  If you
+only (or mainly) work with the LFS CVS server, this makes life easier as
+the right variables are always set (and you can override them at the
+command line temporarily if you need to use another server for some
+reason).</para>
+
+<para>Once you have this setup, try to checkout the BLFS tree using:
+<screen><userinput>cvs checkout BLFS</userinput></screen>
+If this works, you'll get a nice BLFS directory listing and you have
+your own sandbox!.  You also have write access so from now on be extra
+careful but note that <emphasis>no</emphasis> changes will be made until
+you use a <userinput>cvs commit</userinput> command.</para>
+
+<para>As with anonymous access, you can update your local copy (often
+called a sandbox) by simply cd'ing into the BLFS directory and running:
+<screen><userinput>cvs update</userinput></screen></para>
+</sect1>
+
+</chapter>
+<!-- END CHAPTER: Accessing CVS-->
+
+<!-- CHAPTER: Basic CVS Commands-->
+<chapter>
+<title>Basic CVS Commands</title>
+<para>The man and info pages of CVS are fairly good but I'm going to
+list a basic set of commands which all editors will use on an almost
+daily basis.  Note that quite a few things can be set in your local
+<filename>~/.cvsrc</filename> file.  For example, I have in there:
+<screen>cvs -z9
+diff -u</screen>
+This means that all options use the highest level of compression (I'm on
+a dial-up link, if you're on broadband it's probably not needed to do
+this.  It does entail a slightly higher processing time for both your
+machine and shadowfax so think before using it) and says that I always
+want the <userinput>cvs diff</userinput> command to use unified diff
+format (which <emphasis>all</emphasis> e-mailed submissions (i.e. by
+those without write CVS access) to <userinput>blfs-dev</userinput>
+should use as they're much easier to read.  There are many more options
+available, you can usually find them by doing <userinput>cvs --help</userinput>
+<emphasis>command</emphasis>.  You can 
+also get a basic list of CVS commands by simply doing 
+<userinput>cvs --help-commands</userinput>.  Having said all of 
+this, let's get on with the commands!.</para>
+
+<para>Some commands have two forms, the long and the short.  I'll
+list both in the description.</para>
+
+<sect1><title>cvs checkout/co</title>
+<para><userinput>cvs checkout</userinput> or <userinput>cvs
+co</userinput>.  This command is used to pull a CVS tree such as
+<filename>BLFS</filename> (the BLFS book) or
+<filename>LFS/BOOK</filename> (the LFS book) from the server.  You
+should only need to do this once.  If we mess around with the directory
+structure (as sometimes is necessary), you may occasionally need to
+delete your local sandbox and re-check it out.  If this is going to be
+needed, it will usually be because the Editor will have made a
+<emphasis>large</emphasis> change which will be announced to
+<filename>blfs-book</filename> and <filename>blfs-dev</filename> both
+before and after the change is made, so that everyone know what is going
+on.</para>
+</sect1>
+
+<sect1><title>cvs add</title>
+<para><userinput>cvs add</userinput>.  When you are creating a new file,
+you need to tell the CVS server about it.  This does that.  Note that
+the file won't appear in the repository until you do a <userinput>cvs
+commit</userinput> (see below).</para>
+</sect1>
+
+<sect1><title>cvs delete/remove</title>
+<para><userinput>cvs delete</userinput> or <userinput>cvs
+remove</userinput>.  This does what it says!  Note
+that you have to have deleted the file locally before you can run this.
+Again, the file will not be deleted from the server until you do a
+<userinput>cvs commit</userinput>.</para>
+</sect1>
+
+<sect1><title>cvs update/up</title>
+<para><userinput>cvs update</userinput> or <userinput>cvs
+up</userinput>.  This command syncs your local sandbox with the server.
+If you have made local changes, it'll try and merge any changes on the
+server with your changes <emphasis>on your machine</emphasis>.  You
+should always do a manual <userinput>cvs update</userinput> before
+trying to commit changes in order to check that everything is alright
+and ready to go (although when you do a <userinput>cvs
+commit</userinput>, it will warn you if there is a problem).</para>
+</sect1>
+
+<sect1><title>cvs commit/ci</title>
+<para><userinput>cvs commit</userinput> or <userinput>cvs
+ci</userinput>.  This command recursively sends your changes to the CVS
+server.  It will commit changed files, added files and deleted files.
+The -m option can be used to pass a log message to the command.  If you
+don't specify a -m "MESSAGE", then it will open vi (you may be able to
+override this using the $EDITOR variable but I've never tried it).
+Please don't use empty log messages (see later in this document on the
+policy which governs them).</para>
+</sect1>
+
+<sect1><title>Moving files</title>
+<para>Moving files:  One of the (many?) complaints against cvs is that
+it has no concept of 1) moving files or 2) versioning directories.  If
+you need to move a file, it's generally better to do it on the server
+manually.  <emphasis>If this is needed, please contact me and I'll do
+it</emphasis>.  This is simply because then if something goes wrong,
+it's me who takes the fall instead of anyone else!</para>
+</sect1>
+
+<sect1><title>cvs diff</title>
+<para><userinput>cvs diff</userinput>.  This is useful for two different
+purposes.  Firstly, those without write access to the BLFS CVS server
+can use it to generate patches to send to
+<userinput>blfs-dev</userinput>.  To do this, simply edit the files in
+your local sandbox then run <userinput>cvs diff -u &gt;
+FILE.patch</userinput> from the root of your BLFS directory.  You can
+then attach this file to a message to <userinput>blfs-dev</userinput>
+where someone with editing rights will pick it up and apply it to the
+book.  The second use is to find out what has changed between two
+revisions using: 
+<userinput>cvs diff -u -r revision1 -r revision2 FILENAME</userinput>.
+For example: <userinput>cvs diff -u -r 1.68 -r 1.69
+index.xml</userinput> will output a unified diff showing the changes
+between revisions 1.68 and 1.69 of <filename>index.xml</filename>.
+Remember that when using cvs diff, you nearly
+<emphasis>always</emphasis> want to output a unified diff and so either
+use the <userinput>-u</userinput> switch or add it to 
+your <userinput>~/.cvsrc</userinput></para>
+</sect1>
+
+</chapter>
+<!-- END CHAPTER: Basic CVS Commands-->
+
+<!-- CHAPTER: Commiting Policy-->
+<chapter>
+<title>Committing Changes - Policy</title>
+<para>Here is a summary list of things to do before committing changes:</para>
+
+<itemizedlist>
+<listitem><para>Test the instructions you are adding</para></listitem>
+<listitem><para>Update <filename>index.xml</filename> with the new date
+and / or updated entities if necessary.</para></listitem>
+<listitem><para>Update <filename>chapter01/changelog.xml</filename></para></listitem>
+<listitem><para>Update <filename>chapter01/credits.xml</filename></para></listitem>
+<listitem><para>Check that all relevant files have been <userinput>cvs
+add</userinput>'d or <userinput>remove</userinput>'d.</para></listitem>
+<listitem><para>Check that the book renders properly.</para></listitem>
+<listitem><para>Commit it!</para></listitem>
+<listitem><para>Update bugzilla to reflect the changes</para></listitem>
+</itemizedlist>
+
+<sect1>
+<title>Test the instructions</title>
+<para>This may seem <emphasis>really</emphasis> obvious but
+<filename>&lt;confession mode&gt;</filename> I have actually made small
+changes without testing them before, and had to change them (in one case
+twice) very quickly when someone noticed.... &lt;/confession mode&gt;
+So learn from my mistakes - check <emphasis>everything</emphasis></para>
+</sect1>
+
+<sect1>
+<title>Updating index.xml</title>
+
+<sect2><title>Updating the date</title>
+<para>The following elements should be updated whenever
+<emphasis>any</emphasis> change (including small typo fixes) is made:
+<screen>&lt;!ENTITY version "20020429"&gt;
+&lt;!ENTITY releasedate "April 29th, 2002"&gt;</screen>
+The two dates <emphasis>must</emphasis> correspond and the first is in
+the format YYYYMMDD.</para></sect2>
+
+<sect2><title>Adding / updating entities</title>
+<para>Entities should be on one line (even if this requires wrapping
+because of the length).  Package entities should always be added in
+alphabetical order; if needed, create the &lt;-- X --&gt; divider (where X ==
+any letter!).  Most letters probably have their dividers by now but some
+still don't.  We may soon divide <filename>index.xml</filename> into
+entity files (as of the time of writing, it's a tad under 30Kb which is
+too big for my liking).</para></sect2>
+
+</sect1>
+
+<sect1>
+<title>Update chapter01/changelog.xml</title>
+<para>Changelog updates should <emphasis>always</emphasis> be provided
+with the exception of small typo fixes.  You don't need to add "fixed
+small typo in XXX" to the changelog otherwise it'd grow like topsy.</para>
+
+<para>Changelog updates need to be in a standard format.  Here is an
+example:
+<screen>&lt;listitem&gt;&lt;para&gt;April 29th, 2002 [markh]: Chapter 06 - Add DHCP_STOP
+variable to DHCP scripts.&lt;/para&gt;&lt;/listitem&gt;</screen>
+Replace <userinput>[markh]</userinput> with your shadowfax login
+name.</para>
+
+<para>Changelog entries are always added to the top of the file, just
+beneath the &lt;itemizedlist&gt; tag.  They are cleaned out after
+major releases and always divided by the editor (me!) after each
+release.  If you don't understand this, look at the LFS changelog for
+release 3.3 to see what I mean.</para>
+</sect1>
+
+<sect1>
+<title>Update chapter01/credits.xml</title>
+<para>This file contains the list of who wrote what.  We should try and
+keep it up-to-date to be fair to everyone.  Generally this only needs
+altering if new instructions are being added or a new contributor is
+taking over an old set of instructions.  It should be fairly
+self-explanatory as to how it is laid out.  If it isn't, ask!</para>
+</sect1>
+
+<sect1>
+<title>Check all relevant files have been added and removed</title>
+<para>If you are adding files, you need to have ran a <userinput>cvs
+add</userinput> command on each of them (something like <userinput>cvs
+add packages/m/mypackage*.xml</userinput> often does the trick.  A good
+trick if you've only added files (not taken any away) is to run a
+<userinput>cvs up</userinput> which will give an output something like 
+this:
+<screen>mark:~/LFS/BLFS$ cvs up
+? temp/thisfileneedstobeadded
+cvs server: Updating .
+cvs server: Updating appendixa
+[snip]
+cvs server: Updating packages/z
+cvs server: Updating parts
+cvs server: Updating preface
+cvs server: Updating temp
+A temp/thisfileadded
+R temp/thisfilehasbeendeleted
+M temp/thisfilehasbeenmodified
+U temp/thisfilehasbeenupdatedfromtheserver
+RCS file: /home/cvsroot/BLFS/temp/thisfilehasconflicts,v
+retrieving revision 1.1
+retrieving revision 1.2
+Merging differences between 1.1 and 1.2 into thisfilehasconflicts
+rcsmerge: warning: conflicts during merge
+cvs server: conflicts found in temp/thisfilehasconflicts
+C temp/thisfilehasconflicts
+RCS file: /home/cvsroot/BLFS/temp/thisfilehashadchangesmergedin,v
+retrieving revision 1.1
+retrieving revision 1.2
+Merging differences between 1.1 and 1.2 into
+thisfilehashadchangesmergedin
+M temp/thisfilehashadchangesmergedin
+cvs server: Updating template</screen>
+[snip]'s added by me!  If you look at the first column, you will see
+various different letters which all mean different things.</para>
+
+<para><userinput>?</userinput>: This is what CVS reports when it doesn't
+know what to do with a file.  Generally it means that you've forgotten
+to <userinput>cvs add</userinput> a file to the repository but can also
+just be temporary editor files which CVS doesn't know what to do with.
+If it's just temporary files, don't worry, it won't try and commit them
+when you do a <userinput>cvs ci</userinput> because you haven't added
+them.  Instead it'll just leave them alone.</para>
+
+<para><userinput>A</userinput>: This is a file which has been added to
+CVS using <userinput>cvs add</userinput> but has not yet been committed.
+When you're ready to commit it, simply do a <userinput>cvs
+ci</userinput> on it (and don't forget that nearly all cvs operations can be
+performed on as many files at once as you like; indeed, if you specify
+no file, it'll either give you an error (if it doesn't make sense; like
+with <userinput>cvs add</userinput> or <userinput>delete</userinput>) or
+simply perform the action on all files from that directory downwards in
+the tree; for example with <userinput>cvs ci</userinput>).</para>
+
+<para><userinput>R</userinput>: This is a file which has been removed
+from CVS using <userinput>cvs delete</userinput> but has not yet been committed.
+The equivalent of 'A' for added files.</para>
+
+<para><userinput>M</userinput>: This is a file which has been modified
+in your local repository and hasn't been checked in.  If there have also
+been changes in the remote copy, it means that CVS successfully merged
+them.  Even so, if (as in the file thisfilehashadchangesmergedin above)
+changes have been automatically merged, you should look them over to
+check that they make sense.  Then, when you're ready, commit.</para>
+
+<para><userinput>U</userinput>: This is a file which was unchanged
+locally but changed remotely.  The changes were successfully applied to
+your local copy.  You don't need to commit on this message as you
+haven't made any local changes.</para>
+
+<para><userinput>C</userinput>: This is the horrible one.  It means that
+you have made local changes but at the same time someone has made remote
+changes which can't be automatically merged with yours.  You will have
+to go through the files (usually named with .'s and version numbers) and
+sort the conflict out yourself.  Due to the nature of the BLFS book,
+this doesn't happen very often (well up to now never because I was the
+only one committing but even with the LFS book I've only known it happen
+a couple of times).  If this happens to you, good luck and have fun.</para>
+
+<para>Once you know why you're getting each symbol, and they're all
+correct, you can proceed to the next step.</para>
+
+</sect1>
+
+<sect1>
+<title>Check that the book renders properly</title>
+<para>Before commiting any changes, it's important to check that you
+have all the syntax correct and that the book can actually pass through
+<userinput>openjade</userinput> without making it belch.  Instructions
+on how to render the book can be found in the CVS rep in the
+<filename>INSTALL</filename> and <filename>README</filename> files.
+It's generally best to have a script which automatically does it all for
+you.  I'll give my script here (no comments on the coding standard
+please) which I have in <filename>~/scripts</filename> as
+<filename>updatehtmlb</filename>.  <filename>~/scripts</filename> is
+then on my path, making an update simply a quick command away:
+<screen>#!/bin/sh
+
+# This script is licensed under the usual BSD rules which LFS projects
+# generally follow.  I accept no responsibility if it causes any damage
+# including, but not limited to, blowing up household pets.
+# Mark Hymers &lt;markh@linuxfromscratch.org&gt;
+
+BLFS_XML=/home/mark/LFS/BLFS
+BLFS_HTML=/home/mark/LFS/htmlb
+
+if [ ! -d $BLFS_XML ]
+  then
+    echo "$BLFS_XML doesn't exist"
+  else
+    echo "Updating $BLFS_HTML"
+
+    if [ -d $BLFS_HTML ]
+    then
+        cd $BLFS_HTML && rm -fr *
+    else
+      mkdir $BLFS_HTML && cd $BLFS_HTML
+    fi
+
+    mkdir chapter0{1,2,3,4,5,6,7,8,9} chapter1{0,1,2,3,4,5,6,7,8,9}
+    mkdir chapter20 preface packages appendixa other
+
+    /usr/bin/openjade -t sgml \
+      -d /usr/share/dsssl/docbook/html/lfs.dsl \
+      /usr/share/dsssl/docbook/dtds/decls/xml.dcl \
+      $BLFS_XML/index.xml
+
+    cd other
+
+    /usr/bin/openjade -t sgml \
+      -V nochunks \
+      -d /usr/share/dsssl/docbook/html/lfs.dsl \
+      /usr/share/dsssl/docbook/dtds/decls/xml.dcl \
+      $BLFS_XML/index.xml > nochunks.html
+
+    htmldoc --book --firstpage p1 -v -t ps3 -f blfs.ps nochunks.html
+    htmldoc --book --firstpage p1 -v -t pdf13 -f blfs.pdf nochunks.html
+    lynx -dump nochunks.html > blfs.txt
+
+fi</screen></para>
+</sect1>
+
+<sect1>
+<title>Commit it!</title>
+<para>Once you are sure that everything renders and that you know which
+files you wish to commit, you're ready.  At this point, I'd like to say
+that it is nicer to get a set of commit emails each of which is a single
+change.  So for example, if you're adding two packages, try and commit
+them using two seperate commit commands.  This isn't totally necessary
+but it does make it easier to look through the cvs commit emails (which
+go to <userinput>blfs-book</userinput> and makes it easier to write
+comments.</para>
+
+<para>Before you actually commit, spend two seconds thinking about the
+comment you are going to add.  As mentioned in the section on CVS
+commands, comments should <emphasis>always</emphasis> be used when
+commiting to CVS.  Even if the comment is just 'small typo fix', that'll
+do.  Other usual comments are 'update to package-x.y.z' or 'add new
+section BLAH'.</para>
+
+<para>To commit, you use the <userinput>cvs commit</userinput> or
+<userinput>cvs ci</userinput> command.  A good example of a commit
+command could be:
+<screen><userinput>cvs ci -m "add new package baldrick" index.xml \
+chapter01/changelog.xml chapter01/credits.xml \
+chapter17/chapter17.xml packages/b/baldrick*.xml</userinput></screen>
+If you have only made the changes regarding this package to your tree,
+then you can save time by simply running:
+<screen><userinput>cvs ci -m "add new package baldrick"</userinput></screen>
+from the root of your local BLFS sandbox.  The first command is more
+useful when you've modified files you don't want to commit at this
+time.</para>
+</sect1>
+
+<sect1>
+<title>Update bugzilla</title>
+<para>The final part of updating the book is to update bugzilla.  I used
+to be terrible at doing this but even I'm getting slightly more
+disciplined these days!  This is usually as easy as going to BLFS
+Bugzilla (<ulink url="&blfs-bugzilla-url;"/>), going to the bug and
+choosing Resolve bug, changing resolution to FIXED.  Note that you
+should <emphasis>not</emphasis> then go back and CLOSE the bug.  The
+person who closes the bug should be a different editor who has tested
+that what the bug is about has been fixed.  Basically, it's our QA
+process.</para>
+
+<para>Having completed all of this, you can now go and have a rest.
+Well done, thank you and goodnight.</para>
+</sect1>
+
+</chapter>
+<!-- END CHAPTER: Commiting Policy-->
+
+<!-- CHAPTER: Bugzilla and QA-->
+<chapter>
+<title>Bugzilla and QA</title>
+<para>Still to be written.  See above for brief details.</para>
+</chapter>
+<!-- END CHAPTER: Bugzilla-->
+
+</part>
+<!-- END PART: Accessing the BLFS CVS Rep and CVS chores-->
+
+<!-- PART: BLFS Editing Policy-->
+<part>
+<title>BLFS Editing Policy</title>
+
+<chapter>
+<title>Overall editing policy</title>
+<para>This section still needs to be written.  (And we could probably do
+with actually <emphasis>developing</emphasis> some real policy first..).
+Suggestions include: what we do about optimization, scripts, patches
+(where we put them; probably in the blfs-patches area of shadowfax)
+etc. etc.  Contributions welcome; especially from (but not limited to)
+active editors.</para>
+</chapter>
+
+</part>
+<!-- END PART: BLFS Editing Policy-->
+
+</book>
