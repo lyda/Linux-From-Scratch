@@ -539,14 +539,14 @@ diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static-r
  case "${2}" in
  	up)
  		boot_mesg "Adding '${desc}' route to the ${1} interface..."
-+		putlcd "Adding route" "${desc}
++		putlcd "Adding route" "${desc}"
  		ip route add ${args} dev ${1}
  		evaluate_retval
  	;;
  	
  	down)
  		boot_mesg "Removing '${desc}' route from the ${1} interface..."
-+		putlcd "Removing route" "${desc}
++		putlcd "Removing route" "${desc}"
  		ip route del ${args} dev ${1}
  		evaluate_retval
  	;;
