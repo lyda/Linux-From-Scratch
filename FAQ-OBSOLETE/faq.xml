@@ -281,8 +281,8 @@ ln -s ../X11/include/X11 X11
 		</section>
 		<section id="fileutils-error"><title>I'm getting errors when compiling fileutils.</title>
 			<para>
-				You may need to apply the fileutils patch.
-				It is available from <ulink
+				You may need to upgrade to the latest version or apply the fileutils patch.
+				Both are available from <ulink
 				url="http://download.linuxfromscratch.org/conglomeration/">http://download.linuxfromscratch.org/conglomeration/</ulink>.
 			</para>
 		</section>
