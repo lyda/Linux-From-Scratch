@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch09-getcounted">
+<title>Get Counted</title>
+<?dbhtml filename="getcounted.html"?>
+
+<para>Want to be counted as an LFS user now that you have finished the
+book? Head over 
+to <ulink url="http://linuxfromscratch.org/cgi-bin/lfscounter.cgi"/> and 
+register as an LFS user by entering your name and the first LFS version 
+you have used.</para>
+
+<para>Let's reboot into LFS now...</para>
+
+</sect1>

@@ -15,16 +15,52 @@ libxml2-2.6.4 & libxslt-1.1.2 - these releases have a couple of XInclude related
                                 bugfixes in them
 
 
+Setting up the DTD
+~~~~~~~~~~~~~~~~~~
+
+The new XML sources point to the canonical URL where the DTD can be found in
+case it isn't installed locally.  In order to use our local copy we have to set
+up 2 XML catalog files (/etc/xml/catalog and /etc/xml/docbook) so that the
+canonical URLs are mapped to local files.
+
+The easiest way to do this is to follow the BLFS instructions for the 4.2
+version of the DTD.  Simply substitute 4.3CR2 in place of every occurence of 4.2
+in the commands given.
+
+Following this then run the commands listed under the "In order to install
+ScrollKeeper" again, but replace every occurence of 4.1.2 with 4.2.  This will
+allow any documents requiring the 4.2 version of the DTD to be processed
+against the newer version of the DTD.
+
+Additionally there's just two more commands to run:
+
+  xmlcatalog --noout --add "delegateSystem" \
+    "http://www.docbook.org/xml/" \
+    "file:///etc/xml/docbook" /etc/xml/catalog &&
+  xmlcatalog --noout --add "delegateURI" \
+    "http://www.docbook.org/xml/" \
+    "file:///etc/xml/docbook" /etc/xml/catalog
+
+These are required as www.oasis-open.org only host official versions of the DTD,
+www.docbook.org host the beta/work-in-progress versions.  The commands above
+tell the XML processors that any requests to the www.docbook.org domain should
+be routed through the local /etc/xml/docbook file (which subsequently rewrites
+those URIs to our local copy of the DTD).  This step won't be required once the
+official 4.3 release is made.
+
+
 Processing the sources
 ~~~~~~~~~~~~~~~~~~~~~~
 
 In order to process this version of the book simply use the following command:
 
-xsltproc --nonet --xinclude -stringparam base.dir ~/lfs-book/ stylesheets/lfs-chunked.xsl index.xml
+xsltproc --nonet --xinclude -stringparam base.dir ~/lfs-book/ \
+  stylesheets/lfs-chunked.xsl index.xml
 
 This will produce chunked XHTML output in the directory specified by the base.dir command line parameter (~/lfs-book/ in the example above).
 
 In time there will be other XSL files in the stylesheets directory to process the sources into formats such as LaTeX, Text, nALFS profiles.
+
 
 TODO
 ~~~~

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch07-introduction">
+<title>Introduction</title>
+<?dbhtml filename="introduction.html"?>
+
+<para>This chapter will set up the bootscripts that you installed in chapter
+6. Most of these scripts will work without needing to modify them, but a
+few do require additional configuration files set up as they deal with
+hardware dependent information.</para>
+
+</sect1>

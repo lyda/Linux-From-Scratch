@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch01-changelog">
+<title>Changelog</title>
+<?dbhtml filename="changelog.html"?>
+
+<para>CVS-20040102 - January 2nd, 2004</para>
+
+<itemizedlist>
+
+<listitem><para>Upgraded to:</para>
+<itemizedlist>
+<listitem><para>autoconf-2.59</para></listitem>
+<listitem><para>automake-1.8</para></listitem>
+<listitem><para>file-4.06</para></listitem>
+<listitem><para>gcc-3.3.2</para></listitem>
+<listitem><para>gettext-0.13.1</para></listitem>
+<listitem><para>man-pages-1.64</para></listitem>
+<listitem><para>lfs-utils-0.4.2</para></listitem>
+<listitem><para>linux-2.4.23</para></listitem>
+<listitem><para>modutils-2.4.26</para></listitem>
+<listitem><para>perl-5.8.2</para></listitem>
+<listitem><para>procps-3.1.14</para></listitem>
+<listitem><para>psmisc-21.4</para></listitem>
+<listitem><para>sed-4.0.8</para></listitem>
+<listitem><para>tcl-8.4.5</para></listitem>
+<listitem><para>zlib-1.2.1</para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>Added:</para>
+<itemizedlist>
+<listitem><para>gcc-3.3.2-no_fixincludes-1.patch</para></listitem>
+<listitem><para>inetutils-1.4.2-no_server_man_pages-1.patch</para></listitem>
+<listitem><para>kbd-1.08-more-programs-3.patch</para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>Removed:</para>
+<itemizedlist>
+<listitem><para>gcc-3.3.1-no_fixincludes-2.patch</para></listitem>
+<listitem><para>gcc-3.3.1-suppress-libiberty.patch</para></listitem>
+<listitem><para>grub-0.93-gcc33-1.patch</para></listitem>
+<listitem><para>kbd-1.08-more-programs.patch</para></listitem>
+<listitem><para>man-1.5m2-manpath.patch</para></listitem>
+<listitem><para>man-1.5m2-pager.patch</para></listitem>
+<listitem><para>ncurses-5.3-vsscanf.patch</para></listitem>
+<listitem><para>procps-3.1.11-locale-fix.patch</para></listitem>
+<listitem><para>zlib-1.1.4-vsnprintf.patch</para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>December 17th, 2003 [greg]: Chapter 6 - Vim: Added commands to
+run the Vim test suite. Closes Bug 722.</para></listitem> 
+
+<listitem><para>December 17th, 2003 [greg]: Upgraded to Autoconf-2.59,
+Automake-1.8 and Gettext-0.13.1.</para></listitem>
+
+<listitem><para>December 17th, 2003 [greg]: Chapter 6 - Kbd: Updated to new
+patch that also installs the man pages for the additional programs. Closes Bug
+726.</para></listitem>
+
+<listitem><para>December 17th, 2003 [greg]: Chapter 6 - Zlib: Added chmod
+command to fix static library permissions. Closes Bug 728.</para></listitem>
+
+<listitem><para>December 12th, 2003 [greg]: Glibc: Moved ld.so.conf creation
+to immediately before make install in both chapters.</para></listitem>
+
+<listitem><para>December 11th, 2003 [greg]: Chapter 6 - Inetutils: Added patch
+to prevent unnecessary man pages from being installed. Closes Bug
+723.</para></listitem>
+
+<listitem><para>December 11th, 2003 [greg]: Chapter 6 - Creating directories:
+Stopped creation of /usr/share/{dict,nls}. Closes Bug 721.</para></listitem>
+
+<listitem><para>December 11th, 2003 [greg]: Chapter 5 - Setting up the
+environment: Fixed Bash startup files to handle HOME and PS1.</para></listitem>
+
+<listitem><para>December 3rd, 2003 [greg]: Upgraded to Gettext-0.13,
+Man-pages-1.64, Linux-2.4.23 and Psmisc-21.4.</para></listitem>
+
+<listitem><para>November 26th, 2003 [greg]: Upgraded to Lfs-Utils-0.4.2,
+Tcl-8.4.5 and Zlib-1.2.1. Obsoletes the Zlib Vsnprintf patch.</para></listitem>
+
+<listitem><para>November 23rd, 2003 [greg]: Upgraded to Lfs-Utils-0.4.1 and
+improved its build commands.</para></listitem>
+
+<listitem><para>November 20th, 2003 [greg]: Rolled back the following patches
+to sed substitutions: GCC Suppress-Libiberty Patch, Grub Gcc33 Patch, Man
+Manpath Patch and Man Pager Patch. Closes Bug 461.</para></listitem>
+
+<listitem><para>November 19th, 2003 [greg]: Chapter 5 - Setting up the
+environment: Reworked the Bash startup files to enforce a clean environment.
+Closes Bug 714.</para></listitem>
+
+<listitem><para>November 17th, 2003 [jeremy]: Upgraded Man-pages to
+1.63.</para></listitem>
+
+<listitem><para>November 16th, 2003 [greg]: Chapter 6 - Sysvinit: Simplified
+the sed to demonstrate yet another sed variation.</para></listitem>
+
+<listitem><para>November 17th, 2003 [jeremy]: Chapter 6 - Perl: Added fix
+for perldoc less invocation problem.  Closes bug 716.</para></listitem>
+
+<listitem><para>November 16th, 2003 [greg]: Chapter 6 - Texinfo: Added note
+about how to recreate the /usr/share/info/dir file if needed. Closes Bug
+485.</para></listitem>
+
+<listitem><para>November 14th, 2003 [greg]: Removed unnecessary Ncurses
+Vsscanf Patch. Closes Bug 704.</para></listitem>
+
+<listitem><para>November 14th, 2003 [gerard]: Adjusted libexecdir location
+for these packages: Glibc - /usr/bin to /usr/lib, Findutils - /usr/bin to 
+/usr/lib/locate, Gawk - /usr/bin to /usr/lib/gawk, Tar - /usr/bin to
+/usr/sbin. Closes Bug #678.</para></listitem>
+
+<listitem><para>November 14th, 2003 [greg]: Chapter 6 - Coreutils: Stopped
+moving these binaries into /bin: dir, dircolors, du, mkfifo, shred, vdir.
+Closes Bug 679.</para></listitem>
+
+<listitem><para>November 14th, 2003 [greg]: Chapter 6 - Shadow: Added command
+to create /etc/default directory to allow the -D option of useradd to
+work properly.</para></listitem>
+
+<listitem><para>November 14th, 2003 [greg]: Chapter 6 - Coreutils and
+Util-linux: Pruned the number of "kill" binaries installed. Use the one from
+Procps. Partially addresses Bug 307.</para></listitem>
+
+<listitem><para>November 13th, 2003 [greg]: Chapter 6 - Ed: Streamlined build
+commands. Closes Bug 693.</para></listitem>
+
+<listitem><para>November 13th, 2003 [greg]: Upgraded to Perl-5.8.2 and 
+streamlined build commands for Perl's Chapter 5 static 
+extensions. Closes Bug 690.</para></listitem>
+
+<listitem><para>November 13th, 2003 [gerard]: Upgraded to
+Lfs-Utils-0.4 and Man-pages-1.62</para></listitem>
+
+<listitem><para>November 13th, 2003 [gerard]: Renamed GCC
+no_fixincludes-2.patch to no_fixincludes-1.patch which was the name it is
+supposed to be.</para></listitem>
+
+<listitem><para>November 12th, 2003 [greg]: Removed unnecessary Automake
+symlink.</para></listitem>
+
+<listitem><para>November 12th, 2003 [greg]: Removed unnecessary Procps Locale
+Patch. Closes Bug 705.</para></listitem>
+
+<listitem><para>November 12th, 2003 [greg]: Upgraded to Autoconf-2.58,
+Automake-1.7.9, File-4.06, Modutils-2.4.26, Procps-3.1.14 and
+Sed-4.0.8.</para></listitem>
+
+<listitem><para>November 13th, 2003 [alex]: Chapter 6 - Vim: Changed from
+creating a local <filename>/root/.vimrc</filename> to a system-wide
+<filename>/etc/vimrc</filename> file .</para></listitem>
+
+<listitem><para>November 12th, 2003 [greg]: Upgraded to
+GCC-3.3.2.</para></listitem>
+
+</itemizedlist>
+
+<para>Release of version 5.0 on November 5th, 2003.</para>
+
+</sect1>

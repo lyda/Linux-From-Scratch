@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch04-packages">
+<title>All the packages</title>
+<?dbhtml filename="packages.html"?>
+
+<para>Download or otherwise obtain the following packages:</para>
+
+<literallayout>
+Autoconf (2.59) - 903 KB:
+<ulink url="http://freshmeat.net/projects/autoconf/"/>
+
+Automake (1.8) - 694 KB:
+<ulink url="http://freshmeat.net/projects/automake/"/>
+
+Bash (2.05b) - 1,910 KB:
+<ulink url="http://freshmeat.net/projects/gnubash/"/>
+
+Binutils (2.14) - 10,666 KB:
+<ulink url="http://freshmeat.net/projects/binutils/"/>
+
+Bison (1.875) - 796 KB:
+<ulink url="http://freshmeat.net/projects/bison/"/>
+
+Bzip2 (1.0.2) - 650 KB:
+<ulink url="http://freshmeat.net/projects/bzip2/"/>
+
+Coreutils (5.0) - 3,860 KB:
+<ulink url="http://freshmeat.net/projects/coreutils/"/>
+
+DejaGnu (1.4.3) - 1,775 KB:
+<ulink url="http://freshmeat.net/projects/dejagnu/"/>
+
+Diffutils (2.8.1) - 762 KB:
+<ulink url="http://freshmeat.net/projects/diffutils/"/>
+
+E2fsprogs (1.34) - 3,003 KB:
+<ulink url="http://freshmeat.net/projects/e2fsprogs/"/>
+
+Ed (0.2) - 182 KB:
+<ulink url="http://freshmeat.net/projects/ed/"/>
+
+Expect (5.39.0) - 508 KB:
+<ulink url="http://freshmeat.net/projects/expect/"/>
+
+File (4.06) - 345 KB: (*) See Note Below
+<ulink url="http://freshmeat.net/projects/file/"/>
+
+Findutils (4.3CR20) - 760 KB:
+<ulink url="http://freshmeat.net/projects/findutils/"/>
+
+Flex (2.5.4a) - 372 KB:
+<ulink url="ftp://ftp.gnu.org/gnu/non-gnu/flex/"/>
+
+Gawk (3.1.3) - 1,596 KB:
+<ulink url="http://freshmeat.net/projects/gnuawk/"/>
+
+GCC (2.95.3) - 9,618 KB:
+<ulink url="http://freshmeat.net/projects/gcc/"/>
+
+GCC-core (3.3.2) - 10,994 KB:
+<ulink url="http://freshmeat.net/projects/gcc/"/>
+
+GCC-g++ (3.3.2) - 2,019 KB:
+<ulink url="http://freshmeat.net/projects/gcc/"/>
+
+GCC-testsuite (3.3.2) - 1,042 KB:
+<ulink url="http://freshmeat.net/projects/gcc/"/>
+
+Gettext (0.13.1) - 6,306 KB:
+<ulink url="http://freshmeat.net/projects/gettext/"/>
+
+Glibc (2.3.2) - 13,064 KB:
+<ulink url="http://freshmeat.net/projects/glibc/"/>
+
+Glibc-linuxthreads (2.3.2) - 211 KB:
+<ulink url="http://freshmeat.net/projects/glibc/"/>
+
+Grep (2.5.1) - 545 KB:
+<ulink url="http://freshmeat.net/projects/grep/"/>
+
+Groff (1.19) - 2,360 KB:
+<ulink url="http://freshmeat.net/projects/groff/"/>
+
+Grub (0.93) - 870 KB:
+<ulink url="ftp://alpha.gnu.org/pub/gnu/grub/"/>
+
+Gzip (1.3.5) - 324 KB:
+<ulink url="ftp://alpha.gnu.org/gnu/gzip/"/>
+
+Inetutils (1.4.2) - 1,019 KB:
+<ulink url="http://freshmeat.net/projects/inetutils/"/>
+
+Kbd (1.08) - 801 KB:
+<ulink url="http://freshmeat.net/projects/kbd/"/>
+
+Less (381) - 259 KB:
+<ulink url="http://freshmeat.net/projects/less/"/>
+
+LFS-Bootscripts (1.12) - 25 KB:
+<ulink url="http://downloads.linuxfromscratch.org/lfs-bootscripts-1.12.tar.bz2"/>
+
+Lfs-Utils (0.4.2) - 221 KB:
+<ulink url="http://www.linuxfromscratch.org/~winkie/downloads/lfs-utils/"/>
+
+Libtool (1.5) - 2,751 KB:
+<ulink url="http://freshmeat.net/projects/libtool/"/>
+
+Linux (2.4.23) - 29,133 KB:
+<ulink url="http://freshmeat.net/projects/linux/"/>
+
+M4 (1.4) - 310 KB:
+<ulink url="http://freshmeat.net/projects/gnum4/"/>
+
+Make (3.80) - 899 KB:
+<ulink url="http://freshmeat.net/projects/gnumake"/>
+
+MAKEDEV (1.7) - 8 KB:
+<ulink url="http://downloads.linuxfromscratch.org/MAKEDEV-1.7.bz2"/>
+
+Man (1.5m2) - 196 KB:
+<ulink url="http://freshmeat.net/projects/man/"/>
+
+Man-pages (1.64) - 645 KB:
+<ulink url="http://freshmeat.net/projects/man-pages/"/>
+
+Modutils (2.4.26) - 229 KB:
+<ulink url="http://freshmeat.net/projects/modutils/"/>
+
+Ncurses (5.3) - 2,019 KB:
+<ulink url="http://freshmeat.net/projects/ncurses/"/>
+
+Net-tools (1.60) - 194 KB:
+<ulink url="http://freshmeat.net/projects/net-tools/"/>
+
+Patch (2.5.4) - 182 KB:
+<ulink url="http://freshmeat.net/projects/patch/"/>
+
+Perl (5.8.2) - 11,617 KB:
+<ulink url="http://freshmeat.net/projects/perl/"/>
+
+Procinfo (18) - 24 KB:
+<ulink url="http://freshmeat.net/projects/procinfo/"/>
+
+Procps (3.1.14) - 244 KB:
+<ulink url="http://freshmeat.net/projects/procps/"/>
+
+Psmisc (21.4) - 375 KB:
+<ulink url="http://freshmeat.net/projects/psmisc/"/>
+
+Sed (4.0.8) - 717 KB:
+<ulink url="http://freshmeat.net/projects/sed/"/>
+
+Shadow (4.0.3) - 760 KB:
+<ulink url="http://freshmeat.net/projects/shadow/"/>
+
+Sysklogd (1.4.1) - 80 KB:
+<ulink url="http://freshmeat.net/projects/sysklogd/"/>
+
+Sysvinit (2.85) - 91 KB:
+<ulink url="http://freshmeat.net/projects/sysvinit/"/>
+
+Tar (1.13.25) - 1,281 KB:
+<ulink url="ftp://alpha.gnu.org/gnu/tar/"/>
+
+Tcl (8.4.5) - 3,363 KB:
+<ulink url="http://freshmeat.net/projects/tcltk/"/>
+
+Texinfo (4.6) - 1,317 KB:
+<ulink url="http://freshmeat.net/projects/texinfo/"/>
+
+Util-linux (2.12) - 1,814 KB:
+<ulink url="http://freshmeat.net/projects/util-linux/"/>
+
+Vim (6.2) - 3,193 KB:
+<ulink url="http://freshmeat.net/projects/vim/"/>
+
+Zlib (1.2.1) - 277 KB:
+<ulink url="http://freshmeat.net/projects/zlib/"/>
+
+Total size of these packages: 134 MB
+</literallayout>
+
+<note><para>File (4.06) may not be available by the time you read
+this. The master download location is known to remove old versions when new
+ones are released. Please refer to the corresponding section in
+<xref linkend="appendixa"/> for an alternate download location.</para></note>
+
+</sect1>
