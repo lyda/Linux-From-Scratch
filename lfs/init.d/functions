@@ -46,6 +46,23 @@ BRACKET="\\033[1;34m"        # Brackets are blue
 BOOTMESG=""
 BOOTSERVICE=""
 
+#*******************************************************************************
+# Function - boot_mesg()
+#
+# Purpose:      Sending information from bootup scripts to the console
+#
+# Inputs:       $@ is the message
+#
+# Outputs:      Standard Output
+#
+# Todo:         - This function was created for the purpose of storing
+#               information to be passed to a bootup log.  The logging support
+#               is not yet added
+#               - May later have optional color parameter sent via $2.  Using
+#               quotes when calling this function shall force all input to be
+#               sent to $1 to be compatible with future versions
+#
+#*******************************************************************************
 boot_mesg()
 {
 	local nlBOOTMESG=""
