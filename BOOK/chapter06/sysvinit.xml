@@ -103,8 +103,8 @@ EOF</userinput></screen>
 <command>agetty</command> to send this escape sequence to the terminal
 before doing anything else. This escape sequence switches the console
 character set to a user-defined one, which can be modified by running
-the <command>setfont</command> program. The console initscript from
-the LFS-Bootscripts package calls the <command>setfont</command>
+the <command>setfont</command> program. The <command>console</command>
+initscript from the LFS-Bootscripts package calls the <command>setfont</command>
 program during system startup. Sending this escape sequence is
 necessary for people who use non-ISO 8859-1 screen fonts, but it does
 not effect native English speakers.</para>
@@ -141,8 +141,8 @@ brought down.</para>
 <term><command>init</command></term>
 <listitem>
 <para>the first process to be started when the kernel has initialized
-the hardware. Init takes over the boot process and starts all the
-proceses it is instructed to.</para>
+the hardware. <command>init</command> takes over the boot process and 
+starts all the proceses it is instructed to.</para>
 <indexterm zone="ch-system-sysvinit init"><primary sortas="b-init">init</primary></indexterm>
 </listitem>
 </varlistentry>
