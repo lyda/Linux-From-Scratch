@@ -1,3 +1,9 @@
+n/a - June 20, 2004
+
+	* Rolled back to the /dev/.udev.tdb check from 2.1.1, since the new
+	  one doesn't work as well, and the bug that caused it to change is
+	  now fixed
+
 n/a - June 18, 2004
 
 	* Updated sysconfig/console
