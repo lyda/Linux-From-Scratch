@@ -1,3 +1,8 @@
+n/a - July 6, 2004
+
+	* Moved the hotplug bootscript back to contrib, it will not be used in
+	  the testing branch of the lfs book at this time
+
 n/a - July 4, 2004
 
 	* Modified ifup and ifdown to be hotplug aware
