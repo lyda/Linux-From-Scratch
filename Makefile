@@ -59,7 +59,7 @@ install:
 	install -m 754 lfs/sysconfig/network-devices/services/static ${EXTDIR}/sysconfig/network-devices/services
 
 install-adsl:
-	install -m 754 lfs/init.d/adsl       ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/adsl       ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc0.d/K49adsl
 	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc1.d/K49adsl
 	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc2.d/K49adsl
@@ -68,7 +68,7 @@ install-adsl:
 	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc5.d/S24adsl
 	ln -s  ../init.d/adsl ${EXTDIR}/rc.d/rc6.d/K49adsl
 install-alsa:
-	install -m 754 lfs/init.d/alsa       ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/alsa       ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/alsa ${EXTDIR}/rc.d/rc0.d/K35alsa
 	ln -s  ../init.d/alsa ${EXTDIR}/rc.d/rc1.d/K35alsa
 	ln -s  ../init.d/alsa ${EXTDIR}/rc.d/rc2.d/S40alsa
@@ -77,7 +77,7 @@ install-alsa:
 	ln -s  ../init.d/alsa ${EXTDIR}/rc.d/rc5.d/S40alsa
 	ln -s  ../init.d/alsa ${EXTDIR}/rc.d/rc6.d/K35alsa
 install-apache:
-	install -m 754 lfs/init.d/apache     ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/apache     ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/apache ${EXTDIR}/rc.d/rc0.d/K28apache
 	ln -s  ../init.d/apache ${EXTDIR}/rc.d/rc1.d/K28apache
 	ln -s  ../init.d/apache ${EXTDIR}/rc.d/rc2.d/K28apache
@@ -86,7 +86,7 @@ install-apache:
 	ln -s  ../init.d/apache ${EXTDIR}/rc.d/rc5.d/S32apache
 	ln -s  ../init.d/apache ${EXTDIR}/rc.d/rc6.d/K28apache
 install-bind:
-	install -m 754 lfs/init.d/bind       ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/bind       ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/bind ${EXTDIR}/rc.d/rc0.d/K49bind
 	ln -s  ../init.d/bind ${EXTDIR}/rc.d/rc1.d/K49bind
 	ln -s  ../init.d/bind ${EXTDIR}/rc.d/rc2.d/K49bind
@@ -95,7 +95,7 @@ install-bind:
 	ln -s  ../init.d/bind ${EXTDIR}/rc.d/rc5.d/S22bind
 	ln -s  ../init.d/bind ${EXTDIR}/rc.d/rc6.d/K49bind
 install-cups:
-	install -m 754 lfs/init.d/cups       ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/cups       ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/cups ${EXTDIR}/rc.d/rc0.d/K00cups
 	ln -s  ../init.d/cups ${EXTDIR}/rc.d/rc1.d/K00cups
 	ln -s  ../init.d/cups ${EXTDIR}/rc.d/rc2.d/S99cups
@@ -104,7 +104,7 @@ install-cups:
 	ln -s  ../init.d/cups ${EXTDIR}/rc.d/rc5.d/S99cups
 	ln -s  ../init.d/cups ${EXTDIR}/rc.d/rc6.d/K00cups
 install-dhcp:
-	install -m 754 lfs/init.d/dhcp       ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/dhcp       ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc0.d/
 	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc1.d/
 	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc2.d/
@@ -113,7 +113,7 @@ install-dhcp:
 	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc5.d/
 	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc6.d/
 install-exim:
-	install -m 754 lfs/init.d/exim       ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/exim       ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/exim ${EXTDIR}/rc.d/rc0.d/K25exim
 	ln -s  ../init.d/exim ${EXTDIR}/rc.d/rc1.d/K25exim
 	ln -s  ../init.d/exim ${EXTDIR}/rc.d/rc2.d/K25exim
@@ -122,7 +122,7 @@ install-exim:
 	ln -s  ../init.d/exim ${EXTDIR}/rc.d/rc5.d/S35exim
 	ln -s  ../init.d/exim ${EXTDIR}/rc.d/rc6.d/K25exim
 install-fcron:
-	install -m 754 lfs/init.d/fcron      ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/fcron      ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/fcron ${EXTDIR}/rc.d/rc0.d/K08fcron
 	ln -s  ../init.d/fcron ${EXTDIR}/rc.d/rc1.d/K08fcron
 	ln -s  ../init.d/fcron ${EXTDIR}/rc.d/rc2.d/S40fcron
@@ -131,7 +131,7 @@ install-fcron:
 	ln -s  ../init.d/fcron ${EXTDIR}/rc.d/rc5.d/S40fcron
 	ln -s  ../init.d/fcron ${EXTDIR}/rc.d/rc6.d/K08fcron
 install-gdm:
-	install -m 754 lfs/init.d/gdm        ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/gdm        ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/gdm ${EXTDIR}/rc.d/rc0.d/K05gdm
 	ln -s  ../init.d/gdm ${EXTDIR}/rc.d/rc1.d/K05gdm
 	ln -s  ../init.d/gdm ${EXTDIR}/rc.d/rc2.d/K05gdm
@@ -140,7 +140,7 @@ install-gdm:
 	ln -s  ../init.d/gdm ${EXTDIR}/rc.d/rc5.d/S95gdm
 	ln -s  ../init.d/gdm ${EXTDIR}/rc.d/rc6.d/K05gdm
 install-gpm:
-	install -m 754 lfs/init.d/gpm        ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/gpm        ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/gpm ${EXTDIR}/rc.d/rc0.d/K10gpm
 	ln -s  ../init.d/gpm ${EXTDIR}/rc.d/rc1.d/K10gpm
 	ln -s  ../init.d/gpm ${EXTDIR}/rc.d/rc2.d/K10gpm
@@ -149,7 +149,7 @@ install-gpm:
 	ln -s  ../init.d/gpm ${EXTDIR}/rc.d/rc5.d/S70gpm
 	ln -s  ../init.d/gpm ${EXTDIR}/rc.d/rc6.d/K10gpm
 install-lprng:
-	install -m 754 lfs/init.d/lprng      ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/lprng      ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/lprng ${EXTDIR}/rc.d/rc0.d/K00lprng
 	ln -s  ../init.d/lprng ${EXTDIR}/rc.d/rc1.d/K00lprng
 	ln -s  ../init.d/lprng ${EXTDIR}/rc.d/rc2.d/S99lprng
@@ -158,7 +158,7 @@ install-lprng:
 	ln -s  ../init.d/lprng ${EXTDIR}/rc.d/rc5.d/S99lprng
 	ln -s  ../init.d/lprng ${EXTDIR}/rc.d/rc6.d/K00lprng
 install-mysql:
-	install -m 754 lfs/init.d/mysql      ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/mysql      ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/mysql ${EXTDIR}/rc.d/rc0.d/K26mysql
 	ln -s  ../init.d/mysql ${EXTDIR}/rc.d/rc1.d/K26mysql
 	ln -s  ../init.d/mysql ${EXTDIR}/rc.d/rc2.d/K26mysql
@@ -167,7 +167,7 @@ install-mysql:
 	ln -s  ../init.d/mysql ${EXTDIR}/rc.d/rc5.d/S34mysql
 	ln -s  ../init.d/mysql ${EXTDIR}/rc.d/rc6.d/K26mysql
 install-netfs:
-	install -m 754 lfs/init.d/netfs      ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/netfs      ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/netfs ${EXTDIR}/rc.d/rc0.d/K47netfs
 	ln -s  ../init.d/netfs ${EXTDIR}/rc.d/rc1.d/K47netfs
 	ln -s  ../init.d/netfs ${EXTDIR}/rc.d/rc2.d/K47netfs
@@ -176,7 +176,7 @@ install-netfs:
 	ln -s  ../init.d/netfs ${EXTDIR}/rc.d/rc5.d/S28netfs
 	ln -s  ../init.d/netfs ${EXTDIR}/rc.d/rc6.d/K47netfs
 install-nfs-client:
-	install -m 754 lfs/init.d/nfs-client ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/nfs-client ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/nfs-client ${EXTDIR}/rc.d/rc0.d/K48nfs-client
 	ln -s  ../init.d/nfs-client ${EXTDIR}/rc.d/rc1.d/K48nfs-client
 	ln -s  ../init.d/nfs-client ${EXTDIR}/rc.d/rc2.d/K48nfs-client
@@ -185,7 +185,7 @@ install-nfs-client:
 	ln -s  ../init.d/nfs-client ${EXTDIR}/rc.d/rc5.d/S24nfs-client
 	ln -s  ../init.d/nfs-client ${EXTDIR}/rc.d/rc6.d/K48nfs-client
 install-nfs-server:
-	install -m 754 lfs/init.d/nfs-server ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/nfs-server ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/nfs-server ${EXTDIR}/rc.d/rc0.d/K48nfs-server
 	ln -s  ../init.d/nfs-server ${EXTDIR}/rc.d/rc1.d/K48nfs-server
 	ln -s  ../init.d/nfs-server ${EXTDIR}/rc.d/rc2.d/K48nfs-server
@@ -194,7 +194,7 @@ install-nfs-server:
 	ln -s  ../init.d/nfs-server ${EXTDIR}/rc.d/rc5.d/S24nfs-server
 	ln -s  ../init.d/nfs-server ${EXTDIR}/rc.d/rc6.d/K48nfs-server
 install-ntp:
-	install -m 754 lfs/init.d/ntp        ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/ntp        ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc0.d/K46ntp
 	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc1.d/K46ntp
 	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc2.d/K46ntp
@@ -203,7 +203,7 @@ install-ntp:
 	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc5.d/S26npt
 	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc6.d/K46ntp
 install-portmap:
-	install -m 754 lfs/init.d/portmap    ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/portmap    ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/portmap ${EXTDIR}/rc.d/rc0.d/K49portmap
 	ln -s  ../init.d/portmap ${EXTDIR}/rc.d/rc1.d/K49portmap
 	ln -s  ../init.d/portmap ${EXTDIR}/rc.d/rc2.d/K49portmap
@@ -212,7 +212,7 @@ install-portmap:
 	ln -s  ../init.d/portmap ${EXTDIR}/rc.d/rc5.d/S22portmap
 	ln -s  ../init.d/portmap ${EXTDIR}/rc.d/rc6.d/K49portmap
 install-postfix:
-	install -m 754 lfs/init.d/postfix    ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/postfix    ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/postfix ${EXTDIR}/rc.d/rc0.d/K25postfix
 	ln -s  ../init.d/postfix ${EXTDIR}/rc.d/rc1.d/K25postfix
 	ln -s  ../init.d/postfix ${EXTDIR}/rc.d/rc2.d/K25postfix
@@ -221,7 +221,7 @@ install-postfix:
 	ln -s  ../init.d/postfix ${EXTDIR}/rc.d/rc5.d/S35postfix
 	ln -s  ../init.d/postfix ${EXTDIR}/rc.d/rc6.d/K25postfix
 install-postgresql:
-	install -m 754 lfs/init.d/postgresql ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/postgresql ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/postgresql ${EXTDIR}/rc.d/rc0.d/K26postgresql
 	ln -s  ../init.d/postgresql ${EXTDIR}/rc.d/rc1.d/K26postgresql
 	ln -s  ../init.d/postgresql ${EXTDIR}/rc.d/rc2.d/K26postgresql
@@ -230,7 +230,7 @@ install-postgresql:
 	ln -s  ../init.d/postgresql ${EXTDIR}/rc.d/rc5.d/S34postgresql
 	ln -s  ../init.d/postgresql ${EXTDIR}/rc.d/rc6.d/K26postgresql
 install-proftpd:
-	install -m 754 lfs/init.d/proftpd    ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/proftpd    ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/proftpd ${EXTDIR}/rc.d/rc0.d/K28proftpd
 	ln -s  ../init.d/proftpd ${EXTDIR}/rc.d/rc1.d/K28proftpd
 	ln -s  ../init.d/proftpd ${EXTDIR}/rc.d/rc2.d/K28proftpd
@@ -239,7 +239,7 @@ install-proftpd:
 	ln -s  ../init.d/proftpd ${EXTDIR}/rc.d/rc5.d/S32proftpd
 	ln -s  ../init.d/proftpd ${EXTDIR}/rc.d/rc6.d/K28proftpd
 install-random:
-	install -m 754 lfs/init.d/random     ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/random     ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/random ${EXTDIR}/rc.d/rc0.d/K45random
 	ln -s  ../init.d/random ${EXTDIR}/rc.d/rc1.d/S25random
 	ln -s  ../init.d/random ${EXTDIR}/rc.d/rc2.d/S25random
@@ -248,7 +248,7 @@ install-random:
 	ln -s  ../init.d/random ${EXTDIR}/rc.d/rc5.d/S25random
 	ln -s  ../init.d/random ${EXTDIR}/rc.d/rc6.d/K45random
 install-rsyncd:
-	install -m 754 lfs/init.d/rsyncd     ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/rsyncd     ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/rsyncd ${EXTDIR}/rc.d/rc0.d/K30rsyncd
 	ln -s  ../init.d/rsyncd ${EXTDIR}/rc.d/rc1.d/K30rsyncd
 	ln -s  ../init.d/rsyncd ${EXTDIR}/rc.d/rc2.d/K30rsyncd
@@ -257,7 +257,7 @@ install-rsyncd:
 	ln -s  ../init.d/rsyncd ${EXTDIR}/rc.d/rc5.d/S30rsyncd
 	ln -s  ../init.d/rsyncd ${EXTDIR}/rc.d/rc6.d/K30rsyncd
 install-samba:
-	install -m 754 lfs/init.d/samba      ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/samba      ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/samba ${EXTDIR}/rc.d/rc0.d/K48samba
 	ln -s  ../init.d/samba ${EXTDIR}/rc.d/rc1.d/K48samba
 	ln -s  ../init.d/samba ${EXTDIR}/rc.d/rc2.d/K48samba
@@ -266,7 +266,7 @@ install-samba:
 	ln -s  ../init.d/samba ${EXTDIR}/rc.d/rc5.d/S24samba
 	ln -s  ../init.d/samba ${EXTDIR}/rc.d/rc6.d/K48samba
 install-sendmail:
-	install -m 754 lfs/init.d/sendmail   ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/sendmail   ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/sendmail ${EXTDIR}/rc.d/rc0.d/K25sendmail
 	ln -s  ../init.d/sendmail ${EXTDIR}/rc.d/rc1.d/K25sendmail
 	ln -s  ../init.d/sendmail ${EXTDIR}/rc.d/rc2.d/K25sendmail
@@ -275,7 +275,7 @@ install-sendmail:
 	ln -s  ../init.d/sendmail ${EXTDIR}/rc.d/rc5.d/S35sendmail
 	ln -s  ../init.d/sendmail ${EXTDIR}/rc.d/rc6.d/K25sendmail
 install-sshd:
-	install -m 754 lfs/init.d/sshd       ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/sshd       ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/sshd ${EXTDIR}/rc.d/rc0.d/K30sshd
 	ln -s  ../init.d/sshd ${EXTDIR}/rc.d/rc1.d/K30sshd
 	ln -s  ../init.d/sshd ${EXTDIR}/rc.d/rc2.d/K30sshd
@@ -284,7 +284,7 @@ install-sshd:
 	ln -s  ../init.d/sshd ${EXTDIR}/rc.d/rc5.d/S30sshd
 	ln -s  ../init.d/sshd ${EXTDIR}/rc.d/rc6.d/K30sshd
 install-xinetd:
-	install -m 754 lfs/init.d/xinetd     ${EXTDIR}/rc.d/init.d/
+	install -m 754 blfs/init.d/xinetd     ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/xinetd ${EXTDIR}/rc.d/rc0.d/K49xinetd
 	ln -s  ../init.d/xinetd ${EXTDIR}/rc.d/rc1.d/K49xinetd
 	ln -s  ../init.d/xinetd ${EXTDIR}/rc.d/rc2.d/K49xinetd
