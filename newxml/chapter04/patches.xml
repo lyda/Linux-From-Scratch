@@ -58,6 +58,9 @@ Kbd More-Programs Patch - 1 KB:
 Man 80-Columns Patch - 1 KB:
 <ulink url="&patches-root;man-&man-version;-80cols.patch"/>
 
+Mktemp Tempfile Patch - 3 KB:
+<ulink url="&patches-root;mktemp-&mktemp-version;-add-tempfile.patch"/>
+
 Net-tools Mii-Tool-Gcc33 Patch - 2 KB:
 <ulink url="&patches-root;net-tools-&net-tools-version;-miitool-gcc33-1.patch"/>
 

@@ -20,7 +20,6 @@ first a summary, then a detailed log.</para>
 <listitem><para>Upgraded to:</para>
 <itemizedlist>
 <listitem><para>less-382</para></listitem>
-<listitem><para>lfs-utils-0.5</para></listitem>
 <listitem><para>linux-2.4.25</para></listitem>
 <listitem><para>man-pages-1.66</para></listitem>
 <listitem><para>ncurses-5.4</para></listitem>
@@ -30,16 +29,22 @@ first a summary, then a detailed log.</para>
 
 <listitem><para>Added:</para>
 <itemizedlist>
+<listitem><para>iana-etc-1.00</para></listitem>
 <listitem><para>make_devices-1.2</para></listitem>
+<listitem><para>mktemp-1.5</para></listitem>
 </itemizedlist>
 </listitem>
  
 <listitem><para>Removed:</para>
 <itemizedlist>
+<listitem><para>lfs-utils-0.5</para></listitem>
 <listitem><para>MAKEDEV-1.7</para></listitem>
 <listitem><para>ncurses-5.3-etip-2.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>March 21st, 2004 [winkie]: Chapter 6 - Replaced Lfs-Utils
+with Iana-Etc and Mktemp.</para></listitem>
 
 <listitem><para>February 27th, 2004 [jeremy]: Upgraded to
 Procps-3.2.0.</para></listitem>

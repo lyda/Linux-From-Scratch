@@ -60,7 +60,10 @@
 <xi:include href="zlib.xml"/>
 
 
-<xi:include href="lfs-utils.xml"/>
+<xi:include href="mktemp.xml"/>
+
+
+<xi:include href="iana-etc.xml"/>
 
 
 <xi:include href="findutils.xml"/>

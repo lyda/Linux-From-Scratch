@@ -33,10 +33,10 @@
 <listitem><para><xref linkend="ch-system-groff"/></para></listitem>
 <listitem><para><xref linkend="ch-system-grub"/></para></listitem>
 <listitem><para><xref linkend="ch-system-gzip"/></para></listitem>
+<listitem><para><xref linkend="ch-system-iana-etc"/></para></listitem>
 <listitem><para><xref linkend="ch-system-inetutils"/></para></listitem>
 <listitem><para><xref linkend="ch-system-kbd"/></para></listitem>
 <listitem><para><xref linkend="ch-system-less"/></para></listitem>
-<listitem><para><xref linkend="ch-system-lfs-utils"/></para></listitem>
 <listitem><para><xref linkend="ch-system-libtool"/></para></listitem>
 <listitem><para><xref linkend="ch-bootable-kernel"/></para></listitem>
 <listitem><para><xref linkend="ch-system-m4"/></para></listitem>
@@ -44,6 +44,7 @@
 <listitem><para><xref linkend="ch-system-MAKEDEV"/></para></listitem>
 <listitem><para><xref linkend="ch-system-man"/></para></listitem>
 <listitem><para><xref linkend="ch-system-man-pages"/></para></listitem>
+<listitem><para><xref linkend="ch-system-mktemp"/></para></listitem>
 <listitem><para><xref linkend="ch-system-modutils"/></para></listitem>
 <listitem><para><xref linkend="ch-system-ncurses"/></para></listitem>
 <listitem><para><xref linkend="ch-system-net-tools"/></para></listitem>

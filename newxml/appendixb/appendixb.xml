@@ -218,9 +218,7 @@ to which it belongs.</para>
 <listitem><para>hostname : <xref linkend="ch-system-net-tools"/></para></listitem>
 <listitem><para>hostname : <xref linkend="ch-system-coreutils"/></para></listitem>
 <listitem><para>hpftodit : <xref linkend="ch-system-groff"/></para></listitem>
-<listitem><para>http-get : <xref linkend="ch-system-lfs-utils"/></para></listitem>
 <listitem><para>hwclock : <xref linkend="ch-system-util-linux"/></para></listitem>
-<listitem><para>iana-net : <xref linkend="ch-system-lfs-utils"/></para></listitem>
 <listitem><para>iconv : <xref linkend="ch-system-glibc"/></para></listitem>
 <listitem><para>iconvconfig : <xref linkend="ch-system-glibc"/></para></listitem>
 <listitem><para>id : <xref linkend="ch-system-coreutils"/></para></listitem>
@@ -373,7 +371,7 @@ to which it belongs.</para>
 <listitem><para>mknod : <xref linkend="ch-system-coreutils"/></para></listitem>
 <listitem><para>mkpasswd : <xref linkend="ch-system-shadow"/></para></listitem>
 <listitem><para>mkswap : <xref linkend="ch-system-util-linux"/></para></listitem>
-<listitem><para>mktemp : <xref linkend="ch-system-lfs-utils"/></para></listitem>
+<listitem><para>mktemp : <xref linkend="ch-system-mktemp"/></para></listitem>
 <listitem><para>mk_cmds : <xref linkend="ch-system-e2fsprogs"/></para></listitem>
 <listitem><para>mmroff : <xref linkend="ch-system-groff"/></para></listitem>
 <listitem><para>modinfo : <xref linkend="ch-system-modutils"/></para></listitem>
@@ -578,7 +576,7 @@ to which it belongs.</para>
 <listitem><para>tee : <xref linkend="ch-system-coreutils"/></para></listitem>
 <listitem><para>telinit : <xref linkend="ch-system-sysvinit"/></para></listitem>
 <listitem><para>telnet : <xref linkend="ch-system-inetutils"/></para></listitem>
-<listitem><para>tempfile : <xref linkend="ch-system-lfs-utils"/></para></listitem>
+<listitem><para>tempfile : <xref linkend="ch-system-mktemp"/></para></listitem>
 <listitem><para>template : <xref linkend="ch-scripts-bootscripts"/></para></listitem>
 <listitem><para>test : <xref linkend="ch-system-coreutils"/></para></listitem>
 <listitem><para>test.bash : <xref linkend="ch-system-util-linux"/></para></listitem>

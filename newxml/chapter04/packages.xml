@@ -88,6 +88,9 @@ Grub (&grub-version;) - 902 KB:
 Gzip (&gzip-version;) - 324 KB:
 <ulink url="ftp://alpha.gnu.org/gnu/gzip/"/>
 
+Iana-Etc (&iana-etc-version;) - 161 KB:
+<ulink url="&freshmeat;iana-etc/"/>
+
 Inetutils (&inetutils-version;) - 1,019 KB:
 <ulink url="&freshmeat;inetutils/"/>
 
@@ -99,9 +102,6 @@ Less (&less-version;) - 259 KB:
 
 LFS-Bootscripts (&bootscripts-version;) - 25 KB:
 <ulink url="&http-down;lfs-bootscripts-1.12.tar.bz2"/>
-
-Lfs-Utils (&lfs-utils-version;) - 221 KB:
-<ulink url="&lfs-root;~winkie/downloads/lfs-utils/"/>
 
 Libtool (&libtool-version;) - 2,591 KB:
 <ulink url="&freshmeat;libtool/"/>
@@ -123,6 +123,9 @@ Man (&man-version;) - 196 KB:
 
 Man-pages (&man-pages-version;) - 1,582 KB:
 <ulink url="&freshmeat;man-pages/"/>
+
+Mktemp (&mktemp-version;) - 69 KB:
+<ulink url="&freshmeat;mktemp/"/>
 
 Modutils (&modutils-version;) - 229 KB:
 <ulink url="&freshmeat;modutils/"/>
