@@ -22,7 +22,6 @@ install: create-dirs create-service-dir
 	install -m 754 lfs/init.d/mountkernfs  ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/network      ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/rc           ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/random       ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/reboot       ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/sendsignals  ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/setclock     ${EXTDIR}/rc.d/init.d/
@@ -32,8 +31,7 @@ install: create-dirs create-service-dir
 	install -m 754 lfs/init.d/udev         ${EXTDIR}/rc.d/init.d
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc0.d/K90sysklogd
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc0.d/K80network
-	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S50sendsignals
-	ln -sf ../init.d/random      ${EXTDIR}/rc.d/rc0.d/S60random
+	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S60sendsignals
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rc0.d/S70mountfs
 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rc0.d/S80swap
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc0.d/S90localnet
@@ -50,8 +48,7 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc5.d/S20network
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc6.d/K80network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc6.d/K90sysklogd
-	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc6.d/S50sendsignals
-	ln -sf ../init.d/random      ${EXTDIR}/rc.d/rc6.d/S60random
+	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc6.d/S60sendsignals
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rc6.d/S70mountfs
 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rc6.d/S80swap
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc6.d/S90localnet
@@ -61,7 +58,6 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rcsysinit.d/S20swap
 	ln -sf ../init.d/checkfs     ${EXTDIR}/rc.d/rcsysinit.d/S30checkfs
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rcsysinit.d/S40mountfs
-	ln -sf ../init.d/random      ${EXTDIR}/rc.d/rcsysinit.d/S45random
 	ln -sf ../init.d/cleanfs     ${EXTDIR}/rc.d/rcsysinit.d/S50cleanfs
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console

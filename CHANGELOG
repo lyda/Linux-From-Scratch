@@ -1,3 +1,8 @@
+n/a - May 20, 2004
+
+	* Removed the random script.  There is not a strong enough case for
+	  adding it to the lfs-bootscripts.
+
 n/a - May 19, 2004
 
 	* Added the random bootscript from blfs-bootscripts
