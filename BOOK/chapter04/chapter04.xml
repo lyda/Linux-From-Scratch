@@ -1,9 +1,0 @@
-<chapter id="chapter04">
-<title>Packages that need to be downloaded</title>
-<?dbhtml filename="chapter04.html" dir="chapter04"?>
-
-&c4-introduction;
-&c4-packages;
-
-</chapter>
-
