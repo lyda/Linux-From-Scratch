@@ -107,3 +107,18 @@ div.caution {
 .command {
     font-family: courier, monospace;
 }
+
+.item {
+    width: 15em;
+    float: left;
+}
+
+.secitem {
+    font-weight: normal;
+    width: 12.5em;
+    float: left;
+}
+
+.toc ul, .index ul, .navheader ul, .navfooter ul {
+	list-style: none;
+}

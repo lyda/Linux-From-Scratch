@@ -22,6 +22,7 @@ lfs:
 pdf:
 	xsltproc --xinclude --nonet --output lfs.fo stylesheets/lfs-pdf.xsl \
 	  index.xml
+	sed -i -e "s/inherit/all/" lfs.fo
 	fop.sh lfs.fo lfs.pdf
 
 validate:
