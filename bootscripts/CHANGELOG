@@ -6,6 +6,8 @@ n/a - March 19, 2004
 	* added stop to the setclock script
 	* changed echo > to > in cleanfs, suggested by winkie
 	* Initial additions of some BLFS Scripts
+	* Edited killproc, so it checks for running pids, rather then
+	  the completion of the above kill command.  Suggested by Zack
 
 1.99.4 - March 17, 2004
 
@@ -27,7 +29,7 @@ n/a - February 19, 2004
 
 	* Fixed checkfs script, so it will no longer continue to boot after a
 	  failure in the init.d/checkfs script.  Tested with the help of Andre
-	  Müller.  Fix suggested by winkie
+	  Müller.  Fix suggested by Zack
 
 n/a - February 7, 2004
 

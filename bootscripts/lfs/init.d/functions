@@ -187,9 +187,8 @@ killproc()
         getpids $1
 
         if [ -n "$pidlist" ]; then
-                failure=0
-
                 local i=0
+
                 for pid in $pidlist
                 do
                         kill -$signal $pid 2>/dev/null
@@ -205,8 +204,16 @@ killproc()
                         kill -0 $pid 2>/dev/null && failure=1
                 done
 
+		getpids $1
+
                 base=${1##*/}
-                if [ $failure = 0 ]; then rm -f /var/run/$base.pid; fi
+
+                if [ -n "$pidlist" ]; then
+			failure=1
+		else
+			failure=0
+			rm -f /var/run/$base.pid
+		fi
 
                 (exit $failure)
                 evaluate_retval
