@@ -80,14 +80,10 @@ install: create-dirs create-service-dir
 	install -m 754 lfs/sysconfig/network-devices/ifdown               ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/services/ipv4-static ${EXTDIR}/sysconfig/network-devices/services
 
-install-hotplug:
+install-hotplug: create-dirs
 	install -m 754 contrib/init.d/hotplug      ${EXTDIR}/rc.d/init.d
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc1.d/K85hotplug
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc2.d/K85hotplug
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc3.d/S15hotplug
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc4.d/S15hotplug
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc5.d/S15hotplug
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 
 .PHONY: all create-dirs create-service-dir install install-hotplug
