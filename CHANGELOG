@@ -5,7 +5,7 @@ n/a - November 25, 2004
 	  related to boot_mesg changes (DJ Lucas, Alexander Patrakov)
 	* syslog-ng is now installed by default (Jeremy Utley)
 	* removed syslog-ng.conf, as will be added to book (Nathan Coulson)
-
+	* hotplug is now installed by default (Jeremy Utley)
 n/a - November 20, 2004
 	* Modifed modules script to return to previous kernel message
 	  level (DJ Lucas)
