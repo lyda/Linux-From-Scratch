@@ -2,6 +2,8 @@ n/a - March 29, 2004
 
 	* Fixed the rc5.d symlink for ntp so it creates S26ntp instead
 	  of S26npt
+	* Moved S20mountkernfs to S00mountkernfs in rcsysinit.d.  Will help in
+	  the addition of udev in the future.
 
 n/a - March 27, 2004
 
