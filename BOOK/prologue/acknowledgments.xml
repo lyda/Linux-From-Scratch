@@ -64,7 +64,7 @@ Oliver</ulink> &lt;ryan@linuxfromscratch.org&gt; -- Testing Team
 leader, Toolchain maintainer, co-creator of Pure LFS
 (PLFS).</para></listitem>
 
-<listitem><para><ulink url="semzx@newmail.ru">Alexander
+<listitem><para><ulink url="mailto:semzx@newmail.ru">Alexander
 Patrakov</ulink> &lt;semzx@newmail.ru&gt; -- Former LFS Technical
 Writer.</para></listitem>
 
@@ -81,7 +81,8 @@ Utley</ulink> &lt;jeremy@linuxfromscratch.org&gt; -- LFS Technical
 Writer, Bugzilla maintainer, LFS Bootscripts Maintainer, LFS Server
 co-administrator.</para></listitem>
 
-<listitem><para>Zack Winkles -- Former LFS Technical
+<listitem><para><ulink url="mailto:zwinkles@gmail.com">Zack
+Winkles</ulink> &lt;zwinkles@gmail.com&gt; -- Former LFS Technical
 Writer.</para></listitem>
 
 <listitem><para>Countless other people on the various LFS and BLFS mailing lists
