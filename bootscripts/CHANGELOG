@@ -1,3 +1,7 @@
+n/a - June 29, 2004
+
+	* Made the grep for ONBOOT in the network script more exact
+
 2.1.2 - June 27, 2004
 
 	* install the automatic module loading script by default
