@@ -91,7 +91,7 @@ boot_mesg()
 
 boot_log()
 {
-	/bin/logger -p local0.info -t bootlog "@$"
+	/bin/logger -p local0.info -t bootlog "$@"
 }
 
 echo_ok()
