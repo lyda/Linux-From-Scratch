@@ -32,13 +32,16 @@ pdf:
 	  index.xml
 	sed -i -e "s/inherit/all/" $(BASEDIR)/lfs.fo
 	fop.sh $(BASEDIR)/lfs.fo $(BASEDIR)/$(PDF_OUTPUT)
+	rm lfs.fo
 
 print:
-	xsltproc --xinclude --nonet --stringparam profile.condition print --output lfs-print.xml \
-	  stylesheets/lfs-profile.xsl index-print.xml
-	xsltproc --nonet --output lfs-print.fo stylesheets/lfs-print.xsl lfs-print.xml
-	sed -i -e "s/inherit/all/" lfs-print.fo
-	fop.sh lfs-print.fo $(PRINT_OUTPUT)
+	xsltproc --xinclude --nonet --stringparam profile.condition print \
+		--output $(BASEDIR)/lfs-print.xml stylesheets/lfs-profile.xsl index-print.xml
+	xsltproc --nonet --output $(BASEDIR)/lfs-print.fo stylesheets/lfs-print.xsl \
+		$(BASEDIR)/lfs-print.xml
+	sed -i -e "s/inherit/all/" $(BASEDIR)/lfs-print.fo
+	fop.sh $(BASEDIR)/lfs-print.fo $(BASEDIR)/$(PRINT_OUTPUT)
+	rm $(BASEDIR)/lfs-print.xml $(BASEDIR)/lfs-print.fo
 
 nochunks:
 	xsltproc --xinclude --nonet --output $(NOCHUNKS_OUTPUT) \
