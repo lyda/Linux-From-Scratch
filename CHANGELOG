@@ -5,6 +5,7 @@ n/a - September 26, 2004
 	* Added consolelog to contrib (DJ Lucas)
 	* loadproc and killproc can have the -nomsg parameter to avoid
 	  calling evaluate_retval or print_service (Jim Gifford)
+	* boot_mesg no longer explicitly adds a \n onto end of lines
 
 n/a - September 24, 2004
 	* Removed /dev/udev.tdb test
