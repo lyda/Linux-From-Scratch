@@ -83,6 +83,14 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>March 21, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Patch: Arch: All - Shadow fix issue with shadow and lastlog.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>March 19, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: x86, PPC, Alpha - Linux to 2.6.11.5.</para></listitem>
