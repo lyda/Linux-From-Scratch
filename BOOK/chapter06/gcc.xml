@@ -117,71 +117,72 @@ cc1, cc1plus, collect2, cpp, g++, gcc, gccbug, and gcov</seg>
 <seg>libgcc.a, libgcc_eh.a, libgcc_s.so, libstdc++.[a,so] and libsupc++.a</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="cpp">
 <term><command>cpp</command></term>
 <listitem>
-<indexterm zone="ch-system-gcc cpp"><primary sortas="b-cpp">cpp</primary></indexterm>
 <para>the C preprocessor. It is used by the compiler expand the
 #include, #define, and similar statements in the source files.</para>
+<indexterm zone="ch-system-gcc cpp"><primary sortas="b-cpp">cpp</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="g">
 <term><command>g++</command></term>
 <listitem>
-<indexterm zone="ch-system-gcc g"><primary sortas="b-g++">g++</primary></indexterm>
 <para>the C++ compiler.</para>
+<indexterm zone="ch-system-gcc g"><primary sortas="b-g++">g++</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="gcc">
 <term><command>gcc</command></term>
 <listitem>
-<indexterm zone="ch-system-gcc gcc"><primary sortas="b-gcc">gcc</primary></indexterm>
 <para>the C compiler.</para>
+<indexterm zone="ch-system-gcc gcc"><primary sortas="b-gcc">gcc</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="gccbug">
 <term><command>gccbug</command></term>
 <listitem>
-<indexterm zone="ch-system-gcc gccbug"><primary sortas="b-gccbug">gccbug</primary></indexterm>
 <para>a shell script used to help create useful bug reports.</para>
+<indexterm zone="ch-system-gcc gccbug"><primary sortas="b-gccbug">gccbug</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="gcov">
 <term><command>gcov</command></term>
 <listitem>
-<indexterm zone="ch-system-gcc gcov"><primary sortas="b-gcov">gcov</primary></indexterm>
 <para>a coverage testing tool. It is used to analyze programs to
 determine where optimizations will have the most effect.</para>
+<indexterm zone="ch-system-gcc gcov"><primary sortas="b-gcov">gcov</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="libgcc">
 <term><filename class="libraryfile">libgcc*</filename></term>
 <listitem>
-<indexterm zone="ch-system-gcc libgcc"><primary sortas="c-libgcc*">libgcc*</primary></indexterm>
 <para>contains run-time support for <command>gcc</command>.</para>
+<indexterm zone="ch-system-gcc libgcc"><primary sortas="c-libgcc*">libgcc*</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="libstdc">
 <term><filename class="libraryfile">libstdc++</filename></term>
 <listitem>
-<indexterm zone="ch-system-gcc libstdc"><primary sortas="c-libstdc++">libstdc++</primary></indexterm>
 <para>the standard C++ library.</para>
+<indexterm zone="ch-system-gcc libstdc"><primary sortas="c-libstdc++">libstdc++</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="libsupc">
 <term><filename class="libraryfile">libsupc++</filename></term>
 <listitem>
-<indexterm zone="ch-system-gcc libsupc"><primary sortas="c-libsupc++">libsupc++</primary></indexterm>
 <para>provides supporting routines for the c++ programming language.</para>
+<indexterm zone="ch-system-gcc libsupc"><primary sortas="c-libsupc++">libsupc++</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

@@ -53,29 +53,30 @@ Diffutils, GCC, Gettext, Glibc, Make, Sed, Texinfo</seg></seglistitem>
 <seglistitem><seg>egrep (link to grep), fgrep (link to grep) and grep</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="egrep">
 <term><command>egrep</command></term>
 <listitem>
-<indexterm zone="ch-system-grep egrep"><primary sortas="b-egrep">egrep</primary></indexterm>
 <para>prints lines matching an extended regular expression.</para>
+<indexterm zone="ch-system-grep egrep"><primary sortas="b-egrep">egrep</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="fgrep">
 <term><command>fgrep</command></term>
 <listitem>
-<indexterm zone="ch-system-grep fgrep"><primary sortas="b-fgrep">fgrep</primary></indexterm>
 <para>prints lines matching a list of fixed strings.</para>
+<indexterm zone="ch-system-grep fgrep"><primary sortas="b-fgrep">fgrep</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="grep">
 <term><command>grep</command></term>
 <listitem>
-<indexterm zone="ch-system-grep grep"><primary sortas="b-grep">grep</primary></indexterm>
 <para>prints lines matching a basic regular expression.</para>
+<indexterm zone="ch-system-grep grep"><primary sortas="b-grep">grep</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

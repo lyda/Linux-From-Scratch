@@ -41,14 +41,15 @@
 <seglistitem><seg>various manual pages</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="manual-pages">
 <term><emphasis>manual pages</emphasis></term>
 <listitem>
-<indexterm zone="ch-system-man-pages manual-pages"><primary sortas="e-manual-pages">manual pages</primary></indexterm>
 <para>manual pages describing the C and C++ functions, important
 device files, and important configuration files.</para>
+<indexterm zone="ch-system-man-pages manual-pages"><primary sortas="e-manual-pages">manual pages</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

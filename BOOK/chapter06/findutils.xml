@@ -61,67 +61,68 @@ which is FHS-compliant.</para>
 <seglistitem><seg>bigram, code, find, frcode, locate, updatedb and xargs</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="bigram">
 <term><command>bigram</command></term>
 <listitem>
-<indexterm zone="ch-system-findutils bigram"><primary sortas="b-bigram">bigram</primary></indexterm>
 <para>was formerly used to produce <command>locate</command> databases.</para>
+<indexterm zone="ch-system-findutils bigram"><primary sortas="b-bigram">bigram</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="code">
 <term><command>code</command></term>
 <listitem>
-<indexterm zone="ch-system-findutils code"><primary sortas="b-code">code</primary></indexterm>
 <para>was formerly used to produce <command>locate</command>
 databases. It is the ancestor of <command>frcode</command>.</para>
+<indexterm zone="ch-system-findutils code"><primary sortas="b-code">code</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="find">
 <term><command>find</command></term>
 <listitem>
-<indexterm zone="ch-system-findutils find"><primary sortas="b-find">find</primary></indexterm>
 <para>searches given directory trees for files matching the specified criteria.</para>
+<indexterm zone="ch-system-findutils find"><primary sortas="b-find">find</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="frcode">
 <term><command>frcode</command></term>
 <listitem>
-<indexterm zone="ch-system-findutils frcode"><primary sortas="b-frcode">frcode</primary></indexterm>
 <para>is called by <command>updatedb</command> to compress the list of file names. It uses
 front-compression, reducing the database size by a factor of four to
 five.</para>
+<indexterm zone="ch-system-findutils frcode"><primary sortas="b-frcode">frcode</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="locate">
 <term><command>locate</command></term>
 <listitem>
-<indexterm zone="ch-system-findutils locate"><primary sortas="b-locate">locate</primary></indexterm>
 <para>searches through a database of file names and reports the names
 that contain a given string or match a given pattern.</para>
+<indexterm zone="ch-system-findutils locate"><primary sortas="b-locate">locate</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="updatedb">
 <term><command>updatedb</command></term>
 <listitem>
-<indexterm zone="ch-system-findutils updatedb"><primary sortas="b-updatedb">updatedb</primary></indexterm>
 <para>updates the <command>locate</command> database. It scans
 the entire file system (including other file systems that are currently mounted,
 unless told not to) and puts every file name it finds to the database.</para>
+<indexterm zone="ch-system-findutils updatedb"><primary sortas="b-updatedb">updatedb</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="xargs">
 <term><command>xargs</command></term>
 <listitem>
-<indexterm zone="ch-system-findutils xargs"><primary sortas="b-xargs">xargs</primary></indexterm>
 <para>can be used to apply a given command to a list of files.</para>
+<indexterm zone="ch-system-findutils xargs"><primary sortas="b-xargs">xargs</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

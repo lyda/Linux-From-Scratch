@@ -59,31 +59,32 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <seglistitem><seg>less, lessecho and lesskey</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="less">
 <term><command>less</command></term>
 <listitem>
-<indexterm zone="ch-system-less less"><primary sortas="b-less">less</primary></indexterm>
 <para>a file viewer or pager. It displays the contents of the given
 file, letting the user scroll, find strings, and jump to marks.</para>
+<indexterm zone="ch-system-less less"><primary sortas="b-less">less</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="lessecho">
 <term><command>lessecho</command></term>
 <listitem>
-<indexterm zone="ch-system-less lessecho"><primary sortas="b-lessecho">lessecho</primary></indexterm>
 <para>needed to expand meta-characters, such as <emphasis>*</emphasis>
 and <emphasis>?</emphasis>, in filenames on Unix systems.</para>
+<indexterm zone="ch-system-less lessecho"><primary sortas="b-lessecho">lessecho</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="lesskey">
 <term><command>lesskey</command></term>
 <listitem>
-<indexterm zone="ch-system-less lesskey"><primary sortas="b-lesskey">lesskey</primary></indexterm>
 <para>used to specify the key bindings for <command>less</command>.</para>
+<indexterm zone="ch-system-less lesskey"><primary sortas="b-lesskey">lesskey</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

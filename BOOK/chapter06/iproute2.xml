@@ -76,19 +76,19 @@
       </seglistitem>
     </segmentedlist>
 
-    <variablelist>
-      <title>Short descriptions</title>
+    <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
       <varlistentry id="ifstat">
         <term>
           <command>ifstat</command>
         </term>
         <listitem>
+          <para>shows the interfaces statistic including the amount of transmitted
+                and received packages by interface.</para>
           <indexterm zone="ch-system-iproute2 ifstat">
             <primary sortas="b-ifstat">ifstat</primary>
           </indexterm>
-          <para>shows the interfaces statistic including the amount of transmitted
-                and received packages by interface.</para>
         </listitem>
       </varlistentry>
 
@@ -97,9 +97,6 @@
           <command>ip</command>
         </term>
         <listitem>
-          <indexterm zone="ch-system-iproute2 ip">
-            <primary sortas="b-ip">ip</primary>
-          </indexterm>
 
           <para>is the main executable. Has several different functions.</para>
 
@@ -139,6 +136,9 @@
           <para><command>ip monitor</command> allows you to monitor the state of
                 devices, addresses and routes continuously.
           </para>
+          <indexterm zone="ch-system-iproute2 ip">
+            <primary sortas="b-ip">ip</primary>
+          </indexterm>
         </listitem>
       </varlistentry>
 
@@ -147,10 +147,10 @@
           <command>nstat</command>
         </term>
         <listitem>
+          <para>shows network statistics.</para>
           <indexterm zone="ch-system-iproute2 nstat">
             <primary sortas="b-nstat">nstat</primary>
           </indexterm>
-          <para>shows network statistics.</para>
         </listitem>
       </varlistentry>
 
@@ -159,12 +159,12 @@
           <command>routef</command>
         </term>
         <listitem>
-          <indexterm zone="ch-system-iproute2 routef">
-            <primary sortas="b-routef">routef</primary>
-          </indexterm>
           <para>a component of ip route. This is for flushing the routing
                 tables.
           </para>
+          <indexterm zone="ch-system-iproute2 routef">
+            <primary sortas="b-routef">routef</primary>
+          </indexterm>
         </listitem>
       </varlistentry>
 
@@ -173,12 +173,12 @@
           <command>routel</command>
         </term>
         <listitem>
-          <indexterm zone="ch-system-iproute2 routel">
-            <primary sortas="b-routel">routel</primary>
-          </indexterm>
           <para>a component of ip route. This is for listing the routing
                 tables.
           </para>
+          <indexterm zone="ch-system-iproute2 routel">
+            <primary sortas="b-routel">routel</primary>
+          </indexterm>
         </listitem>
       </varlistentry>
 
@@ -187,10 +187,10 @@
           <command>rtmon</command>
         </term>
         <listitem>
+          <para>Route Monitoring Utility.</para>
           <indexterm zone="ch-system-iproute2 rtmon">
             <primary sortas="b-rtmon">rtmon</primary>
           </indexterm>
-          <para>Route Monitoring Utility.</para>
         </listitem>
       </varlistentry>
 
@@ -199,10 +199,10 @@
           <command>rtstat</command>
         </term>
         <listitem>
+          <para>Route Status Utility</para>
           <indexterm zone="ch-system-iproute2 rtstat">
             <primary sortas="b-rtstat">rtstat</primary>
           </indexterm>
-          <para>Route Status Utility</para>
         </listitem>
       </varlistentry>
 
@@ -211,10 +211,10 @@
           <command>ss</command>
         </term>
         <listitem>
+          <para>similar to the netstat command. Shows active connections.</para>
           <indexterm zone="ch-system-iproute2 ss">
             <primary sortas="b-ss">ss</primary>
           </indexterm>
-          <para>similar to the netstat command. Shows active connections.</para>
         </listitem>
       </varlistentry>
 
@@ -223,9 +223,6 @@
           <command>tc</command>
         </term>
         <listitem>
-          <indexterm zone="ch-system-iproute2 ss">
-            <primary sortas="b-tc">tc</primary>
-          </indexterm>
           <para>Traffic Controlling Executable. This is for QOS/COS
                 implementations.
           </para>
@@ -249,6 +246,9 @@
           <para><command>tc policy</command> allows you to setup the QOS/COS
                 policies.
           </para>
+          <indexterm zone="ch-system-iproute2 ss">
+            <primary sortas="b-tc">tc</primary>
+          </indexterm>
         </listitem>
       </varlistentry>
     </variablelist>

@@ -63,24 +63,25 @@ ln -sf ../../lib/libreadline.so.5 /usr/lib/libreadline.so</userinput></screen>
 <seglistitem><seg>libhistory.[a,so], libreadline.[a,so]</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="libhistory">
 <term><filename class="libraryfile">libhistory</filename></term>
 <listitem>
-<indexterm zone="ch-system-readline libhistory"><primary sortas="c-libhistory">libhistory</primary></indexterm>
 <para>a programming tool that provides a consistent user interface
 for recalling lines of history.</para>
+<indexterm zone="ch-system-readline libhistory"><primary sortas="c-libhistory">libhistory</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="libreadline">
 <term><filename class="libraryfile">libreadline</filename></term>
 <listitem>
-<indexterm zone="ch-system-readline libreadline"><primary sortas="c-libreadline">libreadline</primary></indexterm>
 <para>a utility which aids in the consistency of user interface
 across discrete programs that need to provide a command line
 interface.</para>
+<indexterm zone="ch-system-readline libreadline"><primary sortas="c-libreadline">libreadline</primary></indexterm>
 </listitem>
 </varlistentry>
 

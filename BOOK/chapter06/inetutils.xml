@@ -108,69 +108,70 @@ place:</para>
 <seglistitem><seg>ftp, ping, rcp, rlogin, rsh, talk, telnet and tftp</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="ftp">
 <term><command>ftp</command></term>
 <listitem>
-<indexterm zone="ch-system-inetutils ftp"><primary sortas="b-ftp">ftp</primary></indexterm>
 <para>is the file transfer protocol program.</para>
+<indexterm zone="ch-system-inetutils ftp"><primary sortas="b-ftp">ftp</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="ping">
 <term><command>ping</command></term>
 <listitem>
-<indexterm zone="ch-system-inetutils ping"><primary sortas="b-ping">ping</primary></indexterm>
 <para>sends echo-request packets and reports how long the replies take.</para>
+<indexterm zone="ch-system-inetutils ping"><primary sortas="b-ping">ping</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="rcp">
 <term><command>rcp</command></term>
 <listitem>
-<indexterm zone="ch-system-inetutils rcp"><primary sortas="b-rcp">rcp</primary></indexterm>
 <para>performs remote file copy.</para>
+<indexterm zone="ch-system-inetutils rcp"><primary sortas="b-rcp">rcp</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="rlogin">
 <term><command>rlogin</command></term>
 <listitem>
-<indexterm zone="ch-system-inetutils rlogin"><primary sortas="b-rlogin">rlogin</primary></indexterm>
 <para>performs remote login.</para>
+<indexterm zone="ch-system-inetutils rlogin"><primary sortas="b-rlogin">rlogin</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="rsh">
 <term><command>rsh</command></term>
 <listitem>
-<indexterm zone="ch-system-inetutils rsh"><primary sortas="b-rsh">rsh</primary></indexterm>
 <para>runs a remote shell.</para>
+<indexterm zone="ch-system-inetutils rsh"><primary sortas="b-rsh">rsh</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="talk">
 <term><command>talk</command></term>
 <listitem>
-<indexterm zone="ch-system-inetutils talk"><primary sortas="b-talk">talk</primary></indexterm>
 <para>used to chat with another user.</para>
+<indexterm zone="ch-system-inetutils talk"><primary sortas="b-talk">talk</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="telnet">
 <term><command>telnet</command></term>
 <listitem>
-<indexterm zone="ch-system-inetutils telnet"><primary sortas="b-telnet">telnet</primary></indexterm>
 <para>an interface to the TELNET protocol.</para>
+<indexterm zone="ch-system-inetutils telnet"><primary sortas="b-telnet">telnet</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="tftp">
 <term><command>tftp</command></term>
 <listitem>
-<indexterm zone="ch-system-inetutils tftp"><primary sortas="b-tftp">tftp</primary></indexterm>
 <para>a trivial file transfer program.</para>
+<indexterm zone="ch-system-inetutils tftp"><primary sortas="b-tftp">tftp</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

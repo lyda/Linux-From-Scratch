@@ -69,22 +69,23 @@ make install-tempfile</userinput></screen>
 <seglistitem><seg>mktemp, tempfile</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="mktemp">
 <term><command>mktemp</command></term>
 <listitem>
-<indexterm zone="ch-system-mktemp mktemp"><primary sortas="b-mktemp">mktemp</primary></indexterm>
 <para>creates temporary files in a secure manner. It is used in scripts.</para>
+<indexterm zone="ch-system-mktemp mktemp"><primary sortas="b-mktemp">mktemp</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="tempfile">
 <term><command>tempfile</command></term>
 <listitem>
-<indexterm zone="ch-system-mktemp tempfile"><primary sortas="b-tempfile">tempfile</primary></indexterm>
 <para>creates temporary files in a less secure manner than 
 <command>mktemp</command>. It is installed for backwards-compatibility.</para>
+<indexterm zone="ch-system-mktemp tempfile"><primary sortas="b-tempfile">tempfile</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

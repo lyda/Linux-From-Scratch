@@ -54,46 +54,47 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 pgawk, pgawk-&gawk-version; and pwcat</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="gawk">
 <term><command>gawk</command></term>
 <listitem>
-<indexterm zone="ch-system-gawk gawk"><primary sortas="b-gawk">gawk</primary></indexterm>
 <para>a program for manipulating text files.  It is the GNU
 implementation of <command>awk</command>.</para>
+<indexterm zone="ch-system-gawk gawk"><primary sortas="b-gawk">gawk</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="grcat">
 <term><command>grcat</command></term>
 <listitem>
-<indexterm zone="ch-system-gawk grcat"><primary sortas="b-grcat">grcat</primary></indexterm>
 <para>dumps the group database <filename>/etc/group</filename>.</para>
+<indexterm zone="ch-system-gawk grcat"><primary sortas="b-grcat">grcat</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="igawk">
 <term><command>igawk</command></term>
 <listitem>
-<indexterm zone="ch-system-gawk igawk"><primary sortas="b-igawk">igawk</primary></indexterm>
 <para>gives <command>gawk</command> the ability to include files.</para>
+<indexterm zone="ch-system-gawk igawk"><primary sortas="b-igawk">igawk</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="pgawk">
 <term><command>pgawk</command></term>
 <listitem>
-<indexterm zone="ch-system-gawk pgawk"><primary sortas="b-pgawk">pgawk</primary></indexterm>
 <para>the profiling version of <command>gawk</command>.</para>
+<indexterm zone="ch-system-gawk pgawk"><primary sortas="b-pgawk">pgawk</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="pwcat">
 <term><command>pwcat</command></term>
 <listitem>
-<indexterm zone="ch-system-gawk pwcat"><primary sortas="b-pwcat">pwcat</primary></indexterm>
 <para>dumps the password database <filename>/etc/passwd</filename>.</para>
+<indexterm zone="ch-system-gawk pwcat"><primary sortas="b-pwcat">pwcat</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

@@ -53,13 +53,14 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Texinfo</seg></seglistitem>
 <seglistitem><seg>sed</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="sed">
 <term><command>sed</command></term>
 <listitem>
-<indexterm zone="ch-system-sed sed"><primary sortas="b-sed">sed</primary></indexterm>
 <para>used to filter and transform text files in a single pass.</para>
+<indexterm zone="ch-system-sed sed"><primary sortas="b-sed">sed</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

@@ -92,14 +92,15 @@ scripts, which are not needed.</para></listitem>
 <seglistitem><seg>expect</seg><seg>libexpect&expect-version;.a</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short description</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="expect">
 <term><command>expect</command></term>
 <listitem>
-<indexterm zone="ch-tools-expect expect"><primary sortas="b-expect">expect</primary></indexterm>
 <para><quote>talks</quote> to other interactive
 programs according to a script.</para>
+<indexterm zone="ch-tools-expect expect"><primary sortas="b-expect">expect</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

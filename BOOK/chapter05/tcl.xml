@@ -81,21 +81,22 @@ will need its internal headers.</para></warning>
 <seglistitem><seg>tclsh (link to tclsh8.4), tclsh8.4</seg><seg>libtcl8.4.so</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="tclsh8.4">
 <term><command>tclsh8.4</command></term>
 <listitem>
-<indexterm zone="ch-tools-tcl tclsh8.4"><primary sortas="b-tclsh8.4">tclsh8.4</primary></indexterm>
 <para>the Tcl command shell.</para>
+<indexterm zone="ch-tools-tcl tclsh8.4"><primary sortas="b-tclsh8.4">tclsh8.4</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="libtcl8.4.so">
 <term><filename class="libraryfile">libtcl8.4.so</filename></term>
 <listitem>
-<indexterm zone="ch-tools-tcl libtcl8.4.so"><primary sortas="c-libtcl8.4.so">libtcl8.4.so</primary></indexterm>
 <para>the Tcl library.</para>
+<indexterm zone="ch-tools-tcl libtcl8.4.so"><primary sortas="c-libtcl8.4.so">libtcl8.4.so</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>

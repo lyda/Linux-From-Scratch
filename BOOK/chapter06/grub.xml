@@ -74,46 +74,47 @@ copy the <filename>e2fs_stage1_5</filename> and/or
 grub-md5-crypt, grub-terminfo and mbchk</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="grub">
 <term><command>grub</command></term>
 <listitem>
-<indexterm zone="ch-system-grub grub"><primary sortas="b-grub">grub</primary></indexterm>
 <para>the Grand Unified Bootloader's command shell.</para>
+<indexterm zone="ch-system-grub grub"><primary sortas="b-grub">grub</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="grub-install">
 <term><command>grub-install</command></term>
 <listitem>
-<indexterm zone="ch-system-grub grub-install"><primary sortas="b-grub-install">grub-install</primary></indexterm>
 <para>installs GRUB on the given device.</para>
+<indexterm zone="ch-system-grub grub-install"><primary sortas="b-grub-install">grub-install</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="grub-md5-crypt">
 <term><command>grub-md5-crypt</command></term>
 <listitem>
-<indexterm zone="ch-system-grub grub-md5-crypt"><primary sortas="b-grub-md5-crypt">grub-md5-crypt</primary></indexterm>
 <para>encrypts a password in MD5 format.</para>
+<indexterm zone="ch-system-grub grub-md5-crypt"><primary sortas="b-grub-md5-crypt">grub-md5-crypt</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="grub-terminfo">
 <term><command>grub-terminfo</command></term>
 <listitem>
-<indexterm zone="ch-system-grub grub-terminfo"><primary sortas="b-grub-terminfo">grub-terminfo</primary></indexterm>
 <para>generates a terminfo command from a terminfo name. It can be
 employed if an unknown terminal is being used.</para>
+<indexterm zone="ch-system-grub grub-terminfo"><primary sortas="b-grub-terminfo">grub-terminfo</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="mbchk">
 <term><command>mbchk</command></term>
 <listitem>
-<indexterm zone="ch-system-grub mbchk"><primary sortas="b-mbchk">mbchk</primary></indexterm>
 <para>checks the format of a multi-boot kernel.</para>
+<indexterm zone="ch-system-grub mbchk"><primary sortas="b-mbchk">mbchk</primary></indexterm>
 </listitem>
 </varlistentry>
 </variablelist>
