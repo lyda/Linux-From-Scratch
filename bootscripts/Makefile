@@ -351,6 +351,7 @@ install-xinetd: create-dirs
 
 install-contrib-modules: create-dirs
 	install -m 754 contrib/init.d/modules ${EXTDIR}/rc.d/init.d
+	install -m 644 contrib/sysconfig/modules ${EXTDIR}/rc.d/sysconfig
 	ln -s  ../init.d/modules ${EXTDIR}/rc.d/rcsysinit.d/S15modules
 
 install-contrib-udev: create-dirs
