@@ -12,7 +12,7 @@ case "$1" in
 	start)
 		echo "Bringing up the loopback interface..."
 		ip link set lo up
-		ip addr add 127.0.0.1/8 dev label lo dev lo
+		ip addr add 127.0.0.1/8 label lo dev lo
 		evaluate_retval
 
 		echo "Setting hostname to $HOSTNAME..."
