@@ -117,6 +117,22 @@ occasionally due to the amount of manual labor required.
 
 </qandadiv>
 
+<qandadiv id="fre"><title>Frequently Requested Enhancements</title>
+
+<qandaentry id="gcc-3_0">
+<question><para>Why isn't GCC 3.0.x in the book?
+</para></question>
+<answer><para>Because Glibc (2.2.4) refuses to be compiled by it.
+</para>
+<para>If you want to try GCC 3 anyway, it may work.
+Try passing --disable-sanity-checks to Glibc's configure script.
+Be warned, however, that GCC 3 is a major upgrade and many packages,
+especially older ones, may not compile without modifications.
+</para></answer>
+</qandaentry>
+
+</qandadiv>
+
 	<qandadiv id="resources"><title>Resources</title>
 		<qandaentry id="how-to-find"><question><para>How do I find package Foo?</para></question>	
 			<answer><para>Always try Freshmeat at <ulink
