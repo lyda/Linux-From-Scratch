@@ -88,7 +88,7 @@ section:</para>
 
 <screen><computeroutput>make [2]: *** [make] Error 1</computeroutput></screen>
 
-<beginpage/>
+
 
 <para>This is not enough information to properly diagnose the problem
 because it only notes that something went wrong, not

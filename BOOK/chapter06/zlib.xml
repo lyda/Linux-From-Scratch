@@ -50,7 +50,7 @@ configure command below, then remove it afterwards.</para></note>
 
 <screen><userinput>make install</userinput></screen>
 
-<beginpage/>
+
 
 <para>Build the static library:</para>
 

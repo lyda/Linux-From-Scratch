@@ -52,7 +52,7 @@ The authoritative reference covering all platforms is in the
 source tree.</para>
 </important>
 
-<beginpage/>
+
 <para>Some key technical points of how the <xref linkend="chapter-temporary-tools"/> build
 method works:</para>
 
@@ -176,7 +176,7 @@ class="directory">/usr</filename>, perform a quick changeover of the
 toolchain defaults, then proceed in building the rest of the target
 LFS system.</para>
 
-<beginpage/>
+
 
 <sect2>
 <title>Notes on Static Linking</title>

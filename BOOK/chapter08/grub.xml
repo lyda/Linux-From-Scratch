@@ -63,7 +63,7 @@ everywhere to make Grub show the alternatives:</para>
 
 <screen><userinput>root (hd0,3)</userinput></screen>
 
-<beginpage/>
+
 <warning><para>The following command will overwrite the current boot
 loader. Do not run the command if this is not desired, for example, if
 using a third party boot manager to manage the Master Boot Record
@@ -103,7 +103,7 @@ root (hd0,3)
 kernel /boot/lfskernel-&linux-version; root=/dev/hda4</literal>
 EOF</userinput></screen>
 
-<beginpage/>
+
 <para>Add an entry for the host distribution if desired. It might look
 like this:</para>
 

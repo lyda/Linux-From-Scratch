@@ -62,7 +62,7 @@ Details on the <envar>TZ</envar> environment variable is provided in
 
 <screen><userinput>make install</userinput></screen>
 
-<beginpage/>
+
 <warning><para><emphasis>Do not</emphasis> remove the
 <filename class="directory">tcl&tcl-version;</filename> source directory yet, as the next package
 will need its internal headers.</para></warning>

@@ -52,7 +52,7 @@ will not work properly without the following symlinks:</para>
 ln -s eqn /usr/bin/geqn
 ln -s tbl /usr/bin/gtbl</userinput></screen>
 
-<beginpage/>
+
 </sect2>
 
 
@@ -180,7 +180,7 @@ in PCL5 format suitable for an HP Laserjet 4 printer</para>
 <term><command>grops</command></term>
 <listitem>
 <para>Translates the output of GNU <command>troff</command> to PostScript</para>
-<beginpage/>
+
 <indexterm zone="ch-system-groff grops"><primary sortas="b-grops">grops</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -69,7 +69,7 @@ class="directory">/boot/grub</filename> directory. Most users will
 copy the <filename>e2fs_stage1_5</filename> and/or
 <filename>reiserfs_stage1_5</filename> files.</para>
 
-<beginpage/>
+
 </sect2>
 
 

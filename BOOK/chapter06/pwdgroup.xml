@@ -53,7 +53,7 @@ and GIDs can be chosen freely by the system administrator since
 well-written packages do not depend on GID numbers, but rather use the
 group's name.</para>
 
-<beginpage/>
+
 <para>To remove the <quote>I have no name!</quote> prompt, start a new
 shell. Since a full Glibc was installed in <xref
 linkend="chapter-temporary-tools"/> and the

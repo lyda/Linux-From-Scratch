@@ -56,7 +56,7 @@ ln -s gzip /bin/gunzip
 ln -s gzip /bin/zcat
 ln -s gunzip /bin/uncompress</userinput></screen>
 
-<beginpage/>
+
 </sect2>
 
 

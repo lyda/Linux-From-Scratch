@@ -62,7 +62,7 @@ run the tests). By unpacking them in the working directory, they will
 all unfold into a single <filename
 class="directory">gcc-&gcc-version;/</filename> subdirectory.</para>
 
-<beginpage/>
+
 <para>First correct a known problem and make an essential adjustment:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-no_fixincludes-1.patch
@@ -172,7 +172,7 @@ command:</para>
 
 <screen><userinput>make -k check</userinput></screen>
 
-<beginpage/>
+
 <para>The <parameter>-k</parameter> flag is used to make the test suite run
 through to completion and not stop at the first failure. The GCC test
 suite is very comprehensive and is almost guaranteed to generate a few

@@ -50,7 +50,7 @@ class="directory">/var/lib/locate</filename>, which is FHS-compliant.</para>
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
-<beginpage/>
+
 </sect2>
 
 <sect2 id="contents-findutils" role="content"><title>Contents of Findutils</title>

@@ -78,7 +78,7 @@ compliment of device nodes.</para>
 class="directory">/dev</filename> or renames network interfaces (not
 in LFS) in response to hotplug events</para>
 <indexterm zone="ch-system-udev udev"><primary sortas="b-udev">udev</primary></indexterm>
-<beginpage/></listitem></varlistentry>
+</listitem></varlistentry>
 
 <varlistentry id="udevd">
 <term><command>udevd</command></term>

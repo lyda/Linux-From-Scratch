@@ -63,7 +63,7 @@ this userspace visible representation, the possibility of seeing a
 userspace replacement for <systemitem
 class="filesystem">devfs</systemitem> became much more
 realistic.</para>
-<beginpage/>
+
 </sect2>
 
 <sect2>
@@ -137,7 +137,7 @@ the module is loaded.  To solve this, the
 <command>S05modules</command> bootscript was added to the
 lfs-bootscripts package, along with the
 <filename>/etc/sysconfig/modules</filename> file.  By
-<beginpage/> adding module
+ adding module
 names to the <filename>modules</filename> file, these modules will be
 loaded when the computer is starting up. This allows
 <command>udev</command> to detect the devices and create the
@@ -195,7 +195,7 @@ manually create the devices. Consult the
 or the documentation for that driver to find the proper major/minor
 numbers.</para>
 
-<beginpage/>
+
 <para>2) A non-hardware device is required.  This is most common with
 the Advanced Linux Sound Architecture (ALSA) project's Open Sound
 System (OSS) compatibility module.  These types of devices can be

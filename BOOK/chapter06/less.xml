@@ -49,7 +49,7 @@ GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
-<beginpage/>
+
 </sect2>
 
 <sect2 id="contents-less" role="content"><title>Contents of Less</title>

@@ -58,7 +58,7 @@ cd ../gcc-build</userinput></screen>
 from <command>gcc</command>'s include search path. This is not absolutely
 essential, however, it helps to minimize the influence of the host
 system.</para>
-<beginpage/>
+
 </listitem>
 </varlistentry>
 
@@ -118,7 +118,7 @@ replaced.</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<beginpage/>
+
 <para>As a finishing touch, create a symlink. Many programs and
 scripts run <command>cc</command> instead of <command>gcc</command>, which is used to keep programs generic
 and therefore usable on all kinds of UNIX systems where the GNU C compiler

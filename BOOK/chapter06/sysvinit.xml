@@ -59,7 +59,7 @@ make -C src</userinput></screen>
 
 <screen><userinput>make -C src install</userinput></screen>
 
-<beginpage/>
+
 </sect2>
 
 
@@ -114,7 +114,7 @@ program during system startup. Sending this escape sequence is
 necessary for people who use non-ISO 8859-1 screen fonts, but it does
 not effect native English speakers.</para>
 
-<beginpage/>
+
 </sect2>
 
 
@@ -240,7 +240,7 @@ and notifying all logged-in users</para>
 <para>Allows <emphasis>root</emphasis> to log in; it is
 normally invoked by <command>init</command> when the system goes into single user mode</para>
 <indexterm zone="ch-system-sysvinit sulogin"><primary sortas="b-sulogin">sulogin</primary></indexterm>
-<beginpage/></listitem>
+</listitem>
 </varlistentry>
 
 <varlistentry id="telinit">

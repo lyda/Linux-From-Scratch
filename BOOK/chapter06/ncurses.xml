@@ -158,7 +158,7 @@ report its long name</para>
 <listitem>
 <para>Can be used to initialize terminals</para>
 <indexterm zone="ch-system-ncurses tset"><primary sortas="b-tset">tset</primary></indexterm>
-<beginpage/></listitem>
+</listitem>
 </varlistentry>
 
 <varlistentry id="libcurses">

@@ -50,7 +50,7 @@ unset SPECFILE</userinput></screen>
 
 <para><phrase condition="html">It is recommended that the above
 command be copy-and-pasted in order to ensure accuracy.</phrase>
-<beginpage/>
+
 Alternatively, the specs file can be edited by hand. This is done by
 replacing every occurrence of <quote arch="x86">/lib/ld-linux.so.2</quote> 
 <quote arch="raq2">/lib/ld.so.1</quote> with <quote arch="x86">/tools/lib/ld-linux.so.2</quote>
@@ -79,7 +79,7 @@ possibility:</para>
 
 <screen><userinput>rm -f /tools/lib/gcc/*/*/include/{pthread.h,bits/sigthread.h}</userinput></screen>
 
-<beginpage/>
+
 
 <caution><para>At this point, it is imperative to stop and ensure that
 the basic functions (compiling and linking) of the new toolchain are

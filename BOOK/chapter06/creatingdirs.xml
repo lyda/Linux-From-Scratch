@@ -52,7 +52,7 @@ other users' files from them. The latter is prohibited by the
 so-called <quote>sticky bit,</quote> the highest bit (1) in the 1777
 bit mask.</para>
 
-<beginpage/>
+
 <sect2>
 <title>FHS Compliance Note</title>
 

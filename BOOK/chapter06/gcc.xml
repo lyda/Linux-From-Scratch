@@ -54,7 +54,7 @@ Binutils will be used instead:</para>
 
 <screen><userinput>sed -i 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in</userinput></screen>
 
-<beginpage/>
+
 <para>The GCC documentation recommends building GCC outside of the source
 directory in a dedicated build directory:</para>
 
@@ -94,7 +94,7 @@ To support those packages, create this symlink:</para>
 
 <screen><userinput>ln -s ../usr/bin/cpp /lib</userinput></screen>
 
-<beginpage/>
+
 <para>Many packages use the name <command>cc</command> to call the C
 compiler. To satisfy those packages, create a symlink:</para>
 
