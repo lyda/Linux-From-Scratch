@@ -16,17 +16,19 @@ fi
 case "$1" in
 	start)
 		if [ -n "$KEYMAP" ]; then
-			loadkeys $KEYMAP
+			boot_mesg "Loading keymap: $KEYMAP"
+			loadkeys $KEYMAP &> /dev/null
 			evaluate_retval
 		fi
 
 		if [ -n "$KEYMAP_CORRECTIONS" ]; then
-			loadkeys $KEYMAP_CORRECTIONS
+			boot_mesg "Loading keymap corrections: $KEYMAP_CORRECTIONS"
+			loadkeys $KEYMAP_CORRECTIONS &> /dev/null
 			evaluate_retval
 		fi
 
 		if [ -n "$FONT" ]; then
-			echo "Setting screen font to $FONT..."
+			boot_mesg "Setting screen font to $FONT..."
 			setfont $FONT
 			evaluate_retval
 		fi

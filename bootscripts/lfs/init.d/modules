@@ -18,7 +18,7 @@ case "$1" in
 			# Read in the configuration file.
 			exec 9>&0 < /etc/sysconfig/modules
 
-				echo -n "Loading modules:"
+				boot_mesg "Loading modules:"
 
 				while read module args ; do
 					# Ignore comments and blank lines.
@@ -33,7 +33,7 @@ case "$1" in
 					# Print the module name if successful,
 					# otherwise take note.
 					if [ $? -eq 0 ]; then
-						echo -n " $module"
+						boot_mesg " $module"
 					else
 						failedmod="$failedmod $module"
 					fi
@@ -41,12 +41,12 @@ case "$1" in
 
 				# Print a message about successfully loaded
 				# modules on the correct line.
-				echo ; print_status success
+				 print_status success
 
 				# Print a failure message with a list of any
 				# modules that may have failed to load.
 				if [ "$failedmod" ]; then
-					echo "Failed to load modules:$failedmod"
+					boot_mesg "Failed to load modules:$failedmod"
 					print_status failure
 				fi
 

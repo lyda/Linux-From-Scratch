@@ -15,7 +15,7 @@ bring_link_up()
 	link_status=`ip link show $1 2> /dev/null`
 	if [ -n "$link_status" ]; then
 		if ! echo "$link_status" | grep -q UP ; then
-			echo "Bringing up the $1 interface..."
+			boot_mesg "Bringing up the $1 interface..."
 			ip link set $1 up
 			evaluate_retval
 		fi
@@ -38,7 +38,8 @@ for file in $FILES; do
 		continue
 	fi
 	if [ ! -f "$file" ]; then
-		echo "$file is not a network configuration file or directory"
+		boot_mesg "$file is not a network configuration file or directory"
+		print_status warning
 		continue
 	fi
 	(
@@ -59,12 +60,13 @@ for file in $FILES; do
 				bring_link_up $1
 				IFCONFIG=$file $network_devices/services/${SERVICE} $1 up
 			else
-				echo "Interface $1 doesn't exist"
+				boot_mesg "Interface $1 doesn't exist"
 				print_status warning not_available
 			fi
 		else
-			echo -n "Unable to process $file, Either the SERVICE variable was not set, "
-			echo "or the specified service cannot be executed"
+			boot_mesg "Unable to process $file, Either the SERVICE variable was not set, "
+			boot_mesg "or the specified service cannot be executed"
+			print_status failure
 			continue
 		fi
 	)

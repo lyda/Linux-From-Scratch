@@ -9,7 +9,7 @@
 
 case "$1" in
 	stop)
-		echo "Sending all processes the TERM signal..."
+		boot_mesg "Sending all processes the TERM signal..."
 		killall5 -15
 		error_value=$?
 
@@ -22,7 +22,7 @@ case "$1" in
 			print_status failure
 		fi
 
-		echo "Sending all processes the KILL signal..."
+		boot_mesg "Sending all processes the KILL signal..."
 		killall5 -9
 		error_value=$?
 

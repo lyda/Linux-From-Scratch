@@ -9,17 +9,17 @@
 
 case "$1" in
 	start)
-		echo "Starting..."
+		boot_mesg "Starting..."
 		loadproc
 		;;
 
 	stop)
-		echo "Stopping..."
+		boot_mesg "Stopping..."
 		killproc
 		;;
 
 	reload)
-		echo "Reloading..."
+		boot_mesg "Reloading..."
 		reloadproc
 		;;
 

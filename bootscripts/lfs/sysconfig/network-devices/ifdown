@@ -30,7 +30,8 @@ for file in $FILES2; do
 		continue
 	fi
 	if [ ! -f "$file" ]; then
-		echo "$file is not a network configuration file or directory"
+		boot_mesg "$file is not a network configuration file or directory"
+		print_status warn
 		continue
 	fi
 	(
@@ -51,13 +52,14 @@ for file in $FILES2; do
 		if [ -n "$SERVICE" -a -x "$network_devices/services/$SERVICE" ]; then
 			if ip link show $1 > /dev/null 2>&1; then
 				IFCONFIG=$file $network_devices/services/${SERVICE} $1 down
-                        else
-                                echo "Interface $1 doesn't exist"
-                                print_status warning not_available
-                        fi
+			else
+				boot_mesg "Interface $1 doesn't exist"
+				print_status warning not_available
+			fi
 		else
-			echo -n "Unable to process $file, Either the SERVICE variable was not set, "
-			echo "or the specified service cannot be executed"
+			boot_mesg "Unable to process $file, Either the SERVICE variable was not set, "
+			boot_mesg "or the specified service cannot be executed"
+			print_status failure
 			continue
 		fi
 	)
@@ -67,7 +69,7 @@ if [ -z "$2" ]; then
 	link_status=`ip link show $1 2> /dev/null`
 	if [ -n "$link_status" ]; then
 		if echo "$link_status" | grep -q UP ; then
-			echo "Taking down the $1 interface..."
+			boot_mesg "Taking down the $1 interface..."
 			ip link set $1 down
 			evaluate_retval
 		fi

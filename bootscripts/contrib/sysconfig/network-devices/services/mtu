@@ -12,13 +12,14 @@
 . $IFCONFIG
 
 if [ -z "$MTU" ]; then
-	echo "MTU variable missing from $IFCONFIG, cannot continue"
+	boot_mesg "MTU variable missing from $IFCONFIG, cannot continue"
+	print_status failure
 	exit 1
 fi
 
 case "$2" in
 	up)
-		echo "Setting the MTU for $1 to $MTU"
+		boot_mesg "Setting the MTU for $1 to $MTU"
 		echo "$MTU" > "/sys/class/net/$1/mtu"
 		evaluate_retval
 	;;

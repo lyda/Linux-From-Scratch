@@ -27,9 +27,9 @@ create_files() {
 						char)   mknod "$name" c $maj $min	;;
 						block)  mknod "$name" b $maj $min	;;
 						pipe)   mknod "$name" p			;;
-						*) echo "Unknown device type: $dtype"   ;;
+						*) boot_mesg "\nUnknown device type: $dtype"   ;;
 						esac            ;;
-					*)      echo "Unknown type: $type" >&2
+					*) boot_mesg "\nUnknown type: $type" >&2
 						continue        ;;
 				esac
 
@@ -43,18 +43,18 @@ create_files() {
 
 case "$1" in
 	start)
-		echo -n "Cleaning file systems:"
+		boot_mesg "Cleaning file systems:"
 
-		echo -n " /tmp"
+		boot_mesg " /tmp"
 		cd /tmp &&
 		find . -depth -xdev -mindepth 1 ! -name lost+found \
 			-exec rm -rf {} \; || failed=1
 
-		echo -n " /var/lock"
+		boot_mesg " /var/lock"
 		cd /var/lock &&
 		find . -type f ! -newer /proc -exec rm -f {} \; || failed=1
 
-		echo " /var/run"
+		boot_mesg " /var/run"
 		cd /var/run &&
 		find . ! -type d ! -name utmp ! -newer /proc \
 			-exec rm -f {} \; || failed=1
@@ -68,7 +68,7 @@ case "$1" in
 		evaluate_retval
 
 		if egrep -qv '^(#|$)' /etc/sysconfig/createfiles 2>/dev/null; then
-			echo "Creating files and directories..."
+			boot_mesg "Creating files and directories..."
 			create_files
 			evaluate_retval
 		fi
