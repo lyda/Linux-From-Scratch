@@ -372,7 +372,7 @@ alias net-pf-7 loop
 				the list archives may reveal the reason.
 			</para>
 		</section>
-		<section id="why-not-add"><title>Why not add / use package X?</title>
+		<section id="why-not-add"><title>Why not add / use package Foo?</title>
 			<section id="add-grub"><title>GRUB instead of LILO</title>
 				<para>
 					GRUB has not yet been released as stable.
