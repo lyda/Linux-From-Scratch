@@ -83,6 +83,14 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>April 4, 2005 [matt]</para>
+<itemizedlist>
+<listitem><para>Added: Arch: All - Mention bzip2's testsuite.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 1, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Added: Arch: All - IPRoute2 to 2.6.11-050330.</para></listitem>
