@@ -32,6 +32,9 @@ if [ -n "$BROADCAST" ]; then
 	args="$args broadcast $BROADCAST"
 fi
 
+if [ -n "$SOURCE" ]; then
+	args="$args src $SOURCE"
+fi
 
 case "$2" in
 	up)
