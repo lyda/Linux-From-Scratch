@@ -89,24 +89,51 @@ boot_mesg()
 	echo -e "${BOOTMESG}" | sed -n -e "L ${WCOL}"
 }
 
+boot_log()
+{
+	/bin/logger -p local0.info -t bootlog "@$"
+}
+
 echo_ok()
 {
 	echo -e "${CURS_UP}""${SET_COL}""${BRACKET}""[""${SUCCESS}""  OK  ""${BRACKET}""]""${NORMAL}"
+	if [ -z "${BOOTSERVICE}" ]; then
+		boot_log "${BOOTMESG}""  [  OK  ]"
+	else
+		boot_log "${BOOTSERVICE}""  [  OK  ]"
+	fi
+	# Reset BOOTMESG to keep from bleeding over again
+	BOOTMESG=""
 }
 
 echo_failure()
 {
 	echo -e "${CURS_UP}""${SET_COL}""${BRACKET}""[""${FAILURE}""FAILED""${BRACKET}""]""${NORMAL}"
+	if [ -z "${BOOTSERVICE}" ]; then
+		boot_log "${BOOTMESG}""  [FAILED]"
+	else
+		boot_log "${BOOTSERVICE}""  [FAILED]"
+	fi
+	# Reset BOOTMESG to keep from bleeding over again
+	BOOTMESG=""
 }
 
 echo_warning()
 {
 	echo -e "${CURS_UP}""${SET_WCOL}""$@""${SET_COL}""${BRACKET}""[""${WARNING}"" WARN ""${BRACKET}""]""${NORMAL}"
+	if [ -z "${BOOTSERVICE}" ]; then
+		boot_log "${BOOTMESG}""$@""  [ WARN ]"
+	else
+		boot_log "${BOOTSERVICE}""$@""  [ WARN ]"
+	fi
+	# Reset BOOTMESG to keep from bleeding over again
+	BOOTMESG=""
 }
 
 print_error_msg()
 {
 	# $i is inherited by the rc script
+	boot_log "$i failed and exited with a return value of $error_value"
 	echo -e -n $FAILURE
 	echo
 	echo "You should not be reading this error message. It means"
@@ -189,8 +216,6 @@ print_status()
 
 	esac
 
-	# Reset BOOTMESG to keep from bleeding over again
-	BOOTMESG=""
 }
 
 # Returns all of the pid #'s for $1 process
