@@ -1,3 +1,6 @@
+n/a - November 02, 2004
+	* Added sysctl -p to mountkernfs (Matthew Burgess, DJ Lucas)
+
 n/a - October 07, 2004
 	* statusproc modified not to send data to bootlog (Nathan Coulson)
 	* Fixed halt commands in checkfs and udev (James Robertson)
