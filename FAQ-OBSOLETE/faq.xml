@@ -212,8 +212,25 @@ So change the line in /etc/fstab like this:
 <screen>checking whether we are using GNU C... no
 configure: error: GNU libc must be compiled using GNU CC
 </screen>
-It may be because egrep isn't working.
-In case you find you need to reinstall egrep, it's from the grep package.
+It may be because egrep (from the grep package) isn't working.
+</para>
+<para>To test if egrep is working <emphasis>before</emphasis> reinstalling
+the grep package in Chapter 6,
+run the following command from <emphasis>outside</emphasis> chroot:
+<screen>file $LFS/usr/bin/egrep
+</screen>
+If it doesn't say "statically linked" you have a problem
+and need to reinstall the grep package.
+</para>
+<para>To test if egrep is working <emphasis>after</emphasis> reinstalling
+the grep package in Chapter 6,
+run the following command from <emphasis>inside</emphasis> chroot:
+<screen>egrep root /etc/passwd
+</screen>
+If it doesn't print root's line from /etc/passwd,
+again, you have a problem.
+(This test also works if you encounter the problem after rebooting
+into the new LFS system.)
 </para></answer>
 </qandaentry>
 
@@ -645,7 +662,7 @@ by adding lines like this:
 export LC_ALL=en_US
 </screen>
 </para>
-<para>The following command would add those lines to /etc/profile
+<para>Those lines can be added to /etc/profile with the following command:
 <screen>echo -e 'export LANG=en_US\nexport LC_ALL=en_US' >> /etc/profile
 </screen>
 </para>
