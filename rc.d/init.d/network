@@ -10,7 +10,7 @@
 
 case "$1" in
 	start)
-		for file in $(grep -il "ONBOOT=yes" $network_devices/ifconfig.*)
+		for file in $(grep -sil "ONBOOT=yes" $network_devices/ifconfig.*)
 		do
 			interface=${file##*/ifconfig.}
 			case "$interface" in

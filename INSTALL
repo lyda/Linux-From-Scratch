@@ -11,7 +11,11 @@ with your feedback.
 
 Now, on to the installation:
 
-First, remove the old LFS-bootscripts package - this is quite simple:
+In case something goes wrong, we want to back up our existing scripts:
+
+tar cjvfp /root/bootscripts-backup.tar.bz2 /etc/rc.d/*
+
+Then, remove the old LFS-bootscripts package - this is quite simple:
 
 rm -rf /etc/rc.d/*
 
