@@ -45,14 +45,12 @@ installed. The proper solution is to use other module loading methods with
 <application>Udev</application></para></note>
 
 <para>You can put your own module aliases in the
-<filename>/etc/modprobe.conf</filename> file. E.g., if you put the lines
-<screen>alias eth0 e100
-alias char-major-195-* nvidia</screen>
+<filename>/etc/modprobe.conf</filename> file. E.g., if you put the line
+<screen>alias eth0 e100</screen>
 into <filename>/etc/modprobe.conf</filename>, then the e100 module will be
 loaded automatically on the first access to the eth0 interface <emphasis>if it
-has no driver yet</emphasis> and the nvidia module will be loaded upon the
-first access to any of the /dev/nvidia* devices <emphasis>if it already exists
-and has no driver loaded</emphasis>. This method of loading modules is well
+has no driver yet</emphasis>.
+This method of loading modules is well
 documented, however, it is considered obsolete.
 </para>
 <note><para>This method either does not work or is unnecessary when the

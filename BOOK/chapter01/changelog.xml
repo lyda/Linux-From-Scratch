@@ -77,8 +77,12 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July 2, 2004 [alexander]: Marked module-init-tools as
+optional. Moved them to Chapter 8. Dropped nvidia example from the modules
+page because hotplug-related problems are fixed upstream.</para></listitem>
+
 <listitem><para>July 2, 2004 [alexander]: Explained various module loading
-mechanisms</para></listitem>
+mechanisms.</para></listitem>
 
 <listitem><para>July 2, 2004 [alexander]: Added a warning that the E2fsprogs
 package is still needed because of the fsck program even if ext2 and ext3

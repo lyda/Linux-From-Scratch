@@ -3,15 +3,17 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-module-init-tools" xreflabel="Module-Init-Tools" role="wrap">
+<sect1 id="ch-bootable-module-init-tools" xreflabel="Module-Init-Tools" role="wrap">
 <title>Module-Init-Tools-&module-init-tools-version;</title>
 <?dbhtml filename="module-init-tools.html"?>
 
-<indexterm zone="ch-system-module-init-tools"><primary sortas="a-Module-Init-Tools">Module-Init-Tools</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools"><primary sortas="a-Module-Init-Tools">Module-Init-Tools</primary></indexterm>
 
 <sect2 role="package"><title/>
-<para>The Module-Init-Tools package contains programs for handling kernel
-modules in Linux kernels greater than or equal to version 2.5.47.</para>
+<para>The optional Module-Init-Tools package contains programs for handling
+kernel modules in Linux kernels greater than or equal to version 2.5.47.
+You should install this package if you intend to build Linux kernel with the
+support for loadable modules.</para>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -62,7 +64,7 @@ and rmmod (link to insmod)</seg></seglistitem>
 <varlistentry id="depmod">
 <term><command>depmod</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools depmod"><primary sortas="b-depmod">depmod</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools depmod"><primary sortas="b-depmod">depmod</primary></indexterm>
 <para>creates a dependency file, based on the
 symbols it finds in the existing set of modules. This dependency file is used
 by modprobe to automatically load the required modules.</para>
@@ -72,7 +74,7 @@ by modprobe to automatically load the required modules.</para>
 <varlistentry id="genksyms">
 <term><command>genksyms</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools genksyms"><primary sortas="b-genksyms">genksyms</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools genksyms"><primary sortas="b-genksyms">genksyms</primary></indexterm>
 <para>generates symbol version information.</para>
 </listitem>
 </varlistentry>
@@ -80,7 +82,7 @@ by modprobe to automatically load the required modules.</para>
 <varlistentry id="insmod">
 <term><command>insmod</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools insmod"><primary sortas="b-insmod">insmod</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools insmod"><primary sortas="b-insmod">insmod</primary></indexterm>
 <para>installs a loadable module in the running kernel.</para>
 </listitem>
 </varlistentry>
@@ -88,7 +90,7 @@ by modprobe to automatically load the required modules.</para>
 <varlistentry id="insmod_ksymoops_clean">
 <term><command>insmod_ksymoops_clean</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools insmod_ksymoops_clean"><primary sortas="b-insmod_ksymoops_clean">insmod_ksymoops_clean</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools insmod_ksymoops_clean"><primary sortas="b-insmod_ksymoops_clean">insmod_ksymoops_clean</primary></indexterm>
 <para>deletes saved ksyms and modules not accessed for two days.</para>
 </listitem>
 </varlistentry>
@@ -96,7 +98,7 @@ by modprobe to automatically load the required modules.</para>
 <varlistentry id="kallsyms">
 <term><command>kallsyms</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools kallsyms"><primary sortas="b-kallsyms">kallsyms</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools kallsyms"><primary sortas="b-kallsyms">kallsyms</primary></indexterm>
 <para>extracts all kernel symbols for debugging.</para>
 </listitem>
 </varlistentry>
@@ -104,7 +106,7 @@ by modprobe to automatically load the required modules.</para>
 <varlistentry id="kernelversion">
 <term><command>kernelversion</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools kernelversion"><primary sortas="b-kernelversion">kernelversion</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools kernelversion"><primary sortas="b-kernelversion">kernelversion</primary></indexterm>
 <para>reports the major version of the running kernel.</para>
 </listitem>
 </varlistentry>
@@ -112,7 +114,7 @@ by modprobe to automatically load the required modules.</para>
 <varlistentry id="ksyms">
 <term><command>ksyms</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools ksyms"><primary sortas="b-ksyms">ksyms</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools ksyms"><primary sortas="b-ksyms">ksyms</primary></indexterm>
 <para>displays exported kernel symbols.</para>
 </listitem>
 </varlistentry>
@@ -120,7 +122,7 @@ by modprobe to automatically load the required modules.</para>
 <varlistentry id="lsmod">
 <term><command>lsmod</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools lsmod"><primary sortas="b-lsmod">lsmod</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools lsmod"><primary sortas="b-lsmod">lsmod</primary></indexterm>
 <para>shows which modules are loaded.</para>
 </listitem>
 </varlistentry>
@@ -128,7 +130,7 @@ by modprobe to automatically load the required modules.</para>
 <varlistentry id="modinfo">
 <term><command>modinfo</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools modinfo"><primary sortas="b-modinfo">modinfo</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools modinfo"><primary sortas="b-modinfo">modinfo</primary></indexterm>
 <para>examines an object file associated with
 a kernel module and displays any information that it can glean.</para>
 </listitem>
@@ -137,7 +139,7 @@ a kernel module and displays any information that it can glean.</para>
 <varlistentry id="modprobe">
 <term><command>modprobe</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools modprobe"><primary sortas="b-modprobe">modprobe</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools modprobe"><primary sortas="b-modprobe">modprobe</primary></indexterm>
 <para>uses a dependency file, created by
 <command>depmod</command>, to automatically load the relevant modules.</para>
 </listitem>
@@ -146,7 +148,7 @@ a kernel module and displays any information that it can glean.</para>
 <varlistentry id="rmmod">
 <term><command>rmmod</command></term>
 <listitem>
-<indexterm zone="ch-system-module-init-tools rmmod"><primary sortas="b-rmmod">rmmod</primary></indexterm>
+<indexterm zone="ch-bootable-module-init-tools rmmod"><primary sortas="b-rmmod">rmmod</primary></indexterm>
 <para>unloads modules from the running kernel.</para>
 </listitem>
 </varlistentry>
