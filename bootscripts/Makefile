@@ -371,5 +371,5 @@ install-udev: create-dirs
 
 .PHONY: install \
 	install-service-dhclient install-service-dhcpcd install-service-ipx install-service-pppoe \
-	install-alsa install-apache install-bind install-cups install-dhcp install-exim install-fcron install-gdm install-gpm install-lprng install-mysql install-netfs install-nfs-client install-nfs-server install-ntp install-portmap install-postfix install-postgresql install-proftpd install-random install-rsync install-samba install-sendmail install-sshd install-xinetd \
+	install-alsa install-apache install-bind install-cups install-dhcp install-exim install-fcron install-gdm install-gpm install-heimdal install-lprng install-mysql install-netfs install-nfs-client install-nfs-server install-ntp install-portmap install-postfix install-postgresql install-proftpd install-random install-rsync install-samba install-sendmail install-sshd install-xinetd \
 	install-modules install-udev
