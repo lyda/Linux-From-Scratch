@@ -236,13 +236,6 @@
 </varlistentry>
 
 <varlistentry>
-<term>Libol (&libol-version;) - 337 KB:</term>
-<listitem>
-<para><ulink url="http://www.balabit.com/downloads/syslog-ng/libol/&libol-dl-version;/libol-&libol-version;.tar.gz"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
 <term>Libtool (&libtool-version;) - 2.7 MB:</term>
 <listitem>
 <para><ulink url="&gnu;libtool/libtool-&libtool-version;.tar.gz"/></para>
@@ -418,9 +411,9 @@
 </varlistentry>
 
 <varlistentry>
-<term>Syslog-ng (&syslog-ng-version;) - 369 KB:</term>
+<term>Sysklogd (&sysklogd-version;) - 80 KB:</term>
 <listitem>
-<para><ulink url="http://www.balabit.com/downloads/syslog-ng/&syslog-ng-dl-version;/src/syslog-ng-&syslog-ng-version;.tar.gz"/></para>
+<para><ulink url="http://www.infodrom.org/projects/sysklogd/download/sysklogd-&sysklogd-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 

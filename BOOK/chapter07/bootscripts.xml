@@ -27,23 +27,17 @@
 <sect2 role="installation">
 <title>Installation of LFS-Bootscripts</title>
 
-<para arch="raq2">The patch below allows the bootscripts to use the LCD screen to view
-the status of a running script.</para>
-
-<screen arch="raq2"><userinput>patch -Np1 -i ../lfs-bootscripts-&lfs-bootscripts-version;-raq2-2.patch</userinput></screen>
-
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
 
-
 <sect2 id="contents-bootscripts" role="content"><title>Contents of LFS-bootscripts</title>
 
 <segmentedlist>
 <segtitle>Installed scripts</segtitle>
-<seglistitem><seg>checkfs, cleanfs, console, functions, halt, ifdown, ifup,
+<seglistitem><seg>checkfs, cleanfs, console, functions, halt, hotplug, ifdown, ifup,
 localnet, mountfs, mountkernfs, network, rc, reboot, sendsignals, setclock, static, 
 swap, sysklogd, template, and udev</seg></seglistitem>
 </segmentedlist>
@@ -211,11 +205,11 @@ Protocol (IP) address to a network interface</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="syslog-ng-bootscripts">
-<term><command>syslog-ng</command></term>
+<varlistentry id="sysklogd-bootscripts">
+<term><command>sysklogd</command></term>
 <listitem>
 <para>Starts and stops the system and kernel log daemons</para>
-<indexterm zone="ch-scripts-bootscripts syslog-ng-bootscripts"><primary sortas="d-syslog-ng">syslog-ng</primary></indexterm>
+<indexterm zone="ch-scripts-bootscripts sysklogd-bootscripts"><primary sortas="d-sysklogd">sysklogd</primary></indexterm>
 </listitem>
 </varlistentry>
 
