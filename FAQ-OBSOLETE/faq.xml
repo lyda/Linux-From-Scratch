@@ -183,15 +183,15 @@ sklein ~/tmp $ cat > main.c
 void main() { exit(0); }
 sklein ~/tmp $ make
 gcc main.c
-<emphasis role="bold">main.c: In function `main':
+<emphasis role="strong">main.c: In function `main':
 main.c:1: warning: return type of `main' is not `int'</emphasis>
 sklein ~/tmp $ ######## that worked ########
 sklein ~/tmp $ 
 sklein ~/tmp $ cat > main.c
-int main() { exxit(0) }
+int main() { e<emphasis role="strong">xx</emphasis>it(0) }
 sklein ~/tmp $ make
 gcc main.c
-<emphasis role="bold">main.c: In function `main':
+<emphasis role="strong">main.c: In function `main':
 main.c:1: parse error before `}'
 make: *** [main] Error 1</emphasis>
 sklein ~/tmp $ ######## that failed ########
@@ -225,7 +225,7 @@ user  Allow  an  ordinary  user to mount the file system.
 			</para>
 			<screen>sklein ~/tmp-0.0 $ ./configure 
 creating cache ./config.cache
-checking host system type... <emphasis role="bold">configure: error: can not guess host type; you must specify one</emphasis>
+checking host system type... <emphasis role="strong">configure: error: can not guess host type; you must specify one</emphasis>
 sklein ~/tmp-0.0 $
 			</screen>
 			<para>The problem is usually that the script can't run the compiler.
@@ -250,7 +250,7 @@ sklein ~/tmp $ cat > x11.c
 int main() { exit(0); }
 sklein ~/tmp $ make
 gcc x11.c
-<emphasis role="bold">x11.c:1: X11/Xlib.h: No such file or directory
+<emphasis role="strong">x11.c:1: X11/Xlib.h: No such file or directory
 make: *** [x11] Error 1</emphasis>
 sklein ~/tmp $ 
 			</screen>
