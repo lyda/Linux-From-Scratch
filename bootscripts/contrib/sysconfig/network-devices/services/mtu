@@ -11,7 +11,7 @@
 . $rc_functions 
 . $IFCONFIG
 
-if [ -z "$MTU"l; then
+if [ -z "$MTU" ]; then
 	echo "MTU variable missing from $IFCONFIG, cannot continue"
 	exit 1
 fi

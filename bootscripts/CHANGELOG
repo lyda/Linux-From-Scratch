@@ -1,6 +1,8 @@
 n/a - September 21, 2004
 	* boot_mesg has been enhanced.  Subsequent calls will overwrite previous text,
 	  and it will wrap text based upon the variable ${WCOL}.
+	* Fixed mtu optional service typo (Kevin P Fleming)
+	* Added SOURCE variable to ipv4-static-route (Kevin P Fleming)
 
 n/a - September 16, 2004
 	* nework interfaces are now brought down in reverse order
