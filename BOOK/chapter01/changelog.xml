@@ -87,6 +87,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>September 28th, 2004 [matt]: chapter06/zlib - Added a
+description for the zlib security patch (fixes bug 916 - Randy McMurchy).</para></listitem>
+
 <listitem><para>September 28th, 2004 [matt]: chapter06/glibc - glibcbug isn't
 installed in recent versions of glibc (bug 915 - Randy McMurchy).</para></listitem>
 
