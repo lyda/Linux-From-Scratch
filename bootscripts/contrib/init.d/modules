@@ -1,16 +1,7 @@
 #!/bin/sh
-# Begin $rc_base/init.d/modules
+# Begin $rc_base/init.d/modules - Module auto-loading script
 
-# Written by Zack Winkles - winkie.linuxfromscratch.org
-
-# This file uses /etc/sysconfig/modules as the configuration file,
-# where the format is 
-#
-# <module> <arguments>
-#
-# for each line.
-#
-# Blank lines and lines starting with # are ignored.
+# Written by Zack Winkles - winkie@linuxfromscratch.org
 
 . /etc/sysconfig/rc
 . $rc_functions
@@ -20,17 +11,21 @@
 
 case "$1" in
 	start)
-		# Write out the module dependencies, if possible.
+		# Figure out the kernel module dependencies if we have write
+		# permission to the modules directory.
 		if [ -w /lib/modules/`uname -r` ]; then
 			echo "Calculating module dependencies..."
 			depmod --quick
 			evaluate_retval
 		fi
 
-		# Now read in the modules configuration script, and do stuff.
-		if [ "`egrep -v '^(#|$)' /etc/sysconfig/modules 2>/dev/null`" ]; then
+		# Only try to load modules if the user has actually given us
+		# some modules to load.
+		if egrep -qv '^(#|$)' /etc/sysconfig/modules 2>/dev/null; then
+
+			# Read in the configuration file.
 			exec 9>&0 < /etc/sysconfig/modules
-				# Let the user know what's going on.
+
 				echo -n "Loading modules:"
 
 				while read module args ; do
@@ -39,10 +34,12 @@ case "$1" in
 						""|\#*) continue ;;
 					esac
 
-					# Attempt to load the module.
+					# Attempt to load the module, making
+					# sure to pass any arguments provided.
 					modprobe $module $args
 
-					# Print the name if successful, otherwise take note.
+					# Print the module name if successful,
+					# otherwise take note.
 					if [ $? -eq 0 ]; then
 						echo -n " $module"
 					else
@@ -50,15 +47,19 @@ case "$1" in
 					fi
 				done
 
-				# Let the user know about successfully loaded modules.
+				# Print a message about successfully loaded
+				# modules on the correct line.
 				echo ; print_status success
 
-				# If any failed to load, let the user know.
+				# Print a failure message with a list of any
+				# modules that may have failed to load.
 				if [ "$failedmod" ]; then
-					echo "Failed to load:$failedmod"
+					echo "Failed to load modules:$failedmod"
 					print_status failure
 				fi
+
 			exec 0>&9 9>&-
+
 		fi
 		;;
 	*)
