@@ -35,8 +35,8 @@
 <xi:include href="tar.xml"/>
 <xi:include href="texinfo.xml"/>
 <xi:include href="bash.xml"/>
-<xi:include href="perl.xml"/>
 <xi:include href="util-linux.xml"/>
+<xi:include href="perl.xml"/>
 <xi:include href="stripping.xml"/>
 
 </chapter>
