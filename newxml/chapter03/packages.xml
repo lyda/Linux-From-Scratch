@@ -201,7 +201,16 @@ release and make a tarball from it:</para>
 tar jcvf glibc-2.3.3-20031202.tar.bz2 glibc-2.3.3-20031202</userinput></screen>
 
 <para>Alternatively, we've made our own tarball available which you can
-download courtesy of the generous LFS mirror sites. Please refer to the
-<xref linkend="ch-tools-glibc"/> section for the download links.</para></note>
+download courtesy of the generous LFS mirror sites.</para>
+
+<literallayout><ulink url="ftp://gaosu.rave.org/pub/linux/lfs/packages/conglomeration/&glibc-package;"/>
+<ulink url="http://lfs.mirror.intermedia.com.sg/packages/glibc/&glibc-package;"/>
+<ulink url="ftp://lfs.mirror.intermedia.com.sg/pub/lfs/glibc/&glibc-package;"/>
+<ulink url="http://dl.lfs.fredan.org/&glibc-package;"/>
+<ulink url="http://packages.lfs-es.org/&glibc-package;"/>
+<ulink url="http://mirror.averse.net/lfs-packages/&glibc-package;"/>
+<ulink url="ftp://mirror.averse.net/pub/lfs-packages/&glibc-package;"/>
+<ulink url="ftp://ftp.lfs-matrix.de/lfs/packages/conglomeration/&glibc-package;"/></literallayout>
+</note>
 
 </sect1>
