@@ -1,3 +1,8 @@
+n/a - June 4, 2004
+
+	* Added a echo to the > /proc/sys/kernel/hotplug line, as > did not
+	  clear it
+
 n/a - June 3, 2004
 
 	* Added '> /proc/sys/kernel/hotplug' to sendsignals, to disable hotplug
