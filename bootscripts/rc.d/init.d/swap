@@ -3,8 +3,8 @@
 
 # Written by Gerard Beekmans  - gerard@linuxfromscratch.org
 
-source /etc/sysconfig/rc
-source $rc_functions
+. /etc/sysconfig/rc
+. $rc_functions
 
 case "$1" in
 	start)
@@ -38,4 +38,3 @@ case "$1" in
 esac
 
 # End $rc_base/init.d/swap
-

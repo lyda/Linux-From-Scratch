@@ -1,12 +1,21 @@
-#!/bin/bash
+#!/bin/sh
 # Begin $rc_base/init.d/reboot - Reboot Script
 
 # Written by Gerard Beekmans  - gerard@linuxfromscratch.org
 
-source /etc/sysconfig/rc
-source $rc_functions
+. /etc/sysconfig/rc
+. $rc_functions
 
-reboot -d -f -i
+case "$1" in
+	stop)
+		reboot -d -f -i
+		;;
+
+	*)
+		echo "Usage: $0 {stop}"
+		exit 1
+		;;
+
+esac
 
 # End $rc_base/init.d/reboot
-

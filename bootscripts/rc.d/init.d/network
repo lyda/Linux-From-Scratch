@@ -1,18 +1,18 @@
-#!/bin/bash
+#!/bin/sh
 # Begin $rc_base/init.d/network - Network Control Script
 
 # Based on ethnet script from LFS-3.1 and earlier.
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
-source /etc/sysconfig/rc
-source $rc_functions
-source /etc/sysconfig/network
+. /etc/sysconfig/rc
+. $rc_functions
+. /etc/sysconfig/network
 
 case "$1" in
 	start)
 		for file in $(grep -il "ONBOOT=yes" $network_devices/ifconfig.*)
 		do
-			interface=$(basename $file | sed s/ifconfig.//)
+			interface=${file##*/ifconfig.}
 			case "$interface" in
 				*~) ;;
 				*)
@@ -40,7 +40,7 @@ case "$1" in
 
 		for file in $(grep -il "ONBOOT=yes" $network_devices/ifconfig.*)
 		do
-			interface=$(basename $file | sed s/ifconfig.//)
+			interface=${file##*/ifconfig.}
 			case "$interface" in
 				*~) ;;
 				*)
@@ -63,4 +63,3 @@ case "$1" in
 esac
 
 # End /etc/rc.d/init.d/network
-
