@@ -63,6 +63,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>January 5, 2005 [jeremy]: Added the --disable-selinux parameter
+to Ch 5 glibc.  Allows building from hosts which use SELinux functionality,
+like Fedora Core 3</para></listitem>
+
 <listitem><para>December 25, 2004 [jeremy]: Added text suggested by MSB,
 closing Bug 943</para></listitem>
 
