@@ -145,7 +145,7 @@ It is at <ulink
 url="http://beyond.linuxfromscratch.org/">http://beyond.linuxfromscratch.org/</ulink>.
 </para>
 
-<!-- elist: ,lfs-dev -->
+<!-- elist: ,lfs-dev,new -->
 <qandaentry id="gcc-3_0">
 <question><para>Why isn't GCC 3.0.x in the book?
 </para></question>
@@ -168,7 +168,7 @@ even with just the packages in the book.
 
 <!-- elist: ,lfs-dev,new -->
 <qandaentry id="add-gawk">
-<question><para>Why not use gawk instead of mawk? <emphasis role="strong">(NEW)</emphasis><!-- 0 --></para></question>
+<question><para>Why not use gawk instead of mawk?</para></question>
 <answer><para>The book is switching to gawk after 3.2 is released.
 </para>
 <para>If you wish to switch before then,
@@ -213,7 +213,7 @@ history in general.
 </para></answer>
 </qandaentry>
 
-<!-- elist: ,lfs-dev -->
+<!-- elist: ,lfs-dev,new -->
 <qandaentry id="why-not-package-management"><question><para>Why isn't some
 package manager in the book?</para></question>
 <answer><para>Package management -
@@ -257,13 +257,13 @@ to the FAQ maintainer or an apropriate LFS mailing list so it can be added here.
 
 </qandadiv><!-- fre -->
 
-<!-- dlist: ,lfs-compile,new -->
+<!-- dlist: ,lfs-compile -->
 <qandadiv id="fee"><title>Frequently Encountered Errors</title>
 
-<!-- dlist: ,lfs-compile,new -->
+<!-- dlist: ,lfs-compile -->
 <qandadiv id="fee-compile"><title>Compile Time Errors</title>
 
-<!-- dlist: ,lfs-compile,new -->
+<!-- dlist: ,lfs-compile -->
 <qandadiv id="fee-compile-any"><title>Errors From Any Package</title>
 
 <!-- elist: ,lfs-compile -->
@@ -290,9 +290,9 @@ So change the line in /etc/fstab like this:
 </para></answer>
 </qandaentry>
 
-<!-- elist: ,lfs-compile,new -->
+<!-- elist: ,lfs-compile -->
 <qandaentry id="env-bash-no-such-file">
-<question><para>/usr/bin/env: /bin/bash: No such file or directory <emphasis role="strong">(NEW)</emphasis> <!-- 0 --></para></question>
+<question><para>/usr/bin/env: /bin/bash: No such file or directory</para></question>
 <answer><para>You're trying to follow the LFS Book
 and working on entering chroot, right?
 Most likely $LFS/bin/bash isn't statically linked.
@@ -334,10 +334,10 @@ into the new LFS system.)
 </para></answer>
 </qandaentry>
 
-<!-- elist: ,lfs-compile,new -->
+<!-- elist: ,lfs-compile -->
 <qandaentry id="config-hang-size_t">
 <question><para>Why does configure hang at
-"checking for signed size_t type..."? <emphasis role="strong">(NEW)</emphasis><!-- 0 --></para></question>
+"checking for signed size_t type..."?</para></question>
 <answer><para>You over optimized gcc.
 </para></answer>
 </qandaentry>
@@ -401,7 +401,7 @@ endif
 
 </qandadiv><!-- fee -->
 
-<!-- dlist: ,lfs-support,blfs-support,new -->
+<!-- dlist: ,lfs-support,blfs-support -->
 	<qandadiv id="resources"><title>Resources</title>
 
 <!-- elist: ,lfs-support,blfs-support -->
@@ -485,7 +485,7 @@ it the easy way :)
 			</para></answer>
 		</qandaentry>
 
-<!-- elist: ,lfs-support,new -->
+<!-- elist: ,lfs-support -->
 <qandaentry id="where-ncurses-mandrake">
 <question><para>Where's libncurses.a in Mandrake? <emphasis role="strong">(NEW)</emphasis><!-- 0 --></para></question>
 <answer><para>In Mandrake/RPMS2/libncurses5-devel-5.2-16mdk.1586.rpm on Disk 2.
