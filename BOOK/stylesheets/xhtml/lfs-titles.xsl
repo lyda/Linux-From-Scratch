@@ -97,7 +97,7 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:copy-of select="$title"/>
-        <xsl:text>.</xsl:text>
+        <xsl:value-of select="$role"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
