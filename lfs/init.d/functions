@@ -508,6 +508,7 @@ getpids()
 #       LSB does not say that it should call evaluate_retval
 #       It checks for PIDFILE, which is depreciated.
 #         Will be removed after BLFS 6.0
+#       loadproc returns 0 if program is already running, not LSB compliant
 #
 #*******************************************************************************
 loadproc()
@@ -561,11 +562,11 @@ loadproc()
 		case "${?}" in
 			0)
 				log_warning_msg "Unable to continue: ${1} is running"
-				return 4
+				return 0 # 4
 				;;
 			1)
 				log_warning_msg "Unable to continue: ${pidfile} exists"
-				return 4
+				return 0 # 4
 				;;
 			3)
 				;;
