@@ -27,14 +27,20 @@ lfs:
 
 	sh goTidy $(BASEDIR)/
 
-pdf:
-	xsltproc --xinclude --nonet --output $(BASEDIR)/lfs.fo stylesheets/lfs-pdf.xsl \
-	  index.xml
-	sed -i -e "s/inherit/all/" $(BASEDIR)/lfs.fo
-	fop.sh $(BASEDIR)/lfs.fo $(BASEDIR)/$(PDF_OUTPUT)
-	rm lfs.fo
+#
+# This is the old "pdf" target. The old "print" target below has been
+# renamed to "pdf" and will be used. This commented out previous_pdf
+# target can be removed eventually. It'll remain here for a bit for
+# historical reasons
+#
+#previous_pdf:
+#	xsltproc --xinclude --nonet --output $(BASEDIR)/lfs.fo stylesheets/lfs-pdf.xsl \
+#	  index.xml
+#	sed -i -e "s/inherit/all/" $(BASEDIR)/lfs.fo
+#	fop.sh $(BASEDIR)/lfs.fo $(BASEDIR)/$(PDF_OUTPUT)
+#	rm lfs.fo
 
-print:
+pdf:
 	xsltproc --xinclude --nonet --stringparam profile.condition print \
 		--output $(BASEDIR)/lfs-print.xml stylesheets/lfs-profile.xsl index-print.xml
 	xsltproc --nonet --output $(BASEDIR)/lfs-print.fo stylesheets/lfs-print.xsl \
@@ -50,3 +56,4 @@ nochunks:
 
 validate:
 	xmllint --noout --nonet --xinclude --postvalid index.xml
+
