@@ -12,9 +12,6 @@
 <screen>&buildtime; 2.9 SBU
 &diskspace; 143 MB</screen>
 
-<literallayout>Official download location for Perl (&perl-version;):
-<ulink url="http://www.perl.com/"/></literallayout>
-
 <para>For its installation Perl depends on: Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 

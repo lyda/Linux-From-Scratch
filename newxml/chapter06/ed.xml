@@ -12,11 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 3.1 MB</screen>
 
-<literallayout>Official download location for Ed (&ed-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/ed/"/>
-And for the patch:
-<ulink url="&patches-root;ed-&ed-version;-mkstemp.patch"/></literallayout>
-
 <para>For its installation Ed depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
 Glibc, Grep, Make, Sed.</para>
 

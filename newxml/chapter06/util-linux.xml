@@ -14,9 +14,6 @@ messages.</para>
 <screen>&buildtime; 0.2 SBU
 &diskspace; 16 MB</screen>
 
-<literallayout>Official download location for Util-linux (&util-linux-version;):
-<ulink url="http://ftp.cwi.nl/aeb/util-linux/"/></literallayout>
-
 <para>For its installation Util-linux depends on: Bash, Binutils, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, Zlib.</para>
 

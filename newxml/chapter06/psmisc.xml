@@ -13,9 +13,6 @@ processes.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 2.2 MB</screen>
 
-<literallayout>Official download location for Psmisc (&psmisc-version;):
-<ulink url="http://download.sourceforge.net/psmisc/"/></literallayout>
-
 <para>For its installation Psmisc depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed.</para>
 

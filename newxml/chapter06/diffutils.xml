@@ -13,9 +13,6 @@ between files or directories.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 7.5 MB</screen>
 
-<literallayout>Official download location for Diffutils (&diffutils-version;):
-<ulink url="ftp://ftp.gnu.org/gnu/diffutils/"/></literallayout>
-
 <para>For its installation Diffutils depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
 Gettext, Glibc, Grep, Make, Sed.</para>
 

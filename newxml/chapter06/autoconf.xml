@@ -13,9 +13,6 @@ can automatically configure source code.</para>
 <screen>&buildtime; 0.5 SBU
 &diskspace; 7.7 MB</screen>
 
-<literallayout>Official download location for Autoconf (&autoconf-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/autoconf/"/></literallayout>
-
 <para>For its installation Autoconf depends on: Bash, Coreutils, Diffutils, Grep,
 M4, Make, Perl, Sed.</para>
 

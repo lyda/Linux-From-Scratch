@@ -13,9 +13,6 @@ handling of character screens.</para>
 <screen>&buildtime; 0.6 SBU
 &diskspace; 27 MB</screen>
 
-<literallayout>Official download location for Ncurses (&ncurses-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/ncurses/"/></literallayout>
-
 <para>For its installation Ncurses depends on: Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 

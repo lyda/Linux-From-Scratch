@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 0.2 MB</screen>
 
-<literallayout>Official download location for Procinfo (&procinfo-version;):
-<ulink url="ftp://ftp.cistron.nl/pub/people/svm/"/></literallayout>
-
 <para>For its installation Procinfo depends on: Binutils, GCC, Glibc, Make, Ncurses.</para>
 
 

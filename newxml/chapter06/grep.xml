@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 5.8 MB</screen>
 
-<literallayout>Official download location for Grep (&grep-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/grep/"/></literallayout>
-
 <para>For its installation Grep depends on: Bash, Binutils, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Make, Sed, Texinfo.</para>
 

@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 15 MB</screen>
 
-<literallayout>Official download location for Man-pages (&man-pages-version;): 
-<ulink url="ftp://ftp.win.tue.nl/pub/linux-local/manpages/"/></literallayout>
-
 <para>For its installation Man-pages depends on: Bash, Coreutils, Make.</para>
 
 

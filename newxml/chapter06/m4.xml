@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 3.0 MB</screen>
 
-<literallayout>Official download location for M4 (&m4-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/m4/"/></literallayout>
-
 <para>For its installation M4 depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
 Gettext, Glibc, Grep, Make, Perl, Sed.</para>
 

@@ -12,12 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 6.3 MB</screen>
 
-<literallayout>Official download location for File (&file-version;): 
-<ulink url="ftp://ftp.astron.com/pub/file/"/>
-
-Alternative download location:
-<ulink url="ftp://gaosu.rave.org/pub/linux/lfs/"/></literallayout>
-
 <para>For its installation File depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed, Zlib.</para>
 

@@ -15,19 +15,6 @@ arithmetic, and so on.</para>
 <screen>&buildtime; 12.3 SBU
 &diskspace; 784 MB</screen>
 
-<literallayout>Official download location for Glibc (&glibc-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/glibc/"/>
-
-Alternative download locations (courtesy of the generous LFS Mirrors):
-<ulink url="ftp://gaosu.rave.org/pub/linux/lfs/packages/conglomeration/glibc-&glibc-version;-20031202.tar.bz2"/>
-<ulink url="http://lfs.mirror.intermedia.com.sg/packages/glibc/glibc-&glibc-version;-20031202.tar.bz2"/>
-<ulink url="ftp://lfs.mirror.intermedia.com.sg/pub/lfs/glibc/glibc-&glibc-version;-20031202.tar.bz2"/>
-<ulink url="http://dl.lfs.fredan.org/glibc-&glibc-version;-20031202.tar.bz2"/>
-<ulink url="http://packages.lfs-es.org/glibc-&glibc-version;-20031202.tar.bz2"/>
-<ulink url="http://mirror.averse.net/lfs-packages/glibc-&glibc-version;-20031202.tar.bz2"/>
-<ulink url="ftp://mirror.averse.net/pub/lfs-packages/glibc-&glibc-version;-20031202.tar.bz2"/>
-<ulink url="ftp://ftp.lfs-matrix.de/lfs/packages/conglomeration/glibc-&glibc-version;-20031202.tar.bz2"/></literallayout>
-
 <para>For its installation Glibc depends on: Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Gettext, Grep, Make, Perl, Sed, Texinfo.</para>
 

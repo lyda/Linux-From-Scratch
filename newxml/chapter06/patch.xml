@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 1.9 MB</screen>
 
-<literallayout>Official download location for Patch (&patch-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/patch/"/></literallayout>
-
 <para>For its installation Patch depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed.</para>
 

@@ -14,9 +14,6 @@ interface.</para>
 <screen>&buildtime; 1.5 SBU
 &diskspace; 20 MB</screen>
 
-<literallayout>Official download location for Libtool (&libtool-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/libtool/"/></literallayout>
-
 <para>For its installation Libtool depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed.</para>
 

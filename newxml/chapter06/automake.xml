@@ -13,9 +13,6 @@ with Autoconf.</para>
 <screen>&buildtime; 0.2 SBU
 &diskspace; 6.8 MB</screen>
 
-<literallayout>Official download location for Automake (&automake-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/automake/"/></literallayout>
-
 <para>For its installation Automake depends on: Autoconf, Bash, Coreutils,
 Diffutils, Grep, M4, Make, Perl, Sed.</para>
 

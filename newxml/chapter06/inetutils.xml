@@ -12,11 +12,6 @@
 <screen>&buildtime; 0.2 SBU
 &diskspace; 11 MB</screen>
 
-<literallayout>Official download location for Inetutils (&inetutils-version;):
-<ulink url="ftp://ftp.gnu.org/gnu/inetutils/"/>
-And for the patch:
-<ulink url="&patches-root;inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></literallayout>
-
 <para>For its installation Inetutils depends on: Bash, Binutils, Coreutils,
 Diffutils, GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 

@@ -13,9 +13,6 @@ files in shell scripts.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 317 KB</screen>
 
-<literallayout>Official download location for Mktemp (&mktemp-version;):
-<ulink url="ftp://ftp.mktemp.org/pub/mktemp/"/></literallayout>
-
 <para>The installation dependencies for Mktemp haven't been checked yet.</para>
 
 

@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.9 SBU
 &diskspace; 23 MB</screen>
 
-<literallayout>Official download location for Tcl (&tcl-version;):
-<ulink url="http://download.sourceforge.net/tcl/"/></literallayout>
-
 <para>For its installation Tcl depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed.</para>
 

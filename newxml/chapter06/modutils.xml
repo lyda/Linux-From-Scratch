@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &buildtime; 2.9 MB</screen>
 
-<literallayout>Official download location for Modutils (&modutils-version;): 
-<ulink url="ftp://ftp.kernel.org/pub/linux/utils/kernel/modutils/"/></literallayout>
-
 <para>For its installation Modutils depends on: Bash, Binutils, Bison, Coreutils,
 Diffutils, Flex, GCC, Glibc, Grep, M4, Make, Sed.</para>
 

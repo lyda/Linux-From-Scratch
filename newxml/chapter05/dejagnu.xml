@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 8.6 MB</screen>
 
-<literallayout>Official download location for DejaGnu (&dejagnu-version;):
-<ulink url="ftp://ftp.gnu.org/gnu/dejagnu/"/></literallayout>
-
 <para>For its installation Dejagnu depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed.</para>
 

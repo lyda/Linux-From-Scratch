@@ -13,9 +13,6 @@ recognize patterns in text.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 3.4 MB</screen>
 
-<literallayout>Official download location for Flex (&flex-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/non-gnu/flex/"/></literallayout>
-
 <para>For its installation Flex depends on: Bash, Binutils, Bison, Coreutils, Diffutils,
 GCC, Gettext, Glibc, Grep, M4, Make, Sed.</para>
 

@@ -14,9 +14,6 @@ consulting a previously set up database.</para>
 <screen>&buildtime; 0.2 SBU
 &diskspace; 7.5 MB</screen>
 
-<literallayout>Official download location for Findutils (&findutils-version;):
-<ulink url="ftp://alpha.gnu.org/gnu/findutils/"/></literallayout>
-
 <para>For its installation Findutils depends on: Bash, Binutils, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed.</para>
 

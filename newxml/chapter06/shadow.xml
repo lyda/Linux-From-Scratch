@@ -13,9 +13,6 @@ way.</para>
 <screen>&buildtime; 0.4 SBU
 &diskspace; 11 MB</screen>
 
-<literallayout>Official download location for Shadow (&shadow-version;):
-<ulink url="ftp://ftp.pld.org.pl/software/shadow/"/></literallayout>
-
 <para>For its installation Shadow depends on: Bash, Binutils, Bison, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed.</para>
 

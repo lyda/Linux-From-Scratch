@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.5 SBU
 &diskspace; 43 MB</screen>
 
-<literallayout>Official download location for Groff (&groff-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/groff/"/></literallayout>
-
 <para>For its installation Groff depends on: Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Glibc, Grep, Make, Sed.</para>
 

@@ -10,18 +10,6 @@
 <screen>&buildtime; 1.5 SBU
 &buildtime; 130 MB</screen>
 
-<sect2><title/>
-<literallayout>Official download location for GCC-2 (&gcc-2953-version;): 
-<ulink url="ftp://ftp.gnu.org/pub/gnu/gcc/"/>
-And for the GCC-2 Patch:
-<ulink url="&patches-root;gcc-&gcc-2953-version;-2.patch"/>
-And for the GCC-2 No-Fixincludes Patch:
-<ulink url="&patches-root;gcc-&gcc-2953-version;-no-fixinc.patch"/>
-And for the GCC-2 Return-Type Patch:
-<ulink url="&patches-root;gcc-&gcc-2953-version;-returntype-fix.patch"/></literallayout>
-</sect2>
-
-
 <sect2>
 <title>Installation of GCC</title>
 

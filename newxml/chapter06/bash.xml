@@ -12,11 +12,6 @@
 <screen>Approximate build time:  1.2 SBU
 Required disk space:     27 MB</screen>
 
-<literallayout>Official download location for Bash (&bash-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/bash/"/>
-And for the patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/bash-&bash-version;-2.patch"/></literallayout>
-
 <para>For its installation Bash depends on: Binutils, Coreutils, Diffutils, Gawk,
 GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
 

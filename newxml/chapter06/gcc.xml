@@ -13,11 +13,6 @@ the C and C++ compilers.</para>
 <screen>&buildtime; 11.7 SBU
 &diskspace; 294 MB</screen>
 
-<literallayout>Official download location for GCC (&gcc-version;): 
-<ulink url="ftp://ftp.gnu.org/pub/gnu/gcc/"/>
-And for the patch:
-<ulink url="&patches-root;gcc-&gcc-version;-no_fixincludes-1.patch"/></literallayout>
-
 <para>For its installation GCC depends on: Bash, Binutils, Coreutils, Diffutils, Findutils,
 Gawk, Gettext, Glibc, Grep, Make, Perl, Sed, Texinfo.</para>
 

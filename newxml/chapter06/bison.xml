@@ -12,11 +12,6 @@
 <screen>&buildtime; 0.6 SBU
 &diskspace; 10.6 MB</screen>
 
-<literallayout>Official download location for Bison (&bison-version;): 
-<ulink url="ftp://ftp.gnu.org/gnu/bison/"/>
-And for the patch:
-<ulink url="&patches-root;bison-&bison-version;-attribute.patch"/></literallayout>
-
 <para>For its installation Bison depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Gettext, Glibc, Grep, M4, Make, Sed.</para>
 

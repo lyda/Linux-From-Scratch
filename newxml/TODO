@@ -18,9 +18,7 @@ TODO
        will validate against it.  All the documents I try complain that
        "<book> wasn't expected there" (line 1!).
   1.2. Upgrade to lfs-bootscripts-2.0
-  1.3. Upgrade to file-4.08
-  1.4. Merge Alex's structure and content changes
-  1.5. Remove download location hyperlinks from chapters 5 & 6.
+  1.3. Merge Alex's structure and content changes
 
 
 2. HTML

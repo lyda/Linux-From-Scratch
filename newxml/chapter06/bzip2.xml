@@ -14,9 +14,6 @@ traditional <command>gzip</command>.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 3.0 MB</screen>
 
-<literallayout>Official download location for Bzip2 (&bzip2-version;): 
-<ulink url="ftp://sources.redhat.com/pub/bzip2/"/></literallayout>
-
 <para>For its installation Bzip2 depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Make.</para>
 

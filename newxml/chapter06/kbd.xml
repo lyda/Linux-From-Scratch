@@ -12,11 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 12 MB</screen>
 
-<literallayout>Official download location for Kbd (&kbd-version;): 
-<ulink url="ftp://ftp.win.tue.nl/pub/linux-local/utils/kbd/"/>
-And for the patch:
-<ulink url="&patches-root;kbd-&kbd-version;-more-programs-1.patch"/></literallayout>
-
 <para>For its installation Kbd depends on: Bash, Binutils, Bison, Coreutils,
 Diffutils, Flex, GCC, Gettext, Glibc, Grep, Gzip, M4, Make, Sed.</para>
 

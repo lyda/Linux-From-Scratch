@@ -13,9 +13,6 @@ some programs.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 1.5 MB</screen>
 
-<literallayout>Official download location for Zlib (&zlib-version;):
-<ulink url="http://www.gzip.org/zlib/"/></literallayout>
-
 <para>For its installation Zlib depends on: Binutils, Coreutils, GCC, Glibc, Make, Sed.</para>
 
 

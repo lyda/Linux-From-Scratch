@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 6.2 MB</screen>
 
-<literallayout>Official download location for Procps (&procps-version;):
-<ulink url="http://procps.sourceforge.net/"/></literallayout>
-
 <para>For its installation Procps depends on: Bash, Binutils, Coreutils, GCC, Glibc,
 Make, Ncurses.</para>
 

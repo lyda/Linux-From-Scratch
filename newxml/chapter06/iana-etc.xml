@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 641 KB</screen>
 
-<literallayout>Official download location for Iana-Etc (&iana-etc-version;):
-<ulink url="http://www.sethwklein.net/projects/iana-etc/"/></literallayout>
-
 <para>The installation dependencies for Iana-Etc haven't been checked yet.</para>
 
 

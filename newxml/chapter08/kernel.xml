@@ -12,9 +12,6 @@
 <screen>&buildtime; All default options: 4.20 SBU
 &diskspace; All default options: 181 MB</screen>
 
-<literallayout>Official download location for Linux (&linux-version;):
-<ulink url="ftp://ftp.kernel.org/pub/linux/kernel/"/></literallayout>
-
 <para>For its installation Linux depends on: Bash, Binutils, Coreutils, Findutils,
 GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, Sed.</para>
 

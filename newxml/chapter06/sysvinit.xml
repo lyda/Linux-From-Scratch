@@ -13,9 +13,6 @@ running, and shutdown of your system.</para>
 <screen>&buildtime; 0.1 SBU
 &diskspace; 0.9 MB</screen>
 
-<literallayout>Official download location for Sysvinit (&sysvinit-version;):
-<ulink url="ftp://ftp.cistron.nl/pub/people/miquels/sysvinit/"/></literallayout>
-
 <para>For its installation Sysvinit depends on: Binutils, Coreutils, GCC, Glibc, Make.</para>
 
 

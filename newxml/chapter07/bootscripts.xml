@@ -12,9 +12,6 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 0.3 MB</screen>
 
-<literallayout>Official download location for LFS-Bootscripts (&bootscripts-version;):
-<ulink url="&http-down;"/></literallayout>
-
 <para>For its installation LFS-Bootscripts depends on: Bash, Coreutils.</para>
 
 

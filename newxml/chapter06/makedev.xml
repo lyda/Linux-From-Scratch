@@ -13,9 +13,6 @@ nodes.</para>
 <screen>&buildtime; 1 SBU
 &diskspace; 160 KB</screen>
 
-<literallayout>Official download location for Make_devices (&makedev-version;):
-<ulink url="&http-down;"/></literallayout>
-
 <para>For its installation Make_devices depends on: Bash, Bzip2,
 Coreutils.</para>
 
