@@ -74,10 +74,11 @@
 	&quake3;
 </qandadiv>
 <qandadiv id="fsc"><title>Frequently Sought Cluebits</title>
-	&no-poweroff;
+	&dos-text;
 	&how-to-compile;
 	&should-i-keep-sources;
-	&dos-text;
+	&no-dev-eth0;
+	&no-poweroff;
 	&how-to-create-user;
 	&kernel-header-copy;
 	&gcc-warnings;
