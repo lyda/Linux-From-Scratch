@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-diffutils" role="wrap">
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xi="http://www.w3.org/2003/XInclude"
+         xml:id="ch-tools-diffutils" role="wrap">
 <title>Diffutils-&diffutils-version;</title>
 <?dbhtml filename="diffutils.html"?>
 
@@ -11,8 +13,8 @@
 <primary sortas="a-Diffutils">Diffutils</primary>
 <secondary>tools</secondary></indexterm>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/diffutils.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+<section role="package"><title/>
+<xi:include href="../chapter06/diffutils.xml" xpointer="xpointer(/*[1]/*[3]/*[2])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -20,11 +22,11 @@
 <seglistitem><seg>0.1 SBU</seg><seg>7.5 MB</seg></seglistitem>
 </segmentedlist>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/diffutils.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+<xi:include href="../chapter06/diffutils.xml" xpointer="xpointer(/*[1]/*[3]/*[4])"/>
 
-</sect2>
+</section>
 
-<sect2 role="installation">
+<section role="installation">
 <title>Installation of Diffutils</title>
 
 <para>Prepare Diffutils for compilation:</para>
@@ -39,10 +41,10 @@
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
-<sect2 role="content"><title/>
+<section role="content"><title/>
 <para>The details on this package are found in <xref linkend="contents-diffutils"/>.</para>
-</sect2>
+</section>
 
-</sect1>
+</section>

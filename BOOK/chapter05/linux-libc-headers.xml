@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-linux-libc-headers" role="wrap">
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-tools-linux-libc-headers" role="wrap">
 <title>Linux-Libc-Headers-&linux-libc-headers-version;</title>
 <?dbhtml filename="linux-libc-headers.html"?>
 
@@ -11,7 +12,7 @@
 <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
 <secondary>tools, headers</secondary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><title/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -19,9 +20,9 @@
 <seglistitem><seg>0.1 SBU</seg><seg>22 MB</seg></seglistitem>
 </segmentedlist>
 
-</sect2>
+</section>
 
-<sect2 role="installation">
+<section role="installation">
 <title>Installation of Linux-Libc-Headers</title>
 
 <para>For years it has been common practice to use so-called <quote>raw</quote>
@@ -35,6 +36,6 @@ designed to maintain an API stable version of the Linux headers.</para>
 <screen><userinput>cp -R include/asm-i386 /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

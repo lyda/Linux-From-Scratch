@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-glibc" role="wrap">
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xi="http://www.w3.org/2003/XInclude"
+         xml:id="ch-tools-glibc" role="wrap">
 <title>Glibc-&glibc-version;</title>
 <?dbhtml filename="glibc.html"?>
 
@@ -11,8 +13,8 @@
 <primary sortas="a-Glibc">Glibc</primary>
 <secondary>tools</secondary></indexterm>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+<section role="package"><title/>
+<xi:include href="../chapter06/glibc.xml" xpointer="xpointer(/*[1]/*[3]/*[2])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -20,11 +22,11 @@
 <seglistitem><seg>11.8 SBU</seg><seg>800 MB</seg></seglistitem>
 </segmentedlist>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/glibc.xml" xpointer="xpointer(/*[1]/*[3]/*[4])"/>
 
-</sect2>
+</section>
 
-<sect2 role="installation">
+<section role="installation">
 <title>Installation of Glibc</title>
 
 <para>This package is known to behave badly when you change its default
@@ -192,10 +194,10 @@ localedef -i fr_FR@euro -f ISO-8859-15 fr_FR@euro
 localedef -i it_IT -f ISO-8859-1 it_IT
 localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
 
-</sect2>
+</section>
 
-<sect2 role="content"><title/>
+<section role="content"><title/>
 <para>The details on this package are found in <xref linkend="contents-glibc"/>.</para>
-</sect2>
+</section>
 
-</sect1>
+</section>

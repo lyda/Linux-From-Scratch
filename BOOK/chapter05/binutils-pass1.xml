@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-binutils-pass1" role="wrap">
-<title>Binutils-&binutils-version; - Pass 1</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xi="http://www.w3.org/2003/XInclude"
+         xml:id="ch-tools-binutils-pass1" role="wrap">
+<info><title>Binutils-&binutils-version; - Pass 1</title></info>
 <?dbhtml filename="binutils-pass1.html"?>
 
 <indexterm zone="ch-tools-binutils-pass1">
 <primary sortas="a-Binutils">Binutils</primary>
 <secondary>tools, pass 1</secondary></indexterm>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+<section role="package"><title/>
+<xi:include href="../chapter06/binutils.xml" xpointer="xpointer(/*[1]/*[3]/*[2])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -20,12 +22,12 @@
 <seglistitem><seg>1.0 SBU</seg><seg>194 MB</seg></seglistitem>
 </segmentedlist>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+<xi:include href="../chapter06/binutils.xml" xpointer="xpointer(/*[1]/*[3]/*[4])"/>
 
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Binutils</title>
+<section role="installation">
+<info><title>Installation of Binutils</title></info>
 
 <para>It is important that Binutils be the first package to get compiled,
 because both Glibc and GCC perform various tests on the available linker and
@@ -137,10 +139,10 @@ source directories. You will need them again in their current state a bit
 further on in this chapter.</para></warning>
 
 
-</sect2>
+</section>
 
-<sect2 role="content"><title/>
+<section role="content"><info><title/></info>
 <para>The details on this package are found in <xref linkend="contents-binutils"/>.</para>
-</sect2>
+</section>
 
-</sect1>
+</section>

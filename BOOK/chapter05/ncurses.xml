@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-ncurses" role="wrap">
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xi="http://www.w3.org/2003/XInclude"
+         xml:id="ch-tools-ncurses" role="wrap">
 <title>Ncurses-&ncurses-version;</title>
 <?dbhtml filename="ncurses.html"?>
 
@@ -11,8 +13,8 @@
 <primary sortas="a-Ncurses">Ncurses</primary>
 <secondary>tools</secondary></indexterm>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/ncurses.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+<section role="package"><title/>
+<xi:include href="../chapter06/ncurses.xml" xpointer="xpointer(/*[1]/*[3]/*[2])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -20,11 +22,11 @@
 <seglistitem><seg>0.7 SBU</seg><seg>26 MB</seg></seglistitem>
 </segmentedlist>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/ncurses.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+<xi:include href="../chapter06/ncurses.xml" xpointer="xpointer(/*[1]/*[3]/*[4])"/>
 
-</sect2>
+</section>
 
-<sect2 role="installation">
+<section role="installation">
 <title>Installation of Ncurses</title>
 
 <para>Prepare Ncurses for compilation:</para>
@@ -60,10 +62,10 @@ other packages can find the Ncurses headers successfully.</para></listitem>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
-<sect2 role="content"><title/>
+<section role="content"><title/>
 <para>The details on this package are found in <xref linkend="contents-ncurses"/>.</para>
-</sect2>
+</section>
 
-</sect1>
+</section>

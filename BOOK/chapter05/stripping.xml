@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-stripping">
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-tools-stripping">
 <title>Stripping</title>
 <?dbhtml filename="stripping.html"?>
 
@@ -32,4 +33,4 @@ all over again.</para>
 file system to be able to build and install Glibc in the next phase. If you can
 build and install Glibc, you can build and install the rest too.</para>
 
-</sect1>
+</section>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-introduction">
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-tools-introduction">
 <title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
 
@@ -61,4 +62,4 @@ properly:</para>
 point, which is <filename class="directory">/mnt/lfs</filename> if you
 followed our example.</para>
 
-</sect1>
+</section>
