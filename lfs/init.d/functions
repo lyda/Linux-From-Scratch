@@ -87,14 +87,14 @@ BMWORD=""          # last printed word before a newline when wrapping text
 # Outputs:      Standard Output
 #
 # Dependencies: - sed for parsing strings.
-#		- grep, for counting \n's in a variable.
+#	              - grep, for counting \n's in a variable.
 #               
 # Todo:         - This function was created for the purpose of storing
 #               information to be passed to a bootup log and for better
 #               formatting of text sent to the screen.  The logging support
 #               now pushes messages to the local0 service which is now
 #               configured by LFS defalut in syslog-ng.conf.  This also 
-#		requires that /usr/bin/logger be moved to /bin.
+#               requires that /usr/bin/logger be moved to /bin.
 #               Support for parallel bootscripts is not added *yet*...
 #*******************************************************************************
 boot_mesg()

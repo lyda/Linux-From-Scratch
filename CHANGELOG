@@ -9,6 +9,8 @@ n/a - November 25, 2004
 	* udev now uses /sbin/hotplug as the default hotplug handler (Nathan Coulson)
 	* udev now mounts a tmpfs instead of a ramfs onto /dev,
 	  as suggested by Greg K-H (Nathan Coulson
+	* Created contrib/lsb, and added a LSB compliant functions file
+	  (Nathan Coulson, and Alexander Patrakov)
 
 n/a - November 20, 2004
 	* Modifed modules script to return to previous kernel message

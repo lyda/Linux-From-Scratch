@@ -93,6 +93,9 @@ install-consolelog: create-dirs
 	ln -sf ../init.d/consolelog  ${EXTDIR}/rc.d/rcsysinit.d/S00consolelog
 	install --backup=numbered -m ${CONFMODE} contrib/sysconfig/consolelog  ${EXTDIR}/sysconfig/
 
+install-lsb-compliant:
+	make -C contrib/lsb
+
 install-service-mtu: create-service-dir
 	install -m ${MODE} contrib/sysconfig/network-devices/services/mtu ${EXTDIR}/sysconfig/network-devices/services
 
