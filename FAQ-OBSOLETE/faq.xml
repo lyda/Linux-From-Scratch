@@ -440,6 +440,29 @@ endif
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,blfs-support,new -->
+<qandaentry id="missing-x-includes">
+<question><para>X11/Xlib.h: No such file or directory</para></question>
+<answer><para>Typical symptoms look like this:
+</para>
+<screen>$ echo -en 'x11:\n\tgcc x11.c\n' > Makefile
+$ echo -en '#include &lt;X11/Xlib.h>\nmain() { }\n' > x11.c   
+$ make
+gcc x11.c
+<emphasis role="strong">x11.c:1: X11/Xlib.h: No such file or directory
+make: *** [x11] Error 1</emphasis>
+$ rm Makefile x11.c 
+$ 
+</screen>
+<para>Creating a couple symlinks will fix it. Here are the commands:
+</para>
+<screen>cd /usr
+ln -s X11R6 X11
+cd include
+ln -s ../X11/include/X11 X11
+</screen></answer>
+</qandaentry>
+
 <!-- elist: ,lfs-compile,new -->
 <qandaentry id="unable-to-mount-root">
 <question><para>Kernel panic: VFS: unable to mount root fs</para></question>
@@ -861,30 +884,6 @@ ln -s gcc cc
 			<para>If that doesn't do it, check the file config.log created by configure.
 				Errors go here and may indicate the problem.
 			</para></answer>
-		</qandaentry>
-<!-- elist: ,blfs-support -->
-		<qandaentry id="missing-x-includes"><question><para>A package can't find Xlib.h.</para></question>
-			<answer><para>Typical symptoms look like this:
-			</para>
-			<screen>sk ~/tmp $ cat > Makefile
-x11:
-        gcc x11.c
-sk ~/tmp $ cat > x11.c
-#include &lt;X11/Xlib.h>
-int main() { exit(0); }
-sk ~/tmp $ make
-gcc x11.c
-<emphasis role="strong">x11.c:1: X11/Xlib.h: No such file or directory
-make: *** [x11] Error 1</emphasis>
-sk ~/tmp $ 
-			</screen>
-			<para>Creating a couple symlinks will fix this. Here are the commands:
-			</para>
-			<screen>cd /usr
-ln -s X11R6 X11
-cd include
-ln -s ../X11/include/X11 X11
-			</screen></answer>
 		</qandaentry>
 <!-- elist: ,lfs-compile,blfs-support -->
 		<qandaentry id="stdgnu89"><question><para>I'm having trouble compiling something with GCC 3.x</para></question>
