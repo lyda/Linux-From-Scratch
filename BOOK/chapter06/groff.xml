@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-groff" xreflabel="Groff" role="wrap">
-<title>Groff-&groff-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-groff" xreflabel="Groff" role="wrap">
+<info><title>Groff-&groff-version;</title></info>
 <?dbhtml filename="groff.html"?>
 
 <indexterm zone="ch-system-groff"><primary sortas="a-Groff">Groff</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Groff package contains programs for processing and formatting text.</para>
 
 <segmentedlist>
@@ -23,10 +24,10 @@
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Groff</title>
+<section role="installation">
+<info><title>Installation of Groff</title></info>
 
 <para>Groff expects the environment variable PAGE to contain the default paper
 size. For those in the United States, the command below is appropriate. If you
@@ -52,10 +53,10 @@ will not work properly without the following symlinks:</para>
 ln -s eqn /usr/bin/geqn
 ln -s tbl /usr/bin/gtbl</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-groff" role="content"><title>Contents of Groff</title>
+<section xml:id="contents-groff" role="content"><info><title>Contents of Groff</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -67,7 +68,7 @@ pre-grohtml, refer, soelim, tbl, tfmtodit, troff and zsoelim (link to soelim)</s
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="addftinfo">
+<varlistentry xml:id="addftinfo">
 <term><command>addftinfo</command></term>
 <listitem>
 <indexterm zone="ch-system-groff addftinfo"><primary sortas="b-addftinfo">addftinfo</primary></indexterm>
@@ -76,7 +77,7 @@ additional font-metric information that is used by the <command>groff</command> 
 </listitem>
 </varlistentry>
 
-<varlistentry id="afmtodit">
+<varlistentry xml:id="afmtodit">
 <term><command>afmtodit</command></term>
 <listitem>
 <indexterm zone="ch-system-groff afmtodit"><primary sortas="b-afmtodit">afmtodit</primary></indexterm>
@@ -84,7 +85,7 @@ additional font-metric information that is used by the <command>groff</command> 
 </listitem>
 </varlistentry>
 
-<varlistentry id="eqn">
+<varlistentry xml:id="eqn">
 <term><command>eqn</command></term>
 <listitem>
 <indexterm zone="ch-system-groff eqn"><primary sortas="b-eqn">eqn</primary></indexterm>
@@ -93,7 +94,7 @@ within troff input files into commands that are understood by <command>troff</co
 </listitem>
 </varlistentry>
 
-<varlistentry id="eqn2graph">
+<varlistentry xml:id="eqn2graph">
 <term><command>eqn2graph</command></term>
 <listitem>
 <indexterm zone="ch-system-groff eqn2graph"><primary sortas="b-eqn2graph">eqn2graph</primary></indexterm>
@@ -101,7 +102,7 @@ within troff input files into commands that are understood by <command>troff</co
 </listitem>
 </varlistentry>
 
-<varlistentry id="grn">
+<varlistentry xml:id="grn">
 <term><command>grn</command></term>
 <listitem>
 <indexterm zone="ch-system-groff grn"><primary sortas="b-grn">grn</primary></indexterm>
@@ -109,7 +110,7 @@ within troff input files into commands that are understood by <command>troff</co
 </listitem>
 </varlistentry>
 
-<varlistentry id="grodvi">
+<varlistentry xml:id="grodvi">
 <term><command>grodvi</command></term>
 <listitem>
 <indexterm zone="ch-system-groff grodvi"><primary sortas="b-grodvi">grodvi</primary></indexterm>
@@ -117,7 +118,7 @@ within troff input files into commands that are understood by <command>troff</co
 </listitem>
 </varlistentry>
 
-<varlistentry id="groff">
+<varlistentry xml:id="groff">
 <term><command>groff</command></term>
 <listitem>
 <indexterm zone="ch-system-groff groff"><primary sortas="b-groff">groff</primary></indexterm>
@@ -127,7 +128,7 @@ appropriate for the selected device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="groffer">
+<varlistentry xml:id="groffer">
 <term><command>groffer</command></term>
 <listitem>
 <indexterm zone="ch-system-groff groffer"><primary sortas="b-groffer">groffer</primary></indexterm>
@@ -135,7 +136,7 @@ appropriate for the selected device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="grog">
+<varlistentry xml:id="grog">
 <term><command>grog</command></term>
 <listitem>
 <indexterm zone="ch-system-groff grog"><primary sortas="b-grog">grog</primary></indexterm>
@@ -148,7 +149,7 @@ files, and reports the <command>groff</command> command including those options.
 </listitem>
 </varlistentry>
 
-<varlistentry id="grolbp">
+<varlistentry xml:id="grolbp">
 <term><command>grolbp</command></term>
 <listitem>
 <indexterm zone="ch-system-groff grolbp"><primary sortas="b-grolbp">grolbp</primary></indexterm>
@@ -157,7 +158,7 @@ files, and reports the <command>groff</command> command including those options.
 </listitem>
 </varlistentry>
 
-<varlistentry id="grolj4">
+<varlistentry xml:id="grolj4">
 <term><command>grolj4</command></term>
 <listitem>
 <indexterm zone="ch-system-groff grolj4"><primary sortas="b-grolj4">grolj4</primary></indexterm>
@@ -166,7 +167,7 @@ in PCL5 format suitable for an HP Laserjet 4 printer.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="grops">
+<varlistentry xml:id="grops">
 <term><command>grops</command></term>
 <listitem>
 <indexterm zone="ch-system-groff grops"><primary sortas="b-grops">grops</primary></indexterm>
@@ -174,7 +175,7 @@ in PCL5 format suitable for an HP Laserjet 4 printer.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="grotty">
+<varlistentry xml:id="grotty">
 <term><command>grotty</command></term>
 <listitem>
 <indexterm zone="ch-system-groff grotty"><primary sortas="b-grotty">grotty</primary></indexterm>
@@ -183,7 +184,7 @@ a form suitable for typewriter-like devices.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="gtbl">
+<varlistentry xml:id="gtbl">
 <term><command>gtbl</command></term>
 <listitem>
 <indexterm zone="ch-system-groff gtbl"><primary sortas="b-gtbl">gtbl</primary></indexterm>
@@ -191,7 +192,7 @@ a form suitable for typewriter-like devices.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="hpftodit">
+<varlistentry xml:id="hpftodit">
 <term><command>hpftodit</command></term>
 <listitem>
 <indexterm zone="ch-system-groff hpftodit"><primary sortas="b-hpftodit">hpftodit</primary></indexterm>
@@ -200,7 +201,7 @@ a form suitable for typewriter-like devices.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="indxbib">
+<varlistentry xml:id="indxbib">
 <term><command>indxbib</command></term>
 <listitem>
 <indexterm zone="ch-system-groff indxbib"><primary sortas="b-indxbib">indxbib</primary></indexterm>
@@ -209,7 +210,7 @@ use with <command>refer</command>, <command>lookbib</command>, and <command>lkbi
 </listitem>
 </varlistentry>
 
-<varlistentry id="lkbib">
+<varlistentry xml:id="lkbib">
 <term><command>lkbib</command></term>
 <listitem>
 <indexterm zone="ch-system-groff lkbib"><primary sortas="b-lkbib">lkbib</primary></indexterm>
@@ -218,7 +219,7 @@ references that contain specified keys and reports any references found.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="lookbib">
+<varlistentry xml:id="lookbib">
 <term><command>lookbib</command></term>
 <listitem>
 <indexterm zone="ch-system-groff lookbib"><primary sortas="b-lookbib">lookbib</primary></indexterm>
@@ -231,7 +232,7 @@ end of input.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mmroff">
+<varlistentry xml:id="mmroff">
 <term><command>mmroff</command></term>
 <listitem>
 <indexterm zone="ch-system-groff mmroff"><primary sortas="b-mmroff">mmroff</primary></indexterm>
@@ -239,7 +240,7 @@ end of input.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="neqn">
+<varlistentry xml:id="neqn">
 <term><command>neqn</command></term>
 <listitem>
 <indexterm zone="ch-system-groff neqn"><primary sortas="b-neqn">neqn</primary></indexterm>
@@ -248,7 +249,7 @@ Interchange) output.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="nroff">
+<varlistentry xml:id="nroff">
 <term><command>nroff</command></term>
 <listitem>
 <indexterm zone="ch-system-groff nroff"><primary sortas="b-nroff">nroff</primary></indexterm>
@@ -256,7 +257,7 @@ Interchange) output.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pfbtops">
+<varlistentry xml:id="pfbtops">
 <term><command>pfbtops</command></term>
 <listitem>
 <indexterm zone="ch-system-groff pfbtops"><primary sortas="b-pfbtops">pfbtops</primary></indexterm>
@@ -264,7 +265,7 @@ Interchange) output.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pic">
+<varlistentry xml:id="pic">
 <term><command>pic</command></term>
 <listitem>
 <indexterm zone="ch-system-groff pic"><primary sortas="b-pic">pic</primary></indexterm>
@@ -273,7 +274,7 @@ within troff or TeX input files into commands understood by TeX or <command>trof
 </listitem>
 </varlistentry>
 
-<varlistentry id="pic2graph">
+<varlistentry xml:id="pic2graph">
 <term><command>pic2graph</command></term>
 <listitem>
 <indexterm zone="ch-system-groff pic2graph"><primary sortas="b-pic2graph">pic2graph</primary></indexterm>
@@ -281,7 +282,7 @@ within troff or TeX input files into commands understood by TeX or <command>trof
 </listitem>
 </varlistentry>
 
-<varlistentry id="pre-grohtml">
+<varlistentry xml:id="pre-grohtml">
 <term><command>pre-grohtml </command></term>
 <listitem>
 <indexterm zone="ch-system-groff pre-grohtml"><primary sortas="b-pre-grohtml">pre-grohtml</primary></indexterm>
@@ -289,7 +290,7 @@ within troff or TeX input files into commands understood by TeX or <command>trof
 </listitem>
 </varlistentry>
 
-<varlistentry id="post-grohtml">
+<varlistentry xml:id="post-grohtml">
 <term><command>post-grohtml</command></term>
 <listitem>
 <indexterm zone="ch-system-groff post-grohtml"><primary sortas="b-post-grohtml">post-grohtml</primary></indexterm>
@@ -297,7 +298,7 @@ within troff or TeX input files into commands understood by TeX or <command>trof
 </listitem>
 </varlistentry>
 
-<varlistentry id="refer">
+<varlistentry xml:id="refer">
 <term><command>refer</command></term>
 <listitem>
 <indexterm zone="ch-system-groff refer"><primary sortas="b-refer">refer</primary></indexterm>
@@ -308,7 +309,7 @@ how citations are to be processed.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="soelim">
+<varlistentry xml:id="soelim">
 <term><command>soelim</command></term>
 <listitem>
 <indexterm zone="ch-system-groff soelim"><primary sortas="b-soelim">soelim</primary></indexterm>
@@ -318,7 +319,7 @@ how citations are to be processed.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="tbl">
+<varlistentry xml:id="tbl">
 <term><command>tbl</command></term>
 <listitem>
 <indexterm zone="ch-system-groff tbl"><primary sortas="b-tbl">tbl</primary></indexterm>
@@ -327,7 +328,7 @@ within troff input files into commands that are understood by <command>troff</co
 </listitem>
 </varlistentry>
 
-<varlistentry id="tfmtodit">
+<varlistentry xml:id="tfmtodit">
 <term><command>tfmtodit</command></term>
 <listitem>
 <indexterm zone="ch-system-groff tfmtodit"><primary sortas="b-tfmtodit">tfmtodit</primary></indexterm>
@@ -335,7 +336,7 @@ within troff input files into commands that are understood by <command>troff</co
 </listitem>
 </varlistentry>
 
-<varlistentry id="troff">
+<varlistentry xml:id="troff">
 <term><command>troff</command></term>
 <listitem>
 <indexterm zone="ch-system-groff troff"><primary sortas="b-troff">troff</primary></indexterm>
@@ -345,7 +346,7 @@ appropriate order and with the appropriate options.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="zsoelim">
+<varlistentry xml:id="zsoelim">
 <term><command>zsoelim</command></term>
 <listitem>
 <indexterm zone="ch-system-groff zsoelim"><primary sortas="b-zsoelim">zsoelim</primary></indexterm>
@@ -354,6 +355,6 @@ appropriate order and with the appropriate options.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-man" xreflabel="Man" role="wrap">
-<title>Man-&man-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"        
+         xml:id="ch-system-man" xreflabel="Man" role="wrap">
+<info><title>Man-&man-version;</title></info>
 <?dbhtml filename="man.html"?>
 
 <indexterm zone="ch-system-man"><primary sortas="a-Man">Man</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Man package contains programs for finding and viewing manual pages.</para>
 
 <segmentedlist>
@@ -23,10 +25,10 @@
 <seglistitem><seg>Bash, Binutils, Coreutils, Gawk, GCC,
 Glibc, Grep, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Man</title>
+<section role="installation">
+<info><title>Installation of Man</title></info>
 
 <para>We'll make three adjustments to the sources of Man.</para>
 
@@ -105,13 +107,13 @@ multibyte character sets properly anyway. You may want to look at
 internationalization related hints, though.</para>
 
 <para>You may want to also take a look at the BLFS page at
-<ulink url="&blfs-root;view/cvs/postlfs/compressdoc.html"/> which deals with
+<uri xlink:href="&blfs-root;view/cvs/postlfs/compressdoc.html"/> which deals with
 formatting and compression issues for man pages.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-man" role="content"><title>Contents of Man</title>
+<section xml:id="contents-man" role="content"><info><title>Contents of Man</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -121,7 +123,7 @@ man2dvi, man2html and whatis</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="apropos">
+<varlistentry xml:id="apropos">
 <term><command>apropos</command></term>
 <listitem>
 <indexterm zone="ch-system-man apropos"><primary sortas="b-apropos">apropos</primary></indexterm>
@@ -130,7 +132,7 @@ the short descriptions of system commands that contain a given string.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="makewhatis">
+<varlistentry xml:id="makewhatis">
 <term><command>makewhatis</command></term>
 <listitem>
 <indexterm zone="ch-system-man makewhatis"><primary sortas="b-makewhatis">makewhatis</primary></indexterm>
@@ -140,7 +142,7 @@ short description in the whatis database.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="man">
+<varlistentry xml:id="man">
 <term><command>man</command></term>
 <listitem>
 <indexterm zone="ch-system-man man"><primary sortas="b-man">man</primary></indexterm>
@@ -148,7 +150,7 @@ short description in the whatis database.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="man2dvi">
+<varlistentry xml:id="man2dvi">
 <term><command>man2dvi</command></term>
 <listitem>
 <indexterm zone="ch-system-man man2dvi"><primary sortas="b-man2dvi">man2dvi</primary></indexterm>
@@ -156,7 +158,7 @@ short description in the whatis database.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="man2html">
+<varlistentry xml:id="man2html">
 <term><command>man2html</command></term>
 <listitem>
 <indexterm zone="ch-system-man man2html"><primary sortas="b-man2html">man2html</primary></indexterm>
@@ -164,7 +166,7 @@ short description in the whatis database.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="whatis">
+<varlistentry xml:id="whatis">
 <term><command>whatis</command></term>
 <listitem>
 <indexterm zone="ch-system-man whatis"><primary sortas="b-whatis">whatis</primary></indexterm>
@@ -174,6 +176,6 @@ commands that contain the given keyword as a separate word.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

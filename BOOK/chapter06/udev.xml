@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-udev" role="wrap">
-<title>Udev-&udev-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-udev" role="wrap">
+<info><title>Udev-&udev-version;</title></info>
 <?dbhtml filename="udev.html"?>
 
 <indexterm zone="ch-system-udev"><primary sortas="a-Udev">Udev</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Udev package contains programs for dynamic creation of device nodes.</para>
 
 <segmentedlist>
@@ -18,10 +19,10 @@
 <seglistitem><seg>0.2 SBU</seg><seg>5.2 MB</seg></seglistitem>
 </segmentedlist>
 
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Udev</title>
+<section role="installation">
+<info><title>Installation of Udev</title></info>
 
 <para>Compile Udev:</para>
 
@@ -50,10 +51,10 @@ nodes, since earlier we only created a minimal set.</para>
 
 <screen><userinput>/sbin/udevstart</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-udev" role="content"><title>Contents of Udev</title>
+<section xml:id="contents-udev" role="content"><info><title>Contents of Udev</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -62,7 +63,7 @@ nodes, since earlier we only created a minimal set.</para>
 
 <variablelist><title>Short descriptions</title>
                                                                                 
-<varlistentry id="udev">
+<varlistentry xml:id="udev">
 <term><command>udev</command></term>
 <listitem><indexterm zone="ch-system-udev udev"><primary
 sortas="b-udev">udev</primary></indexterm>
@@ -71,7 +72,7 @@ class="directory">/dev</filename> or to rename network interfaces (not in LFS)
 in response to hotplug events.</para>
 </listitem></varlistentry>
 
-<varlistentry id="udevd">
+<varlistentry xml:id="udevd">
 <term><command>udevd</command></term>
 <listitem> <indexterm zone="ch-system-udev udevd"><primary
 sortas="b-udevd">udevd</primary></indexterm>
@@ -80,14 +81,14 @@ sortas="b-udevd">udevd</primary></indexterm>
 thus avoiding various race conditions.</para>
 </listitem></varlistentry>
 
-<varlistentry id="udevsend">
+<varlistentry xml:id="udevsend">
 <term><command>udevsend</command></term>
 <listitem> <indexterm zone="ch-system-udev udevsend"><primary
 sortas="b-udevsend">udevsend</primary></indexterm>
 <para>is used to deliver hotplug events to <command>udevd</command>.</para>
 </listitem></varlistentry>
 
-<varlistentry id="udevstart">
+<varlistentry xml:id="udevstart">
 <term><command>udevstart</command></term>
 <listitem> <indexterm zone="ch-system-udev udevstart"><primary
 sortas="b-udevstart">udevstart</primary></indexterm>
@@ -100,7 +101,7 @@ to <command>udev</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="udevinfo">
+<varlistentry xml:id="udevinfo">
 <term><command>udevinfo</command></term>
 <listitem> <indexterm zone="ch-system-udev udevinfo"><primary
 sortas="b-udevinfo">udevinfo</primary></indexterm>
@@ -110,7 +111,7 @@ provides a way to query any device in the sysfs tree to help creating udev
 rules.</para>
 </listitem></varlistentry>
 
-<varlistentry id="udevtest">
+<varlistentry xml:id="udevtest">
 <term><command>udevtest</command></term>
 <listitem> <indexterm zone="ch-system-udev udevtest"><primary
 sortas="b-udevtest">udevtest</primary></indexterm>
@@ -119,7 +120,7 @@ and prints out the name of the node the real <command>udev</command> would
 have created, or (not in LFS) the name of the renamed network interface.</para>
 </listitem></varlistentry>
 
-<varlistentry id="etc-dev-d">
+<varlistentry xml:id="etc-dev-d">
 <term><filename class="directory">/etc/dev.d</filename></term>
 <listitem> <indexterm zone="ch-system-udev etc-dev-d"><primary
 sortas="e-etc-dev-d">/etc/dev.d</primary></indexterm>
@@ -127,7 +128,7 @@ sortas="e-etc-dev-d">/etc/dev.d</primary></indexterm>
 creation hotplug events.</para>
 </listitem></varlistentry>
 
-<varlistentry id="etc-udev">
+<varlistentry xml:id="etc-udev">
 <term><filename class="directory">/etc/udev</filename></term>
 <listitem> <indexterm zone="ch-system-udev etc-udev"><primary
 sortas="e-etc-udev">/etc/udev</primary></indexterm>
@@ -135,6 +136,6 @@ sortas="e-etc-udev">/etc/udev</primary></indexterm>
 device permissions and rules for device naming.</para>
 </listitem></varlistentry>
 </variablelist>
-</sect2>
+</section>
 
-</sect1>
+</section>

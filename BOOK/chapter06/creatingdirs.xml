@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-creatingdirs">
-<title>Creating directories</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="ch-system-creatingdirs">
+<info><title>Creating directories</title></info>
 <?dbhtml filename="creatingdirs.html"?>
 
 <para>Let's now create some structure in our LFS file system. Let's create
@@ -46,11 +48,11 @@ cannot remove other users' files from them. The latter is prohibited
 by the so-called <quote>sticky bit</quote> -- the highest bit in the 1777 bit
 mask.</para>
 
-<sect2>
-<title>FHS compliance note</title>
+<section>
+<info><title>FHS compliance note</title></info>
 
 <para>We have based our directory tree on the FHS standard (available at
-<ulink url="http://www.pathname.com/fhs/"/>). Besides the above created
+<uri xlink:href="http://www.pathname.com/fhs/"/>). Besides the above created
 tree this standard stipulates the existence of
 <filename class="directory">/usr/local/games</filename> and
 <filename class="directory">/usr/share/games</filename>, but we don't
@@ -59,6 +61,6 @@ FHS-compliant. As to the structure of the
 <filename class="directory">/usr/local/share</filename> subdirectory, the FHS
 isn't precise, so we created here the directories that we think are needed.</para>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

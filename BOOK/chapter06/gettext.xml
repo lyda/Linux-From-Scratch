@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-gettext" xreflabel="Gettext" role="wrap">
-<title>Gettext-&gettext-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-gettext" xreflabel="Gettext" role="wrap">
+<info><title>Gettext-&gettext-version;</title></info>
 <?dbhtml filename="gettext.html"?>
 
 <indexterm zone="ch-system-gettext"><primary sortas="a-Gettext">Gettext</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Gettext package contains utilities for internationalization and
 localization. These allow programs to be compiled with Native Language Support
 (NLS), enabling them to output messages in the user's native language.</para>
@@ -25,10 +26,10 @@ localization. These allow programs to be compiled with Native Language Support
 <seglistitem><seg>Bash, Binutils, Bison, Coreutils,
 Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Gettext</title>
+<section role="installation">
+<info><title>Installation of Gettext</title></info>
 
 <para>Prepare Gettext for compilation:</para>
 
@@ -46,10 +47,10 @@ Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-gettext" role="content"><title>Contents of Gettext</title>
+<section xml:id="contents-gettext" role="content"><info><title>Contents of Gettext</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -63,7 +64,7 @@ ngettext, project-id, team-address, trigger, urlget, user-email and xgettext</se
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="autopoint">
+<varlistentry xml:id="autopoint">
 <term><command>autopoint</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext autopoint"><primary sortas="b-autopoint">autopoint</primary></indexterm>
@@ -71,7 +72,7 @@ ngettext, project-id, team-address, trigger, urlget, user-email and xgettext</se
 </listitem>
 </varlistentry>
 
-<varlistentry id="config.charset">
+<varlistentry xml:id="config.charset">
 <term><command>config.charset</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext config.charset"><primary sortas="b-config.charset">config.charset</primary></indexterm>
@@ -79,7 +80,7 @@ ngettext, project-id, team-address, trigger, urlget, user-email and xgettext</se
 </listitem>
 </varlistentry>
 
-<varlistentry id="config.rpath">
+<varlistentry xml:id="config.rpath">
 <term><command>config.rpath</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext config.rpath"><primary sortas="b-config.rpath">config.rpath</primary></indexterm>
@@ -88,7 +89,7 @@ runtime search path of shared libraries in an executable.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="envsubst">
+<varlistentry xml:id="envsubst">
 <term><command>envsubst</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext envsubst"><primary sortas="b-envsubst">envsubst</primary></indexterm>
@@ -96,7 +97,7 @@ runtime search path of shared libraries in an executable.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="gettext">
+<varlistentry xml:id="gettext">
 <term><command>gettext</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext gettext"><primary sortas="b-gettext">gettext</primary></indexterm>
@@ -105,7 +106,7 @@ the user's language, by looking up the translation in a message catalog.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="gettextize">
+<varlistentry xml:id="gettextize">
 <term><command>gettextize</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext gettextize"><primary sortas="b-gettextize">gettextize</primary></indexterm>
@@ -114,7 +115,7 @@ the given top-level directory of a package, to begin inter-nationalizing it.</pa
 </listitem>
 </varlistentry>
 
-<varlistentry id="hostname-gettext">
+<varlistentry xml:id="hostname-gettext">
 <term><command>hostname</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext hostname-gettext"><primary sortas="b-hostname-gettext">hostname</primary></indexterm>
@@ -122,7 +123,7 @@ the given top-level directory of a package, to begin inter-nationalizing it.</pa
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgattrib">
+<varlistentry xml:id="msgattrib">
 <term><command>msgattrib</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgattrib"><primary sortas="b-msgattrib">msgattrib</primary></indexterm>
@@ -131,7 +132,7 @@ catalog according to their attributes and manipulates the attributes.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgcat">
+<varlistentry xml:id="msgcat">
 <term><command>msgcat</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgcat"><primary sortas="b-msgcat">msgcat</primary></indexterm>
@@ -139,7 +140,7 @@ catalog according to their attributes and manipulates the attributes.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgcmp">
+<varlistentry xml:id="msgcmp">
 <term><command>msgcmp</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgcmp"><primary sortas="b-msgcmp">msgcmp</primary></indexterm>
@@ -148,7 +149,7 @@ files to check that both contain the same set of msgid strings.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgcomm">
+<varlistentry xml:id="msgcomm">
 <term><command>msgcomm</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgcomm"><primary sortas="b-msgcomm">msgcomm</primary></indexterm>
@@ -157,7 +158,7 @@ to the given <filename class="extension">.po</filename> files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgconv">
+<varlistentry xml:id="msgconv">
 <term><command>msgconv</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgconv"><primary sortas="b-msgconv">msgconv</primary></indexterm>
@@ -165,7 +166,7 @@ to the given <filename class="extension">.po</filename> files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgen">
+<varlistentry xml:id="msgen">
 <term><command>msgen</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgen"><primary sortas="b-msgen">msgen</primary></indexterm>
@@ -173,7 +174,7 @@ to the given <filename class="extension">.po</filename> files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgexec">
+<varlistentry xml:id="msgexec">
 <term><command>msgexec</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgexec"><primary sortas="b-msgexec">msgexec</primary></indexterm>
@@ -181,7 +182,7 @@ to the given <filename class="extension">.po</filename> files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgfilter">
+<varlistentry xml:id="msgfilter">
 <term><command>msgfilter</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgfilter"><primary sortas="b-msgfilter">msgfilter</primary></indexterm>
@@ -189,7 +190,7 @@ to the given <filename class="extension">.po</filename> files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgfmt">
+<varlistentry xml:id="msgfmt">
 <term><command>msgfmt</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgfmt"><primary sortas="b-msgfmt">msgfmt</primary></indexterm>
@@ -197,7 +198,7 @@ to the given <filename class="extension">.po</filename> files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msggrep">
+<varlistentry xml:id="msggrep">
 <term><command>msggrep</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msggrep"><primary sortas="b-msggrep">msggrep</primary></indexterm>
@@ -206,7 +207,7 @@ catalog that match a given pattern or belong to some given source files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msginit">
+<varlistentry xml:id="msginit">
 <term><command>msginit</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msginit"><primary sortas="b-msginit">msginit</primary></indexterm>
@@ -215,7 +216,7 @@ information with values from the user's environment.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgmerge">
+<varlistentry xml:id="msgmerge">
 <term><command>msgmerge</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgmerge"><primary sortas="b-msgmerge">msgmerge</primary></indexterm>
@@ -223,7 +224,7 @@ information with values from the user's environment.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msgunfmt">
+<varlistentry xml:id="msgunfmt">
 <term><command>msgunfmt</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgunfmt"><primary sortas="b-msgunfmt">msgunfmt</primary></indexterm>
@@ -231,7 +232,7 @@ information with values from the user's environment.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="msguniq">
+<varlistentry xml:id="msguniq">
 <term><command>msguniq</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msguniq"><primary sortas="b-msguniq">msguniq</primary></indexterm>
@@ -239,7 +240,7 @@ information with values from the user's environment.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="ngettext">
+<varlistentry xml:id="ngettext">
 <term><command>ngettext</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext ngettext"><primary sortas="b-ngettext">ngettext</primary></indexterm>
@@ -248,7 +249,7 @@ textual message whose grammatical form depends on a number.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="xgettext">
+<varlistentry xml:id="xgettext">
 <term><command>xgettext</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext xgettext"><primary sortas="b-xgettext">xgettext</primary></indexterm>
@@ -257,7 +258,7 @@ from the given source files, to make the first translation template.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="libasprintf">
+<varlistentry xml:id="libasprintf">
 <term><filename class="libraryfile">libasprintf</filename></term>
 <listitem>
 <indexterm zone="ch-system-gettext libasprintf"><primary sortas="c-libasprintf">libasprintf</primary></indexterm>
@@ -267,7 +268,7 @@ makes C formatted output routines usable in C++ programs, for use with the
 </listitem>
 </varlistentry>
 
-<varlistentry id="libgettextlib">
+<varlistentry xml:id="libgettextlib">
 <term><filename class="libraryfile">libgettextlib</filename></term>
 <listitem>
 <indexterm zone="ch-system-gettext libgettextlib"><primary sortas="c-libgettextlib">libgettextlib</primary></indexterm>
@@ -276,7 +277,7 @@ programs. They're not meant for general use.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="libgettextpo">
+<varlistentry xml:id="libgettextpo">
 <term><filename class="libraryfile">libgettextpo</filename></term>
 <listitem>
 <indexterm zone="ch-system-gettext libgettextpo"><primary sortas="c-libgettextpo">libgettextpo</primary></indexterm>
@@ -288,7 +289,7 @@ used when the standard applications shipped with Gettext won't suffice (such as
 </listitem>
 </varlistentry>
 
-<varlistentry id="libgettextsrc">
+<varlistentry xml:id="libgettextsrc">
 <term><filename class="libraryfile">libgettextsrc</filename></term>
 <listitem>
 <indexterm zone="ch-system-gettext libgettextsrc"><primary sortas="c-libgettextsrc">libgettextsrc</primary></indexterm>
@@ -298,6 +299,6 @@ programs. They're not meant for general use.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

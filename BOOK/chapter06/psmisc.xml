@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-psmisc" xreflabel="Psmisc" role="wrap">
-<title>Psmisc-&psmisc-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-psmisc" xreflabel="Psmisc" role="wrap">
+<info><title>Psmisc-&psmisc-version;</title></info>
 <?dbhtml filename="psmisc.html"?>
 
 <indexterm zone="ch-system-psmisc"><primary sortas="a-Psmisc">Psmisc</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Psmisc package contains programs for displaying information on
 processes.</para>
 
@@ -24,10 +25,10 @@ processes.</para>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
 GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Psmisc</title>
+<section role="installation">
+<info><title>Installation of Psmisc</title></info>
 
 <para>Prepare Psmisc for compilation:</para>
 
@@ -72,10 +73,10 @@ creating the following symlink:</para>
 
 <screen><userinput>ln -s killall /bin/pidof</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-psmisc" role="content"><title>Contents of Psmisc</title>
+<section xml:id="contents-psmisc" role="content"><info><title>Contents of Psmisc</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -84,7 +85,7 @@ creating the following symlink:</para>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="fuser">
+<varlistentry xml:id="fuser">
 <term><command>fuser</command></term>
 <listitem>
 <indexterm zone="ch-system-psmisc fuser"><primary sortas="b-fuser">fuser</primary></indexterm>
@@ -92,7 +93,7 @@ creating the following symlink:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="killall">
+<varlistentry xml:id="killall">
 <term><command>killall</command></term>
 <listitem>
 <indexterm zone="ch-system-psmisc killall"><primary sortas="b-killall">killall</primary></indexterm>
@@ -101,7 +102,7 @@ to all processes running any of the given commands.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pstree">
+<varlistentry xml:id="pstree">
 <term><command>pstree</command></term>
 <listitem>
 <indexterm zone="ch-system-psmisc pstree"><primary sortas="b-pstree">pstree</primary></indexterm>
@@ -109,7 +110,7 @@ to all processes running any of the given commands.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pstree.x11">
+<varlistentry xml:id="pstree.x11">
 <term><command>pstree.x11</command></term>
 <listitem>
 <indexterm zone="ch-system-psmisc pstree.x11"><primary sortas="b-pstree.x11">pstree.x11</primary></indexterm>
@@ -118,6 +119,6 @@ to all processes running any of the given commands.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

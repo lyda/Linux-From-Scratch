@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-procps" xreflabel="Procps" role="wrap">
-<title>Procps-&procps-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-procps" xreflabel="Procps" role="wrap">
+<info><title>Procps-&procps-version;</title></info>
 <?dbhtml filename="procps.html"?>
 
 <indexterm zone="ch-system-procps"><primary sortas="a-Procps">Procps</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Procps package contains programs for monitoring processes.</para>
 
 <segmentedlist>
@@ -23,10 +24,10 @@
 <seglistitem><seg>Bash, Binutils, Coreutils, GCC, Glibc,
 Make, Ncurses</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Procps</title>
+<section role="installation">
+<info><title>Installation of Procps</title></info>
 
 <para>Compile Procps:</para>
 
@@ -36,10 +37,11 @@ Make, Ncurses</seg></seglistitem>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-procps" role="content"><title>Contents of Procps</title>
+<section xml:id="contents-procps" role="content">
+<info><title>Contents of Procps</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -51,7 +53,7 @@ pmap, ps, skill, snice, sysctl, tload, top, uptime, vmstat, w and watch</seg>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="free">
+<varlistentry xml:id="free">
 <term><command>free</command></term>
 <listitem>
 <indexterm zone="ch-system-procps free"><primary sortas="b-free">free</primary></indexterm>
@@ -60,7 +62,7 @@ in the system, both physical and swap memory.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="kill">
+<varlistentry xml:id="kill">
 <term><command>kill</command></term>
 <listitem>
 <indexterm zone="ch-system-procps kill"><primary sortas="b-kill">kill</primary></indexterm>
@@ -68,7 +70,7 @@ in the system, both physical and swap memory.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pgrep">
+<varlistentry xml:id="pgrep">
 <term><command>pgrep</command></term>
 <listitem>
 <indexterm zone="ch-system-procps pgrep"><primary sortas="b-pgrep">pgrep</primary></indexterm>
@@ -76,7 +78,7 @@ in the system, both physical and swap memory.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pkill">
+<varlistentry xml:id="pkill">
 <term><command>pkill</command></term>
 <listitem>
 <indexterm zone="ch-system-procps pkill"><primary sortas="b-pkill">pkill</primary></indexterm>
@@ -84,7 +86,7 @@ in the system, both physical and swap memory.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pmap">
+<varlistentry xml:id="pmap">
 <term><command>pmap</command></term>
 <listitem>
 <indexterm zone="ch-system-procps pmap"><primary sortas="b-pmap">pmap</primary></indexterm>
@@ -92,7 +94,7 @@ in the system, both physical and swap memory.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="ps">
+<varlistentry xml:id="ps">
 <term><command>ps</command></term>
 <listitem>
 <indexterm zone="ch-system-procps ps"><primary sortas="b-ps">ps</primary></indexterm>
@@ -100,7 +102,7 @@ in the system, both physical and swap memory.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="skill">
+<varlistentry xml:id="skill">
 <term><command>skill</command></term>
 <listitem>
 <indexterm zone="ch-system-procps skill"><primary sortas="b-skill">skill</primary></indexterm>
@@ -108,7 +110,7 @@ in the system, both physical and swap memory.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="snice">
+<varlistentry xml:id="snice">
 <term><command>snice</command></term>
 <listitem>
 <indexterm zone="ch-system-procps snice"><primary sortas="b-snice">snice</primary></indexterm>
@@ -116,7 +118,7 @@ in the system, both physical and swap memory.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="sysctl">
+<varlistentry xml:id="sysctl">
 <term><command>sysctl</command></term>
 <listitem>
 <indexterm zone="ch-system-procps sysctl"><primary sortas="b-sysctl">sysctl</primary></indexterm>
@@ -124,7 +126,7 @@ in the system, both physical and swap memory.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="tload">
+<varlistentry xml:id="tload">
 <term><command>tload</command></term>
 <listitem>
 <indexterm zone="ch-system-procps tload"><primary sortas="b-tload">tload</primary></indexterm>
@@ -132,7 +134,7 @@ in the system, both physical and swap memory.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="top">
+<varlistentry xml:id="top">
 <term><command>top</command></term>
 <listitem>
 <indexterm zone="ch-system-procps top"><primary sortas="b-top">top</primary></indexterm>
@@ -141,7 +143,7 @@ an ongoing look at processor activity in real time.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="uptime">
+<varlistentry xml:id="uptime">
 <term><command>uptime</command></term>
 <listitem>
 <indexterm zone="ch-system-procps uptime"><primary sortas="b-uptime">uptime</primary></indexterm>
@@ -150,7 +152,7 @@ running, how many users are logged on, and the system load averages.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vmstat">
+<varlistentry xml:id="vmstat">
 <term><command>vmstat</command></term>
 <listitem>
 <indexterm zone="ch-system-procps vmstat"><primary sortas="b-vmstat">vmstat</primary></indexterm>
@@ -159,7 +161,7 @@ memory, paging, block IO, traps, and CPU activity.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="w">
+<varlistentry xml:id="w">
 <term><command>w</command></term>
 <listitem>
 <indexterm zone="ch-system-procps w"><primary sortas="b-w">w</primary></indexterm>
@@ -167,7 +169,7 @@ memory, paging, block IO, traps, and CPU activity.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="watch">
+<varlistentry xml:id="watch">
 <term><command>watch</command></term>
 <listitem>
 <indexterm zone="ch-system-procps watch"><primary sortas="b-watch">watch</primary></indexterm>
@@ -176,7 +178,7 @@ output. This allows you to watch the output change over time.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="libproc">
+<varlistentry xml:id="libproc">
 <term><filename class="libraryfile">libproc</filename></term>
 <listitem>
 <indexterm zone="ch-system-procps libproc"><primary sortas="c-libproc">libproc</primary></indexterm>
@@ -185,6 +187,6 @@ output. This allows you to watch the output change over time.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

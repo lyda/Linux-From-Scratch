@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-make" xreflabel="Make" role="wrap">
-<title>Make-&make-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-make" xreflabel="Make" role="wrap">
+<info><title>Make-&make-version;</title></info>
 <?dbhtml filename="make.html"?>
 
 <indexterm zone="ch-system-make"><primary sortas="a-Make">Make</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Make package contains a program for compiling large packages.</para>
 
 <segmentedlist>
@@ -23,10 +24,10 @@
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
 GCC, Gettext, Glibc, Grep, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Make</title>
+<section role="installation">
+<info><title>Installation of Make</title></info>
 
 <para>Prepare Make for compilation:</para>
 
@@ -43,10 +44,10 @@ GCC, Gettext, Glibc, Grep, Sed</seg></seglistitem>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-make" role="content"><title>Contents of Make</title>
+<section xml:id="contents-make" role="content"><info><title>Contents of Make</title></info>
 
 <segmentedlist>
 <segtitle>Installed program</segtitle>
@@ -55,7 +56,7 @@ GCC, Gettext, Glibc, Grep, Sed</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="make">
+<varlistentry xml:id="make">
 <term><command>make</command></term>
 <listitem>
 <indexterm zone="ch-system-make make"><primary sortas="b-make">make</primary></indexterm>
@@ -65,6 +66,6 @@ recompiled, and then issues the relevant commands.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

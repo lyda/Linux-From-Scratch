@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-pwdgroup">
-<title>The passwd, group and log files</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="ch-system-pwdgroup">
+<info><title>The passwd, group and log files</title></info>
 <?dbhtml filename="pwdgroup.html"?>
 
 <indexterm zone="ch-system-pwdgroup"><primary sortas="e-/etc/passwd">/etc/passwd</primary></indexterm>
@@ -52,8 +54,8 @@ EOF</userinput></screen>
 
 <para>The created groups aren't part of any standard -- they are some of the
 groups that the Udev configuration we will be using in the next section
-uses. The LSB (<ulink url="http://www.linuxbase.org/">Linux Standard
-Base</ulink>) recommends only that, beside the group <quote>root</quote> with a
+uses. The LSB (<uri xlink:href="http://www.linuxbase.org/">Linux Standard
+Base</uri>) recommends only that, beside the group <quote>root</quote> with a
 GID of 0, a group <quote>bin</quote> with a GID of 1 be present. All other group
 names and GIDs can be chosen freely by the system administrator, since
 well-written packages don't depend on GID numbers but use the group's name.
@@ -90,4 +92,4 @@ logins and logouts. The <filename>/var/log/lastlog</filename> file records for
 each user when he or she last logged in. The <filename>/var/log/btmp</filename>
 file records the bad login attempts.</para>
 
-</sect1>
+</section>

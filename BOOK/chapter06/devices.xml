@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-devices" xreflabel="devices">
-<title>Populating /dev</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-devices" xreflabel="devices">
+<info><title>Populating /dev</title></info>
 <?dbhtml filename="devices.html"?>
 
 <indexterm zone="ch-system-devices"><primary sortas="e-Devices">Devices</primary></indexterm>
 
-<sect2>
-<title>Creating initial device nodes</title>
+<section>
+<info><title>Creating initial device nodes</title></info>
 
 <para>When the kernel boots the system, it requires the presence of a few device
 nodes, in particular the <filename class="devicefile">console</filename> and
@@ -18,10 +19,10 @@ nodes, in particular the <filename class="devicefile">console</filename> and
 
 <screen><userinput>mknod -m 600 /dev/console c 5 1
 mknod -m 666 /dev/null c 1 3</userinput></screen>
-</sect2>
+</section>
 
-<sect2>
-<title>Mounting ramfs and populating /dev</title>
+<section>
+<info><title>Mounting ramfs and populating /dev</title></info>
 
 <para>The ideal way to populate <filename class="directory">/dev</filename> is
 to mount a <systemitem class="filesystem">ramfs</systemitem> onto <filename class="directory">/dev </filename>
@@ -60,7 +61,7 @@ created:</para>
 
 <screen><userinput>mount -t devpts -o gid=4,mode=620 none /dev/pts
 mount -t tmpfs none /dev/shm</userinput></screen>
-</sect2>
+</section>
 
 
-</sect1>
+</section>

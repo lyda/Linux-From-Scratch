@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-iana-etc" xreflabel="Iana-Etc" role="wrap">
-<title>Iana-Etc-&iana-etc-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-iana-etc" xreflabel="Iana-Etc" role="wrap">
+<info><title>Iana-Etc-&iana-etc-version;</title></info>
 <?dbhtml filename="iana-etc.html"?>
 
 <indexterm zone="ch-system-iana-etc"><primary sortas="a-Iana-Etc">Iana-Etc</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Iana-Etc package provides data for network services and protocols.</para>
 
 <segmentedlist>
@@ -20,10 +21,10 @@
 
 <para>The installation dependencies for Iana-Etc haven't been checked yet.</para>
 
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Iana-Etc</title>
+<section role="installation">
+<info><title>Installation of Iana-Etc</title></info>
 
 <para>Parse the data:</para>
 
@@ -33,10 +34,10 @@
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-iana-etc" role="content"><title>Contents of Iana-Etc</title>
+<section xml:id="contents-iana-etc" role="content"><info><title>Contents of Iana-Etc</title></info>
 
 <segmentedlist>
 <segtitle>Installed files</segtitle>
@@ -47,7 +48,7 @@
 
 <indexterm zone="ch-system-iana-etc"><primary sortas="e-/etc/services">/etc/services</primary></indexterm>
 
-</sect2>
+</section>
 
 
-</sect1>
+</section>

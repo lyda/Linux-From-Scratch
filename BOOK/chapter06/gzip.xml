@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-gzip" xreflabel="Gzip" role="wrap">
-<title>Gzip-&gzip-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-gzip" xreflabel="Gzip" role="wrap">
+<info><title>Gzip-&gzip-version;</title></info>
 <?dbhtml filename="gzip.html"?>
 
 <indexterm zone="ch-system-gzip"><primary sortas="a-Gzip">Gzip</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Gzip package contains programs for compressing and decompressing
 files.</para>
 
@@ -24,10 +25,10 @@ files.</para>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Gzip</title>
+<section role="installation">
+<info><title>Installation of Gzip</title></info>
 
 <para>Prepare Gzip for compilation:</para>
 
@@ -56,10 +57,10 @@ ln -s gzip /bin/gunzip
 ln -s gzip /bin/zcat
 ln -s gunzip /bin/uncompress</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-gzip" role="content"><title>Contents of Gzip</title>
+<section xml:id="contents-gzip" role="content"><info><title>Contents of Gzip</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -70,7 +71,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="gunzip">
+<varlistentry xml:id="gunzip">
 <term><command>gunzip</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip gunzip"><primary sortas="b-gunzip">gunzip</primary></indexterm>
@@ -78,7 +79,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="gzexe">
+<varlistentry xml:id="gzexe">
 <term><command>gzexe</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip gzexe"><primary sortas="b-gzexe">gzexe</primary></indexterm>
@@ -86,7 +87,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="gzip">
+<varlistentry xml:id="gzip">
 <term><command>gzip</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip gzip"><primary sortas="b-gzip">gzip</primary></indexterm>
@@ -94,7 +95,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="zcat">
+<varlistentry xml:id="zcat">
 <term><command>zcat</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip zcat"><primary sortas="b-zcat">zcat</primary></indexterm>
@@ -102,7 +103,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="zcmp">
+<varlistentry xml:id="zcmp">
 <term><command>zcmp</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip zcmp"><primary sortas="b-zcmp">zcmp</primary></indexterm>
@@ -110,7 +111,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="zdiff">
+<varlistentry xml:id="zdiff">
 <term><command>zdiff</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip zdiff"><primary sortas="b-zdiff">zdiff</primary></indexterm>
@@ -118,7 +119,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="zegrep">
+<varlistentry xml:id="zegrep">
 <term><command>zegrep</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip zegrep"><primary sortas="b-zegrep">zegrep</primary></indexterm>
@@ -126,7 +127,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="zfgrep">
+<varlistentry xml:id="zfgrep">
 <term><command>zfgrep</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip zfgrep"><primary sortas="b-zfgrep">zfgrep</primary></indexterm>
@@ -134,7 +135,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="zforce">
+<varlistentry xml:id="zforce">
 <term><command>zforce</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip zforce"><primary sortas="b-zforce">zforce</primary></indexterm>
@@ -144,7 +145,7 @@ useful when file names were truncated during a file transfer.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="zgrep">
+<varlistentry xml:id="zgrep">
 <term><command>zgrep</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip zgrep"><primary sortas="b-zgrep">zgrep</primary></indexterm>
@@ -152,7 +153,7 @@ useful when file names were truncated during a file transfer.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="zless">
+<varlistentry xml:id="zless">
 <term><command>zless</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip zless"><primary sortas="b-zless">zless</primary></indexterm>
@@ -160,7 +161,7 @@ useful when file names were truncated during a file transfer.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="zmore">
+<varlistentry xml:id="zmore">
 <term><command>zmore</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip zmore"><primary sortas="b-zmore">zmore</primary></indexterm>
@@ -168,7 +169,7 @@ useful when file names were truncated during a file transfer.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="znew">
+<varlistentry xml:id="znew">
 <term><command>znew</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip znew"><primary sortas="b-znew">znew</primary></indexterm>
@@ -178,6 +179,6 @@ useful when file names were truncated during a file transfer.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

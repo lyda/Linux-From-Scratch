@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-perl" xreflabel="Perl" role="wrap">
-<title>Perl-&perl-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-perl" xreflabel="Perl" role="wrap">
+<info><title>Perl-&perl-version;</title></info>
 <?dbhtml filename="perl.html"?>
 
 <indexterm zone="ch-system-perl"><primary sortas="a-Perl">Perl</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Perl package contains the Practical Extraction and Report Language.</para>
 
 <segmentedlist>
@@ -23,10 +24,10 @@
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Perl</title>
+<section role="installation">
+<info><title>Installation of Perl</title></info>
 
 <para>If you want full control over the way Perl is set up, you can run the
 interactive <command>Configure</command> script and hand-pick the way this
@@ -63,10 +64,10 @@ resolve the name <emphasis>localhost</emphasis>:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-perl" role="content"><title>Contents of Perl</title>
+<section xml:id="contents-perl" role="content"><info><title>Contents of Perl</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -81,7 +82,7 @@ to c2ph), s2p, splain and xsubpp</seg>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="a2p">
+<varlistentry xml:id="a2p">
 <term><command>a2p</command></term>
 <listitem>
 <indexterm zone="ch-system-perl a2p"><primary sortas="b-a2p">a2p</primary></indexterm>
@@ -89,7 +90,7 @@ to c2ph), s2p, splain and xsubpp</seg>
 </listitem>
 </varlistentry>
 
-<varlistentry id="c2ph">
+<varlistentry xml:id="c2ph">
 <term><command>c2ph</command></term>
 <listitem>
 <indexterm zone="ch-system-perl c2ph"><primary sortas="b-c2ph">c2ph</primary></indexterm>
@@ -97,7 +98,7 @@ to c2ph), s2p, splain and xsubpp</seg>
 </listitem>
 </varlistentry>
 
-<varlistentry id="dprofpp">
+<varlistentry xml:id="dprofpp">
 <term><command>dprofpp</command></term>
 <listitem>
 <indexterm zone="ch-system-perl dprofpp"><primary sortas="b-dprofpp">dprofpp</primary></indexterm>
@@ -105,7 +106,7 @@ to c2ph), s2p, splain and xsubpp</seg>
 </listitem>
 </varlistentry>
 
-<varlistentry id="en2cxs">
+<varlistentry xml:id="en2cxs">
 <term><command>en2cxs</command></term>
 <listitem>
 <indexterm zone="ch-system-perl en2cxs"><primary sortas="b-en2cxs">en2cxs</primary></indexterm>
@@ -114,7 +115,7 @@ from either Unicode Character Mappings or Tcl Encoding Files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="find2perl">
+<varlistentry xml:id="find2perl">
 <term><command>find2perl</command></term>
 <listitem>
 <indexterm zone="ch-system-perl find2perl"><primary sortas="b-find2perl">find2perl</primary></indexterm>
@@ -122,7 +123,7 @@ from either Unicode Character Mappings or Tcl Encoding Files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="h2ph">
+<varlistentry xml:id="h2ph">
 <term><command>h2ph</command></term>
 <listitem>
 <indexterm zone="ch-system-perl h2ph"><primary sortas="b-h2ph">h2ph</primary></indexterm>
@@ -131,7 +132,7 @@ from either Unicode Character Mappings or Tcl Encoding Files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="h2xs">
+<varlistentry xml:id="h2xs">
 <term><command>h2xs</command></term>
 <listitem>
 <indexterm zone="ch-system-perl h2xs"><primary sortas="b-h2xs">h2xs</primary></indexterm>
@@ -139,7 +140,7 @@ from either Unicode Character Mappings or Tcl Encoding Files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="libnetcfg">
+<varlistentry xml:id="libnetcfg">
 <term><command>libnetcfg</command></term>
 <listitem>
 <indexterm zone="ch-system-perl libnetcfg"><primary sortas="b-libnetcfg">libnetcfg</primary></indexterm>
@@ -147,7 +148,7 @@ from either Unicode Character Mappings or Tcl Encoding Files.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="perl">
+<varlistentry xml:id="perl">
 <term><command>perl</command></term>
 <listitem>
 <indexterm zone="ch-system-perl perl"><primary sortas="b-perl">perl</primary></indexterm>
@@ -156,7 +157,7 @@ awk and sh into a single swiss-army language.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="perlbug">
+<varlistentry xml:id="perlbug">
 <term><command>perlbug</command></term>
 <listitem>
 <indexterm zone="ch-system-perl perlbug"><primary sortas="b-perlbug">perlbug</primary></indexterm>
@@ -165,7 +166,7 @@ Perl or the modules that come with it, and mail them.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="perlcc">
+<varlistentry xml:id="perlcc">
 <term><command>perlcc</command></term>
 <listitem>
 <indexterm zone="ch-system-perl perlcc"><primary sortas="b-perlcc">perlcc</primary></indexterm>
@@ -173,7 +174,7 @@ Perl or the modules that come with it, and mail them.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="perldoc">
+<varlistentry xml:id="perldoc">
 <term><command>perldoc</command></term>
 <listitem>
 <indexterm zone="ch-system-perl perldoc"><primary sortas="b-perldoc">perldoc</primary></indexterm>
@@ -182,7 +183,7 @@ format that is embedded in the Perl installation tree or in a Perl script.</para
 </listitem>
 </varlistentry>
 
-<varlistentry id="perlivp">
+<varlistentry xml:id="perlivp">
 <term><command>perlivp</command></term>
 <listitem>
 <indexterm zone="ch-system-perl perlivp"><primary sortas="b-perlivp">perlivp</primary></indexterm>
@@ -191,7 +192,7 @@ Perl and its libraries have been installed correctly.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="piconv">
+<varlistentry xml:id="piconv">
 <term><command>piconv</command></term>
 <listitem>
 <indexterm zone="ch-system-perl piconv"><primary sortas="b-piconv">piconv</primary></indexterm>
@@ -200,7 +201,7 @@ converter <command>iconv</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pl2pm">
+<varlistentry xml:id="pl2pm">
 <term><command>pl2pm</command></term>
 <listitem>
 <indexterm zone="ch-system-perl pl2pm"><primary sortas="b-pl2pm">pl2pm</primary></indexterm>
@@ -209,7 +210,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pod2html">
+<varlistentry xml:id="pod2html">
 <term><command>pod2html</command></term>
 <listitem>
 <indexterm zone="ch-system-perl pod2html"><primary sortas="b-pod2html">pod2html</primary></indexterm>
@@ -217,7 +218,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pod2latex">
+<varlistentry xml:id="pod2latex">
 <term><command>pod2latex</command></term>
 <listitem>
 <indexterm zone="ch-system-perl pod2latex"><primary sortas="b-pod2latex">pod2latex</primary></indexterm>
@@ -225,7 +226,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pod2man">
+<varlistentry xml:id="pod2man">
 <term><command>pod2man</command></term>
 <listitem>
 <indexterm zone="ch-system-perl pod2man"><primary sortas="b-pod2man">pod2man</primary></indexterm>
@@ -233,7 +234,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pod2text">
+<varlistentry xml:id="pod2text">
 <term><command>pod2text</command></term>
 <listitem>
 <indexterm zone="ch-system-perl pod2text"><primary sortas="b-pod2text">pod2text</primary></indexterm>
@@ -241,7 +242,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pod2usage">
+<varlistentry xml:id="pod2usage">
 <term><command>pod2usage</command></term>
 <listitem>
 <indexterm zone="ch-system-perl pod2usage"><primary sortas="b-pod2usage">pod2usage</primary></indexterm>
@@ -249,7 +250,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="podchecker">
+<varlistentry xml:id="podchecker">
 <term><command>podchecker</command></term>
 <listitem>
 <indexterm zone="ch-system-perl podchecker"><primary sortas="b-podchecker">podchecker</primary></indexterm>
@@ -257,7 +258,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="podselect">
+<varlistentry xml:id="podselect">
 <term><command>podselect</command></term>
 <listitem>
 <indexterm zone="ch-system-perl podselect"><primary sortas="b-podselect">podselect</primary></indexterm>
@@ -265,7 +266,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="psed">
+<varlistentry xml:id="psed">
 <term><command>psed</command></term>
 <listitem>
 <indexterm zone="ch-system-perl psed"><primary sortas="b-psed">psed</primary></indexterm>
@@ -273,7 +274,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pstruct">
+<varlistentry xml:id="pstruct">
 <term><command>pstruct</command></term>
 <listitem>
 <indexterm zone="ch-system-perl pstruct"><primary sortas="b-pstruct">pstruct</primary></indexterm>
@@ -281,7 +282,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="s2p">
+<varlistentry xml:id="s2p">
 <term><command>s2p</command></term>
 <listitem>
 <indexterm zone="ch-system-perl s2p"><primary sortas="b-s2p">s2p</primary></indexterm>
@@ -289,7 +290,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="splain">
+<varlistentry xml:id="splain">
 <term><command>splain</command></term>
 <listitem>
 <indexterm zone="ch-system-perl splain"><primary sortas="b-splain">splain</primary></indexterm>
@@ -298,7 +299,7 @@ diagnostics in Perl.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="xsubpp">
+<varlistentry xml:id="xsubpp">
 <term><command>xsubpp</command></term>
 <listitem>
 <indexterm zone="ch-system-perl xsubpp"><primary sortas="b-xsubpp">xsubpp</primary></indexterm>
@@ -307,6 +308,6 @@ diagnostics in Perl.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-gcc" xreflabel="GCC" role="wrap">
-<title>GCC-&gcc-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="ch-system-gcc" xreflabel="GCC" role="wrap">
+<info><title>GCC-&gcc-version;</title></info>
 <?dbhtml filename="gcc.html"?>
 
 <indexterm zone="ch-system-gcc"><primary sortas="a-GCC">GCC</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The GCC package contains the GNU compiler collection, which includes
 the C and C++ compilers.</para>
 
@@ -24,10 +26,10 @@ the C and C++ compilers.</para>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils, Findutils,
 Gawk, Gettext, Glibc, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of GCC</title>
+<section role="installation">
+<info><title>Installation of GCC</title></info>
 
 <para>This package is known to behave badly when you have changed its
 default optimization flags (including the <parameter>-march</parameter> and <parameter>-mcpu</parameter> options).
@@ -39,7 +41,7 @@ or modifying them when building GCC.</para>
 will unfold into the same directory. You should likewise extract the
 GCC-testsuite package. The full GCC package contains even more
 compilers. Instructions for building these can be found at
-<ulink url="&blfs-root;view/stable/general/gcc.html"/>.</para>
+<uri xlink:href="&blfs-root;view/stable/general/gcc.html"/>.</para>
 
 <para>First apply only the No-Fixincludes patch (and <emphasis>not</emphasis>
 the Specs patch) also used in the previous chapter:</para>
@@ -108,10 +110,10 @@ we performed earlier in this chapter. Refer back to
 are wrong, then most likely you erroneously applied the GCC Specs patch from
 <xref linkend="chapter-temporary-tools"/>.</para></note>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-gcc" role="content"><title>Contents of GCC</title>
+<section xml:id="contents-gcc" role="content"><info><title>Contents of GCC</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -123,7 +125,7 @@ cc1, cc1plus, collect2, cpp, g++, gcc, gccbug, and gcov</seg>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="cpp">
+<varlistentry xml:id="cpp">
 <term><command>cpp</command></term>
 <listitem>
 <indexterm zone="ch-system-gcc cpp"><primary sortas="b-cpp">cpp</primary></indexterm>
@@ -132,7 +134,7 @@ cc1, cc1plus, collect2, cpp, g++, gcc, gccbug, and gcov</seg>
 </listitem>
 </varlistentry>
 
-<varlistentry id="g">
+<varlistentry xml:id="g">
 <term><command>g++</command></term>
 <listitem>
 <indexterm zone="ch-system-gcc g"><primary sortas="b-g++">g++</primary></indexterm>
@@ -140,7 +142,7 @@ cc1, cc1plus, collect2, cpp, g++, gcc, gccbug, and gcov</seg>
 </listitem>
 </varlistentry>
 
-<varlistentry id="gcc">
+<varlistentry xml:id="gcc">
 <term><command>gcc</command></term>
 <listitem>
 <indexterm zone="ch-system-gcc gcc"><primary sortas="b-gcc">gcc</primary></indexterm>
@@ -149,7 +151,7 @@ the source code of a program into assembly code.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="gccbug">
+<varlistentry xml:id="gccbug">
 <term><command>gccbug</command></term>
 <listitem>
 <indexterm zone="ch-system-gcc gccbug"><primary sortas="b-gccbug">gccbug</primary></indexterm>
@@ -157,7 +159,7 @@ the source code of a program into assembly code.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="gcov">
+<varlistentry xml:id="gcov">
 <term><command>gcov</command></term>
 <listitem>
 <indexterm zone="ch-system-gcc gcov"><primary sortas="b-gcov">gcov</primary></indexterm>
@@ -166,7 +168,7 @@ analyze programs to find out where optimizations will have the most effect.</par
 </listitem>
 </varlistentry>
 
-<varlistentry id="libgcc">
+<varlistentry xml:id="libgcc">
 <term><filename class="libraryfile">libgcc*</filename></term>
 <listitem>
 <indexterm zone="ch-system-gcc libgcc"><primary sortas="c-libgcc*">libgcc*</primary></indexterm>
@@ -174,7 +176,7 @@ analyze programs to find out where optimizations will have the most effect.</par
 </listitem>
 </varlistentry>
 
-<varlistentry id="libstdc">
+<varlistentry xml:id="libstdc">
 <term><filename class="libraryfile">libstdc++</filename></term>
 <listitem>
 <indexterm zone="ch-system-gcc libstdc"><primary sortas="c-libstdc++">libstdc++</primary></indexterm>
@@ -182,7 +184,7 @@ analyze programs to find out where optimizations will have the most effect.</par
 </listitem>
 </varlistentry>
 
-<varlistentry id="libsupc">
+<varlistentry xml:id="libsupc">
 <term><filename class="libraryfile">libsupc++</filename></term>
 <listitem>
 <indexterm zone="ch-system-gcc libsupc"><primary sortas="c-libsupc++">libsupc++</primary></indexterm>
@@ -191,6 +193,6 @@ analyze programs to find out where optimizations will have the most effect.</par
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-vim" xreflabel="Vim" role="wrap">
-<title>Vim-&vim-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="ch-system-vim" xreflabel="Vim" role="wrap">
+<info><title>Vim-&vim-version;</title></info>
 <?dbhtml filename="vim.html"?>
 
 <indexterm zone="ch-system-vim"><primary sortas="a-Vim">Vim</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Vim package contains a powerful text editor.</para>
 
 <segmentedlist>
@@ -27,13 +29,13 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <tip>
 <title>Alternatives to Vim</title>
 <para>If you prefer another editor -- like Emacs, Joe, or Nano -- to Vim,
-have a look at <ulink url="&blfs-root;view/stable/postlfs/editors.html"/> for
+have a look at <uri xlink:href="&blfs-root;view/stable/postlfs/editors.html"/> for
 suggested installation instructions.</para>
 </tip>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Vim</title>
+<section role="installation">
+<info><title>Installation of Vim</title></info>
 
 <para>First, unpack both
 <filename>vim-&vim-version;.tar.bz2</filename> and (optionally)
@@ -83,10 +85,10 @@ may want to re-compile Vim after having installed X. Vim comes with a nice GUI
 version of the editor that requires X and a few other libraries to be
 installed. For more information read the Vim documentation.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="conf-vim" role="configuration"><title>Configuring Vim</title>
+<section xml:id="conf-vim" role="configuration"><title>Configuring Vim</title>
 <indexterm zone="conf-vim"><primary sortas="e-/etc/vim">/etc/vim</primary></indexterm>
 
 <para>By default, <command>vim</command> runs in vi-incompatible mode. Some
@@ -145,10 +147,10 @@ the following command:</para>
 
 <screen><userinput>vim -c ':options'</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-vim" role="content"><title>Contents of Vim</title>
+<section xml:id="contents-vim" role="content"><info><title>Contents of Vim</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -160,7 +162,7 @@ vimtutor and xxd</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="efm_filter.pl">
+<varlistentry xml:id="efm_filter.pl">
 <term><command>efm_filter.pl</command></term>
 <listitem>
 <indexterm zone="ch-system-vim efm_filter.pl"><primary sortas="b-efm_filter.pl">efm_filter.pl</primary></indexterm>
@@ -168,7 +170,7 @@ vimtutor and xxd</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="efm_perl.pl">
+<varlistentry xml:id="efm_perl.pl">
 <term><command>efm_perl.pl</command></term>
 <listitem>
 <indexterm zone="ch-system-vim efm_perl.pl"><primary sortas="b-efm_perl.pl">efm_perl.pl</primary></indexterm>
@@ -177,7 +179,7 @@ Perl interpreter for use with the <quote>quickfix</quote> mode of <command>vim</
 </listitem>
 </varlistentry>
 
-<varlistentry id="ex">
+<varlistentry xml:id="ex">
 <term><command>ex</command></term>
 <listitem>
 <indexterm zone="ch-system-vim ex"><primary sortas="b-ex">ex</primary></indexterm>
@@ -185,7 +187,7 @@ Perl interpreter for use with the <quote>quickfix</quote> mode of <command>vim</
 </listitem>
 </varlistentry>
 
-<varlistentry id="less.sh">
+<varlistentry xml:id="less.sh">
 <term><command>less.sh</command></term>
 <listitem>
 <indexterm zone="ch-system-vim less.sh"><primary sortas="b-less.sh">less.sh</primary></indexterm>
@@ -193,7 +195,7 @@ Perl interpreter for use with the <quote>quickfix</quote> mode of <command>vim</
 </listitem>
 </varlistentry>
 
-<varlistentry id="mve.awk">
+<varlistentry xml:id="mve.awk">
 <term><command>mve.awk</command></term>
 <listitem>
 <indexterm zone="ch-system-vim mve.awk"><primary sortas="b-mve.awk">mve.awk</primary></indexterm>
@@ -201,7 +203,7 @@ Perl interpreter for use with the <quote>quickfix</quote> mode of <command>vim</
 </listitem>
 </varlistentry>
 
-<varlistentry id="pltags.pl">
+<varlistentry xml:id="pltags.pl">
 <term><command>pltags.pl</command></term>
 <listitem>
 <indexterm zone="ch-system-vim pltags.pl"><primary sortas="b-pltags.pl">pltags.pl</primary></indexterm>
@@ -209,7 +211,7 @@ Perl interpreter for use with the <quote>quickfix</quote> mode of <command>vim</
 </listitem>
 </varlistentry>
 
-<varlistentry id="ref">
+<varlistentry xml:id="ref">
 <term><command>ref</command></term>
 <listitem>
 <indexterm zone="ch-system-vim ref"><primary sortas="b-ref">ref</primary></indexterm>
@@ -217,7 +219,7 @@ Perl interpreter for use with the <quote>quickfix</quote> mode of <command>vim</
 </listitem>
 </varlistentry>
 
-<varlistentry id="rview">
+<varlistentry xml:id="rview">
 <term><command>rview</command></term>
 <listitem>
 <indexterm zone="ch-system-vim rview"><primary sortas="b-rview">rview</primary></indexterm>
@@ -226,7 +228,7 @@ commands can be started and <command>view</command> can't be suspended.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="rvim">
+<varlistentry xml:id="rvim">
 <term><command>rvim</command></term>
 <listitem>
 <indexterm zone="ch-system-vim rvim"><primary sortas="b-rvim">rvim</primary></indexterm>
@@ -235,7 +237,7 @@ commands can be started and <command>vim</command> can't be suspended.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="shtags.pl">
+<varlistentry xml:id="shtags.pl">
 <term><command>shtags.pl</command></term>
 <listitem>
 <indexterm zone="ch-system-vim shtags.pl"><primary sortas="b-shtags.pl">shtags.pl</primary></indexterm>
@@ -243,7 +245,7 @@ commands can be started and <command>vim</command> can't be suspended.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="tcltags">
+<varlistentry xml:id="tcltags">
 <term><command>tcltags</command></term>
 <listitem>
 <indexterm zone="ch-system-vim tcltags"><primary sortas="b-tcltags">tcltags</primary></indexterm>
@@ -251,7 +253,7 @@ commands can be started and <command>vim</command> can't be suspended.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="view">
+<varlistentry xml:id="view">
 <term><command>view</command></term>
 <listitem>
 <indexterm zone="ch-system-vim view"><primary sortas="b-view">view</primary></indexterm>
@@ -259,7 +261,7 @@ commands can be started and <command>vim</command> can't be suspended.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vim">
+<varlistentry xml:id="vim">
 <term><command>vim</command></term>
 <listitem>
 <indexterm zone="ch-system-vim vim"><primary sortas="b-vim">vim</primary></indexterm>
@@ -267,7 +269,7 @@ commands can be started and <command>vim</command> can't be suspended.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vim132">
+<varlistentry xml:id="vim132">
 <term><command>vim132</command></term>
 <listitem>
 <indexterm zone="ch-system-vim vim132"><primary sortas="b-vim132">vim132</primary></indexterm>
@@ -275,7 +277,7 @@ commands can be started and <command>vim</command> can't be suspended.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vim2html.pl">
+<varlistentry xml:id="vim2html.pl">
 <term><command>vim2html.pl</command></term>
 <listitem>
 <indexterm zone="ch-system-vim vim2html.pl"><primary sortas="b-vim2html.pl">vim2html.pl</primary></indexterm>
@@ -283,7 +285,7 @@ commands can be started and <command>vim</command> can't be suspended.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vimdiff">
+<varlistentry xml:id="vimdiff">
 <term><command>vimdiff</command></term>
 <listitem>
 <indexterm zone="ch-system-vim vimdiff"><primary sortas="b-vimdiff">vimdiff</primary></indexterm>
@@ -291,7 +293,7 @@ commands can be started and <command>vim</command> can't be suspended.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vimm">
+<varlistentry xml:id="vimm">
 <term><command>vimm</command></term>
 <listitem>
 <indexterm zone="ch-system-vim vimm"><primary sortas="b-vimm">vimm</primary></indexterm>
@@ -299,7 +301,7 @@ commands can be started and <command>vim</command> can't be suspended.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vimspell.sh">
+<varlistentry xml:id="vimspell.sh">
 <term><command>vimspell.sh</command></term>
 <listitem>
 <indexterm zone="ch-system-vim vimspell.sh"><primary sortas="b-vimspell.sh">vimspell.sh</primary></indexterm>
@@ -309,7 +311,7 @@ command, which is provided neither in LFS nor in BLFS.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vimtutor">
+<varlistentry xml:id="vimtutor">
 <term><command>vimtutor</command></term>
 <listitem>
 <indexterm zone="ch-system-vim vimtutor"><primary sortas="b-vimtutor">vimtutor</primary></indexterm>
@@ -317,7 +319,7 @@ command, which is provided neither in LFS nor in BLFS.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="xxd">
+<varlistentry xml:id="xxd">
 <term><command>xxd</command></term>
 <listitem>
 <indexterm zone="ch-system-vim xxd"><primary sortas="b-xxd">xxd</primary></indexterm>
@@ -327,6 +329,6 @@ also do the reverse, so it can be used for binary patching.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

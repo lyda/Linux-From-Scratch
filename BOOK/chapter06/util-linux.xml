@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-util-linux" xreflabel="Util-linux" role="wrap">
-<title>Util-linux-&util-linux-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-util-linux" xreflabel="Util-linux" role="wrap">
+<info><title>Util-linux-&util-linux-version;</title></info>
 <?dbhtml filename="util-linux.html"?>
 
 <indexterm zone="ch-system-util-linux"><primary sortas="a-Util-linux">Util-linux</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Util-linux package contains miscellaneous utility programs. Among
 them are utilities for handling file systems, consoles, partitions, and
 messages.</para>
@@ -25,10 +26,10 @@ messages.</para>
 <seglistitem><seg>Bash, Binutils, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, Zlib</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>FHS compliance notes</title>
+<section role="installation">
+<info><title>FHS compliance notes</title></info>
 
 <para>The FHS recommends that we use <filename class="directory">/var/lib/hwclock</filename>,
 instead of the usual <filename class="directory">/etc</filename>, as the location for the
@@ -38,10 +39,10 @@ program FHS-compliant, run the following:</para>
 <screen><userinput>sed -i 's@etc/adjtime@var/lib/hwclock/adjtime@g' hwclock/hwclock.c
 mkdir -p /var/lib/hwclock</userinput></screen>
 
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Util-linux</title>
+<section role="installation">
+<info><title>Installation of Util-linux</title></info>
 
 <para>Util-Linux has a coding problem that causes mis-compilation of the sfdisk
 program.  This patch fixes the problem:</para>
@@ -77,10 +78,10 @@ installed again.</para></listitem>
 
 <screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-utillinux" role="content"><title>Contents of Util-linux</title>
+<section xml:id="contents-utillinux" role="content"><info><title>Contents of Util-linux</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -96,7 +97,7 @@ whereis and write</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="agetty">
+<varlistentry xml:id="agetty">
 <term><command>agetty</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux agetty"><primary sortas="b-agetty">agetty</primary></indexterm>
@@ -105,7 +106,7 @@ and then invokes the <command>login</command> program.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="arch">
+<varlistentry xml:id="arch">
 <term><command>arch</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux arch"><primary sortas="b-arch">arch</primary></indexterm>
@@ -113,7 +114,7 @@ and then invokes the <command>login</command> program.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="blockdev">
+<varlistentry xml:id="blockdev">
 <term><command>blockdev</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux blockdev"><primary sortas="b-blockdev">blockdev</primary></indexterm>
@@ -121,7 +122,7 @@ and then invokes the <command>login</command> program.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="cal">
+<varlistentry xml:id="cal">
 <term><command>cal</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux cal"><primary sortas="b-cal">cal</primary></indexterm>
@@ -129,7 +130,7 @@ and then invokes the <command>login</command> program.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="cfdisk">
+<varlistentry xml:id="cfdisk">
 <term><command>cfdisk</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux cfdisk"><primary sortas="b-cfdisk">cfdisk</primary></indexterm>
@@ -137,7 +138,7 @@ and then invokes the <command>login</command> program.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="chkdupexe">
+<varlistentry xml:id="chkdupexe">
 <term><command>chkdupexe</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux chkdupexe"><primary sortas="b-chkdupexe">chkdupexe</primary></indexterm>
@@ -145,7 +146,7 @@ and then invokes the <command>login</command> program.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="col">
+<varlistentry xml:id="col">
 <term><command>col</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux col"><primary sortas="b-col">col</primary></indexterm>
@@ -153,7 +154,7 @@ and then invokes the <command>login</command> program.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="colcrt">
+<varlistentry xml:id="colcrt">
 <term><command>colcrt</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux colcrt"><primary sortas="b-colcrt">colcrt</primary></indexterm>
@@ -162,7 +163,7 @@ that lack some capabilities such as overstriking and half-lines.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="colrm">
+<varlistentry xml:id="colrm">
 <term><command>colrm</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux colrm"><primary sortas="b-colrm">colrm</primary></indexterm>
@@ -170,7 +171,7 @@ that lack some capabilities such as overstriking and half-lines.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="column">
+<varlistentry xml:id="column">
 <term><command>column</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux column"><primary sortas="b-column">column</primary></indexterm>
@@ -178,7 +179,7 @@ that lack some capabilities such as overstriking and half-lines.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="ctrlaltdel">
+<varlistentry xml:id="ctrlaltdel">
 <term><command>ctrlaltdel</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux ctrlaltdel"><primary sortas="b-ctrlaltdel">ctrlaltdel</primary></indexterm>
@@ -187,7 +188,7 @@ soft reset.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="cytune">
+<varlistentry xml:id="cytune">
 <term><command>cytune</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux cytune"><primary sortas="b-cytune">cytune</primary></indexterm>
@@ -196,7 +197,7 @@ serial line drivers for Cyclades cards.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="ddate">
+<varlistentry xml:id="ddate">
 <term><command>ddate</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux ddate"><primary sortas="b-ddate">ddate</primary></indexterm>
@@ -205,7 +206,7 @@ given Gregorian date to a Discordian one.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="dmesg">
+<varlistentry xml:id="dmesg">
 <term><command>dmesg</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux dmesg"><primary sortas="b-dmesg">dmesg</primary></indexterm>
@@ -213,7 +214,7 @@ given Gregorian date to a Discordian one.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="elvtune">
+<varlistentry xml:id="elvtune">
 <term><command>elvtune</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux elvtune"><primary sortas="b-elvtune">elvtune</primary></indexterm>
@@ -222,7 +223,7 @@ and interactivity of a block device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="fdformat">
+<varlistentry xml:id="fdformat">
 <term><command>fdformat</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux fdformat"><primary sortas="b-fdformat">fdformat</primary></indexterm>
@@ -230,7 +231,7 @@ and interactivity of a block device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="fdisk">
+<varlistentry xml:id="fdisk">
 <term><command>fdisk</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux fdisk"><primary sortas="b-fdisk">fdisk</primary></indexterm>
@@ -238,7 +239,7 @@ and interactivity of a block device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="fsck.cramfs">
+<varlistentry xml:id="fsck.cramfs">
 <term><command>fsck.cramfs</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux fsck.cramfs"><primary sortas="b-fsck.cramfs">fsck.cramfs</primary></indexterm>
@@ -247,7 +248,7 @@ Cramfs file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="fsck.minix">
+<varlistentry xml:id="fsck.minix">
 <term><command>fsck.minix</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux fsck.minix"><primary sortas="b-fsck.minix">fsck.minix</primary></indexterm>
@@ -256,7 +257,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="getopt">
+<varlistentry xml:id="getopt">
 <term><command>getopt</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux getopt"><primary sortas="b-getopt">getopt</primary></indexterm>
@@ -264,7 +265,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="hexdump">
+<varlistentry xml:id="hexdump">
 <term><command>hexdump</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux hexdump"><primary sortas="b-hexdump">hexdump</primary></indexterm>
@@ -272,7 +273,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="hwclock">
+<varlistentry xml:id="hwclock">
 <term><command>hwclock</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux hwclock"><primary sortas="b-hwclock">hwclock</primary></indexterm>
@@ -281,7 +282,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="ipcrm">
+<varlistentry xml:id="ipcrm">
 <term><command>ipcrm</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux ipcrm"><primary sortas="b-ipcrm">ipcrm</primary></indexterm>
@@ -289,7 +290,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="ipcs">
+<varlistentry xml:id="ipcs">
 <term><command>ipcs</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux ipcs"><primary sortas="b-ipcs">ipcs</primary></indexterm>
@@ -297,7 +298,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="isosize">
+<varlistentry xml:id="isosize">
 <term><command>isosize</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux isosize"><primary sortas="b-isosize">isosize</primary></indexterm>
@@ -305,7 +306,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="line">
+<varlistentry xml:id="line">
 <term><command>line</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux line"><primary sortas="b-line">line</primary></indexterm>
@@ -313,7 +314,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="logger">
+<varlistentry xml:id="logger">
 <term><command>logger</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux logger"><primary sortas="b-logger">logger</primary></indexterm>
@@ -321,7 +322,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="look">
+<varlistentry xml:id="look">
 <term><command>look</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux look"><primary sortas="b-look">look</primary></indexterm>
@@ -329,7 +330,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="losetup">
+<varlistentry xml:id="losetup">
 <term><command>losetup</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux losetup"><primary sortas="b-losetup">losetup</primary></indexterm>
@@ -337,7 +338,7 @@ Minix file system on the given device.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mcookie">
+<varlistentry xml:id="mcookie">
 <term><command>mcookie</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux mcookie"><primary sortas="b-mcookie">mcookie</primary></indexterm>
@@ -346,7 +347,7 @@ for <command>xauth</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mkfs">
+<varlistentry xml:id="mkfs">
 <term><command>mkfs</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux mkfs"><primary sortas="b-mkfs">mkfs</primary></indexterm>
@@ -355,7 +356,7 @@ for <command>xauth</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mkfs.bfs">
+<varlistentry xml:id="mkfs.bfs">
 <term><command>mkfs.bfs</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux mkfs.bfs"><primary sortas="b-mkfs.bfs">mkfs.bfs</primary></indexterm>
@@ -363,7 +364,7 @@ for <command>xauth</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mkfs.cramfs">
+<varlistentry xml:id="mkfs.cramfs">
 <term><command>mkfs.cramfs</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux mkfs.cramfs"><primary sortas="b-mkfs.cramfs">mkfs.cramfs</primary></indexterm>
@@ -371,7 +372,7 @@ for <command>xauth</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mkfs.minix">
+<varlistentry xml:id="mkfs.minix">
 <term><command>mkfs.minix</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux mkfs.minix"><primary sortas="b-mkfs.minix">mkfs.minix</primary></indexterm>
@@ -379,7 +380,7 @@ for <command>xauth</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mkswap">
+<varlistentry xml:id="mkswap">
 <term><command>mkswap</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux mkswap"><primary sortas="b-mkswap">mkswap</primary></indexterm>
@@ -387,7 +388,7 @@ for <command>xauth</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="more">
+<varlistentry xml:id="more">
 <term><command>more</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux more"><primary sortas="b-more">more</primary></indexterm>
@@ -396,7 +397,7 @@ screen full at a time. But <command>less</command> is much better.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mount">
+<varlistentry xml:id="mount">
 <term><command>mount</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux mount"><primary sortas="b-mount">mount</primary></indexterm>
@@ -405,7 +406,7 @@ hiding the contents of that directory) in the file-system tree.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="namei">
+<varlistentry xml:id="namei">
 <term><command>namei</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux namei"><primary sortas="b-namei">namei</primary></indexterm>
@@ -413,7 +414,7 @@ hiding the contents of that directory) in the file-system tree.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pg">
+<varlistentry xml:id="pg">
 <term><command>pg</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux pg"><primary sortas="b-pg">pg</primary></indexterm>
@@ -421,7 +422,7 @@ hiding the contents of that directory) in the file-system tree.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pivot_root">
+<varlistentry xml:id="pivot_root">
 <term><command>pivot_root</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux pivot_root"><primary sortas="b-pivot_root">pivot_root</primary></indexterm>
@@ -430,7 +431,7 @@ root file system of the current process.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="ramsize">
+<varlistentry xml:id="ramsize">
 <term><command>ramsize</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux ramsize"><primary sortas="b-ramsize">ramsize</primary></indexterm>
@@ -438,7 +439,7 @@ root file system of the current process.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="rdev">
+<varlistentry xml:id="rdev">
 <term><command>rdev</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux rdev"><primary sortas="b-rdev">rdev</primary></indexterm>
@@ -447,7 +448,7 @@ device and other things in a bootable image.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="readprofile">
+<varlistentry xml:id="readprofile">
 <term><command>readprofile</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux readprofile"><primary sortas="b-readprofile">readprofile</primary></indexterm>
@@ -455,7 +456,7 @@ device and other things in a bootable image.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="rename">
+<varlistentry xml:id="rename">
 <term><command>rename</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux rename"><primary sortas="b-rename">rename</primary></indexterm>
@@ -463,7 +464,7 @@ device and other things in a bootable image.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="renice">
+<varlistentry xml:id="renice">
 <term><command>renice</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux renice"><primary sortas="b-renice">renice</primary></indexterm>
@@ -471,7 +472,7 @@ device and other things in a bootable image.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="rev">
+<varlistentry xml:id="rev">
 <term><command>rev</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux rev"><primary sortas="b-rev">rev</primary></indexterm>
@@ -479,7 +480,7 @@ device and other things in a bootable image.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="rootflags">
+<varlistentry xml:id="rootflags">
 <term><command>rootflags</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux rootflags"><primary sortas="b-rootflags">rootflags</primary></indexterm>
@@ -487,7 +488,7 @@ device and other things in a bootable image.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="script">
+<varlistentry xml:id="script">
 <term><command>script</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux script"><primary sortas="b-script">script</primary></indexterm>
@@ -496,7 +497,7 @@ the terminal.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="setfdprm">
+<varlistentry xml:id="setfdprm">
 <term><command>setfdprm</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux setfdprm"><primary sortas="b-setfdprm">setfdprm</primary></indexterm>
@@ -504,7 +505,7 @@ the terminal.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="setsid">
+<varlistentry xml:id="setsid">
 <term><command>setsid</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux setsid"><primary sortas="b-setsid">setsid</primary></indexterm>
@@ -512,7 +513,7 @@ the terminal.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="setterm">
+<varlistentry xml:id="setterm">
 <term><command>setterm</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux setterm"><primary sortas="b-setterm">setterm</primary></indexterm>
@@ -520,7 +521,7 @@ the terminal.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="sfdisk">
+<varlistentry xml:id="sfdisk">
 <term><command>sfdisk</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux sfdisk"><primary sortas="b-sfdisk">sfdisk</primary></indexterm>
@@ -528,7 +529,7 @@ the terminal.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="swapdev">
+<varlistentry xml:id="swapdev">
 <term><command>swapdev</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux swapdev"><primary sortas="b-swapdev">swapdev</primary></indexterm>
@@ -536,7 +537,7 @@ the terminal.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="swapoff">
+<varlistentry xml:id="swapoff">
 <term><command>swapoff</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux swapoff"><primary sortas="b-swapoff">swapoff</primary></indexterm>
@@ -544,7 +545,7 @@ the terminal.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="swapon">
+<varlistentry xml:id="swapon">
 <term><command>swapon</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux swapon"><primary sortas="b-swapon">swapon</primary></indexterm>
@@ -552,7 +553,7 @@ the terminal.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="tunelp">
+<varlistentry xml:id="tunelp">
 <term><command>tunelp</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux tunelp"><primary sortas="b-tunelp">tunelp</primary></indexterm>
@@ -560,7 +561,7 @@ the terminal.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="ul">
+<varlistentry xml:id="ul">
 <term><command>ul</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux ul"><primary sortas="b-ul">ul</primary></indexterm>
@@ -569,7 +570,7 @@ escape sequences indicating underlining for the terminal in use.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="umount">
+<varlistentry xml:id="umount">
 <term><command>umount</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux umount"><primary sortas="b-umount">umount</primary></indexterm>
@@ -577,7 +578,7 @@ escape sequences indicating underlining for the terminal in use.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vidmode">
+<varlistentry xml:id="vidmode">
 <term><command>vidmode</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux vidmode"><primary sortas="b-vidmode">vidmode</primary></indexterm>
@@ -585,7 +586,7 @@ escape sequences indicating underlining for the terminal in use.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="whereis">
+<varlistentry xml:id="whereis">
 <term><command>whereis</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux whereis"><primary sortas="b-whereis">whereis</primary></indexterm>
@@ -594,7 +595,7 @@ source, and the manual page for the given command.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="write">
+<varlistentry xml:id="write">
 <term><command>write</command></term>
 <listitem>
 <indexterm zone="ch-system-util-linux write"><primary sortas="b-write">write</primary></indexterm>
@@ -604,6 +605,6 @@ source, and the manual page for the given command.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-shadow" xreflabel="Shadow" role="wrap">
-<title>Shadow-&shadow-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-shadow" xreflabel="Shadow" role="wrap">
+<info><title>Shadow-&shadow-version;</title></info>
 <?dbhtml filename="shadow.html"?>
 
 <indexterm zone="ch-system-shadow"><primary sortas="a-Shadow">Shadow</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Shadow package contains programs for handling passwords in a secure
 way.</para>
 
@@ -24,10 +25,10 @@ way.</para>
 <seglistitem><seg>Bash, Binutils, Bison, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Shadow</title>
+<section role="installation">
+<info><title>Installation of Shadow</title></info>
 
 <para>Prepare Shadow for compilation:</para>
 
@@ -84,10 +85,10 @@ installed by Shadow:</para>
 
 <screen><userinput>rm /bin/groups</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="conf-shadow" role="configuration"><title>Configuring Shadow</title>
+<section xml:id="conf-shadow" role="configuration"><info><title>Configuring Shadow</title></info>
 <indexterm zone="conf-shadow">
 <primary sortas="a-Shadow">Shadow</primary>
 <secondary>configuring</secondary></indexterm>
@@ -114,20 +115,20 @@ However, if returning to this section later to enable shadowing, you should
 reset any current user passwords with the <command>passwd</command> command or
 any group passwords with the <command>gpasswd</command> command.</para>
 
-</sect2>
+</section>
 
 
-<sect2 role="configuration">
-<title>Setting the root password</title>
+<section role="configuration">
+<info><title>Setting the root password</title></info>
 
 <para>Choose a password for user root and set it via:</para>
 
 <screen><userinput>passwd root</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-shadow" role="content"><title>Contents of Shadow</title>
+<section xml:id="contents-shadow" role="content"><info><title>Contents of Shadow</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -138,9 +139,9 @@ logoutd, mkpasswd, newgrp, newusers, passwd, pwck, pwconv, pwunconv, sg
 </seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><info><title>Short descriptions</title></info>
 
-<varlistentry id="chage">
+<varlistentry xml:id="chage">
 <term><command>chage</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow chage"><primary sortas="b-chage">chage</primary></indexterm>
@@ -149,7 +150,7 @@ days between obligatory password changes.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="chfn">
+<varlistentry xml:id="chfn">
 <term><command>chfn</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow chfn"><primary sortas="b-chfn">chfn</primary></indexterm>
@@ -157,7 +158,7 @@ days between obligatory password changes.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="chpasswd">
+<varlistentry xml:id="chpasswd">
 <term><command>chpasswd</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow chpasswd"><primary sortas="b-chpasswd">chpasswd</primary></indexterm>
@@ -166,7 +167,7 @@ whole series of user accounts in one go.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="chsh">
+<varlistentry xml:id="chsh">
 <term><command>chsh</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow chsh"><primary sortas="b-chsh">chsh</primary></indexterm>
@@ -174,7 +175,7 @@ whole series of user accounts in one go.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="expiry">
+<varlistentry xml:id="expiry">
 <term><command>expiry</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow expiry"><primary sortas="b-expiry">expiry</primary></indexterm>
@@ -182,7 +183,7 @@ whole series of user accounts in one go.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="faillog">
+<varlistentry xml:id="faillog">
 <term><command>faillog</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow faillog"><primary sortas="b-faillog">faillog</primary></indexterm>
@@ -191,7 +192,7 @@ failures before an account is blocked, or to reset the failure count.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="gpasswd">
+<varlistentry xml:id="gpasswd">
 <term><command>gpasswd</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow gpasswd"><primary sortas="b-gpasswd">gpasswd</primary></indexterm>
@@ -199,7 +200,7 @@ failures before an account is blocked, or to reset the failure count.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="groupadd">
+<varlistentry xml:id="groupadd">
 <term><command>groupadd</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow groupadd"><primary sortas="b-groupadd">groupadd</primary></indexterm>
@@ -207,7 +208,7 @@ failures before an account is blocked, or to reset the failure count.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="groupdel">
+<varlistentry xml:id="groupdel">
 <term><command>groupdel</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow groupdel"><primary sortas="b-groupdel">groupdel</primary></indexterm>
@@ -215,7 +216,7 @@ failures before an account is blocked, or to reset the failure count.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="groupmod">
+<varlistentry xml:id="groupmod">
 <term><command>groupmod</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow groupmod"><primary sortas="b-groupmod">groupmod</primary></indexterm>
@@ -223,7 +224,7 @@ failures before an account is blocked, or to reset the failure count.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="groups">
+<varlistentry xml:id="groups">
 <term><command>groups</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow groups"><primary sortas="b-groups">groups</primary></indexterm>
@@ -231,7 +232,7 @@ failures before an account is blocked, or to reset the failure count.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="grpck">
+<varlistentry xml:id="grpck">
 <term><command>grpck</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow grpck"><primary sortas="b-grpck">grpck</primary></indexterm>
@@ -240,7 +241,7 @@ and <filename>/etc/gshadow</filename>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="grpconv">
+<varlistentry xml:id="grpconv">
 <term><command>grpconv</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow grpconv"><primary sortas="b-grpconv">grpconv</primary></indexterm>
@@ -248,7 +249,7 @@ and <filename>/etc/gshadow</filename>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="grpunconv">
+<varlistentry xml:id="grpunconv">
 <term><command>grpunconv</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow grpunconv"><primary sortas="b-grpunconv">grpunconv</primary></indexterm>
@@ -257,7 +258,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="lastlog">
+<varlistentry xml:id="lastlog">
 <term><command>lastlog</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow lastlog"><primary sortas="b-lastlog">lastlog</primary></indexterm>
@@ -265,7 +266,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="login">
+<varlistentry xml:id="login">
 <term><command>login</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow login"><primary sortas="b-login">login</primary></indexterm>
@@ -273,7 +274,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="logoutd">
+<varlistentry xml:id="logoutd">
 <term><command>logoutd</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow logoutd"><primary sortas="b-logoutd">logoutd</primary></indexterm>
@@ -281,7 +282,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mkpasswd">
+<varlistentry xml:id="mkpasswd">
 <term><command>mkpasswd</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow mkpasswd"><primary sortas="b-mkpasswd">mkpasswd</primary></indexterm>
@@ -289,7 +290,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="newgrp">
+<varlistentry xml:id="newgrp">
 <term><command>newgrp</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow newgrp"><primary sortas="b-newgrp">newgrp</primary></indexterm>
@@ -297,7 +298,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="newusers">
+<varlistentry xml:id="newusers">
 <term><command>newusers</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow newusers"><primary sortas="b-newusers">newusers</primary></indexterm>
@@ -305,7 +306,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="passwd">
+<varlistentry xml:id="passwd">
 <term><command>passwd</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow passwd"><primary sortas="b-passwd">passwd</primary></indexterm>
@@ -313,7 +314,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pwck">
+<varlistentry xml:id="pwck">
 <term><command>pwck</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow pwck"><primary sortas="b-pwck">pwck</primary></indexterm>
@@ -322,7 +323,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pwconv">
+<varlistentry xml:id="pwconv">
 <term><command>pwconv</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow pwconv"><primary sortas="b-pwconv">pwconv</primary></indexterm>
@@ -331,7 +332,7 @@ from the normal password file.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="pwunconv">
+<varlistentry xml:id="pwunconv">
 <term><command>pwunconv</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow pwunconv"><primary sortas="b-pwunconv">pwunconv</primary></indexterm>
@@ -340,7 +341,7 @@ from <filename>/etc/shadow</filename> and then deletes the latter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="sg">
+<varlistentry xml:id="sg">
 <term><command>sg</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow sg"><primary sortas="b-sg">sg</primary></indexterm>
@@ -349,7 +350,7 @@ is set to that of the given group.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="su">
+<varlistentry xml:id="su">
 <term><command>su</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow su"><primary sortas="b-su">su</primary></indexterm>
@@ -357,7 +358,7 @@ is set to that of the given group.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="useradd">
+<varlistentry xml:id="useradd">
 <term><command>useradd</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow useradd"><primary sortas="b-useradd">useradd</primary></indexterm>
@@ -366,7 +367,7 @@ or updates the default new-user information.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="userdel">
+<varlistentry xml:id="userdel">
 <term><command>userdel</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow userdel"><primary sortas="b-userdel">userdel</primary></indexterm>
@@ -374,7 +375,7 @@ or updates the default new-user information.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="usermod">
+<varlistentry xml:id="usermod">
 <term><command>usermod</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow usermod"><primary sortas="b-usermod">usermod</primary></indexterm>
@@ -383,7 +384,7 @@ shell, initial group, home directory, and the like.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vigr">
+<varlistentry xml:id="vigr">
 <term><command>vigr</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow vigr"><primary sortas="b-vigr">vigr</primary></indexterm>
@@ -392,7 +393,7 @@ shell, initial group, home directory, and the like.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="vipw">
+<varlistentry xml:id="vipw">
 <term><command>vipw</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow vipw"><primary sortas="b-vipw">vipw</primary></indexterm>
@@ -401,7 +402,7 @@ shell, initial group, home directory, and the like.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="libmisc">
+<varlistentry xml:id="libmisc">
 <term><filename class="libraryfile">libmisc</filename></term>
 <listitem>
 <indexterm zone="ch-system-shadow libmisc"><primary sortas="c-libmisc">libmisc</primary></indexterm>
@@ -409,7 +410,7 @@ shell, initial group, home directory, and the like.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="libshadow">
+<varlistentry xml:id="libshadow">
 <term><filename class="libraryfile">libshadow</filename></term>
 <listitem>
 <indexterm zone="ch-system-shadow libshadow"><primary sortas="c-libshadow">libshadow</primary></indexterm>
@@ -418,6 +419,6 @@ shell, initial group, home directory, and the like.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

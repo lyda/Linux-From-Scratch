@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-mktemp" xreflabel="Mktemp" role="wrap">
-<title>Mktemp-&mktemp-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-mktemp" xreflabel="Mktemp" role="wrap">
+<info><title>Mktemp-&mktemp-version;</title></info>
 <?dbhtml filename="mktemp.html"?>
 
 <indexterm zone="ch-system-mktemp"><primary sortas="a-Mktemp">Mktemp</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Mktemp package contains programs used to create secure temporary
 files in shell scripts.</para>
 
@@ -21,10 +22,10 @@ files in shell scripts.</para>
 
 <para>The installation dependencies for Mktemp haven't been checked yet.</para>
 
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Mktemp</title>
+<section role="installation">
+<info><title>Installation of Mktemp</title></info>
 
 <para>Many scripts still use the deprecated <command>tempfile</command>
 program, which has functionality much the same as <command>mktemp</command>.
@@ -56,10 +57,10 @@ functions from the system C library.</para></listitem>
 <screen><userinput>make install
 make install-tempfile</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-mktemp" role="content"><title>Contents of Mktemp</title>
+<section xml:id="contents-mktemp" role="content"><info><title>Contents of Mktemp</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -68,7 +69,7 @@ make install-tempfile</userinput></screen>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="mktemp">
+<varlistentry xml:id="mktemp">
 <term><command>mktemp</command></term>
 <listitem>
 <indexterm zone="ch-system-mktemp mktemp"><primary sortas="b-mktemp">mktemp</primary></indexterm>
@@ -76,7 +77,7 @@ make install-tempfile</userinput></screen>
 </listitem>
 </varlistentry>
 
-<varlistentry id="tempfile">
+<varlistentry xml:id="tempfile">
 <term><command>tempfile</command></term>
 <listitem>
 <indexterm zone="ch-system-mktemp tempfile"><primary sortas="b-tempfile">tempfile</primary></indexterm>
@@ -86,6 +87,6 @@ make install-tempfile</userinput></screen>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

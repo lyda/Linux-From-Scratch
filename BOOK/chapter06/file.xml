@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-file" xreflabel="File" role="wrap">
-<title>File-&file-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-file" xreflabel="File" role="wrap">
+<info><title>File-&file-version;</title></info>
 <?dbhtml filename="file.html"?>
 
 <indexterm zone="ch-system-file"><primary sortas="a-File">File</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The File package contains a utility for determining the type of files.</para>
 
 <segmentedlist>
@@ -23,10 +24,10 @@
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed, Zlib</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of File</title>
+<section role="installation">
+<info><title>Installation of File</title></info>
 
 <para>Prepare File for compilation:</para>
 
@@ -40,10 +41,10 @@ GCC, Glibc, Grep, Make, Sed, Zlib</seg></seglistitem>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-file" role="content"><title>Contents of File</title>
+<section xml:id="contents-file" role="content"><info><title>Contents of File</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -53,7 +54,7 @@ GCC, Glibc, Grep, Make, Sed, Zlib</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="file">
+<varlistentry xml:id="file">
 <term><command>file</command></term>
 <listitem>
 <indexterm zone="ch-system-file file"><primary sortas="b-file">file</primary></indexterm>
@@ -63,7 +64,7 @@ language tests. The first test that succeeds determines the result.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="libmagic">
+<varlistentry xml:id="libmagic">
 <term><filename class="libraryfile">libmagic</filename></term>
 <listitem>
 <indexterm zone="ch-system-file libmagic"><primary sortas="c-libmagic">libmagic</primary></indexterm>
@@ -72,6 +73,6 @@ language tests. The first test that succeeds determines the result.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-findutils" xreflabel="Findutils" role="wrap">
-<title>Findutils-&findutils-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-findutils" xreflabel="Findutils" role="wrap">
+<info><title>Findutils-&findutils-version;</title></info>
 <?dbhtml filename="findutils.html"?>
 
 <indexterm zone="ch-system-findutils"><primary sortas="a-Findutils">Findutils</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Findutils package contains programs to find files. Processes
 are provided to recursively search through a directory tree and to
 create, maintain and search a database (often faster than the recursive
@@ -26,10 +27,10 @@ find, but unreliable if the database has not been recently updated).</para>
 <seglistitem><seg>Bash, Binutils, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Findutils</title>
+<section role="installation">
+<info><title>Installation of Findutils</title></info>
 
 <para>Prepare Findutils for compilation:</para>
 
@@ -51,10 +52,10 @@ which is FHS-compliant.</para>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-findutils" role="content"><title>Contents of Findutils</title>
+<section xml:id="contents-findutils" role="content"><info><title>Contents of Findutils</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -63,7 +64,7 @@ which is FHS-compliant.</para>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="bigram">
+<varlistentry xml:id="bigram">
 <term><command>bigram</command></term>
 <listitem>
 <indexterm zone="ch-system-findutils bigram"><primary sortas="b-bigram">bigram</primary></indexterm>
@@ -71,7 +72,7 @@ which is FHS-compliant.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="code">
+<varlistentry xml:id="code">
 <term><command>code</command></term>
 <listitem>
 <indexterm zone="ch-system-findutils code"><primary sortas="b-code">code</primary></indexterm>
@@ -80,7 +81,7 @@ databases. It is the ancestor of <command>frcode</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="find">
+<varlistentry xml:id="find">
 <term><command>find</command></term>
 <listitem>
 <indexterm zone="ch-system-findutils find"><primary sortas="b-find">find</primary></indexterm>
@@ -88,7 +89,7 @@ databases. It is the ancestor of <command>frcode</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="frcode">
+<varlistentry xml:id="frcode">
 <term><command>frcode</command></term>
 <listitem>
 <indexterm zone="ch-system-findutils frcode"><primary sortas="b-frcode">frcode</primary></indexterm>
@@ -97,7 +98,7 @@ front-compression, reducing the database size by a factor of 4 to 5.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="locate">
+<varlistentry xml:id="locate">
 <term><command>locate</command></term>
 <listitem>
 <indexterm zone="ch-system-findutils locate"><primary sortas="b-locate">locate</primary></indexterm>
@@ -106,7 +107,7 @@ and reports the names that contain a given string or match a given pattern.</par
 </listitem>
 </varlistentry>
 
-<varlistentry id="updatedb">
+<varlistentry xml:id="updatedb">
 <term><command>updatedb</command></term>
 <listitem>
 <indexterm zone="ch-system-findutils updatedb"><primary sortas="b-updatedb">updatedb</primary></indexterm>
@@ -116,7 +117,7 @@ unless told not to) and puts every file name it finds in the database.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="xargs">
+<varlistentry xml:id="xargs">
 <term><command>xargs</command></term>
 <listitem>
 <indexterm zone="ch-system-findutils xargs"><primary sortas="b-xargs">xargs</primary></indexterm>
@@ -125,6 +126,6 @@ unless told not to) and puts every file name it finds in the database.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

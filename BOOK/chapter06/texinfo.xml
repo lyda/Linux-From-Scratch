@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-texinfo" xreflabel="Texinfo" role="wrap">
-<title>Texinfo-&texinfo-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-texinfo" xreflabel="Texinfo" role="wrap">
+<info><title>Texinfo-&texinfo-version;</title></info>
 <?dbhtml filename="texinfo.html"?>
 
 <indexterm zone="ch-system-texinfo"><primary sortas="a-Texinfo">Texinfo</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Texinfo package contains programs for reading, writing, and
 converting Info documents.</para>
 
@@ -24,10 +25,10 @@ converting Info documents.</para>
 <seglistitem><seg>Bash, Binutils, Coreutils,
 Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Texinfo</title>
+<section role="installation">
+<info><title>Installation of Texinfo</title></info>
 
 <para>Prepare Texinfo for compilation:</para>
 
@@ -79,10 +80,10 @@ for f in *
 do install-info $f dir 2&gt;/dev/null
 done</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-texinfo" role="content"><title>Contents of Texinfo</title>
+<section xml:id="contents-texinfo" role="content"><info><title>Contents of Texinfo</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -92,7 +93,7 @@ makeinfo, texi2dvi and texindex</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="info">
+<varlistentry xml:id="info">
 <term><command>info</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo info"><primary sortas="b-info">info</primary></indexterm>
@@ -103,7 +104,7 @@ and <command>info tar</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="infokey">
+<varlistentry xml:id="infokey">
 <term><command>infokey</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo infokey"><primary sortas="b-infokey">infokey</primary></indexterm>
@@ -112,7 +113,7 @@ customizations into a binary format.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="install-info">
+<varlistentry xml:id="install-info">
 <term><command>install-info</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo install-info"><primary sortas="b-install-info">install-info</primary></indexterm>
@@ -120,7 +121,7 @@ customizations into a binary format.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="makeinfo">
+<varlistentry xml:id="makeinfo">
 <term><command>makeinfo</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo makeinfo"><primary sortas="b-makeinfo">makeinfo</primary></indexterm>
@@ -129,7 +130,7 @@ documents into various other formats: Info files, plain text, or HTML.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="texi2dvi">
+<varlistentry xml:id="texi2dvi">
 <term><command>texi2dvi</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo texi2dvi"><primary sortas="b-texi2dvi">texi2dvi</primary></indexterm>
@@ -138,7 +139,7 @@ document into a device-independent file that can be printed.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="texindex">
+<varlistentry xml:id="texindex">
 <term><command>texindex</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo texindex"><primary sortas="b-texindex">texindex</primary></indexterm>
@@ -147,6 +148,6 @@ document into a device-independent file that can be printed.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

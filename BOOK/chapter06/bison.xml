@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-bison" xreflabel="Bison" role="wrap">
-<title>Bison-&bison-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-bison" xreflabel="Bison" role="wrap">
+<info><title>Bison-&bison-version;</title></info>
 <?dbhtml filename="bison.html"?>
 
 <indexterm zone="ch-system-bison"><primary sortas="a-Bison">Bison</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Bison package contains a parser generator.</para>
 
 <segmentedlist>
@@ -23,10 +24,10 @@
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
 GCC, Gettext, Glibc, Grep, M4, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Bison</title>
+<section role="installation">
+<info><title>Installation of Bison</title></info>
 
 <para>Prepare Bison for compilation:</para>
 
@@ -43,10 +44,10 @@ GCC, Gettext, Glibc, Grep, M4, Make, Sed</seg></seglistitem>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-bison" role="content"><title>Contents of Bison</title>
+<section xml:id="contents-bison" role="content"><info><title>Contents of Bison</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -56,7 +57,7 @@ GCC, Gettext, Glibc, Grep, M4, Make, Sed</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="bison">
+<varlistentry xml:id="bison">
 <term><command>bison</command></term>
 <listitem>
 <indexterm zone="ch-system-bison bison"><primary sortas="b-bison">bison</primary></indexterm>
@@ -66,7 +67,7 @@ for analyzing the structure of text files. <command>bison</command> is a replace
 </listitem>
 </varlistentry>
 
-<varlistentry id="yacc">
+<varlistentry xml:id="yacc">
 <term><command>yacc</command></term>
 <listitem>
 <indexterm zone="ch-system-bison yacc"><primary sortas="b-yacc">yacc</primary></indexterm>
@@ -76,7 +77,7 @@ It calls <command>bison</command> with the <parameter>-y</parameter> option.</pa
 </listitem>
 </varlistentry>
 
-<varlistentry id="liby.a">
+<varlistentry xml:id="liby.a">
 <term><filename class="libraryfile">liby.a</filename></term>
 <listitem>
 <indexterm zone="ch-system-bison liby.a"><primary sortas="c-liby.a">liby.a</primary></indexterm>
@@ -87,6 +88,6 @@ is normally not very useful, but POSIX requires it.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

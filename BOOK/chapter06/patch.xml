@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-patch" xreflabel="Patch" role="wrap">
-<title>Patch-&patch-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-patch" xreflabel="Patch" role="wrap">
+<info><title>Patch-&patch-version;</title></info>
 <?dbhtml filename="patch.html"?>
 
 <indexterm zone="ch-system-patch"><primary sortas="a-Patch">Patch</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Patch package contains a program for modifying files.</para>
 
 <segmentedlist>
@@ -23,10 +24,10 @@
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Patch</title>
+<section role="installation">
+<info><title>Installation of Patch</title></info>
 
 <para>Prepare Patch for compilation (the preprocessor flag
 <parameter>-D_GNU_SOURCE</parameter> is only needed on PowerPCs, on other
@@ -42,10 +43,10 @@ machines you can leave it out):</para>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-patch" role="content"><title>Contents of Patch</title>
+<section xml:id="contents-patch" role="content"><info><title>Contents of Patch</title></info>
 
 <segmentedlist>
 <segtitle>Installed program</segtitle>
@@ -54,7 +55,7 @@ machines you can leave it out):</para>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="patch">
+<varlistentry xml:id="patch">
 <term><command>patch</command></term>
 <listitem>
 <indexterm zone="ch-system-patch patch"><primary sortas="b-patch">patch</primary></indexterm>
@@ -67,6 +68,6 @@ up-to-date can save you a lot of download time.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

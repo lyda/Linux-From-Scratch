@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-inetutils" xreflabel="Inetutils" role="wrap">
-<title>Inetutils-&inetutils-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="ch-system-inetutils" xreflabel="Inetutils" role="wrap">
+<info><title>Inetutils-&inetutils-version;</title></info>
 <?dbhtml filename="inetutils.html"?>
 
 <indexterm zone="ch-system-inetutils"><primary sortas="a-Inetutils">Inetutils</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Inetutils package contains programs for basic networking.</para>
 
 <segmentedlist>
@@ -23,10 +25,10 @@
 <seglistitem><seg>Bash, Binutils, Coreutils,
 Diffutils, GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Inetutils</title>
+<section role="installation">
+<info><title>Installation of Inetutils</title></info>
 
 <para>Inetutils has issues with the Linux 2.6 kernel series - fix these isues
 by applying the following patch:</para>
@@ -78,7 +80,7 @@ installation of the various network servers included as part of the Inetutils
 package. These servers are deemed not appropriate in a basic LFS system. Some
 are insecure by nature and are only considered safe on trusted networks. More
 information can be found at
-<ulink url="&blfs-root;view/stable/basicnet/inetutils.html"/>. Note that better
+<uri xlink:href="&blfs-root;view/stable/basicnet/inetutils.html"/>. Note that better
 replacements are available for many of these servers.</para></listitem>
 </varlistentry>
 </variablelist>
@@ -96,10 +98,10 @@ place:</para>
 
 <screen><userinput>mv /usr/bin/ping /bin</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-inetutils" role="content"><title>Contents of Inetutils</title>
+<section xml:id="contents-inetutils" role="content"><info><title>Contents of Inetutils</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -108,7 +110,7 @@ place:</para>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="ftp">
+<varlistentry xml:id="ftp">
 <term><command>ftp</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils ftp"><primary sortas="b-ftp">ftp</primary></indexterm>
@@ -116,7 +118,7 @@ place:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="ping">
+<varlistentry xml:id="ping">
 <term><command>ping</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils ping"><primary sortas="b-ping">ping</primary></indexterm>
@@ -124,7 +126,7 @@ place:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="rcp">
+<varlistentry xml:id="rcp">
 <term><command>rcp</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils rcp"><primary sortas="b-rcp">rcp</primary></indexterm>
@@ -132,7 +134,7 @@ place:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="rlogin">
+<varlistentry xml:id="rlogin">
 <term><command>rlogin</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils rlogin"><primary sortas="b-rlogin">rlogin</primary></indexterm>
@@ -140,7 +142,7 @@ place:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="rsh">
+<varlistentry xml:id="rsh">
 <term><command>rsh</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils rsh"><primary sortas="b-rsh">rsh</primary></indexterm>
@@ -148,7 +150,7 @@ place:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="talk">
+<varlistentry xml:id="talk">
 <term><command>talk</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils talk"><primary sortas="b-talk">talk</primary></indexterm>
@@ -156,7 +158,7 @@ place:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="telnet">
+<varlistentry xml:id="telnet">
 <term><command>telnet</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils telnet"><primary sortas="b-telnet">telnet</primary></indexterm>
@@ -164,7 +166,7 @@ place:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="tftp">
+<varlistentry xml:id="tftp">
 <term><command>tftp</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils tftp"><primary sortas="b-tftp">tftp</primary></indexterm>
@@ -173,6 +175,6 @@ place:</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-ncurses" xreflabel="Ncurses" role="wrap">
-<title>Ncurses-&ncurses-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-ncurses" xreflabel="Ncurses" role="wrap">
+<info><title>Ncurses-&ncurses-version;</title></info>
 <?dbhtml filename="ncurses.html"?>
 
 <indexterm zone="ch-system-ncurses"><primary sortas="a-Ncurses">Ncurses</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Ncurses package contains libraries for terminal-independent
 handling of character screens.</para>
 
@@ -24,10 +25,10 @@ handling of character screens.</para>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
 Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Ncurses</title>
+<section role="installation">
+<info><title>Installation of Ncurses</title></info>
 
 <para>Prepare Ncurses for compilation:</para>
 
@@ -59,10 +60,10 @@ non-existent files. Recreate those symlinks:</para>
 
 <screen><userinput>ln -sf ../../lib/libncurses.so.5 /usr/lib/libncurses.so
 ln -sf libncurses.so /usr/lib/libcurses.so</userinput></screen>
-</sect2>
+</section>
 
 
-<sect2 id="contents-ncurses" role="content"><title>Contents of Ncurses</title>
+<section xml:id="contents-ncurses" role="content"><title>Contents of Ncurses</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -75,7 +76,7 @@ libncurses++.a, libncurses.[a,so], libpanel.[a,so]</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="captoinfo">
+<varlistentry xml:id="captoinfo">
 <term><command>captoinfo</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses captoinfo"><primary sortas="b-captoinfo">captoinfo</primary></indexterm>
@@ -83,7 +84,7 @@ libncurses++.a, libncurses.[a,so], libpanel.[a,so]</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="clear">
+<varlistentry xml:id="clear">
 <term><command>clear</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses clear"><primary sortas="b-clear">clear</primary></indexterm>
@@ -91,7 +92,7 @@ libncurses++.a, libncurses.[a,so], libpanel.[a,so]</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="infocmp">
+<varlistentry xml:id="infocmp">
 <term><command>infocmp</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses infocmp"><primary sortas="b-infocmp">infocmp</primary></indexterm>
@@ -99,7 +100,7 @@ libncurses++.a, libncurses.[a,so], libpanel.[a,so]</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="infotocap">
+<varlistentry xml:id="infotocap">
 <term><command>infotocap</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses infotocap"><primary sortas="b-infotocap">infotocap</primary></indexterm>
@@ -107,7 +108,7 @@ libncurses++.a, libncurses.[a,so], libpanel.[a,so]</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="reset">
+<varlistentry xml:id="reset">
 <term><command>reset</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses reset"><primary sortas="b-reset">reset</primary></indexterm>
@@ -115,7 +116,7 @@ libncurses++.a, libncurses.[a,so], libpanel.[a,so]</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="tack">
+<varlistentry xml:id="tack">
 <term><command>tack</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses tack"><primary sortas="b-tack">tack</primary></indexterm>
@@ -124,7 +125,7 @@ used to test the correctness of an entry in the terminfo database.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="tic">
+<varlistentry xml:id="tic">
 <term><command>tic</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses tic"><primary sortas="b-tic">tic</primary></indexterm>
@@ -135,7 +136,7 @@ capabilities of a certain terminal.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="toe">
+<varlistentry xml:id="toe">
 <term><command>toe</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses toe"><primary sortas="b-toe">toe</primary></indexterm>
@@ -144,7 +145,7 @@ giving its primary name and its description.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="tput">
+<varlistentry xml:id="tput">
 <term><command>tput</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses tput"><primary sortas="b-tput">tput</primary></indexterm>
@@ -154,7 +155,7 @@ a terminal, or report its long name.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="tset">
+<varlistentry xml:id="tset">
 <term><command>tset</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses tset"><primary sortas="b-tset">tset</primary></indexterm>
@@ -162,7 +163,7 @@ a terminal, or report its long name.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="libncurses">
+<varlistentry xml:id="libncurses">
 <term><filename class="libraryfile">>libncurses*</filename></term>
 <listitem>
 <indexterm zone="ch-system-ncurses libncurses"><primary sortas="c-libncurses*">libncurses*</primary></indexterm>
@@ -172,7 +173,7 @@ functions is the menu displayed during the kernel's <command>make menuconfig</co
 </listitem>
 </varlistentry>
 
-<varlistentry id="libform">
+<varlistentry xml:id="libform">
 <term><filename class="libraryfile">libform*</filename></term>
 <listitem>
 <indexterm zone="ch-system-ncurses libform"><primary sortas="c-libform*">libform*</primary></indexterm>
@@ -180,7 +181,7 @@ functions is the menu displayed during the kernel's <command>make menuconfig</co
 </listitem>
 </varlistentry>
 
-<varlistentry id="libmenu">
+<varlistentry xml:id="libmenu">
 <term><filename class="libraryfile">libmenu*</filename></term>
 <listitem>
 <indexterm zone="ch-system-ncurses libmenu"><primary sortas="c-libmenu*">libmenu*</primary></indexterm>
@@ -188,7 +189,7 @@ functions is the menu displayed during the kernel's <command>make menuconfig</co
 </listitem>
 </varlistentry>
 
-<varlistentry id="libpanel">
+<varlistentry xml:id="libpanel">
 <term><filename class="libraryfile">libpanel*</filename></term>
 <listitem>
 <indexterm zone="ch-system-ncurses libpanel"><primary sortas="c-libpanel*">libpanel*</primary></indexterm>
@@ -197,6 +198,6 @@ functions is the menu displayed during the kernel's <command>make menuconfig</co
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

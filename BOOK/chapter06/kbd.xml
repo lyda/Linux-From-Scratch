@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-kbd" xreflabel="Kbd" role="wrap">
-<title>Kbd-&kbd-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-system-kbd" xreflabel="Kbd" role="wrap">
+<info><title>Kbd-&kbd-version;</title></info>
 <?dbhtml filename="kbd.html"?>
 
 <indexterm zone="ch-system-kbd"><primary sortas="a-Kbd">Kbd</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Kbd package contains key-table files and keyboard utilities.</para>
 
 <segmentedlist>
@@ -23,10 +24,10 @@
 <seglistitem><seg>Bash, Binutils, Bison, Coreutils,
 Diffutils, Flex, GCC, Gettext, Glibc, Grep, Gzip, M4, Make, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of Kbd</title>
+<section role="installation">
+<info><title>Installation of Kbd</title></info>
 
 <para>Prepare Kbd for compilation:</para>
 
@@ -40,12 +41,12 @@ Diffutils, Flex, GCC, Gettext, Glibc, Grep, Gzip, M4, Make, Sed</seg></seglistit
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+</section>
 
 <!-- The "Configuring your keyboard" section has been moved to
 Chapter 7 and renamed to "Configuring Linux console" -->
 
-<sect2 id="contents-kbd" role="content"><title>Contents of Kbd</title>
+<section xml:id="contents-kbd" role="content"><info><title>Contents of Kbd</title></info>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -59,7 +60,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="chvt">
+<varlistentry xml:id="chvt">
 <term><command>chvt</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd chvt"><primary sortas="b-chvt">chvt</primary></indexterm>
@@ -67,7 +68,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="deallocvt">
+<varlistentry xml:id="deallocvt">
 <term><command>deallocvt</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd deallocvt"><primary sortas="b-deallocvt">deallocvt</primary></indexterm>
@@ -75,7 +76,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="dumpkeys">
+<varlistentry xml:id="dumpkeys">
 <term><command>dumpkeys</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd dumpkeys"><primary sortas="b-dumpkeys">dumpkeys</primary></indexterm>
@@ -83,7 +84,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="fgconsole">
+<varlistentry xml:id="fgconsole">
 <term><command>fgconsole</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd fgconsole"><primary sortas="b-fgconsole">fgconsole</primary></indexterm>
@@ -91,7 +92,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="getkeycodes">
+<varlistentry xml:id="getkeycodes">
 <term><command>getkeycodes</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd getkeycodes"><primary sortas="b-getkeycodes">getkeycodes</primary></indexterm>
@@ -99,7 +100,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="getunimap">
+<varlistentry xml:id="getunimap">
 <term><command>getunimap</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd getunimap"><primary sortas="b-getunimap">getunimap</primary></indexterm>
@@ -107,7 +108,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="kbd_mode">
+<varlistentry xml:id="kbd_mode">
 <term><command>kbd_mode</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd kbd_mode"><primary sortas="b-kbd_mode">kbd_mode</primary></indexterm>
@@ -115,7 +116,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="kbdrate">
+<varlistentry xml:id="kbdrate">
 <term><command>kbdrate</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd kbdrate"><primary sortas="b-kbdrate">kbdrate</primary></indexterm>
@@ -123,7 +124,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="loadkeys">
+<varlistentry xml:id="loadkeys">
 <term><command>loadkeys</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd loadkeys"><primary sortas="b-loadkeys">loadkeys</primary></indexterm>
@@ -131,7 +132,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="loadunimap">
+<varlistentry xml:id="loadunimap">
 <term><command>loadunimap</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd loadunimap"><primary sortas="b-loadunimap">loadunimap</primary></indexterm>
@@ -139,7 +140,7 @@ showconsolefont, showkey, unicode_start and unicode_stop</seg></seglistitem>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mapscrn">
+<varlistentry xml:id="mapscrn">
 <term><command>mapscrn</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd mapscrn"><primary sortas="b-mapscrn">mapscrn</primary></indexterm>
@@ -149,7 +150,7 @@ now done by <command>setfont</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="openvt">
+<varlistentry xml:id="openvt">
 <term><command>openvt</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd openvt"><primary sortas="b-openvt">openvt</primary></indexterm>
@@ -157,7 +158,7 @@ now done by <command>setfont</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="psf">
+<varlistentry xml:id="psf">
 <term><command>psf*</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd psf"><primary sortas="b-psf*">psf*</primary></indexterm>
@@ -165,7 +166,7 @@ now done by <command>setfont</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="resizecons">
+<varlistentry xml:id="resizecons">
 <term><command>resizecons</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd resizecons"><primary sortas="b-resizecons">resizecons</primary></indexterm>
@@ -173,7 +174,7 @@ now done by <command>setfont</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="setfont">
+<varlistentry xml:id="setfont">
 <term><command>setfont</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd setfont"><primary sortas="b-setfont">setfont</primary></indexterm>
@@ -181,7 +182,7 @@ now done by <command>setfont</command>.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="setkeycodes">
+<varlistentry xml:id="setkeycodes">
 <term><command>setkeycodes</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd setkeycodes"><primary sortas="b-setkeycodes">setkeycodes</primary></indexterm>
@@ -190,7 +191,7 @@ mapping table entries, useful if you have some unusual keys on your keyboard.</p
 </listitem>
 </varlistentry>
 
-<varlistentry id="setleds">
+<varlistentry xml:id="setleds">
 <term><command>setleds</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd setleds"><primary sortas="b-setleds">setleds</primary></indexterm>
@@ -199,7 +200,7 @@ people find it useful to have <quote>Num Lock</quote> on by default, <command>se
 </listitem>
 </varlistentry>
 
-<varlistentry id="setlogcons">
+<varlistentry xml:id="setlogcons">
 <term><command>setlogcons</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd setlogcons"><primary sortas="b-setlogcons">setlogcons</primary></indexterm>
@@ -207,7 +208,7 @@ people find it useful to have <quote>Num Lock</quote> on by default, <command>se
 </listitem>
 </varlistentry>
 
-<varlistentry id="setmetamode">
+<varlistentry xml:id="setmetamode">
 <term><command>setmetamode</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd setmetamode"><primary sortas="b-setmetamode">setmetamode</primary></indexterm>
@@ -215,7 +216,7 @@ people find it useful to have <quote>Num Lock</quote> on by default, <command>se
 </listitem>
 </varlistentry>
 
-<varlistentry id="setvesablank">
+<varlistentry xml:id="setvesablank">
 <term><command>setvesablank</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd setvesablank"><primary sortas="b-setvesablank">setvesablank</primary></indexterm>
@@ -224,7 +225,7 @@ hardware screensaver (no toasters, just a blank screen).</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="showconsolefont">
+<varlistentry xml:id="showconsolefont">
 <term><command>showconsolefont</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd showconsolefont"><primary sortas="b-showconsolefont">showconsolefont</primary></indexterm>
@@ -232,7 +233,7 @@ hardware screensaver (no toasters, just a blank screen).</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="showkey">
+<varlistentry xml:id="showkey">
 <term><command>showkey</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd showkey"><primary sortas="b-showkey">showkey</primary></indexterm>
@@ -241,7 +242,7 @@ ASCII codes of the keys pressed on the keyboard.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="unicode_start">
+<varlistentry xml:id="unicode_start">
 <term><command>unicode_start</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd unicode_start"><primary sortas="b-unicode_start">unicode_start</primary></indexterm>
@@ -250,7 +251,7 @@ because applications are not configured to support UNICODE.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="unicode_stop">
+<varlistentry xml:id="unicode_stop">
 <term><command>unicode_stop</command></term>
 <listitem>
 <indexterm zone="ch-system-kbd unicode_stop"><primary sortas="b-unicode_stop">unicode_stop</primary></indexterm>
@@ -259,6 +260,6 @@ because applications are not configured to support UNICODE.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-revisedchroot">
-<title>Cleaning up</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="ch-system-revisedchroot">
+<info><title>Cleaning up</title></info>
 <?dbhtml filename="revisedchroot.html"?>
 
 <para>From now on, when you exit the chroot environment and wish to reenter
@@ -30,7 +32,7 @@ will need to recompile and re-install them. The installation instructions are
 the same as in <xref linkend="chapter-temporary-tools"/>, apart from changing
 the prefix from <filename class="directory">/tools</filename> to <filename class="directory">/usr</filename>. The
 BLFS book discusses a slightly different approach to installing Tcl, see 
-<ulink url="&blfs-root;"/>.</para></note>
+<uri xlink:href="&blfs-root;"/>.</para></note>
 
 <para>You may also want to move the packages and patches stored in <filename 
 class="directory">/sources</filename> to a more usual location, such as
@@ -38,4 +40,4 @@ class="directory">/sources</filename> to a more usual location, such as
 directory -- or simply delete the whole directory if you've burned its contents
 on a CD).</para>
 
-</sect1>
+</section>
