@@ -25,7 +25,7 @@ case "${1}" in
 			mount -n /proc || failed=1
 		fi
 
-		if mountpoint /sys
+		if ! mountpoint /sys
 		then
 			boot_mesg -n "/sys" ${NORMAL}
 			mount -n /sys || failed=1
