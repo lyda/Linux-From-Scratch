@@ -66,6 +66,13 @@ There is a plugin to fix Outlook at
 and one for Outlook Express at
 <ulink url="http://home.in.tum.de/~jain/software/oe-quotefix/"/>.
 </para>
+<para><emphasis role="bold">Limit signatures to four lines.</emphasis>
+</para>
+<para><emphasis role="bold">Trim quoted text,</emphasis> especially signatures.
+But <emphasis role="bold">do not trim so that it is confusing
+to read your reply</emphasis>
+without consulting the original.
+</para>
 <para><emphasis role="bold">Do not click reply
 unless you're actually replying to a post.</emphasis>
 Use new, or compose, or whatever your mail client calls it,
@@ -74,8 +81,6 @@ Reply sets more than just the subject line
 and will cause your post to appear in the wrong place
 unless you're actually answering.
 </para>
-<para><emphasis role="bold">Limit signatures to four lines.</emphasis>
-</para>
 <para>The following isn't major, but is useful to know.
 On the LFS lists, people usually clear the CC field
 and just mail the list with replies.
@@ -83,10 +88,6 @@ This is probably not a good idea but is existing practice
 due to a political situation which is unlikely to change.
 </para>
 <!-- XXX: future stuff
-
-Trim quoted text, especially signatures.
-But don't trim so much as to make it confusing to read your reply
-without consulting the original.
 
 Be careful to use the correct list.
 
