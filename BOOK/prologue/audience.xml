@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="pre-audience">
-<title>Audience</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="pre-audience">
+<info><title>Audience</title></info>
 <?dbhtml filename="audience.html"?>
 
-<sect2>
-<title>Who would want to read this book</title>
+<section>
+<info><title>Who would want to read this book</title></info>
 
 <para>There are many reasons why somebody would want to read this book. The 
 principal reason being to install a Linux system straight from the source 
@@ -65,11 +67,10 @@ problem (adequately).</para>
 to be listed here. This section is only the tip of the iceberg.  As you 
 continue in your LFS experience, you will find on your own the power that 
 information and knowledge truly bring.</para>
+</section>
 
-</sect2>
-
-<sect2>
-<title>Who would not want to read this book</title>
+<section>
+<info><title>Who would not want to read this book</title></info>
 
 <para>There are probably some who, for whatever reason, would feel that they do not 
 want to read this book. If you do not wish to build your own Linux system from 
@@ -87,10 +88,10 @@ you do not have any plans for your finished system, then the
 <quote>From Power Up To Bash Prompt</quote> HOWTO is probably a better choice.</para>
 
 <para>The <quote>From Power Up To Bash Prompt</quote> HOWTO is located at 
-<ulink url="http://axiom.anu.edu.au/~okeefe/p2b/"/> or on The Linux 
+<uri xlink:href="http://axiom.anu.edu.au/~okeefe/p2b/">http://axiom.anu.edu.au/~okeefe/p2b/</uri> or on The Linux 
 Documentation Project's website at
-<ulink url="http://www.tldp.org/HOWTO/From-PowerUp-To-Bash-Prompt-HOWTO.html"/>.</para>
+<uri xlink:href="http://www.tldp.org/HOWTO/From-PowerUp-To-Bash-Prompt-HOWTO.html">http://www.tldp.org/HOWTO/From-PowerUp-To-Bash-Prompt-HOWTO.html</uri>.</para>
 
-</sect2>
+</section>
 
-</sect1>
+</section>

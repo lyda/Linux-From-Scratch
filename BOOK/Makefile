@@ -60,5 +60,5 @@ nochunks:
 	tidy -config tidy.conf $(BASEDIR)/$(NOCHUNKS_OUTPUT) || true
 
 validate:
-	xmllint --noout --nonet --xinclude --postvalid index.xml
+	xmllint --noout --xinclude --relaxng docbook.rng index.xml
 

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="pre-typography">
-<title>Typography</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="pre-typography">
+<info><title>Typography</title></info>
 <?dbhtml filename="typography.html"?>
 
 <para>To make things easier to follow, there are a few typographical
@@ -28,7 +30,7 @@ show filenames, such as <filename>/etc/ld.so.conf</filename>.</para></blockquote
 <blockquote><para>This form of text is used for several purposes in the 
 book, mainly to emphasize important points or items.</para></blockquote>
 
-<para><ulink url="&lfs-root;"/></para>
+<para><uri xlink:href="&lfs-root;">&lfs-root;</uri></para>
 
 <blockquote><para>This form of text is used for hyperlinks, both within the 
 book and to external pages such as HOWTOs, download locations and
@@ -51,4 +53,4 @@ typed as seen.</para></blockquote>
 <blockquote><para>This form of text is used to encapsulate text that is
 not to be typed as seen or copy and pasted.</para></blockquote>
 
-</sect1>
+</section>

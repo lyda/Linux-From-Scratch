@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="pre-organization">
-<title>Structure</title>
+<section xmlns="http://docbook.org/docbook-ng" xml:id="pre-organization">
+<info><title>Structure</title></info>
 <?dbhtml filename="organization.html"?>
 
 <para>This book is divided into the following parts:</para>
 
-<sect2>
-<title>Part I - Introduction</title>
+<section>
+<info><title>Part I - Introduction</title></info>
 
 <para>Part I explains a few important things on how to proceed with the
 installation, and gives meta-information about the book (version, changelog,
 acknowledgments, associated mailing lists, and so on).</para>
-</sect2>
+</section>
 
-<sect2>
-<title>Part II - Preparing for the build</title>
+<section>
+<info><title>Part II - Preparing for the build</title></info>
 
 <para>Part II describes how to prepare for the building process: making a
 partition, downloading the packages, and compiling temporary tools.</para>
-</sect2>
+</section>
 
-<sect2>
-<title>Part III - Building the LFS system</title>
+<section>
+<info><title>Part III - Building the LFS system</title></info>
 
 <para>Part III guides you through the building of the LFS system: compiling and
 installing all the packages one by one, setting up the boot scripts, and
@@ -33,6 +33,6 @@ installing the kernel. The resulting basic Linux system is the foundation upon
 which you can build other software, to extend your system in the way you like.
 At the end of the book you'll find a list of all of the programs, libraries and
 important files that have been installed as an easy to use reference.</para>
-</sect2>
+</section>
 
-</sect1>
+</section>

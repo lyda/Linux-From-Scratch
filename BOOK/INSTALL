@@ -17,9 +17,6 @@ If all you want to do is convert XML to HTML perform the following:
 * libxslt
   - http://www.linuxfromscratch.org/blfs/view/cvs/general/libxslt.html
 
-* DocBook DTD 
-  - http://www.linuxfromscratch.org/blfs/view/cvs/pst/xml.html
-
 * DocBook XSL Stylesheets 
   - http://www.linuxfromscratch.org/blfs/view/cvs/pst/docbook-xsl.html
   - additionally create a link from

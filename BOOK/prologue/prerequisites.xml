@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="pf-prerequisites">
-<title>Prerequisites</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="pf-prerequisites">
+<info><title>Prerequisites</title></info>
 <?dbhtml filename="prerequisites.html"?>
 
 <para>This book assumes that its reader has a good deal of knowledge about
@@ -16,15 +18,14 @@ system, you should read the following HOWTOs:</para>
 
 <para>This is a comprehensive guide to building and installing
 <quote>generic</quote> Unix software distributions under Linux. This HOWTO is
-available at <ulink
-url="http://www.tldp.org/HOWTO/Software-Building-HOWTO.html"/>.</para>
+available at <uri xlink:href="http://www.tldp.org/HOWTO/Software-Building-HOWTO.html">http://www.tldp.org/HOWTO/Software-Building-HOWTO.html</uri>.</para>
 </listitem>
 
 <listitem><para>The Linux Users' Guide</para>
 
-<para>This guide covers the usage of assorted Linux software and is
-available at
-<ulink url="http://espc22.murdoch.edu.au/~stewart/guide/guide.html"/>.</para></listitem>
+<para>This guide covers the usage of assorted Linux software and is available at
+<uri xlink:href="http://espc22.murdoch.edu.au/~stewart/guide/guide.html">http://espc22.murdoch.edu.au/~stewart/guide/guide.html</uri>.</para>
+</listitem>
 
 <listitem><para>The Essential Pre-Reading Hint</para>
 
@@ -33,8 +34,8 @@ mostly a list of links to excellent sources of information on a wide range of
 topics. Any person attempting to install LFS, should at least have an
 understanding of many of the topics in this hint. It is available at
 
-<ulink url="&hints-root;essential_prereading.txt"/></para></listitem>
+<uri xlink:href="&hints-root;essential_prereading.txt">&hints-root;essential_prereading.txt</uri></para></listitem>
 
 </itemizedlist>
 
-</sect1>
+</section>

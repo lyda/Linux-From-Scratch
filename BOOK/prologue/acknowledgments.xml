@@ -1,102 +1,105 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-scatter-acknowledgments">
-<title>Acknowledgments</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink" 
+         xml:id="ch-scatter-acknowledgments">
+<info><title>Acknowledgments</title></info>
+
 <?dbhtml filename="acknowledgements.html"?>
 
 <para>We would like to thank the following people and organizations for their
 contributions to the Linux From Scratch Project.</para>
 
-<sect2>
-<title>Current Project Team Members</title>
+<section><info><title>Current Project Team Members</title></info>
+
 
 <itemizedlist>
 
-<listitem><para><ulink url="mailto:gerard@linuxfromscratch.org">Gerard
-Beekmans</ulink> &lt;gerard@linuxfromscratch.org&gt; -- Linux-From-Scratch
+<listitem><para><link xlink:href="mailto:gerard@linuxfromscratch.org">Gerard
+Beekmans</link> &lt;gerard@linuxfromscratch.org&gt; -- Linux-From-Scratch
 initiator, LFS Project organizer.</para></listitem>
 
-<listitem><para><ulink url="mailto:matthew@linuxfromscratch.org">Matthew
-Burgess</ulink> &lt;matthew@linuxfromscratch.org&gt; -- LFS Project Co-Leader, 
+<listitem><para><link xlink:href="mailto:matthew@linuxfromscratch.org">Matthew
+Burgess</link> &lt;matthew@linuxfromscratch.org&gt; -- LFS Project Co-Leader, 
 LFS General Package maintainer, LFS Book editor.</para></listitem>
 
-<listitem><para><ulink url="mailto:meerkats@bellsouth.net">Craig
-Colton</ulink> &lt;meerkats@bellsouth.net&gt; -- LFS, ALFS, BLFS and Hints
+<listitem><para><link xlink:href="mailto:meerkats@bellsouth.net">Craig
+Colton</link> &lt;meerkats@bellsouth.net&gt; -- LFS, ALFS, BLFS and Hints
 Project logo creator.</para></listitem>
 
-<listitem><para><ulink url="mailto:nathan@linuxfromscratch.org">Nathan
-Coulson</ulink> &lt;nathan@linuxfromscratch.org&gt; -- LFS-Bootscripts
+<listitem><para><link xlink:href="mailto:nathan@linuxfromscratch.org">Nathan
+Coulson</link> &lt;nathan@linuxfromscratch.org&gt; -- LFS-Bootscripts
 maintainer.</para></listitem>
 
-<listitem><para><ulink url="mailto:jeroen@linuxfromscratch.org">Jeroen
-Coumans</ulink> &lt;jeroen@linuxfromscratch.org&gt; -- Website developer, FAQ
+<listitem><para><link xlink:href="mailto:jeroen@linuxfromscratch.org">Jeroen
+Coumans</link> &lt;jeroen@linuxfromscratch.org&gt; -- Website developer, FAQ
 maintainer.</para></listitem>
 
-<listitem><para><ulink url="mailto:bdubbs@linuxfromscratch.org">Bruce
-Dubbs</ulink> &lt;bdubbs@linuxfromscratch.org&gt; -- LFS Quality Assurance Team
+<listitem><para><link xlink:href="mailto:bdubbs@linuxfromscratch.org">Bruce
+Dubbs</link> &lt;bdubbs@linuxfromscratch.org&gt; -- LFS Quality Assurance Team
 leader, BLFS Book editor.</para></listitem>
 
-<listitem><para><ulink url="mailto:manuel@linuxfromscratch.org">Manuel
-Canales Esparcia</ulink> &lt;manuel@linuxfromscratch.org&gt; -- LFS Book
+<listitem><para><link xlink:href="mailto:manuel@linuxfromscratch.org">Manuel
+Canales Esparcia</link> &lt;manuel@linuxfromscratch.org&gt; -- LFS Book
 Editor (XML).</para></listitem>
 
-<listitem><para><ulink url="mailto:alex@linuxfromscratch.org">Alex
-Groenewoud</ulink> &lt;alex@linuxfromscratch.org&gt; -- LFS Book
+<listitem><para><link xlink:href="mailto:alex@linuxfromscratch.org">Alex
+Groenewoud</link> &lt;alex@linuxfromscratch.org&gt; -- LFS Book
 editor.</para></listitem>
 
-<listitem><para><ulink url="mailto:markh@linuxfromscratch.org">Mark
-Hymers</ulink> &lt;markh@linuxfromscratch.org&gt; -- CVS maintainer, BLFS Book
+<listitem><para><link xlink:href="mailto:markh@linuxfromscratch.org">Mark
+Hymers</link> &lt;markh@linuxfromscratch.org&gt; -- CVS maintainer, BLFS Book
 creator, former LFS Book editor.</para></listitem>
 
-<listitem><para><ulink url="mailto:iwanek@linuxfromscratch.org">James
-Iwanek</ulink> &lt;iwanek@linuxfromscratch.org&gt; -- System Administration
+<listitem><para><link xlink:href="mailto:iwanek@linuxfromscratch.org">James
+Iwanek</link> &lt;iwanek@linuxfromscratch.org&gt; -- System Administration
 Team member.</para></listitem>
 
-<listitem><para><ulink url="mailto:nicholas@linuxfromscratch.org">Nicholas
-Leippe</ulink> &lt;nicholas@linuxfromscratch.org&gt; -- Wiki
+<listitem><para><link xlink:href="mailto:nicholas@linuxfromscratch.org">Nicholas
+Leippe</link> &lt;nicholas@linuxfromscratch.org&gt; -- Wiki
 maintainer.</para></listitem>
 
-<listitem><para><ulink url="mailto:lizardo@linuxfromscratch.org">Anderson
-Lizardo</ulink> &lt;lizardo@linuxfromscratch.org&gt; -- Website backend scripts
+<listitem><para><link xlink:href="mailto:lizardo@linuxfromscratch.org">Anderson
+Lizardo</link> &lt;lizardo@linuxfromscratch.org&gt; -- Website backend scripts
 creator and maintainer.</para></listitem>
 
-<listitem><para><ulink url="mailto:bill@linuxfromscratch.org">Bill
-Maltby</ulink> &lt;bill@linuxfromscratch.org&gt; -- LFS Project
+<listitem><para><link xlink:href="mailto:bill@linuxfromscratch.org">Bill
+Maltby</link> &lt;bill@linuxfromscratch.org&gt; -- LFS Project
 organizer.</para></listitem>
 
-<listitem><para><ulink url="mailto:alexander@linuxfromscratch.org">Alexander
-Patrakov</ulink> &lt;alexander@linuxfromscratch.org&gt; -- LFS Book
+<listitem><para><link xlink:href="mailto:alexander@linuxfromscratch.org">Alexander
+Patrakov</link> &lt;alexander@linuxfromscratch.org&gt; -- LFS Book
 Editor (internationalization/localization).</para></listitem>
 
-<listitem><para><ulink url="mailto:scot@linuxfromscratch.org">Scot Mc
-Pherson</ulink> &lt;scot@linuxfromscratch.org&gt; -- LFS NNTP gateway
+<listitem><para><link xlink:href="mailto:scot@linuxfromscratch.org">Scot Mc
+Pherson</link> &lt;scot@linuxfromscratch.org&gt; -- LFS NNTP gateway
 maintainer.</para></listitem>
 
-<listitem><para><ulink url="mailto:ryan@linuxfromscratch.org">Ryan
-Oliver</ulink> &lt;ryan@linuxfromscratch.org&gt; -- Testing Team leader,
+<listitem><para><link xlink:href="mailto:ryan@linuxfromscratch.org">Ryan
+Oliver</link> &lt;ryan@linuxfromscratch.org&gt; -- Testing Team leader,
 Toolchain maintainer, co-creator of PLFS.</para></listitem>
 
-<listitem><para><ulink url="mailto:jwrober@linuxfromscratch.org">James
-Robertson</ulink> &lt;jwrober@linuxfromscratch.org&gt; -- Bugzilla maintainer,
+<listitem><para><link xlink:href="mailto:jwrober@linuxfromscratch.org">James
+Robertson</link> &lt;jwrober@linuxfromscratch.org&gt; -- Bugzilla maintainer,
 Wiki developer, LFS Book editor.</para></listitem>
 
-<listitem><para><ulink url="mailto:greg@linuxfromscratch.org">Greg
-Schafer</ulink> &lt;greg@linuxfromscratch.org&gt; -- Toolchain maintainer,
+<listitem><para><link xlink:href="mailto:greg@linuxfromscratch.org">Greg
+Schafer</link> &lt;greg@linuxfromscratch.org&gt; -- Toolchain maintainer,
 Former LFS Book editor, co-creator of PLFS.</para></listitem>
 
-<listitem><para><ulink url="mailto:tushar@linuxfromscratch.org">Tushar
-Teredesai</ulink> &lt;tushar@linuxfromscratch.org&gt; -- BLFS Book editor,
+<listitem><para><link xlink:href="mailto:tushar@linuxfromscratch.org">Tushar
+Teredesai</link> &lt;tushar@linuxfromscratch.org&gt; -- BLFS Book editor,
 Hints and Patches Projects maintainer.</para></listitem>
 
-<listitem><para><ulink url="mailto:jeremy@linuxfromscratch.org">Jeremy
-Utley</ulink> &lt;jeremy@linuxfromscratch.org&gt; -- LFS Book editor, Bugzilla
+<listitem><para><link xlink:href="mailto:jeremy@linuxfromscratch.org">Jeremy
+Utley</link> &lt;jeremy@linuxfromscratch.org&gt; -- LFS Book editor, Bugzilla
 maintainer, LFS-Bootscripts Maintainer, LFS Server co-admin.</para></listitem>
 
-<listitem><para><ulink url="mailto:winkie@linuxfromscratch.org">Zack
-Winkles</ulink> &lt;winkie@linuxfromscratch.org&gt; -- LFS Book editor
+<listitem><para><link xlink:href="mailto:winkie@linuxfromscratch.org">Zack
+Winkles</link> &lt;winkie@linuxfromscratch.org&gt; -- LFS Book editor
 (Emerging Technologies), LFS-Bootscripts co-maintainer.</para></listitem>
 
 <listitem><para>Countless other people on the various LFS and BLFS
@@ -106,227 +109,227 @@ experiences with installing various packages.</para></listitem>
 
 </itemizedlist>
 
-</sect2>
+</section>
 
-<sect2>
-<title>Translators</title>
+<section><info><title>Translators</title></info>
+
 
 <itemizedlist>
 
-<listitem><para><ulink url="mailto:macana@lfs-es.org">Manuel Canales
-Esparcia</ulink> &lt;macana@lfs-es.org&gt; -- Spanish LFS translation
+<listitem><para><link xlink:href="mailto:macana@lfs-es.org">Manuel Canales
+Esparcia</link> &lt;macana@lfs-es.org&gt; -- Spanish LFS translation
 project.</para></listitem>
 
-<listitem><para><ulink url="mailto:johan@linuxfromscratch.org">Johan
-Lenglet</ulink> &lt;johan@linuxfromscratch.org&gt; -- French LFS translation
+<listitem><para><link xlink:href="mailto:johan@linuxfromscratch.org">Johan
+Lenglet</link> &lt;johan@linuxfromscratch.org&gt; -- French LFS translation
 project.</para></listitem>
 
-<listitem><para><ulink url="mailto:lizardo@linuxfromscratch.org">Anderson
-Lizardo</ulink> &lt;lizardo@linuxfromscratch.org&gt; -- Portuguese LFS
+<listitem><para><link xlink:href="mailto:lizardo@linuxfromscratch.org">Anderson
+Lizardo</link> &lt;lizardo@linuxfromscratch.org&gt; -- Portuguese LFS
 translation project.</para></listitem>
 
-<listitem><para><ulink url="mailto:tr@erdfunkstelle.de">Thomas Reitelbach
-</ulink> &lt;tr@erdfunkstelle.de&gt; -- German LFS translation project.</para>
+<listitem><para><link xlink:href="mailto:tr@erdfunkstelle.de">Thomas Reitelbach
+</link> &lt;tr@erdfunkstelle.de&gt; -- German LFS translation project.</para>
 </listitem>
 
 </itemizedlist>
 
-</sect2>
+</section>
 
-<sect2>
-<title>Mirror Maintainers</title>
+<section><info><title>Mirror Maintainers</title></info>
 
-<sect3>
-<title>North American Mirrors</title>
+
+<section><info><title>North American Mirrors</title></info>
+
 
 <itemizedlist>
 
-<listitem><para><ulink url="mailto:scott@osuosl.org">Scott Kveton</ulink>
+<listitem><para><link xlink:href="mailto:scott@osuosl.org">Scott Kveton</link>
 &lt;scott@osuosl.org&gt; -- lfs.oregonstate.edu mirror</para></listitem>
 
-<listitem><para><ulink url="mailto:miha@xuy.biz">Mikhail Pastukhov</ulink>
+<listitem><para><link xlink:href="mailto:miha@xuy.biz">Mikhail Pastukhov</link>
 &lt;miha@xuy.biz&gt; -- lfs.130th.net mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:unknown@unknown.org">Unknown User</ulink>
+<listitem><para><link xlink:href="mailto:unknown@unknown.org">Unknown User</link>
 &lt;unknown@unknown.org&gt; -- lfs.crash404.com mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:lost@l-w.net">William Astle</ulink>
+<listitem><para><link xlink:href="mailto:lost@l-w.net">William Astle</link>
 &lt;lost@l-w.net&gt; -- ca.linuxfromscratch.org mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:jpolen@rackspace.com">Jeremy Polen</ulink>
+<listitem><para><link xlink:href="mailto:jpolen@rackspace.com">Jeremy Polen</link>
 &lt;jpolen@rackspace.com&gt; -- us2.linuxfromscratch.org
 mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:tim@idge.net">Tim Jackson</ulink>
+<listitem><para><link xlink:href="mailto:tim@idge.net">Tim Jackson</link>
 &lt;tim@idge.net&gt; -- linuxfromscratch.idge.net mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:jeremy@linux-phreak.net">Jeremy Utley
-</ulink> &lt;jeremy@linux-phreak.net&gt; -- lfs.linux-phreak.net mirror.
+<listitem><para><link xlink:href="mailto:jeremy@linux-phreak.net">Jeremy Utley
+</link> &lt;jeremy@linux-phreak.net&gt; -- lfs.linux-phreak.net mirror.
 </para></listitem>
 
 </itemizedlist>
 
-</sect3>
+</section>
 
-<sect3>
-<title>South American Mirrors</title>
+<section><info><title>South American Mirrors</title></info>
+
 
 <itemizedlist>
 
-<listitem><para><ulink url="mailto:manuel@linuxfromscratch.org">Manuel Canales
-Esparcia</ulink> &lt;manuel@linuxfromscratch.org&gt; -- lfsmirror.lfs-es.org
+<listitem><para><link xlink:href="mailto:manuel@linuxfromscratch.org">Manuel Canales
+Esparcia</link> &lt;manuel@linuxfromscratch.org&gt; -- lfsmirror.lfs-es.org
 mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:sysop@mesi.com.ar">Andres Meggiotto</ulink>
+<listitem><para><link xlink:href="mailto:sysop@mesi.com.ar">Andres Meggiotto</link>
 &lt;sysop@mesi.com.ar&gt; -- lfs.mesi.com.ar mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:ebf@aedsolucoes.com.br">Eduardo B.
-Fonseca</ulink> &lt;ebf@aedsolucoes.com.br&gt; -- br.linuxfromscratch.org
+<listitem><para><link xlink:href="mailto:ebf@aedsolucoes.com.br">Eduardo B.
+Fonseca</link> &lt;ebf@aedsolucoes.com.br&gt; -- br.linuxfromscratch.org
 mirror.</para></listitem>
 
 </itemizedlist>
 
-</sect3>
+</section>
 
-<sect3>
-<title>European Mirrors</title>
+<section><info><title>European Mirrors</title></info>
+
 
 <itemizedlist>
 
-<listitem><para><ulink url="mailto:barna@siker.hu">Barna Koczka</ulink>
+<listitem><para><link xlink:href="mailto:barna@siker.hu">Barna Koczka</link>
 &lt;barna@siker.hu&gt; -- hu.linuxfromscratch.org mirror.</para></listitem>
 
-<listitem><para><ulink url="http://www.mirror.ac.uk">UK Mirror Service</ulink>
+<listitem><para><link xlink:href="http://www.mirror.ac.uk">UK Mirror Service</link>
 -- linuxfromscratch.mirror.ac.uk mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:Martin.Voss@ada.de">Martin Voss</ulink>
+<listitem><para><link xlink:href="mailto:Martin.Voss@ada.de">Martin Voss</link>
 &lt;Martin.Voss@ada.de&gt; -- lfs.linux-matrix.net mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:unknown@unknown.org">Unknown User</ulink>
+<listitem><para><link xlink:href="mailto:unknown@unknown.org">Unknown User</link>
 &lt;unknown@unknown.org&gt; -- mirror.vtx.ch mirror</para></listitem>
 
-<listitem><para><ulink url="mailto:guido@primerelay.net">Guido Passet</ulink>
+<listitem><para><link xlink:href="mailto:guido@primerelay.net">Guido Passet</link>
 &lt;guido@primerelay.net&gt; -- nl.linuxfromscratch.org
 mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:baafie@planet.nl">Bastiaan Jacques</ulink>
+<listitem><para><link xlink:href="mailto:baafie@planet.nl">Bastiaan Jacques</link>
 &lt;baafie@planet.nl&gt; -- lfs.pagefault.net mirror</para></listitem>
 
-<listitem><para><ulink url="mailto:lfs-mirror@linuxfromscratch.rave.org">Roel
-Neefs</ulink> &lt;lfs-mirror@linuxfromscratch.rave.org&gt; -- linuxfromscratch.rave.org mirror.</para></listitem>
+<listitem><para><link xlink:href="mailto:lfs-mirror@linuxfromscratch.rave.org">Roel
+Neefs</link> &lt;lfs-mirror@linuxfromscratch.rave.org&gt; -- linuxfromscratch.rave.org mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:justin@jrknierim.de">Justin Knierim</ulink>
+<listitem><para><link xlink:href="mailto:justin@jrknierim.de">Justin Knierim</link>
 &lt;justin@jrknierim.de&gt; -- www.lfs-matrix.de mirror</para></listitem>
 
-<listitem><para><ulink url="mailto:stevie@stevie20.de">Stephan Brendel</ulink>
+<listitem><para><link xlink:href="mailto:stevie@stevie20.de">Stephan Brendel</link>
 &lt;stevie@stevie20.de&gt; -- lfs.netservice-neuss.de
 mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:unknown@unknown.org">Unknown User</ulink>
+<listitem><para><link xlink:href="mailto:unknown@unknown.org">Unknown User</link>
 &lt;unknown@unknown.org&gt; -- linuxfromscratch.je-zi.de
 mirror</para></listitem>
 
-<listitem><para><ulink url="mailto:unknown@unknown.org">Unknown User</ulink>
+<listitem><para><link xlink:href="mailto:unknown@unknown.org">Unknown User</link>
 &lt;unknown@unknown.org&gt; -- linuxfromscratch.tuxcenter.net
 mirror</para></listitem>
 
-<listitem><para><ulink url="mailto:hrx@hrxnet.de">Hagen Herrschaft</ulink>
+<listitem><para><link xlink:href="mailto:hrx@hrxnet.de">Hagen Herrschaft</link>
 &lt;hrx@hrxnet.de&gt; -- de.linuxfromscratch.org mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:Antonin.Sprinzl@tuwien.ac.at">Antonin
-Sprinzl</ulink> &lt;Antonin.Sprinzl@tuwien.ac.at&gt; -- at.linuxfromscratch.org
+<listitem><para><link xlink:href="mailto:Antonin.Sprinzl@tuwien.ac.at">Antonin
+Sprinzl</link> &lt;Antonin.Sprinzl@tuwien.ac.at&gt; -- at.linuxfromscratch.org
 mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:fredan-lfs@fredan.org">Fredrik
-Danerklint</ulink> &lt;fredan-lfs@fredan.org&gt; -- se.linuxfromscratch.org
+<listitem><para><link xlink:href="mailto:fredan-lfs@fredan.org">Fredrik
+Danerklint</link> &lt;fredan-lfs@fredan.org&gt; -- se.linuxfromscratch.org
 mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:archive@doc.cs.univ-paris8.fr">Parisian
-sysadmins</ulink> &lt;archive@doc.cs.univ-paris8.fr&gt; --
+<listitem><para><link xlink:href="mailto:archive@doc.cs.univ-paris8.fr">Parisian
+sysadmins</link> &lt;archive@doc.cs.univ-paris8.fr&gt; --
 www2.fr.linuxfromscratch.org mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:velin@zadnik.org">Alexander Velin</ulink>
+<listitem><para><link xlink:href="mailto:velin@zadnik.org">Alexander Velin</link>
 &lt;velin@zadnik.org&gt; -- bg.linuxfromscratch.org mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:dirk@securewebservices.co.uk">
-Dirk Webster</ulink> &lt;dirk@securewebservices.co.uk&gt; -- 
+<listitem><para><link xlink:href="mailto:dirk@securewebservices.co.uk">
+Dirk Webster</link> &lt;dirk@securewebservices.co.uk&gt; -- 
 lfs.securewebservices.co.uk mirror</para></listitem>
 
-<listitem><para><ulink url="mailto:thomas@sofagang.dk">Thomas Skyt</ulink>
+<listitem><para><link xlink:href="mailto:thomas@sofagang.dk">Thomas Skyt</link>
 &lt;thomas@sofagang.dk&gt; -- dk.linuxfromscratch.org mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:sime@dot-sime.com">Simon Nicoll</ulink>
+<listitem><para><link xlink:href="mailto:sime@dot-sime.com">Simon Nicoll</link>
 &lt;sime@dot-sime.com&gt; -- uk.linuxfromscratch.org mirror.</para></listitem>
 
 </itemizedlist>
 
-</sect3>
+</section>
 
-<sect3>
-<title>Asian Mirrors</title>
+<section><info><title>Asian Mirrors</title></info>
+
 
 <itemizedlist>
 
-<listitem><para><ulink url="mailto:pyng@spam.averse.net">Pui Yong</ulink>
+<listitem><para><link xlink:href="mailto:pyng@spam.averse.net">Pui Yong</link>
 &lt;pyng@spam.averse.net&gt; -- sg.linuxfromscratch.org
 mirror.</para></listitem>
 
-<listitem><para><ulink url="mailto:stuart@althalus.me.uk">Stuart Harris</ulink>
+<listitem><para><link xlink:href="mailto:stuart@althalus.me.uk">Stuart Harris</link>
 &lt;stuart@althalus.me.uk&gt; -- lfs.mirror.intermedia.com.sg
 mirror</para></listitem>
 
-<listitem><para><ulink url="mailto:unknown@unknown.org">Unknown User</ulink>
+<listitem><para><link xlink:href="mailto:unknown@unknown.org">Unknown User</link>
 &lt;unknown@unknown.org&gt; -- lfs.mirror.if.itb.ac.id mirror</para></listitem>
 
 </itemizedlist>
 
-</sect3>
+</section>
 
-<sect3>
-<title>Australian Mirrors</title>
+<section><info><title>Australian Mirrors</title></info>
+
 
 <itemizedlist>
 
-<listitem><para><ulink url="mailto:jason@dstc.edu.au">Jason Andrade</ulink>
+<listitem><para><link xlink:href="mailto:jason@dstc.edu.au">Jason Andrade</link>
 &lt;jason@dstc.edu.au&gt; -- au.linuxfromscratch.org mirror.</para></listitem>
 
 </itemizedlist>
 
-</sect3>
+</section>
 
-</sect2>
+</section>
 
-<sect2>
-<title>Donators</title>
+<section><info><title>Donators</title></info>
+
 
 <itemizedlist>
 
-<listitem><para><ulink url="mailto:dean@vipersoft.co.uk">Dean Benson</ulink>
+<listitem><para><link xlink:href="mailto:dean@vipersoft.co.uk">Dean Benson</link>
 &lt;dean@vipersoft.co.uk&gt; for several monetary
 contributions.</para></listitem>
 
-<listitem><para><ulink url="http://www.dreamwvr.com">DREAMWVR.COM</ulink> for 
+<listitem><para><link xlink:href="http://www.dreamwvr.com">DREAMWVR.COM</link> for 
 their past sponsorship of donating various resources to the LFS and related 
 sub projects.</para></listitem>
 
-<listitem><para><ulink url="mailto:hrx@hrxnet.de">Hagen Herrschaft</ulink>
+<listitem><para><link xlink:href="mailto:hrx@hrxnet.de">Hagen Herrschaft</link>
 &lt;hrx@hrxnet.de&gt; for donating a 2.2 GHz P4 system, now running under the
 name of <emphasis>lorien</emphasis>.</para></listitem>
 
-<listitem><para><ulink url="http://www.oreilly.com">O'Reilly</ulink> for 
+<listitem><para><link xlink:href="http://www.oreilly.com">O'Reilly</link> for 
 donating books on SQL and PHP.</para></listitem>
 
-<listitem><para><ulink url="http://www.vasoftware.com">VA Software</ulink> 
-who, on behalf of <ulink url="http://www.linux.com">Linux.com</ulink>, donated 
+<listitem><para><link xlink:href="http://www.vasoftware.com">VA Software</link> 
+who, on behalf of <link xlink:href="http://www.linux.com">Linux.com</link>, donated 
 a VA Linux 420 (former StartX SP2) workstation.</para></listitem>
 
-<listitem><para><ulink url="mailto:strider@linux.com">Mark Stone</ulink> for 
+<listitem><para><link xlink:href="mailto:strider@linux.com">Mark Stone</link> for 
 donating <emphasis>shadowfax</emphasis>, the first linuxfromscratch.org
 server, a 750 MHz P3 with 512 MB RAM and two 9 GB SCSI drives. When the server
 moved it was renamed to <emphasis>belgarath</emphasis>.</para></listitem>
 
-<listitem><para><ulink url="mailto:highos@linuxfromscratch.org">Jesse
-Tie-Ten-Quee</ulink> &lt;highos@linuxfromscratch.org&gt; for donating a Yamaha
+<listitem><para><link xlink:href="mailto:highos@linuxfromscratch.org">Jesse
+Tie-Ten-Quee</link> &lt;highos@linuxfromscratch.org&gt; for donating a Yamaha
 CDRW 8824E CD-writer.</para></listitem>
 
 <listitem><para>Countless other people on the various LFS mailing lists who are
@@ -335,55 +338,55 @@ and throwing in their criticism.</para></listitem>
 
 </itemizedlist>
 
-</sect2>
+</section>
 
-<sect2>
-<title>Former Team Members and Contributors</title>
+<section><info><title>Former Team Members and Contributors</title></info>
+
 
 <itemizedlist>
 
-<listitem><para><ulink url="mailto:timothy@linuxfromscratch.org">Timothy
-Bauscher</ulink> &lt;timothy@linuxfromscratch.org&gt; -- LFS Book editor, Hints
+<listitem><para><link xlink:href="mailto:timothy@linuxfromscratch.org">Timothy
+Bauscher</link> &lt;timothy@linuxfromscratch.org&gt; -- LFS Book editor, Hints
 Project maintainer.</para></listitem>
 
 <listitem><para>Robert Briggs for originally donating the
 <emphasis>linuxfromscratch.org</emphasis> and
 <emphasis>linuxfromscratch.com</emphasis> domain names.</para></listitem>
 
-<listitem><para><ulink url="mailto:ian@ichilton.co.uk">Ian Chilton</ulink>
+<listitem><para><link xlink:href="mailto:ian@ichilton.co.uk">Ian Chilton</link>
 &lt;ian@ichilton.co.uk&gt; for maintaining the Hints project.</para></listitem>
 
-<listitem><para><ulink url="mailto:gimli@linuxfromscratch.org">Marc
-Heerdink</ulink> &lt;gimli@linuxfromscratch.org&gt; -- LFS Book
+<listitem><para><link xlink:href="mailto:gimli@linuxfromscratch.org">Marc
+Heerdink</link> &lt;gimli@linuxfromscratch.org&gt; -- LFS Book
 editor.</para></listitem>
 
-<listitem><para><ulink url="mailto:sklein@linuxfromscratch.org">Seth W.
-Klein</ulink> &lt;sklein@linuxfromscratch.org&gt; -- LFS FAQ
+<listitem><para><link xlink:href="mailto:sklein@linuxfromscratch.org">Seth W.
+Klein</link> &lt;sklein@linuxfromscratch.org&gt; -- LFS FAQ
 creator.</para></listitem>
 
-<listitem><para><ulink url="mailto:garrett@linuxart.com">Garrett
-LeSage</ulink> &lt;garrett@linuxart.com&gt; -- Original LFS banner
+<listitem><para><link xlink:href="mailto:garrett@linuxart.com">Garrett
+LeSage</link> &lt;garrett@linuxart.com&gt; -- Original LFS banner
 creator.</para></listitem>
 
-<listitem><para><ulink url="mailto:nomis80@videotron.ca">Simon
-Perreault</ulink> &lt;nomis80@videotron.ca&gt; -- Hints Project
+<listitem><para><link xlink:href="mailto:nomis80@videotron.ca">Simon
+Perreault</link> &lt;nomis80@videotron.ca&gt; -- Hints Project
 maintainer.</para></listitem>
 
-<listitem><para><ulink url="mailto:Geert.Poels@skynet.be">Geert Poels</ulink>
+<listitem><para><link xlink:href="mailto:Geert.Poels@skynet.be">Geert Poels</link>
 &lt;Geert.Poels@skynet.be&gt; -- Original BLFS banner creator; based on the
 LFS banner by Garrett LeSage.</para></listitem>
 
-<listitem><para><ulink url="mailto:bkenoah@oswd.org">Frank Skettino</ulink>
+<listitem><para><link xlink:href="mailto:bkenoah@oswd.org">Frank Skettino</link>
 &lt;bkenoah@oswd.org&gt; for the initial design of the old website -- have a
-look at <ulink url="http://www.oswd.org/"/>.</para></listitem>
+look at <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.oswd.org/">http://www.oswd.org/</uri>.</para></listitem>
 
-<listitem><para><ulink url="mailto:highos@linuxfromscratch.org">Jesse
-Tie-Ten-Quee</ulink> &lt;highos@linuxfromscratch.org&gt; for temporarily
+<listitem><para><link xlink:href="mailto:highos@linuxfromscratch.org">Jesse
+Tie-Ten-Quee</link> &lt;highos@linuxfromscratch.org&gt; for temporarily
 hosting the linuxfromscratch.org server, answering
 countless questions on IRC and having a great deal of patience.</para></listitem>
 
 </itemizedlist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>
