@@ -16,8 +16,9 @@ case "$1" in
 		echo "Recording existing mounts in /etc/mtab..."
 		> /etc/mtab
 		mount -f / && mount -f /proc
-		# add /dev above if you use devfs
 		evaluate_retval
+		grep -q '[[:space:]]sysfs' /proc/mounts && mount -f /sys
+		# add /dev above if you use devfs
 
 		# The following mount command will mount all file systems.  If
 		# you have any other filesystems that should not be or cannot be
@@ -26,7 +27,7 @@ case "$1" in
 		# no<filesystem> will be skipped.  Any network filesystems will
 		# not be mounted at this time
 
-		NO_FS="noproc"
+		NO_FS="noproc,nosysfs"
 		echo "Mounting remaining file systems..."
 		mount -a -t $NO_FS -O no_netdev
 		evaluate_retval

@@ -13,6 +13,15 @@ case "$1" in
 			mount -n /proc
 			evaluate_retval
 		fi
+
+		# This should be mounted on a 2.6 kernel.
+		if grep -q '[[:space:]]sysfs' /proc/filesystems; then
+			if [ ! -d /sys/block ]; then
+				echo "Mounting sysfs file system..."
+				mount -n /sys
+				evaluate_retval
+			fi
+		fi
 		;;
 	*)
 		echo "Usage $0 {start}"

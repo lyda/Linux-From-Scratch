@@ -2,6 +2,8 @@ n/a - April 12, 2004
 
 	* Added a automatic modules loading script to the contrib directory
 	  submitted by Zack
+	* Edited mountkernfs, so that if you can mount sysfs on /sys, it will
+	  be mounted at boottime.  Should not affect 2.4 systems
 
 2.0.3 - April 8, 2004
 
@@ -12,7 +14,7 @@ n/a - March 31, 2004
 
 	* Changed "Press Enter" on unknown error to white
 	* Moved S10swap to S20swap.  When udev is added, it has to be
-	  ran before swap is setup.
+	  ran before swap is setup
 
 n/a - March 29, 2004
 
