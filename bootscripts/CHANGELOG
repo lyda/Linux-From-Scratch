@@ -10,6 +10,8 @@ n/a - March 19, 2004
 	* BLFS Scripts Added,  collected by Zack
 	* Edited killproc, so it checks for running pids, rather then
 	  the completion of the above kill command.  Suggested by Zack
+	* Added network services found in blfs, removed adsl.  Submitted by
+	  DJ.
 
 1.99.4 - March 17, 2004
 

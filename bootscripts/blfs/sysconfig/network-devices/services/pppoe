@@ -1,0 +1,31 @@
+#!/bin/sh
+# Begin $network_devices/services/pppoe
+
+# Based upon lfs-bootscripts-1.12 $network_devices/if{down,up}
+# Rewritten by Nathan Coulson <nathan@linuxfromscratch.org>
+# Adapted for pppoe by DJ Lucas <dj@lucasit.com>
+
+. /etc/sysconfig/rc
+. $rc_functions
+. $network_devices/ifconfig.$1
+
+case "$2" in
+        up)
+                echo "Bringing up the ADSL interface..."
+                /usr/sbin/adsl-start
+                evaluate_retval
+        ;;
+
+        down)
+                echo "Bringing down the ADSL interface..."
+                /usr/sbin/adsl-stop
+                evaluate_retval
+        ;;
+
+        *)
+                echo "Usage: $0 {up|down}"
+                exit 1
+        ;;
+esac
+
+# End $network_devices/services/pppoe
