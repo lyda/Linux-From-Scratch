@@ -56,7 +56,7 @@
 <varlistentry arch="raq2">
 <term>Colo (&colo-version;) - 2,430 KB:</term>
 <listitem>
-<para><ulink url="http://www.colonel-panic.org/cobalt-mips/colo/"/></para>
+<para><ulink url="http://www.colonel-panic.org/cobalt-mips/colo/colo-&colo-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
@@ -133,7 +133,21 @@
 <varlistentry>
 <term>Glibc (&glibc-version;) - 13,800 KB:</term>
 <listitem>
-<para><ulink url="&redhat;glibc/snapshots/glibc-&glibc-version;.tar.bz2"/></para>
+<para><ulink url="&gnu;/glibc/glibc-&glibc-version;.tar.bz2"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Glibc Linuxthreads (&glibc-version;) - 231  KB:</term>
+<listitem>
+<para><ulink url="&gnu;/glibc/glibc-linuxthreads-&glibc-version;.tar.bz2"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Glibc Libidn (&glibc-version;) - 99 KB:</term>
+<listitem>
+<para><ulink url="&gnu;/glibc/glibc-libidn-&glibc-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
@@ -147,7 +161,7 @@
 <varlistentry>
 <term>Groff (&groff-version;) - 2,360 KB:</term>
 <listitem>
-<para><ulink url="&gnu;groff/groff-&groff-version;.tar.bz2"/></para>
+<para><ulink url="&gnu;groff/groff-&groff-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
@@ -224,7 +238,7 @@
 <varlistentry>
 <term>Libtool (&libtool-version;) - 2,602 KB:</term>
 <listitem>
-<para><ulink url="&gnu;libtool/libtool-&libtool-version;.tar.gz/"/></para>
+<para><ulink url="&gnu;libtool/libtool-&libtool-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
@@ -441,7 +455,7 @@
 <varlistentry>
 <term>Util-linux (&util-linux-version;) - 1,814 KB:</term>
 <listitem>
-<para><ulink url="ftp://ftp.win.tue.nl/pub/linux-local/utils/util-linux/util-linux-&util-linux-version;.tar.gz"/></para>
+<para><ulink url="&kernel;/linux/utils/util-linux/util-linux-&util-linux-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 

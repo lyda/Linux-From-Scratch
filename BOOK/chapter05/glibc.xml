@@ -43,14 +43,6 @@ remove the nptl directory from the Glibc source:</para>
 
 <screen arch="ppc;raq2"><userinput>rm -rf nptl*</userinput></screen>
 
-<para arch="raq2">This patch fixes a librt linking issue.</para>
-
-<screen arch="raq2"><userinput>patch -Np1 -i ../glibc-&glibc-version;-raq2_librt_linking-1.patch</userinput></screen>
-
-<para arch="raq2">This patch contains all the necessary patches for RaQ2 server.</para>
-
-<screen arch="raq2"><userinput>patch -Np1 -i ../glibc-&glibc-version;-raq2_fixes-1.patch</userinput></screen>
-
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
 

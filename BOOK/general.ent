@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "6.1-testing-20050118">
+<!ENTITY version "6.1-testing-20050130">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-alpha "&version;-alpha">
 <!ENTITY version-ppc "&version;-PowerPC">
 <!ENTITY version-raq2 "&version;-RaQ2">
-<!ENTITY releasedate "January 18, 2005">
+<!ENTITY releasedate "January 30, 2005">
 <!ENTITY milestone "6.1">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -12,7 +12,7 @@
 <!ENTITY faq-root "&lfs-root;faq/">
 <!ENTITY hints-root "&lfs-root;hints/downloads/files/">
 <!ENTITY hints-index "&lfs-root;hints/list.html">
-<!ENTITY patches-root "&lfs-root;patches/lfs/cvs/testing/">
+<!ENTITY patches-root "http://www.linuxfromscratch.org/patches/downloads/">
 <!ENTITY wiki-root "http://wiki.linuxfromscratch.org/">
 
 <!ENTITY gnu "http://ftp.gnu.org/gnu/">
@@ -39,12 +39,12 @@
 <!ENTITY e2fsprogs-version "1.35">
 <!ENTITY expect-version "5.42.1">
 <!ENTITY file-version "4.12">
-<!ENTITY findutils-version "4.2.11">
+<!ENTITY findutils-version "4.2.14">
 <!ENTITY flex-version "2.5.31">
 <!ENTITY gawk-version "3.1.4">
 <!ENTITY gcc-version "3.4.3">
 <!ENTITY gettext-version "0.14.1">
-<!ENTITY glibc-version "20050103">
+<!ENTITY glibc-version "2.3.4">
 <!ENTITY grep-version "2.5.1a">
 <!ENTITY groff-version "1.19.1">
 <!ENTITY grub-version "0.95">
@@ -79,18 +79,18 @@
 <!ENTITY openssh-version "3.9p1">
 <!ENTITY patch-version "2.5.9">
 <!ENTITY perl-version "5.8.6">
-<!ENTITY procps-version "3.2.4">
+<!ENTITY procps-version "3.2.5">
 <!ENTITY psmisc-version "21.5">
 <!ENTITY readline-version "5.0">
-<!ENTITY sed-version "4.1.2">
-<!ENTITY shadow-version "4.0.6">
+<!ENTITY sed-version "4.1.4">
+<!ENTITY shadow-version "4.0.7">
 <!ENTITY syslog-ng-version "1.6.5">
 <!ENTITY syslog-ng-dl-version "1.6">
 <!ENTITY sysvinit-version "2.86">
 <!ENTITY tar-version "1.15.1">
 <!ENTITY tcl-version "8.4.9">
 <!ENTITY texinfo-version "4.8">
-<!ENTITY util-linux-version "2.12p">
+<!ENTITY util-linux-version "2.12q">
 <!ENTITY udev-version "050">
 <!ENTITY yaboot-version "1.3.13">
 <!ENTITY vim-version "6.3">

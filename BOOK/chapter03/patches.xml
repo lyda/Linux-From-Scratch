@@ -18,166 +18,153 @@ needed to build an LFS system:</para>
 <varlistentry>
 <term>Bash Various Fixes - 21 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;bash-&bash-version;-fixes-2.patch"/></para>
+<para><ulink url="&patches-root;bash/bash-&bash-version;-fixes-2.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Bash Avoid Wcontinued Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;bash-&bash-version;-avoid_WCONTINUED-1.patch"/></para>
+<para><ulink url="&patches-root;bash/bash-&bash-version;-avoid_WCONTINUED-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Coreutils Suppress Uptime, Kill, Su Patch - 16 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch"/></para>
+<para><ulink url="&patches-root;coreutils/coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="x86">
 <term>Coreutils Uname Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;coreutils-&coreutils-version;-uname-2.patch"/></para>
+<para><ulink url="&patches-root;coreutils/coreutils-&coreutils-version;-uname-2.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Expect Spawn Patch - 6 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;expect-&expect-version;-spawn-1.patch"/></para>
+<para><ulink url="&patches-root;expect/expect-&expect-version;-spawn-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Flex Brokenness Patch - 8 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;flex-&flex-version;-debian_fixes-4.patch"/></para>
+<para><ulink url="&patches-root;flex/flex-&flex-version;-debian_fixes-4.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term> GCC Linkonce Patch - 12 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;gcc-&gcc-version;-linkonce-1.patch"/></para>
+<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-linkonce-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>GCC No-Fixincludes Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;gcc-&gcc-version;-no_fixincludes-1.patch"/></para>
+<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-no_fixincludes-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>GCC Specs Patch - 14 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;gcc-&gcc-version;-specs-2.patch"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="raq2">
-<term>Glibc RaQ2 Fixes Patch - 11 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;glibc-&glibc-version;-raq2_fixes-1.patch"/></para>
+<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-specs-2.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="raq2">
 <term>Grep RaQ2 Config Update Patch - 48 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;grep-&grep-version;-raq2_config_update-1.patch"/></para>
+<para><ulink url="&patches-root;grep/grep-&grep-version;-raq2_config_update-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Inetutils Kernel Headers Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;inetutils-&inetutils-version;-kernel_headers-1.patch"/></para>
+<para><ulink url="&patches-root;inetutils/inetutils-&inetutils-version;-kernel_headers-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Inetutils No-Server-Man-Pages Patch - 4 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></para>
+<para><ulink url="&patches-root;inetutils/inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>IPRoute2 Disable DB Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;iproute2-&iproute2-patch-version;-remove_db-1.patch"/></para>
+<para><ulink url="&patches-root;iproute2/iproute2-&iproute2-patch-version;-remove_db-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>IPRoute2 Find Update Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;iproute2-&iproute2-patch-version;-find_update-1.patch"/></para>
+<para><ulink url="&patches-root;iproute2/iproute2-&iproute2-patch-version;-find_update-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>IPRoute2 Free Error Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;iproute2-&iproute2-patch-version;-free_error-2.patch"/></para>
+<para><ulink url="&patches-root;iproute2/iproute2-&iproute2-patch-version;-free_error-2.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="raq2">
 <term>LFS Bootscripts RaQ2 Patch - 21 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;lfs-bootscripts-&lfs-bootscripts-version;-raq2-2.patch"/></para>
+<para><ulink url="&patches-root;lfs-bootscripts/lfs-bootscripts-&lfs-bootscripts-version;-raq2-2.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="raq2">
 <term>Linux Libc Headers RaQ2 Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;linux-libc-&linux-libc-headers-version;-raq2_fix-1.patch"/></para>
+<para><ulink url="&patches-root;linux-libc-headers/linux-libc-&linux-libc-headers-version;-raq2_fix-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="raq2">
 <term>Linux RaQ2 Patch - 1.9 MB:</term>
 <listitem>
-<para><ulink url="&patches-root;linux-&linux-version;-raq2_fix-1.patch"/></para>
+<para><ulink url="&patches-root;linux/linux-&linux-version;-raq2_fix-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Mktemp Tempfile Patch - 3 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;mktemp-&mktemp-version;-add_tempfile-1.patch"/></para>
+<para><ulink url="&patches-root;mktemp/mktemp-&mktemp-version;-add_tempfile-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Perl Libc Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;perl-&perl-version;-libc-1.patch"/></para>
+<para><ulink url="&patches-root;perl/perl-&perl-version;-libc-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Readline Display Wrap Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;readline-&readline-version;-display_wrap-1.patch"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="x86">
-<term>Sysvinit /proc Title Length Patch - 1 KB:</term> <listitem>
-<para><ulink url="&patches-root;sysvinit-&sysvinit-version;-proclen-1.patch"/></para>
+<para><ulink url="&patches-root;readline/readline-&readline-version;-display_wrap-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Util-linux Cramfs Patch - 2kb:</term> <listitem>
-<para><ulink url="&patches-root;util-linux-&util-linux-version;-cramfs-1.patch"/></para>
+<para><ulink url="&patches-root;util-linux/util-linux-&util-linux-version;-cramfs-1.patch"/></para>
 </listitem>
 </varlistentry>
 
