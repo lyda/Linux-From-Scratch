@@ -65,7 +65,7 @@ test from failing, then issue: <userinput>make check</userinput>.</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Also install also the shared libraries:</para>
+<para>Also install the shared libraries:</para>
 
 <screen><userinput>make install-libs</userinput></screen>
 
