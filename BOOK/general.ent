@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "6.1-testing-20042125">
+<!ENTITY version "6.1-testing-20050105">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-raq2 "&version;-RaQ2">
 <!ENTITY version-ppc "&version;-PowerPC">
-<!ENTITY releasedate "December 25, 2004">
+<!ENTITY releasedate "January 5, 2005">
 <!ENTITY milestone "6.1">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">

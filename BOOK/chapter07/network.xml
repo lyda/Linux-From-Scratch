@@ -23,12 +23,16 @@ class="directory">/etc/rc.d/rc*.d</filename>).</para>
 <sect2>
 <title>Creating Network Interface Configuration Files</title>
 
+<!-- Edit Me -->
 <para>Which interfaces are brought up and down by the network script
-depends on the files in the <filename
-class="directory">/etc/sysconfig/network-devices</filename> directory.
-This directory should contain files in the form of
-<filename>ifconfig.xyz</filename>, where <quote>xyz</quote> is a
-network interface name (such as eth0 or eth0:1).</para>
+depends on the files and directories in the <filename
+class="directory">/etc/sysconfig/network-devices</filename> hierarchy.
+This directory should contain a directory for each interface to be configured,
+such as <filename>ifconfig.xyz</filename>, where <quote>xyz</quote> is a
+network interface name. Inside this directory would be files defining
+the attributes to this interface, such as its IP address(es), subnet
+masks, and so forth.</para>
+<!-- -->
 
 <para>If the <filename
 class="directory">/etc/sysconfig/network-devices</filename> directory
