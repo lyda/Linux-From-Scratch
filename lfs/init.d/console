@@ -9,35 +9,31 @@
 . $rc_functions
 
 # Native English speakers probably don't have /etc/sysconfig/console at all
-
+if [ -f /etc/sysconfig/console ]; then
+	. /etc/sysconfig/console
+else
+	exit 0
+fi
 
 case "$1" in
 	start)
-		if [ ! -f /etc/sysconfig/console ]
-		then
-			exit 0
-		fi
-		. /etc/sysconfig/console
-
-		if [ ! -z "$KEYMAP" ]
-		then
+		if [ -n "$KEYMAP" ]; then
 			echo -n "Loading keymap..."
 			loadkeys $KEYMAP
 			evaluate_retval
 		fi
-		if [ ! -z "$KEYMAP_ CORRECTIONS" ]
-		then
+
+		if [ -n "$KEYMAP_CORRECTIONS" ]; then
 			echo -n "Correcting keymap..."
-			loadkeys $KEYMAP_CORRECTION
+			loadkeys $KEYMAP_CORRECTIONS
 			evaluate_retval
 		fi
-		if [ ! -z "$FONT" ]
-		then
+
+		if [ -n "$FONT" ]; then
 			echo -n "Setting screen font..."
 			setfont $FONT
 			evaluate_retval
 		fi
-
 		;;
 	*)
 		echo "Usage: $0 {start}"
