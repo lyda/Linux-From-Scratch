@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-bootable-colo" arch="ppc">
+<sect1 id="ch-bootable-yaboot" arch="ppc">
 <title>Making the LFS system bootable</title>
 <?dbhtml filename="yaboot.html"?>
 
