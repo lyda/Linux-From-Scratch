@@ -43,10 +43,11 @@
 	<!-- Perhaps the 4.0rc1 release will keep them at bay for a moment.
 	&when-next-lfs-release;
 	-->
-	&shutdown-on-fsck-error;
-	&new-version;
+	&wrong-ln-s-command;
 	&its-hardlink-not-copy;
+	&new-version;
 	&delete_key_not_work;
+	&shutdown-on-fsck-error;
 </qandadiv>
 <qandadiv id="fre"><title>Frequently Requested Enhancements</title>
 	&fre-intro;
