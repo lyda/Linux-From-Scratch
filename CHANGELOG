@@ -1,7 +1,8 @@
-n/a - March 24, 2004
+2.0.2- March 24, 2004
 
 	* Edited cleanfs to solve a problem.  [if /tmp does not exist, it
-	  could run the find command on the root filesystem].
+	  could run the find command on the root filesystem]
+	* Tagged as 2.0.2
 
 2.0.1 - March 24, 2004
 
