@@ -42,8 +42,10 @@ sed 's@ /lib/ld-linux.so.2@ /tools/lib/ld-linux.so.2@g' \
 mv -f tempspecfile $SPECFILE &amp;&amp;
 unset SPECFILE</userinput></screen>
 
-<para>It is recommended that the above command be copy-and-pasted in
-order to ensure accuracy. Alternatively, the specs file can be
+<para><phrase condition="html">It is recommended that the above command 
+be copy-and-pasted in order to ensure accuracy. </phrase>
+<phrase condition="pdf">Be very careful when typing the above command. </phrase>
+Alternatively, the specs file can be
 edited by hand. This is done by replacing every occurrence of
 <quote>/lib/ld-linux.so.2</quote> with
 <quote>/tools/lib/ld-linux.so.2</quote></para>

@@ -84,6 +84,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>September 9th, 2004 [manuel]: Added support to can have
+different contextual phrases for HTML or PDF output.</para></listitem>
+
 <listitem><para>September 9th, 2004 [manuel]: Chapter 6 - Moved the para
 about the missing /etc/fstab from kernfs.xml to devices.xml.</para></listitem>
 

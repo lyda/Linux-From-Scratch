@@ -5,9 +5,12 @@ NOCHUNKS_OUTPUT=LFS-BOOK.html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
 
 lfs:
-	xsltproc --xinclude --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
+	xsltproc --xinclude --nonet -stringparam profile.condition html \
+	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
+
+	xsltproc --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
 	  -stringparam base.dir $(BASEDIR)/ stylesheets/lfs-chunked.xsl \
-	  index.xml
+	  $(BASEDIR)/lfs-html.xml
 
 	if [ ! -e $(BASEDIR)/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/stylesheets; \
@@ -23,6 +26,8 @@ lfs:
 	  *.html
 	cd $(BASEDIR)/; sed -i -e "s@../images@images@g" \
 	  *.html
+
+	rm $(BASEDIR)/lfs-html.xml
 
 	sh goTidy $(BASEDIR)/
 
@@ -40,7 +45,7 @@ lfs:
 #	rm lfs.fo
 
 pdf:
-	xsltproc --xinclude --nonet --stringparam profile.condition print \
+	xsltproc --xinclude --nonet --stringparam profile.condition pdf \
 		--output $(BASEDIR)/lfs-pdf.xml stylesheets/lfs-profile.xsl index.xml
 	xsltproc --nonet --output $(BASEDIR)/lfs-pdf.fo stylesheets/lfs-pdf.xsl \
 		$(BASEDIR)/lfs-pdf.xml
