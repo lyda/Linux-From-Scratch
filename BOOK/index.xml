@@ -22,8 +22,8 @@
 <title>Preparing for the build</title>
 <?dbhtml filename="part2.html"?>
 <xi:include href="chapter03/chapter03.xml"/>
-<!--<xi:include href="chapter04/chapter04.xml"/>
-<xi:include href="chapter05/chapter05.xml"/>-->
+<xi:include href="chapter04/chapter04.xml"/>
+<!--<xi:include href="chapter05/chapter05.xml"/>-->
 </part>
 
 <!--<part id="part3">
