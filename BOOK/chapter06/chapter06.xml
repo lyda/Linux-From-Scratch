@@ -52,7 +52,8 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kbd.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="e2fsprogs.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grep.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grub.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grub.xml"/> <!-- x86 -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="colo.xml"/> <!-- raq2 -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gzip.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="hotplug.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="man.xml"/>
@@ -68,6 +69,8 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="tar.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="udev.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="util-linux.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="openssl.xml"/> <!-- raq2 -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="openssh.xml"/> <!-- raq2 -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="aboutdebug.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="strippingagain.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="revisedchroot.xml"/>
