@@ -180,10 +180,18 @@ that whatever user ID the packager used will be assigned to somebody
 on the machine. That person would then have write access to the kernel
 source.</para>
 
-<para>If the kernel source tree is going to retained, run
+<para>If the kernel source tree is going to be retained, run
 <command>chown -R 0:0</command> on the <filename
 class="directory">linux-&linux-version;</filename> directory to ensure
 all files are owned by user <emphasis>root</emphasis>.</para>
+
+<warning><para>Some kernel documentation recommends creating a symlink from
+<filename class="symlink">/usr/src/linux</filename> pointing to the kernel
+source directory.  This is specific to kernels prior to the 2.6 series and
+<emphasis>must not</emphasis> be created on an LFS system as it can cause
+problems for packages you may wish to build once your base LFS system is
+complete.</para></warning>
+
 </sect2>
 
 

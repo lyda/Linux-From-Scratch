@@ -74,6 +74,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>January 27, 2005 [matt]: Added a warning that the
+<filename class="symlink">/usr/src/linux</filename> symlink shouldn't be
+created.  Fixes bug 1012.</para></listitem>
+
 <listitem><para>January 27, 2005 [matt]: Added link to the live-cd FTP
 location.  Fixes bug 1014.</para></listitem>
 
