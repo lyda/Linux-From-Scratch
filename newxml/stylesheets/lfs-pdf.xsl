@@ -19,6 +19,7 @@
   <!-- Margins -->
   <xsl:param name="page.margin.inner">1in</xsl:param>
   <xsl:param name="page.margin.outer">0.5in</xsl:param>
+  <xsl:param name="title.margin.left">-1pc</xsl:param>
 
   <!-- TOC stuff -->
   <xsl:param name="generate.toc">
