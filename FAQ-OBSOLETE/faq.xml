@@ -88,6 +88,7 @@
 	<qandadiv id="fee-compile"><title>Compile Time Errors</title>
 		<qandadiv id="fee-compile-any">
 				<title>Compile Time Errors From Any Package</title>
+			&undefined-deflate;
 			&configure-no-such-file;
 			&bad-interpreter-permission-denied;
 			&conf-guess-fail;

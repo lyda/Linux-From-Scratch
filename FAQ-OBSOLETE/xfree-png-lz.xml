@@ -35,21 +35,7 @@ make[1]: *** [install] Error 2
 make[1]: Leaving directory `/usr/src/xc'
 make: *** [install] Error 2
 </screen>
-Then rebuild libpng with the patch at
-<ulink url="http://www.linuxfromscratch.org/~sklein/libpng-1.2.5-lz.patch"/>.
-Make sure you apply the patch immediately after unpacking the sources.
-Like this:
-<screen>tar --no-same-owner -xvjf libpng-1.2.5.tar.bz2
-cd libpng-1.2.5
-cat ../libpng-1.2.5-lz.patch | patch -p0
-ln -s scripts/makefile.linux Makefile
-make ZLIBLIB=/lib ZLIBINC=/usr/include
-make ZLIBLIB=/lib ZLIBINC=/usr/include install
-cd ..
-rm -r libpng-1.2.5
-</screen>
-Needless to say, if you originally put zlib in /usr/local
-or did something else different,
-you'll have to adjust those instructions accordingly.
+Then refer to the <link linkend="undefined-deflate">general entry</link>
+for this issue.
 </para></answer>
 </qandaentry>
