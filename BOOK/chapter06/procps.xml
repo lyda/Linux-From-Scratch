@@ -26,7 +26,13 @@ Make, and Ncurses</seg></seglistitem>
 </sect2>
 
 <sect2 role="installation">
+
 <title>Installation of Procps</title>
+
+<para arch="raq2">The patch below fixes the issue with the procps. Without this patch
+when the command ps aux is run you will receive a signal 11.</para>
+
+<screen arch="raq2"><userinput>patch -Np1 -i ../procps-&procps-version;-fix_mips-1.patch</userinput></screen>
 
 <para>Compile the package:</para>
 
@@ -37,7 +43,6 @@ Make, and Ncurses</seg></seglistitem>
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
-
 
 <sect2 id="contents-procps" role="content"><title>Contents of Procps</title>
 
