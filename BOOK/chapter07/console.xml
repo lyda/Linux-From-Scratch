@@ -13,7 +13,7 @@
 
 <para>If you plan to compile the keymap directly in the kernel during <xref
 linkend="chapter-bootable"/> (see <xref linkend="ch-system-kbd"/>), then strictly
-speaking you don't need to run this loadkeys script, since the kernel will set
+speaking you don't need to run this console script, since the kernel will set
 up the keymap for you. If you wish, you can still run the script, it isn't going
 to hurt you. Keeping it could even be beneficial, in case you run a lot of
 different kernels and can't be sure that the keymap is compiled into every one
