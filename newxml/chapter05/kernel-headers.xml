@@ -25,7 +25,7 @@ place where <command>gcc</command> can later find them.</para>
 <para>This ensures that the kernel tree is absolutely clean. The kernel team
 recommends that this command be issued prior to <emphasis>each</emphasis>
 kernel compilation. You shouldn't rely on the source tree being clean after
-untarring.</para>
+un-tarring.</para>
 
 <para>Create the <filename>include/linux/version.h</filename> file:</para>
 
@@ -42,7 +42,7 @@ symlink:</para>
 cp include/asm/* /tools/include/asm
 cp -R include/asm-generic /tools/include</userinput></screen>
 
-<para>And finally install the cross-platform kernel header files:</para>
+<para>Finally, install the cross-platform kernel header files:</para>
 
 <screen><userinput>cp -R include/linux /tools/include</userinput></screen>
 

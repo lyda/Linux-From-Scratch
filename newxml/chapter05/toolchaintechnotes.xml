@@ -18,7 +18,7 @@ clean, trouble-free build of the target LFS system in
 <xref linkend="chapter-building-system"/>. Along the way, we attempt to divorce ourselves
 from the host system as much as possible, and in so doing build a
 self-contained and self-hosted toolchain. It should be noted that the
-build process has been designed in such a way so as to minimize the risks for
+build process has been designed to minimize the risks for
 new readers and provide maximum educational value at the same time. In other
 words, more advanced techniques could be used to build the system.</para>
 
@@ -43,7 +43,7 @@ platforms that are less prevalent, the name might be
 something completely different. You should be able to determine the name
 of your platform's dynamic linker by looking in the
 <filename class="directory">/lib</filename> directory on your host system. A
-surefire way is to inspect a random binary from your host system by running:
+sure-fire way is to inspect a random binary from your host system by running:
 <userinput>readelf -l &lt;name of binary&gt; | grep interpreter</userinput>
 and noting the output. The authoritative reference covering all platforms is in
 the <filename>shlib-versions</filename> file in the root of the Glibc source
@@ -67,9 +67,9 @@ choose.</para></listitem>
 linker will be used.</para></listitem>
 </itemizedlist>
 
-<para>Binutils is installed first because both GCC and Glibc perform various
-feature tests on the assembler and linker during their respective runs of
-<command>./configure</command> to determine which software features to enable
+<para>Binutils is installed first because the <command>./configure</command> runs of both GCC and Glibc perform various
+feature tests on the assembler and linker
+to determine which software features to enable
 or disable. This is more important than one might first realize. An incorrectly
 configured GCC or Glibc can result in a subtly broken toolchain where the impact
 of such breakage might not show up until near the end of the build of a whole

@@ -22,7 +22,7 @@
 optimization flags (including the <emphasis>-march</emphasis> and
 <emphasis>-mcpu</emphasis> options). Therefore, if you have defined any
 environment variables that override default optimizations, such as CFLAGS and
-CXXFLAGS, we recommend unsetting them when building Glibc.</para>
+CXXFLAGS, we recommend un-setting them when building Glibc.</para>
 
 <para>Basically, compiling Glibc in any other way than the book suggests
 is putting the stability of your system at risk.</para>
@@ -43,8 +43,8 @@ cd ../glibc-build</userinput></screen>
 <para>The meaning of the configure options:</para>
 
 <itemizedlist>
-<listitem><para><userinput>--disable-profile</userinput>: This disables the
-building of the libraries with profiling information. Omit this option if you
+<listitem><para><userinput>--disable-profile</userinput>: This
+builds the libraries without profiling information. Omit this option if you
 plan to do profiling on the temporary tools.</para></listitem>
 
 <listitem><para><userinput>--enable-add-ons=linuxthreads</userinput>: This
@@ -57,8 +57,8 @@ these switches are not required. But they ensure nothing can go wrong with
 regard to what kernel headers and Binutils programs get used during the
 Glibc build.</para></listitem>
 
-<listitem><para><userinput>--without-gd</userinput>: This switch ensures
-that we don't build the <command>memusagestat</command> program, which
+<listitem><para><userinput>--without-gd</userinput>: This prevents
+the build of the <command>memusagestat</command> program, which
 strangely enough insists on linking against the host's libraries (libgd,
 libpng, libz, and so forth).</para></listitem>
 

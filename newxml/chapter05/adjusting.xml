@@ -52,7 +52,7 @@ file to verify the intended change was actually made.</para>
 
 <important><para>If you are working on a platform where the name of the dynamic
 linker is something other than <filename>ld-linux.so.2</filename>, you
-<emphasis>must</emphasis> substitute <filename>ld-linux.so.2</filename> with the
+<emphasis>must</emphasis> replace <filename>ld-linux.so.2</filename> with the
 name of your platform's dynamic linker in the above commands. Refer back to
 <xref linkend="ch-tools-toolchaintechnotes"/> if necessary.</para></important>
 

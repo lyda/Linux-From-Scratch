@@ -19,13 +19,13 @@
 <title>Installation of GCC</title>
 
 <para>Unpack only the GCC-core tarball, as we won't be needing the C++ compiler
-nor the test suite at the moment.</para>
+nor the test suite here.</para>
 
 <para>This package is known to behave badly when you change its default
 optimization flags (including the <emphasis>-march</emphasis> and
 <emphasis>-mcpu</emphasis> options). Therefore, if you have defined any
 environment variables that override default optimizations, such as CFLAGS and
-CXXFLAGS, we recommend unsetting them when building GCC.</para>
+CXXFLAGS, we recommend un-setting them when building GCC.</para>
 
 <para>The GCC documentation recommends building GCC outside of the source
 directory in a dedicated build directory:</para>
@@ -47,7 +47,7 @@ cd ../gcc-build</userinput></screen>
 purpose of this switch is to remove <filename>/usr/local/include</filename>
 from <command>gcc</command>'s include search path. This is not absolutely
 essential; however, we want to try to minimize the influence of the host
-system, thus making this a sensible thing to do.</para></listitem>
+system, so this a sensible thing to do.</para></listitem>
 
 <listitem><para><userinput>--enable-shared</userinput>: This switch may
 seem counter-intuitive at first. But using it allows the building of
@@ -86,7 +86,7 @@ test suite. But, as mentioned before, the test suite framework is not in place
 yet. And there would be little point in running the tests anyhow, since the
 programs from this first pass will soon be replaced.</para>
 
-<para>And install the package:</para>
+<para>Now install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 

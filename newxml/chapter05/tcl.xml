@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.9 SBU
 &diskspace; 23 MB</screen>
 
-<para>For its installation Tcl depends on: Bash, Binutils, Coreutils, Diffutils,
+<para>Tcl installation depends on: Bash, Binutils, Coreutils, Diffutils,
 GCC, Glibc, Grep, Make, Sed.</para>
 
 
@@ -20,12 +20,12 @@ GCC, Glibc, Grep, Make, Sed.</para>
 <sect2>
 <title>Installation of Tcl</title>
 
-<para>This package and the next two are only installed to be able to run the
+<para>This package and the next two are only installed to support running the
 test suites for GCC and Binutils. Installing three packages just for testing
 purposes may seem like overkill, but it is very reassuring, if not essential,
-to know that our most important tools are working properly. Even if you are
-not running the test suites here in this chapter as per our recommendation,
-these packages are still required for running the test suites in the next
+to know that our most important tools are working properly. Even if the
+the test suites are not run in this chapter (we recommend not running them),
+these packages are still required to run the test suites in the next
 chapter.</para>
 
 <para>Prepare Tcl for compilation:</para>
@@ -37,7 +37,7 @@ chapter.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>(If you insist on testing the results, then issue:
+<para>If you want to test the results, then issue:
 <userinput>TZ=UTC make test</userinput>. However, the Tcl test suite is known
 to experience failures under certain host conditions that are not fully
 understood. Therefore, test suite failures here are not surprising, and are not
@@ -45,7 +45,7 @@ considered critical. The <emphasis>TZ=UTC</emphasis> parameter sets the time
 zone to Coordinated Universal Time (UTC) also known as Greenwich Mean Time
 (GMT), but only for the duration of the test suite run. This ensures the clock
 tests are exercised correctly. More information on the TZ environment variable
-will be given later on in <xref linkend="chapter-bootscripts"/>.)</para>
+will be given later on in <xref linkend="chapter-bootscripts"/>.</para>
 
 <para>Install the package:</para>
 
@@ -57,7 +57,7 @@ will be given later on in <xref linkend="chapter-bootscripts"/>.)</para>
 will need its internal headers.</para></warning>
 
 
-<para>And make a necessary symbolic link:</para>
+<para>Now make a necessary symbolic link:</para>
 
 <screen><userinput>ln -s tclsh8.4 /tools/bin/tclsh</userinput></screen>
 
