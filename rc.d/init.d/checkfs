@@ -37,7 +37,7 @@ case "$1" in
 			echo "Cannot check root file system because it could not"
 			echo "be mounted in read-only mode."
 			echo
-			echo -n "When you press enter, this system will be halted."
+			echo -n "When you press <ctrl-j>, this system will be halted."
 			echo -n -e $NORMAL
 			echo
 			echo "Press <ctrl-j> to continue..."
@@ -80,11 +80,11 @@ case "$1" in
 			echo "File system errors were found and have been corrected, but"
 			echo "the nature of the errors require this system to be rebooted."
 			echo
-			echo -n "When you press enter, this system will be rebooted."
+			echo -n "When you press <ctrl-j>, this system will be rebooted."
 			echo -n -e $NORMAL
 			print_status warning
 			echo
-			echo "Please <ctrl-j> enter to continue..."
+			echo "Please <ctrl-j> to continue..."
 			read ENTER
 			$rc_base/init.d/reboot stop
 		fi
@@ -97,7 +97,7 @@ case "$1" in
 			echo "and will therefore be halted until those errors fixed manually"
 			echo "by a System Administrator."
 			echo
-			echo -n "When you press enter, this system will be halted."
+			echo -n "When you press <ctrl-j>, this system will be halted."
 			echo -n -e $NORMAL
 			print_status failure
 			echo
@@ -112,7 +112,7 @@ case "$1" in
 			echo "fsck was unable to run. ERROR CODE = " $error_value
 			echo -n -e $NORMAL
 			print_status failure
-			exit $error_value;
+			exit $error_value
 		fi
 		;;
 	*)

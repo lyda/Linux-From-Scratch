@@ -1,6 +1,7 @@
 n/a - February 7, 2004
 
 	* Added -s onto grep on network stop
+	* Replaced a few more enter's with ctrl-j
 
 1.99.2 - February 6, 2004
 
