@@ -15,7 +15,7 @@
 
 cd /etc/hotplug
 . ./hotplug.functions
-DEBUG=yes export DEBUG
+#DEBUG=yes export DEBUG
 
 if [ "$INTERFACE" = "" ]; then
     mesg Bad NET invocation: \$INTERFACE is not set
@@ -35,7 +35,6 @@ add|register)
 	*)
 	    # LFS
 	    export IN_HOTPLUG=1
-	    set > /tmp/variables
 	    debug_mesg invoke ifup $INTERFACE
 	    exec /etc/sysconfig/network-devices/ifup $INTERFACE
 	    ;;
