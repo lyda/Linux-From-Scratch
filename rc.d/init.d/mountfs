@@ -23,7 +23,8 @@ case "$1" in
 		# you have any other filesystems that should not be or cannot be
 		# mounted at this time, add them to the NO_FS variable below.
 		# All file systems that are added to the variable in the form of
-		# no<filesystem> will be skipped.
+		# no<filesystem> will be skipped.  Any network filesystems will
+		# not be mounted at this time
 
 		NO_FS="noproc"
 		echo "Mounting remaining file systems..."

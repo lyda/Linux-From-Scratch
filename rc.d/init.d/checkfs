@@ -86,7 +86,7 @@ case "$1" in
 			echo
 			echo "Please <ctrl-j> to continue..."
 			read ENTER
-			$rc_base/init.d/reboot stop
+			reboot -f
 		fi
 
 		if [ "$error_value" -gt 3 -a "$error_value" -lt 16 ]
@@ -103,7 +103,7 @@ case "$1" in
 			echo
 			echo "Press <ctrl-j> to continue..."
 			read ENTER
-			$rc_base/init.d/halt stop
+			halt -f
 		fi
 
 		if [ "$error_value" -ge 16 ]
