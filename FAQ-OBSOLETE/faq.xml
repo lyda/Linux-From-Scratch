@@ -262,6 +262,13 @@ which may list a primary site where more recent versions may be found.
 </para></answer>
 </qandaentry>
 
+<qandaentry id="bootcd">
+<question><para>How do I make a bootable CD?</para></question>
+<answer><para>See the Boot-CD Hint and <ulink
+url="http://hints.linuxfromscratch.org/hints/bootcd.txt">http://hints.linuxfromscratch.org/hints/bootcd.txt</ulink>
+</para></answer>
+</qandaentry>
+
 		<qandaentry id="what-dist"><question><para>What distribution should I use to start from?</para></question>
 			<answer><para>Any recent distribution should be fine. If you have problems,
 				try installing and/or updating the development packages.
