@@ -1,15 +1,26 @@
 #!/bin/sh
+# Begin $network_devices/ifdown
 
-source /etc/sysconfig/rc 
-source $rc_functions 
-source $network_devices/ifconfig.$1 
+# Written by Nathan Coulson <nathan@linuxfromscratch.org>
+. /etc/sysconfig/rc 
+. $rc_functions 
+. $network_devices/ifconfig.$1 
 
 if [ -f $network_devices/ifdown-$1 ]
 then
 	$network_devices/ifdown-$1
 else
-	echo "Bringing down the $1 interface..."
-	ifconfig $1 down
-	evaluate_retval
+	if [ -z $SERVICE ]
+	then
+		echo -n "SERVICE variable missing from ifconfig.$1, "
+		echo "using static"
+		SERVICE=static
+	fi
+	if [ ! -f $network_devices/script/$SERVICE ]
+	then
+		echo -n "Unknown Service: $SERVICE, cannot continue"
+		exit 1
+	fi
+	$network_devices/script/${SERVICE} $1 down
 fi
-
+# End $network_devices/ifdown

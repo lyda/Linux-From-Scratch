@@ -1,0 +1,48 @@
+#!/bin/sh
+# Begin $network_devices/services/static
+
+# Based upon lfs-bootscripts-1.12 $network_devices/if{down,up}
+# Rewritten by Nathan Coulson <nathan@linuxfromscratch.org>
+
+. /etc/sysconfig/rc 
+. $rc_functions 
+. $network_devices/ifconfig.$1
+
+case "$2" in
+	up)
+		if [ -z $IP ]
+		then
+			echo "IP variable missing for ifconfig.$1, cannot continue"
+			exit 1
+		fi
+
+		if [ -z $NETMASK ]
+		then
+			echo -n "NETMASK variable missing for ifconfig.$1, "
+			echo "using 255.255.255.0"
+			NETMASK=255.255.255.0
+		fi
+
+		if [ -z $BROADCAST ]
+		then
+			echo -n "BROADCAST variable missing for ifconfig.$1, "
+			echo "using default address"
+		fi
+
+		echo "Bringing up the $1 interface..."
+		ifconfig $1 $IP netmask $NETMASK broadcast $BROADCAST
+		evaluate_retval
+	;;
+
+	down)
+		echo "Bringing down the $1 interface..."
+		ifconfig $1 down
+		evaluate_retval
+	;;
+
+	*)
+		echo "Usage: $0 [interface] {up|down}"
+		exit 1
+	;;
+esac
+# End $network_devices/services/static
