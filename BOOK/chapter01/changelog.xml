@@ -70,7 +70,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: RaQ2 - Colo 1.18</para></listitem>
 <listitem><para>Arch: RaQ2 - glibc-2.3.4-mips_syscall-2.patch</para></listitem>
 <listitem><para>Arch: RaQ2 - linux-libc-headers-2.6.11.2-raq2_fix-1.patch</para></listitem>
-<listitem><para>Arch: RaQ2 - linux-2.6.11.6-raq2_fix-2.patch</para></listitem>
+<listitem><para>Arch: RaQ2 - linux-2.6.11.6-raq2_fix-3.patch</para></listitem>
 </itemizedlist>
 </listitem>
  
@@ -85,7 +85,8 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>April 1, 2005 [jim]</para>
 <itemizedlist>
-<listitem><para>Added: Arch: All - IPRoute2 to 2.6.11-050314.</para></listitem>
+<listitem><para>Added: Arch: All - IPRoute2 to 2.6.11-050330.</para></listitem>
+<listitem><para>Patch: Arch: RaQ2 - Updated linux kernel patch for tulip fixes.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
