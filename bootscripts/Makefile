@@ -1,4 +1,4 @@
-ETCDIR=/etc
+ETCDIR=/tc
 EXTDIR=${DESTDIR}${ETCDIR}
 
 all: install
@@ -6,6 +6,7 @@ all: install
 create-dirs:
 	install -d -m 755 ${EXTDIR}/rc.d/rc{0,1,2,3,4,5,6,sysinit}.d
 	install -d -m 755 ${EXTDIR}/rc.d/init.d
+	install -d -m 755 ${EXTDIR}/sysconfig
 
 create-service-dir:
 	install -d -m 755 ${EXTDIR}/sysconfig/network-devices/services
@@ -337,5 +338,9 @@ install-xinetd: create-dirs
 	ln -s  ../init.d/xinetd ${EXTDIR}/rc.d/rc4.d/S23xinetd
 	ln -s  ../init.d/xinetd ${EXTDIR}/rc.d/rc5.d/S23xinetd
 	ln -s  ../init.d/xinetd ${EXTDIR}/rc.d/rc6.d/K49xinetd
+
+install-contrib-modules: create-dirs
+	install -m 754 contrib/init.d/modules ${EXTDIR}/rc.d/init.d
+	ln -s  ../init.d/modules ${EXTDIR}/rc.d/rcsysinit.d/S15modules
 
 .PHONY: install install-service-dhclient install-service-dhcpcd install-service-ipx install-service-pppoe install-alsa install-apache install-bind install-cups install-dhcp install-exim install-fcron install-gdm install-gpm install-lprng install-mysql install-netfs install-nfs-client install-nfs-server install-ntp install-portmap install-postfix install-postgresql install-proftpd install-random install-rsync install-samba install-sendmail install-sshd install-xinetd
