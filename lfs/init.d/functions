@@ -55,6 +55,9 @@ BOOTSERVICE=""
 #
 # Outputs:      Standard Output
 #
+# Dependencies: - wc, for counting \n's in a variable
+#               - $WCOL, from functions
+#
 # Todo:         - This function was created for the purpose of storing
 #               information to be passed to a bootup log.  The logging support
 #               is not yet added
@@ -65,8 +68,6 @@ BOOTSERVICE=""
 #*******************************************************************************
 boot_mesg()
 {
-	local nlBOOTMESG=""
-
 	# First call to boot_mesg, set BOOTMESG normally
 	if [ -z "$BOOTMESG" ]; then
 		BOOTMESG="$@"
