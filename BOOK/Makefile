@@ -28,10 +28,10 @@ lfs:
 	sh goTidy $(BASEDIR)/
 
 pdf:
-	xsltproc --xinclude --nonet --output lfs.fo stylesheets/lfs-pdf.xsl \
+	xsltproc --xinclude --nonet --output $(BASEDIR)/lfs.fo stylesheets/lfs-pdf.xsl \
 	  index.xml
-	sed -i -e "s/inherit/all/" lfs.fo
-	fop.sh lfs.fo $(PDF_OUTPUT)
+	sed -i -e "s/inherit/all/" $(BASEDIR)/lfs.fo
+	fop.sh $(BASEDIR)/lfs.fo $(BASEDIR)/$(PDF_OUTPUT)
 
 print:
 	xsltproc --xinclude --nonet --stringparam profile.condition print --output lfs-print.xml \
