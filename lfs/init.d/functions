@@ -200,14 +200,25 @@ print_status()
 getpids()
 {
 	# Setup Environment
+	local lpids=""
+	local pid=""
 	pidlist=""
 	nopid=""
 
 	# If PIDFILE is set, then we get our pidlist from there
 	if [ -n "${PIDFILE}" ]; then
-		pidlist="$(cat $PIDFILE 2>/dev/null)"
+		lpids="$(cat $PIDFILE 2>/dev/null)"
 		if [ "$?" = "0" ]; then
-			nopid="1"
+			# Sometimes we may have a stale PIDFILE, verify that all pids
+			# are valid
+			for pid in $lpids; do
+				kill -0 $pid 2>/dev/null && pidlist="$pidlist $pid"
+			done
+			if [ -z "$pidlist" ]; then
+				nopid="0"
+			else
+				nopid="1"
+			fi
 		else
 			nopid="0"
 		fi
