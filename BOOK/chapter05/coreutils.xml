@@ -48,8 +48,6 @@ have consequences, including the need to patch the many packages that
 still use the old syntax. Therefore, it is recommended that the
 instructions be followed exactly as given above.</para>
 
-<beginpage/>
-
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>

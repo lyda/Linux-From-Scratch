@@ -48,7 +48,6 @@ the next chapter.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<beginpage/>
 <para>Compile only the required tools:</para>
 
 <screen><userinput>make perl utilities</userinput></screen>

@@ -59,7 +59,6 @@ later.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<beginpage/>
 <para>The Info documentation system uses a plain text file to hold its
 list of menu entries. The file is located at
 <filename>/usr/share/info/dir</filename>.  Unfortunately, due to

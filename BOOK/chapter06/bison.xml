@@ -42,9 +42,8 @@ GCC, Gettext, Glibc, Grep, M4, Make, and Sed</seg></seglistitem>
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
-<beginpage/>
-</sect2>
 
+</sect2>
 
 <sect2 id="contents-bison" role="content"><title>Contents of Bison</title>
 

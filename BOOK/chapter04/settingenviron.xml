@@ -57,7 +57,6 @@ tools in <filename class="directory">$LFS/tools</filename> as soon as
 they are available without remembering a previous version of the same
 program in a different location.</para>
 
-<beginpage/>
 <para>Setting the user file-creation mask (umask) to 022 ensures that newly
 created files and directories are only writable by their owner, but
 are readable and executable by anyone (assuming default modes are used

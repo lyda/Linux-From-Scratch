@@ -52,7 +52,6 @@ cd ../glibc-build</userinput></screen>
     --without-gd --without-cvs --with-headers=/tools/include \
     --disable-selinux</userinput></screen>
 
-<beginpage/>
 <para>The meaning of the configure options:</para>
 
 <variablelist>
@@ -118,7 +117,6 @@ correctly, but will not otherwise affect the build.</para></listitem>
 <!-- -->
 </variablelist>
 
-<beginpage/>
 <para>During this stage the following warning might appear:</para>
 
 <blockquote><screen><computeroutput>configure: WARNING:
@@ -163,7 +161,6 @@ off and continue. This stop-start sequence can be circumvented by
 issuing a <command>make -k check</command> command. If using this option, be sure to log the
 output so that the log file can be examined for failures later.</para>
 
-<beginpage/>
 <para>The install stage of Glibc will issue a harmless warning at the
 end about the absence of <filename>/tools/etc/ld.so.conf</filename>. 
 Prevent this warning with:</para>
@@ -191,7 +188,6 @@ command:</para>
 
 <screen><userinput>make localedata/install-locales</userinput></screen>
 
-<beginpage/>
 <para>To save time, an alternative to running the
 previous command (which generates and installs every locale Glibc is
 aware of) is to install only those locales that are wanted and needed.

@@ -57,8 +57,6 @@ into <filename class="directory">/usr/lib</filename>.</para>
 <screen><userinput>rm /lib/libz.so
 ln -sf ../../lib/libz.so.&zlib-version; /usr/lib/libz.so</userinput></screen>
 
-<beginpage/>
-
 <para>Build the static library:</para>
 
 <screen><userinput>make clean

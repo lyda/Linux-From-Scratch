@@ -42,7 +42,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
-<beginpage/>
+
 </sect2>
 
 

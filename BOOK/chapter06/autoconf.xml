@@ -43,9 +43,8 @@ M4, Make, Perl, and Sed</seg></seglistitem>
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
-<beginpage/>
-</sect2>
 
+</sect2>
 
 <sect2 id="contents-autoconf" role="content"><title>Contents of Autoconf</title>
 

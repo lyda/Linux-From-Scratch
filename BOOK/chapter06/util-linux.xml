@@ -59,7 +59,6 @@ linux-libc-headers.  The following patch properly fixes that issue</para>
 
 <screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes</userinput></screen>
 
-<beginpage/>
 <para>The meaning of the make parameters:</para>
 
 <variablelist>

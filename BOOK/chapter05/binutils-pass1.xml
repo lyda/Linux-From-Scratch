@@ -52,7 +52,6 @@ this easily, wrap the four commands in a <command>time</command>
 command like this: <userinput>time { ./configure ... &amp;&amp; ...
 &amp;&amp; ... &amp;&amp; make install; }</userinput>.</para></note>
 
-<beginpage/>
 <para>Now prepare Binutils for compilation:</para>
 
 <screen><userinput>../binutils-&binutils-version;/configure --prefix=/tools \
@@ -110,7 +109,6 @@ first pass will soon be replaced by those from the second.</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<beginpage/>
 <para>Next, prepare the linker for the <quote>Adjusting</quote> phase
 later on:</para>
 

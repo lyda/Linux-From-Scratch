@@ -98,7 +98,7 @@ servers.</para></listitem>
 place:</para>
 
 <screen><userinput>mv /usr/bin/ping /bin</userinput></screen>
-<beginpage/>
+
 </sect2>
 
 

@@ -59,7 +59,6 @@ values need to be changed for specific users or requirements (if
 assigned an IP address by a network/system administrator and the
 machine will be connected to an existing network).</para>
 
-<beginpage/>
 <para>If a network card is not going to be configured, create the
 <filename>/etc/hosts</filename> file by running:</para>
 

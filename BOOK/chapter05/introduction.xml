@@ -46,8 +46,6 @@ deprecated, but not invalid, use of the C or C++ syntax. C standards
 change fairly often, and some packages still use the older standard.
 This is not a problem, but does prompt the warning.</para>
 
-<beginpage/>
-
 <para>After installing each package, delete its source and build
 directories, unless specifically instructed otherwise. Deleting the
 sources saves space and prevents mis-configuration when the same

@@ -53,7 +53,6 @@ successfully.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<beginpage/>
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>

@@ -61,8 +61,6 @@ Readline author.</para>
 
 <screen><userinput>chmod 755 /lib/lib{readline,history}.so*</userinput></screen>
 
-<beginpage/>
-
 <para>Now we move the static libraries to a more appropriate
 location:</para>
 

@@ -56,7 +56,6 @@ where they are expected to reside:</para>
 
 <screen><userinput>mv /usr/lib/libncurses.so.5* /lib</userinput></screen>
 
-<beginpage/>
 <para>Because the libraries have been moved, a few symlinks are pointing to
 non-existent files. Recreate those symlinks:</para>
 
@@ -163,7 +162,7 @@ report its long name</para>
 <listitem>
 <para>Can be used to initialize terminals</para>
 <indexterm zone="ch-system-ncurses tset"><primary sortas="b-tset">tset</primary></indexterm>
-<beginpage/></listitem>
+</listitem>
 </varlistentry>
 
 <varlistentry id="libcurses">

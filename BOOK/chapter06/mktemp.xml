@@ -50,8 +50,6 @@ functions from the system C library.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<beginpage/>
-
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
