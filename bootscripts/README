@@ -58,9 +58,9 @@ CleanFS configuration:
 		User/Group:
 			chown the created file/dir to this user/group
 		Dev Type:
-			c: character [needs MAJOR#, MINOR#]
-			b: block [needs MAJOR#, MINOR#]
-			p: pipe
+			char:  character [needs MAJOR#, MINOR#]
+			block: block [needs MAJOR#, MINOR#]
+			pipe:  pipe
 		Major#:
 			Used by character and block devices.
 		Minor#:
