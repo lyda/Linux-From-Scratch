@@ -9,5 +9,7 @@ Many users are switching to GRUB.
 (The book would probably switch to GRUB
 if the GRUB maintainers made a release they called stable.
 You could bug the GRUB maintainers if you'd like to see this happen.)
+</para>
+<para>Users who switch to GRUB can omit bin86, since it is only used by LILO.
 </para></answer>
 </qandaentry>

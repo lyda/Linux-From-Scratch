@@ -9,6 +9,7 @@ since current releases seem perfectly stable.
 you should have no trouble following the GRUB documentation
 and the LFS "GRUB-Howto" Hint at
 <ulink url="http://hints.linuxfromscratch.org/hints/grub-howto.txt"/>.
+If you do this, you can omit bin86, since it is only used by LILO.
 </para></answer>
 </qandaentry>
 
