@@ -8,7 +8,7 @@ lfs:
 	if [ ! -e $(BASEDIR)stylesheets ]; then \
 	  mkdir -p $(BASEDIR)stylesheets; \
 	fi;
-	cp ../output/stylesheets/lfs.css $(BASEDIR)/stylesheets
+	cp ../output/stylesheets/lfs.css $(BASEDIR)stylesheets
 
 	if [ ! -e $(BASEDIR)images ]; then \
 	  mkdir -p $(BASEDIR)images; \
