@@ -397,14 +397,117 @@ endif
 
 </qandadiv><!-- fee-compile-specific -->
 
-<!-- dlist: ,lfs-compile,new -->
+<!-- dlist: ,lfs-compile,blfs-support,new -->
 <qandadiv id="fee-compile-notlisted"><title>Errors Not Listed Above</title>
 
 <!-- elist: ,lfs-compile,new -->
 <qandaentry id="gnu-patches">
-<question><para>If you used a patch from GNU to upgrade:</para></question>
+<question><para>I used a patch from GNU to upgrade.
+Is that OK?</para></question>
 <answer><para>For some reason the patches from GNU don't usually work.
 Better download the full archive and try again.
+</para>
+<para>Ed. Note: can anyone tell <ulink url="mailto:sk@sethwklein.net">me</ulink>
+why GNU patches fail?
+</para></answer>
+</qandaentry>
+
+<!-- elist: ,lfs-compile,blfs-support -->
+<qandaentry id="optimizations">
+<question><para>I'm using optimizations.
+Can that be a problem?</para></question>
+<answer><para>If you're getting errors and you're using optimization settings,
+that may be the problem.
+Better retry without optimizations
+before going to the work of asking on the list.
+Even if the errors can't possibly be related.
+I've seen reports of configure scripts not
+running because of optimizations. Weird, huh?
+</para>
+<para>Also, optimizations that work for someone else
+may not work for you. Settings that used to work may break
+if you make the smallest, most innocent hardware change.
+</para>
+<para>(If you don't know what optimization settings are,
+don't worry, really you don't need to.)
+</para></answer>
+</qandaentry>
+
+<!-- elist: ,lfs-compile,blfs-support,new -->
+<qandaentry id="version-not-in-book">
+<question><para>I'm using a version not in the book.
+Is that a problem?</para></question>
+<answer><para>If you're getting errors and you're using a version of
+a package that differs from the version in the book
+(either newer or older), try the version in the book.
+Sometimes there are reasons why the book uses a particular version.
+Search the list archives if you're curious.
+</para>
+<para>In particular, GCC 3.0 will cause problems.
+See the entry "<link linkend="gcc-3_0">Why isn't GCC 3.0.x in the book?</link>".
+</para></answer>
+</qandaentry>
+
+<!-- elist: ,lfs-compile,blfs-support,new -->
+<qandaentry id="dirty-sources">
+<question><para>I didn't delete the source tree after my last attempt.
+Do i need to?</para></question>
+<answer><para>Yes. You should always delete the source tree after installing
+and delete it and start over if anything fails.
+</para>
+<para>The only exception is the kernel.
+Most people keep their kernel source so they don't have to reconfigure
+it from scratch if they need to make a small change.
+If a large change is needed, like changing processor type,
+it may be necessary to restart with a fresh tree even with the kernel.
+</para>
+<para>Here's an example when everything works:
+<screen>tar xvjf foo-0.0.tar.bz2
+cd foo-0.0
+./configure --prefix=/usr
+make
+make install
+cd ..
+rm -rf foo-0.0
+</screen>
+And here's an example for if something (in this case configure) fails:
+<screen>tar xvjf foo-0.0.tar.bz2
+cd foo-0.0
+./configure --prefix=/usr
+.
+.
+.
+*** configure: error: foo requires libess 4.2 or greater
+please install libess and rerun configure.
+cd ..
+rm -rf foo-0.0
+tar xvjf libess-4.2.tar.bz2
+cd libess-4.2
+./configure --prefix=/usr
+make
+make install
+cd ..
+rm -rf libess-4.2
+tar xvjf foo-0.0.tar.bz2
+cd foo-0.0
+./configure --prefix=/usr
+make
+make install
+cd ..
+rm -rf foo-0.0
+</screen></para>
+<para>Ed. Note: The name of the fictional libess above follows
+libiberty (from glibc, AFAIK) and libofat.
+The reason comes from the gcc flag, -l, for linking a library when compiling.
+For instance,
+<screen>gcc -o foo foo.c -lm
+</screen>
+would link the "m" (math) library with the executable foo.
+So, for the libraries above, the command looks like:
+<screen>gcc -o foo foo.c -liberty -lowfat -less
+</screen></para>
+<para>Bonus points if you caught the reference to
+The Hitchhiker's Guide to the Galaxy, by Douglas Adams in the example.
 </para></answer>
 </qandaentry>
 
@@ -564,43 +667,6 @@ and are left as an exercise for the reader.
 
 <!-- dlist: ,lfs-compile,blfs-support -->
 	<qandadiv id="compiling"><title>Compiling</title>
-<!-- dlist: ,lfs-compile,blfs-support -->
-<!--		<qandadiv id="before-ask-comp"><title>Before you ask on the list...</title>-->
-<!-- elist: ,lfs-compile,blfs-support -->
-			<qandaentry id="optimizations"><question><para>If you are using optimizations:</para></question>
-				<answer><para>If you're getting errors and you're using optimizations,
-					try without optimizations. Even if the errors can't possibly
-					be related. I've see reports of configure scripts not
-					running because of optimization settings. Weird, huh?
-				</para>
-				<para>Also, optimization settings that work for someone else
-					may not work for you. Settings that used to work may break
-					if you make the smallest, most innocent hardware change.
-				</para>
-				<para>(If you don't know what optimization settings are,
-					don't worry, you don't need to.)
-				</para></answer>
-			</qandaentry>
-<!-- elist: ,lfs-compile,blfs-support -->
-			<qandaentry id="version-not-in-book"><question><para>If you are using a version not in the book:</para></question>
-				<answer><para>If you're getting errors and you're using a version of
-					a package that differs from the version in the book
-					(either newer or older), try the version in the book.
-					Sometimes there are reasons why the book uses a particular
-					version. Search the list archives if you're curious.
-				</para></answer>
-			</qandaentry>
-<!-- elist: ,lfs-compile,blfs-support -->
-			<qandaentry id="dirty-sources"><question><para>If you didn't delete the source tree after your last attempt:</para></question>
-				<answer><para>If you're getting errors and you tried compiling before
-					but didn't "rm -rf" the sources between,
-					delete and try again.
-					Basically, extract, configure, and make;
-					and if that fails delete the whole business
-					before starting over from "extract".
-				</para></answer>
-			</qandaentry>
-<!--		</qandadiv>-->
 <!-- elist: ,lfs-compile,blfs-support -->
 		<qandaentry id="sig11"><question><para>I'm getting fatal errors about signal 11.</para></question>
 			<answer><para>See <ulink url="http://www.bitwizard.nl/sig11/">http://www.bitwizard.nl/sig11/</ulink>.
