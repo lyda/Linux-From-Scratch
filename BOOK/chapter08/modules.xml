@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-bootable-modules">
+<title>How kernel modules are loaded in LFS</title>
+<?dbhtml filename="modules.html"?>
+
+<para>Almost every driver in the kernel may be either not compiled at all, or
+compiled permanently into the kernel, or made a module. When a driver is a
+module, it must be loaded into the kernel before it can be used. Module
+loading isn't automatic in many cases, and can be a non-trivial problem.
+Solutions for this problem, available in LFS, are discussed below.</para>
+
+<para>First, the problem does not exist if modules are not used. In fact, if
+your kernel will be used only on your computer (with known hardware), there is
+no good reason for building modules, especially if all your hardware is
+supported by drivers that come with the kernel.</para>
+
+<para>Then, you have to do nothing for autoloading network protocol drivers,
+filesystem drivers (except usbcore), and NLS character sets. The kernel just
+calls <command>modprobe</command> itself either with the explicit module name,
+or with a builtin alias (resolved by <command>modprobe</command> via the
+automatically generated
+<filename>/lib/modules/&linux-version;/modules.alias</filename> file). As a
+consequence, the module will be loaded automatically upon the first
+need.</para>
+
+<para>For exactly the same reason, the kernel will automatically load drivers
+for character and block devices upon the first need, if the corresponding
+driver has a builtin alias and the device node is already present. For
+example, the <filename>/dev/lp0</filename> character device has the major
+and minor numbers 6 and 0, correspondingly. The "lp" module has a builtin
+"char-major-6-*" alias, and that's why it is automatically loaded upon the
+first need when an application tries to open <filename>/dev/lp0</filename>,
+<emphasis>if this device node already exists</emphasis>.</para>
+<note><para>This is not the case
+when <application>Udev</application> manages the <filename
+class="directory">/dev</filename> directory automatically: the
+<filename>/dev/lp0</filename> device node will appear only after the "lp"
+module gets loaded. Because of this chicken-and-egg problem, this mechanism
+for module autoloading does not work when <application>Udev</application> is
+installed. The proper solution is to use other module loading methods with
+<application>Udev</application></para></note>
+
+<para>You can put your own module aliases in the
+<filename>/etc/modprobe.conf</filename> file. E.g., if you put the lines
+<screen>alias eth0 e100
+alias char-major-195-* nvidia</screen>
+into <filename>/etc/modprobe.conf</filename>, then the e100 module will be
+loaded automatically on the first access to the eth0 interface <emphasis>if it
+has no driver yet</emphasis> and the nvidia module will be loaded upon the
+first access to any of the /dev/nvidia* devices <emphasis>if it already exists
+and has no driver loaded</emphasis>. This method of loading modules is well
+documented, however, it is considered obsolete.
+</para>
+<note><para>This method either does not work or is unnecessary when the
+<application>Hotplug</application> package is installed, because this package
+loads modules before any access to devices. Therefore, the situation when
+something tries to access a device without a loaded driver is
+improbable.</para></note>
+
+<note><para>For this method to work, the kernel must notice the access to a
+device without a driver. This doesn't always happen if the
+<application>Udev</application> package is installed, for the same reason as
+the chicken-and-egg problem discussed above.</para></note>
+
+<para>The <application>Hotplug</application> package (optionally installed
+later in this chapter) loads all modules
+matching the PCI and USB IDs of your hardware at startup. However, it loads
+nothing else, and requires the modules to provide information about devices
+they support.</para>
+<note><para>E.g., hotplug will load the snd-fm801 module if a ForteMedia based
+soundcard is present in the system, but will not load the snd-pcm-oss module
+because it doesn't correspond to any PCI or USB ID. It will not load the
+proprietary Lucent winmodem driver (ltserial) because this module doesn't
+provide information about the PCI devices supported by it.</para></note>
+
+<para>Finally, LFS provides the <command>modules</command> initscript that
+unconditionally loads all modules listed in the
+<filename>/etc/sysconfig/modules</filename> file early in the boot
+process. When the <application>Udev</application> package is installed,
+this is currently the only way to load character and block device
+drivers that are not detectable by <application>Hotplug</application>.</para>
+<note><para>If you put any module into
+<filename>/etc/sysconfig/modules</filename>, it means that you really should
+not have compiled this driver as a module.</para></note>
+
+<para>Once again, it is recommended to avoid using modules with LFS.</para>
+</sect1>
