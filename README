@@ -36,3 +36,21 @@ SetClock configuration:
 		sysconfig/clock
 		- UTC: 1 assumes hwclock is in UTC
 		       0 assumes hwclock is in local time
+
+CleanFS configuration:
+	Script Files:
+		rc.d/init.d/cleanfs
+
+	Configuration Files:
+		/etc/sysconfig/createfiles
+		Each line is parsed, using space as a deliminator
+		[TYPE] [USER] [GROUP] [PERMISSIONS] [NAME]
+		TYPE:
+			dir: creates a directory
+			file: creates a file
+		User/Group:
+			chown the created file/dir to this user/group
+		Permissions:
+			chmod the created file
+		Name:
+			File/Directory name
