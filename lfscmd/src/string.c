@@ -18,7 +18,6 @@ void error (const char *fmt, ...) {
     va_end(args);
 
     fprintf(stderr, "Error: %s\n", msg);
-    free(msg);
 
     exit(1);
 }
