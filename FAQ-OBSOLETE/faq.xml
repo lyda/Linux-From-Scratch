@@ -365,18 +365,18 @@ make: *** [all] Error 2
  			</para>
 			<para>A full list is in /usr/include/linux/socket.h but here is
 				a list of the likely culprits:
-				<simplelist>
-					<member>net-pf-3: Amateur Radio AX.25 (AF_AX25)
-					</member>
-					<member>net-pf-4: Novell IPX (AF_IPX)
-					</member>
-					<member>net-pf-5: AppleTalk DDP (AF_APPLETALK)
-					</member>
-					<member>net-pf-6: Amateur Radio NET/ROM (AF_NETROM)
-					</member>
-					<member>net-pf-9: Reserved for X.25 project (AF_X25)
-					</member>
-				</simplelist>
+				<itemizedlist>
+					<listitem><para>net-pf-3: Amateur Radio AX.25 (AF_AX25)
+					</para></listitem>
+					<listitem><para>net-pf-4: Novell IPX (AF_IPX)
+					</para></listitem>
+					<listitem><para>net-pf-5: AppleTalk DDP (AF_APPLETALK)
+					</para></listitem>
+					<listitem><para>net-pf-6: Amateur Radio NET/ROM (AF_NETROM)
+					</para></listitem>
+					<listitem><para>net-pf-9: Reserved for X.25 project (AF_X25)
+					</para></listitem>
+				</itemizedlist>
 			</para>
 			<para>Naturally the fix is to recompile net-tools without support
 				for the things you don't need. (Or recompile your kernel with
@@ -463,25 +463,25 @@ make: *** [all] Error 2
 			</qandaentry>
 			<qandaentry id="why-ed"><question><para>Why ed?</para></question>
 				<answer><para>There are several reasons why ed is in the book:
-					<simplelist>
-						<member>The official reason is that patch uses it to process ed
+					<itemizedlist>
+						<listitem><para>The official reason is that patch uses it to process ed
 							scripts. However, these are seldom used recently;
 							everyone uses diff.
-						</member>
-						<member>Unofficially, for all who've learned to use it,
+						</para></listitem>
+						<listitem><para>Unofficially, for all who've learned to use it,
 							ed is a very useful emergency editor.
 							The MS Windows standard telnet client can deal with ed
 							where fullscreen editors (like vim) give it trouble.
 							And a full featured vim requires not only ncurses, but
 							X11 as well! Any trouble with those libraries will leave
 							the system without an editor if ed isn't present.
-						</member>
-						<member>And, though it's not a reason to have ed in the book,
+						</para></listitem>
+						<listitem><para>And, though it's not a reason to have ed in the book,
 							some people actually like ed.
 							It's also a major part of Unix history and understanding
 							it helps with understanding vi(m).
-						</member>
-					</simplelist>
+						</para></listitem>
+					</itemizedlist>
 				</para></answer>
 			</qandaentry>
 <!--		</qandadiv>-->
