@@ -1,0 +1,29 @@
+Thank you for helping us test the new LFS-bootscripts package!
+
+Before you install this, there's something you should know.  Our
+initial testing was that this package would work as a drop-in on
+any LFS system, however, that may not be the case.  We would like
+to know if you encounter any problems, so we may address them for
+the future.  Please send E-mail to either jeremy@linuxfromscratch.org
+or nathan@linuxfromscratch.org with your feedback.
+
+Now, on to the installation:
+
+First, remove the old LFS-bootscripts package - this is quite simple:
+
+rm -rf /etc/rc.d/*
+
+Now, install the new bootscripts package - we've simplified this with
+a standard Makefile:
+
+make install
+
+That's it!  You should be able to safely reboot your system at this
+time!
+
+
+Don't forget to send us feedback, and hit these all you want!
+
+Jeremy Utley
+Nathan Coulson
+LFS-bootscripts maintainers
