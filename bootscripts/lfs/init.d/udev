@@ -34,11 +34,11 @@ case "${1}" in
 		then
 			boot_log " The SysFS filesystem could not be found.  Unable to continue."
 			echo_failure
-			boot_mesg "FAILURE:\n\nUnable to create" ${FAILURE}
-			boot_mesg " devices without a SysFS filesystem"
-			boot_mesg "\n\nAfter you press Enter, this system"
-			boot_mesg " will be halted and powered off."
-			boot_mesg "\n\nPress Enter to continue..." ${INFO}
+			boot_mesg -n "FAILURE:\n\nUnable to create" ${FAILURE}
+			boot_mesg -n " devices without a SysFS filesystem"
+			boot_mesg -n "\n\nAfter you press Enter, this system"
+			boot_mesg -n " will be halted and powered off."
+			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
 			boot_mesg "" ${NORMAL}
 			read ENTER
 			/etc/rc.d/init.d/halt stop
@@ -53,11 +53,11 @@ case "${1}" in
 		then
 			boot_log "Unable to mount a tmpfs onto /dev."
 			echo_failure
-			boot_mesg "FAILURE:\n\nCannot mount a tmpfs" ${FAILURE}
-			boot_mesg " onto /dev, this system will be halted."
-			boot_mesg "\n\nAfter you press Enter, this system"
-			boot_mesg " will be halted and powered off."
-			boot_mesg "\n\nPress Enter to continue..." ${INFO}
+			boot_mesg -n "FAILURE:\n\nCannot mount a tmpfs" ${FAILURE}
+			boot_mesg -n " onto /dev, this system will be halted."
+			boot_mesg -n "\n\nAfter you press Enter, this system"
+			boot_mesg -n " will be halted and powered off."
+			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
 			boot_mesg "" ${NORMAL}
 			read ENTER
 			/etc/rc.d/init.d/halt stop

@@ -17,11 +17,11 @@
 
 case "${1}" in
 	start)
-		boot_mesg "Mounting kernel-based file systems:" ${INFO}
+		boot_mesg -n "Mounting kernel-based file systems:" ${INFO}
 
 		if [ ! -e /proc/mounts ]
 		then
-			boot_mesg " /proc" ${NORMAL}
+			boot_mesg -n " /proc" ${NORMAL}
 			mount -n /proc || failed=1
 		fi
 
@@ -30,10 +30,12 @@ case "${1}" in
 		then
 			if [ -d /sys -a ! -d /sys/block ]
 			then
-				boot_mesg " /sys" ${NORMAL}
+				boot_mesg -n " /sys" ${NORMAL}
 				mount -n /sys || failed=1
 			fi
 		fi
+
+		boot_mesg "" ${NORMAL}
 
 		(exit ${failed})
 		evaluate_retval

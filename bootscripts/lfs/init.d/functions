@@ -98,15 +98,33 @@ BMWORD=""          # last printed word before a newline when wrapping text
 # Todo:         - This function was created for the purpose of storing
 #               information to be passed to a bootup log and for better
 #               formatting of text sent to the screen.  The logging support
-#               now pushes messages to the local0 service which is now
+#               now pushes messages to the local2 service which is now
 #               configured by LFS defalut in syslog-ng.conf.  This also 
 #               requires that /usr/bin/logger be moved to /bin.
 #               Support for parallel bootscripts is not added *yet*...
 #*******************************************************************************
 boot_mesg()
 {
+	local ECHOPARM=""
 	##### NOTE!!!! A single message cannot span two complete lines
 	##### (longer than WCOL) or exceed 100 words.
+
+	while true
+	do
+		case "${1}" in
+			-n)
+				ECHOPARM=" -n "
+				shift 1
+				;;
+			-*)
+				echo "Unknown Option: ${1}"
+				return 1
+				;;
+			*)
+				break
+				;;
+		esac
+	done
 
 	## Figure out the length of what is to be printed. 
 	# This is effectivly eqivelent to wc -m.
@@ -184,7 +202,7 @@ boot_mesg()
 	fi
 
 	# Print the results to the screen
-	echo -n -e "${2}${BOOTMESGPRN}"
+	echo "${ECHOPARM}" -e "${2}${BOOTMESGPRN}"
 	
 	# if CUR_LENGTH was set to zero, then end the line
 	if [ "${CUR_LENGTH}" == "0" ]; then
@@ -224,21 +242,21 @@ boot_log()
 
 echo_ok()
 {
-	echo -n -e "${SET_COL}${BRACKET}[${SUCCESS}  OK  ${BRACKET}]"
+	echo -n -e "${CURS_UP}${SET_COL}${BRACKET}[${SUCCESS}  OK  ${BRACKET}]"
 	echo -e "${NORMAL}"
 	boot_mesg_flush "[  OK  ]"
 }
 
 echo_failure()
 {
-	echo -n -e "${SET_COL}${BRACKET}[${FAILURE} FAIL ${BRACKET}]"
+	echo -n -e "${CURS_UP}${SET_COL}${BRACKET}[${FAILURE} FAIL ${BRACKET}]"
 	echo -e "${NORMAL}"
 	boot_mesg_flush "[ FAIL ]"
 }
 
 echo_warning()
 {
-	echo -n -e "${SET_COL}${BRACKET}[${WARNING} WARN ${BRACKET}]"
+	echo -n -e "${CURS_UP}${SET_COL}${BRACKET}[${WARNING} WARN ${BRACKET}]"
 	echo -e "${NORMAL}"
 	boot_mesg_flush "[ WARN ]"
 }
@@ -249,18 +267,17 @@ print_error_msg()
 	# $i is inherited by the rc script
 	boot_log "\n\n${i} failed and exited with a return value of ${error_value}."
 	boot_mesg_flush
-	boot_mesg "FAILURE:\n\nYou should not be reading this error message.\n\n" ${FAILURE}
-	boot_mesg_flush
-	boot_mesg " It means that an unforseen error took"
-	boot_mesg " place in ${i}, which exited with a return value of"
+	boot_mesg -n "FAILURE:\n\nYou should not be reading this error message.\n\n" ${FAILURE}
+	boot_mesg -n " It means that an unforseen error took"
+	boot_mesg -n " place in ${i}, which exited with a return value of"
 	boot_mesg " ${error_value}.\n\n"
 	boot_mesg_flush
-	boot_mesg "If you're able to track this"
-	boot_mesg " error down to a bug in one of the files provided by"
-	boot_mesg " the LFS book, please be so kind to inform us at"
-	boot_mesg " lfs-dev@linuxfromscratch.org.\n\n"
+	boot_mesg -n "If you're able to track this"
+	boot_mesg -n " error down to a bug in one of the files provided by"
+	boot_mesg -n " the LFS book, please be so kind to inform us at"
+	boot_mesg -n " lfs-dev@linuxfromscratch.org.\n\n"
 	boot_mesg_flush
-	boot_mesg "Press Enter to continue..." ${INFO}
+	boot_mesg -n "Press Enter to continue..." ${INFO}
 	boot_mesg "" ${NORMAL}
 	read ENTER
 }

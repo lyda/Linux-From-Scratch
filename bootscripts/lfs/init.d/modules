@@ -43,7 +43,7 @@ case "${1}" in
 			# Read in the configuration file.
 			exec 9>&0 < /etc/sysconfig/modules
 
-				boot_mesg "Loading modules:" ${INFO}
+				boot_mesg -n "Loading modules:" ${INFO}
 
 				while read module args
 				do
@@ -60,12 +60,13 @@ case "${1}" in
 					# otherwise take note.
 					if [ ${?} -eq 0 ]
 					then
-						boot_mesg " ${module}" ${NORMAL}
+						boot_mesg -n " ${module}" ${NORMAL}
 					else
 						failedmod="${failedmod} ${module}"
 					fi
 				done
 
+				boot_mesg "" ${MORMAL}
 				# Print a message about successfully loaded
 				# modules on the correct line.
 				echo_ok
