@@ -13,22 +13,16 @@ then
   exit 0
 fi
 
-if [ -f $network_devices/ifdown-$1 ]
+if [ -z $SERVICE ]
 then
-	$network_devices/ifdown-$1
-else
-	if [ -z $SERVICE ]
-	then
-		echo -n "SERVICE variable missing from ifconfig.$1, "
-		echo "using static"
-		SERVICE=static
-	fi
-	if [ ! -f $network_devices/services/$SERVICE ]
-	then
-		echo -n "Unknown Service: $SERVICE, cannot continue"
-		exit 1
-	fi
-	$network_devices/services/${SERVICE} $1 down
+	echo "SERVICE variable missing from ifconfig.$1, cannot continue"
+	exit 1
 fi
+if [ ! -f $network_devices/services/$SERVICE ]
+then
+	echo -n "Unknown Service: $SERVICE, cannot continue"
+	exit 1
+fi
+$network_devices/services/${SERVICE} $1 down
 
 # End $network_devices/ifdown
