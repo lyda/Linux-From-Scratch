@@ -22,6 +22,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Automake 1.9.5</para></listitem>
 <listitem><para>Binutils 2.15.94.0.2.2</para></listitem>
 <listitem><para>Bison 2.0</para></listitem>
+<listitem><para>Diffutils 2.8.7</para></listitem>
 <listitem><para>E2fsprogs 1.36</para></listitem>
 <listitem><para>Expect 1.43.0</para></listitem>
 <listitem><para>File 4.13</para></listitem>
