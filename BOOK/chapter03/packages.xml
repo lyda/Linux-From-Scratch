@@ -12,133 +12,133 @@
 <variablelist role="materials">
 
 <varlistentry>
-<term>Autoconf (&autoconf-version;) - 903 KB:</term>
+<term>Autoconf (&autoconf-version;) - 904 KB:</term>
 <listitem>
 <para><ulink url="&gnu;autoconf/autoconf-&autoconf-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Automake (&automake-version;) - 644 KB:</term>
+<term>Automake (&automake-version;) - 741 KB:</term>
 <listitem>
 <para><ulink url="&gnu;automake/automake-&automake-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Bash (&bash-version;) - 1,910 KB:</term>
+<term>Bash (&bash-version;) - 2.4 MB:</term>
 <listitem>
 <para><ulink url="&gnu;bash/bash/bash-&bash-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Binutils (&binutils-version;) - 10,666 KB:</term>
+<term>Binutils (&binutils-version;) - 11 MB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/devel/binutils/binutils-&binutils-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Bison (&bison-version;) - 1,100 KB:</term>
+<term>Bison (&bison-version;) - 1.2 MB:</term>
 <listitem>
 <para><ulink url="&gnu;bison/bison-&bison-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Bzip2 (&bzip2-version;) - 650 KB:</term>
+<term>Bzip2 (&bzip2-version;) - 654 KB:</term>
 <listitem>
-<para><ulink url="&redhat;bzip2/v&bzip2-dl-version;/bzip-&bzip2-version;.tar.gz"/></para>
+<para><ulink url="&http://www.bzip.org/&bzip2-version;/bzip-&bzip2-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="raq2">
-<term>Colo (&colo-version;) - 2,430 KB:</term>
+<term>Colo (&colo-version;) - 240 KB:</term>
 <listitem>
 <para><ulink url="http://www.colonel-panic.org/cobalt-mips/colo/colo-&colo-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Coreutils (&coreutils-version;) - 3,860 KB:</term>
+<term>Coreutils (&coreutils-version;) - 6.3 MB:</term>
 <listitem>
 <para><ulink url="&gnu;coreutils/coreutils-&coreutils-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>DejaGNU (&dejagnu-version;) - 1,055 KB:</term>
+<term>DejaGNU (&dejagnu-version;) - 1.0 MB:</term>
 <listitem>
 <para><ulink url="&gnu;dejagnu/dejagnu-&dejagnu-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Diffutils (&diffutils-version;) - 1034 KB:</term>
+<term>Diffutils (&diffutils-version;) - 1.1 MB:</term>
 <listitem>
 <para><ulink url="&alpha-gnu;diffutils/diffutils-&diffutils-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>E2fsprogs (&e2fsprogs-version;) - 3,003 KB:</term>
+<term>E2fsprogs (&e2fsprogs-version;) - 3.5 MB:</term>
 <listitem>
 <para><ulink url="&sourceforge;e2fsprogs/e2fsprogs-&e2fsprogs-version;.tar.gz?download"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Expect (&expect-version;) - 510 KB:</term>
+<term>Expect (&expect-version;) - 514 KB:</term>
 <listitem>
 <para><ulink url="http://expect.nist.gov/src/expect-&expect-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>File (&file-version;) - 356 KB:</term>
+<term>File (&file-version;) - 411 KB:</term>
 <listitem>
 <para><ulink url="ftp://ftp.gw.com/mirrors/pub/unix/file/file-&file-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Findutils (&findutils-version;) - 760 KB:</term>
+<term>Findutils (&findutils-version;) - 921 KB:</term>
 <listitem>
 <para><ulink url="&alpha-gnu;findutils/findutils-&findutils-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Flex (&flex-version;) - 66 KB:</term>
+<term>Flex (&flex-version;) - 666 KB:</term>
 <listitem>
 <para><ulink url="&sourceforge;lex/flex-&flex-version;.tar.bz2?download"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Gawk (&gawk-version;) - 1,596 KB:</term>
+<term>Gawk (&gawk-version;) - 2.2 MB:</term>
 <listitem>
 <para><ulink url="&gnu;gawk/gawk-&gawk-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>GCC (&gcc-version;) - ~27,000KB:</term>
+<term>GCC (&gcc-version;) - 27 MB:</term>
 <listitem>
 <para><ulink url="&gnu;gcc/gcc-&gcc-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Gettext (&gettext-version;) - 6,397 KB:</term>
+<term>Gettext (&gettext-version;) - 6.3 MB:</term>
 <listitem>
 <para><ulink url="&gnu;gettext/gettext-&gettext-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Glibc (&glibc-version;) - 13,800 KB:</term>
+<term>Glibc (&glibc-version;) - 13 MB:</term>
 <listitem>
 <para><ulink url="&gnu;/glibc/glibc-&glibc-version;.tar.bz2"/></para>
 </listitem>
@@ -152,21 +152,21 @@
 </varlistentry>
 
 <varlistentry>
-<term>Glibc Linuxthreads (&glibc-version;) - 231  KB:</term>
+<term>Glibc Linuxthreads (&glibc-version;) - 231 KB:</term>
 <listitem>
 <para><ulink url="&gnu;/glibc/glibc-linuxthreads-&glibc-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Grep (&grep-version;) - 545 KB:</term>
+<term>Grep (&grep-version;) - 617 KB:</term>
 <listitem>
 <para><ulink url="&gnu;grep/grep-&grep-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Groff (&groff-version;) - 2,360 KB:</term>
+<term>Groff (&groff-version;) - 2.6 MB:</term>
 <listitem>
 <para><ulink url="&gnu;groff/groff-&groff-version;.tar.gz"/></para>
 </listitem>
@@ -180,21 +180,21 @@
 </varlistentry>
 
 <varlistentry arch="x86">
-<term>Grub (&grub-version;) - 902 KB:</term>
+<term>Grub (&grub-version;) - 963 KB:</term>
 <listitem>
 <para><ulink url="&alpha-gnu;grub/grub-&grub-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Hotplug (&hotplug-version;) - 34 KB:</term>
+<term>Hotplug (&hotplug-version;) - 38 KB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/utils/kernel/hotplug/hotplug-&hotplug-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Iana-Etc (&iana-etc-version;) - 161 KB:</term>
+<term>Iana-Etc (&iana-etc-version;) - 169 KB:</term>
 <listitem>
 <para><ulink url="http://www.sethwklein.net/projects/iana-etc/downloads/iana-etc-&iana-etc-version;.tar.bz2"/></para>
 </listitem>
@@ -208,14 +208,14 @@
 </varlistentry>
 
 <varlistentry>
-<term>IPRoute2 (&iproute2-version;) - 230 KB:</term>
+<term>IPRoute2 (&iproute2-version;) - 331 KB:</term>
 <listitem>
 <para><ulink url="http://developer.osdl.org/dev/iproute2/download/iproute2-&iproute2-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Kbd (&kbd-version;) - 617 KB:</term>
+<term>Kbd (&kbd-version;) - 618 KB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/utils/kbd/kbd-&kbd-version;.tar.bz2"/></para>
 </listitem>
@@ -229,105 +229,105 @@
 </varlistentry>
 
 <varlistentry>
-<term>LFS-Bootscripts (&lfs-bootscripts-version;) - 14 KB:</term>
+<term>LFS-Bootscripts (&lfs-bootscripts-version;) - 26 KB:</term>
 <listitem>
 <para><ulink url="http://downloads.linuxfromscratch.org/lfs-bootscripts-&lfs-bootscripts-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Libol (&libol-version;) - 336 KB:</term>
+<term>Libol (&libol-version;) - 337 KB:</term>
 <listitem>
 <para><ulink url="http://www.balabit.com/downloads/syslog-ng/libol/&libol-dl-version;/libol-&libol-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Libtool (&libtool-version;) - 2,602 KB:</term>
+<term>Libtool (&libtool-version;) - 2.7 MB:</term>
 <listitem>
 <para><ulink url="&gnu;libtool/libtool-&libtool-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="x86">
-<term>Linux (&linux-version;) - 34,793 KB:</term>
+<term>Linux (&linux-version;) - 35 MB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="alpha">
-<term>Linux (&linux-alpha-version;) - 34,793 KB:</term>
+<term>Linux (&linux-alpha-version;) - 35 MB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-alpha-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="ppc">
-<term>Linux (&linux-ppc-version;) - 34,793 KB:</term>
+<term>Linux (&linux-ppc-version;) - 35 MB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="raq2">
-<term>Linux (&linux-raq2-version;) - 34,793 KB:</term>
+<term>Linux (&linux-raq2-version;) - 35 MB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-raq2-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="x86">
-<term>Linux-Libc-Headers (&linux-libc-headers-version;) - 2,381 KB:</term>
+<term>Linux-Libc-Headers (&linux-libc-headers-version;) - 2.5 MB:</term>
 <listitem>
 <para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="alpha">
-<term>Linux-Libc-Headers (&linux-libc-headers-alpha-version;) - 2,381 KB:</term>
+<term>Linux-Libc-Headers (&linux-libc-headers-alpha-version;) - 2.5 MB:</term>
 <listitem>
 <para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-alpha-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="ppc">
-<term>Linux-Libc-Headers (&linux-libc-headers-ppc-version;) - 2,381 KB:</term>
+<term>Linux-Libc-Headers (&linux-libc-headers-ppc-version;) - 2.5 MB:</term>
 <listitem>
 <para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-ppc-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="raq2">
-<term>Linux-Libc-Headers (&linux-libc-headers-raq2-version;) - 2,381 KB:</term>
+<term>Linux-Libc-Headers (&linux-libc-headers-raq2-version;) - 2.6 MB:</term>
 <listitem>
 <para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-raq2-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>M4 (&m4-version;) - 310 KB:</term>
+<term>M4 (&m4-version;) - 338 KB:</term>
 <listitem>
 <para><ulink url="&gnu;m4/m4-&m4-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Make (&make-version;) - 899 KB:</term>
+<term>Make (&make-version;) - 900 KB:</term>
 <listitem>
 <para><ulink url="&gnu;make/make-&make-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Man (&man-version;) - 196 KB:</term>
+<term>Man (&man-version;) - 229 KB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/utils/man/man-&man-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Man-pages (&man-pages-version;) - 1,586 KB:</term>
+<term>Man-pages (&man-pages-version;) - 1.6 MB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/docs/manpages/man-pages-&man-pages-version;.tar.bz2"/></para>
 </listitem>
@@ -341,21 +341,21 @@
 </varlistentry>
 
 <varlistentry>
-<term>Module-Init-Tools (&module-init-tools-version;) - 118 KB:</term>
+<term>Module-Init-Tools (&module-init-tools-version;) - 121 KB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/utils/kernel/module-init-tools/module-init-tools-&module-init-tools-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Ncurses (&ncurses-version;) - 2,019 KB:</term>
+<term>Ncurses (&ncurses-version;) - 2.1 MB:</term>
 <listitem>
 <para><ulink url="ftp://invisible-island.net/ncurses/ncurses-&ncurses-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry arch="raq2">
-<term>OpenSSH (&openssh-version;) - 854 KB:</term>
+<term>OpenSSH (&openssh-version;) - 835 KB:</term>
 <listitem>
 <para><ulink url="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-&openssh-version;.tar.gz"/></para>
 </listitem>
@@ -369,91 +369,91 @@
 </varlistentry>
 
 <varlistentry>
-<term>Patch (&patch-version;) - 182 KB:</term>
+<term>Patch (&patch-version;) - 183 KB:</term>
 <listitem>
 <para><ulink url="&alpha-gnu;diffutils/patch-&patch-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Perl (&perl-version;) - 9,373 KB:</term>
+<term>Perl (&perl-version;) - 12 MB:</term>
 <listitem>
 <para><ulink url="http://ftp.funet.fi/pub/CPAN/src/perl-&perl-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Procps (&procps-version;) - 256 KB:</term>
+<term>Procps (&procps-version;) - 271 KB:</term>
 <listitem>
 <para><ulink url="http://procps.sourceforge.net/procps-&procps-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Psmisc (&psmisc-version;) - 375 KB:</term>
+<term>Psmisc (&psmisc-version;) - 374 KB:</term>
 <listitem>
 <para><ulink url="&sourceforge;psmisc/psmisc-&psmisc-version;.tar.gz?download"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Readline (&readline-version;) - 940 KB:</term>
+<term>Readline (&readline-version;) - 1.8 MB:</term>
 <listitem>
 <para><ulink url="&gnu;readline/readline-&readline-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Sed (&sed-version;) - 753 KB:</term>
+<term>Sed (&sed-version;) - 776 KB:</term>
 <listitem>
 <para><ulink url="&gnu;sed/sed-&sed-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Shadow (&shadow-version;) - 795 KB:</term>
+<term>Shadow (&shadow-version;) - 996 KB:</term>
 <listitem>
 <para><ulink url="ftp://ftp.pld.org.pl/software/shadow/shadow-&shadow-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Syslog-ng (&syslog-ng-version;) - 388 KB:</term>
+<term>Syslog-ng (&syslog-ng-version;) - 369 KB:</term>
 <listitem>
 <para><ulink url="http://www.balabit.com/downloads/syslog-ng/&syslog-ng-dl-version;/src/syslog-ng-&syslog-ng-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Sysvinit (&sysvinit-version;) - 91 KB:</term>
+<term>Sysvinit (&sysvinit-version;) - 97 KB:</term>
 <listitem>
 <para><ulink url="ftp://ftp.cistron.nl/pub/people/miquels/sysvinit/sysvinit-&sysvinit-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Tar (&tar-version;) - 1,025 KB:</term>
+<term>Tar (&tar-version;) - 1.6 MB:</term>
 <listitem>
 <para><ulink url="&gnu;tar/tar-&tar-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Tcl (&tcl-version;) - 3,363 KB:</term>
+<term>Tcl (&tcl-version;) - 3.4 MB:</term>
 <listitem>
 <para><ulink url="&sourceforge;tcl/tcl&tcl-version;-src.tar.gz?download"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Texinfo (&texinfo-version;) - 1,385 KB:</term>
+<term>Texinfo (&texinfo-version;) - 1.5 MB:</term>
 <listitem>
 <para><ulink url="&gnu;texinfo/textinfo-&texinfo-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Udev (&udev-version;) - 374 KB:</term>
+<term>Udev (&udev-version;) - 356 KB:</term>
 <listitem>
 <para><ulink url="&kernel;/linux/utils/kernel/hotplug/udev-&udev-version;.tar.bz2"/></para>
 </listitem>
@@ -467,21 +467,21 @@
 </varlistentry>
 
 <varlistentry>
-<term>Util-linux (&util-linux-version;) - 1,814 KB:</term>
+<term>Util-linux (&util-linux-version;) - 2.0 MB:</term>
 <listitem>
 <para><ulink url="&kernel;/linux/utils/util-linux/util-linux-&util-linux-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Vim (&vim-version;) - 3,612 KB:</term>
+<term>Vim (&vim-version;) - 3.6 MB:</term>
 <listitem>
 <para><ulink url="ftp://ftp.vim.org/pub/vim/unix/vim-&vim-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Vim (&vim-version;) language files (optional) - 1,033 KB:</term>
+<term>Vim (&vim-version;) language files (optional) - 1.0 MB:</term>
 <listitem>
 <para><ulink url="ftp://ftp.vim.org/pub/vim/extra/vim-&vim-version;-lang.tar.gz"/></para>
 </listitem>
@@ -495,7 +495,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>Zlib (&zlib-version;) - 277 KB:</term>
+<term>Zlib (&zlib-version;) - 364 KB:</term>
 <listitem>
 <para><ulink url="http://www.zlib.net/zlib-&zlib-version;.tar.gz"/></para>
 </listitem>
