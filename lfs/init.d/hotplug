@@ -6,7 +6,7 @@
 #
 # Authors     : Zack Winkles
 #
-# Version     : 00.01
+# Version     : 00.02
 #
 # Notes       :
 #
@@ -25,14 +25,12 @@ case "${1}" in
 		echo_ok
 		;;
 	stop)
-		# Remove hotplug as the default manager of hotplug events
-		echo /bin/true > /proc/sys/kernel/hotplug
+		# Remove /var/log/hotplug/events
+		rm /var/log/hotplug/events
 
-                # Remove /var/log/hotplug/events
-                rm /var/log/hotplug/events
+		# Recreate /var/log/hotplug/events
+		touch /var/log/hotplug/events
 
-                # Recreate /var/log/hotplug/events
-                touch /var/log/hotplug/events
 		;;
 	status)
 		for rc in /etc/hotplug/*.rc
