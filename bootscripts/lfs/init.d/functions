@@ -173,53 +173,46 @@ loadproc()
 # Stops a process if it is running
 killproc()
 {
-
 	#If PIDFILE is set, no need to pass arguments
-	if [ -n "$PIDFILE" -a -r "$PIDFILE" ]
-	then
+	if [ -n "$PIDFILE" -a -r "$PIDFILE" ]; then
 		pidlist=`cat $PIDFILE`
-		if [ -z "$1" ]
-		then
-			signal=TERM
-			fallback=KILL
-		else
-			signal=${1##-}
-			signal=${signal##SIG}
-			fallback=""
-		fi
-	else
-		if [ $# = 0 ]
-		then
-			echo "Usage: killproc {program} [signal]"
-			exit 1
-		fi
-
-		if [ -z "$2" ]
-		then
+		if [ -z "$2" ]; then
 			signal=TERM
 			fallback=KILL
 		else
 			signal=${2##-}
 			signal=${signal##SIG}
 			fallback=""
+		fi
+	else
+		if [ ${#} = 0 ]; then
+			echo "Usage: killproc {program} [signal]"
+			exit 1
+		fi
+
+		if [ -z "$2" ]; then
+			signal=TERM
+			fallback=KILL
+		else
+			signal=${2##-}
+			signal=${signal##SIG}
+			fallback=""
+		fi
+
 		getpids $1
 	fi
 
-	if [ -n "$pidlist" ]
-	then
+	if [ -n "$pidlist" ]; then
 		local i=0
-		for pid in $pidlist
-		do
+		for pid in $pidlist; do
 			kill -$signal $pid 2>/dev/null
-			while [ $i -lt $KILLDELAY ]
-			do
+			while [ $i -lt $KILLDELAY ]; do
 				kill -0 $pid 2>/dev/null || break
 				sleep 1
 				i=$(($i+1))
 			done
 
-			if [ -n "$fallback" ]
-				then
+			if [ -n "$fallback" ]; then
 				kill -$fallback $pid 2>/dev/null
 			fi
 		done
@@ -228,13 +221,11 @@ killproc()
 
 		base=${1##*/}
 
-		if [ -n "$pidlist" ]
-		then
+		if [ -n "$pidlist" ]; then
 			failure=1
 		else
 			failure=0
-			if [ ! -z $PIDFILE ]
-			then
+			if [ ! -z $PIDFILE ]; then
 				rm -f $PIDFILE
 			else
 				rm -f /var/run/$base.pid
