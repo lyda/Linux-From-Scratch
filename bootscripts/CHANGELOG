@@ -1,6 +1,8 @@
 n/a - February 2, 2004:
 
 	* Added -d to umount in mountfs.
+	* Fixed network shutdown script
+	* Fixed Makefile rc.6 to reboot
 
 n/a - January 30, 2004:
 

@@ -16,11 +16,11 @@ else
 		echo "using static"
 		SERVICE=static
 	fi
-	if [ ! -f $network_devices/script/$SERVICE ]
+	if [ ! -f $network_devices/services/$SERVICE ]
 	then
 		echo -n "Unknown Service: $SERVICE, cannot continue"
 		exit 1
 	fi
-	$network_devices/script/${SERVICE} $1 down
+	$network_devices/services/${SERVICE} $1 down
 fi
 # End $network_devices/ifdown
