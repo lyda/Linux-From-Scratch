@@ -235,7 +235,7 @@ install-ntp: create-dirs
 	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc2.d/K46ntp
 	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc3.d/S26ntp
 	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc4.d/S26ntp
-	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc5.d/S26npt
+	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc5.d/S26ntp
 	ln -s  ../init.d/ntp ${EXTDIR}/rc.d/rc6.d/K46ntp
 
 install-portmap: create-dirs

@@ -1,3 +1,8 @@
+n/a - March 29, 2004
+
+	* Fixed the rc5.d symlink for ntp so it creates S26ntp instead
+	  of S26npt
+
 n/a - March 27, 2004
 
 	* Changed gdm path from hardcoded to program name.  There are 2 spots
