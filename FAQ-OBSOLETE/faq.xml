@@ -216,7 +216,7 @@ ln -s gcc cc
 				Errors go here and may indicate the problem.
 			</para>
 		</section>
-		<section id="missing-x-includes"><title>A package can't find my X headers.</title>
+		<section id="missing-x-includes"><title>A package can't find Xlib.h.</title>
 			<para>
 				Typical symptoms look like this:
 			</para>
