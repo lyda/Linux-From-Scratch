@@ -3,6 +3,7 @@ n/a - March 16, 2005
 	  Moved compatibility code into one single function.
 	  (Nathan Coulson)
 	* Readded the ONHOTPLUG option for ifup/ifdown (Nathan Coulson)
+	* Fixed killproc's output
 
 n/a - March 01, 2005
 	* Added CHECK_LINK variable in ifconfig.*/*, so if the

@@ -488,7 +488,7 @@ getpids()
 }
 
 #*******************************************************************************
-# Function - load_proc [-f] [-n nicelevel] [-p pidfile] pathname [args]
+# Function - loadproc [-f] [-n nicelevel] [-p pidfile] pathname [args]
 #
 # Purpose: This runs the specified program as a daemon
 #
@@ -661,7 +661,7 @@ killproc()
 	done
 
 	if [ -z "${killsig}" ];	then
-		pidofproc "${1}" 2> /dev/null
+		pidofproc "${1}" > /dev/null
 
 		# Program was terminated
 		if [ "$?" != "0" ]; then
@@ -669,15 +669,17 @@ killproc()
 			if [ -f "${pidfile}" ];	then
 				rm -f "${pidfile}"
 			fi
+			echo_ok
 			return 0
 		else # Program is still running
+			echo_failure
 			return 4 # Unknown Status
 		fi
 	else
 		if [ -z "${pidfile}" ];	then
-			pidofproc "${1}" 2> /dev/null
+			pidofproc "${1}" > /dev/null
 		else
-			pidofproc -p "${pidfile}" "${1}" 2> /dev/null
+			pidofproc -p "${pidfile}" "${1}" > /dev/null
 		fi
 	fi
 
