@@ -29,7 +29,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: All - File 4.13</para></listitem>
 <listitem><para>Arch: All - Findutils 4.2.18</para></listitem>
 <listitem><para>Arch: All - GCC 3.4.3</para></listitem>
-<listitem><para>Arch: All - Gettext 0.14.2</para></listitem>
+<listitem><para>Arch: All - Gettext 0.14.3</para></listitem>
 <listitem><para>Arch: All - Glibc 2.3.4</para></listitem>
 <listitem><para>Arch: All - Grep 2.5.1a</para></listitem>
 <listitem><para>Arch: x86 - Grub 0.96</para></listitem>
@@ -81,6 +81,14 @@ c
 </listitem>
 
 <listitem><para>Changelog Entries:</para>
+
+<itemizedlist>
+<listitem><para>March 14, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Gettext to 0.14.3</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
 
 <itemizedlist>
 <listitem><para>March 13, 2005 [jim]</para>
