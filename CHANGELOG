@@ -1,3 +1,7 @@
+n/a - November 20, 2004
+	* Modifed modules script to return to previous kernel message
+	  level (DJ Lucas)
+
 n/a - November 02, 2004
 	* Added sysctl -p to mountkernfs (Matthew Burgess, DJ Lucas)
 

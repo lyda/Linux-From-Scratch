@@ -12,7 +12,20 @@
 case "${1}" in
 	start)
 
+		# If proc is mounted, find the current kernel
+		# message level 
+		if [ -f /proc/sys/kernel/printk ]; then
+			prev_msg=`cat /proc/sys/kernel/printk | \
+					sed 'l 1' | sed -n '2~0p' | \
+					sed 's/\\\//'`
+		else 
+			prev_msg="6"
+		fi
+
+		# Now set the message level to 1 so not to make too 
+		# much noise when loading modules
 		dmesg -n 1
+
 		# Only try to load modules if the user has actually given us
 		# some modules to load.
 		if egrep -qv '^(#|$)' /etc/sysconfig/modules 2>/dev/null
@@ -32,7 +45,7 @@ case "${1}" in
 
 					# Attempt to load the module, making
 					# sure to pass any arguments provided.
-					modprobe ${module} ${args}
+					modprobe ${module} ${args} 2>&1 > /dev/null
 
 					# Print the module name if successful,
 					# otherwise take note.
@@ -59,7 +72,8 @@ case "${1}" in
 			exec 0>&9 9>&-
 
 		fi
-		dmesg -n 6
+		# Set the kernel message level back to it's previous value.
+		dmesg -n "${prev_msg}"
 		;;
 	*)
 		echo "Usage: ${0} {start}"
