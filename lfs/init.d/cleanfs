@@ -19,6 +19,10 @@ case "$1" in
 		echo "Removing possible /etc/nologin /fastboot and /forcefsck..."
 		rm -f /etc/nologin /fastboot /forcefsck
 		evaluate_retval
+
+		echo "Removing /tmp/*"
+		( cd /tmp ; find -xdev -depth ! -name . ! -name lost+found -exec rm -rf {} \; )
+		evaluate_retval
 		;;
 	*)
 		echo "Usage: $0 {start}"
