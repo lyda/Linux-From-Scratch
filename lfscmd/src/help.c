@@ -15,8 +15,6 @@ Options:\n\
      Execute commands.\n\
   -f\n\
      Write commands to their own file.\n\
-  -a\n\
-     Strip '&&' in commands.\n\
   -q query\n\
      Output pages matching regex query.\n\
   -t\n\
