@@ -131,6 +131,11 @@
 				No, use GCC 2.95.2.1.
 			</para>
 		</section>
+		<section id="sig11"><title>I'm getting fatal errors about signal 11.</title>
+			<para>
+				See <ulink url="http://www.bitwizard.nl/sig11/">http://www.bitwizard.nl/sig11/</ulink>.
+			</para>
+		</section>
 		<section id="gcc-warnings"><title>Are compiler warnings from GCC bad?</title>
 			<para>
 				Short answer: no.
