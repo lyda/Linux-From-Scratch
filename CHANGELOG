@@ -1,6 +1,8 @@
 n/a - October 04, 2004
 	* Fixes to commit on 2004/09/30 (James Robertson)
 	* Revert a few changes until later (Nathan Coulson)
+	* Added a warning about switching from a 8bit font
+	  to a 9bit font (Alexander Patrakov)
 
 n/a - September 30, 2004
 	* Finished off boot_mesg() (James Robertson)
