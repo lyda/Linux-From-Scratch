@@ -1,4 +1,7 @@
-CVS - March 15th, 2002:
+CVS - March 22nd, 2002:
+
+	* When script exists with unexpected value, you have to hit "Enter" to
+	  continue, not just a random key as printed on the screen.
 
 	* Moved K10sysklogd, K20sendsignals, K30mount and K40swap to
 	  K40sysklogd, K50sendsignals, K60mount, K70swap

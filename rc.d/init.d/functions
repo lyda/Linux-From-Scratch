@@ -40,7 +40,7 @@ print_error_msg()
 	$NORMAL
 	echo
 	echo
-	echo "Press any key to continue..."
+	echo "Press Enter to continue..."
 	read
 }
 
