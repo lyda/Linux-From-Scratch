@@ -61,13 +61,13 @@ Gawk (&gawk-version;) - 1,596 KB:
 GCC (&gcc-2953-version;) - 9,618 KB:
 <ulink url="&freshmeat;gcc/"/>
 
-GCC-core (&gcc-version;) - 10,994 KB:
+GCC-core (&gcc-version;) - 11,283KB:
 <ulink url="&freshmeat;gcc/"/>
 
-GCC-g++ (&gcc-version;) - 2,019 KB:
+GCC-g++ (&gcc-version;) - 2,026 KB:
 <ulink url="&freshmeat;gcc/"/>
 
-GCC-testsuite (&gcc-version;) - 1,042 KB:
+GCC-testsuite (&gcc-version;) - 1,051 KB:
 <ulink url="&freshmeat;gcc/"/>
 
 Gettext (&gettext-version;) - 6,397 KB:

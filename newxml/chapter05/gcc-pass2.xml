@@ -165,8 +165,10 @@ tests are not always expected to pass.</para>
 
 <para>Having a few unexpected failures often cannot be avoided. The GCC
 developers are usually aware of these, but haven't yet gotten around to fixing
-them. In short, unless your results are vastly different from those at the
-above URL, it is safe to continue.</para>
+them. One particular case in point is the filebuf_members test in the C++
+standard library testsuite.  This test has been observed to fail in some
+situations, but succeeed in others.  In short, unless your results are vastly
+different from those at the above URL, it is safe to continue.</para>
 
 <para>And finally install the package:</para>
 
