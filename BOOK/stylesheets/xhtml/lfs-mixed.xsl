@@ -9,9 +9,7 @@
     <xsl:choose>
       <xsl:when test="child::* = userinput">
         <pre class="userinput">
-          <kbd class="command">
-            <xsl:value-of select="."/>
-          </kbd>
+            <xsl:apply-templates/>
         </pre>
       </xsl:when>
       <xsl:otherwise>
@@ -21,6 +19,20 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  
+  <xsl:template match="userinput">
+    <xsl:choose>
+      <xsl:when test="ancestor::screen">
+        <kbd class="command">
+          <xsl:apply-templates/>
+        </kbd>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-imports/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   
   <!-- variablelist -->
   <xsl:template match="variablelist">
@@ -60,48 +72,107 @@
     </xsl:attribute>
   </xsl:template>
 
-   <!-- Sect1 attributes -->
-  <xsl:template match="sect1">
-    <div>
-      <xsl:choose>
-        <xsl:when test="@role">
-          <xsl:attribute name="class">
-            <xsl:value-of select="@role"/>
+    <!-- External URLs in italic font -->
+  <xsl:template match="ulink" name="ulink">
+    <a>
+      <xsl:if test="@id">
+        <xsl:attribute name="id">
+          <xsl:value-of select="@id"/>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute>
+       <i>
+        <xsl:choose>
+          <xsl:when test="count(child::node())=0">
+            <xsl:value-of select="@url"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </i>
+    </a>
+  </xsl:template>
+  
+    <!-- The <code> xhtml tag have look issues in some browsers, like Konqueror and.
+      isn't semantically correct (a filename isn't a code fragment) We will use <tt> for now. -->
+  <xsl:template name="inline.monoseq">
+    <xsl:param name="content">
+      <xsl:call-template name="anchor"/>
+      <xsl:call-template name="simple.xlink">
+        <xsl:with-param name="content">
+          <xsl:apply-templates/>
+        </xsl:with-param>
+      </xsl:call-template>
+    </xsl:param>
+    <tt class="{local-name(.)}">
+      <xsl:if test="@dir">
+        <xsl:attribute name="dir">
+          <xsl:value-of select="@dir"/>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:copy-of select="$content"/>
+    </tt>
+  </xsl:template>
+  
+  <xsl:template name="inline.boldmonoseq">
+    <xsl:param name="content">
+      <xsl:call-template name="anchor"/>
+      <xsl:call-template name="simple.xlink">
+        <xsl:with-param name="content">
+          <xsl:apply-templates/>
+        </xsl:with-param>
+      </xsl:call-template>
+    </xsl:param>
+    <!-- don't put <strong> inside figure, example, or table titles -->
+    <!-- or other titles that may already be represented with <strong>'s. -->
+    <xsl:choose>
+      <xsl:when test="local-name(..) = 'title' and (local-name(../..) = 'figure' 
+              or local-name(../..) = 'example' or local-name(../..) = 'table' or local-name(../..) = 'formalpara')">
+        <tt class="{local-name(.)}">
+          <xsl:if test="@dir">
+            <xsl:attribute name="dir">
+              <xsl:value-of select="@dir"/>
+            </xsl:attribute>
+          </xsl:if>
+          <xsl:copy-of select="$content"/>
+        </tt>
+      </xsl:when>
+      <xsl:otherwise>
+        <strong class="{local-name(.)}">
+          <tt>
+            <xsl:if test="@dir">
+              <xsl:attribute name="dir">
+                <xsl:value-of select="@dir"/>
+              </xsl:attribute>
+            </xsl:if>
+            <xsl:copy-of select="$content"/>
+          </tt>
+        </strong>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template name="inline.italicmonoseq">
+    <xsl:param name="content">
+      <xsl:call-template name="anchor"/>
+      <xsl:call-template name="simple.xlink">
+        <xsl:with-param name="content">
+          <xsl:apply-templates/>
+        </xsl:with-param>
+      </xsl:call-template>
+    </xsl:param>
+    <em class="{local-name(.)}">
+      <tt>
+        <xsl:if test="@dir">
+          <xsl:attribute name="dir">
+            <xsl:value-of select="@dir"/>
           </xsl:attribute>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:attribute name="class">
-            <xsl:value-of select="name(.)"/>
-          </xsl:attribute>
-        </xsl:otherwise>
-      </xsl:choose>
-      <xsl:call-template name="language.attribute"/>
-      <xsl:call-template name="sect1.titlepage"/>
-      <xsl:apply-templates/>
-      <xsl:call-template name="process.chunk.footnotes"/>
-    </div>
+        </xsl:if>
+        <xsl:copy-of select="$content"/>
+      </tt>
+    </em>
   </xsl:template>
 
-    <!-- Sect2 attributes -->
-  <xsl:template match="sect2">
-    <div>
-      <xsl:choose>
-        <xsl:when test="@role">
-          <xsl:attribute name="class">
-            <xsl:value-of select="@role"/>
-          </xsl:attribute>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:attribute name="class">
-            <xsl:value-of select="name(.)"/>
-          </xsl:attribute>
-        </xsl:otherwise>
-      </xsl:choose>
-      <xsl:call-template name="language.attribute"/>
-      <xsl:call-template name="sect2.titlepage"/>
-      <xsl:apply-templates/>
-      <xsl:call-template name="process.chunk.footnotes"/>
-    </div>
-  </xsl:template>
 
 </xsl:stylesheet>

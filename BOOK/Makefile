@@ -5,9 +5,9 @@ NOCHUNKS_OUTPUT=LFS-BOOK.html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
 
 lfs:
-	xsltproc --xinclude --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
-	  -stringparam base.dir $(BASEDIR)/ stylesheets/lfs-chunked.xsl \
-	  index.xml
+	xsltproc --xinclude --nonet -stringparam profile.condition html \
+	-stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/ \
+	stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/stylesheets; \
@@ -20,9 +20,9 @@ lfs:
 	cp $(XSLROOTDIR)/images/*.png \
 	  $(BASEDIR)/images
 	cd $(BASEDIR)/; sed -i -e "s@../stylesheets@stylesheets@g" \
-	  index.html part1.html part2.html part3.html longindex.html
+	  *.html
 	cd $(BASEDIR)/; sed -i -e "s@../images@images@g" \
-	  index.html part1.html part2.html part3.html longindex.html
+	  *.html
 
 	for filename in `find $(BASEDIR) -name "*.html"`; do \
 	  tidy -config tidy.conf $$filename; \
@@ -32,8 +32,9 @@ lfs:
 	for filename in `find $(BASEDIR) -name "*.html"`; do \
 	  sed -i -e "s@text/html@application/xhtml+xml@g" $$filename; \
 	done;
+
 #
-# This is the old "pdf" target. The old "print" target below has been
+# This is the old "pdf" target. The old "print" target below has been   
 # renamed to "pdf" and will be used. This commented out previous_pdf
 # target can be removed eventually. It'll remain here for a bit for
 # historical reasons
@@ -46,8 +47,8 @@ lfs:
 #	rm lfs.fo
 
 pdf:
-	xsltproc --xinclude --nonet --stringparam profile.condition print \
-		--output $(BASEDIR)/lfs-pdf.xml stylesheets/lfs-profile.xsl index-pdf.xml
+	xsltproc --xinclude --nonet --stringparam profile.condition pdf \
+		--output $(BASEDIR)/lfs-pdf.xml stylesheets/lfs-profile.xsl index.xml
 	xsltproc --nonet --output $(BASEDIR)/lfs-pdf.fo stylesheets/lfs-pdf.xsl \
 		$(BASEDIR)/lfs-pdf.xml
 	sed -i -e "s/inherit/all/" $(BASEDIR)/lfs-pdf.fo
@@ -55,9 +56,14 @@ pdf:
 	rm $(BASEDIR)/lfs-pdf.xml $(BASEDIR)/lfs-pdf.fo
 
 nochunks:
-	xsltproc --xinclude --nonet --output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
+	xsltproc --xinclude --nonet -stringparam profile.condition html \
+	--output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
 	  stylesheets/lfs-nochunks.xsl index.xml
+
 	tidy -config tidy.conf $(BASEDIR)/$(NOCHUNKS_OUTPUT) || true
+
+	sed -i -e "s@text/html@application/xhtml+xml@g"  \
+	  $(BASEDIR)/$(NOCHUNKS_OUTPUT)
 
 validate:
 	xmllint --noout --xinclude --relaxng docbook.rng index.xml
