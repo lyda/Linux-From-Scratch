@@ -463,6 +463,15 @@ alias net-pf-7 loop
 				the list archives may reveal the reason.
 			</para>
 		</section>
+		<section id="kernel-header-copy"><title>Why copy the kernel headers instead of linking?</title>
+			<para>
+				We copy the kernel headers
+				(as instructed by the kernel documentation)
+				instead of linking them because, for most purposes,
+				the kernel headers should match the currently running libc,
+				not the currently running kernel.
+			</para>
+		</section>
 		<section id="why-not-add"><title>Why not add / use package Foo?</title>
 			<section id="add-grub"><title>GRUB instead of LILO</title>
 				<para>
