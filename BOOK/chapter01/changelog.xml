@@ -37,10 +37,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: All - Iproute2 2.6.11-050314</para></listitem>
 <listitem><para>Arch: All - LFS-Bootscripts 3.1.0</para></listitem>
 <listitem><para>Arch: All - Libtool 1.5.14</para></listitem>
-<listitem><para>Arch: x86, PPC, Alpha - Linux 2.6.11.4</para></listitem>
-<listitem><para>Arch: RaQ2  - Linux 2.6.9</para></listitem>
-<listitem><para>Arch: x86, PPC, Alpha - Linux-libc-headers 2.6.11.0</para></listitem>
-<listitem><para>Arch: RaQ2 - Linux-libc-headers 2.6.11.0</para></listitem>
+<listitem><para>Arch: All - Linux 2.6.11.6</para></listitem>
+<listitem><para>Arch: All - Linux-libc-headers 2.6.11.2</para></listitem>
 <listitem><para>Arch: All - Man 1.5p</para></listitem>
 <listitem><para>Arch: All - Man-pages 2.01</para></listitem>
 <listitem><para>Arch: All - Patch 2.5.9</para></listitem>
@@ -88,7 +86,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>March 26, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Linux to 2.6.11.6.</para></listitem>
-<listitem><para>Updated: Arch: All - Linux-libc-headers to 2.6.11.1.</para></listitem>
+<listitem><para>Updated: Arch: All - Linux-libc-headers to 2.6.11.2.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
