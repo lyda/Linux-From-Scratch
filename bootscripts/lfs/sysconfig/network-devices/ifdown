@@ -68,13 +68,13 @@ do
 		# This will run the service script, if SERVICE is set
 		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]
 		then
-      if ip link show ${1} > /dev/null 2>&1
-      then
-        IFCONFIG=${file} ${network_devices}/services/${SERVICE} ${1} down
-      else
-        boot_mesg "Interface ${1} doesn't exist." ${WARNING}
-        echo_warning
-      fi
+			if ip link show ${1} > /dev/null 2>&1
+			then
+				IFCONFIG=${file} ${network_devices}/services/${SERVICE} ${1} down
+			else
+				boot_mesg "Interface ${1} doesn't exist." ${WARNING}
+				echo_warning
+			fi
 		else
 			boot_mesg "Unable to process ${file}.  Either" ${FAILURE}
 			boot_mesg " the SERVICE variable was not set,"
@@ -88,16 +88,16 @@ done
 
 if [ -z "${2}" ]
 then
-  link_status=`ip link show $1 2> /dev/null`
-  if [ -n "${link_status}" ]
-  then
-    if echo "${link_status}" | grep -q UP
-    then
-      boot_mesg "Bringing down the ${1} interface..."
-      ip link set ${1} down
-      evaluate_retval
-    fi
-  fi
+	link_status=`ip link show $1 2> /dev/null`
+	if [ -n "${link_status}" ]
+	then
+		if echo "${link_status}" | grep -q UP
+		then
+			boot_mesg "Bringing down the ${1} interface..."
+			ip link set ${1} down
+			evaluate_retval
+		fi
+	fi
 fi
 
 # End $network_devices/ifdown

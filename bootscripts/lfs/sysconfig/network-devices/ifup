@@ -36,16 +36,16 @@ fi
 # Activate the interface, if not activated
 if ip link show ${1} > /dev/null 2>&1
 then
-  link_status=`ip link show ${1} 2> /dev/null`
-  if [ -n "${link_status}" ]
-  then
-    if ! echo "${link_status}" | grep -q UP
-    then
-      boot_mesg "Bringing up the ${1} interface..."
-      ip link set ${1} up
-      evaluate_retval
-    fi
-  fi
+	link_status=`ip link show ${1} 2> /dev/null`
+	if [ -n "${link_status}" ]
+	then
+		if ! echo "${link_status}" | grep -q UP
+		then
+			boot_mesg "Bringing up the ${1} interface..."
+			ip link set ${1} up
+			evaluate_retval
+		fi
+	fi
 else
 	boot_mesg "Interface ${1} doesn't exist." ${WARNING}
 	echo_warning
