@@ -84,6 +84,7 @@
 		</qandadiv>
 		<qandadiv id="fee-compile-specific">
 				<title>Compile Time Errors From Specific Packages</title>
+			&unknown-pseudo-op-hidden;
 			&optimized-glibc-fail;
 			&asm-global-directive;
 			&glibc-no-ld_map;

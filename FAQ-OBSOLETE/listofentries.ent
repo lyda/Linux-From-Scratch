@@ -44,6 +44,7 @@
 <!ENTITY shutdown-on-fsck-error SYSTEM "shutdown-on-fsck-error.xml">
 <!ENTITY sig11 SYSTEM "sig11.xml">
 <!ENTITY unable-to-mount-root SYSTEM "unable-to-mount-root.xml">
+<!ENTITY unknown-pseudo-op-hidden SYSTEM "unknown-pseudo-op-hidden.xml">
 <!ENTITY version-not-in-book SYSTEM "version-not-in-book.xml">
 <!ENTITY what-dist SYSTEM "what-dist.xml">
 <!ENTITY what-is-lfs SYSTEM "what-is-lfs.xml">
