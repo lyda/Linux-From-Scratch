@@ -10,27 +10,33 @@
 create_files() {
 	# Read in the configuration file.
 	exec 9>&0 < /etc/sysconfig/createfiles
-		while read type owner group perms name ; do
+	        while read name type perm usr grp dtype maj min junk ; do
+
 			# Ignore comments and blank lines.
-			case "$type" in
-				""|\#*) continue ;;
-			esac
+        	        case "$name" in
+                	        ""|\#*) continue ;;
+	                esac
 
 			# Ignore existing files.
-			if [ ! -e "$name" ]; then
+        	        if [ ! -e "$name" ]; then
 				# Create stuff based on its type.
-				case "$type" in
-					dir)	mkdir "$name"	;;
-					file)	:> "$name"	;;
-					*)	echo "Unknown type: $type" >&2
-						continue	;;
-				esac
+                	        case "$type" in
+                        	        dir)    mkdir "$name"   ;;
+                                	file)   :> "$name"      ;;
+	                                dev)    case "$dtype" in
+        	                                char)   mknod "$name" c $maj $min
+                	                        block)  mknod "$name" b $maj $min
+                        	                pipe)   mknod "$name" p
+	                               	        esac            ;;
+        	                        *)      echo "Unknown type: $type" >&2
+                	                        continue        ;;
+                        	esac
 
 				# Set up the permissions, too.
-				chown $owner:$group "$name"
-				chmod $perms "$name"
-			fi
-		done
+	                        chown $usr:$grp "$name"
+	                        chmod $perm "$name"
+	                fi
+	        done
 	exec 0>&9 9>&-
 }
 
