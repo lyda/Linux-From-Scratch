@@ -19,14 +19,12 @@
 . ${rc_functions} 
 
 # Collect a list of configuration files for our interface
-if [ -n "${2}" ]
-then
+if [ -n "${2}" ]; then
 	for file in ${@#$1} # All parameters except $1
 	do
 		FILES="${FILES} ${network_devices}/ifconfig.${1}/${file}"
 	done
-elif [ -d "${network_devices}/ifconfig.${1}" ]
-then
+elif [ -d "${network_devices}/ifconfig.${1}" ]; then
 	FILES=`echo ${network_devices}/ifconfig.${1}/*`
 else
 	FILES="${network_devices}/ifconfig.${1}"
@@ -43,8 +41,7 @@ FILES=${FILES2}
 # Process each configuration file
 for file in ${FILES}
 do
-	if [ ! -f "${file}" ]
-	then
+	if [ ! -f "${file}" ]; then
 		boot_mesg "${file} is not a network configuration file or directory." ${WARNING}
 		echo_warning
 		continue
@@ -53,10 +50,8 @@ do
 		. ${file}
 
 		# This will run the service script, if SERVICE is set
-		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]
-		then
-			if ip link show ${1} > /dev/null 2>&1
-			then
+		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]; then
+			if ip link show ${1} > /dev/null 2>&1; then
 				IFCONFIG=${file} ${network_devices}/services/${SERVICE} ${1} down
 			else
 				boot_mesg "Interface ${1} doesn't exist." ${WARNING}
@@ -73,13 +68,10 @@ do
 done
 
 
-if [ -z "${2}" ]
-then
+if [ -z "${2}" ]; then
 	link_status=`ip link show $1 2> /dev/null`
-	if [ -n "${link_status}" ]
-	then
-		if echo "${link_status}" | grep -q UP
-		then
+	if [ -n "${link_status}" ]; then
+		if echo "${link_status}" | grep -q UP; then
 			boot_mesg "Bringing down the ${1} interface..."
 			ip link set ${1} down
 			evaluate_retval

@@ -30,8 +30,7 @@
 
 case "${1}" in
 	start)
-		if [ -f /fastboot ]
-		then
+		if [ -f /fastboot ]; then
 			boot_mesg -n "/fastboot found, will not perform" ${INFO}
 			boot_mesg " file system checks as requested."
 			echo_ok
@@ -42,8 +41,7 @@ case "${1}" in
 		mount -n -o remount,ro / >/dev/null
 		evaluate_retval
 
-		if [ ${?} != 0 ]
-		then
+		if [ ${?} != 0 ]; then
 			echo_failure
 			boot_mesg -n "FAILURE:\n\nCannot check root" ${FAILURE}
 			boot_mesg -n " filesystem because it could not be mounted"
@@ -56,8 +54,7 @@ case "${1}" in
 			/etc/rc.d/init.d/halt stop
 		fi
 
-		if [ -f /forcefsck ]
-		then
+		if [ -f /forcefsck ]; then
 			boot_mesg -n "/forcefsck found, forcing file" ${INFO}
 			boot_mesg " system checks as requested."
 			echo_ok
@@ -72,13 +69,11 @@ case "${1}" in
 		fsck ${options} -a -A -C -T 2>/dev/null
 		error_value=${?}
 
-		if [ "${error_value}" = 0 ]
-		then
+		if [ "${error_value}" = 0 ]; then
 			echo_ok
 		fi
 
-		if [ "${error_value}" = 1 ]
-		then
+		if [ "${error_value}" = 1 ]; then
 			echo_warning
 			boot_mesg -n "WARNING:\n\nFile system errors" ${WARNING}
 			boot_mesg -n " were found and have been corrected."
@@ -87,8 +82,7 @@ case "${1}" in
 			boot_mesg "" ${NORMAL}
 		fi
 
-		if [ "${error_value}" = 2 -o "${error_value}" = 3 ]
-		then
+		if [ "${error_value}" = 2 -o "${error_value}" = 3 ]; then
 			echo_warning
 			boot_mesg -n "WARNING:\n\nFile system errors" ${WARNING}
 			boot_mesg -n " were found and have been been"
@@ -102,8 +96,7 @@ case "${1}" in
 			reboot -f
 		fi
 
-		if [ "${error_value}" -gt 3 -a "${error_value}" -lt 16 ]
-		then
+		if [ "${error_value}" -gt 3 -a "${error_value}" -lt 16 ]; then
 			echo_failure
 			boot_mesg -n "FAILURE:\n\nFile system errors" ${FAILURE}
 			boot_mesg -n " were encountered that could not be"
@@ -120,8 +113,7 @@ case "${1}" in
 			/etc/rc.d/init.d/halt stop
 		fi
 
-		if [ "${error_value}" -ge 16 ]
-		then
+		if [ "${error_value}" -ge 16 ]; then
 			echo_failure
 			boot_mesg -n "FAILURE:\n\nUnexpected Failure" ${FAILURE}
 			boot_mesg -n " running fsck.  Exited with error"

@@ -30,8 +30,7 @@ make_extra_nodes() {
 case "${1}" in
 	start)
 		boot_mesg "Populating /dev with device nodes..."
-		if ! grep -q '[[:space:]]sysfs' /proc/mounts
-		then
+		if ! grep -q '[[:space:]]sysfs' /proc/mounts; then
 			boot_log " The SysFS filesystem could not be found.  Unable to continue."
 			echo_failure
 			boot_mesg -n "FAILURE:\n\nUnable to create" ${FAILURE}
@@ -49,8 +48,7 @@ case "${1}" in
 		# The reason we don't write to mtab is because we don't ever
 		# want /dev to be unavailable (such as by `umount -a').
 		mount -n -t tmpfs tmpfs /dev -o mode=755
-		if [ ${?} != 0 ]
-		then
+		if [ ${?} != 0 ]; then
 			boot_log "Unable to mount a tmpfs onto /dev."
 			echo_failure
 			boot_mesg -n "FAILURE:\n\nCannot mount a tmpfs" ${FAILURE}

@@ -19,14 +19,12 @@ case "${1}" in
 	start)
 		boot_mesg -n "Mounting kernel-based file systems:" ${INFO}
 
-		if ! mountpoint /proc &> /dev/null
-		then
+		if ! mountpoint /proc &> /dev/null; then
 			boot_mesg -n " /proc" ${NORMAL}
 			mount -n /proc || failed=1
 		fi
 
-		if ! mountpoint /sys &> /dev/null
-		then
+		if ! mountpoint /sys &> /dev/null; then
 			boot_mesg -n " /sys" ${NORMAL}
 			mount -n /sys || failed=1
 		fi

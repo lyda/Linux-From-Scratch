@@ -28,8 +28,7 @@ create_files() {
 			esac
 
 			# Ignore existing files.
-			if [ ! -e "${name}" ]
-			then
+			if [ ! -e "${name}" ]; then
 				# Create stuff based on its type.
 				case "${type}" in
 					dir)
@@ -96,8 +95,7 @@ case "${1}" in
 		(exit ${failed})
 		evaluate_retval
 
-		if egrep -qv '^(#|$)' /etc/sysconfig/createfiles 2>/dev/null
-		then
+		if egrep -qv '^(#|$)' /etc/sysconfig/createfiles 2>/dev/null; then
 			boot_mesg "Creating files and directories..."
 			create_files
 			evaluate_retval

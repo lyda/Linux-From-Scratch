@@ -26,15 +26,13 @@ KILLDELAY="3"
 
 ## Screen Dimentions
 # Find current screen size
-if [ -z "${COLUMNS}" ]
-then
+if [ -z "${COLUMNS}" ]; then
 	COLUMNS=$(stty size)
 	COLUMNS=${COLUMNS##* }
 fi
 
 # When using remote connections, such as a serial port, stty size returns 0
-if [ "${COLUMNS}" = "0" ]
-then 
+if [ "${COLUMNS}" = "0" ]; then 
 	COLUMNS=80
 fi
 
@@ -155,7 +153,6 @@ boot_mesg()
 		### that actually use two columns when printed 
 		### to the screen.
 		BMSEPCT=`echo -e "${BMSEP}" | sed 's/././g'`
-						
 		
 		# keep adding the character count of each line
 		# untill the count exceeds the value of CHARS_LEFT
@@ -203,8 +200,7 @@ boot_mesg()
 boot_mesg_flush()
 {
 	# Do not log null messages
-	if [ -z "${BOOTMESG}" ]
-	then
+	if [ -z "${BOOTMESG}" ]; then
 		return 0
 	else
 		boot_log "${BOOTMESG}${@}"
@@ -275,15 +271,13 @@ print_error_msg()
 check_script_status()
 {
 	# $i is inherited by the rc script
-	if [ ! -f ${i} ]
-	then
+	if [ ! -f ${i} ]; then
 		boot_mesg "${i} is not a valid symlink." ${WARNING}
 		echo_warning
 		continue
 	fi
 
-	if [ ! -x ${i} ]
-	then
+	if [ ! -x ${i} ]; then
 		boot_mesg "${i} is not executable, skipping." ${WARNING}
 		echo_warning
 		continue
@@ -294,8 +288,7 @@ evaluate_retval()
 {
 	error_value="${?}"
 
-	if [ ${error_value} = 0 ]
-	then
+	if [ ${error_value} = 0 ]; then
 		echo_ok
 	else
 		echo_failure
@@ -308,8 +301,7 @@ evaluate_retval()
 
 print_status()
 {
-	if [ "${#}" = "0" ]
-	then
+	if [ "${#}" = "0" ]; then
 		echo "Usage: ${0} {success|warning|failure}"
 		return 1
 	fi
@@ -357,16 +349,14 @@ print_status()
 
 reloadproc()
 {
-	if [ "${#}" = "0" ]
-	then
+	if [ "${#}" = "0" ]; then
 		echo "Usage: reloadproc [{program}]"
 		exit 1
 	fi
 
 	getpids "${1}"
 
-	if [ -n "${pidlist}" ]
-	then
+	if [ -n "${pidlist}" ];	then
 		failure="0"
 		for pid in ${pidlist}
 		do
@@ -392,18 +382,15 @@ statusproc()
 
 	getpids "${1}"
 
-	if [ -n "${pidlist}" ]
-	then
+	if [ -n "${pidlist}" ];	then
 		echo -e "${INFO}${base} is running with Process"\
 			"ID(s) ${pidlist}.${NORMAL}"
 	else
-		if [ -n "${base}" -a -e "/var/run/${base}.pid" ]
-		then
+		if [ -n "${base}" -a -e "/var/run/${base}.pid" ]; then
 			echo -e "${WARNING}${1} is not running but"\
 				"/var/run/${base}.pid exists.${NORMAL}"
 		else
-			if [ -n "${PIDFILE}" -a -e "${PIDFILE}" ]
-			then
+			if [ -n "${PIDFILE}" -a -e "${PIDFILE}" ]; then
 				echo -e "${WARNING}${1} is not running"\
 					"but ${PIDFILE} exists.${NORMAL}"
 			else
@@ -457,25 +444,21 @@ pidofproc()
 		esac
 	done
 
-	if [ "${#}" != "1" ]
-	then
+	if [ "${#}" != "1" ]; then
 		shift 1
 		log_failure_msg "Usage: pidofproc [-p pidfile] pathname"
 		return 2
 	fi
 
-	if [ -n "${pidfile}" ]
-	then
-		if [ ! -r "${pidfile}" ]
-		then
+	if [ -n "${pidfile}" ]; then
+		if [ ! -r "${pidfile}" ]; then
 			return 3 # Program is not running
 		fi
 
 		lpids=`head -n 1 ${pidfile}`
 		for pid in ${lpids}
 		do
-			if [ "${pid}" -ne "$$" -a "${pid}" -ne "${PPID}" ]
-			then
+			if [ "${pid}" -ne "$$" -a "${pid}" -ne "${PPID}" ]; then
 				kill -0 "${pid}" > /dev/null &&
 				pidlist="${pidlist} ${pid}"
 			fi
@@ -488,8 +471,7 @@ pidofproc()
 		pidof -o $$ -o $PPID -x "${1}"
 	fi
 
-	if [ "$?" != "0" ]
-	then
+	if [ "$?" != "0" ]; then
 		return 3 # Program is not running
 	fi
 }
@@ -497,8 +479,7 @@ pidofproc()
 # This will ensure compatibility with previous LFS Bootscripts
 getpids()
 {
-	if [ -z "${PIDFILE}" ]
-	then
+	if [ -z "${PIDFILE}" ]; then
 		pidlist=`pidofproc -p "${PIDFILE}" $@`
 	else
 		pidlist=`pidofproc $@`
@@ -507,7 +488,7 @@ getpids()
 }
 
 #*******************************************************************************
-# Function - start_daemon [-f] [-n nicelevel] [-p pidfile] pathname [args]
+# Function - load_proc [-f] [-n nicelevel] [-p pidfile] pathname [args]
 #
 # Purpose: This runs the specified program as a daemon
 #
@@ -536,8 +517,7 @@ loadproc()
 	local nicelevel="10"
 
 # This will ensure compatibility with previous LFS Bootscripts
-	if [ -n "${PIDFILE}" ]
-	then
+	if [ -n "${PIDFILE}" ];	then
 		pidfile="${PIDFILE}"
 	fi
 
@@ -566,16 +546,13 @@ loadproc()
 		esac
 	done
 
-	if [ "${#}" = "0" ]
-	then
+	if [ "${#}" = "0" ]; then
 		log_failure_msg "Usage: loadproc [-f] [-n nicelevel] [-p pidfile] pathname [args]"
 		return 2 #invalid or excess argument(s)
 	fi
 
-	if [ -z "${forcestart}" ]
-	then
-		if [ -z "${pidfile}" ]
-		then
+	if [ -z "${forcestart}" ]; then
+		if [ -z "${pidfile}" ];	then
 			pidofproc "${1}" > /dev/null
 		else
 			pidofproc -p "${pidfile}" "${1}" > /dev/null
@@ -631,8 +608,7 @@ killproc()
 	local pidlist=""
 
 # This will ensure compatibility with previous LFS Bootscripts
-	if [ -n "${PIDFILE}" ]
-	then
+	if [ -n "${PIDFILE}" ];	then
 		pidfile="${PIDFILE}"
 	fi
 
@@ -653,18 +629,15 @@ killproc()
 		esac
 	done
 
-	if [ "${#}" = "2" ]
-	then
+	if [ "${#}" = "2" ]; then
 		killsig="${2}"
-	elif [ "${#}" != "1" ]
-	then
+	elif [ "${#}" != "1" ];	then
 		shift 2
 		log_failure_msg "Usage: killproc  [-p pidfile] pathname [signal]"
 		return 2
 	fi
 
-	if [ -z "${pidfile}" ]
-	then
+	if [ -z "${pidfile}" ];	then
 		pidlist=`pidofproc "${1}"`
 	else
 		pidlist=`pidofproc -p "${pidfile}" "${1}"`
@@ -673,8 +646,7 @@ killproc()
 	for pid in ${pidlist}
 	do
 		kill -${killsig:-TERM} ${pid} 2>/dev/null
-		if [ -z "${killsig}" ]
-		then
+		if [ -z "${killsig}" ]; then
 			# Wait up to 3 seconds, for ${pid} to terminate
 			local dtime=${KILLDELAY}
 			while [ "${dtime}" != "0" ]
@@ -688,14 +660,13 @@ killproc()
 		fi
 	done
 
-	if [ -z "${killsig}" ]
-	then
+	if [ -z "${killsig}" ];	then
 		pidofproc "${1}" 2> /dev/null
 
-		if [ "$?" != "0" ] # Program was terminated
-		then
-			if [ -f "${pidfile}" ] # Pidfile Exists
-			then
+		# Program was terminated
+		if [ "$?" != "0" ]; then
+			# Pidfile Exists
+			if [ -f "${pidfile}" ];	then
 				rm -f "${pidfile}"
 			fi
 			return 0
@@ -703,8 +674,7 @@ killproc()
 			return 4 # Unknown Status
 		fi
 	else
-		if [ -z "${pidfile}" ]
-		then
+		if [ -z "${pidfile}" ];	then
 			pidofproc "${1}" 2> /dev/null
 		else
 			pidofproc -p "${pidfile}" "${1}" 2> /dev/null
