@@ -1,13 +1,23 @@
+1.99.4 - March 17, 2004
+
+	* Fixed one last halt line in checkfs script
+	* Tagged as development release 1.99.4
+
 n/a - February 28, 2004
 
 	* Added stty sane to the top of rc.d/init.d/rc.  Hopefully, this will
-	  fix the problems.
+	  fix the problems
+	* Also changed all instances of <ctrl-j> back to enter
+
+1.99.3 - February 23, 2004
+
+	* Tagged as development release 1.99.3
 
 n/a - February 19, 2004
 
 	* Fixed checkfs script, so it will no longer continue to boot after a
 	  failure in the init.d/checkfs script.  Tested with the help of Andre
-	  Müller.  Fix suggested by winkie.
+	  Müller.  Fix suggested by winkie
 
 n/a - February 7, 2004
 
@@ -28,7 +38,7 @@ n/a - February 4, 2004
 	* functions is no longer installed as executable
 	* Added a check to checkfs, for errors above 16.  These are caused by
 	  being unable to run fsck, either due to user input, or a unfunctional
-	  linux system.
+	  linux system
 
 1.99.1 - February 2, 2004
 
