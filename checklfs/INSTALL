@@ -31,3 +31,5 @@ After every package in chapter 5 is installed, you can run:
 -c5      use with LFS-Book Chapter 5 installation: check if
          everything is statically linked
 
+To check any other package installation after chapter 5, run:
+	checklfs -v package
