@@ -62,7 +62,7 @@ print_error_msg()
         echo "to inform us at lfs-dev@linuxfromscratch.org"
         echo
         echo
-        echo "Press <ctrl-j> to continue..."
+        echo "Press Enter to continue..."
         read ENTER
 }
 

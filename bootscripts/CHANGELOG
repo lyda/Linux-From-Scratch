@@ -1,3 +1,8 @@
+n/a - February 28, 2004
+
+	* Added stty sane to the top of rc.d/init.d/rc.  Hopefully, this will
+	  fix the problems.
+
 n/a - February 19, 2004
 
 	* Fixed checkfs script, so it will no longer continue to boot after a
