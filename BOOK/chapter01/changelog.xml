@@ -63,6 +63,14 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>December 22, 2004 [manuel]: Readded to chapter09/reboot.xml a para lost
+from version 5.1.</para></listitem>
+
+<listitem><para>December 20, 2004 [manuel]: Made Grub's configuration location 
+FHS compliant.</para></listitem>
+
+<listitem><para>December 19, 2004 [manuel]: Added the irc.lfs-matrix.de IRC server.</para></listitem>
+
 <listitem><para>December 5, 2004 [jeremy]: Added the DOCBOOKTOMAN parameter
 to Module-init-utils - without this, compilation fails.  Thanks Boris Buegling</para></listitem>
 
