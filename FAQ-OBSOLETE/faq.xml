@@ -107,6 +107,14 @@
 occasionally due to the amount of manual labor required.
 </para></answer>
 </qandaentry>
+
+<qandaentry id="delete_key_not_work">
+<question><para>The Delete key doesn't work.
+</para></question>
+<answer><para>See: <ulink url="http://beyond.linuxfromscratch.org/view/cvs/chapter03/inputrc.html">http://beyond.linuxfromscratch.org/view/cvs/chapter03/inputrc.html</ulink>.
+</para></answer>
+</qandaentry>
+
 </qandadiv>
 
 	<qandadiv id="resources"><title>Resources</title>
