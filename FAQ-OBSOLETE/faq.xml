@@ -220,6 +220,14 @@ In addition to the GRUB documentation, see the LFS "GRUB-Howto" Hint at
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-dev,new -->
+<qandaentry id="why-vim">
+<question><para>Why is vim in the book?</para></question>
+<answer><para>This is fairly well discussed in the thread starting at
+<ulink url="http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/02/0012.html"/>.
+</para></answer>
+</qandaentry>
+
 <!-- elist: ,lfs-dev -->
 <qandaentry id="why-ed"><question><para>Why is ed in the book?</para></question>
 <answer><para>The book includes ed because patch uses it to process ed scripts.
