@@ -83,6 +83,14 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>April 6, 2005 [matt]</para>
+<itemizedlist>
+<listitem><para>Fixed: Arch: All - Move e2fsprogs sed command to before	entering the build directory (Steffen R. Knollmann).</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 4, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: Raq2 - Colo to 1.19.</para></listitem>
