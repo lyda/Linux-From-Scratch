@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "&milestone;-20040519">
-<!ENTITY releasedate "May 19, 2004">
+<!ENTITY version "&milestone;-20040523">
+<!ENTITY releasedate "May 23, 2004">
 <!ENTITY milestone "5.1">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -8,7 +8,7 @@
 <!ENTITY faq-root "&lfs-root;faq/">
 <!ENTITY hints-root "&lfs-root;hints/downloads/files/">
 <!ENTITY hints-index "&lfs-root;hints/list.html">
-<!ENTITY patches-root "&lfs-root;patches/lfs/cvs/">
+<!ENTITY patches-root "&lfs-root;patches/lfs/cvs/stable/">
 <!ENTITY wiki-root "http://wiki.linuxfromscratch.org/">
 <!ENTITY http-down "http://downloads.linuxfromscratch.org/">
 <!ENTITY freshmeat "http://freshmeat.net/projects/">
