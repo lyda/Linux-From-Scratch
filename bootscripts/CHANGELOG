@@ -1,3 +1,8 @@
+n/a - March 24, 2004
+
+	* Edited cleanfs to solve a problem.  [if /tmp does not exist, it
+	  could run the find command on the root filesystem].
+
 2.0.1 - March 24, 2004
 
 	* Found typo in BLFS MySQL Script.

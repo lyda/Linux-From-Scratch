@@ -49,8 +49,8 @@ case "$1" in
 		evaluate_retval
 
 		echo "Removing /tmp/*"
-		( cd /tmp ; find -xdev -depth ! -name . ! -name lost+found \
-				-exec rm -rf {} \; )
+		find /tmp -xdev -mindepth 1 -depth ! -path '/tmp/lost+found*' \
+		  -exec rm -rf {} \;
 		evaluate_retval
 
 		if [ -r /etc/sysconfig/createfiles ]; then
