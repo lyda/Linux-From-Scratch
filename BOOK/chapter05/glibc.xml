@@ -219,7 +219,8 @@ localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-glibc"/>.</para>
+<para>Details on this package are located in <xref
+linkend="contents-glibc" role="."/></para>
 </sect2>
 
 </sect1>

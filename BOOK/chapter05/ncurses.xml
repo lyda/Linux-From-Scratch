@@ -66,7 +66,8 @@ successfully.</para></listitem>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-ncurses"/>.</para>
+<para>Details on this package are located in <xref
+linkend="contents-ncurses" role="."/></para>
 </sect2>
 
 </sect1>

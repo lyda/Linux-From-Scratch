@@ -51,7 +51,8 @@ accordingly.</para>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-linux-libc-headers"/>.</para>
+<para>Details on this package are located in <xref
+linkend="contents-linux-libc-headers" role="."/></para>
 </sect2>
 
 </sect1>

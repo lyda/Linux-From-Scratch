@@ -67,7 +67,8 @@ cp -R include/asm-generic /tools/glibc-kernheaders</userinput></screen>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-kernel"/>.</para>
+<para>Details on this package are located in <xref
+linkend="contents-kernel" role="."/></para>
 </sect2>
 
 </sect1>

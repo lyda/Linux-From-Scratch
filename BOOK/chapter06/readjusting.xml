@@ -70,7 +70,7 @@ dynamic linker is something other than
 <filename>ld-linux.so.2</filename>, substitute
 <filename>ld-linux.so.2</filename> with the name of the platform's
 dynamic linker in the above commands. Refer back to <xref
-linkend="ch-tools-toolchaintechnotes"/> if
+linkend="ch-tools-toolchaintechnotes" role=","/> if
 necessary.</para></important>
 
 <caution><para>It is imperative at this point to stop and ensure that

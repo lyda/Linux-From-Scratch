@@ -56,7 +56,7 @@ dynamic linker is something other than
 <filename>ld-linux.so.2</filename>, replace
 <filename>ld-linux.so.2</filename> with the name of the platform's
 dynamic linker in the above commands. Refer back to <xref
-linkend="ch-tools-toolchaintechnotes"/> if
+linkend="ch-tools-toolchaintechnotes" role=","/> if
 necessary.</para></important>
 
 <para>There is a possibility that some include files from the host
@@ -92,13 +92,13 @@ find out where the problem is and correct it. This issue must be
 resolved before continuing on. First, perform the sanity check again,
 using <command>gcc</command> instead of <command>cc</command>. If this
 works, then the <filename>/tools/bin/cc</filename> symlink is missing.
-Revisit <xref linkend="ch-tools-gcc-pass1"/> and install the symlink.
+Revisit <xref linkend="ch-tools-gcc-pass1" role=","/> and install the symlink.
 Next, ensure that the PATH is correct. This can be checked by running
 <command>echo $PATH</command> and verifying that <filename
 class="directory">/tools/bin</filename> is at the head of the list. If
 the PATH is wrong it could mean that you are not logged in as user
 <emphasis>lfs</emphasis> or that something went wrong back in <xref
-linkend="ch-tools-settingenviron"/> Another option is that something
+linkend="ch-tools-settingenviron" role="."/> Another option is that something
 may have gone wrong with the specs file amendment above. In this case,
 redo the specs file amendment, being careful to copy-and-paste the
 commands.</para>

@@ -198,14 +198,15 @@ those at the above URL, it is safe to continue.</para>
 
 <note><para>At this point it is strongly recommended to repeat the
 sanity check we performed earlier in this chapter. Refer back to <xref
-linkend="ch-tools-adjusting"/> and repeat the test compilation.  If
+linkend="ch-tools-adjusting" role=","/> and repeat the test compilation.  If
 the result is wrong, the most likely reason is that the GCC Specs
 patch was not properly applied.</para></note>
 
 </sect2>
 
 <sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-gcc"/>.</para>
+<para>Details on this package are located in <xref
+linkend="contents-gcc" role="."/></para>
 </sect2>
 
 </sect1>

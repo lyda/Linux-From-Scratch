@@ -66,7 +66,8 @@ check</userinput>.</para>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-grep"/>.</para>
+<para>Details on this package are located in <xref
+linkend="contents-grep" role="."/></para>
 </sect2>
 
 </sect1>

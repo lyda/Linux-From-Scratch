@@ -86,7 +86,7 @@ critical. Do not skip it under any circumstance.</para></important>
 
 <para>Some of the errors are known issues and were noted in the
 previous chapter. The test suite notes from <xref
-linkend="ch-tools-gcc-pass2"/> are still relevant here. Be sure to
+linkend="ch-tools-gcc-pass2" role=","/> are still relevant here. Be sure to
 refer back to them as necessary.</para>
 
 <para>Install the package:</para>
@@ -106,7 +106,7 @@ compiler. To satisfy those packages, create a symlink:</para>
 
 <note><para>At this point, it is strongly recommended to repeat the
 sanity check performed earlier in this chapter. Refer back to <xref
-linkend="ch-system-readjusting"/> and repeat the check. If the results
+linkend="ch-system-readjusting" role=","/> and repeat the check. If the results
 are in error, then the most likely reason is that the GCC Specs patch
 from <xref linkend="chapter-temporary-tools"/> was erroneously applied
 here.</para></note>

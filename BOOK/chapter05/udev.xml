@@ -60,7 +60,8 @@ cp ../udev-config-1.rules /tools/etc/udev/rules.d/00-lfs.rules</userinput></scre
 </sect2>
 
 <sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-udev"/>.</para>
+<para>Details on this package are located in <xref
+linkend="contents-udev" role="."/></para>
 </sect2>
 
 </sect1>

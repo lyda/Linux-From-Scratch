@@ -66,7 +66,8 @@ platforms, but generally are not a problem on Linux.</para>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-coreutils"/>.</para>
+<para>Details on this package are located in <xref
+linkend="contents-coreutils" role="."/></para>
 </sect2>
 
 </sect1>

@@ -57,7 +57,8 @@ fine, so make sure it does not get regenerated:</para>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-flex"/>.</para>
+<para>Details on this package are located in <xref
+linkend="contents-flex" role="."/></para>
 </sect2>
 
 </sect1>
