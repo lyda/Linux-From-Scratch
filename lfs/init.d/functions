@@ -145,7 +145,7 @@ getpids()
 
 	pidlist=""
 	if [ -n "$PIDFILE" ]; then
-		lpids=$(cat $PIDFILE)
+		lpids=$(cat $PIDFILE 2>/dev/null)
 	else
 		lpids=$(pidof $base)
 	fi
