@@ -1,6 +1,8 @@
 n/a - March 31, 2004
 
-	* Changed "Press Enter" on unknown error to whote
+	* Changed "Press Enter" on unknown error to white
+	* Moved S10swap to S20swap.  When udev is added, it has to be
+	  ran before swap is setup.
 
 n/a - March 29, 2004
 
