@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-bootable-kernel" xreflabel="Linux" role="wrap">
+<sect1 id="ch-bootable-kernel" role="wrap">
 <title>Linux-&linux-version;</title>
 <?dbhtml filename="kernel.html"?>
 
@@ -53,7 +53,7 @@ ready:</para>
 compile the keymap into the kernel, issue the command below:</para>
 
 <screen><userinput>loadkeys -m /usr/share/kbd/keymaps/<replaceable>[path to  keymap]</replaceable> &gt; \
-    /linux-&linux-version;/drivers/char/defkeymap.c</userinput></screen>
+    drivers/char/defkeymap.c</userinput></screen>
 
 <para>For example, if using a Dutch keyboard, use
 <filename>/usr/share/kbd/keymaps/i386/qwerty/nl.map.gz</filename>.</para>
