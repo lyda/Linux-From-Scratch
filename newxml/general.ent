@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "CVS-2004-04-24">
-<!ENTITY releasedate "April 24, 2004">
+<!ENTITY version "CVS-2004-04-27">
+<!ENTITY releasedate "April 27, 2004">
 <!ENTITY milestone "5.1">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -21,7 +21,7 @@
 <!ENTITY bash-version "2.05b">
 <!ENTITY binutils-version "2.14">
 <!ENTITY bison-version "1.875">
-<!ENTITY bootscripts-version "2.0.3">
+<!ENTITY bootscripts-version "2.0.4">
 <!ENTITY bzip2-version "1.0.2">
 <!ENTITY coreutils-version "5.2.1">
 <!ENTITY dejagnu-version "1.4.4">
