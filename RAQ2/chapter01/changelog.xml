@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-scatter-changelog" condition="no-print">
+<title>Changelog</title>
+<?dbhtml filename="changelog.html"?>
+
+<para>This is version &version; of the Linux From Scratch book, dated
+&releasedate;. If this book is more than two months old, a newer and better
+version is probably already available. To find out, please check one of the
+mirrors via <ulink url="&lfs-root;"/>.</para>
+
+<para>Below is a list of changes made since the previous release of the book,
+first a summary, then a detailed log.</para>
+
+<listitem><para>Upgraded to:</para>
+<itemizedlist>
+none
+</itemizedlist>
+</listitem>
+
+<listitem><para>Added:</para>
+<itemizedlist>
+none
+</itemizedlist>
+</listitem>
+ 
+<listitem><para>Removed:</para>
+<itemizedlist>
+none
+</itemizedlist>
+</listitem>
+
+<listitem><para>November 29th, 2004 [jim]: Re-Worked LFS Unstable dated 11-19-2004 to make it
+compatible with a Cobalt Cube2, RaQ2, or the RaQ2+. Changes from book are the addition of
+linux-libc-headers patch, glibc patch, grep patch, and linux patch for MIPS/RaQ2.</para></listitem>
+
+</sect1>

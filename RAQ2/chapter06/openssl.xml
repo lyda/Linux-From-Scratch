@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-system-openssl" xreflabel="Openssl" role="wrap">
+<title>OpenSSL-&openssl-version;</title>
+<?dbhtml filename="openssl.html"?>
+
+<indexterm zone="ch-system-openssl"><primary sortas="a-Openssl">Openssl</primary></indexterm>
+
+<sect2 role="package"><title/>
+<para>The OpenSSL package contains management tools and libraries relating
+to cryptography.</para>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>1.16 SBU</seg><seg>35 MB</seg></seglistitem>
+</segmentedlist>
+
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of OpenSSL</title>
+
+<para>Prepare OpenSSL for compilation:</para>
+
+<screen><userinput>sed 's/^passwd/openssl-passwd/' doc/apps/passwd.pod > doc/apps/openssl-passwd.pod
+rm doc/apps/passwd.pod
+mv doc/crypto/{,openssl_}threads.pod
+./config --openssldir=/etc/ssl --prefix=/usr shared
+sed -i 's%SHLIBDIRS= fips crypto ssl%SHLIBDIRS= crypto ssl%g' Makefile</userinput></screen>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make MANDIR=/usr/share/man</userinput></screen>
+
+<para>Now install it:</para>
+
+<screen><userinput>make MANDIR=/usr/share/maninstall
+cp -r certs /etc/ssl</userinput></screen>
+
+</sect2>
+
+<sect2 id="contents-openssl" role="content"><title>Contents of OpenSSL</title>
+
+<segmentedlist>
+<segtitle>Installed programs</segtitle>
+<seglistitem><seg>c_rehash, and openssl.</seg></seglistitem>
+</segmentedlist>
+
+<variablelist><title>Short descriptions</title>
+
+<varlistentry id="c_rehash">
+<term><command>c_rehash</command></term>
+<listitem>
+<indexterm zone="ch-system-openssl c_rehash"><primary sortas="b-c_rehash">c_rehash</primary></indexterm>
+<para>c_rehash is a Perl script that scans all files in a directory and adds symbolic links
+to their hash values..</para>
+</listitem>
+</varlistentry>
+
+<varlistentry id="openssl">
+<term><command>openssl</command></term>
+<listitem>
+<indexterm zone="ch-system-openssl openssl"><primary sortas="b-openssl">openssl</primary></indexterm>
+<para> The openssl program is a command-line tool for using the various cryptography
+functions of OpenSSL's crypto library from the shell. It can be used for various
+functions which are documented in man 1 openssl.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
