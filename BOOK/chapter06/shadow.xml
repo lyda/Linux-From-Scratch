@@ -31,7 +31,13 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 
 <para>Prepare Shadow for compilation:</para>
 
-<screen><userinput>./configure --libdir=/usr/lib --enable-shared</userinput></screen>
+<screen><userinput>./configure --libdir=/lib --enable-shared</userinput></screen>
+
+<para>Remove the installation of the groups program, and its man page as
+Coreutils provides a better version:</para>
+
+<screen><userinput>sed -i 's/groups$(EXEEXT) //' src/Makefile
+sed -i '/groups/d' man/Makefile</userinput></screen>
 
 <para>Compile the package:</para>
 
@@ -62,25 +68,19 @@ file while copying it to its destination:</para>
 
 <indexterm zone="shadow-login_defs"><primary sortas="e-/etc/login.defs">/etc/login.defs</primary></indexterm>
 
-<screen><userinput>cp etc/login.defs.linux /etc/login.defs
-sed -i -e 's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
-    -e 's@/var/spool/mail@/var/mail@' /etc/login.defs</userinput></screen>
+<screen><userinput>sed -e's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
+    -e 's@/var/spool/mail@/var/mail@' \
+    etc/login.defs.linux &gt; /etc/login.defs</userinput></screen>
 
-<para>Move a misplaced program to their proper
-location:</para>
+<para>Move a misplaced program to its proper location:</para>
 
 <screen><userinput>mv /usr/bin/passwd /bin</userinput></screen>
 
-<para>Move Shadow's dynamic libraries to a more appropriate
-location:</para>
+<para>Move Shadow's libraries to more appropriate locations:</para>
 
-<screen><userinput>mv /usr/lib/libshadow.so.0* /lib</userinput></screen>
-
-<para>Because some packages expect to find the just-moved libraries in
-<filename class="directory">/usr/lib</filename>, create the following
-symlink:</para>
-
-<screen><userinput>ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
+<screen><userinput>mv /lib/libshadow.*a /usr/lib
+rm /lib/libshadow.so
+ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
 
 <para>The <parameter>-D</parameter> option of the
 <command>useradd</command> program requires the <filename
@@ -89,12 +89,6 @@ properly:</para>
 
 <screen><userinput>mkdir /etc/default</userinput></screen>
 
-<para>Coreutils has already installed a better
-<command>groups</command> program in <filename
-class="directory">/usr/bin</filename>.  Remove the one installed by
-Shadow:</para>
-
-<screen><userinput>rm /bin/groups</userinput></screen>
 <beginpage/>
 </sect2>
 
