@@ -1,3 +1,7 @@
+n/a - July 11, 2004
+
+	* Minor script output changes
+
 n/a - July 10, 2004
 
 	* We now use the ip program [from iproute2] instead of ipconfig [net-tools]

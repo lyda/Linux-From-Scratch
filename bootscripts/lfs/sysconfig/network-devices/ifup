@@ -24,7 +24,7 @@ for file in $FILES
 do
 	if [ ! -f "$file" ]
 	then
-		echo "Unable to read $file"
+		echo "$file was not a file"
 		continue
 	fi
 	(

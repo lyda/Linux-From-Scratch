@@ -34,7 +34,7 @@ case "$1" in
 			interface=${file##*/ifconfig.}
 			interface=${interface%%/*}
 			# verify that $file is a readable file, and does not end with a ~
-			if [ -r "$file" -a "$file" = "${file%""~""}" ]
+			if [ -f "$file" -a "$file" = "${file%""~""}" ]
 			then
 				(
 					. "$file"
