@@ -28,15 +28,14 @@ GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Readline</title>
 
-<para>The following patch fixes a problem where Readline sometimes
-only shows 33 characters on a line and then wraps to the next
-line.</para>
+<para>The following patch fixes various issues including a problem where Readline
+sometimes will only show 33 characters on a line and then wrap to the next line.</para>
 
-<screen><userinput>patch -Np1 -i ../readline-&readline-version;-display_wrap-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../readline-&readline-version;-fixes-1.patch</userinput></screen>
 
 <para>Prepare Readline for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr</userinput></screen>
+<screen><userinput>./configure --prefix=/usr --libdir=/lib</userinput></screen>
 
 <para>Compile the package:</para>
 
@@ -56,23 +55,21 @@ line.</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Give Readline's dynamic libraries more appropriate permissions:</para>
+<para>Give Readline's dynamic libraries to a more appropriate permissions:</para>
 
-<screen><userinput>chmod 755 /usr/lib/*.&readline-version;</userinput></screen>
+<screen><userinput>chmod 755 /lib/lib{readline,history}.so*</userinput></screen>
 
-<beginpage/>
-<para>Move the dynamic libraries to a more appropriate location:</para>
+<para>Now we move the static libraries to a more appropriate location:</para>
 
-<screen><userinput>mv /usr/lib/lib{readline,history}.so.5* /lib</userinput></screen>
+<screen><userinput>mv /lib/lib{readline,history}.a /usr/lib</userinput></screen>
 
-<para>Because the libraries have been moved, a few symlinks are now pointing to
-non-existent files. Recreate those symlinks:</para>
+<para>Now we will remove the old, .so files in /lib and relink them into /usr/lib.</para>
 
-<screen><userinput>ln -sf ../../lib/libhistory.so.5 /usr/lib/libhistory.so
-ln -sf ../../lib/libreadline.so.5 /usr/lib/libreadline.so</userinput></screen>
+<screen><userinput>rm /lib/lib{readline,history}.so
+ln -sf ../../lib/libreadline.so.5 /usr/lib/libreadline.so
+ln -sf ../../lib/libhistory.so.5 /usr/lib/libhistory.so</userinput></screen>
 
 </sect2>
-
 
 <sect2 id="contents-readline" role="content"><title>Contents of Readline</title>
 <segmentedlist>

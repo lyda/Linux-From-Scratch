@@ -56,6 +56,10 @@ problem. The above command takes care of this issue.</para>
 <para>Next, amend the GCC specs file so that it points to the new
 dynamic linker. A perl command accomplishes this:</para>
 
+<warning><para><emphasis>Do not</emphasis> run the following command
+more than once, it will adversely affect the outcome of software built
+after this step.</para></warning>
+
 <screen arch="x86"><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/@g;' \
         `gcc --print-file specs`</userinput></screen>

@@ -31,12 +31,17 @@ Gawk, GCC, Gettext, Grep, Make, Perl, Sed, and Texinfo</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Glibc</title>
 
-<para>This package is known to have issues when its default
+<para>This package is known to behave badly when you change its default
 optimization flags (including the <parameter>-march</parameter> and
-<parameter>-mcpu</parameter> options) are changed. If any environment
-variables that override default optimizations have been defined, such
-as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
-unset them when building Glibc.</para>
+<parameter>-mcpu</parameter> options). Therefore, if you have defined any
+environment variables that override default optimizations, such as CFLAGS and
+CXXFLAGS, we recommend un-setting them when building Glibc.</para>
+
+<para arch="ppc;raq2">Unpack the glibc-linuxthreads-&glibc-version; <emphasis>and</emphasis> the
+glibc-libidn-&glibc-version; tarball -- they will unfold into the same directory.</para>
+
+<para arch="alpha;x86">Unpack the glibc-libidn-&glibc-version; tarball -- it
+will unfold into the same directory.</para>
 
 <para>The Glibc build system is self-contained and will install
 perfectly, even though the compiler specs file and linker are still
@@ -178,6 +183,10 @@ internationalization-related hints.</para>
 
 <para>Build the linuxthreads man pages, which are a great reference
 on the threading API (applicable to NPTL as well):</para>
+
+<para arch="alpha;x86">Unpack the glibc-linuxthreads-&glibc-version; tarball -- it
+is needed for the next two make commands. You can ignore this if you do want
+the threading API man pages.</para>
 
 <screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man</userinput></screen>
 
