@@ -5,7 +5,7 @@ n/a - March 19, 2004
 	* Coloured the print_error_message in functions red
 	* added stop to the setclock script
 	* changed echo > to > in cleanfs, suggested by winkie
-	* Initial additions of some BLFS Scripts
+	* BLFS Scripts Added,  collected by Zack
 	* Edited killproc, so it checks for running pids, rather then
 	  the completion of the above kill command.  Suggested by Zack
 
