@@ -22,7 +22,7 @@ case "${1}" in
 		if [ -f "/etc/sysctl.conf" ]
 		then
 			boot_mesg "Setting kernel runtime parameters..."
-			sysctl -p
+			sysctl -q -p
 			evaluate_retval
 		fi
 		;;
