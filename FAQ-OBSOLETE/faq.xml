@@ -126,6 +126,8 @@
 		</section>
 	</chapter>
 	<chapter id="compiling"><title>Compiling</title>
+		<section id="before-ask-comp"><title>Before you ask on the list...</title>
+		</section>
 		<section id="glibc22x-gcc2952"><title>Is it OK to use GCC 2.95.2 with GLIBC 2.2.x?</title>
 			<para>
 				No, use GCC 2.95.2.1.
