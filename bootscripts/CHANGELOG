@@ -1,3 +1,9 @@
+n/a - November 25, 2004
+	* Added consolelog to contrib/sysconfig (DJ Lucas)
+	* Added syslog-ng.conf to contrib/sysconfig (DJ Lucas)
+	* Rewrite of line wraping in boot_mesg and various fixes
+	  related to boot_mesg changes (DJ Lucas, Alexander Patrakov)
+
 n/a - November 20, 2004
 	* Modifed modules script to return to previous kernel message
 	  level (DJ Lucas)
