@@ -26,7 +26,7 @@ Network Configuration:
 		- PREFIX: CIDR prefix of IP Address, defaults to 24 if not set
 		- BROADCAST: broadcast address
 		ipv4-static-route:
-		- Type: network (default type if not specified), host or
+		- TYPE: network (default type if not specified), default, host or
 		  unreachable
 		- IP: IP Address of target (for network, host and unreachable)
 		- PREFIX: CIDR prefix of target (for network, host and unreachable)
