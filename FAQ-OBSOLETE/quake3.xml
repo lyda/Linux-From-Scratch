@@ -17,7 +17,7 @@ unless you installed Quake 3 somewhere else.
 </para></listitem>
 
 <listitem><para>Players need the add on maps used in the server
-which they can get from <ulink url="http://www.mnementh.co.uk/quake3/"/>
+which they can get from <ulink url="http://games.mnementh.co.uk/"/>
 and install in ~/.q3a/baseq3/ or where ever the pak0.pk3 file is.
 Downloading the maps manually is absolutely necessary
 because the server has automatic map downloading disabled.
