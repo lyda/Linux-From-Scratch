@@ -87,6 +87,8 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: x86, PPC, Alpha - Linux to 2.6.11.3</para></listitem>
 <listitem><para>Updated: Arch: x86, PPC, Alpha - Linux-libc-headers to 2.6.11.0.</para></listitem>
+<listitem><para>Updated: Arch: All - Dynamically link the pass1 toolchain to
+workaround bug 1061 and remove all related explanatory text</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
