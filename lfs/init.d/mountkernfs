@@ -19,20 +19,16 @@ case "${1}" in
 	start)
 		boot_mesg -n "Mounting kernel-based file systems:" ${INFO}
 
-		if [ ! -e /proc/mounts ]
+		if ! mountpoint /proc
 		then
 			boot_mesg -n " /proc" ${NORMAL}
 			mount -n /proc || failed=1
 		fi
 
-		# This should be mounted on a 2.6 kernel.
-		if grep -q '[[:space:]]sysfs' /proc/filesystems
+		if mountpoint /sys
 		then
-			if [ -d /sys -a ! -d /sys/block ]
-			then
-				boot_mesg -n " /sys" ${NORMAL}
-				mount -n /sys || failed=1
-			fi
+			boot_mesg -n "/sys" ${NORMAL}
+			mount -n /sys || failed=1
 		fi
 
 		boot_mesg "" ${NORMAL}
