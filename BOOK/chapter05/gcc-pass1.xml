@@ -30,13 +30,12 @@
 <para>Unpack only the gcc-core tarball because neither the C++
 compiler nor the test suite will be needed here.</para>
 
-<para>This package is known to have issues when the default
+<para>This package is known to have issues when its default
 optimization flags (including the <parameter>-march</parameter> and
-<parameter>-mcpu</parameter> options) are changed. Therefore, if any
-environment variables that override default optimizations have been
-defined, such as <emphasis>CFLAGS</emphasis> and
-<emphasis>CXXFLAGS</emphasis>, we recommend un-setting them when
-building GCC.</para>
+<parameter>-mcpu</parameter> options) are changed. If any environment
+variables that override default optimizations have been defined, such
+as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+unset them when building GCC.</para>
 
 <para>The GCC documentation recommends building GCC outside of the
 source directory in a dedicated build directory:</para>

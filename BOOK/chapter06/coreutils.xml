@@ -99,15 +99,15 @@ mv /usr/bin/chroot /usr/sbin</userinput></screen>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
-<seglistitem><seg>basename, cat, chgrp, chmod,
-chown, chroot, cksum, comm, cp, csplit, cut, date, dd, df, dir, dircolors,
-dirname, du, echo, env, expand, expr, factor, false, fmt, fold, groups, head,
+<seglistitem><seg>basename, cat, chgrp, chmod, chown, chroot, cksum,
+comm, cp, csplit, cut, date, dd, df, dir, dircolors, dirname, du,
+echo, env, expand, expr, factor, false, fmt, fold, groups, head,
 hostid, hostname, id, install, join, link, ln, logname, ls, md5sum,
-mkdir, mkfifo, mknod, mv, nice, nl, nohup, od, paste, pathchk, pinky, pr,
-printenv, printf, ptx, pwd, readlink, rm, rmdir, seq, sha1sum, shred, sleep,
-sort, split, stat, stty, su, sum, sync, tac, tail, tee, test, touch, tr, true,
-tsort, tty, uname, unexpand, uniq, unlink, uptime, users, vdir, wc, who,
-whoami and yes</seg></seglistitem>
+mkdir, mkfifo, mknod, mv, nice, nl, nohup, od, paste, pathchk, pinky,
+pr, printenv, printf, ptx, pwd, readlink, rm, rmdir, seq, sha1sum,
+shred, sleep, sort, split, stat, stty, sum, sync, tac, tail, tee,
+test, touch, tr, true, tsort, tty, uname, unexpand, uniq, unlink,
+users, vdir, wc, who, whoami and yes</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -650,19 +650,19 @@ making it difficult to recover the data.</para>
 </listitem>
 </varlistentry>
 
+<varlistentry id="stat">
+<term><command>stat</command></term>
+<listitem>
+<para>displays file or filesystem status.</para>
+<indexterm zone="ch-system-coreutils stat"><primary sortas="b-stat">stat</primary></indexterm>
+</listitem>
+</varlistentry>
+
 <varlistentry id="stty">
 <term><command>stty</command></term>
 <listitem>
 <para>sets or reports terminal line settings.</para>
 <indexterm zone="ch-system-coreutils stty"><primary sortas="b-stty">stty</primary></indexterm>
-</listitem>
-</varlistentry>
-
-<varlistentry id="su">
-<term><command>su</command></term>
-<listitem>
-<para>runs a shell with substitute user and group IDs.</para>
-<indexterm zone="ch-system-coreutils su"><primary sortas="b-su">su</primary></indexterm>
 </listitem>
 </varlistentry>
 
@@ -792,15 +792,6 @@ input.</para>
 <listitem>
 <para>removes the given file.</para>
 <indexterm zone="ch-system-coreutils unlink"><primary sortas="b-unlink">unlink</primary></indexterm>
-</listitem>
-</varlistentry>
-
-<varlistentry id="uptime-coreutils">
-<term><command>uptime</command></term>
-<listitem>
-<para>reports how long the system has been running, how many users are
-logged on, and the system load averages.</para>
-<indexterm zone="ch-system-coreutils uptime-coreutils"><primary sortas="b-uptime-coreutils">uptime</primary></indexterm>
 </listitem>
 </varlistentry>
 

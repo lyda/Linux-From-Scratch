@@ -33,11 +33,10 @@ assembler to determine which of their own features to enable.</para>
 
 <para>This package is known to have issues when its default
 optimization flags (including the <parameter>-march</parameter> and
-<parameter>-mcpu</parameter> options) are changed. Therefore, if any
-environment variables that override default optimizations have been
-defined, such as <emphasis>CFLAGS</emphasis> and
-<emphasis>CXXFLAGS</emphasis>, we recommend un-setting them when
-building Binutils.</para>
+<parameter>-mcpu</parameter> options) are changed. If any environment
+variables that override default optimizations have been defined, such
+as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+unset them when building Binutils.</para>
 
 <para>The Binutils documentation recommends building Binutils outside of the
 source directory in a dedicated build directory:</para>

@@ -31,6 +31,13 @@ Gawk, GCC, Gettext, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Glibc</title>
 
+<para>This package is known to have issues when its default
+optimization flags (including the <parameter>-march</parameter> and
+<parameter>-mcpu</parameter> options) are changed. If any environment
+variables that override default optimizations have been defined, such
+as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+unset them when building GCC.</para>
+
 <para>The Glibc build system is self-contained and will install
 perfectly, even though the compiler specs file and linker are still
 pointing at <filename class="directory">/tools</filename>. The specs

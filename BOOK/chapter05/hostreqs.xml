@@ -10,7 +10,7 @@
 <para>The host must be running at least a 2.6.2 kernel compiled with
 GCC-3.0 or higher. There are two main reasons for this high
 requirement. First, the Native Posix Threading Library (NPTL)
-testsuite will segfault if the host's kernel hasn't been compiled with
+testsuite will segfault if the host's kernel has not been compiled with
 GCC-3.0 or a later version. Secondly, the 2.6.2 or later version of
 the kernel is required for the use of Udev. Udev creates devices
 dynamically by reading from the <systemitem

@@ -28,6 +28,12 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Readline</title>
 
+<para>The following patch fixes a problem where Readline sometimes
+will only show 33 characters on a line and then wraps to the next
+line.</para>
+
+<screen><userinput>patch -Np1 -i ../readline-&readline-version;-display_wrap-1.patch</userinput></screen>
+
 <para>Prepare Readline for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
@@ -35,6 +41,16 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <para>Compile the package:</para>
 
 <screen><userinput>make SHLIB_XLDFLAGS=-lncurses</userinput></screen>
+
+<para>The meaning of the make option:</para>
+
+<variablelist>
+<varlistentry>
+<term><parameter>SHLIB_XLDFLAGS=-lncurses</parameter></term>
+<listitem><para>This option forces readline to link against the
+<filename>libncurses</filename> library.</para></listitem>
+</varlistentry>
+</variablelist>
 
 <para>Install the package:</para>
 

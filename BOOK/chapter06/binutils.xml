@@ -29,6 +29,13 @@ Glibc, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Binutils</title>
 
+<para>This package is known to have issues when its default
+optimization flags (including the <parameter>-march</parameter> and
+<parameter>-mcpu</parameter> options) are changed. If any environment
+variables that override default optimizations have been defined, such
+as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+unset them when building Binutils.</para>
+
 <para>Verify that your the terminals (PTYs) are working properly
 inside the chroot environment. Check that everything is set up
 correctly by performing a simple test:</para>
@@ -42,13 +49,6 @@ set up for proper PTY operation:</para>
 
 <para>The issue needs to be resolved before running the test suites
 for Binutils and GCC.</para>
-
-<para>This package is known to have issues when its default
-optimization flags (including the <parameter>-march</parameter> and
-<parameter>-mcpu</parameter> options) are changed. If any environment
-variables that override default optimizations have been defined, such
-as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
-unset or modifying them when building Binutils.</para>
 
 <para>The Binutils documentation recommends building Binutils outside of the
 source directory in a dedicated build directory:</para>

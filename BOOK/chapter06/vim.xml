@@ -53,11 +53,10 @@ echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput><
 <para>The optional but highly recommended
 <parameter>--enable-multibyte</parameter> switch includes support for
 editing files in multibyte character encodings into
-<command>vim</command>.  This is needed if the recommendation was not
-heeded to not to use LFS in locales with multibyte character sets.
-This switch is also helpful to be able to edit text files initially
-created in Linux distributions like Fedora Core that use UTF-8 as a
-default character set.</para>
+<command>vim</command>.  This is needed if you are using a locale with
+a multibyte character set. This switch is also helpful to be able to
+edit text files initially created in Linux distributions like Fedora
+Core that use UTF-8 as a default character set.</para>
 
 <para>Compile the package:</para>
 
@@ -84,7 +83,10 @@ symlink:</para>
 system, it may be necessary to re-compile Vim after installing X. Vim
 comes with a GUI version of the editor that requires X and some
 additional libraries to be installed. For more information on this
-process, refer to the Vim documentation.</para>
+process, refer to the Vim documentation and the Vim installation page
+in the BLFS book at <ulink
+url="http://www.linuxfromscratch.org/blfs/view/cvs/postlfs/editors.html#postlfs-editors-vim"/>
+.</para>
 
 </sect2>
 

@@ -27,13 +27,12 @@
 <sect2 role="installation">
 <title>Installation of Glibc</title>
 
-<para>This package is known to have issues when the default
+<para>This package is known to have issues when its default
 optimization flags (including the <parameter>-march</parameter> and
-<parameter>-mcpu</parameter> options) are changed. Therefore, if any
-environment variables that override default optimizations have been
-defined, such as <emphasis>CFLAGS</emphasis> and
-<emphasis>CXXFLAGS</emphasis>, it is recommended that these be un-set
-when building Glibc.</para>
+<parameter>-mcpu</parameter> options) are changed. If any environment
+variables that override default optimizations have been defined, such
+as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+unset them when building Glibc.</para>
 
 <para>It should be noted that compiling Glibc in any way other than
 the method suggested in this book puts the stability of the system at
