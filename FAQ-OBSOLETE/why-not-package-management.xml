@@ -64,7 +64,7 @@ It is available from
 <listitem><para>Gerard has since made additions to his script.
 It is available from
 <ulink url="ftp://ftp.linuxfromscratch.org/misc/pkginst"/> and
-<ulink url="ftp://ftp.linuxfromscratch.org/misc/pgkdel"/>.
+<ulink url="ftp://ftp.linuxfromscratch.org/misc/pkgdel"/>.
 </para></listitem>
 
 <listitem><para>CheckInstall attempts log system calls made by
