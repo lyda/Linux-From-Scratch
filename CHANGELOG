@@ -3,6 +3,8 @@ n/a - September 26, 2004
 	  prefix for boot messages (James Robert)
 	* fixed localnet status, to use ip instead of ifconfig (Jim Gifford)
 	* Added consolelog to contrib (DJ Lucas)
+	* loadproc and killproc can have the -nomsg parameter to avoid
+	  calling evaluate_retval or print_service (Jim Gifford)
 
 n/a - September 24, 2004
 	* Removed /dev/udev.tdb test
