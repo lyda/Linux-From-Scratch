@@ -25,7 +25,7 @@ partition (<filename class="devicefile">hda5</filename> in our previous example)
 <para>If a swap partition was created, it will need to be initialized
 as a swap partition too (also known as formatting, as described above
 with <command>mke2fs</command>) by running the following. If you are using an existing
-swap parition, there is no need to format it.</para>
+swap partition, there is no need to format it.</para>
 
 <screen><userinput>mkswap /dev/<replaceable>[yyy]</replaceable></userinput></screen>
 

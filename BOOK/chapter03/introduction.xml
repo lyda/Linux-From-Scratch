@@ -8,7 +8,7 @@
 <?dbhtml filename="introduction.html"?>
 
 <para>This chapter includes a list of packages that need to be
-download for building a basic Linux system. The listed version numbers
+downloaded for building a basic Linux system. The listed version numbers
 correspond to versions of the software that are known to work, and
 this book is based on their use. We highly recommend not using newer
 versions because the build commands for one version may not work with
@@ -24,7 +24,7 @@ websites, mailing lists, FAQ, changelogs, and more.</para>
 location has changed since this book was published, Google (<ulink
 url="http://www.google.com"/>) provides a useful search engine for
 most packages. If this search is unsuccessful, try one of the
-alternative means of downloading discussed at <ulink
+alternate means of downloading discussed at <ulink
 url="&lfs-root;lfs/packages.html"/>.</para>
 
 <para>Downloaded packages and patches will need to be stored somewhere

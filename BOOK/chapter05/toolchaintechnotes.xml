@@ -59,7 +59,7 @@ method works:</para>
 <listitem><para>The process is similar in principle to
 cross-compiling, whereby tools installed in the same prefix work in
 cooperation, and thus utilize a little GNU
-<quote>magic</quote></para></listitem>
+<quote>magic.</quote></para></listitem>
 
 <listitem><para>Careful manipulation of the standard linker's library
 search path ensures programs are linked only against chosen
@@ -198,7 +198,7 @@ programming interface of the dynamic linker (see the
 <para>Dynamic linking is the default on Linux and has three major
 advantages over static linking. First, only one copy of the executable
 library code is needed on the hard disk, instead of having multiple
-copies of the same code included in several of programs, thus saving
+copies of the same code included in several programs, thus saving
 disk space. Second, when several programs use the same library
 function at the same time, only one copy of the function's code is
 required in core, thus saving memory space. Third, when a library

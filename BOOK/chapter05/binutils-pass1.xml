@@ -69,7 +69,7 @@ programs in the <filename class="directory">/tools</filename> directory.</para><
 <varlistentry>
 <term><parameter>--disable-nls</parameter></term>
 <listitem><para>This disables internationalization. This is not needed
-for the static programs, and nls can cause problems when linking
+for the static programs, and NLS can cause problems when linking
 statically.</para></listitem>
 </varlistentry>
 </variablelist>
@@ -86,7 +86,7 @@ make LDFLAGS="-all-static"</userinput></screen>
 <term><parameter>configure-host</parameter></term>
 <listitem><para>This forces all subdirectories to be configured
 immediately. A statically-linked build will fail without it. Use this
-option to work around the problem:</para></listitem>
+option to work around the problem.</para></listitem>
 </varlistentry>
 
 <varlistentry>

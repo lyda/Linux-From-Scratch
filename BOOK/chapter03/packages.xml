@@ -42,7 +42,7 @@
 <varlistentry>
 <term>Bison (&bison-version;) - 796 KB:</term>
 <listitem>
-<para><ulink url="http://ftp.tuniv.szczecin.pl/pub/Linux/alpha-gnu/bison/"/></para>
+<para><ulink url="ftp://ftp.linuxfromscratch.org/pub/lfs/lfs-packages/conglomeration/bison/"/></para>
 </listitem>
 </varlistentry>
 
@@ -417,9 +417,9 @@
 <note><para>1) File (&file-version;) may no longer be available at the
 listed location. The site administrators of the master download
 location occasionally remove older versions when new ones are
-released. An alternative download location that may have the correct
+released. An alternate download location that may have the correct
 version available is <ulink
-url="ftp://ftp.lfs-matrix.de/pub/lfs/"/>.</para></note>
+url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 
 <note><para>2) Released packages of Glibc are not new enough for our
 purposes, so create a tarball of an appropriate Concurrent Versions
