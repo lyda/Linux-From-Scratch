@@ -4,6 +4,7 @@ n/a - January 5, 2005
 	* Assuming sysfs is always mounted (Nathan Coulson)
 	* Moved fakemount to below mounting (Nathan Coulson)
 	* Removed -t noramfs from umount, as we now use tmpfs (Nathan Coulson)
+	* moved sysctl from mountkernfs to sysctl
 
 n/a - January 2, 2005
 	* Fixed statusproc output. (DJ Lucas)
