@@ -1,0 +1,13 @@
+<qandaentry id="openssl-sed-unexpected">
+<question><para>OpenSSL-0.9.7: sed: -e expression #1, char 16:
+Unexpected ','</para></question>
+<answer><para>If, when compiling openssl-0.9.7
+according to the instructions in the BLFS Book,
+you get an error as in this transcript:
+<screen>prompt $ sed '/=head1 *NAME/,+2s/passwd/openssl-passwd/' \
+doc/apps/passwd.pod > doc/apps/openssl-passwd.pod
+sed: -e expression #1, char 16: Unexpected ','
+</screen>
+You can upgrade sed to 4.05 to fix it.
+</para></answer>
+</qandaentry>

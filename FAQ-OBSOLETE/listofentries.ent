@@ -40,6 +40,7 @@
 <!ENTITY no-dev-rtc SYSTEM "no-dev-rtc.xml">
 <!ENTITY no-linuxthreads SYSTEM "no-linuxthreads.xml">
 <!ENTITY old-sources SYSTEM "old-sources.xml">
+<!ENTITY openssl-sed-unexpected SYSTEM "openssl-sed-unexpected.xml">
 <!ENTITY optimizations SYSTEM "optimizations.xml">
 <!ENTITY optimized-glibc-fail SYSTEM "optimized-glibc-fail.xml">
 <!ENTITY perl-missing-separator SYSTEM "perl-missing-separator.xml">
