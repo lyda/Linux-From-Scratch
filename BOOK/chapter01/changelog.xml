@@ -74,6 +74,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>January 27, 2005 [matt]: Added link to the live-cd FTP
+location.  Fixes bug 1014.</para></listitem>
+
 <listitem><para>January 27, 2005 [matt]: Added bison, flex and m4 to binutils
 dependency list.  Fixes Bug 1018.</para></listitem>
 
