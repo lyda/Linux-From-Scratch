@@ -84,6 +84,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 30th, 2004 [matt]: chapter06/udev.xml.  Renumber udev
+permissions and rules files to allow easier customisation.  Fixes bug 887.
+</para></listitem>
+
 <listitem><para>August 30th, 2004 [matt]: Minor typo corrections in
 appendixb/acronymlist.xml (Tero Tamminen)</para></listitem>
 
