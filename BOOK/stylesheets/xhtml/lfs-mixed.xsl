@@ -2,6 +2,7 @@
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
                 version="1.0">
 
     <!-- screen -->
@@ -73,25 +74,32 @@
   </xsl:template>
 
     <!-- External URLs in italic font -->
-  <xsl:template match="ulink" name="ulink">
-    <a>
-      <xsl:if test="@id">
-        <xsl:attribute name="id">
-          <xsl:value-of select="@id"/>
-        </xsl:attribute>
-      </xsl:if>
-      <xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute>
-       <i>
-        <xsl:choose>
-          <xsl:when test="count(child::node())=0">
-            <xsl:value-of select="@url"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:apply-templates/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </i>
-    </a>
+  <xsl:template match="link" name="ulink">
+    <xsl:choose>
+      <xsl:when test="@xlink:href">
+        <a>
+          <xsl:if test="@xml:id">
+            <xsl:attribute name="id">
+              <xsl:value-of select="@xnl:id"/>
+            </xsl:attribute>
+          </xsl:if>
+          <xsl:attribute name="href"><xsl:value-of select="@xlink:href"/></xsl:attribute>
+          <i>
+            <xsl:choose>
+              <xsl:when test="count(child::node())=0">
+                <xsl:value-of select="@xlink:href"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:apply-templates/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </i>
+        </a>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="link"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
   
     <!-- The <code> xhtml tag have look issues in some browsers, like Konqueror and.
