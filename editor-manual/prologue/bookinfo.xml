@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE bookinfo PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+  "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<bookinfo>
+<title>Linux From Scratch Editor's Manual</title>
+<subtitle>Version &version;</subtitle>
+
+<authorgroup>
+
+<author><firstname>Gerard</firstname><surname>Beekmans</surname></author>
+
+</authorgroup>
+
+
+<copyright id="copyright">
+
+	<year>2004</year>
+	<holder>Gerard Beekmans</holder>
+
+</copyright>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="legalnotice.xml"/>
+
+<abstract>
+<para>This manual teaches you how to properly edit the LFS-Book.</para>
+</abstract>
+
+</bookinfo>

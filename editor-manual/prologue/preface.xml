@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE preface PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<preface id="preface">
+<title>Welcome to the LFS Editor's Manual</title>
+<?dbhtml filename="preface.html" dir="preface"?>
+
+<para>This manual will teach you all that you need to know in order to
+properly edit the LFS-Book. It will cover some basic issues like accessing
+CVS over SSH and the CVS commands you will be used. It will also discuss
+the proper sequence of doing things like upgrading a package (both in the
+book as well as the FTP server) and how to work with the bug tracking
+database.</para>
+
+<literallayout>
+-- 
+Gerard Beekmans
+gerard@linuxfromscratch.org
+</literallayout>
+
+</preface>
