@@ -1,3 +1,8 @@
+o [greg] September 19th 2003
+
+  Added patch from Jon Ringle to properly deal with BLFS
+  commands of the form <screen><userinput><command>.
+
 o [timothy] May 9th
 
   Added LFSCMD_BOOK environment variable for the default

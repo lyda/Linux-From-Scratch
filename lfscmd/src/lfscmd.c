@@ -155,7 +155,31 @@ int lfscmd_parse_screen (xmlDocPtr doc, xmlNodePtr node) {
                else
                  fprintf(output, "%s", string_strip(lfs.cmd, "&&"));
             }
+
+            /* Properly deal with BLFS commands of the form <screen><userinput><command> */
+            if (string_comp("command", node->children->name))
+            {
+                xmlNodePtr command_node = node->children;
+
+                while (NULL != command_node)
+                {
+                    if (NULL != (lfs.cmd = xmlNodeListGetString(doc, command_node->children, 1)))
+                    {
+                        if (1 == lfs.execute)
+                        {
+                            system(string_strip(lfs.cmd, "&&"));
+                        }
+                        else
+                        {
+                            fprintf(output, "%s", string_strip(lfs.cmd, "&&"));
+                        }
+                    }
+                    command_node = command_node->next;
+                }
+
+            }
         }
+
         node = node->next;
     }
 
