@@ -32,9 +32,26 @@ case "$2" in
 		echo "Bringing up the $1 interface..."
 		ifconfig $1 $IP netmask $NETMASK broadcast $BROADCAST
 		evaluate_retval
+
+		if [ -n "$GATEWAY" ]; then
+			if route -n | grep -q '^0\.0\.0\.0'; then
+				echo "Gateway already setup; skipping..."
+				print_status warning
+			else
+				echo "Setting up default gateway..."
+				route add default gateway $GATEWAY metric 1 dev $1
+				evaluate_retval
+			fi
+		fi
 	;;
 
 	down)
+		if [ -n "$GATEWAY" ]; then
+			echo "Removing default gateway..."
+			route del -net default
+			evaluate_retval
+		fi
+
 		echo "Bringing down the $1 interface..."
 		ifconfig $1 down
 		evaluate_retval
