@@ -1,3 +1,8 @@
+n/a - February 19, 2005
+	* Added evaluate_retval to the end of loadproc and killproc.
+	  lsb does not say that killproc should print [  OK  ],
+	  but required for compatibility.  (Nathan Coulson)
+
 n/a - February 9, 2005
 	* Accidently mounted /dev with 775 instead of 755, fixed
 	  (Reported by Alexander E. Patrakov)
