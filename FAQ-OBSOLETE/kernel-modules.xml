@@ -1,0 +1,7 @@
+<qandaentry id="kernel-modules">
+<question><para>How do I setup kernel modules?</para></question>
+<answer><para>See the Module-HOWTO at
+<ulink url="http://www.tldp.org/HOWTO/Module-HOWTO/"/>.
+</para></answer>
+</qandaentry>
+
