@@ -80,14 +80,12 @@ print_error_msg()
 # $i is inherited by the rc script
 check_script_status()
 {
-	if [ ! -f $i ]
-	then
+	if [ ! -f $i ];	then
 		echo "$i is not a valid symlink"
 		continue
 	fi
 
-	if [ ! -x $i ]
-	then
+	if [ ! -x $i ]; then
 		echo "$i is not executable, skipping"
 		continue
 	fi
@@ -97,8 +95,7 @@ evaluate_retval()
 {
 	error_value=$?
 
-	if [ $error_value = 0 ]
-	then
+	if [ $error_value = 0 ]; then
 		print_status success
 	else
 		print_status failure
@@ -111,8 +108,7 @@ evaluate_retval()
 
 print_status()
 {
-        if [ $# = 0 ]
-        then
+        if [ $# = 0 ]; then
                 echo "Usage: $0 {success|warning|failure}"
                 return 1
         fi
@@ -128,6 +124,9 @@ print_status()
                                 ;;
                                 not_running)
                                         echo_warning "Not running"
+                                ;;
+                                not_available)
+                                        echo_warning "Not available"
                                 ;;
                         esac
                 ;;
@@ -163,16 +162,14 @@ getpids()
 # Starts a program if it is currently not running
 loadproc()
 {
-	if [ $# = 0 ]
-	then
+	if [ $# = 0 ]; then
 		echo "Usage: loadproc {program}"
 		exit 1
 		fi
 
 	getpids $1
 
-	if [ -z "$pidlist" ]
-	then
+	if [ -z "$pidlist" ]; then
 		"$@"
 		evaluate_retval
 	else
@@ -229,16 +226,14 @@ killproc()
 
 reloadproc()
 {
-	if [ $# = 0 ]
-	then
+	if [ $# = 0 ]; then
 		echo "Usage: reloadproc [{program}]"
 		exit 1
 	fi
 
 	getpids $1
 
-	if [ -n "$pidlist" ]
-	then
+	if [ -n "$pidlist" ]; then
 		failure=0
 
                 for pid in $pidlist
@@ -247,7 +242,8 @@ reloadproc()
                 done
 
                 (exit $failure)
-                evaluate_retval
+
+		evaluate_retval
         else
                 print_status warning not_running
         fi
@@ -255,8 +251,7 @@ reloadproc()
 
 statusproc()
 {
-        if [ $# = 0 ]
-        then
+        if [ $# = 0 ]; then
                 echo "Usage: statusproc {program}"
                 exit 1
         fi
@@ -264,12 +259,10 @@ statusproc()
         base=${1##*/}
         getpids $base
 
-        if [ -n "$pidlist" ]
-        then
+        if [ -n "$pidlist" ]; then
                 echo "$base is running with Process ID(s) $pidlist"
         else
-                if [ -s /var/run/$base.pid ]
-                then
+                if [ -s /var/run/$base.pid ]; then
                         echo "$1 is not running but /var/run/$base.pid exists"
                         return 1
                 else
