@@ -19,8 +19,8 @@ case "$2" in
 		if [ -z $NETMASK ]
 		then
 			echo -n "NETMASK variable missing for ifconfig.$1, "
-			echo "using 255.255.255.0"
-			NETMASK=255.255.255.0
+			echo "using /24"
+			NETMASK=24
 		fi
 
 		if [ -z $BROADCAST ]
@@ -30,16 +30,17 @@ case "$2" in
 		fi
 
 		echo "Bringing up the $1 interface..."
-		ifconfig $1 $IP netmask $NETMASK broadcast $BROADCAST
+		ip link set $1 up
+		ip addr add $IP/$NETMASK broadcast $BROADCAST label $1 dev $1
 		evaluate_retval
 
 		if [ -n "$GATEWAY" ]; then
-			if route -n | grep -q '^0\.0\.0\.0'; then
+			if ip route | grep -q default; then; then
 				echo "Gateway already setup; skipping..."
 				print_status warning
 			else
 				echo "Setting up default gateway..."
-				route add default gateway $GATEWAY metric 1 dev $1
+				ip route add default via $GATEWAY dev $1
 				evaluate_retval
 			fi
 		fi
@@ -48,12 +49,12 @@ case "$2" in
 	down)
 		if [ -n "$GATEWAY" ]; then
 			echo "Removing default gateway..."
-			route del -net default
+			ip route del default
 			evaluate_retval
 		fi
 
 		echo "Bringing down the $1 interface..."
-		ifconfig $1 down
+		ip link set $1 down
 		evaluate_retval
 	;;
 

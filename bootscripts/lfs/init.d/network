@@ -26,27 +26,7 @@ case "$1" in
 			fi
 		done
 
-		# Setup the Gateway
-		if [ "$GATEWAY" != "" ]
-		then
-			echo -n "Warning, setting gateway in "
-			echo "/etc/sysconfig/network is depreciated"
-			echo "Setting up default gateway..."
-			route add default gateway $GATEWAY metric 1 \
-				dev $GATEWAY_IF
-			evaluate_retval
-		fi
-		;;
-
 	stop)
-		if [ "$GATEWAY" != "" ]
-		then
-			echo -n "Warning, setting gateway in "
-			echo "/etc/sysconfig/network is depreciated"
-			echo "Removing default gateway..."
-			route del -net default
-			evaluate_retval
-		fi
 		# Stop all network interfaces
 		for file in $network_devices/ifconfig.*
 		do

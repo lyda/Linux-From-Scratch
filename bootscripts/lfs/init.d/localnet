@@ -11,7 +11,8 @@
 case "$1" in
 	start)
 		echo "Bringing up the loopback interface..."
-		ifconfig lo 127.0.0.1
+		ip link set lo up
+		ip addr add 127.0.0.1/8 dev label lo dev lo
 		evaluate_retval
 
 		echo "Setting hostname to $HOSTNAME..."
@@ -21,7 +22,7 @@ case "$1" in
 
 	stop)
 		echo "Bringing down the loopback interface..."
-		ifconfig lo down
+		ip link set lo down
 		evaluate_retval
 		;;
 
