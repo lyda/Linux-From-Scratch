@@ -74,6 +74,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 17th, 2004 [winkie]: Chapter 6 - Pass
+<quote>AUTOCONF=no</quote> to the Glibc build. This prevents autoconf from
+causing us problems.</para></listitem>
+
 <listitem><para>May 16th, 2004 [jeremy]: Chapter 9 - Added a brief paragraph
 to the rebooting system page to discuss packages which might be useful to
 add prior to rebooting to the new system</para></listitem>

@@ -68,7 +68,7 @@ kernel headers into <filename>/usr/include</filename>.</para></listitem>
 
 <para>Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>make AUTOCONF=no</userinput></screen>
 
 <important><para>The test suite for Glibc in this section is considered
 <emphasis>critical</emphasis>. Our advice is to not skip it under any
