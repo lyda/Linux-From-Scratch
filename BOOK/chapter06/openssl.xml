@@ -20,7 +20,7 @@ to cryptography.</para>
 </segmentedlist>
 
 <segmentedlist>
-<segtitle>OpenSSL installation depends on</segtitle>
+<segtitle>&dependencies;</segtitle>
 <seglistitem><seg>FIXME</seg></seglistitem>
 </segmentedlist>
 

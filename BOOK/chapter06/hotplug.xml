@@ -25,7 +25,7 @@ existing hardware during boot and inserts the relevant modules into the running 
 </segmentedlist>
 
 <segmentedlist>
-<segtitle>Hotplug installation depends on</segtitle>
+<segtitle>&dependencies;</segtitle>
 <seglistitem><seg>Unchecked</seg></seglistitem>
 </segmentedlist>
 </sect2>

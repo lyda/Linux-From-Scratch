@@ -20,7 +20,7 @@ for encrypting authentication and subsequent traffic over a network..</para>
 </segmentedlist>
 
 <segmentedlist>
-<segtitle>OpenSSH installation depends on</segtitle>
+<segtitle>&dependencies;</segtitle>
 <seglistitem><seg>OpenSSL</seg></seglistitem>
 </segmentedlist>
 </sect2>
