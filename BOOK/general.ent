@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "6.1-testing-20050105">
-<!ENTITY releasedate "January 5, 2005">
+<!ENTITY version "6.1-testing-20050109">
+<!ENTITY releasedate "January 9, 2005">
 <!ENTITY milestone "6.1">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -16,7 +16,7 @@
 <!ENTITY diskspace "Required disk space">
 
 <!ENTITY autoconf-version "2.59">
-<!ENTITY automake-version "1.9.3">
+<!ENTITY automake-version "1.9.4">
 <!ENTITY bash-version "3.0">
 <!ENTITY binutils-version "2.15.94.0.2">
 <!ENTITY bison-version "1.875a">
