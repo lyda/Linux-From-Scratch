@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-bootable-grub">
-<title>Making the LFS system bootable</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="ch-bootable-grub">
+<info><title>Making the LFS system bootable</title></info>
 <?dbhtml filename="grub.html"?>
 
 <indexterm zone="ch-bootable-grub">
@@ -118,7 +120,7 @@ EOF</userinput></screen>
 
 <para>If <command>info grub</command> doesn't tell you all you want to
 know, you can find more information regarding Grub on its website, located at:
-<ulink url="http://www.gnu.org/software/grub/"/>.</para>
+<uri xlink:href="http://www.gnu.org/software/grub/"/>.</para>
 
 <para>The FHS stipulates that Grub's menu.lst file should be symlinked to
 /etc/grub/menu.lst.  To satisfy this requirement, issue the following
@@ -127,4 +129,4 @@ command:</para>
 <screen><userinput>mkdir /etc/grub &amp;&amp;
 ln -s /boot/grub/menu.lst /etc/grub</userinput></screen>
 
-</sect1>
+</section>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-bootable-kernel" xreflabel="Linux" role="wrap">
-<title>Linux-&linux-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink" 
+         xml:id="ch-bootable-kernel" xreflabel="Linux" role="wrap">
+<info><title>Linux-&linux-version;</title></info>
 <?dbhtml filename="kernel.html"?>
 
 <indexterm zone="ch-bootable-kernel"><primary sortas="a-Linux">Linux</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The Linux package contains the kernel and the header files.</para>
 
 <segmentedlist>
@@ -24,10 +26,10 @@
 <seglistitem><seg>Bash, Binutils, Coreutils, Findutils,
 GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, Sed</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of the kernel</title>
+<section role="installation">
+<info><title>Installation of the kernel</title></info>
 
 <para>Building the kernel involves a few steps: configuration, compilation, and
 installation. If you don't like the way this book configures the kernel, view
@@ -124,7 +126,7 @@ configuration, especially if this is the first time you use Udev.</para>
 <para>If you have a lot of modules and very little space, you may want to
 consider stripping and compressing the modules. For most people such compression
 isn't worth the trouble, but if you're really pressed for space, then have a look at
-<ulink url="http://www.linux-mips.org/archives/linux-mips/2002-04/msg00031.html"/>.</para>
+<uri xlink:href="http://www.linux-mips.org/archives/linux-mips/2002-04/msg00031.html"/>.</para>
 
 <para>Kernel compilation has finished but more steps are required to complete
 the installation. Some files need to be copied to the <filename class="directory">/boot</filename>
@@ -164,10 +166,10 @@ run <command>chown -R 0:0</command> on the
 <filename class="directory">linux-&linux-version;</filename> directory to ensure all files are
 owned by user <emphasis>root</emphasis>.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-kernel" role="content"><title>Contents of Linux</title>
+<section xml:id="contents-kernel" role="content"><info><title>Contents of Linux</title></info>
 
 <segmentedlist>
 <segtitle>Installed files</segtitle>
@@ -177,7 +179,7 @@ and the System.map</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="kernel">
+<varlistentry xml:id="kernel">
 <term>The <emphasis>kernel</emphasis></term>
 <listitem>
 <indexterm zone="ch-bootable-kernel kernel"><primary sortas="b-kernel">kernel</primary></indexterm>
@@ -190,7 +192,7 @@ of running scores of programs seemingly at the same time.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="kernel-headers">
+<varlistentry xml:id="kernel-headers">
 <term>The <emphasis>kernel headers</emphasis></term>
 <listitem>
 <indexterm zone="ch-bootable-kernel kernel-headers"><primary sortas="e-kernel-headers">kernel headers</primary></indexterm>
@@ -202,7 +204,7 @@ the ones against which Glibc was compiled and should therefore
 </listitem>
 </varlistentry>
 
-<varlistentry id="System.map">
+<varlistentry xml:id="System.map">
 <term><filename>System.map</filename></term>
 <listitem>
 <indexterm zone="ch-bootable-kernel System.map"><primary sortas="e-/boot/System.map">/boot/System.map</primary></indexterm>
@@ -212,6 +214,6 @@ of all the functions and data structures in the kernel.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>
