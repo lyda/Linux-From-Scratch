@@ -90,6 +90,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 12th, 2004 [winkie]: Chapter 6 - Fixed Coreutils testsuite
+execution.</para></listitem>
+
 <listitem><para>May 12th, 2004 [alexander]: Chapter 6 - Add a patch that
 fixes the race condition in sysklogd signal handling.</para></listitem>
 
