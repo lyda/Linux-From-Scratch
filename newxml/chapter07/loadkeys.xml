@@ -7,6 +7,10 @@
 <title>Do I need the loadkeys script?</title>
 <?dbhtml filename="loadkeys.html"?>
 
+<indexterm zone="ch-scripts-loadkeys">
+<primary sortas="d-loadkeys">loadkeys</primary>
+<secondary>configuring</secondary></indexterm>
+
 <para>If you plan to compile the keymap directly in the kernel during <xref
 linkend="chapter-bootable"/> (see <xref linkend="ch-system-kbd"/>), then strictly
 speaking you don't need to run this loadkeys script, since the kernel will set

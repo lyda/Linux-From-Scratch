@@ -7,6 +7,8 @@
 <title>Installing Tcl-&tcl-version;</title>
 <?dbhtml filename="tcl.html"?>
 
+<indexterm zone="ch-tools-tcl"><primary sortas="a-Tcl">Tcl</primary></indexterm>
+
 <para>The Tcl package contains the Tool Command Language.</para>
 
 <screen>&buildtime; 0.9 SBU
@@ -76,9 +78,11 @@ tclsh8.4</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>tclsh8.4</command> is the Tcl command shell.</para>
+<indexterm zone="ch-tools-tcl tclsh8.4"><primary sortas="b-tclsh8.4">tclsh8.4</primary></indexterm>
+<para id="tclsh8.4"><command>tclsh8.4</command> is the Tcl command shell.</para>
 
-<para><command>libtcl8.4.so</command> is the Tcl library.</para>
+<indexterm zone="ch-tools-tcl libtcl8.4.so"><primary sortas="c-libtcl8.4.so">libtcl8.4.so</primary></indexterm>
+<para id="libtcl8.4.so"><command>libtcl8.4.so</command> is the Tcl library.</para>
 
 </sect2>
 

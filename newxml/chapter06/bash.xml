@@ -7,6 +7,8 @@
 <title>Installing Bash-&bash-version;</title>
 <?dbhtml filename="bash.html"?>
 
+<indexterm zone="ch-system-bash"><primary sortas="a-Bash">Bash</primary></indexterm>
+
 <para>The Bash package contains the Bourne-Again SHell.</para>
 
 <screen>Approximate build time:  1.2 SBU
@@ -64,14 +66,17 @@ bashbug</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>bash</command> is a widely-used command interpreter. It
+<indexterm zone="ch-system-bash bash"><primary sortas="b-bash">bash</primary></indexterm>
+<para id="bash"><command>bash</command> is a widely-used command interpreter. It
 performs many kinds of expansions and substitutions on a given command line
 before executing it, thus making this interpreter a powerful tool.</para>
 
-<para><command>bashbug</command> is a shell script to help the user
+<indexterm zone="ch-system-bash bashbug"><primary sortas="b-bashbug">bashbug</primary></indexterm>
+<para id="bashbug"><command>bashbug</command> is a shell script to help the user
 compose and mail bug reports concerning bash in a standard format.</para>
 
-<para><command>sh</command> is a symlink to the bash program. When invoked
+<indexterm zone="ch-system-bash sh"><primary sortas="b-sh">sh</primary></indexterm>
+<para id="sh"><command>sh</command> is a symlink to the bash program. When invoked
 as sh, bash tries to mimic the startup behavior of historical versions of sh as
 closely as possible, while conforming to the POSIX standard as well.</para>
 

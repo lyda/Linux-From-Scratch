@@ -7,6 +7,10 @@
 <title>Installing Binutils-&binutils-version; - Pass 2</title>
 <?dbhtml filename="binutils-pass2.html"?>
 
+<indexterm zone="ch-tools-binutils-pass2">
+<primary sortas="a-Binutils">Binutils</primary>
+<secondary>tools, pass 2</secondary></indexterm>
+
 <screen>&buildtime; 1.5 SBU
 &diskspace; 108 MB</screen>
 

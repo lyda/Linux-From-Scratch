@@ -7,6 +7,8 @@
 <title>Installing Expect-&expect-version;</title>
 <?dbhtml filename="expect.html"?>
 
+<indexterm zone="ch-tools-expect"><primary sortas="a-Expect">Expect</primary></indexterm>
+
 <para>The Expect package contains a program for doing scripted dialogues with
 other interactive programs.</para>
 
@@ -80,7 +82,8 @@ of the supplementary expect scripts which are not needed.</para></listitem>
 
 <sect2><title>Short description</title>
 
-<para><command>expect</command> <quote>talks</quote> to other interactive
+<indexterm zone="ch-tools-expect expect"><primary sortas="b-expect">expect</primary></indexterm>
+<para id="expect"><command>expect</command> <quote>talks</quote> to other interactive
 programs according to a script.</para>
 
 </sect2>

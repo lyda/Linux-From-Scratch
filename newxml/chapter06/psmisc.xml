@@ -7,6 +7,8 @@
 <title>Installing Psmisc-&psmisc-version;</title>
 <?dbhtml filename="psmisc.html"?>
 
+<indexterm zone="ch-system-psmisc"><primary sortas="a-Psmisc">Psmisc</primary></indexterm>
+
 <para>The Psmisc package contains programs for displaying information on
 processes.</para>
 
@@ -74,15 +76,19 @@ pstree.x11 (link to pstree)</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>fuser</command> reports the PIDs of processes that use
+<indexterm zone="ch-system-psmisc fuser"><primary sortas="b-fuser">fuser</primary></indexterm>
+<para id="fuser"><command>fuser</command> reports the PIDs of processes that use
 the given files or file systems.</para>
 
-<para><command>killall</command> kills processes by name. It sends a signal
+<indexterm zone="ch-system-psmisc killall"><primary sortas="b-killall">killall</primary></indexterm>
+<para id="killall"><command>killall</command> kills processes by name. It sends a signal
 to all processes running any of the given commands.</para>
 
-<para><command>pstree</command> displays running processes as a tree.</para>
+<indexterm zone="ch-system-psmisc pstree"><primary sortas="b-pstree">pstree</primary></indexterm>
+<para id="pstree"><command>pstree</command> displays running processes as a tree.</para>
 
-<para><command>pstree.x11</command> same as pstree except that it waits for
+<indexterm zone="ch-system-psmisc pstree.x11"><primary sortas="b-pstree.x11">pstree.x11</primary></indexterm>
+<para id="pstree.x11"><command>pstree.x11</command> same as pstree except that it waits for
 confirmation before exiting.</para>
 
 </sect2>

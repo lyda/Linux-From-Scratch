@@ -7,6 +7,8 @@
 <title>Installing Net-tools-&net-tools-version;</title>
 <?dbhtml filename="net-tools.html"?>
 
+<indexterm zone="ch-system-net-tools"><primary sortas="a-Net-tools">Net-tools</primary></indexterm>
+
 <para>The Net-tools package contains programs for basic networking.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -64,43 +66,56 @@ ypdomainname (link to hostname)</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>arp</command> is used to manipulate the kernel's ARP cache,
+<indexterm zone="ch-system-net-tools arp"><primary sortas="b-arp">arp</primary></indexterm>
+<para id="arp"><command>arp</command> is used to manipulate the kernel's ARP cache,
 usually to add or delete an entry, or to dump the entire cache.</para>
 
-<para><command>dnsdomainname</command> reports the system's DNS (Domain Name Server) domain
+<indexterm zone="ch-system-net-tools dnsdomainname"><primary sortas="b-dnsdomainname">dnsdomainname</primary></indexterm>
+<para id="dnsdomainname"><command>dnsdomainname</command> reports the system's DNS (Domain Name Server) domain
 name.</para>
 
-<para><command>domainname</command> reports or sets the system's NIS/YP
+<indexterm zone="ch-system-net-tools domainname"><primary sortas="b-domainname">domainname</primary></indexterm>
+<para id="domainname"><command>domainname</command> reports or sets the system's NIS/YP
 domain name.</para>
 
-<para><command>hostname</command> reports or sets the name of the current
+<indexterm zone="ch-system-net-tools hostname"><primary sortas="b-hostname">hostname</primary></indexterm>
+<para id="hostname"><command>hostname</command> reports or sets the name of the current
 host system.</para>
 
-<para><command>ifconfig</command> is the main utility for configuring
+<indexterm zone="ch-system-net-tools ifconfig"><primary sortas="b-ifconfig">ifconfig</primary></indexterm>
+<para id="ifconfig"><command>ifconfig</command> is the main utility for configuring
 network interfaces.</para>
 
-<para><command>nameif</command> names network interfaces based on MAC
+<indexterm zone="ch-system-net-tools nameif"><primary sortas="b-nameif">nameif</primary></indexterm>
+<para id="nameif"><command>nameif</command> names network interfaces based on MAC
 addresses.</para>
 
-<para><command>netstat</command> is used to report network connections,
+<indexterm zone="ch-system-net-tools netstat"><primary sortas="b-netstat">netstat</primary></indexterm>
+<para id="netstat"><command>netstat</command> is used to report network connections,
 routing tables, and interface statistics..</para>
 
-<para><command>nisdomainname</command> does the same as domainname.</para>
+<indexterm zone="ch-system-net-tools nisdomainname"><primary sortas="b-nisdomainname">nisdomainname</primary></indexterm>
+<para id="nisdomainname"><command>nisdomainname</command> does the same as domainname.</para>
 
-<para><command>plipconfig</command> is used to fine tune the PLIP device
+<indexterm zone="ch-system-net-tools plipconfig"><primary sortas="b-plipconfig">plipconfig</primary></indexterm>
+<para id="plipconfig"><command>plipconfig</command> is used to fine tune the PLIP device
 parameters, to improve its performance.</para>
 
-<para><command>rarp</command> is used to manipulate the kernel's RARP
+<indexterm zone="ch-system-net-tools rarp"><primary sortas="b-rarp">rarp</primary></indexterm>
+<para id="rarp"><command>rarp</command> is used to manipulate the kernel's RARP
 table.</para>
 
-<para><command>route</command> is used to manipulate the IP routing
+<indexterm zone="ch-system-net-tools route"><primary sortas="b-route">route</primary></indexterm>
+<para id="route"><command>route</command> is used to manipulate the IP routing
 table.</para>
 
-<para><command>slattach</command> attaches a network interface to a serial
+<indexterm zone="ch-system-net-tools slattach"><primary sortas="b-slattach">slattach</primary></indexterm>
+<para id="slattach"><command>slattach</command> attaches a network interface to a serial
 line. This allows you to use normal terminal lines for point-to-point links to
 other computers.</para>
 
-<para><command>ypdomainname</command> does the same as domainname.</para>
+<indexterm zone="ch-system-net-tools ypdomainname"><primary sortas="b-ypdomainname">ypdomainname</primary></indexterm>
+<para id="ypdomainname"><command>ypdomainname</command> does the same as domainname.</para>
 
 </sect2>
 

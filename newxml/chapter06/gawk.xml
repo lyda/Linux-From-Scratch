@@ -7,6 +7,8 @@
 <title>Installing Gawk-&gawk-version;</title>
 <?dbhtml filename="gawk.html"?>
 
+<indexterm zone="ch-system-gawk"><primary sortas="a-Gawk">Gawk</primary></indexterm>
+
 <para>The Gawk package contains programs for manipulating text files.</para>
 
 <screen>&buildtime; 0.2 SBU
@@ -47,18 +49,23 @@ gawk-&gawk-version;, grcat, igawk, pgawk, pgawk-&gawk-version; and pwcat</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>gawk</command> is a program for manipulating text files.
+<indexterm zone="ch-system-gawk gawk"><primary sortas="b-gawk">gawk</primary></indexterm>
+<para id="gawk"><command>gawk</command> is a program for manipulating text files.
 It is the GNU implementation of awk.</para>
 
-<para><command>grcat</command> dumps the group database
+<indexterm zone="ch-system-gawk grcat"><primary sortas="b-grcat">grcat</primary></indexterm>
+<para id="grcat"><command>grcat</command> dumps the group database
 <filename>/etc/group</filename>.</para>
 
-<para><command>igawk</command> gives gawk the ability to
+<indexterm zone="ch-system-gawk igawk"><primary sortas="b-igawk">igawk</primary></indexterm>
+<para id="igawk"><command>igawk</command> gives gawk the ability to
 include files.</para>
 
-<para><command>pgawk</command> is the profiling version of gawk.</para>
+<indexterm zone="ch-system-gawk pgawk"><primary sortas="b-pgawk">pgawk</primary></indexterm>
+<para id="pgawk"><command>pgawk</command> is the profiling version of gawk.</para>
 
-<para><command>pwcat</command> dumps the password database
+<indexterm zone="ch-system-gawk pwcat"><primary sortas="b-pwcat">pwcat</primary></indexterm>
+<para id="pwcat"><command>pwcat</command> dumps the password database
 <filename>/etc/passwd</filename>.</para>
 
 </sect2>

@@ -7,6 +7,8 @@
 <title>Installing Grep-&grep-version;</title>
 <?dbhtml filename="grep.html"?>
 
+<indexterm zone="ch-system-grep"><primary sortas="a-Grep">Grep</primary></indexterm>
+
 <para>The Grep package contains programs for searching through files.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -48,13 +50,16 @@ Diffutils, GCC, Gettext, Glibc, Make, Sed, Texinfo.</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>egrep</command> prints lines matching an extended regular
+<indexterm zone="ch-system-grep egrep"><primary sortas="b-egrep">egrep</primary></indexterm>
+<para id="egrep"><command>egrep</command> prints lines matching an extended regular
 expression.</para>
 
-<para><command>fgrep</command> prints lines matching a list of fixed
+<indexterm zone="ch-system-grep fgrep"><primary sortas="b-fgrep">fgrep</primary></indexterm>
+<para id="fgrep"><command>fgrep</command> prints lines matching a list of fixed
 strings.</para>
 
-<para><command>grep</command> prints lines matching a basic regular
+<indexterm zone="ch-system-grep grep"><primary sortas="b-grep">grep</primary></indexterm>
+<para id="grep"><command>grep</command> prints lines matching a basic regular
 expression.</para>
 
 </sect2>

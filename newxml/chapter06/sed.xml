@@ -7,6 +7,8 @@
 <title>Installing Sed-&sed-version;</title>
 <?dbhtml filename="sed.html"?>
 
+<indexterm zone="ch-system-sed"><primary sortas="a-Sed">Sed</primary></indexterm>
+
 <para>The Sed package contains a stream editor.</para>
 
 <screen>&buildtime; 0.2 SBU
@@ -47,7 +49,8 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Texinfo.</para>
 
 <sect2><title>Short description</title>
 
-<para><command>sed</command> is used to filter and transform text files
+<indexterm zone="ch-system-sed sed"><primary sortas="b-sed">sed</primary></indexterm>
+<para id="sed"><command>sed</command> is used to filter and transform text files
 in a single pass.</para>
 
 </sect2>

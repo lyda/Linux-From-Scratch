@@ -7,6 +7,10 @@
 <title>Installing Bash-&bash-version;</title>
 <?dbhtml filename="bash.html"?>
 
+<indexterm zone="ch-tools-bash">
+<primary sortas="a-Bash">Bash</primary>
+<secondary>tools</secondary></indexterm>
+
 <xi:include href="../chapter06/bash.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 1.2 SBU

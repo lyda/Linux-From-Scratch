@@ -7,6 +7,8 @@
 <title>Creating devices with Make_devices-&makedev-version;</title>
 <?dbhtml filename="makedevices.html"?>
 
+<indexterm zone="ch-system-MAKEDEV"><primary sortas="a-Make_devices">Make_devices</primary></indexterm>
+
 <para>The Make_devices package contains a script for creating device
 nodes.</para>
 
@@ -92,7 +94,8 @@ have it create the new devices.</para>
 
 <sect2><title>Short description</title>
 
-<para><command>make_devices</command> is a script for creating a basic set of
+<indexterm zone="ch-system-MAKEDEV make_devices"><primary sortas="d-make_devices">make_devices</primary></indexterm>
+<para id="make_devices"><command>make_devices</command> is a script for creating a basic set of
 static device nodes, usually residing in the <filename class="directory">/dev</filename> directory.</para>
 
 </sect2>

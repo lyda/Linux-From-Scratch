@@ -7,6 +7,10 @@
 <title>Installing Ncurses-&ncurses-version;</title>
 <?dbhtml filename="ncurses.html"?>
 
+<indexterm zone="ch-tools-ncurses">
+<primary sortas="a-Ncurses">Ncurses</primary>
+<secondary>tools</secondary></indexterm>
+
 <xi:include href="../chapter06/ncurses.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 0.7 SBU

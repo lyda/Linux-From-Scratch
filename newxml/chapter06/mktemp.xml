@@ -7,6 +7,8 @@
 <title>Installing Mktemp-&mktemp-version;</title>
 <?dbhtml filename="mktemp.html"?>
 
+<indexterm zone="ch-system-mktemp"><primary sortas="a-Mktemp">Mktemp</primary></indexterm>
+
 <para>The Mktemp package contains programs used to create secure temporary
 files in shell scripts.</para>
 
@@ -58,10 +60,12 @@ library.</para></listitem>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>mktemp</command> creates temporary files in a secure manner.
+<indexterm zone="ch-system-mktemp mktemp"><primary sortas="b-mktemp">mktemp</primary></indexterm>
+<para id="mktemp"><command>mktemp</command> creates temporary files in a secure manner.
 It is used in scripts.</para>
 
-<para><command>tempfile</command> creates temporary files in a less secure
+<indexterm zone="ch-system-mktemp tempfile"><primary sortas="b-tempfile">tempfile</primary></indexterm>
+<para id="tempfile"><command>tempfile</command> creates temporary files in a less secure
 manner than <command>mktemp</command>. It is installed for
 backwards-compatibility.</para>
 

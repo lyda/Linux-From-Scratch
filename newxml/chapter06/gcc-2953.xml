@@ -7,6 +7,8 @@
 <title>Installing GCC-&gcc-2953-version;</title>
 <?dbhtml filename="gcc-2953.html"?>
 
+<indexterm zone="ch-system-gcc-2953"><primary sortas="a-GCC-2953">GCC-2953</primary></indexterm>
+
 <screen>&buildtime; 1.5 SBU
 &buildtime; 130 MB</screen>
 

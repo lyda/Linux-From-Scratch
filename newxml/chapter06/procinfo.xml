@@ -7,6 +7,8 @@
 <title>Installing Procinfo-&procinfo-version;</title>
 <?dbhtml filename="procinfo.html"?>
 
+<indexterm zone="ch-system-procinfo"><primary sortas="a-Procinfo">Procinfo</primary></indexterm>
+
 <para>The Procinfo package contains programs for displaying system information.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -47,13 +49,16 @@ socklist</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>lsdev</command> lists the devices present in your system,
+<indexterm zone="ch-system-procinfo lsdev"><primary sortas="b-lsdev">lsdev</primary></indexterm>
+<para id="lsdev"><command>lsdev</command> lists the devices present in your system,
 and which IRQs (Interrupt ReQuest) and IO ports they use.</para>
 
-<para><command>procinfo</command> displays an overview of some of the information
+<indexterm zone="ch-system-procinfo procinfo"><primary sortas="b-procinfo">procinfo</primary></indexterm>
+<para id="procinfo"><command>procinfo</command> displays an overview of some of the information
 present in the virtual proc file system.</para>
 
-<para><command>socklist</command> lists the open sockets, reporting their
+<indexterm zone="ch-system-procinfo socklist"><primary sortas="b-socklist">socklist</primary></indexterm>
+<para id="socklist"><command>socklist</command> lists the open sockets, reporting their
 type, port number, and other specifics.</para>
 
 </sect2>

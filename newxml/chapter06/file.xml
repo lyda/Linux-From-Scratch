@@ -7,6 +7,8 @@
 <title>Installing File-&file-version;</title>
 <?dbhtml filename="file.html"?>
 
+<indexterm zone="ch-system-file"><primary sortas="a-File">File</primary></indexterm>
+
 <para>The File package contains a utility for determining the type of files.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -46,11 +48,13 @@ GCC, Glibc, Grep, Make, Sed, Zlib.</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>file</command> tries to classify each given file. It does
+<indexterm zone="ch-system-file file"><primary sortas="b-file">file</primary></indexterm>
+<para id="file"><command>file</command> tries to classify each given file. It does
 this by performing several tests: file system tests, magic number tests, and
 language tests. The first test that succeeds determines the result.</para>
 
-<para><command>libmagic</command> contains routines for magic number
+<indexterm zone="ch-system-file libmagic"><primary sortas="c-libmagic">libmagic</primary></indexterm>
+<para id="libmagic"><command>libmagic</command> contains routines for magic number
 recognition, used by the file program.</para>
 
 </sect2>

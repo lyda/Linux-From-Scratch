@@ -7,6 +7,8 @@
 <title>Installing GCC-&gcc-version;</title>
 <?dbhtml filename="gcc.html"?>
 
+<indexterm zone="ch-system-gcc"><primary sortas="a-GCC">GCC</primary></indexterm>
+
 <para>The GCC package contains the GNU compiler collection, which includes
 the C and C++ compilers.</para>
 
@@ -111,27 +113,35 @@ libgcc_s.so, libstdc++.[a,so] and libsupc++.a</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>cpp</command> is the C preprocessor. It is used by the
+<indexterm zone="ch-system-gcc cpp"><primary sortas="b-cpp">cpp</primary></indexterm>
+<para id="cpp"><command>cpp</command> is the C preprocessor. It is used by the
 compiler to have the #include and #define and such statements expanded in
 the source files.</para>
 
-<para><command>g++</command> is the C++ compiler.</para>
+<indexterm zone="ch-system-gcc g++"><primary sortas="b-g++">g++</primary></indexterm>
+<para id="g++"><command>g++</command> is the C++ compiler.</para>
 
-<para><command>gcc</command> is the C compiler. It is used to translate
+<indexterm zone="ch-system-gcc gcc"><primary sortas="b-gcc">gcc</primary></indexterm>
+<para id="gcc"><command>gcc</command> is the C compiler. It is used to translate
 the source code of a program into assembly code.</para>
 
-<para><command>gccbug</command> is a shell script used to help create
+<indexterm zone="ch-system-gcc gccbug"><primary sortas="b-gccbug">gccbug</primary></indexterm>
+<para id="gccbug"><command>gccbug</command> is a shell script used to help create
 good bug reports.</para>
 
-<para><command>gcov</command> is a coverage testing tool. It is used to
+<indexterm zone="ch-system-gcc gcov"><primary sortas="b-gcov">gcov</primary></indexterm>
+<para id="gcov"><command>gcov</command> is a coverage testing tool. It is used to
 analyze programs to find out where optimizations will have the most effect.</para>
 
-<para><command>libgcc*</command> contains run-time support for gcc.</para>
+<indexterm zone="ch-system-gcc libgcc*"><primary sortas="c-libgcc*">libgcc*</primary></indexterm>
+<para id="libgcc*"><command>libgcc*</command> contains run-time support for gcc.</para>
 
-<para><command>libstdc++</command> is the standard C++ library. It contains
+<indexterm zone="ch-system-gcc libstdc++"><primary sortas="c-libstdc++">libstdc++</primary></indexterm>
+<para id="libstdc++"><command>libstdc++</command> is the standard C++ library. It contains
 many frequently-used functions.</para>
 
-<para><command>libsupc++</command> provides supporting routines
+<indexterm zone="ch-system-gcc libsupc++"><primary sortas="c-libsupc++">libsupc++</primary></indexterm>
+<para id="libsupc++"><command>libsupc++</command> provides supporting routines
 for the c++ programming language.</para>
 
 </sect2>

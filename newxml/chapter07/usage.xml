@@ -7,6 +7,10 @@
 <title>How does the booting process with these scripts work?</title>
 <?dbhtml filename="usage.html"?>
 
+<indexterm zone="ch-scripts-usage">
+<primary sortas="a-Bootscripts">Bootscripts</primary>
+<secondary>usage</secondary></indexterm>
+
 <para>Linux uses a special booting facility named SysVinit. It's based on a
 concept of <emphasis>run-levels</emphasis>. It can be widely different 
 from one system to another, so it can't be assumed that because things 

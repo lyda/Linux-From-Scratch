@@ -7,6 +7,8 @@
 <title>Installing Tar-&tar-version;</title>
 <?dbhtml filename="tar.html"?>
 
+<indexterm zone="ch-system-tar"><primary sortas="a-Tar">Tar</primary></indexterm>
+
 <para>The Tar package contains an archiving program.</para>
 
 <screen>&buildtime; 0.2 SBU
@@ -46,10 +48,12 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed.</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>rmt</command> is used to remotely manipulate a magnetic
+<indexterm zone="ch-system-tar rmt"><primary sortas="b-rmt">rmt</primary></indexterm>
+<para id="rmt"><command>rmt</command> is used to remotely manipulate a magnetic
 tape drive, through an interprocess communication connection.</para>
 
-<para><command>tar</command> is used to create and extract files from
+<indexterm zone="ch-system-tar tar"><primary sortas="b-tar">tar</primary></indexterm>
+<para id="tar"><command>tar</command> is used to create and extract files from
 archives, also known as tarballs.</para>
 
 </sect2>

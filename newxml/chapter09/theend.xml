@@ -7,6 +7,8 @@
 <title>The End</title>
 <?dbhtml filename="theend.html"?>
 
+<indexterm zone="ch-finish-theend"><primary sortas="e-/etc/lfs-release">/etc/lfs-release</primary></indexterm>
+
 <para>Well done! You have finished installing your LFS system. It may have
 been a long process, but we hope it was worth it. We wish you a lot of fun
 with your new shiny custom built Linux system.</para>

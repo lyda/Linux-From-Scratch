@@ -7,6 +7,8 @@
 <title>Installing Findutils-&findutils-version;</title>
 <?dbhtml filename="findutils.html"?>
 
+<indexterm zone="ch-system-findutils"><primary sortas="a-Findutils">Findutils</primary></indexterm>
+
 <para>The Findutils package contains programs to find files. Processes
 are provided to recursively search through a directory tree and to
 create, maintain and search a database (often faster than the recursive
@@ -55,27 +57,34 @@ locate, updatedb and xargs</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>bigram</command> was formerly used to produce locate
+<indexterm zone="ch-system-findutils bigram"><primary sortas="b-bigram">bigram</primary></indexterm>
+<para id="bigram"><command>bigram</command> was formerly used to produce locate
 databases.</para>
 
-<para><command>code</command> was formerly used to produce locate
+<indexterm zone="ch-system-findutils code"><primary sortas="b-code">code</primary></indexterm>
+<para id="code"><command>code</command> was formerly used to produce locate
 databases. It is the ancestor of frcode.</para>
 
-<para><command>find</command> searches given directory trees for files
+<indexterm zone="ch-system-findutils find"><primary sortas="b-find">find</primary></indexterm>
+<para id="find"><command>find</command> searches given directory trees for files
 matching the specified criteria.</para>
 
-<para><command>frcode</command> is called by updatedb to compress the
+<indexterm zone="ch-system-findutils frcode"><primary sortas="b-frcode">frcode</primary></indexterm>
+<para id="frcode"><command>frcode</command> is called by updatedb to compress the
 list of file names. It uses front-compression, reducing the database size by a
 factor of 4 to 5.</para>
 
-<para><command>locate</command> searches through a database of file names,
+<indexterm zone="ch-system-findutils locate"><primary sortas="b-locate">locate</primary></indexterm>
+<para id="locate"><command>locate</command> searches through a database of file names,
 and reports the names that contain a given string or match a given pattern.</para>
 
-<para><command>updatedb</command> updates the locate database. It scans
+<indexterm zone="ch-system-findutils updatedb"><primary sortas="b-updatedb">updatedb</primary></indexterm>
+<para id="updatedb"><command>updatedb</command> updates the locate database. It scans
 the entire file system (including other file systems that are currently mounted,
 unless told not to) and puts every file name it finds in the database.</para>
 
-<para><command>xargs</command> can be used to apply a given command to
+<indexterm zone="ch-system-findutils xargs"><primary sortas="b-xargs">xargs</primary></indexterm>
+<para id="xargs"><command>xargs</command> can be used to apply a given command to
 a list of files.</para>
 
 </sect2>

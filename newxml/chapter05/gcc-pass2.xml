@@ -7,6 +7,10 @@
 <title>Installing GCC-&gcc-version; - Pass 2</title>
 <?dbhtml filename="gcc-pass2.html"?>
 
+<indexterm zone="ch-tools-gcc-pass2">
+<primary sortas="a-GCC">GCC</primary>
+<secondary>tools, pass 2</secondary></indexterm>
+
 <screen>&buildtime; 11.0 SBU
 &diskspace; 274 MB</screen>
 

@@ -7,6 +7,8 @@
 <title>Installing Libtool-&libtool-version;</title>
 <?dbhtml filename="libtool.html"?>
 
+<indexterm zone="ch-system-libtool"><primary sortas="a-Libtool">Libtool</primary></indexterm>
+
 <para>The Libtool package contains the GNU generic library support script.
 It wraps the complexity of using shared libraries in a consistent, portable
 interface.</para>
@@ -51,13 +53,16 @@ GCC, Glibc, Grep, Make, Sed.</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>libtool</command> provides generalized library-building
+<indexterm zone="ch-system-libtool libtool"><primary sortas="b-libtool">libtool</primary></indexterm>
+<para id="libtool"><command>libtool</command> provides generalized library-building
 support services.</para>
 
-<para><command>libtoolize</command> provides a standard way to add
+<indexterm zone="ch-system-libtool libtoolize"><primary sortas="b-libtoolize">libtoolize</primary></indexterm>
+<para id="libtoolize"><command>libtoolize</command> provides a standard way to add
 libtool support to a package.</para>
 
-<para><command>libltdl</command> hides the various difficulties of
+<indexterm zone="ch-system-libtool libltdl"><primary sortas="c-libltdl">libltdl</primary></indexterm>
+<para id="libltdl"><command>libltdl</command> hides the various difficulties of
 dlopening libraries.</para>
 
 </sect2>

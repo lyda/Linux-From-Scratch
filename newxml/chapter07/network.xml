@@ -7,6 +7,10 @@
 <title>Configuring the network script</title>
 <?dbhtml filename="network.html"?>
 
+<indexterm zone="ch-scripts-network">
+<primary sortas="d-network">network</primary>
+<secondary>configuring</secondary></indexterm>
+
 <para>This section only applies if you're going to configure a network
 card.</para>
 

@@ -7,6 +7,8 @@
 <title>Installing LFS-Bootscripts-&bootscripts-version;</title>
 <?dbhtml filename="bootscripts.html"?>
 
+<indexterm zone="ch-scripts-bootscripts"><primary sortas="a-Bootscripts">Bootscripts</primary></indexterm>
+
 <para>The LFS-Bootscripts package contains a set of bootscripts.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -37,61 +39,79 @@ reboot, sendsignals, setclock, static, swap, sysklogd and template</para>
 
 <sect2><title>Short descriptions</title>
 
-<para>The <command>checkfs</command> script checks the file systems just
+<indexterm zone="ch-scripts-bootscripts checkfs-bootscripts"><primary sortas="d-checkfs">checkfs</primary></indexterm>
+<para id="checkfs-bootscripts">The <command>checkfs</command> script checks the file systems just
 before they are mounted (with the exception of journal and network based
 file systems).</para>
 
-<para>The <command>cleanfs</command> script removes files that shouldn't be
+<indexterm zone="ch-scripts-bootscripts cleanfs-bootscripts"><primary sortas="d-cleanfs">cleanfs</primary></indexterm>
+<para id="cleanfs-bootscripts">The <command>cleanfs</command> script removes files that shouldn't be
 preserved between reboots, such as those in <filename>/var/run/</filename> and
 <filename>/var/lock/</filename>. It re-creates <filename>/var/run/utmp</filename>
 and removes the possibly present <filename>/etc/nologin</filename>,
 <filename>/fastboot</filename> and <filename>/forcefsck</filename> files.</para>
 
-<para>The <command>functions</command> script contains functions shared among
+<indexterm zone="ch-scripts-bootscripts functions-bootscripts"><primary sortas="d-functions">functions</primary></indexterm>
+<para id="functions-bootscripts">The <command>functions</command> script contains functions shared among
 different scripts, such as error and status checking.</para>
 
-<para>The <command>halt</command> script halts the system.</para>
+<indexterm zone="ch-scripts-bootscripts halt-bootscripts"><primary sortas="d-halt">halt</primary></indexterm>
+<para id="halt-bootscripts">The <command>halt</command> script halts the system.</para>
 
-<para>The <command>ifdown</command> and <command>ifup</command> scripts assist
+<indexterm zone="ch-scripts-bootscripts ifdown-bootscripts"><primary sortas="d-ifdown">ifdown</primary></indexterm>
+<para id="ifdown-bootscripts">The <command>ifdown</command> and <command>ifup</command> scripts assist
 the network script with network devices.</para>
 
-<para>The <command>loadkeys</command> script loads the keymap table you
+<indexterm zone="ch-scripts-bootscripts loadkeys-bootscripts"><primary sortas="d-loadkeys">loadkeys</primary></indexterm>
+<para id="loadkeys-bootscripts">The <command>loadkeys</command> script loads the keymap table you
 specified as proper for your keyboard layout.</para>
 
-<para>The <command>localnet</command> script sets up the system's hostname and
+<indexterm zone="ch-scripts-bootscripts localnet-bootscripts"><primary sortas="d-localnet">localnet</primary></indexterm>
+<para id="localnet-bootscripts">The <command>localnet</command> script sets up the system's hostname and
 local loopback device.</para>
 
-<para>The <command>mountfs</command> script mounts all file systems that
+<indexterm zone="ch-scripts-bootscripts mountfs-bootscripts"><primary sortas="d-mountfs">mountfs</primary></indexterm>
+<para id="mountfs-bootscripts">The <command>mountfs</command> script mounts all file systems that
 aren't marked <emphasis>noauto</emphasis> or aren't network based.</para>
 
-<para>The <command>mountkernfs</command> script is used to mount
+<indexterm zone="ch-scripts-bootscripts mountkernfs-bootscripts"><primary sortas="d-mountkernfs">mountkernfs</primary></indexterm>
+<para id="mountkernfs-bootscripts">The <command>mountkernfs</command> script is used to mount
 kernel-provided file systems, such as /proc.</para>
 
-<para>The <command>network</command> script sets up network interfaces, such
+<indexterm zone="ch-scripts-bootscripts network-bootscripts"><primary sortas="d-network">network</primary></indexterm>
+<para id="network-bootscripts">The <command>network</command> script sets up network interfaces, such
 as network cards, and sets up the default gateway where applicable.</para>
 
-<para>The <command>rc</command> script is the master run-level control script.
+<indexterm zone="ch-scripts-bootscripts rc-bootscripts"><primary sortas="d-rc">rc</primary></indexterm>
+<para id="rc-bootscripts">The <command>rc</command> script is the master run-level control script.
 It is responsible for running all the other scripts one-by-one, in a sequence
 determined by the name of the symbolic links being processed.</para>
 
-<para>The <command>reboot</command> script reboots the system.</para>
+<indexterm zone="ch-scripts-bootscripts reboot-bootscripts"><primary sortas="d-reboot">reboot</primary></indexterm>
+<para id="reboot-bootscripts">The <command>reboot</command> script reboots the system.</para>
 
-<para>The <command>sendsignals</command> script makes sure every process is
+<indexterm zone="ch-scripts-bootscripts sendsignals-bootscripts"><primary sortas="d-sendsignals">sendsignals</primary></indexterm>
+<para id="sendsignals-bootscripts">The <command>sendsignals</command> script makes sure every process is
 terminated before the system reboots or halts.</para>
 
-<para>The <command>setclock</command> script resets the kernel clock to
+<indexterm zone="ch-scripts-bootscripts setclock-bootscripts"><primary sortas="d-setclock">setclock</primary></indexterm>
+<para id="setclock-bootscripts">The <command>setclock</command> script resets the kernel clock to
 localtime in case the hardware clock isn't set to GMT time.</para>
 
-<para>The <command>static</command> script provides the functionality needed
+<indexterm zone="ch-scripts-bootscripts static-bootscripts"><primary sortas="d-static">static</primary></indexterm>
+<para id="static-bootscripts">The <command>static</command> script provides the functionality needed
 to assign a static IP address to a network interface.</para>
 
-<para>The <command>swap</command> script enables and disables swap files and
+<indexterm zone="ch-scripts-bootscripts swap-bootscripts"><primary sortas="d-swap">swap</primary></indexterm>
+<para id="swap-bootscripts">The <command>swap</command> script enables and disables swap files and
 partitions.</para>
 
-<para>The <command>sysklogd</command> script starts and stops the system and
+<indexterm zone="ch-scripts-bootscripts sysklogd-bootscripts"><primary sortas="d-sysklogd">sysklogd</primary></indexterm>
+<para id="sysklogd-bootscripts">The <command>sysklogd</command> script starts and stops the system and
 kernel log daemons.</para>
 
-<para>The <command>template</command> script is a template you can use to
+<indexterm zone="ch-scripts-bootscripts template-bootscripts"><primary sortas="d-template">template</primary></indexterm>
+<para id="template-bootscripts">The <command>template</command> script is a template you can use to
 create your own bootscripts for your other daemons.</para>
 
 </sect2>

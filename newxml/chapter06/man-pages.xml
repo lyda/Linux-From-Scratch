@@ -7,6 +7,8 @@
 <title>Installing Man-pages-&man-pages-version;</title>
 <?dbhtml filename="man-pages.html"?>
 
+<indexterm zone="ch-system-man-pages"><primary sortas="a-Man-pages">Man-pages</primary></indexterm>
+
 <para>The Man-pages package contains over 1200 manual pages.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -35,7 +37,8 @@
 
 <sect2><title>Short description</title>
 
-<para>Examples of provided <emphasis>manual pages</emphasis> are the pages
+<indexterm zone="ch-system-man-pages manual-pages"><primary sortas="e-manual-pages">manual pages</primary></indexterm>
+<para id="manual-pages">Examples of provided <emphasis>manual pages</emphasis> are the pages
 describing all the C and C++ functions, important device files, and important
 configuration files.</para>
 

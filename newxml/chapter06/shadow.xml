@@ -7,6 +7,8 @@
 <title>Installing Shadow-&shadow-version;</title>
 <?dbhtml filename="shadow.html"?>
 
+<indexterm zone="ch-system-shadow"><primary sortas="a-Shadow">Shadow</primary></indexterm>
+
 <para>The Shadow package contains programs for handling passwords in a secure
 way.</para>
 
@@ -97,7 +99,10 @@ installed by Shadow:</para>
 </sect2>
 
 
-<sect2><title>Configuring Shadow</title>
+<sect2 id="conf-shadow"><title>Configuring Shadow</title>
+<indexterm zone="conf-shadow">
+<primary sortas="a-Shadow">Shadow</primary>
+<secondary>configuring</secondary></indexterm>
 
 <para>This package contains utilities to add, modify and delete users and
 groups, set and change their passwords, and other such administrative tasks.
@@ -146,103 +151,136 @@ vigr (link to vipw) and vipw</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>chage</command> is used to change the maximum number of
+<indexterm zone="ch-system-shadow chage"><primary sortas="b-chage">chage</primary></indexterm>
+<para id="chage"><command>chage</command> is used to change the maximum number of
 days between obligatory password changes.</para>
 
-<para><command>chfn</command> is used to change a user's full name and
+<indexterm zone="ch-system-shadow chfn"><primary sortas="b-chfn">chfn</primary></indexterm>
+<para id="chfn"><command>chfn</command> is used to change a user's full name and
 some other info.</para>
 
-<para><command>chpasswd</command> is used to update the passwords of a
+<indexterm zone="ch-system-shadow chpasswd"><primary sortas="b-chpasswd">chpasswd</primary></indexterm>
+<para id="chpasswd"><command>chpasswd</command> is used to update the passwords of a
 whole series of user accounts in one go.</para>
 
-<para><command>chsh</command> is used to change a user's default
+<indexterm zone="ch-system-shadow chsh"><primary sortas="b-chsh">chsh</primary></indexterm>
+<para id="chsh"><command>chsh</command> is used to change a user's default
  login shell.</para>
 
-<para><command>dpasswd</command> is used to change dial-up passwords for
+<indexterm zone="ch-system-shadow dpasswd"><primary sortas="b-dpasswd">dpasswd</primary></indexterm>
+<para id="dpasswd"><command>dpasswd</command> is used to change dial-up passwords for
 user login shells.</para>
 
-<para><command>expiry</command> checks and enforces the current password
+<indexterm zone="ch-system-shadow expiry"><primary sortas="b-expiry">expiry</primary></indexterm>
+<para id="expiry"><command>expiry</command> checks and enforces the current password
 expiration policy.</para>
 
-<para><command>faillog</command> is used to examine the log of login
+<indexterm zone="ch-system-shadow faillog"><primary sortas="b-faillog">faillog</primary></indexterm>
+<para id="faillog"><command>faillog</command> is used to examine the log of login
 failures, to set a maximum number of failures before an account is blocked,
 or to reset the failure count.</para>
 
-<para><command>gpasswd</command> is used to add and delete members and
+<indexterm zone="ch-system-shadow gpasswd"><primary sortas="b-gpasswd">gpasswd</primary></indexterm>
+<para id="gpasswd"><command>gpasswd</command> is used to add and delete members and
 administrators to groups.</para>
 
-<para><command>groupadd</command> creates a group with the given
+<indexterm zone="ch-system-shadow groupadd"><primary sortas="b-groupadd">groupadd</primary></indexterm>
+<para id="groupadd"><command>groupadd</command> creates a group with the given
 name.</para>
 
-<para><command>groupdel</command> deletes the group with the given
+<indexterm zone="ch-system-shadow groupdel"><primary sortas="b-groupdel">groupdel</primary></indexterm>
+<para id="groupdel"><command>groupdel</command> deletes the group with the given
 name.</para>
 
-<para><command>groupmod</command> is used to modify the given group's
+<indexterm zone="ch-system-shadow groupmod"><primary sortas="b-groupmod">groupmod</primary></indexterm>
+<para id="groupmod"><command>groupmod</command> is used to modify the given group's
 name or GID.</para>
 
-<para><command>groups</command> reports the groups of which the given
+<indexterm zone="ch-system-shadow groups"><primary sortas="b-groups">groups</primary></indexterm>
+<para id="groups"><command>groups</command> reports the groups of which the given
 users are members.</para>
 
-<para><command>grpck</command> verifies the integrity of the group files,
+<indexterm zone="ch-system-shadow grpck"><primary sortas="b-grpck">grpck</primary></indexterm>
+<para id="grpck"><command>grpck</command> verifies the integrity of the group files,
 <filename>/etc/group</filename> and <filename>/etc/gshadow</filename>.</para>
 
-<para><command>grpconv</command> creates or updates the shadow group file
+<indexterm zone="ch-system-shadow grpconv"><primary sortas="b-grpconv">grpconv</primary></indexterm>
+<para id="grpconv"><command>grpconv</command> creates or updates the shadow group file
 from the normal group file.</para>
 
-<para><command>grpunconv</command> updates <filename>/etc/group</filename>
+<indexterm zone="ch-system-shadow grpunconv"><primary sortas="b-grpunconv">grpunconv</primary></indexterm>
+<para id="grpunconv"><command>grpunconv</command> updates <filename>/etc/group</filename>
 from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 
-<para><command>lastlog</command> reports the most recent login of all
+<indexterm zone="ch-system-shadow lastlog"><primary sortas="b-lastlog">lastlog</primary></indexterm>
+<para id="lastlog"><command>lastlog</command> reports the most recent login of all
 users, or of a given user.</para>
 
-<para><command>login</command> is used by the system to let users sign on.</para>
+<indexterm zone="ch-system-shadow login"><primary sortas="b-login">login</primary></indexterm>
+<para id="login"><command>login</command> is used by the system to let users sign on.</para>
 
-<para><command>logoutd</command> is a daemon used to enforce restrictions
+<indexterm zone="ch-system-shadow logoutd"><primary sortas="b-logoutd">logoutd</primary></indexterm>
+<para id="logoutd"><command>logoutd</command> is a daemon used to enforce restrictions
 on log-on time and ports.</para>
 
-<para><command>mkpasswd</command> encrypts the given password using the
+<indexterm zone="ch-system-shadow mkpasswd"><primary sortas="b-mkpasswd">mkpasswd</primary></indexterm>
+<para id="mkpasswd"><command>mkpasswd</command> encrypts the given password using the
 also given perturbation.</para>
 
-<para><command>newgrp</command> is used to change the current GID during
+<indexterm zone="ch-system-shadow newgrp"><primary sortas="b-newgrp">newgrp</primary></indexterm>
+<para id="newgrp"><command>newgrp</command> is used to change the current GID during
 a login session.</para>
 
-<para><command>newusers</command> is used to create or update a whole
+<indexterm zone="ch-system-shadow newusers"><primary sortas="b-newusers">newusers</primary></indexterm>
+<para id="newusers"><command>newusers</command> is used to create or update a whole
 series of user accounts in one go.</para>
 
-<para><command>passwd</command> is used to change the password for a user
+<indexterm zone="ch-system-shadow passwd"><primary sortas="b-passwd">passwd</primary></indexterm>
+<para id="passwd"><command>passwd</command> is used to change the password for a user
 or group account.</para>
 
-<para><command>pwck</command> verifies the integrity of the password files,
+<indexterm zone="ch-system-shadow pwck"><primary sortas="b-pwck">pwck</primary></indexterm>
+<para id="pwck"><command>pwck</command> verifies the integrity of the password files,
 <filename>/etc/passwd</filename> and <filename>/etc/shadow</filename>.</para>
 
-<para><command>pwconv</command> creates or updates the shadow password file
+<indexterm zone="ch-system-shadow pwconv"><primary sortas="b-pwconv">pwconv</primary></indexterm>
+<para id="pwconv"><command>pwconv</command> creates or updates the shadow password file
 from the normal password file.</para>
 
-<para><command>pwunconv</command> updates <filename>/etc/passwd</filename>
+<indexterm zone="ch-system-shadow pwunconv"><primary sortas="b-pwunconv">pwunconv</primary></indexterm>
+<para id="pwunconv"><command>pwunconv</command> updates <filename>/etc/passwd</filename>
 from <filename>/etc/shadow</filename> and then deletes the latter.</para>
 
-<para><command>sg</command> executes a given command while the user's GID
+<indexterm zone="ch-system-shadow sg"><primary sortas="b-sg">sg</primary></indexterm>
+<para id="sg"><command>sg</command> executes a given command while the user's GID
 is set to that of the given group.</para>
 
-<para><command>useradd</command> creates a new user with the given name,
+<indexterm zone="ch-system-shadow useradd"><primary sortas="b-useradd">useradd</primary></indexterm>
+<para id="useradd"><command>useradd</command> creates a new user with the given name,
 or updates the default new-user information.</para>
 
-<para><command>userdel</command> deletes the given user account.</para>
+<indexterm zone="ch-system-shadow userdel"><primary sortas="b-userdel">userdel</primary></indexterm>
+<para id="userdel"><command>userdel</command> deletes the given user account.</para>
 
-<para><command>usermod</command> is used to modify the given user's
+<indexterm zone="ch-system-shadow usermod"><primary sortas="b-usermod">usermod</primary></indexterm>
+<para id="usermod"><command>usermod</command> is used to modify the given user's
 login name, UID (User Identification), shell, initial group, home directory, and the like.</para>
 
-<para><command>vigr</command> can be used to edit the
+<indexterm zone="ch-system-shadow vigr"><primary sortas="b-vigr">vigr</primary></indexterm>
+<para id="vigr"><command>vigr</command> can be used to edit the
 <filename>/etc/group</filename> or <filename>/etc/gshadow</filename>
 files.</para>
 
-<para><command>vipw</command> can be used to edit the
+<indexterm zone="ch-system-shadow vipw"><primary sortas="b-vipw">vipw</primary></indexterm>
+<para id="vipw"><command>vipw</command> can be used to edit the
 <filename>/etc/passwd</filename> or <filename>/etc/shadow</filename>
 files.</para>
 
-<para><command>libmisc</command>...</para>
+<indexterm zone="ch-system-shadow libmisc"><primary sortas="c-libmisc">libmisc</primary></indexterm>
+<para id="libmisc"><command>libmisc</command>...</para>
 
-<para><command>libshadow</command> contains functions used by most
+<indexterm zone="ch-system-shadow libshadow"><primary sortas="c-libshadow">libshadow</primary></indexterm>
+<para id="libshadow"><command>libshadow</command> contains functions used by most
 programs in this package.</para>
 
 </sect2>

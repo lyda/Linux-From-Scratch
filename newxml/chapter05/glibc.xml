@@ -7,6 +7,10 @@
 <title>Installing Glibc-&glibc-version;</title>
 <?dbhtml filename="glibc.html"?>
 
+<indexterm zone="ch-tools-glibc">
+<primary sortas="a-Glibc">Glibc</primary>
+<secondary>tools</secondary></indexterm>
+
 <xi:include href="../chapter06/glibc.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 11.8 SBU

@@ -7,6 +7,8 @@
 <title>Installing DejaGnu-&dejagnu-version;</title>
 <?dbhtml filename="dejagnu.html"?>
 
+<indexterm zone="ch-tools-dejagnu"><primary sortas="a-DejaGnu">DejaGnu</primary></indexterm>
+
 <para>The DejaGnu package contains a framework for testing other programs.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -40,7 +42,8 @@ GCC, Glibc, Grep, Make, Sed.</para>
 
 <sect2><title>Short description</title>
 
-<para><command>runtest</command> is the wrapper script that finds the proper
+<indexterm zone="ch-tools-dejagnu runtest"><primary sortas="b-runtest">runtest</primary></indexterm>
+<para id="runtest"><command>runtest</command> is the wrapper script that finds the proper
 expect shell and then runs DejaGnu.</para>
 
 </sect2>

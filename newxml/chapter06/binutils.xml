@@ -7,6 +7,8 @@
 <title>Installing Binutils-&binutils-version;</title>
 <?dbhtml filename="binutils.html"?>
 
+<indexterm zone="ch-system-binutils"><primary sortas="a-Binutils">Binutils</primary></indexterm>
+
 <para>The Binutils package contains a linker, an assembler, and other tools for
 handling object files.</para>
 
@@ -102,60 +104,77 @@ libopcodes.[a,so]</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>addr2line</command> translates program addresses to file
+<indexterm zone="ch-system-binutils addr2line"><primary sortas="b-addr2line">addr2line</primary></indexterm>
+<para id="addr2line"><command>addr2line</command> translates program addresses to file
 names and line numbers. Given an address and the name of an executable, it
 uses the debugging information in the executable to figure out which source
 file and line number are associated with the address.</para>
 
-<para><command>ar</command> creates, modifies, and extracts from archives. An archive
+<indexterm zone="ch-system-binutils ar"><primary sortas="b-ar">ar</primary></indexterm>
+<para id="ar"><command>ar</command> creates, modifies, and extracts from archives. An archive
 is a single file holding a collection of other files in a structure that makes
 it possible to retrieve the original individual files (called members of
 the archive).</para>
 
-<para><command>as</command> is an assembler. It assembles the output of
+<indexterm zone="ch-system-binutils as"><primary sortas="b-as">as</primary></indexterm>
+<para id="as"><command>as</command> is an assembler. It assembles the output of
 gcc into object files.</para>
 
-<para><command>c++filt</command> is used by the linker to de-mangle C++ and
+<indexterm zone="ch-system-binutils c++filt"><primary sortas="b-c++filt">c++filt</primary></indexterm>
+<para id="c++filt"><command>c++filt</command> is used by the linker to de-mangle C++ and
 Java symbols, to keep overloaded functions from clashing.</para>
 
-<para><command>gprof</command> displays call graph profile data.</para>
+<indexterm zone="ch-system-binutils gprof"><primary sortas="b-gprof">gprof</primary></indexterm>
+<para id="gprof"><command>gprof</command> displays call graph profile data.</para>
 
-<para><command>ld</command> is a linker. It combines a number of object
+<indexterm zone="ch-system-binutils ld"><primary sortas="b-ld">ld</primary></indexterm>
+<para id="ld"><command>ld</command> is a linker. It combines a number of object
 and archive files into a single file, relocating their data and tying up symbol
 references.</para>
 
-<para><command>nm</command> lists the symbols occurring in a given object file.</para>
+<indexterm zone="ch-system-binutils nm"><primary sortas="b-nm">nm</primary></indexterm>
+<para id="nm"><command>nm</command> lists the symbols occurring in a given object file.</para>
 
-<para><command>objcopy</command> is used to translate one type of object
+<indexterm zone="ch-system-binutils objcopy"><primary sortas="b-objcopy">objcopy</primary></indexterm>
+<para id="objcopy"><command>objcopy</command> is used to translate one type of object
 file into another.</para>
 
-<para><command>objdump</command> displays information about the given
+<indexterm zone="ch-system-binutils objdump"><primary sortas="b-objdump">objdump</primary></indexterm>
+<para id="objdump"><command>objdump</command> displays information about the given
 object file, with options controlling what particular information to display.
 The information shown is mostly only useful to programmers who are working on
 the compilation tools.</para>
 
-<para><command>ranlib</command> generates an index of the contents of an
+<indexterm zone="ch-system-binutils ranlib"><primary sortas="b-ranlib">ranlib</primary></indexterm>
+<para id="ranlib"><command>ranlib</command> generates an index of the contents of an
 archive, and stores it in the archive. The index lists all the symbols defined
 by archive members that are relocatable object files.</para>
 
-<para><command>readelf</command> displays information about elf type binaries.</para>
+<indexterm zone="ch-system-binutils readelf"><primary sortas="b-readelf">readelf</primary></indexterm>
+<para id="readelf"><command>readelf</command> displays information about elf type binaries.</para>
 
-<para><command>size</command> lists the section sizes -- and the grand
+<indexterm zone="ch-system-binutils size"><primary sortas="b-size">size</primary></indexterm>
+<para id="size"><command>size</command> lists the section sizes -- and the grand
 total -- for the given object files.</para>
 
-<para><command>strings</command> outputs, for each given file, the sequences
+<indexterm zone="ch-system-binutils strings"><primary sortas="b-strings">strings</primary></indexterm>
+<para id="strings"><command>strings</command> outputs, for each given file, the sequences
 of printable characters that are of at least the specified length (defaulting to 4).
 For object files it prints, by default, only the strings from the initializing
 and loading sections. For other types of files it scans the whole file.</para>
 
-<para><command>strip</command> discards symbols from object files.</para>
+<indexterm zone="ch-system-binutils strip"><primary sortas="b-strip">strip</primary></indexterm>
+<para id="strip"><command>strip</command> discards symbols from object files.</para>
 
-<para><command>libiberty</command> contains routines used by various GNU
+<indexterm zone="ch-system-binutils libiberty"><primary sortas="c-libiberty">libiberty</primary></indexterm>
+<para id="libiberty"><command>libiberty</command> contains routines used by various GNU
 programs, including getopt, obstack, strerror, strtol and strtoul.</para>
 
-<para><command>libbfd</command> is the Binary File Descriptor library.</para>
+<indexterm zone="ch-system-binutils libbfd"><primary sortas="c-libbfd">libbfd</primary></indexterm>
+<para id="libbfd"><command>libbfd</command> is the Binary File Descriptor library.</para>
 
-<para><command>libopcodes</command> is a library for dealing with opcodes.
+<indexterm zone="ch-system-binutils libopcodes"><primary sortas="c-libopcodes">libopcodes</primary></indexterm>
+<para id="libopcodes"><command>libopcodes</command> is a library for dealing with opcodes.
 It is used for building utilities like objdump. Opcodes are the <quote>readable
 text</quote> versions of instructions for the processor.</para>
 

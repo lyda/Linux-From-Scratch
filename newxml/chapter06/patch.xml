@@ -7,6 +7,8 @@
 <title>Installing Patch-&patch-version;</title>
 <?dbhtml filename="patch.html"?>
 
+<indexterm zone="ch-system-patch"><primary sortas="a-Patch">Patch</primary></indexterm>
+
 <para>The Patch package contains a program for modifying files.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -46,7 +48,8 @@ machines you can leave it out):</para>
 
 <sect2><title>Short description</title>
 
-<para><command>patch</command> modifies files according to a patch file.
+<indexterm zone="ch-system-patch patch"><primary sortas="b-patch">patch</primary></indexterm>
+<para id="patch"><command>patch</command> modifies files according to a patch file.
 A patch file normally is a difference listing created with the diff program.
 By applying these differences to the original files, patch creates the patched
 versions. Using patches instead of entirely new tarballs to keep your sources

@@ -7,6 +7,8 @@
 <title>Installing Bison-&bison-version;</title>
 <?dbhtml filename="bison.html"?>
 
+<indexterm zone="ch-system-bison"><primary sortas="a-Bison">Bison</primary></indexterm>
+
 <para>The Bison package contains a parser generator.</para>
 
 <screen>&buildtime; 0.6 SBU
@@ -54,14 +56,17 @@ the patch is back-ported from CVS:</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>bison</command> generates, from a series of rules, a program
+<indexterm zone="ch-system-bison bison"><primary sortas="b-bison">bison</primary></indexterm>
+<para id="bison"><command>bison</command> generates, from a series of rules, a program
 for analyzing the structure of text files. Bison is a replacement for yacc
 (Yet Another Compiler Compiler).</para>
 
-<para><command>yacc</command> is a wrapper for bison, meant for programs
+<indexterm zone="ch-system-bison yacc"><primary sortas="b-yacc">yacc</primary></indexterm>
+<para id="yacc"><command>yacc</command> is a wrapper for bison, meant for programs
 that still call yacc instead of bison. It calls bison with the -y option.</para>
 
-<para><command>liby.a</command> is the Yacc library containing
+<indexterm zone="ch-system-bison liby.a"><primary sortas="c-liby.a">liby.a</primary></indexterm>
+<para id="liby.a"><command>liby.a</command> is the Yacc library containing
 implementations of Yacc-compatible yyerror and main functions. This library
 is normally not very useful, but POSIX requires it.</para>
 

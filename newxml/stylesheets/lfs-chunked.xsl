@@ -10,6 +10,9 @@
   <!-- The CSS Stylesheet -->
   <xsl:param name="html.stylesheet" select="'../stylesheets/lfs.css'"/>
 
+  <!-- Include our customised templates -->
+  <xsl:include href="xhtml/lfs-index.xsl"/>
+
   <!-- Use graphics in admonitions -->
   <xsl:param name="admon.graphics" select="1"/>
   <xsl:param name="admon.graphics.path">../images/</xsl:param>

@@ -7,6 +7,8 @@
 <title>Installing Kbd-&kbd-version;</title>
 <?dbhtml filename="kbd.html"?>
 
+<indexterm zone="ch-system-kbd"><primary sortas="a-Kbd">Kbd</primary></indexterm>
+
 <para>The Kbd package contains key-table files and keyboard utilities.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -40,7 +42,10 @@ not installed. First enable the compilation of these utilities:</para>
 
 </sect2>
 
-<sect2><title>Configuring your keyboard</title>
+<sect2 id="conf-kbd"><title>Configuring your keyboard</title>
+<indexterm zone="conf-kbd">
+<primary sortas="a-Kbd">Kbd</primary>
+<secondary>configuring</secondary></indexterm>
 
 <para>Few things are more annoying than using Linux while a wrong keymap
 for your keyboard is loaded. If you have a standard US keyboard, however, you
@@ -87,63 +92,87 @@ showconsolefont, showkey, unicode_start and unicode_stop</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>chvt</command> changes the foreground virtual terminal.</para>
+<indexterm zone="ch-system-kbd chvt"><primary sortas="b-chvt">chvt</primary></indexterm>
+<para id="chvt"><command>chvt</command> changes the foreground virtual terminal.</para>
 
-<para><command>deallocvt</command> deallocates unused virtual terminals.</para>
+<indexterm zone="ch-system-kbd deallocvt"><primary sortas="b-deallocvt">deallocvt</primary></indexterm>
+<para id="deallocvt"><command>deallocvt</command> deallocates unused virtual terminals.</para>
 
-<para><command>dumpkeys</command> dumps the keyboard translation tables.</para>
+<indexterm zone="ch-system-kbd dumpkeys"><primary sortas="b-dumpkeys">dumpkeys</primary></indexterm>
+<para id="dumpkeys"><command>dumpkeys</command> dumps the keyboard translation tables.</para>
 
-<para><command>fgconsole</command> prints the number of the active virtual terminal.</para>
+<indexterm zone="ch-system-kbd fgconsole"><primary sortas="b-fgconsole">fgconsole</primary></indexterm>
+<para id="fgconsole"><command>fgconsole</command> prints the number of the active virtual terminal.</para>
 
-<para><command>getkeycodes</command> prints the kernel scancode-to-keycode
+<indexterm zone="ch-system-kbd getkeycodes"><primary sortas="b-getkeycodes">getkeycodes</primary></indexterm>
+<para id="getkeycodes"><command>getkeycodes</command> prints the kernel scancode-to-keycode
 mapping table.</para>
 
-<para><command>getunimap</command> prints the currently used unimap.</para>
+<indexterm zone="ch-system-kbd getunimap"><primary sortas="b-getunimap">getunimap</primary></indexterm>
+<para id="getunimap"><command>getunimap</command> prints the currently used unimap.</para>
 
-<para><command>kbd_mode</command> reports or sets the keyboard mode.</para>
+<indexterm zone="ch-system-kbd kbd_mode"><primary sortas="b-kbd_mode">kbd_mode</primary></indexterm>
+<para id="kbd_mode"><command>kbd_mode</command> reports or sets the keyboard mode.</para>
 
-<para><command>kbdrate</command> sets the keyboard repeat and delay rates.</para>
+<indexterm zone="ch-system-kbd kbdrate"><primary sortas="b-kbdrate">kbdrate</primary></indexterm>
+<para id="kbdrate"><command>kbdrate</command> sets the keyboard repeat and delay rates.</para>
 
-<para><command>loadkeys</command> loads the keyboard translation tables.</para>
+<indexterm zone="ch-system-kbd loadkeys"><primary sortas="b-loadkeys">loadkeys</primary></indexterm>
+<para id="loadkeys"><command>loadkeys</command> loads the keyboard translation tables.</para>
 
-<para><command>loadunimap</command> loads the kernel unicode-to-font mapping table.</para>
+<indexterm zone="ch-system-kbd loadunimap"><primary sortas="b-loadunimap">loadunimap</primary></indexterm>
+<para id="loadunimap"><command>loadunimap</command> loads the kernel unicode-to-font mapping table.</para>
 
-<para><command>mapscrn</command> is an obsolete program that used to load
+<indexterm zone="ch-system-kbd mapscrn"><primary sortas="b-mapscrn">mapscrn</primary></indexterm>
+<para id="mapscrn"><command>mapscrn</command> is an obsolete program that used to load
 a user-defined output character mapping table into the console driver. This is
 now done by setfont.</para>
 
-<para><command>openvt</command> starts a program on a new virtual terminal (VT).</para>
+<indexterm zone="ch-system-kbd openvt"><primary sortas="b-openvt">openvt</primary></indexterm>
+<para id="openvt"><command>openvt</command> starts a program on a new virtual terminal (VT).</para>
 
-<para><command>psf*</command> are a set of tools for handling Unicode
+<indexterm zone="ch-system-kbd psf*"><primary sortas="b-psf*">psf*</primary></indexterm>
+<para id="psf*"><command>psf*</command> are a set of tools for handling Unicode
 character tables for console fonts.</para>
 
-<para><command>resizecons</command> changes the kernel idea of the console size.</para>
+<indexterm zone="ch-system-kbd resizecons"><primary sortas="b-resizecons">resizecons</primary></indexterm>
+<para id="resizecons"><command>resizecons</command> changes the kernel idea of the console size.</para>
 
-<para><command>setfont</command> lets you change the EGA/VGA fonts on the console.</para>
+<indexterm zone="ch-system-kbd setfont"><primary sortas="b-setfont">setfont</primary></indexterm>
+<para id="setfont"><command>setfont</command> lets you change the EGA/VGA fonts on the console.</para>
 
-<para><command>setkeycodes</command> loads kernel scancode-to-keycode
+<indexterm zone="ch-system-kbd setkeycodes"><primary sortas="b-setkeycodes">setkeycodes</primary></indexterm>
+<para id="setkeycodes"><command>setkeycodes</command> loads kernel scancode-to-keycode
 mapping table entries, useful if you have some unusual keys on your keyboard.</para>
 
-<para><command>setleds</command> sets the keyboard flags and LEDs. Many
+<indexterm zone="ch-system-kbd setleds"><primary sortas="b-setleds">setleds</primary></indexterm>
+<para id="setleds"><command>setleds</command> sets the keyboard flags and LEDs. Many
 people find it useful to have "Num Lock" on by default, setleds +num achieves this.</para>
 
-<para><command>setlogcons</command> sends kernel messages to the console.</para>
+<indexterm zone="ch-system-kbd setlogcons"><primary sortas="b-setlogcons">setlogcons</primary></indexterm>
+<para id="setlogcons"><command>setlogcons</command> sends kernel messages to the console.</para>
 
-<para><command>setmetamode</command> defines the keyboard meta-key handling.</para>
+<indexterm zone="ch-system-kbd setmetamode"><primary sortas="b-setmetamode">setmetamode</primary></indexterm>
+<para id="setmetamode"><command>setmetamode</command> defines the keyboard meta-key handling.</para>
 
-<para><command>setvesablank</command> lets you fiddle with the built-in
+<indexterm zone="ch-system-kbd setvesablank"><primary sortas="b-setvesablank">setvesablank</primary></indexterm>
+<para id="setvesablank"><command>setvesablank</command> lets you fiddle with the built-in
 hardware screensaver (no toasters, just a blank screen).</para>
 
-<para><command>showconsolefont</command> shows the current EGA/VGA console
+<indexterm zone="ch-system-kbd showconsolefont"><primary sortas="b-showconsolefont">showconsolefont</primary></indexterm>
+<para id="showconsolefont"><command>showconsolefont</command> shows the current EGA/VGA console
 screen font.</para>
 
-<para><command>showkey</command> reports the scancodes and keycodes and
+<indexterm zone="ch-system-kbd showkey"><primary sortas="b-showkey">showkey</primary></indexterm>
+<para id="showkey"><command>showkey</command> reports the scancodes and keycodes and
 ASCII codes of the keys pressed on the keyboard.</para>
 
-<para><command>unicode_start</command> puts the keyboard and console in
+<indexterm zone="ch-system-kbd unicode_start"><primary sortas="b-unicode_start">unicode_start</primary></indexterm>
+<para id="unicode_start"><command>unicode_start</command> puts the keyboard and console in
 unicode mode.</para>
 
-<para><command>unicode_stop</command> reverts keyboard and console from
+<indexterm zone="ch-system-kbd unicode_stop"><primary sortas="b-unicode_stop">unicode_stop</primary></indexterm>
+<para id="unicode_stop"><command>unicode_stop</command> reverts keyboard and console from
 unicode mode.</para>
 
 </sect2>

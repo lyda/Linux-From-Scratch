@@ -7,6 +7,8 @@
 <title>Installing Make-&make-version;</title>
 <?dbhtml filename="make.html"?>
 
+<indexterm zone="ch-system-make"><primary sortas="a-Make">Make</primary></indexterm>
+
 <para>The Make package contains a program for compiling large packages.</para>
 
 <screen>&buildtime; 0.2 SBU
@@ -47,7 +49,8 @@ GCC, Gettext, Glibc, Grep, Sed.</para>
 
 <sect2><title>Short description</title>
 
-<para><command>make</command> automatically determines which pieces of a
+<indexterm zone="ch-system-make make"><primary sortas="b-make">make</primary></indexterm>
+<para id="make"><command>make</command> automatically determines which pieces of a
 large package need to be recompiled, and then issues the relevant commands.</para>
 
 </sect2>

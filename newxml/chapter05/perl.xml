@@ -7,6 +7,10 @@
 <title>Installing Perl-&perl-version;</title>
 <?dbhtml filename="perl.html"?>
 
+<indexterm zone="ch-tools-perl">
+<primary sortas="a-Perl">Perl</primary>
+<secondary>tools</secondary></indexterm>
+
 <xi:include href="../chapter06/perl.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 0.8 SBU

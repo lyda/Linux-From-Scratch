@@ -7,6 +7,8 @@
 <title>Installing M4-&m4-version;</title>
 <?dbhtml filename="m4.html"?>
 
+<indexterm zone="ch-system-m4"><primary sortas="a-M4">M4</primary></indexterm>
+
 <para>The M4 package contains a macro processor.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -46,7 +48,8 @@ Gettext, Glibc, Grep, Make, Perl, Sed.</para>
 
 <sect2><title>Short description</title>
 
-<para><command>m4</command> copies the given files
+<indexterm zone="ch-system-m4 m4"><primary sortas="b-m4">m4</primary></indexterm>
+<para id="m4"><command>m4</command> copies the given files
 while expanding the macros that they contain. These macros are either built-in
 or user-defined and can take any number of arguments. Besides just doing macro
 expansion, m4 has built-in functions for including named files, running Unix

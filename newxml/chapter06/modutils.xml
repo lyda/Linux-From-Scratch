@@ -7,6 +7,8 @@
 <title>Installing Modutils-&modutils-version;</title>
 <?dbhtml filename="modutils.html"?>
 
+<indexterm zone="ch-system-modutils"><primary sortas="a-Modutils">Modutils</primary></indexterm>
+
 <para>The Modutils package contains programs for handling kernel modules.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -47,33 +49,44 @@ and rmmod (link to insmod)</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>depmod</command> creates a dependency file, based on the
+<indexterm zone="ch-system-modutils depmod"><primary sortas="b-depmod">depmod</primary></indexterm>
+<para id="depmod"><command>depmod</command> creates a dependency file, based on the
 symbols it finds in the existing set of modules. This dependency file is used
 by modprobe to automatically load the required modules.</para>
 
-<para><command>genksyms</command> generates symbol version information.</para>
+<indexterm zone="ch-system-modutils genksyms"><primary sortas="b-genksyms">genksyms</primary></indexterm>
+<para id="genksyms"><command>genksyms</command> generates symbol version information.</para>
 
-<para><command>insmod</command> installs a loadable module in the running kernel.</para>
+<indexterm zone="ch-system-modutils insmod"><primary sortas="b-insmod">insmod</primary></indexterm>
+<para id="insmod"><command>insmod</command> installs a loadable module in the running kernel.</para>
 
-<para><command>insmod_ksymoops_clean</command> deletes saved ksyms and
+<indexterm zone="ch-system-modutils insmod_ksymoops_clean"><primary sortas="b-insmod_ksymoops_clean">insmod_ksymoops_clean</primary></indexterm>
+<para id="insmod_ksymoops_clean"><command>insmod_ksymoops_clean</command> deletes saved ksyms and
 modules not accessed for two days.</para>
 
-<para><command>kallsyms</command> extracts all kernel symbols for debugging.</para>
+<indexterm zone="ch-system-modutils kallsyms"><primary sortas="b-kallsyms">kallsyms</primary></indexterm>
+<para id="kallsyms"><command>kallsyms</command> extracts all kernel symbols for debugging.</para>
 
-<para><command>kernelversion</command> reports the major version of the
+<indexterm zone="ch-system-modutils kernelversion"><primary sortas="b-kernelversion">kernelversion</primary></indexterm>
+<para id="kernelversion"><command>kernelversion</command> reports the major version of the
 running kernel.</para>
 
-<para><command>ksyms</command> displays exported kernel symbols.</para>
+<indexterm zone="ch-system-modutils ksyms"><primary sortas="b-ksyms">ksyms</primary></indexterm>
+<para id="ksyms"><command>ksyms</command> displays exported kernel symbols.</para>
 
-<para><command>lsmod</command> shows which modules are loaded.</para>
+<indexterm zone="ch-system-modutils lsmod"><primary sortas="b-lsmod">lsmod</primary></indexterm>
+<para id="lsmod"><command>lsmod</command> shows which modules are loaded.</para>
 
-<para><command>modinfo</command> examines an object file associated with
+<indexterm zone="ch-system-modutils modinfo"><primary sortas="b-modinfo">modinfo</primary></indexterm>
+<para id="modinfo"><command>modinfo</command> examines an object file associated with
 a kernel module and displays any information that it can glean.</para>
 
-<para><command>modprobe</command> uses a dependency file, created by
+<indexterm zone="ch-system-modutils modprobe"><primary sortas="b-modprobe">modprobe</primary></indexterm>
+<para id="modprobe"><command>modprobe</command> uses a dependency file, created by
 depmod, to automatically load the relevant modules.</para>
 
-<para><command>rmmod</command> unloads modules from the running kernel.</para>
+<indexterm zone="ch-system-modutils rmmod"><primary sortas="b-rmmod">rmmod</primary></indexterm>
+<para id="rmmod"><command>rmmod</command> unloads modules from the running kernel.</para>
 
 </sect2>
 

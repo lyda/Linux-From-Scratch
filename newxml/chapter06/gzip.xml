@@ -7,6 +7,8 @@
 <title>Installing Gzip-&gzip-version;</title>
 <?dbhtml filename="gzip.html"?>
 
+<indexterm zone="ch-system-gzip"><primary sortas="a-Gzip">Gzip</primary></indexterm>
+
 <para>The Gzip package contains programs for compressing and decompressing
 files.</para>
 
@@ -62,36 +64,49 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>gunzip</command> decompresses gzipped files.</para>
+<indexterm zone="ch-system-gzip gunzip"><primary sortas="b-gunzip">gunzip</primary></indexterm>
+<para id="gunzip"><command>gunzip</command> decompresses gzipped files.</para>
 
-<para><command>gzexe</command> is used to create self-uncompressing
+<indexterm zone="ch-system-gzip gzexe"><primary sortas="b-gzexe">gzexe</primary></indexterm>
+<para id="gzexe"><command>gzexe</command> is used to create self-uncompressing
 executable files.</para>
 
-<para><command>gzip</command> compresses the given files, using
+<indexterm zone="ch-system-gzip gzip"><primary sortas="b-gzip">gzip</primary></indexterm>
+<para id="gzip"><command>gzip</command> compresses the given files, using
 Lempel-Ziv (LZ77) coding.</para>
 
-<para><command>zcat</command> uncompresses the given gzipped files to
+<indexterm zone="ch-system-gzip zcat"><primary sortas="b-zcat">zcat</primary></indexterm>
+<para id="zcat"><command>zcat</command> uncompresses the given gzipped files to
 standard output.</para>
 
-<para><command>zcmp</command> runs cmp on gzipped files.</para>
+<indexterm zone="ch-system-gzip zcmp"><primary sortas="b-zcmp">zcmp</primary></indexterm>
+<para id="zcmp"><command>zcmp</command> runs cmp on gzipped files.</para>
 
-<para><command>zdiff</command> runs diff on gzipped files.</para>
+<indexterm zone="ch-system-gzip zdiff"><primary sortas="b-zdiff">zdiff</primary></indexterm>
+<para id="zdiff"><command>zdiff</command> runs diff on gzipped files.</para>
 
-<para><command>zegrep</command> runs egrep on gzipped files.</para>
+<indexterm zone="ch-system-gzip zegrep"><primary sortas="b-zegrep">zegrep</primary></indexterm>
+<para id="zegrep"><command>zegrep</command> runs egrep on gzipped files.</para>
 
-<para><command>zfgrep</command> runs fgrep on gzipped files.</para>
+<indexterm zone="ch-system-gzip zfgrep"><primary sortas="b-zfgrep">zfgrep</primary></indexterm>
+<para id="zfgrep"><command>zfgrep</command> runs fgrep on gzipped files.</para>
 
-<para><command>zforce</command> forces a .gz extension on all given files
+<indexterm zone="ch-system-gzip zforce"><primary sortas="b-zforce">zforce</primary></indexterm>
+<para id="zforce"><command>zforce</command> forces a .gz extension on all given files
 that are gzipped files, so that gzip will not compress them again. This can be
 useful when file names were truncated during a file transfer.</para>
 
-<para><command>zgrep</command> runs grep on gzipped files.</para>
+<indexterm zone="ch-system-gzip zgrep"><primary sortas="b-zgrep">zgrep</primary></indexterm>
+<para id="zgrep"><command>zgrep</command> runs grep on gzipped files.</para>
 
-<para><command>zless</command> runs less on gzipped files.</para>
+<indexterm zone="ch-system-gzip zless"><primary sortas="b-zless">zless</primary></indexterm>
+<para id="zless"><command>zless</command> runs less on gzipped files.</para>
 
-<para><command>zmore</command> runs more on gzipped files.</para>
+<indexterm zone="ch-system-gzip zmore"><primary sortas="b-zmore">zmore</primary></indexterm>
+<para id="zmore"><command>zmore</command> runs more on gzipped files.</para>
 
-<para><command>znew</command> re-compresses files from compress format
+<indexterm zone="ch-system-gzip znew"><primary sortas="b-znew">znew</primary></indexterm>
+<para id="znew"><command>znew</command> re-compresses files from compress format
 to gzip format -- .Z to .gz.</para>
 
 </sect2>

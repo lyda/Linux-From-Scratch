@@ -7,6 +7,10 @@
 <title>Configuring the sysklogd script</title>
 <?dbhtml filename="sysklogd.html"?>
 
+<indexterm zone="ch-scripts-sysklogd">
+<primary sortas="d-sysklogd">sysklogd</primary>
+<secondary>configuring</secondary></indexterm>
+
 <para>The <filename>sysklogd</filename> script invokes the
 <command>syslogd</command> program with the <emphasis>-m 0</emphasis> option.
 This option turns off the periodic timestamp mark that

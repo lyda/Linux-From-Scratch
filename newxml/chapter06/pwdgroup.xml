@@ -7,12 +7,19 @@
 <title>Creating the passwd, group and log files</title>
 <?dbhtml filename="pwdgroup.html"?>
 
+<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/etc/passwd">/etc/passwd</primary></indexterm>
+<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/etc/group">/etc/group</primary></indexterm>
+<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/var/run/utmp">/var/run/utmp</primary></indexterm>
+<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/var/log/btmp">/var/log/btmp</primary></indexterm>
+<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/var/log/lastlog">/var/log/lastlog</primary></indexterm>
+<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/var/log/wtmp">/var/log/wtmp</primary></indexterm>
+
 <para>In order for <emphasis>root</emphasis> to be able to login and for the 
 name <quote>root</quote> to be recognized, there need to be relevant entries in
 the <filename>/etc/passwd</filename> and <filename>/etc/group</filename> files.
 </para>
 
-<para>Create the <filename>/etc/passwd</filename> file by running the following 
+<para>Create the <filename>/etc/passwd</filename> file by running the following
 command:</para>
 
 <screen><userinput>cat &gt; /etc/passwd &lt;&lt; "EOF"</userinput>

@@ -7,6 +7,8 @@
 <title>Installing Ed-&ed-version;</title>
 <?dbhtml filename="ed.html"?>
 
+<indexterm zone="ch-system-ed"><primary sortas="a-Ed">Ed</primary></indexterm>
+
 <para>The Ed package contains a spartan line editor.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -70,10 +72,12 @@ the programs available there is useful in the event of the
 
 <sect2><title>Short descriptions</title>
 
-<para><command>ed</command> is a line-oriented text editor. It can be used
+<indexterm zone="ch-system-ed ed"><primary sortas="b-ed">ed</primary></indexterm>
+<para id="ed"><command>ed</command> is a line-oriented text editor. It can be used
 to create, display, modify and otherwise manipulate text files.</para>
 
-<para><command>red</command> is a restricted ed -- it can only edit files
+<indexterm zone="ch-system-ed red"><primary sortas="b-red">red</primary></indexterm>
+<para id="red"><command>red</command> is a restricted ed -- it can only edit files
 in the current directory and cannot execute shell commands.</para>
 
 </sect2>

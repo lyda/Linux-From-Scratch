@@ -7,6 +7,10 @@
 <title>Installing Util-linux-&util-linux-version;</title>
 <?dbhtml filename="util-linux.html"?>
 
+<indexterm zone="ch-tools-util-linux">
+<primary sortas="a-Util-linux">Util-linux</primary>
+<secondary>tools</secondary></indexterm>
+
 <xi:include href="../chapter06/util-linux.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 0.2 SBU

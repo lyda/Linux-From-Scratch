@@ -7,6 +7,10 @@
 <title>Configuring the localnet script</title>
 <?dbhtml filename="hostname.html"?>
 
+<indexterm zone="ch-scripts-hostname">
+<primary sortas="d-localnet">localnet</primary>
+<secondary>configuring</secondary></indexterm>
+
 <para>Part of the localnet script is setting up the system's hostname. This
 needs to be configured in the /etc/sysconfig/network.</para>
 

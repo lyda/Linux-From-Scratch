@@ -7,6 +7,10 @@
 <title>Installing Gawk-&gawk-version;</title>
 <?dbhtml filename="gawk.html"?>
 
+<indexterm zone="ch-tools-gawk">
+<primary sortas="a-Gawk">Gawk</primary>
+<secondary>tools</secondary></indexterm>
+
 <xi:include href="../chapter06/gawk.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 0.2 SBU

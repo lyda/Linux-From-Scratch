@@ -7,6 +7,8 @@
 <title>Installing Grub-&grub-version;</title>
 <?dbhtml filename="grub.html"?>
 
+<indexterm zone="ch-system-grub"><primary sortas="a-Grub">Grub</primary></indexterm>
+
 <para>The Grub package contains the GRand Unified Bootloader.</para>
 
 <screen>&buildtime; 0.2 SBU
@@ -62,18 +64,23 @@ grub-md5-crypt, grub-terminfo and mbchk</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>grub</command> is the GRand Unified Bootloader's command
+<indexterm zone="ch-system-grub grub"><primary sortas="b-grub">grub</primary></indexterm>
+<para id="grub"><command>grub</command> is the GRand Unified Bootloader's command
 shell.</para>
 
-<para><command>grub-install</command> installs GRUB on the given device.</para>
+<indexterm zone="ch-system-grub grub-install"><primary sortas="b-grub-install">grub-install</primary></indexterm>
+<para id="grub-install"><command>grub-install</command> installs GRUB on the given device.</para>
 
-<para><command>grub-md5-crypt</command> encrypts a password in MD5
+<indexterm zone="ch-system-grub grub-md5-crypt"><primary sortas="b-grub-md5-crypt">grub-md5-crypt</primary></indexterm>
+<para id="grub-md5-crypt"><command>grub-md5-crypt</command> encrypts a password in MD5
 format.</para>
 
-<para><command>grub-terminfo</command> generates a terminfo command from a
+<indexterm zone="ch-system-grub grub-terminfo"><primary sortas="b-grub-terminfo">grub-terminfo</primary></indexterm>
+<para id="grub-terminfo"><command>grub-terminfo</command> generates a terminfo command from a
 terminfo name. It can be used if you have an uncommon terminal.</para>
 
-<para><command>mbchk</command> checks the format of a multi-boot kernel.</para>
+<indexterm zone="ch-system-grub mbchk"><primary sortas="b-mbchk">mbchk</primary></indexterm>
+<para id="mbchk"><command>mbchk</command> checks the format of a multi-boot kernel.</para>
 
 </sect2>
 

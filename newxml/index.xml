@@ -51,14 +51,6 @@
 
 </part>
 
-<part id="part4">
-<title>Appendices</title>
-<?dbhtml filename="part4.html"?>
-<xi:include href="appendixa/appendixa.xml"/>
-
-<xi:include href="appendixb/appendixb.xml"/>
-
-</part>
-
+<index/>
 
 </book>

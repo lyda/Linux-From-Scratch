@@ -7,6 +7,8 @@
 <title>Installing Perl-&perl-version;</title>
 <?dbhtml filename="perl.html"?>
 
+<indexterm zone="ch-system-perl"><primary sortas="a-Perl">Perl</primary></indexterm>
+
 <para>The Perl package contains the Practical Extraction and Report Language.</para>
 
 <screen>&buildtime; 2.9 SBU
@@ -70,78 +72,105 @@ to c2ph), s2p, splain and xsubpp</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>a2p</command> translates awk to perl.</para>
+<indexterm zone="ch-system-perl a2p"><primary sortas="b-a2p">a2p</primary></indexterm>
+<para id="a2p"><command>a2p</command> translates awk to perl.</para>
 
-<para><command>c2ph</command> dumps C structures as generated from
+<indexterm zone="ch-system-perl c2ph"><primary sortas="b-c2ph">c2ph</primary></indexterm>
+<para id="c2ph"><command>c2ph</command> dumps C structures as generated from
 "cc -g -S" stabs.</para>
 
-<para><command>dprofpp</command> displays perl profile data.</para>
+<indexterm zone="ch-system-perl dprofpp"><primary sortas="b-dprofpp">dprofpp</primary></indexterm>
+<para id="dprofpp"><command>dprofpp</command> displays perl profile data.</para>
 
-<para><command>en2cxs</command> builds a Perl extension for the Encode module,
+<indexterm zone="ch-system-perl en2cxs"><primary sortas="b-en2cxs">en2cxs</primary></indexterm>
+<para id="en2cxs"><command>en2cxs</command> builds a Perl extension for the Encode module,
 from either Unicode Character Mappings or Tcl Encoding Files.</para>
 
-<para><command>find2perl</command> translates find commands to perl.</para>
+<indexterm zone="ch-system-perl find2perl"><primary sortas="b-find2perl">find2perl</primary></indexterm>
+<para id="find2perl"><command>find2perl</command> translates find commands to perl.</para>
 
-<para><command>h2ph</command> converts .h C header files to .ph Perl header files.</para>
+<indexterm zone="ch-system-perl h2ph"><primary sortas="b-h2ph">h2ph</primary></indexterm>
+<para id="h2ph"><command>h2ph</command> converts .h C header files to .ph Perl header files.</para>
 
-<para><command>h2xs</command> converts .h C header files to Perl extensions.</para>
+<indexterm zone="ch-system-perl h2xs"><primary sortas="b-h2xs">h2xs</primary></indexterm>
+<para id="h2xs"><command>h2xs</command> converts .h C header files to Perl extensions.</para>
 
-<para><command>libnetcfg</command> can be used to configure the libnet.</para>
+<indexterm zone="ch-system-perl libnetcfg"><primary sortas="b-libnetcfg">libnetcfg</primary></indexterm>
+<para id="libnetcfg"><command>libnetcfg</command> can be used to configure the libnet.</para>
 
-<para><command>perl</command> combines some of the best features of C, sed,
+<indexterm zone="ch-system-perl perl"><primary sortas="b-perl">perl</primary></indexterm>
+<para id="perl"><command>perl</command> combines some of the best features of C, sed,
 awk and sh into a single swiss-army language.</para>
 
-<para><command>perlbug</command> is used to generate bug reports about
+<indexterm zone="ch-system-perl perlbug"><primary sortas="b-perlbug">perlbug</primary></indexterm>
+<para id="perlbug"><command>perlbug</command> is used to generate bug reports about
 Perl or the modules that come with it, and mail them.</para>
 
-<para><command>perlcc</command> generates executables from Perl programs.</para>
+<indexterm zone="ch-system-perl perlcc"><primary sortas="b-perlcc">perlcc</primary></indexterm>
+<para id="perlcc"><command>perlcc</command> generates executables from Perl programs.</para>
 
-<para><command>perldoc</command> displays a piece of documentation in pod
+<indexterm zone="ch-system-perl perldoc"><primary sortas="b-perldoc">perldoc</primary></indexterm>
+<para id="perldoc"><command>perldoc</command> displays a piece of documentation in pod
 format that is embedded in the perl installation tree or in a perl script.</para>
 
-<para><command>perlivp</command> is the Perl Installation Verification
+<indexterm zone="ch-system-perl perlivp"><primary sortas="b-perlivp">perlivp</primary></indexterm>
+<para id="perlivp"><command>perlivp</command> is the Perl Installation Verification
 Procedure. It can be used to verify that Perl and its libraries have been
 installed correctly.</para>
 
-<para><command>piconv</command> is a Perl version of the character encoding
+<indexterm zone="ch-system-perl piconv"><primary sortas="b-piconv">piconv</primary></indexterm>
+<para id="piconv"><command>piconv</command> is a Perl version of the character encoding
 converter <command>iconv</command>.</para>
 
-<para><command>pl2pm</command> is a rough tool for converting Perl4 .pl
+<indexterm zone="ch-system-perl pl2pm"><primary sortas="b-pl2pm">pl2pm</primary></indexterm>
+<para id="pl2pm"><command>pl2pm</command> is a rough tool for converting Perl4 .pl
 files to Perl5 .pm modules.</para>
 
-<para><command>pod2html</command> converts files from pod format to HTML
+<indexterm zone="ch-system-perl pod2html"><primary sortas="b-pod2html">pod2html</primary></indexterm>
+<para id="pod2html"><command>pod2html</command> converts files from pod format to HTML
 format.</para>
 
-<para><command>pod2latex</command> converts files from pod format to LaTeX
+<indexterm zone="ch-system-perl pod2latex"><primary sortas="b-pod2latex">pod2latex</primary></indexterm>
+<para id="pod2latex"><command>pod2latex</command> converts files from pod format to LaTeX
 format.</para>
 
-<para><command>pod2man</command> converts pod data to formatted *roff
+<indexterm zone="ch-system-perl pod2man"><primary sortas="b-pod2man">pod2man</primary></indexterm>
+<para id="pod2man"><command>pod2man</command> converts pod data to formatted *roff
 input.</para>
 
-<para><command>pod2text</command> converts pod data to formatted ASCII
+<indexterm zone="ch-system-perl pod2text"><primary sortas="b-pod2text">pod2text</primary></indexterm>
+<para id="pod2text"><command>pod2text</command> converts pod data to formatted ASCII
 text.</para>
 
-<para><command>pod2usage</command> prints usage messages from embedded
+<indexterm zone="ch-system-perl pod2usage"><primary sortas="b-pod2usage">pod2usage</primary></indexterm>
+<para id="pod2usage"><command>pod2usage</command> prints usage messages from embedded
 pod docs in files.</para>
 
-<para><command>podchecker</command> checks the syntax of pod format
+<indexterm zone="ch-system-perl podchecker"><primary sortas="b-podchecker">podchecker</primary></indexterm>
+<para id="podchecker"><command>podchecker</command> checks the syntax of pod format
 documentation files.</para>
 
-<para><command>podselect</command> displays selected sections of pod
+<indexterm zone="ch-system-perl podselect"><primary sortas="b-podselect">podselect</primary></indexterm>
+<para id="podselect"><command>podselect</command> displays selected sections of pod
 documentation.</para>
 
-<para><command>psed</command> is a Perl version of the stream editor
+<indexterm zone="ch-system-perl psed"><primary sortas="b-psed">psed</primary></indexterm>
+<para id="psed"><command>psed</command> is a Perl version of the stream editor
 <userinput>sed</userinput>.</para>
 
-<para><command>pstruct</command> dumps C structures as generated from
+<indexterm zone="ch-system-perl pstruct"><primary sortas="b-pstruct">pstruct</primary></indexterm>
+<para id="pstruct"><command>pstruct</command> dumps C structures as generated from
 "cc -g -S" stabs.</para>
 
-<para><command>s2p</command> translates sed to perl.</para>
+<indexterm zone="ch-system-perl s2p"><primary sortas="b-s2p">s2p</primary></indexterm>
+<para id="s2p"><command>s2p</command> translates sed to perl.</para>
 
-<para><command>splain</command> is used to force verbose warning
+<indexterm zone="ch-system-perl splain"><primary sortas="b-splain">splain</primary></indexterm>
+<para id="splain"><command>splain</command> is used to force verbose warning
 diagnostics in perl.</para>
 
-<para><command>xsubpp</command> converts Perl XS code into C code.</para>
+<indexterm zone="ch-system-perl xsubpp"><primary sortas="b-xsubpp">xsubpp</primary></indexterm>
+<para id="xsubpp"><command>xsubpp</command> converts Perl XS code into C code.</para>
 
 </sect2>
 

@@ -7,6 +7,8 @@
 <title>Installing Less-&less-version;</title>
 <?dbhtml filename="less.html"?>
 
+<indexterm zone="ch-system-less"><primary sortas="a-Less">Less</primary></indexterm>
+
 <para>The Less package contains a text file viewer.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -52,14 +54,17 @@ configuration files.</para></listitem>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>less</command> is a file viewer or pager. It displays the
+<indexterm zone="ch-system-less less"><primary sortas="b-less">less</primary></indexterm>
+<para id="less"><command>less</command> is a file viewer or pager. It displays the
 contents of the given file, letting you scroll around, find strings, and jump
 to marks.</para>
 
-<para><command>lessecho</command> is needed to expand meta-characters,
+<indexterm zone="ch-system-less lessecho"><primary sortas="b-lessecho">lessecho</primary></indexterm>
+<para id="lessecho"><command>lessecho</command> is needed to expand meta-characters,
 such as * and ?, in filenames on Unix systems.</para>
 
-<para><command>lesskey</command> is used to specify the key bindings
+<indexterm zone="ch-system-less lesskey"><primary sortas="b-lesskey">lesskey</primary></indexterm>
+<para id="lesskey"><command>lesskey</command> is used to specify the key bindings
 for less.</para>
 
 </sect2>

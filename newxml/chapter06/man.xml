@@ -7,6 +7,8 @@
 <title>Installing Man-&man-version;</title>
 <?dbhtml filename="man.html"?>
 
+<indexterm zone="ch-system-man"><primary sortas="a-Man">Man</primary></indexterm>
+
 <para>The Man package contains programs for finding and viewing manual pages.</para>
 
 <screen>&buildtime; 0.1 SBU
@@ -88,21 +90,27 @@ man2dvi, man2html and whatis</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>apropos</command> searches the whatis database and displays
+<indexterm zone="ch-system-man apropos"><primary sortas="b-apropos">apropos</primary></indexterm>
+<para id="apropos"><command>apropos</command> searches the whatis database and displays
 the short descriptions of system commands that contain a given string.</para>
 
-<para><command>makewhatis</command> builds the whatis database. It reads
+<indexterm zone="ch-system-man makewhatis"><primary sortas="b-makewhatis">makewhatis</primary></indexterm>
+<para id="makewhatis"><command>makewhatis</command> builds the whatis database. It reads
 all the manual pages in the manpath and for each page writes the name and a
 short description in the whatis database.</para>
 
-<para><command>man</command> formats and displays the requested on-line
+<indexterm zone="ch-system-man man"><primary sortas="b-man">man</primary></indexterm>
+<para id="man"><command>man</command> formats and displays the requested on-line
 manual page.</para>
 
-<para><command>man2dvi</command> converts a manual page into dvi format.</para>
+<indexterm zone="ch-system-man man2dvi"><primary sortas="b-man2dvi">man2dvi</primary></indexterm>
+<para id="man2dvi"><command>man2dvi</command> converts a manual page into dvi format.</para>
 
-<para><command>man2html</command> converts a manual page into html.</para>
+<indexterm zone="ch-system-man man2html"><primary sortas="b-man2html">man2html</primary></indexterm>
+<para id="man2html"><command>man2html</command> converts a manual page into html.</para>
 
-<para><command>whatis</command> searches the whatis database and displays
+<indexterm zone="ch-system-man whatis"><primary sortas="b-whatis">whatis</primary></indexterm>
+<para id="whatis"><command>whatis</command> searches the whatis database and displays
 the short descriptions of system commands that contain the given keyword as a
 separate word.</para>
 

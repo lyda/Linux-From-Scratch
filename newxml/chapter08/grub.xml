@@ -7,6 +7,10 @@
 <title>Making the LFS system bootable</title>
 <?dbhtml filename="grub.html"?>
 
+<indexterm zone="ch-bootable-grub">
+<primary sortas="a-Grub">Grub</primary>
+<secondary>configuring</secondary></indexterm>
+
 <para>Your shiny new LFS system is almost complete. One of the last things to
 do is ensure you can boot it. The instructions below apply only to computers of
 IA-32 architecture, meaning mainstream PCs. Information on <quote>boot

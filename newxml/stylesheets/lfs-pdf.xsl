@@ -11,6 +11,8 @@
   <!-- Probably want to make the paper size configurable -->
   <xsl:param name="paper.type" select="'A4'"/>
 
+  <!-- Include our customised templates -->
+  <xsl:include href="pdf/lfs-index.xsl"/>
 
   <!-- Font size -->
   <xsl:param name="body.font.master">8</xsl:param>
