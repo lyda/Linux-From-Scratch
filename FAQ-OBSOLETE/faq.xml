@@ -368,8 +368,17 @@ make: *** [all] Error 2
 			</screen>
 		</section>
 		<section id="char-major-10-135"><title>I'm getting errors about char-major-10-135.</title>
-			<para>Either delete /dev/rtc or enable RTC (Real Time Clock) support
-				in your kernel.
+			<para>Errors about char-major-10-135 refer to the character device,
+				major 10, minor 135, which is /dev/rtc.
+				It provides access to the BIOS clock, or RTC, the Real Time Clock.
+				Check /usr/src/linux/Documentation/rtc.txt for more information.
+			</para>
+			<para>Something, most likely hwclock, is trying to use it
+				but you haven't configured kernel support for it in your kernel.
+				Either delete /dev/rtc so hwclock won't try to use it
+				or enable RTC support in your kernel.
+				It's located in make menuconfig under
+				"Character devices" -&gt; "Enhanced Real Time Clock Support".
 			</para>
 		</section>
 	</chapter>
