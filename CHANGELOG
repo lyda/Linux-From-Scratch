@@ -1,4 +1,9 @@
-2.0.2- March 24, 2004
+n/a - March 24, 2004
+
+	* Removed mount command out of nfs.  the netfs script already handles
+	  this
+
+2.0.2 - March 24, 2004
 
 	* Edited cleanfs to solve a problem.  [if /tmp does not exist, it
 	  could run the find command on the root filesystem]
