@@ -7,18 +7,6 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
-# Function used for logging, reports unable to write errors with the test,
-# and fails to allow / to be mounted ro on shutdown.  It is not suggested
-# for use yet.
-logboot()
-{
-	if echo -n >> /var/log/boot.log; then
-		( "$@" | tee -a /var/log/boot.log && exit $PIPESTATUS )
-	else
-		"$@"
-	fi
-}
-
 # This sets a few default terminal options.
 stty sane
 
