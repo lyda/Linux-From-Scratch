@@ -70,9 +70,9 @@ ln -sf libncurses.so /usr/lib/libcurses.so</userinput></screen>
 <segtitle>Installed programs</segtitle>
 <segtitle>Installed libraries</segtitle>
 <seglistitem><seg>captoinfo (link to tic), clear, infocmp, infotocap (link to tic), 
-reset (link to tset), tack, tic, toe, tput and tset</seg>
+reset (link to tset), tack, tic, toe, tput, and tset</seg>
 <seg>libcurses.[a,so] (link to libncurses.[a,so]), libform.[a,so], libmenu.[a,so], 
-libncurses++.a, libncurses.[a,so], libpanel.[a,so]</seg></seglistitem>
+libncurses++.a, libncurses.[a,so], and libpanel.[a,so]</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
