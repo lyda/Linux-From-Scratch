@@ -217,6 +217,15 @@ ln -s ../X11/include/X11 X11
 		</section>
 	</section>
 	<section id="specific-packages"><title>Questions about specific packages.</title>
+		<section id="lesscharset"><title>Why does less print &lt;AD&gt; instead of hyphens?</title>
+			<para>
+				Because the LESSCHARSET environment variable isn't set. To fix
+				that, set it in /etc/profile by doing something like this:
+			</para>
+			<screen>
+echo 'export LESSCHARSET=latin1' >> /etc/profile
+			</screen>
+		</section>
 		<section id="glibc-crypt"><title>Where is glibc-crypt-2.2.x?</title>
 			<para>
 				As of glibc-2.2, you no longer need to get glibc-crypt separately.
