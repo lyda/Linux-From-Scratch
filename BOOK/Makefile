@@ -1,7 +1,7 @@
-BASEDIR=~/lfs-book
+BASEDIR=~/lfs-book-raq2
 CHUNK_QUIET=0
-PDF_OUTPUT=LFS-BOOK.pdf
-NOCHUNKS_OUTPUT=LFS-BOOK.html
+PDF_OUTPUT=LFS-BOOK-RaQ2.pdf
+NOCHUNKS_OUTPUT=LFS-BOOK-RaQ2.html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
 ARCH=raq2
 
@@ -53,7 +53,7 @@ lfs:
 #	rm lfs.fo
 
 pdf:
-	xsltproc --xinclude --nonet --stringparam profile.condition pdf \
+	xsltproc --xinclude --nonet --stringparam profile.condition pdf -stringparam profile.arch $(ARCH) \
 		--output $(BASEDIR)/lfs-pdf.xml stylesheets/lfs-profile.xsl index.xml
 	xsltproc --nonet --output $(BASEDIR)/lfs-pdf.fo stylesheets/lfs-pdf.xsl \
 		$(BASEDIR)/lfs-pdf.xml
@@ -62,7 +62,7 @@ pdf:
 	rm $(BASEDIR)/lfs-pdf.xml $(BASEDIR)/lfs-pdf.fo
 
 nochunks:
-	xsltproc --xinclude --nonet -stringparam profile.condition html \
+	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch $(ARCH) \
 	  --output $(BASEDIR)/lfs-nochunk.xml stylesheets/lfs-profile.xsl index.xml
 
 	xsltproc --nonet --output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
