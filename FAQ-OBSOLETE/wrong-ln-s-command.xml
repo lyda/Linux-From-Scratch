@@ -1,9 +1,0 @@
-<qandaentry id="wrong-ln-s-command">
-<question><para>The "ln -s" commands in the Book are wrong.</para></question>
-<answer><para>No, the "ln -s" commands in the Book are correct.
-A symlink is just a special file containing the given filename.
-So that filename is relative to the link,
-not the working directory when the link is created.
-Try it and see.
-</para></answer>
-</qandaentry>
