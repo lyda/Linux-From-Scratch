@@ -115,7 +115,13 @@
 			</para>
 		</section>
 	</chapter>
-	<chapter id="preparing"><title>Preparing to Build</title>
+	<chapter id="resources"><title>Resources</title>
+		<section id="how-to-find"><title>How do I find package Foo?</title>	
+			<para>Always try Freshmeat at <ulink
+				url="http://freshmeat.net/">http://freshmeat.net/</ulink>
+				before you ask on the list.
+			</para>
+		</section>
 		<section id="what-dist"><title>What distribution should I use to start from?</title>
 			<para>
 				Any recent distribution should be fine. If you have problems,
