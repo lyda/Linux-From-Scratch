@@ -1,0 +1,33 @@
+#!/bin/sh
+# Begin $rc_base/init.d/hotplug - Load modules for system devices
+
+# Written by Zack Winkles - winkie@linuxfromscratch.org
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+# Assure that hotplug is actually present.
+[ -x /sbin/hotplug ] || exit 0
+
+case "$1" in
+	start|restart|status)
+		echo "Loading modules for system devices..."
+		for rc in /etc/hotplug/*.rc; do
+			$rc $1
+		done
+		print_status success
+		;;
+	stop)
+		echo "Unloading modules for system devices..."
+		for rc in /etc/hotplug/*.rc; do
+			$rc $1
+		done
+		print_status success
+		;;
+	*)
+		echo "Usage: $0 {start|stop|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/hotplug
