@@ -63,9 +63,8 @@ this userspace visible representation, the possibility of seeing a
 userspace replacement for <systemitem
 class="filesystem">devfs</systemitem> became much more
 realistic.</para>
-</sect2>
-
 <beginpage/>
+</sect2>
 
 <sect2>
 <title>Udev Implementation</title>

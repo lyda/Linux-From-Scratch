@@ -31,7 +31,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 
 <para>The following patch fixes a problem where the
 <command>info</command> program sometimes crashes when hitting the
-<emphasis>Delete</emphasis> key on the keyboard:</para>.
+<emphasis>Delete</emphasis> key on the keyboard:</para>
 
 <screen><userinput>patch -Np1 -i ../texinfo-&texinfo-version;-segfault-1.patch</userinput></screen>
 
