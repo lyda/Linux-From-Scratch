@@ -1,4 +1,0 @@
-<!ENTITY chapter02 SYSTEM "../chapter02/chapter02.xml">
-<!ENTITY c2-introduction SYSTEM "../chapter02/introduction.xml">
-<!ENTITY c2-anoncvs SYSTEM "../chapter02/anoncvs.xml">
-<!ENTITY c2-cvsssh SYSTEM "../chapter02/cvsssh.xml">
