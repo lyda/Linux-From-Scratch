@@ -85,6 +85,10 @@ install: create-dirs create-service-dir
 	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static       ${EXTDIR}/sysconfig/network-devices/services
 	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services
 
+install-consolelog: create-dirs
+	install -m ${MODE} contrib/init.d/consolelog   ${EXTDIR}/rc.d/init.d
+	ln -sf ../init.d/consolelog  ${EXTDIR}/rc.d/rcsysinit.d/S00consolelog
+
 install-hotplug: create-dirs
 	install -m ${MODE} contrib/init.d/hotplug      ${EXTDIR}/rc.d/init.d
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
