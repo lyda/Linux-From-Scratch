@@ -287,10 +287,38 @@ ln -s ../X11/include/X11 X11
 				Try adding the -std=gnu89 switch to the compile options.
 				(For instance, in CFLAGS or CC.
 				The exact method is a bit beyond the scope of this FAQ.)
+			</para>
 		</section>
 	</chapter>
 	<chapter id="specific-packages"><title>Questions about specific packages.</title>
-		<section id="-f-hostname"><title>My hostname is getting set to "-f"!</title>
+		<section id="optimized-glibc-fail"><title>My optimized build of glibc is failing in spinlock.c</title>
+			<para>
+				I should mention that glibc (and gcc and binutils)
+				are good places to not optimize.
+				The performance versus stability trade off is unusually poor
+				for these packages. But. . . .
+			</para>
+			<para>
+				If you've specified a CFLAGS value like `-march=i686 -mcpu=686'
+				and you're getting an error like this:
+				<screen>
+spinlock.c: In function `__pthread_lock':
+spinlock.c:107: inconsistent operand constraints in an `asm'
+make[2]: *** [/usr/src/glibc-build/linuxthreads/spinlock.o] Error 1
+make[2]: Leaving directory `/usr/src/glibc-2.2.4/linuxthreads'
+make[1]: *** [linuxthreads/others] Error 2
+make[1]: Leaving directory `/usr/src/glibc-2.2.4'
+make: *** [all] Error 2
+				</screen>
+				It's because, unlike almost everything else,
+				spinlock.c requires optimization.
+				You have to set CFLAGS to something like
+				`-march=i686 -mcpu=i686 -O2'.
+				(Note the `-O2'.)
+				Weird, huh?
+				</para>
+			</section>
+		<section id="f-hostname"><title>My hostname is getting set to "-f"!</title>
 			<para>
 				You need to install the net-tools package. (See the instructions in
 				the LFS book.)
