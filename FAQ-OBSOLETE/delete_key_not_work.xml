@@ -1,7 +1,0 @@
-<qandaentry id="delete_key_not_work">
-<question><para>The Delete key doesn't work.</para></question>
-<answer><para>See: <ulink
-url="http://beyond.linuxfromscratch.org/view/cvs/postlfs/inputrc.html"/>.
-</para></answer>
-</qandaentry>
-
