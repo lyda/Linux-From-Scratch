@@ -120,8 +120,8 @@ the archive).</para>
 <para id="as"><command>as</command> is an assembler. It assembles the output of
 gcc into object files.</para>
 
-<indexterm zone="ch-system-binutils c++filt"><primary sortas="b-c++filt">c++filt</primary></indexterm>
-<para id="c++filt"><command>c++filt</command> is used by the linker to de-mangle C++ and
+<indexterm zone="ch-system-binutils c-filt"><primary sortas="b-c++filt">c++filt</primary></indexterm>
+<para id="c-filt"><command>c++filt</command> is used by the linker to de-mangle C++ and
 Java symbols, to keep overloaded functions from clashing.</para>
 
 <indexterm zone="ch-system-binutils gprof"><primary sortas="b-gprof">gprof</primary></indexterm>

@@ -150,8 +150,8 @@ and help messages into a C source file suitable for use with the
 <para id="mke2fs"><command>mke2fs</command> is used to create a second extended
 file system on the given device.</para>
 
-<indexterm zone="ch-system-e2fsprogs mklost+found"><primary sortas="b-mklost+found">mklost+found</primary></indexterm>
-<para id="mklost+found"><command>mklost+found</command> is used to create a
+<indexterm zone="ch-system-e2fsprogs mklost-found"><primary sortas="b-mklost+found">mklost+found</primary></indexterm>
+<para id="mklost-found"><command>mklost+found</command> is used to create a
 <filename>lost+found</filename> directory on a second extended file system.
 It pre-allocates disk blocks to this directory to lighten the task of e2fsck.</para>
 

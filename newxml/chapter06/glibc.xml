@@ -385,8 +385,8 @@ information about the memory usage of a program.</para>
 <indexterm zone="ch-system-glibc libnsl"><primary sortas="c-libnsl">libnsl</primary></indexterm>
 <para id="libnsl"><command>libnsl</command> is the network services library.</para>
 
-<indexterm zone="ch-system-glibc libnss*"><primary sortas="c-libnss*">libnss*</primary></indexterm>
-<para id="libnss*"><command>libnss*</command> are the Name Service Switch libraries,
+<indexterm zone="ch-system-glibc libnss"><primary sortas="c-libnss*">libnss*</primary></indexterm>
+<para id="libnss"><command>libnss*</command> are the Name Service Switch libraries,
 containing functions for resolving host names, user names, group names,
 aliases, services, protocols,and the like.</para>
 

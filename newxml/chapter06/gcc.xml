@@ -118,8 +118,8 @@ libgcc_s.so, libstdc++.[a,so] and libsupc++.a</para>
 compiler to have the #include and #define and such statements expanded in
 the source files.</para>
 
-<indexterm zone="ch-system-gcc g++"><primary sortas="b-g++">g++</primary></indexterm>
-<para id="g++"><command>g++</command> is the C++ compiler.</para>
+<indexterm zone="ch-system-gcc g"><primary sortas="b-g++">g++</primary></indexterm>
+<para id="g"><command>g++</command> is the C++ compiler.</para>
 
 <indexterm zone="ch-system-gcc gcc"><primary sortas="b-gcc">gcc</primary></indexterm>
 <para id="gcc"><command>gcc</command> is the C compiler. It is used to translate
@@ -133,15 +133,15 @@ good bug reports.</para>
 <para id="gcov"><command>gcov</command> is a coverage testing tool. It is used to
 analyze programs to find out where optimizations will have the most effect.</para>
 
-<indexterm zone="ch-system-gcc libgcc*"><primary sortas="c-libgcc*">libgcc*</primary></indexterm>
-<para id="libgcc*"><command>libgcc*</command> contains run-time support for gcc.</para>
+<indexterm zone="ch-system-gcc libgcc"><primary sortas="c-libgcc*">libgcc*</primary></indexterm>
+<para id="libgcc"><command>libgcc*</command> contains run-time support for gcc.</para>
 
-<indexterm zone="ch-system-gcc libstdc++"><primary sortas="c-libstdc++">libstdc++</primary></indexterm>
-<para id="libstdc++"><command>libstdc++</command> is the standard C++ library. It contains
+<indexterm zone="ch-system-gcc libstdc"><primary sortas="c-libstdc++">libstdc++</primary></indexterm>
+<para id="libstdc"><command>libstdc++</command> is the standard C++ library. It contains
 many frequently-used functions.</para>
 
-<indexterm zone="ch-system-gcc libsupc++"><primary sortas="c-libsupc++">libsupc++</primary></indexterm>
-<para id="libsupc++"><command>libsupc++</command> provides supporting routines
+<indexterm zone="ch-system-gcc libsupc"><primary sortas="c-libsupc++">libsupc++</primary></indexterm>
+<para id="libsupc"><command>libsupc++</command> provides supporting routines
 for the c++ programming language.</para>
 
 </sect2>

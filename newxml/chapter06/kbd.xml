@@ -131,8 +131,8 @@ now done by setfont.</para>
 <indexterm zone="ch-system-kbd openvt"><primary sortas="b-openvt">openvt</primary></indexterm>
 <para id="openvt"><command>openvt</command> starts a program on a new virtual terminal (VT).</para>
 
-<indexterm zone="ch-system-kbd psf*"><primary sortas="b-psf*">psf*</primary></indexterm>
-<para id="psf*"><command>psf*</command> are a set of tools for handling Unicode
+<indexterm zone="ch-system-kbd psf"><primary sortas="b-psf*">psf*</primary></indexterm>
+<para id="psf"><command>psf*</command> are a set of tools for handling Unicode
 character tables for console fonts.</para>
 
 <indexterm zone="ch-system-kbd resizecons"><primary sortas="b-resizecons">resizecons</primary></indexterm>

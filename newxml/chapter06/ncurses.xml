@@ -111,19 +111,19 @@ a terminal, or report its long name.</para>
 <indexterm zone="ch-system-ncurses tset"><primary sortas="b-tset">tset</primary></indexterm>
 <para id="tset"><command>tset</command> can be used to initialize terminals.</para>
 
-<indexterm zone="ch-system-ncurses libncurses*"><primary sortas="c-libncurses*">libncurses*</primary></indexterm>
-<para id="libncurses*"><command>libncurses*</command> contains functions to display text in
+<indexterm zone="ch-system-ncurses libncurses"><primary sortas="c-libncurses*">libncurses*</primary></indexterm>
+<para id="libncurses"><command>libncurses*</command> contains functions to display text in
 many complicated ways on a terminal screen. A good example of the use of these
 functions is the menu displayed during the kernel's make menuconfig.</para>
 
-<indexterm zone="ch-system-ncurses libform*"><primary sortas="c-libform*">libform*</primary></indexterm>
-<para id="libform*"><command>libform*</command> contains functions to implement forms.</para>
+<indexterm zone="ch-system-ncurses libform"><primary sortas="c-libform*">libform*</primary></indexterm>
+<para id="libform"><command>libform*</command> contains functions to implement forms.</para>
 
-<indexterm zone="ch-system-ncurses libmenu*"><primary sortas="c-libmenu*">libmenu*</primary></indexterm>
-<para id="libmenu*"><command>libmenu*</command> contains functions to implement menus.</para>
+<indexterm zone="ch-system-ncurses libmenu"><primary sortas="c-libmenu*">libmenu*</primary></indexterm>
+<para id="libmenu"><command>libmenu*</command> contains functions to implement menus.</para>
 
-<indexterm zone="ch-system-ncurses libpanel*"><primary sortas="c-libpanel*">libpanel*</primary></indexterm>
-<para id="libpanel*"><command>libpanel*</command> contains functions to implement panels.</para>
+<indexterm zone="ch-system-ncurses libpanel"><primary sortas="c-libpanel*">libpanel*</primary></indexterm>
+<para id="libpanel"><command>libpanel*</command> contains functions to implement panels.</para>
 
 </sect2>
 

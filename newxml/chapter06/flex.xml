@@ -81,8 +81,8 @@ From a set of rules on what to look for, flex makes a program that looks for
 those patterns. The reason to use flex is that it is much easier to specify
 the rules for a pattern-finding program than to write the program.</para>
 
-<indexterm zone="ch-system-flex flex++"><primary sortas="b-flex++">flex++</primary></indexterm>
-<para id="flex++"><command>flex++</command> invokes a version of flex that is used
+<indexterm zone="ch-system-flex flex-"><primary sortas="b-flex++">flex++</primary></indexterm>
+<para id="flex-"><command>flex++</command> invokes a version of flex that is used
 exclusively for C++ scanners.</para>
 
 <indexterm zone="ch-system-flex libfl.a"><primary sortas="c-libfl.a">libfl.a</primary></indexterm>

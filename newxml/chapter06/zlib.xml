@@ -91,8 +91,8 @@ because we just moved the file it points to:</para>
 
 <sect2><title>Short description</title>
 
-<indexterm zone="ch-system-zlib libz*"><primary sortas="c-libz*">libz*</primary></indexterm>
-<para id="libz*"><command>libz*</command> contains compression and un-compression
+<indexterm zone="ch-system-zlib libz"><primary sortas="c-libz*">libz*</primary></indexterm>
+<para id="libz"><command>libz*</command> contains compression and un-compression
 functions used by some programs.</para>
 
 </sect2>
