@@ -21,6 +21,7 @@
 <!ENTITY gcc-warnings SYSTEM "gcc-warnings.xml">
 <!ENTITY getting-help SYSTEM "getting-help.xml">
 <!ENTITY glibc-no-ld_map SYSTEM "glibc-no-ld_map.xml">
+<!ENTITY glibc-awk-fail SYSTEM "glibc-awk-fail.xml">
 <!ENTITY gnome-versions SYSTEM "gnome-versions.xml">
 <!ENTITY gnu-patches SYSTEM "gnu-patches.xml">
 <!ENTITY gtk-2_0 SYSTEM "gtk-2_0.xml">

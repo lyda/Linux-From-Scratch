@@ -112,6 +112,7 @@
 			&unknown-pseudo-op-hidden;
 			&optimized-glibc-fail;
 			&asm-global-directive;
+			&glibc-awk-fail;
 			&glibc-no-ld_map;
 			&sh-utils-getloadavg;
 		</qandadiv>
