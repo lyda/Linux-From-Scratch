@@ -93,6 +93,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 18th, 2004 [winkie]: Mount /dev/pts and /dev/shm once we're
+inside the chroot environment.</para></listitem>
+
 <listitem><para>May 18th, 2004 [winkie]: Removed Udev from Chapter 5. Instead of
 using Udev to create devices in Chapter 6, we simply <quote>mount --bind</quote>
 the host's /dev.</para></listitem>

@@ -9,7 +9,7 @@ hard drive, but are used to communicate things to and from the kernel itself.</p
 
 <para>Begin by creating directories onto which the file systems will be mounted:</para>
 
-<screen><userinput>mkdir -p $LFS/{proc,sys}</userinput></screen>
+<screen><userinput>mkdir -p $LFS/{dev,proc,sys}</userinput></screen>
 
 <para>Mount the file systems:</para>
 
@@ -21,9 +21,15 @@ mount -t sysfs sysfs $LFS/sys</userinput></screen>
 <screen><userinput>mknod -m 600 $LFS/dev/console c 5 1
 mknod -m 666 $LFS/dev/null c 1 3</userinput></screen>
 
-<para>Finally, create a clone of the host's /dev directory:</para>
+<para>Create a clone of the host's /dev directory:</para>
 
 <screen><userinput>mount --bind /dev $LFS/dev</userinput></screen>
+
+<para>Finally, mount the <quote>devpts</quote> and <quote>tmpfs</quote> file
+systems:</para>
+
+<screen><userinput>mount -t devpts -o gid=4,mode=620 devpts $LFS/dev/pts
+mount -t tmpfs tmpfs $LFS/dev/shm</userinput></screen>
 
 <para>Remember that if for any reason you stop working on your LFS, and start
 again later, it's important to check that these file systems are mounted again
