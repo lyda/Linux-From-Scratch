@@ -4,6 +4,7 @@
 	* Updated the README file
 	* Coloured the print_error_message in functions red
 	* added stop to the setclock script
+	* changed echo > to > in cleanfs, suggested by winkie
 	* Tagged as release 2.0.0
 
 1.99.4 - March 17, 2004

@@ -13,7 +13,7 @@ case "$1" in
 		evaluate_retval
 
 		echo "Creating new /var/run/utmp..."
-		echo > /var/run/utmp && chmod 644 /var/run/utmp
+		> /var/run/utmp && chmod 644 /var/run/utmp
 		evaluate_retval
 
 		echo "Removing possible /etc/nologin /fastboot and /forcefsck..."
