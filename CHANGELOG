@@ -5,7 +5,7 @@ n/a - July 10, 2004
 	* Removed gateway backward compatibility
 	* Removed ifup-eth0 ifdown-eth0 compatibility
 	* Removed the "assume SERVICE=static if SERVICE is unset" compatibility
-	* pass the SOURCE environmental variable to services, so they can locate
+	* pass the IPCONFIG environmental variable to services, so they can locate
 		the file with the parameters they must read
 	* rename static to ipv4-static
 
