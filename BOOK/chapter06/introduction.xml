@@ -29,7 +29,7 @@ given followed by concise descriptions of each program and library it
 installed.</para>
 
 <para>If you plan to use compiler optimizations in this chapter, take a look at
-the optimization hint at <uri xlink:href="&hints-root;optimization.txt"/>.
+the optimization hint at <link xlink:href="&hints-root;optimization.txt"/>.
 Compiler optimizations can make a program run slightly faster, but they may also
 cause compilation difficulties and even problems when running the program. If a
 package refuses to compile when using optimization, try to compile it without
@@ -61,8 +61,8 @@ with a series of short descriptions of these.</para>
 
 <para>If you wish to keep track of which package installs what files, you may
 want to use a package manager. For a general overview of package managers have
-a look at <uri xlink:href="&blfs-root;view/cvs/introduction/pkgmgt.html"/>. And
+a look at <link xlink:href="&blfs-root;view/cvs/introduction/pkgmgt.html"/>. And
 for a package management method specifically geared towards LFS see
-<uri xlink:href="&hints-root;more_control_and_pkg_man.txt"/>.</para>
+<link xlink:href="&hints-root;more_control_and_pkg_man.txt"/>.</para>
 
 </section>

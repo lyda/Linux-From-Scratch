@@ -29,7 +29,7 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <tip>
 <title>Alternatives to Vim</title>
 <para>If you prefer another editor -- like Emacs, Joe, or Nano -- to Vim,
-have a look at <uri xlink:href="&blfs-root;view/stable/postlfs/editors.html"/> for
+have a look at <link xlink:href="&blfs-root;view/stable/postlfs/editors.html"/> for
 suggested installation instructions.</para>
 </tip>
 </section>

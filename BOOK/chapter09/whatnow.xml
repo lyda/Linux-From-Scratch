@@ -21,13 +21,13 @@ composed a list of resources for you.</para>
 
 <para>The Beyond Linux From Scratch book covers installation procedures
 for a wide range of software beyond the scope of the LFS Book. The BLFS
-project can be found at <uri xlink:href="&blfs-root;"/>.</para></listitem>
+project can be found at <link xlink:href="&blfs-root;"/>.</para></listitem>
 
 <listitem><para>LFS Hints</para>
 
 <para>The LFS Hints are a collection of small, educational documents
 submitted by volunteers in the LFS community. The Hints are available at
-<uri xlink:href="&hints-index;"/>.</para></listitem>
+<link xlink:href="&hints-index;"/>.</para></listitem>
 
 <listitem><para>Mailing lists</para>
 
@@ -40,7 +40,7 @@ information.</para></listitem>
 <para>The goal of the Linux Documentation Project is to collaborate in
 all of the issues of Linux documentation. The LDP features a large collection
 of HOWTOs, Guides and man pages; it may be found at
-<uri xlink:href="http://www.tldp.org/"/>.</para></listitem>
+<link xlink:href="http://www.tldp.org/"/>.</para></listitem>
 
 </itemizedlist>
 

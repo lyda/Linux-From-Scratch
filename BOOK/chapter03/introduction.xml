@@ -19,7 +19,7 @@ reason for not using the latest version due to known problems that haven't
 been worked around yet.</para>
 
 <para>All the URLs, when possible, refer to the project's page at
-<uri xlink:href="http://www.freshmeat.net/">http://www.freshmeat.net/</uri>.
+<link xlink:href="http://www.freshmeat.net/">http://www.freshmeat.net/</link>.
 The Freshmeat pages will give you easy access to the official download sites as
 well as project websites, mailing lists, FAQs, changelogs and more.</para>
 
@@ -27,7 +27,7 @@ well as project websites, mailing lists, FAQs, changelogs and more.</para>
 In case a download location has changed since this book was published, please
 try to google for the package. Should you remain unsuccessful with this, 
 try one of the alternative means of downloading listed on
-<uri xlink:href="&lfs-root;lfs/packages.html">&lfs-root;lfs/packages.html</uri>.</para>
+<link xlink:href="&lfs-root;lfs/packages.html">&lfs-root;lfs/packages.html</link>.</para>
 
 <para>You'll need to store all the downloaded packages and patches somewhere
 that is conveniently available throughout the entire build. You'll also need a

@@ -17,7 +17,7 @@ dependent information.</para>
 <para>We have chosen to use System-V style init scripts simply because they
 are widely used and we feel comfortable with them. If you would prefer to try
 something else: Marc Heerdink has written a hint about BSD style init scripts,
-to be found at <uri xlink:href="&hints-root;bsd-init.txt"/>. And if you'd like
+to be found at <link xlink:href="&hints-root;bsd-init.txt"/>. And if you'd like
 something more radical, search the LFS mailing lists for <quote>depinit</quote>.
 </para>
 

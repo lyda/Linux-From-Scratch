@@ -10,10 +10,10 @@
 <?dbhtml filename="askforhelp.html"?>
 
 <para>If you run into a problem while working through this book, you should
-first check the FAQ at <uri xlink:href="&faq-root;"/> -- often your question
+first check the FAQ at <link xlink:href="&faq-root;"/> -- often your question
 is already answered there. If it is not, you should try to find the source of
 the problem. The following hint might give you some ideas for your
-troubleshooting: <uri xlink:href="&hints-root;errors.txt">&hints-root;errors.txt</uri>.</para>
+troubleshooting: <link xlink:href="&hints-root;errors.txt">&hints-root;errors.txt</link>.</para>
 
 <para>If all that fails, you will find that most people on IRC and the mailing
 lists (see <xref linkend="ch-scatter-administrativa"/>) are willing to help
@@ -90,7 +90,7 @@ command that was executed and the command's error message(s).</para>
 
 <para>An excellent article on asking for help on the Internet in general
 has been written by Eric S. Raymond. It is available online at 
-<uri xlink:href="http://catb.org/~esr/faqs/smart-questions.html">http://catb.org/~esr/faqs/smart-questions.html"</uri>.
+<link xlink:href="http://catb.org/~esr/faqs/smart-questions.html">http://catb.org/~esr/faqs/smart-questions.html"</link>.
 Read and follow the hints in that document and you are much more likely
 to get a response to start with and also to get the help you actually
 need.</para>
@@ -103,7 +103,7 @@ need.</para>
 <para>Many packages provide a test suite which, depending on the importance
 of the package, we may encourage you to run. Sometimes packages will
 generate false or expected failures. If you encounter these, you can check
-the LFS Wiki page at <uri xlink:href="&wiki-root;">&wiki-root;</uri> to see
+the LFS Wiki page at <link xlink:href="&wiki-root;">&wiki-root;</link> to see
 whether we have already noted and investigated them. If we already know about
 them, then usually there is no need to be concerned.</para>
 

@@ -32,7 +32,7 @@ will need to recompile and re-install them. The installation instructions are
 the same as in <xref linkend="chapter-temporary-tools"/>, apart from changing
 the prefix from <filename class="directory">/tools</filename> to <filename class="directory">/usr</filename>. The
 BLFS book discusses a slightly different approach to installing Tcl, see 
-<uri xlink:href="&blfs-root;"/>.</para></note>
+<link xlink:href="&blfs-root;"/>.</para></note>
 
 <para>You may also want to move the packages and patches stored in <filename 
 class="directory">/sources</filename> to a more usual location, such as

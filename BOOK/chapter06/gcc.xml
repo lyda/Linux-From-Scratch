@@ -41,7 +41,7 @@ or modifying them when building GCC.</para>
 will unfold into the same directory. You should likewise extract the
 GCC-testsuite package. The full GCC package contains even more
 compilers. Instructions for building these can be found at
-<uri xlink:href="&blfs-root;view/stable/general/gcc.html"/>.</para>
+<link xlink:href="&blfs-root;view/stable/general/gcc.html"/>.</para>
 
 <para>First apply only the No-Fixincludes patch (and <emphasis>not</emphasis>
 the Specs patch) also used in the previous chapter:</para>

@@ -20,124 +20,124 @@ following:</para>
 <varlistentry>
 <term>Bash Various Fixes - 21 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;bash-&bash-version;-fixes-1.patch"/></para>
+<para><link xlink:href="&patches-root;bash-&bash-version;-fixes-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Bash Avoid Wcontinued Patch - 1KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;bash-&bash-version;-avoid_WCONTINUED-1.patch"/></para>
+<para><link xlink:href="&patches-root;bash-&bash-version;-avoid_WCONTINUED-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Coreutils Suppress Uptime, Kill, Su Patch - 16 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch"/></para>
+<para><link xlink:href="&patches-root;coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Coreutils Uname Patch - 1 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;coreutils-&coreutils-version;-uname-2.patch"/></para>
+<para><link xlink:href="&patches-root;coreutils-&coreutils-version;-uname-2.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Expect Spawn Patch - 6 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;expect-&expect-version;-spawn-1.patch"/></para>
+<para><link xlink:href="&patches-root;expect-&expect-version;-spawn-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Flex Brokenness Patch - 8 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;flex-&flex-version;-debian_fixes-2.patch"/></para>
+<para><link xlink:href="&patches-root;flex-&flex-version;-debian_fixes-2.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term> GCC Linkonce Patch - 12KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;gcc-&gcc-version;-linkonce-1.patch"/></para>
+<para><link xlink:href="&patches-root;gcc-&gcc-version;-linkonce-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>GCC No-Fixincludes Patch - 1 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;gcc-&gcc-version;-no_fixincludes-1.patch"/></para>
+<para><link xlink:href="&patches-root;gcc-&gcc-version;-no_fixincludes-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>GCC Specs Patch - 11 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;gcc-&gcc-version;-specs-2.patch"/></para>
+<para><link xlink:href="&patches-root;gcc-&gcc-version;-specs-2.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Inetutils Kernel Headers Patch - 1 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;inetutils-&inetutils-version;-kernel_headers-1.patch"/></para>
+<para><link xlink:href="&patches-root;inetutils-&inetutils-version;-kernel_headers-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Inetutils No-Server-Man-Pages Patch - 4 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></para>
+<para><link xlink:href="&patches-root;inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>IPRoute2 Disable DB Patch - 1 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;iproute2-&iproute2-patch-version;-remove_db-1.patch"/></para>
+<para><link xlink:href="&patches-root;iproute2-&iproute2-patch-version;-remove_db-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Man 80-Columns Patch - 1 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;man-&man-version;-80cols-1.patch"/></para>
+<para><link xlink:href="&patches-root;man-&man-version;-80cols-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Mktemp Tempfile Patch - 3 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;mktemp-&mktemp-version;-add_tempfile-1.patch"/></para>
+<para><link xlink:href="&patches-root;mktemp-&mktemp-version;-add_tempfile-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Perl Libc Patch - 1 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;perl-&perl-version;-libc-1.patch"/></para>
+<para><link xlink:href="&patches-root;perl-&perl-version;-libc-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Readline Various Fixes - 7 KB:</term>
 <listitem>
-<para><uri xlink:href="&patches-root;readline-&readline-version;-fixes-1.patch" /></para>
+<para><link xlink:href="&patches-root;readline-&readline-version;-fixes-1.patch" /></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Sysvinit /proc Title Length Patch - 1 KB:</term> <listitem>
-<para><uri xlink:href="&patches-root;sysvinit-&sysvinit-version;-proclen-1.patch"/></para>
+<para><link xlink:href="&patches-root;sysvinit-&sysvinit-version;-proclen-1.patch"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Texinfo Seg-Fault Patch - 1 KB:</term> <listitem>
-<para><uri xlink:href="&patches-root;texinfo-&texinfo-version;-segfault-1.patch"/></para>
+<para><link xlink:href="&patches-root;texinfo-&texinfo-version;-segfault-1.patch"/></para>
 </listitem>
 </varlistentry>
 
@@ -146,7 +146,7 @@ following:</para>
 <para>In addition to the above required patches, there exist a number of
 optional ones created by the LFS community. Most of these solve slight
 problems, or enable some functionality that's not enabled by default.
-Feel free to examine the patches database, located at <uri xlink:href="&lfs-root;patches/"/>, 
+Feel free to examine the patches database, located at <link xlink:href="&lfs-root;patches/"/>, 
 and pick any additional patches you wish to use.</para>
 
 </section>

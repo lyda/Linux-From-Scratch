@@ -36,7 +36,7 @@ UTC=1
 EOF</userinput></screen>
 
 <para>Now, you may want to take a look at a very good hint explaining how we
-deal with time on LFS at <uri xlink:href="&hints-root;time.txt"/>. 
+deal with time on LFS at <link xlink:href="&hints-root;time.txt"/>. 
 It explains issues such as time zones, UTC, and the TZ environment
 variable.</para>
 

@@ -120,7 +120,7 @@ EOF</userinput></screen>
 
 <para>If <command>info grub</command> doesn't tell you all you want to
 know, you can find more information regarding Grub on its website, located at:
-<uri xlink:href="http://www.gnu.org/software/grub/"/>.</para>
+<link xlink:href="http://www.gnu.org/software/grub/"/>.</para>
 
 <para>The FHS stipulates that Grub's menu.lst file should be symlinked to
 /etc/grub/menu.lst.  To satisfy this requirement, issue the following

@@ -30,7 +30,7 @@ show filenames, such as <filename>/etc/ld.so.conf</filename>.</para></blockquote
 <blockquote><para>This form of text is used for several purposes in the 
 book, mainly to emphasize important points or items.</para></blockquote>
 
-<para><uri xlink:href="&lfs-root;">&lfs-root;</uri></para>
+<para><link xlink:href="&lfs-root;">&lfs-root;</link></para>
 
 <blockquote><para>This form of text is used for hyperlinks, both within the 
 book and to external pages such as HOWTOs, download locations and

@@ -40,7 +40,7 @@ likely cause is that the host system doesn't have the
 more detail later on in <xref linkend="chapter-temporary-tools"/>.</para>
 
 <para>Sometimes package test suites will give false failures. You can
-consult the LFS Wiki at <uri xlink:href="&wiki-root;"/> to verify that these
+consult the LFS Wiki at <link xlink:href="&wiki-root;"/> to verify that these
 failures are normal. This applies to all tests throughout the book.</para>
 
 </section>

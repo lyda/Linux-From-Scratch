@@ -107,7 +107,7 @@ multibyte character sets properly anyway. You may want to look at
 internationalization related hints, though.</para>
 
 <para>You may want to also take a look at the BLFS page at
-<uri xlink:href="&blfs-root;view/cvs/postlfs/compressdoc.html"/> which deals with
+<link xlink:href="&blfs-root;view/cvs/postlfs/compressdoc.html"/> which deals with
 formatting and compression issues for man pages.</para>
 
 </section>

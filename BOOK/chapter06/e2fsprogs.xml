@@ -70,7 +70,7 @@ the shared libraries which some programs in this package use.</para></listitem>
 System (EVMS) plugin.  This plugin is not up-to-date with the latest EVMS
 internal interfaces and EVMS is not installed as part of a base LFS system, so
 the plugin is not required.  See the
-<uri xlink:href="http://evms.sourceforge.net/">EVMS homepage</uri> for more
+<link xlink:href="http://evms.sourceforge.net/">EVMS homepage</link> for more
 information regarding EVMS itself.</para></listitem>
 </varlistentry>
 </variablelist>

@@ -16,7 +16,7 @@
 <para>If during the building of your LFS system you encounter any errors, or
 have any questions, or think you found a typo in the book, then please first
 consult the FAQ (Frequently Asked Questions) at
-<uri xlink:href="&faq-root;">&faq-root;</uri>.</para>
+<link xlink:href="&faq-root;">&faq-root;</link>.</para>
 
 </section>
 
@@ -42,7 +42,7 @@ of mailing lists used for the development of the LFS project. These lists
 include, among others, the main development and support lists.</para>
 
 <para>For information on which lists are available, how to subscribe to them,
-their archive locations, and so on, visit <uri xlink:href="&lfs-root;mail.html">&lfs-root;mail.html</uri>.</para>
+their archive locations, and so on, visit <link xlink:href="&lfs-root;mail.html">&lfs-root;mail.html</link>.</para>
 
 </section>
 
@@ -64,7 +64,7 @@ are copied to the corresponding newsgroup, and vice versa.</para>
 <title>Wiki</title>
 
 <para>For more information on a package, updated versions, tweaks, personal
-experiences, and so on, see the LFS Wiki at <uri xlink:href="&wiki-root;">&wiki-root;</uri>. You can add information there yourself too, to help others.</para>
+experiences, and so on, see the LFS Wiki at <link xlink:href="&wiki-root;">&wiki-root;</link>. You can add information there yourself too, to help others.</para>
 
 </section>
 
@@ -74,7 +74,7 @@ experiences, and so on, see the LFS Wiki at <uri xlink:href="&wiki-root;">&wiki-
 
 <para>If you need still more detailed information on the packages,
 you will find useful pointers on this page:
-<uri xlink:href="http://www.109bean.org.uk/LFS-references.html">http://www.109bean.org.uk/LFS-references.html</uri>.</para>
+<link xlink:href="http://www.109bean.org.uk/LFS-references.html">http://www.109bean.org.uk/LFS-references.html</link>.</para>
 
 </section>
 
@@ -84,7 +84,7 @@ you will find useful pointers on this page:
 
 <para>The LFS project has a number of mirrors set up world-wide to make
 accessing the website and downloading the required packages more convenient.
-Please visit the website at <uri xlink:href="&lfs-root;">&lfs-root;</uri> for a list of current mirrors.</para>
+Please visit the website at <link xlink:href="&lfs-root;">&lfs-root;</link> for a list of current mirrors.</para>
 
 </section>
 

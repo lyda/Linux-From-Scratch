@@ -38,8 +38,8 @@
           common requirement on a base Linux system we remove the dependency on
           Berkeley DB by applying the patch using the command below.  If you
           need the <command>arpd</command> binary, then instructions for
-          compiling Berkeley DB can be found in the <uri
-xlink:href="http://www.linuxfromscratch.org/blfs/view/cvs/content/databases.html#db">BLFS book</uri>.
+          compiling Berkeley DB can be found in the <link
+xlink:href="http://www.linuxfromscratch.org/blfs/view/cvs/content/databases.html#db">BLFS book</link>.
     </para>
 
     <screen><userinput>patch -Np1 -i ../iproute2-&iproute2-patch-version;-remove_db-1.patch</userinput></screen>

@@ -54,8 +54,8 @@ EOF</userinput></screen>
 
 <para>The created groups aren't part of any standard -- they are some of the
 groups that the Udev configuration we will be using in the next section
-uses. The LSB (<uri xlink:href="http://www.linuxbase.org/">Linux Standard
-Base</uri>) recommends only that, beside the group <quote>root</quote> with a
+uses. The LSB (<link xlink:href="http://www.linuxbase.org/">Linux Standard
+Base</link>) recommends only that, beside the group <quote>root</quote> with a
 GID of 0, a group <quote>bin</quote> with a GID of 1 be present. All other group
 names and GIDs can be chosen freely by the system administrator, since
 well-written packages don't depend on GID numbers but use the group's name.

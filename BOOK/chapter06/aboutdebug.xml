@@ -44,6 +44,6 @@ difference will generally be a factor between 2 and 5.</para>
 software, a lot of disk space can be regained by removing these symbols. For
 your convenience, the next section shows how to strip all debugging symbols
 from all programs and libraries. Information on other ways of optimizing your
-system can be found in the hint at <uri xlink:href="&hints-root;optimization.txt"/>.</para>
+system can be found in the hint at <link xlink:href="&hints-root;optimization.txt"/>.</para>
 
 </section>

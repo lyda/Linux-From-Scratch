@@ -18,13 +18,13 @@ system, you should read the following HOWTOs:</para>
 
 <para>This is a comprehensive guide to building and installing
 <quote>generic</quote> Unix software distributions under Linux. This HOWTO is
-available at <uri xlink:href="http://www.tldp.org/HOWTO/Software-Building-HOWTO.html">http://www.tldp.org/HOWTO/Software-Building-HOWTO.html</uri>.</para>
+available at <link xlink:href="http://www.tldp.org/HOWTO/Software-Building-HOWTO.html">http://www.tldp.org/HOWTO/Software-Building-HOWTO.html</link>.</para>
 </listitem>
 
 <listitem><para>The Linux Users' Guide</para>
 
 <para>This guide covers the usage of assorted Linux software and is available at
-<uri xlink:href="http://espc22.murdoch.edu.au/~stewart/guide/guide.html">http://espc22.murdoch.edu.au/~stewart/guide/guide.html</uri>.</para>
+<link xlink:href="http://espc22.murdoch.edu.au/~stewart/guide/guide.html">http://espc22.murdoch.edu.au/~stewart/guide/guide.html</link>.</para>
 </listitem>
 
 <listitem><para>The Essential Pre-Reading Hint</para>
@@ -34,7 +34,7 @@ mostly a list of links to excellent sources of information on a wide range of
 topics. Any person attempting to install LFS, should at least have an
 understanding of many of the topics in this hint. It is available at
 
-<uri xlink:href="&hints-root;essential_prereading.txt">&hints-root;essential_prereading.txt</uri></para></listitem>
+<link xlink:href="&hints-root;essential_prereading.txt">&hints-root;essential_prereading.txt</link></para></listitem>
 
 </itemizedlist>
 

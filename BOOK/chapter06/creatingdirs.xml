@@ -52,7 +52,7 @@ mask.</para>
 <title>FHS compliance note</title>
 
 <para>We have based our directory tree on the FHS standard (available at
-<uri xlink:href="http://www.pathname.com/fhs/"/>). Besides the above created
+<link xlink:href="http://www.pathname.com/fhs/"/>). Besides the above created
 tree this standard stipulates the existence of
 <filename class="directory">/usr/local/games</filename> and
 <filename class="directory">/usr/share/games</filename>, but we don't

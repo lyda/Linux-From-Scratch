@@ -126,7 +126,7 @@ configuration, especially if this is the first time you use Udev.</para>
 <para>If you have a lot of modules and very little space, you may want to
 consider stripping and compressing the modules. For most people such compression
 isn't worth the trouble, but if you're really pressed for space, then have a look at
-<uri xlink:href="http://www.linux-mips.org/archives/linux-mips/2002-04/msg00031.html"/>.</para>
+<link xlink:href="http://www.linux-mips.org/archives/linux-mips/2002-04/msg00031.html"/>.</para>
 
 <para>Kernel compilation has finished but more steps are required to complete
 the installation. Some files need to be copied to the <filename class="directory">/boot</filename>

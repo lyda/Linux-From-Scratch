@@ -15,7 +15,7 @@ on any of your hard disks to make one, then you could build LFS on the
 same partition as the one on which your current distribution is installed.
 This procedure is not recommended for your first LFS install, but if you
 are short on disk space, and you feel brave, take a look at the hint at
-<uri xlink:href="&hints-root;lfs_next_to_existing_systems.txt">&hints-root;lfs_next_to_existing_systems.txt</uri>.</para>
+<link xlink:href="&hints-root;lfs_next_to_existing_systems.txt">&hints-root;lfs_next_to_existing_systems.txt</link>.</para>
 
 <para>For a minimal system you will need a partition of around 1.3 GB.
 This is enough to store all the source tarballs and compile all the packages.
