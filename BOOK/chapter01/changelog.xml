@@ -93,6 +93,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 18th, 2004 [winkie]: Removed Udev from Chapter 5. Instead of
+using Udev to create devices in Chapter 6, we simply <quote>mount --bind</quote>
+the host's /dev.</para></listitem>
+
 <listitem><para>May 18th, 2004 [winkie]: Re-added Flex, M4 and Bison to Chapter 5.</para></listitem>
 
 <listitem><para>May 17th, 2004 [winkie]: Upgraded to Binutils 2.15. Removed Flex,

@@ -11,21 +11,22 @@ hard drive, but are used to communicate things to and from the kernel itself.</p
 
 <screen><userinput>mkdir -p $LFS/{proc,sys}</userinput></screen>
 
-<para>Now mount the file systems:</para>
+<para>Mount the file systems:</para>
 
 <screen><userinput>mount -t proc proc $LFS/proc
 mount -t sysfs sysfs $LFS/sys</userinput></screen>
 
+<para>Create two static nodes which get used early in bootup:</para>
+
+<screen><userinput>mknod -m 600 $LFS/dev/console c 5 1
+mknod -m 666 $LFS/dev/null c 1 3</userinput></screen>
+
+<para>Finally, create a clone of the host's /dev directory:</para>
+
+<screen><userinput>mount --bind /dev $LFS/dev</userinput></screen>
+
 <para>Remember that if for any reason you stop working on your LFS, and start
 again later, it's important to check that these file systems are mounted again
 before entering the chroot environment, otherwise problems could occur.</para>
-
-<para>Shortly, we'll be mounting a few more file systems from within the chroot
-environment. To keep the host up-to-date, we'll do a <quote>fake mount</quote>
-for each of these now:</para>
-
-<screen><userinput>mount -f -t ramfs ramfs $LFS/dev
-mount -f -t tmpfs tmpfs $LFS/dev/shm
-mount -f -t devpts -o gid=4,mode=620 devpts $LFS/dev/pts</userinput></screen>
 
 </sect1>
