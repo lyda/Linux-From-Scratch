@@ -254,7 +254,7 @@ the <command>ls</command> command).</para>
 <varlistentry id="dircolors">
 <term><command>dircolors</command></term>
 <listitem>
-<para>outputs commands to set the <emphasis>LS_COLOR</emphasis>
+<para>outputs commands to set the <envar>LS_COLOR</envar>
 environment variable to change the color scheme used by
 <command>ls</command>.</para>
 <indexterm zone="ch-system-coreutils dircolors"><primary sortas="b-dircolors">dircolors</primary></indexterm>
@@ -328,11 +328,11 @@ indicating failure.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mt">
+<varlistentry id="fmt">
 <term><command>fmt</command></term>
 <listitem>
 <para>reformats the paragraphs in the given files.</para>
-<indexterm zone="ch-system-coreutils mt"><primary sortas="b-mt">mt</primary></indexterm>
+<indexterm zone="ch-system-coreutils fmt"><primary sortas="b-fmt">fmt</primary></indexterm>
 </listitem>
 </varlistentry>
 

@@ -60,7 +60,7 @@ pgawk, pgawk-&gawk-version;, and pwcat</seg></seglistitem>
 <varlistentry id="awk">
 <term><command>awk</command></term>
 <listitem>
-<para>link to gawk</para>
+<para>link to <command>gawk</command></para>
 <indexterm zone="ch-system-gawk awk"><primary sortas="b-awk">awk</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -77,7 +77,7 @@ implementation of <command>awk</command>.</para>
 <varlistentry id="gawk-version">
 <term><command>gawk-&gawk-version;</command></term>
 <listitem>
-<para>hard link to gawk.</para>
+<para>hard link to <command>gawk</command>.</para>
 <indexterm zone="ch-system-gawk gawk-version"><primary sortas="b-gawk-&gawk-version;">gawk-&gawk-version;</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -109,7 +109,7 @@ implementation of <command>awk</command>.</para>
 <varlistentry id="pgawk-version">
 <term><command>pgawk-&gawk-version;</command></term>
 <listitem>
-<para>hard link to pgawk.</para>
+<para>hard link to <command>pgawk</command>.</para>
 <indexterm zone="ch-system-gawk pgawk-version"><primary sortas="b-pgawk-&gawk-version;">pgawk-&gawk-version;</primary></indexterm>
 </listitem>
 </varlistentry>

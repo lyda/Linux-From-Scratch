@@ -49,7 +49,7 @@ used in the previous chapter:</para>
 
 <para>GCC fails to compile some packages outside of a base Linux From Scratch
 install (e.g., Mozilla and kdegraphics) when used in conjunction with newer
-versions of binutils.  Apply the following patch to fix this issue:</para>
+versions of Binutils.  Apply the following patch to fix this issue:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-linkonce-1.patch</userinput></screen>
 
@@ -132,7 +132,7 @@ gcov</seg>
 <varlistentry id="cpp">
 <term><command>cpp</command></term>
 <listitem>
-<para>the C preprocessor. It is used by the compiler expand the
+<para>the C preprocessor. It is used by the compiler to expand the
 #include, #define, and similar statements in the source files.</para>
 <indexterm zone="ch-system-gcc cpp"><primary sortas="b-cpp">cpp</primary></indexterm>
 </listitem>
