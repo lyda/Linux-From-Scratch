@@ -54,7 +54,7 @@ compilation failure. Fix this:</para>
 <para id="shadow-limits-login_access">Shadow uses two files to configure
 authentication settings for the system. Install these two config files:</para>
 
-<indexterm zone="shadow-limits-login_access"><primary sortas="e-/etc/limits">/etc/limit</primary></indexterm>
+<indexterm zone="shadow-limits-login_access"><primary sortas="e-/etc/limits">/etc/limits</primary></indexterm>
 <indexterm zone="shadow-limits-login_access"><primary sortas="e-/etc/login.access">/etc/login.access</primary></indexterm>
 
 <screen><userinput>cp etc/{limits,login.access} /etc</userinput></screen>
