@@ -54,7 +54,7 @@ situation:</para>
 <term><parameter>--disable-logger</parameter></term>
 <listitem><para>This option
 prevents Inetutils from installing the <command>logger</command> program, which is used by
-scripts to pass messages to the System Log Daemon. do not install it
+scripts to pass messages to the System Log Daemon. Do not install it
 because Util-linux installs a better version later.</para></listitem>
 </varlistentry>
 
@@ -68,8 +68,8 @@ installed with the Sysklogd package.</para></listitem>
 <varlistentry>
 <term><parameter>--disable-whois</parameter></term>
 <listitem><para>This option disables
-the building of the Inetutils whois client, which is out of date.
-Instructions for a better whois client are in the BLFS book.</para></listitem>
+the building of the Inetutils <command>whois</command> client, which is out of date.
+Instructions for a better <command>whois<command> client are in the BLFS book.</para></listitem>
 </varlistentry>
 
 <varlistentry>
