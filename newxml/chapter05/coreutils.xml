@@ -21,22 +21,26 @@
 <sect2>
 <title>Installation of Coreutils</title>
 
-<para>This package has an issue when compiled against Glibc-&glibc-version;.
-Without the patch below, some of the Coreutils utilities (such as
+<screen><userinput>DEFAULT_POSIX2_VERSION=1999209 ./configure --prefix=/tools</userinput></screen>
+
+<para>This package has an issue when compiled against versions of glibc
+later than 3.3.2.  Some of the Coreutils utilities (such as
 (<command>head</command>, <command>tail</command> and <command>sort</command>)
 will reject their traditional syntax, a syntax that has been in use for
 approximately 30 years. This old syntax is so pervasive that compatibility
-should be preserved until the many places where it is used can be updated. More
-details on this are provided in the comments inside the patch itself. Use of
-this patch is by no means compulsory, but not using it means you'll have to
-deal with the consequences yourself: patch the many packages that still use the
-old syntax. Therefore, better apply the patch:</para>
-
-<screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-posixver-2.patch</userinput></screen>
+should be preserved until the many places where it is used can be
+updated.  Backwards compatibility is achieved by setting the
+DEFAULT_POSIX2_VERSION environment variable to "1999209".  If, instead, you want
+to enforce the POSIX standard then you can set this variable to "200112",
+realising that doing so will mean you'll have to deal with the consequences
+yourself: patch the many packages that still use the old syntax.  We therefore
+recommend using the instructions as given above.  The behaviour of the coreutils
+binaries can be changed at runtime by setting the _POSIX2_VERSION environment
+variable to one of the two values described above.</para>
 
 <para>Now prepare Coreutils for compilation:</para>
 
-<screen><userinput>./configure --prefix=/tools</userinput></screen>
+<screen><userinput>DEFAULT_POSIX2_VERSION=1999209 ./configure --prefix=/tools</userinput></screen>
 
 <para>Compile the package:</para>
 

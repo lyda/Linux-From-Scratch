@@ -16,8 +16,7 @@ basic system characteristics.</para>
 <literallayout>Official download location for Coreutils (&coreutils-version;):
 <ulink url="ftp://ftp.gnu.org/gnu/coreutils/"/>
 And for the patches:
-<ulink url="&patches-root;coreutils-&coreutils-version;-hostname-2.patch"/>
-<ulink url="&patches-root;coreutils-&coreutils-version;-posixver-2.patch"/>
+<ulink url="&patches-root;coreutils-&coreutils-version;-hostname-1.patch"/>
 <ulink url="&patches-root;coreutils-&coreutils-version;-uname.patch"/></literallayout>
 
 <para>For its installation Coreutils depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
@@ -27,10 +26,6 @@ Gettext, Glibc, Grep, Make, Perl, Sed.</para>
 
 <sect2>
 <title>Installation of Coreutils</title>
-
-<para>Apply the same Posixver patch we used previously:</para>
-
-<screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-posixver-2.patch</userinput></screen>
 
 <para>Normally the functionality of <command>uname</command> is somewhat
 broken, in that the <emphasis>-p</emphasis> switch always returns "unknown".
@@ -42,11 +37,11 @@ The following patch fixes this behaviour for Intel architectures:</para>
 <command>hostname</command> program, because it is inferior to the version
 provided by Net-tools. Prevent its installation by applying a patch:</para>
 
-<screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-hostname-2.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-hostname-1.patch</userinput></screen>
 
 <para>Now prepare Coreutils for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr</userinput></screen>
+<screen><userinput>DEFAULT_POSIX2_VERSION=1999209 ./configure --prefix=/usr</userinput></screen>
 
 <para>Compile the package:</para>
 
@@ -77,7 +72,7 @@ echo "dummy:x:1000:1000:::/bin/bash" &gt;&gt; /etc/passwd</userinput></screen>
 <para>Now you're all set to run the test suite. First run the few tests that
 are meant to be run as <emphasis>root</emphasis>:</para>
 
-<screen><userinput>make check-root</userinput></screen>
+<screen><userinput>export NON_ROOT_USERNAME=dummy; make check-root</userinput></screen>
 
 <para>Then run the remainder of the tests as the <emphasis>dummy</emphasis>
 user:</para>

@@ -16,16 +16,16 @@
 <!ENTITY diskspace "Required disk space:    ">
 
 <!ENTITY autoconf-version "2.59">
-<!ENTITY automake-version "1.8.2">
+<!ENTITY automake-version "1.8.3">
 <!ENTITY bash-version "2.05b">
 <!ENTITY binutils-version "2.14">
 <!ENTITY bison-version "1.875">
 <!ENTITY bootscripts-version "1.12">
 <!ENTITY bzip2-version "1.0.2">
-<!ENTITY coreutils-version "5.0">
+<!ENTITY coreutils-version "5.2.1">
 <!ENTITY dejagnu-version "1.4.4">
 <!ENTITY diffutils-version "2.8.1">
-<!ENTITY e2fsprogs-version "1.34">
+<!ENTITY e2fsprogs-version "1.35">
 <!ENTITY ed-version "0.2">
 <!ENTITY expect-version "5.40.0">
 <!ENTITY file-version "4.07">
@@ -51,7 +51,7 @@
 <!ENTITY make-version "3.80">
 <!ENTITY man-version "1.5m2">
 <!ENTITY man-pages-version "1.66">
-<!ENTITY modutils-version "2.4.26">
+<!ENTITY modutils-version "2.4.27">
 <!ENTITY ncurses-version "5.4">
 <!ENTITY net-tools-version "1.60">
 <!ENTITY patch-version "2.5.4">
@@ -64,8 +64,8 @@
 <!ENTITY sysklogd-version "1.4.1">
 <!ENTITY sysvinit-version "2.85">
 <!ENTITY tar-version "1.13.25">
-<!ENTITY tcl-version "8.4.5">
+<!ENTITY tcl-version "8.4.6">
 <!ENTITY texinfo-version "4.6">
-<!ENTITY util-linux-version "2.12">
+<!ENTITY util-linux-version "2.12a">
 <!ENTITY vim-version "6.2">
 <!ENTITY zlib-version "1.2.1">
