@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-mktemp" xreflabel="Mktemp">
-<title>Installing Mktemp-&mktemp-version;</title>
+<title>Mktemp-&mktemp-version;</title>
 <?dbhtml filename="mktemp.html"?>
 
 <indexterm zone="ch-system-mktemp"><primary sortas="a-Mktemp">Mktemp</primary></indexterm>

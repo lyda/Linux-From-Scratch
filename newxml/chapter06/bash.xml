@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-bash" xreflabel="Bash">
-<title>Installing Bash-&bash-version;</title>
+<title>Bash-&bash-version;</title>
 <?dbhtml filename="bash.html"?>
 
 <indexterm zone="ch-system-bash"><primary sortas="a-Bash">Bash</primary></indexterm>

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-inetutils" xreflabel="Inetutils">
-<title>Installing Inetutils-&inetutils-version;</title>
+<title>Inetutils-&inetutils-version;</title>
 <?dbhtml filename="inetutils.html"?>
 
 <indexterm zone="ch-system-inetutils"><primary sortas="a-Inetutils">Inetutils</primary></indexterm>

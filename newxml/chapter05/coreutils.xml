@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-coreutils">
-<title>Installing Coreutils-&coreutils-version;</title>
+<title>Coreutils-&coreutils-version;</title>
 <?dbhtml filename="coreutils.html"?>
 
 <indexterm zone="ch-tools-coreutils">

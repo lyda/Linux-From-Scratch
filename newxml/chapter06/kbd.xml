@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-kbd" xreflabel="Kbd">
-<title>Installing Kbd-&kbd-version;</title>
+<title>Kbd-&kbd-version;</title>
 <?dbhtml filename="kbd.html"?>
 
 <indexterm zone="ch-system-kbd"><primary sortas="a-Kbd">Kbd</primary></indexterm>

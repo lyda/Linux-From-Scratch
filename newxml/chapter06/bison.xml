@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-bison" xreflabel="Bison">
-<title>Installing Bison-&bison-version;</title>
+<title>Bison-&bison-version;</title>
 <?dbhtml filename="bison.html"?>
 
 <indexterm zone="ch-system-bison"><primary sortas="a-Bison">Bison</primary></indexterm>

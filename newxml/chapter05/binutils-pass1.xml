@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-binutils-pass1">
-<title>Installing Binutils-&binutils-version; - Pass 1</title>
+<title>Binutils-&binutils-version; - Pass 1</title>
 <?dbhtml filename="binutils-pass1.html"?>
 
 <indexterm zone="ch-tools-binutils-pass1">

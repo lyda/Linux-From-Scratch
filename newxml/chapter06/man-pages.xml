@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-man-pages" xreflabel="Man-pages">
-<title>Installing Man-pages-&man-pages-version;</title>
+<title>Man-pages-&man-pages-version;</title>
 <?dbhtml filename="man-pages.html"?>
 
 <indexterm zone="ch-system-man-pages"><primary sortas="a-Man-pages">Man-pages</primary></indexterm>

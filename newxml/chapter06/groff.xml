@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-groff" xreflabel="Groff">
-<title>Installing Groff-&groff-version;</title>
+<title>Groff-&groff-version;</title>
 <?dbhtml filename="groff.html"?>
 
 <indexterm zone="ch-system-groff"><primary sortas="a-Groff">Groff</primary></indexterm>

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-binutils" xreflabel="Binutils">
-<title>Installing Binutils-&binutils-version;</title>
+<title>Binutils-&binutils-version;</title>
 <?dbhtml filename="binutils.html"?>
 
 <indexterm zone="ch-system-binutils"><primary sortas="a-Binutils">Binutils</primary></indexterm>

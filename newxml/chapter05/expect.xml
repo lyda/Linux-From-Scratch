@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-expect" xreflabel="Expect">
-<title>Installing Expect-&expect-version;</title>
+<title>Expect-&expect-version;</title>
 <?dbhtml filename="expect.html"?>
 
 <indexterm zone="ch-tools-expect"><primary sortas="a-Expect">Expect</primary></indexterm>

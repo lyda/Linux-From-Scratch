@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-zlib" xreflabel="Zlib">
-<title>Installing Zlib-&zlib-version;</title>
+<title>Zlib-&zlib-version;</title>
 <?dbhtml filename="zlib.html"?>
 
 <indexterm zone="ch-system-zlib"><primary sortas="a-Zlib">Zlib</primary></indexterm>

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-tcl" xreflabel="Tcl">
-<title>Installing Tcl-&tcl-version;</title>
+<title>Tcl-&tcl-version;</title>
 <?dbhtml filename="tcl.html"?>
 
 <indexterm zone="ch-tools-tcl"><primary sortas="a-Tcl">Tcl</primary></indexterm>

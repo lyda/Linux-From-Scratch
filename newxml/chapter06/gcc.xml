@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-gcc" xreflabel="GCC">
-<title>Installing GCC-&gcc-version;</title>
+<title>GCC-&gcc-version;</title>
 <?dbhtml filename="gcc.html"?>
 
 <indexterm zone="ch-system-gcc"><primary sortas="a-GCC">GCC</primary></indexterm>

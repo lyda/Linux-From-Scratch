@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-sed">
-<title>Installing Sed-&sed-version;</title>
+<title>Sed-&sed-version;</title>
 <?dbhtml filename="sed.html"?>
 
 <indexterm zone="ch-tools-sed">

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-gettext" xreflabel="Gettext">
-<title>Installing Gettext-&gettext-version;</title>
+<title>Gettext-&gettext-version;</title>
 <?dbhtml filename="gettext.html"?>
 
 <indexterm zone="ch-system-gettext"><primary sortas="a-Gettext">Gettext</primary></indexterm>

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-gcc-pass1">
-<title>Installing GCC-&gcc-version; - Pass 1</title>
+<title>GCC-&gcc-version; - Pass 1</title>
 <?dbhtml filename="gcc-pass1.html"?>
 
 <indexterm zone="ch-tools-gcc-pass1">

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-automake" xreflabel="Automake">
-<title>Installing Automake-&automake-version;</title>
+<title>Automake-&automake-version;</title>
 <?dbhtml filename="automake.html"?>
 
 <indexterm zone="ch-system-automake"><primary sortas="a-Automake">Automake</primary></indexterm>

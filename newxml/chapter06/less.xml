@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-less" xreflabel="Less">
-<title>Installing Less-&less-version;</title>
+<title>Less-&less-version;</title>
 <?dbhtml filename="less.html"?>
 
 <indexterm zone="ch-system-less"><primary sortas="a-Less">Less</primary></indexterm>

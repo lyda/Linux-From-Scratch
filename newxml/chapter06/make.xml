@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-make" xreflabel="Make">
-<title>Installing Make-&make-version;</title>
+<title>Make-&make-version;</title>
 <?dbhtml filename="make.html"?>
 
 <indexterm zone="ch-system-make"><primary sortas="a-Make">Make</primary></indexterm>

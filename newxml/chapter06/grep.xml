@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-grep" xreflabel="Grep">
-<title>Installing Grep-&grep-version;</title>
+<title>Grep-&grep-version;</title>
 <?dbhtml filename="grep.html"?>
 
 <indexterm zone="ch-system-grep"><primary sortas="a-Grep">Grep</primary></indexterm>

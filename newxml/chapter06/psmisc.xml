@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-psmisc" xreflabel="Psmisc">
-<title>Installing Psmisc-&psmisc-version;</title>
+<title>Psmisc-&psmisc-version;</title>
 <?dbhtml filename="psmisc.html"?>
 
 <indexterm zone="ch-system-psmisc"><primary sortas="a-Psmisc">Psmisc</primary></indexterm>

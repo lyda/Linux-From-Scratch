@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-bzip2">
-<title>Installing Bzip2-&bzip2-version;</title>
+<title>Bzip2-&bzip2-version;</title>
 <?dbhtml filename="bzip2.html"?>
 
 <indexterm zone="ch-tools-bzip2">

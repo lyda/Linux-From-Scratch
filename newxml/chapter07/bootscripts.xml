@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-scripts-bootscripts" xreflabel="Bootscripts">
-<title>Installing LFS-Bootscripts-&bootscripts-version;</title>
+<title>LFS-Bootscripts-&bootscripts-version;</title>
 <?dbhtml filename="bootscripts.html"?>
 
 <indexterm zone="ch-scripts-bootscripts"><primary sortas="a-Bootscripts">Bootscripts</primary></indexterm>

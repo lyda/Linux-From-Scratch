@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-grub" xreflabel="Grub">
-<title>Installing Grub-&grub-version;</title>
+<title>Grub-&grub-version;</title>
 <?dbhtml filename="grub.html"?>
 
 <indexterm zone="ch-system-grub"><primary sortas="a-Grub">Grub</primary></indexterm>

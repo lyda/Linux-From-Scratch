@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-file" xreflabel="File">
-<title>Installing File-&file-version;</title>
+<title>File-&file-version;</title>
 <?dbhtml filename="file.html"?>
 
 <indexterm zone="ch-system-file"><primary sortas="a-File">File</primary></indexterm>

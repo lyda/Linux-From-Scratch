@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-procps" xreflabel="Procps">
-<title>Installing Procps-&procps-version;</title>
+<title>Procps-&procps-version;</title>
 <?dbhtml filename="procps.html"?>
 
 <indexterm zone="ch-system-procps"><primary sortas="a-Procps">Procps</primary></indexterm>

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-procinfo" xreflabel="Procinfo">
-<title>Installing Procinfo-&procinfo-version;</title>
+<title>Procinfo-&procinfo-version;</title>
 <?dbhtml filename="procinfo.html"?>
 
 <indexterm zone="ch-system-procinfo"><primary sortas="a-Procinfo">Procinfo</primary></indexterm>

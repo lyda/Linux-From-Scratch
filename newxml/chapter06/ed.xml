@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-ed" xreflabel="Ed">
-<title>Installing Ed-&ed-version;</title>
+<title>Ed-&ed-version;</title>
 <?dbhtml filename="ed.html"?>
 
 <indexterm zone="ch-system-ed"><primary sortas="a-Ed">Ed</primary></indexterm>

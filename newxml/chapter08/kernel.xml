@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-bootable-kernel" xreflabel="Linux">
-<title>Installing Linux-&linux-version;</title>
+<title>Linux-&linux-version;</title>
 <?dbhtml filename="kernel.html"?>
 
 <indexterm zone="ch-bootable-kernel"><primary sortas="a-Linux">Linux</primary></indexterm>

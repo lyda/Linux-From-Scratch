@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-shadow" xreflabel="Shadow">
-<title>Installing Shadow-&shadow-version;</title>
+<title>Shadow-&shadow-version;</title>
 <?dbhtml filename="shadow.html"?>
 
 <indexterm zone="ch-system-shadow"><primary sortas="a-Shadow">Shadow</primary></indexterm>

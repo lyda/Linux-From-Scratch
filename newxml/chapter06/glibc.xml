@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-glibc" xreflabel="Glibc">
-<title>Installing Glibc-&glibc-version;</title>
+<title>Glibc-&glibc-version;</title>
 <?dbhtml filename="glibc.html"?>
 
 <indexterm zone="ch-system-glibc"><primary sortas="a-Glibc">Glibc</primary></indexterm>

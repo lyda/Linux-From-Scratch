@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-vim" xreflabel="Vim">
-<title>Installing Vim-&vim-version;</title>
+<title>Vim-&vim-version;</title>
 <?dbhtml filename="vim.html"?>
 
 <indexterm zone="ch-system-vim"><primary sortas="a-Vim">Vim</primary></indexterm>

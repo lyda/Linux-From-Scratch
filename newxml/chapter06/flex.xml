@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-flex" xreflabel="Flex">
-<title>Installing Flex-&flex-version;</title>
+<title>Flex-&flex-version;</title>
 <?dbhtml filename="flex.html"?>
 
 <indexterm zone="ch-system-flex"><primary sortas="a-Flex">Flex</primary></indexterm>

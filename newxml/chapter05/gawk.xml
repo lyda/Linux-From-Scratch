@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-gawk">
-<title>Installing Gawk-&gawk-version;</title>
+<title>Gawk-&gawk-version;</title>
 <?dbhtml filename="gawk.html"?>
 
 <indexterm zone="ch-tools-gawk">

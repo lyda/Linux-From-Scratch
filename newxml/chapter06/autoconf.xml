@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-autoconf" xreflabel="Autoconf">
-<title>Installing Autoconf-&autoconf-version;</title>
+<title>Autoconf-&autoconf-version;</title>
 <?dbhtml filename="autoconf.html"?>
 
 <indexterm zone="ch-system-autoconf"><primary sortas="a-Autoconf">Autoconf</primary></indexterm>

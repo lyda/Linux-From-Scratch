@@ -11,6 +11,7 @@
   <xsl:param name="html.stylesheet" select="'../stylesheets/lfs.css'"/>
 
   <!-- Include our customised templates -->
+  <xsl:include href="xhtml/lfs-toc.xsl"/>
   <xsl:include href="xhtml/lfs-index.xsl"/>
 
   <!-- Use graphics in admonitions -->
