@@ -21,7 +21,6 @@ create-service-dir:
 install: create-dirs create-service-dir
 	install -m 754 lfs/init.d/checkfs      ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/cleanfs      ${EXTDIR}/rc.d/init.d/
-	install -m 754 lfs/init.d/hotplug      ${EXTDIR}/rc.d/init.d
 	install -m 644 lfs/init.d/functions    ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/halt         ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/console      ${EXTDIR}/rc.d/init.d/
@@ -40,30 +39,23 @@ install: create-dirs create-service-dir
 	install -m 754 lfs/init.d/udev         ${EXTDIR}/rc.d/init.d
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc0.d/K90sysklogd
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc0.d/K80network
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S60sendsignals
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rc0.d/S70mountfs
 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rc0.d/S80swap
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc0.d/S90localnet
 	ln -sf ../init.d/halt        ${EXTDIR}/rc.d/rc0.d/S99halt
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc1.d/K90sysklogd
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc1.d/K85hotplug
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc1.d/K80network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc2.d/K90sysklogd
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc2.d/K85hotplug
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc2.d/K80network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc3.d/S10sysklogd
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc3.d/S15hotplug
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc3.d/S20network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc4.d/S10sysklogd
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc4.d/S15hotplug
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc4.d/S20network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc5.d/S10sysklogd
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc5.d/S15hotplug
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc5.d/S20network
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc6.d/K80network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc6.d/K90sysklogd
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc6.d/S60sendsignals
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rc6.d/S70mountfs
 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rc6.d/S80swap
@@ -88,4 +80,14 @@ install: create-dirs create-service-dir
 	install -m 754 lfs/sysconfig/network-devices/ifdown          ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/services/static ${EXTDIR}/sysconfig/network-devices/services
 
-.PHONY: all create-dirs create-service-dir install
+install-hotplug:
+	install -m 754 contrib/init.d/hotplug      ${EXTDIR}/rc.d/init.d
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc1.d/K85hotplug
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc2.d/K85hotplug
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc3.d/S15hotplug
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc4.d/S15hotplug
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc5.d/S15hotplug
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
+
+.PHONY: all create-dirs create-service-dir install install-hotplug
