@@ -16,7 +16,8 @@ n/a - July 11, 2004
 n/a - July 10, 2004
 
 	* We now use the ip program [from iproute2] instead of ipconfig [net-tools]
-		to bring up/down ethernet interfaces, and local connections
+		to bring up/down ethernet interfaces, and local connections, submitted by
+	  Jim Gifford
 	* Removed gateway backward compatibility
 	* Removed ifup-eth0 ifdown-eth0 compatibility
 	* Removed the "assume SERVICE=static if SERVICE is unset" compatibility
