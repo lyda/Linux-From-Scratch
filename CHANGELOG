@@ -1,5 +1,7 @@
 n/a - December 30, 2004
 	* Fixed name of LSB Functions file
+	* Changed boot_mesg to act like echo instead of echo -n, boot_mesg now
+	  takes the -n argument if you do not wish to goto the next line
 
 3.0.1 - December 25, 2004
 	* Released as 3.0.1

@@ -50,13 +50,13 @@ create_files() {
 								mknod "${name}" p
 								;;
 							*) 
-								boot_mesg "\nUnknown device type: ${dtype}" ${WARNING}
+								boot_mesg -n "\nUnknown device type: ${dtype}" ${WARNING}
 								boot_mesg "" ${NORMAL}
 								;;
 						esac
 						;;
 					*)
-						boot_mesg "\nUnknown type: ${type}" ${WARNING}
+						boot_mesg -n "\nUnknown type: ${type}" ${WARNING}
 						boot_mesg "" ${NORMAL}
 						continue
 						;;
@@ -72,14 +72,14 @@ create_files() {
 
 case "${1}" in
 	start)
-		boot_mesg "Cleaning file systems:" ${INFO}
+		boot_mesg -n "Cleaning file systems:" ${INFO}
 
-		boot_mesg " /tmp" ${NORMAL}
+		boot_mesg -n " /tmp" ${NORMAL}
 		cd /tmp &&
 		find . -xdev -mindepth 1 ! -name lost+found \
 			-delete || failed=1
 
-		boot_mesg " /var/lock" ${NORMAL}
+		boot_mesg -n " /var/lock" ${NORMAL}
 		cd /var/lock &&
 		find . -type f ! -newer /proc -exec rm -f {} \; || failed=1
 

@@ -76,8 +76,8 @@ then
 				echo_warning
 			fi
 		else
-			boot_mesg "Unable to process ${file}.  Either" ${FAILURE}
-			boot_mesg " the SERVICE variable was not set,"
+			boot_mesg -n "Unable to process ${file}.  Either" ${FAILURE}
+			boot_mesg -n " the SERVICE variable was not set,"
 			boot_mesg " or the specified service cannot be executed."
 			echo_failure
 			continue

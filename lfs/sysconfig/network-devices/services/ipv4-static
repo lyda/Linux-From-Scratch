@@ -26,7 +26,7 @@ fi
 
 if [ -z "${PREFIX}" -a -z "${PEER}" ]
 then
-	boot_mesg "PREFIX variable missing from ${IFCONFIG}," ${WARNING}
+	boot_mesg -n "PREFIX variable missing from ${IFCONFIG}," ${WARNING}
 	boot_mesg " assuming 24."
 	echo_warning
 	PREFIX=24
