@@ -15,9 +15,9 @@ lfs:
 	cp /usr/share/xml/docbook/xsl-stylesheets-1.65.1/images/*.png \
 	  $(BASEDIR)images
 	cd $(BASEDIR); sed -i -e "s@../stylesheets@stylesheets@" \
-	  index.html part1.html part2.html part3.html part4.html
+	  index.html part1.html part2.html part3.html longindex.html
 	cd $(BASEDIR); sed -i -e "s@../images@images@g" \
-	  index.html part1.html part2.html part3.html part4.html
+	  index.html part1.html part2.html part3.html longindex.html
 
 pdf:
 	xsltproc --xinclude --nonet --output lfs.fo stylesheets/lfs-pdf.xsl \
