@@ -133,6 +133,30 @@ especially older ones, may not compile without modifications.
 
 </qandadiv>
 
+<qandadiv id="fee"><title>Frequently Encountered Errors</title>
+
+<qandadiv id="fee-compile"><title>Compile Time Errors</title>
+
+<qandadiv id="fee-compile-any"><title>Errors From Any Package</title>
+
+<qandaentry id="config-not-gnu-c">
+<question><para>checking whether we are using GNU C... no
+</para></question>
+<answer><para>If you're getting an error from configure like:
+<screen>checking whether we are using GNU C... no
+configure: error: GNU libc must be compiled using GNU CC
+</screen>
+It may be because egrep isn't working.
+In case you find you need to reinstall egrep, it's from the grep package.
+</para></answer>
+</qandaentry>
+
+</qandadiv>
+
+</qandadiv>
+
+</qandadiv>
+
 	<qandadiv id="resources"><title>Resources</title>
 		<qandaentry id="how-to-find"><question><para>How do I find package Foo?</para></question>	
 			<answer><para>Always try Freshmeat at <ulink
