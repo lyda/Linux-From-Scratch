@@ -141,6 +141,12 @@ url="http://beyond.linuxfromscratch.org/">http://beyond.linuxfromscratch.org/</u
 <answer><para>Because many packages still haven't been updated
 to compile with it.
 </para>
+<para>Also note that gcc 2.x and 3.x don't mix.
+Among other things,
+this means that you may have problems if you must use precompiled binaries
+as is often the case with closed source software.
+(The most recent version of Netscape is reported to be fine.)
+</para>
 <para>If you want to try gcc 3, make sure you're using glibc 2.2.5
 and search the mailing lists
 because there are a few fixable problems that you will encounter
