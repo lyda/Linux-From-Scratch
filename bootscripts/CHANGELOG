@@ -5,6 +5,7 @@ n/a - May 16, 2004
 	* Do not attempt to populate /dev if that directory has already been
 	  set up earlier in bootup (such as on initramfs/initrd)
 	* Prevent excessive kernel output once klogd starts
+	* Added hotplug script
 
 n/a - May 15, 2004
 
