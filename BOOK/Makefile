@@ -35,7 +35,7 @@ pdf:
 
 print:
 	xsltproc --xinclude --nonet --stringparam profile.condition print --output lfs-print.xml \
-	  stylesheets/lfs-profile.xsl index.xml
+	  stylesheets/lfs-profile.xsl index-print.xml
 	xsltproc --nonet --output lfs-print.fo stylesheets/lfs-print.xsl lfs-print.xml
 	sed -i -e "s/inherit/all/" lfs-print.fo
 	fop.sh lfs-print.fo $(PRINT_OUTPUT)
