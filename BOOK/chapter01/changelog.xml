@@ -63,13 +63,15 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>December 25, 2004 [jeremy]: Added text suggested by MSB,
+closing Bug 943</para></listitem>
+
 <listitem><para>December 25, 2004 [jeremy]: Upgraded binutils to 2.14.94.0.2 -
 should fix the TLS strip issue that's been seen, at least on X86</para></listitem>
 
 <listitem><para>December 22, 2004 [manuel]: Readded to chapter09/reboot.xml a para lost
 from version 5.1.</para></listitem>
 
->>>>>>> .r4453
 <listitem><para>December 20, 2004 [manuel]: Made Grub's configuration location 
 FHS compliant.</para></listitem>
 
