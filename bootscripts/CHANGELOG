@@ -1,5 +1,7 @@
 n/a - March 19, 2004
 
+	* Added support for ETCDIR, and DESTDIR in the Makefile,
+	  compliments of Tushar
 	* Renamed mountproc to mountkernfs
 	* Updated the README file
 	* Coloured the print_error_message in functions red
