@@ -23,11 +23,11 @@ running, and shutdown of your system.</para>
 <para>When runlevels are changed (for example, when halting the system),
 <command>init</command> sends termination signals to those processes that it
 itself started and that shouldn't be running in the new runlevel. While doing
-this, <command>init</command> outputs messages like "Sending processes the TERM
-signal" which seem to imply that it is sending these signals to all currently
-running processes. To avoid this misinterpretation, you can modify the source
-so that these messages read like "Sending processes started by init the TERM
-signal" instead:</para>
+this, <command>init</command> outputs messages like <quote>Sending processes
+the TERM signal</quote> which seem to imply that it is sending these signals to
+all currently running processes. To avoid this misinterpretation, you can modify
+the source so that these messages read like <quote>Sending processes started by
+init the TERM signal</quote> instead:</para>
 
 <screen><userinput>cp src/init.c{,.backup}
 sed 's/Sending processes/&amp; started by init/g' \

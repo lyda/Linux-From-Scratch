@@ -10,12 +10,12 @@
 <para>Now that the new and final C libraries have been installed, it's time to
 adjust our toolchain again. We'll adjust it so that it will link any newly
 compiled program against these new libraries. This is in fact the same thing we
-did in the "Adjusting" phase in the beginning of the previous chapter, even
-though it looks like the reverse: then we guided the chain from the host's
-<filename class="directory">/{,usr/}lib</filename> to the new
+did in the <quote>Adjusting</quote> phase in the beginning of the previous
+chapter, even though it looks like the reverse: then we guided the chain from
+the host's <filename class="directory">/{,usr/}lib</filename> to the new
 <filename class="directory">/tools/lib</filename>, now we guide it from that
-same <filename class="directory">/tools/lib</filename>
-to the LFS's <filename class="directory">/{,usr/}lib</filename>.</para>
+same <filename class="directory">/tools/lib</filename> to the LFS's <filename
+class="directory">/{,usr/}lib</filename>.</para>
 
 <para>First we adjust the linker. For this we retained the
 source and build directories from the second pass over Binutils. Install the

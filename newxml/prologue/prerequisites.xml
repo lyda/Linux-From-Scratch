@@ -14,9 +14,11 @@ system, you should read the following HOWTOs:</para>
 <itemizedlist>
 <listitem><para>Software-Building-HOWTO</para>
 
-<para>This is a comprehensive guide to building and installing "generic"
-Unix software distributions under Linux. This HOWTO is available at
-<ulink url="http://www.tldp.org/HOWTO/Software-Building-HOWTO.html"/>.</para></listitem>
+<para>This is a comprehensive guide to building and installing
+<quote>generic</quote> Unix software distributions under Linux. This HOWTO is
+available at <ulink
+url="http://www.tldp.org/HOWTO/Software-Building-HOWTO.html"/>.</para>
+</listitem>
 
 <listitem><para>The Linux Users' Guide</para>
 

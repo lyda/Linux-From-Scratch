@@ -76,7 +76,7 @@ system from chapter 9 to the end of chapter 6.</para></listitem>
 E2fsprogs: Clarified the prerequisites for running the tests.</para></listitem>
 
 <listitem><para>February 19th, 2004 [alex]: Chapter 5 - Stripping: Removed
-an unnecessary "{,share/}" from the documentation's <command>rm</command>
+an unnecessary <quote>{,share/}</quote> from the documentation's <command>rm</command>
 command.</para></listitem>
 
 <listitem><para>February 14th, 2004 [jeremy]: Chapter 6 - Upgraded to

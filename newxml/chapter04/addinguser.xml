@@ -51,7 +51,7 @@ user command:</para>
 
 <screen><userinput>su - lfs</userinput></screen>
 
-<para>The "<command>-</command>" instructs <command>su</command> to start a
-<emphasis>login</emphasis> shell.</para>
+<para>The <quote><command>-</command></quote> instructs <command>su</command> to
+start a <emphasis>login</emphasis> shell.</para>
 
 </sect1>

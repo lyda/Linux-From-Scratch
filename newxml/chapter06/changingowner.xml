@@ -29,8 +29,8 @@ user <emphasis>root</emphasis> by running the following command:</para>
 
 <screen><userinput>chown -R 0:0 /tools</userinput></screen>
 
-<para>The command uses "0:0" instead of "root:root", because
-<userinput>chown</userinput> is unable to resolve the name "root" until the
-password file has been created.</para>
+<para>The command uses <quote>0:0</quote> instead of <quote>root:root</quote>,
+because <userinput>chown</userinput> is unable to resolve the name
+<quote>root</quote> until the password file has been created.</para>
 
 </sect1>

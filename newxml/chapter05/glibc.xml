@@ -146,8 +146,8 @@ touch /tools/etc/ld.so.conf</userinput></screen>
 <para>Different countries and cultures have varying conventions for how to
 communicate. These conventions range from very simple ones, such as the format
 for representing dates and times, to very complex ones, such as the language
-spoken. The "internationalization" of GNU programs works by means of
-<emphasis>locales</emphasis>.</para>
+spoken. The <quote>internationalization</quote> of GNU programs works by means
+of <emphasis>locales</emphasis>.</para>
 
 <note><para>If you are not running the test suites here in this chapter as per
 our recommendation, there is little point in installing the locales now. We'll

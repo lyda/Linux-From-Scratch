@@ -9,9 +9,9 @@
 
 <para>Your shiny new LFS system is almost complete. One of the last things to
 do is ensure you can boot it. The instructions below apply only to computers of
-IA-32 architecture, meaning mainstream PCs. Information on "boot loading" for
-other architectures should be available in the usual resource specific
-locations for those architectures.</para>
+IA-32 architecture, meaning mainstream PCs. Information on <quote>boot
+loading</quote> for other architectures should be available in the usual
+resource specific locations for those architectures.</para>
 
 <para>Boot loading can be a complex area. First, a few cautionary words. You
 really should be familiar with your current boot loader and any other
@@ -58,8 +58,8 @@ files -- you can use Tab everywhere to make Grub show the alternatives:</para>
 Don't run the command if this is not what you want. For example, you may be
 using a third party boot manager to manage your MBR (Master Boot Record). In
 this scenario, it would probably make more sense to install Grub into the
-"boot sector" of the LFS partition, in which case the command would become:
-<userinput>setup (hd0,3)</userinput>.</para></warning>
+<quote>boot sector</quote> of the LFS partition, in which case the command would
+become: <userinput>setup (hd0,3)</userinput>.</para></warning>
 
 
 <para>Then tell it to install itself into the MBR (Master Boot Record) of
@@ -72,8 +72,8 @@ this scenario, it would probably make more sense to install Grub into the
 
 <screen><userinput>quit</userinput></screen>
 
-<para>Now we need to create a "menu list" file, defining Grub's boot
-menu:</para>
+<para>Now we need to create a <quote>menu list</quote> file, defining Grub's
+boot menu:</para>
 
 <screen><userinput>cat &gt; /boot/grub/menu.lst &lt;&lt; "EOF"</userinput>
 # Begin /boot/grub/menu.lst
@@ -93,11 +93,12 @@ root (hd0,3)
 kernel --no-mem-option /boot/lfskernel root=/dev/hda4
 <userinput>EOF</userinput></screen>
 
-<note><para>By default, Grub will automatically pass a "mem=xxx" command line
-argument to the kernel. However, Grub occasionally gets the amount of memory
-wrong which can lead to problems in some circumstances. It's best to disable
-this functionality and let the kernel determine the amount of memory itself,
-hence the use of the <emphasis>--no-mem-option</emphasis> above.</para></note>
+<note><para>By default, Grub will automatically pass a <quote>mem=xxx</quote>
+command line argument to the kernel. However, Grub occasionally gets the amount
+of memory wrong which can lead to problems in some circumstances. It's best to
+disable this functionality and let the kernel determine the amount of memory
+itself, hence the use of the <emphasis>--no-mem-option</emphasis> above.</para>
+</note>
 
 <para>You may want to add an entry for your host distribution. It might look
 like this:</para>

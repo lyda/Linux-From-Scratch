@@ -8,8 +8,9 @@
 <?dbhtml filename="pwdgroup.html"?>
 
 <para>In order for <emphasis>root</emphasis> to be able to login and for the 
-name "root" to be recognized, there need to be relevant entries in the 
-<filename>/etc/passwd</filename> and <filename>/etc/group</filename> files.</para>
+name <quote>root</quote> to be recognized, there need to be relevant entries in
+the <filename>/etc/passwd</filename> and <filename>/etc/group</filename> files.
+</para>
 
 <para>Create the <filename>/etc/passwd</filename> file by running the following 
 command:</para>
@@ -18,8 +19,8 @@ command:</para>
 root:x:0:0:root:/root:/bin/bash
 <userinput>EOF</userinput></screen>
 
-<para>The actual password for <emphasis>root</emphasis> (the "x" here is just a 
-placeholder) will be set later.</para>
+<para>The actual password for <emphasis>root</emphasis> (the <quote>x</quote>
+here is just a placeholder) will be set later.</para>
 
 <para>Create the <filename>/etc/group</filename> file by running the following 
 command:</para>
@@ -42,16 +43,17 @@ audio:x:11:
 <para>The created groups aren't part of any standard -- they are some of the
 groups that the <command>make_devices</command> script in the next section
 uses. The LSB (<ulink url="http://www.linuxbase.org/">Linux Standard
-Base</ulink>) recommends only that, beside the group "root" with a GID of 0, a
-group "bin" with a GID of 1 be present. All other group names and GIDs can
-be chosen freely by the system administrator, since well-written packages don't
-depend on GID numbers but use the group's name.</para>
+Base</ulink>) recommends only that, beside the group <quote>root</quote> with a
+GID of 0, a group <quote>bin</quote> with a GID of 1 be present. All other group
+names and GIDs can be chosen freely by the system administrator, since
+well-written packages don't depend on GID numbers but use the group's name.
+</para>
 
-<para>To get rid of the "I have no name!" prompt, we will start a new shell.
-Since we installed a full Glibc in <xref linkend="chapter-temporary-tools"/>,
-and have just created the <filename>/etc/passwd</filename> and
-<filename>/etc/group</filename> files, user name and group name resolution
-will now work.</para>
+<para>To get rid of the <quote>I have no name!</quote> prompt, we will start a
+new shell.  Since we installed a full Glibc in
+<xref linkend="chapter-temporary-tools"/>, and have just created the
+<filename>/etc/passwd</filename> and <filename>/etc/group</filename> files,
+user name and group name resolution will now work.</para>
 
 <screen><userinput>exec /tools/bin/bash --login +h</userinput></screen>
 

@@ -156,8 +156,8 @@ programs, including getopt, obstack, strerror, strtol and strtoul.</para>
 <para><command>libbfd</command> is the Binary File Descriptor library.</para>
 
 <para><command>libopcodes</command> is a library for dealing with opcodes.
-It is used for building utilities like objdump. Opcodes are the "readable text"
-versions of instructions for the processor.</para>
+It is used for building utilities like objdump. Opcodes are the <quote>readable
+text</quote> versions of instructions for the processor.</para>
 
 </sect2>
 

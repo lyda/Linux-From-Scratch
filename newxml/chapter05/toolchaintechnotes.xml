@@ -56,7 +56,7 @@ method works:</para>
 <itemizedlist>
 <listitem><para>Similar in principle to cross compiling whereby tools installed
 into the same prefix work in cooperation and thus utilize a little GNU
-"magic".</para></listitem>
+<quote>magic</quote>.</para></listitem>
 
 <listitem><para>Careful manipulation of the standard linker's library search
 path to ensure programs are linked only against libraries we

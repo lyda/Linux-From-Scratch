@@ -72,12 +72,12 @@ you are satisfied, run the script to create the device files:</para>
 <xref linkend="ch-system-proc"/>, you can continue with the next section. If you were
 unable to mount devpts, you will have to create a few static ptyXX and ttyXX
 device nodes instead. To do this, open <filename>make_devices</filename> in
-your editor, go to the section "Pseudo-TTY masters" and enable a few ptyXX
-devices -- a handful are enough to enable the test suites to run, but if you
-plan to run a kernel without devpts support you will probably need many more
-(every xterm, ssh connection, telnet connection, and the like, uses one of
-these pseudo terminals). In the immediately following section "Pseudo-TTY
-slaves", enable the corresponding ttyXX devices. When you are done, rerun
+your editor, go to the section <quote>Pseudo-TTY masters</quote> and enable a
+few ptyXX devices -- a handful are enough to enable the test suites to run, but
+if you plan to run a kernel without devpts support you will probably need many
+more (every xterm, ssh connection, telnet connection, and the like, uses one of
+these pseudo terminals). In the immediately following section <quote>Pseudo-TTY
+slaves</quote>, enable the corresponding ttyXX devices. When you are done, rerun
 <command>./make_devices</command> from inside <filename>/dev</filename> to
 have it create the new devices.</para>
 

@@ -88,7 +88,7 @@ second.</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Now prepare the linker for the "Adjusting" phase later on:</para>
+<para>Now prepare the linker for the <quote>Adjusting</quote> phase later on:</para>
 
 <screen><userinput>make -C ld clean
 make -C ld LDFLAGS="-all-static" LIB_PATH=/tools/lib</userinput></screen>

@@ -46,7 +46,8 @@ you must remember to first mount the proc and devpts file systems (discussed
 in the previous section) <emphasis>and</emphasis> enter chroot again before
 continuing with the installations.</para>
 
-<para>Note that the bash prompt will say "I have no name!" This is normal, as
-the <filename>/etc/passwd</filename> file has not been created yet.</para>
+<para>Note that the bash prompt will say <quote>I have no name!</quote> This is
+normal, as the <filename>/etc/passwd</filename> file has not been created yet.
+</para>
 
 </sect1>

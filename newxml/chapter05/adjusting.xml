@@ -10,8 +10,8 @@
 <para>Now that the temporary C libraries have been installed, we want all
 the tools compiled in the rest of this chapter to be linked against these
 libraries. To accomplish this, we need to adjust the linker and the compiler's
-specs file. Some people would say that it is <emphasis>"black magic juju below
-this line"</emphasis>, but it is really very simple.</para>
+specs file. Some people would say that it is <emphasis><quote>black magic juju
+below this line</quote></emphasis>, but it is really very simple.</para>
 
 <para>First install the adjusted linker (adjusted at the end of the first pass
 of Binutils) by running the following command from within
@@ -46,9 +46,9 @@ unset SPECFILE</userinput></screen>
 
 <para>We recommend that you cut-and-paste the above rather than try and type it
 all in. Or you can edit the specs file by hand if you want to: just replace the
-occurrence of "/lib/ld-linux.so.2" with "/tools/lib/ld-linux.so.2". Be sure to
-visually inspect the specs file to verify the intended change was actually
-made.</para>
+occurrence of <quote>/lib/ld-linux.so.2</quote> with
+<quote>/tools/lib/ld-linux.so.2</quote>. Be sure to visually inspect the specs
+file to verify the intended change was actually made.</para>
 
 <important><para>If you are working on a platform where the name of the dynamic
 linker is something other than <filename>ld-linux.so.2</filename>, you
@@ -58,9 +58,9 @@ name of your platform's dynamic linker in the above commands. Refer back to
 
 <para>Lastly, there is a possibility that some include files from the host
 system have found their way into GCC's private include dir. This can happen
-because of GCC's "fixincludes" process which runs as part of the GCC build.
-We'll explain more about this further on in this chapter. For now, run the
-following commands to eliminate this possibility:</para>
+because of GCC's <quote>fixincludes</quote> process which runs as part of the
+GCC build.  We'll explain more about this further on in this chapter. For now,
+run the following commands to eliminate this possibility:</para>
 
 <screen><userinput>rm -f /tools/lib/gcc-lib/*/*/include/{pthread.h,bits/sigthread.h}</userinput></screen>
 

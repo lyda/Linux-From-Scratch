@@ -16,10 +16,10 @@ in a separate directory, we can later easily throw them away.</para>
 <para>Later on you might wish to search through the binaries of your system to
 see what files they make use of or link against. To make this searching easier
 you may want to choose a unique name for the directory in which the temporary
-tools are stored. Instead of the simple "tools" you could use something like
-"tools-for-lfs". However, you'll need to be careful to adjust all references to
-"tools" throughout the book -- including those in any patches, notably the
-GCC Specs Patch.</para>
+tools are stored. Instead of the simple <quote>tools</quote> you could use
+something like <quote>tools-for-lfs</quote>. However, you'll need to be careful
+to adjust all references to <quote>tools</quote> throughout the book --
+including those in any patches, notably the GCC Specs Patch.</para>
 
 <para>Create the required directory by running the following:</para>
 
