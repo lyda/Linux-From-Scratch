@@ -10,22 +10,22 @@
 
 case "$2" in
 	up)
-		if [ -z $IP ]
+		if [ -z "$IP" ]
 		then
-			echo "IP variable missing for ifconfig.$1, cannot continue"
+			echo "IP variable missing for $IFCONFIG, cannot continue"
 			exit 1
 		fi
 
-		if [ -z $NETMASK ]
+		if [ -z "$NETMASK" ]
 		then
-			echo -n "NETMASK variable missing for ifconfig.$1, "
+			echo -n "NETMASK variable missing for $IFCONFIG, "
 			echo "using /24"
 			NETMASK=24
 		fi
 
-		if [ -z $BROADCAST ]
+		if [ -z "$BROADCAST" ]
 		then
-			echo -n "BROADCAST variable missing for ifconfig.$1, "
+			echo -n "BROADCAST variable missing for $IFCONFIG, "
 			echo "using default address"
 		fi
 
