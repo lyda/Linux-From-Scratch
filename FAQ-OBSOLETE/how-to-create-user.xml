@@ -1,8 +1,0 @@
-<qandaentry id="how-to-create-user">
-<question><para>How do I create a non-root user?</para></question>
-<answer><para>Use the useradd program.
-It was installed with the shadow package and has many useful options.
-See the useradd man page for more information.
-</para></answer>
-</qandaentry>
-

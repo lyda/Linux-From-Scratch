@@ -1,9 +1,0 @@
-<qandaentry id="conflicting-gethostname">
-<question><para>conflicting types for `gethostname'</para></question>
-<answer><para>If you get an error about "conflicting types for `gethostname'"
-<!-- XXX: get a screen of this -->
-when compiling bash in Chapter 5,
-you need to install the glibc-static-devel RPM.
-(It's on the third CD.)
-</para></answer>
-</qandaentry>
