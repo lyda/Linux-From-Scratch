@@ -7,34 +7,10 @@
 <screen>Estimated build time:           All default options: 4.20 SBU
 Estimated required disk space:  All default options: 181 MB</screen>
 
-<sect2><title>Contents of Linux</title>
-
-<!-- <para>(Last checked against version &kernel-contversion;.)</para> -->
-
-<para>The Linux kernel is at the core of every Linux system. It's what makes
-Linux tick. When a computer is turned on and boots a Linux system, the
-very first piece of Linux software that gets loaded is the kernel. The
-kernel initializes the system's hardware components: serial ports, parallel
-ports, sound cards, network cards, IDE controllers, SCSI controllers and a
-lot more. In a nutshell the kernel makes the hardware available so that the
-software can run.</para>
-
-<para><emphasis>Installed files</emphasis>: the kernel and the kernel
-headers</para>
-
-</sect2>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/kernel-contents.xml"/>
 
 
-<sect2>
-<title>Linux Installation Dependencies</title>
-
-<!-- <para>(Last checked against version &kernel-depversion;.)</para> -->
-
-<para>Linux depends on: Bash, Binutils, Coreutils, Findutils,
-GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, Sed.</para>
-
-</sect2>
-
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/kernel-deps.xml"/>
 
 
 <sect2>
