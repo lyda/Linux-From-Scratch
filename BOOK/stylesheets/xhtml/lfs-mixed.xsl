@@ -33,32 +33,24 @@
     </xsl:choose>
   </xsl:template>
 
-  
-  <!-- variablelist -->
-  <xsl:template match="variablelist">
-    <div class="{name(.)}">
-      <xsl:if test="title | bridgehead">
-        <xsl:choose>
-          <xsl:when test="@role = 'materials'">
-            <h2>
-              <xsl:value-of select="title | bridgehead"/>
-            </h2>
-          </xsl:when>
-          <xsl:otherwise>
-            <h3>
-              <xsl:value-of select="title | bridgehead"/>
-            </h3>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:if>
-      <dl>
-        <xsl:if test="@role">
-          <xsl:attribute name="class">
-            <xsl:value-of select="@role"/>
-          </xsl:attribute>
-        </xsl:if>
-        <xsl:apply-templates select="varlistentry"/>
-      </dl>
+    <!-- segementedlist -->
+  <xsl:template match="seg">
+    <xsl:variable name="segnum" select="count(preceding-sibling::seg)+1"/>
+    <xsl:variable name="seglist" select="ancestor::segmentedlist"/>
+    <xsl:variable name="segtitles" select="$seglist/segtitle"/>
+      <!-- Note: segtitle is only going to be the right thing in a well formed
+      SegmentedList.  If there are too many Segs or too few SegTitles,
+      you'll get something odd...maybe an error -->
+      <div class="seg">
+      <strong>
+        <span class="segtitle">
+          <xsl:apply-templates select="$segtitles[$segnum=position()]" mode="segtitle-in-seg"/>
+          <xsl:text>: </xsl:text>
+        </span>
+      </strong>
+      <span class="seg">
+        <xsl:apply-templates/>
+      </span>
     </div>
   </xsl:template>
 
