@@ -413,11 +413,14 @@ echo 'export LESSCHARSET=latin1' >> /etc/profile
 			</section>
 			<section id="which"><title>Where's which?</title>
 				<para>
-					It's not in there! A proper which is available at
-					<ulink url="http://www.xs4all.nl/~carlo17/which/">http://www.xs4all.nl/~carlo17/which/</ulink>
-					or from the GNU Project at
-					<ulink url="ftp://ftp.gnu.org/gnu/which/">ftp://ftp.gnu.org/gnu/which/</ulink>,
-					but the simplest thing is probably to create a shell script with these commands:
+					It's not in there! A proper which is available
+					from the GNU Project at
+					<ulink url="ftp://ftp.gnu.org/gnu/which/">ftp://ftp.gnu.org/gnu/which/</ulink>
+					or at
+					<ulink url="http://www.xs4all.nl/~carlo17/which/">http://www.xs4all.nl/~carlo17/which/</ulink>.
+					Or for systems that don't require a good user environment
+					the simplest thing is probably to create a shell script
+					using these commands:
 				</para>
 				<screen>
 cat > /usr/bin/which << "EOF"
