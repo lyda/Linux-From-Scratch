@@ -22,6 +22,12 @@ case "$1" in
 				evaluate_retval
 			fi
 		fi
+
+		if grep -q '[[:space:]]usbfs' /proc/filesystems; then
+			echo "Mounting USB filesystem"
+			mount -n /proc/bus/usb
+			evaluate_retval
+		fi
 		;;
 	*)
 		echo "Usage $0 {start}"

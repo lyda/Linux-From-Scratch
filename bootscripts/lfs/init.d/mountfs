@@ -20,6 +20,9 @@ case "$1" in
 		if grep -q '[[:space:]]sysfs' /proc/mounts ; then
 			mount -f /sys || failed=1
 		fi
+		if grep -q '[[:space:]]usbfs' /proc/mounts ; then
+			mount -f /proc/bus/usb || failed=1
+		fi
 		(exit $failed)
 		evaluate_retval
 		# add /dev above if you use devfs
