@@ -13,7 +13,8 @@ For example:
 If it doesn't say something about "statically linked",
 there is a problem.
 </para>
-<para>The solution is to go back to Chapter 5
+<para>The solution is to go back to Chapter 5,
+delete and re-extract the source if you haven't already,
 and recompile the affected package.
 And this time, take extra care with the instructions
 for compiling it statically.
