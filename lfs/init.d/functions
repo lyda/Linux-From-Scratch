@@ -487,21 +487,25 @@ statusproc()
 
 	if [ -n "${pidlist}" ]
 	then
-		boot_mesg "${base} is running with Process ID(s) ${pidlist}." ${INFO}
-		echo_ok
+		echo -e -n "${INFO}"
+		echo "${base} is running with Process ID(s) ${pidlist}."
+		echo -e -n "${NORMAL}"
 	else
 		if [ -n "${base}" -a -e "/var/run/${base}.pid" ]
 		then
-			boot_mesg "${1} is not running but /var/run/${base}.pid exists." ${WARNING}
-			echo_warning
+			echo -e -n "${INFO}"
+			echo "${1} is not running but /var/run/${base}.pid exists." ${WARNING}
+			echo -e -n "${NORMAL}"
 		else
 			if [ -n "${PIDFILE}" -a -e "${PIDFILE}" ]
 			then
-				boot_mesg "${1} is not running but ${PIDFILE} exists." ${WARNING}
-				echo_warning
+				echo -e -n "${INFO}"
+				echo "${1} is not running but ${PIDFILE} exists." ${WARNING}
+				echo -e -n "${NORMAL}"
 			else
-				boot_mesg "${1} is not running." ${INFO}
-				echo_ok
+				echo -e -n "${INFO}"
+				echo "${1} is not running." ${INFO}
+				echo -e -n "${NORMAL}"
 			fi
 		fi
 	fi
