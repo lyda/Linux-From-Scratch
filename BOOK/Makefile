@@ -160,22 +160,22 @@ nochunks:
 
 validate:
 # x86
-	xsltproc --xinclude --nonet --stringparam profile.condition pdf -stringparam profile.arch x86 \
+	xsltproc --xinclude --nonet -stringparam profile.arch x86 \
 		 --output index-x86.xml stylesheets/lfs-profile.xsl index.xml
 	xmllint --noout --nonet --postvalid index-x86.xml
 
 # alpha
-	xsltproc --xinclude --nonet --stringparam profile.condition pdf -stringparam profile.arch alpha \
+	xsltproc --xinclude --nonet -stringparam profile.arch alpha \
 		 --output index-alpha.xml stylesheets/lfs-profile.xsl index.xml
 	xmllint --noout --nonet --postvalid index-alpha.xml
 
 # ppc
-	xsltproc --xinclude --nonet --stringparam profile.condition pdf -stringparam profile.arch ppc \
+	xsltproc --xinclude --nonet -stringparam profile.arch ppc \
 		 --output index-ppc.xml stylesheets/lfs-profile.xsl index.xml
 	xmllint --noout --nonet --postvalid index-ppc.xml
 
 # raq2
-	xsltproc --xinclude --nonet --stringparam profile.condition pdf -stringparam profile.arch raq2 \
+	xsltproc --xinclude --nonet -stringparam profile.arch raq2 \
 		 --output index-raq2.xml stylesheets/lfs-profile.xsl index.xml
 	xmllint --noout --nonet --postvalid index-raq2.xml
 
