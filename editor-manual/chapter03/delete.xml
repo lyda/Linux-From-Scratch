@@ -9,7 +9,7 @@
   <?dbhtml filename="delete.html" dir="chapter03"?>
 
   <para><userinput>cvs delete</userinput> or <userinput>cvs remove</userinput>.
-    This does what it says: remove (a) file(s) from the repository on shadowfax.
+    This does what it says: remove (a) file(s) from the repository on belgarath.
     Note that you have to have deleted the file locally before you can run this.    Again, the file will not be deleted from the server until you do a
     <userinput>cvs commit</userinput>.
   </para>

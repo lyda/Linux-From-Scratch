@@ -11,7 +11,7 @@
 <para>For editors, access is slightly more complicated. You first of
 all need to generate yourself an ssh key-pair. You then need to upload
 your public key into your <filename>~/.ssh</filename> directory on
-shadowfax. To generate the keys run:</para>
+belgarath. To generate the keys run:</para>
 
 <para><screen><userinput>ssh-keygen -t dsa</userinput></screen></para>
 
@@ -21,9 +21,9 @@ them in .ssh (as <filename>id_dsa</filename> and
 When prompted for a passphrase just press enter (unless you want to have
 to give the phrase <emphasis>every</emphasis> time you perform a cvs
 operation.  Having generated your keys, upload
-<filename>~/.ssh/id_dsa.pub</filename> to shadowfax and move it to
+<filename>~/.ssh/id_dsa.pub</filename> to belgarath and move it to
 <filename>~/.ssh/authorized_keys2</filename> <emphasis>on
-shadowfax</emphasis>.  (Your local copy of <filename>id_dsa</filename>
+belgarath</emphasis>.  (Your local copy of <filename>id_dsa</filename>
 and <filename>id_dsa.pub</filename> should remain untouched by
 this.)</para>
 
@@ -33,7 +33,7 @@ this:</para>
 <para><screen><userinput>export CVS_RSH=ssh &amp;&amp;
 export CVSROOT=:ext:USERNAME@cvs.linuxfromscratch.org:/home/cvsroot</userinput></screen></para>
 
-<para>Replace <emphasis>USERNAME</emphasis> with your shadowfax username.</para>
+<para>Replace <emphasis>USERNAME</emphasis> with your belgarath username.</para>
 
 <para>Once you have this setup, try to checkout the LFS tree by
 running:</para>

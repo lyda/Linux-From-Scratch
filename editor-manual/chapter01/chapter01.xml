@@ -15,8 +15,8 @@ the mailing lists <userinput>lfs-book</userinput>,
 system, and thirdly the CVS server where the book itself is
 stored. All of these services are provided by the server
 <userinput>linuxfromscratch.org</userinput> also known as
-<userinput>shadowfax.linuxfromscratch.org</userinput> or more usually,
-<userinput>shadowfax</userinput>. This single server provides mailing
+<userinput>belgarath.linuxfromscratch.org</userinput> or more usually,
+<userinput>belgarath</userinput>. This single server provides mailing
 lists, web hosting, CVS hosting, ftp hosting, the Bugzilla system and
 basically everything we use to work on the LFS project.</para>
 

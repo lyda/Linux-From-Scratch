@@ -10,7 +10,7 @@
 
   <para><userinput>cvs add</userinput>. When you created a new file, you need to
     tell the CVS server about it. Note that the file won't appear in the
-    repository on shadowfax until you do a <userinput>cvs commit</userinput>
+    repository on belgarath until you do a <userinput>cvs commit</userinput>
     (see below).
   </para>
 </sect1>

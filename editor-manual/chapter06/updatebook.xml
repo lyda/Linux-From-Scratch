@@ -17,7 +17,7 @@
       it in Bug #30's Dependency Tree. See previous section).</para>
     </listitem>
 
-    <listitem><para>Download the package to shadowfax in your home directory.
+    <listitem><para>Download the package to belgarath in your home directory.
       If it's not bzip2'ed, then make it so.</para>
     </listitem>
 
@@ -47,7 +47,7 @@
     </listitem>
 
     <listitem><para>Run <userinput>ls -l package-version.tar.bz2</userinput> on
-      the file you have in your home directory on shadowfax. Divide the
+      the file you have in your home directory on belgarath. Divide the
       filesize by <emphasis>1024</emphasis> to get the number of Kilobytes.
       Round off to the nearest Kilobyte and update the
       <emphasis>package-size</emphasis> entity.</para>
