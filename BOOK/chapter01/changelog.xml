@@ -73,6 +73,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 9th, 2004 [winkie]: Chapter 6 - Removed unused and broken
+entries from <filename>nsswitch.conf</filename>.</para></listitem>
+
 <listitem><para>May 7th, 2004 [matt]: Merged Manuel's lfs-xsl-0.9 patches</para>
 </listitem>
 <listitem><para>May 7th, 2004 [matt]: Fixed README error regarding invocation of
