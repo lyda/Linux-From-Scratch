@@ -5,7 +5,7 @@ install:
 	install -d -m 755 ${EXTDIR}/rc.d/init.d
 	install -m 754 rc.d/init.d/checkfs      ${EXTDIR}/rc.d/init.d/
 	install -m 754 rc.d/init.d/cleanfs      ${EXTDIR}/rc.d/init.d/
-	install -m 754 rc.d/init.d/functions    ${EXTDIR}/rc.d/init.d/
+	install -m 644 rc.d/init.d/functions    ${EXTDIR}/rc.d/init.d/
 	install -m 754 rc.d/init.d/halt         ${EXTDIR}/rc.d/init.d/
 	install -m 754 rc.d/init.d/loadkeys     ${EXTDIR}/rc.d/init.d/
 	install -m 754 rc.d/init.d/localnet     ${EXTDIR}/rc.d/init.d/

@@ -4,6 +4,7 @@ n/a    - February 4, 2004
 	  functions
 	* Changed above fixes to work with ash
 	* Fixed checkfs symlink in Makefile
+	* functions is no longer installed as executable
 
 1.99.1 - February 2, 2004
 
