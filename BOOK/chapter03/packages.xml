@@ -218,7 +218,7 @@
 <varlistentry>
 <term>Linux (&linux-version;) - 34,793 KB:</term>
 <listitem>
-<para><ulink url="&freshmeat;linux/"/></para>
+<para><ulink url="&freshmeat;linux/?branch_id=46339"/></para>
 </listitem>
 </varlistentry>
 
@@ -446,7 +446,7 @@ directory.  The tarball is signed using GNU Privacy Guard (GPG), and
 it is strongly recommended that its authenticity be verified before
 use. Instructions for installing GPG, which enables verification, are
 provided in the Beyond Linux From Scratch (BLFS) book at <ulink
-url="&lfs-root;blfs/view/stable/postlfs/gnupg.html"/>.</para></note>
+url="&lfs-root;blfs/view/svn/postlfs/gnupg.html"/>.</para></note>
 
 </sect1>
 

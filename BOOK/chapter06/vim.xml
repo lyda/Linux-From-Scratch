@@ -27,7 +27,7 @@ GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 <tip>
 <title>Alternatives to Vim</title>
 <para>If you prefer another editor&mdash;such as Emacs, Joe, or
-Nano&mdash;please refer to <ulink url="&blfs-root;view/stable/postlfs/editors.html"/>
+Nano&mdash;please refer to <ulink url="&blfs-root;view/svn/postlfs/editors.html"/>
 for suggested installation instructions.</para>
 </tip>
 </sect2>
@@ -86,8 +86,7 @@ comes with a GUI version of the editor that requires X and some
 additional libraries to be installed. For more information on this
 process, refer to the Vim documentation and the Vim installation page
 in the BLFS book at <ulink
-url="http://www.linuxfromscratch.org/blfs/view/cvs/postlfs/editors.html#postlfs-editors-vim"/>
-.</para>
+url="&blfs-root;view/svn/postlfs/editors.html#postlfs-editors-vim"/>.</para>
 
 </sect2>
 

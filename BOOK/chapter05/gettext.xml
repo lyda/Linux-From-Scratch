@@ -62,7 +62,7 @@ This takes quite some time, around 7 SBUs. The Gettext test suite is
 known to experience failures under certain host conditions, for
 example when it finds a Java compiler on the host.  An experimental
 patch to disable Java is available from the LFS Patches project at
-<ulink url="&patches-root;"/></para>
+<ulink url="&lfs-root;patches/"/></para>
 
 <para>Install the package:</para>
 

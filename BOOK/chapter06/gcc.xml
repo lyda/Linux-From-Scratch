@@ -40,7 +40,7 @@ unset them when building GCC.</para>
 unpack into the same directory. Likewise, extract the gcc-testsuite
 package.  The full GCC package contains additional compilers.
 Instructions for building these can be found at <ulink
-url="&blfs-root;view/stable/general/gcc.html"/>.</para>
+url="&blfs-root;view/svn/general/gcc.html"/>.</para>
 
 <para>Apply only the No-Fixincludes patch (not the Specs patch) also
 used in the previous chapter:</para>
