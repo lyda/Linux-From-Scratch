@@ -30,7 +30,6 @@
 <!ENTITY bash-version "3.0">
 <!ENTITY binutils-version "2.15.94.0.2.2">
 <!ENTITY bison-version "2.0">
-<!ENTITY lfs-bootscripts-version "3.1.0">
 <!ENTITY bzip2-version "1.0.3">
 <!ENTITY colo-version "1.17">
 <!ENTITY coreutils-version "5.2.1">
@@ -56,6 +55,7 @@
 <!ENTITY inetutils-version "1.4.2">
 <!ENTITY kbd-version "1.12">
 <!ENTITY less-version "382">
+<!ENTITY lfs-bootscripts-version "3.2.0">
 <!ENTITY libtool-version "1.5.10">
 <!ENTITY linux-version "2.6.11.5">
 <!ENTITY linux-dl-version "2.6">

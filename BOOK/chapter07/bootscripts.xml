@@ -29,6 +29,11 @@
 
 <para>Install the package:</para>
 
+<para arch="raq2">The following patch allows the RaQ2/Qube2 use the LCD Screen
+with the bootscripts:</para>
+
+<screen arch="raq2"><userinput>patch -Np1 -i contrib/lfs-bootscripts-raq2-7.patch</userinput></screen>
+
 <screen><userinput>make install</userinput></screen>
 
 </sect2>
