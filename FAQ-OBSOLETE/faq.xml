@@ -71,6 +71,7 @@
 	&old-sources;
 </qandadiv>
 <qandadiv id="fsc"><title>Frequently Sought Cluebits</title>
+	&how-to-compile;
 	&should-i-keep-sources;
 	&dos-text;
 	&how-to-create-user;
@@ -84,6 +85,7 @@
 	<qandadiv id="fee-compile"><title>Compile Time Errors</title>
 		<qandadiv id="fee-compile-any">
 				<title>Compile Time Errors From Any Package</title>
+			&configure-no-such-file;
 			&bad-interpreter-permission-denied;
 			&conf-guess-fail;
 			&config-not-gnu-c;
