@@ -71,15 +71,15 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
-	install -m 644 lfs/sysconfig/console                                    ${EXTDIR}/sysconfig/
-	install -m 644 lfs/sysconfig/createfiles                                ${EXTDIR}/sysconfig/
-	install -m 644 lfs/sysconfig/modules                                    ${EXTDIR}/sysconfig
-	install -m 644 lfs/sysconfig/rc                                         ${EXTDIR}/sysconfig/
-	install -m 644 lfs/sysconfig/sysklogd                                   ${EXTDIR}/sysconfig/
-	install -m 754 lfs/sysconfig/network-devices/ifup                       ${EXTDIR}/sysconfig/network-devices
-	install -m 754 lfs/sysconfig/network-devices/ifdown                     ${EXTDIR}/sysconfig/network-devices
-	install -m 754 lfs/sysconfig/network-devices/services/ipv4-static       ${EXTDIR}/sysconfig/network-devices/services
-	install -m 754 lfs/sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services
+	install --backup=numbered -m 644 lfs/sysconfig/console                                    ${EXTDIR}/sysconfig/
+	install --backup=numbered -m 644 lfs/sysconfig/createfiles                                ${EXTDIR}/sysconfig/
+	install --backup=numbered -m 644 lfs/sysconfig/modules                                    ${EXTDIR}/sysconfig
+	install --backup=numbered -m 644 lfs/sysconfig/rc                                         ${EXTDIR}/sysconfig/
+	install --backup=numbered -m 644 lfs/sysconfig/sysklogd                                   ${EXTDIR}/sysconfig/
+	install --backup=numbered -m 754 lfs/sysconfig/network-devices/ifup                       ${EXTDIR}/sysconfig/network-devices
+	install --backup=numbered -m 754 lfs/sysconfig/network-devices/ifdown                     ${EXTDIR}/sysconfig/network-devices
+	install --backup=numbered -m 754 lfs/sysconfig/network-devices/services/ipv4-static       ${EXTDIR}/sysconfig/network-devices/services
+	install --backup=numbered -m 754 lfs/sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services
 
 install-hotplug: create-dirs
 	install -m 754 contrib/init.d/hotplug      ${EXTDIR}/rc.d/init.d
