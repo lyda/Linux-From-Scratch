@@ -46,12 +46,6 @@ mkdir -p /var/lib/hwclock</userinput></screen>
 <sect2 role="installation">
 <title>Installation of Util-linux</title>
 
-<para>GCC-&gcc-version; does not properly compile <command>sfdisk</command> if the
-default optimization level is used.  The following patch
-corrects the problem:</para>
-
-<screen><userinput>patch -Np1 -i ../util-linux-&util-linux-version;-sfdisk-2.patch</userinput></screen>
-
 <para>Prepare Util-linux for compilation:</para>
 
 <screen><userinput>./configure</userinput></screen>

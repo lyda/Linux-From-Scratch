@@ -53,6 +53,12 @@ the configuration files here:</para>
     /etc/udev/permissions.d/25-lfs.permissions
 cp ../udev-config-1.rules /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
+<!-- Edit Me -->
+<para>Run the <command>udevstart</command> program to create our full
+compliment of device nodes.</para>
+
+<screen><userinput>/sbin/udevstart</userinput></screen>
+
 </sect2>
 
 <sect2 id="contents-udev" role="content"><title>Contents of Udev</title>

@@ -47,10 +47,9 @@ cd ../glibc-build</userinput></screen>
 <para>Next, prepare Glibc for compilation:</para>
 
 <screen><userinput>../glibc-&glibc-version;/configure --prefix=/tools \
-    --disable-profile --enable-add-ons=nptl --with-tls \
-    --with-__thread --enable-kernel=2.6.0 \
-    --with-binutils=/tools/bin --without-gd --without-cvs \
-    --with-headers=/tools/glibc-kernheaders</userinput></screen>
+    --disable-profile --enable-add-ons \
+    --enable-kernel=2.6.0 --with-binutils=/tools/bin \
+    --without-gd --without-cvs --with-headers=/tools/include</userinput></screen>
 
 <beginpage/>
 <para>The meaning of the configure options:</para>
@@ -64,22 +63,9 @@ necessary.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><parameter>--enable-add-ons=nptl</parameter></term>
+<term><parameter>--enable-add-ons</parameter></term>
 <listitem><para>This tells Glibc to use the NPTL add-on as its threading 
 library.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><parameter>--with-tls</parameter></term>
-<listitem><para>This tells Glibc to include support for Thread-Local
-Storage (TLS). This is required in order for NPTL to work.
-</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><parameter>--with-__thread</parameter></term>
-<listitem><para>This option tells Glibc to include thread support. It is
-required in order for TLS to be properly compiled.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -113,10 +99,10 @@ program.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><parameter>--with-headers=/tools/glibc-kernheaders</parameter></term>
-<listitem><para>This tells Glibc to compile itself against the <quote>raw</quote> 
-kernel headers, so that it knows exactly what features the kernel has and can 
-optimize itself accordingly.</para></listitem>
+<term><parameter>--with-headers=/tools/include</parameter></term>
+<listitem><para>This tells Glibc to compile itself against the headers recently
+installed to the tools directory, so that it knows exactly what features the
+kernel has and can optimize itself accordingly.</para></listitem>
 </varlistentry>
 </variablelist>
 

@@ -140,33 +140,7 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 <varlistentry>
 <term>Glibc (&glibc-version;) - 13,101 KB:</term>
 <listitem>
-<para><ulink url="&freshmeat;glibc/"/></para>
-<note><para>Released packages of Glibc are not new enough for our
-purposes, so create a tarball of an appropriate Concurrent Versions
-System (CVS) snapshot with the following
-commands:</para>
-
-<screen><userinput>cvs -z 3 -d \
-    :pserver:anoncvs@sources.redhat.com:/cvs/glibc \
-    export -d glibc-2.3.4-20040701 \
-    -D "2004-07-01 17:30 UTC" libc
-sed -i -e "s/stable/2004-07-01/" \
-    -e "s/2\.3\.3/2.3.4/" \
-    glibc-2.3.4-20040701/version.h
-tar jcvf glibc-2.3.4-20040701.tar.bz2 \
-    glibc-2.3.4-20040701</userinput></screen>
-
-<para></para>
-<para>Alternatively, the LFS team developed a tarball which can be
-downloaded from any of the File Transfer Protocol (FTP) mirrors listed
-on the LFS Website at <ulink url="&lfs-root;lfs/packages.html#http"/>.
-It is located under the <filename
-class="directory">/pub/lfs/packages/conglomeration/glibc</filename>
-directory.  The tarball is signed using GNU Privacy Guard (GPG), and
-it is strongly recommended that its authenticity be verified before
-use. Instructions for installing GPG, which enables verification, are
-provided in the Beyond Linux From Scratch (BLFS) book at <ulink
-url="&lfs-root;blfs/view/svn/postlfs/gnupg.html"/>.</para></note>
+<para><ulink url="ftp://sources.redhat.com/pub/glibc/snapshots/"/></para>
 </listitem>
 </varlistentry>
 
@@ -195,6 +169,13 @@ url="&lfs-root;blfs/view/svn/postlfs/gnupg.html"/>.</para></note>
 <term>Gzip (&gzip-version;) - 324 KB:</term>
 <listitem>
 <para><ulink url="ftp://alpha.gnu.org/gnu/gzip/"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Hotplug (&hotplug-version;) - 34 KB:</term>
+<listitem>
+<para><ulink url="http://www.kernel.org/pub/linux/utils/kernel/hotplug/"/></para>
 </listitem>
 </varlistentry>
 
@@ -237,6 +218,13 @@ url="&lfs-root;blfs/view/svn/postlfs/gnupg.html"/>.</para></note>
 <term>LFS-Bootscripts (&bootscripts-version;) - 16 KB:</term>
 <listitem>
 <para><ulink url="http://downloads.linuxfromscratch.org/"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry> 
+<term>Libol (&libol-version;) - 336 KB:</term>
+<listitem>
+<para><ulink url="http://www.balabit.com/downloads/syslog-ng/libol/0.3"/></para>
 </listitem>
 </varlistentry>
 
@@ -360,9 +348,9 @@ url="&lfs-root;blfs/view/svn/postlfs/gnupg.html"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Sysklogd (&sysklogd-version;) - 80 KB:</term>
+<term>Syslog-ng (&syslog-ng-version;) - 388 KB:</term>
 <listitem>
-<para><ulink url="&freshmeat;sysklogd/"/></para>
+<para><ulink url="http://www.balabit.com/downloads/syslog-ng/1.6/src/"/></para>
 </listitem>
 </varlistentry>
 
