@@ -4,7 +4,6 @@
   %general-entities;
 ]>
 <bookinfo xmlns:xi="http://www.w3.org/2003/XInclude">
-<?dbhtml dir="prologue"?>
 <title>Linux From Scratch</title>
 <subtitle>Version &version;</subtitle>
 

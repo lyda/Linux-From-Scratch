@@ -4,7 +4,7 @@
                 version="1.0">
 
   <!-- We use XHTML -->
-  <xsl:import href="http://docbook.sourceforge.net/release/xsl/1.65.1/html/chunk.xsl"/>
+  <xsl:import href="http://docbook.sourceforge.net/release/xsl/1.65.1/xhtml/chunk.xsl"/>
   <xsl:param name="chunker.output.encoding" select="'ISO-8859-1'"/>
 
   <!-- The CSS Stylesheet -->
