@@ -44,7 +44,7 @@ touch /usr/include/assert.h &amp;&amp;
 <listitem><para>bash-2.05b:
 Apply the patches from
 <ulink url="ftp://ftp.gnu.org/gnu/bash/bash-2.05b-patches/"/>
-and configure bash with --without-bash-malloc.
+and configure the static (Chapter 5) build with --without-bash-malloc.
 </para></listitem>
 
 </itemizedlist>
