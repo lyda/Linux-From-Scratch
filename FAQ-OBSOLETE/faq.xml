@@ -182,6 +182,29 @@ history in general.
 
 <qandadiv id="fee-compile-any"><title>Errors From Any Package</title>
 
+<qandaentry id="bad-interpreter-permission-denied">
+<question>
+<para>./configure: bad interpreter: Permission denied</para>
+</question>
+<answer><para>You're most likely getting this while building bash in Chapter 5
+of the LFS Book.
+The problem is most likely your mount options.
+You probably have a line in /etc/fstab like:
+<screen>/dev/hda10	/mnt/lfs	ext2	user	1  2
+</screen>
+'user' is the mount flag, and it's the problem. To quote from the mount man page:
+<blockquote><screen> 
+user  Allow  an  ordinary  user to mount the file system.
+      This  option  implies  the options noexec,  nosuid,
+      and nodev (unless overridden by subsequent options,
+      as in the option line user,exec,dev,suid).
+</screen></blockquote>
+So change the line in /etc/fstab like this:
+<screen>/dev/hda10	/mnt/lfs	ext2	defaults	1  2
+</screen>
+</para></answer>
+</qandaentry>
+
 <qandaentry id="config-not-gnu-c">
 <question><para>checking whether we are using GNU C... no
 </para></question>
@@ -340,21 +363,14 @@ sk ~/tmp $
 				<screen>$ ls -l /dev/null
 crw-rw-rw-   1 root     root       1,   3 Aug  3  2000 /dev/null
 				</screen>
-				If so, the problem is probably your mount options.
-				You probably have a line in /etc/fstab like:
-				<screen>/dev/hda10	/mnt/lfs	ext2	user	1  2
-				</screen>
-				`user' is the mount flag, and it's the problem. To quote from
-				the mount man page:
-				<blockquote><screen> 
-user  Allow  an  ordinary  user to mount the file system.
-      This  option  implies  the options noexec,  nosuid,
-      and nodev (unless overridden by subsequent options,
-      as in the option line user,exec,dev,suid).
-			</screen></blockquote>
-				So change the line in /etc/fstab like this:
-				<screen>/dev/hda10	/mnt/lfs	ext2	defaults	1  2
-				</screen>
+				If not, it should. See the chmod(1) and chown(1) man pages
+				if you need help fixing it.
+				</para>
+				<para>If it does look right,
+				the problem is probably your mount options.
+				See the answer to "<link
+				linkend="bad-interpreter-permission-denied">./configure: bad
+				interpreter: Permission denied</link>", above.
 			</para></answer>
 		</qandaentry>
 		<qandaentry id="conf-guess-fail"><question><para>configure can't guess my host type.</para></question>
