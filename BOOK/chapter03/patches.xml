@@ -13,7 +13,8 @@ fixed by the maintainer.  The patches also make small modifications to
 make the packages easier to work with. The following patches will be
 needed to build an LFS system:</para>
 
-<variablelist role="materials"><title>Patches</title>
+<variablelist role="materials">
+<bridgehead renderas="sect3">Patches</bridgehead>
 
 <varlistentry>
 <term>Bash Dislay Wrap Patch - 1 KB:</term>
