@@ -3,22 +3,18 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-making-space" xreflabel="Chapter 3">
+<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-getting-materials" xreflabel="Chapter 3">
 <?dbhtml dir="chapter03"?>
-<title>Preparing a new partition</title>
+<title>The materials: packages and patches</title>
 <?dbhtml filename="chapter03.html"?>
 
 
 <xi:include href="introduction.xml"/>
 
 
-<xi:include href="creatingpartition.xml"/>
+<xi:include href="packages.xml"/>
 
 
-<xi:include href="creatingfilesystem.xml"/>
-
-
-<xi:include href="mounting.xml"/>
-
+<xi:include href="patches.xml"/>
 
 </chapter>

@@ -14,7 +14,7 @@ programs like a compiler, linker and shell to build the new system. Normally
 all the required tools are available if you selected <quote>development</quote>
 as one of the options when you installed your distribution.</para>
 
-<para>In <xref linkend="chapter-making-space"/> you will first create a new Linux native
+<para>In <xref linkend="chapter-partitioning"/> you will first create a new Linux native
 partition and file system, the place where your new LFS system will be compiled
 and installed. Then in <xref linkend="chapter-getting-materials"/> you download all the
 packages and patches required to build an LFS system, and store them on the new
@@ -67,8 +67,8 @@ will take are discussed in the chapters and package descriptions as you
 progress through them. If something isn't completely clear now, don't worry, 
 everything will fall into place soon.</para>
 
-<para>Please read <xref linkend="chapter-preparation"/> carefully as it explains a few
-important things you should be aware of before you begin to work through
+<para>Please read <xref linkend="chapter-final-preps"/> carefully as it explains
+ a few important things you should be aware of before you begin to work through
 <xref linkend="chapter-temporary-tools"/> and beyond.</para>
 
 </sect1>

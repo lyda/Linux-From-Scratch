@@ -10,9 +10,6 @@
 
 <xi:include href="introduction.xml"/>
 <xi:include href="toolchaintechnotes.xml"/>
-<xi:include href="creatingtoolsdir.xml"/>
-<xi:include href="addinguser.xml"/>
-<xi:include href="settingenviron.xml"/>
 <xi:include href="binutils-pass1.xml"/>
 <xi:include href="gcc-pass1.xml"/>
 <xi:include href="kernel-headers.xml"/>

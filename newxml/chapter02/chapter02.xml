@@ -3,22 +3,22 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-preparation" xreflabel="Chapter 2">
+<chapter xmlns:xi="http://www.w3.org/2003/XInclude" id="chapter-partitioning" xreflabel="Chapter 2">
 <?dbhtml dir="chapter02"?>
-<title>Important information</title>
+<title>Preparing a new partition</title>
 <?dbhtml filename="chapter02.html"?>
 
-<xi:include href="aboutlfs.xml"/>
+
+<xi:include href="introduction.xml"/>
 
 
-<xi:include href="aboutsbus.xml"/>
+<xi:include href="creatingpartition.xml"/>
 
 
-<xi:include href="abouttestsuites.xml"/>
+<xi:include href="creatingfilesystem.xml"/>
 
 
-<xi:include href="askforhelp.xml"/>
-
+<xi:include href="mounting.xml"/>
 
 
 </chapter>
