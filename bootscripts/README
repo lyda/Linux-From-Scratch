@@ -43,14 +43,25 @@ CleanFS configuration:
 
 	Configuration Files:
 		/etc/sysconfig/createfiles
-		Each line is parsed, using space as a deliminator
-		[TYPE] [USER] [GROUP] [PERMISSIONS] [NAME]
-		TYPE:
+		Each line is parsed, using space as a deliminator.
+		[NAME] [TYPE] [PERMISSIONS] [USER] [GROUP]
+		The below fields are currently only used on dev type.
+		([DEV TYPE] [MAJOR#] [MINOR#])
+		Name:
+			File/Directory/Device name
+		Type:
 			dir: creates a directory
 			file: creates a file
-		User/Group:
-			chown the created file/dir to this user/group
+			dev: creates a device
 		Permissions:
 			chmod the created file
-		Name:
-			File/Directory name
+		User/Group:
+			chown the created file/dir to this user/group
+		Dev Type:
+			c: character [needs MAJOR#, MINOR#]
+			b: block [needs MAJOR#, MINOR#]
+			p: pipe
+		Major#:
+			Used by character and block devices.
+		Minor#:
+			Used by character and block devices.
