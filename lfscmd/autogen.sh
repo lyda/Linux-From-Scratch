@@ -1,0 +1,3 @@
+aclocal
+autoconf
+automake -a
