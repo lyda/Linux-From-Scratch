@@ -1,3 +1,7 @@
+n/a - September 21, 2004
+	* boot_mesg has been enhanced.  Subsequent calls will overwrite previous text,
+	  and it will wrap text based upon the variable ${WCOL}.
+
 n/a - September 16, 2004
 	* nework interfaces are now brought down in reverse order
 
