@@ -73,6 +73,8 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 7th, 2004 [matt]: Merged Manuel's lfs-xsl-0.9 patches</para>
+</listitem>
 <listitem><para>May 7th, 2004 [matt]: Fixed README error regarding invocation of
 `make`</para></listitem>
 <listitem><para>May 3rd, 2004: LFS 5.1-pre2 released</para></listitem>
