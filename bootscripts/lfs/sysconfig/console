@@ -1,2 +1,6 @@
+# Begin /etc/sysconfig/createfiles 
+
 KEYMAP=
 FONT=
+
+# End /etc/sysconfig/createfiles 
