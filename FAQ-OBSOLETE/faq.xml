@@ -277,6 +277,17 @@ cd include
 ln -s ../X11/include/X11 X11
 			</screen>
 		</section>
+		<section id="stdgnu89"><title>I'm having trouble compiling something with GCC 3.x</title>
+			<para>
+				You should be aware that you're on the bleeding edge.
+				As of 3.0, the LFS Book recommends GCC 2.95.3.
+				However, there are some things you can do:
+			</para>
+			<para>
+				Try adding the -std=gnu89 switch to the compile options.
+				(For instance, in CFLAGS or CC.
+				The exact method is a bit beyond the scope of this FAQ.)
+		</section>
 	</chapter>
 	<chapter id="specific-packages"><title>Questions about specific packages.</title>
 		<section id="-f-hostname"><title>My hostname is getting set to "-f"!</title>
