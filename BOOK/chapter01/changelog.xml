@@ -90,6 +90,8 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 3rd, 2004 [winkie]: Branched for 6.0</para></listitem>
+
 <listitem><para>May 3rd, 2004 [winkie]: Merged BE-LFS content.</para></listitem>
 
 <listitem><para>May 2nd, 2004 [matt]: Quoted chroot commands in chapter 6 (bug
