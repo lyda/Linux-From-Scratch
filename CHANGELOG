@@ -1,6 +1,8 @@
 n/a - May 13, 2004
 
 	* Repaired the console script
+	* Added a check to cleanfs [createfiles], to make sure that we have
+	  a valid devicetype, if we have type=dev
 
 n/a - May 11, 2004
 
