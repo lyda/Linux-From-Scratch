@@ -1,3 +1,8 @@
+n/a - March 19, 2005
+	* Updated RaQ2 patch (Jim Gifford)
+	* Added net.agent for Hotplug of Network adapters in contrib
+	  (Jim Gifford)
+
 n/a - March 16, 2005
 	* Reverted the change from loadproc to start_daemon,
 	  Moved compatibility code into one single function.
