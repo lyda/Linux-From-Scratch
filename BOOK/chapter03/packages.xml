@@ -105,7 +105,7 @@
 <varlistentry>
 <term>Findutils (&findutils-version;) - 921 KB:</term>
 <listitem>
-<para><ulink url="&alpha-gnu;findutils/findutils-&findutils-version;.tar.gz"/></para>
+<para><ulink url="&gnu;findutils/findutils-&findutils-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 

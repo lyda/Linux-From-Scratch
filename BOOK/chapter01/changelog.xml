@@ -27,7 +27,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: All - E2fsprogs 1.36</para></listitem>
 <listitem><para>Arch: All - Expect 1.43.0</para></listitem>
 <listitem><para>Arch: All - File 4.13</para></listitem>
-<listitem><para>Arch: All - Findutils 4.2.18</para></listitem>
+<listitem><para>Arch: All - Findutils 4.2.20</para></listitem>
 <listitem><para>Arch: All - GCC 3.4.3</para></listitem>
 <listitem><para>Arch: All - Gettext 0.14.3</para></listitem>
 <listitem><para>Arch: All - Glibc 2.3.4</para></listitem>
@@ -81,6 +81,14 @@ first a summary, then a detailed log.</para>
 </listitem>
 
 <listitem><para>Changelog Entries:</para>
+
+<itemizedlist>
+<listitem><para>March 18, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Findutils to 4.2.20.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
 
 <itemizedlist>
 <listitem><para>March 16, 2005 [jim]</para>
