@@ -74,6 +74,8 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>June 2, 2004 [matt]: Prologue - acknowledgments, Added Thomas
+Reitelbach as the German translator</para></listitem>
 <listitem><para>May 30, 2004 [matt]: Chapter 6 - vim, corrected the optional
 command for invoking the testsuite</para></listitem>
 <listitem><para>May 23, 2004 [matt]: Chapter 6 - kbd, removed the hardcoded path
