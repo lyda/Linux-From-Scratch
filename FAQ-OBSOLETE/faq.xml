@@ -325,6 +325,23 @@ ln -s ../X11/include/X11 X11
 	chown root.root /usr/bin/which
 				</screen>
 			</section>
+			<section id="lex"><title>This ancient package wants lex?!?</title>
+				<para>
+					If you ever encounter a package so old that it must have
+					lex instead of flex, you can create a script like the one
+					for which (above) with these commands:
+				</para>
+				<screen>
+cat > /usr/bin/lex << "EOF"
+#!/bin/bash
+
+/usr/bin/flex -l "$@"
+
+EOF
+chmod 755 /usr/bin/lex
+chown root.root /usr/bin/lex
+				</screen>
+			</section>
 		</section>
 	</chapter>
 </book>
