@@ -31,7 +31,7 @@
 <!ENTITY findutils-version "4.2.3">
 <!ENTITY flex-version "2.5.31">
 <!ENTITY gawk-version "3.1.4">
-<!ENTITY gcc-version "3.4.2">
+<!ENTITY gcc-version "3.4.3">
 <!ENTITY gettext-version "0.14.1">
 <!ENTITY glibc-version "20041011">
 <!ENTITY grep-version "2.5.1a">

@@ -24,7 +24,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Bison 2.0</para></listitem>
 <listitem><para>File 4.12</para></listitem>
 <listitem><para>Findutils 4.2.3</para></listitem>
-<listitem><para>GCC 3.4.2</para></listitem>
+<listitem><para>GCC 3.4.3</para></listitem>
 <listitem><para>Glibc 20041011</para></listitem>
 <listitem><para>Grep 2.5.1a</para></listitem>
 <listitem><para>Iana-Etc 1.03</para></listitem>
@@ -63,6 +63,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>zlib-1.2.1-security-1.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>January 9, 2005 [matt]: Upgraded to gcc-3.4.3</para></listitem>
 
 <listitem><para>January 9, 2005 [matt]: Upgraded to bison-2.0</para></listitem>
 
