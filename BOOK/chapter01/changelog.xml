@@ -24,7 +24,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: All - Bison 2.0</para></listitem>
 <listitem><para>Arch: All - Bzip2 1.0.3</para></listitem>
 <listitem><para>Arch: All - Diffutils 2.8.7</para></listitem>
-<listitem><para>Arch: All - E2fsprogs 1.36</para></listitem>
+<listitem><para>Arch: All - E2fsprogs 1.37</para></listitem>
 <listitem><para>Arch: All - Expect 1.43.0</para></listitem>
 <listitem><para>Arch: All - File 4.13</para></listitem>
 <listitem><para>Arch: All - Findutils 4.2.20</para></listitem>
@@ -83,6 +83,14 @@ first a summary, then a detailed log.</para>
 </listitem>
 
 <listitem><para>Changelog Entries:</para>
+
+<itemizedlist>
+<listitem><para>March 22, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - E2fsprogs to 1.37.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
 
 <itemizedlist>
 <listitem><para>March 21, 2005 [jim]</para>
