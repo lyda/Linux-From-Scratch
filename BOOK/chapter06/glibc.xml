@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-glibc" xreflabel="Glibc" role="wrap">
+<sect1 id="ch-system-glibc" role="wrap">
 <title>Glibc-&glibc-version;</title>
 <?dbhtml filename="glibc.html"?>
 
@@ -35,7 +35,7 @@ Gawk, GCC, Gettext, Grep, Make, Perl, Sed, and Texinfo</seg></seglistitem>
 optimization flags (including the <parameter>-march</parameter> and
 <parameter>-mcpu</parameter> options) are changed. If any environment
 variables that override default optimizations have been defined, such
-as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
 unset them when building GCC.</para>
 
 <para>The Glibc build system is self-contained and will install
@@ -106,7 +106,8 @@ host system is using the <systemitem
 class="filesystem">devfs</systemitem> file system but does not have
 the <systemitem class="filesystem">tmpfs</systemitem> file system
 mounted at <filename class="directory">/dev/shm</filename>.  This
-occurs because of a lack of support for tmpfs in the
+occurs because of a lack of support for <systemitem 
+class="filesystem">tmpfs</systemitem> in the
 kernel.</para></listitem>
 
 <listitem><para>When running on older and slower hardware, some tests
@@ -138,7 +139,7 @@ command. Information on this command is located in the
 are a number of locales that are essential in order for the tests of
 future packages to pass, in particular, the
 <emphasis>libstdc++</emphasis> tests from GCC. The following
-instructions, instead of the <emphasis>install-locales</emphasis>
+instructions, instead of the <parameter>install-locales</parameter>
 target used above, will install the minimum set of locales necessary
 for the tests to run successfully:</para>
 

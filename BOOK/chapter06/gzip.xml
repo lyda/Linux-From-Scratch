@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-gzip" xreflabel="Gzip" role="wrap">
+<sect1 id="ch-system-gzip" role="wrap">
 <title>Gzip-&gzip-version;</title>
 <?dbhtml filename="gzip.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-iproute2" xreflabel="IProute2" role="wrap">
+<sect1 id="ch-system-iproute2" role="wrap">
   <title>Iproute2-&iproute2-version;</title>
 <?dbhtml filename="iproute2.html"?>
   <indexterm zone="ch-system-iproute2">

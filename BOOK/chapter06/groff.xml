@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-groff" xreflabel="Groff" role="wrap">
+<sect1 id="ch-system-groff" role="wrap">
 <title>Groff-&groff-version;</title>
 <?dbhtml filename="groff.html"?>
 
@@ -28,7 +28,7 @@ Gawk, GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Groff</title>
 
-<para>Groff expects the environment variable <emphasis>PAGE</emphasis>
+<para>Groff expects the environment variable <envar>PAGE</envar>
 to contain the default paper size. For users in the United States, the
 command below is appropriate. Elsewhere, the
 <parameter>PAGE=letter</parameter> may need to be changed to
@@ -36,7 +36,7 @@ command below is appropriate. Elsewhere, the
 
 <para>Prepare Groff for compilation:</para>
 
-<screen><userinput>PAGE=letter ./configure --prefix=/usr</userinput></screen>
+<screen><userinput>PAGE=<replaceable>[letter]</replaceable> ./configure --prefix=/usr</userinput></screen>
 
 <para>Compile the package:</para>
 

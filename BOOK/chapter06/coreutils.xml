@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-coreutils" xreflabel="Coreutils" role="wrap">
+<sect1 id="ch-system-coreutils" role="wrap">
 <title>Coreutils-&coreutils-version;</title>
 <?dbhtml filename="coreutils.html"?>
 

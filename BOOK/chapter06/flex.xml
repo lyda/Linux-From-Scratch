@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-flex" xreflabel="Flex" role="wrap">
+<sect1 id="ch-system-flex" role="wrap">
 <title>Flex-&flex-version;</title>
 <?dbhtml filename="flex.html"?>
 
@@ -56,7 +56,7 @@ default page is fine, so make sure it does not get regenerated:</para>
 <screen><userinput>make install</userinput></screen>
 
 <para>There are some packages that expect to find the
-<filename>lex</filename> library in <filename
+<filename class="libraryfile">lex</filename> library in <filename
 class="directory">/usr/lib</filename>. Create a symlink to account for
 this:</para>
 

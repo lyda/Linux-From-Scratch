@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-ncurses" xreflabel="Ncurses" role="wrap">
+<sect1 id="ch-system-ncurses" role="wrap">
 <title>Ncurses-&ncurses-version;</title>
 <?dbhtml filename="ncurses.html"?>
 

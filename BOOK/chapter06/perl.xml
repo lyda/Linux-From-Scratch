@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-perl" xreflabel="Perl" role="wrap">
+<sect1 id="ch-system-perl" role="wrap">
 <title>Perl-&perl-version;</title>
 <?dbhtml filename="perl.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-devices" xreflabel="devices">
+<sect1 id="ch-system-devices">
 <title>Populating /dev</title>
 <?dbhtml filename="devices.html"?>
 
@@ -25,7 +25,8 @@ mknod -m 666 /dev/null c 1 3</userinput></screen>
 <title>Mounting ramfs and Populating /dev</title>
 
 <para>The ideal way to populate <filename
-class="directory">/dev</filename> is to mount a ramfs onto <filename
+class="directory">/dev</filename> is to mount a <systemitem
+class="filesystem">ramfs</systemitem> onto <filename
 class="directory">/dev</filename>, like <systemitem
 class="filesystem">tmpfs</systemitem>, and create the devices on there
 during each bootup. Since the system has not been booted, it is

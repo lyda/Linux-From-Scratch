@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-iana-etc" xreflabel="Iana-Etc" role="wrap">
+<sect1 id="ch-system-iana-etc" role="wrap">
 <title>Iana-Etc-&iana-etc-version;</title>
 <?dbhtml filename="iana-etc.html"?>
 

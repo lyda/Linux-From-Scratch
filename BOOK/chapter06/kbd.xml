@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-kbd" xreflabel="Kbd" role="wrap">
+<sect1 id="ch-system-kbd" role="wrap">
 <title>Kbd-&kbd-version;</title>
 <?dbhtml filename="kbd.html"?>
 

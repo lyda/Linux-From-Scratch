@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-file" xreflabel="File" role="wrap">
+<sect1 id="ch-system-file" role="wrap">
 <title>File-&file-version;</title>
 <?dbhtml filename="file.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-man" xreflabel="Man" role="wrap">
+<sect1 id="ch-system-man" role="wrap">
 <title>Man-&man-version;</title>
 <?dbhtml filename="man.html"?>
 
@@ -37,7 +37,7 @@ full terminal width instead of being limited to 80 characters:</para>
 <screen><userinput>patch -Np1 -i ../man-&man-version;-80cols-1.patch</userinput></screen>
 
 <para>The second is a sed substitution to add the
-<parameter>-R</parameter> switch to the <emphasis>PAGER</emphasis>
+<parameter>-R</parameter> switch to the <envar>PAGER</envar>
 variable so that escape sequences are properly handled by Less:</para>
 
 <screen><userinput>sed -i 's@-is@&amp;R@g' configure</userinput></screen>
@@ -75,7 +75,7 @@ class="directory">/etc</filename> directory.</para></listitem>
 <note><para>To disable Select Graphic Rendition (SGR) escape
 sequences, edit the <filename>man.conf</filename> file and
 add the <parameter>-c</parameter> switch to
-the <quote>NROFF</quote> variable.</para></note>
+the <envar>NROFF</envar> variable.</para></note>
 
 <para>If the character set uses 8-bit characters, search for the line
 beginning with <quote>NROFF</quote> in

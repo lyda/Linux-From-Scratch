@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-zlib" xreflabel="Zlib" role="wrap">
+<sect1 id="ch-system-zlib" role="wrap">
 <title>Zlib-&zlib-version;</title>
 <?dbhtml filename="zlib.html"?>
 
@@ -29,9 +29,10 @@ some programs.</para>
 <title>Installation of Zlib</title>
 
 <note><para>Zlib is known to build its shared library incorrectly if
-CFLAGS is specified in the environment. If using a specified CFLAGS
+<envar>CFLAGS</envar> is specified in the environment. If using a 
+specified <envar>CFLAGS</envar>
 variable, be sure to add the <parameter>-fPIC</parameter> directive to
-the <emphasis>CFLAGS</emphasis> variable for the duration of the
+the <envar>CFLAGS</envar> variable for the duration of the
 configure command below, then remove it afterwards.</para></note>
 
 <para>Prepare Zlib for compilation:</para>

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-bzip2" xreflabel="Bzip2" role="wrap">
+<sect1 id="ch-system-bzip2" role="wrap">
 <title>Bzip2-&bzip2-version;</title>
 <?dbhtml filename="bzip2.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-vim" xreflabel="Vim" role="wrap">
+<sect1 id="ch-system-vim" role="wrap">
 <title>Vim-&vim-version;</title>
 <?dbhtml filename="vim.html"?>
 
@@ -99,7 +99,7 @@ This may be new to users who have used other editors in the past. The
 fact that a new behavior is being used. It also reminds those who
 would change to <quote>compatible</quote> mode that it should appear
 first.  This is necessary because it changes other settings, and
-overrides must come after this setting.  Create a default vim
+overrides must come after this setting.  Create a default <command>vim</command>
 configuration file by running the following:</para>
 
 <screen><userinput>cat &gt; /etc/vimrc &lt;&lt; "EOF"
@@ -122,7 +122,7 @@ old <command>vi</command> behavior. The <parameter>set
 backspace=2</parameter> allows backspacing over line breaks,
 autoindents, and the start of insert. The <parameter>syntax
 on</parameter> enables vim's syntax highlighting. Finally, the
-<parameter>if</parameter> statement with the <parameter>set
+<emphasis>if</emphasis> statement with the <parameter>set
 background=dark</parameter> corrects <command>vim</command>'s guess
 about the background color of some terminal emulators. This gives the
 highlighting a better color scheme for use on the black background of

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-sed" xreflabel="Sed" role="wrap">
+<sect1 id="ch-system-sed" role="wrap">
 <title>Sed-&sed-version;</title>
 <?dbhtml filename="sed.html"?>
 

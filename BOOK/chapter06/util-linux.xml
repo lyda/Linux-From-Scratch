@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-util-linux" xreflabel="Util-linux" role="wrap">
+<sect1 id="ch-system-util-linux" role="wrap">
 <title>Util-linux-&util-linux-version;</title>
 <?dbhtml filename="util-linux.html"?>
 

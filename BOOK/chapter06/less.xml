@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-less" xreflabel="Less" role="wrap">
+<sect1 id="ch-system-less" role="wrap">
 <title>Less-&less-version;</title>
 <?dbhtml filename="less.html"?>
 

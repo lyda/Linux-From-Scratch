@@ -3,15 +3,16 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-e2fsprogs" xreflabel="E2fsprogs" role="wrap">
+<sect1 id="ch-system-e2fsprogs" role="wrap">
 <title>E2fsprogs-&e2fsprogs-version;</title>
 <?dbhtml filename="e2fsprogs.html"?>
 
 <indexterm zone="ch-system-e2fsprogs"><primary sortas="a-E2fsprogs">E2fsprogs</primary></indexterm>
 
 <sect2 role="package"><title/>
-<para>The E2fsprogs package contains the utilities for handling the ext2
-file system. It also supports the ext3 journaling file system.</para>
+<para>The E2fsprogs package contains the utilities for handling the 
+<systemitem class="filesystem">ext2</systemitem> file system. It also supports
+the <systemitem class="filesystem">ext3</systemitem> journaling file system.</para>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>

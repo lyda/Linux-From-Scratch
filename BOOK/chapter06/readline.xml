@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-readline" xreflabel="Readline" role="wrap">
+<sect1 id="ch-system-readline" role="wrap">
 <title>Readline-&readline-version;</title>
 <?dbhtml filename="readline.html"?>
 
@@ -48,7 +48,7 @@ line.</para>
 <varlistentry>
 <term><parameter>SHLIB_XLDFLAGS=-lncurses</parameter></term>
 <listitem><para>This option forces readline to link against the
-<filename>libncurses</filename> library.</para></listitem>
+<filename class="libraryfile">libncurses</filename> library.</para></listitem>
 </varlistentry>
 </variablelist>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-inetutils" xreflabel="Inetutils" role="wrap">
+<sect1 id="ch-system-inetutils" role="wrap">
 <title>Inetutils-&inetutils-version;</title>
 <?dbhtml filename="inetutils.html"?>
 

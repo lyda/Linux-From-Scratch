@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-module-init-tools" xreflabel="Module-Init-Tools" role="wrap">
+<sect1 id="ch-system-module-init-tools" role="wrap">
 <title>Module-Init-Tools-&module-init-tools-version;</title>
 <?dbhtml filename="module-init-tools.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-gettext" xreflabel="Gettext" role="wrap">
+<sect1 id="ch-system-gettext" role="wrap">
 <title>Gettext-&gettext-version;</title>
 <?dbhtml filename="gettext.html"?>
 

@@ -31,7 +31,7 @@ command:</para>
 <screen><userinput>chown -R 0:0 /tools</userinput></screen>
 
 <para>The command uses <parameter>0:0</parameter> instead of
-<parameter>root:root</parameter>, because <userinput>chown</userinput>
+<parameter>root:root</parameter>, because <command>chown</command>
 is unable to resolve the name <quote>root</quote> until the password
 file has been created. This book assumes you ran this
 <command>chown</command> command.</para>

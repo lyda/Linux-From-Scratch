@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-diffutils" xreflabel="Diffutils" role="wrap">
+<sect1 id="ch-system-diffutils" role="wrap">
 <title>Diffutils-&diffutils-version;</title>
 <?dbhtml filename="diffutils.html"?>
 

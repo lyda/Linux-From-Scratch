@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-bash" xreflabel="Bash" role="wrap">
+<sect1 id="ch-system-bash" role="wrap">
 <title>Bash-&bash-version;</title>
 <?dbhtml filename="bash.html"?>
 

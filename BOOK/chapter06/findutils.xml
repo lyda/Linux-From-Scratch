@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-findutils" xreflabel="Findutils" role="wrap">
+<sect1 id="ch-system-findutils" role="wrap">
 <title>Findutils-&findutils-version;</title>
 <?dbhtml filename="findutils.html"?>
 

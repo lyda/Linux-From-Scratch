@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-grub" xreflabel="Grub" role="wrap">
+<sect1 id="ch-system-grub" role="wrap">
 <title>Grub-&grub-version;</title>
 <?dbhtml filename="grub.html"?>
 
@@ -32,7 +32,7 @@ GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 optimization flags (including the <parameter>-march</parameter> and
 <parameter>-mcpu</parameter> options) are changed. If any environment
 variables that override default optimizations have been defined, such
-as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
 unset them when building Grub.</para>
 
 <para>Prepare Grub for compilation:</para>

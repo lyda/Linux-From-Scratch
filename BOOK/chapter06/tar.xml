@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-tar" xreflabel="Tar" role="wrap">
+<sect1 id="ch-system-tar" role="wrap">
 <title>Tar-&tar-version;</title>
 <?dbhtml filename="tar.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-man-pages" xreflabel="Man-pages" role="wrap">
+<sect1 id="ch-system-man-pages" role="wrap">
 <title>Man-pages-&man-pages-version;</title>
 <?dbhtml filename="man-pages.html"?>
 

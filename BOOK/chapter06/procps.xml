@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-procps" xreflabel="Procps" role="wrap">
+<sect1 id="ch-system-procps" role="wrap">
 <title>Procps-&procps-version;</title>
 <?dbhtml filename="procps.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-m4" xreflabel="M4" role="wrap">
+<sect1 id="ch-system-m4" role="wrap">
 <title>M4-&m4-version;</title>
 <?dbhtml filename="m4.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-shadow" xreflabel="Shadow" role="wrap">
+<sect1 id="ch-system-shadow" role="wrap">
 <title>Shadow-&shadow-version;</title>
 <?dbhtml filename="shadow.html"?>
 

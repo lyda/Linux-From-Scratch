@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-mktemp" xreflabel="Mktemp" role="wrap">
+<sect1 id="ch-system-mktemp" role="wrap">
 <title>Mktemp-&mktemp-version;</title>
 <?dbhtml filename="mktemp.html"?>
 

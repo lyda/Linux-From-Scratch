@@ -38,7 +38,7 @@ url="&blfs-root;"/>).</para></note>
 class="directory">/sources</filename> can also be moved to a more
 usual location, such as <filename
 class="directory">/usr/src/packages</filename>. The entire directory
-can also be deleted if its contents have been burned to a CD).</para>
+can also be deleted if its contents have been burned to a CD.</para>
 
 </sect1>
 

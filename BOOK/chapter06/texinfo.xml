@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-texinfo" xreflabel="Texinfo" role="wrap">
+<sect1 id="ch-system-texinfo" role="wrap">
 <title>Texinfo-&texinfo-version;</title>
 <?dbhtml filename="texinfo.html"?>
 
@@ -53,7 +53,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 <variablelist>
 <varlistentry>
 <term><parameter>TEXMF=/usr/share/texmf</parameter></term>
-<listitem><para>The TEXMF makefile variable holds the location of the
+<listitem><para>The <envar>TEXMF</envar> makefile variable holds the location of the
 root of the TeX tree if, for example, a TeX package will be installed
 later.</para></listitem>
 </varlistentry>

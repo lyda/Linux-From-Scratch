@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-binutils" xreflabel="Binutils" role="wrap">
+<sect1 id="ch-system-binutils" role="wrap">
 <title>Binutils-&binutils-version;</title>
 <?dbhtml filename="binutils.html"?>
 
@@ -33,7 +33,7 @@ Glibc, Grep, Make, Perl, Sed, and Texinfo</seg></seglistitem>
 optimization flags (including the <parameter>-march</parameter> and
 <parameter>-mcpu</parameter> options) are changed. If any environment
 variables that override default optimizations have been defined, such
-as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
 unset them when building Binutils.</para>
 
 <para>Verify that the PTYs are working properly inside the chroot
