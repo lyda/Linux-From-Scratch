@@ -23,17 +23,21 @@ make_extra_nodes() {
 
 case "$1" in
 	start)
+		# Don't attempt to populate the /dev directory when something
+		# else has already set it up.
+		[ -f /dev/.udev.tdb ] && exit 0
+
 		echo "Populating /dev with device nodes..."
+
+		# Assign udev to get hotplug events.  This will be overwritten
+		# in the hotplug bootscript
+		echo /sbin/udev > /proc/sys/kernel/hotplug
 
 		# Mount a temporary file system over /dev, so that any devices
 		# made or removed during this boot don't affect the next one.
 		# The reason we don't write to mtab is because we don't ever
 		# want /dev to be unavailable (such as by `umount -a').
-		grep -q " /dev " /proc/mounts || mount -n -t ramfs ramfs /dev
-
-		# Assign udev to get hotplug events.  This will be overwritten
-		# in the hotplug bootscript
-		echo /sbin/udev > /proc/sys/kernel/hotplug
+		mount -n -t ramfs ramfs /dev
 
 		# Populate /dev with all the devices that are already available,
 		# and save it's status so we can report failures.
