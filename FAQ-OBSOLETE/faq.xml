@@ -131,6 +131,50 @@ especially older ones, may not compile without modifications.
 </para></answer>
 </qandaentry>
 
+<qandaentry id="add-gawk"><question><para>Why not use gawk instead of mawk?</para></question>
+<answer><para>The gawk versus mawk debate involves much talk
+and little evidence. Due to the reportedly unstable history of gawk,
+the book still uses mawk. Personally, your humble FAQ maintainer
+uses gawk because, unlike mawk it is configured with GNU autoconf.
+One of the primary book editors also uses gawk for reasons covered,
+along with many other subjects, in this massive thread: <ulink
+url="http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/10/0290.html">http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/10/0290.html</ulink>
+</para></answer>
+</qandaentry>
+
+<qandaentry id="add-grub"><question><para>Why not use GRUB instead of LILO?</para></question>
+<answer><para>GRUB has not yet been released as stable.
+When it is, it will be considered and, if it seems better than LILO, used.
+</para>
+<para>If your current setup uses GRUB, there's no need to switch.
+In addition to the GRUB documentation, see the LFS "GRUB-Howto" Hint at <ulink
+url="http://hints.linuxfromscratch.org/hints/grub-howto.txt">http://hints.linuxfromscratch.org/hints/grub-howto.txt</ulink>
+</para></answer>
+</qandaentry>
+
+<qandaentry id="why-ed"><question><para>Why is ed in the book?</para></question>
+<answer><para>The book includes ed because patch uses it to process ed scripts.
+However, these are rare today; everyone uses diff format patches.
+</para><para>But ed does have other uses:
+<itemizedlist>
+<listitem><para>For all who've learned to use it,
+ed is a very useful emergency editor.
+The MS Windows standard telnet client can deal with ed
+but has trouble with fullscreen editors (like vim).
+And a full featured vim requires not only ncurses, but X11 as well!
+Any trouble with those libraries will leave
+the system without an editor if ed isn't present.
+</para></listitem>
+<listitem><para>Though it's not a reason to have ed in the book,
+some people actually like ed.
+</para></listitem>
+<listitem><para>Understanding ed helps with understanding vi(m) and Unix
+history in general.
+</para></listitem>
+</itemizedlist>
+</para></answer>
+</qandaentry>
+
 </qandadiv>
 
 <qandadiv id="fee"><title>Frequently Encountered Errors</title>
@@ -562,53 +606,6 @@ url="http://kt.zork.net/kernel-traffic/kt20000814_80.txt">http://kt.zork.net/ker
 </para></answer>
 </qandaentry>
 
-<!--		<qandadiv id="why-not-add"><title>Why not add / use package Foo?</title>-->
-
-<qandaentry id="add-grub"><question><para>GRUB instead of LILO</para></question>
-<answer><para>GRUB has not yet been released as stable.
-When it is, it will be considered and, if it seems better than LILO, used.
-</para>
-<para>If your current setup uses GRUB, there's no need to switch.
-In addition to the GRUB documentation, see the LFS "GRUB-Howto" Hint at <ulink
-url="http://hints.linuxfromscratch.org/hints/grub-howto.txt">http://hints.linuxfromscratch.org/hints/grub-howto.txt</ulink>
-</para></answer>
-</qandaentry>
-
-<qandaentry id="add-gawk"><question><para>gawk instead of mawk</para></question>
-<answer><para>The gawk versus mawk debate involves much talk
-and little evidence. Due to the reportedly unstable history of gawk,
-the book still uses mawk. Personally, your (not) humble FAQ maintainer
-uses gawk because, unlike mawk it is configured with GNU autoconf.
-One of the primary book editors also uses gawk for reasons covered,
-along with many other subjects, in this massive thread: <ulink
-url="http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/10/0290.html">http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/10/0290.html</ulink>
-</para></answer>
-</qandaentry>
-
-			<qandaentry id="why-ed"><question><para>Why ed?</para></question>
-				<answer><para>There are several reasons why ed is in the book:
-					<itemizedlist>
-						<listitem><para>The official reason is that patch uses it to process ed
-							scripts. However, these are seldom used recently;
-							everyone uses diff.
-						</para></listitem>
-						<listitem><para>Unofficially, for all who've learned to use it,
-							ed is a very useful emergency editor.
-							The MS Windows standard telnet client can deal with ed
-							where fullscreen editors (like vim) give it trouble.
-							And a full featured vim requires not only ncurses, but
-							X11 as well! Any trouble with those libraries will leave
-							the system without an editor if ed isn't present.
-						</para></listitem>
-						<listitem><para>And, though it's not a reason to have ed in the book,
-							some people actually like ed.
-							It's also a major part of Unix history and understanding
-							it helps with understanding vi(m).
-						</para></listitem>
-					</itemizedlist>
-				</para></answer>
-			</qandaentry>
-<!--		</qandadiv>-->
 <!--		<qandadiv id="setup-polishing"><title>Polishing your setup.</title>-->
 <!--
 			<para>These don't really belong in the FAQ,
