@@ -1,7 +1,8 @@
 CC=gcc
 CFLAGS=-I/usr/include/libxml2 -W -Wall -Os
-LDFLAGS=-lxml2 -lm -s
+LIBS=-lxml2 -lz -lm -s
 PREFIX=/usr
+LDFLAGS=
 
 OBJS= env.o \
       file.o \
@@ -13,7 +14,7 @@ OBJS= env.o \
 all: lfscmd
 
 lfscmd: env.o file.o help.o lfscmd.o main.o string.o
-	$(CC) env.o file.o help.o lfscmd.o main.o string.o $(CFLAGS) $(LDFLAGS) -o lfscmd
+	$(CC) env.o file.o help.o lfscmd.o main.o string.o $(LDFLAGS) -o lfscmd $(CFLAGS) $(LIBS)
 
 install: lfscmd
 	if ( test ! -d $(PREFIX)/bin ); then mkdir -p $(PREFIX)/bin; fi
