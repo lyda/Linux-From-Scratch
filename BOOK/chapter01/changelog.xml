@@ -79,9 +79,17 @@ first a summary, then a detailed log.</para>
 
 <listitem><para>Changelog Entries:</para>
 <itemizedlist>
+<listitem><para>Feburary 25, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Fixed: Arch: All - Duplicate tty in group file.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>Feburary 24, 2005 [jim]</para>
 <itemizedlist>
-<listitem><para>Updated: Arch: All - Gettext 0.14.2</para></listitem>
+<listitem><para>Updated: Arch: All - Gettext 0.14.2.</para></listitem>
 <listitem><para>Changed: Book Format - Cchangelog format.</para></listitem>
 <listitem><para>Fixed: Arch: All - Bugzilla 1033 Gettext.</para></listitem>
 <listitem><para>Updated: Arch: Raq2 - Colo to 1.1.7</para></listitem>
@@ -89,7 +97,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>Updated: Arch: All - Download file sizes.</para></listitem>
 </itemizedlist>
 </listitem>
+</itemizedlist>
 
+<itemizedlist>
 <listitem><para>Feburary 23, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Sync: With the 6.0 Release.</para></listitem>
@@ -105,6 +115,7 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 </itemizedlist>
+
 </listitem>
 </itemizedlist>
 
