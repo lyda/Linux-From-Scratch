@@ -27,7 +27,7 @@ create_files() {
 						char)   mknod "$name" c $maj $min	;;
 						block)  mknod "$name" b $maj $min	;;
 						pipe)   mknod "$name" p			;;
-						*) echo "Unknown device type: %dtype"   ;;
+						*) echo "Unknown device type: $dtype"   ;;
 						esac            ;;
 					*)      echo "Unknown type: $type" >&2
 						continue        ;;
