@@ -51,7 +51,7 @@
       </xsl:if>
       <xsl:text>/</xsl:text>
       <xsl:value-of select="substring-after(@url, $links.directory)"/>
-      <xsl:text> . &amp;&amp;&#x0a;</xsl:text>
+      <xsl:text> . &#x0a;</xsl:text>
     </xsl:if>
   </xsl:template>
 
