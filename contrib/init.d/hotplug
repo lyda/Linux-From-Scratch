@@ -4,7 +4,7 @@
 # Written by Zack Winkles - winkie@linuxfromscratch.org
 
 . /etc/sysconfig/rc
-. $rc_functions
+. ${rc_functions}
 
 # Exit quietly if you do not have hotplug installed
 [ -x /sbin/hotplug ] || exit 0
