@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN">
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN">
 
-<article id="index"><title>The LFS FAQ</title>
-	<articleinfo>
+<book id="index"><title>The LFS FAQ</title>
+	<bookinfo>
 		<author>
 			<firstname>Seth</firstname>
 			<othername>W.</othername>
@@ -13,8 +13,8 @@
 				</address>
 			</affiliation>
 		</author>
-	</articleinfo>
-	<section><title>Introduction</title>
+	</bookinfo>
+	<chapter><title>Introduction</title>
 		<section><title>Why this FAQ?</title>
 			<para>
 				I started this FAQ in an attempt to make the traffic on
@@ -114,8 +114,8 @@
 				<ulink url="http://www.linuxfromscratch.org/">http://www.linuxfromscratch.org/</ulink>.
 			</para>
 		</section>
-	</section>
-	<section id="preparing"><title>Preparing to Build</title>
+	</chapter>
+	<chapter id="preparing"><title>Preparing to Build</title>
 		<section id="what-dist"><title>What distribution should I use to start from?</title>
 			<para>
 				Most distributions are fine, and even the worst aren't guarenteed to fail;
@@ -138,8 +138,8 @@
 				</para></listitem>
 			</itemizedlist>
 		</section>
-	</section>
-	<section id="compiling"><title>Compiling</title>
+	</chapter>
+	<chapter id="compiling"><title>Compiling</title>
 		<section id="gcc-warnings"><title>Are compiler warnings from GCC bad?</title>
 			<para>
 				Short answer: no.
@@ -248,8 +248,8 @@ cd include
 ln -s ../X11/include/X11 X11
 			</screen>
 		</section>
-	</section>
-	<section id="specific-packages"><title>Questions about specific packages.</title>
+	</chapter>
+	<chapter id="specific-packages"><title>Questions about specific packages.</title>
 		<section id="lesscharset"><title>Why does less print &lt;AD&gt; instead of hyphens?</title>
 			<para>
 				Because the LESSCHARSET environment variable isn't set. To fix
@@ -266,6 +266,6 @@ echo 'export LESSCHARSET=latin1' >> /etc/profile
 				has relaxed it's export regulations.
 			</para>
 		</section>
-	</section>
-</article>
+	</chapter>
+</book>
 
