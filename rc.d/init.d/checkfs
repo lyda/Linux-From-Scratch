@@ -37,10 +37,10 @@ case "$1" in
 			echo "Cannot check root file system because it could not"
 			echo "be mounted in read-only mode."
 			echo
-			echo -n "When you press <ctrl-j>, this system will be halted."
+			echo -n "When you press Enter, this system will be halted."
 			echo -n -e $NORMAL
 			echo
-			echo "Press <ctrl-j> to continue..."
+			echo "Press Enter to continue..."
 			read ENTER
 			echo "gonna run: $rc_base/init.d/halt"
 			$rc_base/init.d/halt stop
@@ -80,11 +80,11 @@ case "$1" in
 			echo "File system errors were found and have been corrected, but"
 			echo "the nature of the errors require this system to be rebooted."
 			echo
-			echo -n "When you press <ctrl-j>, this system will be rebooted."
+			echo -n "When you press Enter, this system will be rebooted."
 			echo -n -e $NORMAL
 			print_status warning
 			echo
-			echo "Please <ctrl-j> to continue..."
+			echo "Please Enter to continue..."
 			read ENTER
 			reboot -f
 		fi
@@ -97,11 +97,11 @@ case "$1" in
 			echo "and will therefore be halted until those errors fixed manually"
 			echo "by a System Administrator."
 			echo
-			echo -n "When you press <ctrl-j>, this system will be halted."
+			echo -n "When you press Enter, this system will be halted."
 			echo -n -e $NORMAL
 			print_status failure
 			echo
-			echo "Press <ctrl-j> to continue..."
+			echo "Press Enter to continue..."
 			read ENTER
 			halt -f
 		fi
