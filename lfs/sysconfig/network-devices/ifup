@@ -45,6 +45,13 @@ do
 
 	(
 		. ${file}
+
+		# Will not process this service if started by hotplug, and 
+		# ONHOTPLUG is not set to yes
+		if [ "${IN_HOTPLUG}" = "1" -a "${ONHOTPLUG}" != "yes" ]; then
+			 continue
+		fi
+
 		if [ -n "${CHECK_LINK}" -o "${CHECK_LINK}" = "y" -o "${CHECK_LINK}" = "yes" -o "${CHECK_LINK}" = "1" ];	then
 
 			# Activate the interface, if not activated
