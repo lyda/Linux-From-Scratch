@@ -11,15 +11,18 @@
 case "$1" in
 	start)
 		# Start all network interfaces which have ONBOOT in them.
-		for file in $(grep -sil '^ONBOOT=yes$' $network_devices/ifconfig.*)
+		for file in $network_devices/ifconfig.*
 		do
 			interface=${file##*/ifconfig.}
-			case "$interface" in
-				*~) ;;
-				*)
-					$network_devices/ifup $interface
-					;;
-			esac
+			if [ -r "$file" -a "$file" = "${file%""~""}" ]
+			then
+				(
+					. "$file"
+					if [ "$ONBOOT" = "yes" ]; then
+						$network_devices/ifup $interface
+					fi
+				)
+			fi
 		done
 
 		# Setup the Gateway
@@ -43,18 +46,22 @@ case "$1" in
 			route del -net default
 			evaluate_retval
 		fi
-
 		# Stop all network interfaces
-		for file in $(grep -sil '^ONBOOT=yes$' $network_devices/ifconfig.*)
+		for file in $network_devices/ifconfig.*
 		do
 			interface=${file##*/ifconfig.}
-			case "$interface" in
-				*~) ;;
-				*)
-					$network_devices/ifdown $interface
-					;;
-			esac
+			if [ -r "$file" -a "$file" = "${file%""~""}" ]
+			then
+				(
+					. "$file"
+					if [ "$ONBOOT" = "yes" ]; then
+						$network_devices/ifdown $interface
+					fi
+				)
+			fi
 		done
+
+
 		;;
 
 	restart)
