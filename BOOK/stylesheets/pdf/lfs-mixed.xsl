@@ -141,6 +141,7 @@
 
     <!-- How is rendered by default a variablelist -->
   <xsl:param name="variablelist.as.blocks" select="1"/>
+  <xsl:param name="variablelist.max.termlength">32</xsl:param>
 
     <!-- Adding space before segmentedlist -->
   <xsl:template match="segmentedlist">
