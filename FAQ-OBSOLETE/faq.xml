@@ -268,5 +268,11 @@ echo 'export LESSCHARSET=latin1' >> /etc/profile
 			</para>
 		</section>
 	</chapter>
+	<chapter id="setup-polishing"><title>Polishing your setup.</title>
+		<para>
+			These don't really belong in the FAQ,
+			but they come up often on the lists.
+		</para>
+	</chapter>
 </book>
 
