@@ -14,7 +14,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 1.0 SBU
-&diskspace; 194 MB</screen>
+&diskspace; 170 MB</screen>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/para[2])"/>
 
