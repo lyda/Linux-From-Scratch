@@ -6,16 +6,16 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
-# If hotplug is actually present, then set it to be the default manager of
-# hotplug events, otherwise quietly exit.
-if [ -x /sbin/hotplug ]; then
-	echo /sbin/hotplug > /proc/sys/kernel/hotplug
-else
+# Exit quietly if you do not have hotplug installed
+if [ ! -x /sbin/hotplug ]; then
 	exit 0
 fi
 
 case "$1" in
 	start|restart|status)
+		# Set hotplug as the default manager of hotplug events
+		echo /sbin/hotplug > /proc/sys/kernel/hotplug
+
 		echo "Loading modules for system devices..."
 		for rc in /etc/hotplug/*.rc; do
 			$rc $1

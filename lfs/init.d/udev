@@ -31,11 +31,9 @@ case "$1" in
 		# want /dev to be unavailable (such as by `umount -a').
 		grep -q " /dev " /proc/mounts || mount -n -t ramfs ramfs /dev
 
-		# When the hotplug package isn't installed, make sure that udev
-		# still gets hotplug events.
-		if [ ! -x /sbin/hotplug ]; then
-			echo /sbin/udev > /proc/sys/kernel/hotplug
-		fi
+		# Assign udev to get hotplug events.  This will be overwritten
+		# in the hotplug bootscript
+		echo /sbin/udev > /proc/sys/kernel/hotplug
 
 		# Populate /dev with all the devices that are already available,
 		# and save it's status so we can report failures.
