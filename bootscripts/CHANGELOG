@@ -1,14 +1,15 @@
+n/a - November 27, 2004
+	* Moved bootlog to use local1 to avoid conflict with ppd (DJ Lucas)
+
 n/a - November 25, 2004
 	* Added consolelog to contrib/sysconfig (DJ Lucas)
-	* Added syslog-ng.conf to contrib/sysconfig (DJ Lucas)
 	* Rewrite of line wraping in boot_mesg and various fixes
 	  related to boot_mesg changes (DJ Lucas, Alexander Patrakov)
 	* syslog-ng is now installed by default (Jeremy Utley)
-	* removed syslog-ng.conf, as will be added to book (Nathan Coulson)
 	* hotplug is now installed by default (Jeremy Utley)
 	* udev now uses /sbin/hotplug as the default hotplug handler (Nathan Coulson)
 	* udev now mounts a tmpfs instead of a ramfs onto /dev,
-	  as suggested by Greg K-H (Nathan Coulson
+	  as suggested by Greg K-H (Nathan Coulson)
 	* Created contrib/lsb, and added a LSB compliant functions file
 	  (Nathan Coulson, and Alexander Patrakov)
 	* Modified find [requires find 4.2.3+] (Matthew Burgess)

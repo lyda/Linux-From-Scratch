@@ -210,7 +210,7 @@ boot_mesg_flush()
 boot_log()
 {
 	if [ -f /bin/logger ]; then
-		/bin/logger -p local0.info -t bootlog "${@}"
+		/bin/logger -p local1.info -t bootlog "${@}"
 	else
 		return 0
 	fi
