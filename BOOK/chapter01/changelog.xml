@@ -84,6 +84,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>September 9th, 2004 [gerard]: Added missing colon to
+group name in Chapter 6-Coreutils used by the test
+suite.</para></listitem>
+
 <listitem><para>September 9th, 2004 [manuel]: Added support to can have
 different contextual phrases for HTML or PDF output.</para></listitem>
 
