@@ -4,41 +4,50 @@
   %general-entities;
 ]>
 <sect1 id="space-creatingpartition">
-<title>Creating a new partition</title>
+<title>Creating a New Partition</title>
 <?dbhtml filename="creatingpartition.html"?>
 
-<para>In order to build our new Linux system, we will need some space:
-an empty disk partition. If you don't have a free partition, and no room
-on any of your hard disks to make one, then you could build LFS on the
-same partition as the one on which your current distribution is installed.
-This procedure is not recommended for your first LFS install, but if you
-are short on disk space, and you feel brave, take a look at the hint at
-<ulink url="&hints-root;lfs_next_to_existing_systems.txt"/>.</para>
+<para>In order to build a new Linux system, space is required -- an
+empty disk partition. If the computer does not have a free partition
+or room on any of the hard disks to make one, LFS can be built on the
+same partition where the current distribution is installed.</para>
 
-<para>For a minimal system you will need a partition of around 1.3 GB.
-This is enough to store all the source tarballs and compile all the packages.
-But if you intend to use the LFS system as your primary Linux system, you
-will probably want to install additional software, and will need more space
-than this, probably around 2 or 3 GB.</para>
+<note><para>This procedure is not recommended for your first LFS
+install, but if you are short on disk space and feel brave, you can
+use the hint at <ulink
+url="&hints-root;lfs_next_to_existing_systems.txt"/>.</para></note>
 
-<para>As we almost never have enough RAM in our box, it is a good idea to
-use a small disk partition as swap space -- this space is used by the kernel
-to store seldom-used data to make room in memory for more urgent stuff.
-The swap partition for your LFS system can be the same one as for your host
-system, so you won't have to create another if your host system already uses
-a swap partition.</para>
+<para>A minimal system requires a partition of around 1.3 gigabytes
+(GB).  This is enough to store all the source tarballs and compile all
+the packages. However, if the LFS system is intended to be the primary
+Linux system, additional software will probably be installed which
+will require additional space (2 or 3 GB). The LFS system itself will
+not take up this much space. A large portion of this required amount
+of space is to provide sufficient free temporary space. Compiling
+packages can require a lot of disk space which will be reclaimed after
+the package is installed, but you do need it temporarily.</para>
 
-<para>Start a disk partitioning program such as <command>cfdisk</command>
-or <command>fdisk</command> with an argument naming the hard disk upon
-which the new partition must be created -- for example
-<filename>/dev/hda</filename> for the primary IDE disk. Create a Linux native
-partition and a swap partition, if needed. Please refer to the man pages of
-<command>cfdisk</command> or <command>fdisk</command> if you don't yet
-know how to use the programs.</para>
+<para>Because there is rarely enough RAM available for the process, it
+is a good idea to use a small disk partition as swap space.  This
+space is used by the kernel to store seldom-used data to make room in
+memory for active processes. The swap partition for an LFS system can
+be the same as the your host system, so another swap partition will
+not need to be created if your host system already uses one.</para>
 
-<para>Remember the designation of your new partition -- something like
-<filename>hda5</filename>. This book will refer to it as the LFS partition.
-If you (now) also have a swap partition, remember its designation too. These
-names will later be needed for the <filename>/etc/fstab</filename> file.</para>
+<para>Start a disk partitioning program such as
+<command>cfdisk</command> or <command>fdisk</command> with an command
+line option naming the hard disk on which the new partition will be
+created -- for example <filename>/dev/hda</filename> for the primary
+Integrated Drive Electronics (IDE) disk. Create a Linux native
+partition and a swap partition, if needed. Please refer to the man
+pages of <command>cfdisk</command> or <command>fdisk</command> if you
+do not yet know how to use the programs.</para>
+
+<para>Remember the designation of the new partition (e.g.,
+<filename>hda5</filename>). This book will refer to this as the LFS
+partition. Also remember the designation of the swap partition. These
+names will be needed later for the <filename>/etc/fstab</filename>
+file.</para>
 
 </sect1>
+
