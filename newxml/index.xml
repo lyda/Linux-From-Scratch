@@ -11,7 +11,8 @@
 
 
 <part id="part1">
-<title>Part I - Introduction</title>
+<title>Introduction</title>
+<?dbhtml filename="part1.html"?>
 <xi:include href="chapter01/chapter01.xml"/>
 
 <xi:include href="chapter02/chapter02.xml"/>
@@ -19,7 +20,8 @@
 </part>
 
 <part id="part2">
-<title>Part II - Preparing for the build</title>
+<title>Preparing for the build</title>
+<?dbhtml filename="part2.html"?>
 <xi:include href="chapter03/chapter03.xml"/>
 
 <xi:include href="chapter04/chapter04.xml"/>
@@ -31,7 +33,8 @@
 </part>
 
 <part id="part3">
-<title>Part III - Building the LFS system</title>
+<title>Building the LFS system</title>
+<?dbhtml filename="part3.html"?>
 <xi:include href="chapter06/chapter06.xml"/>
 
 
@@ -46,7 +49,8 @@
 </part>
 
 <part id="part4">
-<title>Part IV - Appendices</title>
+<title>Appendices</title>
+<?dbhtml filename="part4.html"?>
 <xi:include href="appendixa/appendixa.xml"/>
 
 <xi:include href="appendixb/appendixb.xml"/>

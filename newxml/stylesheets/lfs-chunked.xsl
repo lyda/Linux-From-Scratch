@@ -17,7 +17,8 @@
       <xsl:when test="$generate.legalnotice.link != 0">
         <xsl:variable name="filename">
           <xsl:call-template name="make-relative-filename">
-            <xsl:with-param name="base.name">prologue/legalnotice.html</xsl:with-param>
+            <xsl:with-param name="base.dir" select="''"/>
+            <xsl:with-param name="base.name" select="concat($base.dir, 'prologue/legalnotice.html')"/>
           </xsl:call-template>
         </xsl:variable>
         <xsl:variable name="title">

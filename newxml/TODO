@@ -13,8 +13,7 @@ TODO
    particular http://www.sagehill.net/docbookxsl/OtherOutputForms.html#d0e23340.
 5. The legalinfo page:
      * It generates it's own hyperlink ("Legal Notice") but the current book has
-       it linked to via the "Copyright" message above. The hyperlink also links
-       to prologue/legalnotice.html which isn't produced.
+       it linked to via the "Copyright" message above.  Does this matter?
 6. Decide on what levels the TOCs should go down to.
    * Section elements now no longer have a TOC generated for them - the book TOC
      remains unchanged as do the part and appendix level TOCs.
