@@ -8,105 +8,38 @@
 <title>Constructing a temporary system</title>
 <?dbhtml filename="chapter05.html"?>
 
-
 <xi:include href="introduction.xml"/>
-
-
 <xi:include href="toolchaintechnotes.xml"/>
-
-
 <xi:include href="creatingtoolsdir.xml"/>
-
-
 <xi:include href="addinguser.xml"/>
-
-
 <xi:include href="settingenviron.xml"/>
-
-
 <xi:include href="binutils-pass1.xml"/>
-
-
 <xi:include href="gcc-pass1.xml"/>
-
-
 <xi:include href="kernel-headers.xml"/>
-
-
 <xi:include href="glibc.xml"/>
-
-
-
-
 <xi:include href="adjusting.xml"/>
-
-
 <xi:include href="tcl.xml"/>
-
-
 <xi:include href="expect.xml"/>
-
-
 <xi:include href="dejagnu.xml"/>
-
-
 <xi:include href="gcc-pass2.xml"/>
-
-
 <xi:include href="binutils-pass2.xml"/>
-
-
-
 <xi:include href="gawk.xml"/>
-
-
 <xi:include href="coreutils.xml"/>
-
-
 <xi:include href="bzip2.xml"/>
-
-
 <xi:include href="gzip.xml"/>
-
-
 <xi:include href="diffutils.xml"/>
-
-
 <xi:include href="findutils.xml"/>
-
-
 <xi:include href="make.xml"/>
-
-
 <xi:include href="grep.xml"/>
-
-
 <xi:include href="sed.xml"/>
-
-
 <xi:include href="gettext.xml"/>
-
-
 <xi:include href="ncurses.xml"/>
-
-
 <xi:include href="patch.xml"/>
-
-
 <xi:include href="tar.xml"/>
-
-
 <xi:include href="texinfo.xml"/>
-
-
 <xi:include href="bash.xml"/>
-
-
 <xi:include href="perl.xml"/>
-
-
-
-
+<xi:include href="util-linux.xml"/>
 <xi:include href="stripping.xml"/>
 
 </chapter>
