@@ -1,3 +1,9 @@
+n/a - July 10, 2004
+
+	* We now use the ip program [from iproute2] instead of ipconfig [net-tools]
+		to bring up/down ethernet interfaces, and local connections
+	* Removed gateway backward compatibility
+
 n/a - July 8, 2004
 
 	* Changed iso01 to lat1 everywhere in /etc/sysconfig/console. This
