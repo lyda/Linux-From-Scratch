@@ -263,6 +263,13 @@ into the new LFS system.)
 </para></answer>
 </qandaentry>
 
+<qandaentry id="config-hang-size_t">
+<question><para>Why does configure hang at
+"checking for signed size_t type..."?</para></question>
+<answer><para>You over optimized gcc.
+</para></answer>
+</qandaentry>
+
 </qandadiv>
 
 <qandadiv id="fee-compile-specific"><title>Errors From Specific Packages</title>
