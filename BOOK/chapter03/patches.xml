@@ -29,7 +29,7 @@ Ed Mkstemp Patch - 1 KB:
 <ulink url="&patches-root;ed-&ed-version;-mkstemp.patch"/>
 
 Expect Spawn Patch - 6 KB:
-<ulink url="&patches-root;expect-&expect-version;-spawn-1.patch"/>
+<ulink url="&patches-root;expect-&expect-version;-spawn.patch"/>
 
 GCC No-Fixincludes Patch - 1 KB:
 <ulink url="&patches-root;gcc-&gcc-version;-no_fixincludes-1.patch"/>

@@ -26,7 +26,7 @@ GCC, Glibc, Grep, Make, Sed, Tcl.</para>
 <para>First fix a bug that can result in bogus failures during the GCC test
 suite run:</para>
 
-<screen><userinput>patch -Np1 -i ../expect-&expect-version;-spawn-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../expect-&expect-version;-spawn.patch</userinput></screen>
 
 <para>Now prepare Expect for compilation:</para>
 
