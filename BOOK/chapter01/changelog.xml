@@ -86,6 +86,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>April 4, 2005 [matt]</para>
 <itemizedlist>
 <listitem><para>Added: Arch: All - Mention bzip2's testsuite.</para></listitem>
+<listitem><para>Fixed: Arch: All - Fix E2fsprogs compile problem (Ken Moffat +&amp; Greg Schafer).</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
