@@ -85,7 +85,8 @@ c
 <itemizedlist>
 <listitem><para>March 14, 2005 [jim]</para>
 <itemizedlist>
-<listitem><para>Updated: Arch: All - Gettext to 0.14.3</para></listitem>
+<listitem><para>Updated: Arch: All - Updated hotplug explanations from r4758. Thanx Matt</para></listitem>
+<listitem><para>Updated: Arch: All - Gettext to 0.14.3.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
@@ -93,8 +94,8 @@ c
 <itemizedlist>
 <listitem><para>March 13, 2005 [jim]</para>
 <itemizedlist>
-<listitem><para>Updated: Arch: All - IPRoute2 to 2.6.11-050310</para></listitem>
-<listitem><para>Updated: Arch: x86, PPC, Alpha - Linux to 2.6.11.3</para></listitem>
+<listitem><para>Updated: Arch: All - IPRoute2 to 2.6.11-050310.</para></listitem>
+<listitem><para>Updated: Arch: x86, PPC, Alpha - Linux to 2.6.11.3.</para></listitem>
 <listitem><para>Updated: Arch: x86, PPC, Alpha - Linux-libc-headers to 2.6.11.0.</para></listitem>
 <listitem><para>Updated: Arch: All - Dynamically link the pass1 toolchain to
 workaround bug 1061 and remove all related explanatory text</para></listitem>
