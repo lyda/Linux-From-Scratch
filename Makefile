@@ -93,6 +93,7 @@ install-hotplug: create-dirs
 
 install-syslog-ng: create-dirs
 	install -m ${MODE} contrib/init.d/syslog-ng	${EXTDIR}/rc.d/init.d
+	rm -f  ${EXTDIR}/sysconfig/sysklogd
 	rm -rf ${EXTDIR}/rc.d/init.d/sysklogd
 	rm -rf ${EXTDIR}/rc.d/rc{0,1,2,6}.d/K90sysklogd
 	rm -rf ${EXTDIR}/rc.d/rc{3,4,5}.d/S10sysklogd

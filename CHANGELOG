@@ -1,3 +1,10 @@
+n/a - September 26, 2004
+	* Added BOOTMESG_PREFIX variable, so users can optionally set a
+	  prefix for boot messages (James Robert)
+
+n/a - September 24, 2004
+	* Removed /dev/udev.tdb test
+
 n/a - September 23, 2004
 	* Fixed boot_log so it output's $@'s contents, not @$
 	* Added support for colors in boot_mesg (James Robertson)
