@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-scripts-profile">
-<info><title>The Bash Shell Startup Files</title></info>
+<title>The Bash Shell Startup Files</title>
 <?dbhtml filename="profile.html"?>
 
 <indexterm zone="ch-scripts-profile"><primary sortas="e-/etc/profile">/etc/profile</primary></indexterm>

@@ -6,12 +6,12 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-gcc" xreflabel="GCC" role="wrap">
-<info><title>GCC-&gcc-version;</title></info>
+<title>GCC-&gcc-version;</title>
 <?dbhtml filename="gcc.html"?>
 
 <indexterm zone="ch-system-gcc"><primary sortas="a-GCC">GCC</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The GCC package contains the GNU compiler collection, which includes
 the C and C++ compilers.</para>
 
@@ -29,7 +29,7 @@ Gawk, Gettext, Glibc, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of GCC</title></info>
+<title>Installation of GCC</title>
 
 <para>This package is known to behave badly when you have changed its
 default optimization flags (including the <parameter>-march</parameter> and <parameter>-mcpu</parameter> options).
@@ -113,7 +113,7 @@ are wrong, then most likely you erroneously applied the GCC Specs patch from
 </section>
 
 
-<section xml:id="contents-gcc" role="content"><info><title>Contents of GCC</title></info>
+<section xml:id="contents-gcc" role="content"><title>Contents of GCC</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

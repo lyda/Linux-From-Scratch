@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-diffutils" xreflabel="Diffutils" role="wrap">
-<info><title>Diffutils-&diffutils-version;</title></info>
+<title>Diffutils-&diffutils-version;</title>
 <?dbhtml filename="diffutils.html"?>
 
 <indexterm zone="ch-system-diffutils"><primary sortas="a-Diffutils">Diffutils</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Diffutils package contains programs that show the differences
 between files or directories.</para>
 
@@ -28,7 +28,7 @@ Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Diffutils</title></info>
+<title>Installation of Diffutils</title>
 
 <para>Prepare Diffutils for compilation:</para>
 
@@ -45,7 +45,7 @@ Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 
-<section xml:id="contents-diffutils" role="content"><info><title>Contents of Diffutils</title></info>
+<section xml:id="contents-diffutils" role="content"><title>Contents of Diffutils</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

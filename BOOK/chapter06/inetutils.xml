@@ -6,12 +6,12 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-inetutils" xreflabel="Inetutils" role="wrap">
-<info><title>Inetutils-&inetutils-version;</title></info>
+<title>Inetutils-&inetutils-version;</title>
 <?dbhtml filename="inetutils.html"?>
 
 <indexterm zone="ch-system-inetutils"><primary sortas="a-Inetutils">Inetutils</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Inetutils package contains programs for basic networking.</para>
 
 <segmentedlist>
@@ -28,7 +28,7 @@ Diffutils, GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Inetutils</title></info>
+<title>Installation of Inetutils</title>
 
 <para>Inetutils has issues with the Linux 2.6 kernel series - fix these isues
 by applying the following patch:</para>
@@ -101,7 +101,7 @@ place:</para>
 </section>
 
 
-<section xml:id="contents-inetutils" role="content"><info><title>Contents of Inetutils</title></info>
+<section xml:id="contents-inetutils" role="content"><title>Contents of Inetutils</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-creatingdirs">
-<info><title>Creating directories</title></info>
+<title>Creating directories</title>
 <?dbhtml filename="creatingdirs.html"?>
 
 <para>Let's now create some structure in our LFS file system. Let's create
@@ -49,7 +49,7 @@ by the so-called <quote>sticky bit</quote> -- the highest bit in the 1777 bit
 mask.</para>
 
 <section>
-<info><title>FHS compliance note</title></info>
+<title>FHS compliance note</title>
 
 <para>We have based our directory tree on the FHS standard (available at
 <uri xlink:href="http://www.pathname.com/fhs/"/>). Besides the above created

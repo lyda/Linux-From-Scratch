@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-bash" xreflabel="Bash" role="wrap">
-<info><title>Bash-&bash-version;</title></info>
+<title>Bash-&bash-version;</title>
 <?dbhtml filename="bash.html"?>
 
 <indexterm zone="ch-system-bash"><primary sortas="a-Bash">Bash</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Bash package contains the Bourne-Again SHell.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ GCC, Glibc, Grep, Make, Ncurses, Sed.</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Bash</title></info>
+<title>Installation of Bash</title>
 
 <para>The following patch fixes various issues. Including a problem where Bash
 sometimes will only show 33 characters on a line and then wraps to the next line.</para>
@@ -69,7 +69,7 @@ available.</para></note>
 </section>
 
 
-<section xml:id="contents-bash" role="content"><info><title>Contents of Bash</title></info>
+<section xml:id="contents-bash" role="content"><title>Contents of Bash</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

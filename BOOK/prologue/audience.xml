@@ -6,11 +6,11 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="pre-audience">
-<info><title>Audience</title></info>
+<title>Audience</title>
 <?dbhtml filename="audience.html"?>
 
 <section>
-<info><title>Who would want to read this book</title></info>
+<title>Who would want to read this book</title>
 
 <para>There are many reasons why somebody would want to read this book. The 
 principal reason being to install a Linux system straight from the source 
@@ -70,7 +70,7 @@ information and knowledge truly bring.</para>
 </section>
 
 <section>
-<info><title>Who would not want to read this book</title></info>
+<title>Who would not want to read this book</title>
 
 <para>There are probably some who, for whatever reason, would feel that they do not 
 want to read this book. If you do not wish to build your own Linux system from 

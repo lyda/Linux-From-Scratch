@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-file" xreflabel="File" role="wrap">
-<info><title>File-&file-version;</title></info>
+<title>File-&file-version;</title>
 <?dbhtml filename="file.html"?>
 
 <indexterm zone="ch-system-file"><primary sortas="a-File">File</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The File package contains a utility for determining the type of files.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ GCC, Glibc, Grep, Make, Sed, Zlib</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of File</title></info>
+<title>Installation of File</title>
 
 <para>Prepare File for compilation:</para>
 
@@ -44,7 +44,7 @@ GCC, Glibc, Grep, Make, Sed, Zlib</seg></seglistitem>
 </section>
 
 
-<section xml:id="contents-file" role="content"><info><title>Contents of File</title></info>
+<section xml:id="contents-file" role="content"><title>Contents of File</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xi="http://www.w3.org/2003/XInclude"
          xml:id="ch-tools-gcc-pass1" role="wrap">
-<info><title>GCC-&gcc-version; - Pass 1</title></info>
+<title>GCC-&gcc-version; - Pass 1</title>
 <?dbhtml filename="gcc-pass1.html"?>
 
 <indexterm zone="ch-tools-gcc-pass1">
@@ -27,7 +27,7 @@
 </section>
 
 <section role="installation">
-<info><title>Installation of GCC</title></info>
+<title>Installation of GCC</title>
 
 <para>Unpack only the GCC-core tarball, as we won't be needing the C++ compiler
 nor the test suite here.</para>

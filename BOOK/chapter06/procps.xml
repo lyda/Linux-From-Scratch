@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-procps" xreflabel="Procps" role="wrap">
-<info><title>Procps-&procps-version;</title></info>
+<title>Procps-&procps-version;</title>
 <?dbhtml filename="procps.html"?>
 
 <indexterm zone="ch-system-procps"><primary sortas="a-Procps">Procps</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Procps package contains programs for monitoring processes.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ Make, Ncurses</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Procps</title></info>
+<title>Installation of Procps</title>
 
 <para>Compile Procps:</para>
 
@@ -41,7 +41,7 @@ Make, Ncurses</seg></seglistitem>
 
 
 <section xml:id="contents-procps" role="content">
-<info><title>Contents of Procps</title></info>
+<title>Contents of Procps</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

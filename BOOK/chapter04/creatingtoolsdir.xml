@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-tools-creatingtoolsdir">
-<info><title>Creating the $LFS/tools directory</title></info>
+<title>Creating the $LFS/tools directory</title>
 <?dbhtml filename="creatingtoolsdir.html"?>
 
 <para>All programs compiled in <xref linkend="chapter-temporary-tools"/> will be installed under <filename

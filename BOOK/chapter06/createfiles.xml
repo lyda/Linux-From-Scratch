@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-createfiles">
-<info><title>Creating essential symlinks</title></info>
+<title>Creating essential symlinks</title>
 <?dbhtml filename="createfiles.html"?>
 
 <para>Some programs hard-wire paths to programs which don't exist yet. In

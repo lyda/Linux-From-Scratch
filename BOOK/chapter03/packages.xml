@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="materials-packages">
-<info><title>All the packages</title></info>
+<title>All the packages</title>
 <?dbhtml filename="packages.html"?>
 
 <para>Download or otherwise obtain the following packages:</para>

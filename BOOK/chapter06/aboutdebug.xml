@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-aboutdebug">
-<info><title>About debugging symbols</title></info>
+<title>About debugging symbols</title>
 <?dbhtml filename="aboutdebug.html"?>
 
 <para>Most programs and libraries are, by default, compiled with debugging

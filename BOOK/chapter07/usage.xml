@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-scripts-usage">
-<info><title>How do these bootscripts work?</title></info>
+<title>How do these bootscripts work?</title>
 <?dbhtml filename="usage.html"?>
 
 <indexterm zone="ch-scripts-usage">

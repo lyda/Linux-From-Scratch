@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-tar" xreflabel="Tar" role="wrap">
-<info><title>Tar-&tar-version;</title></info>
+<title>Tar-&tar-version;</title>
 <?dbhtml filename="tar.html"?>
 
 <indexterm zone="ch-system-tar"><primary sortas="a-Tar">Tar</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Tar package contains an archiving program.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Tar</title></info>
+<title>Installation of Tar</title>
 
 <para>Prepare Tar for compilation:</para>
 
@@ -47,7 +47,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 
-<section xml:id="contents-tar" role="content"><info><title>Contents of Tar</title></info>
+<section xml:id="contents-tar" role="content"><title>Contents of Tar</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

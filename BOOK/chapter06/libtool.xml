@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-libtool" xreflabel="Libtool" role="wrap">
-<info><title>Libtool-&libtool-version;</title></info>
+<title>Libtool-&libtool-version;</title>
 <?dbhtml filename="libtool.html"?>
 
 <indexterm zone="ch-system-libtool"><primary sortas="a-Libtool">Libtool</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Libtool package contains the GNU generic library support script.
 It wraps the complexity of using shared libraries in a consistent, portable
 interface.</para>
@@ -29,7 +29,7 @@ GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Libtool</title></info>
+<title>Installation of Libtool</title>
 
 <para>Prepare Libtool for compilation:</para>
 
@@ -49,7 +49,7 @@ GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 
-<section xml:id="contents-libtool" role="content"><info><title>Contents of Libtool</title></info>
+<section xml:id="contents-libtool" role="content"><title>Contents of Libtool</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

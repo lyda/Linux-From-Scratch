@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="materials-introduction">
-<info><title>Introduction</title></info>
+<title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
 
 <para>Below is a list of packages you need to download for building a basic

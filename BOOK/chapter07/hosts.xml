@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-scripts-hosts">
-<info><title>Creating the /etc/hosts file</title></info>
+<title>Creating the /etc/hosts file</title>
 <?dbhtml filename="hosts.html"?>
 
 <indexterm zone="ch-scripts-hosts"><primary sortas="e-/etc/hosts">/etc/hosts</primary></indexterm>

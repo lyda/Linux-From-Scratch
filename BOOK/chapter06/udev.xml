@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-udev" role="wrap">
-<info><title>Udev-&udev-version;</title></info>
+<title>Udev-&udev-version;</title>
 <?dbhtml filename="udev.html"?>
 
 <indexterm zone="ch-system-udev"><primary sortas="a-Udev">Udev</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Udev package contains programs for dynamic creation of device nodes.</para>
 
 <segmentedlist>
@@ -22,7 +22,7 @@
 </section>
 
 <section role="installation">
-<info><title>Installation of Udev</title></info>
+<title>Installation of Udev</title>
 
 <para>Compile Udev:</para>
 
@@ -54,7 +54,7 @@ nodes, since earlier we only created a minimal set.</para>
 </section>
 
 
-<section xml:id="contents-udev" role="content"><info><title>Contents of Udev</title></info>
+<section xml:id="contents-udev" role="content"><title>Contents of Udev</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-perl" xreflabel="Perl" role="wrap">
-<info><title>Perl-&perl-version;</title></info>
+<title>Perl-&perl-version;</title>
 <?dbhtml filename="perl.html"?>
 
 <indexterm zone="ch-system-perl"><primary sortas="a-Perl">Perl</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Perl package contains the Practical Extraction and Report Language.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Perl</title></info>
+<title>Installation of Perl</title>
 
 <para>If you want full control over the way Perl is set up, you can run the
 interactive <command>Configure</command> script and hand-pick the way this
@@ -67,7 +67,7 @@ resolve the name <emphasis>localhost</emphasis>:</para>
 </section>
 
 
-<section xml:id="contents-perl" role="content"><info><title>Contents of Perl</title></info>
+<section xml:id="contents-perl" role="content"><title>Contents of Perl</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

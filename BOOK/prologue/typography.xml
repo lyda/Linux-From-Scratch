@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="pre-typography">
-<info><title>Typography</title></info>
+<title>Typography</title>
 <?dbhtml filename="typography.html"?>
 
 <para>To make things easier to follow, there are a few typographical

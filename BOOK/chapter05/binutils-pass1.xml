@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xi="http://www.w3.org/2003/XInclude"
          xml:id="ch-tools-binutils-pass1" role="wrap">
-<info><title>Binutils-&binutils-version; - Pass 1</title></info>
+<title>Binutils-&binutils-version; - Pass 1</title>
 <?dbhtml filename="binutils-pass1.html"?>
 
 <indexterm zone="ch-tools-binutils-pass1">
@@ -27,7 +27,7 @@
 </section>
 
 <section role="installation">
-<info><title>Installation of Binutils</title></info>
+<title>Installation of Binutils</title>
 
 <para>It is important that Binutils be the first package to get compiled,
 because both Glibc and GCC perform various tests on the available linker and
@@ -141,7 +141,7 @@ further on in this chapter.</para></warning>
 
 </section>
 
-<section role="content"><info><title/></info>
+<section role="content"><title/>
 <para>The details on this package are found in <xref linkend="contents-binutils"/>.</para>
 </section>
 

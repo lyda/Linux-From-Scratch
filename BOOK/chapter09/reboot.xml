@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-finish-reboot">
-<info><title>Rebooting the system</title></info>
+<title>Rebooting the system</title>
 <?dbhtml filename="reboot.html"?>
 
 <para>Now that all of the software has been installed, it is time to reboot

@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-ncurses" xreflabel="Ncurses" role="wrap">
-<info><title>Ncurses-&ncurses-version;</title></info>
+<title>Ncurses-&ncurses-version;</title>
 <?dbhtml filename="ncurses.html"?>
 
 <indexterm zone="ch-system-ncurses"><primary sortas="a-Ncurses">Ncurses</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Ncurses package contains libraries for terminal-independent
 handling of character screens.</para>
 
@@ -28,7 +28,7 @@ Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Ncurses</title></info>
+<title>Installation of Ncurses</title>
 
 <para>Prepare Ncurses for compilation:</para>
 

@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-changingowner">
-<info><title>Changing ownership</title></info>
+<title>Changing ownership</title>
 <?dbhtml filename="changingowner.html"?>
 
 <para>Right now the <filename class="directory">/tools</filename> directory

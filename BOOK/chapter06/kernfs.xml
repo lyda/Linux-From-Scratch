@@ -3,7 +3,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-kernfs">
-<info><title>Mounting virtual kernel file systems</title></info>
+<title>Mounting virtual kernel file systems</title>
 <?dbhtml filename="kernfs.html"?>
 
 <para>Various file systems exported by the kernel don't exist at all on your

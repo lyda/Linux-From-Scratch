@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-scripts-network">
-<info><title>Configuring the network script</title></info>
+<title>Configuring the network script</title>
 <?dbhtml filename="network.html"?>
 
 <indexterm zone="ch-scripts-network">
@@ -22,7 +22,7 @@ run-level directories
 (<filename class="directory">/etc/rc.d/rc*.d</filename>)</para>
 
 <section>
-<info><title>Creating network interface configuration files</title></info>
+<title>Creating network interface configuration files</title>
 
 <para>Which interfaces are brought up and down by the network script depends on
 the files in the <filename class="directory">/etc/sysconfig/network-devices</filename> directory. This

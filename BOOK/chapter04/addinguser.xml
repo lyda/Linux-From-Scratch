@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-tools-addinguser">
-<info><title>Adding the user lfs</title></info>
+<title>Adding the user lfs</title>
 <?dbhtml filename="addinguser.html"?>
 
 <para>When logged in as <emphasis>root</emphasis>, making a single mistake

@@ -8,7 +8,7 @@
          xml:id="chapter-partitioning"
          xreflabel="Chapter 2">
 <?dbhtml dir="chapter02"?>
-<info><title>Preparing a new partition</title></info>
+<title>Preparing a new partition</title>
 <?dbhtml filename="chapter02.html"?>
 
 <xi:include href="introduction.xml"/>

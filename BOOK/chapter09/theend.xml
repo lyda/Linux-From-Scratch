@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-finish-theend">
-<info><title>The End</title></info>
+<title>The End</title>
 <?dbhtml filename="theend.html"?>
 
 <indexterm zone="ch-finish-theend"><primary sortas="e-/etc/lfs-release">/etc/lfs-release</primary></indexterm>

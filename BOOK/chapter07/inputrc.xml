@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-scripts-inputrc">
-<info><title>Creating the /etc/inputrc file</title></info>
+<title>Creating the /etc/inputrc file</title>
 <?dbhtml filename="inputrc.html"?>
 
 <indexterm zone="ch-scripts-inputrc"><primary sortas="e-/etc/inputrc">/etc/inputrc</primary></indexterm>

@@ -7,7 +7,7 @@
          xmlns:xi="http://www.w3.org/2003/XInclude"
          xml:id="chapter-final-preps" xreflabel="Chapter 4">
 <?dbhtml dir="chapter04"?>
-<info><title>Final Preparations</title></info>
+<title>Final Preparations</title>
 <?dbhtml filename="chapter04.html"?>
 
 <xi:include href="aboutlfs.xml"/>

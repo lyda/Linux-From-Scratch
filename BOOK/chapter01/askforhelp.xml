@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="prepare-askforhelp">
-<info><title>How to ask for help</title></info>
+<title>How to ask for help</title>
 <?dbhtml filename="askforhelp.html"?>
 
 <para>If you run into a problem while working through this book, you should
@@ -21,7 +21,7 @@ you. But to assist them in diagnosing and solving your problem, please include
 all relevant information in your request for help.</para>
 
 <section>
-<info><title>Things to mention</title></info>
+<title>Things to mention</title>
  
 <para>Apart from a brief explanation of the problem you're having, the
 essential things to include in your request are:</para>
@@ -42,7 +42,7 @@ help us to see other possible causes of your problem.</para></note>
 </section>
 
 <section>
-<info><title>Configure problems</title></info>
+<title>Configure problems</title>
 
 <para>When something goes wrong during the stage where the configure script
 is run, look through the <filename>config.log</filename> file. This file
@@ -53,7 +53,7 @@ help.</para>
 </section>
 
 <section>
-<info><title>Compile problems</title></info>
+<title>Compile problems</title>
 
 <para>To help us find the cause of the problem, both screen output and
 the contents of various files are useful. The screen output from both
@@ -98,7 +98,7 @@ need.</para>
 </section>
 
 <section>
-<info><title>Test suite problems</title></info>
+<title>Test suite problems</title>
 
 <para>Many packages provide a test suite which, depending on the importance
 of the package, we may encourage you to run. Sometimes packages will

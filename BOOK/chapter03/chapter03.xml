@@ -7,7 +7,7 @@
          xmlns:xi="http://www.w3.org/2003/XInclude"
          xml:id="chapter-getting-materials" xreflabel="Chapter 3">
 <?dbhtml dir="chapter03"?>
-<info><title>The materials: packages and patches</title></info>
+<title>The materials: packages and patches</title>
 <?dbhtml filename="chapter03.html"?>
 
 <xi:include href="introduction.xml"/>

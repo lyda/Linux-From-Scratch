@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-introduction">
-<info><title>Introduction</title></info>
+<title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
 
 <para>In this chapter we enter the building site, and start

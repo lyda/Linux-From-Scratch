@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-scripts-setclock">
-<info><title>Configuring the setclock script</title></info>
+<title>Configuring the setclock script</title>
 <?dbhtml filename="setclock.html"?>
 
 <indexterm zone="ch-scripts-setclock">

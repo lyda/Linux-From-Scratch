@@ -6,12 +6,12 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-vim" xreflabel="Vim" role="wrap">
-<info><title>Vim-&vim-version;</title></info>
+<title>Vim-&vim-version;</title>
 <?dbhtml filename="vim.html"?>
 
 <indexterm zone="ch-system-vim"><primary sortas="a-Vim">Vim</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Vim package contains a powerful text editor.</para>
 
 <segmentedlist>
@@ -35,7 +35,7 @@ suggested installation instructions.</para>
 </section>
 
 <section role="installation">
-<info><title>Installation of Vim</title></info>
+<title>Installation of Vim</title>
 
 <para>First, unpack both
 <filename>vim-&vim-version;.tar.bz2</filename> and (optionally)
@@ -150,7 +150,7 @@ the following command:</para>
 </section>
 
 
-<section xml:id="contents-vim" role="content"><info><title>Contents of Vim</title></info>
+<section xml:id="contents-vim" role="content"><title>Contents of Vim</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

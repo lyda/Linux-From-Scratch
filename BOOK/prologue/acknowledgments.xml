@@ -6,14 +6,14 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink" 
          xml:id="ch-scatter-acknowledgments">
-<info><title>Acknowledgments</title></info>
+<title>Acknowledgments</title>
 
 <?dbhtml filename="acknowledgements.html"?>
 
 <para>We would like to thank the following people and organizations for their
 contributions to the Linux From Scratch Project.</para>
 
-<section><info><title>Current Project Team Members</title></info>
+<section><title>Current Project Team Members</title>
 
 
 <itemizedlist>
@@ -111,7 +111,7 @@ experiences with installing various packages.</para></listitem>
 
 </section>
 
-<section><info><title>Translators</title></info>
+<section><title>Translators</title>
 
 
 <itemizedlist>
@@ -136,10 +136,10 @@ translation project.</para></listitem>
 
 </section>
 
-<section><info><title>Mirror Maintainers</title></info>
+<section><title>Mirror Maintainers</title>
 
 
-<section><info><title>North American Mirrors</title></info>
+<section><title>North American Mirrors</title>
 
 
 <itemizedlist>
@@ -171,7 +171,7 @@ mirror.</para></listitem>
 
 </section>
 
-<section><info><title>South American Mirrors</title></info>
+<section><title>South American Mirrors</title>
 
 
 <itemizedlist>
@@ -191,7 +191,7 @@ mirror.</para></listitem>
 
 </section>
 
-<section><info><title>European Mirrors</title></info>
+<section><title>European Mirrors</title>
 
 
 <itemizedlist>
@@ -265,7 +265,7 @@ lfs.securewebservices.co.uk mirror</para></listitem>
 
 </section>
 
-<section><info><title>Asian Mirrors</title></info>
+<section><title>Asian Mirrors</title>
 
 
 <itemizedlist>
@@ -285,7 +285,7 @@ mirror</para></listitem>
 
 </section>
 
-<section><info><title>Australian Mirrors</title></info>
+<section><title>Australian Mirrors</title>
 
 
 <itemizedlist>
@@ -299,7 +299,7 @@ mirror</para></listitem>
 
 </section>
 
-<section><info><title>Donators</title></info>
+<section><title>Donators</title>
 
 
 <itemizedlist>
@@ -340,7 +340,7 @@ and throwing in their criticism.</para></listitem>
 
 </section>
 
-<section><info><title>Former Team Members and Contributors</title></info>
+<section><title>Former Team Members and Contributors</title>
 
 
 <itemizedlist>

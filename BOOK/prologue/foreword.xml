@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="pf-foreword">
-<info><title>Foreword</title></info>
+<title>Foreword</title>
 <?dbhtml filename="foreword.html"?>
 
 <para>Having used a number of different Linux distributions, I was never

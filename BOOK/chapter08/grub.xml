@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-bootable-grub">
-<info><title>Making the LFS system bootable</title></info>
+<title>Making the LFS system bootable</title>
 <?dbhtml filename="grub.html"?>
 
 <indexterm zone="ch-bootable-grub">

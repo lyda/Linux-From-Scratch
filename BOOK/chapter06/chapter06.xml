@@ -7,7 +7,7 @@
          xmlns:xi="http://www.w3.org/2003/XInclude"
          xml:id="chapter-building-system" xreflabel="Chapter 6">
 <?dbhtml dir="chapter06"?>
-<info><title>Installing basic system software</title></info>
+<title>Installing basic system software</title>
 <?dbhtml filename="chapter06.html"?>
 
 <xi:include href="introduction.xml"/>

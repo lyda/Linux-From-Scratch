@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-util-linux" xreflabel="Util-linux" role="wrap">
-<info><title>Util-linux-&util-linux-version;</title></info>
+<title>Util-linux-&util-linux-version;</title>
 <?dbhtml filename="util-linux.html"?>
 
 <indexterm zone="ch-system-util-linux"><primary sortas="a-Util-linux">Util-linux</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Util-linux package contains miscellaneous utility programs. Among
 them are utilities for handling file systems, consoles, partitions, and
 messages.</para>
@@ -29,7 +29,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, Zlib</seg></seglistite
 </section>
 
 <section role="installation">
-<info><title>FHS compliance notes</title></info>
+<title>FHS compliance notes</title>
 
 <para>The FHS recommends that we use <filename class="directory">/var/lib/hwclock</filename>,
 instead of the usual <filename class="directory">/etc</filename>, as the location for the
@@ -42,7 +42,7 @@ mkdir -p /var/lib/hwclock</userinput></screen>
 </section>
 
 <section role="installation">
-<info><title>Installation of Util-linux</title></info>
+<title>Installation of Util-linux</title>
 
 <para>Util-Linux has a coding problem that causes mis-compilation of the sfdisk
 program.  This patch fixes the problem:</para>
@@ -81,7 +81,7 @@ installed again.</para></listitem>
 </section>
 
 
-<section xml:id="contents-utillinux" role="content"><info><title>Contents of Util-linux</title></info>
+<section xml:id="contents-utillinux" role="content"><title>Contents of Util-linux</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

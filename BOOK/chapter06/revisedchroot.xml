@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-revisedchroot">
-<info><title>Cleaning up</title></info>
+<title>Cleaning up</title>
 <?dbhtml filename="revisedchroot.html"?>
 
 <para>From now on, when you exit the chroot environment and wish to reenter

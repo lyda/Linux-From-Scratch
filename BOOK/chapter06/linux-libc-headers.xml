@@ -5,14 +5,14 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-linux-libc-headers" role="wrap">
-<info><title>Linux-Libc-Headers-&linux-libc-headers-version;</title></info>
+<title>Linux-Libc-Headers-&linux-libc-headers-version;</title>
 <?dbhtml filename="linux-libc-headers.html"?>
 
 <indexterm zone="ch-system-linux-libc-headers">
 <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
 </indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -23,7 +23,7 @@
 </section>
 
 <section role="installation">
-<info><title>Installation of Linux-Libc-Headers</title></info>
+<title>Installation of Linux-Libc-Headers</title>
 
 <para>For years it has been common practice to use so-called <quote>raw</quote>
 kernel headers (straight from a kernel tarball) in <filename class="directory">/usr/include</filename>, but over the
@@ -48,7 +48,7 @@ find /usr/include/{asm,linux} -type f -exec chmod 644 {} \;</userinput></screen>
 </section>
 
 
-<section xml:id="contents-linux-libc-headers" role="content"><info><title>Contents of Linux-Libc-Headers</title></info>
+<section xml:id="contents-linux-libc-headers" role="content"><title>Contents of Linux-Libc-Headers</title>
 
 <segmentedlist>
 <segtitle>Installed headers</segtitle>

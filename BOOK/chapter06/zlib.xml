@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-zlib" xreflabel="Zlib" role="wrap">
-<info><title>Zlib-&zlib-version;</title></info>
+<title>Zlib-&zlib-version;</title>
 <?dbhtml filename="zlib.html"?>
 
 <indexterm zone="ch-system-zlib"><primary sortas="a-Zlib">Zlib</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Zlib package contains compression and un-compression routines used by
 some programs.</para>
 
@@ -27,7 +27,7 @@ some programs.</para>
 </section>
 
 <section role="installation">
-<info><title>Installation of Zlib</title></info>
+<title>Installation of Zlib</title>
 
 <note><para>Zlib is known to build its shared library incorrectly if CFLAGS is
 specified in the environment. If you are using your own CFLAGS variable, be
@@ -90,7 +90,7 @@ because we just moved the file it points to:</para>
 </section>
 
 
-<section xml:id="contents-zlib" role="content"><info><title>Contents of Zlib</title></info>
+<section xml:id="contents-zlib" role="content"><title>Contents of Zlib</title>
 
 <segmentedlist>
 <segtitle>Installed libraries</segtitle>

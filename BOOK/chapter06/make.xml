@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-make" xreflabel="Make" role="wrap">
-<info><title>Make-&make-version;</title></info>
+<title>Make-&make-version;</title>
 <?dbhtml filename="make.html"?>
 
 <indexterm zone="ch-system-make"><primary sortas="a-Make">Make</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Make package contains a program for compiling large packages.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ GCC, Gettext, Glibc, Grep, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Make</title></info>
+<title>Installation of Make</title>
 
 <para>Prepare Make for compilation:</para>
 
@@ -47,7 +47,7 @@ GCC, Gettext, Glibc, Grep, Sed</seg></seglistitem>
 </section>
 
 
-<section xml:id="contents-make" role="content"><info><title>Contents of Make</title></info>
+<section xml:id="contents-make" role="content"><title>Contents of Make</title>
 
 <segmentedlist>
 <segtitle>Installed program</segtitle>

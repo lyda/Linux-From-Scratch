@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-gettext" xreflabel="Gettext" role="wrap">
-<info><title>Gettext-&gettext-version;</title></info>
+<title>Gettext-&gettext-version;</title>
 <?dbhtml filename="gettext.html"?>
 
 <indexterm zone="ch-system-gettext"><primary sortas="a-Gettext">Gettext</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Gettext package contains utilities for internationalization and
 localization. These allow programs to be compiled with Native Language Support
 (NLS), enabling them to output messages in the user's native language.</para>
@@ -29,7 +29,7 @@ Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Gettext</title></info>
+<title>Installation of Gettext</title>
 
 <para>Prepare Gettext for compilation:</para>
 
@@ -50,7 +50,7 @@ Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 
-<section xml:id="contents-gettext" role="content"><info><title>Contents of Gettext</title></info>
+<section xml:id="contents-gettext" role="content"><title>Contents of Gettext</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-binutils" xreflabel="Binutils" role="wrap">
-<info><title>Binutils-&binutils-version;</title></info>
+<title>Binutils-&binutils-version;</title>
 <?dbhtml filename="binutils.html"?>
 
 <indexterm zone="ch-system-binutils"><primary sortas="a-Binutils">Binutils</primary></indexterm>
@@ -28,7 +28,7 @@ Glibc, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Binutils</title></info>
+<title>Installation of Binutils</title>
 
 <para>Now is an appropriate time to verify that your pseudo terminals (PTYs) are
 working properly inside the chroot environment. We will again quickly check that
@@ -97,7 +97,7 @@ some packages:</para>
 
 
 <section xml:id="contents-binutils" role="content">
-<info><title>Contents of Binutils</title></info>
+<title>Contents of Binutils</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

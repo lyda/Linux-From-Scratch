@@ -6,12 +6,12 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink" 
          xml:id="ch-bootable-kernel" xreflabel="Linux" role="wrap">
-<info><title>Linux-&linux-version;</title></info>
+<title>Linux-&linux-version;</title>
 <?dbhtml filename="kernel.html"?>
 
 <indexterm zone="ch-bootable-kernel"><primary sortas="a-Linux">Linux</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Linux package contains the kernel and the header files.</para>
 
 <segmentedlist>
@@ -29,7 +29,7 @@ GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of the kernel</title></info>
+<title>Installation of the kernel</title>
 
 <para>Building the kernel involves a few steps: configuration, compilation, and
 installation. If you don't like the way this book configures the kernel, view
@@ -169,7 +169,7 @@ owned by user <emphasis>root</emphasis>.</para>
 </section>
 
 
-<section xml:id="contents-kernel" role="content"><info><title>Contents of Linux</title></info>
+<section xml:id="contents-kernel" role="content"><title>Contents of Linux</title>
 
 <segmentedlist>
 <segtitle>Installed files</segtitle>

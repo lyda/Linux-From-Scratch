@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-patch" xreflabel="Patch" role="wrap">
-<info><title>Patch-&patch-version;</title></info>
+<title>Patch-&patch-version;</title>
 <?dbhtml filename="patch.html"?>
 
 <indexterm zone="ch-system-patch"><primary sortas="a-Patch">Patch</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Patch package contains a program for modifying files.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Patch</title></info>
+<title>Installation of Patch</title>
 
 <para>Prepare Patch for compilation (the preprocessor flag
 <parameter>-D_GNU_SOURCE</parameter> is only needed on PowerPCs, on other
@@ -46,7 +46,7 @@ machines you can leave it out):</para>
 </section>
 
 
-<section xml:id="contents-patch" role="content"><info><title>Contents of Patch</title></info>
+<section xml:id="contents-patch" role="content"><title>Contents of Patch</title>
 
 <segmentedlist>
 <segtitle>Installed program</segtitle>

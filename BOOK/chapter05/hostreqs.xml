@@ -27,7 +27,7 @@ above, you can run the following command:</para>
 
 <para>This will produce output similar to:</para>
 
-<blockquote><info/><screen><computeroutput>Linux version 2.6.2 (user@host) (gcc version 3.4.0) #1 Tue Apr 20 21:22:18 GMT 2004</computeroutput></screen></blockquote>
+<blockquote><screen><computeroutput>Linux version 2.6.2 (user@host) (gcc version 3.4.0) #1 Tue Apr 20 21:22:18 GMT 2004</computeroutput></screen></blockquote>
 
 <para>If the results of the above command state that your host kernel wasn't
 compiled using a GCC-3.0 (or later) compiler, you will need to compile one

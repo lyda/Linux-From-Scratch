@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-mktemp" xreflabel="Mktemp" role="wrap">
-<info><title>Mktemp-&mktemp-version;</title></info>
+<title>Mktemp-&mktemp-version;</title>
 <?dbhtml filename="mktemp.html"?>
 
 <indexterm zone="ch-system-mktemp"><primary sortas="a-Mktemp">Mktemp</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Mktemp package contains programs used to create secure temporary
 files in shell scripts.</para>
 
@@ -25,7 +25,7 @@ files in shell scripts.</para>
 </section>
 
 <section role="installation">
-<info><title>Installation of Mktemp</title></info>
+<title>Installation of Mktemp</title>
 
 <para>Many scripts still use the deprecated <command>tempfile</command>
 program, which has functionality much the same as <command>mktemp</command>.
@@ -60,7 +60,7 @@ make install-tempfile</userinput></screen>
 </section>
 
 
-<section xml:id="contents-mktemp" role="content"><info><title>Contents of Mktemp</title></info>
+<section xml:id="contents-mktemp" role="content"><title>Contents of Mktemp</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

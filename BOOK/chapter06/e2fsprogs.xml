@@ -6,12 +6,12 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-e2fsprogs" xreflabel="E2fsprogs" role="wrap">
-<info><title>E2fsprogs-&e2fsprogs-version;</title></info>
+<title>E2fsprogs-&e2fsprogs-version;</title>
 <?dbhtml filename="e2fsprogs.html"?>
 
 <indexterm zone="ch-system-e2fsprogs"><primary sortas="a-E2fsprogs">E2fsprogs</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The E2fsprogs package contains the utilities for handling the ext2
 file system. It also supports the ext3 journaling file system.</para>
 
@@ -29,7 +29,7 @@ Diffutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, Texinfo</seg></seglistite
 </section>
 
 <section role="installation">
-<info><title>Installation of E2fsprogs</title></info>
+<title>Installation of E2fsprogs</title>
 
 <para>It is recommended to build E2fsprogs in a subdirectory of the source tree:
 </para>
@@ -94,7 +94,7 @@ information regarding EVMS itself.</para></listitem>
 
 
 
-<section xml:id="contents-e2fsprogs" role="content"><info><title>Contents of E2fsprogs</title></info>
+<section xml:id="contents-e2fsprogs" role="content"><title>Contents of E2fsprogs</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

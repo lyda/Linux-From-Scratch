@@ -6,13 +6,13 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-iproute2" xreflabel="IProute2" role="wrap">
-<info><title>Iproute2-&iproute2-version;</title></info>
+<title>Iproute2-&iproute2-version;</title>
 <?dbhtml filename="iproute2.html"?>
   <indexterm zone="ch-system-iproute2">
     <primary sortas="a-iproute2">iproute2</primary>
   </indexterm>
   <section role="package">
-    <info><title/></info>
+    <title/>
     <para>The iproute2 package contains programs for basic and advanced
           IPV4-based networking.
     </para>
@@ -32,7 +32,7 @@
     </segmentedlist>
   </section>
   <section role="installation">
-    <info><title>Installation of iproute2</title></info>
+    <title>Installation of iproute2</title>
     <para>The <command>arpd</command> binary included in this package is
           dependent on Berkeley DB.  As <command>arpd</command> is not a very
           common requirement on a base Linux system we remove the dependency on
@@ -68,7 +68,7 @@ xlink:href="http://www.linuxfromscratch.org/blfs/view/cvs/content/databases.html
   </section>
 
   <section xml:id="contents-iproute2" role="content">
-    <info><title>Contents of iproute2</title></info>
+    <title>Contents of iproute2</title>
     <segmentedlist>
       <segtitle>Installed programs</segtitle>
       <seglistitem>

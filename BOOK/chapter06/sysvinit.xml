@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-sysvinit" xreflabel="Sysvinit" role="wrap">
-<info><title>Sysvinit-&sysvinit-version;</title></info>
+<title>Sysvinit-&sysvinit-version;</title>
 <?dbhtml filename="sysvinit.html"?>
 
 <indexterm zone="ch-system-sysvinit"><primary sortas="a-Sysvinit">Sysvinit</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Sysvinit package contains programs for controlling the startup,
 running, and shutdown of your system.</para>
 
@@ -27,7 +27,7 @@ running, and shutdown of your system.</para>
 </section>
 
 <section role="installation">
-<info><title>Installation of Sysvinit</title></info>
+<title>Installation of Sysvinit</title>
 
 <para>Sysvinit &sysvinit-version; contains a <quote>buffer overflow</quote> bug.
 Under some conditions, it clobbers the
@@ -57,7 +57,7 @@ misinterpretation, you can modify the source so that these messages read like
 </section>
 
 
-<section xml:id="conf-sysvinit" role="configuration"><info><title>Configuring Sysvinit</title></info>
+<section xml:id="conf-sysvinit" role="configuration"><title>Configuring Sysvinit</title>
 <indexterm zone="conf-sysvinit">
 <primary sortas="a-Sysvinit">Sysvinit</primary>
 <secondary>configuring</secondary></indexterm>
@@ -109,7 +109,7 @@ speakers.</para>
 </section>
 
 
-<section xml:id="contents-sysvinit" role="content"><info><title>Contents of Sysvinit</title></info>
+<section xml:id="contents-sysvinit" role="content"><title>Contents of Sysvinit</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

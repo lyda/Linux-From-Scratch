@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-chroot">
-<info><title>Entering the chroot environment</title></info>
+<title>Entering the chroot environment</title>
 <?dbhtml filename="chroot.html"?>
 
 <para>It is time to enter the chroot environment in order to begin building

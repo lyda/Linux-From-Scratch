@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-glibc" xreflabel="Glibc" role="wrap">
-<info><title>Glibc-&glibc-version;</title></info>
+<title>Glibc-&glibc-version;</title>
 <?dbhtml filename="glibc.html"?>
 
 <indexterm zone="ch-system-glibc"><primary sortas="a-Glibc">Glibc</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Glibc package contains the main C library. This library provides all
 the basic routines for allocating memory, searching directories, opening and
 closing files, reading and writing them, string handling, pattern matching,
@@ -30,7 +30,7 @@ Gawk, GCC, Gettext, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Glibc</title></info>
+<title>Installation of Glibc</title>
 
 <para>The Glibc build system is very well self-contained and will install
 perfectly, even though our compiler specs file and linker are still pointing
@@ -173,7 +173,7 @@ on the threading API (applicable to NPTL as well):</para>
 </section>
 
 
-<section xml:id="conf-glibc" role="configuration"><info><title>Configuring Glibc</title></info>
+<section xml:id="conf-glibc" role="configuration"><title>Configuring Glibc</title>
 <indexterm zone="conf-glibc"><primary sortas="e-/etc/nsswitch.conf">/etc/nsswitch.conf</primary></indexterm>
 <indexterm zone="conf-glibc"><primary sortas="e-/etc/localtime">/etc/localtime</primary></indexterm>
 
@@ -234,7 +234,7 @@ gave you.</para>
 
 
 <section xml:id="conf-ld" role="configuration">
-<info><title>Configuring Dynamic Loader</title></info>
+<title>Configuring Dynamic Loader</title>
 <indexterm zone="conf-ld"><primary sortas="e-/etc/ld.so.conf">/etc/ld.so.conf</primary></indexterm>
 
 <para>By default, the dynamic loader
@@ -265,7 +265,7 @@ EOF</userinput></screen>
 </section>
 
 
-<section xml:id="contents-glibc" role="content"><info><title>Contents of Glibc</title></info>
+<section xml:id="contents-glibc" role="content"><title>Contents of Glibc</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-grub" xreflabel="Grub" role="wrap">
-<info><title>Grub-&grub-version;</title></info>
+<title>Grub-&grub-version;</title>
 <?dbhtml filename="grub.html"?>
 
 <indexterm zone="ch-system-grub"><primary sortas="a-Grub">Grub</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Grub package contains the GRand Unified Bootloader.</para>
 
 <segmentedlist>
@@ -72,7 +72,7 @@ and/or <filename>reiserfs_stage1_5</filename> files.</para>
 </section>
 
 
-<section xml:id="contents-grub" role="content"><info><title>Contents of Grub</title></info>
+<section xml:id="contents-grub" role="content"><title>Contents of Grub</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

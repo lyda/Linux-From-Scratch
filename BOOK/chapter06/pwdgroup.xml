@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-pwdgroup">
-<info><title>The passwd, group and log files</title></info>
+<title>The passwd, group and log files</title>
 <?dbhtml filename="pwdgroup.html"?>
 
 <indexterm zone="ch-system-pwdgroup"><primary sortas="e-/etc/passwd">/etc/passwd</primary></indexterm>

@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-bootable-introduction">
-<info><title>Introduction</title></info>
+<title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
 
 <para>This chapter will make LFS bootable. This chapter deals with creating a

@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="space-mounting">
-<info><title>Mounting the new partition</title></info>
+<title>Mounting the new partition</title>
 <?dbhtml filename="mounting.html"?>
 
 <para>Now that we've created a file system, we want to be able to access

@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-shadow" xreflabel="Shadow" role="wrap">
-<info><title>Shadow-&shadow-version;</title></info>
+<title>Shadow-&shadow-version;</title>
 <?dbhtml filename="shadow.html"?>
 
 <indexterm zone="ch-system-shadow"><primary sortas="a-Shadow">Shadow</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Shadow package contains programs for handling passwords in a secure
 way.</para>
 
@@ -28,7 +28,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Shadow</title></info>
+<title>Installation of Shadow</title>
 
 <para>Prepare Shadow for compilation:</para>
 
@@ -88,7 +88,7 @@ installed by Shadow:</para>
 </section>
 
 
-<section xml:id="conf-shadow" role="configuration"><info><title>Configuring Shadow</title></info>
+<section xml:id="conf-shadow" role="configuration"><title>Configuring Shadow</title>
 <indexterm zone="conf-shadow">
 <primary sortas="a-Shadow">Shadow</primary>
 <secondary>configuring</secondary></indexterm>
@@ -119,7 +119,7 @@ any group passwords with the <command>gpasswd</command> command.</para>
 
 
 <section role="configuration">
-<info><title>Setting the root password</title></info>
+<title>Setting the root password</title>
 
 <para>Choose a password for user root and set it via:</para>
 
@@ -128,7 +128,7 @@ any group passwords with the <command>gpasswd</command> command.</para>
 </section>
 
 
-<section xml:id="contents-shadow" role="content"><info><title>Contents of Shadow</title></info>
+<section xml:id="contents-shadow" role="content"><title>Contents of Shadow</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
@@ -139,7 +139,7 @@ logoutd, mkpasswd, newgrp, newusers, passwd, pwck, pwconv, pwunconv, sg
 </seglistitem>
 </segmentedlist>
 
-<variablelist><info><title>Short descriptions</title></info>
+<variablelist><title>Short descriptions</title>
 
 <varlistentry xml:id="chage">
 <term><command>chage</command></term>

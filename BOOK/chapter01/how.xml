@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <section xmlns="http://docbook.org/docbook-ng" xml:id="ch-scatter-how">
-<info><title>How things are going to be done</title></info>
+<title>How things are going to be done</title>
 <?dbhtml filename="how.html"?>
 
 <para>You are going to build your LFS system by using a previously installed

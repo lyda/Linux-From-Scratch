@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-readline" xreflabel="Readline" role="wrap">
-<info><title>Readline-&readline-version;</title></info>
+<title>Readline-&readline-version;</title>
 <?dbhtml filename="readline.html"?>
 
 <indexterm zone="ch-system-readline"><primary sortas="a-Readline">Readline</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Readline package contains the Readline command-line library.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Readline</title></info>
+<title>Installation of Readline</title>
 
 <para>The following patch fixes various issues including a problem where Readline
 sometimes will only show 33 characters on a line and then wrap to the next line.</para>
@@ -63,7 +63,7 @@ ln -sf ../../lib/libreadline.so.5 /usr/lib/libreadline.so</userinput></screen>
 </section>
 
 
-<section xml:id="contents-readline" role="content"><info><title>Contents of Readline</title></info>
+<section xml:id="contents-readline" role="content"><title>Contents of Readline</title>
 <segmentedlist>
 <segtitle>Installed libraries</segtitle>
 <seglistitem><seg>Not checked</seg></seglistitem>

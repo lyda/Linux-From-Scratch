@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="space-creatingpartition">
-<info><title>Creating a new partition</title></info>
+<title>Creating a new partition</title>
 <?dbhtml filename="creatingpartition.html"?>
 
 <para>In order to build our new Linux system, we will need some space:

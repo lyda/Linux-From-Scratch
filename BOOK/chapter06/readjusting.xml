@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-readjusting">
-<info><title>Re-adjusting the toolchain</title></info>
+<title>Re-adjusting the toolchain</title>
 <?dbhtml filename="readjusting.html"?>
 
 <para>Now that the new and final C libraries have been installed, it's time to

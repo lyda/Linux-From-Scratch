@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-finish-whatnow">
-<info><title>What now?</title></info>
+<title>What now?</title>
 <?dbhtml filename="whatnow.html"?>
 
 <para>We thank you for reading the LFS Book and hope that you've found this

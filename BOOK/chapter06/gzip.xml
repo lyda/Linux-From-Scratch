@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-gzip" xreflabel="Gzip" role="wrap">
-<info><title>Gzip-&gzip-version;</title></info>
+<title>Gzip-&gzip-version;</title>
 <?dbhtml filename="gzip.html"?>
 
 <indexterm zone="ch-system-gzip"><primary sortas="a-Gzip">Gzip</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Gzip package contains programs for compressing and decompressing
 files.</para>
 
@@ -28,7 +28,7 @@ GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Gzip</title></info>
+<title>Installation of Gzip</title>
 
 <para>Prepare Gzip for compilation:</para>
 
@@ -60,7 +60,7 @@ ln -s gunzip /bin/uncompress</userinput></screen>
 </section>
 
 
-<section xml:id="contents-gzip" role="content"><info><title>Contents of Gzip</title></info>
+<section xml:id="contents-gzip" role="content"><title>Contents of Gzip</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="prepare-aboutlfs">
-<info><title>About $LFS</title></info>
+<title>About $LFS</title>
 <?dbhtml filename="aboutlfs.html"?>
 
 <para>Throughout this book the environment variable LFS will be used several

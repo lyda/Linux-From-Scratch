@@ -6,12 +6,12 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-module-init-tools"
          xreflabel="Module-Init-Tools" role="wrap">
-<info><title>Module-Init-Tools-&module-init-tools-version;</title></info>
+<title>Module-Init-Tools-&module-init-tools-version;</title>
 <?dbhtml filename="module-init-tools.html"?>
 
 <indexterm zone="ch-system-module-init-tools"><primary sortas="a-Module-Init-Tools">Module-Init-Tools</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Module-Init-Tools package contains programs for handling kernel
 modules in Linux kernels greater than or equal to version 2.5.47.</para>
 
@@ -29,7 +29,7 @@ Coreutils, Diffutils, Flex, GCC, Glibc, Grep, M4, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Module-Init-Tools</title></info>
+<title>Installation of Module-Init-Tools</title>
 
 <para>Prepare Module-Init-Tools for compilation:</para>
 
@@ -49,7 +49,7 @@ Coreutils, Diffutils, Flex, GCC, Glibc, Grep, M4, Make, Sed</seg></seglistitem>
 </section>
 
 
-<section xml:id="contents-module-init-tools" role="content"><info><title>Contents of Module-Init-Tools</title></info>
+<section xml:id="contents-module-init-tools" role="content"><title>Contents of Module-Init-Tools</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

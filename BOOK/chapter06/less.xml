@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-less" xreflabel="Less" role="wrap">
-<info><title>Less-&less-version;</title></info>
+<title>Less-&less-version;</title>
 <?dbhtml filename="less.html"?>
 
 <indexterm zone="ch-system-less"><primary sortas="a-Less">Less</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Less package contains a text file viewer.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Less</title></info>
+<title>Installation of Less</title>
 
 <para>Prepare Less for compilation:</para>
 
@@ -53,7 +53,7 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 
 </section>
 
-<section xml:id="contents-less" role="content"><info><title>Contents of Less</title></info>
+<section xml:id="contents-less" role="content"><title>Contents of Less</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

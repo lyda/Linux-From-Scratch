@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <dedication xmlns="http://docbook.org/docbook-ng">
-<info><title>Dedication</title></info>
+<title>Dedication</title>
 <para>This book is dedicated to my loving and supportive wife
 <emphasis>Beverly Beekmans</emphasis>.</para>
 </dedication>

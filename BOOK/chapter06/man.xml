@@ -6,12 +6,12 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"        
          xml:id="ch-system-man" xreflabel="Man" role="wrap">
-<info><title>Man-&man-version;</title></info>
+<title>Man-&man-version;</title>
 <?dbhtml filename="man.html"?>
 
 <indexterm zone="ch-system-man"><primary sortas="a-Man">Man</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Man package contains programs for finding and viewing manual pages.</para>
 
 <segmentedlist>
@@ -28,7 +28,7 @@ Glibc, Grep, Make, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Man</title></info>
+<title>Installation of Man</title>
 
 <para>We'll make three adjustments to the sources of Man.</para>
 
@@ -113,7 +113,7 @@ formatting and compression issues for man pages.</para>
 </section>
 
 
-<section xml:id="contents-man" role="content"><info><title>Contents of Man</title></info>
+<section xml:id="contents-man" role="content"><title>Contents of Man</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="pf-prerequisites">
-<info><title>Prerequisites</title></info>
+<title>Prerequisites</title>
 <?dbhtml filename="prerequisites.html"?>
 
 <para>This book assumes that its reader has a good deal of knowledge about

@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-bzip2" xreflabel="Bzip2" role="wrap">
-<info><title>Bzip2-&bzip2-version;</title></info>
+<title>Bzip2-&bzip2-version;</title>
 <?dbhtml filename="bzip2.html"?>
 
 <indexterm zone="ch-system-bzip2"><primary sortas="a-Bzip2">Bzip2</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Bzip2 package contains programs for compressing and decompressing
 files. On text files they achieve a much better compression than the
 traditional <command>gzip</command>.</para>
@@ -29,7 +29,7 @@ GCC, Glibc, Make</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Bzip2</title></info>
+<title>Installation of Bzip2</title>
 
 <para>Prepare Bzip2 for compilation with:</para>
 
@@ -68,7 +68,7 @@ ln -s bzip2 /bin/bzcat</userinput></screen>
 </section>
 
 
-<section xml:id="contents-bzip2" role="content"><info><title>Contents of Bzip2</title></info>
+<section xml:id="contents-bzip2" role="content"><title>Contents of Bzip2</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

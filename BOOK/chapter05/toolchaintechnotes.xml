@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-tools-toolchaintechnotes">
-<info><title>Toolchain technical notes</title></info>
+<title>Toolchain technical notes</title>
 <?dbhtml filename="toolchaintechnotes.html"?>
 
 <para>This section attempts to explain some of the rationale and technical

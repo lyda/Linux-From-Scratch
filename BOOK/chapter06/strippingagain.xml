@@ -3,7 +3,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-strippingagain">
-<info><title>Stripping again</title></info>
+<title>Stripping again</title>
 <?dbhtml filename="strippingagain.html"?>
 
 <para>If you are not a programmer and don't plan to do any debugging on your

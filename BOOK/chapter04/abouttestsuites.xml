@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="prepare-abouttestsuites">
-<info><title>About the test suites</title></info>
+<title>About the test suites</title>
 <?dbhtml filename="abouttestsuites.html"?>
 
 <para>Most packages provide a test suite. Running the test suite for a newly

@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-kbd" xreflabel="Kbd" role="wrap">
-<info><title>Kbd-&kbd-version;</title></info>
+<title>Kbd-&kbd-version;</title>
 <?dbhtml filename="kbd.html"?>
 
 <indexterm zone="ch-system-kbd"><primary sortas="a-Kbd">Kbd</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Kbd package contains key-table files and keyboard utilities.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ Diffutils, Flex, GCC, Gettext, Glibc, Grep, Gzip, M4, Make, Sed</seg></seglistit
 </section>
 
 <section role="installation">
-<info><title>Installation of Kbd</title></info>
+<title>Installation of Kbd</title>
 
 <para>Prepare Kbd for compilation:</para>
 
@@ -46,7 +46,7 @@ Diffutils, Flex, GCC, Gettext, Glibc, Grep, Gzip, M4, Make, Sed</seg></seglistit
 <!-- The "Configuring your keyboard" section has been moved to
 Chapter 7 and renamed to "Configuring Linux console" -->
 
-<section xml:id="contents-kbd" role="content"><info><title>Contents of Kbd</title></info>
+<section xml:id="contents-kbd" role="content"><title>Contents of Kbd</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

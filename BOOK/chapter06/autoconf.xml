@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-autoconf" xreflabel="Autoconf" role="wrap">
-<info><title>Autoconf-&autoconf-version;</title></info>
+<title>Autoconf-&autoconf-version;</title>
 <?dbhtml filename="autoconf.html"?>
 
 <indexterm zone="ch-system-autoconf"><primary sortas="a-Autoconf">Autoconf</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Autoconf package contains programs for producing shell scripts that
 can automatically configure source code.</para>
 
@@ -28,7 +28,7 @@ M4, Make, Perl, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of Autoconf</title></info>
+<title>Installation of Autoconf</title>
 
 <para>Prepare Autoconf for compilation:</para>
 
@@ -48,7 +48,7 @@ M4, Make, Perl, Sed</seg></seglistitem>
 </section>
 
 
-<section xml:id="contents-autoconf" role="content"><info><title>Contents of Autoconf</title></info>
+<section xml:id="contents-autoconf" role="content"><title>Contents of Autoconf</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

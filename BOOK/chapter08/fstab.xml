@@ -5,7 +5,7 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-bootable-fstab">
-<info><title>Creating the /etc/fstab file</title></info>
+<title>Creating the /etc/fstab file</title>
 <?dbhtml filename="fstab.html"?>
 
 <indexterm zone="ch-bootable-fstab"><primary sortas="e-/etc/fstab">/etc/fstab</primary></indexterm>

@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-iana-etc" xreflabel="Iana-Etc" role="wrap">
-<info><title>Iana-Etc-&iana-etc-version;</title></info>
+<title>Iana-Etc-&iana-etc-version;</title>
 <?dbhtml filename="iana-etc.html"?>
 
 <indexterm zone="ch-system-iana-etc"><primary sortas="a-Iana-Etc">Iana-Etc</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Iana-Etc package provides data for network services and protocols.</para>
 
 <segmentedlist>
@@ -24,7 +24,7 @@
 </section>
 
 <section role="installation">
-<info><title>Installation of Iana-Etc</title></info>
+<title>Installation of Iana-Etc</title>
 
 <para>Parse the data:</para>
 
@@ -37,7 +37,7 @@
 </section>
 
 
-<section xml:id="contents-iana-etc" role="content"><info><title>Contents of Iana-Etc</title></info>
+<section xml:id="contents-iana-etc" role="content"><title>Contents of Iana-Etc</title>
 
 <segmentedlist>
 <segtitle>Installed files</segtitle>

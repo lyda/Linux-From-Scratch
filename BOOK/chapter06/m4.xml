@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-m4" xreflabel="M4" role="wrap">
-<info><title>M4-&m4-version;</title></info>
+<title>M4-&m4-version;</title>
 <?dbhtml filename="m4.html"?>
 
 <indexterm zone="ch-system-m4"><primary sortas="a-M4">M4</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The M4 package contains a macro processor.</para>
 
 <segmentedlist>
@@ -27,7 +27,7 @@ Gettext, Glibc, Grep, Make, Perl, Sed</seg></seglistitem>
 </section>
 
 <section role="installation">
-<info><title>Installation of M4</title></info>
+<title>Installation of M4</title>
 
 <para>Prepare M4 for compilation:</para>
 
@@ -47,7 +47,7 @@ Gettext, Glibc, Grep, Make, Perl, Sed</seg></seglistitem>
 </section>
 
 
-<section xml:id="contents-m4" role="content"><info><title>Contents of M4</title></info>
+<section xml:id="contents-m4" role="content"><title>Contents of M4</title>
 
 <segmentedlist>
 <segtitle>Installed program</segtitle>

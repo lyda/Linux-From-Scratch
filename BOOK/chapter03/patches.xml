@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="materials-patches">
-<info><title>Needed patches</title></info>
+<title>Needed patches</title>
 <?dbhtml filename="patches.html"?>
 
 <para>Besides all those packages, you'll also need several patches. These

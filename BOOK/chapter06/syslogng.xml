@@ -5,12 +5,12 @@
 ]>
 <section xmlns="http://docbook.org/docbook-ng"
          xml:id="ch-system-syslogng" xreflabel="Syslog-ng" role="wrap">
-<info><title>Syslog-ng-&syslogng-version;</title></info>
+<title>Syslog-ng-&syslogng-version;</title>
 <?dbhtml filename="syslogng.html"?>
 
 <indexterm zone="ch-system-syslogng"><primary sortas="a-Syslogng">Syslog-ng</primary></indexterm>
 
-<section role="package"><info><title/></info>
+<section role="package"><title/>
 <para>The Syslog-ng package contains programs for logging system messages, such
 as those given by the kernel when unusual things happen.</para>
 
@@ -27,7 +27,7 @@ as those given by the kernel when unusual things happen.</para>
 </section>
 
 <section role="installation">
-<info><title>Installation of Syslog-ng</title></info>
+<title>Installation of Syslog-ng</title>
 
 <para>Prepare Syslog-ng for compilation:</para>
 
@@ -44,7 +44,7 @@ as those given by the kernel when unusual things happen.</para>
 </section>
 
 
-<section xml:id="conf-syslogng" role="configuration"><info><title>Configuring Syslog-ng</title></info>
+<section xml:id="conf-syslogng" role="configuration"><title>Configuring Syslog-ng</title>
 <indexterm zone="conf-syslogng">
 <primary sortas="a-Syslogng">Syslog-ng</primary>
 <secondary>configuring</secondary></indexterm>
@@ -132,7 +132,7 @@ EOF</userinput></screen>
 
 </section>
 
-<section xml:id="contents-syslogng" role="content"><info><title>Contents of Syslog-ng</title></info>
+<section xml:id="contents-syslogng" role="content"><title>Contents of Syslog-ng</title>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>

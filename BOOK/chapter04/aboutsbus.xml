@@ -6,7 +6,7 @@
 <section xmlns="http://docbook.org/docbook-ng"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="prepare-aboutsbus">
-<info><title>About SBUs</title></info>
+<title>About SBUs</title>
 <?dbhtml filename="aboutsbus.html"?>
 
 <para>Most people would like to know beforehand approximately how long it
