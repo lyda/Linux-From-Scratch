@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-scatter-administrativa">
-<title>Resources</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="ch-scatter-administrativa">
+<info><title>Resources</title></info>
 <?dbhtml filename="resources.html"?>
 
 
-<sect2 id="ch-scatter-faq">
-<title>FAQ</title>
+<section xml:id="ch-scatter-faq">
+<info><title>FAQ</title></info>
 
 <para>If during the building of your LFS system you encounter any errors, or
 have any questions, or think you found a typo in the book, then please first
 consult the FAQ (Frequently Asked Questions) at
-<ulink url="&faq-root;"/>.</para>
+<uri xlink:href="&faq-root;">&faq-root;</uri>.</para>
 
-</sect2>
+</section>
 
-
-<sect2 id="ch-scatter-irc">
-<title>IRC</title>
+<section xml:id="ch-scatter-irc">
+<info><title>IRC</title></info>
 
 <para>Several members of the LFS community offer assistance on our community
 IRC (Internet Relay Chat) network. Before you utilize this mode of support, we
@@ -30,24 +31,24 @@ network at <uri>irc.linuxfromscratch.org</uri> or
 <uri>irc.linux-phreak.net</uri> port 6667. The support channel is
 named #LFS-support.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="ch-scatter-maillists" xreflabel="Chapter 1 - Mailing lists">
-<title>Mailing lists</title>
+<section xml:id="ch-scatter-maillists" xreflabel="Chapter 1 - Mailing lists">
+<info><title>Mailing lists</title></info>
 
 <para>The <uri>linuxfromscratch.org</uri> server is hosting a number
 of mailing lists used for the development of the LFS project. These lists
 include, among others, the main development and support lists.</para>
 
 <para>For information on which lists are available, how to subscribe to them,
-their archive locations, and so on, visit <ulink url="&lfs-root;mail.html"/>.</para>
+their archive locations, and so on, visit <uri xlink:href="&lfs-root;mail.html">&lfs-root;mail.html</uri>.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="ch-scatter-newsserver">
-<title>News server</title>
+<section xml:id="ch-scatter-newsserver">
+<info><title>News server</title></info>
 
 <para>All the mailing lists hosted at <uri>linuxfromscratch.org</uri>
 are also accessible via the NNTP server. All messages posted to a mailing list
@@ -56,47 +57,45 @@ are copied to the corresponding newsgroup, and vice versa.</para>
 <para>The news server can be reached at
 <uri>news.linuxfromscratch.org</uri>.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="ch-scatter-wiki">
-<title>Wiki</title>
+<section xml:id="ch-scatter-wiki">
+<info><title>Wiki</title></info>
 
 <para>For more information on a package, updated versions, tweaks, personal
-experiences, and so on, see the LFS Wiki at <ulink url="&wiki-root;"/>. You
-can add information there yourself too, to help others.</para>
+experiences, and so on, see the LFS Wiki at <uri xlink:href="&wiki-root;">&wiki-root;</uri>. You can add information there yourself too, to help others.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="ch-scatter-references">
-<title>References</title>
+<section xml:id="ch-scatter-references">
+<info><title>References</title></info>
 
 <para>If you need still more detailed information on the packages,
 you will find useful pointers on this page:
-<ulink url="http://www.109bean.org.uk/LFS-references.html"/>.</para>
+<uri xlink:href="http://www.109bean.org.uk/LFS-references.html">http://www.109bean.org.uk/LFS-references.html</uri>.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="ch-scatter-mirrors" xreflabel="Chapter 1 - Mirror sites">
-<title>Mirror sites</title>
+<section xml:id="ch-scatter-mirrors" xreflabel="Chapter 1 - Mirror sites">
+<info><title>Mirror sites</title></info>
 
 <para>The LFS project has a number of mirrors set up world-wide to make
 accessing the website and downloading the required packages more convenient.
-Please visit the website at <ulink url="&lfs-root;"/> for a list of current
-mirrors.</para>
+Please visit the website at <uri xlink:href="&lfs-root;">&lfs-root;</uri> for a list of current mirrors.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="ch-scatter-contactinfo">
-<title>Contact information</title>
+<section xml:id="ch-scatter-contactinfo">
+<info><title>Contact information</title></info>
 
 <para>Please direct all your questions and comments to one of the LFS mailing
 lists (see above).</para>
 
-</sect2>
+</section>
 
 
-</sect1>
+</section>
