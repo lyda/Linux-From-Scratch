@@ -19,7 +19,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>Automake (&automake-version;) - 644 KB:</term>
+<term>Automake (&automake-version;) - 681 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;automake/"/></para>
 </listitem>
@@ -110,7 +110,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>Gawk (&gawk-version;) - 1,596 KB:</term>
+<term>Gawk (&gawk-version;) - 1,692 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;gnuawk/"/></para>
 </listitem>
@@ -180,7 +180,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>IPRoute2 (&iproute2-version;) - 230 KB:</term>
+<term>IPRoute2 (&iproute2-version;) - 264 KB:</term>
 <listitem>
 <para><ulink url="http://developer.osdl.org/dev/iproute2/download/"/></para>
 </listitem>
@@ -215,7 +215,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>Linux (&linux-version;) - 30,051 KB:</term>
+<term>Linux (&linux-version;) - 34,793 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;linux/"/></para>
 </listitem>
@@ -229,7 +229,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>M4 (&m4-version;) - 310 KB:</term>
+<term>M4 (&m4-version;) - 337 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;gnum4/"/></para>
 </listitem>
@@ -243,7 +243,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>Man (&man-version;) - 196 KB:</term>
+<term>Man (&man-version;) - 223 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;man/"/></para>
 </listitem>
@@ -292,7 +292,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>Procps (&procps-version;) - 256 KB:</term>
+<term>Procps (&procps-version;) - 265 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;procps/"/></para>
 </listitem>
@@ -313,7 +313,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>Sed (&sed-version;) - 753 KB:</term>
+<term>Sed (&sed-version;) - 749KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;sed/"/></para>
 </listitem>
@@ -383,7 +383,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>Util-linux (&util-linux-version;) - 1,814 KB:</term>
+<term>Util-linux (&util-linux-version;) - 1,921 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;util-linux/"/></para>
 </listitem>

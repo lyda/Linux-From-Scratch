@@ -19,27 +19,30 @@ first a summary, then a detailed log.</para>
 
 <listitem><para>Upgraded to:</para>
 <itemizedlist>
-<listitem><para>automake-1.9</para></listitem>
+<listitem><para>automake-1.9.1</para></listitem>
 <listitem><para>bash-3.0</para></listitem>
-<listitem><para>binutils-2.15</para></listitem>
+<listitem><para>binutils-2.15.91.0.2</para></listitem>
 <listitem><para>bison-1.875a</para></listitem>
 <listitem><para>expect-5.42.1</para></listitem>
 <listitem><para>file-4.10</para></listitem>
 <listitem><para>flex-2.5.31</para></listitem>
+<listitem><para>gawk-3.1.4</para></listitem>
 <listitem><para>gcc-3.4.1</para></listitem>
 <listitem><para>glibc-2.3.4-20040701</para></listitem>
 <listitem><para>groff-1.19.1</para></listitem>
-<listitem><para>lfs-bootscripts-2.2.0</para></listitem>
-<listitem><para>linux-2.6.7</para></listitem>
-<listitem><para>m4-1.4.1</para></listitem>
-<listitem><para>man-1.5n</para></listitem>
+<listitem><para>lfs-bootscripts-2.2.2</para></listitem>
+<listitem><para>libtool-1.5.8</para></listitem>
+<listitem><para>linux-2.6.8.1</para></listitem>
+<listitem><para>m4-1.4.2</para></listitem>
+<listitem><para>man-1.5o</para></listitem>
 <listitem><para>man-pages-1.67</para></listitem>
 <listitem><para>perl-5.8.5</para></listitem>
-<listitem><para>procps-3.2.2</para></listitem>
+<listitem><para>procps-3.2.3</para></listitem>
 <listitem><para>psmisc-21.5</para></listitem>
-<listitem><para>sed-4.1.1</para></listitem>
+<listitem><para>sed-4.1.2</para></listitem>
 <listitem><para>tar-1.14</para></listitem>
 <listitem><para>tcl-8.4.7</para></listitem>
+<listitem><para>util-linux-2.12b</para></listitem>
 <listitem><para>vim-6.3</para></listitem>
 </itemizedlist>
 </listitem>
@@ -50,9 +53,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>coreutils-5.2.1-suppress_hostname_uptime_kill_su-1.patch</para></listitem>
 <listitem><para>flex-2.5.31-debian_fixes-2.patch</para></listitem>
 <listitem><para>inetutils-1.4.2-kernel_headers-1.patch</para></listitem>
-<listitem><para>iproute2-2.6.8-ss040730</para></listitem>
-<listitem><para>iproute2-2.6.8-ss040730-remove_db-1.patch</para></listitem>
-<listitem><para>linux-libc-headers-2.6.7.0</para></listitem>
+<listitem><para>iproute2-2.6.8-040823</para></listitem>
+<listitem><para>iproute2-2.6.8_040823-remove_db-1.patch</para></listitem>
+<listitem><para>linux-libc-headers-2.6.8.1</para></listitem>
 <listitem><para>module-init-tools-3.0</para></listitem>
 <listitem><para>readline-5.0</para></listitem>
 <listitem><para>readline-5.0-display_wrap-1.patch</para></listitem>
@@ -62,7 +65,6 @@ first a summary, then a detailed log.</para>
 <listitem><para>udev-030</para></listitem>
 <listitem><para>udev-config-1.permissions</para></listitem>
 <listitem><para>udev-config-1.rules</para></listitem>
-<listitem><para>util-linux-2.12a-kernel_headers-1.patch</para></listitem>
 <listitem><para>vim-6.3 language files</para></listitem>
 </itemizedlist>
 </listitem>
@@ -80,6 +82,12 @@ first a summary, then a detailed log.</para>
 <listitem><para>procinfo-18</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>August 29th, 2004 [matt]: Upgraded to autoconf-1.9.1,
+gawk-3.1.4, iproute2-2.6.8-040823, linux-2.6.8.1, m4-1.4.2, man-1.5o,
+procps-3.2.3 (removing unnecessary <command>rm</command> command,
+sed-4.1.2 and util-linux-2.12b (removing kernel-headers patch as the issue has
+been fixed upstream).</para></listitem>
 
 <listitem><para>August 29th, 2004 [gerard]: Added missing SBU for
 readline.</para></listitem>
