@@ -52,7 +52,7 @@ When, for example, <filename class="directory">/usr</filename> is not
 mounted, these essential programs need to be available. They belong in
 directories like <filename class="directory">/lib</filename> and
 <filename class="directory">/sbin</filename>. If this option is not
-passed to E2fsprogs's configure, the programs are placed in the
+passed to E2fsprogs' configure, the programs are placed in the
 <filename class="directory">/usr</filename> directory, which is not
 where they should be.</para></listitem>
 </varlistentry>
