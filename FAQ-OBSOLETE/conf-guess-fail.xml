@@ -3,7 +3,8 @@
 <answer><para>Typical symptoms look like this:
 <screen>sk ~/tmp-0.0 $ ./configure 
 creating cache ./config.cache
-checking host system type... <emphasis role="strong">configure: error: can not guess host type; you must specify one</emphasis>
+checking host system type... <emphasis role="strong">configure: error: can not guess host type; you must
+specify one</emphasis><!-- XXX: remove that line break after fixing the tableized layout -->
 sk ~/tmp-0.0 $
 </screen></para>
 <para>The problem is usually that the script can't run the compiler.
