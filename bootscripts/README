@@ -20,11 +20,12 @@ Network Configuration:
 
 	Additional Configuration:
 		sysconfig/network-devices/ifconfig.*
-		static:
+		ipv4-static:
 		- IP: static IP Address
 		- GATEWAY: Specifies the IP Address of the gateway server
-		- NETMASK: netmask, defaults to NETMASK=255.255.255.0
+		- PREFIX: netmask, defaults to PREFIX=24
 		- BROADCAST: broadcast address
+		ipv4-static-routes:
 
 SetClock configuration:
 	Script Files:
