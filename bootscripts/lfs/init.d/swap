@@ -6,22 +6,6 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
-# Parse fstab.
-exec 9>&0 < /etc/fstab
-	while read fs mnt type opts dump pass junk; do
-		# Ignore comments and blank lines.
-		case "$fs" in
-			""|\#*) continue ;;
-		esac
-
-		# Set do_swap if there is swap found.
-		[ "$type" = swap ] && do_swap=yes
-	done
-exec 0>&9 9>&-
-
-# If there's no swap found, exit.
-[ "$do_swap" ] || exit 0
-
 case "$1" in
 	start)
 		echo "Activating all swap files/partitions..."
