@@ -105,13 +105,13 @@ install-cups:
 	ln -s  ../init.d/cups ${EXTDIR}/rc.d/rc6.d/K00cups
 install-dhcp:
 	install -m 754 blfs/init.d/dhcp       ${EXTDIR}/rc.d/init.d/
-	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc0.d/
-	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc1.d/
-	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc2.d/
-	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc3.d/
-	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc4.d/
-	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc5.d/
-	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc6.d/
+	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc0.d/K30dhcp
+	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc1.d/K30dhcp
+	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc2.d/K30dhcp
+	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc3.d/S30dhcp
+	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc4.d/S30dhcp
+	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc5.d/S30dhcp
+	ln -s  ../init.d/dhcp ${EXTDIR}/rc.d/rc6.d/K30dhcp
 install-exim:
 	install -m 754 blfs/init.d/exim       ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/exim ${EXTDIR}/rc.d/rc0.d/K25exim
