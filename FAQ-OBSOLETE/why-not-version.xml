@@ -5,7 +5,7 @@ than the one in the Book?</para></question>
 using a version not in the book or varying from the book in any way
 is not a good idea.
 The IRC channel regulars have a saying, "FBBG".
-As Tux, the resident bot, is quick to say,
+As rms, the resident bot, is quick to say,
 this means, "Follow Book, Book Good."
 They and the people on the lists have helped many an unhappy newbie
 who deviated from the book during that first build.
@@ -21,8 +21,13 @@ here are some notes for specific releases:
 <itemizedlist>
 
 <listitem><para>flex-2.5.31:
-This release breaks building modutils, HJ binutils, and XFree86;
-use 2.5.27 instead.
+This release is nasty. Word in #lfs-support has it that it will work with
+XFree86 4.3.0.1, the latest HJL binutils, and using "flex -l" with modutils,
+which can be done with <ulink
+url="http://evanidus.ath.cx:8080/l14h/patches/personal/modutils-2.4.25-flex-2.5.31-tmp-fix.patch.bz2"/>
+However, you're on your own if you try this.
+Don't expect any support.
+Version 2.5.27 is more likely to work without weird hacks.
 <!-- Chris on #lfs-support says the patch doesn't work
 See <ulink
 url="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=720971&amp;group_id=72099&amp;atid=533377"/>
