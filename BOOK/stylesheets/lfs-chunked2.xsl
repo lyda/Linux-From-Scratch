@@ -10,6 +10,7 @@
 
     <!-- Including our others customized elements templates -->
   <xsl:include href="xhtml/lfs-admon.xsl"/>
+  <xsl:include href="xhtml/lfs-sections.xsl"/>
   <xsl:include href="xhtml/lfs-mixed.xsl"/>
   <xsl:include href="xhtml/lfs-titles.xsl"/>
   <xsl:include href="xhtml/lfs-toc.xsl"/>

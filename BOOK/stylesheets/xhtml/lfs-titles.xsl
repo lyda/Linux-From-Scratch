@@ -7,6 +7,8 @@
   <xsl:template name="part.titlepage">
     <div class="titlepage">
       <h1 class="{name(.)}">
+        <xsl:apply-templates select="." mode="label.markup"/>
+        <xsl:text>. </xsl:text>
         <xsl:value-of select="title"/>
       </h1>
     </div>
@@ -15,6 +17,8 @@
   <xsl:template name="chapter.titlepage">
     <div class="titlepage">
       <h1 class="{name(.)}">
+        <xsl:apply-templates select="." mode="label.markup"/>
+        <xsl:text>. </xsl:text>
         <xsl:value-of select="title"/>
       </h1>
     </div>
@@ -37,6 +41,8 @@
             <a id="{@id}" name="{@id}"/>
           </xsl:if>
           <h2 class="{name(.)}">
+            <xsl:apply-templates select="." mode="label.markup"/>
+            <xsl:text>. </xsl:text>
             <xsl:value-of select="title"/>
           </h2>
         </div>
@@ -44,6 +50,8 @@
       <xsl:otherwise>
         <div class="titlepage">
           <h1 class="{name(.)}">
+            <xsl:apply-templates select="." mode="label.markup"/>
+            <xsl:text>. </xsl:text>
             <xsl:value-of select="title"/>
           </h1>
         </div>
@@ -60,6 +68,8 @@
             <a id="{@id}" name="{@id}"/>
           </xsl:if>
           <h2 class="{name(.)}">
+            <xsl:apply-templates select="." mode="label.markup"/>
+            <xsl:text>. </xsl:text>
             <xsl:value-of select="title"/>
           </h2>
         </div>

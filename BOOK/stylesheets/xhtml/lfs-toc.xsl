@@ -6,7 +6,7 @@
                 
     <!-- General settings -->
   <xsl:param name="generate.toc">
-    appendix  toc
+    appendix  nop
     book      toc,title,figure,table,example,equation
     chapter   nop
     part      toc
