@@ -264,6 +264,12 @@ ln -s ../X11/include/X11 X11
 		</section>
 	</chapter>
 	<chapter id="specific-packages"><title>Questions about specific packages.</title>
+		<section id="kernel-modules"><title>How do I setup kernel modules?</title>
+			<para>
+				Follow the Module-HOWTO at <ulink
+				url="http://www.linuxdoc.org/HOWTO/Module-HOWTO/">http://www.linuxdoc.org/HOWTO/Module-HOWTO/</ulink>.
+			</para>
+		</section>
 		<section id="fileutils-error"><title>I'm getting errors when compiling fileutils.</title>
 			<para>
 				You may need to apply the fileutils patch.
