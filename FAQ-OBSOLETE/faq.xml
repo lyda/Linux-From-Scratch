@@ -542,14 +542,26 @@ make: *** [all] Error 2
 				the list archives may reveal the reason.
 			</para></answer>
 		</qandaentry>
-		<qandaentry id="kernel-header-copy"><question><para>Why copy the kernel headers instead of linking?</para></question>
-			<answer><para>We copy the kernel headers
-				(as instructed by the kernel documentation)
-				instead of linking them because, for most purposes,
-				the kernel headers should match the currently running libc,
-				not the currently running kernel.
-			</para></answer>
-		</qandaentry>
+
+<qandaentry id="kernel-header-copy"><question><para>Why copy the kernel headers instead of linking them?</para></question>
+<answer><para>In short, we copy the kernel headers
+instead of linking them because
+the kernel headers should match the currently running libc,
+not the currently running kernel.
+</para></answer>
+<answer><para>For the long answer see these:
+<itemizedlist>
+<listitem><para>A post by Linus himself: <ulink
+url="http://www.uwsg.iu.edu/hypermail/linux/kernel/0007.3/0587.html">http://www.uwsg.iu.edu/hypermail/linux/kernel/0007.3/0587.html</ulink>
+</para></listitem>
+<listitem><para>Kernel Traffic #80, 4. Symlinks In The Kernel; Kernel/Library/etc Interface Dispute: <ulink
+url="http://kt.zork.net/kernel-traffic/kt20000814_80.txt">http://kt.zork.net/kernel-traffic/kt20000814_80.txt</ulink>
+(This covers the thread in which Linus' post occurred.)
+</para></listitem>
+</itemizedlist>
+</para></answer>
+</qandaentry>
+
 <!--		<qandadiv id="why-not-add"><title>Why not add / use package Foo?</title>-->
 			<qandaentry id="add-grub"><question><para>GRUB instead of LILO</para></question>
 				<answer><para>GRUB has not yet been released as stable.
