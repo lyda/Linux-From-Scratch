@@ -25,9 +25,33 @@ and there is an RPM Hint to help with installation at
 <ulink url="http://hints.linuxfromscratch.org/hints/rpm.txt"/>.
 </para></listitem>
 
-<listitem><para>GNU Stow is an interesting concept. See
+<listitem><para>There are several implementations of the Depot/Stow/Encap
+style package manager.
+</para>
+<itemizedlist>
+
+<listitem><para>The best is probably Graft from
+<ulink url="http://www.gormand.com.au/peters/tools/"/>.
+</para></listitem>
+
+<listitem><para>Depot is available from
+<ulink url="http://asg.web.cmu.edu/depot/"/>.
+</para></listitem>
+
+<listitem><para>Encap is available from
+<ulink url="http://encap.cso.uiuc.edu/epkg/"/>.
+</para></listitem>
+
+<listitem><para>GNU Stow is available from
 <ulink url="http://www.gnu.org/software/stow/"/>.
 </para></listitem>
+
+<listitem><para>And several more are listed in the Graft documentation at
+<ulink url="http://www.gormand.com.au/peters/tools/graft/graft.html#research"/>.
+</para></listitem>
+
+</itemizedlist>
+</listitem>
 
 <listitem><para>Originally based on a script
 written by LFS' own Gerard Beekmans,
@@ -49,8 +73,8 @@ It is available from
 </para></listitem>
 
 </itemizedlist>
-Do you know of one missing from that list?
-Please email its name, URL, and other information,
+If you have an addition to the list,
+please do email its name, URL, and other information,
 to the FAQ maintainer or an apropriate LFS mailing list so it can be added here.
 </para></answer>
 </qandaentry>
