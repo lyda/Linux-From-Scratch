@@ -112,6 +112,7 @@ install-livecd: create-dirs create-service-dir
 	install -m ${MODE} lfs/init.d/sysctl        ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/startup   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/mountsqfs ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} contrib/livecd/hostname ${EXTDIR}/rc.d/init.d/
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S60sendsignals
 	ln -sf ../init.d/halt        ${EXTDIR}/rc.d/rc0.d/S99halt
@@ -120,6 +121,7 @@ install-livecd: create-dirs create-service-dir
 	ln -sf ../init.d/reboot      ${EXTDIR}/rc.d/rc6.d/S99reboot
 	ln -sf ../init.d/startup     ${EXTDIR}/rc.d/rcsysinit.d/S00startup
 	ln -sf ../init.d/mountsqfs   ${EXTDIR}/rc.d/rcsysinit.d/S05mountsqfs
+	ln -sf ../init.d/hostname    ${EXTDIR}/rc.d/rcsysinit.d/S10hostname
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	ln -sf ../init.d/sysctl      ${EXTDIR}/rc.d/rcsysinit.d/S90sysctl
