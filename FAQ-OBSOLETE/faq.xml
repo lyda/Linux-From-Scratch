@@ -169,6 +169,19 @@ url="http://beyond.linuxfromscratch.org/">http://beyond.linuxfromscratch.org/</u
 </para>
 
 <!-- elist: ,lfs-dev,new -->
+<qandaentry id="why-not-faq">
+<question><para>Why not include the FAQ in the book?</para></question>
+<answer><para>Marc Heerdink may have said it best in a post to lfs-dev:
+<blockquote><para>The problem is that the FAQ is a dynamic document.
+The FAQ for a book release is released only after the book version itself,
+because the FAQ is updated to reflect the Qs asked
+about the current version of the book.
+A link is better, since you'll always have the most up-to-date answers handy.
+</para></blockquote>
+</para></answer>
+</qandaentry>
+
+<!-- elist: ,lfs-dev,new -->
 <qandaentry id="gcc-3_0">
 <question><para>Why isn't GCC 3.0.x in the book?
 </para></question>
