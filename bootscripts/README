@@ -16,15 +16,13 @@ Network Configuration:
                   exist.  Depreciated, but remains for comatibility purpose
 
 		sysconfig/network
-		- GATEWAY: Specifies the IPAddress of the gateway server
-		- GATEWAY_IF: Specifies which IPAddress the gateway is
-		              connected to
 		- HOSTNAME: Value of the system's hostname
 
 	Additional Configuration:
 		sysconfig/network-devices/ifconfig.*
 		static:
 		- IP: static IP Address
+		- GATEWAY: Specifies the IP Address of the gateway server
 		- NETMASK: netmask, defaults to NETMASK=255.255.255.0
 		- BROADCAST: broadcast address
 
