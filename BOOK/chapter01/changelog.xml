@@ -75,6 +75,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>February 5, 2005 [matt]: Copy hotplug's pnp.distmap file to
+silence its warnings.  Also tidy up some explanatory text</para></listitem>
+
 <listitem><para>January 29, 2005 [matt]: Upgraded to sed-4.1.4</para></listitem>
 
 <listitem><para>January 29, 2005 [matt]: Upgraded to procps-3.2.5</para>
