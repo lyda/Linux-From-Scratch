@@ -97,6 +97,22 @@ boot_mesg()
 	echo -e -n "${BOOTMESGCON}" | sed -n -e "s/\$/\n/g;L ${WCOL}"
 }
 
+boot_mesg_flush()
+{
+	# Do not log null messages
+	if [ -z "${BOOTMESG}" ]; then
+		return 0
+	fi
+
+	if [ -z "${BOOTSERVICE}" ]; then
+		boot_log "${BOOTMESG}""$@"
+	else
+		boot_log "${BOOTSERVICE}""$@"
+	fi
+	# Reset BOOTMESG and BOOTMESGCON to keep from bleeding over again
+	BOOTMESG=""
+	BOOTMESGCON=""
+}
 boot_log()
 {
 	/bin/logger -p local0.info -t bootlog "$@"
@@ -105,40 +121,19 @@ boot_log()
 echo_ok()
 {
 	echo -e "${SET_COL}""${BRACKET}""[""${SUCCESS}""  OK  ""${BRACKET}""]""${NORMAL}"
-	if [ -z "${BOOTSERVICE}" ]; then
-		boot_log "${BOOTMESG}""  [  OK  ]"
-	else
-		boot_log "${BOOTSERVICE}""  [  OK  ]"
-	fi
-	# Reset BOOTMESG and BOOTMESGCON to keep from bleeding over again
-	BOOTMESG=""
-	BOOTMESGCON=""
+	boot_mesg_flush "  [  OK  ]"
 }
 
 echo_failure()
 {
 	echo -e "${SET_COL}""${BRACKET}""[""${FAILURE}""FAILED""${BRACKET}""]""${NORMAL}"
-	if [ -z "${BOOTSERVICE}" ]; then
-		boot_log "${BOOTMESG}""  [FAILED]"
-	else
-		boot_log "${BOOTSERVICE}""  [FAILED]"
-	fi
-	# Reset BOOTMESG to keep from bleeding over again
-	BOOTMESG=""
-	BOOTMESGCON=""
+	boot_mesg_flush "  [FAILED]"
 }
 
 echo_warning()
 {
 	echo -e "${SET_WCOL}""$@""${SET_COL}""${BRACKET}""[""${WARNING}"" WARN ""${BRACKET}""]""${NORMAL}"
-	if [ -z "${BOOTSERVICE}" ]; then
-		boot_log "${BOOTMESG}""$@""  [ WARN ]"
-	else
-		boot_log "${BOOTSERVICE}""$@""  [ WARN ]"
-	fi
-	# Reset BOOTMESG to keep from bleeding over again
-	BOOTMESG=""
-	BOOTMESGCON=""
+	boot_mesg_flush "@$  [ WARN ]"
 }
 
 print_error_msg()

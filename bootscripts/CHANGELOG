@@ -6,6 +6,9 @@ n/a - September 26, 2004
 	* loadproc and killproc can have the -nomsg parameter to avoid
 	  calling evaluate_retval or print_service (Jim Gifford)
 	* boot_mesg no longer explicitly adds a \n onto end of lines
+	* Added a function called boot_mesg_flush, which can
+	  dump the BOOTMESG to the bootlog.  This helps avoid making
+	  everything have to end in OK/WARN/FAIL (Nathan Coulson)
 
 n/a - September 24, 2004
 	* Removed /dev/udev.tdb test
