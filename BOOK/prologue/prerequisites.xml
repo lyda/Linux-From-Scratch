@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="pf-prerequisites">
+<title>Prerequisites</title>
+<?dbhtml filename="prerequisites.html"?>
+
+<para>This book assumes that the reader has a reasonable knowledge of using
+and installing Linux software. Before building an LFS system, we
+recommend reading the following HOWTOs:</para>
+
+<itemizedlist>
+<listitem><para>Software-Building-HOWTO
+<ulink url="http://www.tldp.org/HOWTO/Software-Building-HOWTO.html"/></para>
+
+<para>This is a comprehensive guide to building and installing
+<quote>generic</quote> Unix software distributions under Linux.</para></listitem>
+
+<listitem><para>The Linux Users' Guide
+<ulink url="http://espc22.murdoch.edu.au/~stewart/guide/guide.html"/></para>
+
+<para>This guide covers the usage of assorted Linux software.</para></listitem>
+
+<listitem><para>The Essential Pre-Reading Hint
+<ulink url="&hints-root;essential_prereading.txt"/></para>
+
+<para>This is an LFS Hint written specifically for users new to Linux.
+It includes a list of links to excellent sources of information on a
+wide range of topics. Anyone attempting to install LFS should have an
+understanding of many of the topics in this hint.</para></listitem>
+
+</itemizedlist>
+
+</sect1>
+
