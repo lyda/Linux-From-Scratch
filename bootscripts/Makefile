@@ -104,6 +104,7 @@ install-service-mtu: create-service-dir
 install-livecd: create-dirs create-service-dir
 	install -m ${CONFMODE} lfs/init.d/functions ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/halt          ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/console       ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/hotplug   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/localnet      ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/rc            ${EXTDIR}/rc.d/init.d/
@@ -111,6 +112,7 @@ install-livecd: create-dirs create-service-dir
 	install -m ${MODE} lfs/init.d/sendsignals   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/setclock      ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/sysctl        ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/syslog-ng	    ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/startup   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/mountsqfs ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/network   ${EXTDIR}/rc.d/init.d/
@@ -133,6 +135,7 @@ install-livecd: create-dirs create-service-dir
 	ln -sf ../init.d/mountsqfs   ${EXTDIR}/rc.d/rcsysinit.d/S05mountsqfs
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
+	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
 	ln -sf ../init.d/sysctl      ${EXTDIR}/rc.d/rcsysinit.d/S90sysctl
 	if [ ! -f ${EXTDIR}/sysconfig/rc          ]; then install -m ${CONFMODE} lfs/sysconfig/rc          ${EXTDIR}/sysconfig/; fi

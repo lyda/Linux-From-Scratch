@@ -16,10 +16,10 @@
 case "$1" in
 	start)
 		cd /
-		echo "Mounting squashed usr directory..."
+		boot_mesg "Mounting squashed usr directory..."
 		mkdir /usr
 		mount -t squashfs /.cdrom/usr.sqfs /usr -o loop
-		evaluate_retval
+		echo_ok
 		;;
 
 	*)
