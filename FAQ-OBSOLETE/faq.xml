@@ -119,6 +119,22 @@ occasionally due to the amount of manual labor required.
 
 <qandadiv id="fre"><title>Frequently Requested Enhancements</title>
 
+<para>LFS is a very basic system,
+in massive contrast to traditional distributions. The reason is this:
+LFS is not intended to create your system as you want it.
+It's intended to be just enough to allow you
+to build your system as you want it.
+It's not an end, it's a beginning.
+When you're done with LFS, you've just started building your system.
+</para>
+<para>This can be a problem if you're new to Unix systems
+and want a typical install with X and a web browser
+but have no idea what packages you need.
+For this reason, there is the Beyond Linux From Scratch, or BLFS, project.
+It is at <ulink
+url="http://beyond.linuxfromscratch.org/">http://beyond.linuxfromscratch.org/</ulink>.
+</para>
+
 <qandaentry id="gcc-3_0">
 <question><para>Why isn't GCC 3.0.x in the book?
 </para></question>
@@ -617,19 +633,6 @@ make: *** [all] Error 2
 		</qandaentry>
 	</qandadiv>
 	<qandadiv id="additions"><title>Additions / Changes to LFS.</title>
-		<para>LFS is a very basic system, in massive contrast to traditional
-			distributions. The reason is this: LFS is not intended to create
-			your system as you want it. It's intended to be just enough to
-			allow you to build your system from it. It's not an end, it's
-			a beginning. When you're done with LFS, you've just started
-			building your system.
-		</para>
-		<para>This can be a problem if you're new to Unix systems and want
-			a typical install with X and a web browser but have no idea
-			what packages you need. For this reason, there is the Beyond
-			Linux From Scratch, or BLFS, project. It is at <ulink
-			url="http://beyond.linuxfromscratch.org/">http://beyond.linuxfromscratch.org/</ulink>.
-		</para>
 		<qandaentry id="new-version"><question><para>There's a new version of package Foo.</para></question>
 			<answer><para>There's no need to mention it unless you have something
 				useful to add such as changes in the compile instructions.
