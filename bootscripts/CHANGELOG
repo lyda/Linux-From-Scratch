@@ -1,3 +1,9 @@
+n/a - January 30, 2004:
+
+	* New maintainers for the lfs-bootscripts package are:
+	Jeremy Utley (jeremy@linuxfromscratch.org)
+	Nathan Coulson (nathan@linuxfromscratch.org)
+
 1.11 - February 3rd, 2003:
 
 	* /etc/mtab is now a real file and is handled correctly so there are
