@@ -8,6 +8,8 @@ n/a - July 10, 2004
 	* pass the IFCONFIG environmental variable to services, so they can locate
 		the file with the parameters they must read
 	* rename static to ipv4-static
+	* Stage1 for network configuration via directories, ifup and ifdown modified,
+	  and the static service modified
 
 n/a - July 8, 2004
 

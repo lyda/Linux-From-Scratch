@@ -2,33 +2,48 @@
 # Begin $network_devices/ifdown
 
 # Written by Nathan Coulson <nathan@linuxfromscratch.org>
+#        and Kevin P Fleming <kpfleming@linuxfromscratch.org>
 #
-# the IPCONFIG variable is passed to the scripts found in the services directory,
+# the IFCONFIG variable is passed to the scripts found in the services directory,
 # to indicate what file the service should source to get environmental variables.
 
 . /etc/sysconfig/rc 
 . $rc_functions 
-. $network_devices/ifconfig.$1 
 
-# Will exit if it is started by the hotplug system, but the configuration file
-# does not mention ONHOTPLUG=yes
-if [ "$IN_HOTPLUG" = "1" -a "$ONHOTPLUG" != "yes" ]
+if [ "$2" != "" ]
 then
-  exit 0
+  FILES="$network_devices/ifconfig.$1/${@#1}"
+elif [ -d "$network_devices/ifconfig.$1" ]
+then
+  FILES="$network_devices/ifconfig.$1/*"
+else
+  FILES="$network_devices/ifconfig.$1"
 fi
 
-if [ -z $SERVICE ]
-then
-	echo "SERVICE variable missing from ifconfig.$1, cannot continue"
-	exit 1
-fi
-if [ ! -f $network_devices/services/$SERVICE ]
-then
-	echo -n "Unknown Service: $SERVICE, cannot continue"
-	exit 1
-fi
-
-IFCONFIG=$network_devices/ifconfig.$1 \
-  $network_devices/services/${SERVICE} $1 down
+for file in $FILES
+do
+	if [ ! -f "$file" ]
+	then
+		echo "Unable to read $file"
+		continue
+	fi
+	(
+		. $file
+		# Will not process this service if started by hotplug, and ONHOTPLUG
+		#	is not set to yes
+		if [ "$IN_HOTPLUG" = "1" -a "$ONHOTPLUG" != "yes" ]
+		then
+		  continue
+		fi
+		if [ -n "$SERVICE" -a -x "network_devices/services/$SERVICE" ]
+			IFCONFIG=$file \
+			  $network_devices/services/${SERVICE} $1 down
+		else
+			echo -n"Unable to process $file, Either the SERVICE variable was not set, "
+			echo "or the script in question cannot be executed"
+			continue
+		fi
+	)
+done
 
 # End $network_devices/ifdown
