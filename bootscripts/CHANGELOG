@@ -1,5 +1,9 @@
 n/a - January 5, 2005
 	* Attempted to simplify network bootup files (Nathan Coulson)
+	* Modified mountkernfs to use mountpoint (Nathan Coulson)
+	* Assuming sysfs is always mounted (Nathan Coulson)
+	* Moved fakemount to below mounting (Nathan Coulson)
+	* Removed -t noramfs from umount, as we now use tmpfs (Nathan Coulson)
 
 n/a - January 2, 2005
 	* Fixed statusproc output. (DJ Lucas)
