@@ -30,11 +30,17 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 
 <para>Compile the Yaboot package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>make PREFIX=/usr</userinput></screen>
 
 <para>Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen><userinput>make PREFIX=/usr install</userinput></screen>
+
+<para>Move the files need in /boot</para>
+<screen><userinput>install ofboot.b /boot
+install /usr/lib/yaboot/yaboot /boot
+install yaboot.conf /boot
+install boot.msg /boot</userinput></screen>
 
 </sect2>
 
@@ -44,24 +50,45 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <segtitle>Installed programs</segtitle>
 <seglistitem><seg>Unchecked</seg></seglistitem>
 </segmentedlist>
-<!--
+
 <variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 <?dbhtml list-presentation="table"?>
 
-
-<varlistentry id="yaboot-rom-image.bin">
-<term><command>yaboot-rom-image.bin</command></term>
+<varlistentry id="yaboot-ofboot.b">
+<term><command>yaboot-ofboot.b</command></term>
 <listitem>
-<para>Is a replacement firmware for the Cobalt's standard firmware</para>
-<indexterm zone="ch-system-yaboot yaboot-rom-image.bin"><primary sortas="b-yaboot-rom-image.bin">yaboot-rom-image.bin</primary></indexterm>
+<para>Need Description</para>
+<indexterm zone="ch-system-yaboot ofboot.b"><primary sortas="b-yaboot-ofboot.b">yaboot-ofboot.b</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="yaboot-yaboot">
+<term><command>yaboot-yaboot</command></term>
+<listitem>
+<para>Need Description</para>
+<indexterm zone="ch-system-yaboot yaboot"><primary sortas="b-yaboot-yaboot">yaboot-yaboot</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="yaboot-yaboot.conf">
+<term><command>yaboot-yaboot.conf</command></term>
+<listitem>
+<para>Need Description</para>
+<indexterm zone="ch-system-yaboot yaboot.conf"><primary sortas="b-yaboot-yaboot.conf">yaboot-yaboot.conf</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="yaboot-boot.msg">
+<term><command>yaboot-boot.msg</command></term>
+<listitem>
+<para>Need Description</para>
+<indexterm zone="ch-system-yaboot boot.msg"><primary sortas="b-yaboot-boot.msg">yaboot-boot.msg</primary></indexterm>
 </listitem>
 </varlistentry>
 
 </variablelist>
--->
 
 </sect2>
-
 
 </sect1>
