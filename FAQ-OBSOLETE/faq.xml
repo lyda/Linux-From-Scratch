@@ -380,6 +380,48 @@ it the easy way :)
 			</para></answer>
 		</qandaentry>
 	</qandadiv>
+
+<qandadiv id="fsc"><title>Frequently Sought Cluebits</title>
+
+<qandaentry id="dos-text">
+<question><para>What's a DOS format text file?</para></question>
+<answer><para>It has to do with the characters used to end lines.
+</para>
+<para>There are two that may be used:
+<itemizedlist>
+	<listitem><para>Line Feed: (LF) Octal:012 Decimal:10 Hex:0A C Style Escape:'\n'
+		Moves down one line.
+	</para></listitem>
+	<listitem><para>Carriage Return: (CR) Octal:015 Decimal:13 Hex:0D C Style Excape:'\r'
+		Move to the left margin.
+	</para></listitem>
+</itemizedlist>
+</para>
+<para>Unix and DOS each use a different combination to end lines in text files:
+<itemizedlist>
+	<listitem><para>Unix: LF only.
+		This is why when a Unix format text file is sent to a printer raw,
+		it prints out
+		<screen>like
+    stairs
+          steps.
+</screen>
+	</para></listitem>
+	<listitem><para>DOS: CRLF both.
+		Which is why if you do "cat -v" on a DOS file you'll see a "^M"
+		(control m is carriage return) at the end of each line.
+	</para></listitem>
+</itemizedlist>
+</para>
+<para>To change DOS to Unix, use
+<screen>cp &lt;filename> &lt;filename>.dos && cat &lt;filename>.dos | tr -d '\r' > &lt;filename>
+</screen>
+</para></answer>
+</qandaentry>
+
+</qandadiv>
+
+
 	<qandadiv id="compiling"><title>Compiling</title>
 <!--		<qandadiv id="before-ask-comp"><title>Before you ask on the list...</title>-->
 			<qandaentry id="optimizations"><question><para>If you are using optimizations:</para></question>
