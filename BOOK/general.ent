@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "6.0-testing-20040801">
-<!ENTITY releasedate "August 01, 2004">
+<!ENTITY version "6.0-testing-20040807">
+<!ENTITY releasedate "August 07, 2004">
 <!ENTITY milestone "6.0">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -18,7 +18,7 @@
 <!ENTITY autoconf-version "2.59">
 <!ENTITY automake-version "1.9">
 <!ENTITY bash-version "3.0">
-<!ENTITY binutils-version "2.15">
+<!ENTITY binutils-version "2.15.91.0.2">
 <!ENTITY bison-version "1.875a">
 <!ENTITY bootscripts-version "2.2.1">
 <!ENTITY bzip2-version "1.0.2">
@@ -26,7 +26,7 @@
 <!ENTITY dejagnu-version "1.4.4">
 <!ENTITY diffutils-version "2.8.1">
 <!ENTITY e2fsprogs-version "1.35">
-<!ENTITY expect-version "5.41.0">
+<!ENTITY expect-version "5.42.0">
 <!ENTITY file-version "4.10">
 <!ENTITY findutils-version "4.1.20">
 <!ENTITY flex-version "2.5.31">
@@ -38,13 +38,13 @@
 <!ENTITY groff-version "1.19.1">
 <!ENTITY grub-version "0.95">
 <!ENTITY gzip-version "1.3.5">
-<!ENTITY iana-etc-version "1.00">
+<!ENTITY iana-etc-version "1.01">
 <!ENTITY iproute2-version "2.6.X-ss040702">
 <!ENTITY iproute2-patch-version "2.6.X_ss040702">
 <!ENTITY inetutils-version "1.4.2">
 <!ENTITY kbd-version "1.12">
 <!ENTITY less-version "382">
-<!ENTITY libtool-version "1.5.6">
+<!ENTITY libtool-version "1.5.8">
 <!ENTITY linux-version "2.6.7">
 <!ENTITY linux-libc-headers-version "2.6.7.0">
 <!ENTITY m4-version "1.4.1">
