@@ -36,10 +36,10 @@ architectures:</para>
 
 <screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-uname-2.patch</userinput></screen>
 
-<para>Prevent Coreutils from installing binaries that will be later be installed
-by other programs:</para>
+<para>Prevent Coreutils from installing binaries that will be installed by other
+programs later:</para>
 
-<screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-suppress_hostname_uptime_kill_su-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch</userinput></screen>
 
 <para>Now prepare Coreutils for compilation:</para>
 
@@ -361,10 +361,10 @@ exits with a status code indicating failure.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="hostname-coreutils">
+<varlistentry id="hostname">
 <term><command>hostname</command></term>
 <listitem>
-<indexterm zone="ch-system-coreutils hostname-coreutils"><primary sortas="b-hostname-coreutils">hostname</primary></indexterm>
+<indexterm zone="ch-system-coreutils hostname"><primary sortas="b-hostname">hostname</primary></indexterm>
 <para>reports or sets the name of the host.</para>
 </listitem>
 </varlistentry>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "6.0-testing-200407010">
-<!ENTITY releasedate "July 10, 2004">
+<!ENTITY version "6.0-testing-200407012">
+<!ENTITY releasedate "July 12, 2004">
 <!ENTITY milestone "6.0">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -39,6 +39,7 @@
 <!ENTITY grub-version "0.95">
 <!ENTITY gzip-version "1.3.5">
 <!ENTITY iana-etc-version "1.00">
+<!ENTITY iproute2-version "2.6.X-ss040702">
 <!ENTITY inetutils-version "1.4.2">
 <!ENTITY kbd-version "1.12">
 <!ENTITY less-version "382">
@@ -52,7 +53,6 @@
 <!ENTITY mktemp-version "1.5">
 <!ENTITY module-init-tools-version "3.0">
 <!ENTITY ncurses-version "5.4">
-<!ENTITY net-tools-version "1.60">
 <!ENTITY patch-version "2.5.4">
 <!ENTITY perl-version "5.8.4">
 <!ENTITY procps-version "3.2.1">

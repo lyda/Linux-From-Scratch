@@ -37,7 +37,7 @@ The following command creates a sample <filename>ifconfig.eth0</filename> file:<
 
 <screen><userinput>cat &gt; /etc/sysconfig/network-devices/ifconfig.eth0 &lt;&lt; "EOF"
 ONBOOT=yes
-SERVICE=static
+SERVICE=ipv4-static
 IP=192.168.1.1
 GATEWAY=192.168.1.2
 NETMASK=255.255.255.0
@@ -75,6 +75,7 @@ following:</para>
 <screen><userinput>cat &gt; /etc/resolv.conf &lt;&lt; "EOF"
 # Begin /etc/resolv.conf
 
+domain {<replaceable>[Your Domain Name]</replaceable>}
 nameserver <replaceable>[IP address of your nameserver]</replaceable>
 
 # End /etc/resolv.conf
