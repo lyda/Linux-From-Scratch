@@ -101,7 +101,6 @@
 		</qandadiv>
 		<qandadiv id="fee-compile-specific">
 				<title>Compile Time Errors From Specific Packages</title>
-			&openssl-sed-unexpected;
 			&conflicting-gethostname;
 			&xfree-png-lz;
 			&no-linuxthreads;
