@@ -427,6 +427,33 @@ alias net-pf-7 loop
 					It is smaller, faster, and works reliably.
 				</para>
 			</section>
+			<section id="why-ed"><title>Why ed?</title>
+				<para>
+					There are several reasons why ed is in the book:
+					<simplelist>
+						<member>
+							The official reason is that patch uses it to process ed
+							scripts. However, these seldom used anymore;
+							everyone uses diff.
+						</member>
+						<member>
+							Unofficially, for all who've learned to use it,
+							ed is a very useful emergency editor.
+							The MS Windows standard telnet client can deal with ed
+							where fullscreen editors (like vim) give it trouble.
+							And a full featured vim requires not only ncurses, but
+							X11 as well! Any trouble with those libraries will leave
+							the system without an editor if ed isn't present.
+						</member>
+						<member>
+							And, though it's not a reason to have ed in the book,
+							some people actually like ed.
+							It's also a major part of Unix history and understanding
+							it helps with understanding vi(m).
+						</member>
+					</simplelist>
+				</para>
+			</section>
 		</section>
 		<section id="setup-polishing"><title>Polishing your setup.</title>
 			<para>
