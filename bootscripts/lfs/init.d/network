@@ -31,8 +31,14 @@ case "$1" in
 	;;
 
 	stop)
-		# Stop all network interfaces
+		# Reverse list
+		FILES=""
 		for file in $network_devices/ifconfig.*; do
+			FILES="${file} ${FILES}"
+		done
+
+		# Stop all network interfaces
+		for file in $FILES; do
 			interface=${file##*/ifconfig.}
 
 			# skip if $file is * (because nothing was found)
