@@ -55,6 +55,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>bash-3.0-avoid_WCONTINUED-1.patch</para></listitem>
 <listitem><para>Hotplug 2004_09_23</para></listitem>
 <listitem><para>Libol 0.3.14</para></listitem>
+<listitem><para>linux-2.6.10-security_fix-1.patch</para></listitem>
 <listitem><para>Syslog-ng 1.6.5</para></listitem>
 <listitem><para>util-linux-2.12p-cramfs-1.patch</para></listitem>
 <listitem><para>vim-6.0-security_fix-1.patch</para></listitem>
@@ -72,6 +73,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>zlib-1.2.1-security-1.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>January 9, 2005 [matt]: Added a security patch for the kernel</para></listitem>
 
 <listitem><para>January 9, 2005 [matt]: Added a security patch for vim</para></listitem>
 
