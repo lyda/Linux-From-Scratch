@@ -37,6 +37,7 @@ case "$1" in
 
 		# Assign udev to get hotplug events.  This will be overwritten
 		# in the hotplug bootscript.
+		# FIXME: do we need to reorder the events using udevsend here?
 		echo /sbin/udev > /proc/sys/kernel/hotplug
 
 		# Populate /dev with all the devices that are already available,
