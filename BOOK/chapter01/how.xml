@@ -67,7 +67,7 @@ different virtual console (VC) or X desktop and continue using the
 computer as normal.</para>
 
 <para>To finish the installation, the bootscripts are set up in <xref
-linkend="chapter-bootscripts"/>, and the kernel and bootloader are set
+linkend="chapter-bootscripts"/>, and the kernel and boot loader are set
 up in <xref linkend="chapter-bootable"/>. <xref
 linkend="chapter-finalizing"/> contains information on furthering the
 LFS experience beyond this book.  After the steps in this book have

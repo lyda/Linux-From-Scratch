@@ -33,7 +33,7 @@ requirements outlined above, run the following command:</para>
 was not compiled using a GCC-3.0 (or later) compiler, one will need to
 be compiled.  The host system will then need to be rebooted to use the
 newly compiled kernel. Instructions for compiling the kernel and
-configuring the bootloader (assuming the host uses GRUB) are located
+configuring the boot loader (assuming the host uses GRUB) are located
 in <xref linkend="chapter-bootable"/>.</para>
 
 </sect1>
