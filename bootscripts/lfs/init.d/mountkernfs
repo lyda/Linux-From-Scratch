@@ -23,7 +23,6 @@ case "$1" in
 			fi
 		fi
 
-		echo
 		(exit $failed)
 		evaluate_retval
 		;;
