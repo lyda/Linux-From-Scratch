@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2002 Free Software Foundation, Inc.
+ * Copyright (C) 2003 Timothy Bauscher <timothy@linuxfromscratch.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,23 +15,27 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
- * Timothy Bauscher <timothy@linuxfromscratch.org>
 */
 
-#include <ctype.h>
 #include <stdio.h>
-#include <unistd.h>
-#include "stringfun.h"
-#include "xml.h"
+#include <stdlib.h>
 
-int print_title (FILE *output) {
-	/* Print the title if it's new */
-	if (1 == lfs.title_status && 1 == lfsopts.titles) {
-		if (1 != lfsopts.files)
-			fprintf(output, "\n\n");
+#include "help.h"
 
-		fprintf(output, "### %s ###\n", lfs.title);
-		lfs.title_status = 0;
-	}
-	return(1);
+void help (const char *prog)
+{
+	fprintf(stderr,
+"Usage: %s [options] index.xml\n\
+Options:\n\
+  -f\n\
+     Write commands to their own file.\n\
+  -q query\n\
+     Output pages matching regex query.\n\
+  -t\n\
+     Print titles (as comments).\n\
+  -x\n\
+     Make file output executable.\n",
+prog);
+
+    exit(1);
 }

@@ -1,7 +1,6 @@
 #ifndef FILE_H
 #define FILE_H
 
-extern int readable (char *filename);
-extern FILE *openFile (char *filename);
+extern FILE *write_file (const char *fname, const char *mode);
 
 #endif

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2002 Free Software Foundation, Inc.
+ * Copyright (C) 2003 Timothy Bauscher <timothy@linuxfromscratch.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,33 +15,18 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
- * Timothy Bauscher <timothy@linuxfromscratch.org>
 */
 
 #include <stdio.h>
-#include <unistd.h>
-#include <string.h>
+
+#include "string.h"
 #include "file.h"
-#include "xml.h"
-#include "stringfun.h"
 
-int readable (char *filename) {
-	FILE *test;
-	if ((test = fopen(filename, "r")) == NULL) {
-		fprintf(stderr, "Cannot open %s for reading.\n", filename);
-		return(0);
-	}
+FILE *write_file (const char *fname, const char *mode) {
+    FILE *file = NULL;
 
-	fclose(test);
-	return(1);
-}
+    if ((file = fopen(fname, mode)) == NULL)
+    error("Cannot access file: %s", fname);
 
-FILE *openFile (char *filename) {
-	FILE *output;
-	if ((output = fopen(filename, "a")) == NULL) {
-		fprintf(stderr, "ERROR: Cannot write to file: %s\n", filename);
-		exit(1);
-	}
-
-	return(output);
+    return(file);
 }

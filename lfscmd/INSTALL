@@ -1,5 +1,4 @@
 INSTALLATION
-	./configure
 	make
 	make install
 
