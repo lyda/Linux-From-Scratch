@@ -326,4 +326,4 @@ install-xinetd: create-dirs
 	ln -s  ../init.d/xinetd ${EXTDIR}/rc.d/rc5.d/S23xinetd
 	ln -s  ../init.d/xinetd ${EXTDIR}/rc.d/rc6.d/K49xinetd
 
-.PHONY: install install-alsa install-apache install-bind install-cups install-dhcp install-exim install-fcron install-gdm install-gpm install-lprng install-mysql install-netfs install-nfs-client install-nfs-server install-ntp install-portmap install-postfix install-postgresql install-proftpd install-random install-rsync install-samba install-sendmail install-sshd install-xinetd
+.PHONY: install install-service-dhclient install-service-dhcpcd install-service-ipx install-service-pppoe install-alsa install-apache install-bind install-cups install-dhcp install-exim install-fcron install-gdm install-gpm install-lprng install-mysql install-netfs install-nfs-client install-nfs-server install-ntp install-portmap install-postfix install-postgresql install-proftpd install-random install-rsync install-samba install-sendmail install-sshd install-xinetd
