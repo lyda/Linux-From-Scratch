@@ -1,8 +1,8 @@
 README for the newxml module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Requirements
-~~~~~~~~~~~~
+1. Requirements
+~~~~~~~~~~~~~~~
 
 DocBook XML DTD 4.3CR3 - this is required as the 4.2 version doesn't properly
                          support XIncludes
@@ -18,60 +18,194 @@ FOP-0.20.5 - required for PDF generation.  The easiest method of installation is
              to download the binary tarball, extract it to /opt/fop and set
              JAVA_HOME, FOP_HOME and PATH appropriately.
 
-Setting up the DTD
-~~~~~~~~~~~~~~~~~~
+2. Setting up the DTD
+~~~~~~~~~~~~~~~~~~~~~
 
-The new XML sources point to the canonical URL where the DTD can be found in
-case it isn't installed locally.  In order to use our local copy we have to set
-up 2 XML catalog files (/etc/xml/catalog and /etc/xml/docbook) so that the
-canonical URLs are mapped to local files.
+2.1. Short and swift version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The easiest way to do this is to follow the BLFS instructions for the 4.2
-version of the DTD.  Simply substitute 4.3CR3 in place of every occurence of 4.2
-in the commands given.
+If you're comfortable with it then here's a quick run down of what needs
+to be done:
 
-After this, run just the commands listed under the "In order to install
-ScrollKeeper" section again, but this time replace every occurence of
-4.1.2 with 4.2.  This will allow any documents requiring the 4.2 version
-of the DTD to be processed against the newer version of the DTD.
+1) Follow the instructions in the *first* grey box in the BLFS book, but
+   substitute 4.2 with 4.3CR3 and http://www.oasis-open.org/docbook/ with
+   http://www.docbook.org/ respectively.  This will install the 4.3CR2
+   version of the DTD and allow local resolution.
 
-Additionally there's just two more commands to run:
+2) Follow the instructions in the *second* grey box in the BLFS book, but
+   substituting 4.2 with 4.3CR3.  This allows processing of the BLFS book
+   against the 4.3CR3 DTD.
 
-  xmlcatalog --noout --add "delegateSystem" \
-    "http://www.docbook.org/xml/" \
-    "file:///etc/xml/docbook" /etc/xml/catalog &&
-  xmlcatalog --noout --add "delegateURI" \
-    "http://www.docbook.org/xml/" \
-    "file:///etc/xml/docbook" /etc/xml/catalog
+3) Follow the instructions in the *third* grey box in the BLFS book, but
+   substitute 4.2 with 4.3CR3.  This allows anything wanting to use the
+   4.1.2 version of the DTD to use our local copy of 4.3CR3 instead.
 
-These are required as www.oasis-open.org only host official versions of the DTD,
-www.docbook.org host the beta/work-in-progress versions.  The commands above
-tell the XML processors that any requests to the www.docbook.org domain should
-be routed through the local /etc/xml/docbook file (which subsequently rewrites
-those URIs to our local copy of the DTD).  This step won't be required once the
-official 4.3 release is made.
+4) Follow the instructions in the *third* grey box *again*, but this time
+   substitute 4.2 with 4.3CR2 and 4.1.2 with 4.2.  This allows anything wanting
+   to use the 4.2 version of the DTD to use our local copy of 4.3CR3.
 
-Processing the sources
-~~~~~~~~~~~~~~~~~~~~~~
+
+2.2. The long winded but (hopefully) RPM/APT/YAST user proof method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2.2.1. Install the 4.3CR3 version of the DTD
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+install -d /usr/share/xml/docbook/xml-dtd-4.3CR3 &&
+cp -af docbook.cat *.dtd ent/ *.mod /usr/share/xml/docbook/xml-dtd-4.3CR3 &&
+if [ ! -e /etc/xml/catalog ]; then mkdir -p /etc/xml; xmlcatalog --noout \
+--create /etc/xml/catalog; fi &&
+if [ ! -e /etc/xml/docbook ]; then xmlcatalog --noout --create \
+/etc/xml/docbook; fi &&
+xmlcatalog --noout --add "public" \
+"-//OASIS//ELEMENTS DocBook XML Information Pool V4.3CR3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/dbpoolx.mod" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+"-//OASIS//DTD DocBook XML V4.3CR3//EN" \
+"http://www.docbook.org/xml/4.3CR3/docbookx.dtd" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+"-//OASIS//ENTITIES DocBook XML Character Entities V4.3CR3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/dbcentx.mod" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+"-//OASIS//ENTITIES DocBook XML Notations V4.3CR3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/dbnotnx.mod" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+"-//OASIS//ENTITIES DocBook XML Additional General Entities V4.3CR3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/dbgenent.mod" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+"-//OASIS//ELEMENTS DocBook XML Document Hierarchy V4.3CR3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/dbhierx.mod" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+"-//OASIS//DTD XML Exchange Table Model 19990315//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/soextblx.dtd" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+"-//OASIS//DTD DocBook XML CALS Table Model V4.3CR3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/calstblx.dtd" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "rewriteSystem" \
+"http://www.docbook.org/xml/4.3CR3" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "rewriteURI" \
+"http://www.docbook.org/xml/4.3CR3" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "delegatePublic" \
+"-//OASIS//ENTITIES DocBook XML" \
+"file:///etc/xml/docbook" /etc/xml/catalog &&
+xmlcatalog --noout --add "delegatePublic" \
+"-//OASIS//DTD DocBook XML" \
+"file:///etc/xml/docbook" /etc/xml/catalog &&
+xmlcatalog --noout --add "delegateSystem" \
+"http://www.docbook.org/" \
+"file:///etc/xml/docbook" /etc/xml/catalog &&
+xmlcatalog --noout --add "delegateURI" \
+"http://www.docbook.org/" \
+"file:///etc/xml/docbook" /etc/xml/catalog
+
+2.2.2. Enable processing of the BLFS book
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+xmlcatalog --noout --add "delegateSystem" \
+"/usr/share/docbook/" \
+"file:///etc/xml/docbook" /etc/xml/catalog &&
+xmlcatalog --noout --add "delegateURI" \
+"/usr/share/docbook/" \
+"file:///etc/xml/docbook" /etc/xml/catalog &&
+xmlcatalog --noout --add "rewriteSystem" \
+"/usr/share/docbook" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "rewriteURI" \
+"/usr/share/docbook" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+/etc/xml/docbook
+
+2.2.3. Enable 4.3CR3 to be used when 4.1.2. is requested
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+xmlcatalog --noout --add "public" \
+"-//OASIS//DTD DocBook XML V4.1.2//EN" \
+"http://oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "delegateSystem" \
+"http://www.oasis-open.org/docbook/xml/4.1.2/" \
+"file:///etc/xml/docbook" /etc/xml/catalog &&
+xmlcatalog --noout --add "delegateURI" \
+"http://www.oasis-open.org/docbook/xml/4.1.2/" \
+"file:///etc/xml/docbook" /etc/xml/catalog &&
+xmlcatalog --noout --add "rewriteSystem" \
+"http://www.oasis-open.org/docbook/xml/4.1.2" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "rewriteURI" \
+"http://www.oasis-open.org/docbook/xml/4.1.2" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+/etc/xml/docbook
+
+2.2.4. Enable 4.3CR3 to be used when 4.2 is requested
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+xmlcatalog --noout --add "public" \
+"-//OASIS//DTD DocBook XML V4.2//EN" \
+"http://oasis-open.org/docbook/xml/4.2/docbookx.dtd" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "delegateSystem" \
+"http://www.oasis-open.org/docbook/xml/4.2/" \
+"file:///etc/xml/docbook" /etc/xml/catalog &&
+xmlcatalog --noout --add "delegateURI" \
+"http://www.oasis-open.org/docbook/xml/4.2/" \
+"file:///etc/xml/docbook" /etc/xml/catalog &&
+xmlcatalog --noout --add "rewriteSystem" \
+"http://www.oasis-open.org/docbook/xml/4.2" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+/etc/xml/docbook &&
+xmlcatalog --noout --add "rewriteURI" \
+"http://www.oasis-open.org/docbook/xml/4.2" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+/etc/xml/docbook
+
+
+3. Processing the sources
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By far the easiest way to process the source is by running `make`.  An
 explanation of the process follows:
 
-Firstly, our sources include constructs in chapters 5 & 6 that trigger a bug in
-libxml2.  A script to workaround this is provided with the source.  The
-preprocessed source is created in a separate directory (passed as a parameter to
-the script):
+For the HTML output, we run the top-level index.xml file through
+xsltproc in conjunction with the lfs-chunked.xsl stylesheet.  The
+index.xml file just has a bunch of XInclude instructions in it, which
+pull in all the different chapters of the book.  The lfs-chunked
+stylesheet (in stylesheets/) is a customisation layer, on top of the
+docbook-xsl XHTML/chunked.xsl stylesheet.  It basically configures some
+layout related variables to tweak the output to the liking of the LFS
+readership.  The majority of work is delegated to the docbook-xsl
+stylesheets.  Note that the directory that the HTML files are output to
+can be altered by changing the BASEDIR variable at the top of the Makefile,
+ensuring that when you do so, you're new value has a trailing "/".
 
-./entResolver output
+For the PDF output we use a two stage process.  The first stage creates an
+XSL-FO (Formatting Objects) file, which is essentially an output-format
+independent description of the layout of the book.  xsltproc carries out
+this part of the processing for us, again taking index.xml as the input
+source and stylesheets/lfs-pdf.xsl as it's stylesheet.  Similar to
+lfs-chunked.xsl, lfs-pdf.xsl is a customisation layer around
+docbook-xsl's fo/docbook.xsl stylesheet.  Once generated, the .fo file
+can then be fed into a FO Processor, which can translate it into any format it
+supports.  In our case we use FOP (http://xml.apache.org/fop/index.html), which
+requires a Java runtime environment.  Note that FOP is currently
+undergoing a redesign, and as such they have two versions available for
+download.  It is recommended to use the 0.20.5 version at this time.
+FOP is simply told which FO file to process and the name of the output file (it
+infers the desired output format from the file extension).
 
-Following this, the preprocessed source can now be run through xsltproc
-to generate the HTML:
-
-cd ../output && xsltproc --nonet --xinclude -stringparam base.dir ~/lfs-book/ \
-  stylesheets/lfs-chunked.xsl index.xml
-
-This will produce chunked XHTML output in the directory specified by the
-base.dir command line parameter (~/lfs-book/ in the example above).  Ensure that
-the directory you specify ends in a trailing "/".
-
-In time there will be other XSL files in the stylesheets directory to process the sources into formats such as LaTeX, Text, nALFS profiles.
+In time their will be other XSL files in the stylesheets directory to
+process the sources into formats such as LaTeX, Text, nALFS profiles and others
+(if requested).
