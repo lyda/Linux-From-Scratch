@@ -1,8 +1,16 @@
 <qandaentry id="how-to-find">
-<question><para>How do I find package Foo?</para></question>	
-<answer><para>Mostly, it's not hard, but some packages can lead quite a chase.
+<question><para>How do I find a package or command?</para></question>	
+<answer><para>Mostly, it's not hard, but some things can lead quite a chase.
 </para>
-<para>Searching <ulink url="http://freshmeat.net/"/> for
+<para>To get a command, you must know what package it's from.
+Sometimes this is obvious;
+when it's not, a search on
+either <ulink url="http://www.debian.org/distrib/packages#search_contents"/>
+or <ulink url="http://www.rpmfind.net"/>
+will usually provide the answer.
+</para>
+<para>Once you know the package,
+searching <ulink url="http://freshmeat.net/"/> for
 <screen>foo</screen>
 will usually turn up a freshmeat page
 with links to an URL
