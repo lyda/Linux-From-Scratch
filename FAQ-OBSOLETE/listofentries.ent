@@ -31,6 +31,7 @@
 <!ENTITY kernel-modules SYSTEM "kernel-modules.xml">
 <!ENTITY its-hardlink-not-copy SYSTEM "its-hardlink-not-copy.xml">
 <!ENTITY less-prints-ad SYSTEM "less-prints-ad.xml">
+<!ENTITY lfs-logos SYSTEM "lfs-logos.xml">
 <!ENTITY lilo-errors SYSTEM "lilo-errors.xml">
 <!ENTITY missing-x-includes SYSTEM "missing-x-includes.xml">
 <!ENTITY net-pf-x SYSTEM "net-pf-x.xml">
