@@ -228,7 +228,7 @@ sites:</para>
 <itemizedlist>
 <listitem><para remap="verbatim">A Userspace Implementation of devfs &ndash; 
 <ulink url="http://www.kroah.com/linux/talks/ols_2003_udev_paper/Reprint-Kroah-Hartman-OLS2003.pdf"><phrase
-conditon="pdf">http://www.kroah.com/linux/talks/ols_2003_udev_paper/
+condition="pdf">http://www.kroah.com/linux/talks/ols_2003_udev_paper/
 Reprint-Kroah-Hartman-OLS2003.pdf</phrase></ulink></para></listitem>
 
 <listitem><para remap="verbatim">udev FAQ &ndash;
