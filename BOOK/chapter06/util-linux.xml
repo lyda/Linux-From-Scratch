@@ -47,11 +47,10 @@ mkdir -p /var/lib/hwclock</userinput></screen>
 <title>Installation of Util-linux</title>
 
 <para>GCC-&gcc-version; miscompiles <command>sfdisk</command> if the
-default optimisation level is used.  The following command
+default optimisation level is used.  The following patch
 corrects the problem:</para>
 
-<screen><userinput>sed -i -e 's%^include ../MCONFIG%'\
-'&amp;\n\nCFLAGS:=$(CFLAGS) -fno-unit-at-a-time%' fdisk/Makefile</userinput></screen>
+<screen><userinput>patch -Np1 -i ../util-linux-&util-linux-version;-sfdisk-1.patch</userinput></screen>
 
 <para>Prepare Util-linux for compilation:</para>
 

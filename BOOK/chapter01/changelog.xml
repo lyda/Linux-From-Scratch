@@ -66,6 +66,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>udev-030</para></listitem>
 <listitem><para>udev-config-1.permissions</para></listitem>
 <listitem><para>udev-config-1.rules</para></listitem>
+<listitem><para>util-linux-2.12b-sfdisk-1.patch</para></listitem>
 <listitem><para>vim-6.3 language files</para></listitem>
 </itemizedlist>
 </listitem>
@@ -83,6 +84,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>procinfo-18</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>September 13th, 2004 [jeremy]: Replaced the util-linux sed
+with a patch file instead.</para></listitem>
 
 <listitem><para>September 12th, 2004 [manuel]: Fixed some URLs.</para></listitem>
 
