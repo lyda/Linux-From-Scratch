@@ -5,6 +5,16 @@
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 # Patch to handle all fsck variants by A. Luebke - luebke@users.sourceforge.net
 
+# From man fsck
+# 0    - No errors
+# 1    - File system errors corrected
+# 2    - System should be rebooted
+# 4    - File system errors left uncorrected
+# 8    - Operational error
+# 16   - Usage or syntax error
+# 32   - Fsck canceled by user request
+# 128  - Shared library error
+
 . /etc/sysconfig/rc
 . $rc_functions
 
@@ -94,6 +104,15 @@ case "$1" in
 			echo "Press <ctrl-j> to continue..."
 			read ENTER
 			$rc_base/init.d/halt stop
+		fi
+
+		if [ "$error_value" -ge 16 ]
+		then 
+			echo -n -e $FAILURE
+			echo "fsck was unable to run. ERROR CODE = " $error_value
+			echo -n -e $NORMAL
+			print_status failure
+			exit $error_value;
 		fi
 		;;
 	*)

@@ -10,6 +10,7 @@
 
 case "$1" in
 	start)
+		# Start all network interfaces which have ONBOOT in them.
 		for file in $(grep -sil "ONBOOT=yes" $network_devices/ifconfig.*)
 		do
 			interface=${file##*/ifconfig.}
@@ -21,6 +22,7 @@ case "$1" in
 			esac
 		done
 
+		# Setup the Gateway
 		if [ "$GATEWAY" != "" ]
 		then
 			echo "Setting up default gateway..."
@@ -38,6 +40,7 @@ case "$1" in
 			evaluate_retval
 		fi
 
+		# Stop all network interfaces
 		for file in $(grep -il "ONBOOT=yes" $network_devices/ifconfig.*)
 		do
 			interface=${file##*/ifconfig.}

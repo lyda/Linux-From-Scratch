@@ -5,6 +5,9 @@ n/a    - February 4, 2004
 	* Changed above fixes to work with ash
 	* Fixed checkfs symlink in Makefile
 	* functions is no longer installed as executable
+	* Added a check to checkfs, for errors above 16.  These are caused by
+	  being unable to run fsck, either due to user input, or a unfunctional
+	  linux system.
 
 1.99.1 - February 2, 2004
 

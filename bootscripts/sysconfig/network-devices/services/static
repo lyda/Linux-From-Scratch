@@ -45,4 +45,5 @@ case "$2" in
 		exit 1
 	;;
 esac
+
 # End $network_devices/services/static

@@ -7,6 +7,7 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
+# These 3 signals will not cause our script to exit
 trap "" INT QUIT TSTP
 
 [ "$1" != "" ] && runlevel=$1
@@ -26,7 +27,8 @@ then
         exit 1
 fi
 
-#Attempt to stop all service started by previous runlevel, and killed in this runlevel
+# Attempt to stop all service started by previous runlevel,
+# and killed in this runlevel
 if [ "$previous" != "N" ]
 then
         for i in $(ls -v $rc_base/rc$runlevel.d/K* 2> /dev/null)
