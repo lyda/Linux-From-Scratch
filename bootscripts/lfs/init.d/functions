@@ -20,7 +20,10 @@ KILLDELAY="3"   # Number of seconds between STOPSIG and FALLBACK when stopping p
 PIDFILE=""
 
 ## Screen Dimentions
-if [ -z "$COLUMNS" ]; then COLUMNS=$(stty size); COLUMNS=${COLUMNS##*}; fi
+if [ -z "$COLUMNS" ]; then
+	COLUMNS=$(stty size)
+	COLUMNS=${COLUMNS##* }
+fi
 # When using remote connections, such as a serial port, stty size returns 0
 if [ "$COLUMNS" = "0" ]; then COLUMNS=80; fi
 # Measurements for positioning result messages
@@ -58,7 +61,7 @@ echo_ok()
 
 echo_failure()
 {
-	echo -e "${CURS_UP}""${SET_COL}""${BRACKET}""[""${FAILED}""FAILED""${BRACKET}""]""${NORMAL}"
+	echo -e "${CURS_UP}""${SET_COL}""${BRACKET}""[""${FAILURE}""FAILED""${BRACKET}""]""${NORMAL}"
 }
 
 echo_warning()
@@ -251,7 +254,7 @@ killproc()
 		if [ "${nopid}" = "0" ]; then
 			failure=0
 
-			if [ -n "${PIDFILE}" -a -e "${PIDFILE}"]; then
+			if [ -n "${PIDFILE}" -a -e "${PIDFILE}" ]; then
 				rm -f "${PIDFILE}"
 			fi
 
