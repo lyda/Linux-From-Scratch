@@ -47,14 +47,19 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc0.d/S90localnet
 	ln -sf ../init.d/halt        ${EXTDIR}/rc.d/rc0.d/S99halt
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc1.d/K90sysklogd
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc1.d/K85hotplug
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc1.d/K80network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc2.d/K90sysklogd
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc2.d/K85hotplug
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc2.d/K80network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc3.d/S10sysklogd
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc3.d/S15hotplug
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc3.d/S20network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc4.d/S10sysklogd
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc4.d/S15hotplug
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc4.d/S20network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc5.d/S10sysklogd
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc5.d/S15hotplug
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc5.d/S20network
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc6.d/K80network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc.d/rc6.d/K90sysklogd
@@ -71,7 +76,6 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/checkfs     ${EXTDIR}/rc.d/rcsysinit.d/S30checkfs
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rcsysinit.d/S40mountfs
 	ln -sf ../init.d/cleanfs     ${EXTDIR}/rc.d/rcsysinit.d/S50cleanfs
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
