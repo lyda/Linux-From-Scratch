@@ -48,9 +48,8 @@ sed 's@ /lib/ld.so.1@ /tools/lib/ld.so.1@g' \
 mv -f tempspecfile $SPECFILE &amp;&amp;
 unset SPECFILE</userinput></screen>
 
-<para><phrase condition="html">It is recommended that the above
-command be copy-and-pasted in order to ensure accuracy.</phrase>
-
+<para>It is recommended that the above
+command be copy-and-pasted in order to ensure accuracy.
 Alternatively, the specs file can be edited by hand. This is done by
 replacing every occurrence of <quote arch="x86">/lib/ld-linux.so.2</quote> 
 <quote arch="raq2">/lib/ld.so.1</quote> with <quote arch="x86">/tools/lib/ld-linux.so.2</quote>
@@ -116,8 +115,8 @@ the <envar>PATH</envar> is wrong it could mean that you are not logged in as use
 <emphasis>lfs</emphasis> or that something went wrong back in <xref
 linkend="ch-tools-settingenviron" role="."/> Another option is that something
 may have gone wrong with the specs file amendment above. In this case,
-redo the specs file amendment<phrase condition="html">, being careful to copy-and-paste the
-commands</phrase>.</para>
+redo the specs file amendment, being careful to copy-and-paste the
+commands.</para>
 
 <para>Once all is well, clean up the test files:</para>
 
