@@ -73,6 +73,8 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 2nd, 2004 [matt]: Quoted chroot commands in chapter 6 (bug
+#818).</para></listitem>
 <listitem><para>May 2nd, 2004 [matt]: Removed description of the now
 non-existent part IV from the structure section in the prologue.</para>
 </listitem>
