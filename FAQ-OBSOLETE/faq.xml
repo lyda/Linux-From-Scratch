@@ -563,19 +563,16 @@ url="http://kt.zork.net/kernel-traffic/kt20000814_80.txt">http://kt.zork.net/ker
 </qandaentry>
 
 <!--		<qandadiv id="why-not-add"><title>Why not add / use package Foo?</title>-->
-			<qandaentry id="add-grub"><question><para>GRUB instead of LILO</para></question>
-				<answer><para>GRUB has not yet been released as stable.
-					When it is, it will be considered
-					and, if it seems better than LILO, used.
-				</para>
-				<para>If your current setup is using GRUB,
-					there's no need to switch to LILO.
-					In addition to the GRUB documentation,
-					there is an LFS Hint for GRUB.
-					The LFS Hints are at <ulink
-					url="http://www.linuxfromscratch.org/services/lfshints.php">http://www.linuxfromscratch.org/services/lfshints.php</ulink>.
-				</para></answer>
-			</qandaentry>
+
+<qandaentry id="add-grub"><question><para>GRUB instead of LILO</para></question>
+<answer><para>GRUB has not yet been released as stable.
+When it is, it will be considered and, if it seems better than LILO, used.
+</para>
+<para>If your current setup uses GRUB, there's no need to switch.
+In addition to the GRUB documentation, there is the LFS "GRUB-Howto" Hint at <ulink
+url"http://hints.linuxfromscratch.org/hints/grub-howto.txt">http://hints.linuxfromscratch.org/hints/grub-howto.txt</ulink>
+</para></answer>
+</qandaentry>
 
 <qandaentry id="add-gawk"><question><para>gawk instead of mawk</para></question>
 <answer><para>The gawk versus mawk debate involves much talk and little
