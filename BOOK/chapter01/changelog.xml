@@ -74,6 +74,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July 14, 2004 [matt]: chapter06/udev.xml - Explained udevdir
+option</para></listitem>
+
 <listitem><para>July 12, 2004 [matt]: Network bootscripts now support directory
 based configurations.</para></listitem>
 
