@@ -551,6 +551,7 @@ and are left as an exercise for the reader.
 
 <!-- dlist: ,lfs-compile,blfs-support -->
 	<qandadiv id="compiling"><title>Compiling</title>
+<!-- dlist: ,lfs-compile,blfs-support -->
 <!--		<qandadiv id="before-ask-comp"><title>Before you ask on the list...</title>-->
 <!-- elist: ,lfs-compile,blfs-support -->
 			<qandaentry id="optimizations"><question><para>If you are using optimizations:</para></question>
@@ -880,6 +881,7 @@ url="http://kt.zork.net/kernel-traffic/kt20000814_80.txt">http://kt.zork.net/ker
 </para></answer>
 </qandaentry>
 
+<!-- dlist: ,lfs-support,blfs-support -->
 <!--		<qandadiv id="setup-polishing"><title>Polishing your setup.</title>-->
 <!--
 			<para>These don't really belong in the FAQ,
