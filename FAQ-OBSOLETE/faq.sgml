@@ -1,0 +1,202 @@
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook V4.1//EN">
+
+<article id="index"><title>The LFS FAQ</title>
+	<articleinfo>
+		<author>
+			<firstname>Seth</firstname>
+			<othername>W.</othername>
+			<surname>Klein</surname>
+			<affiliation>
+				<address>
+					<email>sklein@mint.net</email>
+				</address>
+			</affiliation>
+		</author>
+	</articleinfo>
+	<section><title>Introduction</title>
+		<section><title>Why this FAQ?</title>
+			<para>
+				I started this FAQ in an attempt to make the traffic on
+				lfs-discuss more manageable and improve the signal to noise
+				ratio. I'm going to limit myself to things that come up
+				often there leaving tips and such for
+				<ulink url="http://www.linuxfromscratch.org/services/lfshints.php">LFS-Hints</ulink>.
+			</para>
+		</section>
+		<section><title>What is appropriate for lfs-discuss?</title>
+			<para>
+				From the
+				<ulink url="http://www.linuxfromscratch.org/services/mailinglistinfo.php">website</ulink>:
+			</para>
+			<blockquote>
+				<para>
+					The lfs-discuss mailinglist discusses matters strictly
+					related to the LFS-BOOK. If you have problems with
+					the book, want to report a bug or two or have suggestions
+					to improve the book, use this mailinglist.
+				</para>
+				<para>
+					Any other mail is to be posted to the lfs-apps list.
+				</para>
+			</blockquote>
+			<para>
+				For instance, GCC and Glibc are part of the book and
+				belong on lfs-discuss.
+				XFree86, KDE, and GNOME are not part of the book and
+				belong on lfs-apps.
+			</para>
+		</section>
+		<section><title>Contributing to this FAQ.</title>
+			<para>
+				If you have an addition or suggestion, please, let me know.
+				I can be reached at
+				<ulink url="mailto:sklein@mint.net">sklein@mint.net</ulink>,
+				and i read lfs-discuss and lfs-apps thoroughly (but not always
+				promptly).
+			</para>
+			<para>
+				I'd like to list FAQ's for not only lfs-discuss, but lfs-apps
+				as well. I want to stick to questions that have been asked
+				at least twice and to remove items that are no longer an issue.
+			</para>
+		</section>
+		<section><title>Where is the best place to get help?</title>
+			<para>
+				For support type help, IRC is often best. It's faster,
+				and doesn't clog the mailinglists.
+				Information on the LFS IRC channel is at
+				<ulink url="http://www.linuxfromscratch.org/services/irc.php">http://www.linuxfromscratch.org/services/irc.php</ulink>.
+			</para>
+		</section>
+		<section><title>What is LFS?</title>
+			<para>
+				LFS stands for Linux From Scratch which is a project that
+				primarily documents how to install a Linux system by downloading,
+				building, and installing the packages yourself.
+			</para>
+			<para>
+				For why you might want to do this, how to do it, and other
+				useful stuff, see the website at
+				<ulink url="http://www.linuxfromscratch.org/">http://www.linuxfromscratch.org/</ulink>.
+			</para>
+		</section>
+	</section>
+	<section id="preparing"><title>Preparing to build?</title>
+		<section id="what-dist"><title>What distribution should I use to start from?</title>
+			<para>
+				Most distributions are fine, and even the worst aren't guarenteed to fail;
+				but here are a few recommendations:
+			</para>
+			<itemizedlist>
+				<listitem><para>
+					Red Hat 7 is not recommended because it includes pre-release
+					versions of core software which don't have all the wrinkles
+					ironed out.
+				</para></listitem>
+				<listitem><para>
+					Red Hat 6.x, in contrast, is noted to work well.
+				</para></listitem>
+				<listitem><para>
+					Debian is not recommended due to problems with TexInfo.
+				</para></listitem>
+				<listitem><para>
+					Slackware 7 is often mentioned as a good choice.
+				</para></listitem>
+			</itemizedlist>
+		</section>
+	</section>
+	<section id="compiling"><title>Compiling</title>
+		<section id="gcc-warnings"><title>Are compiler warnings from GCC bad?</title>
+			<para>
+				Short answer: no.
+			</para>
+			<para>
+				Long answer: probably, but only to someone
+				working on the package you're trying to compile. Mostly,
+				everything will be fine unless make quits with an error.
+			</para>
+			<para>
+				Here's an example:
+			</para>
+			<screen>
+sklein ~/tmp $ cat > Makefile
+main:
+	gcc main.c
+sklein ~/tmp $ cat > main.c
+void main() { exit(0); }
+sklein ~/tmp $ make
+gcc main.c
+<emphasis role="bold">main.c: In function `main':
+main.c:1: warning: return type of `main' is not `int'</emphasis>
+sklein ~/tmp $ ######## that worked ########
+sklein ~/tmp $ 
+sklein ~/tmp $ cat > main.c
+int main() { exxit(0) }
+sklein ~/tmp $ make
+gcc main.c
+<emphasis role="bold">main.c: In function `main':
+main.c:1: parse error before `}'
+make: *** [main] Error 1</emphasis>
+sklein ~/tmp $ ######## that failed ########
+sklein ~/tmp $
+			</screen>
+		</section>
+		<section id="missing-x-includes"><title>A package can't find my X headers.</title>
+			<para>
+				Typical symptoms look like this:
+			</para>
+			<screen>
+sklein ~/tmp $ cat > Makefile
+x11:
+        gcc x11.c
+sklein ~/tmp $ cat > x11.c
+#include &lt;X11/Xlib.h>
+int main() { exit(0); }
+sklein ~/tmp $ make
+gcc x11.c
+<emphasis role="bold">x11.c:1: X11/Xlib.h: No such file or directory
+make: *** [x11] Error 1</emphasis>
+sklein ~/tmp $ 
+			</screen>
+			<para>
+				Creating a couple symlinks will fix this. Here are the commands:
+			</para>
+			<screen>
+cd /usr
+ln -s X11R6 X11
+cd include
+ln -s ../X11/include/X11 X11
+			</screen>
+		</section>
+		<section id="conf-guess-fail"><title>configure can't guess my host type.</title>
+			<para>
+				Typical symptoms look like this:
+			</para>
+			<screen>
+sklein ~/tmp-0.0 $ ./configure 
+creating cache ./config.cache
+checking host system type... <emphasis role="bold">configure: error: can not guess host type; you must specify one</emphasis>
+sklein ~/tmp-0.0 $
+			</screen>
+			<para>
+				The problem is usually that the script can't run the compiler.
+				Usually it's just a missing /usr/bin/cc symlink. You can fix it like
+				this:
+			</para>
+			<screen>
+cd /usr/bin
+ln -s gcc cc
+			</screen>
+		</section>
+	</section>
+	<section id="specific-packages"><title>Questions about specific packages.</title>
+		<section id="glibc-crypt"><title>Where is glibc-crypt-2.2.x?</title>
+			<para>
+				As of glibc-2.2, you no longer need to get glibc-crypt separately.
+				It has been merged into the main package because the US
+				has relaxed it's export regulations.
+			</para>
+		</section>
+	</section>
+</article>
+
