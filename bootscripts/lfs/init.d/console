@@ -16,19 +16,17 @@ fi
 case "$1" in
 	start)
 		if [ -n "$KEYMAP" ]; then
-			echo -n "Loading keymap..."
 			loadkeys $KEYMAP
 			evaluate_retval
 		fi
 
 		if [ -n "$KEYMAP_CORRECTIONS" ]; then
-			echo -n "Correcting keymap..."
 			loadkeys $KEYMAP_CORRECTIONS
 			evaluate_retval
 		fi
 
 		if [ -n "$FONT" ]; then
-			echo -n "Setting screen font..."
+			echo "Setting screen font to $FONT..."
 			setfont $FONT
 			evaluate_retval
 		fi
