@@ -1,3 +1,7 @@
+n/a - June 2, 2004
+
+	* Reorganize what goes on in the udev script
+
 n/a - June 1, 2004
 
 	* removed usbfs from mountkernfs, and mountfs
