@@ -3,7 +3,6 @@
 <!ENTITY c4-test SYSTEM "../chapter04/test.xml">
 <!ENTITY c4-updateindex SYSTEM "../chapter04/updateindex.xml">
 <!ENTITY c4-updatechangelog SYSTEM "../chapter04/updatechangelog.xml">
-<!ENTITY c4-updatecredits SYSTEM "../chapter04/updatecredits.xml">
 <!ENTITY c4-checkfiles SYSTEM "../chapter04/checkfiles.xml">
 <!ENTITY c4-checkrender SYSTEM "../chapter04/checkrender.xml">
 <!ENTITY c4-commit SYSTEM "../chapter04/commit.xml">
