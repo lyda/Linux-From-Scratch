@@ -6,7 +6,7 @@
 <screen>foo</screen>
 will usually turn up a freshmeat page
 with links to an URL
-where which may have newer releases not reported to freshmeat.
+which may have newer releases not reported to freshmeat.
 </para>
 <para>Searching <ulink url="http://www.google.com/"/> for 
 <screen>+foo +index +lsm</screen>

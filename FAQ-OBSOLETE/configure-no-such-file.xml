@@ -2,6 +2,6 @@
 <question><para>bash: ./configure: No such file or directory</para></question>
 <answer><para>Reread Chapter 2 of the LFS Book
 or the FAQ entry
-<link linkend="how-to-compile">"Exactly how do i compile this?"</link>
+<link linkend="how-to-compile">"How do I compile a package?"</link>
 </para></answer>
 </qandaentry>
