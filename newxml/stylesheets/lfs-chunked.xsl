@@ -82,7 +82,7 @@
     section   nop
     set       nop
   </xsl:param>
-  <xsl:param name="toc.section.depth">3</xsl:param>
+  <xsl:param name="toc.section.depth">1</xsl:param>
   <xsl:param name="toc.max.depth">3</xsl:param>
 
 </xsl:stylesheet>
