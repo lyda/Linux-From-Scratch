@@ -1,3 +1,6 @@
+n/a - March 30, 2005
+	* Changed from syslog-ng to sysklogd (Archaic)
+
 n/a - March 19, 2005
 	* Updated RaQ2 patch (Jim Gifford)
 	* Added net.agent for Hotplug of Network adapters in contrib

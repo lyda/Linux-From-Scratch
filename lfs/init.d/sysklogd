@@ -1,8 +1,8 @@
 #!/bin/sh
 ########################################################################
-# Begin $rc_base/init.d/syslog-ng
+# Begin $rc_base/init.d/sysklogd
 #
-# Description : Syslog-ng loader
+# Description : Sysklogd loader
 #
 # Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
 #
@@ -18,17 +18,23 @@
 case "${1}" in
 	start)
 		boot_mesg "Starting system log daemon..."
-		loadproc syslog-ng
+		loadproc syslogd -m 0
+
+		boot_mesg "Starting kernel log daemon..."
+		loadproc klogd
 		;;
 
 	stop)
+		boot_mesg "Stopping kernel log daemon..."
+		killproc klogd
+
 		boot_mesg "Stopping system log daemon..."
-		killproc syslog-ng
+		killproc syslogd
 		;;
 
 	reload)
 		boot_mesg "Reloading system log daemon config file..."
-		reloadproc syslog-ng 1
+		reloadproc syslogd 1
 		;;
 
 	restart)
@@ -38,7 +44,8 @@ case "${1}" in
 		;;
 
 	status)
-		statusproc syslog-ng
+		statusproc syslogd
+		statusproc klogd
 		;;
 
 	*)
@@ -47,4 +54,4 @@ case "${1}" in
 		;;
 esac
 
-# End $rc_base/init.d/syslog-ng
+# End $rc_base/init.d/sysklogd

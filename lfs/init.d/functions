@@ -87,7 +87,7 @@ BMWORD=""          # last printed word before a newline when wrapping text
 #               information to be passed to a bootup log and for better
 #               formatting of text sent to the screen.  The logging support
 #               now pushes messages to the local2 service which is now
-#               configured by LFS defalut in syslog-ng.conf.  This also 
+#               configured by LFS default in syslog.conf.  This also 
 #               requires that /usr/bin/logger be moved to /bin.
 #               Support for parallel bootscripts is not added *yet*...
 #*******************************************************************************
