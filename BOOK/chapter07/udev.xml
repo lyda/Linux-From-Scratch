@@ -35,7 +35,7 @@ used in negligable.</para>
 <sect2>
 <title>History</title>
 
-<para>In Febraury 2000, a new filesystem called <systemitem
+<para>In February 2000, a new filesystem called <systemitem
 class="filesystem">devfs</systemitem> was merged into the 2.3.46
 kernel and was made available during the 2.4 series of
 stable kernels.  Although it was present in the kernel source itself,

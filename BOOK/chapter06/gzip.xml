@@ -75,7 +75,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew</seg></seglistitem>
 <varlistentry id="gunzip">
 <term><command>gunzip</command></term>
 <listitem>
-<para>decompresses gzipped files</para>
+<para>Decompresses gzipped files</para>
 <indexterm zone="ch-system-gzip gunzip"><primary sortas="b-gunzip">gunzip</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -83,7 +83,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew</seg></seglistitem>
 <varlistentry id="gzexe">
 <term><command>gzexe</command></term>
 <listitem>
-<para>creates self-uncompressing executable files</para>
+<para>Creates self-uncompressing executable files</para>
 <indexterm zone="ch-system-gzip gzexe"><primary sortas="b-gzexe">gzexe</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -91,7 +91,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew</seg></seglistitem>
 <varlistentry id="gzip">
 <term><command>gzip</command></term>
 <listitem>
-<para>compresses the given files using Lempel-Ziv (LZ77) coding</para>
+<para>Compresses the given files using Lempel-Ziv (LZ77) coding</para>
 <indexterm zone="ch-system-gzip gzip"><primary sortas="b-gzip">gzip</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -100,14 +100,14 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew</seg></seglistitem>
 <term><command>uncompress</command></term>
 <listitem>
 <para>Decompresses compressed files</para>
-<indexterm zone="ch-system-gzip znew"><primary sortas="b-znew">znew</primary></indexterm>
+<indexterm zone="ch-system-gzip uncompress"><primary sortas="b-uncompress">uncompress</primary></indexterm>
 </listitem>
 </varlistentry>
 
 <varlistentry id="zcat">
 <term><command>zcat</command></term>
 <listitem>
-<para>uncompresses the given gzipped files to standard output</para>
+<para>Uncompresses the given gzipped files to standard output</para>
 <indexterm zone="ch-system-gzip zcat"><primary sortas="b-zcat">zcat</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -115,7 +115,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew</seg></seglistitem>
 <varlistentry id="zcmp">
 <term><command>zcmp</command></term>
 <listitem>
-<para>runs <command>cmp</command> on gzipped files</para>
+<para>Runs <command>cmp</command> on gzipped files</para>
 <indexterm zone="ch-system-gzip zcmp"><primary sortas="b-zcmp">zcmp</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -123,7 +123,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew</seg></seglistitem>
 <varlistentry id="zdiff">
 <term><command>zdiff</command></term>
 <listitem>
-<para>runs <command>diff</command> on gzipped files</para>
+<para>Runs <command>diff</command> on gzipped files</para>
 <indexterm zone="ch-system-gzip zdiff"><primary sortas="b-zdiff">zdiff</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -131,7 +131,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew</seg></seglistitem>
 <varlistentry id="zegrep">
 <term><command>zegrep</command></term>
 <listitem>
-<para>runs <command>egrep</command> on gzipped files</para>
+<para>Runs <command>egrep</command> on gzipped files</para>
 <indexterm zone="ch-system-gzip zegrep"><primary sortas="b-zegrep">zegrep</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -139,7 +139,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew</seg></seglistitem>
 <varlistentry id="zfgrep">
 <term><command>zfgrep</command></term>
 <listitem>
-<para>runs <command>fgrep</command> on gzipped files</para>
+<para>Runs <command>fgrep</command> on gzipped files</para>
 <indexterm zone="ch-system-gzip zfgrep"><primary sortas="b-zfgrep">zfgrep</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -147,7 +147,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew</seg></seglistitem>
 <varlistentry id="zforce">
 <term><command>zforce</command></term>
 <listitem>
-<para>forces a <filename class="extension">.gz</filename> extension on all given files
+<para>Forces a <filename class="extension">.gz</filename> extension on all given files
 that are gzipped files, so that <command>gzip</command> will not compress them again; this can be
 useful when file names were truncated during a file transfer</para>
 <indexterm zone="ch-system-gzip zforce"><primary sortas="b-zforce">zforce</primary></indexterm>
@@ -157,7 +157,7 @@ useful when file names were truncated during a file transfer</para>
 <varlistentry id="zgrep">
 <term><command>zgrep</command></term>
 <listitem>
-<para>runs <command>grep</command> on gzipped files</para>
+<para>Runs <command>grep</command> on gzipped files</para>
 <indexterm zone="ch-system-gzip zgrep"><primary sortas="b-zgrep">zgrep</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -165,7 +165,7 @@ useful when file names were truncated during a file transfer</para>
 <varlistentry id="zless">
 <term><command>zless</command></term>
 <listitem>
-<para>runs <command>less</command> on gzipped files</para>
+<para>Runs <command>less</command> on gzipped files</para>
 <indexterm zone="ch-system-gzip zless"><primary sortas="b-zless">zless</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -173,7 +173,7 @@ useful when file names were truncated during a file transfer</para>
 <varlistentry id="zmore">
 <term><command>zmore</command></term>
 <listitem>
-<para>runs <command>more</command> on gzipped files</para>
+<para>Runs <command>more</command> on gzipped files</para>
 <indexterm zone="ch-system-gzip zmore"><primary sortas="b-zmore">zmore</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -181,7 +181,7 @@ useful when file names were truncated during a file transfer</para>
 <varlistentry id="znew">
 <term><command>znew</command></term>
 <listitem>
-<para>re-compresses files from <command>compress</command> format to
+<para>Re-compresses files from <command>compress</command> format to
 <command>gzip</command> format&mdash;<filename class="extension">.Z</filename>
 to <filename class="extension">.gz</filename></para>
 <indexterm zone="ch-system-gzip znew"><primary sortas="b-znew">znew</primary></indexterm>
