@@ -47,6 +47,7 @@
 <!ENTITY portmap SYSTEM "portmap.xml">
 <!ENTITY quake3 SYSTEM "quake3.xml">
 <!ENTITY really-small SYSTEM "really-small.xml">
+<!ENTITY respawning-too-fast SYSTEM "respawning-too-fast.xml">
 <!ENTITY sh-utils-getloadavg SYSTEM "sh-utils-getloadavg.xml">
 <!ENTITY should-i-keep-sources SYSTEM "should-i-keep-sources.xml">
 <!ENTITY shutdown-on-fsck-error SYSTEM "shutdown-on-fsck-error.xml">

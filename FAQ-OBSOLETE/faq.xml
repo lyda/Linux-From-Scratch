@@ -124,6 +124,7 @@
 		&char-major-10-135;
 		&no-dev-rtc;
 		&unable-to-mount-root;
+		&respawning-too-fast;
 		&lilo-errors;
 		&f-hostname;
 		&less-prints-ad;
