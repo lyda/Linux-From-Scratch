@@ -26,6 +26,7 @@ install: create-dirs create-service-dir
 	install -m 754 lfs/init.d/halt         ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/console      ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/localnet     ${EXTDIR}/rc.d/init.d/
+	install -m 754 lfs/init.d/modules      ${EXTDIR}/rc.d/init.d
 	install -m 754 lfs/init.d/mountfs      ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/mountkernfs  ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/network      ${EXTDIR}/rc.d/init.d/
@@ -64,6 +65,7 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc6.d/S90localnet
 	ln -sf ../init.d/reboot      ${EXTDIR}/rc.d/rc6.d/S99reboot
 	ln -sf ../init.d/mountkernfs ${EXTDIR}/rc.d/rcsysinit.d/S00mountkernfs
+	ln -sf ../init.d/modules     ${EXTDIR}/rc.d/rcsysinit.d/S05modules
 	ln -sf ../init.d/udev        ${EXTDIR}/rc.d/rcsysinit.d/S10udev
 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rcsysinit.d/S20swap
 	ln -sf ../init.d/checkfs     ${EXTDIR}/rc.d/rcsysinit.d/S30checkfs
@@ -75,15 +77,11 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
 	install -m 644 lfs/sysconfig/console                         ${EXTDIR}/sysconfig/
 	install -m 644 lfs/sysconfig/createfiles                     ${EXTDIR}/sysconfig/
+	install -m 644 lfs/sysconfig/modules                         ${EXTDIR}/sysconfig
 	install -m 644 lfs/sysconfig/rc                              ${EXTDIR}/sysconfig/
 	install -m 644 lfs/sysconfig/sysklogd                        ${EXTDIR}/sysconfig/
 	install -m 754 lfs/sysconfig/network-devices/ifup            ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/ifdown          ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/services/static ${EXTDIR}/sysconfig/network-devices/services
 
-install-modules: create-dirs
-	install -m 754 contrib/init.d/modules ${EXTDIR}/rc.d/init.d
-	install -m 644 contrib/sysconfig/modules ${EXTDIR}/sysconfig
-	ln -sf ../init.d/modules ${EXTDIR}/rc.d/rcsysinit.d/S05modules
-
-.PHONY: all create-dirs create-service-dir install install-hotplug install-modules
+.PHONY: all create-dirs create-service-dir install
