@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-scripts-bootscripts" role="wrap">
-<title>LFS-Bootscripts-&bootscripts-version;</title>
+<title>LFS-Bootscripts-&lfs-bootscripts-version;</title>
 <?dbhtml filename="bootscripts.html"?>
 
 <indexterm zone="ch-scripts-bootscripts"><primary sortas="a-Bootscripts">Bootscripts</primary></indexterm>
@@ -27,22 +27,14 @@
 <sect2 role="installation">
 <title>Installation of LFS-Bootscripts</title>
 
+<para arch="raq2">The patch below allows the bootscripts to use the LCD screen to view
+the status of a running script.</para>
+
+<screen arch="raq2"><userinput>patch -Np1 -i ../lfs-bootscripts-&lfs-bootscripts-version;-raq2-2.patch</userinput></screen>
+
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
-
-<!-- Temporary until new bootscripts release -->
-<para>Since this version of LFS also uses the Hotplug and Syslog-ng packages,
-install the bootscripts for those packages as well:</para>
-
-<screen><userinput>make install-hotplug
-make install-syslog-ng</userinput></screen>
-
-<para arch="raq2">Due that in a RaQ2 server there is no video output, the sshd
-daemon is needed to can login into the server. Install the sshd bootscript included
-in the BLFS-Bootscript-&blfs-bootscripts-version; package:</para>
-
-<screen arch="raq2"><userinput>make install-sshd</userinput></screen>
 
 </sect2>
 
@@ -198,14 +190,6 @@ or halts</para>
 <para>Resets the kernel clock to local time in case the hardware clock
 is not set to UTC time</para>
 <indexterm zone="ch-scripts-bootscripts setclock-bootscripts"><primary sortas="d-setclock">setclock</primary></indexterm>
-</listitem>
-</varlistentry>
-
-<varlistentry id="sshd-bootscripts" arch="raq2">
-<term><command>sshd</command></term>
-<listitem>
-<para>Load the sshd daemom</para>
-<indexterm zone="ch-scripts-bootscripts sshd-bootscripts"><primary sortas="d-sshd">sshd</primary></indexterm>
 </listitem>
 </varlistentry>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-linux-libc-headers" role="wrap">
+<sect1 id="ch-system-linux-libc-headers" role="wrap" arch="x86">
 <title>Linux-Libc-Headers-&linux-libc-headers-version;</title>
 <?dbhtml filename="linux-libc-headers.html"?>
 
@@ -39,16 +39,9 @@ should not be done. This gave birth to the Linux-Libc-Headers Project,
 which was designed to maintain an API stable version of the Linux
 headers.</para>
 
-<para arch="raq2">This patch fixes a compile issue with Glibc on a RaQ2 server.</para>
-
-<screen arch="raq2"><userinput>patch -Np1 -i ../linux-libc-headers-&linux-libc-headers-version;-raq2_fix-1.patch</userinput></screen>
-
 <para>Install the header files:</para>
 
 <screen arch="x86"><userinput>cp -R include/asm-i386 /usr/include/asm
-cp -R include/linux /usr/include</userinput></screen>
-
-<screen arch="raq2"><userinput>cp -R include/asm-mips /usr/include/asm
 cp -R include/linux /usr/include</userinput></screen>
 
 <screen arch="ppc"><userinput>cp -R include/asm-ppc /usr/include/asm

@@ -43,7 +43,7 @@ sed -i 's%SHLIBDIRS= fips crypto ssl%SHLIBDIRS= crypto ssl%g' Makefile</userinpu
 
 <para>Install the package:</para>
 
-<screen><userinput>make MANDIR=/usr/share/maninstall
+<screen><userinput>make MANDIR=/usr/share/man install
 cp -r certs /etc/ssl</userinput></screen>
 
 </sect2>

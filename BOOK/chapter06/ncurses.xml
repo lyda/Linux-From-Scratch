@@ -31,39 +31,34 @@ Gawk, GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 
 <para>Prepare Ncurses for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --with-shared --without-debug</userinput></screen>
+<screen><userinput>./configure --prefix=/usr --libdir \
+--with-shared --without-debug</userinput></screen>
 
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>This package does not come with a test suite.</para>
-
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
+<para>Move the Ncurses static libraries to the proper locations:</para>
+
+<screen><userinput>mv /lib/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib</userinput></screen>
+
+<para>Create symlinks in <filename class="directory">/usr/lib:</filename></para>
+
+<screen><userinput>rm /lib/lib{ncurses,menu,panel,form}.so
+ln -sf ../../lib/libncurses.so.5 /usr/lib/libncurses.so
+ln -sf ../../lib/libmenu.so.5 /usr/lib/libmenu.so
+ln -sf ../../lib/libpanel.so.5 /usr/lib/libpanel.so
+ln -sf ../../lib/libform.so.5 /usr/lib/libform.so</userinput></screen>
+
 <para>Give the Ncurses libraries execute permissions:</para>
 
-<screen><userinput>chmod 755 /usr/lib/*.&ncurses-version;</userinput></screen>
+<screen><userinput>chmod 755 /lib/lib{panel,menu,form,ncurses}.so.&ncurses-version;</userinput></screen>
 
-<para>Fix a library that should not be executable:</para>
-
-<screen><userinput>chmod 644 /usr/lib/libncurses++.a</userinput></screen>
-
-<para>Move the libraries to the <filename class="directory">/lib</filename> directory,
-where they are expected to reside:</para>
-
-<screen><userinput>mv /usr/lib/libncurses.so.5* /lib</userinput></screen>
-
-<beginpage/>
-<para>Because the libraries have been moved, a few symlinks are pointing to
-non-existent files. Recreate those symlinks:</para>
-
-<screen><userinput>ln -sf ../../lib/libncurses.so.5 /usr/lib/libncurses.so
-ln -sf libncurses.so /usr/lib/libcurses.so</userinput></screen>
 </sect2>
-
 
 <sect2 id="contents-ncurses" role="content"><title>Contents of Ncurses</title>
 
