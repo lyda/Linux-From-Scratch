@@ -201,7 +201,7 @@ killproc()
 
                         if [ -n "$fallback" ]; then kill -$fallback $pid 2>/dev/null; fi
 
-                        kill -0 $pid 2>/dev/null && failure=1
+                        kill -0 $pid 2>/dev/null
                 done
 
 		getpids $1
