@@ -57,6 +57,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Libol 0.3.14</para></listitem>
 <listitem><para>Syslog-ng 1.6.5</para></listitem>
 <listitem><para>util-linux-2.12p-cramfs-1.patch</para></listitem>
+<listitem><para>vim-6.0-security_fix-1.patch</para></listitem>
 </itemizedlist>
 </listitem>
  
@@ -71,6 +72,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>zlib-1.2.1-security-1.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>January 9, 2005 [matt]: Added a security patch for vim</para></listitem>
 
 <listitem><para>January 9, 2005 [matt]: Upgraded to man-1.5p</para></listitem>
 
