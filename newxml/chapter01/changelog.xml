@@ -26,6 +26,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>ncurses-5.4</para></listitem>
 <listitem><para>procps-3.2.0</para></listitem>
 <listitem><para>lfs-bootscripts-2.0.2</para></listitem>
+<listitem><para>texinfo-4.7</para></listitem>
 </itemizedlist>
 </listitem>
 
