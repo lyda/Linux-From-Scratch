@@ -303,7 +303,7 @@ ln -s ../X11/include/X11 X11
 					that, set it in /etc/profile by doing something like this:
 				</para>
 				<screen>
-	echo 'export LESSCHARSET=latin1' >> /etc/profile
+echo 'export LESSCHARSET=latin1' >> /etc/profile
 				</screen>
 			</section>
 			<section id="which"><title>Where's which?</title>
@@ -315,14 +315,14 @@ ln -s ../X11/include/X11 X11
 					but the simplest thing is probably to create a shell script with these commands:
 				</para>
 				<screen>
-	cat > /usr/bin/which << "EOF"
-	#!/bin/bash
+cat > /usr/bin/which << "EOF"
+#!/bin/bash
 
-	type -p "$@"
+type -p "$@"
 
-	EOF
-	chmod 755 /usr/bin/which
-	chown root.root /usr/bin/which
+EOF
+chmod 755 /usr/bin/which
+chown root.root /usr/bin/which
 				</screen>
 			</section>
 			<section id="lex"><title>This ancient package wants lex?!?</title>
