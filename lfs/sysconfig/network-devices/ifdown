@@ -6,6 +6,13 @@
 . $rc_functions 
 . $network_devices/ifconfig.$1 
 
+# Will exit if it is started by the hotplug system, but the configuration file
+# does not mention ONHOTPLUG=yes
+if [ "$IN_HOTPLUG" = "1" -a "$ONHOTPLUG" != "yes" ]
+then
+  exit 0
+fi
+
 if [ -f $network_devices/ifdown-$1 ]
 then
 	$network_devices/ifdown-$1

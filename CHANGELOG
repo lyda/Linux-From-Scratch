@@ -1,3 +1,7 @@
+n/a - July 4, 2004
+
+	* Modified ifup and ifdown to be hotplug aware
+
 n/a - July 3, 2004
 
 	* Change the check for ONBOOT into a source within a subshell
