@@ -291,6 +291,11 @@ ln -s ../X11/include/X11 X11
 		</section>
 	</chapter>
 	<chapter id="specific-packages"><title>Questions about specific packages.</title>
+		<section id="how-to-create-user"><title>How do I create a non-root user?</title>
+			<para>
+				Use the useradd program. It was installed with the shadow package.
+			</para>
+		</section>
 		<section id="sh-utils-getloadavg"><title>My sh-utils build is failing with "undefined reference to `getloadavg'".</title>
 			<para>
 				If you're trying to build sh-utils and you're getting an error like this:
