@@ -33,16 +33,6 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 
 <screen><userinput>./configure --libdir=/usr/lib --enable-shared</userinput></screen>
 
-<para>Work around a problem that prevents Shadow's
-internationalization from working:</para>
-
-<screen><userinput>echo '#define HAVE_SETLOCALE 1' &gt;&gt; config.h</userinput></screen>
-
-<para>Shadow incorrectly declares the malloc() function, causing
-compilation failure. Fix this:</para>
-
-<screen><userinput>sed -i '/extern char/d' libmisc/xmalloc.c</userinput></screen>
-
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
@@ -79,21 +69,18 @@ sed -i -e 's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
 <para>Move some misplaced symlinks/programs to their proper
 locations:</para>
 
-<screen><userinput>mv /bin/sg /usr/bin
-mv /bin/vigr /usr/sbin
-mv /usr/bin/passwd /bin</userinput></screen>
+<screen><userinput>mv /usr/bin/passwd /bin</userinput></screen>
 
 <para>Move Shadow's dynamic libraries to a more appropriate
 location:</para>
 
-<screen><userinput>mv /usr/lib/lib{shadow,misc}.so.0* /lib</userinput></screen>
+<screen><userinput>mv /usr/lib/libshadow.so.0* /lib</userinput></screen>
 
 <para>Because some packages expect to find the just-moved libraries in
 <filename class="directory">/usr/lib</filename>, create the following
 symlinks:</para>
 
-<screen><userinput>ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so
-ln -sf ../../lib/libmisc.so.0 /usr/lib/libmisc.so</userinput></screen>
+<screen><userinput>ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
 
 <para>The <parameter>-D</parameter> option of the
 <command>useradd</command> program requires the <filename
