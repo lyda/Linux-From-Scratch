@@ -1,3 +1,9 @@
+n/a - July 31, 2004
+	
+	* Moved PIDFILE check to getpids and removed arguments from
+	  killproc and reloadproc.  Signals are now set at begining of
+	  funtcions script with KILLDELAY. (DJ)
+
 n/a - July 21, 2004
 
 	* Committed DJ Lucas's patch for the killproc function.  It no longer requires
