@@ -23,7 +23,7 @@ Network Configuration:
 		ipv4-static:
 		- IP: static IP Address
 		- GATEWAY: Specifies the IP Address of the gateway server
-		- PREFIX: CIDR prefix of IP Adderss, defaults to 24 if not set
+		- PREFIX: CIDR prefix of IP Address, defaults to 24 if not set
 		- BROADCAST: broadcast address
 		ipv4-static-route:
 		- Type: network (default type if not specified), host or
