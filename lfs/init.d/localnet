@@ -1,8 +1,16 @@
-#!/bin/bash
-# Begin $rc_base/init.d/localnet - Loopback device
-
-# Based on localnet sysklogd script from LFS-3.1 and earlier.
-# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+#!/bin/sh
+########################################################################
+# Begin $rc_base/init.d/localnet
+#
+# Description : Loopback device
+#
+# Authors     : Gerard Beekmans  - gerard@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

@@ -1,3 +1,6 @@
+n/a - December 20, 2004
+	* Cleaned up header.
+
 n/a - December 16, 2004
 	* Fixed a text typo in udev, tmpfs instead of ramfs (Steve Crosby)
 

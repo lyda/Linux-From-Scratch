@@ -1,7 +1,16 @@
 #!/bin/sh
-# Begin $rc_base/init.d/reboot - Reboot Script
-
-# Written by Gerard Beekmans  - gerard@linuxfromscratch.org
+########################################################################
+# Begin $rc_base/init.d/reboot
+#
+# Description : Reboot Scripts
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

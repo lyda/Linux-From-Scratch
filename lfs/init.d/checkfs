@@ -1,10 +1,18 @@
 #!/bin/sh
-# Begin $rc_base/init.d/checkfs - File System Check Script
-
+########################################################################
+# Begin $rc_base/init.d/checkfs
+#
+# Description : File System Check
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#		A. Luebke - luebke@users.sourceforge.net
+#
+# Version     : 00.00
+#
+# Notes       :
+#
 # Based on checkfs script from LFS-3.1 and earlier.
-# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
-# Patch to handle all fsck variants by A. Luebke - luebke@users.sourceforge.net
-
+#
 # From man fsck
 # 0    - No errors
 # 1    - File system errors corrected
@@ -14,6 +22,8 @@
 # 16   - Usage or syntax error
 # 32   - Fsck canceled by user request
 # 128  - Shared library error
+#
+#########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

@@ -1,10 +1,18 @@
 #!/bin/sh
-# Begin $rc_base/init.d/network - Network Control Script
-
-# Based on ethnet script from LFS-3.1 and earlier.
-# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
-# Rewritten by Nathan Coulson <nathan@linuxfromscratch.org>
-# Enhanced by Kevin P. Fleming <kpfleming@linuxfromscratch.org>
+########################################################################
+# Begin $rc_base/init.d/network
+#
+# Description : Network Control Script
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#		Nathan Coulson - nathan@linuxfromscratch.org
+#		Kevin P. Fleming - kpfleming@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

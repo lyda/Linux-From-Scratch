@@ -1,8 +1,16 @@
 #!/bin/sh
-# Begin $rc_base/init.d/setclock - Setting Linux Clock
-
-# Based on setclock script from LFS-3.1 and earlier.
-# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+########################################################################
+# Begin $rc_base/init.d/setclock
+#
+# Description : Setting Linux Clock
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

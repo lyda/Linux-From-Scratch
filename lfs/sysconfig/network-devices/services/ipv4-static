@@ -1,9 +1,17 @@
 #!/bin/sh
+########################################################################
 # Begin $network_devices/services/ipv4-static
-
-# Based upon lfs-bootscripts-1.12 $network_devices/if{down,up}
-# Rewritten by Nathan Coulson <nathan@linuxfromscratch.org>
-# Enhanced by Kevin P. Fleming <kpfleming@linuxfromscratch.org>
+#
+# Description : IPV4 Static Boot Script
+#
+# Authors     : Nathan Coulson - nathan@linuxfromscratch.org
+#		Kevin P. Fleming - kpfleming@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc 
 . ${rc_functions} 

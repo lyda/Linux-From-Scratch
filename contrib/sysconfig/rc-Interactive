@@ -1,5 +1,15 @@
-# This is the proposed addition to have interactive bootscripts.
+########################################################################
 # Begin /etc/sysconfig/rc
+#
+# Description : rc script configuration file - Interactive Version
+#
+# Authors     :
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 rc_base=/etc/rc.d
 rc_functions=${rc_base}/init.d/functions

@@ -1,7 +1,16 @@
 #!/bin/sh
-# Begin $rc_base/init.d/modules - Module auto-loading script
-
-# Written by Zack Winkles - winkie@linuxfromscratch.org
+########################################################################
+# Begin $rc_base/init.d/modules
+#
+# Description : Module auto-loading script
+#
+# Authors     : Zack Winkles
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}
