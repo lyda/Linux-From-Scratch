@@ -40,7 +40,7 @@ int string_comp (const char *str1, const char *str2) {
     len = string_len(str1);
     
     if (len != string_len(str2)) return(0);
-    for (; len > 0; len--)
+    for (; len >= 0; len--)
 		if (str1[len] != str2[len]) return(0);
 
     return(1);
@@ -96,14 +96,14 @@ char *string_strip (const char *string, const char *strip) {
     str = malloc((len_str + 1) * sizeof(char));
     c = 0;
 
-    for (s=0; '\0' != string[s]; s++)
+    for (s=0; '\0' != string[s];)
     {
        tmp = string_snip(string, s, s + len_stp);
 
        if (string_comp(strip, tmp))
           s += len_stp;
        else
-          str[c++] = string[s];
+          str[c++] = string[s++];
 
        free(tmp);
     }
