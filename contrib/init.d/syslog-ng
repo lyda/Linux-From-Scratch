@@ -9,17 +9,17 @@
 
 case "$1" in
 	start)
-		echo "Starting system log daemon..."
+		boot_mesg "Starting system log daemon..."
 		loadproc syslog-ng
 		;;
 
 	stop)
-		echo "Stopping system log daemon..."
+		boot_mesg "Stopping system log daemon..."
 		killproc syslog-ng
 		;;
 
 	reload)
-		echo "Reloading system log daemon config file..."
+		boot_mesg "Reloading system log daemon config file..."
 		reloadproc syslog-ng 1
 		;;
 

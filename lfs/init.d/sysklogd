@@ -12,23 +12,23 @@
 
 case "$1" in
 	start)
-		echo "Starting system log daemon..."
+		boot_mesg "Starting system log daemon..."
 		loadproc syslogd $SYSLOGD_OPTIONS
 
-		echo "Starting kernel log daemon..."
+		boot_mesg "Starting kernel log daemon..."
 		loadproc klogd $KLOGD_OPTIONS
 		;;
 
 	stop)
-		echo "Stopping kernel log daemon..."
+		boot_mesg "Stopping kernel log daemon..."
 		killproc klogd
 
-		echo "Stopping system log daemon..."
+		boot_mesg "Stopping system log daemon..."
 		killproc syslogd
 		;;
 
 	reload)
-		echo "Reloading system log daemon config file..."
+		boot_mesg "Reloading system log daemon config file..."
 		reloadproc syslogd 1
 		;;
 

@@ -8,17 +8,17 @@
 
 case "$1" in
 	start)
-		echo -n "Mounting kernel-based file systems:"
+		boot_mesg "Mounting kernel-based file systems:"
 
 		if [ ! -e /proc/mounts ]; then
-			echo -n " /proc"
+			boot_mesg " /proc"
 			mount -n /proc || failed=1
 		fi
 
 		# This should be mounted on a 2.6 kernel.
 		if grep -q '[[:space:]]sysfs' /proc/filesystems; then
 			if [ -d /sys -a ! -d /sys/block ]; then
-				echo -n " /sys"
+				boot_mesg " /sys"
 				mount -n /sys || failed=1
 			fi
 		fi

@@ -7,6 +7,7 @@ n/a - September 22, 2004
 	  next line
 	* boot_log has been added.  the echo_ functions commit the log,
 	  and then clear the BOOTMSG variable
+	* All scriptes have been converted to use boot_mesg
 
 n/a - September 21, 2004
 	* boot_mesg has been enhanced.  Subsequent calls will overwrite previous text,

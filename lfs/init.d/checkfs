@@ -22,11 +22,12 @@ case "$1" in
 	start)
 		if [ -f /fastboot ]
 		then
-			echo "Fast boot requested, will not perform file system checks"
+			boot_mesg "Fast boot requested, will not perform file system checks"
+			print_status warning
 			exit 0
 		fi
 
-		echo "Mounting root file system in read-only mode..."
+		boot_mesg "Mounting root file system in read-only mode..."
 		mount -n -o remount,ro /
 		evaluate_retval
 
@@ -47,23 +48,25 @@ case "$1" in
 
 		if [ -f /forcefsck ]
 		then
-			echo "/forcefsck exists, forcing file system check"
+			boot_mesg "/forcefsck exists, forcing file system check"
+			print_status warning
 			options="-f"
-			else
+		else
 			options=""
 		fi
 
-		echo "Checking file systems..."
+		boot_mesg "Checking file systems..."
 		#Note: -a option used to be -p; but this fails e.g. on fsck.minix
 		fsck $options -a -A -C -T
 		error_value=$?
 
 		if [ "$error_value" = 1 ]
 		then
+			
 			echo -n -e $WARNING
-			echo "File system errors were found and have been corrected."
-			echo "You may want to double-check that everything was fixed"
-			echo -n "properly"
+			boot_mesg "\nFile system errors were found and have been corrected."
+			boot_mesg "  You may want to double-check that everything was fixed"
+			boot_mesg " properly"
 			echo -n -e $NORMAL
 			print_status warning
 		fi
@@ -76,7 +79,7 @@ case "$1" in
 		if [ "$error_value" = 2 -o "$error_value" = 3 ]
 		then
 			echo -n -e $WARNING
-			echo "File system errors were found and have been corrected, but"
+			echo "\nFile system errors were found and have been corrected, but"
 			echo "the nature of the errors require this system to be rebooted."
 			echo
 			echo -n "When you press Enter, this system will be rebooted."
@@ -108,7 +111,7 @@ case "$1" in
 		if [ "$error_value" -ge 16 ]
 		then 
 			echo -n -e $FAILURE
-			echo "Unexpected Failure running fsck. Exited with "$error_value
+			boot_mesg "\nUnexpected Failure running fsck. Exited with "$error_value
 			echo -n -e $NORMAL
 			print_status failure
 			exit $error_value

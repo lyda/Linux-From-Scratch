@@ -1,5 +1,5 @@
 #!/bin/sh
-# Begin $network_devices/services/ipv4-static
+4# Begin $network_devices/services/ipv4-static
 
 # Based upon lfs-bootscripts-1.12 $network_devices/if{down,up}
 # Rewritten by Nathan Coulson <nathan@linuxfromscratch.org>
@@ -10,17 +10,20 @@
 . $IFCONFIG
 
 if [ -z "$IP" ]; then
-	echo "IP variable missing from $IFCONFIG, cannot continue"
+	boot_mesg "IP variable missing from $IFCONFIG, cannot continue"
+	print_status failure
 	exit 1
 fi
 
 if [ -z "$PREFIX" -a -z "$PEER" ]; then
-	echo -n "PREFIX variable missing from $IFCONFIG, "
-	echo    "assuming 24"
+	boot_mesg "PREFIX variable missing from $IFCONFIG, "
+	boot_mesg "assuming 24"
+	print_status warning
 	PREFIX=24
 	args="$args $IP/$PREFIX"
 elif [ -n "$PREFIX" -a -n "$PEER" ]; then
-	echo "PREFIX and PEER both specified in $IFCONFIG, cannot continue"
+	boot_mesg "PREFIX and PEER both specified in $IFCONFIG, cannot continue"
+	print_status failure
 	exit 1
 elif [ -n "$PREFIX" ]; then
 	args="$args $IP/$PREFIX"
@@ -38,16 +41,16 @@ fi
 
 case "$2" in
 	up)
-		echo "Adding IPV4 address $IP to the $1 interface..."
+		boot_mesg "Adding IPV4 address $IP to the $1 interface..."
 		ip addr add $args dev $1
 		evaluate_retval
 	
 		if [ -n "$GATEWAY" ]; then
 			if ip route | grep -q default; then
-				echo "Gateway already setup; skipping..."
+				boot_mesg "Gateway already setup; skipping..."
 				print_status warning
 			else
-				echo "Setting up default gateway..."
+				boot_mesg "Setting up default gateway..."
 				ip route add default via $GATEWAY dev $1
 				evaluate_retval
 			 fi
@@ -56,12 +59,12 @@ case "$2" in
 	
 	down)
 		if [ -n "$GATEWAY" ]; then
-			echo "Removing default gateway..."
+			boot_mesg "Removing default gateway..."
 			ip route del default
 			evaluate_retval
 		fi
 	
-		echo "Removing IPV4 address $IP from the $1 interface..."
+		boot_mesg "Removing IPV4 address $IP from the $1 interface..."
 		ip addr del $args dev $1
 		evaluate_retval
 	;;

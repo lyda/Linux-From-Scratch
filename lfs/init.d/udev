@@ -27,7 +27,7 @@ case "$1" in
 		# else has already set it up.
 		[ -f /dev/.udev.tdb ] && exit 0
 
-		echo "Populating /dev with device nodes..."
+		boot_mesg "Populating /dev with device nodes..."
 
 		# Mount a temporary file system over /dev, so that any devices
 		# made or removed during this boot don't affect the next one.
@@ -37,6 +37,7 @@ case "$1" in
 		if [ $? != 0 ]
 		then
 			print_status failure
+			boot_log "Unable to mount a ramfs onto /dev"
 			echo -n -e $FAILURE
 			echo
 			echo "Cannot mount a ramfs onto /dev, this system will be halted."
@@ -67,6 +68,7 @@ case "$1" in
 		(exit $failed)
 		evaluate_retval
 		;;
+
 	*)
 		echo "Usage $0 {start}"
 		exit 1
