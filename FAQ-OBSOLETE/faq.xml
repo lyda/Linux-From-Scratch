@@ -64,6 +64,7 @@
 	&kernel-modules;
 	&nls-info;
 	&what-dist;
+	&wheres-which;
 	&portmap;
 	&where-ncurses-mandrake;
 	&bootcd;

@@ -58,6 +58,7 @@
 <!ENTITY what-is-lfs SYSTEM "what-is-lfs.xml">
 <!ENTITY when-next-lfs-release SYSTEM "when-next-lfs-release.xml">
 <!ENTITY where-ncurses-mandrake SYSTEM "where-ncurses-mandrake.xml">
+<!ENTITY wheres-which SYSTEM "wheres-which.xml">
 <!ENTITY which-list SYSTEM "which-list.xml">
 <!ENTITY why-ed SYSTEM "why-ed.xml">
 <!ENTITY why-faq SYSTEM "why-faq.xml">
