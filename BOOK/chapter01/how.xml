@@ -50,7 +50,8 @@ with the exception of the running kernel.</para>
 
 <para>While this may initially seem like a lot of work to get away
 from a host distribution, a full technical explanation is provided at
-the beginning of Chapter 5, including notes on the differences between
+the beginning of <xref linkend="chapter-temporary-tools"/>, 
+including notes on the differences between
 statically and dynamically-linked programs.</para>
 
 <para>In <xref linkend="chapter-building-system"/>, the full LFS system is
