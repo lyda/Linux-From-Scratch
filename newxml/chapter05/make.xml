@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.2 SBU
 &diskspace; 8.8 MB</screen>
 
-<para>You can found the official download location for this package in
+<para>You can find the official download location for this package in
 <xref linkend="ch-system-make"/>.</para>
 
 <xi:include href="../chapter06/make.xml" xpointer="xpointer(/sect1/para[2])"/>

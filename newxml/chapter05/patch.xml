@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 1.9 MB</screen>
 
-<para>You can found the official download location for this package in
+<para>You can find the official download location for this package in
 <xref linkend="ch-system-patch"/>.</para>
 
 <xi:include href="../chapter06/patch.xml" xpointer="xpointer(/sect1/para[2])"/>
