@@ -179,6 +179,16 @@ install-gpm: create-dirs
 	ln -s  ../init.d/gpm ${EXTDIR}/rc.d/rc5.d/S70gpm
 	ln -s  ../init.d/gpm ${EXTDIR}/rc.d/rc6.d/K10gpm
 
+install-lisa: create-dirs
+	install -m 754 blfs/init.d/lisa       ${EXTDIR}/rc.d/init.d/
+	ln -s  ../init.d/lisa ${EXTDIR}/rc.d/rc0.d/K35lisa
+	ln -s  ../init.d/lisa ${EXTDIR}/rc.d/rc1.d/K35lisa
+	ln -s  ../init.d/lisa ${EXTDIR}/rc.d/rc2.d/K35lisa
+	ln -s  ../init.d/lisa ${EXTDIR}/rc.d/rc3.d/S30lisa
+	ln -s  ../init.d/lisa ${EXTDIR}/rc.d/rc4.d/S30lisa
+	ln -s  ../init.d/lisa ${EXTDIR}/rc.d/rc5.d/S30lisa
+	ln -s  ../init.d/lisa ${EXTDIR}/rc.d/rc6.d/K35lisa
+
 install-lprng: create-dirs
 	install -m 754 blfs/init.d/lprng      ${EXTDIR}/rc.d/init.d/
 	ln -s  ../init.d/lprng ${EXTDIR}/rc.d/rc0.d/K00lprng
