@@ -8,23 +8,27 @@
 
 case "$1" in
 	start)
+		echo -n "Mounting kernel-based file systems:"
+
 		if [ ! -e /proc/mounts ]; then
-			echo "Mounting proc file system..."
-			mount -n /proc
-			evaluate_retval
+			echo -n " /proc"
+			mount -n /proc || failed=1
 		fi
 
 		# This should be mounted on a 2.6 kernel.
 		if grep -q '[[:space:]]sysfs' /proc/filesystems; then
 			if [ -d /sys -a ! -d /sys/block ]; then
-				echo "Mounting sysfs file system..."
-				mount -n /sys
-				evaluate_retval
+				echo -n " /sys"
+				mount -n /sys || failed=1
 			fi
 		fi
+
+		echo
+		(exit $failed)
+		evaluate_retval
 		;;
 	*)
-		echo "Usage $0 {start}"
+		echo "Usage: $0 {start}"
 		exit 1
 		;;
 esac
