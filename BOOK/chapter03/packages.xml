@@ -46,10 +46,24 @@
 </listitem>
 </varlistentry>
 
+<varlistentry arch="raq2">
+<term>BLFS-Bootscripts (&blfs-bootscripts-version;) - 12 KB:</term>
+<listitem>
+<para><ulink url="http://www.linuxfromscratch.org/blfs/downloads/svn/"/></para>
+</listitem>
+</varlistentry>
+
 <varlistentry>
 <term>Bzip2 (&bzip2-version;) - 650 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;bzip2/"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Colo (&colo-version;) - 2,430 KB:</term>
+<listitem>
+<para><ulink url="http://www.colonel-panic.org/cobalt-mips/colo/"/></para>
 </listitem>
 </varlistentry>
 
@@ -158,7 +172,7 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </listitem>
 </varlistentry>
 
-<varlistentry>
+<varlistentry arch="x86">
 <term>Grub (&grub-version;) - 902 KB:</term>
 <listitem>
 <para><ulink url="ftp://alpha.gnu.org/pub/gnu/grub/"/></para>
@@ -295,6 +309,20 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 <term>Ncurses (&ncurses-version;) - 2,019 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;ncurses/"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>OpenSSL (&openssl-version;) - 3.0 MB:</term>
+<listitem>
+<para><ulink url="http://www.openssl.org/source/"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>OpenSSH (&openssh-version;) - 854 KB:</term>
+<listitem>
+<para><ulink url="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/"/></para>
 </listitem>
 </varlistentry>
 

@@ -37,7 +37,7 @@ needed to build an LFS system:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry>
+<varlistentry arch="x86">
 <term>Coreutils Uname Patch - 1 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;coreutils-&coreutils-version;-uname-2.patch"/></para>
@@ -54,7 +54,8 @@ needed to build an LFS system:</para>
 <varlistentry>
 <term>Flex Brokenness Patch - 8 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;flex-&flex-version;-debian_fixes-2.patch"/></para>
+<para arch="x86"><ulink url="&patches-root;flex-&flex-version;-debian_fixes-2.patch"/></para>
+<para arch="raq2"><ulink url="http://ftp.jg555.com/patches/flex/flex-&flex-version;-debian_fixes-3.patch"/></para>
 </listitem>
 </varlistentry>
 
@@ -76,6 +77,27 @@ needed to build an LFS system:</para>
 <term>GCC Specs Patch - 11 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;gcc-&gcc-version;-specs-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Glibc RaQ2 Fixes Patch - 11 KB:</term>
+<listitem>
+<para><ulink url="http://ftp.jg555.com/patches/raq2/glibc/glibc-&glibc-version;-raq2_fixes-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Glibc RaQ2  librt linking Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="http://ftp.jg555.com/patches/raq2/glibc/glibc-&glibc-version;-raq2_librt_linking-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Grep RaQ2 Config Update Patch - 48 KB:</term>
+<listitem>
+<para><ulink url="http://ftp.jg555.com/patches/raq2/grep/grep-&grep-version;-raq2_config_update-1.patch"/></para>
 </listitem>
 </varlistentry>
 
@@ -101,6 +123,20 @@ needed to build an LFS system:</para>
 <listitem>
 <para condition="html"><ulink url="&patches-root;iproute2-&iproute2-patch-version;-remove_db-1.patch"/></para>
 <para condition="pdf"><ulink url="&patches-root;iproute2-&iproute2-patch-version;-remove_ db-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Linux Libc Headers RaQ2 Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="http://ftp.jg555.com/patches/raq2/linux-libc-headers/linux-libc-&linux-libc-headers-version;-raq2_fix-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Linux RaQ2 Patch - 1.9 MB:</term>
+<listitem>
+<para><ulink url="http://ftp.jg555.com/patches/raq2/linux/linux-&linux-version;-raq2_fix-1.patch"/></para>
 </listitem>
 </varlistentry>
 
@@ -132,7 +168,7 @@ needed to build an LFS system:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry>
+<varlistentry arch="x86">
 <term>Sysvinit /proc Title Length Patch - 1 KB:</term> <listitem>
 <para><ulink url="&patches-root;sysvinit-&sysvinit-version;-proclen-1.patch"/></para>
 </listitem>

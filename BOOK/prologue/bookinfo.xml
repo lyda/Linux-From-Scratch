@@ -5,7 +5,8 @@
 ]>
 <bookinfo>
 <title>Linux From Scratch</title>
-<subtitle>Version &version;</subtitle>
+<subtitle arch="x86">Version &version-x86;</subtitle>
+<subtitle arch="raq2">Version &version-raq2;</subtitle>
 
 
 <authorgroup>
