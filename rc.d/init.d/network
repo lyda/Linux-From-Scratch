@@ -41,7 +41,7 @@ case "$1" in
 		fi
 
 		# Stop all network interfaces
-		for file in $(grep -il "ONBOOT=yes" $network_devices/ifconfig.*)
+		for file in $(grep -sil "ONBOOT=yes" $network_devices/ifconfig.*)
 		do
 			interface=${file##*/ifconfig.}
 			case "$interface" in
