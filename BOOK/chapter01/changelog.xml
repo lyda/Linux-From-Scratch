@@ -63,6 +63,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>January 5, 2005 [jeremy]: Minor textual correction in network
+configuration, since iproute will not recognize the old eth0:1 format for
+ip aliasing. Closes bug 1013.</para></listitem>
+
 <listitem><para>January 5, 2005 [jeremy]: Added the --disable-selinux parameter
 to Ch 5 glibc.  Allows building from hosts which use SELinux functionality,
 like Fedora Core 3</para></listitem>
