@@ -37,16 +37,18 @@
 <variablelist>
 <varlistentry>
 <term><parameter>--disable-perl-regexp</parameter></term>
-<listitem><para>This makes sure that <command>grep</command> does not 
-get linked against a PCRE library that may be present on the host and would not be 
-available once we enter the chroot environment.</para></listitem>
+<listitem><para>This makes sure that the <command>grep</command>
+program does not get linked against a Perl Compatible Regular
+Expression (PCRE) library that may be present on the host and would
+not be available once we enter the chroot
+environment.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><parameter>--with-included-regex</parameter></term>
-<listitem><para>This ensures that
-Grep uses its internal regular expression code. Without this switch, Grep will
-use the code from Glibc, which is known to be slightly buggy.</para></listitem>
+<listitem><para>This ensures that Grep uses its internal regular
+expression code.  Without this switch, Grep will use the code from
+Glibc, which is known to be buggy.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -54,10 +56,10 @@ use the code from Glibc, which is known to be slightly buggy.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>(If you want to test the results, then issue:
-<userinput>make check</userinput>.)</para>
+<para>To test the results, issue: <userinput>make
+check</userinput>.</para>
 
-<para>Then install them and their documentation:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -68,3 +70,4 @@ use the code from Glibc, which is known to be slightly buggy.</para></listitem>
 </sect2>
 
 </sect1>
+

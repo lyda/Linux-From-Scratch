@@ -27,14 +27,14 @@
 <sect2 role="installation">
 <title>Installation of Util-linux</title>
 
-<para>Util-linux has issues with the Linux 2.6 kernel series - fix these issues
-by applying the following patch:</para>
+<para>Util-linux has issues with the Linux 2.6 kernel series. These
+issues can be fixed by applying the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../util-linux-&util-linux-version;-kernel_headers-1.patch</userinput></screen>
 
-<para>Util-linux doesn't use the freshly installed headers and libraries
-from the <filename class="directory">/tools</filename> directory.  This is fixed by altering the configure
-script:</para>
+<para>Util-linux does not use the freshly installed headers and
+libraries from the <filename class="directory">/tools</filename>
+directory. This is fixed by altering the configure script:</para>
 
 <screen><userinput>sed -i 's@/usr/include@/tools/include@g' configure</userinput></screen>
 
@@ -46,8 +46,8 @@ script:</para>
 
 <screen><userinput>make -C lib</userinput></screen>
 
-<para>Since you'll only need a couple of the utilities contained in
-this package, build just those:</para>
+<para>Since only a couple of the utilities contained in this package
+are needed, build only those:</para>
 
 <screen><userinput>make -C mount mount umount
 make -C text-utils more</userinput></screen>
@@ -62,3 +62,4 @@ make -C text-utils more</userinput></screen>
 <para>The details on this package are found in <xref linkend="contents-utillinux"/>.</para>
 </sect2>
 </sect1>
+

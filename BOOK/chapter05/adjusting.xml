@@ -8,31 +8,28 @@
 <?dbhtml filename="adjusting.html"?>
 
 <para>Now that the temporary C libraries have been installed, all
-the tools compiled in the rest of this chapter should be linked against these
-libraries. In order to accomplish this, the linker and the compiler's
-specs file, need to be adjsted.</para>
+tools compiled in the rest of this chapter should be linked against
+these libraries. In order to accomplish this, the linker and the
+compiler's specs file need to be adjusted.</para>
 
-<para> Some people would say that there is <emphasis><quote>black magic juju
-below this line</quote></emphasis>, but it is really very simple.</para>
-
-<para>First, the linker, adjusted at the end of the first pass of Binutils, is
-installed by running the following command from within
-the <filename class="directory">binutils-build</filename> directory:</para>
+<para>The linker, adjusted at the end of the first pass of Binutils,
+is installed by running the following command from within the
+<filename class="directory">binutils-build</filename> directory:</para>
 
 <screen><userinput>make -C ld install</userinput></screen>
 
-<para>From this point onwards everything will link <emphasis>only</emphasis>
+<para>From this point onwards, everything will link only
 against the libraries in <filename class="directory">/tools/lib</filename>.</para>
 
-<note><para>If you missed the earlier warning to retain the Binutils
-source and build directories from the first pass, dont worry - all is not lost.
-Just ignore the above command. This results in a small chance of the subsequent
-testing programs linking against libraries on the host. This is not ideal, but
-it's not a major problem. The situation is corrected when the second pass of
-Binutils is installed later on.</para></note>
+<note><para>If the earlier warning to retain the Binutils source and
+build directories from the first pass was missed, ignore the above
+command. This results in a small chance that the subsequent testing
+programs will link against libraries on the host. This is not ideal,
+but it is not a major problem. The situation is corrected when the
+second pass of Binutils is installed later.</para></note>
 
 <para>Now that the adjusted linker is installed, the Binutils build and source
-directories should be <emphasis>removed</emphasis>.</para>
+directories should be removed.</para>
 
 <para>The next task is to amend our GCC specs file so that it points
 to the new dynamic linker. A simple sed script will accomplish this:</para>
@@ -45,65 +42,70 @@ sed 's@ /lib/ld-linux.so.2@ /tools/lib/ld-linux.so.2@g' \
 mv -f tempspecfile $SPECFILE &amp;&amp;
 unset SPECFILE</userinput></screen>
 
-<para>It is recommended that the above command be cut-and-pasted in order to
-ensure correctness - Alternatively, the specs file can be edited by hand. This
-is done simply by replacing every occurrence of
-<quote>/lib/ld-linux.so.2</quote> with <quote>/tools/lib/ld-linux.so.2</quote>.
-</para>
+<para>It is recommended that the above command be cut-and-pasted in
+order to ensure correctness. Alternatively, the specs file can be
+edited by hand. This is done by replacing every occurrence of
+<quote>/lib/ld-linux.so.2</quote> with
+<quote>/tools/lib/ld-linux.so.2</quote>.</para>
 
-<para> Be sure to visually inspect the specs file in order to verify the intended changes have been made.</para>
+<para>Be sure to visually inspect the specs file in order to verify the
+intended changes have been made.</para>
 
-<important><para>If you are working on a platform where the name of the dynamic
-linker is something other than <filename>ld-linux.so.2</filename>, you
-<emphasis>must</emphasis> replace <filename>ld-linux.so.2</filename> with the
-name of your platform's dynamic linker in the above commands. Refer back to
-<xref linkend="ch-tools-toolchaintechnotes"/> if necessary.</para></important>
+<important><para>If working on a platform where the name of the
+dynamic linker is something other than
+<filename>ld-linux.so.2</filename>, replace
+<filename>ld-linux.so.2</filename> with the name of the platform's
+dynamic linker in the above commands. Refer back to <xref
+linkend="ch-tools-toolchaintechnotes"/> if
+necessary.</para></important>
 
-<para>Lastly, there is a possibility that some include files from the host
-system have found their way into GCC's private include dir. This can happen
-as a result of of GCC's <quote>fixincludes</quote> process which runs as part
-of the GCC build.  We'll explain more about this further on in this chapter.
-Run the following commands to eliminate this possibility:</para>
+<para>There is a possibility that some include files from the host
+system have found their way into GCC's private include dir. This can
+happen as a result of GCC's <quote>fixincludes</quote> process, which runs as part
+of the GCC build. This is explained in more detail later in this
+chapter. Run the following command to eliminate this
+possibility:</para>
 
 <screen><userinput>rm -f /tools/lib/gcc/*/*/include/{pthread.h,bits/sigthread.h}</userinput></screen>
 
-
-<caution><para>It is imperative at this point to stop and ensure that the basic
-functions (compiling and linking) of the new toolchain are working as expected.
-To perform a simple sanity check, run the following commands:</para>
+<caution><para>At this point, it is imperative to stop and ensure that
+the basic functions (compiling and linking) of the new toolchain are
+working as expected. To perform a sanity check, run the following
+commands:</para>
 
 <screen><userinput>echo 'main(){}' &gt; dummy.c
 cc dummy.c
 readelf -l a.out | grep ': /tools'</userinput></screen>
 
-<para>If everything is working correctly, there should be no errors, and the
-output of the last command will be of the form:</para>
+<para>If everything is working correctly, there should be no errors,
+and the output of the last command will be of the form:</para>
 
 <blockquote><screen><computeroutput>[Requesting program interpreter: /tools/lib/ld-linux.so.2]</computeroutput></screen></blockquote>
 
 <para>Note especially that <filename class="directory">/tools/lib</filename>
-appears as the prefix of our dynamic linker.</para>
+appears as the prefix of the dynamic linker.</para>
 
-<para>If the output is not
-as shown above, or there was no output at all, then something is seriously
-wrong. You will need to investigate and retrace your steps to find out where the
-problem is and correct it. There is no point in continuing until this is done.
-First, perform the sanity check again, using <command>gcc</command> instead of
-<command>cc</command>. If this works, then the
-<filename class="symlink">/tools/bin/cc</filename> symlink is missing. Revisit
-<xref linkend="ch-tools-gcc-pass1"/> and install the symlink. Second, ensure your PATH
-is correct. You can check this by running <userinput>echo $PATH</userinput> and
-verifying that <filename class="directory">/tools/bin</filename> is at the head
-of the list. If the PATH is wrong it could mean you're not logged in as user
-<emphasis>lfs</emphasis> or something went wrong back in
-<xref linkend="ch-tools-settingenviron"/>. Third, something may have gone wrong with
-the specs file amendment above. In this case redo the specs file amendment
-being careful to cut-and-paste the commands.</para>
+<para>If the output is not shown as above or there was no output at
+all, then something is wrong. Investigate and retrace the steps to
+find out where the problem is and correct it. This issue must be
+resolved before continuing on. First, perform the sanity check again,
+using <command>gcc</command> instead of <command>cc</command>. If this
+works, then the <filename>/tools/bin/cc</filename> symlink is missing.
+Revisit <xref linkend="ch-tools-gcc-pass1"/> and install the symlink.
+Next, ensure that the PATH is correct. This can be checked by running
+<command>echo $PATH</command> and verifying that <filename
+class="directory">/tools/bin</filename> is at the head of the list. If
+the PATH is wrong it could mean that you are not logged in as user
+<emphasis>lfs</emphasis> or that something went wrong back in <xref
+linkend="ch-tools-settingenviron"/> Another option is that something
+may have gone wrong with the specs file amendment above. In this case,
+redo the specs file amendment, being careful to cut-and-paste the
+commands.</para>
 
-<para>Once you are satisfied that all is well, clean up the test files:</para>
+<para>Once all is well, clean up the test files:</para>
 
 <screen><userinput>rm dummy.c a.out</userinput></screen>
 </caution>
 
-
 </sect1>
+

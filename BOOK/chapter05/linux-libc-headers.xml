@@ -24,17 +24,27 @@
 <sect2 role="installation">
 <title>Installation of Linux-Libc-Headers</title>
 
-<para>For years it has been common practice to use so-called <quote>raw</quote>
-kernel headers (straight from a kernel tarball) in <filename class="directory">/usr/include</filename>, but over the
-last few years, the kernel developers have taken a strong stance that such
-things should not be done.  Thus was born the linux-libc-headers project,
-designed to maintain an API stable version of the Linux headers.</para>
+<para>For years it has been common practice to use <quote>raw</quote> kernel
+headers (straight from a kernel tarball) in <filename
+class="directory">/usr/include</filename>, but over the
+last few years, the kernel developers have taken a strong stance that
+this should not be done. This gave birth to the linux-libc-headers
+project, which was designed to maintain an Application Programming
+Interface (API) stable version of the Linux headers.</para>
 
 <para>Install the header files:</para>
 
 <screen><userinput>cp -R include/asm-i386 /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
 
+<para>If your architecture is not i386 (compatible), adjust the first command
+accordingly.</para>
+
+</sect2>
+
+<sect2 role="content"><title/>
+<para>The details on this package are found in <xref linkend="contents-linux-libc-headers"/>.</para>
 </sect2>
 
 </sect1>
+

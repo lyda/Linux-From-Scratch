@@ -27,14 +27,15 @@
 <sect2 role="installation">
 <title>Installation of Flex</title>
 
-<para>Flex contains several known bugs. Fix these with the following patch:</para>
+<para>Flex contains several known bugs. These can be fixed with the
+following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../flex-&flex-version;-debian_fixes-2.patch</userinput></screen>
 
-<para>The GNU autotools detects that the Flex source code has been modified by
-the previous patch, and tries to update the manual page accordingly, but this
-breaks on many systems, and the default page is fine, so make sure it doesn't
-get regenerated:</para>
+<para>The GNU autotools will detect that the Flex source code has been
+modified by the previous patch and tries to update the manual page
+accordingly.  This does not work on many systems, and the default page is
+fine, so make sure it does not get regenerated:</para>
 
 <screen><userinput>touch doc/flex.1</userinput></screen>
 
@@ -49,7 +50,7 @@ get regenerated:</para>
 <para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
-<para>Now install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -60,3 +61,4 @@ get regenerated:</para>
 </sect2>
 
 </sect1>
+

@@ -27,12 +27,13 @@
 <sect2 role="installation">
 <title>Installation of Perl</title>
 
-<para>First adapt some hard-wired paths to the C library:</para>
+<para>First adapt some hard-wired paths to the C library by applying
+the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../perl-&perl-version;-libc-1.patch</userinput></screen>
 
 <para>Now prepare Perl for compilation (make sure you get the 'IO Fcntl POSIX'
-right, they are all letters):</para>
+part of the command correct -- they are all letters):</para>
 
 <screen><userinput>./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX'</userinput></screen>
 
@@ -41,9 +42,9 @@ right, they are all letters):</para>
 <variablelist>
 <varlistentry>
 <term><parameter>-Dstatic_ext='IO Fcntl POSIX'</parameter></term>
-<listitem><para>This tells
-Perl to build the minimum set of static extensions needed for installing and
-testing the Coreutils package in the next chapter.</para></listitem>
+<listitem><para>This tells Perl to build the minimum set of static
+extensions needed for installing and testing the Coreutils package in
+the next chapter.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -64,3 +65,4 @@ cp -R lib/* /tools/lib/perl5/&perl-version;</userinput></screen>
 </sect2>
 
 </sect1>
+

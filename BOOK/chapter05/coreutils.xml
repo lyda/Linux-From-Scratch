@@ -31,32 +31,35 @@
 
 <screen><userinput>DEFAULT_POSIX2_VERSION=199209 ./configure --prefix=/tools</userinput></screen>
 
-<para>This package has an issue when compiled against versions of Glibc
-later than 2.3.2.  Some of the Coreutils utilities (such as
-<command>head</command>, <command>tail</command> and <command>sort</command>)
-will reject their traditional syntax, a syntax that has been in use for
-approximately 30 years. This old syntax is so pervasive that compatibility
-should be preserved until the many places where it is used can be
-updated.  Backwards compatibility is achieved by setting the
-DEFAULT_POSIX2_VERSION environment variable to <quote>199209</quote> in the above
-command.  If you don't want coreutils to be backwards compatible
-with the traditional syntax, then simply omit setting the DEFAULT_POSIX2_VERSION
-environment variable.  Realise though, that doing so will mean you'll have
-to deal with the consequences yourself: patch the many packages that still use
-the old syntax.  We therefore recommend using the instructions exactly as given
-above.</para>
+<para>This package has an issue when compiled against versions of
+Glibc later than 2.3.2. Some of the Coreutils utilities (such as
+<command>head</command>, <command>tail</command>, and
+<command>sort</command>) will reject their traditional syntax, a
+syntax that has been in use for approximately 30 years. This old
+syntax is so pervasive that compatibility should be preserved until
+the many places where it is used can be updated. Backwards
+compatibility is achieved by setting the
+<emphasis>DEFAULT_POSIX2_VERSION</emphasis> environment variable to
+<quote>199209</quote> in the above command. If you do not want
+coreutils to be backwards compatible with the traditional syntax, then
+omit setting the <emphasis>DEFAULT_POSIX2_VERSION</emphasis>
+environment variable. It is important to remember that doing so will
+have consequences, including the need to patch the many packages that
+still use the old syntax. We therefore recommend using the
+instructions exactly as given above.</para>
 
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>(If you want to test the results, then issue:
-<userinput>make RUN_EXPENSIVE_TESTS=yes check</userinput>. The
-<parameter>RUN_EXPENSIVE_TESTS=yes</parameter> parameter tells the test suite to
-run several additional tests that are considered relatively expensive on some
-platforms but generally are not a problem on Linux.)</para>
+<para>To test the results, issue: <userinput>make
+RUN_EXPENSIVE_TESTS=yes check</userinput>.  The
+<parameter>RUN_EXPENSIVE_TESTS=yes</parameter> parameter tells the
+test suite to run several additional tests that are considered
+relatively expensive (in terms of CPU power and memory usage) on some
+platforms, but generally are not a problem on Linux.</para>
 
-<para>And install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -67,3 +70,4 @@ platforms but generally are not a problem on Linux.)</para>
 </sect2>
 
 </sect1>
+

@@ -35,10 +35,10 @@
 
 <screen><userinput>make</userinput></screen>
 
-<para>(If you want to test the results, then issue:
-<userinput>make check</userinput>.)</para>
+<para>To test the results, issue: <userinput>make
+check</userinput>.</para>
 
-<para>Then install them and their documentation:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -49,3 +49,4 @@
 </sect2>
 
 </sect1>
+

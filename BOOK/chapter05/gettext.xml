@@ -37,18 +37,18 @@
 <variablelist>
 <varlistentry>
 <term><parameter>--disable-libasprintf</parameter></term>
-<listitem><para>This flag tells
-Gettext that we don't want its asprintf library.  Nothing in this chapter or the next
-requires this, and Gettext gets rebuilt later, so we exclude it to save
-time/space.</para></listitem>
+<listitem><para>This flag tells Gettext not to include its
+<filename>asprintf</filename> library. Because nothing in this chapter
+or the next requires this library and Gettext gets rebuilt later,
+exclude it to save time and space.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><parameter>--disable-csharp</parameter></term>
-<listitem><para>Gettext has a nasty
-habit of searching for a C# compiler on the host, and building bindings for it.
-We've already <quote>locked</quote> ourselves into the temporary tools though,
-which doesn't have a C# compiler.</para></listitem>
+<listitem><para>Gettext has an unwanted habit of searching for a C#
+compiler on the host, and building bindings for it. We have already
+<quote>locked</quote> ourselves into the temporary tools which does
+not include a C# compiler.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -56,14 +56,14 @@ which doesn't have a C# compiler.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>(If you want to test the results, then issue: <userinput>make
-check</userinput>. This takes a very long time, around 7 SBUs. Moreover, the
-Gettext test suite is known to experience failures under certain host
-conditions -- for example when it finds a Java compiler on the host (but an
-experimental patch to disable Java is available from the LFS Patches
-project).)</para>
+<para>To test the results, issue: <userinput>make check</userinput>.
+This takes quite some time, around 7 SBUs. The Gettext test suite is
+known to experience failures under certain host conditions, for
+example when it finds a Java compiler on the host.  An experimental
+patch to disable Java is available from the LFS Patches project at
+<ulink url="&patches-root;"/></para>
 
-<para>And install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -74,3 +74,4 @@ project).)</para>
 </sect2>
 
 </sect1>
+

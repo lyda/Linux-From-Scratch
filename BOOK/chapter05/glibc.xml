@@ -27,14 +27,17 @@
 <sect2 role="installation">
 <title>Installation of Glibc</title>
 
-<para>This package is known to behave badly when you change its default
+<para>This package is known to have issues when the default
 optimization flags (including the <parameter>-march</parameter> and
-<parameter>-mcpu</parameter> options). Therefore, if you have defined any
-environment variables that override default optimizations, such as CFLAGS and
-CXXFLAGS, we recommend un-setting them when building Glibc.</para>
+<parameter>-mcpu</parameter> options) are changed. Therefore, if any
+environment variables that override default optimizations have been
+defined, such as <emphasis>CFLAGS</emphasis> and
+<emphasis>CXXFLAGS</emphasis>, it is recommended that these be un-set
+when building Glibc.</para>
 
-<para>Basically, compiling Glibc in any other way than the book suggests
-is putting the stability of your system at risk.</para>
+<para>It should be noted that compiling Glibc in any way other than
+the method suggested in this book puts the stability of the system at
+risk.</para>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
@@ -54,9 +57,9 @@ cd ../glibc-build</userinput></screen>
 <variablelist>
 <varlistentry>
 <term><parameter>--disable-profile</parameter></term>
-<listitem><para>This builds the
-libraries without profiling information. Omit this option if you plan to do
-profiling on the temporary tools.</para></listitem>
+<listitem><para>This builds the libraries without profiling
+information. Omit this option if profiling on the temporary tools is
+necessary.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -67,51 +70,52 @@ library.</para></listitem>
 
 <varlistentry>
 <term><parameter>--with-tls</parameter></term>
-<listitem><para>This tells Glibc to include support for TLS (thread-local storage).
-This is required for NPTL to work. </para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><parameter>--with-__thread</parameter></term>
-<listitem><para>This tells Glibc to include thread support, this is for proper
-compiling of the thread-local storage.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><parameter>--enable-kernel=2.6.0</parameter></term>
-<listitem><para>This tells Glibc to compile the library for support of
-linux 2.6.x kernels.
+<listitem><para>This tells Glibc to include support for Thread-Local
+Storage (TLS). This is required in order for NPTL to work.
 </para></listitem>
 </varlistentry>
 
 <varlistentry>
+<term><parameter>--with-__thread</parameter></term>
+<listitem><para>This tells Glibc to include thread support. This is
+required in order for TLS to be properly compiled.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><parameter>--enable-kernel=2.6.0</parameter></term>
+<listitem><para>This tells Glibc to compile the library with support
+for 2.6.x Linux kernels.</para></listitem>
+</varlistentry>
+
+<varlistentry>
 <term><parameter>--with-binutils=/tools/bin</parameter></term>
-<listitem><para>Strictly speaking this switch is not required. But it does ensure 
-nothing can go wrong with regard to what Binutils programs get used during the 
+<listitem><para>While not required, this switch ensures that there are
+no errors pertaining to which Binutils programs get used during the
 Glibc build.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><parameter>--without-gd</parameter></term>
-<listitem><para>This prevents the build of the <command>memusagestat</command>
-program, which strangely enough insists on linking against the host's libraries 
-(libgd, libpng, libz, and so forth). </para></listitem>
+<listitem><para>This prevents the build of the
+<command>memusagestat</command> program, which insists on linking
+against the host's libraries (libgd, libpng, libz,
+etc.).</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><parameter>--without-cvs</parameter></term>
-<listitem><para>This is meant to prevent
-the Makefiles from attempting automatic CVS checkouts when using a CVS
-snapshot. But it's not actually needed these days. We use it because it
-suppresses an annoying but harmless warning about a missing
-<command>autoconf</command> program.</para></listitem>
+<listitem><para>This is meant to prevent the Makefile files from
+attempting automatic CVS checkouts when using a CVS snapshot. While
+this command is not required, it is recommended because it suppresses
+an annoying, but harmless, warning about a missing autoconf
+program.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><parameter>--with-headers=/tools/glibc-kernheaders</parameter></term>
-<listitem><para>This tells Glibc to compile against the <quote>raw</quote> 
+<listitem><para>This tells Glibc to compile itself against the <quote>raw</quote> 
 kernel headers, so that it knows exactly what features the kernel has, and can 
-optimize itself accordingly.  Not strictly necessary, but nice to have.</para></listitem>
+optimize itself accordingly. Not strictly necessary, but nice to use.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -123,72 +127,81 @@ optimize itself accordingly.  Not strictly necessary, but nice to have.</para></
 *** Check the INSTALL file for required versions.</computeroutput></screen></blockquote>
 
 <para>The missing or incompatible <command>msgfmt</command> program is
-generally harmless, but it's believed it can sometimes cause problems when
-running the test suite.</para>
+generally harmless, but it is believed it can sometimes cause issues when
+running the test suite. <command>msgfmt</command> is part of the
+Gettext package which your distribution should provide. If you do have
+<command>msgfmt</command> but it is deemed incompatible, you have the
+option to upgrade your host system's Gettext package, or you can
+continue without it and see if the test suite runs without problems
+regardless.</para>
 
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Compilation is now complete. As mentioned earlier, running the test suites
-for the temporary tools installed in this chapter is not mandatory. If you want
-to run the Glibc test suite though, the following command will do so:</para>
+<para>Compilation is now complete. As mentioned earlier, running the
+test suites for the temporary tools installed in this chapter is not
+mandatory. To run the Glibc test suite (if desired), the following
+command will do so:</para>
 
 <screen><userinput>make check</userinput></screen>
 
 <para>For a discussion of test failures that are of particular
 importance, please see <xref linkend="ch-system-glibc"/>.</para>
 
-<para>In this chapter, some tests can be adversely affected by existing tools or
-environmental issues on the host system.  In short, don't worry too much if you
-see Glibc test suite failures in this chapter. The Glibc in
-<xref linkend="chapter-building-system"/> is the one we'll ultimately end up
-using, so that is the one we would really like to see pass the tests (but even
-there some failures could still occur -- the <emphasis>math</emphasis> tests,
-for example).</para>
+<para>In this chapter, some tests can be adversely affected by
+existing tools or environmental issues on the host system. Glibc test
+suite failures in this chapter are not typically worrisome. The Glibc
+installed in <xref linkend="chapter-building-system"/> is the one that
+will ultimately end up being used, so that is the one that should pass
+most tests (even in <xref linkend="chapter-building-system"/>, some
+failures could still occur, for example, with the math tests).</para>
 
-<para>When experiencing a failure, make a note of it, then continue by reissuing
-the <command>make check</command>. The test suite should pick up where it left
-off and continue. You can circumvent this stop-start sequence by issuing a
-<command>make -k check</command>. If you do that though, be sure to log the
-output so that you can later peruse the log file and examine the total number of
-failures.</para>
+<para>When experiencing a failure, make a note of it, then continue by
+reissuing the <command>make check</command> command. The test suite should pick up where it left
+off and continue. This stop-start sequence can be circumvented by
+issuing a <command>make -k check</command> command. If using this option, be sure to log the
+output so that the log file can be examined for failures later.</para>
 
-<para>Though it is a harmless message, the install stage of Glibc will at the
-end complain about the absence of <filename>/tools/etc/ld.so.conf</filename>.
-Prevent this confusing little warning with:</para>
+<para>The install stage of Glibc will issue a harmless warning at the
+end about the absence of /tools/etc/ld.so.conf. Prevent this warning
+with:</para>
 
 <screen><userinput>mkdir /tools/etc
 touch /tools/etc/ld.so.conf</userinput></screen>
 
-<para>Now install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Different countries and cultures have varying conventions for how to
-communicate. These conventions range from very simple ones, such as the format
-for representing dates and times, to very complex ones, such as the language
-spoken. The <quote>internationalization</quote> of GNU programs works by means
-of <emphasis>locales</emphasis>.</para>
+<para>Different countries and cultures have varying conventions for
+how to communicate. These conventions range from the format for
+representing dates and times to more complex ones, such as the
+language spoken. The <quote>internationalization</quote> of GNU programs works by
+locale.</para>
 
-<note><para>If you are not running the test suites here in this chapter as per
-our recommendation, there is little point in installing the locales now. We'll
-be installing the locales in the next chapter.</para></note>
+<note><para>If the test suites are not being run in this chapter (as
+per the recommendation), there is no need to install the locales now.
+The appropriate locales will be installed in the next
+chapter.</para></note>
 
-<para>If you still want to install the Glibc locales anyway, the following
-command will do so:</para>
+<para>To install the Glibc locales anyway, use the following
+command:</para>
 
 <screen><userinput>make localedata/install-locales</userinput></screen>
 
-<para>An alternative to running the previous command is to install only those
-locales which you need or want. This can be achieved by using the
-<command>localedef</command> command. Information on this can be found in
-the <filename>INSTALL</filename> file in the Glibc source. However, there are
-a number of locales that are essential for the tests of future packages to
-pass, in particular, the <emphasis>libstdc++</emphasis> tests from GCC. The
-following instructions, instead of the install-locales target above, will
-install the minimum set of locales necessary for the tests to run
-successfully:</para>
+<para>To save yourself a lot of time, an alternative to running the
+previous command (which generates and installs every locale Glibc is
+aware of) is to install only those locales that are wanted and needed.
+This can be achieved by using the <command>localedef</command>
+command. Information on this command is located in the
+<filename>INSTALL</filename> file in the Glibc source.  However, there
+are a number of locales that are essential in order for the tests of
+future packages to pass, in particular, the
+<emphasis>libstdc++</emphasis> tests from GCC. The following
+instructions, instead of the <emphasis>install-locales</emphasis>
+target used above, will install the minimum set of locales necessary
+for the tests to run successfully:</para>
 
 <screen><userinput>mkdir -p /tools/lib/locale
 localedef -i de_DE -f ISO-8859-1 de_DE
@@ -210,3 +223,4 @@ localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
 </sect2>
 
 </sect1>
+

@@ -28,11 +28,11 @@
 <title>Installation of Bzip2</title>
 
 <para>The Bzip2 package doesn't contain a <command>configure</command>
-script. Compile it with a straightforward:</para>
+script. Compile it with:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make PREFIX=/tools install</userinput></screen>
 
@@ -43,3 +43,4 @@ script. Compile it with a straightforward:</para>
 </sect2>
 
 </sect1>
+

@@ -29,7 +29,7 @@ GCC, Glibc, Grep, Make, Sed, Tcl</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Expect</title>
 
-<para>First fix a bug that can result in bogus failures during the GCC test
+<para>First fix a bug that can result in false failures during the GCC test
 suite run:</para>
 
 <screen><userinput>patch -Np1 -i ../expect-&expect-version;-spawn-1.patch</userinput></screen>
@@ -43,17 +43,16 @@ suite run:</para>
 <variablelist>
 <varlistentry>
 <term><parameter>--with-tcl=/tools/lib</parameter></term>
-<listitem><para>This ensures that
-the configure script finds the Tcl installation in our temporary tools location.
-We don't want it to find an existing one that may possibly reside on the host
-system.</para></listitem>
+<listitem><para>This ensures that the configure script finds the Tcl installation in
+the temporary tools location instead of possibly finding an existing
+one on the host system.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><parameter>--with-x=no</parameter></term>
-<listitem><para>This tells the configure
-script not to search for Tk (the Tcl GUI component) or the X Window System
-libraries, both of which may possibly reside on the host system.</para></listitem>
+<listitem><para>This tells the configure script not to search for Tk
+(the Tcl GUI component) or the X Window System libraries, both of
+which may possibly reside on the host system.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -61,13 +60,13 @@ libraries, both of which may possibly reside on the host system.</para></listite
 
 <screen><userinput>make</userinput></screen>
 
-<para>(If you want to test the results, then issue:
-<userinput>make test</userinput>. However, the Expect test suite is known to
-experience failures under certain host conditions that are not within our
-control. Therefore, test suite failures here are not surprising, and are not
-considered critical.)</para>
+<para>To test the results, issue: <userinput>make test</userinput>.
+Note that the Expect test suite is known to experience failures under
+certain host conditions that are not within our control. Therefore,
+test suite failures here are not surprising, and are not considered
+critical.</para>
 
-<para>And install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make SCRIPTS="" install</userinput></screen>
 
@@ -76,15 +75,14 @@ considered critical.)</para>
 <variablelist>
 <varlistentry>
 <term><parameter>SCRIPTS=""</parameter></term>
-<listitem><para>This prevents installation
-of the supplementary expect scripts which are not needed.</para></listitem>
+<listitem><para>This prevents installation of the supplementary expect
+scripts, which are not needed.</para></listitem>
 </varlistentry>
 </variablelist>
 
 <para>You can now remove the source directories of both Tcl and Expect.</para>
 
 </sect2>
-
 
 <sect2 id="contents-expect" role="content"><title>Contents of Expect</title>
 

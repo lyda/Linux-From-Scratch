@@ -29,13 +29,15 @@ GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Tcl</title>
 
-<para>This package and the next two are only installed to support running the
-test suites for GCC and Binutils. Installing three packages just for testing
-purposes may seem like overkill, but it is very reassuring, if not essential,
-to know that our most important tools are working properly. Even if the
-the test suites are not run in this chapter (we recommend not running them),
-these packages are still required to run the test suites in the next
-chapter.</para>
+<para>This package and the next two (Expect and DejaGNU)
+are
+installed to support running the test suites for GCC and Binutils.
+Installing three packages for testing purposes may seem excessive, but
+it is very reassuring, if not essential, to know that the most
+important tools are working properly. Even if the test suites are not
+run in this chapter (we recommend not running them), these packages
+are still required to run the test suites in <xref
+linkend="chapter-building-system"/>.</para>
 
 <para>Prepare Tcl for compilation:</para>
 
@@ -46,21 +48,22 @@ chapter.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>If you want to test the results, then issue:
-<userinput>TZ=UTC make test</userinput>. However, the Tcl test suite is known
-to experience failures under certain host conditions that are not fully
-understood. Therefore, test suite failures here are not surprising, and are not
-considered critical. The <parameter>TZ=UTC</parameter> parameter sets the time
-zone to Coordinated Universal Time (UTC) also known as Greenwich Mean Time
-(GMT), but only for the duration of the test suite run. This ensures the clock
-tests are exercised correctly. More information on the TZ environment variable
-will be given later on in <xref linkend="chapter-bootscripts"/>.</para>
+<para>To test the results, issue: <userinput>TZ=UTC make
+test</userinput>. However, the Tcl test
+suite is known to experience failures under certain host conditions
+that are not fully understood. Therefore, test suite failures here are not surprising, and are not
+considered critical. The <parameter>TZ=UTC</parameter> parameter sets the time zone to
+Coordinated Universal Time (UTC), also known as Greenwich Mean Time
+(GMT), but only for the duration of the test suite run. This ensures
+that the clock tests are exercised correctly. More information on the
+TZ environment variable will be provided in <xref
+linkend="chapter-bootscripts"/>.</para>
 
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<warning><para><emphasis>Do not remove</emphasis> the
+<warning><para><emphasis>Do not</emphasis> remove the
 <filename class="directory">tcl&tcl-version;</filename> source directory yet, as the next package
 will need its internal headers.</para></warning>
 
@@ -84,7 +87,7 @@ will need its internal headers.</para></warning>
 <term><command>tclsh8.4</command></term>
 <listitem>
 <indexterm zone="ch-tools-tcl tclsh8.4"><primary sortas="b-tclsh8.4">tclsh8.4</primary></indexterm>
-<para>is the Tcl command shell.</para>
+<para>the Tcl command shell.</para>
 </listitem>
 </varlistentry>
 
@@ -92,7 +95,7 @@ will need its internal headers.</para></warning>
 <term><filename class="libraryfile">libtcl8.4.so</filename></term>
 <listitem>
 <indexterm zone="ch-tools-tcl libtcl8.4.so"><primary sortas="c-libtcl8.4.so">libtcl8.4.so</primary></indexterm>
-<para>is the Tcl library.</para>
+<para>the Tcl library.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -100,3 +103,4 @@ will need its internal headers.</para></warning>
 </sect2>
 
 </sect1>
+

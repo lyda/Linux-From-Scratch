@@ -35,7 +35,7 @@
 
 <screen><userinput>make</userinput></screen>
 
-<para>And install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -46,3 +46,4 @@
 </sect2>
 
 </sect1>
+

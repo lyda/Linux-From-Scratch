@@ -27,9 +27,9 @@
 <sect2 role="installation">
 <title>Installation of Patch</title>
 
-<para>Prepare Patch for compilation (the preprocessor flag
-<parameter>-D_GNU_SOURCE</parameter> is only needed on the PowerPC platform, on
-other architectures you can leave it out):</para>
+<para>Prepare Patch for compilation.  The preprocessor flag
+<parameter>-D_GNU_SOURCE</parameter> is only needed on the PowerPC
+platform, on other architectures it can be left it out:</para>
 
 <screen><userinput>CPPFLAGS=-D_GNU_SOURCE ./configure --prefix=/tools</userinput></screen>
 
@@ -37,7 +37,7 @@ other architectures you can leave it out):</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Then install it and its documentation:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -48,3 +48,4 @@ other architectures you can leave it out):</para>
 </sect2>
 
 </sect1>
+

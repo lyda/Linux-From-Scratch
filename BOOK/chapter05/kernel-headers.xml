@@ -19,23 +19,29 @@
 <seglistitem><seg>0.1 SBU</seg><seg>186 MB</seg></seglistitem>
 </segmentedlist>
 
+<segmentedlist>
+<segtitle>Linux Headers installation depends on</segtitle>
+<seglistitem><seg>Coreutils, Make</seg></seglistitem>
+</segmentedlist>
+
 </sect2>
 
 <sect2 role="installation">
 <title>Installation of the kernel headers</title>
 
-<para>As some packages need to refer to the kernel header files, we're going
-to unpack the kernel archive now, set it up, and copy the required files to a
-place where <command>gcc</command> can later find them.</para>
+<para>Because some packages need to refer to the kernel header files,
+now is a good time to unpack the kernel archive, set it up, and copy
+the required files to a place where <command>gcc</command> can locate
+them later.</para>
 
 <para>Prepare for the header installation with:</para>
 
 <screen><userinput>make mrproper</userinput></screen>
 
-<para>This ensures that the kernel tree is absolutely clean. The kernel team
-recommends that this command be issued prior to <emphasis>each</emphasis>
-kernel compilation. You shouldn't rely on the source tree being clean after
-un-tarring.</para>
+<para>This ensures that the kernel tree is absolutely clean. It is
+recommended that this command be issued prior to
+<emphasis>each</emphasis> kernel compilation. Do not assume that the
+source tree is automatically clean after un-tarring.</para>
 
 <para>Create the <filename>include/linux/version.h</filename> file:</para>
 
@@ -59,3 +65,4 @@ cp -R include/asm-generic /tools/glibc-kernheaders</userinput></screen>
 </sect2>
 
 </sect1>
+

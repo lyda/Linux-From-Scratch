@@ -37,18 +37,19 @@
 <variablelist>
 <varlistentry>
 <term><parameter>--without-ada</parameter></term>
-<listitem><para>This tells Ncurses not
-to build its Ada bindings, even if an Ada compiler is installed on the host.
-This must be done because once we enter the chroot environment, Ada will no
-longer be available.</para></listitem>
+<listitem><para>This tells Ncurses not to build its Ada bindings, even
+if an Ada compiler is installed on the host. This needs to be done
+because once we enter the chroot environment, Ada will no longer be
+available.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><parameter>--enable-overwrite</parameter></term>
-<listitem><para>This tells Ncurses to install its header files into 
-<filename class="directory">/tools/include</filename> instead of 
-<filename class="directory">/tools/include/ncurses</filename> to ensure that 
-other packages can find the Ncurses headers successfully.</para></listitem>
+<listitem><para>This tells Ncurses to install its header files into
+<filename class="directory">/tools/include</filename>, instead of
+<filename class="directory">/tools/include/ncurses</filename>, to
+ensure that other packages can find the Ncurses headers
+successfully.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -56,7 +57,7 @@ other packages can find the Ncurses headers successfully.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Then install them and their documentation:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -67,3 +68,4 @@ other packages can find the Ncurses headers successfully.</para></listitem>
 </sect2>
 
 </sect1>
+

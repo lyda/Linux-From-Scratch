@@ -35,15 +35,15 @@
 
 <screen><userinput>make</userinput></screen>
 
-<para>(If you want to test the results, then issue:
-<userinput>make tests</userinput>.)</para>
+<para>To test the results, issue: <userinput>make
+tests</userinput>.</para>
 
-<para>Then install it and its documentation:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And make a link for the programs that use <command>sh</command>
-for a shell:</para>
+<para>Make a link for the programs that use <command>sh</command> for
+a shell:</para>
 
 <screen><userinput>ln -s bash /tools/bin/sh</userinput></screen>
 
@@ -54,3 +54,4 @@ for a shell:</para>
 </sect2>
 
 </sect1>
+
