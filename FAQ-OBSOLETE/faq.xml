@@ -31,8 +31,9 @@
 	&contributing-to-faq;
 </qandadiv>
 <qandadiv id="frb"><title>Frequently Reported Bugs</title>
+	<!-- Perhaps the 4.0rc1 release will keep them at bay for a moment.
 	&when-next-lfs-release;
-	&deps_version_not_match_package; <!-- remove after LFS release > 3.3 -->
+	-->
 	&shutdown-on-fsck-error;
 	&new-version;
 	&its-hardlink-not-copy;
