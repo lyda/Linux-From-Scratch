@@ -123,19 +123,6 @@ html:
 	  sed -i -e "s@text/html@application/xhtml+xml@g" $$filename; \
 	done;
 
-#
-# This is the old "pdf" target. The old "print" target below has been   
-# renamed to "pdf" and will be used. This commented out previous_pdf
-# target can be removed eventually. It'll remain here for a bit for
-# historical reasons
-#
-#previous_pdf:
-#	xsltproc --xinclude --nonet --output $(BASEDIR)/lfs.fo stylesheets/lfs-pdf.xsl \
-#	  index.xml
-#	sed -i -e "s/inherit/all/" $(BASEDIR)/lfs.fo
-#	fop.sh $(BASEDIR)/lfs.fo $(BASEDIR)/$(PDF_OUTPUT)
-#	rm lfs.fo
-
 pdf:
 	xsltproc --xinclude --nonet --stringparam profile.condition pdf -stringparam profile.arch $(ARCH) \
 		 --output $(BASEDIR)/lfs-pdf.xml stylesheets/lfs-profile.xsl index.xml
