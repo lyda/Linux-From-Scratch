@@ -1,3 +1,7 @@
+n/a - January 10, 005
+	* Moved ONBOOT check back to network (Nathan Coulson)
+	* Removed ONHOTPLUG check (Nathan Coulson)
+
 n/a - January 6, 2005
 	* fixed mountkernfs output (Nathan Coulson)
 	* reverted mountfs fakemounting (Nathan Coulson)

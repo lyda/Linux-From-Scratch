@@ -45,25 +45,12 @@ for file in ${FILES}
 do
 	if [ ! -f "${file}" ]
 	then
-
 		boot_mesg "${file} is not a network configuration file or directory." ${WARNING}
 		echo_warning
 		continue
 	fi
 	(
 		. ${file}
-		# Will not process this service if started by boot, and ONBOOT
-		# is not set to yes
-		if [ "${IN_BOOT}" = "1" -a "${ONBOOT}" != "yes" ]
-		then
-			continue
-		fi
-		# Will not process this service if started by hotplug, and 
-		# ONHOTPLUG is not set to yes
-		if [ "${IN_HOTPLUG}" = "1" -a "${ONHOTPLUG}" != "yes" ]
-		then
-			 continue
-		fi
 
 		# This will run the service script, if SERVICE is set
 		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]
