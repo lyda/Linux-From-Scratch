@@ -127,11 +127,11 @@ the canonical triplet for the given build, host, or target architecture</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="config.su">
+<varlistentry id="config.sub">
 <term><command>config.sub</command></term>
 <listitem>
 <para>A configuration validation subroutine script</para>
-<indexterm zone="ch-system-automake config.su"><primary sortas="b-config.su">config.su</primary></indexterm>
+<indexterm zone="ch-system-automake config.sub"><primary sortas="b-config.sub">config.sub</primary></indexterm>
 </listitem>
 </varlistentry>
 

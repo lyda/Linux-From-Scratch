@@ -32,7 +32,7 @@
 <screen><userinput>make install</userinput></screen>
 
 <!-- Temporary until new bootscripts release -->
-<para>Since this version of LFS also uses the hotplug and syslog-ng packages,
+<para>Since this version of LFS also uses the Hotplug and Syslog-ng packages,
 install the bootscripts for those packages as well:</para>
 
 <screen><userinput>make install-hotplug

@@ -66,8 +66,8 @@ file while copying it to its destination:</para>
 sed -i -e 's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
     -e 's@/var/spool/mail@/var/mail@' /etc/login.defs</userinput></screen>
 
-<para>Move some misplaced symlinks/programs to their proper
-locations:</para>
+<para>Move a misplaced program to their proper
+location:</para>
 
 <screen><userinput>mv /usr/bin/passwd /bin</userinput></screen>
 
@@ -78,7 +78,7 @@ location:</para>
 
 <para>Because some packages expect to find the just-moved libraries in
 <filename class="directory">/usr/lib</filename>, create the following
-symlinks:</para>
+symlink:</para>
 
 <screen><userinput>ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
 

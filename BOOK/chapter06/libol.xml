@@ -31,11 +31,11 @@
 
 <screen><userinput>./configure --prefix=/usr --enable-shared</userinput></screen>
 
-<para>Compile Libol:</para>
+<para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Now install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 

@@ -32,11 +32,11 @@ as those given by the kernel when unusual things happen.</para>
 
 <screen><userinput>./configure --prefix=/usr --sysconfdir=/etc</userinput></screen>
 
-<para>Compile Syslog-ng:</para>
+<para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Now install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -55,7 +55,7 @@ running the following:</para>
 
 <screen><userinput>mkdir -p /etc/syslog-ng
 cat &gt; /etc/syslog-ng/syslog-ng.conf &lt;&lt; "EOF"
-# Begin /etc/syslog-ng/syslog-ng.conf
+<literal># Begin /etc/syslog-ng/syslog-ng.conf
 
 options { 	sync (0);
 		time_reopen (10);
@@ -126,7 +126,7 @@ log { source(src); filter(f_emergency); destination(console); };
 log { source(src); filter(f_everything); destination(everything); };
 log { source(src); destination(console_all); };
 
-# END /etc/syslog-ng/syslog-ng.conf
+# END /etc/syslog-ng/syslog-ng.conf</literal>
 EOF</userinput></screen>
 
 </sect2>
@@ -138,13 +138,14 @@ EOF</userinput></screen>
 <seglistitem><seg>Unchecked</seg></seglistitem>
 </segmentedlist>
 
-<variablelist><title>Short descriptions</title>
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
 
 <varlistentry id="syslog-ng">
 <term><command>syslog-ng</command></term>
 <listitem>
 <indexterm zone="ch-system-syslogng"><primary sortas="b-syslog-ng">syslog-ng</primary></indexterm>
-<para>logs the messages that system programs
+<para>Logs the messages that system programs
 offer for logging. Every logged message contains at least a date stamp and a
 hostname, and normally the program's name too, but that depends on how
 trusting the logging daemon is told to be.</para>
