@@ -1,3 +1,9 @@
+2.0.0 - March 19, 2004
+
+	* Renamed mountproc to mountkernfs
+	* Updated the README file
+	* Tagged as release 2.0.0
+
 1.99.4 - March 17, 2004
 
 	* Fixed one last halt line in checkfs script

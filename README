@@ -15,9 +15,24 @@ Network Configuration:
 		- These scripts are run instead of the SERVICE, if they
                   exist.  Depreciated, but remains for comatibility purpose
 
+		sysconfig/network
+		- GATEWAY: Specifies the IPAddress of the gateway server
+		- GATEWAY_IF: Specifies which IPAddress the gateway is
+		              connected to
+		- HOSTNAME: Value of the system's hostname
+
 	Additional Configuration:
 		sysconfig/network-devices/ifconfig.*
 		static:
 		- IP: static IP Address
 		- NETMASK: netmask, defaults to NETMASK=255.255.255.0
 		- BROADCAST: broadcast address
+
+SetClock configuration:
+	Script Files:
+		rc.d/init.d/setclock
+
+	Configuration Files:
+		sysconfig/clock
+		- UTC: 1 assumes hwclock is in UTC
+		       0 assumes hwclock is in local time
