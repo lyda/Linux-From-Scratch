@@ -17,8 +17,20 @@
 
 # Chinese is not supported by LFS and needs special tools
 
+# Czechia
+#
+# KEYMAP="cz-lat2"
+# FONT="lat2-16"
+
+# Hungary
+#
+# KEYMAP="hu"
+# FONT="lat2-16"
+
 # Latvian users need to download additional files from
 # http://linux.ma-1.lv/ll10nt/Latvian-HOWTO/files/konsole-files.tar.gz
+
+# Origin: http://www.zelow.no/floppyfw/download/packages/loadkeys/post-loadkeys-qwertz.ini
 
 # Russia, one of many variants actually used
 # See the book for the contents of /etc/kbd/bs-sends-del
@@ -27,11 +39,34 @@
 # KEYMAP_CORRECTIONS="/etc/kbd/bs-sends-del"
 # FONT="cp866-8x16 -m koi2alt"
 
+# Serbia (latin)
+# Need to download:
+# http://gd.tuwien.ac.at/opsys/linux/Owl/pool/sources/console-tools/kbd-sr.map.gz
+# and put it into /usr/share/kbd/keymaps/i386/qwertz/sr.map.gz
+#
+# KEYMAP="sr"
+# FONT="lat2-16"
+
+# TODO: add Serbian Cyrillic settings
+
 # Spain, with Euro character (information from
 # http://www.linuxforum.com/forums/index.php?showtopic=14590),
 #
 # KEYMAP="es"
 # KEYMAP_CORRECTIONS="euro"
 # FONT="lat9-16 -u iso01"
+
+# Slovenia
+#
+# KEYMAP="slovene"
+# FONT="lat2-16"
+
+# Croatia
+#
+# KEYMAP="croat"
+# FONT="lat2-16"
+
+# TODO: for Slovakia, there are four variants
+
 
 # End /etc/sysconfig/console
