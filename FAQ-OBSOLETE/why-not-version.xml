@@ -25,7 +25,8 @@ This release is nasty. Word in #lfs-support has it that it will work with
 XFree86 4.3.0.1, the latest HJL binutils, and using "flex -l" with modutils,
 which can be done with <ulink
 url="http://evanidus.ath.cx:8080/l14h/patches/personal/modutils-2.4.25-flex-2.5.31-tmp-fix.patch.bz2"/>
-However, you're on your own if you try this.
+You will also encounter problems with bc, libidl, and perhaps more.
+You're on your own if you try this.
 Don't expect any support.
 Version 2.5.27 is more likely to work without weird hacks.
 <!-- Chris on #lfs-support says the patch doesn't work
