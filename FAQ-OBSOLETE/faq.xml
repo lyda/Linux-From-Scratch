@@ -149,6 +149,11 @@ especially older ones, may not compile without modifications.
 <qandaentry id="add-gawk">
 <question><para>Why not use gawk instead of mawk?</para></question>
 <answer><para>The book is switching to gawk after 3.2 is released.
+</para>
+<para>If you wish to switch before then,
+gawk is a well behaved GNU package
+so it is available from your favorite GNU mirror
+and "./configure --prefix=/usr && make && make install" works.
 </para></answer>
 </qandaentry>
 
