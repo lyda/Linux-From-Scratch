@@ -313,7 +313,7 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Procps (&procps-version;) - 265 KB:</term>
+<term>Procps (&procps-version;) - 271 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;procps/"/></para>
 </listitem>
