@@ -277,7 +277,7 @@ to the FAQ maintainer or an apropriate LFS mailing list so it can be added here.
 
 </qandadiv><!-- fre -->
 
-<!-- dlist: ,lfs-compile,blfs-support,new -->
+<!-- dlist: ,lfs-support,lfs-compile,blfs-support,new -->
 <qandadiv id="fee"><title>Frequently Encountered Errors</title>
 
 <!-- dlist: ,lfs-compile,blfs-support,new -->
@@ -578,10 +578,10 @@ The Hitchhiker's Guide to the Galaxy, by Douglas Adams in the example.
 
 </qandadiv><!-- fee-compile -->
 
-<!-- dlist: ,new -->
+<!-- dlist: ,lfs-support,new -->
 <qandadiv id="fee-runtime"><title>Run Time Errors</title>
 
-<!-- dlist: ,new -->
+<!-- dlist: ,lfs-support,new -->
 <qandadiv id="fee-runtime-specific"><title>Run Time Errors From Specific Packages</title>
 
 <!-- elist: ,lfs-support,new -->
