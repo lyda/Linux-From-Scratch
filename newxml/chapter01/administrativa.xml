@@ -50,7 +50,7 @@ their archive locations, and so on, visit <ulink url="&lfs-root;mail.html"/>.</p
 
 <para>All the mailing lists hosted at <emphasis>linuxfromscratch.org</emphasis>
 are also accessible via the NNTP server. All messages posted to a mailing list
-are copied to the correspondent newsgroup, and vice versa.</para>
+are copied to the corresponding newsgroup, and vice versa.</para>
 
 <para>The news server can be reached at
 <emphasis>news.linuxfromscratch.org</emphasis>.</para>

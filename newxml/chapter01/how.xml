@@ -50,7 +50,7 @@ a new shell whose root directory will be set to the LFS partition. This is very
 similar to rebooting and instructing the kernel to mount the LFS partition as
 the root partition. The reason that you don't actually reboot, but instead
 chroot, is that creating a bootable system requires additional work which isn't
-necessary just yet. But the major advantage is that chrooting allows you to
+necessary just yet. But the major advantage is that <quote>chrooting</quote> allows you to
 continue using the host while LFS is being built. While waiting for package
 compilation to complete, you can simply switch to a different VC (Virtual
 Console) or X desktop and continue using the computer as you normally

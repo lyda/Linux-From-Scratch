@@ -96,7 +96,7 @@ installation section to chapter 7.</para></listitem>
 Man-pages-1.66.</para></listitem>
 
 <listitem><para>February 7th, 2004 [alex]: Chapter 1 - Moved the Conventions
-and Acknowledgements sections to the Preface.</para></listitem>
+and Acknowledgments sections to the Preface.</para></listitem>
 
 <listitem><para>February 7th, 2004 [alex]: Chapter 6 - Creating devices:
 replaced the MAKEDEV script with the make_devices script. Contributed by
