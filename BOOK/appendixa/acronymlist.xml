@@ -3,12 +3,12 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<appendix id="appendixb" xreflabel="Appendix B">
-<?dbhtml dir="appendixb"?>
+<appendix id="appendixa" xreflabel="Appendix A">
+<?dbhtml dir="appendixa"?>
 <title/>
 <?dbhtml filename="acronymlist.html"?>
 
-<sect1 id="appendixb-acronymlist">
+<sect1 id="appendixa-acronymlist">
 <title>Acronyms and terms</title>
 
 <variablelist>

@@ -3,12 +3,12 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<appendix id="appendixa" xreflabel="Appendix A">
-<?dbhtml dir="appendixa"?>
+<appendix id="appendixb" xreflabel="Appendix B">
+<?dbhtml dir="appendixb"?>
 <title/>
 <?dbhtml filename="acknowledgements.html"?>
 
-<sect1 id="appendixa-acknowledgments">
+<sect1 id="appendixb-acknowledgments">
 <title>Acknowledgments</title>
 
 <para>We would like to thank the following people and organizations
