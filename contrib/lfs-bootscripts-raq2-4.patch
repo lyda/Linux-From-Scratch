@@ -1,13 +1,60 @@
 Submitted By: Jim Gifford (patches at jg555 dot com)
-Date: 2005-03-19
-Initial Package Version: 3.1.x
+Date: 2005-03-30
+Initial Package Version: contrib
 Origin: Jim Gifford
-Upstream Status: In Contrib
-Description: Modifies Bootscripts to work with the RaQ2
-
-diff -Naur bootscripts/lfs/init.d/checkfs bootscripts.raq2/lfs/init.d/checkfs
---- bootscripts/lfs/init.d/checkfs	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/checkfs	2005-03-19 08:25:06.853255720 -0800
+Upstream Status: N/A
+Description: Bootscript Modifications for the RaQ2
+ 
+diff -Naur bootscripts.orig/Makefile bootscripts/Makefile
+--- bootscripts.orig/Makefile	2005-03-31 04:10:50.000000000 +0000
++++ bootscripts/Makefile	2005-03-31 04:13:05.053189832 +0000
+@@ -29,6 +29,7 @@
+ 	install -m ${MODE} lfs/init.d/halt          ${EXTDIR}/rc.d/init.d/
+ 	install -m ${MODE} lfs/init.d/console       ${EXTDIR}/rc.d/init.d/
+ 	install -m ${MODE} lfs/init.d/hotplug       ${EXTDIR}/rc.d/init.d/
++	install -m ${MODE} lfs/init.d/laststart     ${EXTDIR}/rc.d/init.d/
+ 	install -m ${MODE} lfs/init.d/localnet      ${EXTDIR}/rc.d/init.d/
+ 	install -m ${MODE} lfs/init.d/modules       ${EXTDIR}/rc.d/init.d/
+ 	install -m ${MODE} lfs/init.d/mountfs       ${EXTDIR}/rc.d/init.d/
+@@ -37,6 +38,7 @@
+ 	install -m ${MODE} lfs/init.d/rc            ${EXTDIR}/rc.d/init.d/
+ 	install -m ${MODE} lfs/init.d/reboot        ${EXTDIR}/rc.d/init.d/
+ 	install -m ${MODE} lfs/init.d/sendsignals   ${EXTDIR}/rc.d/init.d/
++	install -m ${MODE} lfs/init.d/sshd          ${EXTDIR}/rc.d/init.d/
+ 	install -m ${MODE} lfs/init.d/setclock      ${EXTDIR}/rc.d/init.d/
+ 	install -m ${MODE} lfs/init.d/sysklogd	    ${EXTDIR}/rc.d/init.d/
+ 	install -m ${MODE} lfs/init.d/swap          ${EXTDIR}/rc.d/init.d/
+@@ -51,16 +53,27 @@
+ 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rc0.d/S80swap
+ 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc0.d/S90localnet
+ 	ln -sf ../init.d/halt        ${EXTDIR}/rc.d/rc0.d/S99halt
++	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc1.d/K30sshd
++	ln -sf ../init.d/laststart   ${EXTDIR}/rc.d/rc1.d/S99laststart
+ 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc1.d/K80network
+ 	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc1.d/K90sysklogd
++	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc1.d/K30sshd
++	ln -sf ../init.d/laststart   ${EXTDIR}/rc.d/rc2.d/S99laststart
+ 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc2.d/K80network
+ 	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc2.d/K90sysklogd
++	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc3.d/S30sshd
+ 	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc3.d/S10sysklogd
++	ln -sf ../init.d/laststart   ${EXTDIR}/rc.d/rc3.d/S99laststart
+ 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc3.d/S20network
++	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc4.d/S30sshd
+ 	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc4.d/S10sysklogd
++	ln -sf ../init.d/laststart   ${EXTDIR}/rc.d/rc4.d/S99laststart
+ 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc4.d/S20network
++	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc5.d/S30sshd
+ 	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc5.d/S10sysklogd
++	ln -sf ../init.d/laststart   ${EXTDIR}/rc.d/rc5.d/S99laststart
+ 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc5.d/S20network
++	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc6.d/K30sshd
+ 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc6.d/K80network
+ 	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc6.d/K90sysklogd
+ 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
+diff -Naur bootscripts.orig/lfs/init.d/checkfs bootscripts/lfs/init.d/checkfs
+--- bootscripts.orig/lfs/init.d/checkfs	2005-03-16 22:57:35.000000000 +0000
++++ bootscripts/lfs/init.d/checkfs	2005-03-31 04:00:37.000000000 +0000
 @@ -33,11 +33,13 @@
  		if [ -f /fastboot ]; then
  			boot_mesg -n "/fastboot found, will not perform" ${INFO}
@@ -56,7 +103,7 @@ diff -Naur bootscripts/lfs/init.d/checkfs bootscripts.raq2/lfs/init.d/checkfs
 -			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
  			boot_mesg "" ${NORMAL}
 -			read ENTER
-+			putlcd "Errors corrected" "Rebooting"
++                        putlcd "Errors corrected" "Rebooting"
 +			sleep 5
  			reboot -f
  		fi
@@ -73,9 +120,9 @@ diff -Naur bootscripts/lfs/init.d/checkfs bootscripts.raq2/lfs/init.d/checkfs
  			/etc/rc.d/init.d/halt stop
  		fi
  
-diff -Naur bootscripts/lfs/init.d/cleanfs bootscripts.raq2/lfs/init.d/cleanfs
---- bootscripts/lfs/init.d/cleanfs	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/cleanfs	2005-03-18 08:47:19.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/cleanfs bootscripts/lfs/init.d/cleanfs
+--- bootscripts.orig/lfs/init.d/cleanfs	2005-03-16 22:58:01.000000000 +0000
++++ bootscripts/lfs/init.d/cleanfs	2005-03-31 04:00:37.000000000 +0000
 @@ -72,17 +72,21 @@
  case "${1}" in
  	start)
@@ -106,9 +153,9 @@ diff -Naur bootscripts/lfs/init.d/cleanfs bootscripts.raq2/lfs/init.d/cleanfs
  			create_files
  			evaluate_retval
  		fi
-diff -Naur bootscripts/lfs/init.d/console bootscripts.raq2/lfs/init.d/console
---- bootscripts/lfs/init.d/console	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/console	2005-03-18 08:47:19.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/console bootscripts/lfs/init.d/console
+--- bootscripts.orig/lfs/init.d/console	2005-03-16 22:58:21.000000000 +0000
++++ bootscripts/lfs/init.d/console	2005-03-31 04:00:37.000000000 +0000
 @@ -25,18 +25,21 @@
  	start)
  		if [ -n "${KEYMAP}" ]; then
@@ -131,9 +178,9 @@ diff -Naur bootscripts/lfs/init.d/console bootscripts.raq2/lfs/init.d/console
  			setfont $FONT &>/dev/null
  			evaluate_retval
  		fi
-diff -Naur bootscripts/lfs/init.d/functions bootscripts.raq2/lfs/init.d/functions
---- bootscripts/lfs/init.d/functions	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/functions	2005-03-18 12:59:02.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/functions bootscripts/lfs/init.d/functions
+--- bootscripts.orig/lfs/init.d/functions	2005-03-31 04:10:50.000000000 +0000
++++ bootscripts/lfs/init.d/functions	2005-03-31 04:00:37.000000000 +0000
 @@ -263,7 +263,8 @@
  	boot_mesg -n " the LFS book, please be so kind to inform us at"
  	boot_mesg " lfs-dev@linuxfromscratch.org.\n"
@@ -144,9 +191,9 @@ diff -Naur bootscripts/lfs/init.d/functions bootscripts.raq2/lfs/init.d/function
  	boot_mesg "" ${NORMAL}
  	read ENTER
  }
-diff -Naur bootscripts/lfs/init.d/halt bootscripts.raq2/lfs/init.d/halt
---- bootscripts/lfs/init.d/halt	2005-01-13 23:20:19.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/halt	2005-03-18 08:47:19.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/halt bootscripts/lfs/init.d/halt
+--- bootscripts.orig/lfs/init.d/halt	2005-03-12 01:31:41.000000000 +0000
++++ bootscripts/lfs/init.d/halt	2005-03-31 04:00:37.000000000 +0000
 @@ -17,6 +17,7 @@
  
  case "${1}" in
@@ -155,18 +202,9 @@ diff -Naur bootscripts/lfs/init.d/halt bootscripts.raq2/lfs/init.d/halt
  		halt -d -f -i -p
  		;;
  	*)
-diff -Naur bootscripts/lfs/init.d/hotplug bootscripts.raq2/lfs/init.d/hotplug
---- bootscripts/lfs/init.d/hotplug	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/hotplug	2005-03-19 08:25:52.724282264 -0800
-@@ -6,7 +6,7 @@
- #
- # Authors     : Zack Winkles
- #
--# Version     : 00.02
-+# Version     : 00.00
- #
- # Notes       :
- #
+diff -Naur bootscripts.orig/lfs/init.d/hotplug bootscripts/lfs/init.d/hotplug
+--- bootscripts.orig/lfs/init.d/hotplug	2005-03-14 22:05:31.000000000 +0000
++++ bootscripts/lfs/init.d/hotplug	2005-03-31 04:00:37.000000000 +0000
 @@ -18,6 +18,7 @@
  case "${1}" in
  	start|restart)
@@ -192,9 +230,9 @@ diff -Naur bootscripts/lfs/init.d/hotplug bootscripts.raq2/lfs/init.d/hotplug
  		;;
  	status)
  		for rc in /etc/hotplug/*.rc
-diff -Naur bootscripts/lfs/init.d/laststart bootscripts.raq2/lfs/init.d/laststart
---- bootscripts/lfs/init.d/laststart	1969-12-31 16:00:00.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/laststart	2005-03-18 08:47:19.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/laststart bootscripts/lfs/init.d/laststart
+--- bootscripts.orig/lfs/init.d/laststart	1970-01-01 00:00:00.000000000 +0000
++++ bootscripts/lfs/init.d/laststart	2005-03-31 04:00:37.000000000 +0000
 @@ -0,0 +1,31 @@
 +#!/bin/sh
 +########################################################################
@@ -217,7 +255,7 @@ diff -Naur bootscripts/lfs/init.d/laststart bootscripts.raq2/lfs/init.d/laststar
 +	start)
 +		IFACE1_IP="`ip addr show dev eth0 | grep inet | cut -d / -f 1 | cut -d t  -f 2 | cut -d' ' -f 2 `"
 +		IFACE2_IP="`ip addr show dev eth1 | grep inet | cut -d / -f 1 | cut -d t  -f 2 | cut -d' ' -f 2 `"
-+		putlcd "1 $IFACE1_IP" "2 $IFACE2_IP"
++		paneld -d "1 $IFACE1_IP" "2 $IFACE2_IP"
 +	;;
 +	*)
 +		echo "Usage: {start}"
@@ -227,9 +265,9 @@ diff -Naur bootscripts/lfs/init.d/laststart bootscripts.raq2/lfs/init.d/laststar
 +
 +# End $rc_base/init.d/laststart
 +
-diff -Naur bootscripts/lfs/init.d/localnet bootscripts.raq2/lfs/init.d/localnet
---- bootscripts/lfs/init.d/localnet	2005-01-13 23:20:19.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/localnet	2005-03-18 12:55:58.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/localnet bootscripts/lfs/init.d/localnet
+--- bootscripts.orig/lfs/init.d/localnet	2005-03-12 01:31:41.000000000 +0000
++++ bootscripts/lfs/init.d/localnet	2005-03-31 04:00:37.000000000 +0000
 @@ -19,17 +19,20 @@
  case "${1}" in
  	start)
@@ -251,9 +289,9 @@ diff -Naur bootscripts/lfs/init.d/localnet bootscripts.raq2/lfs/init.d/localnet
  		ip link set lo down
  		evaluate_retval
  		;;
-diff -Naur bootscripts/lfs/init.d/modules bootscripts.raq2/lfs/init.d/modules
---- bootscripts/lfs/init.d/modules	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/modules	2005-03-18 12:56:30.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/modules bootscripts/lfs/init.d/modules
+--- bootscripts.orig/lfs/init.d/modules	2005-03-16 23:03:11.000000000 +0000
++++ bootscripts/lfs/init.d/modules	2005-03-31 04:00:37.000000000 +0000
 @@ -60,6 +60,7 @@
  					# otherwise take note.
  					if [ ${?} -eq 0 ]; then
@@ -262,9 +300,9 @@ diff -Naur bootscripts/lfs/init.d/modules bootscripts.raq2/lfs/init.d/modules
  					else
  						failedmod="${failedmod} ${module}"
  					fi
-diff -Naur bootscripts/lfs/init.d/mountfs bootscripts.raq2/lfs/init.d/mountfs
---- bootscripts/lfs/init.d/mountfs	2005-01-13 23:20:19.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/mountfs	2005-03-19 08:27:09.058677672 -0800
+diff -Naur bootscripts.orig/lfs/init.d/mountfs bootscripts/lfs/init.d/mountfs
+--- bootscripts.orig/lfs/init.d/mountfs	2005-03-12 01:31:41.000000000 +0000
++++ bootscripts/lfs/init.d/mountfs	2005-03-31 04:00:37.000000000 +0000
 @@ -18,6 +18,7 @@
  case "${1}" in
  	start)
@@ -298,9 +336,9 @@ diff -Naur bootscripts/lfs/init.d/mountfs bootscripts.raq2/lfs/init.d/mountfs
  		evaluate_retval
  		;;
  
-diff -Naur bootscripts/lfs/init.d/mountkernfs bootscripts.raq2/lfs/init.d/mountkernfs
---- bootscripts/lfs/init.d/mountkernfs	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/mountkernfs	2005-03-19 08:12:34.205675544 -0800
+diff -Naur bootscripts.orig/lfs/init.d/mountkernfs bootscripts/lfs/init.d/mountkernfs
+--- bootscripts.orig/lfs/init.d/mountkernfs	2005-03-16 23:03:32.000000000 +0000
++++ bootscripts/lfs/init.d/mountkernfs	2005-03-31 04:00:37.000000000 +0000
 @@ -18,7 +18,6 @@
  case "${1}" in
  	start)
@@ -309,9 +347,9 @@ diff -Naur bootscripts/lfs/init.d/mountkernfs bootscripts.raq2/lfs/init.d/mountk
  		if ! mountpoint /proc &> /dev/null; then
  			boot_mesg -n " /proc" ${NORMAL}
  			mount -n /proc || failed=1
-diff -Naur bootscripts/lfs/init.d/network bootscripts.raq2/lfs/init.d/network
---- bootscripts/lfs/init.d/network	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/network	2005-03-18 08:47:19.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/network bootscripts/lfs/init.d/network
+--- bootscripts.orig/lfs/init.d/network	2005-03-16 23:03:59.000000000 +0000
++++ bootscripts/lfs/init.d/network	2005-03-31 04:00:38.000000000 +0000
 @@ -30,19 +30,12 @@
  				continue
  			fi
@@ -364,9 +402,9 @@ diff -Naur bootscripts/lfs/init.d/network bootscripts.raq2/lfs/init.d/network
  		done
  		;;
  
-diff -Naur bootscripts/lfs/init.d/rc bootscripts.raq2/lfs/init.d/rc
---- bootscripts/lfs/init.d/rc	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/rc	2005-03-18 12:59:27.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/rc bootscripts/lfs/init.d/rc
+--- bootscripts.orig/lfs/init.d/rc	2005-03-16 23:04:42.000000000 +0000
++++ bootscripts/lfs/init.d/rc	2005-03-31 04:00:38.000000000 +0000
 @@ -33,6 +33,7 @@
  
  if [ ! -d ${rc_base}/rc${runlevel}.d ]; then
@@ -393,26 +431,25 @@ diff -Naur bootscripts/lfs/init.d/rc bootscripts.raq2/lfs/init.d/rc
  		print_error_msg
  	fi
  done
-diff -Naur bootscripts/lfs/init.d/reboot bootscripts.raq2/lfs/init.d/reboot
---- bootscripts/lfs/init.d/reboot	2005-01-13 23:20:19.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/reboot	2005-03-18 13:00:00.000000000 -0800
-@@ -17,7 +17,7 @@
- 
+diff -Naur bootscripts.orig/lfs/init.d/reboot bootscripts/lfs/init.d/reboot
+--- bootscripts.orig/lfs/init.d/reboot	2005-03-12 01:31:41.000000000 +0000
++++ bootscripts/lfs/init.d/reboot	2005-03-31 04:00:38.000000000 +0000
+@@ -18,6 +18,7 @@
  case "${1}" in
  	stop)
--		boot_mesg "Restarting system..."
+ 		boot_mesg "Restarting system..."
 +		putlcd "Restarting" "system..."
  		reboot -d -f -i
  		;;
  
-diff -Naur bootscripts/lfs/init.d/sendsignals bootscripts.raq2/lfs/init.d/sendsignals
---- bootscripts/lfs/init.d/sendsignals	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/sendsignals	2005-03-18 13:00:29.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/sendsignals bootscripts/lfs/init.d/sendsignals
+--- bootscripts.orig/lfs/init.d/sendsignals	2005-03-16 23:05:03.000000000 +0000
++++ bootscripts/lfs/init.d/sendsignals	2005-03-31 04:00:38.000000000 +0000
 @@ -18,6 +18,7 @@
  case "${1}" in
  	stop)
  		boot_mesg "Sending all processes the TERM signal..."
-+		putlcd "Sending:" " TERM signal"
++		putlcd "Sending:" "TERM signal"
  		killall5 -15
  		error_value=${?}
  
@@ -424,9 +461,9 @@ diff -Naur bootscripts/lfs/init.d/sendsignals bootscripts.raq2/lfs/init.d/sendsi
  		killall5 -9
  		error_value=${?}
  
-diff -Naur bootscripts/lfs/init.d/setclock bootscripts.raq2/lfs/init.d/setclock
---- bootscripts/lfs/init.d/setclock	2005-01-13 23:20:19.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/setclock	2005-03-18 08:47:19.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/setclock bootscripts/lfs/init.d/setclock
+--- bootscripts.orig/lfs/init.d/setclock	2005-03-12 01:31:41.000000000 +0000
++++ bootscripts/lfs/init.d/setclock	2005-03-31 04:00:38.000000000 +0000
 @@ -32,12 +32,14 @@
  case ${1} in
  	start)
@@ -442,9 +479,9 @@ diff -Naur bootscripts/lfs/init.d/setclock bootscripts.raq2/lfs/init.d/setclock
  		hwclock --systohc ${CLOCKPARAMS} &>/dev/null
  		evaluate_retval
  		;;
-diff -Naur bootscripts/lfs/init.d/sshd bootscripts.raq2/lfs/init.d/sshd
---- bootscripts/lfs/init.d/sshd	1969-12-31 16:00:00.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/sshd	2005-03-18 12:48:31.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/sshd bootscripts/lfs/init.d/sshd
+--- bootscripts.orig/lfs/init.d/sshd	1970-01-01 00:00:00.000000000 +0000
++++ bootscripts/lfs/init.d/sshd	2005-03-31 04:04:03.000000000 +0000
 @@ -0,0 +1,52 @@
 +#!/bin/sh
 +########################################################################
@@ -498,9 +535,9 @@ diff -Naur bootscripts/lfs/init.d/sshd bootscripts.raq2/lfs/init.d/sshd
 +esac
 +
 +# End $rc_base/init.d/sshd
-diff -Naur bootscripts/lfs/init.d/swap bootscripts.raq2/lfs/init.d/swap
---- bootscripts/lfs/init.d/swap	2005-01-13 23:20:19.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/swap	2005-03-18 13:01:10.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/swap bootscripts/lfs/init.d/swap
+--- bootscripts.orig/lfs/init.d/swap	2005-03-12 01:31:41.000000000 +0000
++++ bootscripts/lfs/init.d/swap	2005-03-31 04:00:38.000000000 +0000
 @@ -18,12 +18,14 @@
  case "${1}" in
  	start)
@@ -516,9 +553,9 @@ diff -Naur bootscripts/lfs/init.d/swap bootscripts.raq2/lfs/init.d/swap
  		swapoff -a
  		evaluate_retval
  		;;
-diff -Naur bootscripts/lfs/init.d/sysctl bootscripts.raq2/lfs/init.d/sysctl
---- bootscripts/lfs/init.d/sysctl	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/sysctl	2005-03-18 13:05:54.000000000 -0800
+diff -Naur bootscripts.orig/lfs/init.d/sysctl bootscripts/lfs/init.d/sysctl
+--- bootscripts.orig/lfs/init.d/sysctl	2005-03-16 23:05:21.000000000 +0000
++++ bootscripts/lfs/init.d/sysctl	2005-03-31 04:00:38.000000000 +0000
 @@ -21,6 +21,7 @@
  	start)
  		if [ -f "/etc/sysctl.conf" ]; then
@@ -527,35 +564,34 @@ diff -Naur bootscripts/lfs/init.d/sysctl bootscripts.raq2/lfs/init.d/sysctl
  			sysctl -q -p
  			evaluate_retval
  		fi
-diff -Naur bootscripts/lfs/init.d/syslog-ng bootscripts.raq2/lfs/init.d/syslog-ng
---- bootscripts/lfs/init.d/syslog-ng	2005-01-13 23:20:19.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/syslog-ng	2005-03-18 08:47:19.000000000 -0800
-@@ -18,11 +18,13 @@
+diff -Naur bootscripts.orig/lfs/init.d/sysklogd bootscripts/lfs/init.d/sysklogd
+--- bootscripts.orig/lfs/init.d/sysklogd	2005-03-31 04:10:50.000000000 +0000
++++ bootscripts/lfs/init.d/sysklogd	2005-03-31 04:00:38.000000000 +0000
+@@ -18,17 +18,21 @@
  case "${1}" in
  	start)
  		boot_mesg "Starting system log daemon..."
 +		putlcd "Starting:" "system log"
- 		loadproc syslog-ng
+ 		loadproc syslogd -m 0
+ 
+ 		boot_mesg "Starting kernel log daemon..."
++		putlcd "Starting:" "kernel log"
+ 		loadproc klogd
  		;;
  
  	stop)
- 		boot_mesg "Stopping system log daemon..."
+ 		boot_mesg "Stopping kernel log daemon..."
 +		putlcd "Stopping:" "system log"
- 		killproc syslog-ng
+ 		killproc klogd
+ 
+ 		boot_mesg "Stopping system log daemon..."
++		putlcd "Stopping:" "kernel log"
+ 		killproc syslogd
  		;;
  
-diff -Naur bootscripts/lfs/init.d/udev bootscripts.raq2/lfs/init.d/udev
---- bootscripts/lfs/init.d/udev	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/init.d/udev	2005-03-18 13:09:15.000000000 -0800
-@@ -6,7 +6,7 @@
- #
- # Authors     : Zack Winkles
- #
--# Version     : 00.01
-+# Version     : 00.00
- #
- # Notes       :
- #
+diff -Naur bootscripts.orig/lfs/init.d/udev bootscripts/lfs/init.d/udev
+--- bootscripts.orig/lfs/init.d/udev	2005-03-16 23:05:42.000000000 +0000
++++ bootscripts/lfs/init.d/udev	2005-03-31 04:00:38.000000000 +0000
 @@ -39,7 +39,8 @@
  			boot_mesg -n " will be halted and powered off."
  			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
@@ -583,10 +619,10 @@ diff -Naur bootscripts/lfs/init.d/udev bootscripts.raq2/lfs/init.d/udev
  		echo /sbin/udevsend > /proc/sys/kernel/hotplug
  
  		# Populate /dev with all the devices that are already available,
-diff -Naur bootscripts/lfs/sysconfig/network-devices/ifdown bootscripts.raq2/lfs/sysconfig/network-devices/ifdown
---- bootscripts/lfs/sysconfig/network-devices/ifdown	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/sysconfig/network-devices/ifdown	2005-03-19 08:19:16.272552088 -0800
-@@ -5,22 +5,21 @@
+diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/ifdown bootscripts/lfs/sysconfig/network-devices/ifdown
+--- bootscripts.orig/lfs/sysconfig/network-devices/ifdown	2005-03-17 06:07:08.000000000 +0000
++++ bootscripts/lfs/sysconfig/network-devices/ifdown	2005-03-31 04:05:01.000000000 +0000
+@@ -5,22 +5,22 @@
  # Description : Interface Down
  #
  # Authors     : Nathan Coulson - nathan@linuxfromscratch.org
@@ -607,13 +643,15 @@ diff -Naur bootscripts/lfs/sysconfig/network-devices/ifdown bootscripts.raq2/lfs
  . ${rc_functions} 
  
 -# Collect a list of configuration files for our interface
- if [ -n "${2}" ]; then
+-if [ -n "${2}" ]; then
 -	for file in ${@#$1} # All parameters except $1
++if [ -n "${2}" ]
++then
 +	for file in ${@#$1}
  	do
  		FILES="${FILES} ${network_devices}/ifconfig.${1}/${file}"
  	done
-@@ -30,17 +29,17 @@
+@@ -30,17 +30,17 @@
  	FILES="${network_devices}/ifconfig.${1}"
  fi
  
@@ -636,7 +674,7 @@ diff -Naur bootscripts/lfs/sysconfig/network-devices/ifdown bootscripts.raq2/lfs
  	if [ ! -f "${file}" ]; then
  		boot_mesg "${file} is not a network configuration file or directory." ${WARNING}
  		echo_warning
-@@ -49,23 +48,30 @@
+@@ -49,23 +49,30 @@
  	(
  		. ${file}
  
@@ -672,7 +710,7 @@ diff -Naur bootscripts/lfs/sysconfig/network-devices/ifdown bootscripts.raq2/lfs
  			boot_mesg " or the specified service cannot be executed."
  			echo_failure
  			continue
-@@ -73,12 +79,13 @@
+@@ -73,12 +80,13 @@
  	)
  done
  
@@ -688,10 +726,10 @@ diff -Naur bootscripts/lfs/sysconfig/network-devices/ifdown bootscripts.raq2/lfs
  			ip link set ${1} down
  			evaluate_retval
  		fi
-diff -Naur bootscripts/lfs/sysconfig/network-devices/ifup bootscripts.raq2/lfs/sysconfig/network-devices/ifup
---- bootscripts/lfs/sysconfig/network-devices/ifup	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/sysconfig/network-devices/ifup	2005-03-19 08:31:40.003487800 -0800
-@@ -18,9 +18,20 @@
+diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/ifup bootscripts/lfs/sysconfig/network-devices/ifup
+--- bootscripts.orig/lfs/sysconfig/network-devices/ifup	2005-03-17 06:07:08.000000000 +0000
++++ bootscripts/lfs/sysconfig/network-devices/ifup	2005-03-31 04:05:01.000000000 +0000
+@@ -18,64 +18,64 @@
  . /etc/sysconfig/rc 
  . ${rc_functions} 
  
@@ -714,7 +752,11 @@ diff -Naur bootscripts/lfs/sysconfig/network-devices/ifup bootscripts.raq2/lfs/s
  	do
  		FILES="${FILES} ${network_devices}/ifconfig.${1}/${file}"
  	done
-@@ -30,52 +41,40 @@
+-elif [ -d "${network_devices}/ifconfig.${1}" ]; then
++elif [ -d "${network_devices}/ifconfig.${1}" ]
++then
+ 	FILES=`echo ${network_devices}/ifconfig.${1}/*`
+ else
  	FILES="${network_devices}/ifconfig.${1}"
  fi
  
@@ -746,8 +788,7 @@ diff -Naur bootscripts/lfs/sysconfig/network-devices/ifup bootscripts.raq2/lfs/s
 +		fi
  		# Will not process this service if started by hotplug, and 
  		# ONHOTPLUG is not set to yes
--		if [ "${IN_HOTPLUG}" = "1" -a "${ONHOTPLUG}" != "yes" ]; then
-+		if [ "${IN_HOTPLUG}" = "1" -a "${ONHOTPLUG}" != "yes"  -a "${HOSTNAME}" != "(none)" ]; then
+ 		if [ "${IN_HOTPLUG}" = "1" -a "${ONHOTPLUG}" != "yes" ]; then
  			 continue
  		fi
  
@@ -784,9 +825,9 @@ diff -Naur bootscripts/lfs/sysconfig/network-devices/ifup bootscripts.raq2/lfs/s
  		else
  			boot_mesg "Unable to process ${file}.  Either" ${FAILURE}
  			boot_mesg " the SERVICE variable was not set,"
-diff -Naur bootscripts/lfs/sysconfig/network-devices/services/ipv4-static bootscripts.raq2/lfs/sysconfig/network-devices/services/ipv4-static
---- bootscripts/lfs/sysconfig/network-devices/services/ipv4-static	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/sysconfig/network-devices/services/ipv4-static	2005-03-18 08:49:41.000000000 -0800
+diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static bootscripts/lfs/sysconfig/network-devices/services/ipv4-static
+--- bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static	2005-03-16 23:08:28.000000000 +0000
++++ bootscripts/lfs/sysconfig/network-devices/services/ipv4-static	2005-03-31 04:05:29.000000000 +0000
 @@ -50,6 +50,7 @@
  case "${2}" in
  	up)
@@ -820,9 +861,9 @@ diff -Naur bootscripts/lfs/sysconfig/network-devices/services/ipv4-static bootsc
  		ip addr del ${args} dev ${1}
  		evaluate_retval
  	;;
-diff -Naur bootscripts/lfs/sysconfig/network-devices/services/ipv4-static-route bootscripts.raq2/lfs/sysconfig/network-devices/services/ipv4-static-route
---- bootscripts/lfs/sysconfig/network-devices/services/ipv4-static-route	2005-03-18 08:44:36.000000000 -0800
-+++ bootscripts.raq2/lfs/sysconfig/network-devices/services/ipv4-static-route	2005-03-18 08:49:41.000000000 -0800
+diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static-route bootscripts/lfs/sysconfig/network-devices/services/ipv4-static-route
+--- bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static-route	2005-03-16 23:08:51.000000000 +0000
++++ bootscripts/lfs/sysconfig/network-devices/services/ipv4-static-route	2005-03-31 04:05:29.000000000 +0000
 @@ -63,7 +63,7 @@
  fi
  
@@ -847,50 +888,3 @@ diff -Naur bootscripts/lfs/sysconfig/network-devices/services/ipv4-static-route 
  		ip route del ${args} dev ${1}
  		evaluate_retval
  	;;
-diff -Naur bootscripts/Makefile bootscripts.raq2/Makefile
---- bootscripts/Makefile	2005-03-19 08:17:55.285863936 -0800
-+++ bootscripts.raq2/Makefile	2005-03-19 08:16:59.866288992 -0800
-@@ -29,6 +29,7 @@
- 	install -m ${MODE} lfs/init.d/halt          ${EXTDIR}/rc.d/init.d/
- 	install -m ${MODE} lfs/init.d/console       ${EXTDIR}/rc.d/init.d/
- 	install -m ${MODE} lfs/init.d/hotplug       ${EXTDIR}/rc.d/init.d/
-+	install -m ${MODE} lfs/init.d/laststart     ${EXTDIR}/rc.d/init.d/
- 	install -m ${MODE} lfs/init.d/localnet      ${EXTDIR}/rc.d/init.d/
- 	install -m ${MODE} lfs/init.d/modules       ${EXTDIR}/rc.d/init.d/
- 	install -m ${MODE} lfs/init.d/mountfs       ${EXTDIR}/rc.d/init.d/
-@@ -37,6 +38,7 @@
- 	install -m ${MODE} lfs/init.d/rc            ${EXTDIR}/rc.d/init.d/
- 	install -m ${MODE} lfs/init.d/reboot        ${EXTDIR}/rc.d/init.d/
- 	install -m ${MODE} lfs/init.d/sendsignals   ${EXTDIR}/rc.d/init.d/
-+	install -m ${MODE} lfs/init.d/sshd          ${EXTDIR}/rc.d/init.d/
- 	install -m ${MODE} lfs/init.d/setclock      ${EXTDIR}/rc.d/init.d/
- 	install -m ${MODE} lfs/init.d/syslog-ng	    ${EXTDIR}/rc.d/init.d/
- 	install -m ${MODE} lfs/init.d/swap          ${EXTDIR}/rc.d/init.d/
-@@ -51,16 +53,27 @@
- 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rc0.d/S80swap
- 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc0.d/S90localnet
- 	ln -sf ../init.d/halt        ${EXTDIR}/rc.d/rc0.d/S99halt
-+	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc1.d/K30sshd
-+	ln -sf ../init.d/laststart   ${EXTDIR}/rc.d/rc1.d/S99laststart
- 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc1.d/K80network
- 	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc1.d/K90syslog-ng
-+	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc1.d/K30sshd
-+	ln -sf ../init.d/laststart   ${EXTDIR}/rc.d/rc2.d/S99laststart
- 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc2.d/K80network
- 	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc2.d/K90syslog-ng
-+	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc3.d/S30sshd
- 	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc3.d/S10syslog-ng
-+	ln -sf ../init.d/laststart   ${EXTDIR}/rc.d/rc3.d/S99laststart
- 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc3.d/S20network
-+	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc4.d/S30sshd
- 	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc4.d/S10syslog-ng
-+	ln -sf ../init.d/laststart   ${EXTDIR}/rc.d/rc4.d/S99laststart
- 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc4.d/S20network
-+	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc5.d/S30sshd
- 	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc5.d/S10syslog-ng
-+	ln -sf ../init.d/laststart   ${EXTDIR}/rc.d/rc5.d/S99laststart
- 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc5.d/S20network
-+	ln -sf ../init.d/sshd        ${EXTDIR}/rc.d/rc6.d/K30sshd
- 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc6.d/K80network
- 	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc6.d/K90syslog-ng
- 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
