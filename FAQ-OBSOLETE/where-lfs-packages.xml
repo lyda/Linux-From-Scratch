@@ -1,0 +1,11 @@
+<qandaentry id="where-lfs-packages">
+<question><para>Where are the lfs-packages tarballs
+or wget scripts?</para></question>
+<answer><para>For bandwidth reasons,
+the lfs-packages tarball is no longer available.
+This is subject to change,
+but for now, packages can be downloaded in bulk via the wget script found at
+<ulink url="http://linuxfromscratch.org/~highos/packages-ordered.wget"/>.
+The wget(1) man page tells how to use that script.</para>
+</answer>
+</qandaentry>

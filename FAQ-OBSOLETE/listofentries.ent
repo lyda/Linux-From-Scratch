@@ -63,6 +63,7 @@
 <!ENTITY what-dist SYSTEM "what-dist.xml">
 <!ENTITY what-is-lfs SYSTEM "what-is-lfs.xml">
 <!ENTITY when-next-lfs-release SYSTEM "when-next-lfs-release.xml">
+<!ENTITY where-lfs-packages SYSTEM "where-lfs-packages.xml">
 <!ENTITY where-ncurses-mandrake SYSTEM "where-ncurses-mandrake.xml">
 <!ENTITY wheres-which SYSTEM "wheres-which.xml">
 <!ENTITY which-list SYSTEM "which-list.xml">

@@ -62,6 +62,7 @@
 </qandadiv>
 <qandadiv id="resources"><title>Resources</title>
 	&alpha-fixes;
+	&where-lfs-packages;
 	&how-to-find;
 	&kernel-modules;
 	&what-dist;
