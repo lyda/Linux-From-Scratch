@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="prepare-bootcd">
+<sect1 id="prepare-bootcd" arch="x86">
 <title>About the Included CD</title>
 <?dbhtml filename="bootcd.html"?>
 
