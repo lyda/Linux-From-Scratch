@@ -1,4 +1,8 @@
 n/a - February 9, 2005
+	* Accidently mounted /dev with 775 instead of 755, fixed
+	  (Reported by Alexander E. Patrakov)
+
+n/a - February 9, 2005
 	* Bugfix for /dev, now mounted with 755 permission
 
 n/a - February 8, 2005
