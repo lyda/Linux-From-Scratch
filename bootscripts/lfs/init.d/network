@@ -34,8 +34,15 @@ case "$1" in
 	;;
 
 	stop)
+		# Reverse the list of files to process
+		FILES2="$network_devices/ifconfig.* $network_devices/ifconfig.*/*"
+		for file in $FILES2
+		do
+		  FILES="$file $FILES"
+		done
+
 		# Stop all network interfaces
-		for file in $network_devices/ifconfig.* $network_devices/ifconfig.*/*
+		for file in $FILES
 		do
 			interface=${file##*/ifconfig.}
 			interface=${interface%%/*}

@@ -14,14 +14,20 @@ if [ "$2" != "" ]
 then
 	for file in ${@#$1}
 	do
-	  FILES="$FILES $network_devices/ifconfig.$1/$file"
+	  FILES2="$FILES $network_devices/ifconfig.$1/$file"
 	done
 elif [ -d "$network_devices/ifconfig.$1" ]
 then
-  FILES="$network_devices/ifconfig.$1/*"
+  FILES2="$network_devices/ifconfig.$1/*"
 else
-  FILES="$network_devices/ifconfig.$1"
+  FILES2="$network_devices/ifconfig.$1"
 fi
+
+# Reverse the list of files to process
+for file in $FILES2
+do
+  FILES="$file $FILES"
+done
 
 for file in $FILES
 do
