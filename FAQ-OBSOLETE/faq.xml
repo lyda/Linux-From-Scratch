@@ -108,6 +108,7 @@
 		<qandadiv id="fee-compile-specific">
 				<title>Compile Time Errors From Specific Packages</title>
 			&conflicting-gethostname;
+			&yytext_ptr-undeclared;
 			&xfree-png-lz;
 			&no-linuxthreads;
 			&perl-missing-separator;
