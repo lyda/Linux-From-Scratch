@@ -1,9 +1,0 @@
-<qandaentry id="no-poweroff">
-<question><para>How do I make my machine poweroff
-when shut down?</para></question>
-<answer><para>Power Management is a kernel function,
-you need to enable it in the kernel.
-In the "General Setup" section of "make menuconfig",
-look for "Power Management Support" and read the help.
-</para></answer>
-</qandaentry>

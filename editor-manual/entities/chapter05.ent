@@ -1,6 +1,0 @@
-<!ENTITY chapter05 SYSTEM "../chapter05/chapter05.xml">
-<!ENTITY c5-introduction SYSTEM "../chapter05/introduction.xml">
-<!ENTITY c5-addingcomments SYSTEM "../chapter05/addingcomments.xml">
-<!ENTITY c5-enternewbugs SYSTEM "../chapter05/enternewbugs.xml">
-<!ENTITY c5-assignbug SYSTEM "../chapter05/assignbug.xml">
-<!ENTITY c5-fixbug SYSTEM "../chapter05/fixbug.xml">

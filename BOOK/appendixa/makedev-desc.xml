@@ -1,8 +1,0 @@
-<sect2><title>Short description</title>
-
-<para><command>MAKEDEV</command> is a script for creating the necessary
-static device nodes, usually residing in the <filename>/dev</filename>
-directory.</para>
-
-</sect2>
-
