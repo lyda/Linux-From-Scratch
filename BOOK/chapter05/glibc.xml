@@ -86,7 +86,7 @@ running the test suite.</para>
 
 <para>Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>make AUTOCONF=no</userinput></screen>
 
 <para>Compilation is now complete. As mentioned earlier, we don't recommend
 running the test suites for the temporary system here in this chapter. If you

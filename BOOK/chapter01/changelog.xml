@@ -74,7 +74,7 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
-<listitem><para>May 17th, 2004 [winkie]: Chapter 6 - Pass
+<listitem><para>May 17th, 2004 [winkie]: Chapter 5 - Pass
 <quote>AUTOCONF=no</quote> to the Glibc build. This prevents autoconf from
 causing us problems.</para></listitem>
 
