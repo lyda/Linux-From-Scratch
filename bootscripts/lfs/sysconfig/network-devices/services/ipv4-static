@@ -1,76 +1,86 @@
 #!/bin/sh
-4# Begin $network_devices/services/ipv4-static
+# Begin $network_devices/services/ipv4-static
 
 # Based upon lfs-bootscripts-1.12 $network_devices/if{down,up}
 # Rewritten by Nathan Coulson <nathan@linuxfromscratch.org>
 # Enhanced by Kevin P. Fleming <kpfleming@linuxfromscratch.org>
 
 . /etc/sysconfig/rc 
-. $rc_functions 
-. $IFCONFIG
+. ${rc_functions} 
+. ${IFCONFIG}
 
-if [ -z "$IP" ]; then
-	boot_mesg "IP variable missing from $IFCONFIG, cannot continue"
-	print_status failure
+if [ -z "${IP}" ]
+then
+	boot_mesg "IP variable missing from ${IFCONFIG}, cannot continue." ${FAILURE}
+	echo_failure
 	exit 1
 fi
 
-if [ -z "$PREFIX" -a -z "$PEER" ]; then
-	boot_mesg "PREFIX variable missing from $IFCONFIG, "
-	boot_mesg "assuming 24"
-	print_status warning
+if [ -z "${PREFIX}" -a -z "${PEER}" ]
+then
+	boot_mesg "PREFIX variable missing from ${IFCONFIG}," ${WARNING}
+	boot_mesg " assuming 24."
+	echo_warning
 	PREFIX=24
-	args="$args $IP/$PREFIX"
-elif [ -n "$PREFIX" -a -n "$PEER" ]; then
-	boot_mesg "PREFIX and PEER both specified in $IFCONFIG, cannot continue"
-	print_status failure
+	args="${args} ${IP}/${PREFIX}"
+elif [ -n "${PREFIX}" -a -n "${PEER}" ]
+then
+	boot_mesg "PREFIX and PEER both specified in ${IFCONFIG}, cannot continue." ${FAILURE}
+	echo_failure
 	exit 1
-elif [ -n "$PREFIX" ]; then
-	args="$args $IP/$PREFIX"
-elif [ -n "$PEER" ]; then
-	args="$args $IP peer $PEER"
+elif [ -n "${PREFIX}" ]
+then
+	args="${args} ${IP}/${PREFIX}"
+elif [ -n "${PEER}" ]
+then
+	args="${args} ${IP} peer ${PEER}"
 fi
 
-if [ -n "$BROADCAST" ]; then
-	args="$args broadcast $BROADCAST"
+if [ -n "${BROADCAST}" ]
+then
+	args="${args} broadcast ${BROADCAST}"
 fi
 
-if [ -n "$SOURCE" ]; then
-	args="$args src $SOURCE"
+if [ -n "${SOURCE}" ]
+then
+	args="${args} src ${SOURCE}"
 fi
 
-case "$2" in
+case "${2}" in
 	up)
-		boot_mesg "Adding IPV4 address $IP to the $1 interface..."
-		ip addr add $args dev $1
+		boot_mesg "Adding IPv4 address ${IP} to the ${1} interface..."
+		ip addr add ${args} dev ${1}
 		evaluate_retval
 	
-		if [ -n "$GATEWAY" ]; then
-			if ip route | grep -q default; then
-				boot_mesg "Gateway already setup; skipping..."
-				print_status warning
+		if [ -n "${GATEWAY}" ]
+		then
+			if ip route | grep -q default
+			then
+				boot_mesg "Gateway already setup; skipping." ${WARNING}
+				echo_warning
 			else
 				boot_mesg "Setting up default gateway..."
-				ip route add default via $GATEWAY dev $1
+				ip route add default via ${GATEWAY} dev ${1}
 				evaluate_retval
 			 fi
 		fi
 	;;
 	
 	down)
-		if [ -n "$GATEWAY" ]; then
+		if [ -n "${GATEWAY}" ]
+		then
 			boot_mesg "Removing default gateway..."
 			ip route del default
 			evaluate_retval
 		fi
 	
-		boot_mesg "Removing IPV4 address $IP from the $1 interface..."
-		ip addr del $args dev $1
+		boot_mesg "Removing IPv4 address ${IP} from the ${1} interface..."
+		ip addr del ${args} dev ${1}
 		evaluate_retval
 	;;
 	
 	*)
-		echo "Usage: $0 [interface] {up|down}"
+		echo "Usage: ${0} [interface] {up|down}"
 		exit 1
 	;;
 esac

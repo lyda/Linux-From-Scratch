@@ -5,18 +5,18 @@
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
 . /etc/sysconfig/rc
-. $rc_functions
+. ${rc_functions}
 
 # Include the boot-time configuration options.
 [ -f /etc/sysconfig/sysklogd ] && . /etc/sysconfig/sysklogd
 
-case "$1" in
+case "${1}" in
 	start)
 		boot_mesg "Starting system log daemon..."
-		loadproc syslogd $SYSLOGD_OPTIONS
+		loadproc syslogd ${SYSLOGD_OPTIONS}
 
 		boot_mesg "Starting kernel log daemon..."
-		loadproc klogd $KLOGD_OPTIONS
+		loadproc klogd ${KLOGD_OPTIONS}
 		;;
 
 	stop)
@@ -33,9 +33,9 @@ case "$1" in
 		;;
 
 	restart)
-		$0 stop
+		${0} stop
 		sleep 1
-		$0 start
+		${0} start
 		;;
 
 	status)
@@ -44,7 +44,7 @@ case "$1" in
 		;;
 
 	*)
-		echo "Usage: $0 {start|stop|reload|restart|status}"
+		echo "Usage: ${0} {start|stop|reload|restart|status}"
 		exit 1
 		;;
 esac

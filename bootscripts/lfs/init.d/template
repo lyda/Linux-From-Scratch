@@ -5,9 +5,9 @@
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
 . /etc/sysconfig/rc
-. $rc_functions
+. ${rc_functions}
 
-case "$1" in
+case "${1}" in
 	start)
 		boot_mesg "Starting..."
 		loadproc
@@ -24,9 +24,9 @@ case "$1" in
 		;;
 
 	restart)
-		$0 stop
+		${0} stop
 		sleep 1
-		$0 start
+		${0} start
 		;;
 
 	status)
@@ -34,7 +34,7 @@ case "$1" in
 		;;
 
 	*)
-		echo "Usage: $0 {start|stop|reload|restart|status}"
+		echo "Usage: ${0} {start|stop|reload|restart|status}"
 		exit 1
 		;;
 esac

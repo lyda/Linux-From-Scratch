@@ -8,19 +8,20 @@
 # a packet.  By default, this value is set to 1500.
 
 . /etc/sysconfig/rc 
-. $rc_functions 
-. $IFCONFIG
+. ${rc_functions}
+. ${IFCONFIG}
 
-if [ -z "$MTU" ]; then
-	boot_mesg "MTU variable missing from $IFCONFIG, cannot continue"
-	print_status failure
+if [ -z "${MTU}" ]
+then
+	boot_mesg "MTU variable missing from $IFCONFIG, cannot continue." ${FAILURE}
+	echo_failure
 	exit 1
 fi
 
-case "$2" in
+case "${2}" in
 	up)
-		boot_mesg "Setting the MTU for $1 to $MTU"
-		echo "$MTU" > "/sys/class/net/$1/mtu"
+		boot_mesg "Setting the MTU for ${1} to ${MTU}..."
+		echo "${MTU}" > "/sys/class/net/${1}/mtu"
 		evaluate_retval
 	;;
 	
@@ -28,7 +29,7 @@ case "$2" in
 	;;
 	
 	*)
-		echo "Usage: $0 [interface] {up|down}"
+		echo "Usage: ${0} [interface] {up|down}"
 		exit 1
 	;;
 esac

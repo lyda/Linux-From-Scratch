@@ -8,65 +8,78 @@
 # to indicate what file the service should source to get environmental variables.
 
 . /etc/sysconfig/rc 
-. $rc_functions 
+. ${rc_functions} 
 
 bring_link_up()
 {
-	link_status=`ip link show $1 2> /dev/null`
-	if [ -n "$link_status" ]; then
-		if ! echo "$link_status" | grep -q UP ; then
-			boot_mesg "Bringing up the $1 interface..."
-			ip link set $1 up
+	link_status=`ip link show ${1} 2> /dev/null`
+	if [ -n "${link_status}" ]
+	then
+		if ! echo "${link_status}" | grep -q UP
+		then
+			boot_mesg "Bringing up the ${1} interface..."
+			ip link set ${1} up
 			evaluate_retval
 		fi
 	fi
 }
 
-if [ -n "$2" ]; then
-	for file in ${@#$1}; do
-		FILES="$FILES $network_devices/ifconfig.$1/$file"
+if [ -n "${2}" ]
+then
+	for file in ${@#$1}
+	do
+		FILES="${FILES} ${network_devices}/ifconfig.${1}/${file}"
 	done
-elif [ -d "$network_devices/ifconfig.$1" ]; then
-	FILES=`echo $network_devices/ifconfig.$1/*`
+elif [ -d "${network_devices}/ifconfig.${1}" ]
+then
+	FILES=`echo ${network_devices}/ifconfig.${1}/*`
 else
-	FILES="$network_devices/ifconfig.$1"
+	FILES="${network_devices}/ifconfig.${1}"
 fi
 
-for file in $FILES; do
+for file in ${FILES}
+do
 	# skip backup files
-	if [ "$file" != "${file%""~""}" ]; then
+	if [ "${file}" != "${file%""~""}" ]
+	then
 		continue
 	fi
-	if [ ! -f "$file" ]; then
-		boot_mesg "$file is not a network configuration file or directory"
-		print_status warning
+	if [ ! -f "${file}" ]
+	then
+		boot_mesg "${file} is not a network configuration file or directory." ${WARNING}
+		echo_warning
 		continue
 	fi
 	(
-		. $file
+		. ${file}
 		# Will not process this service if started by boot, and ONBOOT
-		#	is not set to yes
-		if [ "$IN_BOOT" = "1" -a "$ONBOOT" != "yes" ]; then
+		# is not set to yes
+		if [ "${IN_BOOT}" = "1" -a "${ONBOOT}" != "yes" ]
+		then
 			continue
 		fi
-		# Will not process this service if started by hotplug, and ONHOTPLUG
-		#	is not set to yes
-		if [ "$IN_HOTPLUG" = "1" -a "$ONHOTPLUG" != "yes" ]; then
+		# Will not process this service if started by hotplug, and 
+		# ONHOTPLUG is not set to yes
+		if [ "${IN_HOTPLUG}" = "1" -a "${ONHOTPLUG}" != "yes" ]
+		then
 			 continue
 		fi
 
-		if [ -n "$SERVICE" -a -x "$network_devices/services/$SERVICE" ]; then
-			if ip link show $1 > /dev/null 2>&1; then
-				bring_link_up $1
-				IFCONFIG=$file $network_devices/services/${SERVICE} $1 up
+		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]
+		then
+			if ip link show ${1} > /dev/null 2>&1
+			then
+				bring_link_up ${1}
+				IFCONFIG=${file} ${network_devices}/services/${SERVICE} ${1} up
 			else
-				boot_mesg "Interface $1 doesn't exist"
-				print_status warning not_available
+				boot_mesg "Interface ${1} doesn't exist." ${WARNING}
+				echo_warning
 			fi
 		else
-			boot_mesg "Unable to process $file, Either the SERVICE variable was not set, "
-			boot_mesg "or the specified service cannot be executed"
-			print_status failure
+			boot_mesg "Unable to process ${file}.  Either" ${FAILURE}
+			boot_mesg " the SERVICE variable was not set,"
+			boot_mesg " or the specified service cannot be executed."
+			echo_failure
 			continue
 		fi
 	)
