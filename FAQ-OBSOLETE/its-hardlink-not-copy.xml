@@ -1,7 +1,0 @@
-<qandaentry id="its-hardlink-not-copy">
-<question><para>/bin/foo is a copy of /bin/bar.</para></question>
-<answer><para>Try "ls -i /bin/foo /bin/bar".
-Are the inode numbers the same?
-If so, they're not copies, they're hardlinked.
-</para></answer>
-</qandaentry>

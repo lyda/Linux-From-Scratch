@@ -1,9 +1,0 @@
-<qandaentry id="where-ncurses-mandrake">
-<question><para>Where's libncurses.a in Mandrake?</para></question>
-<answer><para>In Mandrake/RPMS2/libncurses5-devel-5.2-16mdk.1586.rpm on Disk 2.
-Version numbers might be a little different for you.
-(If you're missing libcurses.a (no "n"),
-reread the book's instructions for bash more carefully.)
-</para></answer>
-</qandaentry>
-
