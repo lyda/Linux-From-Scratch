@@ -92,6 +92,7 @@
 			&sig11;
 			&gtk-2_0;
 			&missing-x-includes;
+			&gnome-versions;
 		</qandadiv>
 		<qandadiv id="fee-compile-specific">
 				<title>Compile Time Errors From Specific Packages</title>
