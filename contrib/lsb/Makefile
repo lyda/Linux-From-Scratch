@@ -6,6 +6,6 @@ CONFMODE=644
 
 install:
 	install -d -m ${DIRMODE} ${DESTDIR}/lib/lsb
-	install -m ${CONFMODE} lib/functions ${DESTDIR}/lib/lsb
+	install -m ${CONFMODE} lib/init-functions ${DESTDIR}/lib/lsb
 
 .PHONY: install
