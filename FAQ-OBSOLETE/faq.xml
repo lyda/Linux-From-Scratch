@@ -543,6 +543,13 @@ alias net-pf-7 loop
 echo 'export LESSCHARSET=latin1' >> /etc/profile
 				</screen>
 			</section>
+			<section id="portmap"><title>Where's portmap?</title>
+				<para>
+					The best way i know is to follow the instructions
+					for portmap in the NFS Hint at <ulink
+					url="http://hints.linuxfromscratch.org/hints/nfs.txt">http://hints.linuxfromscratch.org/hints/nfs.txt</ulink>.
+				</para>
+			</section>
 			<section id="which"><title>Where's which?</title>
 				<para>
 					It's not in there! A proper which is available
