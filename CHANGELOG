@@ -1,3 +1,7 @@
+n/a - February 2, 2004:
+
+	* Added -d to umount in mountfs.
+
 n/a - January 30, 2004:
 
 	* Reorganized the network system to accept multiple services.
