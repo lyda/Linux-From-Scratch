@@ -73,6 +73,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 2nd, 2004 [matt]: Removed description of the now
+non-existent part IV from the structure section in the prologue.</para>
+</listitem>
 <listitem><para>May 1st, 2004 [jeremy]: Added creation of the /media and /srv
 directories, as well as 2 directories under /media for floppy and cdrom, as per
 FHS - fixes bugzilla bug #785 and #819.</para></listitem>

@@ -27,19 +27,12 @@ partition, downloading the packages, and compiling temporary tools.</para>
 <sect2>
 <title>Part III - Building the LFS system</title>
 
-<para>Part III guides you through the building of the LFS system: compiling
-and installing all the packages one by one, setting up the boot scripts, and
-installing the kernel. The resulting basic Linux system is the foundation
-upon which you can build other software, to extend your system in the way
-you like.</para>
-</sect2>
-
-<sect2>
-<title>Part IV - Appendices</title>
-
-<para>Part IV consists of two appendices. The first is an alphabetical list of
-all the installed packages, and the second an alphabetical list of all the
-installed programs and libraries, mentioning which package installed it.</para>
+<para>Part III guides you through the building of the LFS system: compiling and
+installing all the packages one by one, setting up the boot scripts, and
+installing the kernel. The resulting basic Linux system is the foundation upon
+which you can build other software, to extend your system in the way you like.
+At the end of the book you'll find a list of all of the programs, libraries and
+important files that have been installed as an easy to use reference.</para>
 </sect2>
 
 </sect1>
