@@ -3,7 +3,7 @@
 <bookinfo>
 <?dbhtml dir="prologue"?>
 <title>Linux From Scratch</title>
-<subtitle>Version CVS-20040102</subtitle>
+<subtitle>Version CVS-20040109</subtitle>
 
 
 <authorgroup>
@@ -12,7 +12,7 @@
 
 
 <copyright id="copyright">
-	<year>1999-2003</year>
+	<year>1999-2004</year>
 	<holder>Gerard Beekmans</holder>
 </copyright>
 
@@ -24,7 +24,7 @@ scratch, using nothing but the sources of the required software.</para>
 
 
 <legalnotice>
-<para>Copyright (c) 1999-2003, Gerard Beekmans</para>
+<para>Copyright (c) 1999-2004, Gerard Beekmans</para>
 
 <para>All rights reserved.</para>
 

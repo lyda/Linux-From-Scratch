@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % autoconf-entities SYSTEM "../ent/autoconf.ent">
+  %autoconf-entities;
+]>
 <sect1 id="aa-autoconf" xreflabel="Autoconf">
 <title>Autoconf</title>
 <?dbhtml filename="autoconf.html"?>
@@ -10,7 +13,7 @@
 
 <title>Official Download Location</title>
 
-<literallayout>Autoconf (2.59): 
+<literallayout>Autoconf (&autoconf-version;): 
 <ulink url="ftp://ftp.gnu.org/gnu/autoconf/"/></literallayout>
 
 </sect2>

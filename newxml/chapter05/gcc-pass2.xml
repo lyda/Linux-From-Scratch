@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % gcc-entities SYSTEM "../ent/gcc.ent">
+  %gcc-entities;
+]>
 <sect1 id="ch05-gcc-pass2">
-<title>Installing GCC-3.3.2 - Pass 2</title>
+<title>Installing GCC-&gcc-version; - Pass 2</title>
 <?dbhtml filename="gcc-pass2.html"?>
 
 <screen>Estimated build time:           11.0 SBU
@@ -36,12 +39,12 @@ get PTYs working.</para>
 <para>This time we will build both the C and the C++ compilers, so you'll have
 to unpack all three GCC tarballs (-core, -g++, and -testsuite) in one and the
 same working directory. They will all unfold into a single
-<filename>gcc-3.3.2/</filename> subdirectory.</para>
+<filename>gcc-&gcc-version;/</filename> subdirectory.</para>
 
 <para>First correct one problem and make an essential adjustment:</para>
 
-<screen><userinput>patch -Np1 -i ../gcc-3.3.2-no_fixincludes-1.patch
-patch -Np1 -i ../gcc-3.3.2-specs-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-no_fixincludes-1.patch
+patch -Np1 -i ../gcc-&gcc-version;-specs-1.patch</userinput></screen>
 
 <para>The first patch disables the GCC "fixincludes" script.  We mentioned this
 briefly earlier, but a slightly more in-depth explanation of the fixincludes 
@@ -76,7 +79,7 @@ variables that override the default optimization flags.</para>
 
 <para>Now prepare GCC for compilation:</para>
 
-<screen><userinput>../gcc-3.3.2/configure --prefix=/tools \
+<screen><userinput>../gcc-&gcc-version;/configure --prefix=/tools \
     --with-local-prefix=/tools \
     --enable-clocale=gnu --enable-shared \
     --enable-threads=posix --enable-__cxa_atexit \
@@ -128,11 +131,11 @@ through to completion and not stop at the first failure. The GCC test suite is
 very comprehensive and is almost guaranteed to generate a few failures. To get
 a summary of the test suite results, run this:</para>
  
-<screen><userinput>../gcc-3.3.2/contrib/test_summary | more</userinput></screen>
+<screen><userinput>../gcc-&gcc-version;/contrib/test_summary | more</userinput></screen>
 
 <para>You can compare your results to those posted to the gcc-testresults
 mailing list for similar configurations to your own. For an example of how
-current GCC-3.3.2 should look on i686-pc-linux-gnu, see
+current GCC-&gcc-version; should look on i686-pc-linux-gnu, see
 <ulink url="http://gcc.gnu.org/ml/gcc-testresults/2003-10/msg00803.html"/>.</para>
 
 <para>Note that the results contain:</para>

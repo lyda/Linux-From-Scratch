@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % sysklogd-entities SYSTEM "../ent/sysklogd.ent">
+  %sysklogd-entities;
+]>
 <sect1 id="ch06-sysklogd">
-<title>Installing Sysklogd-1.4.1</title>
+<title>Installing Sysklogd-&sysklogd-version;</title>
 <?dbhtml filename="sysklogd.html"?>
 
 <screen>Estimated build time:           0.1 SBU

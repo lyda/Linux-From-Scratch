@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % gawk-entities SYSTEM "../ent/gawk.ent">
+  %gawk-entities;
+]>
 <sect1 id="aa-gawk" xreflabel="Gawk">
 <title>Gawk</title>
 <?dbhtml filename="gawk.html"?>
@@ -8,11 +11,8 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Gawk (3.1.3): 
-<ulink url="ftp://ftp.gnu.org/pub/gnu/gawk/"/>
-
-Gawk Libexecdir Patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gawk-3.1.3-libexecdir.patch"/></literallayout>
+<literallayout>Gawk (&gawk-version;): 
+<ulink url="ftp://ftp.gnu.org/pub/gnu/gawk/"/></literallayout>
 </sect2>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gawk-contents.xml"/>

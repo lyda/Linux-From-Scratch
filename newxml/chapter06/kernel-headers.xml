@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % linux-entities SYSTEM "../ent/linux.ent">
+  %linux-entities;
+]>
 <sect1 id="ch06-kernel-headers">
-<title>Installing Linux-2.4.23 headers</title>
+<title>Installing Linux-&linux-version; headers</title>
 <?dbhtml filename="kernel.html"?>
 
 <screen>Estimated build time:           0.1 SBU
@@ -34,7 +37,7 @@ used will be assigned to somebody on your machine and then that person would
 have write access to the kernel source.</para>
 
 <para>In light of this, you might want to run <userinput>chown -R 0:0</userinput>
-on the <filename>linux-2.4.23</filename> directory
+on the <filename>linux-&linux-version;</filename> directory
 to ensure all files are owned by user <emphasis>root</emphasis>.</para>
 
 <para>Prepare for header installation:</para>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % coreutils-entities SYSTEM "../ent/coreutils.ent">
+  %coreutils-entities;
+]>
 <sect1 id="aa-coreutils" xreflabel="Coreutils">
 <title>Coreutils</title>
 <?dbhtml filename="coreutils.html"?>
@@ -8,14 +11,14 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Coreutils (5.0):
+<literallayout>Coreutils (&coreutils-version;):
 <ulink url="ftp://ftp.gnu.org/gnu/coreutils/"/>
 
 Coreutils Hostname Patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/coreutils-5.0-hostname-2.patch"/>
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/coreutils-&coreutils-version;-hostname-2.patch"/>
 
 Coreutils Uname Patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/coreutils-5.0-uname.patch"/></literallayout>
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/coreutils-&coreutils-version;-uname.patch"/></literallayout>
 </sect2>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="coreutils-contents.xml"/>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % sysvinit-entities SYSTEM "../ent/sysvinit.ent">
+  %sysvinit-entities;
+]>
 <sect1 id="aa-sysvinit" xreflabel="Sysvinit">
 <title>Sysvinit</title>
 <?dbhtml filename="sysvinit.html"?>
@@ -8,7 +11,7 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Sysvinit (2.85):
+<literallayout>Sysvinit (&sysvinit-version;):
 <ulink url="ftp://ftp.cistron.nl/pub/people/miquels/sysvinit/"/></literallayout>
 </sect2>
 

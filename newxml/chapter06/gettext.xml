@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % gettext-entities SYSTEM "../ent/gettext.ent">
+  %gettext-entities;
+]>
 <sect1 id="ch06-gettext">
-<title>Installing Gettext-0.13.1</title>
+<title>Installing Gettext-&gettext-version;</title>
 <?dbhtml filename="gettext.html"?>
 
 <screen>Estimated build time:           6.9 SBU

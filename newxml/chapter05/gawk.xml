@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % gawk-entities SYSTEM "../ent/gawk.ent">
+  %gawk-entities;
+]>
 <sect1 id="ch05-gawk">
-<title>Installing Gawk-3.1.3</title>
+<title>Installing Gawk-&gawk-version;</title>
 <?dbhtml filename="gawk.html"?>
 
 <screen>Estimated build time:           0.2 SBU

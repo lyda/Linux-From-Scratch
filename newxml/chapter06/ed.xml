@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % ed-entities SYSTEM "../ent/ed.ent">
+  %ed-entities;
+]>
 <sect1 id="ch06-ed">
-<title>Installing Ed-0.2</title>
+<title>Installing Ed-&ed-version;</title>
 <?dbhtml filename="ed.html"?>
 
 <screen>Estimated build time:           0.1 SBU
@@ -31,7 +34,7 @@ create temporary files.</para>
 
 <para>Apply the patch:</para>
 
-<screen><userinput>patch -Np1 -i ../ed-0.2-mkstemp.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../ed-&ed-version;-mkstemp.patch</userinput></screen>
 
 <para>Now prepare Ed for compilation:</para>
 

@@ -15,8 +15,8 @@
 <title>Book version</title>
 <?dbhtml filename="version.html"?>
 
-<para>This is version CVS-20040102 of the Linux From Scratch book, dated
-January 2nd, 2004. If this book is more than two months old, a newer and better
+<para>This is version CVS-20040109 of the Linux From Scratch book, dated
+January 9th, 2004. If this book is more than two months old, a newer and better
 version is probably already available. To find out, check one of the mirrors
 listed on <ulink url="http://www.linuxfromscratch.org/"/>.</para>
 

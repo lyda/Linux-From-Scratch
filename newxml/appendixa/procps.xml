@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % procps-entities SYSTEM "../ent/procps.ent">
+  %procps-entities;
+]>
 <sect1 id="aa-procps" xreflabel="Procps">
 <title>Procps</title>
 <?dbhtml filename="procps.html"?>
@@ -8,7 +11,7 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Procps (3.1.14):
+<literallayout>Procps (&procps-version;):
 <ulink url="http://procps.sourceforge.net/"/></literallayout>
 </sect2>
 

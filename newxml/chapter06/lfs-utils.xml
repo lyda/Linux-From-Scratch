@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % lfs-utils-entities SYSTEM "../ent/lfs-utils.ent">
+  %lfs-utils-entities;
+]>
 <sect1 id="ch06-lfs-utils">
-<title>Installing Lfs-Utils-0.4.2</title>
+<title>Installing Lfs-Utils-&lfs-utils-version;</title>
 <?dbhtml filename="lfs-utils.html"?>
 
 <screen>Estimated build time:           0.1 SBU

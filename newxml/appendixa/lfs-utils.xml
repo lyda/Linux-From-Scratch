@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % lfs-utils-entities SYSTEM "../ent/lfs-utils.ent">
+  %lfs-utils-entities;
+]>
 <sect1 id="aa-lfs-utils" xreflabel="Lfs-Utils">
 <title>Lfs-Utils</title>
 <?dbhtml filename="lfs-utils.html"?>
@@ -9,7 +12,7 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Lfs-utils (0.4.2):
+<literallayout>Lfs-utils (&lfs-utils-version;):
 <ulink url="http://www.linuxfromscratch.org/~winkie/downloads/lfs-utils/"/></literallayout>
 </sect2>
 

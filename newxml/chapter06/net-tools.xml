@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % net-tools-entities SYSTEM "../ent/net-tools.ent">
+  %net-tools-entities;
+]>
 <sect1 id="ch06-net-tools">
-<title>Installing Net-tools-1.60</title>
+<title>Installing Net-tools-&net-tools-version;</title>
 <?dbhtml filename="net-tools.html"?>
 
 <screen>Estimated build time:           0.1 SBU
@@ -31,7 +34,7 @@ but it's up to the kernel to make the protocols available.</para>
 <para>First fix a small syntax problem in the sources of the mii-tool
 program:</para>
 
-<screen><userinput>patch -Np1 -i ../net-tools-1.60-miitool-gcc33-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../net-tools-&net-tools-version;-miitool-gcc33-1.patch</userinput></screen>
 
 <para>Now prepare Net-tools for compilation with:</para>
 

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % zlib-entities SYSTEM "../ent/zlib.ent">
+  %zlib-entities;
+]>
 <sect1 id="aa-zlib" xreflabel="Zlib">
 <title>Zlib</title>
 <?dbhtml filename="zlib.html"?>
@@ -9,7 +12,7 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Zlib (1.2.1):
+<literallayout>Zlib (&zlib-version;):
 <ulink url="http://www.gzip.org/zlib/"/></literallayout>
 </sect2>
 

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % dejagnu-entities SYSTEM "../ent/dejagnu.ent">
+  %dejagnu-entities;
+]>
 <sect1 id="aa-dejagnu" xreflabel="DejaGnu">
 <title>DejaGnu</title>
 <?dbhtml filename="dejagnu.html"?>
@@ -8,7 +11,7 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>DejaGnu (1.4.3):
+<literallayout>DejaGnu (&dejagnu-version;):
 <ulink url="ftp://ftp.gnu.org/gnu/dejagnu/"/></literallayout>
 </sect2>
 

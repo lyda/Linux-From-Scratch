@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % makedev-entities SYSTEM "../ent/makedev.ent">
+  %makedev-entities;
+]>
 <sect1 id="ch06-MAKEDEV">
-<title>Creating devices (Makedev-1.7)</title>
+<title>Creating &makedev-version; (Makedev-1.7)</title>
 <?dbhtml filename="makedev.html"?>
 
 <screen>Estimated build time:           0.1 SBU
@@ -14,7 +17,7 @@ Estimated required disk space:  50 KB</screen>
 <para>The MAKEDEV script creates the static device nodes which
 usually reside in the <filename class="directory">/dev</filename>
 directory. Detailed information about device nodes may be found
-in the <filename>Documentation/devices.txt</filename> file under
+in the <filename>Documentation/&makedev-version;.txt</filename> file under
 the Linux kernel source tree.</para>
 
 <para><emphasis>Installed script</emphasis>: MAKEDEV</para>
@@ -35,7 +38,7 @@ the Linux kernel source tree.</para>
 
 
 <sect2>
-<title>Creating devices</title>
+<title>Creating &makedev-version;</title>
 
 <para>Note that unpacking the <filename>MAKEDEV-1.7.bz2</filename>
 file doesn't create a directory for you to <userinput>cd</userinput> into, as
@@ -66,7 +69,7 @@ need those files because we are going to use Unix98 PTYs via the
 
 <para>If it turns out that some special device <filename>zzz</filename> that
 you need is missing, try running <userinput>./MAKEDEV -v zzz</userinput>.
-Alternatively, you may create devices via the <userinput>mknod</userinput>
+Alternatively, you may create &makedev-version; via the <userinput>mknod</userinput>
 program. Please refer to its man and info pages if you need more
 information.</para>
 

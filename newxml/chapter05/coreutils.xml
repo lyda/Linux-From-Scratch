@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % coreutils-entities SYSTEM "../ent/coreutils.ent">
+  %coreutils-entities;
+]>
 <sect1 id="ch05-coreutils">
-<title>Installing Coreutils-5.0</title>
+<title>Installing Coreutils-&coreutils-version;</title>
 <?dbhtml filename="coreutils.html"?>
 
 <screen>Estimated build time:           0.9 SBU

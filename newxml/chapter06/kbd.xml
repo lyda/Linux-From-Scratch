@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % kbd-entities SYSTEM "../ent/kbd.ent">
+  %kbd-entities;
+]>
 <sect1 id="ch06-kbd">
-<title>Installing Kbd-1.08</title>
+<title>Installing Kbd-&kbd-version;</title>
 <?dbhtml filename="kbd.html"?>
 
 <screen>Estimated build time:           0.1 SBU
@@ -22,7 +25,7 @@ Estimated required disk space:  12 MB</screen>
 <userinput>setvesablank</userinput> and <userinput>getunimap</userinput>) are
 not installed. First enable the compilation of these utilities:</para>
 
-<screen><userinput>patch -Np1 -i ../kbd-1.08-more-programs-3.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../kbd-&kbd-version;-more-programs-2.patch</userinput></screen>
 
 <para>Now prepare Kbd for compilation:</para>
 
@@ -65,7 +68,7 @@ kernel source. You will have to repeat this command whenever you unpack a
 new kernel:</para>
 
 <screen><userinput>loadkeys -m /usr/share/kbd/keymaps/defkeymap.map.gz &gt; \
-    /usr/src/linux-2.4.23/drivers/char/defkeymap.c</userinput></screen>
+    /usr/src/linux-2.4.24/drivers/char/defkeymap.c</userinput></screen>
 
 </sect2>
 

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % flex-entities SYSTEM "../ent/flex.ent">
+  %flex-entities;
+]>
 <sect1 id="aa-flex" xreflabel="Flex">
 <title>Flex</title>
 <?dbhtml filename="flex.html"?>
@@ -8,7 +11,7 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Flex (2.5.4a): 
+<literallayout>Flex (&flex-version;): 
 <ulink url="ftp://ftp.gnu.org/non-gnu/flex/"/></literallayout>
 </sect2>
 

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % gcc-2953-entities SYSTEM "../ent/gcc-2953.ent">
+  %gcc-2953-entities;
+]>
 <sect1 id="ch06-gcc-2953">
-<title>Installing GCC-2.95.3</title>
+<title>Installing GCC-&gcc-2953-version;</title>
 <?dbhtml filename="gcc-2953.html"?>
 
 <screen>Estimated build time:           1.5 SBU
@@ -37,9 +40,9 @@ the system GCC already installed in <filename class="directory">/usr</filename>
 
 <para>Apply the patches and make a small adjustment:</para>
 
-<screen><userinput>patch -Np1 -i ../gcc-2.95.3-2.patch
-patch -Np1 -i ../gcc-2.95.3-no-fixinc.patch
-patch -Np1 -i ../gcc-2.95.3-returntype-fix.patch
+<screen><userinput>patch -Np1 -i ../gcc-&gcc-2953-version;-2.patch
+patch -Np1 -i ../gcc-&gcc-2953-version;-no-fixinc.patch
+patch -Np1 -i ../gcc-&gcc-2953-version;-returntype-fix.patch
 echo timestamp &gt; gcc/cstamp-h.in</userinput></screen>
 
 <para>The GCC documentation recommends building GCC outside of the source
@@ -50,7 +53,7 @@ cd ../gcc-2-build</userinput></screen>
 
 <para>Compile and install the compiler:</para>
 
-<screen><userinput>../gcc-2.95.3/configure --prefix=/opt/gcc-2.95.3 \
+<screen><userinput>../gcc-&gcc-2953-version;/configure --prefix=/opt/gcc-&gcc-2953-version; \
     --enable-shared --enable-languages=c \
     --enable-threads=posix
 make bootstrap

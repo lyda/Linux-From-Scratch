@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % shadow-entities SYSTEM "../ent/shadow.ent">
+  %shadow-entities;
+]>
 <sect1 id="ch06-shadow">
-<title>Installing Shadow-4.0.3</title>
+<title>Installing Shadow-&shadow-version;</title>
 <?dbhtml filename="shadow.html"?>
 
 <screen>Estimated build time:           0.4 SBU
@@ -50,7 +53,7 @@ the package incorrectly assumes it is going to be located at
 <userinput>newgrp</userinput> command to fail.  The following patch (also
 appearing in Shadow's CVS code) fixes this problem:</para>
 
-<screen><userinput>patch -Np1 -i ../shadow-4.0.3-newgrp-fix.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../shadow-&shadow-version;-newgrp-fix.patch</userinput></screen>
 
 <para>Now prepare Shadow for compilation:</para>
 

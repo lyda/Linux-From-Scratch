@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % bison-entities SYSTEM "../ent/bison.ent">
+  %bison-entities;
+]>
 <sect1 id="aa-bison" xreflabel="Bison">
 <title>Bison</title>
 <?dbhtml filename="bison.html"?>
@@ -8,11 +11,11 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Bison (1.875): 
+<literallayout>Bison (&bison-version;): 
 <ulink url="ftp://ftp.gnu.org/gnu/bison/"/>
 
 Bison Attribute Patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/bison-1.875-attribute.patch"/></literallayout>
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/bison-&bison-version;-attribute.patch"/></literallayout>
 </sect2>
 
 

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % libtool-entities SYSTEM "../ent/libtool.ent">
+  %libtool-entities;
+]>
 <sect1 id="aa-libtool" xreflabel="Libtool">
 <title>Libtool</title>
 <?dbhtml filename="libtool.html"?>
@@ -8,7 +11,7 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Libtool (1.5): 
+<literallayout>Libtool (&libtool-version;): 
 <ulink url="ftp://ftp.gnu.org/gnu/libtool/"/></literallayout>
 
 </sect2>

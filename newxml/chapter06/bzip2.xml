@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % bzip2-entities SYSTEM "../ent/bzip2.ent">
+  %bzip2-entities;
+]>
 <sect1 id="ch06-bzip2">
-<title>Installing Bzip2-1.0.2</title>
+<title>Installing Bzip2-&bzip2-version;</title>
 <?dbhtml filename="bzip2.html"?>
 
 <screen>Estimated build time:           0.1 SBU

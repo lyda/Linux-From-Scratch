@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % net-tools-entities SYSTEM "../ent/net-tools.ent">
+  %net-tools-entities;
+]>
 <sect1 id="aa-net-tools" xreflabel="Net-tools">
 <title>Net-tools</title>
 <?dbhtml filename="net-tools.html"?>
@@ -8,11 +11,11 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Net-tools (1.60): 
+<literallayout>Net-tools (&net-tools-version;): 
 <ulink url="http://www.tazenda.demon.co.uk/phil/net-tools/"/>
 
 Net-tools Mii-Tool-Gcc33 Patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/net-tools-1.60-miitool-gcc33-1.patch"/></literallayout>
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/net-tools-&net-tools-version;-miitool-gcc33-1.patch"/></literallayout>
 </sect2>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="net-tools-contents.xml"/>

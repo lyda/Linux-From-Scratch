@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % findutils-entities SYSTEM "../ent/findutils.ent">
+  %findutils-entities;
+]>
 <sect1 id="ch05-findutils">
-<title>Installing Findutils-4.3CR20</title>
+<title>Installing Findutils-&findutils-version;</title>
 <?dbhtml filename="findutils.html"?>
 
 <screen>Estimated build time:           0.2 SBU

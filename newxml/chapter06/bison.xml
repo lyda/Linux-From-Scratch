@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % bison-entities SYSTEM "../ent/bison.ent">
+  %bison-entities;
+]>
 <sect1 id="ch06-bison">
-<title>Installing Bison-1.875</title>
+<title>Installing Bison-&bison-version;</title>
 <?dbhtml filename="bison.html"?>
 
 <screen>Estimated build time:           0.6 SBU
@@ -21,7 +24,7 @@ Estimated required disk space:  10.6 MB</screen>
 <para>First fix a minor compilation problem that Bison has with some packages,
 the patch is backported from CVS:</para>
 
-<screen><userinput>patch -Np1 -i ../bison-1.875-attribute.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../bison-&bison-version;-attribute.patch</userinput></screen>
 
 <para>Now prepare Bison for compilation:</para>
 

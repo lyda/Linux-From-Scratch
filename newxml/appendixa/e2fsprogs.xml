@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % e2fsprogs-entities SYSTEM "../ent/e2fsprogs.ent">
+  %e2fsprogs-entities;
+]>
 <sect1 id="aa-e2fsprogs" xreflabel="E2fsprogs">
 <title>E2fsprogs</title>
 <?dbhtml filename="e2fsprogs.html"?>
@@ -8,7 +11,7 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>E2fsprogs (1.34):
+<literallayout>E2fsprogs (&e2fsprogs-version;):
 <ulink url="ftp://download.sourceforge.net/pub/sourceforge/e2fsprogs/"/>
 <ulink url="http://download.sourceforge.net/e2fsprogs/"/></literallayout>
 </sect2>

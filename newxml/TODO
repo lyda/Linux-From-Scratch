@@ -2,6 +2,8 @@ TODO
 ~~~~
 
 1. Reintroduce some entities that were removed during the cleanup
+   * Version entities are now in
+   * Decide what other entities we need
 2. Provide a css file to provide nicer output than whatever the UA's default is.
    * Started - needs some comments regarding layout.
 3. Decide whether we want to use the strict or traditional XHTML DTD.  Note in

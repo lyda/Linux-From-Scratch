@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % gcc-entities SYSTEM "../ent/gcc.ent">
+  %gcc-entities;
+]>
 <sect1 id="aa-gcc" xreflabel="GCC">
 <title>GCC</title>
 <?dbhtml filename="gcc.html"?>
@@ -8,14 +11,14 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>GCC (3.3.2): 
+<literallayout>GCC (&gcc-version;): 
 <ulink url="ftp://ftp.gnu.org/pub/gnu/gcc/"/>
 
 GCC No-Fixincludes Patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-3.3.2-no_fixincludes-1.patch"/>
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-&gcc-version;-no_fixincludes-1.patch"/>
 
 GCC Specs Patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-3.3.2-specs-1.patch"/>
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-&gcc-version;-specs-1.patch"/>
 
 GCC-2 (2.95.3): 
 <ulink url="ftp://ftp.gnu.org/pub/gnu/gcc/"/>

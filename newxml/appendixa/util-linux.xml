@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % util-linux-entities SYSTEM "../ent/util-linux.ent">
+  %util-linux-entities;
+]>
 <sect1 id="aa-utillinux" xreflabel="Util-linux">
 <title>Util-linux</title>
 <?dbhtml filename="util-linux.html"?>
@@ -8,7 +11,7 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Util-linux (2.12):
+<literallayout>Util-linux (&util-linux-version;):
 <ulink url="http://ftp.cwi.nl/aeb/util-linux/"/></literallayout>
 </sect2>
 

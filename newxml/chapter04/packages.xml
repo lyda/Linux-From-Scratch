@@ -43,10 +43,10 @@ Ed (0.2) - 182 KB:
 Expect (5.39.0) - 508 KB:
 <ulink url="http://freshmeat.net/projects/expect/"/>
 
-File (4.06) - 345 KB: (*) See Note Below
+File (4.07) - 347 KB: (*) See Note Below
 <ulink url="http://freshmeat.net/projects/file/"/>
 
-Findutils (4.3CR20) - 760 KB:
+Findutils (4.1.20) - 760 KB:
 <ulink url="http://freshmeat.net/projects/findutils/"/>
 
 Flex (2.5.4a) - 372 KB:
@@ -91,7 +91,7 @@ Gzip (1.3.5) - 324 KB:
 Inetutils (1.4.2) - 1,019 KB:
 <ulink url="http://freshmeat.net/projects/inetutils/"/>
 
-Kbd (1.08) - 801 KB:
+Kbd (1.10) - 869 KB:
 <ulink url="http://freshmeat.net/projects/kbd/"/>
 
 Less (381) - 259 KB:
@@ -106,7 +106,7 @@ Lfs-Utils (0.4.2) - 221 KB:
 Libtool (1.5) - 2,751 KB:
 <ulink url="http://freshmeat.net/projects/libtool/"/>
 
-Linux (2.4.23) - 29,133 KB:
+Linux (2.4.24) - 29,138 KB:
 <ulink url="http://freshmeat.net/projects/linux/"/>
 
 M4 (1.4) - 310 KB:
@@ -142,7 +142,7 @@ Perl (5.8.2) - 11,617 KB:
 Procinfo (18) - 24 KB:
 <ulink url="http://freshmeat.net/projects/procinfo/"/>
 
-Procps (3.1.14) - 244 KB:
+Procps (3.1.15) - 260 KB:
 <ulink url="http://freshmeat.net/projects/procps/"/>
 
 Psmisc (21.4) - 375 KB:
@@ -181,7 +181,7 @@ Zlib (1.2.1) - 277 KB:
 Total size of these packages: 134 MB
 </literallayout>
 
-<note><para>File (4.06) may not be available by the time you read
+<note><para>File (4.07) may not be available by the time you read
 this. The master download location is known to remove old versions when new
 ones are released. Please refer to the corresponding section in
 <xref linkend="appendixa"/> for an alternate download location.</para></note>

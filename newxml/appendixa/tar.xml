@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % tar-entities SYSTEM "../ent/tar.ent">
+  %tar-entities;
+]>
 <sect1 id="aa-tar" xreflabel="Tar">
 <title>Tar</title>
 <?dbhtml filename="tar.html"?>
@@ -8,7 +11,7 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Tar (1.13.25):
+<literallayout>Tar (&tar-version;):
 <ulink url="ftp://alpha.gnu.org/gnu/tar/"/></literallayout>
 
 </sect2>

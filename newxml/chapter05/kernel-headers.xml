@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % linux-entities SYSTEM "../ent/linux.ent">
+  %linux-entities;
+]>
 <sect1 id="ch05-kernel-headers">
-<title>Installing Linux-2.4.23 headers</title>
+<title>Installing Linux-&linux-version; headers</title>
 <?dbhtml filename="kernel-headers.html"?>
 
 <screen>Estimated build time:           0.1 SBU

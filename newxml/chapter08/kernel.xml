@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % linux-entities SYSTEM "../ent/linux.ent">
+  %linux-entities;
+]>
 <sect1 id="ch08-kernel">
-<title>Installing Linux-2.4.23</title>
+<title>Installing Linux-&linux-version;</title>
 <?dbhtml filename="kernel.html"?>
 
 <screen>Estimated build time:           All default options: 4.20 SBU
@@ -41,7 +44,7 @@ more information.</para>
 <para>If you wish, you may skip kernel configuration by simply copying the
 kernel config file, <filename>.config</filename>, from your host system
 (assuming it is available) to the unpacked
-<filename class="directory">linux-2.4.23</filename> directory.
+<filename class="directory">linux-&linux-version;</filename> directory.
 However, we don't recommend this option. You're much better off exploring all
 the configuration menus and creating your own kernel configuration from
 scratch.</para>
@@ -66,7 +69,7 @@ systems" menu and is normally enabled by default.</para>
 <filename>/etc/modules.conf</filename> file. Information pertaining
 to modules and to kernel configuration in general may be found in the
 kernel documentation, which is found in the
-<filename>linux-2.4.23/Documentation</filename> directory. The
+<filename>linux-&linux-version;/Documentation</filename> directory. The
 modules.conf man page and the kernel HOWTO at
 <ulink url="http://www.tldp.org/HOWTO/Kernel-HOWTO.html"/> may also be of
 interest to you.</para>

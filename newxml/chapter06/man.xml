@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % man-entities SYSTEM "../ent/man.ent">
+  %man-entities;
+]>
 <sect1 id="ch06-man">
-<title>Installing Man-1.5m2</title>
+<title>Installing Man-&man-version;</title>
 <?dbhtml filename="man.html"?>
 
 <screen>Estimated build time:           0.1 SBU
@@ -24,7 +27,7 @@ Estimated required disk space:  1.9MB</screen>
 of Groff. In particular, man pages will now display using the full terminal
 width instead of being limited to 80 characters:</para>
 
-<screen><userinput>patch -Np1 -i ../man-1.5m2-80cols.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../man-&man-version;-80cols.patch</userinput></screen>
 
 <para>The second is a sed substitution to add the <emphasis>-R</emphasis>
 switch to the <emphasis>PAGER</emphasis> variable so that escape sequences are

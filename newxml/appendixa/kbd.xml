@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % kbd-entities SYSTEM "../ent/kbd.ent">
+  %kbd-entities;
+]>
 <sect1 id="aa-kbd" xreflabel="Kbd">
 <title>Kbd</title>
 <?dbhtml filename="kbd.html"?>
@@ -8,11 +11,11 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Kbd (1.08): 
+<literallayout>Kbd (&kbd-version;): 
 <ulink url="ftp://ftp.win.tue.nl/pub/linux-local/utils/kbd/"/>
 
 Kbd More-Programs Patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/kbd-1.08-more-programs-3.patch"/></literallayout>
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/kbd-&kbd-version;-more-programs-2.patch"/></literallayout>
 </sect2>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kbd-contents.xml"/>

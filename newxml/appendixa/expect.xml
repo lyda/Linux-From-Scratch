@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % expect-entities SYSTEM "../ent/expect.ent">
+  %expect-entities;
+]>
 <sect1 id="aa-expect" xreflabel="expect">
 <title>Expect</title>
 <?dbhtml filename="expect.html"?>
@@ -8,11 +11,11 @@
 
 <sect2><title>Official Download Location</title>
 
-<literallayout>Expect (5.39.0):
+<literallayout>Expect (&expect-version;):
 <ulink url="http://expect.nist.gov/src/"/>
 
 Expect Spawn Patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/expect-5.39.0-spawn.patch"/></literallayout>
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/expect-&expect-version;-spawn.patch"/></literallayout>
 </sect2>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="expect-contents.xml"/>

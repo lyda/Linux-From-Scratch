@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % ncurses-entities SYSTEM "../ent/ncurses.ent">
+  %ncurses-entities;
+]>
 <sect1 id="ch06-ncurses">
-<title>Installing Ncurses-5.3</title>
+<title>Installing Ncurses-&ncurses-version;</title>
 <?dbhtml filename="ncurses.html"?>
 
 <screen>Estimated build time:           0.6 SBU
@@ -20,7 +23,7 @@ Estimated required disk space:  27 MB</screen>
 <para>Fix a minor problem related to the <filename>etip.h</filename> header
 file:</para>
 
-<screen><userinput>patch -Np1 -i ../ncurses-5.3-etip-2.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../ncurses-&ncurses-version;-etip-2.patch</userinput></screen>
 
 <para>Now prepare Ncurses for compilation:</para>
 
@@ -37,7 +40,7 @@ file:</para>
 
 <para>Give the Ncurses libraries execute permissions:</para>
 
-<screen><userinput>chmod 755 /usr/lib/*.5.3</userinput></screen>
+<screen><userinput>chmod 755 /usr/lib/*.&ncurses-version;</userinput></screen>
 
 <para>And fix a library that shouldn't be executable:</para>
 

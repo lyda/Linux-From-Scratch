@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % expect-entities SYSTEM "../ent/expect.ent">
+  %expect-entities;
+]>
 <sect1 id="ch05-expect">
-<title>Installing Expect-5.39.0</title>
+<title>Installing Expect-&expect-version;</title>
 <?dbhtml filename="expect.html"?>
 
 <screen>Estimated build time:           0.1 SBU 
@@ -20,7 +23,7 @@ Estimated required disk space:  3.9 MB</screen>
 
 <para>First apply a patch:</para>
 
-<screen><userinput>patch -Np1 -i ../expect-5.39.0-spawn.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../expect-&expect-version;-spawn.patch</userinput></screen>
 
 <para>This fixes a bug in Expect that can result in bogus failures during the
 GCC test suite run.</para>

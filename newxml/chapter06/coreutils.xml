@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % coreutils-entities SYSTEM "../ent/coreutils.ent">
+  %coreutils-entities;
+]>
 <sect1 id="ch06-coreutils">
-<title>Installing Coreutils-5.0</title>
+<title>Installing Coreutils-&coreutils-version;</title>
 <?dbhtml filename="coreutils.html"?>
 
 <screen>Estimated build time:           0.9 SBU
@@ -22,13 +25,13 @@ Estimated required disk space:  69 MB</screen>
 broken, in that the <userinput>-p</userinput> switch always returns "unknown".
 The following patch fixes this behaviour for Intel architectures:</para>
 
-<screen><userinput>patch -Np1 -i ../coreutils-5.0-uname.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-uname.patch</userinput></screen>
 
 <para>We do not want Coreutils to install its version of the
 <userinput>hostname</userinput> program, because it is inferior to the version
 provided by Net-tools. Prevent its installation by applying a patch:</para>
 
-<screen><userinput>patch -Np1 -i ../coreutils-5.0-hostname-2.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-hostname-2.patch</userinput></screen>
 
 <para>Now prepare Coreutils for compilation:</para>
 

@@ -28,9 +28,6 @@ Ed Mkstemp Patch - 1 KB:
 Expect Spawn Patch - 6 KB:
 <ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/expect-5.39.0-spawn.patch"/>
 
-Gawk Libexecdir Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gawk-3.1.3-libexecdir.patch"/>
-
 GCC No-Fixincludes Patch - 1 KB:
 <ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-3.3.2-no_fixincludes-1.patch"/>
 
@@ -53,7 +50,7 @@ Inetutils No-Server-Man-Pages Patch - 4 KB:
 <ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/inetutils-1.4.2-no_server_man_pages-1.patch"/>
 
 Kbd More-Programs Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/kbd-1.08-more-programs-3.patch"/>
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/kbd-1.10-more-programs-2.patch"/>
 
 Man 80-Columns Patch - 1 KB:
 <ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/man-1.5m2-80cols.patch"/>

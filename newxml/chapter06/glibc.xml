@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % glibc-entities SYSTEM "../ent/glibc.ent">
+  %glibc-entities;
+]>
 <sect1 id="ch06-glibc">
-<title>Installing Glibc-2.3.2</title>
+<title>Installing Glibc-&glibc-version;</title>
 <?dbhtml filename="glibc.html"?>
 
 <screen>Estimated build time:           12.3 SBU
@@ -29,13 +32,13 @@ results and thus defeat our goal of achieving a clean build.</para>
 circumstance.</para></note>
 
 <para>Before starting to build Glibc, remember to unpack the Glibc-linuxthreads
-again inside the <filename>glibc-2.3.2</filename> directory, and to
+again inside the <filename>glibc-&glibc-version;</filename> directory, and to
 unset any environment variables that override the default optimization
 flags.</para>
 
 <para>Apply the same patch we used previously:</para>
                                                                                 
-<screen><userinput>patch -Np1 -i ../glibc-2.3.2-sscanf-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../glibc-&glibc-version;-sscanf-1.patch</userinput></screen>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
@@ -45,13 +48,20 @@ cd ../glibc-build</userinput></screen>
 
 <para>Now prepare Glibc for compilation:</para>
 
-<screen><userinput>../glibc-2.3.2/configure --prefix=/usr \
+<screen><userinput>../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons \
     --libexecdir=/usr/lib --with-headers=/usr/include</userinput></screen>
 
 <para>The meaning of the new configure options:</para>
 
 <itemizedlist>
+<listitem><para><userinput>--libexecdir=/usr/lib</userinput>: This changes the
+location of the <filename>pt_chown</filename> program from its default of 
+<filename class="directory">/usr/libexec</filename> to
+<filename class="directory">/usr/lib</filename>. The use of
+<emphasis>libexec</emphasis> is considered not FHS compliant because the FHS
+doesn't even mention it.</para></listitem>
+
 <listitem><para><userinput>--with-headers=/usr/include</userinput>: This
 ensures that the kernel headers in <filename>/usr/include</filename> are used
 for this build. If you don't pass this switch then the headers from
@@ -91,7 +101,7 @@ weren't installed by the above command. Do it with this:</para>
 locales which you need or want. This can be achieved using the
 <userinput>localedef</userinput> command. Information on this can be found in
 the <filename>INSTALL</filename> file in the
-<filename>glibc-2.3.2</filename> tree. However,  there are a number
+<filename>glibc-&glibc-version;</filename> tree. However,  there are a number
 of locales that are essential for the tests of future packages to pass
 correctly. The following instructions, in place of the install-locales
 command above, will install the minimum set of locales necessary for the
@@ -111,11 +121,11 @@ localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
 
 <para>Finally, build the linuxthreads man pages:</para>
 
-<screen><userinput>make -C ../glibc-2.3.2/linuxthreads/man</userinput></screen>
+<screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man</userinput></screen>
 
 <para>And install these pages:</para>
 
-<screen><userinput>make -C ../glibc-2.3.2/linuxthreads/man install</userinput></screen>
+<screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man install</userinput></screen>
 
 </sect2>
 

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % inetutils-entities SYSTEM "../ent/inetutils.ent">
+  %inetutils-entities;
+]>
 <sect1 id="ch06-inetutils">
-<title>Installing Inetutils-1.4.2</title>
+<title>Installing Inetutils-&inetutils-version;</title>
 <?dbhtml filename="inetutils.html"?>
 
 <screen>Estimated build time:           0.2 SBU
@@ -21,7 +24,7 @@ Estimated required disk space:  11 MB</screen>
 However, the Inetutils build system will insist on installing all the man
 pages anyway. The following patch will correct this situation:</para>
 
-<screen><userinput>patch -Np1 -i ../inetutils-1.4.2-no_server_man_pages-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../inetutils-&inetutils-version;-no_server_man_pages-1.patch</userinput></screen>
 
 <para>Now prepare Inetutils for compilation:</para>
 

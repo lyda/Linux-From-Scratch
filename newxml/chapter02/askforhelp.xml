@@ -20,7 +20,7 @@ request for help.</para>
 essential things to include in your request are:</para>
 
 <itemizedlist>
-<listitem><para>the version of the book you are using (being CVS-20040102),</para></listitem>
+<listitem><para>the version of the book you are using (being CVS-20040109),</para></listitem>
 <listitem><para>the host distribution and version you are using to create
 LFS from,</para></listitem>
 <listitem><para>the package or section giving you problems,</para></listitem>

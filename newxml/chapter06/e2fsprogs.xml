@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % e2fsprogs-entities SYSTEM "../ent/e2fsprogs.ent">
+  %e2fsprogs-entities;
+]>
 <sect1 id="ch06-e2fsprogs">
-<title>Installing E2fsprogs-1.34</title>
+<title>Installing E2fsprogs-&e2fsprogs-version;</title>
 <?dbhtml filename="e2fsprogs.html"?>
 
 <screen>Estimated build time:           0.6 SBU
@@ -26,7 +29,7 @@ cd ../e2fsprogs-build</userinput></screen>
 
 <para>Prepare E2fsprogs for compilation:</para>
 
-<screen><userinput>../e2fsprogs-1.34/configure --prefix=/usr --with-root-prefix="" \
+<screen><userinput>../e2fsprogs-&e2fsprogs-version;/configure --prefix=/usr --with-root-prefix="" \
     --enable-elf-shlibs</userinput></screen>
 
 <para>The meaning of the configure options:</para>

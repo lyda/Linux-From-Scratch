@@ -57,6 +57,6 @@ file. By having this file it is very easy for you (and for us if you are going
 to ask for help with something at some point) to find out which LFS version
 you have installed on your system. Create this file by running:</para>
 
-<screen><userinput>echo CVS-20040102 &gt; /etc/lfs-release</userinput></screen>
+<screen><userinput>echo CVS-20040109 &gt; /etc/lfs-release</userinput></screen>
 
 </sect1>

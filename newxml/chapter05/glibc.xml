@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd" [
+  <!ENTITY % glibc-entities SYSTEM "../ent/glibc.ent">
+  %glibc-entities;
+]>
 <sect1 id="ch05-glibc">
-<title>Installing Glibc-2.3.2</title>
+<title>Installing Glibc-&glibc-version;</title>
 <?dbhtml filename="glibc.html"?>
 
 <screen>Estimated build time:           11.8 SBU
@@ -19,7 +22,7 @@ Estimated required disk space:  800 MB</screen>
 <title>Glibc installation</title>
 
 <para>Before starting to install Glibc, you must <userinput>cd</userinput>
-into the <filename>glibc-2.3.2</filename> directory and unpack
+into the <filename>glibc-&glibc-version;</filename> directory and unpack
 Glibc-linuxthreads in that directory, not in the directory where you usually
 unpack all the sources.</para>
 
@@ -40,7 +43,7 @@ is putting the stability of your system at risk.</para>
 <para>Glibc has a subtle problem when compiled with GCC 3.3.2.
 Apply the following patch to fix this:</para>
 
-<screen><userinput>patch -Np1 -i ../glibc-2.3.2-sscanf-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../glibc-&glibc-version;-sscanf-1.patch</userinput></screen>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
@@ -50,7 +53,7 @@ cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>../glibc-2.3.2/configure --prefix=/tools \
+<screen><userinput>../glibc-&glibc-version;/configure --prefix=/tools \
     --disable-profile --enable-add-ons \
     --with-headers=/tools/include \
     --with-binutils=/tools/bin \
@@ -162,7 +165,7 @@ spoken. The "internationalization" of GNU programs works by means of
 those locales which you need or want. This can be achieved by using the
 <userinput>localedef</userinput> command. Information on this can be
 found in the <filename>INSTALL</filename> file in the
-<filename>glibc-2.3.2</filename> source. However, there are a number
+<filename>glibc-&glibc-version;</filename> source. However, there are a number
 of locales that are essential for the tests of future packages to pass, in
 particular, the <emphasis>libstdc++</emphasis> tests from GCC.  The following
 instructions, instead of the install-locales target above, will install
