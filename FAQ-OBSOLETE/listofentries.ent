@@ -1,4 +1,5 @@
 <!ENTITY add-grub SYSTEM "add-grub.xml">
+<!ENTITY asm-global-directive SYSTEM "asm-global-directive.xml">
 <!ENTITY bad-interpreter-permission-denied SYSTEM "bad-interpreter-permission-denied.xml">
 <!ENTITY bootcd SYSTEM "bootcd.xml">
 <!ENTITY char-major-10-135 SYSTEM "char-major-10-135.xml">
