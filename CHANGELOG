@@ -1,3 +1,7 @@
+n/a - May 16, 2004
+
+	* Added sysklogd configuration file
+
 n/a - May 15, 2004
 
 	* Namespace rework (enumeration of scripts is now cleaner)
