@@ -18,7 +18,7 @@ case "$1" in
 	start)
 		echo "Unpacking files to /etc..."
 		cd /
-		/bin/rm  /etc
+		/bin/rm  /etc /init
 		/bin/tar xjf /.cdrom/etc.tar.bz2
 		evaluate_retval
 		echo "Unpacking files to /root..."
