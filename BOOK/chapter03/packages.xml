@@ -208,7 +208,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>IPRoute2 (&iproute2-version;) - 896 KB:</term>
+<term>IPRoute2 (&iproute2-version;) - 339 KB:</term>
 <listitem>
 <para><ulink url="http://developer.osdl.org/dev/iproute2/download/iproute2-&iproute2-version;.tar.gz"/></para>
 </listitem>
