@@ -144,6 +144,15 @@
 					don't worry, you don't need to.)
 				</para>
 			</section>
+			<section id="version-not-in-book"><title>If you are using a version not in the book:</title>
+				<para>
+					If you're getting errors and you're using a version of
+					a package that differs from the version in the book
+					(either newer or older), try the version in the book.
+					Sometimes there are reasons why the book uses a particular
+					version. Search the list archives if you're curious.
+				</para>
+			</section>
 		</section>
 		<section id="sig11"><title>I'm getting fatal errors about signal 11.</title>
 			<para>
