@@ -15,6 +15,7 @@
 		</author>
 	</articleinfo>
 <qandaset>
+
 <!-- dlist: ,lfs-dev,lfs-support,blfs-support -->
 	<qandadiv><title>Introduction</title>
 
@@ -162,13 +163,14 @@ to see if freshmeat (or someone else)
 has reported it to lfs-book (or blfs-book for packages in BLFS).
 </para></listitem>
 <listitem><para>If no one has reported it to the lists,
-check LFS <ulink url="http://bugs.linuxfromscratch.org/">bugzilla</ulink>
+check <ulink url="http://bugs.linuxfromscratch.org/">LFS bugzilla</ulink>
+(or <ulink url="http://blfs-bugs.linuxfromscratch.org/">BLFS bugzilla</ulink>)
 to see if it's there.
 </para></listitem>
 <listitem><para>If it's not in bugzilla,
 report it to lfs-book (or blfs-book for packages in BLFS).
 And if you like, test the new release and report any problems
-or changes in compilation instructions too.
+or changes in compilation instructions, too.
 </para></listitem>
 </itemizedlist>
 </para></answer>
@@ -431,6 +433,32 @@ into the new LFS system.)
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-compile -->
+<qandaentry id="perm-denied">
+<question><para>I'm getting `/dev/null: Permission denied'</para></question>
+<answer><para>Does /dev/null look like this:
+<screen>$ ls -l /dev/null
+crw-rw-rw-   1 root     root       1,   3 Aug  3  2000 /dev/null
+</screen>
+If not, it should.
+See the chmod(1), chown(1), and mknod(1) man pages
+and /usr/src/linux/Documentation/devices.txt if you need help fixing it.
+</para>
+<para>If it does look right,
+the problem is probably your mount options.
+See the answer to "<link
+linkend="bad-interpreter-permission-denied">./configure: bad
+interpreter: Permission denied</link>", above.
+</para></answer>
+</qandaentry>
+
+<!-- elist: ,lfs-compile,blfs-support -->
+<qandaentry id="sig11">
+<question><para>I'm getting fatal errors about signal 11.</para></question>
+<answer><para>See <ulink url="http://www.bitwizard.nl/sig11/"/>.
+</para></answer>
+</qandaentry>
+
 <!-- elist: ,blfs-support,new -->
 <qandaentry id="gtk-2_0">
 <question><para>I'm getting errors building a package that requires GTK+,
@@ -439,6 +467,29 @@ but I've installed GTK+ 2.x.</para></question>
 The package you're installing may need GTK+ (and GLIB) 1.2.x.
 You can install GTK+ (and GLIB) 1.2.x next to 2.x.
 </para></answer>
+</qandaentry>
+
+<!-- elist: ,blfs-support,new -->
+<qandaentry id="missing-x-includes">
+<question><para>X11/Xlib.h: No such file or directory</para></question>
+<answer><para>Typical symptoms look like this:
+</para>
+<screen>$ echo -en 'x11:\n\tgcc x11.c\n' > Makefile
+$ echo -en '#include &lt;X11/Xlib.h>\nmain() { }\n' > x11.c   
+$ make
+gcc x11.c
+<emphasis role="strong">x11.c:1: X11/Xlib.h: No such file or directory
+make: *** [x11] Error 1</emphasis>
+$ rm Makefile x11.c 
+$ 
+</screen>
+<para>Creating a couple symlinks will fix it. Here are the commands:
+</para>
+<screen>cd /usr
+ln -s X11R6 X11
+cd include
+ln -s ../X11/include/X11 X11
+</screen></answer>
 </qandaentry>
 
 </qandadiv><!-- fee-compile-any -->
@@ -494,58 +545,6 @@ endif
 </screen>
 </para></answer>
 </qandaentry>
-
-<!-- elist: ,blfs-support,new -->
-<qandaentry id="missing-x-includes">
-<question><para>X11/Xlib.h: No such file or directory</para></question>
-<answer><para>Typical symptoms look like this:
-</para>
-<screen>$ echo -en 'x11:\n\tgcc x11.c\n' > Makefile
-$ echo -en '#include &lt;X11/Xlib.h>\nmain() { }\n' > x11.c   
-$ make
-gcc x11.c
-<emphasis role="strong">x11.c:1: X11/Xlib.h: No such file or directory
-make: *** [x11] Error 1</emphasis>
-$ rm Makefile x11.c 
-$ 
-</screen>
-<para>Creating a couple symlinks will fix it. Here are the commands:
-</para>
-<screen>cd /usr
-ln -s X11R6 X11
-cd include
-ln -s ../X11/include/X11 X11
-</screen></answer>
-</qandaentry>
-
-<!-- elist: ,lfs-compile,new -->
-<qandaentry id="unable-to-mount-root">
-<question><para>Kernel panic: VFS: unable to mount root fs</para></question>
-<answer><para>There several reasons why the kernel might be unable to
-mount the root filesystem.
-<itemizedlist>
-<listitem><para>Did you specify the correct partition in
-<filename>/etc/lilo.conf</filename>?
-</para></listitem>
-<listitem><para>Did you remember to rerun lilo after changing
-<filename>/etc/lilo.conf</filename>?
-</para></listitem>
-<listitem><para>Is support for the hard drive enabled in the kernel.
-For SCSI this means support for the specific SCSI adapter.
-</para></listitem>
-<listitem><para>Is support for the hard drive compiled into the kernel,
-not just as a module.
-(Modules are stored on the filesystem.
-If a driver needed to access the filesystem is stored as a module on
-that filesystem, well. . . you know. . . . ;)
-</para></listitem>
-<listitem><para>Is support for the filesystem compiled into the kernel.
-Again, not a module.
-Support for ext2 is enabled by default,
-but others like ext3, reiser, jfs, and xfs are not.
-</para></listitem>
-</itemizedlist></para></answer>
-</qandaentry><!-- unable-to-mount-root -->
 
 </qandadiv><!-- fee-compile-specific -->
 
@@ -693,6 +692,35 @@ It's located in make menuconfig under
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-support,new -->
+<qandaentry id="unable-to-mount-root">
+<question><para>Kernel panic: VFS: unable to mount root fs</para></question>
+<answer><para>There several reasons why the kernel might be unable to
+mount the root filesystem.
+<itemizedlist>
+<listitem><para>Did you specify the correct partition in
+<filename>/etc/lilo.conf</filename>?
+</para></listitem>
+<listitem><para>Did you remember to rerun lilo after changing
+<filename>/etc/lilo.conf</filename>?
+</para></listitem>
+<listitem><para>Is support for the hard drive enabled in the kernel.
+For SCSI this means support for the specific SCSI adapter.
+</para></listitem>
+<listitem><para>Is support for the hard drive compiled into the kernel,
+not just as a module.
+(Modules are stored on the filesystem.
+If a driver needed to access the filesystem is stored as a module on
+that filesystem, well. . . you know. . . . ;)
+</para></listitem>
+<listitem><para>Is support for the filesystem compiled into the kernel.
+Again, not a module.
+Support for ext2 is enabled by default,
+but others like ext3, reiser, jfs, and xfs are not.
+</para></listitem>
+</itemizedlist></para></answer>
+</qandaentry><!-- unable-to-mount-root -->
+
 </qandadiv><!-- fee-runtime-specific -->
 
 </qandadiv><!-- fee-runtime -->
@@ -780,6 +808,21 @@ it the easy way :)
 				<ulink url="http://archive.linuxfromscratch.org/mail-archives/lfs-support/2001/10/0072.html"/>.
 			</para></answer>
 		</qandaentry>
+
+<!-- elist: ,lfs-compile,blfs-support -->
+<qandaentry id="cross-compile">
+<question><para>How do I cross compile LFS?</para></question>
+<answer><para>It's often useful to compile LFS for one machine
+on another machine.
+Say using that fast 1Ghz Athlon to build an install for an old 486.
+While this is technically not cross compiling,
+binaries compiled for the Athlon cannot be run on the 486
+because binaries compiled for the newer processor
+use features the older processor doesn't have.
+To make the newer system compile for the older, follow the hint at
+<ulink url="http://hints.linuxfromscratch.org/hints/crosscompiling-x86.txt"/>.
+</para></answer>
+</qandaentry>
 
 <!-- elist: ,lfs-support -->
 <qandaentry id="where-ncurses-mandrake">
@@ -869,25 +912,6 @@ and are left as an exercise for the reader.
 <!-- dlist: ,lfs-compile,blfs-support -->
 	<qandadiv id="compiling"><title>Compiling</title>
 <!-- elist: ,lfs-compile,blfs-support -->
-		<qandaentry id="sig11"><question><para>I'm getting fatal errors about signal 11.</para></question>
-			<answer><para>See <ulink url="http://www.bitwizard.nl/sig11/"/>.
-			</para></answer>
-		</qandaentry>
-<!-- elist: ,lfs-compile,blfs-support -->
-		<qandaentry id="cross-compile"><question><para>How do I cross compile LFS?</para></question>
-			<answer><para>It's often useful to compile LFS for one machine
-				on another machine. Say using that 1Ghz Athlon
-				to build an install for an old 486.
-				While this is technically not cross compiling,
-				binaries compiled for the Athlon cannot be run on the 486
-				because binaries compiled for the newer processor
-				use features the older processor doesn't have.
-				To make the newer system compile for the older,
-				follow the hint at
-				<ulink url="http://hints.linuxfromscratch.org/hints/crosscompiling-x86.txt"/>.
-			</para></answer>
-		</qandaentry>
-<!-- elist: ,lfs-compile,blfs-support -->
 		<qandaentry id="gcc-warnings"><question><para>Are compiler warnings from GCC bad?</para></question>
 			<answer><para>Short answer: no.
 			</para></answer>
@@ -919,25 +943,6 @@ sk ~/tmp $ ######## that failed ########
 sk ~/tmp $
 			</screen></answer>
 		</qandaentry>
-
-<!-- elist: ,lfs-compile -->
-<qandaentry id="perm-denied">
-<question><para>I'm getting `/dev/null: Permission denied'</para></question>
-<answer><para>Does /dev/null look like this:
-<screen>$ ls -l /dev/null
-crw-rw-rw-   1 root     root       1,   3 Aug  3  2000 /dev/null
-</screen>
-If not, it should.
-See the chmod(1), chown(1), and mknod(1) man pages
-and /usr/src/linux/Documentation/devices.txt if you need help fixing it.
-</para>
-<para>If it does look right,
-the problem is probably your mount options.
-See the answer to "<link
-linkend="bad-interpreter-permission-denied">./configure: bad
-interpreter: Permission denied</link>", above.
-</para></answer>
-</qandaentry>
 
 <!-- elist: ,lfs-compile -->
 		<qandaentry id="conf-guess-fail"><question><para>configure can't guess my host type.</para></question>
