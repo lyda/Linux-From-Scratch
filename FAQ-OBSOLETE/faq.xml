@@ -139,6 +139,19 @@
 			<para>See <ulink url="http://www.bitwizard.nl/sig11/">http://www.bitwizard.nl/sig11/</ulink>.
 			</para>
 		</section>
+		<section id="cross-compile"><title>How do I cross compile LFS?</title>
+			<para>It's often useful to compile LFS for one machine
+				on another machine. Say using that 1Ghz Athlon
+				to build an install for an old 486.
+				While this is technically not cross compiling,
+				binaries compiled for the Athlon cannot be run on the 486
+				because binaries compiled for the newer processor
+				use features the older processor doesn't have.
+				To make the newer system compile for the older,
+				follow the hint at <ulink
+				url="http://hints.linuxfromscratch.org/hints/crosscompiling-x86.txt">http://hints.linuxfromscratch.org/hints/crosscompiling-x86.txt</ulink>
+			</para>
+		</section>
 		<section id="gcc-warnings"><title>Are compiler warnings from GCC bad?</title>
 			<para>Short answer: no.
 			</para>
