@@ -74,6 +74,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 16th, 2004 [jeremy]: Chapter 9 - Added a brief paragraph
+to the rebooting system page to discuss packages which might be useful to
+add prior to rebooting to the new system</para></listitem>
+
 <listitem><para>May 15th, 2004 [matt]: Chapter 6 - Added a clearer warning that
 make_devices needs to be customised</para></listitem>
 
