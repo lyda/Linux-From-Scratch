@@ -1,11 +1,11 @@
 n/a - September 23, 2004
 	* Fixed boot_log so it output's $@'s contents, not @$
-	* Added support for colors in boot_mesg
+	* Added support for colors in boot_mesg (James Robertson)
 	* Modified udev's error checking
 	* Modified hotplug's error checking
 	* Converted checkfs's error handling to use boot_mesg with
 	  color support
-	* added $INFO color to functions
+	* added $INFO color to functions (James Robert)
 
 n/a - September 22, 2004
 	* Removed the dependency on wl by replacing it with grep (Bryan Kadzban)
@@ -13,14 +13,14 @@ n/a - September 22, 2004
 	* removed ${NORMAL} from echo "$BOOTMESG" in functions, and removed space
 	  added to each additional sentence tacked onto BOOTMESG
 	* boot_mesg now handles \n's properly, and does not dimish the size of the
-	  next line
+	  next line (James Robertson)
 	* boot_log has been added.  the echo_ functions commit the log,
 	  and then clear the BOOTMSG variable
 	* All scriptes have been converted to use boot_mesg
 
 n/a - September 21, 2004
 	* boot_mesg has been enhanced.  Subsequent calls will overwrite previous text,
-	  and it will wrap text based upon the variable ${WCOL}.
+	  and it will wrap text basedupon the variable ${WCOL}. (James Robert)
 	* Fixed mtu optional service typo (Kevin P Fleming)
 	* Added SOURCE variable to ipv4-static-route (Kevin P Fleming)
 
