@@ -1,7 +1,37 @@
 # Begin /etc/sysconfig/console
+# Uncomment the section corresponding to your country
 
-KEYMAP="defkeymap"
-KEYMAP_CORRECTIONS="euro"
-FONT="default8x16"
+# English-speaking users don't need this file at all, except when they
+# use framebuffer console.
+# For framebuffer users whose native language is English:
+#
+# FONT="default8x16"
+
+# Belarussian users need to download additional fonts (TODO)
+
+# Belgium, with Euro character (information from Belgian-HOWTO)
+#
+# KEYMAP="be-latin1"
+# KEYMAP_CORRECTIONS="euro"
+# FONT="lat9-16 -u iso01"
+
+# Chinese is not supported by LFS and needs special tools
+
+# Latvian users need to download additional files from
+# http://linux.ma-1.lv/ll10nt/Latvian-HOWTO/files/konsole-files.tar.gz
+
+# Russia, one of many variants actually used
+# See the book for the contents of /etc/kbd/bs-sends-del
+#
+# KEYMAP="ru-ms"
+# KEYMAP_CORRECTIONS="/etc/kbd/bs-sends-del"
+# FONT="cp866-8x16 -m koi2alt"
+
+# Spain, with Euro character (information from
+# http://www.linuxforum.com/forums/index.php?showtopic=14590),
+#
+# KEYMAP="es"
+# KEYMAP_CORRECTIONS="euro"
+# FONT="lat9-16 -u iso01"
 
 # End /etc/sysconfig/console
