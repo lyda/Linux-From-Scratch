@@ -16,7 +16,6 @@
 <!ENTITY dos-text SYSTEM "dos-text.xml">
 <!ENTITY f-hostname SYSTEM "f-hostname.xml">
 <!ENTITY fre-intro SYSTEM "fre-intro.xml">
-<!ENTITY gcc-3_0 SYSTEM "gcc-3_0.xml">
 <!ENTITY gcc-warnings SYSTEM "gcc-warnings.xml">
 <!ENTITY getting-help SYSTEM "getting-help.xml">
 <!ENTITY glibc-no-ld_map SYSTEM "glibc-no-ld_map.xml">

@@ -49,7 +49,6 @@
 </qandadiv>
 <qandadiv id="fre"><title>Frequently Requested Enhancements</title>
 	&fre-intro;
-	&gcc-3_0;
 	&add-grub;
 	&why-not-new-lilo;
 	&why-not-faq;
