@@ -10,17 +10,17 @@
 case "$1" in
 	start)
 		echo "Starting File Alteration Monitor..."
-		loadproc fam -T 0
+		loadproc famd -T 0
 		;;
 
 	stop)
 		echo "Stopping File Alteration Monitor..."
-		killproc fam
+		killproc famd
 		;;
 
 	reload)
 		echo "Reloading File Alteration Monitor..."
-		reloadproc fam
+		reloadproc famd
 		;;
 
 	restart)
@@ -30,7 +30,7 @@ case "$1" in
 		;;
 
 	status)
-		statusproc fam
+		statusproc famd
 		;;
 
 	*)
