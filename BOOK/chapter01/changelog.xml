@@ -31,7 +31,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Grep 2.5.1a</para></listitem>
 <listitem><para>Grub 0.96</para></listitem>
 <listitem><para>Iana-Etc 1.04</para></listitem>
-<listitem><para>Iproute2 2.6.10-050209/para></listitem>
+<listitem><para>Iproute2 2.6.10-050209</para></listitem>
 <listitem><para>LFS-Bootscripts 3.1.0</para></listitem>
 <listitem><para>Libtool 1.5.14</para></listitem>
 <listitem><para>Linux 2.6.10</para></listitem>
@@ -57,9 +57,11 @@ first a summary, then a detailed log.</para>
 <listitem><para>Added:</para>
 <itemizedlist>
 <listitem><para>glibc-2.3.4-mips_syscall-2.patch</para></listitem>
-<listitem><para>util-linux-2.12q-cramfs-1.patch<para></listitem>
+<listitem><para>util-linux-2.12q-cramfs-1.patch</para></listitem>
 <listitem><para>grep-2.5.1a-raq2_config_update-1.patch</para></listitem>
 <listitem><para>lfs-bootscripts-3.1.0-raq2-2.patch</para></listitem>
+<listitem><para>Colo 1.16</para></listitem>
+<listitem><para>Yaboot 1.3.13</para></listitem>
 <listitem><para>Libol 0.3.15</para></listitem>
 <listitem><para>Syslog-NG 1.6.6</para></listitem>
 </itemizedlist>
@@ -69,11 +71,12 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Sysklogd 1.4.1</para></listitem>
 <listitem><para>udev-config-2.permissions</para></listitem>
+</itemizedlist>
 </listitem>
 
 <listitem><para>Feburary 23, 2005 [jim]</para>
 <itemizedlist>
-<para>Feburary 23, 2005 [jim]: Sync: With the 6.0 Release.
+<listitem><para>Feburary 23, 2005 [jim]: Sync: With the 6.0 Release.
 Updated: Arch: All - Users and Groups to basic needs.
 Updated: Arch: All - Udev Configuration.
 Added Patch: Arch: RaQ2 for glibc, which fixes the generation of the syscall.h file.
@@ -82,8 +85,10 @@ Added Patch: Arch: RaQ2 for Linux, fixes MIPS Processor related issues.
 Added Patch: Arch: RaQ2 for bootscripts, allows LCD Status during bootup.
 Added patch: Arch: All for iproute2, fixes constant_htons build issue
 Added: Arch: RaQ2 Colo, OpenSSL, and OpenSSH.
-Added: Arch: PPC Yaboot</para></itemizedlist>
+Added: Arch: PPC Yaboot</para></listitem>
+</itemizedlist>
 </listitem>
+
 </itemizedlist>
 
 <para>Branch Synced from the Release of LFS 6.0 on February 23rd, 2005</para>
