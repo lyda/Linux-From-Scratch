@@ -1,9 +1,0 @@
-<qandaentry id="deps_version_not_match_package">
-<question><para>The Dependencies section for Foo 2.0
-says "Foo 1.0".</para></question>
-<answer><para>That is not a bug; that is way it's supposed to be.
-The wording has been made clearer in <ulink
-url="http://www.linuxfromscratch.org/view/cvs/">CVS</ulink>.
-</para></answer>
-</qandaentry>
-

@@ -1,7 +1,0 @@
-<qandaentry id="why-vim">
-<question><para>Why is vim in the book?</para></question>
-<answer><para>This is fairly well discussed in the thread starting at
-<ulink url="http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/02/0012.html"/>.
-</para></answer>
-</qandaentry>
-
