@@ -1,7 +1,0 @@
-LFS Wish List...
-================
-
-Please see 
-http://www.linuxfromscratch.org/todo.php
-and
-http://www.linuxfromscratch.org/wish.php
