@@ -54,6 +54,11 @@ symlink style package management:
 </itemizedlist>
 </listitem>
 
+<listitem><para>The NetBSD package manager, pkgsrc,
+is available on other systems including Linux.
+It is at <ulink url="http://www.netbsd.org/zoularis/"/>.
+</para></listitem>
+
 <listitem><para>Originally based on a script
 written by LFS' own Gerard Beekmans,
 install-log records a list of files installed by a package
