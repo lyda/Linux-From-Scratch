@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
-	"/usr/share/docbook/docbookx.dtd"
+	"/usr/share/xml/docbook/docbookx.dtd"
 	[
 
 <!ENTITY % listofentries SYSTEM "listofentries.ent">
