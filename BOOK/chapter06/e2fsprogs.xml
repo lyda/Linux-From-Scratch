@@ -11,7 +11,14 @@
 
 <sect2 role="package"><title/>
 <para>The E2fsprogs package contains the utilities for handling the ext2
-file system. It also supports the ext3 journaling file system.</para>
+file system. It supports the ext3 journaling file system as well. Also, it
+contains the <command>fsck</command> program that is a generic wrapper around
+filesystem-specific check programs.</para>
+<note>
+<para>Because of the <command>fsck</command> program, you still need 
+E2fsprogs even if you don't use ext2 or ext3
+filesystems at all with your LFS installation. Don't skip this package!</para>
+</note>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>

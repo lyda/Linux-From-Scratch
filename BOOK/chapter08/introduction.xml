@@ -28,10 +28,14 @@ Let's examine the alternatives in more detail.</para>
 filesystem on a partition that we want to use as a root of the new LFS
 installation. The LFS system needs a tool to check this filesystem for errors
 during boot. Such tool is provided by the <application>e2fsprogs</application>
-for ext2 and ext3 filesystems. If you use other filesystem, you need to install
-the corresponding package from the <ulink
-url="$blfs-root;view/cvs/postlfs/filesystems.html">File Systems section in
-BLFS</ulink>.</para></sect2>
+package for ext2 and ext3 filesystems. If you use some other filesystem,
+now you need to install the corresponding package from the <ulink
+url="&blfs-root;view/stable/postlfs/filesystems.html"><quote>File Systems</quote>
+section in BLFS</ulink> <emphasis>in addition to</emphasis>
+<application>e2fsprogs</application> (because it's the
+<application>e2fsprogs</application> package that provides the generic
+<command>fsck</command> wrapper program).
+</para></sect2>
 
 <sect2><title>Kernel modules</title>
 <para>
