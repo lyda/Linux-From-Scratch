@@ -1,6 +1,7 @@
 n/a - May 24, 2004
 
 	* Added more example keymaps and font settings to /etc/sysconfig/console
+	* Install the /etc/sysconfig/console file by default
 
 n/a - May 23, 2004
 
