@@ -1,4 +1,4 @@
-CVS - March 22nd, 2002:
+1.9 - April 5th, 2002:
 
 	* reloadproc function had a missing '=' in the "failure 1" command (it
 	  should be failure=1)
