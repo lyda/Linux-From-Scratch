@@ -1,5 +1,5 @@
 #!/bin/sh
-# Begin $rc_base/init.d/mountproc
+# Begin $rc_base/init.d/mountkernfs
 
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
@@ -20,4 +20,4 @@ case "$1" in
 		;;
 esac
 
-# End $rc_base/init.d/mountproc
+# End $rc_base/init.d/mountkernfs
