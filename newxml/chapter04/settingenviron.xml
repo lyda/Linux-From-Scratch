@@ -65,7 +65,7 @@ host system uses a version of Glibc older than 2.2.4,
 having LC_ALL set to something other than <quote>POSIX</quote> or
 <quote>C</quote> during this chapter may cause trouble if you exit the chroot
 environment and wish to return later.  By setting LC_ALL to <quote>POSIX</quote>
-(or </quote>C</quote>, the two are equivalent) we ensure that
+(or <quote>C</quote>, the two are equivalent) we ensure that
 everything will work as expected in the chroot environment.</para>
 
 <para>We prepend <filename>/tools/bin</filename> to the standard PATH so
