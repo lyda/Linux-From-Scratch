@@ -85,6 +85,7 @@
     </div>
   </xsl:template>
 
+    <!-- Harcoded a period for proper punctuation in xrefs. -->
   <xsl:template match="*" mode="insert.title.markup">
     <xsl:param name="purpose"/>
     <xsl:param name="xrefstyle"/>

@@ -189,4 +189,21 @@
     </fo:inline>
   </xsl:template>
 
+    <!-- Harcoded a period for proper punctuation in xrefs. -->
+  <xsl:template match="*" mode="insert.title.markup">
+    <xsl:param name="purpose"/>
+    <xsl:param name="xrefstyle"/>
+    <xsl:param name="title"/>
+    <xsl:param name="role"/>
+    <xsl:choose>
+      <xsl:when test="$purpose = 'xref' and titleabbrev">
+        <xsl:apply-templates select="." mode="titleabbrev.markup"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy-of select="$title"/>
+        <xsl:text>.</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
 </xsl:stylesheet>
