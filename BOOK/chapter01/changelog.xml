@@ -86,6 +86,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>March 18, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Findutils to 4.2.20.</para></listitem>
+<listitem><para>Fixed: Arch: All - Updated to IPRoute2 file size.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

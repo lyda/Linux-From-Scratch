@@ -208,7 +208,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>IPRoute2 (&iproute2-version;) - 331 KB:</term>
+<term>IPRoute2 (&iproute2-version;) - 896 KB:</term>
 <listitem>
 <para><ulink url="http://developer.osdl.org/dev/iproute2/download/iproute2-&iproute2-version;.tar.gz"/></para>
 </listitem>
@@ -503,6 +503,6 @@
 
 </variablelist>
 
-<para>Total size of these packages: about 170 MB</para>
+<para>Total size of these packages: about 171 MB</para>
 
 </sect1>
