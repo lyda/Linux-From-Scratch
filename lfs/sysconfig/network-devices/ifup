@@ -55,8 +55,13 @@ for file in $FILES; do
 		fi
 
 		if [ -n "$SERVICE" -a -x "$network_devices/services/$SERVICE" ]; then
-			bring_link_up $1
-			IFCONFIG=$file $network_devices/services/${SERVICE} $1 up
+			if ip link | grep -q $1;then
+				bring_link_up $1
+				IFCONFIG=$file $network_devices/services/${SERVICE} $1 up
+			else
+				echo "Interface $1 doesn't exist"
+				print_status warning not_available
+			fi
 		else
 			echo -n "Unable to process $file, Either the SERVICE variable was not set, "
 			echo "or the specified service cannot be executed"
