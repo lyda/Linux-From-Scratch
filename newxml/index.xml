@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+<book>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="bookinfo.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="dedication.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="preface.xml"/>
+  <part id="part1">
+    <title>Part I - Introduction</title>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter01.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter02.xml"/>
+  </part>
+  <part id="part2">
+    <title>Part II - Preparing for the build</title>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter03.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter04.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter05.xml"/>
+  </part>
+  <part id="part3">
+    <title>Part III - Building the LFS system</title>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter06.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter07.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter08.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter09.xml"/>
+  </part>
+  <part id="part4">
+    <title>Part IV - Appendices</title>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendixa.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendixb.xml"/>
+  </part>
+</book>

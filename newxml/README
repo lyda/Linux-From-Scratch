@@ -1,0 +1,17 @@
+README for the newxml module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In order to process this version of the book simply use the following command:
+
+`xmllint --xinclude --postvalid index.xml > lfs-all.xml`
+
+lfs-all.xml will now contain the entire source of the book, which you can
+process using the existing commands detailed in LFS's main README file.
+
+In time this process will change to using XSLT stylesheets which will require
+a command line something like the following:
+
+`xsltproc --xinclude lfs-[output-format].xsl index.xml`
+
+where [output-format] will be one of a number of alternatives including (but
+no doubt not limited to) XHTML, PDF, LaTeX, Text, nALFS profiles.
