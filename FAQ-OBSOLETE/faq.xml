@@ -118,8 +118,8 @@
 	<chapter id="preparing"><title>Preparing to Build</title>
 		<section id="what-dist"><title>What distribution should I use to start from?</title>
 			<para>
-				Any recent distribution should be fine
-				if you install and/or update the development packages.
+				Any recent distribution should be fine. If you have problems,
+				try installing and/or updating the development packages.
 				(Look for ones starting in "gcc" or "glibc" "libstdc++" or
 				ending in "-dev".)
 			</para>
