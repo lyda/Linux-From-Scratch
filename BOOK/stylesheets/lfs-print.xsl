@@ -13,7 +13,7 @@
   <xsl:include href="print/lfs-pagesetup.xsl"/>
 
     <!-- Paper size required by the publisher -->
-  <xsl:param name="paper.type" select="'Cunstommized'"/>
+  <xsl:param name="paper.type" select="'Customized'"/>
   <xsl:param name="page.width">7.25in</xsl:param>
   <xsl:param name="page.height">9.25in</xsl:param>
 
