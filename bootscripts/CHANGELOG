@@ -1,3 +1,5 @@
+3.0 - December 8, 2004
+
 n/a - December 5, 2004
 	* Moved bootlog to use local2 service to avoide conflict with
 	  dhcpcd (DJ Lucas)
