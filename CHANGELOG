@@ -10,6 +10,7 @@ n/a - June 21, 2004
 	* Removed anything that might call "rmmod" in hotplug, since rmmod is
 	  notoriously troublesome in the 2.6.x kernels, and call it with the
 	  stop argument from runlevels 0 and 6
+	* Fixed previous modifications to the udev and cleanfs scripts
 
 n/a - June 20, 2004
 
