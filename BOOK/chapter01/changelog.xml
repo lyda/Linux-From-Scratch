@@ -81,6 +81,12 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 29th, 2004 [gerard]: Added missing SBU for
+readline.</para></listitem>
+
+<listitem><para>August 29th, 2004 [gerard]: Completed second global
+textual edits.</para></listitem>
+
 <listitem><para>August 17th, 2004 [gerard]: Added Bash and Readline
 Display Wrap patches.</para></listitem>
 
