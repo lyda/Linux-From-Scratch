@@ -42,7 +42,7 @@ comes last in the <envar>PATH</envar>. This means that a
 temporary tool will not be used anymore as soon as its final version
 is installed. This occurs when the shell does not <quote>remember</quote> the
 locations of executed binaries&mdash;for this reason, hashing is switched
-off by passing the <parameter>+h</parameter> option to bash.</para>
+off by passing the <parameter>+h</parameter> option to <command>bash</command>.</para>
 
 <para>It is important that all the commands throughout the remainder
 of this chapter and the following chapters be run from within the

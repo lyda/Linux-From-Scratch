@@ -36,9 +36,10 @@ GCC, Glibc, and Make</seg></seglistitem>
 make clean</userinput></screen>
 
 <para>The <parameter>-f</parameter> flag will cause Bzip2 to be built
-using a different Makefile file, in this case the
+using a different <filename>Makefile</filename> file, in this case the
 <filename>Makefile-libbz2_so</filename> file, which creates a dynamic
-libbz2.so library and links the Bzip2 utilities against it.</para>
+<filename class="libraryfile">libbz2.so</filename> library and links the Bzip2
+utilities against it.</para>
 
 <para>Compile the package:</para>
 
@@ -72,7 +73,7 @@ ln -s bzip2 /bin/bzcat</userinput></screen>
 <segtitle>Installed programs</segtitle>
 <segtitle>Installed libraries</segtitle>
 <seglistitem><seg>bunzip2 (link to bzip2), bzcat (link to bzip2), bzcmp, bzdiff,
-bzegrep, bzfgrep, bzgrep, bzip2, bzip2recover, bzless ,and bzmore</seg>
+bzegrep, bzfgrep, bzgrep, bzip2, bzip2recover, bzless, and bzmore</seg>
 <seg>libbz2.a, libbz2.so (link to libbz2.so.1.0), libbz2.so.1.0 (link to 
 libbz2.so.&bzip2-version;), and libbz2.so.&bzip2-version;</seg></seglistitem>
 </segmentedlist>

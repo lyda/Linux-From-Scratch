@@ -135,8 +135,8 @@ members of the archive).</para>
 <varlistentry id="as">
 <term><command>as</command></term>
 <listitem>
-<para>an assembler that assembles the output of gcc into object
-files.</para>
+<para>an assembler that assembles the output of <command>gcc</command>
+into object files.</para>
 <indexterm zone="ch-system-binutils as"><primary sortas="b-as">as</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -80,7 +80,7 @@ files based on the contents of <filename>configure.in</filename> files.</para>
 <varlistentry id="aclocal-version">
 <term><command>aclocal-&automake-version;</command></term>
 <listitem>
-<para>hard link to aclocal.</para>
+<para>hard link to <command>aclocal</command>.</para>
 <indexterm zone="ch-system-automake aclocal-version"><primary
 sortas="b-aclocal-&automake-version;">aclocal-&automake-version;</primary></indexterm>
 </listitem>
@@ -104,7 +104,7 @@ corresponding <filename>Makefile.in</filename> file.</para>
 <varlistentry id="automake-version">
 <term><command>automake-&automake-version;</command></term>
 <listitem>
-<para>hard link to automake.</para>
+<para>hard link to <command>automake</command>.</para>
 <indexterm zone="ch-system-automake automake-version"><primary
 sortas="b-automake-&automake-version;">automake-&automake-version;</primary></indexterm>
 </listitem>

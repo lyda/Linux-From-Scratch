@@ -48,8 +48,8 @@ already resolves this issue.</para>
 <varlistentry>
 <term><parameter>--with-installed-readline</parameter></term>
 <listitem><para>This options tells Bash to use the
-<filename>readline</filename> library that is already installed on the
-system rather than using its own readline version.</para></listitem>
+<filename class="libraryfile">readline</filename> library that is already installed 
+on the system rather than using its own readline version.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -108,8 +108,8 @@ concerning <command>bash</command> in a standard format.</para>
 <varlistentry id="sh">
 <term><command>sh</command></term>
 <listitem>
-<para>a symlink to the bash program. When invoked
-as <command>sh</command>, <command>bash</command> tries to mimic the 
+<para>a symlink to the <command>bash</command> program. When invoked
+as <command>sh</command>, <command>bash</command> tries to mimic the
 startup behavior of historical versions of <command>sh</command> as
 closely as possible, while conforming to the POSIX standard as well.</para>
 <indexterm zone="ch-system-bash sh"><primary sortas="b-sh">sh</primary></indexterm>
