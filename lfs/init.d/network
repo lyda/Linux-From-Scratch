@@ -43,7 +43,7 @@ case "${1}" in
 				fi
 
 				# Bring up ${interface}
-				${network_devices}/ifup ${interace}
+				${network_devices}/ifup ${interface}
 			)
 		done
 		;;
@@ -79,7 +79,7 @@ case "${1}" in
 				fi
 
 				# Bring up ${interface}
-				${network_devices}/ifup ${interace}
+				${network_devices}/ifdown ${interface}
 			)
 		done
 		;;
