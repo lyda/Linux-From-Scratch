@@ -142,7 +142,7 @@ libbz2.so.&bzip2-version;), and libbz2.so.&bzip2-version;</seg></seglistitem>
 <para>compresses files using the Burrows-Wheeler block sorting text
 compression algorithm with Huffman coding. The compression rate is
 better than that achieved by more conventional compressors using
-LZ77/LZ78, like <command>gzip</command>.</para>
+<quote>Lempel-Ziv</quote> algorithms, like <command>gzip</command>.</para>
 <indexterm zone="ch-system-bzip2 bzip2"><primary sortas="b-bzip2">bzip2</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -9,7 +9,7 @@
 <?dbhtml filename="acronymlist.html"?>
 
 <sect1 id="appendixb-acronymlist">
-<title>Acronyms</title>
+<title>Acronyms and terms</title>
 
 <variablelist>
 <?dbfo list-presentation="list"?>
@@ -98,7 +98,7 @@ Metal Oxide Semiconductor</para></listitem>
 
 <varlistentry>
 <term><command>ELF</command></term>
-<listitem><para>Executable and Link Format</para></listitem>
+<listitem><para>Executable and Linkable Format</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -173,7 +173,7 @@ Metal Oxide Semiconductor</para></listitem>
 
 <varlistentry>
 <term><command>HTML</command></term>
-<listitem><para>HyperText Markup Language</para></listitem>
+<listitem><para>Hypertext Markup Language</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -222,11 +222,6 @@ Metal Oxide Semiconductor</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><command>LDP</command></term>
-<listitem><para>Linux Documentation Project</para></listitem>
-</varlistentry>
-
-<varlistentry>
 <term><command>LED</command></term>
 <listitem><para>Light Emitting Diode</para></listitem>
 </varlistentry>
@@ -239,11 +234,6 @@ Metal Oxide Semiconductor</para></listitem>
 <varlistentry>
 <term><command>LSB</command></term>
 <listitem><para>Linux Standards Base</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><command>LZ77</command></term>
-<listitem><para>Lempel-Ziv</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -278,7 +268,7 @@ Metal Oxide Semiconductor</para></listitem>
 
 <varlistentry>
 <term><command>NPTL</command></term>
-<listitem><para>Native POSIX Threading Librar</para></listitem>
+<listitem><para>Native POSIX Threading Library</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -343,7 +333,7 @@ Metal Oxide Semiconductor</para></listitem>
 
 <varlistentry>
 <term><command>SCO</command></term>
-<listitem><para>Santa Cruz Operations</para></listitem>
+<listitem><para>The Santa Cruz Operation</para></listitem>
 </varlistentry>
 
 <varlistentry>
