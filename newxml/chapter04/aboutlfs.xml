@@ -10,7 +10,7 @@
 <para>Please read the following paragraphs carefully. Throughout this book the
 variable LFS will be used frequently. $LFS must at all times be replaced with
 the directory where the partition that contains the LFS system is mounted. How
-to create and where to mount the partition will be explained in full detail in
+to create and where to mount the partition is explained in full detail in
 <xref linkend="chapter-partitioning"/>. For the moment let's assume that the LFS partition
 is mounted on <filename>/mnt/lfs</filename>.</para>
 
@@ -31,6 +31,8 @@ This way $LFS can be entered literally instead of replacing it with
 <userinput>./configure --prefix=$LFS/tools</userinput>, then you may type it
 literally. Your shell will replace "$LFS" with "/mnt/lfs" when it processes
 the command line (that is, when you hit Enter after having typed the
-command).</para>
+command). Don't forget to check that <quote>$LFS</quote> is set whenever you leave and
+reenter the environment (as when doing an <quote>su</quote> to root or another user).
+</para>
 
 </sect1>
