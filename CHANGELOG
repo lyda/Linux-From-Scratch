@@ -1,3 +1,7 @@
+3.0-rc1 - December 1, 2004
+	* rc-Interactive added (DJ Lucas)
+	* rc-Interactive moved to contrib (Nathan Coulson)
+
 n/a - November 27, 2004
 	* Moved bootlog to use local1 to avoid conflict with ppd (DJ Lucas)
 
