@@ -44,6 +44,11 @@ rm -r cvs &amp;&amp;
 mv lfs-packages-yyyymmdd-hhmm cvs &amp;&amp;
 mv lfs-packages-yyyymmdd-hhmm.tar cvs</userinput></screen></para></listitem>
 
+<listitem><para>Add the new lfs-packages' MD5 hash to the 00MD5SUMS
+file:</para>
+
+<para><screen><userinput>md5sum cvs/lfs-packages-yyyymmdd-hhmm.tar >> cvs/00MD5SUMS</userinput></screen></para></listitem>
+
 <listitem><para>Check the filesize of this new lfs-packages-cvs tarball and
 divide it by <emphasis>1024</emphasis> to get the number of Kilobytes.
 Round it off to the nearest Kilobyte. Divide this number by
