@@ -291,6 +291,24 @@ ln -s ../X11/include/X11 X11
 		</section>
 	</chapter>
 	<chapter id="specific-packages"><title>Questions about specific packages.</title>
+		<section id="sh-utils-getloadavg"><title>My sh-utils build is failing with "undefined reference to `getloadavg'".</title>
+			<para>
+				If you're trying to build sh-utils and you're getting an error like this:
+				<screen>
+gcc  -g -O2  -static -o uptime  uptime.o ../lib/libsu.a -lutil
+uptime.o: In function `print_uptime':
+/lfs/tmp/sh-utils-2.0/src/uptime.c:125: undefined reference to `getloadavg'
+collect2: ld returned 1 exit status
+make[2]: *** [uptime] Error 1
+make[2]: Leaving directory `/lfs/tmp/sh-utils-2.0/src'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/lfs/tmp/sh-utils-2.0'
+make: *** [all-recursive-am] Error 2
+				</screen>
+				try the fix given in this post: <ulink
+				url="http://archive.linuxfromscratch.org/mail-archives/lfsapps/2001/06/0497.html">http://archive.linuxfromscratch.org/mail-archives/lfsapps/2001/06/0497.html</ulink>
+			</para>
+		</section>
 		<section id="optimized-glibc-fail"><title>My optimized build of glibc is failing in spinlock.c</title>
 			<para>
 				I should mention that glibc (and gcc and binutils)
