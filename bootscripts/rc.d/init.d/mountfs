@@ -13,7 +13,13 @@ case "$1" in
 		mount -n -o remount,rw /
 		evaluate_retval
 
-		# The follow mount command will mount all file systems. If you
+		echo "Recording existing mounts in /etc/mtab..."
+		> /etc/mtab
+		mount -f / && mount -f /proc
+		# add /dev above if you use devfs
+		evaluate_retval
+
+		# The following mount command will mount all file systems. If you
 		# have other (network based) file system that should not be or
 		# cannot be mounted at this time, add them to the NO_FS variable
 		# below. All file systems that are added to the variable in the

@@ -1,3 +1,8 @@
+1.11 - February 3rd, 2003:
+
+	* /etc/mtab is now a real file and is handled correctly so there are
+	no errors even when the machine has crashed.
+
 1.10 - September 12th, 2002:
 
 	* Fixed up checkfs to work with non-ext2 filesystems too (such as
