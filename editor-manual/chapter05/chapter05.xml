@@ -1,0 +1,9 @@
+<chapter id="chapter05">
+<title>Using Bugzilla</title>
+<?dbhtml filename="chapter05" dir="chapter05"?>
+
+&c5-introduction;
+&c5-addingcomments;
+&c5-enternewbugs;
+
+</chapter>
