@@ -94,7 +94,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>April 6, 2005 [matt]</para>
 <itemizedlist>
-<listitem><para>Fixed: Arch: All - Move e2fsprogs sed command to before	entering the build directory (Steffen R. Knollmann).</para></listitem>
+<listitem><para>Fixed: Arch: All - Move e2fsprogs sed command to before entering the build directory (Steffen R. Knollmann).</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
