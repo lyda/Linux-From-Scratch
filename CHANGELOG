@@ -1,9 +1,13 @@
+n/a - May 14, 2004
+
+	* Namespace rework (enumeration of scripts is now cleaner)
+	* Removed directories: blfs, contrib/new-boot-0.2, contrib/rlv
+
 n/a - May 13, 2004
 
 	* Repaired the console script
 	* Added a check to cleanfs [createfiles], to make sure that we have
 	  a valid devicetype, if we have type=dev
-	* Namespace rework (enumeration of scripts is now cleaner)
 
 n/a - May 11, 2004
 
