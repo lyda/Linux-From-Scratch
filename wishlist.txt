@@ -2,3 +2,4 @@ LFS Wish List...
 ================
 
     o rewrite of MAKEDEV shell script.
+        (please contact, Gerard and Jesse if your interested)
