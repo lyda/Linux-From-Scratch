@@ -70,6 +70,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: RaQ2 - Colo 1.18</para></listitem>
 <listitem><para>Arch: RaQ2 - glibc-2.3.4-mips_syscall-2.patch</para></listitem>
 <listitem><para>Arch: RaQ2 - linux-libc-headers-2.6.11.2-raq2_fix-1.patch</para></listitem>
+<listitem><para>Arch: RaQ2 - linux-2.6.11.6-raq2_fix-2.patch</para></listitem>
 </itemizedlist>
 </listitem>
  
@@ -97,6 +98,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Updated: Arch: All - LFS-Bootscritps to 3.2.0.</para></listitem>
 <listitem><para>Removed: RaQ2 - lfs-bootscripts-3.1.0-raq2-2.patch</para></listitem>
 <listitem><para>Fixed: Arch: All - Sysklogd missing files.</para></listitem>
+<listitem><para>Patch: Arch: RaQ2 - Updated linux kernel patch for 64 bit.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
