@@ -221,7 +221,8 @@ will output the name of the time zone (e.g.,
 Then create the <filename>/etc/localtime</filename> file by
 running:</para>
 
-<screen><userinput>cp --remove-destination /usr/share/zoneinfo/<replaceable>[xxx]</replaceable> /etc/localtime</userinput></screen>
+<screen><userinput>cp --remove-destination /usr/share/zoneinfo/<replaceable>[xxx]</replaceable> \
+    /etc/localtime</userinput></screen>
 
 <para>Replace [xxx] with the name of the time zone that the
 <command>tzselect</command> provided (e.g., Canada/Eastern).</para>

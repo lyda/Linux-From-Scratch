@@ -19,7 +19,7 @@ otherwise noted in the surrounding text. It is also used in the
 explanation sections to identify which of the commands is being
 referenced.</para>
 
-<screen><computeroutput>install-info: unknown option `--dir-file=/mnt/lfs/usr/info/dir'</computeroutput></screen>
+<screen><computeroutput>install-info: unknown option '--dir-file=/mnt/lfs/usr/info/dir'</computeroutput></screen>
 
 <para>This form of text (fixed width text) shows screen output,
 probably as the result of commands issued.  This format is also used

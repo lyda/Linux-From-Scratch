@@ -207,7 +207,8 @@ handled in one of two ways:</para>
 modprobe command <quote>when loading this module, also load this other
 module, at the same time.</quote>  For example:</para>
 
-<screen><userinput>install snd-pcm modprobe -i snd-pcm ; modprobe snd-pcm-oss ; true</userinput></screen>
+<screen><userinput>install snd-pcm modprobe -i snd-pcm ; modprobe \
+    snd-pcm-oss ; true</userinput></screen>
 
 <para>This will cause the system to load both the
 <emphasis>snd-pcm</emphasis> and <emphasis>snd-pcm-oss</emphasis>

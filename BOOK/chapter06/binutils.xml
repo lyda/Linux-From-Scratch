@@ -45,7 +45,8 @@ simple test:</para>
 <para>If the following message shows up, the chroot environment is not
 set up for proper PTY operation:</para>
 
-<screen><computeroutput>The system has no more ptys.  Ask your system administrator to create more.</computeroutput></screen>
+<screen><computeroutput>The system has no more ptys.  
+Ask your system administrator to create more.</computeroutput></screen>
 
 <para>This issue needs to be resolved before running the test suites
 for Binutils and GCC.</para>
@@ -58,7 +59,8 @@ cd ../binutils-build</userinput></screen>
 
 <para>Prepare Binutils for compilation:</para>
 
-<screen><userinput>../binutils-&binutils-version;/configure --prefix=/usr --enable-shared</userinput></screen>
+<screen><userinput>../binutils-&binutils-version;/configure --prefix=/usr \
+    --enable-shared</userinput></screen>
 
 <para>Compile the package:</para>
 

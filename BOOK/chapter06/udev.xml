@@ -49,7 +49,8 @@ devices nodes are to be created.</para></listitem>
 <para>Udev's configuration is far from ideal by default, so install
 the configuration files here:</para>
 
-<screen><userinput>cp ../udev-config-2.permissions /etc/udev/permissions.d/25-lfs.permissions
+<screen><userinput>cp ../udev-config-2.permissions \
+    /etc/udev/permissions.d/25-lfs.permissions
 cp ../udev-config-1.rules /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
 </sect2>

@@ -39,7 +39,8 @@ fixes this behavior for Intel architectures:</para>
 <para>Prevent Coreutils from installing binaries that will be later be
 installed by other packages:</para>
 
-<screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i \
+    ../coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch</userinput></screen>
 
 <para>Now prepare Coreutils for compilation:</para>
 
