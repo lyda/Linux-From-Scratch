@@ -24,6 +24,7 @@
 #include <stdlib.h>
 
 #include "help.h"
+#include "env.h"
 #include "string.h"
 #include "file.h"
 #include "lfscmd.h"
@@ -66,12 +67,12 @@ int lfscmd (int argc, char **argv) {
     }
 
     /* Get xmlfile */
-    for (c=optind; c < argc; c++)
-    lfs.xmlfile = argv[c];
+    lfs.xmlfile = argv[optind];
 
     /* Validate arguments */
-    if (NULL == lfs.xmlfile)
-    help(argv[0]);
+    if (NULL == lfs.xmlfile
+     && NULL == (lfs.xmlfile=locate_book("LFSCMD_BOOK")))
+     help(argv[0]);
 
     /* Setup the xml parser */
     xmlSubstituteEntitiesDefault(1);

@@ -1,10 +1,10 @@
-SHELL=/bin/sh
-CC=gcc -s
+CC=gcc
 CFLAGS=-I/usr/include/libxml2 -W -Wall -Os
-LDFLAGS=-lxml2 -lm
+LDFLAGS=-lxml2 -lm -s
 PREFIX=/usr
 
-OBJS= file.o \
+OBJS= env.o \
+      file.o \
       help.o \
       lfscmd.o \
       main.o \
@@ -12,8 +12,8 @@ OBJS= file.o \
 
 all: lfscmd
 
-lfscmd: file.o help.o lfscmd.o main.o string.o
-	$(CC) file.o help.o lfscmd.o main.o string.o $(CFLAGS) $(LDFLAGS) -o lfscmd
+lfscmd: env.o file.o help.o lfscmd.o main.o string.o
+	$(CC) env.o file.o help.o lfscmd.o main.o string.o $(CFLAGS) $(LDFLAGS) -o lfscmd
 
 install: lfscmd
 	if ( test ! -d $(PREFIX)/bin ); then mkdir -p $(PREFIX)/bin; fi
@@ -32,6 +32,8 @@ remove:
 	rm -f $(PREFIX)/bin/lfscmd
 	rm -f $(PREFIX)/share/man/man1/lfscmd.1
 
+env.o: src/env.c
+	$(CC) $(CFLAGS) -c src/env.c
 file.o: src/file.c
 	$(CC) $(CFLAGS) -c src/file.c
 help.o: src/help.c

@@ -66,6 +66,21 @@ int string_comp (const char *str1, const char *str2) {
     return(1);
 }
 
+char *string_cpy (const char *str1) {
+	int c;
+	char *dest;
+
+	c = 0;
+	dest = malloc((string_len(str1)+1) * sizeof(char));
+    while (*str1) {
+		dest[c] = *str1++;
+		c++;
+	}
+	
+	dest[c] = '\0';
+    return(dest);
+}
+
 int string_len (const char *string) {
     int c;
     for (c=0; '\0' != string[c]; c++);
