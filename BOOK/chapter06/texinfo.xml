@@ -29,9 +29,9 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Texinfo</title>
 
-<para>Texinfo-&texinfo-version; has a bug that can lead to the
-<command>info</command> program to crash.  Apply a patch to fix this
-problem:</para>
+<para>The following patch fixes a problem where the
+<command>info</command> program sometimes crashes when hitting the
+<emphasis>Delete</emphasis> key on the keyboard:</para>.
 
 <screen><userinput>patch -Np1 -i ../texinfo-&texinfo-version;-segfault-1.patch</userinput></screen>
 
