@@ -1,4 +1,8 @@
-n/a - January 10, 005
+n/a - February 6, 2005
+	* Updated main functions file with lsb functions file
+	  Should now be LSB compliant (Nathan Coulson)
+
+n/a - January 10, 2005
 	* Moved ONBOOT check back to network (Nathan Coulson)
 	* Removed ONHOTPLUG check (Nathan Coulson)
 

@@ -11,7 +11,7 @@
 #         args, arguments to pass to specified program
 #
 # Outputs: return 0 - Success
-#          return 1 - Invalid of excessive arguments, warning in stdout
+#          return 2 - Invalid of excessive arguments, warning in stdout
 #          return 4 - Program or service status is unknown
 #
 # Dependencies: nice
@@ -42,7 +42,7 @@ start_daemon()
 				;;
 			-*)
 				log_failure_msg "Unknown Option: ${1}"
-				return 1
+				return 2
 				;;
 			*)
 				break

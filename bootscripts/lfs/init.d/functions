@@ -18,21 +18,11 @@
 umask 022
 export PATH="/bin:/usr/bin:/sbin:/usr/sbin"
 
-## Default values for kill function
-# Initial Stop Signal
-STOPSIG="TERM"
-
-# Fallback if STOPSIG does not stop a process in time (see KILLDELAY)
-FALLBACK="KILL"
-
 # Signal sent to running processes to refresh their configuration
 RELOADSIG="HUP"
 
 # Number of seconds between STOPSIG and FALLBACK when stopping processes
 KILLDELAY="3"
-
-# The path of known pid files (this is set in the bootscript if necessary)
-PIDFILE=""
 
 ## Screen Dimentions
 # Find current screen size
@@ -365,163 +355,6 @@ print_status()
 
 }
 
-# Returns all of the pid #s for $1 process
-getpids()
-{
-	# Setup Environment
-	local lpids=""
-	local pid=""
-	pidlist=""
-	nopid=""
-
-	# If PIDFILE is set, then get the pidlist from there
-	if [ -n "${PIDFILE}" ]
-	then
-		lpids="$(cat ${PIDFILE} 2>/dev/null)"
-		if [ "${?}" = "0" ]
-		then
-			# Sometimes there may be a stale PIDFILE, verify 
-			# that all pids are valid
-			for pid in ${lpids}
-			do
-				kill -0 ${pid} 2>/dev/null && \
-					pidlist="${pidlist} ${pid}"
-			done
-
-			if [ -z "${pidlist}" ]
-			then
-				nopid="0"
-			else
-				nopid="1"
-			fi
-		else
-			nopid="0"
-		fi
-
-	# Else, get the pidlist from pidof
-	else
-		# Strip any thing after the program name for the value
-		# to pass to pidof
-		base="${1##*/}"
-		local pid=""
-		local lpids=""
-
-		lpids=$(pidof ${base})
-		# Use the return value of pidof above
-		# if the list is empty then the process is not running and
-		# the return value is 1, else nopid is false
-		if [ "${?}" = "0" ]
-		then
-			nopid="1"
-			for pid in ${lpids}
-			do
-				if [ "${pid}" -ne "$$" -a "${pid}" -ne "${PPID}" ]
-				then 
-					pidlist="${pidlist} ${pid}"
-				fi
-			done
-		else
-			nopid="0"
-		fi
-	fi
-}
-
-# Starts a program if it is currently not running
-loadproc()
-{
-	if [ "${#}" = "0" ]
-	then
-		echo "Usage: loadproc {program}"
-		exit 1
-	fi
-
-	getpids "${1}"
-
-	if [ "${nopid}" = "0" ]; then
-		"${@}"
-			evaluate_retval
-	else
-		boot_mesg "Process ${1} already running." ${WARNING}
-		echo_warning
-	fi
-}
-
-# Stops a process if it is running
-killproc()
-{
-	if [ -z "${PIDFILE}" -a -z "${#}" ]
-	then
-		echo "Usage: killproc [{program}] [-nomsg]"
-		exit 1	
-	fi
-
-	getpids "${1}"
-
-	# Send the STOPSIG to the running process list
-	if [ -n "${pidlist}" ]
-	then
-		local pid=""
-		for pid in ${pidlist}
-		do
-			kill -"${STOPSIG}" "${pid}" 2>/dev/null
-			local delay="${KILLDELAY}"
-			local dtime="0"
-			# Give it time to exit based on KILLDELAY and break
-			# out of the while so that unnecessary time is
-			# not wated (KILLDELAY)
-			# Setting a gracious KILLDELAY value has little
-			# effect on execution time if things work
-			# as expected
-			while [ "${dtime}" -lt "${delay}" ]
-			do
-				kill -0 "${pid}" 2>/dev/null || break
-				sleep 1
-				dtime=$((${dtime}+1))
-			done
-
-			# Kill remaining pid's with fallback
-
-			if [ -n "${FALLBACK}" ]
-			then
-				kill -${FALLBACK} ${pid} 2>/dev/null
-			fi
-		done
-
-		# Check to see if anything is still here
-		getpids "${1}"
-		if [ "${nopid}" = "0" ]
-		then
-			failure=0
-
-			if [ -n "${PIDFILE}" -a -e "${PIDFILE}" ]
-			then
-				rm -f "${PIDFILE}"
-			fi
-
-			# Base is inherited from getpids, if pidof was used
-			if [ -n "${base}" -a -e "/var/run/$base.pid" ]
-			then
-				rm -f "/var/run/${base}.pid"
-			fi
-		else
-			failure="1"
-		fi
-
-		(exit ${failure})
-
-		if [ "${2}" != "-nomsg" ]
-		then
-			evaluate_retval
-		fi
-	else
-		if [ "${2}" != "-nomsg" ]
-		then
-			boot_mesg "Process ${1} not running." ${WARNING}
-			echo_warning
-		fi
-	fi
-}
-
 reloadproc()
 {
 	if [ "${#}" = "0" ]
@@ -542,6 +375,7 @@ reloadproc()
 
 		(exit ${failure})
 		evaluate_retval
+
 	else
 		boot_mesg "Process ${1} not running." ${WARNING}
 		echo_warning
@@ -561,7 +395,7 @@ statusproc()
 	if [ -n "${pidlist}" ]
 	then
 		echo -e "${INFO}${base} is running with Process"\
-			"ID(s)${pidlist}.${NORMAL}"
+			"ID(s) ${pidlist}.${NORMAL}"
 	else
 		if [ -n "${base}" -a -e "/var/run/${base}.pid" ]
 		then
@@ -577,6 +411,362 @@ statusproc()
 			fi
 		fi
 	fi
+}
+
+# The below functions are documented in the LSB-generic 2.1.0
+
+#*******************************************************************************
+# Function - pidofproc [-p pidfile] pathname
+#
+# Purpose: This function returns one or more pid(s) for a particular daemon
+#
+# Inputs: -p pidfile, use the specified pidfile instead of pidof
+#         pathname, path to the specified program
+#
+# Outputs: return 0 - Success, pid's in stdout
+#          return 1 - Program is dead, pidfile exists
+#          return 2 - Invalid of excessive arguments, warning in stdout
+#          return 3 - Program is not running
+#
+# Dependencies: pidof, echo
+#
+# Todo: This depreciates getpids 
+#
+#*******************************************************************************
+pidofproc()
+{
+	local pidfile=""
+	local lpids=""
+	local pidlist=""
+	while true
+	do
+		case "${1}" in
+			-p)
+				pidfile="${2}"
+				shift 2
+				;;
+			-*)
+				log_failure_msg "Unknown Option: ${1}"
+				return 2
+				;;
+			*)
+				break
+				;;
+		esac
+	done
+
+	if [ "${#}" != "1" ]
+	then
+		shift 1
+		log_failure_msg "Usage: pidofproc [-p pidfile] pathname"
+		return 2
+	fi
+
+	if [ -n "${pidfile}" ]
+	then
+		if [ ! -r "${pidfile}" ]
+		then
+			return 3 # Program is not running
+		fi
+
+		lpids=`head -n 1 ${pidfile}`
+		for pid in ${lpids}
+		do
+			if [ "${pid}" -ne "$$" -a "${pid}" -ne "${PPID}" ]
+			then
+				kill -0 "${pid}" > /dev/null &&
+				pidlist="${pidlist} ${pid}"
+			fi
+			echo ${pidlist}
+			test -z "${pidlist}" && return 1 # Program is dead, pidfile exists
+			return 0
+		done
+
+	else
+		pidof "${1}"
+	fi
+
+	if [ "$?" != "0" ]
+	then
+		return 3 # Program is not running
+	fi
+}
+
+# This will ensure compatibility with previous LFS Bootscripts
+getpids()
+{
+	if [ -z "${PIDFILE}" ]
+	then
+		pidlist=`pidofproc -p "${PIDFILE}" $@`
+	else
+		pidlist=`pidofproc $@`
+	fi
+	base="${1##*/}"
+}
+
+#*******************************************************************************
+# Function - start_daemon [-f] [-n nicelevel] [-p pidfile] pathname [args]
+#
+# Purpose: This runs the specified program as a daemon
+#
+# Inputs: -f, run the program even if it is already running
+#         -n nicelevel, specifies a nice level. See nice(1).
+#         -p pidfile, uses the specified pidfile
+#         pathname, pathname to the specified program
+#         args, arguments to pass to specified program
+#
+# Outputs: return 0 - Success
+#          return 2 - Invalid of excessive arguments, warning in stdout
+#          return 4 - Program or service status is unknown
+#
+# Dependencies: nice
+#
+# Todo: This depreciates loadproc
+#
+#*******************************************************************************
+start_daemon()
+{
+	local pidfile=""
+	local forcestart=""
+	local nicelevel="10"
+
+  while true
+	do
+		case "${1}" in
+			-f)
+				forcestart="1"
+				shift 1
+				;;
+			-n)
+				nicelevel="${2}"
+				shift 2
+				;;
+			-p)
+				pidfile="${2}"
+				shift 2
+				;;
+			-*)
+				log_failure_msg "Unknown Option: ${1}"
+				return 2 #invalid or excess argument(s)
+				;;
+			*)
+				break
+				;;
+		esac
+	done
+
+	if [ "${#}" = "0" ]
+	then
+		log_failure_msg "Usage: loadproc [-f] [-n nicelevel] [-p pidfile] pathname [args]"
+		return 2 #invalid or excess argument(s)
+	fi
+
+	if [ -z "${forcestart}" ]
+	then
+		if [ -z "${pidfile}" ]
+		then
+			pidofproc "${1}" > /dev/null
+		else
+			pidofproc -p "${pidfile}" "${1}" > /dev/null
+		fi
+
+		case "${?}" in
+			0)
+				log_warning_msg "Unable to continue: ${1} is running"
+				return 4
+				;;
+			1)
+				log_warning_msg "Unable to continue: ${pidfile} exists"
+				return 4
+				;;
+			3)
+				;;
+			*)
+				log_failure_msg "Unknown error code from pidofproc: ${?}"
+				return 4
+				;;
+		esac
+	fi
+
+	nice -n "${nicelevel}" "${@}"
+}
+
+# This will ensure compatibility with previous LFS Bootscripts
+loadproc()
+{
+	if [ -z "${PIDFILE}" ]
+	then
+		start_daemon -p "${PIDFILE}" $@
+	else
+		start_daemon $@
+	fi
+}
+
+#*******************************************************************************
+# Function - killproc  [-p pidfile] pathname [signal]
+#
+# Purpose:
+#
+# Inputs: -p pidfile, uses the specified pidfile
+#         pathname, pathname to the specified program
+#         signal, send this signal to pathname
+#
+# Outputs: return 0 - Success
+#          return 2 - Invalid of excessive arguments, warning in stdout
+#          return 4 - Unknown Status
+#
+# Dependencies: kill
+#
+# Todo: This checks for PIDFILE, which is depreciated
+#
+#*******************************************************************************
+killproc()
+{
+	local pidfile=""
+	local killsig=""
+	local pidlist=""
+
+# This will ensure compatibility with previous LFS Bootscripts
+	if [ -n "${PIDFILE}" ]
+	then
+		pidfile="${PIDFILE}"
+	fi
+
+	while true
+	do
+		case "${1}" in
+			-p)
+				pidfile="${2}"
+				shift 2
+				;;
+			-*)
+				log_failure_msg "Unknown Option: ${1}"
+				return 2
+			;;
+			*)
+ 				break
+				;;
+		esac
+	done
+
+	if [ "${#}" = "2" ]
+	then
+		killsig="${2}"
+	elif [ "${#}" != "1" ]
+	then
+		shift 2
+		log_failure_msg "Usage: killproc  [-p pidfile] pathname [signal]"
+		return 2
+	fi
+
+	if [ -z "${pidfile}" ]
+	then
+		pidlist=`pidofproc "${1}"`
+	else
+		pidlist=`pidofproc -p "${pidfile}" "${1}"`
+	fi
+
+	for pid in ${pidlist}
+	do
+		kill -${killsig:-TERM} ${pid} 2>/dev/null
+		if [ -z "${killsig}" ]
+		then
+			# Wait up to 3 seconds, for ${pid} to terminate
+			local dtime=${KILLDELAY}
+			while [ "${dtime}" != "0" ]
+			do
+				kill -0 ${pid} 2>/dev/null || break
+				sleep 1
+				dtime=$(( ${dtime} - 1))
+			done
+			# If ${pid} is still running, kill it
+			kill -0 ${pid} && kill -KILL ${pid} 2>/dev/null
+		fi
+	done
+
+	if [ -z "${killsig}" ]
+	then
+		pidofproc "${1}" 2> /dev/null
+
+		if [ "$?" != "0" ] # Program was terminated
+		then
+			if [ -f "${pidfile}" ] # Pidfile Exists
+			then
+				rm -f "${pidfile}"
+			fi
+			return 0
+		else # Program is still running
+			return 4 # Unknown Status
+		fi
+	else
+		if [ -z "${pidfile}" ]
+		then
+			pidofproc "${1}" 2> /dev/null
+		else
+			pidofproc -p "${pidfile}" "${1}" 2> /dev/null
+		fi
+	fi
+}
+
+#*******************************************************************************
+# Function - log_success_msg "message"
+#
+# Purpose: Print a success message
+#
+# Inputs: $@ - Message
+#
+# Outputs: Text output to screen
+#
+# Dependencies: echo
+#
+# Todo: logging
+#
+#*******************************************************************************
+log_success_msg()
+{
+	echo -n -e "${BOOTMESG_PREFIX}${@}"
+	echo -e "${SET_COL}""${BRACKET}""[""${SUCCESS}""  OK  ""${BRACKET}""]""${NORMAL}"
+	return 0
+}
+
+#*******************************************************************************
+# Function - log_failure_msg "message"
+#
+# Purpose: Print a failure message
+#
+# Inputs: $@ - Message
+#
+# Outputs: Text output to screen
+#
+# Dependencies: echo
+#
+# Todo: logging
+#
+#*******************************************************************************
+log_failure_msg() {
+	echo -n -e "${BOOTMESG_PREFIX}${@}"
+	echo -e "${SET_COL}""${BRACKET}""[""${FAILURE}"" FAIL ""${BRACKET}""]""${NORMAL}"
+	return 0
+}
+
+#*******************************************************************************
+# Function - log_warning_msg "message"
+#
+# Purpose: print a warning message
+#
+# Inputs: $@ - Message
+#
+# Outputs: Text output to screen
+#
+# Dependencies: echo
+#
+# Todo: logging
+#
+#*******************************************************************************
+log_warning_msg() {
+	echo -n -e "${BOOTMESG_PREFIX}${@}"
+	echo -e "${SET_COL}""${BRACKET}""[""${WARNING}"" WARN ""${BRACKET}""]""${NORMAL}"
+	return 0
 }
 
 # End $rc_base/init.d/functions
