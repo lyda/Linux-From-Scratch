@@ -11,7 +11,7 @@
 case "$1" in
 	start)
 		# Start all network interfaces which have ONBOOT in them.
-		for file in $(grep -sil "ONBOOT=yes" $network_devices/ifconfig.*)
+		for file in $(grep -sil '^ONBOOT=yes$' $network_devices/ifconfig.*)
 		do
 			interface=${file##*/ifconfig.}
 			case "$interface" in
@@ -45,7 +45,7 @@ case "$1" in
 		fi
 
 		# Stop all network interfaces
-		for file in $(grep -sil "ONBOOT=yes" $network_devices/ifconfig.*)
+		for file in $(grep -sil '^ONBOOT=yes$' $network_devices/ifconfig.*)
 		do
 			interface=${file##*/ifconfig.}
 			case "$interface" in
