@@ -368,7 +368,7 @@ install-modules: create-dirs
 	install -m 644 contrib/sysconfig/modules ${EXTDIR}/rc.d/sysconfig
 	ln -sf  ../init.d/modules ${EXTDIR}/rc.d/rcsysinit.d/S15modules
 
-.PHONY: install \
+.PHONY: all create-dirs create-service-dir install \
 	install-service-dhclient install-service-dhcpcd install-service-ipx install-service-pppoe \
 	install-alsa install-apache install-bind install-cups install-dhcp install-exim install-fcron install-gdm install-gpm install-heimdal install-lprng install-mysql install-netfs install-nfs-client install-nfs-server install-ntp install-portmap install-postfix install-postgresql install-proftpd install-random install-rsync install-samba install-sendmail install-sshd install-xinetd \
 	install-modules
