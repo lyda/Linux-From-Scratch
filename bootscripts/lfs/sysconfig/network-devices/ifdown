@@ -23,6 +23,6 @@ then
 	echo -n "Unknown Service: $SERVICE, cannot continue"
 	exit 1
 fi
-$network_devices/services/${SERVICE} $1 down
+SOURCE=$network_devices/ifconfig.$1 $network_devices/services/${SERVICE} $1 down
 
 # End $network_devices/ifdown

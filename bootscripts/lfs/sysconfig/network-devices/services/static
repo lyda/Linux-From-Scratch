@@ -6,7 +6,9 @@
 
 . /etc/sysconfig/rc 
 . $rc_functions 
-. $network_devices/ifconfig.$1
+# Passed from ifup, or ifdown.  Contains all parameters needed to
+# complete this script
+. $SOURCE
 
 case "$2" in
 	up)
