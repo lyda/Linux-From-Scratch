@@ -20,6 +20,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Upgraded to:</para>
 <itemizedlist>
 <listitem><para>less-382</para></listitem>
+<listitem><para>libtool-2.5.6</para></listitem>
 <listitem><para>linux-2.4.25</para></listitem>
 <listitem><para>man-pages-1.66</para></listitem>
 <listitem><para>ncurses-5.4</para></listitem>

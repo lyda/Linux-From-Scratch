@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "CVS-2004-04-07">
-<!ENTITY releasedate "April 7th, 2004">
+<!ENTITY version "CVS-2004-04-11">
+<!ENTITY releasedate "April 11, 2004">
 <!ENTITY milestone "5.1">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -45,7 +45,7 @@
 <!ENTITY inetutils-version "1.4.2">
 <!ENTITY kbd-version "1.12">
 <!ENTITY less-version "382">
-<!ENTITY libtool-version "1.5.2">
+<!ENTITY libtool-version "1.5.6">
 <!ENTITY linux-version "2.4.25">
 <!ENTITY m4-version "1.4">
 <!ENTITY makedev-version "1.2">
