@@ -1,3 +1,7 @@
+n/a - June 23, 2004
+
+	* Fixed a typo in the hotplug installation procedure
+
 n/a - June 21, 2004
 
 	* Re-ordered the "mount" and "echo" commands in the udev script, to
