@@ -21,13 +21,16 @@ here are some notes for specific releases:
 <itemizedlist>
 
 <listitem><para>flex-2.5.31:
-This release breaks building modutils, HJ binutils, and XFree86.
+This release breaks building modutils, HJ binutils, and XFree86;
+use 2.5.27 instead.
+<!-- Chris on #lfs-support says the patch doesn't work
 See <ulink
 url="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=720971&amp;group_id=72099&amp;atid=533377"/>
 for a description of the problem,
 and <ulink
 url="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=720976&amp;group_id=72099&amp;atid=533379"/>
 for a patch that fixes it.
+-->
 </para></listitem>
 
 <listitem><para>glibc-2.3.2:
