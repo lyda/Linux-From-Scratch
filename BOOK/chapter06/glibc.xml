@@ -45,10 +45,10 @@ and linker cannot be adjusted before the Glibc install because the
 Glibc autoconf tests would give false results and defeat the goal
 of achieving a clean build.</para>
 
-<para arch="raq2">NPTL is not supported under the MIPS architecture, so we are going to
+<para arch="ppc;raq2">NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
 
-<screen arch="raq2"><userinput>rm -rf nptl*</userinput></screen>
+<screen arch="ppc;raq2"><userinput>rm -rf nptl*</userinput></screen>
 
 <para arch="raq2">This patch contains all the necessary patches for MIPS based system.</para>
 

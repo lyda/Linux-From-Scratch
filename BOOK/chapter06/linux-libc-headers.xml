@@ -44,9 +44,6 @@ headers.</para>
 <screen arch="x86"><userinput>cp -R include/asm-i386 /usr/include/asm
 cp -R include/linux /usr/include</userinput></screen>
 
-<screen arch="ppc"><userinput>cp -R include/asm-ppc /usr/include/asm
-cp -R include/linux /usr/include</userinput></screen>
-
 <para>Ensure that all the headers are owned by root:</para>
 
 <screen><userinput>chown -R root:root /usr/include/{asm,linux}</userinput></screen>
