@@ -6,6 +6,34 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
+# Function to create files/directory on boot.
+create_files() {
+	# Read in the configuration file.
+	exec 9>&0 < /etc/sysconfig/createfiles
+		while read type owner group perms name ; do
+			# Ignore comments and blank lines.
+			case "$type" in
+				""|\#*) continue ;;
+			esac
+
+			# Ignore existing files.
+			if [ ! -e "$name" ]; then
+				# Create stuff based on its type.
+				case "$type" in
+					dir)	mkdir "$name"	;;
+					file)	:> "$name"	;;
+					*)	echo "Unknown type: $type" >&2
+						continue	;;
+				esac
+
+				# Set up the permissions, too.
+				chown $owner:$group "$name"
+				chmod $perms "$name"
+			fi
+		done
+	exec 0>&9 9>&-
+}
+
 case "$1" in
 	start)
 		echo "Removing /var/run/* and /var/lock/*"
@@ -21,8 +49,15 @@ case "$1" in
 		evaluate_retval
 
 		echo "Removing /tmp/*"
-		( cd /tmp ; find -xdev -depth ! -name . ! -name lost+found -exec rm -rf {} \; )
+		( cd /tmp ; find -xdev -depth ! -name . ! -name lost+found \
+				-exec rm -rf {} \; )
 		evaluate_retval
+
+		if [ -r /etc/sysconfig/createfiles ]; then
+			echo "Creating files and directories..."
+			create_files
+			evaluate_retval
+		fi
 		;;
 	*)
 		echo "Usage: $0 {start}"
