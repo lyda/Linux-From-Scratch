@@ -89,6 +89,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Fixed: Arch: All - Fix E2fsprogs compile problem (Ken Moffat +&amp; Greg Schafer).</para></listitem>
 <listitem><para>Fixed: Arch: All - No need to manually create /var/log/hotplug as hotplug's Makefile creates it (Ken Moffat).</para></listitem>
 <listitem><para>Fixed: Arch: All - Also minor rewording to improve consistency, in hotplug.</para></listitem>
+<listitem><para>Typo: Arch: All - The udev initscript registers udevsend, not udev, as the hotplug handler (Bryan Kadzban).</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
