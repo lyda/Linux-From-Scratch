@@ -1,0 +1,42 @@
+#!/bin/sh
+# Begin $rc_base/init.d/rsyncd
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case "$1" in
+	start)
+		echo "Starting RSYNC Server..."
+		loadproc /usr/bin/rsync --daemon --compress
+		;;
+
+	stop)
+		echo "Stopping RSYNC Server..."
+		killproc /usr/bin/rsync
+		;;
+
+	reload)
+		echo "Reloading RSYNC Server..."
+		reloadproc /usr/bin/rsync
+		;;
+            
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+
+	status)
+		statusproc /usr/bin/rsync
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|reload|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/rsyncd
