@@ -18,33 +18,30 @@
 		<section><title>Why this FAQ?</title>
 			<para>
 				I started this FAQ in an attempt to make the traffic on
-				lfs-discuss more manageable and improve the signal to noise
-				ratio. I'm going to limit myself to things that come up
-				often there leaving tips and such for
-				<ulink url="http://www.linuxfromscratch.org/services/lfshints.php">LFS-Hints</ulink>.
+				the LFS mailing lists more manageable and improve the signal
+				to noise ratio. I'm going to limit myself to things that come
+				up often there leaving tips and such for
+				<ulink url="http://hints.linuxfromscratch.org">LFS-Hints</ulink>.
 			</para>
 		</section>
-		<section><title>What is appropriate for lfs-discuss?</title>
+		<section><title>What is appropriate for lfs-support?</title>
 			<para>
 				From the
-				<ulink url="http://www.linuxfromscratch.org/services/mailinglistinfo.php">website</ulink>:
+				<ulink url="http://www.linuxfromscratch.org/mailinglists/info.shtml">website</ulink>:
 			</para>
 			<blockquote>
 				<para>
-					The lfs-discuss mailinglist discusses matters strictly
-					related to the LFS-BOOK. If you have problems with
-					the book, want to report a bug or two or have suggestions
-					to improve the book, use this mailinglist.
-				</para>
-				<para>
-					Any other mail is to be posted to the lfs-apps list.
+					The lfs-support mailing list provides support to users
+					building an LFS system as far as the end of the main book.
+					Requests for help with installing software beyond the base
+					system should go to the blfs-support list.
 				</para>
 			</blockquote>
 			<para>
-				For instance, GCC and Glibc are part of the book and
-				belong on lfs-discuss.
-				XFree86, KDE, and GNOME are not part of the book and
-				belong on lfs-apps.
+				For instance, GCC and Glibc are part of the LFS book and
+				belong on lfs-support.
+				XFree86, KDE, and GNOME are not part of the LFS book and
+				belong on blfs-support.
 			</para>
 		</section>
 		<section><title>Contributing to this FAQ.</title>
@@ -52,13 +49,11 @@
 				If you have an addition or suggestion, please, let me know.
 				I can be reached at
 				<ulink url="mailto:sklein@mint.net">sklein@mint.net</ulink>,
-				and i read lfs-discuss and lfs-apps thoroughly (but not always
-				promptly).
+				and i read the lists thoroughly (but not always promptly).
 			</para>
 			<para>
-				I'd like to list FAQ's for not only lfs-discuss, but lfs-apps
-				as well. I want to stick to questions that have been asked
-				at least twice and to remove items that are no longer an issue.
+				I want to stick to questions that have been asked at least
+				twice and to remove items that are no longer an issue.
 			</para>
 		</section>
 		<section><title>Where is the best place to get help?</title>
@@ -92,13 +87,13 @@
 				For support type help, IRC is often best. It's faster,
 				and doesn't clog the mailinglists.
 				Information on the LFS IRC channel is at
-				<ulink url="http://www.linuxfromscratch.org/services/irc.php">http://www.linuxfromscratch.org/services/irc.php</ulink>.
+				<ulink url="http://www.linuxfromscratch.org/misc/irc.shtml">http://www.linuxfromscratch.org/misc/irc.shtml</ulink>.
 			</para>
 			<para>
 				As a last resort, there are the mailing lists.
 				People will get frustrated with you if you use the wrong one or cross post.
 				Mailing list information is at
-				<ulink url="http://www.linuxfromscratch.org/services/mailinglistinfo.php">http://www.linuxfromscratch.org/services/mailinglistinfo.php</ulink>
+				<ulink url="http://www.linuxfromscratch.org/mailinglists/info.shtml">http://www.linuxfromscratch.org/mailinglists/info.shtml</ulink>:
 				and tells which list to use.
 			</para>
 		</section>
@@ -455,9 +450,9 @@ alias net-pf-7 loop
 		<para>
 			This can be a problem if you're new to Unix systems and want
 			a typical install with X and a web browser but have no idea
-			what packages you need. For this reason, there is the After
-			LFS Hint. It is one of the LFS Hints which can be found at <ulink
-			url="http://www.linuxfromscratch.org/services/lfshints.php">http://www.linuxfromscratch.org/services/lfshints.php</ulink>.
+			what packages you need. For this reason, there is the Beyond
+			Linux From Scratch, or BLFS, project. It is at <ulink
+			url="http://beyond.linuxfromscratch.org/">http://beyond.linuxfromscratch.org/</ulink>.
 		</para>
 		<section id="new-version"><title>There's a new version of package Foo.</title>
 			<para>
