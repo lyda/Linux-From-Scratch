@@ -70,7 +70,9 @@
                 <xsl:attribute name="title">
                   <xsl:choose>
                     <xsl:when test="local-name($next)='index'">
-                      <xsl:text>Index</xsl:text>
+                      <xsl:call-template name="gentext">
+                        <xsl:with-param name="key">Index</xsl:with-param>
+                      </xsl:call-template>
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:value-of select="$next/title"/>
@@ -84,7 +86,9 @@
               <p>
                 <xsl:choose>
                   <xsl:when test="local-name($next)='index'">
-                    <xsl:text>Index</xsl:text>
+                    <xsl:call-template name="gentext">
+                      <xsl:with-param name="key">Index</xsl:with-param>
+                    </xsl:call-template>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:value-of select="$next/title"/>
@@ -176,7 +180,9 @@
                 <xsl:attribute name="title">
                   <xsl:choose>
                     <xsl:when test="local-name($next)='index'">
-                      <xsl:text>Index</xsl:text>
+                      <xsl:call-template name="gentext">
+                        <xsl:with-param name="key">Index</xsl:with-param>
+                      </xsl:call-template>
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:value-of select="$next/title"/>
@@ -190,7 +196,9 @@
               <p>
                 <xsl:choose>
                   <xsl:when test="local-name($next)='index'">
-                    <xsl:text>Index</xsl:text>
+                    <xsl:call-template name="gentext">
+                      <xsl:with-param name="key">Index</xsl:with-param>
+                    </xsl:call-template>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:value-of select="$next/title"/>

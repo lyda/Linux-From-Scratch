@@ -19,13 +19,17 @@
   <xsl:param name="index-title">Index</xsl:param>
   
   <xsl:template match="index" mode="title.markup">
-    <xsl:value-of select="$index-title"/>
+    <xsl:call-template name="gentext">
+      <xsl:with-param name="key" select="$index-title"/>
+    </xsl:call-template>
   </xsl:template>
-  
+
   <xsl:template name="index.titlepage">
     <div class="titlepage">
       <h1 class="index">
-        <xsl:value-of select="$index-title"/>
+        <xsl:call-template name="gentext">
+          <xsl:with-param name="key" select="$index-title"/>
+        </xsl:call-template>
       </h1>
     </div>
   </xsl:template>

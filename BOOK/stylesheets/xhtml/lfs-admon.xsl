@@ -29,11 +29,7 @@
           </xsl:attribute>
         </img>
         <h3 class="admontitle">
-          <xsl:value-of select="$admon.type"/>
-          <xsl:if test="title">
-            <xsl:text>: </xsl:text>
-            <xsl:value-of select="title"/>
-          </xsl:if>
+          <xsl:apply-templates select="." mode="object.title.markup"/>
         </h3>
       </div>
       <div class="admonbody">
