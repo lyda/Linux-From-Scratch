@@ -1,0 +1,4 @@
+LFS Wish List...
+================
+
+    o rewrite of MAKEDEV shell script.
