@@ -12,7 +12,7 @@
 <screen>&buildtime; All default options: 4.20 SBU
 &diskspace; All default options: 181 MB</screen>
 
-<para>For its installation Linux depends on: Bash, Binutils, Coreutils, Findutils,
+<para>Linux installation depends on: Bash, Binutils, Coreutils, Findutils,
 GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, Sed.</para>
 
 
@@ -32,7 +32,7 @@ methods.</para>
 <para>This ensures that the kernel tree is absolutely clean. The kernel team
 recommends that this command be issued prior to <emphasis>each</emphasis>
 kernel compilation. You shouldn't rely on the source tree being clean after
-untarring.</para>
+un-tarring.</para>
 
 <para>Configure the kernel via a menu-driven interface:</para>
 
@@ -103,7 +103,7 @@ using. Issue the following command to install the kernel:</para>
 <screen><userinput>cp arch/i386/boot/bzImage /boot/lfskernel</userinput></screen>
 
 <para><filename>System.map</filename> is a symbol file for the kernel. It maps
-the function entrypoints of every function in the kernel API, as well as the
+the function entry points of every function in the kernel API (Application Programming Interface), as well as the
 addresses of the kernel data structures for the running kernel. Issue the
 following command to install the map file:</para>
 
