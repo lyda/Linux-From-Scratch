@@ -77,6 +77,17 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July 2, 2004 [alexander]: Expanded the Introduction in the
+kernel chapter. The forward references ("later in this chapter") point to
+nowhere yet. The corresponding text will be added later.</para></listitem>
+
+<listitem><para>July 2, 2004 [alexander]: Added "-ssc8" to the version string
+for the "system_specific_ch8" branch. This branch will implement enhanced
+kernel chapter structure as outlined by Jeroen Coumans in
+<ulink
+url="http://wiki.linuxfromscratch.org/index.php?pagename=BuildingKernel"/>.
+</para></listitem>
+
 <listitem><para>June 29, 2004 [alexander]: Explained the benefits of setting
 LC_ALL properly.</para></listitem>
 

@@ -7,9 +7,67 @@
 <title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
 
-<para>This chapter will make LFS bootable. This chapter deals with creating a
-<filename>fstab</filename> file, building a
-kernel for the new LFS system and installing the Grub bootloader
-so that the LFS system can be selected for booting at startup.</para>
+<para>This chapter will make LFS bootable. This involves
+kernel compilation and installation of userspace tools needed by the
+kernel, setting up the bootloader and creating configuration files for all
+programs installed in this chapter.</para>
+
+<para>This chapter allows for many reader decisions, and is in fact specific
+to the user's system. However, only one
+default combination of options (ext2 root filesystem, non-modular kernel, udev,
+no hotplug, grub as the bootloader) is guaranteed to be tested by LFS
+editors and actually work with LFS on supported hardware.
+<!-- well, ext3 + a lot of modules + udev + hotplug + grub is what I use at
+home, but I dislike udev and that's why I can't call this setup well tested.
+- - Alexander E. Patrakov -->
+Let's examine the alternatives in more detail.</para>
+
+<!-- Only summaries should be placed here. Details deserve their own pages -->
+<sect2><title>Filesystems</title>
+<para>Earlier in <xref linkend="space-creatingfilesystem"/> we created a
+filesystem on a partition that we want to use as a root of the new LFS
+installation. The LFS system needs a tool to check this filesystem for errors
+during boot. Such tool is provided by the <application>e2fsprogs</application>
+for ext2 and ext3 filesystems. If you use other filesystem, you need to install
+the corresponding package from the <ulink
+url="$blfs-root;view/cvs/postlfs/filesystems.html">File Systems section in
+BLFS</ulink>.</para></sect2>
+
+<sect2><title>Kernel modules</title>
+<para>
+Kernel modules are small pieces of compiled code which can
+be inserted in the running kernel, rather than being
+permanently built into the kernel.
+Other Linux distributions use modules for infrequently used drivers which are
+not required for booting. In fact, they compile almost all hardware drivers as
+modules to avoid producing a big kernel image. However, when some driver is
+compiled as a module, special steps (discussed later in this chapter) must
+be performed to ensure that this module will be loaded. It is often much
+easier to build every driver required on your system permanently into the
+kernel, and omit drivers you don't need.</para></sect2>
+
+<sect2><title>Population of the <filename class="directory">/dev</filename>
+directory</title>
+<para>The <filename class="directory">/dev</filename> directory contains
+special files called device nodes. They are used to communicate with hardware
+present in the system (e.g <filename>/dev/lp0</filename> represents the
+first parallel printer) or to use some abstractions provided by the kernel
+(e.g. <filename>/dev/random</filename> is used for reading random bytes).
+There are three methods of maintaining the contents of
+the <filename class="directory">/dev</filename> directory. The oldest method,
+used by most Linux distributions, is to pre-create a lot of device
+nodes in the <filename class="directory">/dev</filename> directory on the root
+filesystem. This approach was also used in the past releases of LFS.
+There are also methods that allow dynamic creation of device nodes based on
+hardware that is actually present in the system. Such methods will be
+discussed later in this chapter.</para></sect2>
+
+<sect2><title>Bootloader</title>
+<para>Bootloader is used for loading a Linux kernel from the hard disk into
+memory. For the IA-32 architecture, meaning mainstream PCs, there are two
+bootloaders widely used: <application>GRUB</application> and
+<application>LILO</application>. Instructions for
+<application>GRUB</application> installation are provided later in this
+chapter.</para></sect2>
 
 </sect1>
