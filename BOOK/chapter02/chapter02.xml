@@ -3,14 +3,17 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-partitioning" xreflabel="Chapter 2">
+<chapter xmlns="http://docbook.org/docbook-ng"
+         xmlns:xi="http://www.w3.org/2003/XInclude"
+         xml:id="chapter-partitioning"
+         xreflabel="Chapter 2">
 <?dbhtml dir="chapter02"?>
-<title>Preparing a new partition</title>
+<info><title>Preparing a new partition</title></info>
 <?dbhtml filename="chapter02.html"?>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="creatingpartition.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="creatingfilesystem.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mounting.xml"/>
+<xi:include href="introduction.xml"/>
+<xi:include href="creatingpartition.xml"/>
+<xi:include href="creatingfilesystem.xml"/>
+<xi:include href="mounting.xml"/>
 
 </chapter>

@@ -15,7 +15,7 @@
 <title>Introduction</title>
 <?dbhtml filename="part1.html"?>
 <xi:include href="chapter01/chapter01.xml"/>
-<!--<xi:include href="chapter02/chapter02.xml"/>-->
+<xi:include href="chapter02/chapter02.xml"/>
 </part>
 
 <!--<part id="part2">

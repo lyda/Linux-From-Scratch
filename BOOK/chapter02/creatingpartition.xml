@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="space-creatingpartition">
-<title>Creating a new partition</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="space-creatingpartition">
+<info><title>Creating a new partition</title></info>
 <?dbhtml filename="creatingpartition.html"?>
 
 <para>In order to build our new Linux system, we will need some space:
@@ -13,7 +15,7 @@ on any of your hard disks to make one, then you could build LFS on the
 same partition as the one on which your current distribution is installed.
 This procedure is not recommended for your first LFS install, but if you
 are short on disk space, and you feel brave, take a look at the hint at
-<ulink url="&hints-root;lfs_next_to_existing_systems.txt"/>.</para>
+<uri xlink:href="&hints-root;lfs_next_to_existing_systems.txt">&hints-root;lfs_next_to_existing_systems.txt</uri>.</para>
 
 <para>For a minimal system you will need a partition of around 1.3 GB.
 This is enough to store all the source tarballs and compile all the packages.
@@ -41,4 +43,4 @@ know how to use the programs.</para>
 If you (now) also have a swap partition, remember its designation too. These
 names will later be needed for the <filename>/etc/fstab</filename> file.</para>
 
-</sect1>
+</section>
