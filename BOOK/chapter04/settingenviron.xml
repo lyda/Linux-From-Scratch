@@ -24,8 +24,8 @@ some settings and environment variables) and then
 -i.../bin/bash</command> command in the
 <filename>.bash_profile</filename> file replaces the running shell
 with a new one with a completely empty environment, except for the
-<emphasis>HOME</emphasis>, <emphasis>TERM</emphasis>, and
-<emphasis>PS1</emphasis> variables. This ensures that no unwanted and
+<envar>HOME</envar>, <envar>TERM</envar>, and
+<envar>PS1</envar> variables. This ensures that no unwanted and
 potentially hazardous environment variables from the host system leak
 into the build environment. The technique used here achieves the goal
 of ensuring a clean environment.</para>
@@ -48,10 +48,10 @@ EOF</userinput></screen>
 <para>The <command>set +h</command> command turns off
 <command>bash</command>'s hash function. Hashing is ordinarily a useful 
 feature&mdash;<command>bash</command> uses a hash table to remember the
-full pathnames of executable files to avoid searching the PATH time
+full pathnames of executable files to avoid searching the <envar>PATH</envar> time
 and again to find the same executable. However, the new tools
 should be used as soon as they are installed. By switching off the
-hash function, the shell will always search the PATH when a program is
+hash function, the shell will always search the <envar>PATH</envar> when a program is
 to be run. As such, the shell will find the newly compiled
 tools in <filename class="directory">$LFS/tools</filename> as soon as
 they are available without remembering a previous version of the same
@@ -63,21 +63,21 @@ are readable and executable by anyone (assuming default modes are used
 by the open(2) system call, new files will end up with permission mode
 644 and directories with mode 755).</para>
 
-<para>The <emphasis>LFS</emphasis> variable should be set to the
+<para>The <envar>LFS</envar> variable should be set to the
 chosen mount point.</para>
 
-<para>The <emphasis>LC_ALL</emphasis> variable controls the
+<para>The <envar>LC_ALL</envar> variable controls the
 localization of certain programs, making their messages follow the
 conventions of a specified country.  If the host system uses a version
-of Glibc older than 2.2.4, having LC_ALL set to something other than
+of Glibc older than 2.2.4, having <envar>LC_ALL</envar> set to something other than
 <quote>POSIX</quote> or <quote>C</quote> (during this chapter) may
 cause issues if you exit the chroot environment and wish to return
-later. Setting <emphasis>LC_ALL</emphasis> to <quote>POSIX</quote>
+later. Setting <envar>LC_ALL</envar> to <quote>POSIX</quote>
 or <quote>C</quote> (the two are equivalent) ensures that
 everything will work as expected in the chroot environment.</para>
 
 <para>By putting <filename class="directory">/tools/bin</filename>
-ahead of the standard PATH, all the programs installed in <xref
+ahead of the standard <envar>PATH</envar>, all the programs installed in <xref
 linkend="chapter-temporary-tools"/> are picked up by the shell
 immediately after their installation. This, combined with turning off 
 hashing, limits the risk that old programs from

@@ -14,8 +14,8 @@ assumed that the file system is mounted under <filename
 class="directory">/mnt/lfs</filename>, but the directory choice is up
 to you.</para>
 
-<para>Choose a mount point and assign it to the LFS environment
-variable by running:</para>
+<para>Choose a mount point and assign it to the <envar>LFS</envar> 
+environment variable by running:</para>
 
 <screen><userinput>export LFS=/mnt/lfs</userinput></screen>
 
