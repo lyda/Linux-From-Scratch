@@ -35,7 +35,7 @@
 <!ENTITY gcc-short-version "3.3.4">
 <!ENTITY gcc-version "3.3.4-20040517">
 <!ENTITY gettext-version "0.14.1">
-<!ENTITY glibc-version "2.3.4-20040408">
+<!ENTITY glibc-version "2.3.4-20040510">
 <!ENTITY grep-version "2.5.1">
 <!ENTITY groff-version "1.19.1">
 <!ENTITY grub-version "0.94">
