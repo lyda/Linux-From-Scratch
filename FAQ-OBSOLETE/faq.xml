@@ -199,6 +199,47 @@ history in general.
 </para></answer>
 </qandaentry>
 
+<qandaentry id="why-not-package-management"><question><para>Why isn't some
+package manager in the book?</para></question>
+<answer><para>Package management -
+beyond that profided by tarballs and makefiles -
+is beyond the scope of the book.
+If nothing else does,
+the number of different "solutions" should hint at some of the reasons.
+</para>
+<para>Here a just a few of the options:
+<itemizedlist>
+<listitem><para>No package management is really necessary.
+Unless it is desirable to monitor package file placement minutely,
+any package large enough to warrent removal for disk space reasons
+can be installed in /opt as detailed by the FHS.
+Libraries are generally best upgraded by rebuilding the system
+from the bottom up.
+</para></listitem>
+<listitem><para>RPM, the Redhat Package Manager,
+is used by a number of distributions.
+It is available from <ulink
+url="http://www.rpm.org/">http://www.rpm.org/</ulink>
+and there is an RPM Hint to help with installation at <ulink
+url="http://hints.linuxfromscratch.org/hints/rpm.txt">http://hints.linuxfromscratch.org/hints/rpm.txt</ulink>
+</para></listitem>
+<listitem><para>Originally based on a script
+written by LFS' own Gerard Beekmans,
+install-log records a list of files installed by a package
+as the package is installed.
+It is available from <ulink
+url="http://install-log.sourceforge.net/">http://install-log.sourceforge.net/</ulink>
+</para></listitem>
+<listitem><para>GNU Stow is an interesting concept. See <ulink
+url="http://www.gnu.org/software/stow/">http://www.gnu.org/software/stow/</ulink>
+</para></listitem>
+</itemizedlist>
+Do you know of one missing from that list?
+Please email its name, URL, and other information,
+to the FAQ maintainer or an apropriate LFS mailing list so it can be added here.
+</para></answer>
+</qandaentry>
+
 </qandadiv>
 
 <qandadiv id="fee"><title>Frequently Encountered Errors</title>
@@ -379,13 +420,6 @@ which may list a primary site where more recent versions may be found.
 <question><para>How do I make a bootable CD?</para></question>
 <answer><para>See the Boot-CD Hint and <ulink
 url="http://hints.linuxfromscratch.org/hints/bootcd.txt">http://hints.linuxfromscratch.org/hints/bootcd.txt</ulink>
-</para></answer>
-</qandaentry>
-
-<qandaentry id="install-log">
-<question><para>How do I find what files a package installs? <emphasis role="strong">(NEW)</emphasis><!-- 0 --></para></question>
-<answer><para>Use install-log from <ulink
-url="http://install-log.sourceforge.net/">http://install-log.sourceforge.net/</ulink>.
 </para></answer>
 </qandaentry>
 
