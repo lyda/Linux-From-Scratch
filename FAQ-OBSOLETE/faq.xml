@@ -353,6 +353,13 @@ url="http://hints.linuxfromscratch.org/hints/bootcd.txt">http://hints.linuxfroms
 </para></answer>
 </qandaentry>
 
+<qandaentry id="install-log">
+<question><para>How do I find what files a package installs?</para></question>
+<answer><para>Use install-log from <ulink
+url="http://install-log.sourceforge.net/">http://install-log.sourceforge.net/</ulink>.
+</para></answer>
+</qandaentry>
+
 <qandaentry id="portmap">
 <question><para>Where's portmap?</para></question>
 <answer><para>There are instructions in the NFS Hint at <ulink
