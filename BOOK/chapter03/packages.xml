@@ -28,7 +28,7 @@
 <varlistentry>
 <term>Bash (&bash-version;) - 2.4 MB:</term>
 <listitem>
-<para><ulink url="&gnu;bash/bash/bash-&bash-version;.tar.gz"/></para>
+<para><ulink url="&gnu;bash/bash-&bash-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 

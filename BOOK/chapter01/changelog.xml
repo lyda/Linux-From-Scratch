@@ -80,7 +80,16 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
-<listitem><para>Feburary 26, 2005 [jim]</para>
+<listitem><para>March 2, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Fixed: Arch: All - Bash Download Location.</para></listitem>
+<listitem><para>Fixed: Arch: All - Spelling of February.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>February 26, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Udev to 054.</para></listitem>
 </itemizedlist>
@@ -88,7 +97,7 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 
 <itemizedlist>
-<listitem><para>Feburary 25, 2005 [jim]</para>
+<listitem><para>February 25, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Fixed: Arch: All - Duplicate tty in group file.</para></listitem>
 </itemizedlist>
@@ -96,7 +105,7 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 
 <itemizedlist>
-<listitem><para>Feburary 24, 2005 [jim]</para>
+<listitem><para>February 24, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Gettext 0.14.2.</para></listitem>
 <listitem><para>Changed: Book Format - Changelog format.</para></listitem>
@@ -109,7 +118,7 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 
 <itemizedlist>
-<listitem><para>Feburary 23, 2005 [jim]</para>
+<listitem><para>February 23, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Sync: With the 6.0 Release.</para></listitem>
 <listitem><para>Updated: Arch: All - Users and Groups to basic needs.</para></listitem>
