@@ -36,7 +36,7 @@
 <!ENTITY gcc-2953-version "2.95.3">
 <!ENTITY gcc-version "3.3.3">
 <!ENTITY gettext-version "0.14.1">
-<!ENTITY glibc-version "2.3.3">
+<!ENTITY glibc-version "2.3.3-lfs-5.1">
 <!ENTITY grep-version "2.5.1">
 <!ENTITY groff-version "1.19">
 <!ENTITY grub-version "0.94">
