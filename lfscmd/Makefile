@@ -13,7 +13,7 @@ OBJS= file.o \
 all: lfscmd
 
 lfscmd: file.o help.o lfscmd.o main.o string.o
-	$(CC) $(CFLAGS) $(LDFLAGS) -o lfscmd file.o help.o lfscmd.o main.o string.o
+	$(CC) file.o help.o lfscmd.o main.o string.o $(CFLAGS) $(LDFLAGS) -o lfscmd
 
 install: lfscmd
 	if ( test ! -d $(PREFIX)/bin ); then mkdir -p $(PREFIX)/bin; fi
