@@ -42,10 +42,10 @@ then
                 then
                         if [ ! -f $prev_start ] && [ ! -f $sysinit_start ]
                         then
-                                $WARNING
+                                echo -ne $WARNING
                                 echo "$i can't be executed because it was"
                                 echo "not started in the previous runlevel ($previous)"
-                                $NORMAL
+                                echo -ne $NORMAL
                                 continue
                         fi
                 fi
