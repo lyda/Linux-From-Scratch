@@ -39,6 +39,8 @@ install binaries/colo-chain.elf /usr/lib/colo
 install binaries/colo-rom-image.bin /usr/lib/colo
 install tools/colo-perm/colo-perm /sbin
 install tools/colo-perm/colo-perm.8 /usr/man/man8
+install tools/copy-rom/copy-rom /sbin
+install tools/copy-rom/copy-rom.8 /usr/man/man8
 install tools/elf2rfx/elf2rfx /sbin
 install tools/flash-tool/flash-tool /sbin
 install tools/flash-tool/flash-tool.8 /usr/man/man8
@@ -49,8 +51,6 @@ install tools/lcdtools/paneld/paneld /sbin
 install tools/lcdtools/paneld/paneld.8 /usr/man/man8
 install tools/lcdtools/putlcd/putlcd /sbin
 install tools/lcdtools/putlcd/putlcd.8 /usr/man/man8
-install tools/md5rom/md5rom /sbin
-install tools/md5rom/md5rom.8 /usr/man/man8
 install examples/menu.colo /usr/lib/colo/examples
 install examples/simple.colo /usr/lib/colo/examples
 cp binaries/colo-chain.elf /boot/vmlinux
@@ -97,6 +97,15 @@ the ROM</para>
 </listitem>
 </varlistentry>
 
+<varlistentry id="copy-rom">
+<term><command>copy-rom</command></term>
+<listitem>
+<para>Will output the MD5 checksum of a Cobalt's ROM and and optionally save a copy of
+the ROM to a file.</para>
+<indexterm zone="ch-system-colo copy-rom"><primary sortas="b-copy-rom">copy-rom</primary></indexterm>
+</listitem>
+</varlistentry>
+
 <varlistentry id="elf2rfx">
 <term><command>elf2rfx</command></term>
 <listitem>
@@ -136,14 +145,6 @@ get an admin menu.  The menu will allow you to either halt or reboot your Cobalt
 <listitem>
 <para>Is a tool to display text on the LCD display of Cobalt machines</para>
 <indexterm zone="ch-system-colo putlcd"><primary sortas="b-putlcd">putlcd</primary></indexterm>
-</listitem>
-</varlistentry>
-
-<varlistentry id="md5rom">
-<term><command>md5rom</command></term>
-<listitem>
-<para>Will output the MD5 checksum of a Cobalt's ROM</para>
-<indexterm zone="ch-system-colo md5rom"><primary sortas="b-md5rom">md5rom</primary></indexterm>
 </listitem>
 </varlistentry>
 
