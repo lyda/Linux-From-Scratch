@@ -36,8 +36,14 @@ to the new dynamic linker. A simple sed script will accomplish this:</para>
 
 <!-- Ampersands are needed to allow copy and paste -->
 
-<screen><userinput>SPECFILE=`gcc --print-file specs` &amp;&amp;
+<screen arch="x86"><userinput>SPECFILE=`gcc --print-file specs` &amp;&amp;
 sed 's@ /lib/ld-linux.so.2@ /tools/lib/ld-linux.so.2@g' \
+    $SPECFILE &gt; tempspecfile &amp;&amp;
+mv -f tempspecfile $SPECFILE &amp;&amp;
+unset SPECFILE</userinput></screen>
+
+<screen arch="raq2"><userinput>SPECFILE=`gcc --print-file specs` &amp;&amp;
+sed 's@ /lib/ld.so.1@ /tools/lib/ld.so.1@g' \
     $SPECFILE &gt; tempspecfile &amp;&amp;
 mv -f tempspecfile $SPECFILE &amp;&amp;
 unset SPECFILE</userinput></screen>
@@ -46,11 +52,14 @@ unset SPECFILE</userinput></screen>
 command be copy-and-pasted in order to ensure accuracy.</phrase>
 <beginpage/>
 Alternatively, the specs file can be edited by hand. This is done by
-replacing every occurrence of <quote>/lib/ld-linux.so.2</quote> with
-<quote>/tools/lib/ld-linux.so.2</quote></para>
+replacing every occurrence of <quote arch="x86">/lib/ld-linux.so.2</quote> 
+<quote arch="raq2">/lib/ld.so.1</quote> with <quote arch="x86">/tools/lib/ld-linux.so.2</quote>
+<quote arch="raq2">/tools/lib/ld.so.2</quote></para>
 
 <para>Be sure to visually inspect the specs file in order to verify the
 intended changes have been made.</para>
+
+<!-- For specific arch books, the next para isn't needed, IMHO.
 
 <important><para>If working on a platform where the name of the
 dynamic linker is something other than
@@ -59,6 +68,7 @@ dynamic linker is something other than
 dynamic linker in the above commands. Refer back to <xref
 linkend="ch-tools-toolchaintechnotes" role=","/> if
 necessary.</para></important>
+-->
 
 <para>There is a possibility that some include files from the host
 system have found their way into GCC's private include dir. This can
@@ -83,8 +93,11 @@ readelf -l a.out | grep ': /tools'</userinput></screen>
 <para>If everything is working correctly, there should be no errors,
 and the output of the last command will be of the form:</para>
 
-<screen><computeroutput>[Requesting program interpreter: 
+<screen arch="x86"><computeroutput>[Requesting program interpreter: 
     /tools/lib/ld-linux.so.2]</computeroutput></screen>
+
+<screen arch="raq2"><computeroutput>[Requesting program interpreter: 
+    /tools/lib/ld.so.1]</computeroutput></screen>
 
 <para>Note that <filename class="directory">/tools/lib</filename>
 appears as the prefix of the dynamic linker.</para>

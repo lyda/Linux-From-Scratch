@@ -27,6 +27,10 @@
 <sect2 role="installation">
 <title>Installation of Grep</title>
 
+<para arch="raq2">This patch updates config.guess and config.sub for RaQ2 servers.</para>
+
+<screen arch="raq2"><userinput>patch -Np1 -i ../grep-&grep-version;-raq2_config_update-1.patch</userinput></screen>
+
 <para>Prepare Grep for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools \

@@ -40,6 +40,10 @@ this should not be done. This gave birth to the Linux-Libc-Headers
 Project, which was designed to maintain an Application Programming
 Interface (API) stable version of the Linux headers.</para>
 
+<para arch="raq2">This patch fixes a compile issue with Glibc on a RaQ2 server.</para>
+
+<screen arch="raq2"><userinput>patch -Np1 -i ../linux-libc-headers-&linux-libc-headers-version;-raq2_fix-1.patch</userinput></screen>
+
 <para>Install the header files:</para>
 
 <screen><userinput>cp -R include/asm-i386 /tools/include/asm
