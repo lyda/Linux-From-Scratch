@@ -155,7 +155,11 @@ loadproc()
                 exit 1
         fi
 
-        getpids $1
+	if [ -n $PIDFILE -a -r $PIDFILE ]; then
+		pidlist=`cat $PIDFILE`
+	else
+		getpids $1
+	fi
 
         if [ -z "$pidlist" ]
         then
@@ -184,7 +188,11 @@ killproc()
                 fallback=""
         fi
 
-        getpids $1
+	if [ -n $PIDFILE -a -r $PIDFILE ]; then
+		pidlist=`cat $PIDFILE`
+	else
+		getpids $1
+	fi
 
         if [ -n "$pidlist" ]; then
                 local i=0
@@ -212,7 +220,11 @@ killproc()
 			failure=1
 		else
 			failure=0
-			rm -f /var/run/$base.pid
+			if [ ! -z $PIDFILE ]; then
+				rm -f $PIDFILE
+			else
+				rm -f /var/run/$base.pid
+			fi
 		fi
 
                 (exit $failure)

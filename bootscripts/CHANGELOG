@@ -1,11 +1,12 @@
 n/a - May 4, 2004
 
 	* Update to the console script, prevent install of the console script
-	* chgrp's udev, /var/run/udev, if udev is a valid group, suggested by
+	* chgrp's udev, /var/run/utmp, if utmp is a valid group, suggested by
 	  Zack
 	* Moved udev from contrib to lfs
 	* Moved GATEWAY setup from /etc/rc.d/init.d/network to
 	  /etc/sysconfig/network-devices/services/static
+	* Use the contents of $PIDFILE, if it is set in the script
 
 n/a - April 30, 2004
 
