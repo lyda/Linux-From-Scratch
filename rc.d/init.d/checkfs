@@ -109,7 +109,7 @@ case "$1" in
 		if [ "$error_value" -ge 16 ]
 		then 
 			echo -n -e $FAILURE
-			echo "fsck was unable to run. ERROR CODE = " $error_value
+			echo "Unexpected Failure running fsck. Exited with "$error_value
 			echo -n -e $NORMAL
 			print_status failure
 			exit $error_value
