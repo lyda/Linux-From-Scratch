@@ -88,6 +88,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Updated: Arch: x86, PPC, Alpha - Linux to 2.6.11.5.</para></listitem>
 <listitem><para>Updated: Arch: All - Made the bootloader FHS symlink generic to all bootloaders.</para></listitem>
 <listitem><para>Updated: Arch: All - Udev to 056.</para></listitem>
+<listitem><para>Patch: Arch: All - Tar -S fail with files over 4 GB.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
