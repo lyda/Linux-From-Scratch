@@ -1,0 +1,15 @@
+source /etc/sysconfig/rc
+source $rc_functions
+
+NAME=""              #name of the service/application
+PREFIX=""            #path to the application
+APP=""               #the application
+OPTIONS=""           #parameters
+
+case "$1" in
+    start)
+        echo "Starting $NAME..."
+        loadproc $PREFIX/$APP $OPTIONS
+        ;;
+
+and so on
