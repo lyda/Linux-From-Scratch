@@ -22,11 +22,11 @@
   href="../chapter06/linux-libc-headers.xml"
   xpointer="xpointer(/sect1/sect2[@role='installation']/para[1])"/>
 
-<para>Install the header files:</para>
-
 <para>The following patch corrects the building of sysklogd:</para>
 
 <screen><userinput>patch -Np1 -i ../linux-libc-headers-&linux-libc-headers-raq2-version;-raq2_fix-1.patch</userinput></screen>
+
+<para>Install the header files:</para>
 
 <screen><userinput>cp -R include/asm-mips /usr/include/asm
 cp -R include/linux /usr/include</userinput></screen>
