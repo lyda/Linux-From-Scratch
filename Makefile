@@ -87,4 +87,6 @@ install-hotplug: create-dirs
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 
+install-service-mtu: create-service-dir
+	install -m 754 contrib/sysconfig/network-devices/services/mtu ${EXTDIR}/sysconfig/network-devices/services
 .PHONY: all create-dirs create-service-dir install install-hotplug
