@@ -83,9 +83,17 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>April 1, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Added: Arch: All - IPRoute2 to 2.6.11-050314.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>March 31, 2005 [jhuntwork]</para>
 <itemizedlist>
-<listitem><para>Added: Arch: PPC - Parted 1.6.22</para></listitem>
+<listitem><para>Added: Arch: PPC - Parted 1.6.22.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
