@@ -41,6 +41,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: All - Linux-libc-headers 2.6.11.2</para></listitem>
 <listitem><para>Arch: All - Man 1.5p</para></listitem>
 <listitem><para>Arch: All - Man-pages 2.01</para></listitem>
+<listitem><para>Arch: All - M4 1.43</para></listitem>
 <listitem><para>Arch: All - Patch 2.5.9</para></listitem>
 <listitem><para>Arch: All - Perl 5.8.5</para></listitem>
 <listitem><para>Arch: All - Procps 3.2.5</para></listitem>
@@ -79,6 +80,14 @@ first a summary, then a detailed log.</para>
 </listitem>
 
 <listitem><para>Changelog Entries:</para>
+
+<itemizedlist>
+<listitem><para>March 31, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - M4 to 1.4.3.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
 
 <itemizedlist>
 <listitem><para>March 30, 2005 [jim]</para>
