@@ -16,6 +16,7 @@
 <!ENTITY % chapter03 SYSTEM "entities/chapter03.ent">
 <!ENTITY % chapter04 SYSTEM "entities/chapter04.ent">
 <!ENTITY % chapter05 SYSTEM "entities/chapter05.ent">
+<!ENTITY % chapter06 SYSTEM "entities/chapter06.ent">
 
 %bookinfo;
 %dedication;
@@ -25,7 +26,7 @@
 %chapter03;
 %chapter04;
 %chapter05;
-
+%chapter06;
 
 ]>
 
