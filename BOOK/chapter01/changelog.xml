@@ -53,7 +53,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: All - Tar 1.15.1</para></listitem>
 <listitem><para>Arch: All - Texinfo 4.8</para></listitem>
 <listitem><para>Arch: All - Tcl 8.4.9</para></listitem>
-<listitem><para>Arch: All - Udev 054</para></listitem>
+<listitem><para>Arch: All - Udev 056</para></listitem>
 <listitem><para>Arch: All - Util-linux 2.12q</para></listitem>
 <listitem><para>Arch: All - Zlib 1.2.2</para></listitem>
 <listitem><para>Arch: All - udev-config-2.rules</para></listitem>
@@ -87,6 +87,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: x86, PPC, Alpha - Linux to 2.6.11.5.</para></listitem>
 <listitem><para>Updated: Arch: All - Made the bootloader FHS symlink generic to all bootloaders.</para></listitem>
+<listitem><para>Updated: Arch: All - Udev to 056.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
