@@ -1,5 +1,8 @@
 CVS - March 22nd, 2002:
 
+	* reloadproc function had a missing '=' in the "failure 1" command (it
+	  should be failure=1)
+
 	* When script exists with unexpected value, you have to hit "Enter" to
 	  continue, not just a random key as printed on the screen.
 
