@@ -6,9 +6,6 @@
 . /etc/sysconfig/rc
 . ${rc_functions}
 
-# Exit quietly if you do not have hotplug installed
-[ -x /sbin/hotplug ] || exit 0
-
 case "${1}" in
 	start|restart)
 		# Set hotplug as the default manager of hotplug events
