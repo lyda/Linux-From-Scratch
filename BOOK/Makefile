@@ -1,11 +1,75 @@
-BASEDIR=~/lfs-book-raq2
+BASEDIR=~/lfs-book
 CHUNK_QUIET=0
-PDF_OUTPUT=LFS-BOOK-RaQ2.pdf
-NOCHUNKS_OUTPUT=LFS-BOOK-RaQ2.html
+PDF_OUTPUT=LFS-BOOK.pdf
+NOCHUNKS_OUTPUT=LFS-BOOK.html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
-ARCH=raq2
+ARCH=x86
 
 lfs:
+# top-level index.html
+	xsltproc --nonet --output $(BASEDIR)/index.html stylesheets/top-index.xsl prologue/bookinfo.xml
+
+# x86
+	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch x86 \
+	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
+
+	xsltproc --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
+	  -stringparam base.dir $(BASEDIR)/x86/ stylesheets/lfs-chunked.xsl \
+	  $(BASEDIR)/lfs-html.xml
+
+	if [ ! -e $(BASEDIR)/x86/stylesheets ]; then \
+	  mkdir -p $(BASEDIR)/x86/stylesheets; \
+	fi;
+	cp stylesheets/*.css $(BASEDIR)/x86/stylesheets
+
+	if [ ! -e $(BASEDIR)/x86/images ]; then \
+	  mkdir -p $(BASEDIR)/x86/images; \
+	fi;
+	cp $(XSLROOTDIR)/images/*.png \
+	  $(BASEDIR)/x86/images
+	cd $(BASEDIR)/x86/; sed -i -e "s@../stylesheets@stylesheets@g" \
+	  *.html
+	cd $(BASEDIR)/x86/; sed -i -e "s@../images@images@g" \
+	  *.html
+
+	rm $(BASEDIR)/lfs-html.xml
+
+# raq2
+	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch raq2 \
+	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
+
+	xsltproc --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
+	  -stringparam base.dir $(BASEDIR)/raq2/ stylesheets/lfs-chunked.xsl \
+	  $(BASEDIR)/lfs-html.xml
+
+	if [ ! -e $(BASEDIR)/raq2/stylesheets ]; then \
+	  mkdir -p $(BASEDIR)/raq2/stylesheets; \
+	fi;
+	cp stylesheets/*.css $(BASEDIR)/raq2/stylesheets
+
+	if [ ! -e $(BASEDIR)/raq2/images ]; then \
+	  mkdir -p $(BASEDIR)/raq2/images; \
+	fi;
+	cp $(XSLROOTDIR)/images/*.png \
+	  $(BASEDIR)/raq2/images
+	cd $(BASEDIR)/raq2/; sed -i -e "s@../stylesheets@stylesheets@g" \
+	  *.html
+	cd $(BASEDIR)/raq2/; sed -i -e "s@../images@images@g" \
+	  *.html
+
+	rm $(BASEDIR)/lfs-html.xml
+
+# common stuff
+	for filename in `find $(BASEDIR) -name "*.html"`; do \
+	  tidy -config tidy.conf $$filename; \
+	  true; \
+	done;
+
+	for filename in `find $(BASEDIR) -name "*.html"`; do \
+	  sed -i -e "s@text/html@application/xhtml+xml@g" $$filename; \
+	done;
+
+html:
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch $(ARCH) \
 	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
 
