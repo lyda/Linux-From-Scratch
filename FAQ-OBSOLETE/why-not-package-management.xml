@@ -74,8 +74,8 @@ It is available from
 
 <listitem><para>Gerard has since made additions to his script.
 It is available from
-<ulink url="ftp://ftp.linuxfromscratch.org/misc/pkginst"/> and
-<ulink url="ftp://ftp.linuxfromscratch.org/misc/pkgdel"/>.
+<ulink url="http://linuxfromscratch.org/~gerard/log-install"/> and
+<ulink url="http://linuxfromscratch.org/~gerard/pkgdel"/>.
 </para></listitem>
 
 <listitem><para>CheckInstall attempts log system calls made by
@@ -96,7 +96,7 @@ and information about other interesting systems is at
 </itemizedlist>
 If you have an addition to the list,
 please do email its name, URL, and other information,
-to the FAQ maintainer or an apropriate LFS mailing list so it can be added here.
+to the FAQ maintainer or an appropriate LFS mailing list so it can be added here.
 </para></answer>
 </qandaentry>
 
