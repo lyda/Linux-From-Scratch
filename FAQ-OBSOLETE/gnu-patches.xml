@@ -1,11 +1,10 @@
 <qandaentry id="gnu-patches">
 <question><para>I used a patch from GNU to upgrade.
 Is that OK?</para></question>
-<answer><para>For some reason the patches from GNU don't usually work.
-Better download the full archive and try again.
-</para>
-<para>Ed. Note: can anyone tell <ulink url="mailto:sk@sethwklein.net">me</ulink>
-why GNU patches fail?
+<answer><para>Patches from GNU don't usually work.
+You can either download the full archive and try again
+or try the solution given in the message archived at
+<ulink url="http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/06/0386.html/"/>.
 </para></answer>
 </qandaentry>
 
