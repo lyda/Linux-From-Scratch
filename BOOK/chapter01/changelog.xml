@@ -53,6 +53,11 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>December 2, 2004 [jeremy]: Migrated change from unstable to
+build Glibc against sanitized linux-libc-headers instead of raw kernel headers,
+bringing us more in line with what the kernel developers think should be
+happening.</para></listitem>
+
 <listitem><para>December 1, 2004 [jeremy]: Dropped Udev from being built in
 Chapter 5, in favor of creating a minimal set of devices at the beginning
 of Chapter 6.  All devices are created after the installation of Udev near
