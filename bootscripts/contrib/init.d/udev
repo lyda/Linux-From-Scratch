@@ -1,0 +1,42 @@
+#!/bin/sh
+# Begin $rc_base/init.d/udev
+
+# Content by Zack Winkles  - winkie@linuxfromscratch.org
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+# Some things sysfs just doesn't export for us.
+make_extra_nodes() {
+	ln -s /proc/self/fd /dev/fd
+	ln -s /proc/self/fd/0 /dev/stdin
+	ln -s /proc/self/fd/1 /dev/stdout
+	ln -s /proc/self/fd/2 /dev/stderr
+	ln -s /proc/kcore /dev/core
+	mkdir /dev/pts
+	mkdir /dev/shm
+}
+
+case "$1" in
+	start)
+		# Assure that udev is the hotplug handler, as the book
+		# doesn't install full hotplug.
+		echo "/sbin/udev" > /proc/sys/kernel/hotplug
+
+		echo "Populating /dev with device nodes..."
+		mount -n -t ramfs ramfs /dev
+		udevstart || failed=1
+		make_extra_nodes
+
+		# If $failed is empty, then the subshell exits with 0,
+		# otherwise 1, so it's good for status checking.
+		(exit $failed)
+		evaluate_retval
+		;;
+	*)
+		echo "Usage $0 {start}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/udev
