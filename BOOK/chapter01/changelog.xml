@@ -21,7 +21,7 @@
 <listitem><para>man-pages-1.64</para></listitem>
 <listitem><para>lfs-utils-0.4.2</para></listitem>
 <listitem><para>libtool-1.5.2</para></listitem>
-<listitem><para>linux-2.4.24</para></listitem>
+<listitem><para>linux-2.4.25</para></listitem>
 <listitem><para>man-pages-1.65</para></listitem>
 <listitem><para>modutils-2.4.26</para></listitem>
 <listitem><para>perl-5.8.3</para></listitem>
@@ -59,6 +59,9 @@
 <listitem><para>zlib-1.1.4-vsnprintf.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>February 27th, 2004 [jeremy]: Upgraded to linux-2.4.25
+due to security vulnerability in 2.4.24</para></listitem>
 
 <listitem><para>February 1st, 2004 [gerard]: LFS-5.1-PRE1
 release.</para></listitem>
