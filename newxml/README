@@ -4,8 +4,8 @@ README for the newxml module
 1. Requirements
 ~~~~~~~~~~~~~~~
 
-DocBook XML DTD 4.3CR3 - this is required as the 4.2 version doesn't properly
-                         support XIncludes
+DocBook XML DTD 4.3 - this is required as the 4.2 version doesn't properly
+                      support XIncludes
 
 DocBook XSL Stylesheets 1.65.1 - older versions of the stylesheets had a bug
                                  which caused broken hyperlinks (they pointed to
@@ -28,74 +28,73 @@ If you're comfortable with it then here's a quick run down of what needs
 to be done:
 
 1) Follow the instructions in the *first* grey box in the BLFS book, but
-   substitute 4.2 with 4.3CR3 and http://www.oasis-open.org/docbook/ with
-   http://www.docbook.org/ respectively.  This will install the 4.3CR2
-   version of the DTD and allow local resolution.
+   substitute 4.2 with 4.3.  This will install the 4.3 version of the DTD and
+   allow local resolution.
 
 2) Follow the instructions in the *second* grey box in the BLFS book, but
-   substituting 4.2 with 4.3CR3.  This allows processing of the BLFS book
-   against the 4.3CR3 DTD.
+   substituting 4.2 with 4.3.  This allows processing of the BLFS book against
+   the 4.3 DTD.
 
 3) Follow the instructions in the *third* grey box in the BLFS book, but
-   substitute 4.2 with 4.3CR3.  This allows anything wanting to use the
-   4.1.2 version of the DTD to use our local copy of 4.3CR3 instead.
+   substitute 4.2 with 4.3.  This allows anything wanting to use the 4.1.2
+   version of the DTD to use our local copy of 4.3 instead.
 
 4) Follow the instructions in the *third* grey box *again*, but this time
-   substitute 4.2 with 4.3CR2 and 4.1.2 with 4.2.  This allows anything wanting
-   to use the 4.2 version of the DTD to use our local copy of 4.3CR3.
+   substitute 4.2 with 4.3 and 4.1.2 with 4.2.  This allows anything wanting
+   to use the 4.2 version of the DTD to use our local copy of 4.3.
 
 
 2.2. The long winded but (hopefully) RPM/APT/YAST user proof method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-2.2.1. Install the 4.3CR3 version of the DTD
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.2.1. Install the 4.3 version of the DTD
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-install -d /usr/share/xml/docbook/xml-dtd-4.3CR3 &&
-cp -af docbook.cat *.dtd ent/ *.mod /usr/share/xml/docbook/xml-dtd-4.3CR3 &&
+install -d /usr/share/xml/docbook/xml-dtd-4.3 &&
+cp -af docbook.cat *.dtd ent/ *.mod /usr/share/xml/docbook/xml-dtd-4.3 &&
 if [ ! -e /etc/xml/catalog ]; then mkdir -p /etc/xml; xmlcatalog --noout \
 --create /etc/xml/catalog; fi &&
 if [ ! -e /etc/xml/docbook ]; then xmlcatalog --noout --create \
 /etc/xml/docbook; fi &&
 xmlcatalog --noout --add "public" \
-"-//OASIS//ELEMENTS DocBook XML Information Pool V4.3CR3//EN" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/dbpoolx.mod" \
+"-//OASIS//ELEMENTS DocBook XML Information Pool V4.3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3/dbpoolx.mod" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "public" \
-"-//OASIS//DTD DocBook XML V4.3CR3//EN" \
-"http://www.docbook.org/xml/4.3CR3/docbookx.dtd" \
+"-//OASIS//DTD DocBook XML V4.3//EN" \
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "public" \
-"-//OASIS//ENTITIES DocBook XML Character Entities V4.3CR3//EN" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/dbcentx.mod" \
+"-//OASIS//ENTITIES DocBook XML Character Entities V4.3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3/dbcentx.mod" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "public" \
-"-//OASIS//ENTITIES DocBook XML Notations V4.3CR3//EN" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/dbnotnx.mod" \
+"-//OASIS//ENTITIES DocBook XML Notations V4.3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3/dbnotnx.mod" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "public" \
-"-//OASIS//ENTITIES DocBook XML Additional General Entities V4.3CR3//EN" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/dbgenent.mod" \
+"-//OASIS//ENTITIES DocBook XML Additional General Entities V4.3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3/dbgenent.mod" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "public" \
-"-//OASIS//ELEMENTS DocBook XML Document Hierarchy V4.3CR3//EN" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/dbhierx.mod" \
+"-//OASIS//ELEMENTS DocBook XML Document Hierarchy V4.3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3/dbhierx.mod" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "public" \
 "-//OASIS//DTD XML Exchange Table Model 19990315//EN" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/soextblx.dtd" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3/soextblx.dtd" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "public" \
-"-//OASIS//DTD DocBook XML CALS Table Model V4.3CR3//EN" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3/calstblx.dtd" \
+"-//OASIS//DTD DocBook XML CALS Table Model V4.3//EN" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3/calstblx.dtd" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "rewriteSystem" \
-"http://www.docbook.org/xml/4.3CR3" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+"http://www.oasis-open.org/docbook/xml/4.3" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "rewriteURI" \
-"http://www.docbook.org/xml/4.3CR3" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+"http://www.oasis-open.org/docbook/xml/4.3" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "delegatePublic" \
 "-//OASIS//ENTITIES DocBook XML" \
@@ -104,10 +103,10 @@ xmlcatalog --noout --add "delegatePublic" \
 "-//OASIS//DTD DocBook XML" \
 "file:///etc/xml/docbook" /etc/xml/catalog &&
 xmlcatalog --noout --add "delegateSystem" \
-"http://www.docbook.org/" \
+"http://www.oasis-open.org/" \
 "file:///etc/xml/docbook" /etc/xml/catalog &&
 xmlcatalog --noout --add "delegateURI" \
-"http://www.docbook.org/" \
+"http://www.oasis-open.org/" \
 "file:///etc/xml/docbook" /etc/xml/catalog
 
 2.2.2. Enable processing of the BLFS book
@@ -121,14 +120,14 @@ xmlcatalog --noout --add "delegateURI" \
 "file:///etc/xml/docbook" /etc/xml/catalog &&
 xmlcatalog --noout --add "rewriteSystem" \
 "/usr/share/docbook" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "rewriteURI" \
 "/usr/share/docbook" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3" \
 /etc/xml/docbook
 
-2.2.3. Enable 4.3CR3 to be used when 4.1.2. is requested
+2.2.3. Enable 4.3 to be used when 4.1.2. is requested
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 xmlcatalog --noout --add "public" \
@@ -143,19 +142,19 @@ xmlcatalog --noout --add "delegateURI" \
 "file:///etc/xml/docbook" /etc/xml/catalog &&
 xmlcatalog --noout --add "rewriteSystem" \
 "http://www.oasis-open.org/docbook/xml/4.1.2" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "rewriteURI" \
 "http://www.oasis-open.org/docbook/xml/4.1.2" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3" \
 /etc/xml/docbook
 
-2.2.4. Enable 4.3CR3 to be used when 4.2 is requested
+2.2.4. Enable 4.3 to be used when 4.2 is requested
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 xmlcatalog --noout --add "public" \
 "-//OASIS//DTD DocBook XML V4.2//EN" \
-"http://oasis-open.org/docbook/xml/4.2/docbookx.dtd" \
+"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "delegateSystem" \
 "http://www.oasis-open.org/docbook/xml/4.2/" \
@@ -165,11 +164,11 @@ xmlcatalog --noout --add "delegateURI" \
 "file:///etc/xml/docbook" /etc/xml/catalog &&
 xmlcatalog --noout --add "rewriteSystem" \
 "http://www.oasis-open.org/docbook/xml/4.2" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3" \
 /etc/xml/docbook &&
 xmlcatalog --noout --add "rewriteURI" \
 "http://www.oasis-open.org/docbook/xml/4.2" \
-"file:///usr/share/xml/docbook/xml-dtd-4.3CR3" \
+"file:///usr/share/xml/docbook/xml-dtd-4.3" \
 /etc/xml/docbook
 
 
