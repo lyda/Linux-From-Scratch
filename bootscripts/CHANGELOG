@@ -4,6 +4,7 @@ n/a - June 3, 2004
 	  events, which may start up new daemons
 	* Added elementry bootup logging support.  If it can write to
 	  /var/log/boot.log, it will
+	* Removed logging support, it kept / from being remounted ro
 
 n/a - June 2, 2004
 
