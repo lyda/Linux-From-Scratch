@@ -4,30 +4,38 @@ TODO
 1. General
 ~~~~~~~~~~
 
-1.1.  Decide on a validation method to use.  DTD's are not namespace aware
-      which may cause us problems in the future.  RelaxNG looks promising but
-      there's also the W3C's "XML Schema".  Docbook is available in both, and
-      libxml2 supports both.
+  1.1. Decide on a validation method to use.  DTD's are not namespace aware
+       which cause us problems with XInclude namespaces, and will likely cause
+       more problems in the future.  RelaxNG looks promising but there's also
+       the W3C's "XML Schema".  Docbook is available in both, and libxml2
+       supports both.  DocBook 5.0 appears as if it'll be primarily based on RNG
+       so it would probably be better if we can migrate to that.
+
+       Note: Preliminary testing isn't going too well.  Validating against the
+       4.3CR3 version of the Docbook RNG schema causes libxml2 to crash
+       spectacularly (the process ends up getting killed!).  The 4.2 version
+       seems better in that respect, but I can't seem to write a document that
+       will validate against it.  All the documents I try complain that
+       "<book> wasn't expected there" (line 1!).
+  1.2. Upgrade to lfs-bootscripts-2.0
+  1.3. Upgrade to file-4.08
+  1.4. Merge Alex's structure and content changes
+  1.5. Remove download location hyperlinks from chapters 5 & 6.
+
 
 2. HTML
 ~~~~~~~
 
-2.1. Provide a css file to provide nicer output than whatever the UA's default
-     is.
-       * Started - needs some comments regarding layout.
-       * Binary/library names listed in "Short Description" sections should be
-         in a fixed-width font.
-       * URLs of "Official download locations" appear on the line below where
-         they should do in chapter 6.
-       * Header (naviagtion) areas, TOCs & "Titlepage" sections need font sizes
-         & style fixing.
-2.2. Decide whether we want to use the strict or transitional XHTML DTD. Note in
-     particular http://www.sagehill.net/docbookxsl/OtherOutputForms.html#d0e23340.
-2.3. The legalinfo page generates it's own hyperlink ("Legal Notice") but the
-     current book has it linked to via the "Copyright" message above.  Does this
-     matter?
-2.4. Decide on what levels the TOCs should go down to.
+  2.1. Decide whether we want to use the strict or transitional XHTML DTD. Note
+       in particular http://www.sagehill.net/docbookxsl/OtherOutputForms.html#d0e23340.
+  2.2. The legalinfo page generates it's own hyperlink ("Legal Notice") but the
+       current book has it linked to via the "Copyright" message above.  Does
+       this matter?
+  2.3. Decide on what levels the TOCs should go down to.
        * Section elements now no longer have a TOC generated for them - the book         TOC remains unchanged as do the part and appendix level TOCs.
+  2.4. Jeroen commented that the semantics of the HTML output are inaccurate. It
+       looks as if it'll be too time consuming to get this fixed, but does at
+       least warrant further investigation.
 
 3. PDF
 ~~~~~~

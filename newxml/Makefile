@@ -1,14 +1,13 @@
 BASEDIR=~/lfs-book/
 
 lfs:
-	bash entResolver output
-	cd ../output && xsltproc --xinclude --nonet -stringparam base.dir \
-	$(BASEDIR) stylesheets/lfs-chunked.xsl index.xml
+	xsltproc --xinclude --nonet -stringparam base.dir $(BASEDIR) \
+	  stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)stylesheets ]; then \
 	  mkdir -p $(BASEDIR)stylesheets; \
 	fi;
-	cp ../output/stylesheets/lfs.css $(BASEDIR)stylesheets
+	cp stylesheets/lfs.css $(BASEDIR)stylesheets
 
 	if [ ! -e $(BASEDIR)images ]; then \
 	  mkdir -p $(BASEDIR)images; \
@@ -21,7 +20,6 @@ lfs:
 	  $(BASEDIR){index,part1,part2,part3,part4}.html
 
 pdf:
-	bash entResolver output
-	cd ../output && xsltproc --xinclude --nonet --output lfs.fo \
-	  stylesheets/lfs-pdf.xsl index.xml
-	cd ../output && fop.sh lfs.fo lfs.pdf
+	xsltproc --xinclude --nonet --output lfs.fo stylesheets/lfs-pdf.xsl \
+	  index.xml
+	fop.sh lfs.fo lfs.pdf

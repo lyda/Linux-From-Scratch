@@ -11,7 +11,7 @@ DocBook XSL Stylesheets 1.65.1 - older versions of the stylesheets had a bug
                                  which caused broken hyperlinks (they pointed to
                                  the wrong directory).
 
-libxml2-2.6.7 & libxslt-1.1.4 - these releases have a couple of XInclude related
+libxml2-2.6.8 & libxslt-1.1.5 - these releases have a couple of XInclude related
                                 bugfixes in them
 
 FOP-0.20.5 - required for PDF generation.  The easiest method of installation is
