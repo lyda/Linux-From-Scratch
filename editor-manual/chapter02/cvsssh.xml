@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 id="ch02-cvsssh">
 <title>CVS SSH Access (for editors)</title>
 <?dbhtml filename="cvsssh.html" dir="chapter02"?>
@@ -45,4 +51,3 @@ cd'ing into the LFS directory and running:</para>
 <para><screen><userinput>cvs update</userinput></screen></para>
 
 </sect1>
-

@@ -1,50 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 id="ch05-filingbug">
-<title>Enter a new bug</title>
-<?dbhtml filename="enternewbug.html" dir="chapter05"?>
+  <title>Enter a new bug</title>
+  <?dbhtml filename="enternewbug.html" dir="chapter05"?>
 
-<para>You found a bug, or somebody else found a bug and you decided to add
-it to Bugzilla.</para>
+  <para>You found a bug, or somebody else found a bug and you decided to add
+    it to Bugzilla.
+  </para>
 
-<itemizedlist>
+  <itemizedlist>
 
-<listitem><para>Go to <ulink
-url="http://bugs.linuxfromscratch.org/enter_bug.cgi"/></para></listitem>
+  <listitem>
+    <para>Go to <ulink url="http://bugs.linuxfromscratch.org/enter_bug.cgi"/>
+    </para>
+  </listitem>
 
-<listitem><para>Select the proper <emphasis>Version</emphasis>. You most
-always will choose the <emphasis>CVS</emphasis> version. It doesn't make
-sense to report a bug against an old version if it's no longer in CVS. If
-it is, then CVS is newer than a previously released stable book version.
-The versions are basically there only for people who don't edit the book
-and who want to report a bug against the book version they
-have.</para></listitem>
+  <listitem><para>Select the proper <emphasis>Version</emphasis>. You most
+    always will choose the <emphasis>CVS</emphasis> version. It doesn't make
+    sense to report a bug against an old version if it's no longer in CVS. If it
+    is, then CVS is newer than a previously released stable book version.  The
+    versions are basically there only for people who don't edit the book and who
+    want to report a bug against the book version they have.</para>
+  </listitem>
 
-<listitem><para>Don't worry about <emphasis>Component, Platform, OS and
-Severity</emphasis> Those aren't used at the moment.</para></listitem>
+  <listitem><para>Don't worry about <emphasis>Component, Platform, OS and
+    Severity</emphasis> Those aren't used at the moment.</para>
+  </listitem>
 
-<listitem><para>Select the <emphasis>Resolution Priority</emphasis>. Use
-your own judgement on how important fixing this bug is. If you're not sure
-just leave the default. Priorities are periodically re-evaluated and
-changed anyways (what may be P5 a month ago may be changed to a P1 now
-because it's finally time to fix it).</para></listitem>
+  <listitem><para>Select the <emphasis>Resolution Priority</emphasis>. Use your
+    own judgement on how important fixing this bug is. If you're not sure just
+    leave the default. Priorities are periodically re-evaluated and changed
+    anyways (what may be P5 a month ago may be changed to a P1 now because it's
+    finally time to fix it).</para>
+  </listitem>
 
-<listitem><para>Select the <emphasis>Initial state</emphasis>. Only select
-<emphasis>UNCONFIRMED</emphasis> if you haven't checked the matter out yet
-and are only suspecting a bug. Otherwise, leave it as
-<emphasis>NEW</emphasis></para></listitem>
+  <listitem><para>Select the <emphasis>Initial state</emphasis>. Only select
+    <emphasis>UNCONFIRMED</emphasis> if you haven't checked the matter out yet
+    and are only suspecting a bug. Otherwise, leave it as
+    <emphasis>NEW</emphasis></para>
+  </listitem>
 
-<listitem><para>If you don't want to assign yourself to it right away,
-leave the <emphasis>Assigned To</emphasis> field blank. It'll be assigned
-to <emphasis>lfs-book@linuxfromscratch.org</emphasis> then, until a real
-editor changes that to himself.</para></listitem>
+  <listitem><para>If you don't want to assign yourself to it right away, leave
+    the <emphasis>Assigned To</emphasis> field blank. It'll be assigned to
+    <emphasis>lfs-book@linuxfromscratch.org</emphasis> then, until a real editor
+    changes that to himself.</para>
+  </listitem>
 
-<listitem><para>Fill in the other fields as appropriate,
-<emphasis>Summary</emphasis> and <emphasis>Description</emphasis> are
-mandatory.</para></listitem>
+  <listitem><para>Fill in the other fields as appropriate,
+    <emphasis>Summary</emphasis> and <emphasis>Description</emphasis> are
+    mandatory.</para>
+  </listitem>
 
-<listitem><para>As the last step, click on the <emphasis>Commit</emphasis>
-button to commit your changes to the database. A log of this will be sent
-to the lfs-book mailinglist.</para></listitem>
-
+  <listitem><para>As the last step, click on the <emphasis>Commit</emphasis>
+    button to commit your changes to the database. A log of this will be sent to
+    the lfs-book mailinglist.</para>
+  </listitem>
 </itemizedlist>
 
 </sect1>

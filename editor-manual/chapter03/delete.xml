@@ -1,11 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 id="ch03-delete">
-<title>cvs delete/remove</title>
-<?dbhtml filename="delete.html" dir="chapter03"?>
+  <title>cvs delete/remove</title>
+  <?dbhtml filename="delete.html" dir="chapter03"?>
 
-<para><userinput>cvs delete</userinput> or <userinput>cvs
-remove</userinput>. This does what it says: remove (a) file(s) from the
-repository on shadowfax. Note that you have to have deleted the file
-locally before you can run this. Again, the file will not be deleted from
-the server until you do a <userinput>cvs commit</userinput>.</para>
-
+  <para><userinput>cvs delete</userinput> or <userinput>cvs remove</userinput>.
+    This does what it says: remove (a) file(s) from the repository on shadowfax.
+    Note that you have to have deleted the file locally before you can run this.    Again, the file will not be deleted from the server until you do a
+    <userinput>cvs commit</userinput>.
+  </para>
 </sect1>

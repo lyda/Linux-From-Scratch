@@ -1,24 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 id="ch05-assignbug">
-<title>Assigning bugs</title>
-<?dbhtml filename="assignbug.html" dir="chapter05"?>
+  <title>Assigning bugs</title>
+  <?dbhtml filename="assignbug.html" dir="chapter05"?>
 
-<para>You're ready to start working on a bug that's in Bugzilla. Step one
-is to assign the bug to yourself. This informs us that somebody is working
-on the bug so we can move onto other bugs.</para>
+  <para>You're ready to start working on a bug that's in Bugzilla. Step one is
+    to assign the bug to yourself. This informs us that somebody is working on
+    the bug so we can move onto other bugs.
+  </para>
 
-<itemizedlist>
+  <itemizedlist>
 
-<listitem><para>Go to the bug you want to work on.</para></listitem>
+    <listitem><para>Go to the bug you want to work on.</para></listitem>
 
-<listitem><para>Select the <emphasis>Accept bug (change status to
-ASSIGNED)</emphasis> radio button.</para></listitem>
+    <listitem><para>Select the <emphasis>Accept bug (change status to ASSIGNED)
+      </emphasis> radio button.</para>
+    </listitem>
 
-<listitem><para>Click on the <emphasis>Commit</emphasis>
-button.</para></listitem>
+    <listitem><para>Click on the <emphasis>Commit</emphasis> button.</para>
+    </listitem>
 
-<listitem><para>While working on the bug, sometimes you may want to add
-comments to it. Feel free to do so.</para></listitem>
-
-</itemizedlist>
-
+    <listitem><para>While working on the bug, sometimes you may want to add
+      comments to it. Feel free to do so.</para>
+    </listitem>
+  </itemizedlist>
 </sect1>

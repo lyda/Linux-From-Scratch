@@ -1,15 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <chapter id="chapter04">
-<title>Committing Changes - Policy</title>
-<?dbhtml filename="chapter04.html" dir="chapter04"?>
-
-&c4-introduction;
-&c4-test;
-&c4-updateindex;
-&c4-updatechangelog;
-&c4-checkfiles;
-&c4-checkrender;
-&c4-commit;
-&c4-bugzilla;
-
+  <title>Committing Changes - Policy</title>
+  <?dbhtml filename="chapter04.html" dir="chapter04"?>
+ <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="test.xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="updateindex.xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="updatechangelog.xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="checkfiles.xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="commit.xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bugzilla.xml"/>
 </chapter>
 

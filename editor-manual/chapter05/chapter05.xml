@@ -1,11 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <chapter id="chapter05">
-<title>Using Bugzilla</title>
-<?dbhtml filename="chapter05" dir="chapter05"?>
-
-&c5-introduction;
-&c5-addingcomments;
-&c5-enternewbugs;
-&c5-assignbug;
-&c5-fixbug;
-
+  <title>Using Bugzilla</title>
+  <?dbhtml filename="chapter05" dir="chapter05"?>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="addingcomments.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="enternewbugs.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="assignbug.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="fixbug.xml"/>
 </chapter>

@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <chapter id="chapter01">
 <title>LFS Development</title>
 <?dbhtml filename="chapter01.html" dir="chapter01"?>
@@ -22,8 +28,7 @@ notice that it will reference the entity &amp;book;. Look up the entity
 <filename>book/book.xml</filename>. Continue in this way and you'll find
 your way around the book soon enough.</para>
 
-<para>The Bugzilla bug-tracking system for LFS can be found at <ulink
-url="http://bugs.linuxfromscratch.org"/>. In order to be able to
+<para>The Bugzilla bug-tracking system for LFS can be found at <ulink url="http://bugs.linuxfromscratch.org"/>. In order to be able to
 add, remove and edit bugs, you need to add an account and make sure you
 are logged in whenever you wish to perform such an action.  You can
 query and read the bug database without logging in or creating a user.

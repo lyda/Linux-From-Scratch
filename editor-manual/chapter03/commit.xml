@@ -1,13 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 id="ch03-commit">
-<title>cvs commit/ci</title>
-<?dbhtml filename="commit.html" dir="chapter03"?>
+  <title>cvs commit/ci</title>
+  <?dbhtml filename="commit.html" dir="chapter03"?>
 
-<para><userinput>cvs commit</userinput> or <userinput>cvs ci</userinput>.
-This command recursively sends your changes to the CVS server. It will
-commit changed files, added files and deleted files. The -m option can be
-used to pass a log message to the command. If you don't specify a
-<emphasis>-m "MESSAGE"</emphasis>, then it will open the default editor and
-ask you to type in a log. Please don't use empty log messages (see later in
-this document on the policy which governs them).</para>
-
+  <para><userinput>cvs commit</userinput> or <userinput>cvs ci</userinput>. This
+    command recursively sends your changes to the CVS server. It will commit
+    changed files, added files and deleted files. The -m option can be used to
+    pass a log message to the command. If you don't specify a
+    <emphasis>-m "MESSAGE"</emphasis>, then it will open the default editor and
+    ask you to type in a log. Please don't use empty log messages (see later in
+    this document on the policy which governs them).
+  </para>
 </sect1>

@@ -1,76 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 id="ch06-updateftp">
-<title>Updating the LFS FTP Archive</title>
-<?dbhtml filename="updateftp.html" dir="chapter06"?>
+  <title>Updating the LFS FTP Archive</title>
+  <?dbhtml filename="updateftp.html" dir="chapter06"?>
 
-<para>Now that the book has been updated, it's time to update the LFS FTP
-archive so people can download the new package.</para>
+  <para>Now that the book has been updated, it's time to update the LFS FTP
+    archive so people can download the new package.
+  </para>
 
-<itemizedlist>
+  <itemizedlist>
+    <listitem><para>Move the new package tarball from your home directory on
+      shadowfax to the <filename
+      class="directory">/home/ftp/lfs-packages/conglomeration</filename>
+      directory.</para>
+    </listitem>
 
-<listitem><para>Move the new package tarball from your home directory on
-shadowfax to the
-<filename
-class="directory">/home/ftp/lfs-packages/conglomeration</filename>
-directory.</para></listitem>
+    <listitem><para>Go to the <filename
+      class="directory">/home/ftp/lfs-packages/cvs</filename> directory.</para>
+    </listitem>
 
-<listitem><para>Go to the <filename
-class="directory">/home/ftp/lfs-packages/cvs</filename>
-directory.</para></listitem>
+    <listitem><para>Remove the symlink that points to the old package.</para>
+    </listitem>
 
-<listitem><para>Remove the symlink that points to the old
-package.</para></listitem>
+    <listitem><para>Create a new symlink that points to the new package by
+      running a command like
+      <userinput>ln -s ../conglomeration/package-newversion.tar.bz2</userinput>
+      </para>
+    </listitem>
 
-<listitem><para>Create a new symlink that points to the new package by
-running a command like
-<userinput>ln -s ../conglomeration/package-newversion.tar.bz2</userinput></para></listitem>
+    <listitem><para>Remove the <filename>lfs-packages-cvs-*</filename> file.
+      </para>
+    </listitem>
 
-<listitem><para>Remove the <filename>lfs-packages-cvs-*</filename>
-file.</para></listitem>
+    <listitem><para>Recreate the <filename>00MD5SUMS</filename> file by running:
+      </para>
 
-<listitem><para>Recreate the <filename>00MD5SUMS</filename> file by
-running:</para>
+      <para><screen><userinput>rm 00MD5SUMS &amp;&amp;
+md5sum * > 00MD5SUMS</userinput></screen>
+      </para>
+    </listitem>
 
-<para><screen><userinput>rm 00MD5SUMS &amp;&amp;
-md5sum * > 00MD5SUMS</userinput></screen></para></listitem>
+    <listitem><para>Run <userinput>date</userinput> to get the current date and
+      time on the server.</para>
+    </listitem>
 
-<listitem><para>Run <userinput>date</userinput> to get the current date and
-time on the server.</para></listitem>
+    <listitem>
+      <para>Go to the <filename class="directory">/home/ftp/lfs-packages
+        </filename> directory and create a new lfs-packages tarball by running
+        the following commands:
+      </para>
 
-<listitem><para>Go to the <filename
-class="directory">/home/ftp/lfs-packages</filename> directory and create a
-new lfs-packages tarball by running the following
-commands:</para>
-
-<para><screen><userinput>cp -av cvs lfs-packages-cvs-yyyymmdd-hhmm &amp;&amp;
+      <para>
+        <screen><userinput>cp -av cvs lfs-packages-cvs-yyyymmdd-hhmm &amp;&amp;
 tar cvfh lfs-packages-cvs-yyyymmdd-hhmm.tar lfs-packages-cvs-yyyymmdd-hhmm &amp;&amp;
 rm -r cvs &amp;&amp;
 mv lfs-packages-yyyymmdd-hhmm cvs &amp;&amp;
-mv lfs-packages-yyyymmdd-hhmm.tar cvs</userinput></screen></para></listitem>
+mv lfs-packages-yyyymmdd-hhmm.tar cvs</userinput></screen>
+      </para>
+    </listitem>
 
-<listitem><para>Add the new lfs-packages' MD5 hash to the 00MD5SUMS
-file:</para>
+    <listitem>
+      <para>Add the new lfs-packages' MD5 hash to the 00MD5SUMS file:</para>
 
-<para><screen><userinput>cd cvs &amp;&amp;
-md5sum lfs-packages-yyyymmdd-hhmm.tar >> 00MD5SUMS</userinput></screen></para></listitem>
+      <para><screen><userinput>cd cvs &amp;&amp;
+md5sum lfs-packages-yyyymmdd-hhmm.tar >> 00MD5SUMS</userinput></screen>
+      </para>
+    </listitem>
 
-<listitem><para>Check the filesize of this new lfs-packages-cvs tarball and
-divide it by <emphasis>1024</emphasis> to get the number of Kilobytes.
-Round it off to the nearest Kilobyte. Divide this number by
-<emphasis>1024</emphasis> to get the number of Megabytes and round it off
-to two digits after the decimal point.</para></listitem>
+    <listitem>
+      <para>Check the filesize of this new lfs-packages-cvs tarball and divide
+        it by <emphasis>1024</emphasis> to get the number of Kilobytes.  Round
+        it off to the nearest Kilobyte. Divide this number by
+        <emphasis>1024</emphasis> to get the number of Megabytes and round it
+        off to two digits after the decimal point.
+      </para>
+    </listitem>
 
-<listitem><para>Go back to the LFS Book and edit the
-<filename>index.xml</filename> file.</para></listitem>
+    <listitem>
+      <para>Go back to the LFS Book and edit the <filename>index.xml</filename>
+        file.
+      </para>
+    </listitem>
 
-<listitem><para>Update the <emphasis>all-version</emphasis> entity and
-enter the new version string in the <emphasis>cvs-yyyymmdd-hhmm</emphasis>
-format.</para></listitem>
+    <listitem>
+      <para>Update the <emphasis>all-version</emphasis> entity and enter the new
+        version string in the <emphasis>cvs-yyyymmdd-hhmm</emphasis> format.
+      </para>
+    </listitem>
 
-<listitem><para>Update the <emphasis>all-size-kb</emphasis> and
-<emphasis>all-size-mb</emphasis> entities with the values you calculated
-above.</para></listitem>
-
-</itemizedlist>
-
+    <listitem>
+      <para>Update the <emphasis>all-size-kb</emphasis> and
+        <emphasis>all-size-mb</emphasis> entities with the values you calculated
+        above.
+      </para>
+    </listitem>
+  </itemizedlist>
 </sect1>
-
