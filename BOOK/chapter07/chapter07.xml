@@ -3,20 +3,23 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-bootscripts" xreflabel="Chapter 7">
+<chapter xmlns="http://docbook.org/docbook-ng"
+         xmlns:xi="http://www.w3.org/2003/XInclude"
+         xml:id="chapter-bootscripts"
+         xreflabel="Chapter 7">
 <?dbhtml dir="chapter07"?>
-<title>Setting up system boot scripts</title>
+<info><title>Setting up system boot scripts</title></info>
 <?dbhtml filename="chapter07.html"?>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bootscripts.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="usage.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="setclock.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="console.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="inputrc.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="profile.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="hostname.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="hosts.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="network.xml"/>
+<xi:include href="introduction.xml"/>
+<xi:include href="bootscripts.xml"/>
+<xi:include href="usage.xml"/>
+<xi:include href="setclock.xml"/>
+<xi:include href="console.xml"/>
+<xi:include href="inputrc.xml"/>
+<xi:include href="profile.xml"/>
+<xi:include href="hostname.xml"/>
+<xi:include href="hosts.xml"/>
+<xi:include href="network.xml"/>
 
 </chapter>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-scripts-hosts">
-<title>Creating the /etc/hosts file</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-scripts-hosts">
+<info><title>Creating the /etc/hosts file</title></info>
 <?dbhtml filename="hosts.html"?>
 
 <indexterm zone="ch-scripts-hosts"><primary sortas="e-/etc/hosts">/etc/hosts</primary></indexterm>
@@ -69,4 +70,4 @@ have to be changed to your liking (or requirements if assigned an IP-address
 by a network/system administrator and this machine is planned to be connected
 to an existing network).</para>
 
-</sect1>
+</section>

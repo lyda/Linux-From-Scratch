@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 [
+<!DOCTYPE section [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-scripts-bootscripts" xreflabel="Bootscripts" role="wrap">
-<title>LFS-Bootscripts-&bootscripts-version;</title>
+<section xmlns="http://docbook.org/docbook-ng"
+         xml:id="ch-scripts-bootscripts"
+         xreflabel="Bootscripts" role="wrap">
+<info><title>LFS-Bootscripts-&bootscripts-version;</title></info>
 <?dbhtml filename="bootscripts.html"?>
 
 <indexterm zone="ch-scripts-bootscripts"><primary sortas="a-Bootscripts">Bootscripts</primary></indexterm>
 
-<sect2 role="package"><title/>
+<section role="package"><info><title/></info>
 <para>The LFS-Bootscripts package contains a set of bootscripts.</para>
 
 <segmentedlist>
@@ -22,10 +24,10 @@
 <segtitle>LFS-Bootscripts installation depends on</segtitle>
 <seglistitem><seg>Bash, Coreutils</seg></seglistitem>
 </segmentedlist>
-</sect2>
+</section>
 
-<sect2 role="installation">
-<title>Installation of LFS-Bootscripts</title>
+<section role="installation">
+<info><title>Installation of LFS-Bootscripts</title></info>
 
 <para>Installation of the bootscripts is very simple:</para>
 
@@ -37,10 +39,10 @@ we also want to make sure we install the bootscripts for those as well:</para>
 <screen><userinput>make install-hotplug
 make install-syslog-ng</userinput></screen>
 
-</sect2>
+</section>
 
 
-<sect2 id="contents-bootscripts" role="content"><title>Contents of LFS-bootscripts</title>
+<section xml:id="contents-bootscripts" role="content"><info><title>Contents of LFS-bootscripts</title></info>
 
 <segmentedlist>
 <segtitle>Installed scripts</segtitle>
@@ -51,7 +53,7 @@ swap, sysklogd and template</seg></seglistitem>
 
 <variablelist><title>Short descriptions</title>
 
-<varlistentry id="checkfs-bootscripts">
+<varlistentry xml:id="checkfs-bootscripts">
 <term><command>checkfs</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts checkfs-bootscripts"><primary sortas="d-checkfs">checkfs</primary></indexterm>
@@ -60,7 +62,7 @@ and network based file systems).</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="cleanfs-bootscripts">
+<varlistentry xml:id="cleanfs-bootscripts">
 <term><command>cleanfs</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts cleanfs-bootscripts"><primary sortas="d-cleanfs">cleanfs</primary></indexterm>
@@ -72,7 +74,7 @@ and removes the possibly present <filename>/etc/nologin</filename>,
 </listitem>
 </varlistentry>
 
-<varlistentry id="console-bootscripts">
+<varlistentry xml:id="console-bootscripts">
 <term><command>console</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts console-bootscripts"><primary sortas="d-console">console</primary></indexterm>
@@ -81,7 +83,7 @@ It also sets the screen font.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="functions-bootscripts">
+<varlistentry xml:id="functions-bootscripts">
 <term><command>functions</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts functions-bootscripts"><primary sortas="d-functions">functions</primary></indexterm>
@@ -90,7 +92,7 @@ different scripts, such as error and status checking.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="halt-bootscripts">
+<varlistentry xml:id="halt-bootscripts">
 <term><command>halt</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts halt-bootscripts"><primary sortas="d-halt">halt</primary></indexterm>
@@ -98,7 +100,7 @@ different scripts, such as error and status checking.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="ifdown-bootscripts">
+<varlistentry xml:id="ifdown-bootscripts">
 <term><command>ifdown</command> and <command>ifup</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts ifdown-bootscripts"><primary sortas="d-ifdown">ifdown</primary></indexterm>
@@ -106,7 +108,7 @@ different scripts, such as error and status checking.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="localnet-bootscripts">
+<varlistentry xml:id="localnet-bootscripts">
 <term><command>localnet</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts localnet-bootscripts"><primary sortas="d-localnet">localnet</primary></indexterm>
@@ -114,7 +116,7 @@ different scripts, such as error and status checking.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mountfs-bootscripts">
+<varlistentry xml:id="mountfs-bootscripts">
 <term><command>mountfs</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts mountfs-bootscripts"><primary sortas="d-mountfs">mountfs</primary></indexterm>
@@ -123,7 +125,7 @@ aren't marked <emphasis>noauto</emphasis> or aren't network based.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="mountkernfs-bootscripts">
+<varlistentry xml:id="mountkernfs-bootscripts">
 <term><command>mountkernfs</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts mountkernfs-bootscripts"><primary sortas="d-mountkernfs">mountkernfs</primary></indexterm>
@@ -131,7 +133,7 @@ aren't marked <emphasis>noauto</emphasis> or aren't network based.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="network-bootscripts">
+<varlistentry xml:id="network-bootscripts">
 <term><command>network</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts network-bootscripts"><primary sortas="d-network">network</primary></indexterm>
@@ -140,7 +142,7 @@ as network cards, and sets up the default gateway where applicable.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="rc-bootscripts">
+<varlistentry xml:id="rc-bootscripts">
 <term><command>rc</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts rc-bootscripts"><primary sortas="d-rc">rc</primary></indexterm>
@@ -150,7 +152,7 @@ determined by the name of the symbolic links being processed.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="reboot-bootscripts">
+<varlistentry xml:id="reboot-bootscripts">
 <term><command>reboot</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts reboot-bootscripts"><primary sortas="d-reboot">reboot</primary></indexterm>
@@ -158,7 +160,7 @@ determined by the name of the symbolic links being processed.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="sendsignals-bootscripts">
+<varlistentry xml:id="sendsignals-bootscripts">
 <term><command>sendsignals</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts sendsignals-bootscripts"><primary sortas="d-sendsignals">sendsignals</primary></indexterm>
@@ -166,7 +168,7 @@ determined by the name of the symbolic links being processed.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="setclock-bootscripts">
+<varlistentry xml:id="setclock-bootscripts">
 <term><command>setclock</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts setclock-bootscripts"><primary sortas="d-setclock">setclock</primary></indexterm>
@@ -175,7 +177,7 @@ localtime in case the hardware clock isn't set to GMT time.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="static-bootscripts">
+<varlistentry xml:id="static-bootscripts">
 <term><command>static</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts static-bootscripts"><primary sortas="d-static">static</primary></indexterm>
@@ -184,7 +186,7 @@ to assign a static IP address to a network interface.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="swap-bootscripts">
+<varlistentry xml:id="swap-bootscripts">
 <term><command>swap</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts swap-bootscripts"><primary sortas="d-swap">swap</primary></indexterm>
@@ -192,7 +194,7 @@ to assign a static IP address to a network interface.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="syslogng-bootscripts">
+<varlistentry xml:id="syslogng-bootscripts">
 <term><command>sysklogd</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts syslogng-bootscripts"><primary sortas="d-syslogng">syslog-ng</primary></indexterm>
@@ -200,7 +202,7 @@ to assign a static IP address to a network interface.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="template-bootscripts">
+<varlistentry xml:id="template-bootscripts">
 <term><command>template</command></term>
 <listitem>
 <indexterm zone="ch-scripts-bootscripts template-bootscripts"><primary sortas="d-template">template</primary></indexterm>
@@ -210,6 +212,6 @@ create your own bootscripts for your other daemons.</para>
 </varlistentry>
 </variablelist>
 
-</sect2>
+</section>
 
-</sect1>
+</section>
