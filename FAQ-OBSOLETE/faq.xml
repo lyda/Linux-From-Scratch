@@ -304,7 +304,8 @@ ln -s ../X11/include/X11 X11
 				These don't really belong in the FAQ,
 				but they come up often on the lists.
 			</para>
-			<section id="lesscharset"><title>Why does less print &lt;AD&gt; instead of hyphens?</title>
+			<section id="lesscharset"><title>Why does less (and therefore man)
+				print &lt;AD&gt; instead of hyphens?</title>
 				<para>
 					Because the LESSCHARSET environment variable isn't set. To fix
 					that, set it in /etc/profile by doing something like this:
