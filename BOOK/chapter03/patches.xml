@@ -184,8 +184,15 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry>
-<term>Util-linux Cramfs Patch - 2kb:</term> <listitem>
+<term>Util-linux Cramfs Patch - 2 KB:</term> <listitem>
 <para><ulink url="&patches-root;util-linux/util-linux-&util-linux-version;-cramfs-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="ppc">
+<term>Yaboot (&yaboot-version;) - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;yaboot/yaboot-&yaboot-version;-fix-1.patch"/></para>
 </listitem>
 </varlistentry>
 

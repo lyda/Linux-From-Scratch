@@ -53,7 +53,7 @@ command be copy-and-pasted in order to ensure accuracy.
 Alternatively, the specs file can be edited by hand. This is done by
 replacing every occurrence of <quote arch="x86">/lib/ld-linux.so.2</quote> 
 <quote arch="ppc;raq2">/lib/ld.so.1</quote> with <quote arch="x86">/tools/lib/ld-linux.so.2</quote>
-<quote arch="ppc;raq2">/tools/lib/ld.so.2</quote></para>
+<quote arch="ppc;raq2">/tools/lib/ld.so.1</quote></para>
 
 <para>Be sure to visually inspect the specs file in order to verify the
 intended changes have been made.</para>

@@ -28,6 +28,10 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Yaboot</title>
 
+<para>Yaboot has a compilation error.  The following patch properly fixes that issue</para>
+
+<screen><userinput>patch -Np1 -i ../yaboot-&yaboot-version;-fix-1.patch</userinput></screen>
+
 <para>Compile the Yaboot package:</para>
 
 <screen><userinput>make PREFIX=/usr</userinput></screen>
