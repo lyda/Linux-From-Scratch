@@ -428,9 +428,11 @@ statusproc()
 #          return 2 - Invalid of excessive arguments, warning in stdout
 #          return 3 - Program is not running
 #
-# Dependencies: pidof, echo
+# Dependencies: pidof, echo, head
 #
-# Todo: This depreciates getpids 
+# Todo: Remove dependency on head
+#       This depreciates getpids
+#       Test changes to pidof
 #
 #*******************************************************************************
 pidofproc()
@@ -483,7 +485,7 @@ pidofproc()
 		done
 
 	else
-		pidof "${1}"
+		pidof -o $$ -o $PPID -x "${1}"
 	fi
 
 	if [ "$?" != "0" ]

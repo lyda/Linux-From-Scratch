@@ -1,3 +1,11 @@
+n/a - February 9, 2005
+	* Bugfix for /dev, now mounted with 755 permission
+
+n/a - February 8, 2005
+	* changed pidof, so it doesnt check the process id
+	  of running bootscripts, and to process shell scripts
+	  (Nathan Coulson)
+
 n/a - February 6, 2005
 	* Updated main functions file with lsb functions file
 	  Should now be LSB compliant (Nathan Coulson)
