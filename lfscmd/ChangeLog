@@ -1,3 +1,12 @@
+o [jon] November 24th 2003
+  Reorganized much of lfscmd.c
+  
+  Fixed '&&' stripping:
+    Bug in string_comp where first char was not compared.
+    bug in string_strip where s index was increment too many times.
+  Added -a option to let user decide to strip '&&'
+  Fixed BLFS parsing of cat here documents.
+
 o [greg] September 19th 2003
 
   Added patch from Jon Ringle to properly deal with BLFS
