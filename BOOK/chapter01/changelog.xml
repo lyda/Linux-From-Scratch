@@ -50,7 +50,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Tar 1.15.1</para></listitem>
 <listitem><para>Texinfo 4.8</para></listitem>
 <listitem><para>Tcl 8.4.9</para></listitem>
-<listitem><para>Udev 053</para></listitem>
+<listitem><para>Udev 054</para></listitem>
 <listitem><para>Util-linux 2.12q</para></listitem>
 <listitem><para>Zlib 1.2.2</para></listitem>
 <listitem><para>udev-config-2.rules</para></listitem>
@@ -78,6 +78,15 @@ first a summary, then a detailed log.</para>
 </listitem>
 
 <listitem><para>Changelog Entries:</para>
+
+<itemizedlist>
+<listitem><para>Feburary 26, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Udev to 054.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
 <itemizedlist>
 <listitem><para>Feburary 25, 2005 [jim]</para>
 <itemizedlist>
@@ -90,9 +99,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>Feburary 24, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Gettext 0.14.2.</para></listitem>
-<listitem><para>Changed: Book Format - Cchangelog format.</para></listitem>
+<listitem><para>Changed: Book Format - Changelog format.</para></listitem>
 <listitem><para>Fixed: Arch: All - Bugzilla 1033 Gettext.</para></listitem>
-<listitem><para>Updated: Arch: Raq2 - Colo to 1.1.7</para></listitem>
+<listitem><para>Updated: Arch: Raq2 - Colo to 1.1.7.</para></listitem>
 <listitem><para>Updated: Arch: All - Bzip2 to 1.0.3.</para></listitem>
 <listitem><para>Updated: Arch: All - Download file sizes.</para></listitem>
 </itemizedlist>
@@ -109,9 +118,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>Added Patch: Arch: RaQ2 grep - updated config.guess and config.sub.</para></listitem>
 <listitem><para>Added Patch: Arch: RaQ2 Linux - fixes MIPS Processor related issues.</para></listitem>
 <listitem><para>Added Patch: Arch: RaQ2 bootscripts - allows LCD Status during bootup.</para></listitem>
-<listitem><para>Added patch: Arch: All iproute2 - fixes constant_htons build issue.</para></listitem>
+<listitem><para>Added Patch: Arch: All iproute2 - fixes constant_htons build issue.</para></listitem>
 <listitem><para>Added: Arch: RaQ2 Colo, OpenSSL, and OpenSSH.</para></listitem>
-<listitem><para>Added: Arch: PPC Yaboot</para></listitem>
+<listitem><para>Added: Arch: PPC Yaboot.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

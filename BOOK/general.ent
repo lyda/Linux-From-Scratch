@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "7.0-multiarch-20050225">
+<!ENTITY version "7.0-multiarch-20050226">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-alpha "&version;-alpha">
 <!ENTITY version-ppc "&version;-PowerPC">
 <!ENTITY version-raq2 "&version;-RaQ2">
-<!ENTITY releasedate "February 25, 2005">
+<!ENTITY releasedate "February 26, 2005">
 <!ENTITY milestone "7.0">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -91,7 +91,7 @@
 <!ENTITY tcl-version "8.4.9">
 <!ENTITY texinfo-version "4.8">
 <!ENTITY util-linux-version "2.12q">
-<!ENTITY udev-version "053">
+<!ENTITY udev-version "054">
 <!ENTITY yaboot-version "1.3.13">
 <!ENTITY vim-version "6.3">
 <!ENTITY zlib-version "1.2.2">
