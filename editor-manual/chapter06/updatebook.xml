@@ -1,6 +1,6 @@
 <sect1 id="ch06-updatebook">
 <title>Update the book</title>
-<?dbhtml filename="updatebook.xml" dir="chapter06"?>
+<?dbhtml filename="updatebook.html" dir="chapter06"?>
 
 <para>When you're going to update the book by adding a new package to it,
 here's how you do it:</para>
