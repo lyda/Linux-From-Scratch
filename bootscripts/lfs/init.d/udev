@@ -33,11 +33,10 @@ case "$1" in
 
 		# When the hotplug package isn't installed, make sure that udev
 		# still gets hotplug events.
-		if [ -x /sbin/hotplug ]; then
-			echo /sbin/hotplug > /proc/sys/kernel/hotplug
-		else
+		if [ ! -x /sbin/hotplug ]; then
 			echo /sbin/udev > /proc/sys/kernel/hotplug
 		fi
+
 		# Populate /dev with all the devices that are already available,
 		# and save it's status so we can report failures.
 		udevstart || failed=1
