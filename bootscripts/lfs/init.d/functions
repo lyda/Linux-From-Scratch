@@ -284,7 +284,7 @@ getpids()
 loadproc()
 {
 	if [ "$#" = "0" ]; then
-		echo "Usage: loadproc {program}"
+		echo "Usage: loadproc {program} [-nomsg]"
 		exit 1
 	fi
 
@@ -293,8 +293,13 @@ loadproc()
 	if [ "$nopid" = "0" ]; then
 		"$@"
 		evaluate_retval
+		if [ "$2" != "-nomsg" ]; then
+			evaluate_retval
+		fi
 	else
-		print_status warning running
+		if [ "$2" != "-nomsg" ]; then
+			print_status warning not_running
+		fi
 	fi
 }
 
@@ -302,7 +307,7 @@ loadproc()
 killproc()
 {
 	if [ -z "$PIDFILE" -a -z "$#" ]; then
-		echo "Usage: killproc [{program}]"
+		echo "Usage: killproc [{program}] [-nomsg]"
 		exit 1	
 	fi
 
@@ -349,9 +354,14 @@ killproc()
 		fi
 
 		(exit $failure)
-		evaluate_retval
+
+		if [ "$2" != "-nomsg" ]; then
+			evaluate_retval
+		fi
 	else
-		print_status warning not_running
+		if [ "$2" != "-nomsg" ]; then
+			print_status warning not_running
+		fi
 	fi
 }
 
