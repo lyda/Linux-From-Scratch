@@ -105,6 +105,7 @@ install-livecd: create-dirs create-service-dir
 	install -m ${CONFMODE} lfs/init.d/functions ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/halt          ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/hotplug       ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/localnet      ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/rc            ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/reboot        ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/sendsignals   ${EXTDIR}/rc.d/init.d/
@@ -115,15 +116,18 @@ install-livecd: create-dirs create-service-dir
 	install -m ${MODE} contrib/livecd/hostname ${EXTDIR}/rc.d/init.d/
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S60sendsignals
+	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc0.d/S90localnet
 	ln -sf ../init.d/halt        ${EXTDIR}/rc.d/rc0.d/S99halt
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc6.d/S60sendsignals
+	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc6.d/S90localnet
 	ln -sf ../init.d/reboot      ${EXTDIR}/rc.d/rc6.d/S99reboot
 	ln -sf ../init.d/startup     ${EXTDIR}/rc.d/rcsysinit.d/S00startup
 	ln -sf ../init.d/mountsqfs   ${EXTDIR}/rc.d/rcsysinit.d/S05mountsqfs
 	ln -sf ../init.d/hostname    ${EXTDIR}/rc.d/rcsysinit.d/S10hostname
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
+	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
 	ln -sf ../init.d/sysctl      ${EXTDIR}/rc.d/rcsysinit.d/S90sysctl
 	if [ ! -f ${EXTDIR}/sysconfig/rc          ]; then install -m ${CONFMODE} lfs/sysconfig/rc          ${EXTDIR}/sysconfig/; fi
 	if [ ! -f ${EXTDIR}/sysconfig/createfiles ]; then install -m ${CONFMODE} lfs/sysconfig/createfiles ${EXTDIR}/sysconfig/; fi
