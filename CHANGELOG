@@ -1,6 +1,11 @@
 n/a - April 17, 2004
 
 	* Added the lisa bootscript, lisa is part of the KDE Network package
+	* Add proper error checking to the mountfs script when writing out mtab
+	* Add more comments to the udev script, and conditionalize various
+	  things that should've been done this way in the first place
+	* Include a template module auto-loading configuration file instead of
+	  having syntax comments in the script itself
 
 n/a - April 12, 2004
 
