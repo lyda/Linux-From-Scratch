@@ -54,6 +54,9 @@ XML/XSL maintainer</para></listitem>
 Gifford</ulink> &lt;jim@linuxfromscratch.org&gt; &ndash; LFS Technical
 Writer, Patches maintainer</para></listitem>
 
+<listitem><para><ulink url="mailto:jhuntwork@linuxfromscratch.org">Jeremy
+Huntwork</ulink> &lt;jhuntwork@linuxfromscratch.org&gt; &ndash; ALFS Maintainer,LFS Live-CD maintainer</para></listitem>
+
 <listitem><para><ulink
 url="mailto:nicholas@linuxfromscratch.org">Nicholas Leippe</ulink>
 &lt;nicholas@linuxfromscratch.org&gt; &ndash; Wiki
@@ -160,14 +163,13 @@ mirror</para></listitem>
 
 <itemizedlist>
 
-<!-- Comment out until have the new URL
-<listitem><para><ulink url="mailto:manuel@linuxfromscratch.org">Manuel
-Canales Esparcia</ulink> &lt;manuel@linuxfromscratch.org&gt; &ndash;
-lfsmirror.lfs-es.org mirror</para></listitem>-->
-
 <listitem><para><ulink url="mailto:sysop@mesi.com.ar">Andres
 Meggiotto</ulink> &lt;sysop@mesi.com.ar&gt; &ndash; lfs.mesi.com.ar
 mirror</para></listitem>
+
+<listitem><para><ulink url="mailto:manuel@linuxfromscratch.org">Manuel
+Canales Esparcia</ulink> &lt;manuel@linuxfromscratch.org&gt; &ndash;
+www.dattaweb.com/~lfs-eso/lfsmirror mirror</para></listitem>
 
 <listitem><para><ulink url="mailto:ebf@aedsolucoes.com.br">Eduardo B.
 Fonseca</ulink> &lt;ebf@aedsolucoes.com.br&gt; &ndash;
