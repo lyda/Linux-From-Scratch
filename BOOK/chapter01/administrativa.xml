@@ -36,8 +36,8 @@ locations, and additional information, visit
 community Internet Relay Chat (IRC) network. Before using this
 support, please make sure that your question is not already answered in the LFS
 FAQ or the mailing list archives. You can find the IRC network at
-irc.linuxfromscratch.org or irc.linux-phreak.net. The support channel
-is named #LFS-support.</para>
+<uri>irc.linuxfromscratch.org</uri> or <uri>irc.linux-phreak.net</uri>. 
+The support channel is named #LFS-support.</para>
 </sect2>
 
 <sect2 id="ch-scatter-newsserver">
