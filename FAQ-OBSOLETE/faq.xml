@@ -15,7 +15,9 @@
 		</author>
 	</articleinfo>
 <qandaset>
+<!-- dlist: ,lfs-dev,lfs-support,blfs-support -->
 	<qandadiv><title>Introduction</title>
+<!-- elist: ,lfs-dev,lfs-support,blfs-support -->
 		<qandaentry><question><para>Why this FAQ?</para></question>
 			<answer><para>I started this FAQ in an attempt to make the traffic on
 				the LFS mailing lists more manageable and improve the signal
@@ -24,6 +26,7 @@
 				<ulink url="http://hints.linuxfromscratch.org">LFS-Hints</ulink>.
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-support -->
 		<qandaentry><question><para>What is appropriate for lfs-support?</para></question>
 			<answer><para>From the
 				<ulink url="http://www.linuxfromscratch.org/mailinglists/info.shtml">website</ulink>:
@@ -41,6 +44,7 @@
 				belong on blfs-support.
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-dev,lfs-support,blfs-support -->
 		<qandaentry><question><para>Contributing to this FAQ.</para></question>
 			<answer><para>If you have an addition or suggestion, please, let me know.
 				I can be reached at
@@ -51,6 +55,7 @@
 				twice and to remove items that are no longer an issue.
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-dev,lfs-support,blfs-support -->
 		<qandaentry><question><para>Where is the best place to get help?</para></question>
 			<answer><para>When this FAQ fails to help, there are several places to go.
 			</para></answer>
@@ -85,6 +90,7 @@
 				and tells which list to use.
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-dev,lfs-support -->
 		<qandaentry><question><para>What is LFS?</para></question>
 			<answer><para>LFS stands for Linux From Scratch which is a project that
 				primarily documents how to install a Linux system by downloading,
@@ -95,11 +101,13 @@
 				<ulink url="http://www.linuxfromscratch.org/">http://www.linuxfromscratch.org/</ulink>.
 			</para></answer>
 		</qandaentry>
-	</qandadiv>
+	</qandadiv><!-- Introduction -->
 
 
+<!-- dlist: ,lfs-dev,lfs-support,blfs-support -->
 <qandadiv id="frb"><title>Frequently Reported Bugs</title>
 
+<!-- elist: ,lfs-dev -->
 <qandaentry id="deps_version_not_match_package">
 <question><para>The Dependencies section for Foo 2.0 says "Foo 1.0".
 </para></question>
@@ -108,6 +116,7 @@ occasionally due to the amount of manual labor required.
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-support,blfs-support -->
 <qandaentry id="delete_key_not_work">
 <question><para>The Delete key doesn't work.
 </para></question>
@@ -115,8 +124,9 @@ occasionally due to the amount of manual labor required.
 </para></answer>
 </qandaentry>
 
-</qandadiv>
+</qandadiv><!-- frb -->
 
+<!-- dlist: ,lfs-dev,new -->
 <qandadiv id="fre"><title>Frequently Requested Enhancements</title>
 
 <para>LFS is a very basic system,
@@ -135,6 +145,7 @@ It is at <ulink
 url="http://beyond.linuxfromscratch.org/">http://beyond.linuxfromscratch.org/</ulink>.
 </para>
 
+<!-- elist: ,lfs-dev -->
 <qandaentry id="gcc-3_0">
 <question><para>Why isn't GCC 3.0.x in the book?
 </para></question>
@@ -155,6 +166,7 @@ even with just the packages in the book.
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-dev,new -->
 <qandaentry id="add-gawk">
 <question><para>Why not use gawk instead of mawk? <emphasis role="strong">(NEW)</emphasis><!-- 0 --></para></question>
 <answer><para>The book is switching to gawk after 3.2 is released.
@@ -166,6 +178,7 @@ and "./configure --prefix=/usr && make && make install" works.
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-dev -->
 <qandaentry id="add-grub"><question><para>Why not use GRUB instead of LILO?</para></question>
 <answer><para>GRUB has not yet been released as stable.
 When it is, it will be considered and, if it seems better than LILO, used.
@@ -176,6 +189,7 @@ url="http://hints.linuxfromscratch.org/hints/grub-howto.txt">http://hints.linuxf
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-dev -->
 <qandaentry id="why-ed"><question><para>Why is ed in the book?</para></question>
 <answer><para>The book includes ed because patch uses it to process ed scripts.
 However, these are rare today; everyone uses diff format patches.
@@ -199,6 +213,7 @@ history in general.
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-dev -->
 <qandaentry id="why-not-package-management"><question><para>Why isn't some
 package manager in the book?</para></question>
 <answer><para>Package management -
@@ -240,14 +255,18 @@ to the FAQ maintainer or an apropriate LFS mailing list so it can be added here.
 </para></answer>
 </qandaentry>
 
-</qandadiv>
+</qandadiv><!-- fre -->
 
+<!-- dlist: ,lfs-compile,new -->
 <qandadiv id="fee"><title>Frequently Encountered Errors</title>
 
+<!-- dlist: ,lfs-compile,new -->
 <qandadiv id="fee-compile"><title>Compile Time Errors</title>
 
+<!-- dlist: ,lfs-compile,new -->
 <qandadiv id="fee-compile-any"><title>Errors From Any Package</title>
 
+<!-- elist: ,lfs-compile -->
 <qandaentry id="bad-interpreter-permission-denied">
 <question>
 <para>./configure: bad interpreter: Permission denied</para>
@@ -271,6 +290,7 @@ So change the line in /etc/fstab like this:
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-compile,new -->
 <qandaentry id="env-bash-no-such-file">
 <question><para>/usr/bin/env: /bin/bash: No such file or directory <emphasis role="strong">(NEW)</emphasis> <!-- 0 --></para></question>
 <answer><para>You're trying to follow the LFS Book
@@ -284,6 +304,7 @@ reinstall bash following the instructions in Chapter 5.
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-compile -->
 <qandaentry id="config-not-gnu-c">
 <question><para>checking whether we are using GNU C... no
 </para></question>
@@ -313,6 +334,7 @@ into the new LFS system.)
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-compile,new -->
 <qandaentry id="config-hang-size_t">
 <question><para>Why does configure hang at
 "checking for signed size_t type..."? <emphasis role="strong">(NEW)</emphasis><!-- 0 --></para></question>
@@ -320,10 +342,12 @@ into the new LFS system.)
 </para></answer>
 </qandaentry>
 
-</qandadiv>
+</qandadiv><!-- fee-compile-any -->
 
+<!-- dlist: ,lfs-compile -->
 <qandadiv id="fee-compile-specific"><title>Errors From Specific Packages</title>
 
+<!-- elist: ,lfs-compile -->
 <qandaentry id="optimized-glibc-fail">
 <question><para>My optimized build of glibc is failing in spinlock.c</para></question>
 <answer><para>It should be mentioned that glibc (and gcc and binutils)
@@ -371,14 +395,16 @@ endif
 </para></answer>
 </qandaentry>
 
-</qandadiv>
+</qandadiv><!-- fee-compile-specific -->
 
-</qandadiv>
+</qandadiv><!-- fee-compile -->
 
-</qandadiv>
+</qandadiv><!-- fee -->
 
+<!-- dlist: ,lfs-support,blfs-support,new -->
 	<qandadiv id="resources"><title>Resources</title>
 
+<!-- elist: ,lfs-support,blfs-support -->
 <qandaentry id="how-to-find"><question><para>How do I find package Foo?</para></question>	
 <answer><para>Mostly, it's not hard, but some packages can lead quite a chase.
 Here are some steps:
@@ -416,6 +442,7 @@ which may list a primary site where more recent versions may be found.
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-support,blfs-support -->
 <qandaentry id="bootcd">
 <question><para>How do I make a bootable CD?</para></question>
 <answer><para>See the Boot-CD Hint and <ulink
@@ -423,6 +450,7 @@ url="http://hints.linuxfromscratch.org/hints/bootcd.txt">http://hints.linuxfroms
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,blfs-support -->
 <qandaentry id="portmap">
 <question><para>Where's portmap?</para></question>
 <answer><para>There are instructions in the NFS Hint at <ulink
@@ -441,6 +469,7 @@ it the easy way :)
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,lfs-support -->
 		<qandaentry id="what-dist"><question><para>What distribution should I use to start from?</para></question>
 			<answer><para>Any recent distribution should be fine. If you have problems,
 				try installing and/or updating the development packages.
@@ -448,6 +477,7 @@ it the easy way :)
 				ending in "-dev".)
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-support -->
 		<qandaentry id="really-small"><question><para>How do I make that really small install the book mentions?</para></question>
 			<answer><para>Gerard describes the process of making a 5MB LFS install
 				in an email archived at <ulink
@@ -455,6 +485,7 @@ it the easy way :)
 			</para></answer>
 		</qandaentry>
 
+<!-- elist: ,lfs-support,new -->
 <qandaentry id="where-ncurses-mandrake">
 <question><para>Where's libncurses.a in Mandrake? <emphasis role="strong">(NEW)</emphasis><!-- 0 --></para></question>
 <answer><para>In Mandrake/RPMS2/libncurses5-devel-5.2-16mdk.1586.rpm on Disk 2.
@@ -464,10 +495,12 @@ reread the book's instructions for bash more carefully.)
 </para></answer>
 </qandaentry>
 
-	</qandadiv>
+	</qandadiv><!-- resources -->
 
+<!-- dlist: ,lfs-support -->
 <qandadiv id="fsc"><title>Frequently Sought Cluebits</title>
 
+<!-- elist: ,lfs-support -->
 <qandaentry id="dos-text">
 <question><para>What's a DOS format text file?</para></question>
 <answer><para>It has to do with the characters used to end lines.
@@ -513,11 +546,13 @@ and are left as an exercise for the reader.
 </para></answer>
 </qandaentry>
 
-</qandadiv>
+</qandadiv><!-- fsc -->
 
 
+<!-- dlist: ,lfs-compile,blfs-support -->
 	<qandadiv id="compiling"><title>Compiling</title>
 <!--		<qandadiv id="before-ask-comp"><title>Before you ask on the list...</title>-->
+<!-- elist: ,lfs-compile,blfs-support -->
 			<qandaentry id="optimizations"><question><para>If you are using optimizations:</para></question>
 				<answer><para>If you're getting errors and you're using optimizations,
 					try without optimizations. Even if the errors can't possibly
@@ -532,6 +567,7 @@ and are left as an exercise for the reader.
 					don't worry, you don't need to.)
 				</para></answer>
 			</qandaentry>
+<!-- elist: ,lfs-compile,blfs-support -->
 			<qandaentry id="version-not-in-book"><question><para>If you are using a version not in the book:</para></question>
 				<answer><para>If you're getting errors and you're using a version of
 					a package that differs from the version in the book
@@ -540,6 +576,7 @@ and are left as an exercise for the reader.
 					version. Search the list archives if you're curious.
 				</para></answer>
 			</qandaentry>
+<!-- elist: ,lfs-compile,blfs-support -->
 			<qandaentry id="dirty-sources"><question><para>If you didn't delete the source tree after your last attempt:</para></question>
 				<answer><para>If you're getting errors and you tried compiling before
 					but didn't "rm -rf" the sources between,
@@ -550,10 +587,12 @@ and are left as an exercise for the reader.
 				</para></answer>
 			</qandaentry>
 <!--		</qandadiv>-->
+<!-- elist: ,lfs-compile,blfs-support -->
 		<qandaentry id="sig11"><question><para>I'm getting fatal errors about signal 11.</para></question>
 			<answer><para>See <ulink url="http://www.bitwizard.nl/sig11/">http://www.bitwizard.nl/sig11/</ulink>.
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-compile,blfs-support -->
 		<qandaentry id="cross-compile"><question><para>How do I cross compile LFS?</para></question>
 			<answer><para>It's often useful to compile LFS for one machine
 				on another machine. Say using that 1Ghz Athlon
@@ -567,6 +606,7 @@ and are left as an exercise for the reader.
 				url="http://hints.linuxfromscratch.org/hints/crosscompiling-x86.txt">http://hints.linuxfromscratch.org/hints/crosscompiling-x86.txt</ulink>
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-compile,blfs-support -->
 		<qandaentry id="gcc-warnings"><question><para>Are compiler warnings from GCC bad?</para></question>
 			<answer><para>Short answer: no.
 			</para></answer>
@@ -598,6 +638,7 @@ sk ~/tmp $ ######## that failed ########
 sk ~/tmp $
 			</screen></answer>
 		</qandaentry>
+<!-- elist: ,lfs-compile -->
 		<qandaentry id="perm-denied"><question><para>I'm getting `/dev/null: Permission denied'</para></question>
 			<answer><para>Does /dev/null look like this:
 				<screen>$ ls -l /dev/null
@@ -613,6 +654,7 @@ crw-rw-rw-   1 root     root       1,   3 Aug  3  2000 /dev/null
 				interpreter: Permission denied</link>", above.
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-compile -->
 		<qandaentry id="conf-guess-fail"><question><para>configure can't guess my host type.</para></question>
 			<answer><para>Typical symptoms look like this:
 			</para>
@@ -632,6 +674,7 @@ ln -s gcc cc
 				Errors go here and may indicate the problem.
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,blfs-support -->
 		<qandaentry id="missing-x-includes"><question><para>A package can't find Xlib.h.</para></question>
 			<answer><para>Typical symptoms look like this:
 			</para>
@@ -655,6 +698,7 @@ cd include
 ln -s ../X11/include/X11 X11
 			</screen></answer>
 		</qandaentry>
+<!-- elist: ,lfs-compile,blfs-support -->
 		<qandaentry id="stdgnu89"><question><para>I'm having trouble compiling something with GCC 3.x</para></question>
 			<answer><para>You should be aware that you're on the bleeding edge.
 				As of 3.0, the LFS Book recommends GCC 2.95.3.
@@ -665,12 +709,15 @@ ln -s ../X11/include/X11 X11
 				The exact method is a bit beyond the scope of this FAQ.)
 			</para></answer>
 		</qandaentry>
-	</qandadiv>
+	</qandadiv><!-- compiling -->
+<!-- dlist: ,lfs-compile,blfs-support -->
 	<qandadiv id="specific-packages"><title>Questions about specific packages.</title>
+<!-- elist: ,lfs-support,blfs-support -->
 		<qandaentry id="how-to-create-user"><question><para>How do I create a non-root user?</para></question>
 			<answer><para>Use the useradd program. It was installed with the shadow package.
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-compile -->
 		<qandaentry id="sh-utils-getloadavg"><question><para>My static sh-utils build is failing with "undefined reference to `getloadavg'".</para></question>
 			<answer><para>If you're trying to build static sh-utils and you're getting an error like this:
 				<screen>gcc  -g -O2  -static -o uptime  uptime.o ../lib/libsu.a -lutil
@@ -704,6 +751,7 @@ make: *** [all-recursive-am] Error 2
 			</para></answer>
 		</qandaentry>
 
+<!-- elist: ,blfs-support -->
 		<qandaentry id="f-hostname"><question><para>My hostname is getting set to "-f"!</para></question>
 			<answer><para>You need to install the net-tools package. (See the instructions in
 				the LFS book.)
@@ -714,12 +762,13 @@ make: *** [all-recursive-am] Error 2
 				doesn't have this problem.
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-support,blfs-support -->
 		<qandaentry id="kernel-modules"><question><para>How do I setup kernel modules?</para></question>
 			<answer><para>Follow the Module-HOWTO at <ulink
 				url="http://www.linuxdoc.org/HOWTO/Module-HOWTO/">http://www.linuxdoc.org/HOWTO/Module-HOWTO/</ulink>.
 			</para></answer>
 		</qandaentry>
-<!--
+<!-- elist: ,lfs-compile --><!--
 		<qandaentry id="fileutils-error"><question><para>I'm getting errors when compiling fileutils.</para></question>
 			<answer><para>You may need to upgrade to the latest version or apply the fileutils patch.
 				Both are available from <ulink
@@ -727,7 +776,7 @@ make: *** [all-recursive-am] Error 2
 			</para></answer>
 		</qandaentry>
 -->
-<!-- 2001-09-29
+<!-- elist: ,lfs-support --><!-- 2001-09-29
 		<qandaentry id="glibc-crypt"><question><para>Where is glibc-crypt-2.2.x?</para></question>
 			<answer><para>As of glibc-2.2, you no longer need to get glibc-crypt separately.
 				It has been merged into the main package because the US
@@ -735,6 +784,7 @@ make: *** [all-recursive-am] Error 2
 			</para></answer>
 		</qandaentry>
 -->
+<!-- elist: ,lfs-support -->
 		<qandaentry id="lilo-errors"><question><para>What do those LILO errors mean?</para></question>
 			<answer><para>The documentation in the LILO distribution lists all errors
 				(such as when it prints "LI" and stops),
@@ -742,6 +792,7 @@ make: *** [all-recursive-am] Error 2
 				url="http://sdb.suse.de/sdb/en/html/kgw_lilo_errmsg.html">http://sdb.suse.de/sdb/en/html/kgw_lilo_errmsg.html</ulink>.
 			</para></answer>
 		</qandaentry>
+<!-- elist: ,lfs-support -->
 		<qandaentry id="net-pf-x"><question><para>I'm getting errors about net-pf-?.</para></question>
 			<answer><para>When you compiled net-tools you enabled support for a protocol
 				family (that's where the "pf" comes from) that you didn't
@@ -781,6 +832,7 @@ make: *** [all-recursive-am] Error 2
 			<screen>alias net-pf-7 loop
 			</screen></answer>
 		</qandaentry>
+<!-- elist: ,lfs-support -->
 		<qandaentry id="char-major-10-135"><question><para>I'm getting errors about char-major-10-135.</para></question>
 			<answer><para>Errors about char-major-10-135 refer to the character device,
 				major 10, minor 135, which is /dev/rtc.
@@ -795,8 +847,10 @@ make: *** [all-recursive-am] Error 2
 				"Character devices" -&gt; "Enhanced Real Time Clock Support".
 			</para></answer>
 		</qandaentry>
-	</qandadiv>
+	</qandadiv><!-- specific-packages -->
+<!-- dlist: ,lfs-dev,lfs-support,blfs-support -->
 	<qandadiv id="additions"><title>Additions / Changes to LFS.</title>
+<!-- elist: ,lfs-dev -->
 		<qandaentry id="new-version"><question><para>There's a new version of package Foo.</para></question>
 			<answer><para>There's no need to mention it unless you have something
 				useful to add such as changes in the compile instructions.
@@ -806,6 +860,7 @@ make: *** [all-recursive-am] Error 2
 			</para></answer>
 		</qandaentry>
 
+<!-- elist: ,lfs-dev -->
 <qandaentry id="kernel-header-copy"><question><para>Why copy the kernel headers instead of linking them?</para></question>
 <answer><para>In short, we copy the kernel headers
 instead of linking them because
@@ -832,6 +887,7 @@ url="http://kt.zork.net/kernel-traffic/kt20000814_80.txt">http://kt.zork.net/ker
 			</para>
 -->
 
+<!-- elist: ,lfs-support -->
 <qandaentry id="less-prints-ad">
 <question><para>Why does less (and therefore man) print &lt;AD&gt; instead of
 hyphens?</para></question>
@@ -850,6 +906,7 @@ export LC_ALL=en_US
 </para></answer>
 </qandaentry>
 
+<!-- elist: ,blfs-support -->
 			<qandaentry id="which"><question><para>Where's which?</para></question>
 				<answer><para>It's not in there! A proper which is available
 					from the GNU Project at
@@ -871,7 +928,7 @@ chown root.root /usr/bin/which
 				</screen></answer>
 			</qandaentry>
 <!--		</qandadiv>-->
-	</qandadiv>
+	</qandadiv><!-- additions -->
 </qandaset>
 </article>
 
