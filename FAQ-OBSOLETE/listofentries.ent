@@ -31,6 +31,7 @@
 <!ENTITY missing-x-includes SYSTEM "missing-x-includes.xml">
 <!ENTITY net-pf-x SYSTEM "net-pf-x.xml">
 <!ENTITY new-version SYSTEM "new-version.xml">
+<!ENTITY nls-info SYSTEM "nls-info.xml">
 <!ENTITY no-dev-rtc SYSTEM "no-dev-rtc.xml">
 <!ENTITY old-sources SYSTEM "old-sources.xml">
 <!ENTITY optimizations SYSTEM "optimizations.xml">

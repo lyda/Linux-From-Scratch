@@ -52,6 +52,7 @@
 <qandadiv id="resources"><title>Resources</title>
 	&how-to-find;
 	&kernel-modules;
+	&nls-info;
 	&what-dist;
 	&portmap;
 	&where-ncurses-mandrake;
