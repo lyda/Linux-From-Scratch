@@ -33,5 +33,10 @@ print:
 	sed -i -e "s/inherit/all/" lfs-print.fo
 	fop.sh lfs-print.fo lfs-print.pdf
 
+nochunks:
+	xsltproc --xinclude --nonet --output lfs.html \
+	  stylesheets/lfs-nochunks.xsl index.xml
+	tidy -config tidy.conf lfs.html || true
+
 validate:
 	xmllint --noout --nonet --xinclude --postvalid index.xml
