@@ -127,8 +127,8 @@ EOF</userinput></screen>
 information regarding Grub is located on its website at:
 <ulink url="http://www.gnu.org/software/grub/"/>.</para>
 
-<para>The FHS stipulates that Grub's <filename>menu.lst</filename> file should be symlinked to
-<filename class="symlink">/etc/grub/menu.lst</filename>.  To satisfy this requirement, issue the 
+<para>The FHS stipulates that Bootloader's configuration file should be symlinked to
+/etc/{Bootloader Name}.  To satisfy this requirement for grub, issue the
 following command:</para>
 
 <screen><userinput>mkdir /etc/grub &amp;&amp;

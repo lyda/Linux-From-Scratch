@@ -83,6 +83,14 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>March 19, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Made the bootloader FHS symlink generic to all bootloaders.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>March 18, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Findutils to 4.2.20.</para></listitem>

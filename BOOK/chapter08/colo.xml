@@ -41,4 +41,11 @@ EOF</userinput></screen>
 <para>Included in /usr/lib/colo/examples are more examples of a
 default.colo file.</para>
 
+<para>The FHS stipulates that Bootloader's configuration file should be symlinked to
+/etc/{Bootloader Name}.  To satisfy this requirement for colo, issue the
+following command:</para>
+
+<screen><userinput>mkdir /etc/colo &amp;&amp;
+ln -s /boot/colo/default.colo /etc/colo</userinput></screen>
+
 </sect1>
