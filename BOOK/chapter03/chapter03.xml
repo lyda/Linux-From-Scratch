@@ -3,13 +3,15 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-getting-materials" xreflabel="Chapter 3">
+<chapter xmlns="http://docbook.org/docbook-ng"
+         xmlns:xi="http://www.w3.org/2003/XInclude"
+         xml:id="chapter-getting-materials" xreflabel="Chapter 3">
 <?dbhtml dir="chapter03"?>
-<title>The materials: packages and patches</title>
+<info><title>The materials: packages and patches</title></info>
 <?dbhtml filename="chapter03.html"?>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="packages.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="patches.xml"/>
+<xi:include href="introduction.xml"/>
+<xi:include href="packages.xml"/>
+<xi:include href="patches.xml"/>
 
 </chapter>
