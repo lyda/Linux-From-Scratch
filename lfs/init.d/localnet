@@ -34,7 +34,7 @@ case "$1" in
 
 	status)
 		echo "Hostname is: $(hostname)"
-		ifconfig lo
+		ip link show lo
 	;;
 
 	*)
