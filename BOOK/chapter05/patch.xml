@@ -29,11 +29,7 @@
 
 <para>Prepare Patch for compilation:</para>
 
-<!-- This is temporally until can test if there is other ways to do it -->
-
-<screen arch="x86"><userinput>./configure --prefix=/tools</userinput></screen>
-
-<screen arch="raq2"><userinput>./configure --prefix=/tools</userinput></screen>
+<screen arch="x86;raq2;alpha"><userinput>./configure --prefix=/tools</userinput></screen>
 
 <screen arch="ppc"><userinput>CPPFLAGS=-D_GNU_SOURCE ./configure --prefix=/tools</userinput></screen>
 
