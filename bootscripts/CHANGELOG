@@ -1,3 +1,8 @@
+n/a - June 3, 2004
+
+	* Added '> /proc/sys/kernel/hotplug' to sendsignals, to disable hotplug
+	  events, which may start up new daemons
+
 n/a - June 2, 2004
 
 	* Reorganize what goes on in the udev script
