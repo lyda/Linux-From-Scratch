@@ -22,10 +22,6 @@
   href="../chapter05/linux-libc-headers.xml"
   xpointer="xpointer(/sect1/sect2[@role='installation']/para[1])"/>
 
-<para>This patch fixes a compile issue with Glibc on a RaQ2 server.</para>
-
-<screen><userinput>patch -Np1 -i ../linux-libc-headers-&linux-libc-headers-raq2-version;-raq2_fix-1.patch</userinput></screen>
-
 <para>Install the header files:</para>
 
 <screen><userinput>cp -R include/asm-mips /tools/include/asm

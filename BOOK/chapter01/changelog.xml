@@ -87,6 +87,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Linux to 2.6.11.6.</para></listitem>
 <listitem><para>Updated: Arch: All - Linux-libc-headers to 2.6.11.2.</para></listitem>
+<listitem><para>Removed: Arch: RaQ2 - Patch for Linux-libc-headers, no longer needed</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
