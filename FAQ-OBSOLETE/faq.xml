@@ -263,6 +263,57 @@ ln -s ../X11/include/X11 X11
 				has relaxed it's export regulations.
 			</para>
 		</section>
+		<section id="net-pf-x"><title>I'm getting errors about net-pf-?.</title>
+			<para>
+				When you compiled net-tools you enabled support for a protocol
+				family (that's where the "pf" comes from) that you didn't
+				enable support for in the kernel. (You probably just accepted
+				the default answers.)
+			</para>
+			<para>
+				A full list is in /usr/include/linux/socket.h but here is
+				a list of the likely culprits:
+				<simplelist>
+					<member>
+						net-pf-3: Amateur Radio AX.25 (AF_AX25)
+					</member>
+					<member>
+						net-pf-4: Novell IPX (AF_IPX)
+					</member>
+					<member>
+						net-pf-5: AppleTalk DDP (AF_APPLETALK)
+					</member>
+					<member>
+						net-pf-6: Amateur Radio NET/ROM (AF_NETROM)
+					</member>
+					<member>
+						net-pf-9: Reserved for X.25 project (AF_X25)
+					</member>
+				</simplelist>
+			</para>
+			<para>
+				Naturally the fix is to recompile net-tools without support
+				for the things you don't need. (Or recompile your kernel with
+				support if you find you actually wanted them.) The workaround
+				to put a line like the following in /etc/modules.conf
+			</para>
+			<screen>
+alias net-pf-? off
+			</screen>
+			<para>
+				Replace the question mark with the correct number, of course.
+				And rerun depmod.
+			</para>
+			<para>
+				If you get an error about net-pf-7, you probably need to
+				enable support for the loopback network device (not block
+				device) in your kernel. Or you may need to add the following
+				line to /etc/modules.conf and rerun depmod.
+			</para>
+			<screen>
+alias net-pf-7 loop
+			</screen>
+		</section>
 	</chapter>
 	<chapter id="additions"><title>Additions / Changes to LFS.</title>
 		<para>
