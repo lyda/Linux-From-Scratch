@@ -1,3 +1,6 @@
+n/a - December 31, 2004
+	* fixed textoutput
+
 n/a - December 30, 2004
 	* Fixed name of LSB Functions file
 	* Changed boot_mesg to act like echo instead of echo -n, boot_mesg now
