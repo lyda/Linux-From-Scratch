@@ -45,30 +45,30 @@ cd build</userinput></screen>
 <variablelist>
 <varlistentry>
 <term><parameter>--with-root-prefix=""</parameter></term>
-<listitem><para>Certain programs (such as the <command>e2fsck</command> 
-program) are considered essential programs.
-When, for example, <filename class="directory">/usr</filename> isn't
-mounted, these essential programs have to be available. They belong in
+<listitem><para>Certain programs (such as the
+<command>e2fsck</command> program) are considered essential programs.
+When, for example, <filename class="directory">/usr</filename> is not
+mounted, these essential programs need to be available. They belong in
 directories like <filename class="directory">/lib</filename> and
-<filename class="directory">/sbin</filename>. If this option isn't passed
-to E2fsprogs's configure, the programs are placed in the
-<filename class="directory">/usr</filename> directory, which is not what we
-want.</para></listitem>
+<filename class="directory">/sbin</filename>. If this option is not
+passed to E2fsprogs's configure, the programs are placed in the
+<filename class="directory">/usr</filename> directory, which is not
+where they should be.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><parameter>--enable-elf-shlibs</parameter></term>
-<listitem><para>This creates
-the shared libraries which some programs in this package use.</para></listitem>
+<listitem><para>This creates the shared libraries which some programs
+in this package use.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><parameter>--disable-evms</parameter></term>
-<listitem><para>This disables the building of the Enterprise Volume Management
-System (EVMS) plugin.  This plugin is not up-to-date with the latest EVMS
-internal interfaces and EVMS is not installed as part of a base LFS system, so
-the plugin is not required.  See the
-<ulink url="http://evms.sourceforge.net/">EVMS homepage</ulink> for more
+<listitem><para>This disables the building of the Enterprise Volume
+Management System (EVMS) plugin. This plugin is not up-to-date with
+the latest EVMS internal interfaces and EVMS is not installed as part
+of a base LFS system, so the plugin is not required. See the EVMS
+website at <ulink url="http://evms.sourceforge.net/"/> for more
 information regarding EVMS itself.</para></listitem>
 </varlistentry>
 </variablelist>
@@ -119,7 +119,7 @@ libuuid.[a,so]</seg></seglistitem>
 <term><command>blkid</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs blkid"><primary sortas="b-blkid">blkid</primary></indexterm>
-<para>is a command line utility to locate and print block device attributes.</para>
+<para>a command line utility to locate and print block device attributes.</para>
 </listitem>
 </varlistentry>
 
@@ -136,7 +136,7 @@ also ext3 file systems, the journaling version of ext2 file systems.</para>
 <term><command>compile_et</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs compile_et"><primary sortas="b-compile_et">compile_et</primary></indexterm>
-<para>is an error table compiler. It
+<para>an error table compiler. It
 converts a table of error-code names and messages into a C source file
 suitable for use with the <filename class="libraryfile">com_err</filename> library.</para>
 </listitem>
@@ -146,8 +146,8 @@ suitable for use with the <filename class="libraryfile">com_err</filename> libra
 <term><command>debugfs</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs debugfs"><primary sortas="b-debugfs">debugfs</primary></indexterm>
-<para>is a file system debugger. It can be
-used to examine and change the state of an ext2 file system.</para>
+<para>a file system debugger. It can be used to examine and change the
+state of an ext2 file system.</para>
 </listitem>
 </varlistentry>
 
@@ -155,8 +155,8 @@ used to examine and change the state of an ext2 file system.</para>
 <term><command>dumpe2fs</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs dumpe2fs"><primary sortas="b-dumpe2fs">dumpe2fs</primary></indexterm>
-<para>prints the super block and blocks group
-information for the file system present on a given device.</para>
+<para>prints the super block and blocks group information for the file
+system present on a given device.</para>
 </listitem>
 </varlistentry>
 
@@ -164,8 +164,8 @@ information for the file system present on a given device.</para>
 <term><command>e2fsck</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs e2fsck"><primary sortas="b-e2fsck">e2fsck</primary></indexterm>
-<para>is used to check, and optionally repair,
-second extended (ext2) file systems, and also ext3 file systems.</para>
+<para>is used to check, and optionally repair, second extended (ext2)
+file systems, and also ext3 file systems.</para>
 </listitem>
 </varlistentry>
 
@@ -181,8 +181,8 @@ second extended (ext2) file systems, and also ext3 file systems.</para>
 <term><command>e2label</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs e2label"><primary sortas="b-e2label">e2label</primary></indexterm>
-<para>will display or change the file system
-label on the ext2 file system present on a given device.</para>
+<para>will display or change the file system label on the ext2 file
+system present on a given device.</para>
 </listitem>
 </varlistentry>
 
@@ -190,7 +190,8 @@ label on the ext2 file system present on a given device.</para>
 <term><command>findfs</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs findfs"><primary sortas="b-findfs">findfs</primary></indexterm>
-<para>finds a file system by label or UUID (Universally Unique Identifier).</para>
+<para>finds a file system by label or Universally Unique Identifier
+(UUID).</para>
 </listitem>
 </varlistentry>
 
@@ -198,8 +199,9 @@ label on the ext2 file system present on a given device.</para>
 <term><command>fsck</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs fsck"><primary sortas="b-fsck">fsck</primary></indexterm>
-<para>is used to check, and optionally repair, file systems. By default it checks the 
-file systems listed in <filename>/etc/fstab</filename></para>
+<para>is used to check, and optionally repair, file systems. By
+default, it checks the file systems listed in
+<filename>/etc/fstab</filename></para>
 </listitem>
 </varlistentry>
 
@@ -223,9 +225,9 @@ file systems listed in <filename>/etc/fstab</filename></para>
 <term><command>mk_cmds</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs mk_cmds"><primary sortas="b-mk_cmds">mk_cmds</primary></indexterm>
-<para>converts a table of command names
-and help messages into a C source file suitable for use with the
-<filename class="libraryfile">libss</filename> subsystem library.</para>
+<para>converts a table of command names and help messages into a C
+source file suitable for use with the <filename
+class="libraryfile">libss</filename> subsystem library.</para>
 </listitem>
 </varlistentry>
 
@@ -233,7 +235,8 @@ and help messages into a C source file suitable for use with the
 <term><command>mke2fs</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs mke2fs"><primary sortas="b-mke2fs">mke2fs</primary></indexterm>
-<para>is used to create a second extended file system on the given device.</para>
+<para>is used to create a second extended file system on the given
+device.</para>
 </listitem>
 </varlistentry>
 
@@ -241,9 +244,10 @@ and help messages into a C source file suitable for use with the
 <term><command>mklost+found</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs mklost-found"><primary sortas="b-mklost+found">mklost+found</primary></indexterm>
-<para>is used to create a
-<filename class="directory">lost+found</filename> directory on a second extended file system.
-It pre-allocates disk blocks to this directory to lighten the task of e2fsck.</para>
+<para>used to create a <filename
+class="directory">lost+found</filename> directory on a second extended
+file system.  It pre-allocates disk blocks to this directory to
+lighten the task of <command>e2fsck</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -259,8 +263,8 @@ It pre-allocates disk blocks to this directory to lighten the task of e2fsck.</p
 <term><command>tune2fs</command></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs tune2fs"><primary sortas="b-tune2fs">tune2fs</primary></indexterm>
-<para>is used adjust tunable file system
-parameters on a second extended file system.</para>
+<para>used adjust tunable file system parameters on a second
+extended file system.</para>
 </listitem>
 </varlistentry>
 
@@ -286,7 +290,7 @@ past and in the future.</para>
 <term><filename class="libraryfile">libcom_err</filename></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs libcom_err"><primary sortas="c-libcom_err">libcom_err</primary></indexterm>
-<para>is the common error display routine.</para>
+<para>the common error display routine.</para>
 </listitem>
 </varlistentry>
 
@@ -294,7 +298,8 @@ past and in the future.</para>
 <term><filename class="libraryfile">libe2p</filename></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs libe2p"><primary sortas="c-libe2p">libe2p</primary></indexterm>
-<para>is used by dumpe2fs, chattr, and lsattr.</para>
+<para>used by <command>dumpe2fs</command>, <command>chattr</command>,
+and <command>lsattr</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -302,8 +307,8 @@ past and in the future.</para>
 <term><filename class="libraryfile">libext2fs</filename></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs libext2fs"><primary sortas="c-libext2fs">libext2fs</primary></indexterm>
-<para>contains routines to enable user-level
-programs to manipulate an ext2 file system.</para>
+<para>contains routines to enable user-level programs to manipulate an
+ext2 file system.</para>
 </listitem>
 </varlistentry>
 
@@ -311,7 +316,7 @@ programs to manipulate an ext2 file system.</para>
 <term><filename class="libraryfile">libss</filename></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs libss"><primary sortas="c-libss">libss</primary></indexterm>
-<para>is used by <command>debugfs</command>.</para>
+<para>used by <command>debugfs</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -319,8 +324,8 @@ programs to manipulate an ext2 file system.</para>
 <term><filename class="libraryfile">libuuid</filename></term>
 <listitem>
 <indexterm zone="ch-system-e2fsprogs libuuid"><primary sortas="c-libuuid">libuuid</primary></indexterm>
-<para>contains routines for generating unique
-identifiers for objects that may be accessible beyond the local system.</para>
+<para>contains routines for generating unique identifiers for objects
+that may be accessible beyond the local system.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -328,3 +333,4 @@ identifiers for objects that may be accessible beyond the local system.</para>
 </sect2>
 
 </sect1>
+

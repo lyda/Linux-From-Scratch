@@ -18,8 +18,10 @@
 <seglistitem><seg>0.1 SBU</seg><seg>641 KB</seg></seglistitem>
 </segmentedlist>
 
-<para>The installation dependencies for Iana-Etc haven't been checked yet.</para>
-
+<segmentedlist>
+<segtitle>Iana-Etc installation depends on</segtitle>
+<seglistitem><seg>Make</seg></seglistitem>
+</segmentedlist>
 </sect2>
 
 <sect2 role="installation">
@@ -29,7 +31,7 @@
 
 <screen><userinput>make</userinput></screen>
 
-<para>Now install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -49,5 +51,5 @@
 
 </sect2>
 
-
 </sect1>
+

@@ -37,7 +37,7 @@ Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -89,3 +89,4 @@ Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 </sect2>
 
 </sect1>
+

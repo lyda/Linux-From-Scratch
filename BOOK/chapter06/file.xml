@@ -36,7 +36,7 @@ GCC, Glibc, Grep, Make, Sed, Zlib</seg></seglistitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Now install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -57,9 +57,9 @@ GCC, Glibc, Grep, Make, Sed, Zlib</seg></seglistitem>
 <term><command>file</command></term>
 <listitem>
 <indexterm zone="ch-system-file file"><primary sortas="b-file">file</primary></indexterm>
-<para>tries to classify each given file. It does
-this by performing several tests: file system tests, magic number tests, and
-language tests. The first test that succeeds determines the result.</para>
+<para>tries to classify each given file. It does this by performing
+several tests: file system tests, magic number tests, and language
+tests. The first test that succeeds determines the result.</para>
 </listitem>
 </varlistentry>
 
@@ -67,7 +67,8 @@ language tests. The first test that succeeds determines the result.</para>
 <term><filename class="libraryfile">libmagic</filename></term>
 <listitem>
 <indexterm zone="ch-system-file libmagic"><primary sortas="c-libmagic">libmagic</primary></indexterm>
-<para>contains routines for magic number recognition, used by the <command>file</command> program.</para>
+<para>contains routines for magic number recognition, used by the
+<command>file</command> program.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -75,3 +76,4 @@ language tests. The first test that succeeds determines the result.</para>
 </sect2>
 
 </sect1>
+

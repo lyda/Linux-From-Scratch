@@ -39,7 +39,7 @@ GCC, Gettext, Glibc, Grep, Sed</seg></seglistitem>
 <para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
-<para>Now install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -59,8 +59,8 @@ GCC, Gettext, Glibc, Grep, Sed</seg></seglistitem>
 <term><command>make</command></term>
 <listitem>
 <indexterm zone="ch-system-make make"><primary sortas="b-make">make</primary></indexterm>
-<para>automatically determines which pieces of a large package need to be 
-recompiled, and then issues the relevant commands.</para>
+<para>automatically determines which pieces of a large package need to
+be recompiled, and then issues the relevant commands.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -68,3 +68,4 @@ recompiled, and then issues the relevant commands.</para>
 </sect2>
 
 </sect1>
+

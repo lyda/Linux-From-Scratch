@@ -10,7 +10,7 @@
 <indexterm zone="ch-system-grub"><primary sortas="a-Grub">Grub</primary></indexterm>
 
 <sect2 role="package"><title/>
-<para>The Grub package contains the GRand Unified Bootloader.</para>
+<para>The Grub package contains the Grand Unified Bootloader.</para>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -28,39 +28,40 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Grub</title>
 
-<para>This package is known to behave badly when you have changed its default
-optimization flags (including the <parameter>-march</parameter> and 
-<parameter>-mcpu</parameter> options). Therefore, if you
-have defined any environment variables that override default optimizations,
-such as CFLAGS and CXXFLAGS, we recommend un-setting them when building
-Grub.</para>
+<para>This package is known to have issues when its default
+optimization flags (including the <parameter>-march</parameter> and
+<parameter>-mcpu</parameter> options) are changed. If any environment
+variables that override default optimizations have been defined, such
+as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+unset or modifying them when building Binutils.</para>
 
 <para>Prepare Grub for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
 
-<para>Now compile the rest of the package:</para>
+<para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
 <para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
-<para>Now install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install
 mkdir /boot/grub
 cp /usr/share/grub/i386-pc/stage{1,2} /boot/grub</userinput></screen>
 
 <para>Replace <filename class="directory">i386-pc</filename> with whatever
-directory is appropriate for your hardware.</para>
+directory is appropriate for the hardware in use.</para>
 
-<para>The <filename class="directory">i386-pc</filename> directory also
-contains a number of <filename>*stage1_5</filename> files, different ones
-for different file systems. Have a look at the ones available and copy the
-appropriate ones to the <filename class="directory">/boot/grub</filename>
-directory. Most people will copy the <filename>e2fs_stage1_5</filename>
-and/or <filename>reiserfs_stage1_5</filename> files.</para>
+<para>The <filename class="directory">i386-pc</filename> directory
+contains a number of <filename>*stage1_5</filename> files, different
+ones for different file systems. Review the files available and copy
+the appropriate ones to the <filename
+class="directory">/boot/grub</filename> directory. Most users will
+copy the <filename>e2fs_stage1_5</filename> and/or
+<filename>reiserfs_stage1_5</filename> files.</para>
 
 </sect2>
 
@@ -79,7 +80,7 @@ grub-md5-crypt, grub-terminfo and mbchk</seg></seglistitem>
 <term><command>grub</command></term>
 <listitem>
 <indexterm zone="ch-system-grub grub"><primary sortas="b-grub">grub</primary></indexterm>
-<para>is the GRand Unified Bootloader's command shell.</para>
+<para>the Grand Unified Bootloader's command shell.</para>
 </listitem>
 </varlistentry>
 
@@ -103,8 +104,8 @@ grub-md5-crypt, grub-terminfo and mbchk</seg></seglistitem>
 <term><command>grub-terminfo</command></term>
 <listitem>
 <indexterm zone="ch-system-grub grub-terminfo"><primary sortas="b-grub-terminfo">grub-terminfo</primary></indexterm>
-<para>generates a terminfo command from a
-terminfo name. It can be used if you have an uncommon terminal.</para>
+<para>generates a terminfo command from a terminfo name. It can be
+employed if an unknown terminal is being used.</para>
 </listitem>
 </varlistentry>
 
@@ -119,5 +120,5 @@ terminfo name. It can be used if you have an uncommon terminal.</para>
 
 </sect2>
 
-
 </sect1>
+

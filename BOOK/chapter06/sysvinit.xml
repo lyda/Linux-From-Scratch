@@ -28,19 +28,22 @@ running, and shutdown of your system.</para>
 <sect2 role="installation">
 <title>Installation of Sysvinit</title>
 
-<para>Sysvinit &sysvinit-version; contains a <quote>buffer overflow</quote> bug.
-Under some conditions, it clobbers the
-values of environment variables. Fix that:</para>
+<para>Sysvinit-&sysvinit-version; contains a <quote>buffer
+overflow</quote> bug. Under some conditions, it modifies the values of
+environment variables. Fix this with:</para>
 
 <screen><userinput>patch -Np1 -i ../sysvinit-&sysvinit-version;-proclen-1.patch</userinput></screen>
 
-<para>When run-levels are changed (for example, when halting the system),
-<command>init</command> sends termination signals to those processes that
-<command>init</command> itself started and that shouldn't be running in the new
-run-level. While doing this, <command>init</command> outputs messages like
-<quote>Sending processes the TERM signal</quote> which seem to imply that it is sending these signals to all currently running processes. To avoid this
-misinterpretation, you can modify the source so that these messages read like
-<quote>Sending processes started by init the TERM signal</quote> instead:</para>
+<para>When run-levels are changed (for example, when halting the
+system), <command>init</command> sends termination signals to those
+processes that <command>init</command> itself started and that should
+not be running in the new run-level.  While doing this,
+<command>init</command> outputs messages like <quote>Sending processes
+the TERM signal</quote> which seem to imply that it is sending these
+signals to all currently running processes. To avoid this
+misinterpretation, modify the source so that these messages read like
+<quote>Sending processes started by init the TERM signal</quote>
+instead:</para>
 
 <screen><userinput>sed -i 's@Sending processes@&amp; started by init@g' \
     src/init.c</userinput></screen>
@@ -49,7 +52,7 @@ misinterpretation, you can modify the source so that these messages read like
 
 <screen><userinput>make -C src</userinput></screen>
 
-<para>Then install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make -C src install</userinput></screen>
 
@@ -63,7 +66,7 @@ misinterpretation, you can modify the source so that these messages read like
 
 <indexterm zone="conf-sysvinit"><primary sortas="e-/etc/inittab">/etc/inittab</primary></indexterm>
 
-<para>Create a new <filename>/etc/inittab</filename> file by running the
+<para>Create a new file <filename>/etc/inittab</filename> by running the
 following:</para>
 
 <screen><userinput>cat &gt; /etc/inittab &lt;&lt; "EOF"
@@ -95,15 +98,15 @@ su:S016:once:/sbin/sulogin
 # End /etc/inittab
 EOF</userinput></screen>
 
-<para> The <parameter>-I '\033(K'</parameter> switch tells <command>agetty</command> to send this escape sequence to
-the terminal before doing anything else. This escape sequence switches the
-console character set to a user-defined one, which can be modified by
-running the <command>setfont</command> program.
-Actually, the <command>console</command> initscript from the LFS-Bootscripts
-package calls the <command>setfont</command> program during system
-startup. Sending this escape sequence is necessary for
-people who use non-ISO-8859-1 screen font, but does not hurt native English
-speakers.</para>
+<para>The <parameter>-I '\033(K'</parameter> option tells
+<command>agetty</command> to send this escape sequence to the terminal
+before doing anything else. This escape sequence switches the console
+character set to a user-defined one, which can be modified by running
+the <command>setfont</command> program. The console initscript from
+the LFS-Bootscripts package calls the <command>setfont</command>
+program during system startup. Sending this escape sequence is
+necessary for people who use non-ISO-8859-1 screen fonts, but it does
+not affect native English speakers.</para>
 
 </sect2>
 
@@ -123,10 +126,11 @@ killall5), poweroff (link to halt), reboot (link to halt), runlevel, shutdown, s
 <term><command>halt</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit halt"><primary sortas="b-halt">halt</primary></indexterm>
-<para>normally invokes <command>shutdown</command> with the <parameter>-h</parameter> flag,
-except when already in run-level 0, then it tells the kernel to halt the system.
-But first it notes in the file <filename>/var/log/wtmp</filename> that the
-system is being brought down.</para>
+<para>normally invokes <command>shutdown</command> with the
+<parameter>-h</parameter> option, except when already in run-level 0,
+then it tells the kernel to halt the system.  First it notes in the
+file <filename>/var/log/wtmp</filename> that the system is being
+brought down.</para>
 </listitem>
 </varlistentry>
 
@@ -134,9 +138,9 @@ system is being brought down.</para>
 <term><command>init</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit init"><primary sortas="b-init">init</primary></indexterm>
-<para>is the mother of all processes. It reads its
-commands from <filename>/etc/inittab</filename>, which normally tell it which
-scripts to run for which run-level, and how many gettys to spawn.</para>
+<para>the first process to be started when the kernel has initialized
+the hardware. Init takes over the boot process and starts all the
+proceses it is instructed to.</para>
 </listitem>
 </varlistentry>
 
@@ -144,8 +148,9 @@ scripts to run for which run-level, and how many gettys to spawn.</para>
 <term><command>killall5</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit killall5"><primary sortas="b-killall5">killall5</primary></indexterm>
-<para>sends a signal to all processes, except the processes in its own session -- 
-so it won't kill the shell running the script that called it.</para>
+<para>sends a signal to all processes, except the processes in its own
+session so it won't kill the shell running the script that called
+it.</para>
 </listitem>
 </varlistentry>
 
@@ -154,8 +159,8 @@ so it won't kill the shell running the script that called it.</para>
 <listitem>
 <indexterm zone="ch-system-sysvinit last"><primary sortas="b-last">last</primary></indexterm>
 <para>shows which users last logged in (and out),
-searching back through the file <filename>/var/log/wtmp</filename>. It can
-also show system boots and shutdowns, and run-level changes.</para>
+searching back through the <filename>/var/log/wtmp</filename> file. It
+also show system boots, shutdowns, and run-level changes.</para>
 </listitem>
 </varlistentry>
 
@@ -163,7 +168,7 @@ also show system boots and shutdowns, and run-level changes.</para>
 <term><command>lastb</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit lastb"><primary sortas="b-lastb">lastb</primary></indexterm>
-<para>shows the failed login attempts, as logged in 
+<para>shows the failed login attempts, as logged in
 <filename>/var/log/btmp</filename>.</para>
 </listitem>
 </varlistentry>
@@ -172,8 +177,8 @@ also show system boots and shutdowns, and run-level changes.</para>
 <term><command>mesg</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit mesg"><primary sortas="b-mesg">mesg</primary></indexterm>
-<para>controls whether other users can send
-messages to the current user's terminal.</para>
+<para>controls whether other users can send messages to the current
+user's terminal.</para>
 </listitem>
 </varlistentry>
 
@@ -189,8 +194,8 @@ messages to the current user's terminal.</para>
 <term><command>poweroff</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit poweroff"><primary sortas="b-poweroff">poweroff</primary></indexterm>
-<para>tells the kernel to halt the system and
-switch off the computer. But see <command>halt</command>.</para>
+<para>tells the kernel to halt the system and switch off the computer
+(see <command>halt</command>).</para>
 </listitem>
 </varlistentry>
 
@@ -198,7 +203,8 @@ switch off the computer. But see <command>halt</command>.</para>
 <term><command>reboot</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit reboot"><primary sortas="b-reboot">reboot</primary></indexterm>
-<para>tells the kernel to reboot the system. But see <command>halt</command>.</para>
+<para>tells the kernel to reboot the system (see
+<command>halt</command>).</para>
 </listitem>
 </varlistentry>
 
@@ -215,8 +221,8 @@ record in <filename>/var/run/utmp</filename>.</para>
 <term><command>shutdown</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit shutdown"><primary sortas="b-shutdown">shutdown</primary></indexterm>
-<para>brings the system down in a secure way,
-signaling all processes and notifying all logged-in users.</para>
+<para>brings the system down in a secure way, signaling all processes
+and notifying all logged-in users.</para>
 </listitem>
 </varlistentry>
 
@@ -224,7 +230,7 @@ signaling all processes and notifying all logged-in users.</para>
 <term><command>sulogin</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit sulogin"><primary sortas="b-sulogin">sulogin</primary></indexterm>
-<para>allows the superuser to log in. It is
+<para>allows <emphasis>root</emphasis> to log in. It is
 normally invoked by <command>init</command> when the system goes into single user mode.</para>
 </listitem>
 </varlistentry>
@@ -233,7 +239,7 @@ normally invoked by <command>init</command> when the system goes into single use
 <term><command>telinit</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit telinit"><primary sortas="b-telinit">telinit</primary></indexterm>
-<para>tells <command>init</command> which run-level to enter.</para>
+<para>tells <command>init</command> which run-level to change to.</para>
 </listitem>
 </varlistentry>
 
@@ -241,7 +247,8 @@ normally invoked by <command>init</command> when the system goes into single use
 <term><command>utmpdump</command></term>
 <listitem>
 <indexterm zone="ch-system-sysvinit utmpdump"><primary sortas="b-utmpdump">utmpdump</primary></indexterm>
-<para>displays the content of the given login file in a friendlier format.</para>
+<para>displays the content of the given login file in a more
+user-friedly format.</para>
 </listitem>
 </varlistentry>
 
@@ -257,3 +264,4 @@ normally invoked by <command>init</command> when the system goes into single use
 </sect2>
 
 </sect1>
+

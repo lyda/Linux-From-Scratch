@@ -40,11 +40,11 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Give Readline's dynamic libraries to a more appropriate permissions:</para>
+<para>Give Readline's dynamic libraries more appropriate permissions:</para>
 
 <screen><userinput>chmod 755 /usr/lib/*.&readline-version;</userinput></screen>
 
-<para>And move them to a more appropriate location:</para>
+<para>Move the dynamic libraries to a more appropriate location:</para>
 
 <screen><userinput>mv /usr/lib/lib{readline,history}.so.5* /lib</userinput></screen>
 
@@ -60,9 +60,33 @@ ln -sf ../../lib/libreadline.so.5 /usr/lib/libreadline.so</userinput></screen>
 <sect2 id="contents-readline" role="content"><title>Contents of Readline</title>
 <segmentedlist>
 <segtitle>Installed libraries</segtitle>
-<seglistitem><seg>Not checked</seg></seglistitem>
+<seglistitem><seg>libhistory.[a,so], libreadline.[a,so]</seg></seglistitem>
 </segmentedlist>
+
+<variablelist><title>Short descriptions</title>
+
+<varlistentry id="libhistory">
+<term><filename class="libraryfile">libhistory</filename></term>
+<listitem>
+<indexterm zone="ch-system-readline libhistory"><primary sortas="c-libhistory">libhistory</primary></indexterm>
+<para>a programming tool that provides a consistent user interface
+for recalling lines of history.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry id="libreadline">
+<term><filename class="libraryfile">libreadline</filename></term>
+<listitem>
+<indexterm zone="ch-system-readline libreadline"><primary sortas="c-libreadline">libreadline</primary></indexterm>
+<para>a utility which aids in the consistency of user interface
+across discrete programs that need to provide a command line
+interface.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
 </sect2>
 
-
 </sect1>
+

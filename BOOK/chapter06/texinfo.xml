@@ -44,7 +44,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Optionally install the components belonging in a TeX installation:</para>
+<para>Optionally, install the components belonging in a TeX installation:</para>
 
 <screen><userinput>make TEXMF=/usr/share/texmf install-tex</userinput></screen>
 
@@ -53,19 +53,20 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <variablelist>
 <varlistentry>
 <term><parameter>TEXMF=/usr/share/texmf</parameter></term>
-<listitem><para>The TEXMF
-makefile variable holds the location of the root of your TeX tree if, for
-example, you plan to install a TeX package later on.</para></listitem>
+<listitem><para>The TEXMF makefile variable holds the location of the
+root of the TeX tree if, for example, a TeX package will be installed
+later.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<para>The Info documentation system uses a plain text file to hold its list of
-menu entries. The file is located at <filename>/usr/share/info/dir</filename>.
-Unfortunately, due to occasional problems in the Makefiles of various packages,
-it can sometimes get out of step with the Info manuals actually installed on the
-system. If ever you need to recreate the
-<filename>/usr/share/info/dir</filename> file, the following optional commands
-will accomplish the task:</para>
+<para>The Info documentation system uses a plain text file to hold its
+list of menu entries. The file is located at
+<filename>/usr/share/info/dir</filename>.  Unfortunately, due to
+occasional problems in the Makefiles of various packages, it can
+sometimes get out of step with the Info manuals installed on the
+system. If the <filename>/usr/share/info/dir</filename> file ever
+needs to be recreated, the following optional commands will accomplish
+the task:</para>
 
 <screen><userinput>cd /usr/share/info
 rm dir
@@ -74,7 +75,6 @@ do install-info $f dir 2&gt;/dev/null
 done</userinput></screen>
 
 </sect2>
-
 
 <sect2 id="contents-texinfo" role="content"><title>Contents of Texinfo</title>
 
@@ -90,10 +90,10 @@ makeinfo, texi2dvi and texindex</seg></seglistitem>
 <term><command>info</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo info"><primary sortas="b-info">info</primary></indexterm>
-<para>is used to read Info documents. Info
-documents are a bit like man pages, but often go much deeper than just
-explaining all the flags. Compare for example <command>man tar</command>
-and <command>info tar</command>.</para>
+<para>used to read Info documents. Info documents are similar to man
+pages, but often go much deeper than just explaining all the command
+line options. Compare for example <command>man bison</command> and
+<command>info bison</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -101,8 +101,8 @@ and <command>info tar</command>.</para>
 <term><command>infokey</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo infokey"><primary sortas="b-infokey">infokey</primary></indexterm>
-<para>compiles a source file containing Info
-customizations into a binary format.</para>
+<para>compiles a source file containing Info customizations into a
+binary format.</para>
 </listitem>
 </varlistentry>
 
@@ -110,7 +110,8 @@ customizations into a binary format.</para>
 <term><command>install-info</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo install-info"><primary sortas="b-install-info">install-info</primary></indexterm>
-<para>is used to install Info files. It updates entries in the Info index file.</para>
+<para>used to install Info files. It updates entries in the Info index
+file.</para>
 </listitem>
 </varlistentry>
 
@@ -118,8 +119,8 @@ customizations into a binary format.</para>
 <term><command>makeinfo</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo makeinfo"><primary sortas="b-makeinfo">makeinfo</primary></indexterm>
-<para>translates the given Texinfo source
-documents into various other formats: Info files, plain text, or HTML.</para>
+<para>translates the given Texinfo source documents into various other
+formats: Info files, plain text, or HTML.</para>
 </listitem>
 </varlistentry>
 
@@ -127,8 +128,8 @@ documents into various other formats: Info files, plain text, or HTML.</para>
 <term><command>texi2dvi</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo texi2dvi"><primary sortas="b-texi2dvi">texi2dvi</primary></indexterm>
-<para>is used to format the given Texinfo
-document into a device-independent file that can be printed.</para>
+<para>used to format the given Texinfo document into a
+device-independent file that can be printed.</para>
 </listitem>
 </varlistentry>
 
@@ -136,7 +137,7 @@ document into a device-independent file that can be printed.</para>
 <term><command>texindex</command></term>
 <listitem>
 <indexterm zone="ch-system-texinfo texindex"><primary sortas="b-texindex">texindex</primary></indexterm>
-<para>is used to sort Texinfo index files.</para>
+<para>used to sort Texinfo index files.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -144,3 +145,4 @@ document into a device-independent file that can be printed.</para>
 </sect2>
 
 </sect1>
+

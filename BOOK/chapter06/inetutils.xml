@@ -28,14 +28,15 @@ Diffutils, GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Inetutils</title>
 
-<para>Inetutils has issues with the Linux 2.6 kernel series - fix these isues
-by applying the following patch:</para>
+<para>Inetutils has issues with the Linux 2.6 kernel series. Fix these
+issues by applying the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../inetutils-&inetutils-version;-kernel_headers-1.patch</userinput></screen>
 
-<para>We are not going to install all the programs that come with Inetutils.
-However, the Inetutils build system will insist on installing all the man
-pages anyway. The following patch will correct this situation:</para>
+<para>All programs that come with Inetutils will not be installed.
+However, the Inetutils build system will insist on installing all the
+man pages anyway. The following patch will correct this
+situation:</para>
 
 <screen><userinput>patch -Np1 -i ../inetutils-&inetutils-version;-no_server_man_pages-1.patch</userinput></screen>
 
@@ -73,13 +74,14 @@ Instructions for a better whois client are in the BLFS book.</para></listitem>
 
 <varlistentry>
 <term><parameter>--disable-servers</parameter></term>
-<listitem><para>This disables the
-installation of the various network servers included as part of the Inetutils
-package. These servers are deemed not appropriate in a basic LFS system. Some
-are insecure by nature and are only considered safe on trusted networks. More
-information can be found at
-<ulink url="&blfs-root;view/stable/basicnet/inetutils.html"/>. Note that better
-replacements are available for many of these servers.</para></listitem>
+<listitem><para>This disables the installation of the various network
+servers included as part of the Inetutils package. These servers are
+deemed not appropriate in a basic LFS system. Some are insecure by
+nature and are only considered safe on trusted networks. More
+information can be found at <ulink
+url="&blfs-root;view/stable/basicnet/inetutils.html"/>. Note that
+better replacements are available for many of these
+servers.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -87,7 +89,7 @@ replacements are available for many of these servers.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -112,7 +114,7 @@ place:</para>
 <term><command>ftp</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils ftp"><primary sortas="b-ftp">ftp</primary></indexterm>
-<para>is the ARPANET file transfer program.</para>
+<para>is the file transfer protocol program.</para>
 </listitem>
 </varlistentry>
 
@@ -128,7 +130,7 @@ place:</para>
 <term><command>rcp</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils rcp"><primary sortas="b-rcp">rcp</primary></indexterm>
-<para>does remote file copy.</para>
+<para>performs remote file copy.</para>
 </listitem>
 </varlistentry>
 
@@ -136,7 +138,7 @@ place:</para>
 <term><command>rlogin</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils rlogin"><primary sortas="b-rlogin">rlogin</primary></indexterm>
-<para>does remote login.</para>
+<para>performs remote login.</para>
 </listitem>
 </varlistentry>
 
@@ -152,7 +154,7 @@ place:</para>
 <term><command>talk</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils talk"><primary sortas="b-talk">talk</primary></indexterm>
-<para>is used to chat up another user.</para>
+<para>used to chat with another user.</para>
 </listitem>
 </varlistentry>
 
@@ -160,7 +162,7 @@ place:</para>
 <term><command>telnet</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils telnet"><primary sortas="b-telnet">telnet</primary></indexterm>
-<para>is an interface to the TELNET protocol.</para>
+<para>an interface to the TELNET protocol.</para>
 </listitem>
 </varlistentry>
 
@@ -168,7 +170,7 @@ place:</para>
 <term><command>tftp</command></term>
 <listitem>
 <indexterm zone="ch-system-inetutils tftp"><primary sortas="b-tftp">tftp</primary></indexterm>
-<para>is a trivial file transfer program.</para>
+<para>a trivial file transfer program.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -176,3 +178,4 @@ place:</para>
 </sect2>
 
 </sect1>
+

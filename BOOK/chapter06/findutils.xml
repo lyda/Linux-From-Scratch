@@ -47,7 +47,7 @@ which is FHS-compliant.</para>
 <para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
-<para>Now install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -93,7 +93,8 @@ databases. It is the ancestor of <command>frcode</command>.</para>
 <listitem>
 <indexterm zone="ch-system-findutils frcode"><primary sortas="b-frcode">frcode</primary></indexterm>
 <para>is called by <command>updatedb</command> to compress the list of file names. It uses
-front-compression, reducing the database size by a factor of 4 to 5.</para>
+front-compression, reducing the database size by a factor of four to
+five.</para>
 </listitem>
 </varlistentry>
 
@@ -101,8 +102,8 @@ front-compression, reducing the database size by a factor of 4 to 5.</para>
 <term><command>locate</command></term>
 <listitem>
 <indexterm zone="ch-system-findutils locate"><primary sortas="b-locate">locate</primary></indexterm>
-<para>searches through a database of file names,
-and reports the names that contain a given string or match a given pattern.</para>
+<para>searches through a database of file names and reports the names
+that contain a given string or match a given pattern.</para>
 </listitem>
 </varlistentry>
 
@@ -112,7 +113,7 @@ and reports the names that contain a given string or match a given pattern.</par
 <indexterm zone="ch-system-findutils updatedb"><primary sortas="b-updatedb">updatedb</primary></indexterm>
 <para>updates the <command>locate</command> database. It scans
 the entire file system (including other file systems that are currently mounted,
-unless told not to) and puts every file name it finds in the database.</para>
+unless told not to) and puts every file name it finds to the database.</para>
 </listitem>
 </varlistentry>
 
@@ -128,3 +129,4 @@ unless told not to) and puts every file name it finds in the database.</para>
 </sect2>
 
 </sect1>
+

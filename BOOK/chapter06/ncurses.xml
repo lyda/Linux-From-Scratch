@@ -50,7 +50,7 @@ Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 <screen><userinput>chmod 644 /usr/lib/libncurses++.a</userinput></screen>
 
 <para>Move the libraries to the <filename class="directory">/lib</filename> directory,
-where they're expected to reside:</para>
+where they are expected to reside:</para>
 
 <screen><userinput>mv /usr/lib/libncurses.so.5* /lib</userinput></screen>
 
@@ -119,8 +119,8 @@ libncurses++.a, libncurses.[a,so], libpanel.[a,so]</seg></seglistitem>
 <term><command>tack</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses tack"><primary sortas="b-tack">tack</primary></indexterm>
-<para>is the terminfo action checker. It is mainly
-used to test the correctness of an entry in the terminfo database.</para>
+<para>the terminfo action checker. It is mainly used to test the
+accuracy of an entry in the terminfo database.</para>
 </listitem>
 </varlistentry>
 
@@ -128,9 +128,9 @@ used to test the correctness of an entry in the terminfo database.</para>
 <term><command>tic</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses tic"><primary sortas="b-tic">tic</primary></indexterm>
-<para>is the terminfo entry-description compiler.
-It translates a terminfo file from source format into the binary format needed
-for the ncurses library routines. A terminfo file contains information on the
+<para>the terminfo entry-description compiler. It translates a
+terminfo file from source format into the binary format needed for the
+ncurses library routines. A terminfo file contains information on the
 capabilities of a certain terminal.</para>
 </listitem>
 </varlistentry>
@@ -139,8 +139,8 @@ capabilities of a certain terminal.</para>
 <term><command>toe</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses toe"><primary sortas="b-toe">toe</primary></indexterm>
-<para>lists all available terminal types, for each
-giving its primary name and its description.</para>
+<para>lists all available terminal types, giving the primary name and
+description for each.</para>
 </listitem>
 </varlistentry>
 
@@ -148,9 +148,9 @@ giving its primary name and its description.</para>
 <term><command>tput</command></term>
 <listitem>
 <indexterm zone="ch-system-ncurses tput"><primary sortas="b-tput">tput</primary></indexterm>
-<para>makes the values of terminal-dependent
-capabilities available to the shell. It can also be used to reset or initialize
-a terminal, or report its long name.</para>
+<para>makes the values of terminal-dependent capabilities available to
+the shell. It can also be used to reset or initialize a terminal or
+report its long name.</para>
 </listitem>
 </varlistentry>
 
@@ -166,9 +166,9 @@ a terminal, or report its long name.</para>
 <term><filename class="libraryfile">>libncurses*</filename></term>
 <listitem>
 <indexterm zone="ch-system-ncurses libncurses"><primary sortas="c-libncurses*">libncurses*</primary></indexterm>
-<para>contains functions to display text in
-many complicated ways on a terminal screen. A good example of the use of these
-functions is the menu displayed during the kernel's <command>make menuconfig</command>.</para>
+<para>contains functions to display text in many complicated ways on a
+terminal screen. A good example of the use of these functions is the
+menu displayed during the kernel's <command>make menuconfig</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -200,3 +200,4 @@ functions is the menu displayed during the kernel's <command>make menuconfig</co
 </sect2>
 
 </sect1>
+

@@ -38,7 +38,7 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <varlistentry>
 <term><parameter>--sysconfdir=/etc</parameter></term>
 <listitem><para>This option tells the programs created by the package to look in 
-<filename class="directory">/etc</filename> for their configuration files.</para></listitem>
+<filename class="directory">/etc</filename> for the configuration files.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -46,7 +46,7 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Now install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -65,8 +65,8 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <term><command>less</command></term>
 <listitem>
 <indexterm zone="ch-system-less less"><primary sortas="b-less">less</primary></indexterm>
-<para>is a file viewer or pager. It displays the contents of the given file, letting you 
-scroll around, find strings, and jump to marks.</para>
+<para>a file viewer or pager. It displays the contents of the given
+file, letting the user scroll, find strings, and jump to marks.</para>
 </listitem>
 </varlistentry>
 
@@ -74,7 +74,8 @@ scroll around, find strings, and jump to marks.</para>
 <term><command>lessecho</command></term>
 <listitem>
 <indexterm zone="ch-system-less lessecho"><primary sortas="b-lessecho">lessecho</primary></indexterm>
-<para>is needed to expand meta-characters, such as * and ?, in filenames on Unix systems.</para>
+<para>needed to expand meta-characters, such as <emphasis>*</emphasis>
+and <emphasis>?</emphasis>, in filenames on Unix systems.</para>
 </listitem>
 </varlistentry>
 
@@ -82,7 +83,7 @@ scroll around, find strings, and jump to marks.</para>
 <term><command>lesskey</command></term>
 <listitem>
 <indexterm zone="ch-system-less lesskey"><primary sortas="b-lesskey">lesskey</primary></indexterm>
-<para>is used to specify the key bindings for <command>less</command>.</para>
+<para>used to specify the key bindings for <command>less</command>.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -90,3 +91,4 @@ scroll around, find strings, and jump to marks.</para>
 </sect2>
 
 </sect1>
+

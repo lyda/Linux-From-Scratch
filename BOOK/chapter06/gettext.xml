@@ -42,7 +42,7 @@ Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 <userinput>make check</userinput>. This takes a very long time, around
 7 SBUs.</para>
 
-<para>Now install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -100,8 +100,8 @@ runtime search path of shared libraries in an executable.</para>
 <term><command>gettext</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext gettext"><primary sortas="b-gettext">gettext</primary></indexterm>
-<para>translates a natural language message into
-the user's language, by looking up the translation in a message catalog.</para>
+<para>translates a natural language message into the user's language
+by looking up the translation in a message catalog.</para>
 </listitem>
 </varlistentry>
 
@@ -109,8 +109,8 @@ the user's language, by looking up the translation in a message catalog.</para>
 <term><command>gettextize</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext gettextize"><primary sortas="b-gettextize">gettextize</primary></indexterm>
-<para>copies all standard Gettext files into
-the given top-level directory of a package, to begin inter-nationalizing it.</para>
+<para>copies all standard Gettext files into the given top-level
+directory of a package to begin internationalizing it.</para>
 </listitem>
 </varlistentry>
 
@@ -126,8 +126,8 @@ the given top-level directory of a package, to begin inter-nationalizing it.</pa
 <term><command>msgattrib</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msgattrib"><primary sortas="b-msgattrib">msgattrib</primary></indexterm>
-<para>filters the messages of a translation
-catalog according to their attributes and manipulates the attributes.</para>
+<para>filters the messages of a translation catalog according to their
+attributes and manipulates the attributes.</para>
 </listitem>
 </varlistentry>
 
@@ -201,8 +201,8 @@ to the given <filename class="extension">.po</filename> files.</para>
 <term><command>msggrep</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext msggrep"><primary sortas="b-msggrep">msggrep</primary></indexterm>
-<para>extracts all messages of a translation
-catalog that match a given pattern or belong to some given source files.</para>
+<para>extracts all messages of a translation catalog that match a
+given pattern or belong to some given source files.</para>
 </listitem>
 </varlistentry>
 
@@ -243,8 +243,8 @@ information with values from the user's environment.</para>
 <term><command>ngettext</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext ngettext"><primary sortas="b-ngettext">ngettext</primary></indexterm>
-<para>displays native language translations of a
-textual message whose grammatical form depends on a number.</para>
+<para>displays native language translations of a textual message whose
+grammatical form depends on a number.</para>
 </listitem>
 </varlistentry>
 
@@ -252,8 +252,8 @@ textual message whose grammatical form depends on a number.</para>
 <term><command>xgettext</command></term>
 <listitem>
 <indexterm zone="ch-system-gettext xgettext"><primary sortas="b-xgettext">xgettext</primary></indexterm>
-<para>extracts the translatable message lines
-from the given source files, to make the first translation template.</para>
+<para>extracts the translatable message lines from the given source
+files to make the first translation template.</para>
 </listitem>
 </varlistentry>
 
@@ -261,9 +261,10 @@ from the given source files, to make the first translation template.</para>
 <term><filename class="libraryfile">libasprintf</filename></term>
 <listitem>
 <indexterm zone="ch-system-gettext libasprintf"><primary sortas="c-libasprintf">libasprintf</primary></indexterm>
-<para>defines the autosprintf class, which
-makes C formatted output routines usable in C++ programs, for use with the
-&lt;string&gt; strings and the &lt;iostream&gt; streams.</para>
+<para>defines the <emphasis>autosprintf</emphasis> class, which makes
+C formatted output routines usable in C++ programs, for use with the
+<emphasis>&lt;string&gt;</emphasis> strings and the
+<emphasis>&lt;iostream&gt;</emphasis> streams.</para>
 </listitem>
 </varlistentry>
 
@@ -271,8 +272,8 @@ makes C formatted output routines usable in C++ programs, for use with the
 <term><filename class="libraryfile">libgettextlib</filename></term>
 <listitem>
 <indexterm zone="ch-system-gettext libgettextlib"><primary sortas="c-libgettextlib">libgettextlib</primary></indexterm>
-<para>is a private library containing common routines used by the various Gettext
-programs. They're not meant for general use.</para>
+<para>a private library containing common routines used by the various Gettext
+programs. These are not intended for general use.</para>
 </listitem>
 </varlistentry>
 
@@ -280,11 +281,12 @@ programs. They're not meant for general use.</para>
 <term><filename class="libraryfile">libgettextpo</filename></term>
 <listitem>
 <indexterm zone="ch-system-gettext libgettextpo"><primary sortas="c-libgettextpo">libgettextpo</primary></indexterm>
-<para>is used to write specialized programs that process <filename 
-class="extension">.po</filename> files. This library is
-used when the standard applications shipped with Gettext won't suffice (such as
-<command>msgcomm</command>, <command>msgcmp</command>, 
-<command>msgattrib</command> and <command>msgen</command>).</para>
+<para>used to write specialized programs that process <filename
+class="extension">.po</filename> files. This library is used when the
+standard applications shipped with Gettext (such as
+<command>msgcomm</command>, <command>msgcmp</command>,
+<command>msgattrib</command> and <command>msgen</command>) will not
+suffice.</para>
 </listitem>
 </varlistentry>
 
@@ -292,8 +294,8 @@ used when the standard applications shipped with Gettext won't suffice (such as
 <term><filename class="libraryfile">libgettextsrc</filename></term>
 <listitem>
 <indexterm zone="ch-system-gettext libgettextsrc"><primary sortas="c-libgettextsrc">libgettextsrc</primary></indexterm>
-<para>is a private library containing common routines used by the various Gettext 
-programs. They're not meant for general use.</para>
+<para>a private library containing common routines used by the various Gettext 
+programs. These are not intended for general use.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -301,3 +303,4 @@ programs. They're not meant for general use.</para>
 </sect2>
 
 </sect1>
+

@@ -28,11 +28,11 @@ some programs.</para>
 <sect2 role="installation">
 <title>Installation of Zlib</title>
 
-<note><para>Zlib is known to build its shared library incorrectly if CFLAGS is
-specified in the environment. If you are using your own CFLAGS variable, be
-sure to add the <parameter>-fPIC</parameter> directive to your CFLAGS for the
-duration of the below <command>configure</command> command, then remove it
-afterwards.</para></note>
+<note><para>Zlib is known to build its shared library incorrectly if
+CFLAGS is specified in the environment. If using a specified CFLAGS
+variable, be sure to add the <parameter>-fPIC</parameter> directive to
+the <emphasis>CFLAGS</emphasis> variable for the duration of the
+configure command below, then remove it afterwards.</para></note>
 
 <para>Prepare Zlib for compilation:</para>
 
@@ -49,40 +49,41 @@ afterwards.</para></note>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Now also build the non-shared (static) library:</para>
+<para>Build the static library:</para>
 
 <screen><userinput>make clean
 ./configure --prefix=/usr
 make</userinput></screen>
 
-<para>To again test the results, issue:
+<para>To test the results again, issue:
 <userinput>make check</userinput>.</para>
 
 <para>Install the static library:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And fix the permissions on the static library:</para>
+<para>Fix the permissions on the static library:</para>
 
 <screen><userinput>chmod 644 /usr/lib/libz.a</userinput></screen>
 
-<para>It is good policy and common practice to place important libraries into
-the <filename class="directory">/lib</filename> directory. This matters most
-in scenarios where <filename class="directory">/usr</filename> is on a
-separate partition. Essentially, the run-time components of any libraries that
-are used by programs in <filename class="directory">/bin</filename> or
-<filename class="directory">/sbin</filename> should reside in
-<filename class="directory">/lib</filename> so that they are on the root
-partition and available in the event of
-<filename class="directory">/usr</filename> being inaccessible.</para>
+<para>It is good policy and common practice to place important
+libraries into the <filename class="directory">/lib</filename>
+directory. This is most important in scenarios where <filename
+class="directory">/usr</filename> is on a separate partition.
+Essentially, the run-time components of any libraries that are used by
+programs in <filename class="directory">/bin</filename> or <filename
+class="directory">/sbin</filename> should reside in <filename
+class="directory">/lib</filename> so that they are on the root
+partition and available in the event of <filename
+class="directory">/usr</filename> being inaccessible.</para>
 
-<para>For the above reason we move the run-time components of the shared Zlib
+<para>For the above reason, move the run-time components of the shared Zlib
 into <filename class="directory">/lib</filename>:</para>
 
 <screen><userinput>mv /usr/lib/libz.so.* /lib</userinput></screen>
 
-<para>Now we need to fix the <filename class="symlink">/usr/lib/libz.so</filename> symlink
-because we just moved the file it points to:</para>
+<para>Fix the <filename class="symlink">/usr/lib/libz.so</filename> symlink
+after the above move:</para>
 
 <screen><userinput>ln -sf ../../lib/libz.so.1 /usr/lib/libz.so</userinput></screen>
 
@@ -111,3 +112,4 @@ functions used by some programs.</para>
 </sect2>
 
 </sect1>
+

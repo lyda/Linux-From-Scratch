@@ -34,9 +34,9 @@ GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
 
 <para>The <command>gzexe</command> script has the location of the
-<command>gzip</command> binary hard-wired into it. Because we later change
-the location of the binary, the following command ensures that the new
-location gets placed into the script:</para>
+<command>gzip</command> binary hard-wired into it. Because the
+location of the binary is changed later, the following command ensures
+that the new location gets placed into the script:</para>
 
 <screen><userinput>sed -i 's@"BINDIR"@/bin@g' gzexe.in</userinput></screen>
 
@@ -82,7 +82,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 <term><command>gzexe</command></term>
 <listitem>
 <indexterm zone="ch-system-gzip gzexe"><primary sortas="b-gzexe">gzexe</primary></indexterm>
-<para>is used to create self-uncompressing executable files.</para>
+<para>used to create self-uncompressing executable files.</para>
 </listitem>
 </varlistentry>
 
@@ -181,3 +181,4 @@ useful when file names were truncated during a file transfer.</para>
 </sect2>
 
 </sect1>
+

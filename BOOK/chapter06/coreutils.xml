@@ -29,15 +29,15 @@ Gettext, Glibc, Grep, Make, Perl, Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Coreutils</title>
 
-<para>Normally the functionality of <command>uname</command> is somewhat
-broken, in that the <parameter>-p</parameter> switch always returns
-<computeroutput>unknown</computeroutput>.  The following patch fixes this behavior for Intel
-architectures:</para>
+<para>A known issue with the <command>uname</command> program from
+this package is that the <parameter>-p</parameter> switch always
+returns <computeroutput>unknown</computeroutput>. The following patch
+fixes this behavior for Intel architectures:</para>
 
 <screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-uname-2.patch</userinput></screen>
 
-<para>Prevent Coreutils from installing binaries that will be installed by other
-programs later:</para>
+<para>Prevent Coreutils from installing binaries that will be later be
+installed by other packages:</para>
 
 <screen><userinput>patch -Np1 -i ../coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch</userinput></screen>
 
@@ -49,11 +49,11 @@ programs later:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>The test suite of Coreutils makes several assumptions about the presence
-of files and users that aren't valid this early in the LFS build. We will
-therefore have to set up a few things before being able to run the tests. If
-you choose not to run these tests, skip down to <quote>Install the
-package</quote>.</para>
+<para>The test suite of Coreutils makes several assumptions about the
+presence of files and users that are not valid this early in the LFS
+build. Therefore, additional items need to be set up before running
+the tests. Skip down to <quote>Install the package</quote> if you are
+not running the test suite.</para>
 
 <para>Create two dummy groups and a dummy user name:</para>
 
@@ -61,17 +61,18 @@ package</quote>.</para>
 echo "dummy2:x:1001:dummy" &gt;&gt; /etc/group
 echo "dummy:x:1000:1000:::/bin/bash" &gt;&gt; /etc/passwd</userinput></screen>
 
-<para>Now you're all set to run the test suite. First run the few tests that
-are meant to be run as <emphasis>root</emphasis>:</para>
+<para>Now the test suite is ready to be run. First, run the tests that
+are meant to be run as user <emphasis>root</emphasis>:</para>
 
 <screen><userinput>make NON_ROOT_USERNAME=dummy check-root</userinput></screen>
 
-<para>Then run the remainder of the tests as the <emphasis>dummy</emphasis>
-user:</para>
+<para>Then run the remainder of the tests as the
+<emphasis>dummy</emphasis> user:</para>
 
 <screen><userinput>src/su dummy -c "make RUN_EXPENSIVE_TESTS=yes check"</userinput></screen>
 
-<para>When you're done testing, remove the dummy user and groups:</para>
+<para>When testing is complete, remove the dummy user and
+groups:</para>
 
 <screen><userinput>sed -i '/dummy/d' /etc/passwd /etc/group</userinput></screen>
 
@@ -79,11 +80,11 @@ user:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>And move some programs to their proper locations:</para>
+<para>Move programs to the proper locations:</para>
 
 <screen><userinput>mv /usr/bin/{[,basename,cat,chgrp,chmod,chown,cp,dd,df} /bin
-mv /usr/bin/{date,echo,false,head,install,ln,ls} /bin
-mv /usr/bin/{mkdir,mknod,mv,pwd,rm,rmdir,sync} /bin
+mv /usr/bin/{date,echo,false,head,hostname,install,ln} /bin
+mv /usr/bin/{ls,mkdir,mknod,mv,pwd,rm,rmdir,sync} /bin
 mv /usr/bin/{sleep,stty,test,touch,true,uname} /bin
 mv /usr/bin/chroot /usr/sbin</userinput></screen>
 
@@ -115,7 +116,7 @@ whoami and yes</seg></seglistitem>
 <term><command>basename</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils basename"><primary sortas="b-basename">basename</primary></indexterm>
-<para>strips any path and a given suffix from the given file name.</para>
+<para>strips any path and a given suffix from a given file name.</para>
 </listitem>
 </varlistentry>
 
@@ -131,8 +132,9 @@ whoami and yes</seg></seglistitem>
 <term><command>chgrp</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils chgrp"><primary sortas="b-chgrp">chgrp</primary></indexterm>
-<para>changes the group ownership of each given file to the given group. The 
-group can be either given a a name or a numeric ID.</para>
+<para>changes the group ownership of each given file to the given
+group. The group can either be either given a name or a numeric
+ID.</para>
 </listitem>
 </varlistentry>
 
@@ -140,9 +142,9 @@ group can be either given a a name or a numeric ID.</para>
 <term><command>chmod</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils chmod"><primary sortas="b-chmod">chmod</primary></indexterm>
-<para>changes the permissions of each given file
-to the given mode. The mode can be either a symbolic representation of the
-changes to make, or an octal number representing the new permissions.</para>
+<para>changes the permissions of each file to the given mode. The mode
+can be either a symbolic representation of the changes to make or an
+octal number representing the new permissions.</para>
 </listitem>
 </varlistentry>
 
@@ -151,7 +153,7 @@ changes to make, or an octal number representing the new permissions.</para>
 <listitem>
 <indexterm zone="ch-system-coreutils chown"><primary sortas="b-chown">chown</primary></indexterm>
 <para>changes the user and/or group ownership of
-each given file to the given user:group pair.</para>
+each given file to the given user/group pair.</para>
 </listitem>
 </varlistentry>
 
@@ -169,7 +171,7 @@ On most systems only <emphasis>root</emphasis> can do this.</para>
 <term><command>cksum</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils cksum"><primary sortas="b-cksum">cksum</primary></indexterm>
-<para>prints the CRC (Cyclic Redundancy Check) checksum and the byte
+<para>prints the Cyclic Redundancy Check (CRC) checksum and the byte
 counts of each specified file.</para>
 </listitem>
 </varlistentry>
@@ -178,8 +180,8 @@ counts of each specified file.</para>
 <term><command>comm</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils comm"><primary sortas="b-comm">comm</primary></indexterm>
-<para>compares two sorted files, outputting in
-three columns the lines that are unique, and the lines that are common.</para>
+<para>compares two sorted files, outputting in three columns the lines
+that are unique and the lines that are common.</para>
 </listitem>
 </varlistentry>
 
@@ -195,9 +197,9 @@ three columns the lines that are unique, and the lines that are common.</para>
 <term><command>csplit</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils csplit"><primary sortas="b-csplit">csplit</primary></indexterm>
-<para>splits a given file into several new files,
-separating them according to given patterns or line numbers, and outputting
-the byte count of each new file.</para>
+<para>splits a given file into several new files, separating them
+according to given patterns or line numbers and outputting the byte
+count of each new file.</para>
 </listitem>
 </varlistentry>
 
@@ -205,8 +207,8 @@ the byte count of each new file.</para>
 <term><command>cut</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils cut"><primary sortas="b-cut">cut</primary></indexterm>
-<para>prints parts of lines, selecting the parts
-according to given fields or positions.</para>
+<para>prints sections of lines, selecting the parts according to given
+fields or positions.</para>
 </listitem>
 </varlistentry>
 
@@ -214,7 +216,8 @@ according to given fields or positions.</para>
 <term><command>date</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils date"><primary sortas="b-date">date</primary></indexterm>
-<para>displays the current time in the given format, or sets the system date.</para>
+<para>displays the current time in the given format, or sets the
+system date.</para>
 </listitem>
 </varlistentry>
 
@@ -222,8 +225,8 @@ according to given fields or positions.</para>
 <term><command>dd</command> </term>
 <listitem>
 <indexterm zone="ch-system-coreutils dd"><primary sortas="b-dd">dd</primary></indexterm>
-<para>copies a file using the given block size and
-count, while optionally performing conversions on it.</para>
+<para>copies a file using the given block size and count, while
+optionally performing conversions on it.</para>
 </listitem>
 </varlistentry>
 
@@ -231,9 +234,9 @@ count, while optionally performing conversions on it.</para>
 <term><command>df</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils df"><primary sortas="b-df">df</primary></indexterm>
-<para>reports the amount of disk space available
-(and used) on all mounted file systems, or only on the file systems holding the
-given files.</para>
+<para>reports the amount of disk space available (and used) on all
+mounted file systems, or only on the file systems holding the selected
+files.</para>
 </listitem>
 </varlistentry>
 
@@ -241,7 +244,8 @@ given files.</para>
 <term><command>dir</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils dir"><primary sortas="b-dir">dir</primary></indexterm>
-<para>is the same as <command>ls</command>.</para>
+<para>lists the contents of each given directory. (the same as
+the <command>ls</command> command).</para>
 </listitem>
 </varlistentry>
 
@@ -249,8 +253,9 @@ given files.</para>
 <term><command>dircolors</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils dircolors"><primary sortas="b-dircolors">dircolors</primary></indexterm>
-<para>outputs commands to set the LS_COLOR
-environment variable, to change the color scheme used by <command>ls</command>.</para>
+<para>outputs commands to set the <emphasis>LS_COLOR</emphasis>
+environment variable to change the color scheme used by
+<command>ls</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -258,7 +263,7 @@ environment variable, to change the color scheme used by <command>ls</command>.<
 <term><command>dirname</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils dirname"><primary sortas="b-dirname">dirname</primary></indexterm>
-<para>strips the non-directory suffix from a given file name.</para>
+<para>strips the non-directory suffix from a file name.</para>
 </listitem>
 </varlistentry>
 
@@ -266,9 +271,9 @@ environment variable, to change the color scheme used by <command>ls</command>.<
 <term><command>du</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils du"><primary sortas="b-du">du</primary></indexterm>
-<para>reports the amount of disk space used by the
-current directory, or by each of the given directories including all their
-subdirectories, or by each of the given files.</para>
+<para>reports the amount of disk space used by the current directory,
+by each of the given directories (including all subdirectories), or by
+each of the given files.</para>
 </listitem>
 </varlistentry>
 
@@ -316,8 +321,8 @@ subdirectories, or by each of the given files.</para>
 <term><command>false</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils false"><primary sortas="b-false">false</primary></indexterm>
-<para>does nothing, unsuccessfully. It always
-exits with a status code indicating failure.</para>
+<para>does nothing, unsuccessfully. It always exits with a status code
+indicating failure.</para>
 </listitem>
 </varlistentry>
 
@@ -374,7 +379,7 @@ exits with a status code indicating failure.</para>
 <listitem>
 <indexterm zone="ch-system-coreutils id"><primary sortas="b-id">id</primary></indexterm>
 <para>reports the effective user ID, group ID, and
-group memberships of the current user, or of a given user.</para>
+group memberships of the current user or specified user.</para>
 </listitem>
 </varlistentry>
 
@@ -391,7 +396,8 @@ permission modes and, if possible, their owner and group.</para>
 <term><command>join</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils join"><primary sortas="b-join">join</primary></indexterm>
-<para>joins from two files the lines that have identical join fields.</para>
+<para>joins the lines that have identical join fields from two
+separate files.</para>
 </listitem>
 </varlistentry>
 
@@ -399,7 +405,7 @@ permission modes and, if possible, their owner and group.</para>
 <term><command>link</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils link"><primary sortas="b-link">link</primary></indexterm>
-<para>creates a hard link with the given name to the given file.</para>
+<para>creates a hard link with the given name to a file.</para>
 </listitem>
 </varlistentry>
 
@@ -407,7 +413,7 @@ permission modes and, if possible, their owner and group.</para>
 <term><command>ln</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils ln"><primary sortas="b-ln">ln</primary></indexterm>
-<para>makes hard links or soft links between files.</para>
+<para>makes hard links or soft (symbolic) links between files.</para>
 </listitem>
 </varlistentry>
 
@@ -423,8 +429,7 @@ permission modes and, if possible, their owner and group.</para>
 <term><command>ls</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils ls"><primary sortas="b-ls">ls</primary></indexterm>
-<para>lists the contents of each given directory.
-By default it orders the files and subdirectories alphabetically.</para>
+<para>lists the contents of each given directory.</para>
 </listitem>
 </varlistentry>
 
@@ -432,7 +437,7 @@ By default it orders the files and subdirectories alphabetically.</para>
 <term><command>md5sum</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils md5sum"><primary sortas="b-md5sum">md5sum</primary></indexterm>
-<para>reports or checks MD5 (Message Digest 5) checksums.</para>
+<para>reports or checks Message Digest 5 (MD5) checksums.</para>
 </listitem>
 </varlistentry>
 
@@ -448,8 +453,8 @@ By default it orders the files and subdirectories alphabetically.</para>
 <term><command>mkfifo</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils mkfifo"><primary sortas="b-mkfifo">mkfifo</primary></indexterm>
-<para>creates FIFOs (First-In, First-Out, a <quote>named pipe</quote> in UNIX parlance) with
-the given names.</para>
+<para>creates First-In, First-Outs (FIFOs), a <quote>named
+pipe</quote> in UNIX parlance, with the given names.</para>
 </listitem>
 </varlistentry>
 
@@ -457,8 +462,8 @@ the given names.</para>
 <term><command>mknod</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils mknod"><primary sortas="b-mknod">mknod</primary></indexterm>
-<para>creates device nodes with the given names.
-A device node is a character special file, or a block special file, or a FIFO.</para>
+<para>creates device nodes with the given names. A device node is a
+character special file, a block special file, or a FIFO.</para>
 </listitem>
 </varlistentry>
 
@@ -490,8 +495,8 @@ A device node is a character special file, or a block special file, or a FIFO.</
 <term><command>nohup</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils nohup"><primary sortas="b-nohup">nohup</primary></indexterm>
-<para>runs a command immune to hangups, with
-output redirected to a log file.</para>
+<para>runs a command immune to hangups, with its output redirected to
+a log file.</para>
 </listitem>
 </varlistentry>
 
@@ -507,8 +512,8 @@ output redirected to a log file.</para>
 <term><command>paste</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils paste"><primary sortas="b-paste">paste</primary></indexterm>
-<para>merges the given files, joining
-sequentially corresponding lines side by side, separated by tab characters..</para>
+<para>merges the given files, joining sequentially corresponding lines
+side by side, separated by tab characters.</para>
 </listitem>
 </varlistentry>
 
@@ -516,7 +521,7 @@ sequentially corresponding lines side by side, separated by tab characters..</pa
 <term><command>pathchk</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils pathchk"><primary sortas="b-pathchk">pathchk</primary></indexterm>
-<para>checks whether file names are valid or portable.</para>
+<para>checks if file names are valid or portable.</para>
 </listitem>
 </varlistentry>
 
@@ -524,7 +529,7 @@ sequentially corresponding lines side by side, separated by tab characters..</pa
 <term><command>pinky</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils pinky"><primary sortas="b-pinky">pinky</primary></indexterm>
-<para>is a lightweight finger. It reports some information about the given users.</para>
+<para>is a lightweight finger client. It reports some information about the given users.</para>
 </listitem>
 </varlistentry>
 
@@ -548,8 +553,8 @@ sequentially corresponding lines side by side, separated by tab characters..</pa
 <term><command>printf</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils printf"><primary sortas="b-printf">printf</primary></indexterm>
-<para>prints the given arguments according to the
-given format -- much like the C printf function.</para>
+<para>prints the given arguments according to the given format, much
+like the C printf function.</para>
 </listitem>
 </varlistentry>
 
@@ -557,8 +562,8 @@ given format -- much like the C printf function.</para>
 <term><command>ptx</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils ptx"><primary sortas="b-ptx">ptx</primary></indexterm>
-<para>produces from the contents of the given files
-a permuted index, with each keyword in its context.</para>
+<para>produces a permuted index from the contents of the given files,
+with each keyword in its context.</para>
 </listitem>
 </varlistentry>
 
@@ -566,7 +571,7 @@ a permuted index, with each keyword in its context.</para>
 <term><command>pwd</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils pwd"><primary sortas="b-pwd">pwd</primary></indexterm>
-<para>reports the name of the current directory.</para>
+<para>reports the name of the current working directory.</para>
 </listitem>
 </varlistentry>
 
@@ -590,7 +595,7 @@ a permuted index, with each keyword in its context.</para>
 <term><command>rmdir</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils rmdir"><primary sortas="b-rmdir">rmdir</primary></indexterm>
-<para>removes directories, if they are empty.</para>
+<para>removes directories if they are empty.</para>
 </listitem>
 </varlistentry>
 
@@ -598,8 +603,8 @@ a permuted index, with each keyword in its context.</para>
 <term><command>seq</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils seq"><primary sortas="b-seq">seq</primary></indexterm>
-<para>prints a sequence of numbers, within a given
-range and with a given increment.</para>
+<para>prints a sequence of numbers within a given range and with a
+given increment.</para>
 </listitem>
 </varlistentry>
 
@@ -607,7 +612,7 @@ range and with a given increment.</para>
 <term><command>sha1sum</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils sha1sum"><primary sortas="b-sha1sum">sha1sum</primary></indexterm>
-<para>prints or checks 160-bit SHA1 checksums.</para>
+<para>prints or checks 160-bit Secure Hash Algorithm 1 (SHA1) checksums.</para>
 </listitem>
 </varlistentry>
 
@@ -615,8 +620,8 @@ range and with a given increment.</para>
 <term><command>shred</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils shred"><primary sortas="b-shred">shred</primary></indexterm>
-<para>overwrites the given files repeatedly with
-strange patterns, to make it real hard to recover the data.</para>
+<para>overwrites the given files repeatedly with complex patterns,
+making it difficult to recover the data.</para>
 </listitem>
 </varlistentry>
 
@@ -640,7 +645,7 @@ strange patterns, to make it real hard to recover the data.</para>
 <term><command>split</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils split"><primary sortas="b-split">split</primary></indexterm>
-<para>splits the given file into pieces, by size or by numbspliter of lines.</para>
+<para>splits the given file into pieces, by size or by number of lines.</para>
 </listitem>
 </varlistentry>
 
@@ -672,8 +677,8 @@ strange patterns, to make it real hard to recover the data.</para>
 <term><command>sync</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils sync"><primary sortas="b-sync">sync</primary></indexterm>
-<para>flushes file system buffers. It forces
-changed blocks to disk and updates the super block.</para>
+<para>flushes file system buffers. It forces changed blocks to disk
+and updates the super block.</para>
 </listitem>
 </varlistentry>
 
@@ -689,7 +694,8 @@ changed blocks to disk and updates the super block.</para>
 <term><command>tail</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils tail"><primary sortas="b-tail">tail</primary></indexterm>
-<para>prints the last ten lines (or the given number of lines) of each given file.</para>
+<para>prints the last ten lines (or the given number of lines) of each
+given file.</para>
 </listitem>
 </varlistentry>
 
@@ -697,8 +703,8 @@ changed blocks to disk and updates the super block.</para>
 <term><command>tee</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils tee"><primary sortas="b-tee">tee</primary></indexterm>
-<para>reads from standard input while writing both
-to standard output and to the given files.</para>
+<para>reads from standard input while writing both to standard output
+and to the given files.</para>
 </listitem>
 </varlistentry>
 
@@ -714,9 +720,9 @@ to standard output and to the given files.</para>
 <term><command>touch</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils touch"><primary sortas="b-touch">touch</primary></indexterm>
-<para>changes file timestamps, setting the access
-and modification times of the given files to the current time. Files that do
-not exist are created with zero length.</para>
+<para>changes file timestamps, setting the access and modification
+times of the given files to the current time. Files that do not exist
+are created with zero length.</para>
 </listitem>
 </varlistentry>
 
@@ -724,8 +730,8 @@ not exist are created with zero length.</para>
 <term><command>tr</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils tr"><primary sortas="b-tr">tr</primary></indexterm>
-<para>translates, squeezes, and deletes the given
-characters from standard input.</para>
+<para>translates, squeezes, and deletes the given characters from
+standard input.</para>
 </listitem>
 </varlistentry>
 
@@ -733,8 +739,8 @@ characters from standard input.</para>
 <term><command>true</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils true"><primary sortas="b-true">true</primary></indexterm>
-<para>does nothing, successfully. It always exits
-with a status code indicating success.</para>
+<para>does nothing, successfully. It always exits with a status code
+indicating success.</para>
 </listitem>
 </varlistentry>
 
@@ -742,8 +748,8 @@ with a status code indicating success.</para>
 <term><command>tsort</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils tsort"><primary sortas="b-tsort">tsort</primary></indexterm>
-<para>performs a topological sort. It writes a
-totally ordered list according to the partial ordering in a given file.</para>
+<para>performs a topological sort. It writes a totally ordered list
+according to the partial ordering in a given file.</para>
 </listitem>
 </varlistentry>
 
@@ -751,7 +757,8 @@ totally ordered list according to the partial ordering in a given file.</para>
 <term><command>tty</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils tty"><primary sortas="b-tty">tty</primary></indexterm>
-<para>reports the file name of the terminal connected to standard input.</para>
+<para>reports the file name of the terminal connected to standard
+input.</para>
 </listitem>
 </varlistentry>
 
@@ -791,8 +798,8 @@ totally ordered list according to the partial ordering in a given file.</para>
 <term><command>uptime</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils uptime-coreutils"><primary sortas="b-uptime-coreutils">uptime</primary></indexterm>
-<para>reports how long the system has been
-running, how many users are logged on, and the system load averages.</para>
+<para>reports how long the system has been running, how many users are
+logged on, and the system load averages.</para>
 </listitem>
 </varlistentry>
 
@@ -816,8 +823,8 @@ running, how many users are logged on, and the system load averages.</para>
 <term><command>wc</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils wc"><primary sortas="b-wc">wc</primary></indexterm>
-<para>reports the number of lines, words, and bytes
-for each given file, and a total line when more than one file is given.</para>
+<para>reports the number of lines, words, and bytes for each given
+file, as well as a total line when more than one file is given.</para>
 </listitem>
 </varlistentry>
 
@@ -841,7 +848,7 @@ for each given file, and a total line when more than one file is given.</para>
 <term><command>yes</command></term>
 <listitem>
 <indexterm zone="ch-system-coreutils yes"><primary sortas="b-yes">yes</primary></indexterm>
-<para>outputs <quote>y</quote> or a given string repeatedly, until killed.</para>
+<para>outputs <quote>y</quote>, or a given string, repeatedly until killed.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -849,3 +856,4 @@ for each given file, and a total line when more than one file is given.</para>
 </sect2>
 
 </sect1>
+

@@ -39,7 +39,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 <para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
-<para>Now install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -60,8 +60,8 @@ pgawk, pgawk-&gawk-version; and pwcat</seg></seglistitem>
 <term><command>gawk</command></term>
 <listitem>
 <indexterm zone="ch-system-gawk gawk"><primary sortas="b-gawk">gawk</primary></indexterm>
-<para>is a program for manipulating text files.
-It is the GNU implementation of <command>awk</command>.</para>
+<para>a program for manipulating text files.  It is the GNU
+implementation of <command>awk</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -85,7 +85,7 @@ It is the GNU implementation of <command>awk</command>.</para>
 <term><command>pgawk</command></term>
 <listitem>
 <indexterm zone="ch-system-gawk pgawk"><primary sortas="b-pgawk">pgawk</primary></indexterm>
-<para>is the profiling version of <command>gawk</command>.</para>
+<para>the profiling version of <command>gawk</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -101,3 +101,4 @@ It is the GNU implementation of <command>awk</command>.</para>
 </sect2>
 
 </sect1>
+

@@ -29,25 +29,26 @@ Glibc, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Binutils</title>
 
-<para>Now is an appropriate time to verify that your pseudo terminals (PTYs) are
-working properly inside the chroot environment. We will again quickly check that
-everything is set up correctly by performing a simple test:</para>
+<para>Verify that your the terminals (PTYs) are working properly
+inside the chroot environment. Check that everything is set up
+correctly by performing a simple test:</para>
 
 <screen><userinput>expect -c "spawn ls"</userinput></screen>
 
-<para>If you receive the message:</para>
+<para>If the following message shows up, the chroot environment is not
+set up for proper PTY operation:</para>
 
 <screen><computeroutput>The system has no more ptys.  Ask your system administrator to create more.</computeroutput></screen>
 
-<para>Your chroot environment is not set up for proper PTY operation. In this
-case there is no point in running the test suites for Binutils and GCC until you
-are able to resolve the issue.</para>
+<para>The issue needs to be resolved before running the test suites
+for Binutils and GCC.</para>
 
-<para>This package is known to behave badly when you have changed its
-default optimization flags (including the <parameter>-march</parameter> and <parameter>-mcpu</parameter> options).
-Therefore, if you have defined any environment variables that override
-default optimizations, such as CFLAGS and CXXFLAGS, we recommend un-setting
-or modifying them when building Binutils.</para>
+<para>This package is known to have issues when its default
+optimization flags (including the <parameter>-march</parameter> and
+<parameter>-mcpu</parameter> options) are changed. If any environment
+variables that override default optimizations have been defined, such
+as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
+unset or modifying them when building Binutils.</para>
 
 <para>The Binutils documentation recommends building Binutils outside of the
 source directory in a dedicated build directory:</para>
@@ -55,7 +56,7 @@ source directory in a dedicated build directory:</para>
 <screen><userinput>mkdir ../binutils-build
 cd ../binutils-build</userinput></screen>
 
-<para>Now prepare Binutils for compilation:</para>
+<para>Prepare Binutils for compilation:</para>
 
 <screen><userinput>../binutils-&binutils-version;/configure --prefix=/usr --enable-shared</userinput></screen>
 
@@ -63,25 +64,24 @@ cd ../binutils-build</userinput></screen>
 
 <screen><userinput>make tooldir=/usr</userinput></screen>
 
-<para>Normally, the <emphasis>tooldir</emphasis> (the directory where the
-executables end up) is set to $(exec_prefix)/$(target_alias), which expands
-into, for example, <filename class="directory">/usr/i686-pc-linux-gnu</filename>. Since we only
-build for our own system, we don't need this target specific directory in
-<filename class="directory">/usr</filename>. That setup would be used if the system was used to
-cross-compile (for example compiling a package on an Intel machine that
-generates code that can be executed on PowerPC machines).</para>
+<para>Normally, the tooldir (the directory where the executables will
+ultimately be located) is set to <filename
+class="directory">$(exec_prefix)/$(target_alias)</filename>, which
+expands into <filename
+class="directory">/usr/i686-pc-linux-gnu</filename>. Because this is a
+custom system, this target-specific directory in <filename
+class="directory">/usr</filename> is not required. This setup would be
+used if the system was used to cross-compile (for example, compiling a
+package on an Intel machine that generates code that can be executed
+on PowerPC machines).</para>
 
-<important><para>The test suite for Binutils in this section is considered
-<emphasis>critical</emphasis>. Our advice is to not skip it under any
+<important><para>The test suite for Binutils in this section is
+considered critical. Do not skip it under any
 circumstances.</para></important>
 
 <para>Test the results:</para>
 
-<screen><userinput>make -k check</userinput></screen>
-
-<para>The test suite notes from <xref linkend="ch-tools-binutils-pass2"/> are still
-very much appropriate here. Be sure to refer back there should you have any
-doubts.</para>
+<screen><userinput>make check</userinput></screen>
 
 <para>Install the package:</para>
 
@@ -111,10 +111,10 @@ ranlib, readelf, size, strings and strip</seg>
 <term><command>addr2line</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils addr2line"><primary sortas="b-addr2line">addr2line</primary></indexterm>
-<para>translates program addresses to file
-names and line numbers. Given an address and the name of an executable, it
-uses the debugging information in the executable to figure out which source
-file and line number are associated with the address.</para>
+<para>translates program addresses to file names and line numbers.
+Given an address and the name of an executable, it uses the debugging
+information in the executable to determine which source file and line
+number are associated with the address.</para>
 </listitem>
 </varlistentry>
 
@@ -122,10 +122,10 @@ file and line number are associated with the address.</para>
 <term><command>ar</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils ar"><primary sortas="b-ar">ar</primary></indexterm>
-<para>creates, modifies, and extracts from archives. An archive
-is a single file holding a collection of other files in a structure that makes
-it possible to retrieve the original individual files (called members of
-the archive).</para>
+<para>creates, modifies, and extracts from archives. An archive is a
+single file holding a collection of other files in a structure that
+makes it possible to retrieve the original individual files (called
+members of the archive).</para>
 </listitem>
 </varlistentry>
 
@@ -133,7 +133,8 @@ the archive).</para>
 <term><command>as</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils as"><primary sortas="b-as">as</primary></indexterm>
-<para>is an assembler. It assembles the output of <command>gcc</command> into object files.</para>
+<para>an assembler. It assembles the output of gcc into object
+files.</para>
 </listitem>
 </varlistentry>
 
@@ -141,8 +142,8 @@ the archive).</para>
 <term><command>c++filt</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils c-filt"><primary sortas="b-c++filt">c++filt</primary></indexterm>
-<para>is used by the linker to de-mangle C++ and
-Java symbols, to keep overloaded functions from clashing.</para>
+<para>used by the linker to de-mangle C++ and Java symbols and to keep
+overloaded functions from clashing.</para>
 </listitem>
 </varlistentry>
 
@@ -158,7 +159,7 @@ Java symbols, to keep overloaded functions from clashing.</para>
 <term><command>ld</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils ld"><primary sortas="b-ld">ld</primary></indexterm>
-<para>is a linker. It combines a number of object and archive files into a single file, 
+<para>a linker. It combines a number of object and archive files into a single file, 
 relocating their data and tying up symbol references.</para>
 </listitem>
 </varlistentry>
@@ -175,7 +176,7 @@ relocating their data and tying up symbol references.</para>
 <term><command>objcopy</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils objcopy"><primary sortas="b-objcopy">objcopy</primary></indexterm>
-<para>is used to translate one type of object file into another.</para>
+<para>used to translate one type of object file into another.</para>
 </listitem>
 </varlistentry>
 
@@ -183,9 +184,10 @@ relocating their data and tying up symbol references.</para>
 <term><command>objdump</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils objdump"><primary sortas="b-objdump">objdump</primary></indexterm>
-<para>displays information about the given object file, with options controlling what 
-particular information to display. The information shown is mostly only useful to 
-programmers who are working on the compilation tools.</para>
+<para>displays information about the given object file, with options
+controlling the particular information to display. The information
+shown is useful to programmers who are working on the compilation
+tools.</para>
 </listitem>
 </varlistentry>
 
@@ -193,9 +195,9 @@ programmers who are working on the compilation tools.</para>
 <term><command>ranlib</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils ranlib"><primary sortas="b-ranlib">ranlib</primary></indexterm>
-<para>generates an index of the contents of an
-archive, and stores it in the archive. The index lists all the symbols defined
-by archive members that are relocatable object files.</para>
+<para>generates an index of the contents of an archive and stores it
+in the archive. The index lists all of the symbols defined by archive
+members that are relocatable object files.</para>
 </listitem>
 </varlistentry>
 
@@ -203,7 +205,7 @@ by archive members that are relocatable object files.</para>
 <term><command>readelf</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils readelf"><primary sortas="b-readelf">readelf</primary></indexterm>
-<para>displays information about elf type binaries.</para>
+<para>displays information about ELF type binaries.</para>
 </listitem>
 </varlistentry>
 
@@ -211,7 +213,7 @@ by archive members that are relocatable object files.</para>
 <term><command>size</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils size"><primary sortas="b-size">size</primary></indexterm>
-<para>lists the section sizes -- and the grand total -- for the given object files.</para>
+<para>lists the section sizes and the total size for the given object files.</para>
 </listitem>
 </varlistentry>
 
@@ -219,10 +221,11 @@ by archive members that are relocatable object files.</para>
 <term><command>strings</command></term>
 <listitem>
 <indexterm zone="ch-system-binutils strings"><primary sortas="b-strings">strings</primary></indexterm>
-<para>outputs, for each given file, the sequences
-of printable characters that are of at least the specified length (defaulting to 4).
-For object files it prints, by default, only the strings from the initializing
-and loading sections. For other types of files it scans the whole file.</para>
+<para>outputs, for each given file, the sequences of printable
+characters that are of at least the specified length (defaulting to
+four). For object files, it prints, by default, only the strings from
+the initializing and loading sections. For other types of files, it
+scans the whole file.</para>
 </listitem>
 </varlistentry>
 
@@ -238,8 +241,10 @@ and loading sections. For other types of files it scans the whole file.</para>
 <term><filename class="libraryfile">libiberty</filename></term>
 <listitem>
 <indexterm zone="ch-system-binutils libiberty"><primary sortas="c-libiberty">libiberty</primary></indexterm>
-<para>contains routines used by various GNU
-programs, including getopt, obstack, strerror, strtol and strtoul.</para>
+<para>contains routines used by various GNU programs, including
+<command>getopt</command>, <command>obstack</command>,
+<command>strerror</command>, <command>strtol</command> and
+<command>strtoul</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -247,7 +252,7 @@ programs, including getopt, obstack, strerror, strtol and strtoul.</para>
 <term><filename class="libraryfile">libbfd</filename></term>
 <listitem>
 <indexterm zone="ch-system-binutils libbfd"><primary sortas="c-libbfd">libbfd</primary></indexterm>
-<para>is the Binary File Descriptor library.</para>
+<para>the Binary File Descriptor library.</para>
 </listitem>
 </varlistentry>
 
@@ -255,8 +260,8 @@ programs, including getopt, obstack, strerror, strtol and strtoul.</para>
 <term><filename class="libraryfile">libopcodes</filename></term>
 <listitem>
 <indexterm zone="ch-system-binutils libopcodes"><primary sortas="c-libopcodes">libopcodes</primary></indexterm>
-<para>is a library for dealing with opcodes.
-It is used for building utilities like objdump. Opcodes are the <quote>readable
+<para>a library for dealing with opcodes.
+It is used for building utilities like <command>objdump</command>. Opcodes are the <quote>readable
 text</quote> versions of instructions for the processor.</para>
 </listitem>
 </varlistentry>
@@ -265,3 +270,4 @@ text</quote> versions of instructions for the processor.</para>
 </sect2>
 
 </sect1>
+

@@ -32,7 +32,7 @@ Make, Ncurses</seg></seglistitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Install it:</para>
+<para>Install the packag:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -59,8 +59,8 @@ pmap, ps, skill, snice, sysctl, tload, top, uptime, vmstat, w and watch</seg>
 <term><command>free</command></term>
 <listitem>
 <indexterm zone="ch-system-procps free"><primary sortas="b-free">free</primary></indexterm>
-<para>reports the amount of free and used memory
-in the system, both physical and swap memory.</para>
+<para>reports the amount of free and used memory (both physical and
+swap memory) in the system.</para>
 </listitem>
 </varlistentry>
 
@@ -68,7 +68,7 @@ in the system, both physical and swap memory.</para>
 <term><command>kill</command></term>
 <listitem>
 <indexterm zone="ch-system-procps kill"><primary sortas="b-kill">kill</primary></indexterm>
-<para>is used to send signals to processes.</para>
+<para>sends signals to processes.</para>
 </listitem>
 </varlistentry>
 
@@ -100,7 +100,7 @@ in the system, both physical and swap memory.</para>
 <term><command>ps</command></term>
 <listitem>
 <indexterm zone="ch-system-procps ps"><primary sortas="b-ps">ps</primary></indexterm>
-<para>gives a snapshot of the current processes.</para>
+<para>lists the current running processes.</para>
 </listitem>
 </varlistentry>
 
@@ -140,8 +140,8 @@ in the system, both physical and swap memory.</para>
 <term><command>top</command></term>
 <listitem>
 <indexterm zone="ch-system-procps top"><primary sortas="b-top">top</primary></indexterm>
-<para>displays the top CPU processes. It provides
-an ongoing look at processor activity in real time.</para>
+<para>displays the top CPU processes. It provides an ongoing look at
+processor activity in real time.</para>
 </listitem>
 </varlistentry>
 
@@ -149,8 +149,8 @@ an ongoing look at processor activity in real time.</para>
 <term><command>uptime</command></term>
 <listitem>
 <indexterm zone="ch-system-procps uptime"><primary sortas="b-uptime">uptime</primary></indexterm>
-<para>reports how long the system has been
-running, how many users are logged on, and the system load averages.</para>
+<para>reports how long the system has been running, how many users are
+logged on, and the system load averages.</para>
 </listitem>
 </varlistentry>
 
@@ -158,8 +158,8 @@ running, how many users are logged on, and the system load averages.</para>
 <term><command>vmstat</command></term>
 <listitem>
 <indexterm zone="ch-system-procps vmstat"><primary sortas="b-vmstat">vmstat</primary></indexterm>
-<para>reports virtual memory statistics, giving information about processes, 
-memory, paging, block IO, traps, and CPU activity.</para>
+<para>reports virtual memory statistics, giving information about
+processes, memory, paging, block IO, traps, and CPU activity.</para>
 </listitem>
 </varlistentry>
 
@@ -167,7 +167,7 @@ memory, paging, block IO, traps, and CPU activity.</para>
 <term><command>w</command></term>
 <listitem>
 <indexterm zone="ch-system-procps w"><primary sortas="b-w">w</primary></indexterm>
-<para>shows which users are currently logged on, where and since when.</para>
+<para>shows which users are currently logged on, where, and since when.</para>
 </listitem>
 </varlistentry>
 
@@ -176,7 +176,7 @@ memory, paging, block IO, traps, and CPU activity.</para>
 <listitem>
 <indexterm zone="ch-system-procps watch"><primary sortas="b-watch">watch</primary></indexterm>
 <para>runs a given command repeatedly, displaying the first screen-full of its 
-output. This allows you to watch the output change over time.</para>
+output. This allows a user to watch the output change over time.</para>
 </listitem>
 </varlistentry>
 
@@ -192,3 +192,4 @@ output. This allows you to watch the output change over time.</para>
 </sect2>
 
 </sect1>
+

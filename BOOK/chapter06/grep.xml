@@ -39,7 +39,7 @@ Diffutils, GCC, Gettext, Glibc, Make, Sed, Texinfo</seg></seglistitem>
 <para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
-<para>Now install the package:</para>
+<para>Iinstall the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -83,3 +83,4 @@ Diffutils, GCC, Gettext, Glibc, Make, Sed, Texinfo</seg></seglistitem>
 </sect2>
 
 </sect1>
+

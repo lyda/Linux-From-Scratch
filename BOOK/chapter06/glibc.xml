@@ -31,14 +31,16 @@ Gawk, GCC, Gettext, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Glibc</title>
 
-<para>The Glibc build system is very well self-contained and will install
-perfectly, even though our compiler specs file and linker are still pointing
-at <filename class="directory">/tools</filename>. We cannot adjust the specs and linker before
-the Glibc install, because the Glibc autoconf tests would then give bogus
-results and thus defeat our goal of achieving a clean build.</para>
+<para>The Glibc build system is self-contained and will install
+perfectly, even though the compiler specs file and linker are still
+pointing at <filename class="directory">/tools</filename>. The specs
+and linker cannot be adjusted before the Glibc install because the
+Glibc autoconf tests would then give false results and defeat the goal
+of achieving a clean build.</para>
 
-<para>Before starting to build Glibc, remember to unset any environment
-variables that override the default optimization flags.</para>
+<para>Before starting to build Glibc, remember to unset any
+environment variables that override the default optimization
+flags.</para>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
@@ -51,24 +53,38 @@ cd ../glibc-build</userinput></screen>
 <screen><userinput>../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons=nptl --with-tls \
     --with-__thread --enable-kernel=2.6.0 --without-cvs \
+    --libexecdir=/usr/lib/glibc \
     --with-headers=/tools/glibc-kernheaders</userinput></screen>
+
+<para>The meaning of the new configure option:</para>
+
+<variablelist>
+<varlistentry>
+<term><parameter>--libexecdir=/usr/lib/glibc</parameter></term>
+<listitem><para>This changes the location of the
+<command>pt_chown</command> program from its default of <filename
+class="directory">/usr/libexec</filename> to <filename
+class="directory">/usr/lib/glibc</filename>.</para></listitem>
+</varlistentry>
+</variablelist>
 
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<important><para>The test suite for Glibc in this section is considered
-<emphasis>critical</emphasis>. Our advice is to not skip it under any
+<important><para>In this section, the test suite for Glibc is
+considered critical. Do not skip it under any
 circumstance.</para></important>
 
 <para>Test the results:</para>
 
 <screen><userinput>make check</userinput></screen>
 
-<para>The Glibc test suite is highly dependent on certain functions of your host
-system, in particular the kernel.  In general, the Glibc test suite is always
-expected to pass. However, in certain circumstances some failures are
-unavoidable. Here is a list of the most common issues we are aware of:</para>
+<para>The Glibc test suite is highly dependent on certain functions of
+the host system, in particular the kernel. In general, the Glibc test
+suite is always expected to pass. However, in certain circumstances,
+some failures are unavoidable. This is a list of the most common
+issues:</para>
 
 <itemizedlist>
 <listitem><para>The <emphasis>math</emphasis> tests sometimes fail when running
@@ -78,43 +94,51 @@ Certain optimization settings are also known to be a factor here.</para></listit
 <listitem><para>The <emphasis>gettext</emphasis> test sometimes fails due to
 host system issues. The exact reasons are not yet clear.</para></listitem>
 
-<listitem><para>The <emphasis>atime</emphasis> test sometimes fails when the
-LFS partition is mounted with the <parameter>noatime</parameter> option, or due
-to other file system quirks.</para></listitem>
+<listitem><para>The <emphasis>atime</emphasis> test sometimes fails
+when the LFS partition is mounted with the
+<parameter>noatime</parameter> option. This sometimes occurs because
+of other file system quirks as well.</para></listitem>
 
-<listitem><para>The <emphasis>shm</emphasis> test might fail when the host
-system is running the devfs file system but doesn't have the <systemitem class="filesystem">tmpfs</systemitem> file system
-mounted at <filename class="directory">/dev/shm</filename> due to lack of support for tmpfs in
-the kernel.</para></listitem>
+<listitem><para>The <emphasis>shm</emphasis> test can fail when the
+host system is using the <systemitem
+class="filesystem">devfs</systemitem> file system but does not have
+the <systemitem class="filesystem">tmpfs</systemitem> file system
+mounted at <filename class="directory">/dev/shm</filename>.  This
+occurs because of a lack of support for tmpfs in the
+kernel.</para></listitem>
 
-<listitem><para>When running on older and slower hardware, some tests might
-fail due to test timeouts being exceeded.</para></listitem>
+<listitem><para>When running on older and slower hardware, some tests
+can fail because of test timeouts being exceeded.</para></listitem>
 </itemizedlist>
 
 <para>Though it is a harmless message, the install stage of Glibc will
-complain about the absence of <filename>/etc/ld.so.conf</filename>. Fix this
-annoying little warning with:</para>
+complain about the absence of <filename>/etc/ld.so.conf</filename>.
+Prevent this warning with:</para>
 
 <screen><userinput>touch /etc/ld.so.conf</userinput></screen>
 
-<para>And install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>The locales that can make your system respond in a different language
-weren't installed by the above command. Do it with this:</para>
+<para>The locales that can make the system respond in a different
+language were not installed by the above command. Install this
+with:</para>
 
 <screen><userinput>make localedata/install-locales</userinput></screen>
 
-<para>An alternative to running the previous command is to install only those
-locales which you need or want. This can be achieved by using the
-<command>localedef</command> command. Information on this can be found in
-the <filename>INSTALL</filename> file in the Glibc source. However, there are
-a number of locales that are essential for the tests of future packages to
-pass, in particular, the <emphasis>libstdc++</emphasis> tests from GCC. The
-following instructions, instead of the install-locales target above, will
-install the minimum set of locales necessary for the tests to run
-successfully:</para>
+<para>To save yourself a lot of time, an alternative to running the
+previous command (which generates and installs every locale Glibc is
+aware of) is to install only those locales that are wanted and needed.
+This can be achieved by using the <command>localedef</command>
+command. Information on this command is located in the
+<filename>INSTALL</filename> file in the Glibc source.  However, there
+are a number of locales that are essential in order for the tests of
+future packages to pass, in particular, the
+<emphasis>libstdc++</emphasis> tests from GCC. The following
+instructions, instead of the <emphasis>install-locales</emphasis>
+target used above, will install the minimum set of locales necessary
+for the tests to run successfully:</para>
 
 <screen><userinput>mkdir -p /usr/lib/locale
 localedef -i de_DE -f ISO-8859-1 de_DE
@@ -129,46 +153,40 @@ localedef -i fr_FR@euro -f ISO-8859-15 fr_FR@euro
 localedef -i it_IT -f ISO-8859-1 it_IT
 localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
 
-<para>In fact, some locales installed by the
-<command>make localedata/install-locales</command>
-command above are not properly
-supported by some applications that are in LFS and BLFS books. Because
-of various problems that arise
-due to application programmers making
-assumptions that break in such locales, LFS <emphasis>should not</emphasis>
-be used in locales that utilize
-multibyte character sets (including UTF-8) or
-right-to-left writing order.
-Numerous unofficial and unstable patches are required to fix these problems,
-and it has been decided not to support such complex locales.
-This applies to the ja_JP and fa_IR locales as well:
-they have been installed only
-for GCC and Gettext tests to pass, and e.g.
-the <command>watch</command> program (part of Procps)
-compiled according to this book doesn't work properly in them.
-Various attempts to circumvent these
-restrictions are documented in internationalization-related hints.</para>
+<para>Some locales installed by the <command>make
+localedata/install-locales</command> command above are not properly
+supported by some applications that are in the LFS and BLFS books.
+Because of the various problems that arise due to application
+programmers making assumptions that break in such locales, LFS should
+not be used in locales that utilize multibyte character sets
+(including UTF-8) or right-to-left writing order.  Numerous unofficial
+and unstable patches are required to fix these problems, and it has
+been decided not to support such complex locales.  This applies to the
+ja_JP and fa_IR locales as well -- they have been installed only for
+GCC and Gettext tests to pass and the <command>watch</command> program
+(part of the Procps package) does not work properly in them. Various
+attempts to circumvent these restrictions are documented in
+internationalization-related hints.</para>
 
-<para>Finally, build the linuxthreads man pages, which are a great reference
+<para>Build the linuxthreads man pages, which are a great reference
 on the threading API (applicable to NPTL as well):</para>
 
 <screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man</userinput></screen>
 
-<para>And install these pages:</para>
+<para>Install these pages:</para>
 
 <screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man install</userinput></screen>
 
 </sect2>
 
-
 <sect2 id="conf-glibc" role="configuration"><title>Configuring Glibc</title>
 <indexterm zone="conf-glibc"><primary sortas="e-/etc/nsswitch.conf">/etc/nsswitch.conf</primary></indexterm>
 <indexterm zone="conf-glibc"><primary sortas="e-/etc/localtime">/etc/localtime</primary></indexterm>
 
-<para>We need to create the <filename>/etc/nsswitch.conf</filename> file,
-because, although Glibc provides defaults when this file is missing or corrupt,
-the Glibc defaults don't work well with networking. Also, our time zone needs
-to be set up.</para>
+<para>The <filename>/etc/nsswitch.conf</filename> file needs to be
+created because, although Glibc provides defaults when this file is
+missing or corrupt, the Glibc defaults do not work well with
+networking. The time zone also needs to be set up.</para>
 
 <para>Create a new file <filename>/etc/nsswitch.conf</filename> by running the
 following:</para>
@@ -195,28 +213,30 @@ EOF</userinput></screen>
 
 <screen><userinput>tzselect</userinput></screen>
 
-<para>When you've answered a few questions about your location, the script will
-output the name of your time zone, something like <emphasis>EST5EDT</emphasis>
-or <emphasis>Canada/Eastern</emphasis>. Then create the
-<filename>/etc/localtime</filename> file by running:</para>
+<para>After answering a few questions about the location, the script
+will output the name of the time zone (e.g.,
+<emphasis>EST5EDT</emphasis> or <emphasis>Canada/Eastern</emphasis>).
+Then create the <filename>/etc/localtime</filename> file by
+running:</para>
 
-<screen><userinput>cp --remove-destination /usr/share/zoneinfo/Canada/Eastern /etc/localtime</userinput></screen>
+<screen><userinput>cp --remove-destination /usr/share/zoneinfo/<replaceable>[xxx]</replaceable> /etc/localtime</userinput></screen>
 
-<para>The meaning of the option:</para>
+<para>Replace [xxx] with the name of the time zone that the
+<command>tzselect</command> provided (e.g., Canada/Eastern).</para>
+
+<para>The meaning of the cp option:</para>
 
 <variablelist>
 <varlistentry>
 <term><parameter>--remove-destination</parameter></term>
-<listitem><para>This is needed to force removal of the already existing symbolic 
-link. The reason why we copy instead of symlink is to cover the situation where 
-<filename class="directory">/usr</filename> is on a separate partition. This could matter, for
-example, when booted into single user mode.</para></listitem>
+<listitem><para>This is needed to force removal of the already
+existing symbolic link. The reason for copying the file instead of
+using a symlink is to cover the situation where <filename
+class="directory">/usr</filename> is on a separate partition. This
+could be important when booted into single user
+mode.</para></listitem>
 </varlistentry>
 </variablelist>
-
-<para>Of course, instead of <emphasis>Canada/Eastern</emphasis>, fill in
-the name of the time zone that the <command>tzselect</command> script
-gave you.</para>
 
 </sect2>
 
@@ -225,17 +245,18 @@ gave you.</para>
 <title>Configuring Dynamic Loader</title>
 <indexterm zone="conf-ld"><primary sortas="e-/etc/ld.so.conf">/etc/ld.so.conf</primary></indexterm>
 
-<para>By default, the dynamic loader
-(<filename class="libraryfile">/lib/ld-linux.so.2</filename>) searches through <filename
-class="directory">/lib</filename> and <filename class="directory">/usr/lib</filename> 
-for dynamic libraries that are needed
-by programs when you run them. However, if there are libraries in
+<para>By default, the dynamic loader (<filename
+class="libraryfile">/lib/ld-linux.so.2</filename>) searches through
+<filename class="directory">/lib</filename> and <filename
+class="directory">/usr/lib</filename> for dynamic libraries that are
+needed by programs as they are run. However, if there are libraries in
 directories other than <filename class="directory">/lib</filename> and
-<filename class="directory">/usr/lib</filename>, you need to add them to
-the <filename>/etc/ld.so.conf</filename> file for the dynamic
-loader to find them. Two directories that are commonly known to contain
-additional libraries are <filename class="directory">/usr/local/lib</filename> 
-and <filename class="directory">/opt/lib</filename>, so we add those directories to the
+<filename class="directory">/usr/lib</filename>, these need to be
+added them to the <filename>/etc/ld.so.conf</filename> file in order
+for the dynamic loader to find them. Two directories that are commonly
+known to contain additional libraries are <filename
+class="directory">/usr/local/lib</filename> and <filename
+class="directory">/opt/lib</filename>, so add those directories to the
 dynamic loader's search path.</para>
 
 <para>Create a new file <filename>/etc/ld.so.conf</filename> by running the
@@ -277,8 +298,8 @@ and libutil.[a,so]</seg></seglistitem>
 <term><command>catchsegv</command></term>
 <listitem>
 <indexterm zone="ch-system-glibc catchsegv"><primary sortas="b-catchsegv">catchsegv</primary></indexterm>
-<para>can be used to create a stack trace
-when a program terminates with a segmentation fault.</para>
+<para>can be used to create a stack trace when a program
+terminates with a segmentation fault.</para>
 </listitem>
 </varlistentry>
 
@@ -326,7 +347,7 @@ when a program terminates with a segmentation fault.</para>
 <term><command>iconvconfig</command></term>
 <listitem>
 <indexterm zone="ch-system-glibc iconvconfig"><primary sortas="b-iconvconfig">iconvconfig</primary></indexterm>
-<para>creates fastloading <command>iconv</command> module configuration file.</para>
+<para>creates fastloading <command>iconv</command> module configuration files.</para>
 </listitem>
 </varlistentry>
 
@@ -359,7 +380,7 @@ by each given program or shared library.</para>
 <term><command>locale</command></term>
 <listitem>
 <indexterm zone="ch-system-glibc locale"><primary sortas="b-locale">locale</primary></indexterm>
-<para>is a Perl program that tells the compiler
+<para>a Perl program that tells the compiler
 to enable or disable the use of POSIX locales for built-in operations.</para>
 </listitem>
 </varlistentry>
@@ -376,7 +397,8 @@ to enable or disable the use of POSIX locales for built-in operations.</para>
 <term><command>mtrace</command></term>
 <listitem>
 <indexterm zone="ch-system-glibc mtrace"><primary sortas="b-mtrace">mtrace</primary></indexterm>
-<para>...</para>
+<para>a program that reads and interprets a memory trace file and
+ouputs a summary in human-readable format.</para>
 </listitem>
 </varlistentry>
 
@@ -384,8 +406,8 @@ to enable or disable the use of POSIX locales for built-in operations.</para>
 <term><command>nscd</command></term>
 <listitem>
 <indexterm zone="ch-system-glibc nscd"><primary sortas="b-nscd">nscd</primary></indexterm>
-<para>is a name service cache daemon providing a
-cache for the most common name service requests.</para>
+<para>a daemon that provides a cache for the most common name
+service requests.</para>
 </listitem>
 </varlistentry>
 
@@ -409,7 +431,7 @@ cache for the most common name service requests.</para>
 <term><command>pt_chown</command></term>
 <listitem>
 <indexterm zone="ch-system-glibc pt_chown"><primary sortas="b-pt_chown">pt_chown</primary></indexterm>
-<para>is a helper program for grantpt to set
+<para>is a helper program for <command>grantpt</command> to set
 the owner, group and access permissions of a slave pseudo terminal.</para>
 </listitem>
 </varlistentry>
@@ -418,7 +440,7 @@ the owner, group and access permissions of a slave pseudo terminal.</para>
 <term><command>rpcgen</command></term>
 <listitem>
 <indexterm zone="ch-system-glibc rpcgen"><primary sortas="b-rpcgen">rpcgen</primary></indexterm>
-<para>generates C code to implement the RPC protocol.</para>
+<para>generates C code to implement the Remote Procecure call (RPC) protocol.</para>
 </listitem>
 </varlistentry>
 
@@ -434,9 +456,7 @@ the owner, group and access permissions of a slave pseudo terminal.</para>
 <term><command>sln</command></term>
 <listitem>
 <indexterm zone="ch-system-glibc sln"><primary sortas="b-sln">sln</primary></indexterm>
-<para>is used to make symbolic links. The program
-is statically linked, so it is useful for making symbolic links to dynamic
-libraries if the dynamic linking system for some reason is nonfunctional.</para>
+<para>a statically linked <command>ln</command> program.</para>
 </listitem>
 </varlistentry>
 
@@ -470,7 +490,7 @@ printing the currently executed function.</para>
 <term><command>zdump</command></term>
 <listitem>
 <indexterm zone="ch-system-glibc zdump"><primary sortas="b-zdump">zdump</primary></indexterm>
-<para>is the time zone dumper.</para>
+<para>the time zone dumper.</para>
 </listitem>
 </varlistentry>
 
@@ -478,7 +498,7 @@ printing the currently executed function.</para>
 <term><command>zic</command></term>
 <listitem>
 <indexterm zone="ch-system-glibc zic"><primary sortas="b-zic">zic</primary></indexterm>
-<para>is the time zone compiler.</para>
+<para>the time zone compiler.</para>
 </listitem>
 </varlistentry>
 
@@ -486,7 +506,7 @@ printing the currently executed function.</para>
 <term><filename class="libraryfile">ld.so</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc ld.so"><primary sortas="c-ld.so">ld.so</primary></indexterm>
-<para>is the helper program for shared library executables.</para>
+<para>the helper program for shared library executables.</para>
 </listitem>
 </varlistentry>
 
@@ -494,7 +514,7 @@ printing the currently executed function.</para>
 <term><filename class="libraryfile">libBrokenLocale</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libBrokenLocale"><primary sortas="c-libBrokenLocale">libBrokenLocale</primary></indexterm>
-<para>is used by programs, such as Mozilla, to solve broken locales.</para>
+<para>used by programs, such as Mozilla, to solve broken locales.</para>
 </listitem>
 </varlistentry>
 
@@ -502,7 +522,7 @@ printing the currently executed function.</para>
 <term><filename class="libraryfile">libSegFault</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libSegFault"><primary sortas="c-libSegFault">libSegFault</primary></indexterm>
-<para>is a segmentation fault signal handler. It tries to catch segfaults.</para>
+<para>the segmentation fault signal handler.</para>
 </listitem>
 </varlistentry>
 
@@ -510,7 +530,7 @@ printing the currently executed function.</para>
 <term><filename class="libraryfile">libanl</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libanl"><primary sortas="c-libanl">libanl</primary></indexterm>
-<para>is an asynchronous name lookup library.</para>
+<para>an asynchronous name lookup library.</para>
 </listitem>
 </varlistentry>
 
@@ -527,7 +547,7 @@ in order to run certain BSD programs under Linux.</para>
 <term><filename class="libraryfile">libc</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libc"><primary sortas="c-libc">libc</primary></indexterm>
-<para>is the main C library -- a collection of commonly used functions.</para>
+<para>the main C library.</para>
 </listitem>
 </varlistentry>
 
@@ -535,7 +555,7 @@ in order to run certain BSD programs under Linux.</para>
 <term><filename class="libraryfile">libcrypt</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libcrypt"><primary sortas="c-libcrypt">libcrypt</primary></indexterm>
-<para>is the cryptography library.</para>
+<para>the cryptography library.</para>
 </listitem>
 </varlistentry>
 
@@ -543,7 +563,7 @@ in order to run certain BSD programs under Linux.</para>
 <term><filename class="libraryfile">libdl</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libdl"><primary sortas="c-libdl">libdl</primary></indexterm>
-<para>is the dynamic linking interface library.</para>
+<para>the dynamic linking interface library.</para>
 </listitem>
 </varlistentry>
 
@@ -551,7 +571,7 @@ in order to run certain BSD programs under Linux.</para>
 <term><filename class="libraryfile">libg</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libg"><primary sortas="c-libg">libg</primary></indexterm>
-<para>is a runtime library for <command>g++</command>.</para>
+<para>a runtime library for <command>g++</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -559,7 +579,7 @@ in order to run certain BSD programs under Linux.</para>
 <term><filename class="libraryfile">libieee</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libieee"><primary sortas="c-libieee">libieee</primary></indexterm>
-<para>is the IEEE floating point library.</para>
+<para>the Institute of Electrical and Electronic Engineers (IEEE) floating point library.</para>
 </listitem>
 </varlistentry>
 
@@ -567,7 +587,7 @@ in order to run certain BSD programs under Linux.</para>
 <term><filename class="libraryfile">libm</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libm"><primary sortas="c-libm">libm</primary></indexterm>
-<para>is the mathematical library.</para>
+<para>the mathematical library.</para>
 </listitem>
 </varlistentry>
 
@@ -583,7 +603,7 @@ in order to run certain BSD programs under Linux.</para>
 <term><filename class="libraryfile">libmemusage</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libmemusage"><primary sortas="c-libmemusage">libmemusage</primary></indexterm>
-<para>is used by <command>memusage</command> to help collect
+<para>used by <command>memusage</command> to help collect
 information about the memory usage of a program.</para>
 </listitem>
 </varlistentry>
@@ -592,7 +612,7 @@ information about the memory usage of a program.</para>
 <term><filename class="libraryfile">libnsl</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libnsl"><primary sortas="c-libnsl">libnsl</primary></indexterm>
-<para>is the network services library.</para>
+<para>the network services library.</para>
 </listitem>
 </varlistentry>
 
@@ -600,9 +620,9 @@ information about the memory usage of a program.</para>
 <term><filename class="libraryfile">libnss*</filename></term>
 <listitem>
 <indexterm zone="ch-system-glibc libnss"><primary sortas="c-libnss*">libnss*</primary></indexterm>
-<para>are the Name Service Switch libraries,
+<para>the Name Service Switch libraries,
 containing functions for resolving host names, user names, group names,
-aliases, services, protocols, and the like.</para>
+aliases, services, protocols, etc.</para>
 </listitem>
 </varlistentry>
 
@@ -670,3 +690,4 @@ building debuggers for multi-threaded programs.</para>
 </sect2>
 
 </sect1>
+

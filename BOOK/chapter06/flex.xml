@@ -33,10 +33,10 @@ GCC, Gettext, Glibc, Grep, M4, Make, Sed</seg></seglistitem>
 
 <screen><userinput>patch -Np1 -i ../flex-&flex-version;-debian_fixes-2.patch</userinput></screen>
 
-<para>The GNU autotools detects that the Flex source code has been modified by
-the previous patch, and tries to update the manual page accordingly, but this
-breaks on many systems, and the default page is fine, so make sure it doesn't
-get regenerated:</para>
+<para>The GNU autotools detects that the Flex source code has been
+modified by the previous patch, and tries to update the manual page
+accordingly. This does not work correctly on many systems, and the
+default page is fine, so make sure it does not get regenerated:</para>
 
 <screen><userinput>touch doc/flex.1</userinput></screen>
 
@@ -51,20 +51,21 @@ get regenerated:</para>
 <para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
-<para>Now install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>There are some packages that expect to find the <emphasis>lex</emphasis>
-library in <filename>/usr/lib</filename>. Create a symlink to account for
+<para>There are some packages that expect to find the
+<filename>lex</filename> library in <filename
+class="directory">/usr/lib</filename>. Create a symlink to account for
 this:</para>
 
 <screen><userinput>ln -s libfl.a /usr/lib/libl.a</userinput></screen>
 
-<para>A few programs don't know about <command>flex</command> yet and try
-to run its predecessor <command>lex</command>. To support those programs,
-create a wrapper script named <filename>lex</filename> that calls
-<command>flex</command> in <emphasis>lex</emphasis> emulation mode:</para>
+<para>A few programs do not know about <command>flex</command> yet and
+try to run its predecessor, <command>lex</command>. To support those
+programs, create a wrapper script named <filename>lex</filename> that
+calls <filename>flex</filename> in lex emulation mode:</para>
 
 <screen><userinput>cat &gt; /usr/bin/lex &lt;&lt; "EOF"</userinput>
 #!/bin/sh
@@ -94,11 +95,13 @@ chmod 755 /usr/bin/lex</userinput></screen>
 <term><command>flex</command></term>
 <listitem>
 <indexterm zone="ch-system-flex flex"><primary sortas="b-flex">flex</primary></indexterm>
-<para>is a tool for generating programs that
-recognize patterns in text. Pattern recognition is useful in many applications.
-From a set of rules on what to look for, <command>flex</command> makes a program that looks for
-those patterns. The reason to use <command>flex</command> is that it is much easier to specify
-the rules for a pattern-finding program than to write the program.</para>
+<para>a tool for generating programs that recognize patterns in text.
+Pattern recognition is useful in many applications.
+<application>Flex</application> makes a program that looks for those
+patterns from a set of established rules.
+<application>Flex</application> allows for the versatility to specify
+the rules for a pattern-finding, eradicating the need to develop a
+specialized program.</para>
 </listitem>
 </varlistentry>
 
@@ -114,7 +117,7 @@ the rules for a pattern-finding program than to write the program.</para>
 <term><filename class="libraryfile">libfl.a</filename></term>
 <listitem>
 <indexterm zone="ch-system-flex libfl.a"><primary sortas="c-libfl.a">libfl.a</primary></indexterm>
-<para>is the flex library.</para>
+<para>the flex library.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -122,3 +125,4 @@ the rules for a pattern-finding program than to write the program.</para>
 </sect2>
 
 </sect1>
+

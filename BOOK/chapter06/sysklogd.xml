@@ -28,13 +28,13 @@ as those given by the kernel when unusual things happen.</para>
 <sect2 role="installation">
 <title>Installation of Sysklogd</title>
 
-<para>Sysklogd has issues with the Linux 2.6 kernel series - fix these isues
-by applying the following patch:</para>
+<para>Sysklogd has issues with the Linux 2.6 kernel series. Fix these
+issues by applying the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../sysklogd-&sysklogd-version;-kernel_headers-1.patch</userinput></screen>
 
-<para>There is also a race condition in the signal handling logic, and this
-sometimes confuses the <command>sysklogd</command> initscript.
+<para>There is also a race condition in the signal handling logic, and
+this sometimes confuses the <command>sysklogd</command> initscript.
 Fix this bug by applying another patch:</para>
 
 <screen><userinput>patch -Np1 -i ../sysklogd-&sysklogd-version;-signal-1.patch</userinput></screen>
@@ -43,7 +43,7 @@ Fix this bug by applying another patch:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Now install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -57,7 +57,7 @@ Fix this bug by applying another patch:</para>
 
 <indexterm zone="conf-sysklogd"><primary sortas="e-/etc/syslog.conf">/etc/syslog.conf</primary></indexterm>
 
-<para>Create a new <filename>/etc/syslog.conf</filename> file by running the
+<para>Create a new file <filename>/etc/syslog.conf</filename> by running the
 following:</para>
 
 <screen><userinput>cat &gt; /etc/syslog.conf &lt;&lt; "EOF"
@@ -98,10 +98,10 @@ EOF</userinput></screen>
 <term><command>syslogd</command></term>
 <listitem>
 <indexterm zone="ch-system-sysklogd syslogd"><primary sortas="b-syslogd">syslogd</primary></indexterm>
-<para>logs the messages that system programs
-offer for logging. Every logged message contains at least a date stamp and a
-hostname, and normally the program's name too, but that depends on how
-trusting the logging daemon is told to be.</para>
+<para>logs the messages that system programs offer for logging. Every
+logged message contains at least a date stamp and a hostname, and
+normally the program's name too depending on how ?trusting? the
+logging daemon is told to be.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -109,3 +109,4 @@ trusting the logging daemon is told to be.</para>
 </sect2>
 
 </sect1>
+

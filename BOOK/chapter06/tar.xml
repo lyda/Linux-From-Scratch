@@ -39,7 +39,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 <para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
-<para>Now install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -76,3 +76,4 @@ tape drive, through an interprocess communication connection.</para>
 </sect2>
 
 </sect1>
+

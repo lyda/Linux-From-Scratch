@@ -28,10 +28,10 @@ Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Perl</title>
 
-<para>If you want full control over the way Perl is set up, you can run the
-interactive <command>Configure</command> script and hand-pick the way this
-package is built. If you think you can live with the (sensible)
-defaults it auto-detects, then prepare Perl for compilation with:</para>
+<para>To have full control over the way Perl is set up, run the
+interactive <command>Configure</command> script and hand-pick the way
+this package is built. If the defaults it auto-detects are suitable,
+prepare Perl for compilation with:</para>
 
 <screen><userinput>./configure.gnu --prefix=/usr -Dpager="/bin/less -isR"</userinput></screen>
 
@@ -49,17 +49,17 @@ of the <command>less</command> program.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>If you wish to run the test suite, you first have to create a basic
-<filename>/etc/hosts</filename> file, which is needed by a couple of tests to
-resolve the name <emphasis>localhost</emphasis>:</para>
+<para>To run the test suite, first create a basic
+<filename>/etc/hosts</filename> file which is needed by a couple of
+tests to resolve the network name localhost:</para>
 
 <screen><userinput>echo "127.0.0.1 localhost $(hostname)" &gt; /etc/hosts</userinput></screen>
 
-<para>Now run the tests, if you wish:</para>
+<para>Now run the tests, if desired:</para>
 
 <screen><userinput>make test</userinput></screen>
 
-<para>Finally, install the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -76,7 +76,7 @@ find2perl, h2ph, h2xs, libnetcfg, perl, perl&perl-version; (link to perl),
 perlbug, perlcc, perldoc, perlivp, piconv, pl2pm, pod2html, pod2latex, pod2man,
 pod2text, pod2usage, podchecker, podselect, psed (link to s2p), pstruct (link
 to c2ph), s2p, splain and xsubpp</seg>
-<seg>(too many to name)</seg></seglistitem>
+<seg>Several hundred which cannot be all listed here</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><title>Short descriptions</title>
@@ -93,7 +93,7 @@ to c2ph), s2p, splain and xsubpp</seg>
 <term><command>c2ph</command></term>
 <listitem>
 <indexterm zone="ch-system-perl c2ph"><primary sortas="b-c2ph">c2ph</primary></indexterm>
-<para>dumps C structures as generated from <quote>cc -g -S</quote> stabs.</para>
+<para>dumps C structures as generated from <quote>cc -g -S</quote>.</para>
 </listitem>
 </varlistentry>
 
@@ -109,8 +109,8 @@ to c2ph), s2p, splain and xsubpp</seg>
 <term><command>en2cxs</command></term>
 <listitem>
 <indexterm zone="ch-system-perl en2cxs"><primary sortas="b-en2cxs">en2cxs</primary></indexterm>
-<para>builds a Perl extension for the Encode module,
-from either Unicode Character Mappings or Tcl Encoding Files.</para>
+<para>builds a Perl extension for the Encode module, from either
+Unicode Character Mappings or Tcl Encoding Files.</para>
 </listitem>
 </varlistentry>
 
@@ -151,8 +151,8 @@ from either Unicode Character Mappings or Tcl Encoding Files.</para>
 <term><command>perl</command></term>
 <listitem>
 <indexterm zone="ch-system-perl perl"><primary sortas="b-perl">perl</primary></indexterm>
-<para>combines some of the best features of C, sed,
-awk and sh into a single swiss-army language.</para>
+<para>combines some of the best features of C, sed, awk and sh into a
+single swiss-army language.</para>
 </listitem>
 </varlistentry>
 
@@ -160,8 +160,8 @@ awk and sh into a single swiss-army language.</para>
 <term><command>perlbug</command></term>
 <listitem>
 <indexterm zone="ch-system-perl perlbug"><primary sortas="b-perlbug">perlbug</primary></indexterm>
-<para>is used to generate bug reports about
-Perl or the modules that come with it, and mail them.</para>
+<para>used to generate bug reports about Perl or the modules that come
+with it, and mail them.</para>
 </listitem>
 </varlistentry>
 
@@ -177,8 +177,8 @@ Perl or the modules that come with it, and mail them.</para>
 <term><command>perldoc</command></term>
 <listitem>
 <indexterm zone="ch-system-perl perldoc"><primary sortas="b-perldoc">perldoc</primary></indexterm>
-<para>displays a piece of documentation in pod
-format that is embedded in the Perl installation tree or in a Perl script.</para>
+<para>displays a piece of documentation in pod format that is embedded
+in the Perl installation tree or in a Perl script.</para>
 </listitem>
 </varlistentry>
 
@@ -186,8 +186,9 @@ format that is embedded in the Perl installation tree or in a Perl script.</para
 <term><command>perlivp</command></term>
 <listitem>
 <indexterm zone="ch-system-perl perlivp"><primary sortas="b-perlivp">perlivp</primary></indexterm>
-<para>is the Perl Installation Verification Procedure. It can be used to verify that 
-Perl and its libraries have been installed correctly.</para>
+<para>the Perl Installation Verification Procedure. It can be used to
+verify that Perl and its libraries have been installed
+correctly.</para>
 </listitem>
 </varlistentry>
 
@@ -195,8 +196,8 @@ Perl and its libraries have been installed correctly.</para>
 <term><command>piconv</command></term>
 <listitem>
 <indexterm zone="ch-system-perl piconv"><primary sortas="b-piconv">piconv</primary></indexterm>
-<para>is a Perl version of the character encoding
-converter <command>iconv</command>.</para>
+<para>is a Perl version of the character encoding converter
+<command>iconv</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -269,7 +270,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 <term><command>psed</command></term>
 <listitem>
 <indexterm zone="ch-system-perl psed"><primary sortas="b-psed">psed</primary></indexterm>
-<para>is a Perl version of the stream editor <command>sed</command>.</para>
+<para>a Perl version of the stream editor <command>sed</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -293,8 +294,7 @@ files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 <term><command>splain</command></term>
 <listitem>
 <indexterm zone="ch-system-perl splain"><primary sortas="b-splain">splain</primary></indexterm>
-<para>is used to force verbose warning
-diagnostics in Perl.</para>
+<para>is used to force verbose warning diagnostics in Perl.</para>
 </listitem>
 </varlistentry>
 
@@ -310,3 +310,4 @@ diagnostics in Perl.</para>
 </sect2>
 
 </sect1>
+

@@ -33,13 +33,13 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 
 <screen><userinput>./configure --libdir=/usr/lib --enable-shared</userinput></screen>
 
-<para>Work around a problem that prevents Shadow's internationalization from
-working:</para>
+<para>Work around a problem that prevents Shadow's
+internationalization from working:</para>
 
 <screen><userinput>echo '#define HAVE_SETLOCALE 1' &gt;&gt; config.h</userinput></screen>
 
-<para>Shadow incorrectly declares the malloc() function, causing compilation
-failure. Fix this:</para>
+<para>Shadow incorrectly declares the malloc() function, causing
+compilation failure. Fix this:</para>
 
 <screen><userinput>sed -i '/extern char/d' libmisc/xmalloc.c</userinput></screen>
 
@@ -47,7 +47,7 @@ failure. Fix this:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Then install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -56,44 +56,50 @@ system. Install these two config files:</para>
 
 <screen><userinput>cp etc/{limits,login.access} /etc</userinput></screen>
 
-<para>Instead of using the default <emphasis>crypt</emphasis> method, we want
-to use the more secure <emphasis>MD5</emphasis> method of password encryption,
-which also allows passwords longer than 8 characters. We also need to
-change the obsolete <filename class="directory">/var/spool/mail</filename>
-location for user mailboxes that Shadow uses by default to the <filename 
-class="directory">/var/mail</filename> location used currently. We accomplish
-both these things by changing the relevant configuration file while copying it
-to its destination (it's probably better to cut-and-paste this rather than try
-and type it all in):</para>
+<para>Instead of using the default <emphasis>crypt</emphasis> method,
+use the more secure <emphasis>MD5</emphasis> method of password
+encryption, which also allows passwords longer than 8 characters. It
+is also necessary to change the obsolete <filename
+class="directory">/var/spool/mail</filename> location for user
+mailboxes that Shadow uses by default to the <filename
+class="directory">/var/mail</filename> location used currently. Both
+of these can be accomplished by changing the relevant configuration
+file while copying it to its destination:</para>
 
 <screen><userinput>cp etc/login.defs.linux /etc/login.defs
 sed -i -e 's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
     -e 's@/var/spool/mail@/var/mail@' /etc/login.defs</userinput></screen>
 
-<para>Move some misplaced symlinks/programs to their proper locations:</para>
+<para>Move some misplaced symlinks/programs to their proper
+locations:</para>
 
 <screen><userinput>mv /bin/sg /usr/bin
 mv /bin/vigr /usr/sbin
 mv /usr/bin/passwd /bin</userinput></screen>
 
-<para>And move Shadow's dynamic libraries to a more appropriate location:</para>
+<para>Move Shadow's dynamic libraries to a more appropriate
+location:</para>
 
 <screen><userinput>mv /usr/lib/lib{shadow,misc}.so.0* /lib</userinput></screen>
 
-<para>As some packages expect to find the just-moved libraries in
-<filename class="directory">/usr/lib</filename>, create the following symlinks:</para>
+<para>Because some packages expect to find the just-moved libraries in
+<filename class="directory">/usr/lib</filename>, create the following
+symlinks:</para>
 
 <screen><userinput>ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so
 ln -sf ../../lib/libmisc.so.0 /usr/lib/libmisc.so</userinput></screen>
 
-<para>The <parameter>-D</parameter> option of the <command>useradd</command> program requires this
-directory for it to work properly:</para>
+<para>The <parameter>-D</parameter> option of the
+<command>useradd</command> program requires the <filename
+class="directory">/etc/default</filename> directory for it to work
+properly:</para>
 
 <screen><userinput>mkdir /etc/default</userinput></screen>
 
-<para>Coreutils has already installed a better <command>groups</command>
-program in <filename class="directory">/usr/bin</filename>. Remove the one
-installed by Shadow:</para>
+<para>Coreutils has already installed a better
+<command>groups</command> program in <filename
+class="directory">/usr/bin</filename>.  Remove the one installed by
+Shadow:</para>
 
 <screen><userinput>rm /bin/groups</userinput></screen>
 
@@ -105,14 +111,15 @@ installed by Shadow:</para>
 <primary sortas="a-Shadow">Shadow</primary>
 <secondary>configuring</secondary></indexterm>
 
-<para>This package contains utilities to add, modify and delete users and
-groups, set and change their passwords, and other such administrative tasks.
-For a full explanation of what <emphasis>password shadowing</emphasis> means,
-see the <filename>doc/HOWTO</filename> file within the unpacked source tree.
-There's one thing to keep in mind if you decide to use Shadow support: programs
-that need to verify passwords (display managers, ftp programs, pop3 daemons,
-and the like) need to be <emphasis>shadow-compliant</emphasis>, that is they
-need to be able to work with shadowed passwords.</para>
+<para>This package contains utilities to add, modify, and delete users
+and groups; set and change their passwords; and perform other
+administrative tasks. For a full explanation of what
+<emphasis>password shadowing</emphasis> means, see the
+<filename>doc/HOWTO</filename> file within the unpacked source tree.
+If using Shadow support, keep in mind that programs which need to
+verify passwords (display managers, ftp programs, pop3 daemons, etc.)
+must be shadow-compliant That is, they need to be able to work with
+shadowed passwords.</para>
 
 <para>To enable shadowed passwords, run the following command:</para>
 
@@ -122,10 +129,11 @@ need to be able to work with shadowed passwords.</para>
 
 <screen><userinput>grpconv</userinput></screen>
 
-<para>Under normal circumstances, you won't have created any passwords yet.
-However, if returning to this section later to enable shadowing, you should
-reset any current user passwords with the <command>passwd</command> command or
-any group passwords with the <command>gpasswd</command> command.</para>
+<para>Under normal circumstances, passwords will not have been created
+yet. However, if returning to this section later to enable shadowing,
+reset any current user passwords with the <command>passwd</command>
+command or any group passwords with the <command>gpasswd</command>
+command.</para>
 
 </sect2>
 
@@ -133,7 +141,8 @@ any group passwords with the <command>gpasswd</command> command.</para>
 <sect2 role="configuration">
 <title>Setting the root password</title>
 
-<para>Choose a password for user root and set it via:</para>
+<para>Choose a password for user <emphasis>root</emphasis> and set it
+by running:</para>
 
 <screen><userinput>passwd root</userinput></screen>
 
@@ -157,8 +166,8 @@ logoutd, mkpasswd, newgrp, newusers, passwd, pwck, pwconv, pwunconv, sg
 <term><command>chage</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow chage"><primary sortas="b-chage">chage</primary></indexterm>
-<para>is used to change the maximum number of
-days between obligatory password changes.</para>
+<para> used to change the maximum number of days between obligatory
+password changes.</para>
 </listitem>
 </varlistentry>
 
@@ -166,7 +175,7 @@ days between obligatory password changes.</para>
 <term><command>chfn</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow chfn"><primary sortas="b-chfn">chfn</primary></indexterm>
-<para>is used to change a user's full name and some other info.</para>
+<para>used to change a user's full name and other info.</para>
 </listitem>
 </varlistentry>
 
@@ -174,8 +183,8 @@ days between obligatory password changes.</para>
 <term><command>chpasswd</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow chpasswd"><primary sortas="b-chpasswd">chpasswd</primary></indexterm>
-<para>is used to update the passwords of a
-whole series of user accounts in one go.</para>
+<para>used to update the passwords of an entire series of user
+accounts.</para>
 </listitem>
 </varlistentry>
 
@@ -183,7 +192,7 @@ whole series of user accounts in one go.</para>
 <term><command>chsh</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow chsh"><primary sortas="b-chsh">chsh</primary></indexterm>
-<para>is used to change a user's default  login shell.</para>
+<para>used to change a user's default login shell.</para>
 </listitem>
 </varlistentry>
 
@@ -298,7 +307,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 <term><command>mkpasswd</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow mkpasswd"><primary sortas="b-mkpasswd">mkpasswd</primary></indexterm>
-<para>encrypts the given password using the also given perturbation.</para>
+<para>generates random passwords.</para>
 </listitem>
 </varlistentry>
 
@@ -314,7 +323,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 <term><command>newusers</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow newusers"><primary sortas="b-newusers">newusers</primary></indexterm>
-<para>is used to create or update a whole series of user accounts in one go.</para>
+<para>is used to create or update an entire series of user accounts.</para>
 </listitem>
 </varlistentry>
 
@@ -339,8 +348,8 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 <term><command>pwconv</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow pwconv"><primary sortas="b-pwconv">pwconv</primary></indexterm>
-<para>creates or updates the shadow password file
-from the normal password file.</para>
+<para>creates or updates the shadow password file from the normal
+password file.</para>
 </listitem>
 </varlistentry>
 
@@ -366,8 +375,8 @@ is set to that of the given group.</para>
 <term><command>useradd</command></term>
 <listitem>
 <indexterm zone="ch-system-shadow useradd"><primary sortas="b-useradd">useradd</primary></indexterm>
-<para>creates a new user with the given name,
-or updates the default new-user information.</para>
+<para>creates a new user with the given name, or updates the default
+new-user information.</para>
 </listitem>
 </varlistentry>
 
@@ -384,7 +393,7 @@ or updates the default new-user information.</para>
 <listitem>
 <indexterm zone="ch-system-shadow usermod"><primary sortas="b-usermod">usermod</primary></indexterm>
 <para>is used to modify the given user's login name, UID (User Identification), 
-shell, initial group, home directory, and the like.</para>
+shell, initial group, home directory, etc.</para>
 </listitem>
 </varlistentry>
 
@@ -406,14 +415,6 @@ shell, initial group, home directory, and the like.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry id="libmisc">
-<term><filename class="libraryfile">libmisc</filename></term>
-<listitem>
-<indexterm zone="ch-system-shadow libmisc"><primary sortas="c-libmisc">libmisc</primary></indexterm>
-<para>...</para>
-</listitem>
-</varlistentry>
-
 <varlistentry id="libshadow">
 <term><filename class="libraryfile">libshadow</filename></term>
 <listitem>
@@ -426,3 +427,4 @@ shell, initial group, home directory, and the like.</para>
 </sect2>
 
 </sect1>
+

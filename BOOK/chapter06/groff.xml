@@ -28,10 +28,11 @@ Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Groff</title>
 
-<para>Groff expects the environment variable PAGE to contain the default paper
-size. For those in the United States, the command below is appropriate. If you
-live elsewhere, you may want to change <emphasis>PAGE=letter</emphasis> to
-<emphasis>PAGE=A4</emphasis>.</para>
+<para>Groff expects the environment variable <emphasis>PAGE</emphasis>
+to contain the default paper size. For those in the United States, the
+command below is appropriate. Elsewhere, the
+<parameter>PAGE=letter</parameter> may need to be changed to
+<parameter>PAGE=A4</parameter>.</para>
 
 <para>Prepare Groff for compilation:</para>
 
@@ -41,7 +42,7 @@ live elsewhere, you may want to change <emphasis>PAGE=letter</emphasis> to
 
 <screen><userinput>make</userinput></screen>
 
-<para>Now install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -97,7 +98,7 @@ within troff input files into commands that are understood by <command>troff</co
 <term><command>eqn2graph</command></term>
 <listitem>
 <indexterm zone="ch-system-groff eqn2graph"><primary sortas="b-eqn2graph">eqn2graph</primary></indexterm>
-<para>converts an EQN equation into a cropped image.</para>
+<para>converts a troff EQN (equation) into a cropped image.</para>
 </listitem>
 </varlistentry>
 
@@ -105,7 +106,7 @@ within troff input files into commands that are understood by <command>troff</co
 <term><command>grn</command></term>
 <listitem>
 <indexterm zone="ch-system-groff grn"><primary sortas="b-grn">grn</primary></indexterm>
-<para>is a <command>groff</command> preprocessor for gremlin files.</para>
+<para>a <command>groff</command> preprocessor for gremlin files.</para>
 </listitem>
 </varlistentry>
 
@@ -113,7 +114,7 @@ within troff input files into commands that are understood by <command>troff</co
 <term><command>grodvi</command></term>
 <listitem>
 <indexterm zone="ch-system-groff grodvi"><primary sortas="b-grodvi">grodvi</primary></indexterm>
-<para>is a driver for <command>groff</command> that produces TeX dvi format.</para>
+<para>a driver for <command>groff</command> that produces TeX dvi format.</para>
 </listitem>
 </varlistentry>
 
@@ -121,8 +122,8 @@ within troff input files into commands that are understood by <command>troff</co
 <term><command>groff</command></term>
 <listitem>
 <indexterm zone="ch-system-groff groff"><primary sortas="b-groff">groff</primary></indexterm>
-<para>is a front-end to the groff document
-formatting system. Normally it runs the <command>troff</command> program and a post-processor
+<para>a front-end to the groff document
+formatting system. Normally, it runs the <command>troff</command> program and a post-processor
 appropriate for the selected device.</para>
 </listitem>
 </varlistentry>
@@ -204,7 +205,7 @@ a form suitable for typewriter-like devices.</para>
 <term><command>indxbib</command></term>
 <listitem>
 <indexterm zone="ch-system-groff indxbib"><primary sortas="b-indxbib">indxbib</primary></indexterm>
-<para>makes an inverted index for the bibliographic databases a specified file for 
+<para>creates an inverted index for the bibliographic databases with a specified file for 
 use with <command>refer</command>, <command>lookbib</command>, and <command>lkbib</command>.</para>
 </listitem>
 </varlistentry>
@@ -213,8 +214,8 @@ use with <command>refer</command>, <command>lookbib</command>, and <command>lkbi
 <term><command>lkbib</command></term>
 <listitem>
 <indexterm zone="ch-system-groff lkbib"><primary sortas="b-lkbib">lkbib</primary></indexterm>
-<para>searches bibliographic databases for
-references that contain specified keys and reports any references found.</para>
+<para>searches bibliographic databases for references that contain
+specified keys and reports any references found.</para>
 </listitem>
 </varlistentry>
 
@@ -222,12 +223,12 @@ references that contain specified keys and reports any references found.</para>
 <term><command>lookbib</command></term>
 <listitem>
 <indexterm zone="ch-system-groff lookbib"><primary sortas="b-lookbib">lookbib</primary></indexterm>
-<para>prints a prompt on the standard error
-(unless the standard input is not a terminal), reads from the standard input
-a line containing a set of keywords, searches the bibliographic databases in
-a specified file for references containing those keywords, prints any
-references found on the standard output and repeats this process until the
-end of input.</para>
+<para>prints a prompt on the standard error (unless the standard input
+is not a terminal), reads from the standard input a line containing a
+set of keywords, searches the bibliographic databases in a specified
+file for references containing those keywords, prints any references
+found on the standard output, and repeats this process until the end
+of input.</para>
 </listitem>
 </varlistentry>
 
@@ -235,7 +236,7 @@ end of input.</para>
 <term><command>mmroff</command></term>
 <listitem>
 <indexterm zone="ch-system-groff mmroff"><primary sortas="b-mmroff">mmroff</primary></indexterm>
-<para>is a simple preprocessor for <command>groff</command>.</para>
+<para>a simple preprocessor for <command>groff</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -243,8 +244,8 @@ end of input.</para>
 <term><command>neqn</command></term>
 <listitem>
 <indexterm zone="ch-system-groff neqn"><primary sortas="b-neqn">neqn</primary></indexterm>
-<para>formats equations for ASCII (American Standard Code for Information 
-Interchange) output.</para>
+<para>formats equations for American Standard Code for Information 
+Interchange (ASCII) output.</para>
 </listitem>
 </varlistentry>
 
@@ -252,7 +253,7 @@ Interchange) output.</para>
 <term><command>nroff</command></term>
 <listitem>
 <indexterm zone="ch-system-groff nroff"><primary sortas="b-nroff">nroff</primary></indexterm>
-<para>is a script that emulates the <command>nroff</command> command using <command>groff</command>.</para>
+<para>a script that emulates the <command>nroff</command> command using <command>groff</command>.</para>
 </listitem>
 </varlistentry>
 
@@ -301,10 +302,11 @@ within troff or TeX input files into commands understood by TeX or <command>trof
 <term><command>refer</command></term>
 <listitem>
 <indexterm zone="ch-system-groff refer"><primary sortas="b-refer">refer</primary></indexterm>
-<para>copies the contents of a file to the
-standard output, except that lines between .[ and .] are interpreted as
-citations, and lines between .R1 and .R2 are interpreted as commands about
-how citations are to be processed.</para>
+<para>copies the contents of a file to the standard output, except
+that lines between <emphasis>.[</emphasis> and <emphasis>.]</emphasis>
+are interpreted as citations, and lines between
+<emphasis>.R1</emphasis> and <emphasis>.R2</emphasis> are interpreted
+as commands about how citations are to be processed.</para>
 </listitem>
 </varlistentry>
 
@@ -357,3 +359,4 @@ appropriate order and with the appropriate options.</para>
 </sect2>
 
 </sect1>
+

@@ -19,20 +19,23 @@ files in shell scripts.</para>
 <seglistitem><seg>0.1 SBU</seg><seg>317 KB</seg></seglistitem>
 </segmentedlist>
 
-<para>The installation dependencies for Mktemp haven't been checked yet.</para>
-
+<segmentedlist>
+<segtitle>Mktemp installation depends on</segtitle>
+<seglistitem><seg>Coreutils, Make, Patch</seg></seglistitem>
+</segmentedlist>
 </sect2>
 
 <sect2 role="installation">
 <title>Installation of Mktemp</title>
 
-<para>Many scripts still use the deprecated <command>tempfile</command>
-program, which has functionality much the same as <command>mktemp</command>.
-Patch Mktemp to include a <command>tempfile</command> wrapper:</para>
+<para>Many scripts still use the deprecated
+<command>tempfile</command> program, which has functionality similar
+to <command>mktemp</command>. Patch Mktemp to include a
+<command>tempfile</command> wrapper:</para>
 
 <screen><userinput>patch -Np1 -i ../mktemp-&mktemp-version;-add_tempfile-1.patch</userinput></screen>
 
-<para>Now prepare Mktemp for compilation:</para>
+<para>Prepare Mktemp for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --with-libc</userinput></screen>
 
@@ -51,7 +54,7 @@ functions from the system C library.</para></listitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Now install it:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install
 make install-tempfile</userinput></screen>
@@ -89,3 +92,4 @@ make install-tempfile</userinput></screen>
 </sect2>
 
 </sect1>
+
