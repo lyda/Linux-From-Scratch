@@ -7,27 +7,22 @@
 # With code based on Matthias Benkmann's simpleinit-msb @
 # http://winterdrache.de/linux/newboot/index.html
 
-# Initial Stop Signal
-STOPSIG=TERM
-
-# The fallback if STOPSIG does not stop a process in time (see KILLDELAY)
-FALLBACK=KILL
-
-# Signal sent to running processes to refresh their configuration
-RELOADSIG=HUP
-
-# Number of seconds between STOPSIG and FALLBACK when stopping processes
-KILLDELAY=3
-
+## Environmental setup
+# Setup default values for environment
 umask 022
 export PATH="/bin:/usr/bin:/sbin:/usr/sbin"
 
-# Width of the Screen
-COLUMNS=$(stty size)
-COLUMNS=${COLUMNS##* }
+# Default values for kill function
+STOPSIG="TERM"  # Initial Stop Signal
+FALLBACK="KILL" # Fallback if STOPSIG does not stop a process in time (see KILLDELAY)
+RELOADSIG="HUP" # Signal sent to running processes to refresh their configuration
+KILLDELAY="3"   # Number of seconds between STOPSIG and FALLBACK when stopping processes
+PIDFILE=""
+
+## Screen Dimentions
+if [ -z "$COLUMNS" ]; then COLUMNS=$(stty size); COLUMNS=${COLUMNS##*}; fi
 # When using remote connections, such as a serial port, stty size returns 0
 if [ "$COLUMNS" = "0" ]; then COLUMNS=80; fi
-
 # Measurements for positioning result messages
 COL=$(($COLUMNS - 10))
 WCOL=$(($COLUMNS - 30))
@@ -42,20 +37,32 @@ NORMAL="\\033[0;39m"
 SUCCESS="\\033[1;32m"
 WARNING="\\033[1;33m"
 FAILURE="\\033[1;31m"
+BRACKET="\\033[1;34m"
+
+# Set screen and bootlog message values to ero
+BOOTMESG=""
+BOOTSERVICE=""
+
+boot_mesg() {
+	if [ -z "$BOOTMESG" ]; then
+		BOOTMESG="$@"
+		echo -e "${NORMAL}${BOOTMESG}"
+	fi
+}
 
 echo_ok()
 {
-	echo -e "$CURS_UP$SET_COL"["$SUCCESS""  OK  ""$NORMAL"]
+	echo -e "${CURS_UP}""${SET_COL}""${BRACKET}""[""${SUCCESS}""  OK  ""${BRACKET}""]""${NORMAL}"
 }
 
 echo_failure()
 {
-	echo -e "$CURS_UP$SET_COL"["$FAILURE"FAILED"$NORMAL"]
+	echo -e "${CURS_UP}""${SET_COL}""${BRACKET}""[""${FAILED}""FAILED""${BRACKET}""]""${NORMAL}"
 }
 
 echo_warning()
 {
-	echo -e "$CURS_UP$SET_WCOL$@$SET_COL"["$WARNING" WARN  "$NORMAL"]
+	echo -e "${CURS_UP}""${SET_WCOL}""$@""${SET_COL}""${BRACKET}""[""${WARNING}"" WARN  ""${BRACKET}""]""${NORMAL}"
 }
 
 # $i is inherited by the rc script

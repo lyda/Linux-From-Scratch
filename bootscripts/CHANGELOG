@@ -1,3 +1,10 @@
+n/a - September 15, 2004
+	* Added blue bracket, from dj's 3.0-pre1 bootscript package [echo_failure,
+	  echo_warning, and echo_ok]
+	* Added a new function called boot_mesg, meant to replace the echo command.
+	  This will give us the posibility of doing logging at a later date
+	* Do not set COLUMNS if COLUMNS is already set
+
 2.2.3 - September 04, 2004
 	* Tagged as 2.2.3
 
