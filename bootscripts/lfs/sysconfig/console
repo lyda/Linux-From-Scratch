@@ -1,6 +1,7 @@
 # Begin /etc/sysconfig/console
 
-KEYMAP=
-FONT=
+KEYMAP="defkeymap"
+KEYMAP_CORRECTIONS="euro"
+FONT="default8x16"
 
 # End /etc/sysconfig/console
