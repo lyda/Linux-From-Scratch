@@ -4,7 +4,7 @@ Is that OK?</para></question>
 <answer><para>Patches from GNU don't usually work.
 You can either download the full archive and try again
 or try the solution given in the message archived at
-<ulink url="http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/06/0386.html/"/>.
+<ulink url="http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/06/0386.html"/>.
 </para></answer>
 </qandaentry>
 
