@@ -3,6 +3,8 @@
 	* Changed from syslog-ng to sysklogd (Archaic)
 	* Temporairly changed loadproc to return 0 if the program is
 	  already running (Nathan Coulson)
+  * Fixed (by reverting) ifup/ifdown/network (Nathan Coulson),
+	  Reported by Jim Gifford
 	* Tagged as lfs-bootscripts-3.2.0 (Nathan Coulson)
 
 n/a - March 19, 2005

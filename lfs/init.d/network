@@ -30,19 +30,7 @@ case "${1}" in
 				continue
 			fi
 
-			# A subshell allows us to open files,
-			# without contaminating our network bootscript with
-			# unneeded variables
-			(
-				. ${file}
-				# If ONBOOT does not equal yes, process the next file
-				if [ "${ONBOOT}" != "yes" ]; then
-					continue
-				fi
-
-				# Bring up ${interface}
-				${network_devices}/ifup ${interface}
-			)
+			IN_BOOT=1 ${network_devices}/ifup ${interface}
 		done
 		;;
 
@@ -64,19 +52,7 @@ case "${1}" in
 				continue
 			fi
 
-			# A subshell allows us to open files,
-			# without contaminating our network bootscript with
-			# unneeded variables
-			(
-				. ${file}
-				# If ONBOOT does not equal yes, process the next file
-				if [ "${ONBOOT}" != "yes" ]; then
-					continue
-				fi
-
-				# Bring up ${interface}
-				${network_devices}/ifdown ${interface}
-			)
+			IN_BOOT=1 ${network_devices}/ifdown ${interface}
 		done
 		;;
 
