@@ -35,7 +35,7 @@ fi
 # Reverse the order configuration files are processed in
 for file in ${FILES}
 do
-  FILES2="${file} ${FILES2}"
+	FILES2="${file} ${FILES2}"
 done
 FILES=${FILES2}
 
