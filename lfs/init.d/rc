@@ -78,7 +78,10 @@ do
 
         check_script_status
 
-        $i start
+	case $runlevel in
+		0|6)	$i stop		;;
+		*)	$i start	;;
+	esac
         error_value=$?
 
         if [ "$error_value" != "0" ]
