@@ -253,13 +253,13 @@ to the FAQ maintainer or an apropriate LFS mailing list so it can be added here.
 
 </qandadiv><!-- fre -->
 
-<!-- dlist: ,lfs-compile -->
+<!-- dlist: ,lfs-compile,blfs-support,new -->
 <qandadiv id="fee"><title>Frequently Encountered Errors</title>
 
-<!-- dlist: ,lfs-compile -->
+<!-- dlist: ,lfs-compile,blfs-support,new -->
 <qandadiv id="fee-compile"><title>Compile Time Errors</title>
 
-<!-- dlist: ,lfs-compile -->
+<!-- dlist: ,lfs-compile,blfs-support,new -->
 <qandadiv id="fee-compile-any"><title>Errors From Any Package</title>
 
 <!-- elist: ,lfs-compile -->
@@ -335,6 +335,16 @@ into the new LFS system.)
 <question><para>Why does configure hang at
 "checking for signed size_t type..."?</para></question>
 <answer><para>You over optimized gcc.
+</para></answer>
+</qandaentry>
+
+<!-- elist: ,blfs-support,new -->
+<qandaentry id="gtk-2_0">
+<question><para>I'm getting errors building a package that requires GTK+,
+but I've installed GTK+ 2.x.</para></question>
+<answer><para>GTK+ 2.x and 1.2.x aren't compatible.
+The package you're installing may need GTK+ (and GLIB) 1.2.x.
+You can install GTK+ (and GLIB) 1.2.x next to 2.x.
 </para></answer>
 </qandaentry>
 
@@ -415,7 +425,7 @@ that filesystem, well. . . you know. . . . ;)
 <listitem><para>Is support for the filesystem compiled into the kernel.
 Again, not a module.
 Support for ext2 is enabled by default,
-but others like ext3, reiser, jfs, and xfs, are not.
+but others like ext3, reiser, jfs, and xfs are not.
 </para></listitem>
 </itemizedlist></para></answer>
 </qandaentry><!-- unable-to-mount-root -->
