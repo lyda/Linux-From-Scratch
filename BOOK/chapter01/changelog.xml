@@ -74,6 +74,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 18, 2004 [manuel]: Chapter 3 - Updated the list of mirrors
+for Glibc package. Fixed several textual bugs.</para></listitem>
+
 <listitem><para>May 17th, 2004 [winkie]: Chapter 5 - Pass
 <quote>AUTOCONF=no</quote> to the Glibc build. This prevents autoconf from
 causing us problems.</para></listitem>
