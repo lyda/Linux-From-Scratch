@@ -30,6 +30,7 @@
 <!ENTITY lilo-errors SYSTEM "lilo-errors.xml">
 <!ENTITY missing-x-includes SYSTEM "missing-x-includes.xml">
 <!ENTITY net-pf-x SYSTEM "net-pf-x.xml">
+<!ENTITY netiquette SYSTEM "netiquette.xml">
 <!ENTITY new-version SYSTEM "new-version.xml">
 <!ENTITY nls-info SYSTEM "nls-info.xml">
 <!ENTITY no-dev-rtc SYSTEM "no-dev-rtc.xml">
