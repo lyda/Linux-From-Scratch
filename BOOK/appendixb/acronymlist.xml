@@ -163,7 +163,7 @@ Metal Oxide Semiconductor</para></listitem>
 
 <varlistentry>
 <term><command>GMT</command></term>
-<listitem><para>Greenwich Mean Tim</para></listitem>
+<listitem><para>Greenwich Mean Time</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -388,7 +388,7 @@ Metal Oxide Semiconductor</para></listitem>
 
 <varlistentry>
 <term><command>UUID</command></term>
-<listitem><para>Universally Unique Identifie</para></listitem>
+<listitem><para>Universally Unique Identifier</para></listitem>
 </varlistentry>
 
 <varlistentry>
