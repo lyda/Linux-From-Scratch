@@ -26,7 +26,7 @@
 
 <para>The following patch corrects the building of sysklogd:</para>
 
-<screen><userinput>patch -Np1 -i ../linux-libc-headers-&linux-libc-headers-version;-raq2_fix-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../linux-libc-headers-&linux-libc-headers-raq2-version;-raq2_fix-1.patch</userinput></screen>
 
 <screen><userinput>cp -R include/asm-mips /usr/include/asm
 cp -R include/linux /usr/include</userinput></screen>
