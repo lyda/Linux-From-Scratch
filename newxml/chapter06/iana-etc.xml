@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-iana-etc" xreflabel="Iana-Etc">
+<title>Installing Iana-Etc-&iana-etc-version;</title>
+<?dbhtml filename="iana-etc.html"?>
+
+<para>The Iana-Etc package network services and protocols data.</para>
+
+<screen>&buildtime; 0.1 SBU
+&diskspace; 641 KB</screen>
+
+<literallayout>Official download location for Iana-Etc (&iana-etc-version;):
+<ulink url="http://www.sethwklein.net/projects/iana-etc/"/></literallayout>
+
+<para>The installation dependencies for Iana-Etc haven't been checked yet.</para>
+
+
+
+<sect2>
+<title>Installation of Iana-Etc</title>
+
+<para>Parse the data:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>And install it:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+</sect2>
+
+
+<sect2 id="contents-iana-etc"><title>Contents of Iana-Etc</title>
+
+<para><emphasis>Installed files</emphasis>: protocols, services</para>
+
+</sect2>
+
+
+</sect1>
