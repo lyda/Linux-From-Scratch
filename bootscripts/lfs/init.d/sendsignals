@@ -10,7 +10,7 @@
 case "$1" in
 	stop)
 		echo "Disabling Hotplug Events..."
-		> /proc/sys/kernel/hotplug
+		echo > /proc/sys/kernel/hotplug
 		evaluate_retval
 
 		echo "Sending all processes the TERM signal..."
