@@ -569,8 +569,8 @@ url="http://kt.zork.net/kernel-traffic/kt20000814_80.txt">http://kt.zork.net/ker
 When it is, it will be considered and, if it seems better than LILO, used.
 </para>
 <para>If your current setup uses GRUB, there's no need to switch.
-In addition to the GRUB documentation, there is the LFS "GRUB-Howto" Hint at <ulink
-url"http://hints.linuxfromscratch.org/hints/grub-howto.txt">http://hints.linuxfromscratch.org/hints/grub-howto.txt</ulink>
+In addition to the GRUB documentation, see the LFS "GRUB-Howto" Hint at <ulink
+url="http://hints.linuxfromscratch.org/hints/grub-howto.txt">http://hints.linuxfromscratch.org/hints/grub-howto.txt</ulink>
 </para></answer>
 </qandaentry>
 
