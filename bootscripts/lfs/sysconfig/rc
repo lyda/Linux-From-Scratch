@@ -1,7 +1,7 @@
 # Begin /etc/sysconfig/rc
 
 rc_base=/etc/rc.d
-rc_functions=$rc_base/init.d/functions
+rc_functions=${rc_base}/init.d/functions
 network_devices=/etc/sysconfig/network-devices
 
 # End /etc/sysconfig/rc

@@ -48,7 +48,7 @@ create_files() {
 						;;
 					*)
 						boot_mesg "\nUnknown type: ${type}" ${WARNING}
-						boot_mesg "" ${NORMAL} >&2
+						boot_mesg "" ${NORMAL}
 						continue
 						;;
 				esac

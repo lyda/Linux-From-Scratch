@@ -13,7 +13,7 @@
 
 if [ -z "${MTU}" ]
 then
-	boot_mesg "MTU variable missing from $IFCONFIG, cannot continue." ${FAILURE}
+	boot_mesg "MTU variable missing from ${IFCONFIG}, cannot continue." ${FAILURE}
 	echo_failure
 	exit 1
 fi

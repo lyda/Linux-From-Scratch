@@ -74,7 +74,7 @@ case "${1}" in
 			boot_mesg " were found and have been corrected."
 			boot_mesg "  You may want to double-check that"
 			boot_mesg " everything was fixed properly."
-			boot_mesg "" $NORMAL
+			boot_mesg "" ${NORMAL}
 		fi
 
 		if [ "${error_value}" = 2 -o "${error_value}" = 3 ]
@@ -116,7 +116,7 @@ case "${1}" in
 			boot_mesg "FAILURE:\n\nUnexpected Failure" ${FAILURE}
 			boot_mesg " running fsck.  Exited with error"
 			boot_mesg " code: ${error_value}."
-			boot_mesg "" $NORMAL
+			boot_mesg "" ${NORMAL}
 			exit ${error_value}
 		fi
 		;;
