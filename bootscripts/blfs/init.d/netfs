@@ -66,7 +66,7 @@ case "$1" in
 			# by fstype.  This list can be extended later as
 			# more network filesystems are supported by mount.
 			umount -a -t coda,ncpfs,nfs,smbfs
-			if [ $? == 0]
+			if [ $? == 0 ]
 			then
 				[ -z $NERRVAL ]
 				evaluate_retval
