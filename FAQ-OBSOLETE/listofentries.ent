@@ -1,4 +1,5 @@
 <!ENTITY add-grub SYSTEM "add-grub.xml">
+<!ENTITY alpha-fixes SYSTEM "alpha-fixes.xml">
 <!ENTITY any-no-such-file SYSTEM "any-no-such-file.xml">
 <!ENTITY asm-global-directive SYSTEM "asm-global-directive.xml">
 <!ENTITY bad-interpreter-permission-denied SYSTEM "bad-interpreter-permission-denied.xml">

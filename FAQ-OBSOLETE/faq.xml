@@ -58,6 +58,7 @@
 	&why-not-package-management;
 </qandadiv>
 <qandadiv id="resources"><title>Resources</title>
+	&alpha-fixes;
 	&how-to-find;
 	&kernel-modules;
 	&nls-info;
