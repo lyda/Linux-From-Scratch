@@ -7,35 +7,55 @@
 <title>Foreword</title>
 <?dbhtml filename="foreword.html"?>
 
-<para>Six years ago I embarked on the adventure known as Linux. I did
-what most you guys have done: download a distribution, install it, and
-work with it for a while. Then you don't quite like it and you hear
-about a different distribution that is supposed to be great and fix
-everything your current distribution does wrong. So you try that new
-distribution out for a while. You may even repeat that same cycle a
-few times.</para>
+<para>My adventures in Linux began six years ago when I downloaded and
+installed my first distribution. After working with it for awhile, I
+discovered issues I definitely would have liked to see improved upon.
+For example, I didn't like the arrangement of the bootscripts, the way
+programs were configured by default. I tried a number of alternate
+distributions to address these issues, yet each had it pros and cons.
+Finally, I realized that if I wanted full satisfaction from my Linux
+system, I would have to build my own system from scratch.</para>
 
-<para>After you have tried out a number of different distributions,
-you find that each has its strengths and weaknesses, but you can't
-seem to find that one system that brings you the most satisfaction.
-Personally, I came to the conclusion that to be truly satisfied with
-my Linux system, I would have to somehow combine those different
-systems into one <quote>perfect</quote> Linux system. It would then
-have all the strengths from various different systems, without their
-weaknesses.  But that surely is an impossible and daunting task. Or is
-it?</para>
+<para>What does this mean? I resolved not to use pre-compiled packages
+of any kind, nor CD-ROMs or boot disks that would install basic
+utilities. I would use my current Linux system to develop my own
+customized system. This <quote>perfect</quote> Linux system would then
+have the strengths of various systems without their associated
+weaknesses. In the beginning, the idea was rather daunting, but I
+remained committed to the idea that a system could be built that would
+conform to my needs and desires rather than to a standard that just
+did not fit what I was looking for.</para>
 
-<para>You can do better than simply combining several distributions
-into one.  You can create your own Linux system from scratch.</para>
+<para>After sorting through issues such as circular dependencies and
+compile-time errors, I created a custom-built Linux system that was
+fully operational and suitable to individual needs. This process also
+allowed me to create compact and streamlined Linux systems which are
+faster and take up less space than traditional operating systems. I
+called this system a Linux From Scratch system, or LFS system for
+short.</para>
 
-<para>After figuring out things like circular dependencies, compile
-time errors and other related issues, a custom built Linux system was
-created and fully operational. I called this system a Linux From
-Scratch system, or LFS for short. This book will show you how it was
-done and how you can create your own LFS system, fully customized to
-your own needs and desires.</para>
+<para>As I shared my goals and experiences with other members of the
+Linux community, it became apparent that there was sustained interest
+in the ideas set forth in my Linux adventures. Such custom-built LFS
+systems not only to meet user specifications and requirements, but
+also serve as an ideal learning opportunity for programmers and system
+administrators to enhance their Linux skills. Out of this broadened
+interest, the Linux From Scratch project was born.</para>
 
-<para>I hope you will have a great time working on your own LFS!</para>
+<para>This <emphasis>Linux From Scratch</emphasis> book provides
+readers with the background and instruction to design and build custom
+Linux systems. This book highlights the Linux from Scratch project and
+the benefits of using this system. Users can dictate all aspects of
+their system, including directory layout, script setup, and security.
+The resulting system will be compiled straight from the source code,
+and the user will be able to specify where, why, and how programs are
+installed. This book allows readers to fully customize Linux systems
+to their own needs and allows users more control over their
+system.</para>
+
+<para>I hope you will have a great time working on your own LFS
+system, and enjoy the numerous benefits of having a system that is
+truly <emphasis>your own</emphasis>.</para>
 
 <literallayout>--
 Gerard Beekmans
