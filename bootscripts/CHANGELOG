@@ -2,6 +2,8 @@ n/a - July 21, 2004
 
 	* Committed DJ Lucas's patch for the killproc function.  It no longer requires
 	  arguments if PIDFILE is set
+	* added --backup to all sysconfig configuration files, so they are not
+	  replaced on a make install
 
 n/a - July 13, 2004
 
