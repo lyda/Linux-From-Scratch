@@ -12,12 +12,10 @@ case "$1" in
 		echo "Mounting NFS Partitions..."
 		loadproc /usr/sbin/rpc.statd
 		loadproc /usr/sbin/rpc.lockd
-		mount -a -t nfs
 		;;
 
 	stop)
 		echo "Unmounting NFS Partitions..."
-		umount -a -t nfs
 		killproc /usr/sbin/rpc.lockd
 		killproc /usr/sbin/rpc.statd
 		;;
