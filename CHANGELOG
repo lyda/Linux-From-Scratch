@@ -1,5 +1,5 @@
 
-n/a - March 30, 2005
+3.2.0 - March 30, 2005
 	* Changed from syslog-ng to sysklogd (Archaic)
 	* Temporairly changed loadproc to return 0 if the program is
 	  already running (Nathan Coulson)
