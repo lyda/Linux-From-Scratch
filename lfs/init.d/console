@@ -9,15 +9,16 @@
 . $rc_functions
 
 # Native English speakers probably don't have /etc/sysconfig/console at all
-if [ ! -f /etc/sysconfig/console ]
-then
-	exit 0
-fi
 
-./etc/sysconfig/console
 
 case "$1" in
 	start)
+		if [ ! -f /etc/sysconfig/console ]
+		then
+			exit 0
+		fi
+		. /etc/sysconfig/console
+
 		if [ ! -z "$KEYMAP" ]
 		then
 			echo -n "Loading keymap..."
