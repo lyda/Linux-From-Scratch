@@ -16,14 +16,14 @@
 
 case "$1" in
 	start)
-		echo "Unpacking files to /etc..."
+		boot_mesg "Unpacking files to /etc..."
 		cd /
 		/bin/rm  /etc /init
 		/bin/tar xjf /.cdrom/etc.tar.bz2
-		evaluate_retval
-		echo "Unpacking files to /root..."
+		echo_ok
+		boot_mesg "Unpacking files to /root..."
 		/bin/tar xjf /.cdrom/root.tar.bz2
-		evaluate_retval
+		echo_ok
 		;;
 
 	*)
