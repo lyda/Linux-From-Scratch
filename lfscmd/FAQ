@@ -1,4 +1,0 @@
-1. "Entity 'nbsp' not defined"?
-
-Define nbsp as an entity in the index.xml file:
-<!ENTITY nbsp " ">
