@@ -62,3 +62,4 @@
 <!ENTITY why-not-package-management SYSTEM "why-not-package-management.xml">
 <!ENTITY why-not-new-lilo SYSTEM "why-not-new-lilo.xml">
 <!ENTITY why-vim SYSTEM "why-vim.xml">
+<!ENTITY xfree-png-lz SYSTEM "xfree-png-lz.xml">
