@@ -130,7 +130,7 @@ localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
 
 
 <sect2 id="conf-glibc"><title>Configuring Glibc</title>
-<indexterm zone="conf-glibc"><primary sortas="e-/etc/nsswitch.con">/etc/nsswitch.con</primary></indexterm>
+<indexterm zone="conf-glibc"><primary sortas="e-/etc/nsswitch.conf">/etc/nsswitch.con</primary></indexterm>
 <indexterm zone="conf-glibc"><primary sortas="e-/etc/localtime">/etc/localtime</primary></indexterm>
 
 <para>We need to create the <filename>/etc/nsswitch.conf</filename> file,
