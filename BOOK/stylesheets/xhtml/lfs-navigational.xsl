@@ -123,9 +123,9 @@
                 </xsl:call-template>
               </xsl:attribute>
                 <xsl:attribute name="title">
-                  <xsl:value-of select="$home/bookinfo/title"/>
+                  <xsl:value-of select="$home/info/title"/>
                   <xsl:text> - </xsl:text>
-                  <xsl:value-of select="$home/bookinfo/subtitle"/>
+                  <xsl:value-of select="$home/info/subtitle"/>
                 </xsl:attribute>
                 <xsl:call-template name="navig.content">
                   <xsl:with-param name="direction" select="'home'"/>
@@ -234,9 +234,9 @@
                     </xsl:call-template>
                   </xsl:attribute>
                   <xsl:attribute name="title">
-                    <xsl:value-of select="$home/bookinfo/title"/>
+                    <xsl:value-of select="$home/info/title"/>
                     <xsl:text> - </xsl:text>
-                    <xsl:value-of select="$home/bookinfo/subtitle"/>
+                    <xsl:value-of select="$home/info/subtitle"/>
                   </xsl:attribute>
                   <xsl:call-template name="navig.content">
                     <xsl:with-param name="direction" select="'home'"/>

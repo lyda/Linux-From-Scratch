@@ -34,9 +34,9 @@
                       <xsl:text>../index.html</xsl:text>
                     </xsl:attribute>
                     <xsl:attribute name="title">
-                      <xsl:value-of select="/book/bookinfo/title"/>
+                      <xsl:value-of select="/book/info/title"/>
                       <xsl:text> - </xsl:text>
-                      <xsl:value-of select="/book/bookinfo/subtitle"/>
+                      <xsl:value-of select="/book/info/subtitle"/>
                     </xsl:attribute>
                     <xsl:call-template name="navig.content">
                       <xsl:with-param name="direction" select="'home'"/>
