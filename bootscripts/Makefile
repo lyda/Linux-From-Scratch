@@ -60,6 +60,7 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	ln -sf ../init.d/loadkeys    ${EXTDIR}/rc.d/rcsysinit.d/S70loadkeys
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
+	install -m 644 lfs/sysconfig/createfiles                     ${EXTDIR}/sysconfig/
 	install -m 644 lfs/sysconfig/rc                              ${EXTDIR}/sysconfig/
 	install -m 754 lfs/sysconfig/network-devices/ifup            ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/ifdown          ${EXTDIR}/sysconfig/network-devices
