@@ -28,6 +28,10 @@ some programs.</para>
 <sect2 role="installation">
 <title>Installation of Zlib</title>
 
+<para>Placeholder for patch information</para>
+
+<screen><userinput>patch -Np1 -i ../zlib-&zlib-version;-security-1.patch</userinput></screen>
+
 <note><para>Zlib is known to build its shared library incorrectly if
 <envar>CFLAGS</envar> is specified in the environment. If using a 
 specified <envar>CFLAGS</envar>

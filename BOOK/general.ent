@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "6.0-testing-20040912">
-<!ENTITY releasedate "September 12, 2004">
+<!ENTITY version "6.0-testing-20040913">
+<!ENTITY releasedate "September 13, 2004">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
 <!ENTITY blfs-root "&lfs-root;blfs/">
