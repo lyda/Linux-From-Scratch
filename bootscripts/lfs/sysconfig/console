@@ -1,11 +1,17 @@
 # Begin /etc/sysconfig/console
 # Uncomment the section corresponding to your country
 
-# English-speaking users don't need this file at all, except when they
+# US-English users don't need this file at all, except when they
 # use framebuffer console.
-# For framebuffer users whose native language is English:
+# For framebuffer users from USA or Australia:
 #
 # FONT="default8x16"
+# WARNING: this is not the same as the kernel default font!
+
+# Users from Great Britain:
+#
+# KEYMAP="uk"
+# FONT="iso01-16"
 
 # Belarussian users need to download additional fonts (TODO)
 
@@ -30,8 +36,6 @@
 # Latvian users need to download additional files from
 # http://linux.ma-1.lv/ll10nt/Latvian-HOWTO/files/konsole-files.tar.gz
 
-# Origin: http://www.zelow.no/floppyfw/download/packages/loadkeys/post-loadkeys-qwertz.ini
-
 # Russia, one of many variants actually used
 # See the book for the contents of /etc/kbd/bs-sends-del
 #
@@ -50,7 +54,7 @@
 # TODO: add Serbian Cyrillic settings
 
 # Spain, with Euro character (information from
-# http://www.linuxforum.com/forums/index.php?showtopic=14590),
+# http://www.linuxforum.com/forums/index.php?showtopic=14590)
 #
 # KEYMAP="es"
 # KEYMAP_CORRECTIONS="euro"

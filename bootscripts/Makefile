@@ -14,6 +14,7 @@ create-service-dir:
 install: create-dirs create-service-dir
 	install -m 754 lfs/init.d/checkfs      ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/cleanfs      ${EXTDIR}/rc.d/init.d/
+	install -m 754 lfs/init.d/hotplug      ${EXTDIR}/rc.d/init.d
 	install -m 644 lfs/init.d/functions    ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/halt         ${EXTDIR}/rc.d/init.d/
 	install -m 754 lfs/init.d/console      ${EXTDIR}/rc.d/init.d/
@@ -59,6 +60,7 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/checkfs     ${EXTDIR}/rc.d/rcsysinit.d/S30checkfs
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rcsysinit.d/S40mountfs
 	ln -sf ../init.d/cleanfs     ${EXTDIR}/rc.d/rcsysinit.d/S50cleanfs
+	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
@@ -69,10 +71,6 @@ install: create-dirs create-service-dir
 	install -m 754 lfs/sysconfig/network-devices/ifup            ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/ifdown          ${EXTDIR}/sysconfig/network-devices
 	install -m 754 lfs/sysconfig/network-devices/services/static ${EXTDIR}/sysconfig/network-devices/services
-
-install-hotplug: create-dirs
-	install -m 754 contrib/init.d/hotplug ${EXTDIR}/rc.d/init.d
-	ln -sf ../init.d/hotplug ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
 
 install-modules: create-dirs
 	install -m 754 contrib/init.d/modules ${EXTDIR}/rc.d/init.d
