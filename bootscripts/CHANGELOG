@@ -11,6 +11,7 @@ n/a - November 25, 2004
 	  as suggested by Greg K-H (Nathan Coulson
 	* Created contrib/lsb, and added a LSB compliant functions file
 	  (Nathan Coulson, and Alexander Patrakov)
+	* Modified find [requires find 4.2.3+] (Matthew Burgess)
 
 n/a - November 20, 2004
 	* Modifed modules script to return to previous kernel message
