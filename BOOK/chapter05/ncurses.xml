@@ -14,7 +14,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/ncurses.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 0.7 SBU
-&diskspace; 26 MB</screen>
+&diskspace; 27.8 MB</screen>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/ncurses.xml" xpointer="xpointer(/sect1/para[2])"/>
 

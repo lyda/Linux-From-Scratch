@@ -14,7 +14,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/glibc.xml" xpointer="xpointer(/sect1/para[1])"/>
 
 <screen>&buildtime; 11.8 SBU
-&diskspace; 800 MB</screen>
+&diskspace; 734.2 MB</screen>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/glibc.xml" xpointer="xpointer(/sect1/para[2])"/>
 
@@ -39,7 +39,7 @@ cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>../glibc-&glibc-version;-20031202/configure --prefix=/tools \
+<screen><userinput>../glibc-&glibc-version;/configure --prefix=/tools \
     --disable-profile --enable-add-ons=linuxthreads \
     --with-binutils=/tools/bin --with-headers=/tools/include \
     --without-gd --without-cvs</userinput></screen>
@@ -179,6 +179,7 @@ localedef -i en_HK -f ISO-8859-1 en_HK
 localedef -i en_PH -f ISO-8859-1 en_PH
 localedef -i en_US -f ISO-8859-1 en_US
 localedef -i es_MX -f ISO-8859-1 es_MX
+localedef -i fa_IR -f UTF-8 fa_IR
 localedef -i fr_FR -f ISO-8859-1 fr_FR
 localedef -i fr_FR@euro -f ISO-8859-15 fr_FR@euro
 localedef -i it_IT -f ISO-8859-1 it_IT

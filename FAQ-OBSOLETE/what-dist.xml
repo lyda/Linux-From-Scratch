@@ -1,9 +1,0 @@
-<qandaentry id="what-dist">
-<question><para>What distribution should I use to start from?</para></question>
-<answer><para>Any recent distribution should be fine. If you have problems,
-try installing and/or updating the development packages.
-(Look for ones starting in "gcc", "glibc", or "libstdc++" or
-ending in "-dev".)
-</para></answer>
-</qandaentry>
-

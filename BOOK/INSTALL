@@ -9,7 +9,7 @@ document.  Instead, you need to read the LFS Editor's Manual.  See the LFS
 website at http://www.linuxfromscratch.org for more information.
 
 -------------------------------------------------------------------------------
-If all you want to do is convert XML to HTML perform the following:
+If all you want to do is convert XML to HTML install the following:
 
 * libxml2
   - http://www.linuxfromscratch.org/blfs/view/cvs/general/libxml2.html
@@ -23,10 +23,21 @@ If all you want to do is convert XML to HTML perform the following:
 * DocBook XSL Stylesheets 
   - http://www.linuxfromscratch.org/blfs/view/cvs/pst/docbook-xsl.html
 
+* HTML Tidy - http://tidy.sourceforge.net/src/tidy_src.tgz
+
+  /bin/sh build/gnuauto/setup.sh &&
+  ./configure --prefix=/usr &&
+  make &&
+  su -c "make install"
+
 ------------------------------------------------------------------------------- 
 If you want to be able to convert the book into PDF as well, then you will need
 the FOP package.  This takes an XSL-FO file (created with libxslt which you
-already installed) and converts it to PDF:
+already installed) and converts it to PDF.  Additionally you will need
+the Java Advanced Imaging (JAI) library from
+http://java.sun.com/products/java-media/jai/downloads/download-1_1_2.html
+(you'll need either the JDK .bin or JRE .bin file dependent on your
+particular Java setup).
 
   - http://www.apache.org/dist/xml/fop/fop-0.20.5-bin.tar.gz
 
@@ -35,5 +46,11 @@ already installed) and converts it to PDF:
   cd /opt &&
   tar -xzvf /usr/src/fop-0.20.5-bin.tar.gz &&
   mv fop-0.20.5 fop
+
+  Install JAI by running:
+
+  chmod u+x /path/to/jai-1_1_2-lib-linux-i586-jdk.bin &&
+  cd $JAVA_HOME &&
+  /path/to/jai-1_1_2-lib-linux-i586-jdk.bin
 
   Now set JAVA_HOME, FOP_HOME and PATH to values appropriate to your system.
