@@ -1,0 +1,15 @@
+# This is the proposed addition to have interactive bootscripts.
+# Begin /etc/sysconfig/rc
+
+rc_base=/etc/rc.d
+rc_functions=${rc_base}/init.d/functions
+network_devices=/etc/sysconfig/network-devices
+
+# Setup for interactive startup
+DISTRO="Linux From Scratch"
+ITIME="2"
+PTAB="22"
+IPROMPT="yes"
+# End setup for interactive
+
+# End /etc/sysconfig/rc
