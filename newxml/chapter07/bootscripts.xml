@@ -12,7 +12,7 @@
 <screen>&buildtime; 0.1 SBU
 &diskspace; 0.3 MB</screen>
 
-<para>For its installation LFS-Bootscripts depends on: Bash, Coreutils.</para>
+<para>LFS-Bootscripts installation depends on: Bash, Coreutils.</para>
 
 
 
@@ -70,9 +70,9 @@ kernel-provided file systems, such as /proc.</para>
 <para>The <command>network</command> script sets up network interfaces, such
 as network cards, and sets up the default gateway where applicable.</para>
 
-<para>The <command>rc</command> script is the master runlevel control script.
-It is responsible for running all the other scripts one-by-one in a specific
-sequence.</para>
+<para>The <command>rc</command> script is the master run-level control script.
+It is responsible for running all the other scripts one-by-one, in a sequence
+determined by the name of the symbolic links being processed.</para>
 
 <para>The <command>reboot</command> script reboots the system.</para>
 

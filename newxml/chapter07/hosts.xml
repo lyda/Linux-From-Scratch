@@ -13,7 +13,7 @@ syntax is:</para>
 
 <screen>&lt;IP address&gt; myhost.example.org aliases</screen>
 
-<para>You should make sure that the IP-address is in the private network
+<para>Unless your computer is to be visible to the Internet (e.g. you have a registered domain and a valid block of assigned IP addresses - most of us don't have this)you should make sure that the IP-address is in the private network
 IP-address range. Valid ranges are:</para>
 
 <screen>	Class Networks
@@ -22,7 +22,7 @@ IP-address range. Valid ranges are:</para>
 	C     192.168.0.0 through 192.168.255.0</screen>
 
 <para>A valid IP address could be 192.168.1.1. A valid FQDN for this IP could
-be www.linuxfromscratch.org.</para>
+be www.linuxfromscratch.org (not recommended as this is a valid registered domain address and could cause your domain name server problems).</para>
 
 <para>If you aren't going to use a network card, you still need to 
 come up with a FQDN. This is necessary for certain programs to operate

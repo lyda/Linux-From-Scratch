@@ -7,8 +7,8 @@
 <title>Configuring the setclock script</title>
 <?dbhtml filename="setclock.html"?>
 
-<para>This setclock script reads the time from your hardware clock (also
-known as BIOS or CMOS clock) and either converts that time to localtime
+<para>This setclock script reads the time from your hardware clock, also
+known as BIOS or CMOS (Complementry Metal-Oxide Semiconductor) clock, and either converts that time to localtime
 using the <filename>/etc/localtime</filename> file (if the hardware clock
 is set to GMT) or not (if the hardware clock is already set to localtime).
 There is no way to auto-detect whether the hardware clock is set to GMT or
