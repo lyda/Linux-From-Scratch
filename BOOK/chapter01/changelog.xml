@@ -73,6 +73,8 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 3rd, 2004: LFS 5.1-pre2 released</para></listitem>
+
 <listitem><para>May 2nd, 2004 [matt]: Quoted chroot commands in chapter 6 (bug
 #818).</para></listitem>
 <listitem><para>May 2nd, 2004 [matt]: Removed description of the now
