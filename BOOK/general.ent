@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "CVS-2004-05-02">
-<!ENTITY releasedate "May 2, 2004">
-<!ENTITY milestone "5.1">
+<!ENTITY version "&milestone;">
+<!ENTITY releasedate "June 5th, 2004">
+<!ENTITY milestone "5.1.1">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
 <!ENTITY blfs-root "&lfs-root;blfs/">
 <!ENTITY faq-root "&lfs-root;faq/">
 <!ENTITY hints-root "&lfs-root;hints/downloads/files/">
 <!ENTITY hints-index "&lfs-root;hints/list.html">
-<!ENTITY patches-root "&lfs-root;patches/lfs/cvs/">
+<!ENTITY patches-root "&lfs-root;patches/lfs/&version;/">
 <!ENTITY wiki-root "http://wiki.linuxfromscratch.org/">
 <!ENTITY http-down "http://downloads.linuxfromscratch.org/">
 <!ENTITY freshmeat "http://freshmeat.net/projects/">
@@ -21,7 +21,7 @@
 <!ENTITY bash-version "2.05b">
 <!ENTITY binutils-version "2.14">
 <!ENTITY bison-version "1.875">
-<!ENTITY bootscripts-version "2.0.4">
+<!ENTITY bootscripts-version "2.0.5">
 <!ENTITY bzip2-version "1.0.2">
 <!ENTITY coreutils-version "5.2.1">
 <!ENTITY dejagnu-version "1.4.4">
@@ -36,7 +36,7 @@
 <!ENTITY gcc-2953-version "2.95.3">
 <!ENTITY gcc-version "3.3.3">
 <!ENTITY gettext-version "0.14.1">
-<!ENTITY glibc-version "2.3.3">
+<!ENTITY glibc-version "2.3.3-lfs-5.1">
 <!ENTITY grep-version "2.5.1">
 <!ENTITY groff-version "1.19">
 <!ENTITY grub-version "0.94">

@@ -27,10 +27,11 @@ first a summary, then a detailed log.</para>
 <listitem><para>file-4.09</para></listitem>
 <listitem><para>gcc-3.3.3</para></listitem>
 <listitem><para>gettext-0.14.1</para></listitem>
+<listitem><para>glibc-2.3.3-lfs-5.1</para></listitem>
 <listitem><para>grub-0.94</para></listitem>
 <listitem><para>kbd-1.12</para></listitem>
 <listitem><para>less-382</para></listitem>
-<listitem><para>lfs-bootscripts-2.0.4</para></listitem>
+<listitem><para>lfs-bootscripts-2.0.5</para></listitem>
 <listitem><para>libtool-2.5.6</para></listitem>
 <listitem><para>linux-2.4.26</para></listitem>
 <listitem><para>man-pages-1.66</para></listitem>
@@ -72,6 +73,46 @@ first a summary, then a detailed log.</para>
 <listitem><para>zlib-1.1.4-vsnprintf.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>June 2, 2004 [matt]: Prologue - acknowledgments, Added Thomas
+Reitelbach as the German translator</para></listitem>
+<listitem><para>May 30, 2004 [matt]: Chapter 6 - vim, corrected the optional
+command for invoking the testsuite</para></listitem>
+<listitem><para>May 23, 2004 [matt]: Chapter 6 - kbd, removed the hardcoded path
+to the kernel source directory</para></listitem>
+<listitem><para>May 19, 2004 [matt]: Chapter 6 - mktemp, added instruction to
+install tempfile wrapper</para></listitem>
+<listitem><para>May 18, 2004 [manuel]: Chapter 3 - Updated the list of mirrors
+for Glibc package. Fixed several textual bugs.</para></listitem>
+
+<listitem><para>May 17th, 2004 [winkie]: Chapter 5 - Pass
+<quote>AUTOCONF=no</quote> to the Glibc build. This prevents autoconf from
+causing us problems.</para></listitem>
+
+<listitem><para>May 16th, 2004 [jeremy]: Chapter 9 - Added a brief paragraph
+to the rebooting system page to discuss packages which might be useful to
+add prior to rebooting to the new system</para></listitem>
+
+<listitem><para>May 15th, 2004 [matt]: Chapter 6 - Added a clearer warning that
+make_devices needs to be customised</para></listitem>
+
+<listitem><para>May 14th, 2004 [matt]: Chapter 3 - Added glibc's md5sum</para>
+</listitem>
+
+<listitem><para>May 14th, 2004 [matt]: Chapters 5 &amp; 6 - Upgraded to
+glibc-2.3.3-lfs-5.1</para></listitem>
+
+<listitem><para>May 11th, 2004 [jeremy]: Prologue - Updated the list of
+active staff in the project.</para></listitem>
+
+<listitem><para>May 9th, 2004 [winkie]: Chapter 6 - Removed unused and broken
+entries from <filename>nsswitch.conf</filename>.</para></listitem>
+
+<listitem><para>May 7th, 2004 [matt]: Merged Manuel's lfs-xsl-0.9 patches</para>
+</listitem>
+<listitem><para>May 7th, 2004 [matt]: Fixed README error regarding invocation of
+`make`</para></listitem>
+<listitem><para>May 3rd, 2004: LFS 5.1-pre2 released</para></listitem>
 
 <listitem><para>May 2nd, 2004 [matt]: Quoted chroot commands in chapter 6 (bug
 #818).</para></listitem>

@@ -72,7 +72,7 @@ the <quote>File systems</quote> menu and is normally enabled by default.</para>
 <filename>/etc/modules.conf</filename> file. Information pertaining
 to modules and to kernel configuration in general may be found in the
 kernel documentation, which is found in the
-<filename>linux-2.4.25/Documentation</filename> directory. The
+<filename>linux-&linux-version;/Documentation</filename> directory. The
 modules.conf man page and the kernel HOWTO at
 <ulink url="http://www.tldp.org/HOWTO/Kernel-HOWTO.html"/> may also be of
 interest to you.</para>
@@ -130,7 +130,7 @@ person would have write access to the kernel source.</para>
 
 <para>If you are going to keep the kernel source tree around, you may want to
 run <userinput>chown -R 0:0</userinput> on the
-<filename>linux-2.4.25</filename> directory to ensure all files are
+<filename>linux-&linux-version;</filename> directory to ensure all files are
 owned by user <emphasis>root</emphasis>.</para>
 
 </sect2>
