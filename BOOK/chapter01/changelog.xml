@@ -74,6 +74,8 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 19, 2004 [matt]: Chapter 6 - mktemp, added instruction to
+install tempfile wrapper</para></listitem>
 <listitem><para>May 18, 2004 [manuel]: Chapter 3 - Updated the list of mirrors
 for Glibc package. Fixed several textual bugs.</para></listitem>
 
