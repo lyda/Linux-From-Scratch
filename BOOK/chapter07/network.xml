@@ -38,12 +38,14 @@ update the <quote>network_devices</quote> by providing it with the new path.</pa
 creates a sample <filename>ipv4</filename> file for the
 <filename>eth0</filename> device:</para>
 
-<screen><userinput>cat &gt; /etc/sysconfig/network-devices/ifconfig.eth0/ipv4 &lt;&lt; "EOF"
+<screen><userinput>cd /etc/sysconfig/network-devices &amp;&amp;
+mkdir ifconfig.eth0 &amp;&amp;
+cat &gt; ifconfig.eth0/ipv4 &lt;&lt; "EOF"
 ONBOOT=yes
 SERVICE=ipv4-static
 IP=192.168.1.1
 GATEWAY=192.168.1.2
-NETMASK=255.255.255.0
+NETMASK=24
 BROADCAST=192.168.1.255
 EOF</userinput></screen>
 

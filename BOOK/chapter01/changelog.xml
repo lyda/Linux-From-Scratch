@@ -74,6 +74,12 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July 14, 2004 [matt]: chapter07/network.xml - A couple
+of minor fixes for the network configuration</para></listitem>
+
+<listitem><para>July 14, 2004 [matt]: chapter06/iproute2.xml - Fixed
+remaining reference to net-tools</para></listitem>
+
 <listitem><para>July 14, 2004 [matt]: chapter06/udev.xml - Explained udevdir
 option</para></listitem>
 

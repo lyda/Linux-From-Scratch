@@ -52,8 +52,8 @@
     <screen><userinput>make install</userinput></screen>
   </sect2>
 
-  <sect2 id="contents-net" role="content">
-    <title>Contents of Net-tools</title>
+  <sect2 id="contents-iproute2" role="content">
+    <title>Contents of IPRoute2</title>
     <segmentedlist>
       <segtitle>Installed programs</segtitle>
       <seglistitem>
