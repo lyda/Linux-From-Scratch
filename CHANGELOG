@@ -1,11 +1,11 @@
 n/a - June 21, 2004
 
-	* Converted the udev script to use udevsend/udevd
-
-n/a - June 21, 2004
-
 	* Re-ordered the "mount" and "echo" commands in the udev script, to
 	  prevent a possible race
+	* Converted the udev script to use udevsend/udevd
+	* Moved removal of /fastboot and /forcefsck to just after the root fs
+	  becomes writable, and dropped the removal of /etc/nologin
+	* Cleaned and tweaked both the output and actions of cleanfs
 
 n/a - June 20, 2004
 
