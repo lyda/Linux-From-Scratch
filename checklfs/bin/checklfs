@@ -172,3 +172,5 @@ echo
 
 } 2>&1 | tee $results
 
+exit $errors_found
+
