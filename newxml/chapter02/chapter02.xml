@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.oasis-open.org/docbook/xml/4.3CR2/docbookx.dtd">
+<chapter id="chapter02" xreflabel="Chapter 2">
+<?dbhtml dir="chapter02"?>
+<title>Important information</title>
+<?dbhtml filename="chapter02.html"?>
+
+<sect1 id="ch02-aboutlfs">
+<title>About $LFS</title>
+<?dbhtml filename="aboutlfs.html"?>
+
+<para>Please read the following paragraphs carefully. Throughout this book the
+variable LFS will be used frequently. $LFS must at all times be replaced with
+the directory where the partition that contains the LFS system is mounted. How
+to create and where to mount the partition will be explained in full detail in
+<xref linkend="chapter03"/>. For the moment let's assume that the LFS partition
+is mounted on <filename>/mnt/lfs</filename>.</para>
+
+<para>When you are told to run a command like
+<userinput>./configure --prefix=$LFS/tools</userinput>, you actually have to
+execute <userinput>./configure --prefix=/mnt/lfs/tools</userinput>.</para>
+
+<para>It's important that this is done no matter where it is read; be it in
+commands entered in a shell, or in a file edited or created.</para>
+
+<para>A possible solution is to set the environment variable LFS.
+This way $LFS can be entered literally instead of replacing it with 
+/mnt/lfs. This is accomplished by running: </para>
+
+<screen><userinput>export LFS=/mnt/lfs</userinput></screen>
+
+<para>Now, if you are told to run a command such as
+<userinput>./configure --prefix=$LFS/tools</userinput>, then you may type it
+literally. Your shell will replace "$LFS" with "/mnt/lfs" when it processes
+the command line (that is, when you hit Enter after having typed the
+command).</para>
+
+</sect1>
+
+
+<sect1 id="ch02-aboutsbus">
+<title>About SBUs</title>
+<?dbhtml filename="aboutsbus.html"?>
+
+<para>Most people would like to know beforehand how long it approximately
+takes to compile and install each package. But "Linux from Scratch" is built
+on so many different systems, it is not possible to give actual times that are
+anywhere near accurate: the biggest package (Glibc) won't take more than
+twenty minutes on the fastest systems, but will take something like three days
+on the slowest -- no kidding. So instead of giving actual times, we've come up
+with the idea of using the <emphasis>Static Binutils Unit</emphasis>
+(abbreviated to <emphasis>SBU</emphasis>).</para>
+
+<para>It works like this: the first package you compile in this book is the
+statically linked Binutils in Chapter 5, and the time it takes to compile this
+package is what we call the "Static Binutils Unit" or "SBU". All other compile
+times will be expressed relative to this time.</para>
+
+<para>For example, the time it takes to build the static version of GCC is
+4.4 SBUs. This means that if on your system it took 10 minutes
+to compile and install the static Binutils, then you know it will take
+approximately 45 minutes to build the static GCC. Fortunately, most build times
+are much shorter than the one of Binutils.</para>
+
+<para>Note that if the system compiler on your host is GCC-2 based, the SBUs
+listed may end up being somewhat understated. This is because the SBU is based
+on the very first package, compiled with the old GCC, while the rest of the
+system is compiled with the newer GCC-3.3.2 which is known to be
+approximately 30% slower.</para>
+
+<para>Also note that SBUs don't work well for SMP-based machines. But if you're
+so lucky as to have multiple processors, chances are that your system is so fast
+that you won't mind.</para>
+
+</sect1>
+
+
+<sect1 id="ch02-abouttestsuites">
+<title>About the test suites</title>
+<?dbhtml filename="abouttestsuites.html"?>
+
+<para>Most packages provide a test suite. Running the test suite for a newly
+built package is generally a good idea as it can provide a nice sanity check
+that everything compiled correctly. A test suite that passes its set of
+checks usually proves that the package is functioning mostly as the developer
+intended. It does not, however, guarantee that the package is totally bug
+free.</para>
+
+<para>Some test suites are more important than others. For example, the test
+suites for the core toolchain packages -- GCC, Binutils, and Glibc (the C
+library) -- are of the utmost importance due to their central role in a
+properly functioning system. But be warned, the test suites for GCC and Glibc
+can take a very long period of time to complete, especially on slower
+hardware.</para>
+
+<para>As you progress through the book and encounter the build commands to
+run the various test suites, we'll guide you on the relative importance of
+the test suite in question so that you can decide for yourself whether to
+run it or not.</para>
+
+<note><para>A common problem when running the test suites for Binutils and GCC
+is running out of pseudo terminals (PTYs for short). The symptom is an unusually
+high number of failing tests. This can happen for any number of reasons. Most
+likely is that the host system doesn't have the <emphasis>devpts</emphasis> file
+system set up correctly. We'll discuss this in more detail later on in Chapter
+5.</para></note>
+
+</sect1>
+
+
+<sect1 id="ch02-askforhelp">
+<title>How to ask for help</title>
+<?dbhtml filename="askforhelp.html"?>
+
+<para>If you encounter a problem while using this book, and your problem 
+is not listed in the FAQ (<ulink url="http://www.linuxfromscratch.org/faq"/>), you will find that most 
+of the people on Internet Relay Chat (IRC) and 
+on the mailing lists are willing to help you. An 
+overview of the LFS mailing lists can be found in 
+<xref linkend="ch01-maillists"/>. To assist us in diagnosing and solving
+your problem, include as much relevant information as possible in your
+request for help.</para>
+
+<sect2>
+<title>Things to mention</title>
+ 
+<para>Apart from a brief explanation of the problem you're having, the
+essential things to include in your request are:</para>
+
+<itemizedlist>
+<listitem><para>the version of the book you are using (being CVS-20040102),</para></listitem>
+<listitem><para>the host distribution and version you are using to create
+LFS from,</para></listitem>
+<listitem><para>the package or section giving you problems,</para></listitem>
+<listitem><para>the exact error message or symptom you are receiving,</para></listitem>
+<listitem><para>whether you have deviated from the book at all.</para></listitem>
+</itemizedlist>
+
+<para>(Note that saying that you've deviated from the book doesn't mean
+that we won't help you. After all, LFS is about choice. It'll just
+help us to see other possible causes of your problem.)</para>
+
+</sect2>
+
+<sect2>
+<title>Configure problems</title>
+
+<para>When something goes wrong during the stage where the configure script
+is run, look through the <filename>config.log</filename> file. This file
+may contain errors encountered during configure which weren't printed to
+the screen.  Include those relevant lines if you decide to ask for
+help.</para>
+
+</sect2>
+
+<sect2>
+<title>Compile problems</title>
+
+<para>To help us find the cause of the problem, both screen output and
+the contents of various files are useful. The screen output from both
+the ./configure script and the make run can be useful. Don't blindly
+include the whole thing but on the other hand, don't include too little.
+As an example, here is some screen output from make:</para>
+
+<screen>gcc -DALIASPATH=\"/mnt/lfs/usr/share/locale:.\"
+-DLOCALEDIR=\"/mnt/lfs/usr/share/locale\" -DLIBDIR=\"/mnt/lfs/usr/lib\"
+-DINCLUDEDIR=\"/mnt/lfs/usr/include\" -DHAVE_CONFIG_H -I. -I.
+-g -O2 -c getopt1.c
+gcc -g -O2 -static -o make ar.o arscan.o commands.o dir.o expand.o file.o
+function.o getopt.o implicit.o job.o main.o misc.o read.o remake.o rule.o
+signame.o variable.o vpath.o default.o remote-stub.o version.o opt1.o
+-lutil job.o: In function `load_too_high':
+/lfs/tmp/make-3.79.1/job.c:1565: undefined reference to `getloadavg'
+collect2: ld returned 1 exit status
+make[2]: *** [make] Error 1
+make[2]: Leaving directory `/lfs/tmp/make-3.79.1'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/lfs/tmp/make-3.79.1'
+make: *** [all-recursive-am] Error 2</screen>
+
+<para>In this case, many people just include the bottom section where it
+says:</para>
+
+<screen>make [2]: *** [make] Error 1</screen>
+
+<para>and onwards. This isn't enough for us to diagnose the problem because it
+only tells us that <emphasis>something</emphasis> went wrong, not
+<emphasis>what</emphasis> went wrong. The whole section, as in the example
+above, is what should be included to be helpful, because it includes the
+command that was executed and the command's error message(s).</para>
+
+<para>An excellent article on asking for help on the Internet in general
+has been written by Eric S. Raymond. It is available online at <ulink url="http://catb.org/~esr/faqs/smart-questions.html"/>.
+Read and follow the hints in that document and you are much more likely
+to get a response to start with and also to get the help you actually
+need.</para>
+
+</sect2>
+
+<sect2>
+<title>Test suite problems</title>
+
+<para>Many packages provide a test suite which, depending on the importance
+of the package, we may encourage you to run. Sometimes packages will
+generate false or expected failures. If you encounter these, you can check
+the LFS Wiki page at <ulink url="http://wiki.linuxfromscratch.org/"/> to see
+whether we have already investigated and noted them. If we already know
+about them, then usually there is no need to be concerned.</para>
+
+</sect2>
+
+
+</sect1>
+
+
+
+</chapter>

@@ -1,0 +1,4721 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.oasis-open.org/docbook/xml/4.3CR2/docbookx.dtd">
+<appendix id="appendixa" xreflabel="Appendix A">
+<?dbhtml dir="appendixa"?>
+<title>Package descriptions and dependencies</title>
+<?dbhtml filename="appendixa.html"?>
+
+<sect1 id="aa-intro">
+<title>Introduction</title>
+<?dbhtml filename="introduction.html"?>
+
+<para>In this appendix the following aspects of every package
+installed in this book are described:</para>
+
+<itemizedlist>
+
+<listitem><para>the official download location for the 
+package,</para></listitem>
+
+<listitem><para>what the package contains,</para></listitem>
+
+<listitem><para>what each program from the package does,</para></listitem>
+
+<listitem><para>what the package needs to be compiled.</para></listitem>
+
+</itemizedlist>
+
+<para>Most information about these packages (especially the descriptions of
+them) come from the man pages of those packages. We do not include
+the entire man page, but just some key elements to make it possible to
+understand what a program does. To get information on all details of a program, 
+please refer to its man page or info page.</para>
+
+<para>Certain packages are documented in more depth
+than others, because we just happen to know more about certain
+packages than about others. If you think anything should be added to the
+following descriptions, please don't hesitate to email the mailing
+lists. We intend that the list should contain an in-depth description 
+of every package installed, but we can't do it without help.</para>
+
+<para>Please note that currently only what a package does is described and not
+why it needs to be installed. This may be added later.</para>
+
+<para>Also listed are all of the installation dependencies for all the
+packages that are installed in this book. The listings will include
+which programs from which packages are needed to successfully compile
+the package to be installed.</para>
+
+<para>These are not running dependencies, meaning they don't tell you
+what programs are needed to use that package's programs, just the ones
+needed to compile it.</para>
+
+<para>The dependency list can be, from time to time, outdated in regards
+to the currently used package version. Checking dependencies takes quite a
+bit of work, so they may lag behind a bit on the package update. But
+often with minor package updates, the installation dependencies hardly
+change, so they'll be current in most cases. When we upgrade to a major
+new release, we'll make sure the dependencies are checked too.</para>
+
+</sect1>
+
+
+<sect1 id="aa-autoconf" xreflabel="Autoconf">
+<title>Autoconf</title>
+<?dbhtml filename="autoconf.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-autoconf"/>.</para>
+
+<sect2>
+
+<title>Official Download Location</title>
+
+<literallayout>Autoconf (2.59): 
+<ulink url="ftp://ftp.gnu.org/gnu/autoconf/"/></literallayout>
+
+</sect2>
+
+<sect2><title>Contents of Autoconf</title>
+
+<!-- <para>(Last checked against version &autoconf-contversion;.)</para> -->
+
+<para>Autoconf produces shell scripts which automatically configure source
+code.</para>
+
+<para><emphasis>Installed programs</emphasis>: autoconf, autoheader, autom4te,
+autoreconf, autoscan, autoupdate and ifnames</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>autoconf</command> is a tool for producing shell scripts
+that automatically configure software source code packages to adapt to many
+kinds of Unix-like systems. The configuration scripts it produces are
+independent -- running them does not require the autoconf program.</para>
+
+<para><command>autoheader</command> is a tool for creating template files
+of C #define statements for configure to use.</para>
+
+<para><command>autom4te</command> is a wrapper for the M4 macro
+processor.</para>
+
+<para><command>autoreconf</command> comes in handy when there are a lot
+of autoconf-generated configure scripts around. The program runs autoconf and
+autoheader repeatedly (where appropriate) to remake the autoconf configure
+scripts and configuration header templates in a given directory tree.</para>
+
+<para><command>autoscan</command> can help to create a
+<filename>configure.in</filename> file for a software package. It examines
+the source files in a directory tree, searching them for common portability
+problems and creates a <filename>configure.scan</filename> file that serves as
+as a preliminary <filename>configure.in</filename> for the package.</para>
+
+<para><command>autoupdate</command> modifies a 
+<filename>configure.in</filename> file that still calls autoconf macros
+by their old names to use the current macro names.</para>
+
+<para><command>ifnames</command> can be helpful when writing a
+<filename>configure.in</filename> for a software package. It prints the
+identifiers that the package uses in C preprocessor conditionals. If a package
+has already been set up to have some portability, this program can help to
+determine what <userinput>configure</userinput> needs to check. It can fill
+in some gaps in a <filename>configure.in</filename> file generated by
+autoscan.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Autoconf Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &autoconf-depversion;.)</para> -->
+
+<para>Autoconf depends on: Bash, Coreutils, Diffutils, Grep,
+M4, Make, Perl, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-automake" xreflabel="Automake">
+<title>Automake</title>
+<?dbhtml filename="automake.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-automake"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Automake (1.8): 
+<ulink url="ftp://ftp.gnu.org/gnu/automake/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Automake</title>
+
+<!-- <para>(Last checked against version &automake-contversion;.)</para> -->
+
+<para>Automake generates Makefile.in files, intended for use with Autoconf.</para>
+
+<para><emphasis>Installed programs</emphasis>: acinstall, aclocal,
+aclocal-1.8, automake, automake-1.8, compile, config.guess, config.sub,
+depcomp, elisp-comp, install-sh, mdate-sh, missing, mkinstalldirs, py-compile,
+symlink-tree, ylwrap</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>acinstall</command> is a script that installs
+aclocal-style M4 files.</para>
+
+<para><command>aclocal</command> generates <filename>aclocal.m4</filename>
+files based on the contents of <filename>configure.in</filename> files.</para>
+
+<para><command>automake</command> is a tool for automatically generating
+<filename>Makefile.in</filename>'s from files called
+<filename>Makefile.am</filename>. To create all the
+<filename>Makefile.in</filename> files for a package, run this program in the
+top level directory. By scanning the <filename>configure.in</filename>s it
+automatically finds each appropriate <filename>Makefile.am</filename> and
+generate the corresponding <filename>Makefile.in</filename>.</para>
+
+<para><command>compile</command> is a wrapper for compilers.</para>
+
+<para><command>config.guess</command> is a script that attempts to guess
+the canonical triplet for the given build, host, or target architecture.</para>
+
+<para><command>config.sub</command> is a configuration validation
+subroutine script.</para>
+
+<para><command>depcomp</command> is a script for compiling a program
+so that not only the desired output is generated but also dependency
+information.</para>
+
+<para><command>elisp-comp</command> byte-compiles Emacs Lisp code.</para>
+
+<para><command>install-sh</command> is a script that installs a program,
+a script, or a datafile.</para>
+
+<para><command>mdate-sh</command> is a script that prints the modification
+time of a file or directory.</para>
+
+<para><command>missing</command> is a script acting as a common stub for
+missing GNU programs during an installation.</para>
+
+<para><command>mkinstalldirs</command> is a script that creates a directory
+tree.</para>
+
+<para><command>py-compile</command> compiles a Python program.</para>
+
+<para><command>symlink-tree</command> is a script to create a symlink tree of
+a directory tree.</para>
+
+<para><command>ylwrap</command> is a wrapper for lex and yacc.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Automake Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &automake-depversion;.)</para> -->
+
+<para>Automake depends on: Autoconf, Bash, Coreutils,
+Diffutils, Grep, M4, Make, Perl, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-bash" xreflabel="Bash">
+<title>Bash</title>
+<?dbhtml filename="bash.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-bash"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Bash (2.05b): 
+<ulink url="ftp://ftp.gnu.org/gnu/bash/"/>
+
+Bash Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/bash-2.05b-2.patch"/></literallayout>
+</sect2>
+
+
+<sect2><title>Contents of Bash</title>
+
+<!-- <para>(Last checked against version &bash-contversion;.)</para> -->
+
+<para>bash is the Bourne-Again SHell, which is a widely used command
+interpreter on Unix systems. The bash program reads from standard
+input (the keyboard). A user types something and the program will evaluate
+what he has typed and do something with it, like running a
+program.</para>
+
+<para><emphasis>Installed programs</emphasis>: bash, sh (link to bash) and
+bashbug</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>bash</command> is a widely-used command interpreter. It
+performs all kinds of expansions and substitutions on a given command line
+before executing it, thus making this interpreter a powerful tool.</para>
+
+<para><command>bashbug</command> is a shell script to help the user
+compose and mail bug reports concerning bash in a standard format.</para>
+
+<para><command>sh</command> is a symlink to the bash program. When invoked
+as sh, bash tries to mimic the startup behavior of historical versions of sh as
+closely as possible, while conforming to the POSIX standard as well.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Bash Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &bash-depversion;.)</para> -->
+
+<para>Bash depends on: Binutils, Coreutils, Diffutils, Gawk,
+GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-binutils" xreflabel="Binutils">
+<title>Binutils</title>
+<?dbhtml filename="binutils.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-binutils"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Binutils (2.14): 
+<ulink url="ftp://ftp.gnu.org/gnu/binutils/"/></literallayout>
+</sect2>
+
+
+<sect2><title>Contents of Binutils</title>
+
+<!-- <para>(Last checked against version &binutils-contversion;.)</para> -->
+
+<para>Binutils is a collection of software development tools containing a
+linker, assembler and other tools to work with object files and
+archives.</para>
+
+<para><emphasis>Installed programs</emphasis>: addr2line, ar, as, c++filt,
+gprof, ld, nm, objcopy, objdump, ranlib, readelf, size, strings and
+strip</para>
+
+<para><emphasis>Installed libraries</emphasis>: libiberty.a, libbfd.[a,so] and
+libopcodes.[a,so]</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>addr2line</command> translates program addresses to file
+names and line numbers. Given an address and the name of an executable, it
+uses the debugging information in the executable to figure out which source
+file and line number are associated with the address.</para>
+
+<para><command>ar</command> creates, modifies, and extracts from archives. An archive
+is a single file holding a collection of other files in a structure that makes
+it possible to retrieve the original individual files (called members of
+the archive).</para>
+
+<para><command>as</command> is an assembler. It assembles the output of
+gcc into object files.</para>
+
+<para><command>c++filt</command> is used by the linker to demangle C++ and
+Java symbols, to keep overloaded functions from clashing.</para>
+
+<para><command>gprof</command> displays call graph profile data.</para>
+
+<para><command>ld</command> is a linker. It combines a number of object
+and archive files into a single file, relocating their data and tying up symbol
+references.</para>
+
+<para><command>nm</command> lists the symbols occurring in a given object file.</para>
+
+<para><command>objcopy</command> is used to translate one type of object
+file into another.</para>
+
+<para><command>objdump</command> displays information about the given
+object file, with options controlling what particular information to display.
+The information shown is mostly only useful to programmers who are working on
+the compilation tools.</para>
+
+<para><command>ranlib</command> generates an index of the contents of an
+archive, and stores it in the archive. The index lists all the symbols defined
+by archive members that are relocatable object files.</para>
+
+<para><command>readelf</command> displays information about elf type binaries.</para>
+
+<para><command>size</command> lists the section sizes -- and the grand
+total -- for the given object files.</para>
+
+<para><command>strings</command> outputs for each file given the sequences
+of printable characters that are of at least the specified length (defaulting to 4)
+For object files it prints by default only the strings from the initializing
+and loading sections. For other types of files it scans the whole file.</para>
+
+<para><command>strip</command> discards symbols from object files.</para>
+
+<para><command>libiberty</command> contains routines used by various GNU
+programs, including getopt, obstack, strerror, strtol and strtoul.</para>
+
+<para><command>libbfd</command> is the Binary File Descriptor library.</para>
+
+<para><command>libopcodes</command> is a library for dealing with opcodes.
+It is used for building utilities like objdump. Opcodes are the "readable text"
+versions of instructions for the processor.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Binutils Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &binutils-depversion;.)</para> -->
+
+<para>Binutils depends on: Bash, Coreutils, Diffutils, GCC, Gettext,
+Glibc, Grep, Make, Perl, Sed, Texinfo.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-bison" xreflabel="Bison">
+<title>Bison</title>
+<?dbhtml filename="bison.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-bison"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Bison (1.875): 
+<ulink url="ftp://ftp.gnu.org/gnu/bison/"/>
+
+Bison Attribute Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/bison-1.875-attribute.patch"/></literallayout>
+</sect2>
+
+
+<sect2><title>Contents of Bison</title>
+
+<!-- <para>(Last checked against version &bison-contversion;.)</para> -->
+
+<para>Bison is a parser generator, a replacement for yacc. Bison
+generates a program that analyzes the structure of a text file.</para>
+
+<para><emphasis>Installed programs</emphasis>: bison and yacc</para>
+
+<para><emphasis>Installed library</emphasis>: liby.a</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>bison</command> generates, from a series of rules, a program
+for analyzing the structure of text files. Bison is a replacement for yacc
+(Yet Another Compiler Compiler).</para>
+
+<para><command>yacc</command> is a wrapper for bison, meant for programs
+that still call yacc instead of bison. It calls bison with the -y option.</para>
+
+<para><command>liby.a</command> is the Yacc library containing
+implementations of Yacc-compatible yyerror and main functions. This library
+is normally not very useful, but POSIX requires it.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Bison Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &bison-depversion;.)</para> -->
+
+<para>Bison depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Gettext, Glibc, Grep, M4, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-bzip2" xreflabel="Bzip2">
+<title>Bzip2</title>
+<?dbhtml filename="bzip2.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-bzip2"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Bzip2 (1.0.2): 
+<ulink url="http://sources.redhat.com/bzip2/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Bzip2</title>
+
+<!-- <para>(Last checked against version &bzip2-contversion;.)</para> -->
+
+<para>Bzip2 is a block-sorting file compressor which generally achieves a
+better compression than the traditional <userinput>gzip</userinput>
+does.</para>
+
+<para><emphasis>Installed programs</emphasis>: bunzip2 (link to bzip2), bzcat
+(link to bzip2), bzcmp, bzdiff, bzegrep, bzfgrep, bzgrep, bzip2, bzip2recover,
+bzless and bzmore</para>
+
+<para><emphasis>Installed libraries</emphasis>: libbz2.a, libbz2.so (link to
+libbz2.so.1.0), libbz2.so.1.0 (link to libbz2.so.1.0.2) and
+libbz2.so.1.0.2</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>bunzip2</command> decompresses bzipped files.</para>
+
+<para><command>bzcat</command> decompresses to standard output.</para>
+
+<para><command>bzcmp</command> runs cmp on bzipped files.</para>
+
+<para><command>bzdiff</command> runs diff on bzipped files.</para>
+
+<para><command>bzgrep</command> and friends run grep on bzipped files.</para>
+
+<para><command>bzip2</command> compresses files using the Burrows-Wheeler
+block sorting text compression algorithm with Huffman coding. The compression
+rate is generally considerably better than that achieved by more conventional
+compressors using LZ77/LZ78, like <userinput>gzip</userinput>.</para>
+
+<para><command>bzip2recover</command> tries to recover data from damaged
+bzip2 files.</para>
+
+<para><command>bzless</command> runs less on bzipped files.</para>
+
+<para><command>bzmore</command> runs more on bzipped files.</para>
+
+<para><command>libbz2*</command> is the library implementing lossless,
+block-sorting data compression, using the Burrows-Wheeler algorithm.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Bzip2 Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &bzip2-depversion;.)</para> -->
+
+<para>Bzip2 depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Make.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-coreutils" xreflabel="Coreutils">
+<title>Coreutils</title>
+<?dbhtml filename="coreutils.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-coreutils"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Coreutils (5.0):
+<ulink url="ftp://ftp.gnu.org/gnu/coreutils/"/>
+
+Coreutils Hostname Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/coreutils-5.0-hostname-2.patch"/>
+
+Coreutils Uname Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/coreutils-5.0-uname.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Coreutils</title>
+
+<para>The Coreutils package contains a whole series of basic shell utilities.</para>
+
+<!-- <para>(Last checked against version &coreutils-contversion;.)</para> -->
+
+<para><emphasis>Installed programs</emphasis>: basename, cat, chgrp, chmod,
+chown, chroot, cksum, comm, cp, csplit, cut, date, dd, df, dir, dircolors,
+dirname, du, echo, env, expand, expr, factor, false, fmt, fold, groups, head,
+hostid, hostname, id, install, join, link, ln, logname, ls, md5sum,
+mkdir, mkfifo, mknod, mv, nice, nl, nohup, od, paste, pathchk, pinky, pr,
+printenv, printf, ptx, pwd, readlink, rm, rmdir, seq, sha1sum, shred, sleep,
+sort, split, stat, stty, su, sum, sync, tac, tail, tee, test, touch, tr, true,
+tsort, tty, uname, unexpand, uniq, unlink, uptime, users, vdir, wc, who,
+whoami and yes</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>basename</command> strips any path and a given suffix from
+the given file name.</para>
+
+<para><command>cat</command> concatenates files to standard output.</para>
+
+<para><command>chgrp</command> changes the group ownership of each given
+file to the given group. The group can be either given a a name or a numeric
+ID.</para>
+
+<para><command>chmod</command> changes the permissions of each given file
+to the given mode. The mode can be either a symbolic representation of the
+changes to make, or an octal number representing the new permissions.</para>
+
+<para><command>chown</command> changes the user and/or group ownership of
+each given file to the given user:group pair.</para>
+
+<para><command>chroot</command> runs a given command with the specified
+directory as the <filename>/</filename> directory. The given command can be an
+interactive shell. On most systems only <emphasis>root</emphasis> can do
+this.</para>
+
+<para><command>cksum</command> prints the CRC checksum and the byte
+counts of each specified file.</para>
+
+<para><command>comm</command> compares two sorted files, outputting in
+three columns the lines that are unique, and the lines that are common.</para>
+
+<para><command>cp</command> copies files.</para>
+
+<para><command>csplit</command> splits a given file into several new files,
+separating them according to given patterns or line numbers, and outputting
+the byte count of each new file.</para>
+
+<para><command>cut</command> prints parts of lines, selecting the parts
+according to given fields or positions.</para>
+
+<para><command>date</command> displays the current time in the given
+format, or sets the system date.</para>
+
+<para><command>dd</command> copies a file using the given blocksize and
+count, while optionally performing conversions on it.</para>
+
+<para><command>df</command> reports the amount of disk space available
+(and used) on all mounted filesystems, or only on the filesystems holding the
+given files.</para>
+
+<para><command>dir</command> is the same as ls.</para>
+
+<para><command>dircolors</command> outputs commands to set the LS_COLOR
+environment variable, to change the color scheme used by ls.</para>
+
+<para><command>dirname</command> strips the non-directory suffix from
+a given file name.</para>
+
+<para><command>du</command> reports the amount of disk space used by the
+current directory, or by each of the given directories including all their
+subdirectories, or by each of the given files.</para>
+
+<para><command>echo</command> displays the given strings.</para>
+
+<para><command>env</command> runs a command in a modified environment.</para>
+
+<para><command>expand</command> converts tabs to spaces.</para>
+
+<para><command>expr</command> evaluates expressions.</para>
+
+<para><command>factor</command> prints the prime factors of all specified
+integer numbers.</para>
+
+<para><command>false</command> does nothing, unsuccessfully. It always
+exits with a status code indicating failure.</para>
+
+<para><command>fmt</command> reformats the paragraphs in the given files.</para>
+
+<para><command>fold</command> wraps the lines in the given files.</para>
+
+<para><command>groups</command> reports a user's group memberships.</para>
+
+<para><command>head</command> prints the first ten lines (or the given
+number of lines) of each given file.</para>
+
+<para><command>hostid</command> reports the numeric identifier
+(in hexadecimal) of the host.</para>
+
+<para><command>hostname</command> reports or sets the name of the
+host.</para>
+
+<para><command>id</command> reports the effective user ID, group ID, and
+group memberships of the current user, or of a given user.</para>
+
+<para><command>install</command> copies files while setting their
+permission modes and, if possible, their owner and group.</para>
+
+<para><command>join</command> joins from two files the lines that have
+identical join fields.</para>
+
+<para><command>link</command> creates a hard link with the given name
+to the given file.</para>
+
+<para><command>ln</command> makes hard links or soft links between files.</para>
+
+<para><command>logname</command> reports the current user's login name.</para>
+
+<para><command>ls</command> lists the contents of each given directory.
+By default it orders the files and subdirectories alphabetically.</para>
+
+<para><command>md5sum</command> reports or checks MD5 checksums.</para>
+
+<para><command>mkdir</command> creates directories with the given names.</para>
+
+<para><command>mkfifo</command> creates FIFOs with the given names.</para>
+
+<para><command>mknod</command> creates device nodes with the given names.
+A device node is a character special file, or a block special file, or a FIFO.</para>
+
+<para><command>mv</command> moves or renames files or directories.</para>
+
+<para><command>nice</command> runs a program with modified scheduling priority.</para>
+
+<para><command>nl</command> numbers the lines from the given files.</para>
+
+<para><command>nohup</command> runs a command immune to hangups, with
+output redirected to a log file.</para>
+
+<para><command>od</command> dumps files in octal and other formats.</para>
+
+<para><command>paste</command> merges the given files, joining
+sequentially corresponding lines side by side, separated by TABs.</para>
+
+<para><command>pathchk</command> checks whether file names are valid
+or portable.</para>
+
+<para><command>pinky</command> is a lightweight finger. It reports
+some information about the given users.</para>
+
+<para><command>pr</command> paginates and columnates files for printing.</para>
+
+<para><command>printenv</command> prints the environment.</para>
+
+<para><command>printf</command> prints the given arguments according to the
+given format -- much like the C printf function.</para>
+
+<para><command>ptx</command> produces from the contents of the given files
+a permuted index, with each keyword in its context.</para>
+
+<para><command>pwd</command> reports the name of the current directory.</para>
+
+<para><command>readlink</command> reports the value of the given symbolic
+link.</para>
+
+<para><command>rm</command> removes files or directories.</para>
+
+<para><command>rmdir</command> removes directories, if they are empty.</para>
+
+<para><command>seq</command> prints a sequence of numbers, within a given
+range and with a given increment.</para>
+
+<para><command>sha1sum</command> prints or checks 160-bit SHA1
+checksums.</para>
+
+<para><command>shred</command> overwrites the given files repeatedly with
+strange patterns, to make it real hard to recover the data.</para>
+
+<para><command>sleep</command> pauses for the given amount of time.</para>
+
+<para><command>sort</command> sorts the lines from the given files.</para>
+
+<para><command>split</command> splits the given file into pieces, by size
+or by number of lines.</para>
+
+<para><command>stty</command> sets or reports terminal line settings.</para>
+
+<para><command>su</command> runs a shell with substitute user and group IDs.</para>
+
+<para><command>sum</command> prints checksum and block counts for each
+given file.</para>
+
+<para><command>sync</command> flushes filesystem buffers. It forces
+changed blocks to disk and updates the super block.</para>
+
+<para><command>tac</command> concatenates the given files in reverse.</para>
+
+<para><command>tail</command> prints the last ten lines (or the given
+number of lines) of each given file.</para>
+
+<para><command>tee</command> reads from standard input while writing both
+to standard output and to the given files.</para>
+
+<para><command>test</command> compares values and checks file types.</para>
+
+<para><command>touch</command> changes file timestamps, setting the access
+and modification times of the given files to the current time. Files that do
+not exist are created with zero length.</para>
+
+<para><command>tr</command> translates, squeezes, and deletes the given
+characters from standard input.</para>
+
+<para><command>true</command> does nothing, successfully. It always exits
+with a status code indicating success.</para>
+
+<para><command>tsort</command> performs a topological sort. It writes a
+totally ordered list according to the partial ordering in a given file.</para>
+
+<para><command>tty</command> reports the file name of the terminal
+connected to standard input.</para>
+
+<para><command>uname</command> reports system information.</para>
+
+<para><command>unexpand</command> converts spaces to tabs.</para>
+
+<para><command>uniq</command> discards all but one of successive
+identical lines.</para>
+
+<para><command>unlink</command> removes the given file.</para>
+
+<para><command>uptime</command> reports how long the system has been
+running, how many users are logged on, and the system load averages.</para>
+
+<para><command>users</command> reports the names of the users currently
+logged on.</para>
+
+<para><command>vdir</command> is the same as ls -l.</para>
+
+<para><command>wc</command> reports the number of lines, words, and bytes
+for each given file, and a total line when more than one file is given.</para>
+
+<para><command>who</command> reports who is logged on.</para>
+
+<para><command>whoami</command> reports the user name associated with the
+current effective user ID.</para>
+
+<para><command>yes</command> outputs 'y' or a given string repeatedly,
+until killed.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Coreutils Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &coreutils-depversion;.)</para> -->
+
+<para>Coreutils depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
+Gettext, Glibc, Grep, Make, Perl, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-dejagnu" xreflabel="DejaGnu">
+<title>DejaGnu</title>
+<?dbhtml filename="dejagnu.html"?>
+
+<para>For installation instructions see <xref linkend="ch05-dejagnu"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>DejaGnu (1.4.3):
+<ulink url="ftp://ftp.gnu.org/gnu/dejagnu/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of DejaGnu</title>
+
+<!-- <para>(Last checked against version &dejagnu-contversion;.)</para> -->
+
+<para>The DejaGnu package contains a framework for testing other programs.</para>
+
+<para><emphasis>Installed program</emphasis>: runtest</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short description</title>
+
+<para><command>runtest</command> is the wrapper script that finds the proper
+expect shell and then runs DejaGnu.</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>DejaGnu Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &dejagnu-depversion;.)</para> -->
+
+<para>Dejagnu depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-diffutils" xreflabel="Diffutils">
+<title>Diffutils</title>
+<?dbhtml filename="diffutils.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-diffutils"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Diffutils (2.8.1):
+<ulink url="ftp://ftp.gnu.org/gnu/diffutils/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Diffutils</title>
+
+<!-- <para>(Last checked against version &diffutils-contversion;.)</para> -->
+
+<para>The programs from this package show you the differences between two
+files or directories. It's most common use is to create software
+patches.</para>
+
+<para><emphasis>Installed programs</emphasis>: cmp, diff, diff3 and sdiff</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>cmp</command> compares two files and reports whether or
+in which bytes they differ.</para>
+
+<para><command>diff</command> compares two files or directories and reports
+which lines in the files differ.</para>
+
+<para><command>diff3</command> compares three files line by line.</para>
+
+<para><command>sdiff</command> merges two files and interactively outputs
+the results.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Diffutils Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &diffutils-depversion;.)</para> -->
+
+<para>Diffutils depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
+Gettext, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-e2fsprogs" xreflabel="E2fsprogs">
+<title>E2fsprogs</title>
+<?dbhtml filename="e2fsprogs.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-e2fsprogs"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>E2fsprogs (1.34):
+<ulink url="ftp://download.sourceforge.net/pub/sourceforge/e2fsprogs/"/>
+<ulink url="http://download.sourceforge.net/e2fsprogs/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of E2fsprogs</title>
+
+<!-- <para>(Last checked against version &e2fsprogs-contversion;.)</para> -->
+
+<para>E2fsprogs provides the filesystem utilities for use with the
+ ext2 filesystem. It also supports the ext3 filesystem with journaling
+ support.</para>
+
+<para><emphasis>Installed programs</emphasis>: badblocks, blkid, chattr,
+compile_et, debugfs, dumpe2fs, e2fsck, e2image, e2label, findfs, fsck,
+fsck.ext2, fsck.ext3, logsave, lsattr, mk_cmds, mke2fs, mkfs.ext2, mkfs.ext3,
+mklost+found, resize2fs, tune2fs and uuidgen.</para>
+
+<para><emphasis>Installed libraries</emphasis>: libblkid.[a,so],
+libcom_err.[a,so], libe2p.[a,so], libext2fs.[a,so], libss.[a,so] and
+libuuid.[a,so]</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>badblocks</command> searches a device (usually a disk
+partition) for bad blocks.</para>
+
+<para><command>blkid</command> is a command line utility to locate and
+print block device attributes.</para>
+
+<para><command>chattr</command> changes the attributes of files on a
+second extended (ext2) filesystem.</para>
+
+<para><command>compile_et</command> is an error table compiler. It
+converts a table of error-code names and messages into a C source file
+suitable for use with the com_err library.</para>
+
+<para><command>debugfs</command> is a filesystem debugger. It can be
+used to examine and change the state of an ext2 filesystem.</para>
+
+<para><command>dumpe2fs</command> prints the super block and blocks group
+information for the filesystem present on a given device.</para>
+
+<para><command>e2fsck</command> is used to check, and optionally repair,
+second extended (ext2) filesystems, and also ext3 filesystems.</para>
+
+<para><command>e2image</command> is used to save critical ext2 filesystem
+data to a file.</para>
+
+<para><command>e2label</command> will display or change the filesystem
+label on the ext2 filesystem present on a given device.</para>
+
+<para><command>findfs</command> finds a file system by label or UUID.</para>
+
+<para><command>fsck</command> is used to check, and optionally repair,
+filesystems. By default it checks the filesystems listed in
+<filename>/etc/fstab</filename></para>
+
+<para><command>logsave</command> saves the output of a command in a logfile.</para>
+
+<para><command>lsattr</command> lists the attributes of files on a second
+extended filesystem.</para>
+
+<para><command>mk_cmds</command> converts a table of command names
+and help messages into a C source file suitable for use with the
+<filename>libss</filename> subsystem library.</para>
+
+<para><command>mke2fs</command> is used to create a second extended
+filesystem on the given device.</para>
+
+<para><command>mklost+found</command> is used to create a
+<filename>lost+found</filename> directory on a second extended filesystem.
+It pre-allocates disk blocks to this directory to lighten the task of e2fsck.</para>
+
+<para><command>resize2fs</command> can be used to enlarge or shrink an
+ext2 filesystem.</para>
+
+<para><command>tune2fs</command> is used adjust tunable filesystem
+parameters on a second extended filesystem.</para>
+
+<para><command>uuidgen</command> creates new universally unique
+identifiers (UUID). Each new UUID can reasonably be considered unique
+among all UUIDs created, on the local system and on other systems, in the
+past and in the future.</para>
+
+<para><command>libblkid</command> contains routines for device
+identification and token extraction.</para>
+
+<para><command>libcom_err</command> is the common error display routine.</para>
+
+<para><command>libe2p</command> is used by dumpe2fs, chattr, and lsattr.</para>
+
+<para><command>libext2fs</command> contains routines to enable user-level
+programs to manipulate an ext2 filesystem.</para>
+
+<para><command>libss</command> is used by debugfs.</para>
+
+<para><command>libuuid</command> contains routines for generating unique
+identifiers for objects that may be accessible beyond the local system.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>E2fsprogs Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &e2fsprogs-depversion;.)</para> -->
+
+<para>E2fsprogs depends on: Bash, Binutils, Coreutils,
+Diffutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, Texinfo.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-ed" xreflabel="Ed">
+<title>Ed</title>
+<?dbhtml filename="ed.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-ed"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Ed (0.2): 
+<ulink url="ftp://ftp.gnu.org/gnu/ed/"/>
+
+Ed Mkstemp Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/ed-0.2-mkstemp.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Ed</title>
+
+<!-- <para>(Last checked against version &ed-contversion;.)</para> -->
+
+<para>GNU ed is an 8-bit clean, POSIX-compliant line editor.</para>
+
+<para><emphasis>Installed programs</emphasis>: ed and red (link to ed)</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>ed</command> is a line-oriented text editor. It can be used
+to create, display, modify and otherwise manipulate text files.</para>
+
+<para><command>red</command> is a restricted ed -- it can only edit files
+in the current directory and cannot execute shell commands.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Ed Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &ed-depversion;.)</para> -->
+
+<para>Ed depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
+Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-expect" xreflabel="expect">
+<title>Expect</title>
+<?dbhtml filename="expect.html"?>
+
+<para>For installation instructions see <xref linkend="ch05-expect"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Expect (5.39.0):
+<ulink url="http://expect.nist.gov/src/"/>
+
+Expect Spawn Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/expect-5.39.0-spawn.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Expect</title>
+
+<!-- <para>(Last checked against version &expect-contversion;.)</para> -->
+
+<para>The Expect package provides a program that performs programmed dialogue
+with other interactive programs.</para>
+
+<para><emphasis>Installed program</emphasis>: expect</para>
+
+<para><emphasis>Installed library</emphasis>: libexpect5.39.a</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short description</title>
+
+<para><command>expect</command> "talks" to other interactive programs according
+to a script.</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Expect Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &expect-depversion;.)</para> -->
+
+<para>Expect depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Sed, Tcl.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-file" xreflabel="File">
+<title>File</title>
+<?dbhtml filename="file.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-file"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>File (4.06): 
+<ulink url="ftp://ftp.gw.com/mirrors/pub/unix/file/"/>
+
+Alternate Download Location:
+<ulink url="ftp://gaosu.rave.org/pub/linux/lfs/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of File</title>
+
+<!-- <para>(Last checked against version &file-contversion;.)</para> -->
+
+<para>File is a utility used to determine file types.</para>
+
+<para><emphasis>Installed program</emphasis>: file</para>
+
+<para><emphasis>Installed library</emphasis>: libmagic.[a,so]</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short description</title>
+
+<para><command>file</command> tries to classify each given file. It does
+this by performing several tests: filesystem tests, magic number tests, and
+language tests. The first test that succeeds determines the result.</para>
+
+<para><command>libmagic</command> contains routines for magic number
+recognition, used by the file program.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>File Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &file-depversion;.)</para> -->
+
+<para>File depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Sed, Zlib.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-findutils" xreflabel="Findutils">
+<title>Findutils</title>
+<?dbhtml filename="findutils.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-findutils"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Findutils (4.3CR20):
+<ulink url="ftp://alpha.gnu.org/gnu/findutils/"/></literallayout>
+
+</sect2>
+
+<sect2><title>Contents of Findutils</title>
+
+<!-- <para>(Last checked against version &findutils-contversion;.)</para> -->
+
+<para>The Findutils package contains programs to find files, either
+on-the-fly (by doing a live recursive search through directories and only
+showing files that match the specifications) or by searching through a
+database.</para>
+
+<para><emphasis>Installed programs</emphasis>: bigram, code, find, frcode,
+locate, updatedb and xargs</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>bigram</command> was formerly used to produce locate
+databases.</para>
+
+<para><command>code</command> was formerly used to produce locate
+databases. It is the ancestor of frcode.</para>
+
+<para><command>find</command> searches given directory trees for files
+matching the specified criteria.</para>
+
+<para><command>frcode</command> is called by updatedb to compress the
+list of file names. It uses front-compression, reducing the database size by a
+factor of 4 to 5.</para>
+
+<para><command>locate</command> searches through a database of file names,
+and reports the names that contain a given string or match a given pattern.</para>
+
+<para><command>updatedb</command> updates the locate database. It scans
+the entire filesystem (including other filesystems that are currently mounted,
+unless told not to) and puts every file name it finds in the database.</para>
+
+<para><command>xargs</command> can be used to apply a given command to
+a list of files.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Findutils Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &findutils-depversion;.)</para> -->
+
+<para>Findutils depends on: Bash, Binutils, Coreutils,
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-flex" xreflabel="Flex">
+<title>Flex</title>
+<?dbhtml filename="flex.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-flex"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Flex (2.5.4a): 
+<ulink url="ftp://ftp.gnu.org/non-gnu/flex/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Flex</title>
+
+<!-- <para>(Last checked against version &flex-contversion;.)</para> -->
+
+<para>The Flex package is used to generate programs which recognize
+patterns in text.</para>
+
+<para><emphasis>Installed programs</emphasis>: flex, flex++ (link to flex)
+and lex</para>
+
+<para><emphasis>Installed library</emphasis>: libfl.a</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>flex</command> is a tool for generating programs that
+recognize patterns in text. Pattern recognition is useful in many applications.
+From a set of rules on what to look for flex makes a program that looks for
+those patterns. The reason to use flex is that it is much easier to specify
+the rules for than to write the actual pattern-finding program.</para>
+
+<para><command>flex++</command> invokes a version of flex that is used
+exclusively for C++ scanners.</para>
+
+<para><command>libfl.a</command> is the flex library.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Flex Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &flex-depversion;.)</para> -->
+
+<para>Flex depends on: Bash, Binutils, Bison, Coreutils, Diffutils,
+GCC, Gettext, Glibc, Grep, M4, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-gawk" xreflabel="Gawk">
+<title>Gawk</title>
+<?dbhtml filename="gawk.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-gawk"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Gawk (3.1.3): 
+<ulink url="ftp://ftp.gnu.org/pub/gnu/gawk/"/>
+
+Gawk Libexecdir Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gawk-3.1.3-libexecdir.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Gawk</title>
+
+<!-- <para>(Last checked against version &gawk-contversion;.)</para> -->
+
+<para>Gawk is an awk implementation that is used to manipulate text
+files.</para>
+
+<para><emphasis>Installed programs</emphasis>: awk (link to gawk), gawk,
+gawk-3.1.3, grcat, igawk, pgawk, pgawk-3.1.3 and pwcat</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>gawk</command> is a program for manipulating text files.
+It is the GNU implementation of awk.</para>
+
+<para><command>grcat</command> dumps the group database
+<filename>/etc/group</filename>.</para>
+
+<para><command>igawk</command> gives gawk the ability to
+include files.</para>
+
+<para><command>pgawk</command> is the profiling version of gawk.</para>
+
+<para><command>pwcat</command> dumps the password database
+<filename>/etc/passwd</filename>.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Gawk Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &gawk-depversion;.)</para> -->
+
+<para>Gawk depends on: Bash, Binutils, Coreutils,
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-gcc" xreflabel="GCC">
+<title>GCC</title>
+<?dbhtml filename="gcc.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-gcc"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>GCC (3.3.2): 
+<ulink url="ftp://ftp.gnu.org/pub/gnu/gcc/"/>
+
+GCC No-Fixincludes Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-3.3.2-no_fixincludes-1.patch"/>
+
+GCC Specs Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-3.3.2-specs-1.patch"/>
+
+GCC-2 (2.95.3): 
+<ulink url="ftp://ftp.gnu.org/pub/gnu/gcc/"/>
+
+GCC-2 Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-2.95.3-2.patch"/>
+
+GCC-2 No-Fixincludes Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-2.95.3-no-fixinc.patch"/>
+
+GCC-2 Return-Type Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-2.95.3-returntype-fix.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of GCC</title>
+
+<!-- <para>(Last checked against version &gcc-contversion;.)</para> -->
+
+<para>The GCC package contains the GNU compiler collection, including
+the C and C++ compilers.</para>
+
+<para><emphasis>Installed programs</emphasis>: c++, cc (link to gcc),
+cc1, cc1plus, collect2, cpp, g++, gcc, gccbug, and gcov</para>
+
+<para><emphasis>Installed libraries</emphasis>: libgcc.a, libgcc_eh.a,
+libgcc_s.so, libstdc++.[a,so] and libsupc++.a</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>cpp</command> is the C preprocessor. It is used by the
+compiler to have the #include and #define and such statements expanded in
+the source files.</para>
+
+<para><command>g++</command> is the C++ compiler.</para>
+
+<para><command>gcc</command> is the C compiler. It is used to translate
+the source code of a program into assembly code.</para>
+
+<para><command>gccbug</command> is a shell script used to help create
+good bug reports.</para>
+
+<para><command>gcov</command> is a coverage testing tool. It is used to
+analyze programs to find out where optimizations will have the most effect.</para>
+
+<para><command>libgcc*</command> contains run-time support for gcc.</para>
+
+<para><command>libstdc++</command> is the standard C++ library. It contains
+many frequently-used functions.</para>
+
+<para><command>libsupc++</command> provides supporting routines
+for the c++ programming language.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>GCC Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &gcc-depversion;.)</para> -->
+
+<para>GCC depends on: Bash, Binutils, Coreutils, Diffutils, Findutils,
+Gawk, Gettext, Glibc, Grep, Make, Perl, Sed, Texinfo.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-gettext" xreflabel="Gettext">
+<title>Gettext</title>
+<?dbhtml filename="gettext.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-gettext"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Gettext (0.13.1): 
+<ulink url="ftp://ftp.gnu.org/gnu/gettext/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Gettext</title>
+
+<!-- <para>(Last checked against version &gettext-contversion;.)</para> -->
+
+<para>The Gettext package is used for internationalization and
+localization. Programs can be compiled with Native Language Support
+(NLS) which enable them to output messages in the user's native
+language.</para>
+
+<para><emphasis>Installed programs</emphasis>: autopoint, config.charset,
+config.rpath, envsubst, gettext, gettextize, hostname, msgattrib, msgcat, msgcmp,
+msgcomm, msgconv, msgen, msgexec, msgfilter, msgfmt, msggrep, msginit,
+msgmerge, msgunfmt, msguniq, ngettext, project-id, team-address, trigger,
+urlget, user-email and xgettext</para>
+
+<para><emphasis>Installed libraries</emphasis>: libasprintf[a,so],
+libgettextlib[a,so], libgettextpo[a,so] and libgettextsrc[a,so]</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>autopoint</command> copies standard gettext infrastructure
+files into a source package.</para>
+
+<para><command>config.charset</command> outputs a system-dependent table of
+character encoding aliases.</para>
+
+<para><command>config.rpath</command> outputs a system-dependent set of
+variables, describing how to set the runtime search path of shared libraries in an
+executable.</para>
+
+<para><command>envsubst</command> substitutes environment variables in shell
+format strings.</para>
+
+<para><command>gettext</command> translates a natural language message into
+the user's language, by looking up the translation in a message catalog.</para>
+
+<para><command>gettextize</command> copies all standard Gettext files into
+the given top-level directory of a package, to begin internationalizing it.</para>
+
+<para><command>hostname</command> displays a network hostname in various
+forms.</para>
+
+<para><command>msgattrib</command> filters the messages of a translation
+catalog according to their attributes and manipulates the attributes.</para>
+
+<para><command>msgcat</command> concatenates and merges the given
+<filename>.po</filename> files.</para>
+
+<para><command>msgcmp</command> compares two <filename>.po</filename>
+files to check that both contain the same set of msgid strings.</para>
+
+<para><command>msgcomm</command> finds the messages that are common to
+to the given <filename>.po</filename> files.</para>
+
+<para><command>msgconv</command> converts a translation catalog to a
+different character encoding.</para>
+
+<para><command>msgen</command> creates an English translation catalog.</para>
+
+<para><command>msgexec</command> applies a command to all translations of a
+translation catalog.</para>
+
+<para><command>msgfilter</command> applies a filter to all translations of a
+translation catalog.</para>
+
+<para><command>msgfmt</command> generates a binary message catalog from
+from a translation catalog.</para>
+
+<para><command>msggrep</command> extracts all messages of a translation
+catalog that match a given pattern or belong to some given source files.</para>
+
+<para><command>msginit</command> creates a new  <filename>.po</filename>
+file, initializing the meta information with values from the user's
+environment.</para>
+
+<para><command>msgmerge</command> combines two raw translations into a
+single file.</para>
+
+<para><command>msgunfmt</command> decompiles a binary message catalog
+into raw translation text.</para>
+
+<para><command>msguniq</command> unifies duplicate translations in a
+translation catalog.</para>
+
+<para><command>ngettext</command> displays native language translations of a
+textual message whose grammatical form depends on a number.</para>
+
+<para><command>xgettext</command> extracts the translatable message lines
+from the given source files, to make the first translation template.</para>
+
+<para><command>libasprintf</command> defines the autosprintf class which
+makes C formatted output routines usable in C++ programs, for use with the
+&lt;string&gt; strings and the &lt;iostream&gt; streams.</para>
+
+<para><command>libgettextlib</command> is a private library containing
+common routines used by the various gettext programs. They're not meant for
+general use.</para>
+
+<para><command>libgettextpo</command> is used to write specialized
+programs that process PO files. This library is used when the standard
+applications shipped with gettext won't suffice (such as msgcomm, msgcmp,
+msgattrib and msgen).</para>
+
+<para><command>libgettextsrc</command> is a private library containing
+common routines used by the various gettext programs. They're not meant for
+general use.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Gettext Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &gettext-depversion;.)</para> -->
+
+<para>Gettext depends on: Bash, Binutils, Bison, Coreutils,
+Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-glibc" xreflabel="Glibc">
+<title>Glibc</title>
+<?dbhtml filename="glibc.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-glibc"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Glibc (2.3.2): 
+<ulink url="ftp://ftp.gnu.org/gnu/glibc/"/>
+
+Glibc-linuxthreads (2.3.2): 
+<ulink url="ftp://ftp.gnu.org/gnu/glibc/"/>
+
+Glibc Sscanf Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/glibc-2.3.2-sscanf-1.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Glibc</title>
+
+<!-- <para>(Last checked against version &glibc-contversion;.)</para> -->
+
+<para>Glibc is the C library that provides the system calls and basic
+functions such as open, malloc, printf, etc. The C library is used by all
+dynamically linked programs.</para>
+
+<para><emphasis>Installed programs</emphasis>: catchsegv, gencat, getconf,
+getent, glibcbug, iconv, iconvconfig, ldconfig, ldd, lddlibc4, locale,
+localedef, mtrace, nscd, nscd_nischeck, pcprofiledump, pt_chown, rpcgen,
+rpcinfo, sln, sprof, tzselect, xtrace, zdump and zic</para>
+
+<para><emphasis>Installed libraries</emphasis>: ld.so, libBrokenLocale.[a,so],
+libSegFault.so, libanl.[a,so], libbsd-compat.a, libc.[a,so], libc_nonshared.a,
+libcrypt.[a,so], libdl.[a,so], libg.a, libieee.a, libm.[a,so], libmcheck.a,
+libmemusage.so, libnsl.a, libnss_compat.so, libnss_dns.so, libnss_files.so,
+libnss_hesiod.so, libnss_nis.so, libnss_nisplus.so, libpcprofile.so,
+libpthread.[a,so], libresolv.[a,so], librpcsvc.a, librt.[a,so], libthread_db.so
+and libutil.[a,so]</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>catchsegv</command> can be used to create a stack trace
+when a program terminates with a segmentation fault.</para>
+
+<para><command>gencat</command> generates message catalogues.</para>
+
+<para><command>getconf</command> displays the system configuration values
+for filesystem specific variables.</para>
+
+<para><command>getent</command> gets entries from an administrative
+database.</para>
+
+<para><command>glibcbug</command> creates a bug report and mails it to the
+bug email address.</para>
+
+<para><command>iconv</command> performs character set conversion.</para>
+
+<para><command>iconvconfig</command> creates fastloading iconv module
+configuration file.</para>
+
+<para><command>ldconfig</command> configures the dynamic linker runtime
+bindings.</para>
+
+<para><command>ldd</command> reports which shared libraries are required
+by each given program or shared library.</para>
+
+<para><command>lddlibc4</command> assists ldd with object files.</para>
+
+<para><command>locale</command> is a Perl program that tells the compiler
+to enable or disable the use of POSIX locales for built-in operations.</para>
+
+<para><command>localedef</command> compiles locale specifications.</para>
+
+<para><command>mtrace</command>...</para>
+
+<para><command>nscd</command> is a name service cache daemon providing a
+cache for the most common name service requests.</para>
+
+<para><command>nscd_nischeck</command> checks whether or not secure mode
+is necessary for NIS+ lookup.</para>
+
+<para><command>pcprofiledump</command> dumps information generated by
+PC profiling.</para>
+
+<para><command>pt_chown</command> is a helper program for grantpt to set
+the owner, group and access permissions of a slave pseudo terminal.</para>
+
+<para><command>rpcgen</command> generates C code to implement the
+RPC protocol.</para>
+
+<para><command>rpcinfo</command> makes an RPC call to an RPC server.</para>
+
+<para><command>sln</command> is used to make symbolic links. The program
+is statically linked, so it is useful for making symbolic links to dynamic
+libraries if the dynamic linking system for some reason is nonfunctional.</para>
+
+<para><command>sprof</command> reads and displays shared object profiling
+data.</para>
+
+<para><command>tzselect</command> asks the user about the location of the
+system and reports the corresponding time zone description.</para>
+
+<para><command>xtrace</command> traces the execution of a program by
+printing the currently executed function.</para>
+
+<para><command>zdump</command> is the time zone dumper.</para>
+
+<para><command>zic</command> is the time zone compiler.</para>
+
+<para><command>ld.so</command> is the helper program for shared library
+executables.</para>
+
+<para><command>libBrokenLocale</command> is used by programs, such as
+Mozilla, to solve broken locales.</para>
+
+<para><command>libSegFault</command> is a segmentation fault signal
+handler. It tries to catch segfaults.</para>
+
+<para><command>libanl</command> is an asynchronous name lookup
+library.</para>
+
+<para><command>libbsd-compat</command> provides the portability needed
+in order to run certain BSD programs under Linux.</para>
+
+<para><command>libc</command> is the main C library -- a collection of
+commonly used functions.</para>
+
+<para><command>libcrypt</command> is the cryptography library.</para>
+
+<para><command>libdl</command> is the dynamic linking interface library.</para>
+
+<para><command>libg</command> is a runtime library for g++.</para>
+
+<para><command>libieee</command> is the IEEE floating point library.</para>
+
+<para><command>libm</command> is the mathematical library.</para>
+
+<para><command>libmcheck</command> contains code run at boot.</para>
+
+<para><command>libmemusage</command> is used by memusage to help collect
+information about the memory usage of a program.</para>
+
+<para><command>libnsl</command> is the network services library.</para>
+
+<para><command>libnss*</command> are the Name Service Switch libraries,
+containing functions for resolving host names, user names, group names,
+aliases, services, protocols,and the like.</para>
+
+<para><command>libpcprofile</command> contains profiling functions used
+to track the amount of CPU time spent in which source code lines.</para>
+
+<para><command>libpthread</command> is the POSIX threads library.</para>
+
+<para><command>libresolv</command> contains functions for creating,
+sending, and interpreting packets to the Internet domain name servers.</para>
+
+<para><command>librpcsvc</command>contains functions providing
+miscellaneous RPC services.</para>
+
+<para><command>librt</command> contains functions providing most of the
+interfaces specified by the POSIX.1b Realtime Extension.</para>
+
+<para><command>libthread_db</command> contains functions useful for
+building debuggers for multi-threaded programs.</para>
+
+<para><command>libutil</command> contains code for "standard" functions
+used in many different Unix utilities.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Glibc Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &glibc-depversion;.)</para> -->
+
+<para>Glibc depends on: Bash, Binutils, Coreutils, Diffutils,
+Gawk, GCC, Gettext, Grep, Make, Perl, Sed, Texinfo.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-grep" xreflabel="Grep">
+<title>Grep</title>
+<?dbhtml filename="grep.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-grep"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Grep (2.5.1): 
+<ulink url="ftp://ftp.gnu.org/gnu/grep/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Grep</title>
+
+<!-- <para>(Last checked against version &grep-contversion;.)</para> -->
+
+<para>Grep is a program used to print lines from a file matching a
+specified pattern.</para>
+
+<para><emphasis>Installed programs</emphasis>: egrep (link to grep), fgrep
+(link to grep) and grep</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>egrep</command> prints lines matching an extended regular
+expression.</para>
+
+<para><command>fgrep</command> prints lines matching a list of fixed
+strings.</para>
+
+<para><command>grep</command> prints lines matching a basic regular
+expression.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Grep Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &grep-depversion;.)</para> -->
+
+<para>Grep depends on: Bash, Binutils, Coreutils,
+Diffutils, GCC, Gettext, Glibc, Make, Sed, Texinfo.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-groff" xreflabel="Groff">
+<title>Groff</title>
+<?dbhtml filename="groff.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-groff"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Groff (1.19): 
+<ulink url="ftp://ftp.gnu.org/gnu/groff/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Groff</title>
+
+<!-- <para>(Last checked against version &groff-contversion;.)</para> -->
+
+<para>The Groff package includes several text processing programs
+for text formatting. Groff translates standard text and special
+commands into formatted output, such as what you see in a manual
+page.</para>
+
+<para><emphasis>Installed programs</emphasis>: addftinfo, afmtodit, eqn,
+eqn2graph, geqn (link to eqn), grn, grodvi, groff, groffer, grog, grolbp,
+grolj4, grops, grotty, gtbl (link to tbl), hpftodit, indxbib, lkbib,
+lookbib, mmroff, neqn, nroff, pfbtops, pic, pic2graph, post-grohtml,
+pre-grohtml, refer, soelim, tbl, tfmtodit, troff and zsoelim (link to
+soelim)</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>addftinfo</command> reads a troff font file and adds some
+additional font-metric information that is used by the groff system.</para>
+
+<para><command>afmtodit</command> creates a font file for use with
+groff and grops.</para>
+
+<para><command>eqn</command> compiles descriptions of equations embedded
+within troff input files into commands that are understood by troff.</para>
+
+<para><command>eqn2graph</command> converts an EQN equation into a cropped
+image.</para>
+
+<para><command>grn</command> is a groff preprocessor for gremlin files.</para>
+
+<para><command>grodvi</command> is a driver for groff that produces TeX dvi format.</para>
+
+<para><command>groff</command> is a front-end to the groff document
+formatting system. Normally it runs the troff program and a post-processor
+appropriate for the selected device.</para>
+
+<para><command>groffer</command> displays groff files and man pages on X
+and tty.</para>
+<para><command>grog</command> reads files and guesses which of the groff
+options -e, -man, -me, -mm, -ms, -p, -s, and -t are required for printing
+files, and reports the groff command including those options.</para>
+
+<para><command>grolbp</command> is a groff driver for Canon CAPSL printers
+(LBP-4 and LBP-8 series laser printers).</para>
+
+<para><command>grolj4</command> is a driver for groff that produces output
+in PCL5 format suitable for an HP Laserjet 4 printer.</para>
+
+<para><command>grops</command> translates the output of GNU troff to
+Postscript.</para>
+
+<para><command>grotty</command> translates the output of GNU troff into
+a form suitable for typewriter-like devices.</para>
+
+<para><command>gtbl</command> is the GNU implementation of tbl.</para>
+
+<para><command>hpftodit</command> creates a font file for use with
+groff -Tlj4 from an HP-tagged font metric file.</para>
+
+<para><command>indxbib</command> makes an inverted index for the
+bibliographic databases a specified file for use with refer, lookbib,
+and lkbib.</para>
+
+<para><command>lkbib</command> searches bibliographic databases for
+references that contain specified keys and reports any references found.</para>
+
+<para><command>lookbib</command> prints a prompt on the standard error
+(unless the standard input is not a terminal), reads from the standard input
+a line containing a set of keywords, searches the bibliographic databases in
+a specified file for references containing those keywords, prints any
+references found on the standard output and repeats this process until the
+end of input.</para>
+
+<para><command>mmroff</command> is a simple preprocessor for groff.</para>
+
+<para><command>neqn</command> formats equations for ascii output.</para>
+
+<para><command>nroff</command> is a script that emulates the nroff command
+using groff.</para>
+
+<para><command>pfbtops</command> translates a Postscript font in .pfb
+format to ASCII.</para>
+
+<para><command>pic</command> compiles descriptions of pictures embedded
+within troff or TeX input files into commands understood by TeX or troff.</para>
+
+<para><command>pic2graph</command> converts a PIC diagram into a cropped
+image.</para>
+
+<para><command>pre-grohtml </command> translates  the output of GNU troff
+to html.</para>
+
+<para><command>post-grohtml</command> translates the output of GNU troff
+to html.</para>
+
+<para><command>refer</command> copies the contents of a file to the
+standard output, except that lines between .[ and .] are interpreted as
+citations, and lines between .R1 and .R2 are interpreted as commands about
+how citations are to be processed.</para>
+
+<para><command>soelim</command> reads files and replaces lines of the form
+<emphasis>.so file</emphasis> by the contents of the mentioned
+<emphasis>file</emphasis>.</para>
+
+<para><command>tbl</command> compiles descriptions of tables embedded
+within troff input files into commands that are understood by troff.</para>
+
+<para><command>tfmtodit</command> creates a font file for use with
+groff -Tdvi.</para>
+
+<para><command>troff</command> is highly compatible with Unix troff.
+Usually it should be invoked using the groff command, which will also run
+preprocessors and post-processors in the appropriate order and with the
+appropriate options.</para>
+
+<para><command>zsoelim</command> is the GNU implementation of soelim.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Groff Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &groff-depversion;.)</para> -->
+
+<para>Groff depends on: Bash, Binutils, Coreutils, Diffutils,
+Gawk, GCC, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-grub" xreflabel="Grub">
+<title>Grub</title>
+<?dbhtml filename="grub.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-grub"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Grub (0.93):
+<ulink url="ftp://alpha.gnu.org/pub/gnu/grub/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Grub</title>
+
+<!-- <para>(Last checked against version &grub-contversion;.)</para> -->
+
+<para>The Grub package contains a bootloader.</para>
+
+<para><emphasis>Installed programs</emphasis>: grub, grub-install,
+grub-md5-crypt, grub-terminfo and mbchk</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>grub</command> is the GRand Unified Bootloader's command
+shell.</para>
+
+<para><command>grub-install</command> installs GRUB on the given device.</para>
+
+<para><command>grub-md5-crypt</command> encrypts a password in MD5
+format.</para>
+
+<para><command>grub-terminfo</command> generates a terminfo command from a
+terminfo name. It can be used if you have an uncommon terminal.</para>
+
+<para><command>mbchk</command> checks the format of a multiboot kernel.</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Grub Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &grub-depversion;.)</para> -->
+
+<para>Grub depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-gzip" xreflabel="Gzip">
+<title>Gzip</title>
+<?dbhtml filename="gzip.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-gzip"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Gzip (1.3.5): 
+<ulink url="ftp://alpha.gnu.org/gnu/gzip/"/></literallayout>
+
+</sect2>
+
+<sect2><title>Contents of Gzip</title>
+
+<!-- <para>(Last checked against version &gzip-contversion;.)</para> -->
+
+<para>The Gzip package contains programs to compress and decompress files
+using the Lempel-Ziv coding (LZ77).</para>
+
+<para><emphasis>Installed programs</emphasis>: gunzip (link to gzip), gzexe,
+gzip, uncompress (link to gunzip), zcat (link to gzip), zcmp, zdiff,
+zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>gunzip</command> decompresses gzipped files.</para>
+
+<para><command>gzexe</command> is used to create self-uncompressing
+executable files.</para>
+
+<para><command>gzip</command> compresses the given files, using
+Lempel-Ziv (LZ77) coding.</para>
+
+<para><command>zcat</command> uncompresses the given gzipped files to
+standard output.</para>
+
+<para><command>zcmp</command> runs cmp on gzipped files.</para>
+
+<para><command>zdiff</command> runs diff on gzipped files.</para>
+
+<para><command>zegrep</command> runs egrep on gzipped files.</para>
+
+<para><command>zfgrep</command> runs fgrep on gzipped files.</para>
+
+<para><command>zforce</command> forces a .gz extension on all given files
+that are gzipped files, so that gzip will not compress them again. This can be
+useful when file names were truncated during a file transfer.</para>
+
+<para><command>zgrep</command> runs grep on gzipped files.</para>
+
+<para><command>zless</command> runs less on gzipped files.</para>
+
+<para><command>zmore</command> runs more on gzipped files.</para>
+
+<para><command>znew</command> recompresses files from compress format
+to gzip format -- .Z to .gz.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Gzip Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &gzip-depversion;.)</para> -->
+
+<para>Gzip depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-inetutils" xreflabel="Inetutils">
+<title>Inetutils</title>
+<?dbhtml filename="inetutils.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-inetutils"/>.</para>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Inetutils (1.4.2):
+<ulink url="http://freshmeat.net/projects/inetutils/"/>
+
+Inetutils No-Server-Man-Pages Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/inetutils-1.4.2-no_server_man_pages-1.patch"/></literallayout>
+</sect2>
+
+
+<sect2><title>Contents of Inetutils</title>
+
+<!-- <para>(Last checked against version &inetutils-contversion;.)</para> -->
+
+<para>The Inetutils package contains network clients and servers.</para>
+
+<para><emphasis>Installed programs</emphasis>: ftp, ping, rcp, rlogin, rsh,
+talk, telnet and tftp</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>ftp</command> is the ARPANET file transfer program.</para>
+
+<para><command>ping</command> sends echo-request packets and reports how
+long the replies take.</para>
+
+<para><command>rcp</command> does remote file copy.</para>
+
+<para><command>rlogin</command> does remote login.</para>
+
+<para><command>rsh</command> runs a remote shell.</para>
+
+<para><command>talk</command> is used to chat up another user.</para>
+
+<para><command>telnet</command> is an interface to the TELNET protocol.</para>
+
+<para><command>tftp</command> is a trivial file transfer program.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Inetutils Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &inetutils-depversion;.)</para> -->
+
+<para>Inetutils depends on: Bash, Binutils, Coreutils,
+Diffutils, GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+<sect1 id="aa-kbd" xreflabel="Kbd">
+<title>Kbd</title>
+<?dbhtml filename="kbd.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-kbd"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Kbd (1.08): 
+<ulink url="ftp://ftp.win.tue.nl/pub/linux-local/utils/kbd/"/>
+
+Kbd More-Programs Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/kbd-1.08-more-programs-3.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Kbd</title>
+
+<!-- <para>(Last checked against version &kbd-contversion;.)</para> -->
+
+<para>Kbd contains keytable files and keyboard utilities.</para>
+
+<para><emphasis>Installed programs</emphasis>: chvt, deallocvt, dumpkeys,
+fgconsole, getkeycodes, getunimap, kbd_mode, kbdrate, loadkeys, loadunimap,
+mapscrn, openvt, psfaddtable (link to psfxtable), psfgettable (link to
+psfxtable), psfstriptable (link to psfxtable), psfxtable, resizecons,
+setfont, setkeycodes, setleds, setlogcons, setmetamode, setvesablank,
+showconsolefont, showkey, unicode_start and unicode_stop</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>chvt</command> changes the foreground virtual terminal.</para>
+
+<para><command>deallocvt</command> deallocates unused virtual terminals.</para>
+
+<para><command>dumpkeys</command> dumps the keyboard translation tables.</para>
+
+<para><command>fgconsole</command> prints the number of the active virtual terminal.</para>
+
+<para><command>getkeycodes</command> prints the kernel scancode-to-keycode
+mapping table.</para>
+
+<para><command>getunimap</command> prints the currently used unimap.</para>
+
+<para><command>kbd_mode</command> reports or sets the keyboard mode.</para>
+
+<para><command>kbdrate</command> sets the keyboard repeat and delay rates.</para>
+
+<para><command>loadkeys</command> loads the keyboard translation tables.</para>
+
+<para><command>loadunimap</command> loads the kernel unicode-to-font mapping table.</para>
+
+<para><command>mapscrn</command> is an obsolete program that used to load
+a user-defined output character mapping table into the console driver. This is
+now done by setfont.</para>
+
+<para><command>openvt</command> starts a program on a new virtual terminal (VT).</para>
+
+<para><command>psf*</command> are a set of tools for handling Unicode
+character tables for console fonts.</para>
+
+<para><command>resizecons</command> changes the kernel idea of the console size.</para>
+
+<para><command>setfont</command> lets you change the EGA/VGA fonts on the console.</para>
+
+<para><command>setkeycodes</command> loads kernel scancode-to-keycode
+mapping table entries, useful if you have some unusual keys on your keyboard.</para>
+
+<para><command>setleds</command> sets the keyboard flags and LEDs. Many
+people find it useful to have NumLock on by default, setleds +num achieves this.</para>
+
+<para><command>setlogcons</command> sends kernel messages to the console.</para>
+
+<para><command>setmetamode</command> defines the keyboard meta key handling.</para>
+
+<para><command>setvesablank</command> lets you fiddle with the built-in
+hardware screensaver (no toasters, just a blank screen).</para>
+
+<para><command>showconsolefont</command> shows the current EGA/VGA console
+screen font.</para>
+
+<para><command>showkey</command> reports the scancodes and keycodes and
+ASCII codes of the keys pressed on the keyboard.</para>
+
+<para><command>unicode_start</command> puts the keyboard and console in
+unicode mode.</para>
+
+<para><command>unicode_stop</command> reverts keyboard and console from
+unicode mode.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Kbd Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &kbd-depversion;.)</para> -->
+
+<para>Kbd depends on: Bash, Binutils, Bison, Coreutils,
+Diffutils, Flex, GCC, Gettext, Glibc, Grep, Gzip, M4, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-less" xreflabel="Less">
+<title>Less</title>
+<?dbhtml filename="less.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-less"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Less (381): 
+<ulink url="ftp://ftp.gnu.org/gnu/less/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Less</title>
+
+<!-- <para>(Last checked against version &less-contversion;.)</para> -->
+
+<para>Less is a file pager, or text viewer. It displays the contents
+of a file, or stream, and has the ability to scroll. Less has a few
+features not included in the <userinput>more</userinput> pager,
+such as the ability to scroll backwards.</para>
+
+<para><emphasis>Installed programs</emphasis>: less, lessecho and lesskey</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>less</command> is a file viewer or pager. It displays the
+contents of the given file, letting you scroll around, find strings, and jump
+to marks.</para>
+
+<para><command>lessecho</command> is needed to expand metacharacters,
+such as * and ?, in filenames on Unix systems.</para>
+
+<para><command>lesskey</command> is used to specify the key bindings
+for less.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Less Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &less-depversion;.)</para> -->
+
+<para>Less depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-bootscripts" xreflabel="LFS-Bootscripts">
+<title>LFS-Bootscripts</title>
+<?dbhtml filename="bootscripts.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-lfs-bootscripts"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>LFS-Bootscripts (1.12): 
+<ulink url="http://downloads.linuxfromscratch.org/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of LFS-bootscripts</title>
+
+<!-- <para>(Last checked against version &bootscripts-contversion;.)</para> -->
+
+<para>The LFS-Bootscripts package contains SysV init style shell
+scripts. These scripts do various tasks such as check filesystem
+integrity during boot, load keymaps, set up networks and halt
+processes at shutdown.</para>
+
+<para><emphasis>Installed scripts</emphasis>: checkfs, cleanfs, functions,
+halt, ifdown, ifup, loadkeys, localnet, mountfs, mountproc, network, rc,
+reboot, sendsignals, setclock, swap, sysklogd and template</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para>The <command>checkfs</command> script checks the file systems just
+before they are mounted (with the exception of journal and network based file
+systems).</para>
+
+<para>The <command>cleanfs</command> script removes files that shouldn't be
+preserved between reboots, such as those in <filename>/var/run/</filename> and
+<filename>/var/lock/</filename>. It re-creates <filename>/var/run/utmp</filename>
+and removes the possibly present <filename>/etc/nologin</filename>,
+<filename>/fastboot</filename> and <filename>/forcefsck</filename> files.</para>
+
+<para>The <command>functions</command> script contains functions shared among
+different scripts, such as error and status checking.</para>
+
+<para>The <command>halt</command> script halts the system.</para>
+
+<para>The <command>ifdown</command> and <command>ifup</command> scripts assist
+the network script with network devices.</para>
+
+<para>The <command>loadkeys</command> script loads the keymap table you
+specified as proper for your keyboard layout.</para>
+
+<para>The <command>localnet</command> script sets up the system's hostname and
+local loopback device.</para>
+
+<para>The <command>mountfs</command> script mounts all file systems that
+aren't marked noauto or aren't network based.</para>
+
+<para>The <command>mountproc</command> script is used to mount the proc
+filesystem.</para>
+
+<para>The <command>network</command> script sets up network interfaces, such
+as network cards, and sets up the default gateway where applicable.</para>
+
+<para>The <command>rc</command> script is the master runlevel control script.
+It is responsible for running all the other scripts one-by-one in a specific
+sequence.</para>
+
+<para>The <command>reboot</command> script reboots the system.</para>
+
+<para>The <command>sendsignals</command> script makes sure every process is
+terminated before the system reboots or halts.</para>
+
+<para>The <command>setclock</command> script resets the kernel clock to
+localtime in case the hardware clock isn't set to GMT time.</para>
+
+<para>The <command>swap</command> script enables and disables swap files and
+partitions.</para>
+
+<para>The <command>sysklogd</command> script starts and stops the system and
+kernel log daemons.</para>
+
+<para>The <command>template</command> script is a template you can use to
+create your own bootscripts for your other daemons.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>LFS-Bootscripts Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &bootscripts-depversion;.)</para> -->
+
+<para>LFS-Bootscripts depends on: Bash, Coreutils.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-lfs-utils" xreflabel="Lfs-Utils">
+<title>Lfs-Utils</title>
+<?dbhtml filename="lfs-utils.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-lfs-utils"/>.</para>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Lfs-utils (0.4.2):
+<ulink url="http://www.linuxfromscratch.org/~winkie/downloads/lfs-utils/"/></literallayout>
+</sect2>
+
+
+<sect2><title>Contents of Lfs-Utils</title>
+
+<!-- <para>(Last checked against version &lfs-utils-contversion;.)</para> -->
+
+<para>The Lfs-Utils package contains some miscellaneous programs used by
+various packages, but are not large enough to warrant their own
+individual package.</para>
+
+<para><emphasis>Installed programs</emphasis>: mktemp, tempfile, http-get
+and iana-net</para>
+
+<para><emphasis>Installed files</emphasis>: protocols, services</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>mktemp</command> creates temporary files in a secure manner.
+It is used in scripts.</para>
+
+<para><command>tempfile</command> creates temporary files in a less secure
+manner than <userinput>mktemp</userinput>. It is installed for
+backwards-compatibility.</para>
+
+<para>The <command>http-get</command> script takes advantage of a little known
+feature of <userinput>bash</userinput> called "net redirection". It is used to
+download from websites without using any other programs.</para>
+
+<para><command>iana-net</command> uses the <userinput>http-get</userinput>
+script to simplify the process of procuring IANA's services and protocols
+configuration files.</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Lfs-Utils Installation Dependencies</title>
+
+<literallayout>(No dependencies checked yet.)</literallayout>
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-libtool" xreflabel="Libtool">
+<title>Libtool</title>
+<?dbhtml filename="libtool.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-libtool"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Libtool (1.5): 
+<ulink url="ftp://ftp.gnu.org/gnu/libtool/"/></literallayout>
+
+</sect2>
+
+<sect2><title>Contents of Libtool</title>
+
+<!-- <para>(Last checked against version &libtool-contversion;.)</para> -->
+
+<para>GNU libtool is a generic library support script. Libtool hides
+  the complexity of using shared libraries behind a consistent,
+  portable interface.</para>
+
+<para><emphasis>Installed programs</emphasis>: libtool and libtoolize</para>
+
+<para><emphasis>Installed libraries</emphasis>: libltdl.[a,so].</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>libtool</command> provides generalized library-building
+support services.</para>
+
+<para><command>libtoolize</command> provides a standard way to add
+libtool support to a package.</para>
+
+<para><command>libltdl</command> hides the various difficulties of
+dlopening libraries.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Libtool Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &libtool-depversion;.)</para> -->
+
+<para>Libtool depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-kernel" xreflabel="Linux">
+<title>Linux (the kernel)</title>
+<?dbhtml filename="kernel.html"?>
+
+<para>For installation instructions see <xref linkend="ch08-kernel"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Linux (2.4.23):
+<ulink url="ftp://ftp.kernel.org/pub/linux/kernel/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Linux</title>
+
+<!-- <para>(Last checked against version &kernel-contversion;.)</para> -->
+
+<para>The Linux kernel is at the core of every Linux system. It's what makes
+Linux tick. When a computer is turned on and boots a Linux system, the
+very first piece of Linux software that gets loaded is the kernel. The
+kernel initializes the system's hardware components: serial ports, parallel
+ports, sound cards, network cards, IDE controllers, SCSI controllers and a
+lot more. In a nutshell the kernel makes the hardware available so that the
+software can run.</para>
+
+<para><emphasis>Installed files</emphasis>: the kernel and the kernel
+headers</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para>The <emphasis>kernel</emphasis> is the engine of your GNU/Linux system.
+When switching on your box, the kernel is the first part of your operating
+system that gets loaded. It detects and initializes all the components of your
+computer's hardware, then makes these components available as a tree of files
+to the software, and turns a single CPU into a multi-tasking machine capable
+of running scores of programs seemingly at the same time.</para>
+                                                            
+<para>The <emphasis>kernel headers</emphasis> define the interface to the
+services that the kernel provides. The headers in your system's
+<filename>include</filename> directory should <emphasis>always</emphasis> be
+the ones against which Glibc was compiled and should therefore
+<emphasis>not</emphasis> be replaced when upgrading the kernel.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Linux Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &kernel-depversion;.)</para> -->
+
+<para>Linux depends on: Bash, Binutils, Coreutils, Findutils,
+GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-m4" xreflabel="M4">
+<title>M4</title>
+<?dbhtml filename="m4.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-m4"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>M4 (1.4): 
+<ulink url="ftp://ftp.gnu.org/gnu/m4/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of M4</title>
+
+<!-- <para>(Last checked against version &m4-contversion;.)</para> -->
+
+<para>M4 is a macro processor. It copies input to output, expanding
+macros as it goes. Macros are either built-in or user-defined and can
+take any number of arguments. Besides just doing macro expansion, m4
+has built-in functions for including named files, running Unix
+commands, doing integer arithmetic, manipulating text in various ways,
+recursion, etc. The m4 program can be used either as a front-end to a
+compiler or as a macro processor in its own right.</para>
+
+<para><emphasis>Installed program</emphasis>: m4</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>m4</command> copies the given files
+while expanding the macros that they contain. These macros are either built-in
+or user-defined and can take any number of arguments. Besides just doing macro
+expansion, m4 has built-in functions for including named files, running Unix
+commands, doing integer arithmetic, manipulating text in various ways,
+recursion, and so on. The m4 program can be used either as a front-end to a
+compiler or as a macro processor in its own right.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>M4 Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &m4-depversion;.)</para> -->
+
+<para>M4 depends on: Bash, Binutils, Coreutils, Diffutils, GCC,
+Gettext, Glibc, Grep, Make, Perl, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-make" xreflabel="Make">
+<title>Make</title>
+<?dbhtml filename="make.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-make"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Make (3.80): 
+<ulink url="ftp://ftp.gnu.org/gnu/make/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Make</title>
+
+<!-- <para>(Last checked against version &make-contversion;.)</para> -->
+
+<para>Make determines, automatically, which pieces of a large program need
+to be recompiled and issues the commands to recompile them.</para>
+
+<para><emphasis>Installed program</emphasis>: make</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short description</title>
+
+<para><command>make</command> automatically determines which pieces of a
+large package need to be recompiled, and then issues the relevant commands.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Make Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &make-depversion;.)</para> -->
+
+<para>Make depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Gettext, Glibc, Grep, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-makedev" xreflabel="Makedev">
+<title>MAKEDEV</title>
+<?dbhtml filename="makedev.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-MAKEDEV"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>MAKEDEV (1.7):
+<ulink url="http://downloads.linuxfromscratch.org/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of MAKEDEV</title>
+
+<!-- <para>(Last checked against version &makedev-contversion;.)</para> -->
+
+<para>The MAKEDEV script creates the static device nodes which
+usually reside in the <filename class="directory">/dev</filename>
+directory. Detailed information about device nodes may be found
+in the <filename>Documentation/devices.txt</filename> file under
+the Linux kernel source tree.</para>
+
+<para><emphasis>Installed script</emphasis>: MAKEDEV</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short description</title>
+
+<para><command>MAKEDEV</command> is a script for creating the necessary
+static device nodes, usually residing in the <filename>/dev</filename>
+directory.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>MAKEDEV Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &makedev-depversion;.)</para> -->
+
+<para>MAKEDEV depends on: Bash, Coreutils.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-man" xreflabel="Man">
+<title>Man</title>
+<?dbhtml filename="man.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-man"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Man (1.5m2): 
+<ulink url="ftp://ftp.win.tue.nl/pub/linux-local/utils/man/"/>
+
+Man 80-Columns Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/man-1.5m2-80cols.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Man</title>
+
+<!-- <para>(Last checked against version &man-contversion;.)</para> -->
+
+<para>Man is a man pager.</para>
+
+<para><emphasis>Installed programs</emphasis>: apropos, makewhatis, man,
+man2dvi, man2html and whatis</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>apropos</command> searches the whatis database and displays
+the short descriptions of system commands that contain a given string.</para>
+
+<para><command>makewhatis</command> builds the whatis database. It reads
+all the manual pages in the manpath and for each page writes the name and a
+short description in the whatis database.</para>
+
+<para><command>man</command> formats and displays the requested on-line
+manual page.</para>
+
+<para><command>man2dvi</command> converts a manual page into dvi format.</para>
+
+<para><command>man2html</command> converts a manual page into html.</para>
+
+<para><command>whatis</command> searches the whatis database and displays
+the short descriptions of system commands that contain the given keyword as a
+separate word.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Man Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &man-depversion;.)</para> -->
+
+<para>Man depends on: Bash, Binutils, Coreutils, Gawk, GCC,
+Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-man-pages" xreflabel="Man-pages">
+<title>Man-pages</title>
+<?dbhtml filename="man-pages.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-man-pages"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Man-pages (1.64): 
+<ulink url="ftp://ftp.kernel.org/pub/linux/docs/manpages/"/></literallayout>
+
+</sect2>
+
+<sect2><title>Contents of Man-pages</title>
+
+<!-- <para>(Last checked against version &man-pages-contversion;.)</para> -->
+
+<para>The Man-pages package contains over 1200 manual pages. This
+documentation details the C and C++ functions, describes a few
+important device files and provides documents which would otherwise
+be missing from other packages.</para>
+
+<para><emphasis>Installed files</emphasis>: various manual pages</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short description</title>
+
+<para>Examples of provided <emphasis>manual pages</emphasis> are the pages
+describing all the C and C++ functions, important device files, and important
+configuration files.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Man-pages Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &man-pages-depversion;.)</para> -->
+
+<para>Man-pages depends on: Bash, Coreutils, Make.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-modutils" xreflabel="Modutils">
+<title>Modutils</title>
+<?dbhtml filename="modutils.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-modutils"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Modutils (2.4.26): 
+<ulink url="ftp://ftp.kernel.org/pub/linux/utils/kernel/modutils/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Modutils</title>
+
+<!-- <para>(Last checked against version &modutils-contversion;.)</para> -->
+
+<para>The Modutils package contains programs that you can use to work with
+kernel modules.</para>
+
+<para><emphasis>Installed programs</emphasis>: depmod, genksyms, insmod,
+insmod_ksymoops_clean, kallsyms (link to insmod), kernelversion, ksyms
+(link to insmod), lsmod (link to insmod), modinfo, modprobe (link to insmod)
+and rmmod (link to insmod)</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>depmod</command> creates a dependency file, based on the
+symbols it finds in the existing set of modules. This  dependency file is used
+by modprobe to automatically load the required modules.</para>
+
+<para><command>genksyms</command> generates symbol version information.</para>
+
+<para><command>insmod</command> installs a loadable module in the running kernel.</para>
+
+<para><command>insmod_ksymoops_clean</command> deletes saved ksyms and
+modules not accessed for two days.</para>
+
+<para><command>kallsyms</command> extracts all kernel symbols for debugging.</para>
+
+<para><command>kernelversion</command> reports the major version of the
+running kernel.</para>
+
+<para><command>ksyms</command> displays exported kernel symbols.</para>
+
+<para><command>lsmod</command> shows which modules are loaded.</para>
+
+<para><command>modinfo</command> examines an object file associated with
+a kernel module and displays any information that it can glean.</para>
+
+<para><command>modprobe</command> uses a dependency file, created by
+depmod, to automatically load the relevant modules.</para>
+
+<para><command>rmmod</command> unloads modules from the running kernel.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Modutils Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &modutils-depversion;.)</para> -->
+
+<para>Modutils depends on: Bash, Binutils, Bison, Coreutils,
+Diffutils, Flex, GCC, Glibc, Grep, M4, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-ncurses" xreflabel="Ncurses">
+<title>Ncurses</title>
+<?dbhtml filename="ncurses.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-ncurses"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Ncurses (5.3): 
+<ulink url="ftp://ftp.gnu.org/gnu/ncurses/"/>
+
+Ncurses Etip Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/ncurses-5.3-etip-2.patch"/></literallayout>
+
+</sect2>
+
+<sect2><title>Contents of Ncurses</title>
+
+<!-- <para>(Last checked against version &ncurses-contversion;.)</para> -->
+
+<para>The Ncurses package provides character and terminal handling
+libraries, including panels and menus.</para>
+
+<para><emphasis>Installed programs</emphasis>: captoinfo (link to tic), clear,
+infocmp, infotocap (link to tic), reset (link to tset), tack, tic, toe, tput
+and tset</para>
+
+<para><emphasis>Installed libraries</emphasis>: libcurses.[a,so] (link to
+libncurses.[a,so]), libform.[a,so], libmenu.[a,so], libncurses++.a,
+libncurses.[a,so], libpanel.[a,so]</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>captoinfo</command> converts a termcap description into a
+terminfo description.</para>
+
+<para><command>clear</command> clears the screen, if this is possible.</para>
+
+<para><command>infocmp</command> compares or prints out terminfo
+descriptions.</para>
+
+<para><command>infotocap</command> converts a terminfo description into
+a termcap description.</para>
+
+<para><command>reset</command> reinitializes a terminal to its default
+values.</para>
+
+<para><command>tack</command> is the terminfo action checker. It is mainly
+used to test the correctness of an entry in the terminfo database.</para>
+
+<para><command>tic</command> is the terminfo entry-description compiler.
+It translates a terminfo file from source format into the binary format needed
+for the ncurses library routines. A terminfo file contains information on the
+capabilities of a certain terminal.</para>
+
+<para><command>toe</command> lists all available terminal types, for each
+giving its primary name and its description.</para>
+
+<para><command>tput</command> makes the values of terminal-dependent
+capabilities available to the shell. It can also be used to reset or initialize
+a terminal, or report its long name.</para>
+
+<para><command>tset</command> can be used to initialize terminals.</para>
+
+<para><command>libncurses*</command> contain functions to display text in
+many complicated ways on a terminal screen. A good example of the use of these
+functions is the menu displayed during the kernel's make menuconfig.</para>
+
+<para><command>libform*</command> contain functions to implement forms.</para>
+
+<para><command>libmenu*</command> contain functions to implement menus.</para>
+
+<para><command>libpanel*</command> contain functions to implement panels.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Ncurses Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &ncurses-depversion;.)</para> -->
+
+<para>Ncurses depends on: Bash, Binutils, Coreutils, Diffutils,
+Gawk, GCC, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-net-tools" xreflabel="Net-tools">
+<title>Net-tools</title>
+<?dbhtml filename="net-tools.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-net-tools"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Net-tools (1.60): 
+<ulink url="http://www.tazenda.demon.co.uk/phil/net-tools/"/>
+
+Net-tools Mii-Tool-Gcc33 Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/net-tools-1.60-miitool-gcc33-1.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Net-tools</title>
+
+<!-- <para>(Last checked against version &net-tools-contversion;.)</para> -->
+
+<para>The Net-tools package contains a collection of programs
+which form the base of Linux networking.</para>
+
+<para><emphasis>Installed programs</emphasis>: arp, dnsdomainname (link to
+hostname), domainname (link to hostname), hostname, ifconfig, nameif, netstat,
+nisdomainname (link to hostname), plipconfig, rarp, route, slattach and
+ypdomainname (link to hostname)</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>arp</command> is used to manipulate the kernel's ARP cache,
+usually to add or delete an entry, or to dump the entire cache.</para>
+
+<para><command>dnsdomainname</command> reports the system's DNS domain
+name.</para>
+
+<para><command>domainname</command> reports or sets the system's NIS/YP
+domain name.</para>
+
+<para><command>hostname</command> reports or sets the name of the current
+host system.</para>
+
+<para><command>ifconfig</command> is the main utility for configuring
+network interfaces.</para>
+
+<para><command>nameif</command> names network interfaces based on MAC
+addresses.</para>
+
+<para><command>netstat</command> is used to report network connections,
+routing tables, and interface statistics..</para>
+
+<para><command>nisdomainname</command> does the same as domainname.</para>
+
+<para><command>plipconfig</command> is used to fine tune the PLIP device
+parameters, to improve its performance.</para>
+
+<para><command>rarp</command> is used to manipulate the kernel's RARP
+table.</para>
+
+<para><command>route</command> is used to manipulate the IP routing
+table.</para>
+
+<para><command>slattach</command> attaches a network interface to a serial
+line. This allows you to use normal terminal lines for point-to-point links to
+other computers.</para>
+
+<para><command>ypdomainname</command> does the same as domainname.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Net-tools Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &net-tools-depversion;.)</para> -->
+
+<para>Net-tools depends on: Bash, Binutils, Coreutils, GCC,
+Glibc, Make.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-patch" xreflabel="Patch">
+<title>Patch</title>
+<?dbhtml filename="patch.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-patch"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Patch (2.5.4): 
+<ulink url="ftp://ftp.gnu.org/gnu/patch/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Patch</title>
+
+<!-- <para>(Last checked against version &patch-contversion;.)</para> -->
+
+<para>The patch program modifies a file according to a patch file. A patch
+file usually is a list, created by the diff program, that contains
+instructions on how an original file needs to be modified.</para>
+
+<para><emphasis>Installed program</emphasis>: patch</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short description</title>
+
+<para><command>patch</command> modifies files according to a patch file.
+A patch file normally is a difference listing created with the diff program.
+By applying these differences to the original files, patch creates the patched
+versions. Using patches instead a entire new tarballs to keep your sources
+up-to-date can save you a lot of download time.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Patch Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &patch-depversion;.)</para> -->
+
+<para>Patch depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-perl" xreflabel="Perl">
+<title>Perl</title>
+<?dbhtml filename="perl.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-perl"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Perl (5.8.2):
+<ulink url="http://www.perl.com/"/>
+
+Perl Libc Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/perl-5.8.2-libc-1.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Perl</title>
+
+<!-- <para>(Last checked against version &perl-contversion;.)</para> -->
+
+<para>The Perl package contains perl, the Practical Extraction
+and Report Language. Perl combines some of the best features of C,
+sed, awk and sh into one powerful language.</para>
+
+<para><emphasis>Installed programs</emphasis>: a2p, c2ph, dprofpp, enc2xs,
+find2perl, h2ph, h2xs, libnetcfg, perl, perl5.8.2 (link to perl),
+perlbug, perlcc, perldoc, perlivp, piconv, pl2pm, pod2html, pod2latex, pod2man,
+pod2text, pod2usage, podchecker, podselect, psed (link to s2p), pstruct (link
+to c2ph), s2p, splain and xsubpp</para> 
+
+<para><emphasis>Installed libraries</emphasis>: (too many to name)</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>a2p</command> translates awk to perl.</para>
+
+<para><command>c2ph</command> dumps C structures as generated from
+"cc -g -S" stabs.</para>
+
+<para><command>dprofpp</command> displays perl profile data.</para>
+
+<para><command>en2cxs</command> builds a Perl extension for the Encode module,
+from either Unicode Character Mappings or Tcl Encoding Files.</para>
+
+<para><command>find2perl</command> translates find commands to perl.</para>
+
+<para><command>h2ph</command> converts .h C header files to .ph Perl header files.</para>
+
+<para><command>h2xs</command> converts .h C header files to Perl extensions.</para>
+
+<para><command>libnetcfg</command> can be used to configure the libnet.</para>
+
+<para><command>perl</command> combines some of the best features of C, sed,
+awk and sh into a single swiss-army language.</para>
+
+<para><command>perlbug</command> is used to generate bug reports about
+Perl or the modules that come with it, and mail them.</para>
+
+<para><command>perlcc</command> generates executables from Perl programs.</para>
+
+<para><command>perldoc</command> displays a piece of documentation in pod
+format that is embedded in the perl installation tree or in a perl script.</para>
+
+<para><command>perlivp</command> is the Perl Installation Verification
+Procedure. It can be used to verify that Perl and its libraries have been
+installed correctly.</para>
+
+<para><command>piconv</command> is a Perl version of the character encoding
+converter <userinput>iconv</userinput>.</para>
+
+<para><command>pl2pm</command> is a rough tool for converting Perl4 .pl
+files to Perl5 .pm modules.</para>
+
+<para><command>pod2html</command> converts files from pod format to HTML
+format.</para>
+
+<para><command>pod2latex</command> converts files from pod format to LaTeX
+format.</para>
+
+<para><command>pod2man</command> converts pod data to formatted *roff
+input.</para>
+
+<para><command>pod2text</command> converts pod data to formatted ASCII
+text.</para>
+
+<para><command>pod2usage</command> prints usage messages from embedded
+pod docs in files.</para>
+
+<para><command>podchecker</command> checks the syntax of pod format
+documentation files.</para>
+
+<para><command>podselect</command> displays selected sections of pod
+documentation.</para>
+
+<para><command>psed</command> is a Perl version of the stream editor
+<userinput>sed</userinput>.</para>
+
+<para><command>pstruct</command> dumps C structures as generated from
+"cc -g -S" stabs.</para>
+
+<para><command>s2p</command> translates sed to perl.</para>
+
+<para><command>splain</command> is used to force verbose warning
+diagnostics in perl.</para>
+
+<para><command>xsubpp</command> converts Perl XS code into C code.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Perl Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &perl-depversion;.)</para> -->
+
+<para>Perl depends on: Bash, Binutils, Coreutils, Diffutils,
+Gawk, GCC, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-procinfo" xreflabel="Procinfo">
+<title>Procinfo</title>
+<?dbhtml filename="procinfo.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-procinfo"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Procinfo (18):
+<ulink url="ftp://ftp.cistron.nl/pub/people/svm/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Procinfo</title>
+
+<!-- <para>(Last checked against version &procinfo-contversion;.)</para> -->
+
+<para>The procinfo program gathers system data, such as memory
+usage and IRQ numbers, from the <filename>/proc</filename>
+directory and formats this data in a meaningful way.</para>
+
+<para><emphasis>Installed programs</emphasis>: lsdev, procinfo and
+socklist</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>lsdev</command> lists the devices present in your system,
+and which IRQs and IO ports they use.</para>
+
+<para><command>procinfo</command> displays an overview of some of the info
+present in the virtual proc filesystem.</para>
+
+<para><command>socklist</command> lists the open sockets, reporting their
+type, portnumber, and other specifics.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Procinfo Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &procinfo-depversion;.)</para> -->
+
+<para>Procinfo depends on: Binutils, GCC, Glibc, Make, Ncurses.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-procps" xreflabel="Procps">
+<title>Procps</title>
+<?dbhtml filename="procps.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-procps"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Procps (3.1.14):
+<ulink url="http://procps.sourceforge.net/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Procps</title>
+
+<!-- <para>(Last checked against version &procps-contversion;.)</para> -->
+
+<para>The Procps package provides programs to monitor and
+halt system processes. Procps gathers information about
+processes via the <filename>/proc</filename> directory.</para>
+
+<para><emphasis>Installed programs</emphasis>: free, kill, pgrep, pkill,
+pmap, ps, skill, snice, sysctl, tload, top, uptime, vmstat, w and watch</para>
+
+<para><emphasis>Installed library</emphasis>: libproc.so</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>free</command> reports the amount of free and used memory
+in the system, both physical and swap memory.</para>
+
+<para><command>kill</command> is used to send signals to processes.</para>
+
+<para><command>pgrep</command> looks up processes based on their name
+and other attributes.</para>
+
+<para><command>pkill</command> signals processes based on their name
+and other attributes.</para>
+
+<para><command>pmap</command> reports the memory map of the given
+process.</para>
+
+<para><command>ps</command> gives a snapshot of the current processes.</para>
+
+<para><command>skill</command> sends signals to processes matching the
+given criteria.</para>
+
+<para><command>snice</command> changes the scheduling priority of processes
+matching the given criteria.</para>
+
+<para><command>sysctl</command> modifies kernel parameters at run time.</para>
+
+<para><command>tload</command> prints a graph of the current system load
+average.</para>
+
+<para><command>top</command> displays the top CPU processes. It provides
+an ongoing look at processor activity in real time.</para>
+
+<para><command>uptime</command> reports how long the system has been
+running, how many users are logged on, and the system load averages.</para>
+
+<para><command>vmstat</command> reports virtual memory statistics, giving
+information about processes, memory, paging, block IO, traps, and CPU
+activity.</para>
+
+<para><command>w</command> shows which users are currently logged on,
+where and since when.</para>
+
+<para><command>watch</command> runs a given command repeatedly,
+displaying the first screenful of its output. This allows you to watch the
+output change over time.</para>
+
+<para><command>libproc</command> contains the functions used by most
+programs in this package.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Procps Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &procps-depversion;.)</para> -->
+
+<para>Procps depends on: Bash, Binutils, Coreutils, GCC, Glibc,
+Make, Ncurses.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-psmisc" xreflabel="Psmisc">
+<title>Psmisc</title>
+<?dbhtml filename="psmisc.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-psmisc"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Psmisc (21.4):
+<ulink url="http://download.sourceforge.net/psmisc/"/>
+<ulink url="ftp://download.sourceforge.net/pub/sourceforge/psmisc/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Psmisc</title>
+
+<!-- <para>(Last checked against version &psmisc-contversion;.)</para> -->
+
+<para>The Psmisc package contains three programs which help
+manage the <filename>/proc</filename> directory.</para>
+
+<para><emphasis>Installed programs</emphasis>: fuser, killall, pstree and
+pstree.x11 (link to pstree)</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>fuser</command> reports the PIDs of processes that use
+the given files or filesystems.</para>
+
+<para><command>killall</command> kills processes by name. It sends a signal
+to all processes running any of the given commands.</para>
+
+<para><command>pstree</command> displays running processes as a tree.</para>
+
+<para><command>pstree.x11</command> same as pstree except that it waits for
+confirmation before exiting.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Psmisc Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &psmisc-depversion;.)</para> -->
+
+<para>Psmisc depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-sed" xreflabel="Sed">
+<title>Sed</title>
+<?dbhtml filename="sed.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-sed"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Sed (4.0.8):
+<ulink url="ftp://ftp.gnu.org/gnu/sed/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Sed</title>
+
+<!-- <para>(Last checked against version &sed-contversion;.)</para> -->
+
+<para>sed is a stream editor. A stream editor is used to perform basic text
+transformations on an input stream (a file or input from a
+pipeline).</para>
+
+<para><emphasis>Installed program</emphasis>: sed</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short description</title>
+
+<para><command>sed</command> is used to filter and transform text files
+in a single pass.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Sed Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &sed-depversion;.)</para> -->
+
+<para>Sed depends on: Bash, Binutils, Coreutils,
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Texinfo.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-shadow" xreflabel="Shadow">
+<title>Shadow</title>
+<?dbhtml filename="shadow.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-shadow"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Shadow (4.0.3):
+<ulink url="ftp://ftp.pld.org.pl/software/shadow/"/>
+
+Shadow Newgrp Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/shadow-4.0.3-newgrp-fix.patch"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Shadow</title>
+
+<!-- <para>(Last checked against version &shadow-contversion;.)</para> -->
+
+<para>The Shadow package was created to strengthen the security
+of system passwords.</para>
+
+<para><emphasis>Installed programs</emphasis>: chage, chfn, chpasswd, chsh,
+dpasswd, expiry, faillog, gpasswd, groupadd, groupdel, groupmod, groups, grpck,
+grpconv, grpunconv, lastlog, login, logoutd, mkpasswd, newgrp, newusers,
+passwd, pwck, pwconv, pwunconv, sg (link to newgrp), useradd, userdel, usermod,
+vigr (link to vipw) and vipw</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>chage</command> is used to change the maximum number of
+days between obligatory password changes.</para>
+
+<para><command>chfn</command> is used to change a user's full name and
+some other info.</para>
+
+<para><command>chpasswd</command> is used to update the passwords of a
+whole series of user accounts in one go.</para>
+
+<para><command>chsh</command> is used to change a user's default
+ login shell.</para>
+
+<para><command>dpasswd</command> is used to change dial-up passwords for
+user login shells.</para>
+
+<para><command>expiry</command> checks and enforces the current password
+expiration policy.</para>
+
+<para><command>faillog</command> is used to examine the log of login
+failures, to set a maximum number of failures before an account is blocked,
+or to reset the failure count.</para>
+
+<para><command>gpasswd</command> is used to add and delete members and
+administrators to groups.</para>
+
+<para><command>groupadd</command> creates a group with the given
+name.</para>
+
+<para><command>groupdel</command> deletes the group with the given
+name.</para>
+
+<para><command>groupmod</command> is used to modify the given group's
+name or GID.</para>
+
+<para><command>groups</command> reports the groups of which the given
+users are members.</para>
+
+<para><command>grpck</command> verifies the integrity of the group files,
+<filename>/etc/group</filename> and <filename>/etc/gshadow</filename>.</para>
+
+<para><command>grpconv</command> creates or updates the shadow group file
+from the normal group file.</para>
+
+<para><command>grpunconv</command> updates <filename>/etc/group</filename>
+from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
+
+<para><command>lastlog</command> reports the most recent login of all
+users, or of a given user.</para>
+
+<para><command>login</command> is used by the system let users sign on.</para>
+
+<para><command>logoutd</command> is a daemon used to enforce restrictions
+on log-on time and ports.</para>
+
+<para><command>mkpasswd</command> encrypts the given password using the
+also given perturbation.</para>
+
+<para><command>newgrp</command> is used to change the current GID during
+a login session.</para>
+
+<para><command>newusers</command> is used to create or update a whole
+series of user accounts in one go.</para>
+
+<para><command>passwd</command> is used to change the password for a user
+or group account.</para>
+
+<para><command>pwck</command> verifies the integrity of the password files,
+<filename>/etc/passwd</filename> and <filename>/etc/shadow</filename>.</para>
+
+<para><command>pwconv</command> creates or updates the shadow password file
+from the normal password file.</para>
+
+<para><command>pwunconv</command> updates <filename>/etc/passwd</filename>
+from <filename>/etc/shadow</filename> and then deletes the latter.</para>
+
+<para><command>sg</command> executes a given command while the user's GID
+is set to that of the given group.</para>
+
+<para><command>useradd</command> creates a new user with the given name,
+or updates the default new-user information.</para>
+
+<para><command>userdel</command> deletes the given user account.</para>
+
+<para><command>usermod</command> is used to modify the given user's
+login name, UID, shell, initial group, home directory, and the like.</para>
+
+<para><command>vigr</command> can be used to edit the
+<filename>/etc/group</filename> or <filename>/etc/gshadow</filename>
+files.</para>
+
+<para><command>vipw</command> can be used to edit the
+<filename>/etc/passwd</filename> or <filename>/etc/shadow</filename>
+files.</para>
+
+<para><command>libmisc</command>...</para>
+
+<para><command>libshadow</command> contains functions used by most
+programs in this package.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Shadow Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &shadow-depversion;.)</para> -->
+
+<para>Shadow depends on: Bash, Binutils, Bison, Coreutils,
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-sysklogd" xreflabel="Sysklogd">
+<title>Sysklogd</title>
+<?dbhtml filename="sysklogd.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-sysklogd"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Sysklogd (1.4.1):
+<ulink url="http://www.infodrom.org/projects/sysklogd/"/></literallayout>
+
+</sect2>
+
+<sect2><title>Contents of Sysklogd</title>
+
+<!-- <para>(Last checked against version &sysklogd-contversion;.)</para> -->
+
+<para>The Sysklogd package contains programs for recording
+system log messages, such as those reported by the kernel.</para>
+
+<para><emphasis>Installed programs</emphasis>: klogd and syslogd</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>klogd</command> is a system daemon for intercepting and
+logging kernel messages.</para>
+
+<para><command>syslogd</command> logs the messages that system programs
+offer for logging. Every logged message contains at least a date stamp and a
+hostname, and normally the program's name too, but that depends on how
+trusting the logging daemon is told to be.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Sysklogd Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &sysklogd-depversion;.)</para> -->
+
+<para>Sysklogd depends on: Binutils, Coreutils, GCC, Glibc, Make.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-sysvinit" xreflabel="Sysvinit">
+<title>Sysvinit</title>
+<?dbhtml filename="sysvinit.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-sysvinit"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Sysvinit (2.85):
+<ulink url="ftp://ftp.cistron.nl/pub/people/miquels/sysvinit/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Sysvinit</title>
+
+<!-- <para>(Last checked against version &sysvinit-contversion;.)</para> -->
+
+<para>The Sysvinit package contains programs to control the
+startup, running and shutdown of all other programs.</para>
+
+<para><emphasis>Installed programs</emphasis>: halt, init, killall5, last,
+lastb (link to last), mesg, pidof (link to killall5), poweroff (link to halt),
+reboot (link to halt), runlevel, shutdown, sulogin, telinit (link to init),
+utmpdump and wall</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>halt</command> normally invokes shutdown with the -h flag,
+except when already in runlevel 0, then it tells the kernel to halt the system.
+But first it notes in the file <filename>/var/log/wtmp</filename> that the
+system is being brought down.</para>
+
+<para><command>init</command> is the mother of all processes. It reads its
+commands from <filename>/etc/inittab</filename>, which normally tell it which
+scripts to run for which runlevel, and how many gettys to spawn.</para>
+
+<para><command>killall5</command> sends a signal to all processes, except
+the processes in its own session -- so it won't kill the shell running the
+script that called it.</para>
+
+<para><command>last</command> shows which users last logged in (and out),
+searching back through the file <filename>/var/log/wtmp</filename>. It can
+also show system boots and shutdowns, and runlevel changes.</para>
+
+<para><command>lastb</command> shows the failed login attempts, as logged
+in <filename>/var/log/btmp</filename>.</para>
+
+<para><command>mesg</command> controls whether other users can send
+messages to the current user's terminal.</para>
+
+<para><command>pidof</command> reports the PIDs of the given programs.</para>
+
+<para><command>poweroff</command> tells the kernel to halt the system and
+switch off the computer. But see halt.</para>
+
+<para><command>reboot</command> tells the kernel to reboot the system.
+But see halt.</para>
+
+<para><command>runlevel</command> reports the previous and the current
+runlevel, as noted in the last runlevel record  in
+<filename>/var/run/utmp</filename>.</para>
+
+<para><command>shutdown</command> brings the system down in a secure way,
+signaling all processes and notifying all logged-in users.</para>
+
+<para><command>sulogin</command> allows the superuser to log in. It is
+normally invoked by init when the system goes into single user mode.</para>
+
+<para><command>telinit</command> tells init which runlevel to enter.</para>
+
+<para><command>utmpdump</command> displays the content of  the given login
+file in a friendlier format.</para>
+
+<para><command>wall</command> writes a message to all logged-in users.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Sysvinit Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &sysvinit-depversion;.)</para> -->
+
+<para>Sysvinit depends on: Binutils, Coreutils, GCC, Glibc, Make.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-tar" xreflabel="Tar">
+<title>Tar</title>
+<?dbhtml filename="tar.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-tar"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Tar (1.13.25):
+<ulink url="ftp://alpha.gnu.org/gnu/tar/"/></literallayout>
+
+</sect2>
+
+<sect2><title>Contents of Tar</title>
+
+<!-- <para>(Last checked against version &tar-contversion;.)</para> -->
+
+<para>Tar is an archiving program designed to store and extract
+files from an archive file known as a tar file.</para>
+
+<para><emphasis>Installed programs</emphasis>: rmt and tar</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>rmt</command> is used to remotely manipulate a magnetic
+tape drive, through an interprocess communication connection.</para>
+
+<para><command>tar</command> is used to create and extract files from
+archives, also known as tarballs.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Tar Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &tar-depversion;.)</para> -->
+
+<para>Tar depends on: Bash, Binutils, Coreutils,
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-tcl" xreflabel="Tcl">
+<title>Tcl</title>
+<?dbhtml filename="tcl.html"?>
+
+<para>For installation instructions see <xref linkend="ch05-tcl"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Tcl (8.4.5):
+<ulink url="http://download.sourceforge.net/tcl/"/>
+<ulink url="ftp://download.sourceforge.net/pub/sourceforge/tcl/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Tcl</title>
+
+<!-- <para>(Last checked against version &tcl-contversion;.)</para> -->
+
+<para>The Tcl package contains the Tool Command Language.</para>
+
+<para><emphasis>Installed programs</emphasis>: tclsh (link to tclsh8.4),
+tclsh8.4</para>
+
+<para><emphasis>Installed library</emphasis>: libtcl8.4.so</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short description</title>
+
+<para><command>tclsh8.4</command> is the Tcl command shell.</para>
+
+<para><command>libtcl8.4.so</command> is the Tcl library.</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Tcl Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &tcl-depversion;.)</para> -->
+
+<para>Tcl depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-texinfo" xreflabel="Texinfo">
+<title>Texinfo</title>
+<?dbhtml filename="texinfo.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-texinfo"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Texinfo (4.6):
+<ulink url="ftp://ftp.gnu.org/gnu/texinfo/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Texinfo</title>
+
+<!-- <para>(Last checked against version &texinfo-contversion;.)</para> -->
+
+<para>The Texinfo package contains programs used for reading,
+writing and converting Info documents, which provide system
+documentation.</para>
+
+<para><emphasis>Installed programs</emphasis>: info, infokey, install-info,
+makeinfo, texi2dvi and texindex</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>info</command> is used to read Info documents. Info
+documents are a bit like man pages, but often go much deeper than just
+explaining all the flags. Compare for example man tar and info tar.</para>
+
+<para><command>infokey</command> compiles a source file containing Info
+customizations into a binary format.</para>
+
+<para><command>install-info</command> is used to install Info files. It
+updates entries in the Info index file.</para>
+
+<para><command>makeinfo</command> translates the given Texinfo source
+documents into various other formats: Info files, plain text, or HTML.</para>
+
+<para><command>texi2dvi</command> is used to format the given Texinfo
+document into a device-independent file that can be printed.</para>
+
+<para><command>texindex</command> is used to sort Texinfo index files.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Texinfo Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &texinfo-depversion;.)</para> -->
+
+<para>Texinfo depends on: Bash, Binutils, Coreutils,
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-utillinux" xreflabel="Util-linux">
+<title>Util-linux</title>
+<?dbhtml filename="util-linux.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-util-linux"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Util-linux (2.12):
+<ulink url="http://ftp.cwi.nl/aeb/util-linux/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Util-linux</title>
+
+<!-- <para>(Last checked against version &util-linux-contversion;.)</para> -->
+
+<para>The Util-linux package contains a number of miscellaneous
+utility programs. Some of the more prominent utilities are used
+to mount, unmount, format, partition and manage disk drives,
+open tty ports and fetch kernel messages.</para>
+
+<para><emphasis>Installed programs</emphasis>: agetty, arch, blockdev, cal,
+cfdisk, chkdupexe, col, colcrt, colrm, column, ctrlaltdel, cytune, ddate,
+dmesg, elvtune, fdformat, fdisk, fsck.cramfs, fsck.minix, getopt, hexdump,
+hwclock, ipcrm, ipcs, isosize, line, logger, look, losetup, mcookie, mkfs,
+mkfs.bfs, mkfs.cramfs, mkfs.minix, mkswap, more, mount, namei, parse.bash,
+parse.tcsh, pg, pivot_root, ramsize (link to rdev), raw, rdev, readprofile,
+rename, renice, rev, rootflags (link to rdev), script, setfdprm, setsid,
+setterm, sfdisk, swapoff (link to swapon), swapon, test.bash, test.tcsh,
+tunelp, ul, umount, vidmode (link to rdev), whereis and write</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>agetty</command> opens a tty port, prompts for a login name,
+and then invokes the login program.</para>
+
+<para><command>arch</command> reports the machine's architecture.</para>
+
+<para><command>blockdev</command> allows you to call block device ioctls
+from the command line.</para>
+
+<para><command>cal</command> displays a simple calender.</para>
+
+<para><command>cfdisk</command> is used to manipulate the partition table
+of the given device.</para>
+
+<para><command>chkdupexe</command> finds duplicate executables.</para>
+
+<para><command>col</command> filters out reverse line feeds.</para>
+
+<para><command>colcrt</command> is used to filter nroff output for terminals
+that lack some capabilities such as overstriking and half-lines.</para>
+
+<para><command>colrm</command> filters out the given columns.</para>
+
+<para><command>column</command> formats a given file into multiple
+columns.</para>
+
+<para><command>ctrlaltdel</command> sets the function of the Ctrl+Alt+Del
+ key combination, to a hard or a soft reset.</para>
+
+<para><command>cytune</command> was used to tune the parameters of the
+serial line drivers for Cyclades cards.</para>
+
+<para><command>ddate</command> gives the Discordian date, or converts the
+given Gregorian date to a Discordian one.</para>
+
+<para><command>dmesg</command> dumps the kernel boot messages.</para>
+
+<para><command>elvtune</command> can be used to tune the performance
+and interactiveness of a block device.</para>
+
+<para><command>fdformat</command> low-level formats a floppy disk.</para>
+
+<para><command>fdisk</command> could be used to manipulate the partition
+table of the given device.</para>
+
+<para><command>fsck.cramfs</command> performs a consistency check on the
+Cramfs filesystem on the given device.</para>
+
+<para><command>fsck.minix</command> performs a consistency check on the
+Minix filesystem on the given device.</para>
+
+<para><command>getopt</command> parses options in the given command line.</para>
+
+<para><command>hexdump</command> dumps the given file in hexadecimal, or
+in another given format.</para>
+
+<para><command>hwclock</command> is used to read or set the system's
+hardware clock (also called the RTC or BIOS clock).</para>
+
+<para><command>ipcrm</command> removes the given IPC resource.</para>
+
+<para><command>ipcs</command> provides IPC status information.</para>
+
+<para><command>isosize</command> reports the size of an iso9660
+filesystem.</para>
+
+<para><command>line</command> copies a single line.</para>
+
+<para><command>logger</command> enters the given message into the system
+log.</para>
+
+<para><command>look</command> displays lines that begin with the given
+string.</para>
+
+<para><command>losetup</command> is used to set up and control loop devices.</para>
+
+<para><command>mcookie</command> generates magic cookies, 128-bit random
+hexadecimal numbers, for xauth.</para>
+
+<para><command>mkfs</command> is used to build a filesystem on a device
+(usually a harddisk partition).</para>
+
+<para><command>mkfs.bfs</command> creates an SCO bfs filesystem.</para>
+
+<para><command>mkfs.cramfs</command> creates a cramfs filesystem.</para>
+
+<para><command>mkfs.minix</command> creates a Minix filesystem.</para>
+
+<para><command>mkswap</command> initializes the given device or file to be
+used as a swap area.</para>
+
+<para><command>more</command> is a filter for paging through text one
+screenful at a time. But less is much better.</para>
+
+<para><command>mount</command> attaches the filesystem on the given device
+to the given directory in the system's file tree.</para>
+
+<para><command>namei</command> shows the symbolic links in the given
+pathnames.</para>
+
+<para><command>pg</command> displays a text file one screenful at a
+time.</para>
+
+<para><command>pivot_root</command> makes the given filesystem the new
+root filesystem of the current process.</para>
+
+<para><command>ramsize</command> could be used to set the size of the
+RAM disk in a bootable image.</para>
+
+<para><command>rdev</command> could be used to query and set the root
+device and other things in a bootable image.</para>
+
+<para><command>readprofile</command> reads kernel profiling information.</para>
+
+<para><command>rename</command> renames the given files, replacing a given
+string with another.</para>
+
+<para><command>renice</command> is used to alter the priority of running
+processes.</para>
+
+<para><command>rev</command> reverses the lines of a given file.</para>
+
+<para><command>rootflags</command> could be used to set the rootflags
+in a bootable image.</para>
+
+<para><command>script</command> makes a typescript of a terminal
+session, of everything printed to the terminal.</para>
+
+<para><command>setfdprm</command> sets user-provided floppy disk
+parameters.</para>
+
+<para><command>setsid</command> runs the given program in a new session.</para>
+
+<para><command>setterm</command> is used to set terminal attributes.</para>
+
+<para><command>sfdisk</command> is a disk partition table manipulator.</para>
+
+<para><command>swapdev</command> could be used to set the swap device
+in a bootable image.</para>
+
+<para><command>swapoff</command> disables devices and files for paging
+and swapping.</para>
+
+<para><command>swapon</command> enables devices and files for paging
+and swapping.</para>
+
+<para><command>tunelp</command> is used to tune the parameters of the
+line printer.</para>
+
+<para><command>ul</command> is a filter for translating underscores into
+escape sequences indicating underlining for the terminal in use.</para>
+
+<para><command>umount</command> disconnects a filesystem from the
+system's file tree.</para>
+
+<para><command>vidmode</command> could be used to set the video mode
+in a bootable image.</para>
+
+<para><command>whereis</command> reports the location of binary, the
+source, and the manual page for the given command.</para>
+
+<para><command>write</command> sends a message to the given user. That is,
+if that user has not disabled such messages.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Util-linux Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &util-linux-depversion;.)</para> -->
+
+<para>Util-linux depends on: Bash, Binutils, Coreutils,
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, Zlib.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-vim" xreflabel="Vim">
+<title>Vim</title>
+<?dbhtml filename="vim.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-vim"/>.</para>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Vim (6.2):
+<ulink url="ftp://ftp.vim.org/pub/editors/vim/unix/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Vim</title>
+
+<!-- <para>(Last checked against version &vim-contversion;.)</para> -->
+
+<para>The Vim package contains a configurable text editor built to
+enable efficient text editing.</para>
+
+<para><emphasis>Installed programs</emphasis>: efm_filter.pl, efm_perl.pl, ex
+(link to vim), less.sh, mve.awk, pltags.pl, ref, rview (link to vim), rvim
+(link to vim), shtags.pl, tcltags, vi (link to vim), view (link to vim), vim,
+vim132, vim2html.pl, vimdiff (link to vim), vimm, vimspell.sh, vimtutor
+and xxd</para>
+
+</sect2>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short descriptions</title>
+
+<para><command>efm_filter.pl</command> is a filter for creating an error
+file that can be read by vim.</para>
+
+<para><command>efm_perl.pl</command> reformats the error messages of the
+Perl interpreter for use with the quickfix mode of vim.</para>
+
+<para><command>ex</command> starts vim in ex mode.</para>
+
+<para><command>less.sh</command> is a script that starts vim with less.vim.</para>
+
+<para><command>mve.awk</command> processes vim errors.</para>
+
+<para><command>pltags.pl</command> creates a tags file for perl code,
+for use by vim.</para>
+
+<para><command>ref</command> checks the spelling of arguments.</para>
+
+<para><command>rview</command> is a restricted version of view: no shell
+commands can be started and view can't be suspended.</para>
+
+<para><command>rvim</command> is a restricted version of vim: no shell
+commands can be started and vim can't be suspended.</para>
+
+<para><command>shtags.pl</command> generates a tag file for perl scripts.</para>
+
+<para><command>tcltags</command> generates a tag file for TCL code.</para>
+
+<para><command>vi</command> starts vim in vi-compatible mode.</para>
+
+<para><command>view</command> starts vim in read-only mode.</para>
+
+<para><command>vim</command> is the editor.</para>
+
+<para><command>vim132</command> starts vim with the terminal in
+132-column mode.</para>
+
+<para><command>vim2html.pl</command> converts vim documentation to
+HTML.</para>
+
+<para><command>vimdiff</command> edits two or three versions of a file with
+vim and show differences.</para>
+
+<para><command>vimm</command> enables the DEC locator input model on a
+remote terminal.</para>
+
+<para><command>vimspell.sh</command> is a script which spells a file and generates the syntax
+statements necessary to highlight in vim.</para>
+
+<para><command>vimtutor</command> teaches you the basic keys and commands
+of vim.</para>
+
+<para><command>xxd</command> makes a hexdump of the given file. It can
+also do the reverse, so it can be used for binary patching.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Vim Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &vim-depversion;.)</para> -->
+
+<para>Vim depends on: Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+<sect1 id="aa-zlib" xreflabel="Zlib">
+<title>Zlib</title>
+<?dbhtml filename="zlib.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-zlib"/>.</para>
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Official Download Location</title>
+
+<literallayout>Zlib (1.2.1):
+<ulink url="http://www.gzip.org/zlib/"/></literallayout>
+</sect2>
+
+<sect2><title>Contents of Zlib</title>
+
+<!-- <para>(Last checked against version &zlib-contversion;.)</para> -->
+
+<para>The Zlib package contains the libz library, which is used by some
+programs for its compression and uncompression functions.</para>
+
+<para><emphasis>Installed libraries</emphasis>: libz[a,so]</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2><title>Short description</title>
+
+<para><command>libz*</command> contains compression and uncompression
+functions used by some programs.</para>
+
+</sect2>
+
+
+<sect2><title> </title><para> </para></sect2>
+
+<sect2>
+<title>Zlib Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &zlib-depversion;.)</para> -->
+
+<para>Zlib depends on: Binutils, Coreutils, GCC, Glibc, Make, Sed.</para>
+
+</sect2>
+
+
+
+</sect1>
+
+
+
+</appendix>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE preface PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.oasis-open.org/docbook/xml/4.3CR2/docbookx.dtd">
+<preface id="preface">
+<?dbhtml dir="prologue"?>
+<title>Preface</title>
+<?dbhtml filename="preface.html"?>
+
+<sect1 id="pf-foreword">
+<title>Foreword</title>
+<?dbhtml filename="foreword.html"?>
+
+<para>Having used a number of different Linux distributions, I was never
+fully satisfied with any of them. I didn't like the arrangement of
+the bootscripts. I didn't like the way certain programs were configured by
+default. Much more of that sort of thing bothered me. Finally I realized
+that if I wanted full satisfaction from my Linux system I would have to
+build my own system from scratch, using only the source code. I resolved
+not to use pre-compiled packages of any kind, nor CD-ROM or boot disk that
+would install some basic utilities. I would use my current Linux system to
+develop my own.</para>
+
+<para>This wild idea seemed very difficult at the time and often seemed
+an impossible task. After sorting out all kinds of problems, such as
+dependencies and compile-time errors, a custom-built Linux system was
+created that was fully operational. I called this system a Linux From Scratch
+system, or LFS for short.</para>
+
+<para>I hope you will have a great time working on your own LFS!</para>
+
+<literallayout>
+-- 
+Gerard Beekmans
+gerard@linuxfromscratch.org
+</literallayout>
+
+</sect1>
+
+
+<sect1 id="pre-audience">
+<title>Audience</title>
+<?dbhtml filename="audience.html"?>
+
+<sect2>
+<title>Who would want to read this book</title>
+
+<para>There are many reasons why somebody would want to read this book. The 
+principal reason being to install a Linux system straight from the source 
+code. A question many people raise is "Why go through all the hassle of 
+manually building a Linux system from scratch when you can just download and 
+install an existing one?". That is a good question and is the impetus for this 
+section of the book.</para>
+
+<para>One important reason for LFS's existence is to help people learn how a 
+Linux system works from the inside out. Building an LFS system helps demonstrate
+to you what makes Linux tick, how things work together and depend on each 
+other. One of the best things that this learning experience provides is the 
+ability to customize Linux to your own tastes and needs.</para>
+
+<para>A key benefit of LFS is that you have more control of your system
+without relying on someone else's Linux implementation. With LFS, you are
+in the driver's seat and dictate every aspect of your system, such as the
+directory layout and bootscript setup. You also dictate where, why and how
+programs are installed.</para>
+
+<para>Another benefit of LFS is the ability to create a very compact Linux 
+system. When installing a regular distribution, you are usually forced to 
+install several programs which you are likely never to use. They're just 
+sitting there wasting precious disk space (or worse, CPU cycles). It isn't 
+difficult to build an LFS system less than 100 MB. Does that still sound like a
+lot? A few of us have been working on creating a very small embedded LFS 
+system. We successfully built a system that was just enough to run the Apache 
+web server with approximately 8MB of disk space used. Further stripping could 
+bring that down to 5 MB or less. Try that with a regular distribution.</para>
+
+<para>We could compare distributed Linux to a hamburger you buy at a
+fast-food restaurant -- you have no idea what you are eating. LFS, on the
+other hand, doesn't give you a hamburger, but the recipe to make a hamburger. 
+This allows you to review it, to omit unwanted ingredients, and to
+add your own ingredients which enhance the flavor of your burger. When you
+are satisfied with the recipe, you go on to preparing it. You make it just
+the way you like it: broil it, bake it, deep-fry it, barbecue it, or eat it
+tar-tar (raw).</para>
+
+<para>Another analogy that we can use is that of comparing LFS with a 
+finished house. LFS will give you the skeletal plan of a house, but it's up 
+to you to build it. You have the freedom to adjust your plans as you
+go.</para>
+
+<para>One last advantage of a custom built Linux system is security.
+By compiling the entire system from source code, you are empowered to audit
+everything and apply all the security patches you feel are needed. You don't 
+have to wait for somebody else to compile binary packages that fix a security
+hole. Unless you examine the patch and implement it yourself you have no
+guarantee that the new binary package was built correctly and actually fixes the
+problem (adequately).</para>
+
+<para>There are too many good reasons to build your own LFS system for them all 
+to be listed here. This section is only the tip of the iceberg.  As you 
+continue in your LFS experience, you will find on your own the power that 
+information and knowledge truly bring.</para>
+
+</sect2>
+
+<sect2>
+<title>Who would not want to read this book</title>
+
+<para>There are probably some who, for whatever reason, would feel that they do not 
+want to read this book. If you do not wish to build your own Linux system from 
+scratch, then you probably don't want to read this book. Our goal is to help 
+you build a complete and usable foundation-level system. If you only want to 
+know what happens while your computer boots, then we recommend the <quote>From 
+Power Up To Bash Prompt</quote> HOWTO. The HOWTO builds a bare system which is 
+similar to that of this book, but it focuses strictly on creating a system 
+capable of booting to a BASH prompt.</para>
+
+<para>While you decide which to read, consider your objective. If you wish
+to build a Linux system while learning a bit along the way, then this book
+is probably your best choice. If your objective is strictly educational and
+you do not have any plans for your finished system, then the
+<quote>From Power Up To Bash Prompt</quote> HOWTO is probably a better choice.</para>
+
+<para>The <quote>From Power Up To Bash Prompt</quote> HOWTO is located at 
+<ulink url="http://axiom.anu.edu.au/~okeefe/p2b/"/> or on The Linux 
+Documentation Project's website at
+<ulink url="http://www.tldp.org/HOWTO/From-PowerUp-To-Bash-Prompt-HOWTO.html"/>.</para>
+
+</sect2>
+
+</sect1>
+
+<sect1 id="pf-prerequisites">
+<title>Prerequisites</title>
+<?dbhtml filename="prerequisites.html"?>
+
+<para>This book assumes that its reader has a good deal of knowledge about
+using and installing Linux software. Before you begin building your LFS
+system, you should read the following HOWTOs:</para>
+
+<itemizedlist>
+<listitem><para>Software-Building-HOWTO</para>
+
+<para>This is a comprehensive guide to building and installing "generic"
+UNIX software distributions under Linux. This HOWTO is available at
+<ulink url="http://www.tldp.org/HOWTO/Software-Building-HOWTO.html"/>.</para></listitem>
+
+<listitem><para>The Linux Users' Guide</para>
+
+<para>This guide covers the usage of assorted Linux software and is
+available at
+<ulink url="http://espc22.murdoch.edu.au/~stewart/guide/guide.html"/>.</para></listitem>
+
+<listitem><para>The Essential Pre-Reading Hint</para>
+
+<para>This is an LFS Hint written specifically for new users of Linux. It is
+mostly a list of links to excellent sources of information on a wide range of
+topics. Any person attempting to install LFS, should at least have an
+understanding of many of the topics in this hint. It is available at
+
+<ulink url="http://www.linuxfromscratch.org/hints/downloads/files/essential_prereading.txt"/></para></listitem>
+
+</itemizedlist>
+
+</sect1>
+
+<sect1 id="pre-organization">
+<title>Structure</title>
+<?dbhtml filename="organization.html"?>
+
+<para>This book is divided into the following four parts:</para>
+
+<sect2>
+<title>Part I - Introduction</title>
+
+<para>Part I explains a few important things on how to proceed with the
+installation, and gives meta information about the book (version, changelog,
+acknowledgments, associated mailing lists, and so on).</para>
+</sect2>
+
+<sect2>
+<title>Part II - Preparing for the build</title>
+
+<para>Part II describes how to prepare for the building process: making a
+partition, downloading the packages, and compiling temporary tools.</para>
+</sect2>
+
+<sect2>
+<title>Part III - Building the LFS system</title>
+
+<para>Part III guides you through the building of the LFS system: compiling
+and installing all the packages one by one, setting up the boot scripts, and
+installing the kernel. The resulting basic Linux system is the foundation
+upon which you can build other software, to extend your system in the way
+you like.</para>
+</sect2>
+
+<sect2>
+<title>Part IV - Appendices</title>
+
+<para>Part IV consists of two appendices. The first is an alphabetical list of
+all the packages that are installed -- for each package giving its official
+download location, its contents, and its installation dependencies. The second
+appendix lists all the programs and libraries installed by these packages in
+alphabetical order, so you can easily find out to which package a certain
+program or library belongs.</para>
+
+<para>(Much of the first appendix is integrated into Parts II and III. This
+enlarges the book somewhat, but we believe it makes for easier reading. Now
+you don't have to keep referencing the appendix while doing the installation.
+This going back and forth would be a real chore, especially if you're reading
+a plain text version of the book.)</para>
+</sect2>
+
+</sect1>
+
+
+</preface>

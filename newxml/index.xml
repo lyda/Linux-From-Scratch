@@ -1,30 +1,57 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.oasis-open.org/docbook/xml/4.3CR2/docbookx.dtd">
 <book>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="bookinfo.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="dedication.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="preface.xml"/>
-  <part id="part1">
-    <title>Part I - Introduction</title>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter01.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter02.xml"/>
-  </part>
-  <part id="part2">
-    <title>Part II - Preparing for the build</title>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter03.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter04.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter05.xml"/>
-  </part>
-  <part id="part3">
-    <title>Part III - Building the LFS system</title>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter06.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter07.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter08.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter09.xml"/>
-  </part>
-  <part id="part4">
-    <title>Part IV - Appendices</title>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendixa.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendixb.xml"/>
-  </part>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/bookinfo.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/dedication.xml"/>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/preface.xml"/>
+
+
+<part id="part1">
+<title>Part I - Introduction</title>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter01/chapter01.xml"/>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter02/chapter02.xml"/>
+
+</part>
+
+<part id="part2">
+<title>Part II - Preparing for the build</title>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter03/chapter03.xml"/>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter04/chapter04.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter05/chapter05.xml"/>
+
+
+</part>
+
+<part id="part3">
+<title>Part III - Building the LFS system</title>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter06/chapter06.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter07/chapter07.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter08/chapter08.xml"/>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chapter09/chapter09.xml"/>
+
+
+</part>
+
+<part id="part4">
+<title>Part IV - Appendices</title>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="appendixa/appendixa.xml"/>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="appendixb/appendixb.xml"/>
+
+</part>
+
+
 </book>

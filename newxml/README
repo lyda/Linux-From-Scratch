@@ -1,17 +1,39 @@
 README for the newxml module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Requirements
+~~~~~~~~~~~~
+
+DocBook XML DTD 4.3CR2 - this is required as the 4.2 version doesn't properly
+                         support XIncludes
+
+DocBook XSL Stylesheets 1.64.1 - older versions of the stylesheets had a bug
+                                 which caused broken hyperlinks (they pointed to
+                                 the wrong directory).
+
+libxml2-2.6.4 & libxslt-1.1.2 - these releases have a couple of XInclude related
+                                bugfixes in them
+
+
+Processing the sources
+~~~~~~~~~~~~~~~~~~~~~~
+
 In order to process this version of the book simply use the following command:
 
-`xmllint --xinclude --postvalid index.xml > lfs-all.xml`
+xsltproc --nonet --xinclude -stringparam base.dir ~/lfs-book/ stylesheets/lfs-chunked.xsl index.xml
 
-lfs-all.xml will now contain the entire source of the book, which you can
-process using the existing commands detailed in LFS's main README file.
+This will produce chunked XHTML output in the directory specified by the base.dir command line parameter (~/lfs-book/ in the example above).
 
-In time this process will change to using XSLT stylesheets which will require
-a command line something like the following:
+In time there will be other XSL files in the stylesheets directory to process the sources into formats such as LaTeX, Text, nALFS profiles.
 
-`xsltproc --xinclude lfs-[output-format].xsl index.xml`
+TODO
+~~~~
 
-where [output-format] will be one of a number of alternatives including (but
-no doubt not limited to) XHTML, PDF, LaTeX, Text, nALFS profiles.
+1. Further split the XML sources up
+2. Reintroduce some entities that were removed during the cleanup
+3. Provide a css file to provide nicer output than whatever the UA's default is.
+4. Decide whether we want to use the strict or traditional XHTML DTD.  Note in
+   particular http://www.sagehill.net/docbookxsl/OtherOutputForms.html#d0e23340.
+5. Move the legalinfo off the titlepage.
+6. Decide on what levels the TOCs should go down to.
+7. Incorporate Alex's restructuring? 

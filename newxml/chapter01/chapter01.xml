@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.oasis-open.org/docbook/xml/4.3CR2/docbookx.dtd">
+<chapter id="chapter01" xreflabel="Chapter 1">
+<?dbhtml dir="chapter01"?>
+<title>Introduction</title>
+<?dbhtml filename="chapter01.html"?>
+
+<sect1 id="ch01-how">
+<title>How things are going to be done</title>
+<?dbhtml filename="how.html"?>
+
+<para>You are going to build your LFS system by using a previously installed
+Linux distribution (such as Debian, Mandrake, Red Hat, or SuSE). This existing
+Linux system (the host) will be used as a starting point, because you will need
+programs like a compiler, linker and shell to build the new system. Normally
+all the required tools are available if you selected <quote>development</quote>
+as one of the options when you installed your distribution.</para>
+
+<para>In <xref linkend="chapter03"/> you will first create a new Linux native
+partition and file system, the place where your new LFS system will be compiled
+and installed. Then in <xref linkend="chapter04"/> you download all the
+packages and patches required to build an LFS system, and store them on the new
+file system.</para>
+
+<para><xref linkend="chapter05"/> then discusses the installation of a number
+of packages that will form the basic development suite (or toolchain) which is
+used to build the actual system in <xref linkend="chapter06"/>. Some of these
+packages are needed to resolve circular dependencies -- for example, to compile
+a compiler you need a compiler.</para>
+
+<para>The first thing to be done in <xref linkend="chapter05"/> is build a
+first pass of the toolchain, made up of Binutils and GCC. The programs from
+these  packages will be linked statically in order for them to be usable
+independently of the host system. The second thing to do is build Glibc, the
+C library. Glibc will be compiled by the toolchain programs we just built in
+the first pass. The third thing to do is build a second pass of the toolchain.
+This time the toolchain will be dynamically linked against the newly built
+Glibc. The remaining <xref linkend="chapter05"/> packages are all built using
+this second pass toolchain and dynamically linked against the new
+host-independent Glibc. When this is done, the LFS installation process will no
+longer depend on the host distribution, with the exception of the running
+kernel.</para>
+
+<para>You may be thinking that <quote>this seems like a lot of work, just to
+get away from my host distribution</quote>. Well, a full technical explanation
+is provided at the start of <xref linkend="chapter05"/>, including some notes
+on the differences between statically and dynamically linked programs.</para>
+
+<para>In <xref linkend="chapter06"/> your real LFS system will be built. The
+chroot (change root)  program is used to enter a virtual environment and start
+a new shell whose root directory will be set to the LFS partition. This is very
+similar to rebooting and instructing the kernel to mount the LFS partition as
+the root partition. The reason that you don't actually reboot, but instead
+chroot, is that creating a bootable system requires additional work which isn't
+necessary just yet. But the major advantage is that chrooting allows you to
+continue using the host while LFS is being built. While waiting for package
+compilation to complete, you can simply switch to a different VC (Virtual
+Console) or X desktop and continue using the computer as you normally
+would.</para>
+
+<para>To finish the installation, the bootscripts are set up in
+<xref linkend="chapter07"/>, the kernel and bootloader are set up in
+<xref linkend="chapter08"/>, and <xref linkend="chapter09"/> contains some
+pointers to help you after you finish the book.  Then, finally, you're ready to
+reboot your computer into your new LFS system.</para>
+
+<para>This is the process in a nutshell. Detailed information on the steps you 
+will take are discussed in the chapters and package descriptions as you 
+progress through them. If something isn't completely clear now, don't worry, 
+everything will fall into place soon.</para>
+
+<para>Please read <xref linkend="chapter02"/> carefully as it explains a few
+important things you should be aware of before you begin to work through
+<xref linkend="chapter05"/> and beyond.</para>
+
+</sect1>
+
+
+<sect1 id="ch01-conventions">
+<title>Conventions used in this book</title>
+<?dbhtml filename="conventions.html"?>
+
+<para>To make things easy to follow, there are a number of conventions used
+throughout the book. Following are some examples:</para>
+
+<screen><userinput>./configure --prefix=/usr</userinput></screen>
+
+<blockquote><para>This form of text is designed to be typed exactly 
+as seen unless otherwise noted in the surrounding text. It is also used 
+in the explanation sections to identify which of the commands is being 
+referenced.</para></blockquote>
+
+<para><filename>install-info: unknown option 
+`--dir-file=/mnt/lfs/usr/info/dir'</filename></para>
+
+<blockquote><para>This form of text (fixed width text) is showing screen 
+output, probably as the result of commands issued, and is also used to 
+show filenames, such as <filename>/etc/ld.so.conf</filename>.</para></blockquote>
+
+<para><emphasis>Emphasis</emphasis></para>
+
+<blockquote><para>This form of text is used for several purposes in the 
+book, mainly to emphasize important points, and to give examples of
+what to type.</para></blockquote>
+
+<para><ulink url="http://www.linuxfromscratch.org/"/></para>
+
+<blockquote><para>This form of text is used for hyperlinks, both within the 
+book and to external pages such as HOWTOs, download locations and
+websites.</para></blockquote>
+
+<screen><userinput>cat &gt; $LFS/etc/group &lt;&lt; "EOF"</userinput>
+root:x:0:
+bin:x:1:
+......
+<userinput>EOF</userinput>
+</screen>
+
+<blockquote><para>This type of section is used mainly when creating 
+configuration files. The first command tells the system to create 
+the file $LFS/etc/group from whatever is typed on the following lines until 
+the sequence EOF is encountered. Therefore, this whole section is generally 
+typed as seen.</para></blockquote>
+
+</sect1>
+
+
+<sect1 id="ch01-version" xreflabel="Chapter 1 - Book Version">
+<title>Book version</title>
+<?dbhtml filename="version.html"?>
+
+<para>This is version CVS-20040102 of the Linux From Scratch book, dated
+January 2nd, 2004. If this book is more than two months old, a newer and better
+version is probably already available. To find out, check one of the mirrors
+listed on <ulink url="http://www.linuxfromscratch.org/"/>.</para>
+
+</sect1>
+
+
+<sect1 id="ch01-changelog">
+<title>Changelog</title>
+<?dbhtml filename="changelog.html"?>
+
+<para>CVS-20040102 - January 2nd, 2004</para>
+
+<itemizedlist>
+
+<listitem><para>Upgraded to:</para>
+<itemizedlist>
+<listitem><para>autoconf-2.59</para></listitem>
+<listitem><para>automake-1.8</para></listitem>
+<listitem><para>file-4.06</para></listitem>
+<listitem><para>gcc-3.3.2</para></listitem>
+<listitem><para>gettext-0.13.1</para></listitem>
+<listitem><para>man-pages-1.64</para></listitem>
+<listitem><para>lfs-utils-0.4.2</para></listitem>
+<listitem><para>linux-2.4.23</para></listitem>
+<listitem><para>modutils-2.4.26</para></listitem>
+<listitem><para>perl-5.8.2</para></listitem>
+<listitem><para>procps-3.1.14</para></listitem>
+<listitem><para>psmisc-21.4</para></listitem>
+<listitem><para>sed-4.0.8</para></listitem>
+<listitem><para>tcl-8.4.5</para></listitem>
+<listitem><para>zlib-1.2.1</para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>Added:</para>
+<itemizedlist>
+<listitem><para>gcc-3.3.2-no_fixincludes-1.patch</para></listitem>
+<listitem><para>inetutils-1.4.2-no_server_man_pages-1.patch</para></listitem>
+<listitem><para>kbd-1.08-more-programs-3.patch</para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>Removed:</para>
+<itemizedlist>
+<listitem><para>gcc-3.3.1-no_fixincludes-2.patch</para></listitem>
+<listitem><para>gcc-3.3.1-suppress-libiberty.patch</para></listitem>
+<listitem><para>grub-0.93-gcc33-1.patch</para></listitem>
+<listitem><para>kbd-1.08-more-programs.patch</para></listitem>
+<listitem><para>man-1.5m2-manpath.patch</para></listitem>
+<listitem><para>man-1.5m2-pager.patch</para></listitem>
+<listitem><para>ncurses-5.3-vsscanf.patch</para></listitem>
+<listitem><para>procps-3.1.11-locale-fix.patch</para></listitem>
+<listitem><para>zlib-1.1.4-vsnprintf.patch</para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>December 17th, 2003 [greg]: Chapter 6 - Vim: Added commands to
+run the Vim test suite. Closes Bug 722.</para></listitem> 
+
+<listitem><para>December 17th, 2003 [greg]: Upgraded to Autoconf-2.59,
+Automake-1.8 and Gettext-0.13.1.</para></listitem>
+
+<listitem><para>December 17th, 2003 [greg]: Chapter 6 - Kbd: Updated to new
+patch that also installs the man pages for the additional programs. Closes Bug
+726.</para></listitem>
+
+<listitem><para>December 17th, 2003 [greg]: Chapter 6 - Zlib: Added chmod
+command to fix static library permissions. Closes Bug 728.</para></listitem>
+
+<listitem><para>December 12th, 2003 [greg]: Glibc: Moved ld.so.conf creation
+to immediately before make install in both chapters.</para></listitem>
+
+<listitem><para>December 11th, 2003 [greg]: Chapter 6 - Inetutils: Added patch
+to prevent unnecessary man pages from being installed. Closes Bug
+723.</para></listitem>
+
+<listitem><para>December 11th, 2003 [greg]: Chapter 6 - Creating directories:
+Stopped creation of /usr/share/{dict,nls}. Closes Bug 721.</para></listitem>
+
+<listitem><para>December 11th, 2003 [greg]: Chapter 5 - Setting up the
+environment: Fixed Bash startup files to handle HOME and PS1.</para></listitem>
+
+<listitem><para>December 3rd, 2003 [greg]: Upgraded to Gettext-0.13,
+Man-pages-1.64, Linux-2.4.23 and Psmisc-21.4.</para></listitem>
+
+<listitem><para>November 26th, 2003 [greg]: Upgraded to Lfs-Utils-0.4.2,
+Tcl-8.4.5 and Zlib-1.2.1. Obsoletes the Zlib Vsnprintf patch.</para></listitem>
+
+<listitem><para>November 23rd, 2003 [greg]: Upgraded to Lfs-Utils-0.4.1 and
+improved its build commands.</para></listitem>
+
+<listitem><para>November 20th, 2003 [greg]: Rolled back the following patches
+to sed substitutions: GCC Suppress-Libiberty Patch, Grub Gcc33 Patch, Man
+Manpath Patch and Man Pager Patch. Closes Bug 461.</para></listitem>
+
+<listitem><para>November 19th, 2003 [greg]: Chapter 5 - Setting up the
+environment: Reworked the Bash startup files to enforce a clean environment.
+Closes Bug 714.</para></listitem>
+
+<listitem><para>November 17th, 2003 [jeremy]: Upgraded Man-pages to
+1.63.</para></listitem>
+
+<listitem><para>November 16th, 2003 [greg]: Chapter 6 - Sysvinit: Simplified
+the sed to demonstrate yet another sed variation.</para></listitem>
+
+<listitem><para>November 17th, 2003 [jeremy]: Chapter 6 - Perl: Added fix
+for perldoc less invocation problem.  Closes bug 716.</para></listitem>
+
+<listitem><para>November 16th, 2003 [greg]: Chapter 6 - Texinfo: Added note
+about how to recreate the /usr/share/info/dir file if needed. Closes Bug
+485.</para></listitem>
+
+<listitem><para>November 14th, 2003 [greg]: Removed unnecessary Ncurses
+Vsscanf Patch. Closes Bug 704.</para></listitem>
+
+<listitem><para>November 14th, 2003 [gerard]: Adjusted libexecdir location
+for these packages: Glibc - /usr/bin to /usr/lib, Findutils - /usr/bin to 
+/usr/lib/locate, Gawk - /usr/bin to /usr/lib/gawk, Tar - /usr/bin to
+/usr/sbin. Closes Bug #678.</para></listitem>
+
+<listitem><para>November 14th, 2003 [greg]: Chapter 6 - Coreutils: Stopped
+moving these binaries into /bin: dir, dircolors, du, mkfifo, shred, vdir.
+Closes Bug 679.</para></listitem>
+
+<listitem><para>November 14th, 2003 [greg]: Chapter 6 - Shadow: Added command
+to create /etc/default directory to allow the -D option of useradd to
+work properly.</para></listitem>
+
+<listitem><para>November 14th, 2003 [greg]: Chapter 6 - Coreutils and
+Util-linux: Pruned the number of "kill" binaries installed. Use the one from
+Procps. Partially addresses Bug 307.</para></listitem>
+
+<listitem><para>November 13th, 2003 [greg]: Chapter 6 - Ed: Streamlined build
+commands. Closes Bug 693.</para></listitem>
+
+<listitem><para>November 13th, 2003 [greg]: Upgraded to Perl-5.8.2 and 
+streamlined build commands for Perl's Chapter 5 static 
+extensions. Closes Bug 690.</para></listitem>
+
+<listitem><para>November 13th, 2003 [gerard]: Upgraded to
+Lfs-Utils-0.4 and Man-pages-1.62</para></listitem>
+
+<listitem><para>November 13th, 2003 [gerard]: Renamed GCC
+no_fixincludes-2.patch to no_fixincludes-1.patch which was the name it is
+supposed to be.</para></listitem>
+
+<listitem><para>November 12th, 2003 [greg]: Removed unnecessary Automake
+symlink.</para></listitem>
+
+<listitem><para>November 12th, 2003 [greg]: Removed unnecessary Procps Locale
+Patch. Closes Bug 705.</para></listitem>
+
+<listitem><para>November 12th, 2003 [greg]: Upgraded to Autoconf-2.58,
+Automake-1.7.9, File-4.06, Modutils-2.4.26, Procps-3.1.14 and
+Sed-4.0.8.</para></listitem>
+
+<listitem><para>November 13th, 2003 [alex]: Chapter 6 - Vim: Changed from
+creating a local <filename>/root/.vimrc</filename> to a system-wide
+<filename>/etc/vimrc</filename> file .</para></listitem>
+
+<listitem><para>November 12th, 2003 [greg]: Upgraded to
+GCC-3.3.2.</para></listitem>
+
+</itemizedlist>
+
+<para>Release of version 5.0 on November 5th, 2003.</para>
+
+</sect1>
+
+
+<sect1 id="ch01-administrativa">
+<title>Resources</title>
+<?dbhtml filename="resources.html"?>
+
+
+<sect2 id="ch01-faq">
+<title>FAQ</title>
+
+<para>If during the building of your LFS system you encounter any errors, or
+have any questions, or think you found a typo in the book, then please first
+consult the FAQ (Frequently Asked Questions) at
+<ulink url="http://www.linuxfromscratch.org/faq/"/>.</para>
+
+</sect2>
+
+
+<sect2 id="ch01-irc">
+<title>IRC</title>
+
+<para>Several members of the LFS community offer assistance on our community
+IRC server. Before you utilize this mode of support, we ask that you've
+at least checked the LFS FAQ and the mailing list archives for the answer to
+your question.  You can find the IRC server at
+<emphasis>irc.linuxfromscratch.org</emphasis> port 6667.  The support channel
+is named #LFS-support.</para>
+
+</sect2>
+
+
+<sect2 id="ch01-maillists" xreflabel="Chapter 1 - Mailing lists">
+<title>Mailing lists</title>
+
+<para>The <emphasis>linuxfromscratch.org</emphasis> server is hosting a number
+of mailing lists used for the development of the LFS project. These lists
+include, among others, the main development and support lists.</para>
+
+<para>For information on which lists are available, how to subscribe to them,
+their archive locations, and so on, visit <ulink url="http://www.linuxfromscratch.org/mail.html"/>.</para>
+
+</sect2>
+
+
+<sect2 id="ch01-newsserver">
+<title>News server</title>
+
+<para>All the mailing lists hosted at <emphasis>linuxfromscratch.org</emphasis>
+are also accessible via the NNTP server. All messages posted to a mailing list
+will be copied to the correspondent newsgroup, and vice versa.</para>
+
+<para>The news server can be reached at
+<emphasis>news.linuxfromscratch.org</emphasis>.</para>
+
+</sect2>
+
+
+<sect2 id="ch01-mirrors" xreflabel="Chapter 1 - Mirror sites">
+<title>Mirror sites</title>
+
+<para>The LFS project has a number of mirrors set up world-wide to make
+accessing the website and downloading the required packages more convenient.
+Please visit the website at <ulink url="http://www.linuxfromscratch.org/"/> for
+a list of current mirrors.</para>
+
+</sect2>
+
+
+<sect2 id="ch01-contactinfo">
+<title>Contact information</title>
+
+<para>Please direct all your questions and comments to one of the LFS mailing
+lists (see above).</para>
+
+</sect2>
+
+
+</sect1>
+
+
+<sect1 id="ch01-acknowledgments">
+<title>Acknowledgments</title>
+<?dbhtml filename="acknowledgements.html"?>
+
+<para>We would like to thank the following people and organizations for their
+contributions to the Linux From Scratch Project.</para>
+
+<sect2>
+<title>Current Project Team Members</title>
+
+<itemizedlist>
+
+<listitem><para><ulink url="mailto:gerard@linuxfromscratch.org">Gerard
+Beekmans</ulink> &lt;gerard@linuxfromscratch.org&gt; -- Linux-From-Scratch
+initiator, LFS Project organizer.</para></listitem>
+
+<listitem><para><ulink url="mailto:matthew@linuxfromscratch.org">Matthew
+Burgess</ulink> &lt;matthew@linuxfromscratch.org&gt; -- LFS General Package
+maintainer, LFS Book editor.</para></listitem>
+
+<listitem><para><ulink url="mailto:meerkats@bellsouth.net">Craig
+Colton</ulink> &lt;meerkats@bellsouth.net&gt; -- LFS, ALFS, BLFS and Hints
+Project logo creator.</para></listitem>
+
+<listitem><para><ulink url="mailto:jeroen@linuxfromscratch.org">Jeroen
+Coumans</ulink> &lt;jeroen@linuxfromscratch.org&gt; -- Website developer, FAQ
+maintainer.</para></listitem>
+
+<listitem><para><ulink url="mailto:bdubbs@linuxfromscratch.org">Bruce
+Dubbs</ulink> &lt;bdubbs@linuxfromscratch.org&gt; -- LFS Quality Assurance Team
+leader, BLFS Book editor.</para></listitem>
+
+<listitem><para><ulink url="mailto:alex@linuxfromscratch.org">Alex
+Groenewoud</ulink> &lt;alex@linuxfromscratch.org&gt; -- LFS Book
+editor.</para></listitem>
+
+<listitem><para><ulink url="mailto:markh@linuxfromscratch.org">Mark
+Hymers</ulink> &lt;markh@linuxfromscratch.org&gt; -- CVS maintainer, BLFS Book
+creator, former LFS Book editor.</para></listitem>
+
+<listitem><para><ulink url="mailto:iwanek@linuxfromscratch.org">James
+Iwanek</ulink> &lt;iwanek@linuxfromscratch.org&gt; -- System Administration
+Team member.</para></listitem>
+
+<listitem><para><ulink url="mailto:nicholas@linuxfromscratch.org">Nicholas
+Leippe</ulink> &lt;nicholas@linuxfromscratch.org&gt; -- Wiki
+maintainer.</para></listitem>
+
+<listitem><para><ulink url="mailto:lizardo@linuxfromscratch.org">Anderson
+Lizardo</ulink> &lt;lizardo@linuxfromscratch.org&gt; -- Website backend scripts
+creator and maintainer.</para></listitem>
+
+<listitem><para><ulink url="mailto:bill@linuxfromscratch.org">Bill
+Maltby</ulink> &lt;bill@linuxfromscratch.org&gt; -- LFS Project
+organizer.</para></listitem>
+
+<listitem><para><ulink url="mailto:scot@linuxfromscratch.org">Scot Mc
+Pherson</ulink> &lt;scot@linuxfromscratch.org&gt; -- LFS NNTP gateway
+maintainer.</para></listitem>
+
+<listitem><para><ulink url="mailto:ryan@linuxfromscratch.org">Ryan
+Oliver</ulink> &lt;ryan@linuxfromscratch.org&gt; -- Testing Team leader,
+co-creator of PLFS.</para></listitem>
+
+<listitem><para><ulink url="mailto:jwrober@linuxfromscratch.org">James
+Robertson</ulink> &lt;jwrober@linuxfromscratch.org&gt; -- Bugzilla maintainer,
+Wiki developer, LFS Book editor.</para></listitem>
+
+<listitem><para><ulink url="mailto:greg@linuxfromscratch.org">Greg
+Schafer</ulink> &lt;greg@linuxfromscratch.org&gt; -- Toolchain maintainer,
+LFS Book editor, co-creator of PLFS.</para></listitem>
+
+<listitem><para><ulink url="mailto:tushar@linuxfromscratch.org">Tushar
+Teredesai</ulink> &lt;tushar@linuxfromscratch.org&gt; -- BLFS Book editor,
+Hints and Patches Projects maintainer.</para></listitem>
+
+<listitem><para><ulink url="mailto:jeremy@linuxfromscratch.org">Jeremy
+Utley</ulink> &lt;jeremy@linuxfromscratch.org&gt; -- LFS Book editor, Bugzilla
+maintainer.</para></listitem>
+
+<listitem><para>Countless other people on the various LFS and BLFS
+mailing lists who are making this book happen by giving their suggestions,
+testing the book and submitting bug reports, instructions and their
+experiences with installing various packages.</para></listitem>
+
+</itemizedlist>
+
+</sect2>
+
+<sect2>
+<title>Translators</title>
+
+<itemizedlist>
+
+<listitem><para><ulink url="mailto:macana@lfs-es.org">Manuel Canales
+Esparcia</ulink> &lt;macana@lfs-es.org&gt; -- Spanish LFS translation
+project.</para></listitem>
+
+<listitem><para><ulink url="mailto:johan@linuxfromscratch.org">Johan
+Lenglet</ulink> &lt;johan@linuxfromscratch.org&gt; -- French LFS translation
+project.</para></listitem>
+
+<listitem><para><ulink url="mailto:lizardo@linuxfromscratch.org">Anderson
+Lizardo</ulink> &lt;lizardo@linuxfromscratch.org&gt; -- Portuguese LFS
+translation project.</para></listitem>
+
+</itemizedlist>
+
+</sect2>
+
+<sect2>
+<title>Mirror Maintainers</title>
+
+<itemizedlist>
+
+<listitem><para><ulink url="mailto:jason@dstc.edu.au">Jason Andrade</ulink>
+&lt;jason@dstc.edu.au&gt; -- au.linuxfromscratch.org mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:lost@l-w.net">William Astle</ulink>
+&lt;lost@l-w.net&gt; -- ca.linuxfromscratch.org mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:baque@cict.fr">Baque</ulink>
+&lt;baque@cict.fr&gt; -- lfs.cict.fr mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:stevie@stevie20.de">Stephan Brendel</ulink>
+&lt;stevie@stevie20.de&gt; -- lfs.netservice-neuss.de
+mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:ian@ichilton.co.uk">Ian Chilton</ulink>
+&lt;ian@ichilton.co.uk&gt; -- us.linuxfromscratch.org, linuxfromscratch.co.uk
+mirrors.</para></listitem>
+
+<listitem><para><ulink url="mailto:fredan-lfs@fredan.org">Fredrik
+Danerklint</ulink> &lt;fredan-lfs@fredan.org&gt; -- se.linuxfromscratch.org
+mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:pgpkeys@aeternamtech.com">David D.W.
+Downey</ulink> &lt;pgpkeys@aeternamtech.com&gt; -- lfs.learnbyexample.com
+mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:ebf@aedsolucoes.com.br">Eduardo B.
+Fonseca</ulink> &lt;ebf@aedsolucoes.com.br&gt; -- br.linuxfromscratch.org
+mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:hrx@hrxnet.de">Hagen Herrschaft</ulink>
+&lt;hrx@hrxnet.de&gt; -- de.linuxfromscratch.org mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:tim@idge.net">Tim Jackson</ulink>
+&lt;tim@idge.net&gt; -- linuxfromscratch.idge.net mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:barna@siker.hu">Barna Koczka</ulink>
+&lt;barna@siker.hu&gt; -- hu.linuxfromscratch.org mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:lfs-mirror@linuxfromscratch.rave.org">Roel 
+Neefs</ulink> -- linuxfromscratch.rave.org mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:sime@dot-sime.com">Simon Nicoll</ulink>
+&lt;sime@dot-sime.com&gt; -- uk.linuxfromscratch.org mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:ervin@activalink.net">Ervin S.
+Odisho</ulink> &lt;ervin@activalink.net&gt; -- lfs.activalink.net
+mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:guido@primerelay.net">Guido Passet</ulink>
+&lt;guido@primerelay.net&gt; -- nl.linuxfromscratch.org
+mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:miha@xuy.biz">Mikhail Pastukhov</ulink>
+&lt;miha@xuy.biz&gt; -- lfs.130th.net mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:jpolen@rackspace.com">Jeremy Polen</ulink>
+&lt;jpolen@rackspace.com&gt; -- us2.linuxfromscratch.org
+mirror.</para></listitem>
+
+<listitem><para><ulink url="http://www.mirror.ac.uk">UK Mirror Service</ulink> 
+-- linuxfromscratch.mirror.co.uk mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:thomas@sofagang.dk">Thomas Skyt</ulink>
+&lt;thomas@sofagang.dk&gt; -- dk.linuxfromscratch.org mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:Antonin.Sprinzl@tuwien.ac.at">Antonin
+Sprinzl</ulink> &lt;Antonin.Sprinzl@tuwien.ac.at&gt; -- at.linuxfromscratch.org
+mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:dag@stenstad.net">Dag Stenstad</ulink> 
+&lt;dag@stenstad.net&gt; for providing no.linuxfromscratch.org and <ulink url="mailto:ian@ichilton.co.uk">Ian Chilton</ulink> for running 
+it.</para></listitem>
+
+<listitem><para><ulink url="mailto:archive@doc.cs.univ-paris8.fr">Parisian
+sysadmins</ulink> &lt;archive@doc.cs.univ-paris8.fr&gt; --
+www2.fr.linuxfromscratch.org mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:highos@linuxfromscratch.org">Jesse
+Tie-Ten-Quee</ulink> &lt;highos@linuxfromscratch.org&gt; for providing and
+running the linuxfromscratch.org server.</para></listitem>
+
+<listitem><para><ulink url="mailto:velin@zadnik.org">Alexander Velin</ulink>
+&lt;velin@zadnik.org&gt; -- bg.linuxfromscratch.org mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:Martin.Voss@ada.de">Martin Voss</ulink>
+&lt;Martin.Voss@ada.de&gt; -- lfs.linux-matrix.net mirror.</para></listitem>
+
+<listitem><para><ulink url="mailto:pyng@spam.averse.net">Pui Yong</ulink>
+&lt;pyng@spam.averse.net&gt; -- sg.linuxfromscratch.org
+mirror.</para></listitem>
+
+</itemizedlist>
+
+</sect2>
+
+<sect2>
+<title>Donators</title>
+
+<itemizedlist>
+
+<listitem><para><ulink url="mailto:dean@vipersoft.co.uk">Dean Benson</ulink>
+&lt;dean@vipersoft.co.uk&gt; for several monetary
+contributions.</para></listitem>
+
+<listitem><para><ulink url="http://www.dreamwvr.com">DREAMWVR.COM</ulink> for 
+their past sponsorship of donating various resources to the LFS and related 
+sub projects.</para></listitem>
+
+<listitem><para><ulink url="mailto:hrx@hrxnet.de">Hagen Herrschaft</ulink>
+&lt;hrx@hrxnet.de&gt; for donating a 2.2 GHz P4 system, now running under the
+name of <emphasis>lorien</emphasis>.</para></listitem>
+
+<listitem><para><ulink url="http://www.oreilly.com">O'Reilly</ulink> for 
+donating books on SQL and PHP.</para></listitem>
+
+<listitem><para><ulink url="http://www.vasoftware.com">VA Software</ulink> 
+who, on behalf of <ulink url="http://www.linux.com">Linux.com</ulink>, donated 
+a VA Linux 420 (former StartX SP2) workstation.</para></listitem>
+
+<listitem><para><ulink url="mailto:strider@linux.com">Mark Stone</ulink> for 
+donating <emphasis>shadowfax</emphasis>, the first linuxfromscratch.org
+server, a 750 MHz P3 with 512 MB RAM and two 9 GB SCSI drives. When the server
+moved it was renamed to <emphasis>belgarath</emphasis>.</para></listitem>
+
+<listitem><para><ulink url="mailto:highos@linuxfromscratch.org">Jesse
+Tie-Ten-Quee</ulink> &lt;highos@linuxfromscratch.org&gt; for donating a Yamaha
+CDRW 8824E CD-writer.</para></listitem>
+
+<listitem><para>Countless other people on the various LFS mailing lists who are
+making this book better by giving their suggestions, submitting bug reports,
+and throwing in their criticism.</para></listitem>
+
+</itemizedlist>
+
+</sect2>
+
+<sect2>
+<title>Former Team Members and Contributors</title>
+
+<itemizedlist>
+
+<listitem><para><ulink url="mailto:timothy@linuxfromscratch.org">Timothy
+Bauscher</ulink> &lt;timothy@linuxfromscratch.org&gt; -- LFS Book editor, Hints
+Project maintainer.</para></listitem>
+
+<listitem><para>Robert Briggs for originally donating the
+<emphasis>linuxfromscratch.org</emphasis> and
+<emphasis>linuxfromscratch.com</emphasis> domain names.</para></listitem>
+
+<listitem><para><ulink url="mailto:ian@ichilton.co.uk">Ian Chilton</ulink>
+&lt;ian@ichilton.co.uk&gt; for maintaining the Hints project.</para></listitem>
+
+<listitem><para><ulink url="mailto:gimli@linuxfromscratch.org">Marc
+Heerdink</ulink> &lt;gimli@linuxfromscratch.org&gt; -- LFS Book
+editor.</para></listitem>
+
+<listitem><para><ulink url="mailto:sklein@linuxfromscratch.org">Seth W.
+Klein</ulink> &lt;sklein@linuxfromscratch.org&gt; -- LFS FAQ
+creator.</para></listitem>
+
+<listitem><para><ulink url="mailto:garrett@linuxart.com">Garrett
+LeSage</ulink> &lt;garrett@linuxart.com&gt; -- Original LFS banner
+creator.</para></listitem>
+
+<listitem><para><ulink url="mailto:nomis80@videotron.ca">Simon
+Perreault</ulink> &lt;nomis80@videotron.ca&gt; -- Hints Project
+maintainer.</para></listitem>
+
+<listitem><para><ulink url="mailto:Geert.Poels@skynet.be">Geert Poels</ulink>
+&lt;Geert.Poels@skynet.be&gt; -- Original BLFS banner creator; based on the
+LFS banner by Garrett LeSage.</para></listitem>
+
+<listitem><para><ulink url="mailto:bkenoah@oswd.org">Frank Skettino</ulink>
+&lt;bkenoah@oswd.org&gt; for the initial design of the old website -- have a
+look at <ulink url="http://www.oswd.org/"/>.</para></listitem>
+
+<listitem><para><ulink url="mailto:highos@linuxfromscratch.org">Jesse
+Tie-Ten-Quee</ulink> &lt;highos@linuxfromscratch.org&gt; for answering
+countless questions on IRC and having a great deal of patience.</para></listitem>
+
+</itemizedlist>
+
+</sect2>
+
+</sect1>
+
+
+
+</chapter>
