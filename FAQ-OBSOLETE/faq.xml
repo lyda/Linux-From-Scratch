@@ -118,25 +118,11 @@
 	<chapter id="preparing"><title>Preparing to Build</title>
 		<section id="what-dist"><title>What distribution should I use to start from?</title>
 			<para>
-				Most distributions are fine, and even the worst aren't guarenteed to fail;
-				but here are a few recommendations:
+				Any recent distribution should be fine
+				if you install and/or update the development packages.
+				(Look for ones starting in "gcc" or "glibc" "libstdc++" or
+				ending in "-dev".)
 			</para>
-			<itemizedlist>
-				<listitem><para>
-					Red Hat 7 is not recommended because it includes pre-release
-					versions of core software which don't have all the wrinkles
-					ironed out.
-				</para></listitem>
-				<listitem><para>
-					Red Hat 6.x, in contrast, is noted to work well.
-				</para></listitem>
-				<listitem><para>
-					Debian is not recommended due to problems with TexInfo.
-				</para></listitem>
-				<listitem><para>
-					Slackware 7 is often mentioned as a good choice.
-				</para></listitem>
-			</itemizedlist>
 		</section>
 	</chapter>
 	<chapter id="compiling"><title>Compiling</title>
