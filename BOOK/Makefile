@@ -3,9 +3,10 @@ CHUNK_QUIET=0
 PDF_OUTPUT=LFS-BOOK.pdf
 NOCHUNKS_OUTPUT=LFS-BOOK.html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
+ARCH=raq2
 
 lfs:
-	xsltproc --xinclude --nonet -stringparam profile.condition html \
+	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch $(ARCH) \
 	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
 
 	xsltproc --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
