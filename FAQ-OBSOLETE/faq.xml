@@ -979,7 +979,7 @@ make: *** [all-recursive-am] Error 2
 			</para></answer>
 		</qandaentry>
 	</qandadiv><!-- specific-packages -->
-<!-- dlist: ,lfs-dev,lfs-support,blfs-support -->
+<!-- dlist: ,lfs-dev,lfs-support,xblfs-support -->
 	<qandadiv id="additions"><title>Additions / Changes to LFS.</title>
 <!-- elist: ,lfs-dev -->
 		<qandaentry id="new-version"><question><para>There's a new version of package Foo.</para></question>
@@ -1011,7 +1011,7 @@ url="http://kt.zork.net/kernel-traffic/kt20000814_80.txt">http://kt.zork.net/ker
 </para></answer>
 </qandaentry>
 
-<!-- dlist: ,lfs-support,blfs-support -->
+<!-- dlist: ,lfs-support,xblfs-support -->
 <!--		<qandadiv id="setup-polishing"><title>Polishing your setup.</title>-->
 <!--
 			<para>These don't really belong in the FAQ,
@@ -1038,7 +1038,8 @@ export LC_ALL=en_US
 </para></answer>
 </qandaentry>
 
-<!-- elist: ,blfs-support -->
+<!-- elist: ,xblfs-support --><!-- 2002-03-27 now in BLFS. hoping a pointer
+there isn't needed.
 			<qandaentry id="which"><question><para>Where's which?</para></question>
 				<answer><para>It's not in there! A proper which is available
 					from the GNU Project at
@@ -1059,6 +1060,7 @@ chmod 755 /usr/bin/which
 chown root.root /usr/bin/which
 				</screen></answer>
 			</qandaentry>
+-->
 <!--		</qandadiv>-->
 	</qandadiv><!-- additions -->
 </qandaset>
