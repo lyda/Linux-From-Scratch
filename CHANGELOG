@@ -1,3 +1,9 @@
+n/a - June 18, 2004
+
+	* Updated sysconfig/console
+	* Fixed disabling hotplug in sendsignals
+	* hotplug is now installed by default
+
 n/a - June 15, 2004
 
 	* Reset /proc/sys/kernel/hotplug to /bin/true when running the "stop"
