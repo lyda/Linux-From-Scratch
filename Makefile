@@ -349,12 +349,12 @@ install-xinetd: create-dirs
 	ln -sf  ../init.d/xinetd ${EXTDIR}/rc.d/rc5.d/S23xinetd
 	ln -sf  ../init.d/xinetd ${EXTDIR}/rc.d/rc6.d/K49xinetd
 
-install-contrib-modules: create-dirs
+install-modules: create-dirs
 	install -m 754 contrib/init.d/modules ${EXTDIR}/rc.d/init.d
 	install -m 644 contrib/sysconfig/modules ${EXTDIR}/rc.d/sysconfig
 	ln -sf  ../init.d/modules ${EXTDIR}/rc.d/rcsysinit.d/S15modules
 
-install-contrib-udev: create-dirs
+install-udev: create-dirs
 	install -m 754 contrib/init.d/udev ${EXTDIR}/rc.d/init.d
 	ln -sf  ../init.d/udev ${EXTDIR}/rc.d/rcsysinit.d/S10udev
 
