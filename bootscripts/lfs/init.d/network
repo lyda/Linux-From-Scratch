@@ -14,7 +14,7 @@ case "$1" in
 		for file in $network_devices/ifconfig.*
 		do
 			interface=${file##*/ifconfig.}
-			# verify that $file is a file, and does not end with a ~
+			# verify that $file is a readable file, and does not end with a ~
 			if [ -r "$file" -a "$file" = "${file%""~""}" ]
 			then
 				(
@@ -51,7 +51,7 @@ case "$1" in
 		for file in $network_devices/ifconfig.*
 		do
 			interface=${file##*/ifconfig.}
-			# verify that $file is a file, and does not end with a ~
+			# verify that $file is a readable file, and does not end with a ~
 			if [ -r "$file" -a "$file" = "${file%""~""}" ]
 			then
 				(
