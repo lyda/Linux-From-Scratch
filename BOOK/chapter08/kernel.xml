@@ -155,7 +155,7 @@ being used. -->Issue the following command to install the kernel:</para>
 
 <screen arch="x86"><userinput>cp arch/i386/boot/bzImage /boot/lfskernel-&linux-version;</userinput></screen>
 
-<screen arch="raq2"><userinput>cp vmliux /boot/vmlinux-2.6.9
+<screen arch="raq2"><userinput>cp vmlinux /boot/vmlinux-2.6.9
 cd /boot
 gzip -9 vmlinux-2.6.9
 </userinput></screen>

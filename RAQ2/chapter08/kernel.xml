@@ -138,7 +138,7 @@ directory.</para>
 <para>The path to the kernel image may vary depending on the platform you're
 using. Issue the following command to install the kernel:</para>
 
-<screen><userinput>cp vmliux /boot/vmlinux-2.6.9
+<screen><userinput>cp vmlinux /boot/vmlinux-2.6.9
 cd /boot
 gzip -9 vmlinux-2.6.9
 </userinput></screen>
