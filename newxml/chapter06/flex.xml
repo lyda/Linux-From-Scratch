@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % flex-entities SYSTEM "../ent/flex.ent">
-  %flex-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-flex" xreflabel="Flex">
 <title>Installing Flex-&flex-version;</title>
@@ -10,8 +10,8 @@
 <para>The Flex package contains a utility for generating programs that
 recognize patterns in text.</para>
 
-<screen>Approximate build time:  0.1 SBU
-Required disk space:     3.4 MB</screen>
+<screen>&buildtime; 0.1 SBU
+&diskspace; 3.4 MB</screen>
 
 <literallayout>Official download location for Flex (&flex-version;): 
 <ulink url="ftp://ftp.gnu.org/gnu/non-gnu/flex/"/></literallayout>

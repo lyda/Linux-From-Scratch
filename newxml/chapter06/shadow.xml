@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % shadow-entities SYSTEM "../ent/shadow.ent">
-  %shadow-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-shadow" xreflabel="Shadow">
 <title>Installing Shadow-&shadow-version;</title>
@@ -10,8 +10,8 @@
 <para>The Shadow package contains programs for handling passwords in a secure
 way.</para>
 
-<screen>Approximate build time:  0.4 SBU
-Required disk space:     11 MB</screen>
+<screen>&buildtime; 0.4 SBU
+&diskspace; 11 MB</screen>
 
 <literallayout>Official download location for Shadow (&shadow-version;):
 <ulink url="ftp://ftp.pld.org.pl/software/shadow/"/></literallayout>
@@ -61,7 +61,8 @@ system. Install these two config files:</para>
 to use the more secure <emphasis>MD5</emphasis> method of password encryption,
 which in addition allows passwords longer than 8 characters. We also need to
 change the obsolete <filename class="directory">/var/spool/mail</filename>
-location for user mailboxes that Shadow uses by default to the <filename class="directory">/var/mail</filename> location used nowadays. We accomplish
+location for user mailboxes that Shadow uses by default to the <filename 
+class="directory">/var/mail</filename> location used nowadays. We accomplish
 both these things by changing the relevant configuration file while copying it
 to its destination (it's probably better to cut-and-paste this rather than try
 and type it all in):</para>

@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % findutils-entities SYSTEM "../ent/findutils.ent">
-  %findutils-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-findutils">
 <title>Installing Findutils-&findutils-version;</title>
 <?dbhtml filename="findutils.html"?>
 
-<xi:include href="../chapter06/findutils.xml" xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[2]))"/>
+<xi:include href="../chapter06/findutils.xml" xpointer="xpointer(/sect1/para[1])"/>
 
+<screen>&buildtime; 0.2 SBU
+&diskspace; 7.6 MB</screen>
+
+<para>You can found the official download location for this package in
+<xref linkend="ch-system-findutils"/>.</para>
+
+<xi:include href="../chapter06/findutils.xml" xpointer="xpointer(/sect1/para[2])"/>
 
 
 <sect2>

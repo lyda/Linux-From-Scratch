@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % gettext-entities SYSTEM "../ent/gettext.ent">
-  %gettext-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-gettext" xreflabel="Gettext">
 <title>Installing Gettext-&gettext-version;</title>
@@ -11,8 +11,8 @@
 localization. These allow programs to be compiled with Native Language Support
 (NLS), enabling them to output messages in the user's native language.</para>
 
-<screen>Approximate build time:  0.5 SBU
-Required disk space:     55 MB</screen>
+<screen>&buildtime; 0.5 SBU
+&diskspace; 55 MB</screen>
 
 <literallayout>Official download location for Gettext (&gettext-version;): 
 <ulink url="ftp://ftp.gnu.org/gnu/gettext/"/></literallayout>

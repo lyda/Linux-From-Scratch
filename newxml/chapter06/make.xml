@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % make-entities SYSTEM "../ent/make.ent">
-  %make-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-make" xreflabel="Make">
 <title>Installing Make-&make-version;</title>
@@ -9,8 +9,8 @@
 
 <para>The Make package contains a program for compiling large packages.</para>
 
-<screen>Approximate build time:  0.2 SBU
-Required disk space:     8.8 MB</screen>
+<screen>&buildtime; 0.2 SBU
+&diskspace; 8.8 MB</screen>
 
 <literallayout>Official download location for Make (&make-version;): 
 <ulink url="ftp://ftp.gnu.org/gnu/make/"/></literallayout>

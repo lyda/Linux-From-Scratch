@@ -1,5 +1,6 @@
 <?xml version='1.0'?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
   <!-- We use XHTML -->
@@ -8,6 +9,16 @@
 
   <!-- The CSS Stylesheet -->
   <xsl:param name="html.stylesheet" select="'../stylesheets/lfs.css'"/>
+
+  <!-- Use graphics in admonitions -->
+  <xsl:param name="admon.graphics" select="1"/>
+  <xsl:param name="admon.graphics.path">../images/</xsl:param>
+  <xsl:param name="admon.graphics.extension" select="'.png'"/>
+
+  <!-- Use graphics in headers -->
+  <xsl:param name="navig.graphics" select="1"/>
+  <xsl:param name="navig.graphics.path">../images/</xsl:param>
+  <xsl:param name="navig.graphics.extension" select="'.png'"/>
 
   <!-- Legal Notice stuff -->
   <xsl:param name="generate.legalnotice.link" select="1"/>
@@ -24,9 +35,12 @@
         <xsl:variable name="title">
           <xsl:apply-templates select="." mode="title.markup"/>
         </xsl:variable>
-        <a href="prologue/legalnotice.html">
+        <xsl:element name="a">
+          <xsl:attribute name="href">
+            <xsl:value-of select="'prologue/legalnotice.html'"/>
+          </xsl:attribute>
           <xsl:copy-of select="$title"/>
-        </a>
+        </xsl:element>
         <xsl:call-template name="write.chunk">
           <xsl:with-param name="filename" select="$filename"/>
           <xsl:with-param name="quiet" select="$chunk.quietly"/>

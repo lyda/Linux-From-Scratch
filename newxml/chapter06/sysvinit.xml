@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % sysvinit-entities SYSTEM "../ent/sysvinit.ent">
-  %sysvinit-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-sysvinit" xreflabel="Sysvinit">
 <title>Installing Sysvinit-&sysvinit-version;</title>
@@ -10,8 +10,8 @@
 <para>The Sysvinit package contains programs for controlling the startup,
 running, and shutdown of your system.</para>
 
-<screen>Approximate build time:  0.1 SBU
-Required disk space:     0.9 MB</screen>
+<screen>&buildtime; 0.1 SBU
+&diskspace; 0.9 MB</screen>
 
 <literallayout>Official download location for Sysvinit (&sysvinit-version;):
 <ulink url="ftp://ftp.cistron.nl/pub/people/miquels/sysvinit/"/></literallayout>

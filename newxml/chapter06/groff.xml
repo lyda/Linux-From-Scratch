@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % groff-entities SYSTEM "../ent/groff.ent">
-  %groff-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-groff" xreflabel="Groff">
 <title>Installing Groff-&groff-version;</title>
@@ -9,8 +9,8 @@
 
 <para>The Groff package contains programs for processing and formatting text.</para>
 
-<screen>Approximate build time:  0.5 SBU
-Required disk space:     43 MB</screen>
+<screen>&buildtime; 0.5 SBU
+&diskspace; 43 MB</screen>
 
 <literallayout>Official download location for Groff (&groff-version;): 
 <ulink url="ftp://ftp.gnu.org/gnu/groff/"/></literallayout>

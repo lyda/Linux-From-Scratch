@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % util-linux-entities SYSTEM "../ent/util-linux.ent">
-  %util-linux-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-util-linux" xreflabel="Util-linux">
 <title>Installing Util-linux-&util-linux-version;</title>
@@ -11,8 +11,8 @@
 them are utilities for handling file systems, consoles, partitions, and
 messages.</para>
 
-<screen>Approximate build time:  0.2 SBU
-Required disk space:     16 MB</screen>
+<screen>&buildtime; 0.2 SBU
+&diskspace; 16 MB</screen>
 
 <literallayout>Official download location for Util-linux (&util-linux-version;):
 <ulink url="http://ftp.cwi.nl/aeb/util-linux/"/></literallayout>

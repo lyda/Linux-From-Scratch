@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE preface PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE preface PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <preface xmlns:xi="http://www.w3.org/2003/XInclude" id="preface">
 <?dbhtml dir="prologue"?>
 <title>Preface</title>
@@ -156,7 +159,7 @@ mostly a list of links to excellent sources of information on a wide range of
 topics. Any person attempting to install LFS, should at least have an
 understanding of many of the topics in this hint. It is available at
 
-<ulink url="http://www.linuxfromscratch.org/hints/downloads/files/essential_prereading.txt"/></para></listitem>
+<ulink url="&hints-root;essential_prereading.txt"/></para></listitem>
 
 </itemizedlist>
 
@@ -189,7 +192,7 @@ show filenames, such as <filename>/etc/ld.so.conf</filename>.</para></blockquote
 book, mainly to emphasize important points, and to give examples of
 what to type.</para></blockquote>
 
-<para><ulink url="http://www.linuxfromscratch.org/"/></para>
+<para><ulink url="&lfs-root;"/></para>
 
 <blockquote><para>This form of text is used for hyperlinks, both within the 
 book and to external pages such as HOWTOs, download locations and
@@ -396,7 +399,8 @@ Sprinzl</ulink> &lt;Antonin.Sprinzl@tuwien.ac.at&gt; -- at.linuxfromscratch.org
 mirror.</para></listitem>
 
 <listitem><para><ulink url="mailto:dag@stenstad.net">Dag Stenstad</ulink> 
-&lt;dag@stenstad.net&gt; for providing no.linuxfromscratch.org and <ulink url="mailto:ian@ichilton.co.uk">Ian Chilton</ulink> for running 
+&lt;dag@stenstad.net&gt; for providing no.linuxfromscratch.org and 
+<ulink url="mailto:ian@ichilton.co.uk">Ian Chilton</ulink> for running 
 it.</para></listitem>
 
 <listitem><para><ulink url="mailto:archive@doc.cs.univ-paris8.fr">Parisian

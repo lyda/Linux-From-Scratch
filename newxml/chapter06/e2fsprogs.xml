@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % e2fsprogs-entities SYSTEM "../ent/e2fsprogs.ent">
-  %e2fsprogs-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-e2fsprogs" xreflabel="E2fsprogs">
 <title>Installing E2fsprogs-&e2fsprogs-version;</title>
@@ -10,8 +10,8 @@
 <para>The E2fsprogs package contains the utilities for handling the ext2
 file system. It also supports the ext3 journaling file system.</para>
 
-<screen>Approximate build time:  0.6 SBU
-Required disk space:     48.4 MB</screen>
+<screen>&buildtime; 0.6 SBU
+&diskspace; 48.4 MB</screen>
 
 <literallayout>Official download location for E2fsprogs (&e2fsprogs-version;):
 <ulink url="http://download.sourceforge.net/e2fsprogs/"/></literallayout>

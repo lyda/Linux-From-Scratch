@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-aboutdebug">
 <title>About debugging symbols</title>
 <?dbhtml filename="aboutdebug.html"?>
@@ -38,6 +41,6 @@ difference will generally be a factor between 2 and 5.</para>
 software, a lot of disk space can be regained by removing these symbols. For
 your convenience, the next section shows how to strip all debugging symbols
 from all programs and libraries. Information on other ways of optimizing your
-system can be found in the hint at <ulink url="http://www.linuxfromscratch.org/hints/downloads/files/optimization.txt"/>.</para>
+system can be found in the hint at <ulink url="&hints-root;optimization.txt"/>.</para>
 
 </sect1>

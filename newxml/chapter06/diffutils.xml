@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % diffutils-entities SYSTEM "../ent/diffutils.ent">
-  %diffutils-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-diffutils" xreflabel="Diffutils">
 <title>Installing Diffutils-&diffutils-version;</title>
@@ -10,8 +10,8 @@
 <para>The Diffutils package contains programs that show the differences
 between files or directories.</para>
 
-<screen>Approximate build time:  0.1 SBU
-Required disk space:     7.5 MB</screen>
+<screen>&buildtime; 0.1 SBU
+&diskspace; 7.5 MB</screen>
 
 <literallayout>Official download location for Diffutils (&diffutils-version;):
 <ulink url="ftp://ftp.gnu.org/gnu/diffutils/"/></literallayout>

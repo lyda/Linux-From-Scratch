@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % grub-entities SYSTEM "../ent/grub.ent">
-  %grub-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-grub" xreflabel="Grub">
 <title>Installing Grub-&grub-version;</title>
@@ -9,8 +9,8 @@
 
 <para>The Grub package contains the GRand Unified Bootloader.</para>
 
-<screen>Approximate build time:  0.2 SBU
-Required disk space:     10 MB</screen>
+<screen>&buildtime; 0.2 SBU
+&diskspace; 10 MB</screen>
 
 <literallayout>Official download location for Grub (&grub-version;):
 <ulink url="ftp://alpha.gnu.org/gnu/grub/"/></literallayout>
@@ -69,7 +69,7 @@ grub-md5-crypt, grub-terminfo and mbchk</para>
 
 <sect2><title>Short descriptions</title>
 
-<para><command>grub</command> is the GRand Unified Bootloader's command
+<para><command>grub</command> is the GRand Unified Bootloader'sRequired disk space:      command
 shell.</para>
 
 <para><command>grub-install</command> installs GRUB on the given device.</para>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % patch-entities SYSTEM "../ent/patch.ent">
-  %patch-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-patch" xreflabel="Patch">
 <title>Installing Patch-&patch-version;</title>
@@ -9,8 +9,8 @@
 
 <para>The Patch package contains a program for modifying files.</para>
 
-<screen>Approximate build time:  0.1 SBU
-Required disk space:     1.9 MB</screen>
+<screen>&buildtime; 0.1 SBU
+&diskspace; 1.9 MB</screen>
 
 <literallayout>Official download location for Patch (&patch-version;): 
 <ulink url="ftp://ftp.gnu.org/gnu/patch/"/></literallayout>

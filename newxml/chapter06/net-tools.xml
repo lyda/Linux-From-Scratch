@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % net-tools-entities SYSTEM "../ent/net-tools.ent">
-  %net-tools-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-net-tools" xreflabel="Net-tools">
 <title>Installing Net-tools-&net-tools-version;</title>
@@ -9,13 +9,13 @@
 
 <para>The Net-tools package contains programs for basic networking.</para>
 
-<screen>Approximate build time:  0.1 SBU
-Required disk space:     9.4 MB</screen>
+<screen>&buildtime; 0.1 SBU
+&diskspace; 9.4 MB</screen>
 
 <literallayout>Official download location for Net-tools (&net-tools-version;): 
 <ulink url="http://www.tazenda.demon.co.uk/phil/net-tools/"/>
 And for the patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/net-tools-&net-tools-version;-miitool-gcc33-1.patch"/></literallayout>
+<ulink url="&patches-root;net-tools-&net-tools-version;-miitool-gcc33-1.patch"/></literallayout>
 
 <para>For its installation Net-tools depends on: Bash, Binutils, Coreutils, GCC,
 Glibc, Make.</para>

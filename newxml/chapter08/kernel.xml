@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-bootable-kernel" xreflabel="Linux">
-<title>Installing Linux-2.4.25</title>
+<title>Installing Linux-&linux-version;</title>
 <?dbhtml filename="kernel.html"?>
 
 <para>The Linux package contains the kernel and the header files.</para>
 
-<screen>Estimated build time:           All default options: 4.20 SBU
-Estimated required disk space:  All default options: 181 MB</screen>
+<screen>&buildtime; All default options: 4.20 SBU
+&diskspace; All default options: 181 MB</screen>
 
-<literallayout>Official download location for Linux (2.4.25):
+<literallayout>Official download location for Linux (&linux-version;):
 <ulink url="ftp://ftp.kernel.org/pub/linux/kernel/"/></literallayout>
 
 <para>For its installation Linux depends on: Bash, Binutils, Coreutils, Findutils,
@@ -44,7 +47,8 @@ information.</para>
 
 <para>If you wish, you may skip kernel configuration by simply copying the
 kernel config file, <filename>.config</filename>, from your host system
-(assuming it is available) to the unpacked <filename class="directory">linux-2.4.25</filename> directory. However, we
+(assuming it is available) to the unpacked <filename class="directory">linux-&linux-version;</filename>
+directory. However, we
 don't recommend this option. You're much better off exploring all the
 configuration menus and creating your own kernel configuration from
 scratch.</para>

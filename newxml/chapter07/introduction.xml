@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-scripts-introduction">
 <title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
@@ -12,7 +15,7 @@ dependent information.</para>
 <para>We have chosen to use System-V style init scripts simply because they
 are widely used and we feel comfortable with them. If you would prefer to try
 something else: Marc Heerdink has written a hint about BSD style init scripts,
-to be found at <ulink url="http://www.linuxfromscratch.org/hints/downloads/files/bsd-init.txt"/>. And if you'd like
+to be found at <ulink url="&hints-root;bsd-init.txt"/>. And if you'd like
 something more radical, search the LFS mailing lists for "depinit".</para>
 
 <para>If you decide to use some other style of init scripts, you can skip this

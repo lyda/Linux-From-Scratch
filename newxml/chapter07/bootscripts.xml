@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-scripts-bootscripts" xreflabel="Bootscripts">
-<title>Installing LFS-Bootscripts-1.12</title>
+<title>Installing LFS-Bootscripts-&bootscripts-version;</title>
 <?dbhtml filename="bootscripts.html"?>
 
 <para>The LFS-Bootscripts package contains a set of bootscripts.</para>
 
-<screen>Approximate build time:  0.1 SBU
-Required disk space:     0.3 MB</screen>
+<screen>&buildtime; 0.1 SBU
+&diskspace; 0.3 MB</screen>
 
-<literallayout>Official download location for LFS-Bootscripts (1.12): 
-<ulink url="http://downloads.linuxfromscratch.org/"/></literallayout>
+<literallayout>Official download location for LFS-Bootscripts (&bootscripts-version;):
+<ulink url="&http-down;"/></literallayout>
 
 <para>For its installation LFS-Bootscripts depends on: Bash, Coreutils.</para>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % sysklogd-entities SYSTEM "../ent/sysklogd.ent">
-  %sysklogd-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-sysklogd" xreflabel="Sysklogd">
 <title>Installing Sysklogd-&sysklogd-version;</title>
@@ -10,8 +10,8 @@
 <para>The Sysklogd package contains programs for logging system messages, such
 as those given by the kernel when unusual things happen.</para>
 
-<screen>Approximate build time:  0.1 SBU
-Required disk space:     0.5 MB</screen>
+<screen>&buildtime; 0.1 SBU
+&diskspace; 0.5 MB</screen>
 
 <literallayout>Official download location for Sysklogd (&sysklogd-version;):
 <ulink url="http://www.infodrom.org/projects/sysklogd/download/"/></literallayout>

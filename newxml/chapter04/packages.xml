@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="materials-packages">
 <title>All the packages</title>
 <?dbhtml filename="packages.html"?>
@@ -7,178 +10,178 @@
 <para>Download or otherwise obtain the following packages:</para>
 
 <literallayout>
-Autoconf (2.59) - 903 KB:
-<ulink url="http://freshmeat.net/projects/autoconf/"/>
+Autoconf (&autoconf-version;) - 903 KB:
+<ulink url="&freshmeat;autoconf/"/>
 
-Automake (1.8.2) - 623 KB:
-<ulink url="http://freshmeat.net/projects/automake/"/>
+Automake (&automake-version;) - 623 KB:
+<ulink url="&freshmeat;automake/"/>
 
-Bash (2.05b) - 1,910 KB:
-<ulink url="http://freshmeat.net/projects/gnubash/"/>
+Bash (&bash-version;) - 1,910 KB:
+<ulink url="&freshmeat;gnubash/"/>
 
-Binutils (2.14) - 10,666 KB:
-<ulink url="http://freshmeat.net/projects/binutils/"/>
+Binutils (&binutils-version;) - 10,666 KB:
+<ulink url="&freshmeat;binutils/"/>
 
-Bison (1.875) - 796 KB:
-<ulink url="http://freshmeat.net/projects/bison/"/>
+Bison (&bison-version;) - 796 KB:
+<ulink url="&freshmeat;bison/"/>
 
-Bzip2 (1.0.2) - 650 KB:
-<ulink url="http://freshmeat.net/projects/bzip2/"/>
+Bzip2 (&bzip2-version;) - 650 KB:
+<ulink url="&freshmeat;bzip2/"/>
 
-Coreutils (5.0) - 3,860 KB:
-<ulink url="http://freshmeat.net/projects/coreutils/"/>
+Coreutils (&coreutils-version;) - 3,860 KB:
+<ulink url="&freshmeat;coreutils/"/>
 
-DejaGnu (1.4.4) - 1,055 KB:
-<ulink url="http://freshmeat.net/projects/dejagnu/"/>
+DejaGnu (&dejagnu-version;) - 1,055 KB:
+<ulink url="&freshmeat;dejagnu/"/>
 
-Diffutils (2.8.1) - 762 KB:
-<ulink url="http://freshmeat.net/projects/diffutils/"/>
+Diffutils (&diffutils-version;) - 762 KB:
+<ulink url="&freshmeat;diffutils/"/>
 
-E2fsprogs (1.34) - 3,003 KB:
-<ulink url="http://freshmeat.net/projects/e2fsprogs/"/>
+E2fsprogs (&e2fsprogs-version;) - 3,003 KB:
+<ulink url="&freshmeat;e2fsprogs/"/>
 
-Ed (0.2) - 182 KB:
-<ulink url="http://freshmeat.net/projects/ed/"/>
+Ed (&ed-version;) - 182 KB:
+<ulink url="&freshmeat;ed/"/>
 
-Expect (5.40.0) - 509 KB:
-<ulink url="http://freshmeat.net/projects/expect/"/>
+Expect (&expect-version;) - 509 KB:
+<ulink url="&freshmeat;expect/"/>
 
-File (4.07) - 347 KB: -- <emphasis>(see Note 1 below)</emphasis>
-<ulink url="http://freshmeat.net/projects/file/"/>
+File (&file-version;) - 347 KB: -- <emphasis>(see Note 1 below)</emphasis>
+<ulink url="&freshmeat;file/"/>
 
-Findutils (4.1.20) - 760 KB:
-<ulink url="http://freshmeat.net/projects/findutils/"/>
+Findutils (&findutils-version;) - 760 KB:
+<ulink url="&freshmeat;findutils/"/>
 
-Flex (2.5.4a) - 372 KB:
+Flex (&flex-version;) - 372 KB:
 <ulink url="ftp://ftp.gnu.org/gnu/non-gnu/flex/"/>
 
-Gawk (3.1.3) - 1,596 KB:
-<ulink url="http://freshmeat.net/projects/gnuawk/"/>
+Gawk (&gawk-version;) - 1,596 KB:
+<ulink url="&freshmeat;gnuawk/"/>
 
-GCC (2.95.3) - 9,618 KB:
-<ulink url="http://freshmeat.net/projects/gcc/"/>
+GCC (&gcc-2953-version;) - 9,618 KB:
+<ulink url="&freshmeat;gcc/"/>
 
-GCC-core (3.3.2) - 10,994 KB:
-<ulink url="http://freshmeat.net/projects/gcc/"/>
+GCC-core (&gcc-version;) - 10,994 KB:
+<ulink url="&freshmeat;gcc/"/>
 
-GCC-g++ (3.3.2) - 2,019 KB:
-<ulink url="http://freshmeat.net/projects/gcc/"/>
+GCC-g++ (&gcc-version;) - 2,019 KB:
+<ulink url="&freshmeat;gcc/"/>
 
-GCC-testsuite (3.3.2) - 1,042 KB:
-<ulink url="http://freshmeat.net/projects/gcc/"/>
+GCC-testsuite (&gcc-version;) - 1,042 KB:
+<ulink url="&freshmeat;gcc/"/>
 
-Gettext (0.14.1) - 6,397 KB:
-<ulink url="http://freshmeat.net/projects/gettext/"/>
+Gettext (&gettext-version;) - 6,397 KB:
+<ulink url="&freshmeat;gettext/"/>
 
-Glibc (2.3.3) - 13,101 KB: -- <emphasis>(see Note 2 below)</emphasis>
-<ulink url="http://freshmeat.net/projects/glibc/"/>
+Glibc (&glibc-version;) - 13,101 KB: -- <emphasis>(see Note 2 below)</emphasis>
+<ulink url="&freshmeat;glibc/"/>
 
-Grep (2.5.1) - 545 KB:
-<ulink url="http://freshmeat.net/projects/grep/"/>
+Grep (&grep-version;) - 545 KB:
+<ulink url="&freshmeat;grep/"/>
 
-Groff (1.19) - 2,360 KB:
-<ulink url="http://freshmeat.net/projects/groff/"/>
+Groff (&groff-version;) - 2,360 KB:
+<ulink url="&freshmeat;groff/"/>
 
-Grub (0.94) - 902 KB:
+Grub (&grub-version;) - 902 KB:
 <ulink url="ftp://alpha.gnu.org/pub/gnu/grub/"/>
 
-Gzip (1.3.5) - 324 KB:
+Gzip (&gzip-version;) - 324 KB:
 <ulink url="ftp://alpha.gnu.org/gnu/gzip/"/>
 
-Inetutils (1.4.2) - 1,019 KB:
-<ulink url="http://freshmeat.net/projects/inetutils/"/>
+Inetutils (&inetutils-version;) - 1,019 KB:
+<ulink url="&freshmeat;inetutils/"/>
 
-Kbd (1.12) - 617 KB:
-<ulink url="http://freshmeat.net/projects/kbd/"/>
+Kbd (&kbd-version;) - 617 KB:
+<ulink url="&freshmeat;kbd/"/>
 
-Less (382) - 259 KB:
-<ulink url="http://freshmeat.net/projects/less/"/>
+Less (&less-version;) - 259 KB:
+<ulink url="&freshmeat;less/"/>
 
-LFS-Bootscripts (1.12) - 25 KB:
-<ulink url="http://downloads.linuxfromscratch.org/lfs-bootscripts-1.12.tar.bz2"/>
+LFS-Bootscripts (&bootscripts-version;) - 25 KB:
+<ulink url="&http-down;lfs-bootscripts-1.12.tar.bz2"/>
 
-Lfs-Utils (0.5) - 221 KB:
-<ulink url="http://www.linuxfromscratch.org/~winkie/downloads/lfs-utils/"/>
+Lfs-Utils (&lfs-utils-version;) - 221 KB:
+<ulink url="&lfs-root;~winkie/downloads/lfs-utils/"/>
 
-Libtool (1.5.2) - 2,591 KB:
-<ulink url="http://freshmeat.net/projects/libtool/"/>
+Libtool (&libtool-version;) - 2,591 KB:
+<ulink url="&freshmeat;libtool/"/>
 
-Linux (2.4.25) - 29,138 KB:
-<ulink url="http://freshmeat.net/projects/linux/"/>
+Linux (&linux-version;) - 29,138 KB:
+<ulink url="&freshmeat;linux/"/>
 
-M4 (1.4) - 310 KB:
-<ulink url="http://freshmeat.net/projects/gnum4/"/>
+M4 (&m4-version;) - 310 KB:
+<ulink url="&freshmeat;gnum4/"/>
 
-Make (3.80) - 899 KB:
-<ulink url="http://freshmeat.net/projects/gnumake/"/>
+Make (&make-version;) - 899 KB:
+<ulink url="&freshmeat;gnumake/"/>
 
-Make_devices (1.2) - 20 KB:
-<ulink url="http://www.linuxfromscratch.org/~alex/make_devices-1.2.bz2"/>
+Make_devices (&makedev-version;) - 20 KB:
+<ulink url="&lfs-root;~alex/make_devices-1.2.bz2"/>
 
-Man (1.5m2) - 196 KB:
-<ulink url="http://freshmeat.net/projects/man/"/>
+Man (&man-version;) - 196 KB:
+<ulink url="&freshmeat;man/"/>
 
-Man-pages (1.66) - 1,582 KB:
-<ulink url="http://freshmeat.net/projects/man-pages/"/>
+Man-pages (&man-pages-version;) - 1,582 KB:
+<ulink url="&freshmeat;man-pages/"/>
 
-Modutils (2.4.26) - 229 KB:
-<ulink url="http://freshmeat.net/projects/modutils/"/>
+Modutils (&modutils-version;) - 229 KB:
+<ulink url="&freshmeat;modutils/"/>
 
-Ncurses (5.4) - 2,019 KB:
-<ulink url="http://freshmeat.net/projects/ncurses/"/>
+Ncurses (&ncurses-version;) - 2,019 KB:
+<ulink url="&freshmeat;ncurses/"/>
 
-Net-tools (1.60) - 194 KB:
-<ulink url="http://freshmeat.net/projects/net-tools/"/>
+Net-tools (&net-tools-version;) - 194 KB:
+<ulink url="&freshmeat;net-tools/"/>
 
-Patch (2.5.4) - 182 KB:
-<ulink url="http://freshmeat.net/projects/patch/"/>
+Patch (&patch-version;) - 182 KB:
+<ulink url="&freshmeat;patch/"/>
 
-Perl (5.8.3) - 11,721 KB:
-<ulink url="http://freshmeat.net/projects/perl/"/>
+Perl (&perl-version;) - 11,721 KB:
+<ulink url="&freshmeat;perl/"/>
 
-Procinfo (18) - 24 KB:
-<ulink url="http://freshmeat.net/projects/procinfo/"/>
+Procinfo (&procinfo-version;) - 24 KB:
+<ulink url="&freshmeat;procinfo/"/>
 
-Procps (3.2.0) - 260 KB:
-<ulink url="http://freshmeat.net/projects/procps/"/>
+Procps (&procps-version;) - 260 KB:
+<ulink url="&freshmeat;procps/"/>
 
-Psmisc (21.4) - 375 KB:
-<ulink url="http://freshmeat.net/projects/psmisc/"/>
+Psmisc (&psmisc-version;) - 375 KB:
+<ulink url="&freshmeat;psmisc/"/>
 
-Sed (4.0.9) - 751 KB:
-<ulink url="http://freshmeat.net/projects/sed/"/>
+Sed (&sed-version;) - 751 KB:
+<ulink url="&freshmeat;sed/"/>
 
-Shadow (4.0.4.1) - 795 KB:
-<ulink url="http://freshmeat.net/projects/shadow/"/>
+Shadow (&shadow-version;) - 795 KB:
+<ulink url="&freshmeat;shadow/"/>
 
-Sysklogd (1.4.1) - 80 KB:
-<ulink url="http://freshmeat.net/projects/sysklogd/"/>
+Sysklogd (&sysklogd-version;) - 80 KB:
+<ulink url="&freshmeat;sysklogd/"/>
 
-Sysvinit (2.85) - 91 KB:
-<ulink url="http://freshmeat.net/projects/sysvinit/"/>
+Sysvinit (&sysvinit-version;) - 91 KB:
+<ulink url="&freshmeat;sysvinit/"/>
 
-Tar (1.13.25) - 1,281 KB:
+Tar (&tar-version;) - 1,281 KB:
 <ulink url="ftp://alpha.gnu.org/gnu/tar/"/>
 
-Tcl (8.4.5) - 3,363 KB:
-<ulink url="http://freshmeat.net/projects/tcltk/"/>
+Tcl (&tcl-version;) - 3,363 KB:
+<ulink url="&freshmeat;tcltk/"/>
 
-Texinfo (4.6) - 1,317 KB:
-<ulink url="http://freshmeat.net/projects/texinfo/"/>
+Texinfo (&texinfo-version;) - 1,317 KB:
+<ulink url="&freshmeat;texinfo/"/>
 
-Util-linux (2.12) - 1,814 KB:
-<ulink url="http://freshmeat.net/projects/util-linux/"/>
+Util-linux (&util-linux-version;) - 1,814 KB:
+<ulink url="&freshmeat;util-linux/"/>
 
-Vim (6.2) - 3,193 KB:
-<ulink url="http://freshmeat.net/projects/vim/"/>
+Vim (&vim-version;) - 3,193 KB:
+<ulink url="&freshmeat;vim/"/>
 
-Zlib (1.2.1) - 277 KB:
-<ulink url="http://freshmeat.net/projects/zlib/"/>
+Zlib (&zlib-version;) - 277 KB:
+<ulink url="&freshmeat;zlib/"/>
 
 Total size of these packages: 134 MB
 </literallayout>
 
-<note><para>1) File (4.07) may not be available by the time you read
+<note><para>1) File (&file-version;) may not be available by the time you read
 this. The site admins of the master download location are known to occasionally
 remove old versions when new ones are released. Please refer to the
 <xref linkend="ch-system-file"/> section for an alternate download

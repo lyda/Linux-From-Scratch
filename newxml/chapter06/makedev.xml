@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-MAKEDEV" xreflabel="Make_devices">
-<title>Creating devices with Make_devices-1.2</title>
+<title>Creating devices with Make_devices-&makedev-version;</title>
 <?dbhtml filename="makedevices.html"?>
 
 <para>The Make_devices package contains a script for creating device
 nodes.</para>
 
-<screen>Approximate build time:  1 SBU
-Required disk space:     160 KB</screen>
+<screen>&buildtime; 1 SBU
+&diskspace; 160 KB</screen>
 
-<literallayout>Official download location for Make_devices (1.2):
-<ulink url="http://downloads.linuxfromscratch.org/"/></literallayout>
+<literallayout>Official download location for Make_devices (&makedev-version;):
+<ulink url="&http-down;"/></literallayout>
 
 <para>For its installation Make_devices depends on: Bash, Bzip2,
 Coreutils.</para>
@@ -22,13 +25,13 @@ Coreutils.</para>
 <title>Making devices</title>
 
 <para>Note that unpacking the
-<filename>make_devices-1.2.bz2</filename> file doesn't
+<filename>make_devices-&makedev-version;.bz2</filename> file doesn't
 create a directory for you to <command>cd</command> into, as the file
 contains only a shell script.</para>
 
 <para>Install the <filename>make_devices</filename> script:</para>
 
-<screen><userinput>bzcat make_devices-1.2.bz2 &gt; /dev/make_devices
+<screen><userinput>bzcat make_devices-&makedev-version;.bz2 &gt; /dev/make_devices
 chmod 754 /dev/make_devices</userinput></screen>
 
 <para>Device nodes are special files: things that can generate or receive data.
@@ -68,7 +71,8 @@ you are satisfied, run the script to create the device files:</para>
 <screen><userinput>cd /dev
 ./make_devices</userinput></screen>
 
-<para>If you had success with mounting the devpts file system earlier in <xref linkend="ch-system-proc"/>, you can continue with the next section. If you were
+<para>If you had success with mounting the devpts file system earlier in 
+<xref linkend="ch-system-proc"/>, you can continue with the next section. If you were
 unable to mount devpts, you will have to create a few static ptyXX and ttyXX
 device nodes instead. To do this, open <filename>make_devices</filename> in
 your editor, go to the section "Pseudo-TTY masters" and enable a few ptyXX

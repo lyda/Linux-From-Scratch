@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % inetutils-entities SYSTEM "../ent/inetutils.ent">
-  %inetutils-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-inetutils" xreflabel="Inetutils">
 <title>Installing Inetutils-&inetutils-version;</title>
@@ -9,13 +9,13 @@
 
 <para>The Inetutils package contains programs for basic networking.</para>
 
-<screen>Approximate build time:  0.2 SBU
-Required disk space:     11 MB</screen>
+<screen>&buildtime; 0.2 SBU
+&diskspace; 11 MB</screen>
 
 <literallayout>Official download location for Inetutils (&inetutils-version;):
 <ulink url="ftp://ftp.gnu.org/gnu/inetutils/"/>
 And for the patch:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></literallayout>
+<ulink url="&patches-root;inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></literallayout>
 
 <para>For its installation Inetutils depends on: Bash, Binutils, Coreutils,
 Diffutils, GCC, Glibc, Grep, Make, Ncurses, Sed.</para>
@@ -59,7 +59,7 @@ installation of the various network servers included as part of the Inetutils
 package. These servers are deemed not appropriate in a basic LFS system. Some
 are insecure by nature and are only considered safe on trusted networks. More
 information can be found at
-<ulink url="http://www.linuxfromscratch.org/blfs/view/stable/basicnet/inetutils.html"/>. Note that better
+<ulink url="&blfs-root;view/stable/basicnet/inetutils.html"/>. Note that better
 replacements are available for many of these servers.</para></listitem>
 </itemizedlist>
 

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-introduction">
 <title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
@@ -24,7 +27,7 @@ given followed by concise descriptions of each program and library it
 installed.</para>
 
 <para>If you plan to use compiler optimizations in this chapter, take a look at
-the optimization hint at <ulink url="http://www.linuxfromscratch.org/hints/downloads/files/optimization.txt"/>. Compiler
+the optimization hint at <ulink url="&hints-root;optimization.txt"/>. Compiler
 optimizations can make a program run slightly faster, but they may also cause
 compilation difficulties and even problems when running the program. If a
 package refuses to compile when using optimization, try to compile it without
@@ -57,8 +60,8 @@ with a series of short descriptions of these.</para>
 
 <para>If you wish to keep track of which package installs what files, you may
 want to use a package manager. For a general overview of package managers have
-a look at <ulink url="http://www.linuxfromscratch.org/blfs/view/cvs/introduction/pkgmgt.html"/>. And for
+a look at <ulink url="&blfs-root;view/cvs/introduction/pkgmgt.html"/>. And for
 a package management method specifically geared towards LFS see
-<ulink url="http://www.linuxfromscratch.org/hints/downloads/files/more_control_and_pkg_man.txt"/>.</para>
+<ulink url="&hints-root;more_control_and_pkg_man.txt"/>.</para>
 
 </sect1>

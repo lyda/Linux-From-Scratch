@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % tcl-entities SYSTEM "../ent/tcl.ent">
-  %tcl-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-tcl" xreflabel="Tcl">
 <title>Installing Tcl-&tcl-version;</title>
@@ -9,8 +9,8 @@
 
 <para>The Tcl package contains the Tool Command Language.</para>
 
-<screen>Approximate build time:  0.9 SBU 
-Required disk space:     23 MB</screen>
+<screen>&buildtime; 0.9 SBU
+&diskspace; 23 MB</screen>
 
 <literallayout>Official download location for Tcl (&tcl-version;):
 <ulink url="http://download.sourceforge.net/tcl/"/></literallayout>

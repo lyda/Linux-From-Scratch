@@ -5,12 +5,17 @@ TODO
    which may cause us problems in the future.  RelaxNG looks promising but
    there's also the W3C's "XML Schema".  Docbook is available in both, and
    libxml2 supports both.
-2. Decide what entities are required, other than the version entities that are
-   currently in place.
-3. Provide a css file to provide nicer output than whatever the UA's default is.
+2. Provide a css file to provide nicer output than whatever the UA's default is.
    * Started - needs some comments regarding layout.
-4. Decide whether we want to use the strict or transitional XHTML DTD.  Note in
+   * Binary/library names listed in "Short Description" sections should be in a
+     fixed-width font.
+   * URLs of "Official download locations" appear on the line below where they
+     should do in chapter 6.
+   * Header (naviagtion) areas, TOCs & "Titlepage" sections need font sizes &
+     style fixing.
+3. Decide whether we want to use the strict or transitional XHTML DTD.  Note in
    particular http://www.sagehill.net/docbookxsl/OtherOutputForms.html#d0e23340.
+4. Do we want to use graphics in the navigation headers?
 5. The legalinfo page:
      * It generates it's own hyperlink ("Legal Notice") but the current book has
        it linked to via the "Copyright" message above.  Does this matter?

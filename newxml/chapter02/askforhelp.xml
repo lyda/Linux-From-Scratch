@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="prepare-askforhelp">
 <title>How to ask for help</title>
 <?dbhtml filename="askforhelp.html"?>
 
 <para>If you encounter a problem while using this book, and your problem
-is not listed in the FAQ (<ulink url="http://www.linuxfromscratch.org/faq/"/>), you will find that
+is not listed in the FAQ (<ulink url="&faq-root;"/>), you will find that
 most of the people on Internet Relay Chat (IRC) and on the mailing lists
 are willing to help you. An overview of the LFS mailing lists can be
 found via <xref linkend="ch-scatter-maillists"/>. To assist us in
@@ -19,7 +22,7 @@ information as possible in your request for help.</para>
 essential things to include in your request are:</para>
 
 <itemizedlist>
-<listitem><para>the version of the book you are using (being CVS-2004-03-05),</para></listitem>
+<listitem><para>the version of the book you are using (being &version;),</para></listitem>
 <listitem><para>the host distribution and version you are using to create
 LFS from,</para></listitem>
 <listitem><para>the package or section giving you problems,</para></listitem>
@@ -81,7 +84,8 @@ above, is what should be included to be helpful, because it includes the
 command that was executed and the command's error message(s).</para>
 
 <para>An excellent article on asking for help on the Internet in general
-has been written by Eric S. Raymond. It is available online at <ulink url="http://catb.org/~esr/faqs/smart-questions.html"/>.
+has been written by Eric S. Raymond. It is available online at 
+<ulink url="http://catb.org/~esr/faqs/smart-questions.html"/>.
 Read and follow the hints in that document and you are much more likely
 to get a response to start with and also to get the help you actually
 need.</para>
@@ -94,7 +98,7 @@ need.</para>
 <para>Many packages provide a test suite which, depending on the importance
 of the package, we may encourage you to run. Sometimes packages will
 generate false or expected failures. If you encounter these, you can check
-the LFS Wiki page at <ulink url="http://wiki.linuxfromscratch.org/"/> to see whether we have
+the LFS Wiki page at <ulink url="&wiki-root;"/> to see whether we have
 already noted and investigated them. If we already know
 about them, then usually there is no need to be concerned.</para>
 

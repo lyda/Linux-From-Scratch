@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="materials-patches">
 <title>Needed patches</title>
 <?dbhtml filename="patches.html"?>
@@ -11,61 +14,61 @@ following:</para>
 
 <literallayout>
 Bash Patch - 7 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/bash-2.05b-2.patch"/>
+<ulink url="&patches-root;bash-&bash-version;-2.patch"/>
 
 Bison Attribute Patch - 2 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/bison-1.875-attribute.patch"/>
+<ulink url="&patches-root;bison-&bison-version;-attribute.patch"/>
 
 Coreutils Hostname Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/coreutils-5.0-hostname-2.patch"/>
+<ulink url="&patches-root;coreutils-&coreutils-version;-hostname-2.patch"/>
 
 Coreutils Posixver Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/coreutils-5.0-posixver-2.patch"/>
+<ulink url="&patches-root;coreutils-&coreutils-version;-posixver-2.patch"/>
 
 Coreutils Uname Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/coreutils-5.0-uname.patch"/>
+<ulink url="&patches-root;coreutils-&coreutils-version;-uname.patch"/>
 
 Ed Mkstemp Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/ed-0.2-mkstemp.patch"/>
+<ulink url="&patches-root;ed-&ed-version;-mkstemp.patch"/>
 
 Expect Spawn Patch - 6 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/expect-5.40.0-spawn.patch"/>
+<ulink url="&patches-root;expect-&expect-version;-spawn.patch"/>
 
 GCC No-Fixincludes Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-3.3.2-no_fixincludes-1.patch"/>
+<ulink url="&patches-root;gcc-&gcc-version;-no_fixincludes-1.patch"/>
 
 GCC Specs Patch - 11 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-3.3.2-specs-1.patch"/>
+<ulink url="&patches-root;gcc-&gcc-version;-specs-1.patch"/>
 
 GCC-2 Patch - 16 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-2.95.3-2.patch"/>
+<ulink url="&patches-root;gcc-&gcc-2953-version;-2.patch"/>
 
 GCC-2 No-Fixincludes Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-2.95.3-no-fixinc.patch"/>
+<ulink url="&patches-root;gcc-&gcc-2953-version;-no-fixinc.patch"/>
 
 GCC-2 Return-Type Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gcc-2.95.3-returntype-fix.patch"/>
+<ulink url="&patches-root;gcc-&gcc-2953-version;-returntype-fix.patch"/>
 
 Inetutils No-Server-Man-Pages Patch - 4 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/inetutils-1.4.2-no_server_man_pages-1.patch"/>
+<ulink url="&patches-root;inetutils-&inetutils-version;-no_server_man_pages-1.patch"/>
 
 Kbd More-Programs Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/kbd-1.12-more-programs-1.patch"/>
+<ulink url="&patches-root;kbd-&kbd-version;-more-programs-1.patch"/>
 
 Man 80-Columns Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/man-1.5m2-80cols.patch"/>
+<ulink url="&patches-root;man-&man-version;-80cols.patch"/>
 
 Net-tools Mii-Tool-Gcc33 Patch - 2 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/net-tools-1.60-miitool-gcc33-1.patch"/>
+<ulink url="&patches-root;net-tools-&net-tools-version;-miitool-gcc33-1.patch"/>
 
 Perl Libc Patch - 1 KB:
-<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/perl-5.8.3-libc-1.patch"/>
+<ulink url="&patches-root;perl-&perl-version;-libc-1.patch"/>
 </literallayout>
 
 <para>In addition to the above required patches, there exist a number of
 optional ones created by the LFS community. Most of these solve slight
 problems, or enable some functionality that's not enabled by default.
-Feel free to examine the patches database, located at <ulink url="http://www.linuxfromscratch.org/patches/"/>, and pick any additional patches you wish to
-use.</para>
+Feel free to examine the patches database, located at <ulink url="&lfs-root;patches/"/>, 
+and pick any additional patches you wish to use.</para>
 
 </sect1>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % ncurses-entities SYSTEM "../ent/ncurses.ent">
-  %ncurses-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-ncurses" xreflabel="Ncurses">
 <title>Installing Ncurses-&ncurses-version;</title>
@@ -10,8 +10,8 @@
 <para>The Ncurses package contains libraries for the terminal-independent
 handling of character screens.</para>
 
-<screen>Approximate build time:  0.6 SBU
-Required disk space:     27 MB</screen>
+<screen>&buildtime; 0.6 SBU
+&diskspace; 27 MB</screen>
 
 <literallayout>Official download location for Ncurses (&ncurses-version;): 
 <ulink url="ftp://ftp.gnu.org/gnu/ncurses/"/></literallayout>

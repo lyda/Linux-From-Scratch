@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % glibc-entities SYSTEM "../ent/glibc.ent">
-  %glibc-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-glibc" xreflabel="Glibc">
 <title>Installing Glibc-&glibc-version;</title>
@@ -12,8 +12,8 @@ the basic routines for allocating memory, searching directories, opening and
 closing files, reading and writing them, string handling, pattern matching,
 arithmetic, and so on.</para>
 
-<screen>Approximate build time:  12.3 SBU
-Required disk space:     784 MB</screen>
+<screen>&buildtime; 12.3 SBU
+&diskspace; 784 MB</screen>
 
 <literallayout>Official download location for Glibc (&glibc-version;): 
 <ulink url="ftp://ftp.gnu.org/gnu/glibc/"/>
@@ -204,13 +204,16 @@ gave you.</para>
 <title>Configuring Dynamic Loader</title>
 
 <para>By default, the dynamic loader
-(<filename>/lib/ld-linux.so.2</filename>) searches through <filename class="directory">/lib</filename> and <filename class="directory">/usr/lib</filename> for dynamic libraries that are needed
+(<filename>/lib/ld-linux.so.2</filename>) searches through <filename 
+class="directory">/lib</filename> and <filename class="directory">/usr/lib</filename> 
+for dynamic libraries that are needed
 by programs when you run them. However, if there are libraries in
 directories other than <filename class="directory">/lib</filename> and
 <filename class="directory">/usr/lib</filename>, you need to add them to
 the <filename>/etc/ld.so.conf</filename> file for the dynamic
 loader to find them. Two directories that are commonly known to contain
-additional libraries are <filename class="directory">/usr/local/lib</filename> and <filename class="directory">/opt/lib</filename>, so we add those directories to the
+additional libraries are <filename class="directory">/usr/local/lib</filename> 
+and <filename class="directory">/opt/lib</filename>, so we add those directories to the
 dynamic loader's search path.</para>
 
 <para>Create a new file <filename>/etc/ld.so.conf</filename> by running the

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % lfs-utils-entities SYSTEM "../ent/lfs-utils.ent">
-  %lfs-utils-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-lfs-utils" xreflabel="Lfs-Utils">
 <title>Installing Lfs-Utils-&lfs-utils-version;</title>
@@ -9,11 +9,11 @@
 
 <para>The Lfs-Utils package contains a few helper files.</para>
 
-<screen>Approximate build time:  0.1 SBU
-Required disk space:     1.1 MB</screen>
+<screen>&buildtime; 0.1 SBU
+&diskspace; 1.1 MB</screen>
 
 <literallayout>Official download location for Lfs-Utils (&lfs-utils-version;):
-<ulink url="http://www.linuxfromscratch.org/~winkie/downloads/lfs-utils/"/></literallayout>
+<ulink url="&lfs-root;~winkie/downloads/lfs-utils/"/></literallayout>
 
 <para>The installation dependencies for Lfs-Utils haven't been checked yet.</para>
 

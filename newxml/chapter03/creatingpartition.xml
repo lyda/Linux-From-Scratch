@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
 <sect1 id="space-creatingpartition">
 <title>Creating a new partition</title>
 <?dbhtml filename="creatingpartition.html"?>
@@ -10,7 +13,7 @@ on any of your hard disks to make one, then you could build LFS on the
 same partition as the one on which your current distribution is installed.
 This procedure is not recommended for your first LFS install, but if you
 are short on disk space, and you feel brave, take a look at the hint at
-<ulink url="http://www.linuxfromscratch.org/hints/downloads/files/lfs_next_to_existing_systems.txt"/>.</para>
+<ulink url="&hints-root;lfs_next_to_existing_systems.txt"/>.</para>
 
 <para>For a minimal system you will need a partition of around 1.2 GB.
 This is enough to store all the source tarballs and compile all the packages.

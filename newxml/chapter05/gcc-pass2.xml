@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % gcc-entities SYSTEM "../ent/gcc.ent">
-  %gcc-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-tools-gcc-pass2">
 <title>Installing GCC-&gcc-version; - Pass 2</title>
 <?dbhtml filename="gcc-pass2.html"?>
 
-<xi:include href="../chapter06/gcc.xml" xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[2]))"/>
-
+<screen>&buildtime; 11.0 SBU
+&diskspace; 274 MB</screen>
 
 
 <sect2>
@@ -32,7 +32,7 @@ system is set up correctly in this regard by performing a simple test:</para>
 <para>If you receive the above message, your host doesn't have its PTYs set up
 properly. In this case there is no point in running the test suites for GCC
 and Binutils until you are able to resolve the issue. You can consult the LFS
-Wiki at <ulink url="http://wiki.linuxfromscratch.org/"/> for more information on how to get PTYs
+Wiki at <ulink url="&wiki-root;"/> for more information on how to get PTYs
 working.</para>
 
 <para>This time we will build both the C and the C++ compilers, so you'll have

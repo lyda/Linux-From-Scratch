@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd" [
-  <!ENTITY % psmisc-entities SYSTEM "../ent/psmisc.ent">
-  %psmisc-entities;
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
 ]>
 <sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-system-psmisc" xreflabel="Psmisc">
 <title>Installing Psmisc-&psmisc-version;</title>
@@ -10,8 +10,8 @@
 <para>The Psmisc package contains programs for displaying information on
 processes.</para>
 
-<screen>Approximate build time:  0.1 SBU
-Required disk space:     2.2 MB</screen>
+<screen>&buildtime; 0.1 SBU
+&diskspace; 2.2 MB</screen>
 
 <literallayout>Official download location for Psmisc (&psmisc-version;):
 <ulink url="http://download.sourceforge.net/psmisc/"/></literallayout>
