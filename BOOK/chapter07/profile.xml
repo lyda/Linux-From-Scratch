@@ -27,7 +27,7 @@ non-interactive shell is usually present when a shell script is
 running. It is non-interactive because it is processing a script and
 not waiting for user input between commands.</para>
 
-<para>For more information, see <command>info bash</command> -- Nodes:
+<para>For more information, see <command>info bash</command> - Nodes:
 Bash Startup Files and Interactive Shells.</para>
 
 <para>The files <filename>/etc/profile</filename> and
@@ -39,17 +39,17 @@ environment variables necessary for native language support. Setting
 them properly results in:</para>
 
 <itemizedlist>
-<listitem><para>the output of programs translated into your native
-language;</para></listitem>
-<listitem><para>correct classification of characters into letters,
+<listitem><para>The output of programs translated into the native
+language</para></listitem>
+<listitem><para>Correct classification of characters into letters,
 digits and other classes. This is necessary for Bash to properly
 accept non-ASCII characters in command lines in non-English
-locales;</para></listitem>
-<listitem><para>the correct alphabetical sorting order for the
-country;</para></listitem>
-<listitem><para>appropriate default paper size;</para></listitem>
-<listitem><para>correct formatting of monetary, time and date
-values.</para></listitem>
+locales</para></listitem>
+<listitem><para>The correct alphabetical sorting order for the
+country</para></listitem>
+<listitem><para>Appropriate default paper size</para></listitem>
+<listitem><para>Correct formatting of monetary, time, and date
+values</para></listitem>
 </itemizedlist>
 
 <para>This script also sets the <emphasis>INPUTRC</emphasis>
@@ -90,7 +90,7 @@ EOF</userinput></screen>
 (the recommended one for United States English users) locales are
 different.</para></note>
 
-<para>Setting the keyboard layout, the screen font, and the
+<para>Setting the keyboard layout, screen font, and 
 locale-related environment variables are the only internationalization
 steps needed to support locales that use ordinary single-byte
 encodings and left-to-right writing direction. More complex cases

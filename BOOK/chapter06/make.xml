@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Make installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Gettext, Glibc, Grep, Sed</seg></seglistitem>
+GCC, Gettext, Glibc, Grep, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -60,7 +60,7 @@ GCC, Gettext, Glibc, Grep, Sed</seg></seglistitem>
 <term><command>make</command></term>
 <listitem>
 <para>automatically determines which pieces of a large package need to
-be recompiled, and then issues the relevant commands.</para>
+be recompiled and then issues the relevant commands.</para>
 <indexterm zone="ch-system-make make"><primary sortas="b-make">make</primary></indexterm>
 </listitem>
 </varlistentry>

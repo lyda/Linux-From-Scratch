@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-system-readjusting">
-<title>Re-adjusting the toolchain</title>
+<title>Re-adjusting the Toolchain</title>
 <?dbhtml filename="readjusting.html"?>
 
 <para>Now that the new and final C libraries have been installed, it
@@ -13,11 +13,12 @@ so that it will link any newly compiled program against these new
 libraries. This is the same process used in the
 <quote>Adjusting</quote> phase in the beginning of <xref
 linkend="chapter-temporary-tools"/>, even though it looks to be
-reversed -- in that chapter, the chain was guided from the host's
-<filename class="directory">/{,usr/}lib</filename> directories to the
-new <filename class="directory">/tools/lib</filename> directory. Now,
-the chain will be guided from that same <filename
-class="directory">/tools/lib</filename> directory to the LFS's
+reversed. In <xref linkend="chapter-temporary-tools"/>, the chain was
+guided from the host's <filename
+class="directory">/{,usr/}lib</filename> directories to the new
+<filename class="directory">/tools/lib</filename> directory. Now, the
+chain will be guided from that same <filename
+class="directory">/tools/lib</filename> directory to the LFS
 <filename class="directory">/{,usr/}lib</filename> directories.</para>
 
 <para>Start by adjusting the linker. The source and build directories
@@ -48,19 +49,19 @@ second pass still contains the reference to
 Some host distributions contain a <filename
 class="symlink">ginstall</filename> symbolic link which takes
 precedence in the <filename>Makefile</filename> file and can cause a
-problem here. The above command takes care of this issue.</para>
+problem. The above command takes care of this issue.</para>
 
 <para>Remove the Binutils source and build directories now.</para>
 
 <para>Next, amend the GCC specs file so that it points to the new
-dynamic linker. A sed to accomplish this just like before:</para>
+dynamic linker. A sed command accomplishes this:</para>
 
 <!-- Ampersands are needed to allow cut and paste -->
 
 <screen><userinput>sed -i 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g' \
     `gcc --print-file specs`</userinput></screen>
 
-<para>Cutting and pasting the above is recommended. It is a good idea
+<para>Copying and pasting the above is recommended. It is a good idea
 to visually inspect the specs file to verify the intended change was
 actually made.</para>
 
@@ -74,7 +75,7 @@ necessary.</para></important>
 
 <caution><para>It is imperative at this point to stop and ensure that
 the basic functions (compiling and linking) of the adjusted toolchain
-are working as expected. To do this, perform a simple sanity
+are working as expected. To do this, perform a sanity
 check:</para>
 
 <screen><userinput>echo 'main(){}' &gt; dummy.c
@@ -82,12 +83,12 @@ cc dummy.c
 readelf -l a.out | grep ': /lib'</userinput></screen>
 
 <para>If everything is working correctly, there should be no errors,
-and the output of the last command will be (allowing for platform
-specific differences in dynamic linker name):</para>
+and the output of the last command will be (allowing for
+platform-specific differences in dynamic linker name):</para>
 
 <screen><computeroutput>[Requesting program interpreter: /lib/ld-linux.so.2]</computeroutput></screen>
 
-<para>Note especially that <filename class="directory">/lib</filename> is now
+<para>Note that <filename class="directory">/lib</filename> is now
 the prefix of our dynamic linker.</para>
 
 <para>If the output does not appear as shown above or is not received

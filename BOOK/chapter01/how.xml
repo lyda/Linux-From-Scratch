@@ -19,7 +19,7 @@ tools.</para>
 to create a new Linux native partition and file system, the place
 where the new LFS system will be compiled and installed. <xref
 linkend="chapter-getting-materials"/> explains which packages and
-patches need to be downloaded to build an LFS system, and how to store
+patches need to be downloaded to build an LFS system and how to store
 them on the new file system. <xref linkend="chapter-final-preps"/>
 discusses the setup for an appropriate work environment. Please read
 <xref linkend="chapter-final-preps"/> carefully as it explains several
@@ -31,7 +31,7 @@ beyond.</para>
 installation of a number of packages that will form the basic
 development suite (or toolchain) which is used to build the actual
 system in <xref linkend="chapter-building-system"/>. Some of these
-packages are needed to resolve circular dependencies -- for example,
+packages are needed to resolve circular dependencies&mdash;for example,
 to compile a compiler, you need a compiler.</para>
 
 <para><xref linkend="chapter-temporary-tools"/> also shows the user how
@@ -58,8 +58,8 @@ built. The chroot (change root) program is used to enter a virtual
 environment and start a new shell whose root directory will be set to
 the LFS partition. This is very similar to rebooting and instructing
 the kernel to mount the LFS partition as the root partition. The
-system doesn't actually reboot, but instead chroots because creating a
-bootable system requires additional work which isn't necessary just
+system does not actually reboot, but instead chroots because creating a
+bootable system requires additional work which is not necessary just
 yet. The major advantage is that <quote>chrooting</quote> allows the
 builder to continue using the host while LFS is being built. While
 waiting for package compilation to complete, a user can switch to a

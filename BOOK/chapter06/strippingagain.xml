@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd">
 <sect1 id="ch-system-strippingagain">
-<title>Stripping again</title>
+<title>Stripping Again</title>
 <?dbhtml filename="strippingagain.html"?>
 
 <para>If the intended user is not a programmer and does not plan to do
@@ -13,10 +13,10 @@ debug the software fully anymore.</para>
 <para>Most people who use the command mentioned below do not
 experience any difficulties. However, it is easy to make a typo and
 render the new system unusable, so before running the strip command,
-it is probably a good idea to make a backup of the current
+it is a good idea to make a backup of the current
 situation.</para>
 
-<para>Before perform the stripping, take special care to ensure that
+<para>Before performing the stripping, take special care to ensure that
 none of the binaries that are about to be stripped are running. If
 unsure whether the user entered chroot with the command given in
 <xref linkend="ch-system-chroot"/>, first exit from
@@ -44,7 +44,7 @@ binaries.</para>
 <para>If disk space is very tight, the
 <parameter>--strip-all</parameter> options can be used on the binaries
 in <filename class="directory">/{,usr/}{bin,sbin}</filename> to gain
-several more megabytes. Do not use this option on libraries -- they will
+several more megabytes. Do not use this option on libraries&mdash;they will
 be destroyed.</para>
 
 </sect1>

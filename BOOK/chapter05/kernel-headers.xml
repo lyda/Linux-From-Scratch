@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-tools-kernel-headers" role="wrap">
-<title>Linux-&linux-version; headers</title>
+<title>Linux-&linux-version; Headers</title>
 <?dbhtml filename="kernel-headers.html"?>
 
 <indexterm zone="ch-tools-kernel-headers">
@@ -12,6 +12,8 @@
 <secondary>tools, headers</secondary></indexterm>
 
 <sect2 role="package"><title/>
+<para>The Linux kernel package contains the kernel source as well as
+the header files used by Glibc.</para>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -21,13 +23,13 @@
 
 <segmentedlist>
 <segtitle>Linux Headers installation depends on</segtitle>
-<seglistitem><seg>Coreutils, Make</seg></seglistitem>
+<seglistitem><seg>Coreutils and Make</seg></seglistitem>
 </segmentedlist>
 
 </sect2>
 
 <sect2 role="installation">
-<title>Installation of the kernel headers</title>
+<title>Installation of the Kernel Headers</title>
 
 <para>Because some packages need to refer to the kernel header files,
 now is a good time to unpack the kernel archive, set it up, and copy
@@ -62,6 +64,10 @@ cp -R include/asm-generic /tools/glibc-kernheaders</userinput></screen>
 
 <screen><userinput>cp -R include/linux /tools/glibc-kernheaders</userinput></screen>
 
+</sect2>
+
+<sect2 role="content"><title/>
+<para>Details on this package are located in <xref linkend="contents-kernel"/>.</para>
 </sect2>
 
 </sect1>

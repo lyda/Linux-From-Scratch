@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-finish-reboot">
-<title>Rebooting the system</title>
+<title>Rebooting the System</title>
 <?dbhtml filename="reboot.html"?>
 
 <para>Now that all of the software has been installed, it is time to
@@ -20,7 +20,7 @@ umount $LFS/dev
 umount $LFS/proc
 umount $LFS/sys</userinput></screen>    
 
-<para>And unmount the LFS file system itself:</para>
+<para>Unmount the LFS file system itself:</para>
 
 <screen><userinput>umount $LFS</userinput></screen>
 
@@ -31,7 +31,7 @@ partitions before unmounting the main one, like this:</para>
 umount $LFS/home
 umount $LFS</userinput></screen>
 
-<para>Now reboot your system with:</para>
+<para>Now, reboot the system with:</para>
 
 <screen><userinput>shutdown -r now</userinput></screen>
 

@@ -9,11 +9,10 @@
 
 <para>Now that a blank partition has been set up, the file system can
 be created. The most widely-used system in the Linux world is the
-<systemitem class="filesystem">second extended file
-system</systemitem> (ext2), but with the newer high-capacity hard
-disks, the journaling file systems are becoming increasingly popular.
-Here we will create an ext2 file system, but build instructions for
-other file systems can be found at <ulink
+second extended file system (ext2), but with the newer high-capacity
+hard disks, the journaling file systems are becoming increasingly
+popular.  Here we will create an ext2 file system, but build
+instructions for other file systems can be found at <ulink
 url="&blfs-root;view/stable/postlfs/filesystems.html"/>.</para>
 
 <para>To create an ext2 file system on the LFS partition, run the following:</para>
@@ -26,7 +25,7 @@ partition (<filename>hda5</filename> in our previous example).</para>
 <para>If a swap partition was created, it will need to be initialized
 as a swap partition too (also known as formatting, as described above
 with mke2fs) by running the following. If you are using an existing
-swap parition you do not need to format it.</para>
+swap parition, there is no need to format it.</para>
 
 <screen><userinput>mkswap /dev/<replaceable>[yyy]</replaceable></userinput></screen>
 

@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Perl installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
+Gawk, GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -75,8 +75,8 @@ tests to resolve the network name localhost:</para>
 find2perl, h2ph, h2xs, libnetcfg, perl, perl&perl-version; (link to perl),
 perlbug, perlcc, perldoc, perlivp, piconv, pl2pm, pod2html, pod2latex, pod2man,
 pod2text, pod2usage, podchecker, podselect, psed (link to s2p), pstruct (link
-to c2ph), s2p, splain and xsubpp</seg>
-<seg>Several hundred which cannot be all listed here</seg></seglistitem>
+to c2ph), s2p, splain, and xsubpp</seg>
+<seg>Several hundred which cannot all be listed here</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -109,7 +109,7 @@ to c2ph), s2p, splain and xsubpp</seg>
 <varlistentry id="en2cxs">
 <term><command>en2cxs</command></term>
 <listitem>
-<para>builds a Perl extension for the Encode module, from either
+<para>builds a Perl extension for the Encode module from either
 Unicode Character Mappings or Tcl Encoding Files.</para>
 <indexterm zone="ch-system-perl en2cxs"><primary sortas="b-en2cxs">en2cxs</primary></indexterm>
 </listitem>
@@ -157,10 +157,20 @@ single swiss-army language.</para>
 </listitem>
 </varlistentry>
 
+<varlistentry id="perl-version">
+<term><command>perl&perl-version;</command></term>
+<listitem>
+<para>hard link to perl.</para>
+<indexterm zone="ch-system-perl perl-version"><primary
+sortas="b-perl&perl-version;">perl&perl-version;</primary></indexterm>
+</listitem>
+</varlistentry>
+
+
 <varlistentry id="perlbug">
 <term><command>perlbug</command></term>
 <listitem>
-<para>used to generate bug reports about Perl or the modules that come
+<para>used to generate bug reports about Perl, or the modules that come
 with it, and mail them.</para>
 <indexterm zone="ch-system-perl perlbug"><primary sortas="b-perlbug">perlbug</primary></indexterm>
 </listitem>
@@ -196,7 +206,7 @@ correctly.</para>
 <varlistentry id="piconv">
 <term><command>piconv</command></term>
 <listitem>
-<para>is a Perl version of the character encoding converter
+<para>a Perl version of the character encoding converter
 <command>iconv</command>.</para>
 <indexterm zone="ch-system-perl piconv"><primary sortas="b-piconv">piconv</primary></indexterm>
 </listitem>
@@ -205,7 +215,7 @@ correctly.</para>
 <varlistentry id="pl2pm">
 <term><command>pl2pm</command></term>
 <listitem>
-<para>is a rough tool for converting Perl4 <filename class="extension">.pl</filename>
+<para>a rough tool for converting Perl4 <filename class="extension">.pl</filename>
 files to Perl5 <filename class="extension">.pm</filename> modules.</para>
 <indexterm zone="ch-system-perl pl2pm"><primary sortas="b-pl2pm">pl2pm</primary></indexterm>
 </listitem>

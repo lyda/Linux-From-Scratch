@@ -22,7 +22,7 @@ handling of character screens.</para>
 <segmentedlist>
 <segtitle>Ncurses installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
+Gawk, GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -47,7 +47,7 @@ Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 
 <screen><userinput>chmod 755 /usr/lib/*.&ncurses-version;</userinput></screen>
 
-<para>Now fix a library that shouldn't be executable:</para>
+<para>Fix a library that should not be executable:</para>
 
 <screen><userinput>chmod 644 /usr/lib/libncurses++.a</userinput></screen>
 
@@ -89,7 +89,7 @@ libncurses++.a, libncurses.[a,so], libpanel.[a,so]</seg></seglistitem>
 <varlistentry id="clear">
 <term><command>clear</command></term>
 <listitem>
-<para>clears the screen, if this is possible.</para>
+<para>clears the screen, if possible.</para>
 <indexterm zone="ch-system-ncurses clear"><primary sortas="b-clear">clear</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -168,7 +168,7 @@ report its long name.</para>
 <varlistentry id="libncurses">
 <term><filename class="libraryfile">>libncurses*</filename></term>
 <listitem>
-<para>contains functions to display text in many complicated ways on a
+<para>contains functions to display text in many complex ways on a
 terminal screen. A good example of the use of these functions is the
 menu displayed during the kernel's <command>make menuconfig</command>.</para>
 <indexterm zone="ch-system-ncurses libncurses"><primary sortas="c-libncurses*">libncurses*</primary></indexterm>

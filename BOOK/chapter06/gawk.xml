@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Gawk installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils,
-Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
+Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -51,11 +51,19 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
 <seglistitem><seg>awk (link to gawk), gawk, gawk-&gawk-version;, grcat, igawk, 
-pgawk, pgawk-&gawk-version; and pwcat</seg></seglistitem>
+pgawk, pgawk-&gawk-version;, and pwcat</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
+
+<varlistentry id="awk">
+<term><command>awk</command></term>
+<listitem>
+<para>link to gawk</para>
+<indexterm zone="ch-system-gawk awk"><primary sortas="b-awk">awk</primary></indexterm>
+</listitem>
+</varlistentry>
 
 <varlistentry id="gawk">
 <term><command>gawk</command></term>
@@ -63,6 +71,14 @@ pgawk, pgawk-&gawk-version; and pwcat</seg></seglistitem>
 <para>a program for manipulating text files.  It is the GNU
 implementation of <command>awk</command>.</para>
 <indexterm zone="ch-system-gawk gawk"><primary sortas="b-gawk">gawk</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="gawk-version">
+<term><command>gawk-&gawk-version;</command></term>
+<listitem>
+<para>hard link to gawk.</para>
+<indexterm zone="ch-system-gawk gawk-version"><primary sortas="b-gawk-&gawk-version;">gawk-&gawk-version;</primary></indexterm>
 </listitem>
 </varlistentry>
 
@@ -87,6 +103,14 @@ implementation of <command>awk</command>.</para>
 <listitem>
 <para>the profiling version of <command>gawk</command>.</para>
 <indexterm zone="ch-system-gawk pgawk"><primary sortas="b-pgawk">pgawk</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="pgawk-version">
+<term><command>pgawk-&gawk-version;</command></term>
+<listitem>
+<para>hard link to pgawk.</para>
+<indexterm zone="ch-system-gawk pgawk-version"><primary sortas="b-pgawk-&gawk-version;">pgawk-&gawk-version;</primary></indexterm>
 </listitem>
 </varlistentry>
 

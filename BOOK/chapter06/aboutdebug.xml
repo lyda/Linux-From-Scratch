@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-system-aboutdebug">
-<title>About debugging symbols</title>
+<title>About Debugging Symbols</title>
 <?dbhtml filename="aboutdebug.html"?>
 
 <para>Most programs and libraries are, by default, compiled with
@@ -35,8 +35,8 @@ without debugging symbols: 16 MB</para></listitem>
 
 </itemizedlist>
 
-<para>Sizes may vary depending on which compiler was used and which C
-library, but when comparing programs with and without debugging
+<para>Sizes may vary depending on which compiler and C
+library were used, but when comparing programs with and without debugging
 symbols, the difference will usually be a factor between two and
 five.</para>
 

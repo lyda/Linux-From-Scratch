@@ -11,8 +11,8 @@
 
 <sect2 role="package"><title/>
 <para>The Gettext package contains utilities for internationalization and
-localization. These allow programs to be compiled with Native Language Support
-(NLS), enabling them to output messages in the user's native language.</para>
+localization. These allow programs to be compiled with NLS, enabling them
+to output messages in the user's native language.</para>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -23,7 +23,7 @@ localization. These allow programs to be compiled with Native Language Support
 <segmentedlist>
 <segtitle>Gettext installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Bison, Coreutils,
-Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
+Diffutils, Gawk, GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -57,7 +57,7 @@ Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 <seglistitem><seg>autopoint, config.charset, config.rpath, envsubst, gettext, 
 gettextize, hostname, msgattrib, msgcat, msgcmp, msgcomm, msgconv, msgen, 
 msgexec, msgfilter, msgfmt, msggrep, msginit, msgmerge, msgunfmt, msguniq, 
-ngettext, project-id, team-address, trigger, urlget, user-email and xgettext</seg>
+ngettext, project-id, team-address, trigger, urlget, user-email, and xgettext</seg>
 <seg>libasprintf[a,so], libgettextlib[a,so], libgettextpo[a,so] and libgettextsrc[a,so]</seg></seglistitem>
 </segmentedlist>
 
@@ -285,7 +285,7 @@ programs. These are not intended for general use.</para>
 class="extension">.po</filename> files. This library is used when the
 standard applications shipped with Gettext (such as
 <command>msgcomm</command>, <command>msgcmp</command>,
-<command>msgattrib</command> and <command>msgen</command>) will not
+<command>msgattrib</command>, and <command>msgen</command>) will not
 suffice.</para>
 <indexterm zone="ch-system-gettext libgettextpo"><primary sortas="c-libgettextpo">libgettextpo</primary></indexterm>
 </listitem>

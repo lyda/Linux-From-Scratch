@@ -12,12 +12,19 @@
 <secondary>tools, pass 2</secondary></indexterm>
 
 <sect2 role="package"><title/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+	href="../chapter06/binutils.xml"
+	xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
 <segtitle>&diskspace;</segtitle>
 <seglistitem><seg>1.5 SBU</seg><seg>108 MB</seg></seglistitem>
 </segmentedlist>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+	href="../chapter06/binutils.xml"
+	xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
 
 </sect2>
 
@@ -36,7 +43,7 @@ unset them when building Binutils.</para>
 <screen><userinput>mkdir ../binutils-build
 cd ../binutils-build</userinput></screen>
 
-<para>Now prepare Binutils for compilation:</para>
+<para>Prepare Binutils for compilation:</para>
 
 <screen><userinput>../binutils-&binutils-version;/configure --prefix=/tools \
     --enable-shared --with-lib-path=/tools/lib</userinput></screen>
@@ -53,10 +60,6 @@ This prevents the linker from searching through library directories on
 the host.</para></listitem>
 </varlistentry>
 </variablelist>
-
-<para>Before starting to build Binutils, remember to unset any
-environment variables that override the default optimization
-flags.</para>
 
 <para>Compile the package:</para>
 
@@ -87,7 +90,7 @@ chapter in their current state.</para></warning>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-binutils"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-binutils"/>.</para>
 </sect2>
 
 </sect1>

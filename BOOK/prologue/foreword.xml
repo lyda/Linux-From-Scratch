@@ -10,7 +10,7 @@
 <para>My adventures in Linux began six years ago when I downloaded and
 installed my first distribution. After working with it for awhile, I
 discovered issues I definitely would have liked to see improved upon.
-For example, I didn't like the arrangement of the bootscripts, the way
+For example, I didn't like the arrangement of the bootscripts or the way
 programs were configured by default. I tried a number of alternate
 distributions to address these issues, yet each had it pros and cons.
 Finally, I realized that if I wanted full satisfaction from my Linux
@@ -31,7 +31,7 @@ compile-time errors, I created a custom-built Linux system that was
 fully operational and suitable to individual needs. This process also
 allowed me to create compact and streamlined Linux systems which are
 faster and take up less space than traditional operating systems. I
-called this system a Linux From Scratch system, or LFS system for
+called this system a Linux From Scratch system, or an LFS system for
 short.</para>
 
 <para>As I shared my goals and experiences with other members of the
@@ -40,7 +40,7 @@ in the ideas set forth in my Linux adventures. Such custom-built LFS
 systems not only to meet user specifications and requirements, but
 also serve as an ideal learning opportunity for programmers and system
 administrators to enhance their Linux skills. Out of this broadened
-interest, the Linux From Scratch project was born.</para>
+interest, the Linux From Scratch Project was born.</para>
 
 <para>This <emphasis>Linux From Scratch</emphasis> book provides
 readers with the background and instruction to design and build custom

@@ -8,15 +8,15 @@
 <?dbhtml filename="abouttestsuites.html"?>
 
 <para>Most packages provide a test suite. Running the test suite for a
-newly built package is a good idea because it can provide a ?sanity
-check? indicating that everything compiled correctly. A test suite
+newly built package is a good idea because it can provide a <quote>sanity
+check</quote> indicating that everything compiled correctly. A test suite
 that passes its set of checks usually proves that the package is
 functioning as the developer intended. It does not, however, guarantee
 that the package is totally bug free.</para>
 
 <para>Some test suites are more important than others. For example,
-the test suites for the core toolchain packages?GCC, Binutils, and
-Glibc?are of the utmost importance due to their central role in a
+the test suites for the core toolchain packages&mdash;GCC, Binutils, and
+Glibc&mdash;are of the utmost importance due to their central role in a
 properly functioning system. The test suites for GCC and Glibc can
 take a very long time to complete, especially on slower hardware, but
 are strongly recommended.</para>
@@ -43,7 +43,7 @@ linkend="chapter-temporary-tools"/>.</para>
 
 <para>Sometimes package test suites will give false failures. Consult
 the LFS Wiki at <ulink url="&wiki-root;"/> to verify that these
-failures are normal. This site is valid for all tests throughout this
+failures are expected. This site is valid for all tests throughout this
 book.</para>
 
 </sect1>

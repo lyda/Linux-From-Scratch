@@ -14,19 +14,12 @@
 
 
 <copyright id="copyright">
-	<year>1999-2004</year>
+	<year>1999&ndash;2004</year>
 	<holder>Gerard Beekmans</holder>
 </copyright>
 
-
-<abstract>
-<para>This book describes the process of creating a Linux system from
-scratch, using nothing but the sources of the required software.</para>
-</abstract>
-
-
 <legalnotice>
-<para>Copyright (c) 1999-2004, Gerard Beekmans</para>
+<para>Copyright (c) 1999&ndash;2004, Gerard Beekmans</para>
 
 <para>All rights reserved.</para>
 
@@ -37,14 +30,14 @@ met:</para>
 <itemizedlist>
 
 <listitem><para>Redistributions in any form must retain the above copyright 
-notice, this list of conditions and the following disclaimer.</para></listitem>
+notice, this list of conditions and the following disclaimer</para></listitem>
 
 <listitem><para>Neither the name of <quote>Linux From Scratch</quote> nor the
 names of its contributors may be used to endorse or promote products derived
-from  this material without specific prior written permission.</para></listitem>
+from  this material without specific prior written permission</para></listitem>
 
 <listitem><para>Any material derived from Linux From Scratch must contain 
-a reference to the <quote>Linux From Scratch</quote> project.</para></listitem>
+a reference to the <quote>Linux From Scratch</quote> project</para></listitem>
 
 </itemizedlist>
 
@@ -61,5 +54,5 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
 </legalnotice>
 
-
 </bookinfo>
+

@@ -21,14 +21,14 @@
 <segmentedlist>
 <segtitle>Vim installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
+GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 </segmentedlist>
 
 <tip>
 <title>Alternatives to Vim</title>
-<para>If you prefer another editor -- like Emacs, Joe, or Nano --
-please refer to <ulink url="&blfs-root;view/stable/postlfs/editors.html"/> for
-suggested installation instructions.</para>
+<para>If you prefer another editor&mdash;such as Emacs, Joe, or
+Nano&mdash;please refer to <ulink url="&blfs-root;view/stable/postlfs/editors.html"/>
+for suggested installation instructions.</para>
 </tip>
 </sect2>
 
@@ -38,7 +38,7 @@ suggested installation instructions.</para>
 <para>First, unpack both
 <filename>vim-&vim-version;.tar.bz2</filename> and (optionally)
 <filename>vim-&vim-version;-lang.tar.gz</filename> archives into the
-same directory. Then change the default locations of the
+same directory. Then, change the default locations of the
 <filename>vimrc</filename> and <filename>gvimrc</filename>
 configuration files to <filename
 class="directory">/etc</filename>:</para>
@@ -53,7 +53,7 @@ echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput><
 <para>The optional but highly recommended
 <parameter>--enable-multibyte</parameter> switch includes support for
 editing files in multibyte character encodings into
-<command>vim</command>.  This is needed if you are using a locale with
+<command>vim</command>.  This is needed if using a locale with
 a multibyte character set. This switch is also helpful to be able to
 edit text files initially created in Linux distributions like Fedora
 Core that use UTF-8 as a default character set.</para>
@@ -62,25 +62,25 @@ Core that use UTF-8 as a default character set.</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>To test the results, you can issue:
+<para>To test the results, issue:
 <userinput>make test</userinput>. However, this test suite outputs a
 lot of chaotic characters to the screen, which can cause issues with
 the settings of the current terminal. Therefore, running the test
-suite here is strictly optional.</para>
+suite here is optional.</para>
 
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Many users are used to using <command>vi</command>, instead of
+<para>Many users are used to using <command>vi</command> instead of
 <command>vim</command>. To allow execution of <command>vim</command>
-when they habitually enter <command>vi</command>, create a
+when users habitually enter <command>vi</command>, create a
 symlink:</para>
 
 <screen><userinput>ln -s vim /usr/bin/vi</userinput></screen>
 
 <para>If the X Window system is going to be installed on the LFS
-system, it may be necessary to re-compile Vim after installing X. Vim
+system, it may be necessary to recompile Vim after installing X. Vim
 comes with a GUI version of the editor that requires X and some
 additional libraries to be installed. For more information on this
 process, refer to the Vim documentation and the Vim installation page
@@ -117,7 +117,7 @@ EOF</userinput></screen>
 
 <para>The <parameter>set nocompatible</parameter> makes
 <command>vim</command> behave in a more useful way (the default) than
-the vi-compatible manner. Remove the <quote>no</quote> if you want the
+the vi-compatible manner. Remove the <quote>no</quote> to keep the 
 old <command>vi</command> behavior. The <parameter>set
 backspace=2</parameter> allows backspacing over line breaks,
 autoindents, and the start of insert. The <parameter>syntax
@@ -142,7 +142,7 @@ running the following command:</para>
 <seglistitem><seg>efm_filter.pl, efm_perl.pl, ex (link to vim), less.sh, mve.awk, 
 pltags.pl, ref, rview (link to vim), rvim (link to vim), shtags.pl, tcltags, vi (link to vim), 
 view (link to vim), vim, vim132, vim2html.pl, vimdiff (link to vim), vimm, vimspell.sh, 
-vimtutor and xxd</seg></seglistitem>
+vimtutor, and xxd</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -192,7 +192,7 @@ Perl interpreter for use with the <quote>quickfix</quote> mode of <command>vim</
 <varlistentry id="pltags.pl">
 <term><command>pltags.pl</command></term>
 <listitem>
-<para>creates a tags file for Perl code, for use by <command>vim</command>.</para>
+<para>creates a tags file for Perl code for use by <command>vim</command>.</para>
 <indexterm zone="ch-system-vim pltags.pl"><primary sortas="b-pltags.pl">pltags.pl</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -208,7 +208,7 @@ Perl interpreter for use with the <quote>quickfix</quote> mode of <command>vim</
 <varlistentry id="rview">
 <term><command>rview</command></term>
 <listitem>
-<para>is a restricted version of <command>view</command>: no shell
+<para>is a restricted version of <command>view</command>. No shell
 commands can be started and <command>view</command> cannot be suspended.</para>
 <indexterm zone="ch-system-vim rview"><primary sortas="b-rview">rview</primary></indexterm>
 </listitem>
@@ -217,7 +217,7 @@ commands can be started and <command>view</command> cannot be suspended.</para>
 <varlistentry id="rvim">
 <term><command>rvim</command></term>
 <listitem>
-<para>is a restricted version of <command>vim</command>: no shell
+<para>is a restricted version of <command>vim</command>. No shell
 commands can be started and <command>vim</command> cannot be suspended.</para>
 <indexterm zone="ch-system-vim rvim"><primary sortas="b-rvim">rvim</primary></indexterm>
 </listitem>
@@ -266,7 +266,7 @@ commands can be started and <command>vim</command> cannot be suspended.</para>
 <varlistentry id="vim2html.pl">
 <term><command>vim2html.pl</command></term>
 <listitem>
-<para>converts Vim documentation to HTML.</para>
+<para>converts Vim documentation to HypterText Markup Language (HTML).</para>
 <indexterm zone="ch-system-vim vim2html.pl"><primary sortas="b-vim2html.pl">vim2html.pl</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -290,7 +290,7 @@ commands can be started and <command>vim</command> cannot be suspended.</para>
 <varlistentry id="vimspell.sh">
 <term><command>vimspell.sh</command></term>
 <listitem>
-<para>a script which spells a file and generates the syntax statements necessary 
+<para>spells a file and generates the syntax statements necessary 
 to highlight in <command>vim</command>. This script requires the old Unix <command>spell</command>
 command, which is provided neither in LFS nor in BLFS.</para>
 <indexterm zone="ch-system-vim vimspell.sh"><primary sortas="b-vimspell.sh">vimspell.sh</primary></indexterm>
@@ -300,7 +300,7 @@ command, which is provided neither in LFS nor in BLFS.</para>
 <varlistentry id="vimtutor">
 <term><command>vimtutor</command></term>
 <listitem>
-<para>teaches you the basic keys and commands of <command>vim</command>.</para>
+<para>teaches the basic keys and commands of <command>vim</command>.</para>
 <indexterm zone="ch-system-vim vimtutor"><primary sortas="b-vimtutor">vimtutor</primary></indexterm>
 </listitem>
 </varlistentry>

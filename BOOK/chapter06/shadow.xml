@@ -22,7 +22,7 @@ way.</para>
 <segmentedlist>
 <segtitle>Shadow installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Bison, Coreutils,
-Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
+Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -117,8 +117,8 @@ administrative tasks. For a full explanation of what
 <emphasis>password shadowing</emphasis> means, see the
 <filename>doc/HOWTO</filename> file within the unpacked source tree.
 If using Shadow support, keep in mind that programs which need to
-verify passwords (display managers, ftp programs, pop3 daemons, etc.)
-must be shadow-compliant That is, they need to be able to work with
+verify passwords (display managers, FTP programs, pop3 daemons, etc.)
+must be shadow-compliant. That is, they need to be able to work with
 shadowed passwords.</para>
 
 <para>To enable shadowed passwords, run the following command:</para>
@@ -153,10 +153,12 @@ by running:</para>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
+<segtitle>Installed libraries</segtitle>
 <seglistitem><seg>chage, chfn, chpasswd, chsh, expiry, faillog, gpasswd,
 groupadd, groupdel, groupmod, groups, grpck, grpconv, grpunconv, lastlog, login,
 logoutd, mkpasswd, newgrp, newusers, passwd, pwck, pwconv, pwunconv, sg
-(link to newgrp), useradd, userdel, usermod, vigr (link to vipw) and vipw</seg>
+(link to newgrp), useradd, userdel, usermod, vigr (link to vipw), and vipw</seg>
+<seg>libshadow[.a,so]</seg>
 </seglistitem>
 </segmentedlist>
 
@@ -257,7 +259,7 @@ failures before an account is blocked, or to reset the failure count.</para>
 <varlistentry id="grpck">
 <term><command>grpck</command></term>
 <listitem>
-<para>verifies the integrity of the group files, <filename>/etc/group</filename> 
+<para>verifies the integrity of the group files <filename>/etc/group</filename> 
 <indexterm zone="ch-system-shadow grpck"><primary sortas="b-grpck">grpck</primary></indexterm>
 and <filename>/etc/gshadow</filename>.</para>
 </listitem>
@@ -283,7 +285,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 <varlistentry id="lastlog">
 <term><command>lastlog</command></term>
 <listitem>
-<para>reports the most recent login of all users, or of a given user.</para>
+<para>reports the most recent login of all users or of a given user.</para>
 <indexterm zone="ch-system-shadow lastlog"><primary sortas="b-lastlog">lastlog</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -339,7 +341,7 @@ from <filename>/etc/gshadow</filename> and then deletes the latter.</para>
 <varlistentry id="pwck">
 <term><command>pwck</command></term>
 <listitem>
-<para>verifies the integrity of the password files, 
+<para>verifies the integrity of the password files 
 <filename>/etc/passwd</filename> and <filename>/etc/shadow</filename>.</para>
 <indexterm zone="ch-system-shadow pwck"><primary sortas="b-pwck">pwck</primary></indexterm>
 </listitem>
@@ -392,7 +394,8 @@ new-user information.</para>
 <varlistentry id="usermod">
 <term><command>usermod</command></term>
 <listitem>
-<para>is used to modify the given user's login name, UID (User Identification), 
+<para>is used to modify the given user's login name, User
+Identification (UID), 
 shell, initial group, home directory, etc.</para>
 <indexterm zone="ch-system-shadow usermod"><primary sortas="b-usermod">usermod</primary></indexterm>
 </listitem>
@@ -401,7 +404,7 @@ shell, initial group, home directory, etc.</para>
 <varlistentry id="vigr">
 <term><command>vigr</command></term>
 <listitem>
-<para>can be used to edit the <filename>/etc/group</filename> or
+<para>edits the <filename>/etc/group</filename> or
 <filename>/etc/gshadow</filename> files.</para>
 <indexterm zone="ch-system-shadow vigr"><primary sortas="b-vigr">vigr</primary></indexterm>
 </listitem>
@@ -410,7 +413,7 @@ shell, initial group, home directory, etc.</para>
 <varlistentry id="vipw">
 <term><command>vipw</command></term>
 <listitem>
-<para>can be used to edit the <filename>/etc/passwd</filename> or 
+<para>edits the <filename>/etc/passwd</filename> or 
 <filename>/etc/shadow</filename> files.</para>
 <indexterm zone="ch-system-shadow vipw"><primary sortas="b-vipw">vipw</primary></indexterm>
 </listitem>

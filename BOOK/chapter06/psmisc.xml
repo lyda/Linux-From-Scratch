@@ -22,7 +22,7 @@ processes.</para>
 <segmentedlist>
 <segtitle>Psmisc installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
+GCC, Gettext, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -40,7 +40,7 @@ GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <term><parameter>--exec-prefix=""</parameter></term>
 <listitem><para>This causes the binaries to be installed in <filename
 class="directory">/bin</filename> instead of <filename
-class="directory">/usr/bin</filename>. As the Psmisc programs are
+class="directory">/usr/bin</filename>. Because the Psmisc programs are
 often used in bootscripts, they should be available when the <filename
 class="directory">/usr</filename> file system is not
 mounted.</para></listitem>
@@ -81,7 +81,7 @@ following symlink:</para>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
-<seglistitem><seg>fuser, killall, pstree and pstree.x11 (link to pstree)</seg></seglistitem>
+<seglistitem><seg>fuser, killall, pstree, and pstree.x11 (link to pstree)</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -90,7 +90,7 @@ following symlink:</para>
 <varlistentry id="fuser">
 <term><command>fuser</command></term>
 <listitem>
-<para>reports the PIDs of processes that use the given files or file systems.</para>
+<para>reports the Process IDs (PIDs) of processes that use the given files or file systems.</para>
 <indexterm zone="ch-system-psmisc fuser"><primary sortas="b-fuser">fuser</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -115,7 +115,7 @@ running any of the given commands.</para>
 <varlistentry id="pstree.x11">
 <term><command>pstree.x11</command></term>
 <listitem>
-<para>same as pstree except that it waits for confirmation before exiting.</para>
+<para>same as pstree, except that it waits for confirmation before exiting.</para>
 <indexterm zone="ch-system-psmisc pstree.x11"><primary sortas="b-pstree.x11">pstree.x11</primary></indexterm>
 </listitem>
 </varlistentry>

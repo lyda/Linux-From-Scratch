@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-scripts-usage">
-<title>How do these bootscripts work?</title>
+<title>How Do These Bootscripts Work?</title>
 <?dbhtml filename="usage.html"?>
 
 <indexterm zone="ch-scripts-usage">
@@ -20,7 +20,7 @@ respects generally accepted standards.</para>
 
 <para>SysVinit (which will be referred to as <quote>init</quote> from
 now on) works using a run-levels scheme. There are seven (from 0 to 6)
-run-levels (actually, there are more run-levels but they are for
+run-levels (actually, there are more run-levels, but they are for
 special cases and are generally not used. The init man page describes
 those details), and each one of those corresponds to the actions the
 computer is supposed to perform when it starts up. The default
@@ -50,9 +50,9 @@ run-level) and <filename class="directory">rcsysinit.d</filename>, all
 containing a number of symbolic links. Some begin with a
 <emphasis>K</emphasis>, the others begin with an
 <emphasis>S</emphasis>, and all of them have two numbers following the
-initial letter. The K means to stop (kill) a service, and the S means
+initial letter. The K means to stop (kill) a service and the S means
 to start a service. The numbers determine the order in which the
-scripts are run, from 00 to 99 -- the lower the number the earlier it
+scripts are run, from 00 to 99&mdash;the lower the number the earlier it
 gets executed. When init switches to another run-level, the
 appropriate services get killed and others get started.</para>
 
@@ -101,7 +101,7 @@ do:</para>
 <term><parameter>reload</parameter></term>
 <listitem><para>The configuration of the service is updated.
 This is used after the configuration file of a service was modified, when 
-the service doesn't need to be restarted.</para></listitem>
+the service does not need to be restarted.</para></listitem>
 </varlistentry>
 
 <varlistentry>

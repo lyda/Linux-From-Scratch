@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-system-pwdgroup">
-<title>The passwd, group and log files</title>
+<title>Creating the passwd, group and log files</title>
 <?dbhtml filename="pwdgroup.html"?>
 
 <indexterm zone="ch-system-pwdgroup"><primary sortas="e-/etc/passwd">/etc/passwd</primary></indexterm>
@@ -50,13 +50,13 @@ utmp:x:13:
 usb:x:14:
 EOF</userinput></screen>
 
-<para>The created groups are not part of any standard -- they are some
-of the groups that the Udev configuration we will be using in the next
-section. The Linux Standard Base (LSB, available at <ulink
+<para>The created groups are not part of any standard&mdash;they are some
+of the groups that the Udev configuration will be using in the next
+section. The Linux Standard Base (LSB), available at <ulink
 url="http://www.linuxbase.org"/>) recommends only that, besides the
 group <quote>root</quote> with a Group ID (GID) of 0, a group
 <quote>bin</quote> with a GID of 1 be present. All other group names
-and GIDs can be chosen freely by the system administrator, since
+and GIDs can be chosen freely by the system administrator since
 well-written packages do not depend on GID numbers, but rather use the
 group's name.</para>
 
@@ -76,11 +76,11 @@ paths to binaries it has executed. In order to use the newly compiled
 binaries as soon as they are installed, turn off this function for the
 duration of this chapter.</para>
 
-<para>The <command>login</command>, <command>agetty</command> and
+<para>The <command>login</command>, <command>agetty</command>, and
 <command>init</command> programs (and others) use a number of log
 files to record information such as who was logged into the system and
 when. However, these programs will not write to the log files if they
-do not already exist. Initialize the log files and give them their
+do not already exist. Initialize the log files and give them 
 proper permissions:</para>
 
 <screen><userinput>touch /var/run/utmp /var/log/{btmp,lastlog,wtmp}
@@ -90,8 +90,8 @@ chmod 664 /var/run/utmp /var/log/lastlog</userinput></screen>
 <para>The <filename>/var/run/utmp</filename> file records the users
 that are currently logged in. The <filename>/var/log/wtmp</filename>
 file records all logins and logouts. The
-<filename>/var/log/lastlog</filename> file records for each user when
-he or she last logged in. The <filename>/var/log/btmp</filename> file
+<filename>/var/log/lastlog</filename> file records when
+each user last logged in. The <filename>/var/log/btmp</filename> file
 records the bad login attempts.</para>
 
 </sect1>

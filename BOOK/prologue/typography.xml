@@ -43,7 +43,7 @@ bin:x:1:
 ......
 EOF</userinput></screen>
 
-<para>This type is used when creating configuration files. The first
+<para>This format is used when creating configuration files. The first
 command tells the system to create the file
 <filename>$LFS/etc/group</filename> from whatever is typed on the
 following lines until the sequence end of file (EOF) is encountered.

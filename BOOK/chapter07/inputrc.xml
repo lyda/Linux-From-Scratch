@@ -4,14 +4,14 @@
   %general-entities;
 ]>
 <sect1 id="ch-scripts-inputrc">
-<title>Creating the /etc/inputrc file</title>
+<title>Creating the /etc/inputrc File</title>
 <?dbhtml filename="inputrc.html"?>
 
 <indexterm zone="ch-scripts-inputrc"><primary sortas="e-/etc/inputrc">/etc/inputrc</primary></indexterm>
 
 <para>The <filename>/etc/inputrc</filename> file deals with mapping
 the keyboard for specific situations. This file is the start-up file
-used by <application>readline</application> -- the input-related
+used by <application>readline</application>, the input-related
 library used by <application>Bash</application> and most other
 shells.</para>
 
@@ -39,7 +39,7 @@ cannot be on the same line as commands.</para>
 class="directory">/etc/skel</filename> using the command below, change
 the command's output to <filename
 class="directory">/etc/skel/.inputrc</filename> and be sure to
-check/set permissions afterward. Then copy that file to
+check/set permissions afterward. Copy that file to
 <filename>/etc/inputrc</filename> and the home directory of any user
 already existing on the system, including <emphasis>root</emphasis>,
 that needs a private version of the file. Be certain to use the

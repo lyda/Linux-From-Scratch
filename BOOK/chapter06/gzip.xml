@@ -22,7 +22,7 @@ files.</para>
 <segmentedlist>
 <segtitle>Gzip installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
+GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -65,7 +65,7 @@ ln -s gunzip /bin/uncompress</userinput></screen>
 <segtitle>Installed programs</segtitle>
 <seglistitem><seg>gunzip (link to gzip), gzexe,
 gzip, uncompress (link to gunzip), zcat (link to gzip), zcmp, zdiff,
-zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
+zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -82,7 +82,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 <varlistentry id="gzexe">
 <term><command>gzexe</command></term>
 <listitem>
-<para>used to create self-uncompressing executable files.</para>
+<para>creates self-uncompressing executable files.</para>
 <indexterm zone="ch-system-gzip gzexe"><primary sortas="b-gzexe">gzexe</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -90,7 +90,7 @@ zegrep, zfgrep, zforce, zgrep, zless, zmore and znew</seg></seglistitem>
 <varlistentry id="gzip">
 <term><command>gzip</command></term>
 <listitem>
-<para>compresses the given files, using Lempel-Ziv (LZ77) coding.</para>
+<para>compresses the given files using Lempel-Ziv (LZ77) coding.</para>
 <indexterm zone="ch-system-gzip gzip"><primary sortas="b-gzip">gzip</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -172,8 +172,9 @@ useful when file names were truncated during a file transfer.</para>
 <varlistentry id="znew">
 <term><command>znew</command></term>
 <listitem>
-<para>re-compresses files from <command>compress</command> format to <command>gzip</command> format 
--- <filename class="extension">.Z</filename> to <filename class="extension">.gz</filename>.</para>
+<para>re-compresses files from <command>compress</command> format to
+<command>gzip</command> format&mdash;<filename class="extension">.Z</filename>
+to <filename class="extension">.gz</filename>.</para>
 <indexterm zone="ch-system-gzip znew"><primary sortas="b-znew">znew</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -27,7 +27,7 @@
 <sect2 role="installation">
 <title>Installation of Bzip2</title>
 
-<para>The Bzip2 package doesn't contain a <command>configure</command>
+<para>The Bzip2 package does not contain a <command>configure</command>
 script. Compile it with:</para>
 
 <screen><userinput>make</userinput></screen>
@@ -39,7 +39,7 @@ script. Compile it with:</para>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-bzip2"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-bzip2"/>.</para>
 </sect2>
 
 </sect1>

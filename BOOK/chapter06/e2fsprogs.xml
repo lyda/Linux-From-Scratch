@@ -22,14 +22,14 @@ file system. It also supports the ext3 journaling file system.</para>
 <segmentedlist>
 <segtitle>E2fsprogs installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils,
-Diffutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, Texinfo</seg></seglistitem>
+Diffutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, and Texinfo</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
 <sect2 role="installation">
 <title>Installation of E2fsprogs</title>
 
-<para>It is recommended to build E2fsprogs in a subdirectory of the source tree:
+<para>It is recommended that E2fsprogs be built in a subdirectory of the source tree:
 </para>
 
 <screen><userinput>mkdir build
@@ -69,7 +69,7 @@ Management System (EVMS) plugin. This plugin is not up-to-date with
 the latest EVMS internal interfaces and EVMS is not installed as part
 of a base LFS system, so the plugin is not required. See the EVMS
 website at <ulink url="http://evms.sourceforge.net/"/> for more
-information regarding EVMS itself.</para></listitem>
+information regarding EVMS.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -84,7 +84,7 @@ information regarding EVMS itself.</para></listitem>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Also install the shared libraries:</para>
+<para>Install the shared libraries:</para>
 
 <screen><userinput>make install-libs</userinput></screen>
 
@@ -100,9 +100,9 @@ information regarding EVMS itself.</para></listitem>
 <seglistitem><seg>badblocks, blkid, chattr,
 compile_et, debugfs, dumpe2fs, e2fsck, e2image, e2label, findfs, fsck,
 fsck.ext2, fsck.ext3, logsave, lsattr, mk_cmds, mke2fs, mkfs.ext2, mkfs.ext3,
-mklost+found, resize2fs, tune2fs and uuidgen.</seg>
-<seg>libblkid.[a,so], libcom_err.[a,so], libe2p.[a,so], libext2fs.[a,so], libss.[a,so] and
-libuuid.[a,so]</seg></seglistitem>
+mklost+found, resize2fs, tune2fs, and uuidgen.</seg>
+<seg>libblkid.[a,so], libcom_err.[a,so], libe2p.[a,so],
+libext2fs.[a,so], libss.[a,so], and libuuid.[a,so]</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -127,8 +127,8 @@ libuuid.[a,so]</seg></seglistitem>
 <varlistentry id="chattr">
 <term><command>chattr</command></term>
 <listitem>
-<para>changes the attributes of files on a second extended (ext2) file system, and 
-also ext3 file systems, the journaling version of ext2 file systems.</para>
+<para>changes the attributes of files on an ext2 file system. It
+also changes ext3 file systems, the journaling version of ext2 file systems.</para>
 <indexterm zone="ch-system-e2fsprogs chattr"><primary sortas="b-chattr">chattr</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -164,8 +164,8 @@ system present on a given device.</para>
 <varlistentry id="e2fsck">
 <term><command>e2fsck</command></term>
 <listitem>
-<para>is used to check, and optionally repair, second extended (ext2)
-file systems, and also ext3 file systems.</para>
+<para>is used to check, and optionally repair ext2
+file systems and ext3 file systems.</para>
 <indexterm zone="ch-system-e2fsprogs e2fsck"><primary sortas="b-e2fsck">e2fsck</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -181,7 +181,7 @@ file systems, and also ext3 file systems.</para>
 <varlistentry id="e2label">
 <term><command>e2label</command></term>
 <listitem>
-<para>will display or change the file system label on the ext2 file
+<para>displays or changes the file system label on the ext2 file
 system present on a given device.</para>
 <indexterm zone="ch-system-e2fsprogs e2label"><primary sortas="b-e2label">e2label</primary></indexterm>
 </listitem>
@@ -206,6 +206,24 @@ default, it checks the file systems listed in
 </listitem>
 </varlistentry>
 
+<varlistentry id="fsck.ext2">
+<term><command>fsck.ext2</command></term>
+<listitem>
+<para>by default checks ext2 file systems.</para>
+<indexterm zone="ch-system-e2fsprogs fsck.ext2"><primary
+sortas="b-fsck.ext2">fsck.ext2</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="fsck.ext3">
+<term><command>fsck.ext3</command></term>
+<listitem>
+<para>by default checks ext3 file systems.</para>
+<indexterm zone="ch-system-e2fsprogs fsck.ext3"><primary
+sortas="b-fsck.ext3">fsck.ext3</primary></indexterm>
+</listitem>
+</varlistentry>
+
 <varlistentry id="logsave">
 <term><command>logsave</command></term>
 <listitem>
@@ -225,7 +243,7 @@ default, it checks the file systems listed in
 <varlistentry id="mk_cmds">
 <term><command>mk_cmds</command></term>
 <listitem>
-<para>converts a table of command names and help messages into a C
+<para>converts a table of command names and helps messages into a C
 source file suitable for use with the <filename
 class="libraryfile">libss</filename> subsystem library.</para>
 <indexterm zone="ch-system-e2fsprogs mk_cmds"><primary sortas="b-mk_cmds">mk_cmds</primary></indexterm>
@@ -241,12 +259,30 @@ device.</para>
 </listitem>
 </varlistentry>
 
+<varlistentry id="mkfs.ext2">
+<term><command>mkfs.ext2</command></term>
+<listitem>
+<para>by default creates ext2 file systems.</para>
+<indexterm zone="ch-system-e2fsprogs mkfs.ext2"><primary
+sortas="b-mkfs.ext2">mkfs.ext2</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="mkfs.ext3">
+<term><command>mkfs.ext3</command></term>
+<listitem>
+<para>by default creates ext3 file systems.</para>
+<indexterm zone="ch-system-e2fsprogs mkfs.ext3"><primary
+sortas="b-mkfs.ext3">mkfs.ext3</primary></indexterm>
+</listitem>
+</varlistentry>
+
 <varlistentry id="mklost-found">
 <term><command>mklost+found</command></term>
 <listitem>
 <para>used to create a <filename
-class="directory">lost+found</filename> directory on a second extended
-file system.  It pre-allocates disk blocks to this directory to
+class="directory">lost+found</filename> directory on an ext2 file system.
+It pre-allocates disk blocks to this directory to
 lighten the task of <command>e2fsck</command>.</para>
 <indexterm zone="ch-system-e2fsprogs mklost-found"><primary sortas="b-mklost+found">mklost+found</primary></indexterm>
 </listitem>
@@ -263,8 +299,7 @@ lighten the task of <command>e2fsck</command>.</para>
 <varlistentry id="tune2fs">
 <term><command>tune2fs</command></term>
 <listitem>
-<para>used adjust tunable file system parameters on a second
-extended file system.</para>
+<para>adjusts tunable file system parameters on an ext2 file system.</para>
 <indexterm zone="ch-system-e2fsprogs tune2fs"><primary sortas="b-tune2fs">tune2fs</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -272,7 +307,7 @@ extended file system.</para>
 <varlistentry id="uuidgen">
 <term><command>uuidgen</command></term>
 <listitem>
-<para>creates new UUID. Each new UUID can reasonably be considered unique
+<para>creates new UUIDs. Each new UUID can reasonably be considered unique
 among all UUIDs created, on the local system and on other systems, in the
 past and in the future.</para>
 <indexterm zone="ch-system-e2fsprogs uuidgen"><primary sortas="b-uuidgen">uuidgen</primary></indexterm>

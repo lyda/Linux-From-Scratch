@@ -35,7 +35,7 @@ location. Fix this by running the following:</para>
 
 <screen><userinput>sed -i 's@/sbin/udev@/tools/sbin/udev@g' udevstart.c</userinput></screen>
 
-<para>Also ensure that <command>udev</command> knows the correct location to look for its
+<para>Also, ensure that <command>udev</command> knows the correct location to look for its
 configuration files:</para>
 
 <screen><userinput>sed -i 's@/etc@/tools/etc@g' etc/udev/udev.conf.in</userinput></screen>
@@ -51,7 +51,7 @@ configuration files:</para>
 <screen><userinput>make DESTDIR=/tools udevdir=/dev install</userinput></screen>
 
 <para>Udev's configuration is far from ideal by default, so install
-LFS specific configuration files here:</para>
+LFS-specific configuration files here:</para>
 
 <screen><userinput>cp ../udev-config-2.permissions /tools/etc/udev/permissions.d/00-lfs.permissions
 cp ../udev-config-1.rules /tools/etc/udev/rules.d/00-lfs.rules</userinput></screen>
@@ -59,7 +59,7 @@ cp ../udev-config-1.rules /tools/etc/udev/rules.d/00-lfs.rules</userinput></scre
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-udev"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-udev"/>.</para>
 </sect2>
 
 </sect1>

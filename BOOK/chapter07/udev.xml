@@ -4,16 +4,16 @@
   %general-entities;
 ]>
 <sect1 id="ch-scripts-udev">
-<title>Device and Module handling on an LFS system</title>
+<title>Device and Module Handling on an LFS System</title>
 <?dbhtml filename="udev.html"?>
 
 <indexterm zone="ch-scripts-udev">
 <primary sortas="a-Udev">Udev</primary>
 <secondary>usage</secondary></indexterm>
 
-<para>In <xref linkend="chapter-building-system"/> we installed the udev
-package.  Before we go into the details regarding how this does its
-job, a brief history of previous methods of handling devices is in
+<para>In <xref linkend="chapter-building-system"/>, we installed the udev
+package.  Before we go into the details regarding how this works,
+a brief history of previous methods of handling devices is in
 order.</para>
 
 <para>Linux systems in general traditionally use a static device
@@ -21,11 +21,11 @@ creation method, whereby a great many device nodes are created under
 <filename class="directory">/dev</filename> (sometimes literally
 thousands of nodes), regardless of whether the corresponding hardware
 devices actually exist. This is typically done via a
-<command>MAKEDEV</command> script, which simply contains a number of
+<command>MAKEDEV</command> script, which contains a number of
 calls to the 'mknod' program with the relevant major and minor device
 numbers for every possible device that might exist in the world. Using
 the udev method, only those devices which are detected by the kernel
-get device nodes created for them. As these device nodes will be
+get device nodes created for them. Because these device nodes will be
 created each time the system boots, they will be stored on a
 <systemitem class="filesystem">ramfs</systemitem> (a file system that
 resides entirely in memory and does not take up any disk space).
@@ -35,28 +35,28 @@ used in negligable.</para>
 <sect2>
 <title>History</title>
 
-<para>In Febraury of 2000, a new filesystem called <systemitem
+<para>In Febraury 2000, a new filesystem called <systemitem
 class="filesystem">devfs</systemitem> was merged into the 2.3.46
-kernel and was made generally available during the 2.4 series of
+kernel and was made available during the 2.4 series of
 stable kernels.  Although it was present in the kernel source itself,
 this method of creating devices dynamically never received
 overwhelming support from the core kernel developers.</para>
 
 <para>The main problem with the approach adopted by <systemitem
-class="filesystem">devfs</systemitem> was the way that it handled
+class="filesystem">devfs</systemitem> was the way it handled
 device detection, creation, and naming. The latter issue, that of
 device node naming, was perhaps the most critical. It is generally
-accepted that if you are to allow device names to be configurable then
+accepted that if device names are allowed to be configurable, then
 the device naming policy should be up to a system administrator, not
-imposed upon them by any particular developer(s).  <systemitem
-class="filesystem">devfs</systemitem> also suffers from race
-conditions that are inherent in its design, and cannot be fixed
+imposed on them by any particular developer(s). The <systemitem
+class="filesystem">devfs</systemitem> file system also suffers from race
+conditions that are inherent in its design and cannot be fixed
 without a substantial revision to the kernel. It has also been marked
 as deprecated due to a lack of recent maintenance.</para>
 
 <para>With the development of the unstable 2.5 kernel tree, later
-released as the 2.6 series of stable kernels, came a new virtual
-filesystem called <systemitem class="filesystem">sysfs</systemitem>.
+released as the 2.6 series of stable kernels, a new virtual filesystem
+called <systemitem class="filesystem">sysfs</systemitem> came to be.
 The job of <systemitem class="filesystem">sysfs</systemitem> is to
 export a view of the system's structure to userspace processes.  With
 this userspace visible representation, the possibility of seeing a
@@ -71,7 +71,7 @@ realistic.</para>
 <para>The <systemitem class="filesystem">sysfs</systemitem> filesystem
 was mentioned briefly above.  One may wonder how <systemitem
 class="filesystem">sysfs</systemitem> knows about the devices present
-on a system, and what device numbers should be used.  Drivers that
+on a system and what device numbers should be used.  Drivers that
 have been compiled into the kernel directly register their objects
 with <systemitem class="filesystem">sysfs</systemitem> as they are
 detected by the kernel.  For drivers compiled as modules, this will
@@ -79,7 +79,7 @@ happen when the module is loaded.  Once the <systemitem
 class="filesystem">sysfs</systemitem> filesystem is mounted (on
 <filename class="directory">/sys</filename>), the data which the
 built-in drivers registered with <systemitem
-class="filesystem">sysfs</systemitem> is available to userspace
+class="filesystem">sysfs</systemitem> are available to userspace
 processes and to <command>udev</command> for device node creation.</para>
 
 <para>The <command>S10udev</command> initscript takes care of creating
@@ -92,11 +92,11 @@ the <systemitem class="filesystem">/sys</systemitem> filesystem and
 creates devices under <filename class="directory">/dev</filename> that
 match the descriptions.  For example,
 <filename>/sys/class/tty/vcs/dev</filename> contains the string
-<quote>7:0</quote>.  <command>udevstart</command> uses this to create
-<filename>/dev/vcs</filename> with major number <emphasis>7</emphasis>
-and minor <emphasis>0</emphasis>.  The permissions of each and every
-device that <command>udevstart</command> creates are set using files
-from the <filename
+<quote>7:0</quote> This string is used by <command>udevstart</command>
+to create <filename>/dev/vcs</filename> with major number
+<emphasis>7</emphasis> and minor <emphasis>0</emphasis>.  The
+permissions of each and every device that <command>udevstart</command>
+creates are set using files from the <filename
 class="directory">/etc/udev.d/permissions.d/</filename> directory.
 These are numbered in a similar fashion to the LFS bootscripts.  If
 <command>udev</command> cannot find a permissions file for the device
@@ -109,19 +109,19 @@ configured according to the rules specified in the files within the
 directory.</para>
 
 <para>Once the above stage is complete, all devices that were already
-present and have compiled-in drivers will be available for use. How
+present and have compiled-in drivers will be available for use. What 
 about those devices that have modular drivers?</para>
 
-<para>We mentioned earlier the concept of a <quote>hotplug event
-handler</quote>.  When a new device connection is detected by the
+<para>Earlier, we mentioned the concept of a <quote>hotplug event
+handler.</quote> When a new device connection is detected by the
 kernel, the kernel will generate a hotplug event and look at the file
 <filename>/proc/sys/kernel/hotplug</filename> to find out the
-userspace program to handle that device's connection.  The
+userspace program that handles the device's connection.  The
 <command>udev</command> initscript registered <command>udev</command>
 as this handler. When these hotplug events are generated, the kernel
 will tell <command>udev</command> to check the <filename
 class="directory">/sys</filename> filesystem for the information
-pertaining to this new device, and create the <filename
+pertaining to this new device and create the <filename
 class="directory">/dev</filename> entry for it.</para>
 
 <para>This brings us to one problem that exists with
@@ -134,27 +134,27 @@ the appropriate kernel module to load.  With <command>udev</command>,
 this method will not work because the device node does not exist until
 the module is loaded.  To solve this, the
 <command>S05modules</command> bootscript was added to the
-lfs-bootscripts package along with the
+lfs-bootscripts package, along with the
 <filename>/etc/sysconfig/modules</filename> file.  By adding module
 names to the <filename>modules</filename> file, these modules will be
 loaded when the computer is starting up. This allows
 <command>udev</command> to detect the devices and create the
 appropriate device nodes.</para>
 
-<para>Note that on slower machines, or for drivers that create a lot
+<para>Note that on slower machines or for drivers that create a lot
 of device nodes, the process of creating devices may take a few
 seconds to complete. This means that some device nodes may not be
 immediately accessible.</para>
 </sect2>
 
 <sect2>
-<title>Handling hotpluggable/dynamic devices</title>
+<title>Handling Hotpluggable/Dynamic Devices</title>
 
-<para>When you plug in a device, e.g. a USB MP3 player, the kernel
+<para>When you plug in a device, such a Universal Serial Bus (USB) MP3 player, the kernel
 recognizes that the device is now connected and generates a hotplug
 event. If the driver is already loaded (either because it was compiled
-into the kernel, or it was loaded via the
-<command>S05modules</command> bootscript) <command>udev</command> will
+into the kernel or because it was loaded via the
+<command>S05modules</command> bootscript), <command>udev</command> will
 be called upon to create the relevant device node(s) according to the
 <systemitem class="filesystem">sysfs</systemitem> data available in
 <filename class="directory">/sys</filename>.  If the driver for the
@@ -165,44 +165,45 @@ new device connection and it not being attached to a driver. In
 effect, nothing happens and the device itself is not usable
 yet.</para>
 
-<para>If you are building a system that has a lot of drivers compiled
-as modules rather than directly built into the kernel and using the
-<command>S05modules</command> is not practical then the Hotplug
+<para>If building a system that has a lot of drivers compiled as
+modules rather than directly built into the kernel, using the
+<command>S05modules</command> may not be practical. The Hotplug
 package (see <ulink url="http://linux-hotplug.sourceforge.net/"/>) can
-be beneficial. When the Hotplug package is installed it will respond
-to the aforementioned kernel's bus driver hotplug events. The Hotplug
-package will load the appropriate module and make this device
-available by creating the device node(s) for it.</para>
+be beneficial in these cases. When the Hotplug package is installed,
+it will respond to the aforementioned kernel's bus driver hotplug
+events. The Hotplug package will load the appropriate module and make
+this device available by creating the device node(s) for it.</para>
 </sect2>
 
 <sect2>
-<title>Problems with creating devices</title>
+<title>Problems with Creating Devices</title>
 
-<para>There are a few problems when it comes to automatically creating
+<para>There are a few known problems when it comes to automatically creating
 devices nodes:</para>
 
 <para>1) A kernel driver may not export its data to sysfs</para>
    
-<para>This is most common with 3rd party drivers from outside the
+<para>This is most common with third party drivers from outside the
 kernel tree.  These drivers will not end up having their device nodes
-created.  You can use the
+created.  Use the
 <filename>/etc/sysconfig/createfiles</filename> configuration file to
 manually create the devices. Consult the
-<filename>devices.txt</filename> file inside your kernel documentation
+<filename>devices.txt</filename> file inside the kernel documentation
 or the documentation for that driver to find the proper major/minor
 numbers.</para>
 
-<para>2) A non-hardware device is required.  This is most common with the
-ALSA project's OSS compatibility module.  These types of devices can
-be handled in one of two ways:</para>
+<para>2) A non-hardware device is required.  This is most common with
+the Advanced Linux Sound Architecture (ALSA) project's Open Sound
+System (OSS) compatibility module.  These types of devices can be
+handled in one of two ways:</para>
 
 <itemizedlist>
 
 <listitem><para>Adding the module names to
 <filename>/etc/sysconfig/modules</filename></para></listitem>
-<listitem><para>Use of an
+<listitem><para>Using an
 <quote>install</quote> line in
-<filename>/etc/modprobe.conf</filename>. Basically, this tells the
+<filename>/etc/modprobe.conf</filename>. This tells the
 modprobe command <quote>when loading this module, also load this other
 module, at the same time.</quote>  For example:</para>
 
@@ -216,10 +217,10 @@ modules when any request is made to load the driver
 </sect2>
 
 <sect2>
-<title>Useful reading</title>
+<title>Useful Reading</title>
 
-<para>Some additional documentation that will be useful to
-read:</para>
+<para>Additional helpful documentation is available at the following
+sites:</para>
 
 <itemizedlist>
 <listitem><para>A Userspace Implementation of devfs -- <ulink

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="materials-patches">
-<title>Needed patches</title>
+<title>Needed Patches</title>
 <?dbhtml filename="patches.html"?>
 
 <para>In addition to the packages, several patches are also required.
@@ -14,7 +14,6 @@ make the packages easier to work with. The following patches will be
 needed to build an LFS system:</para>
 
 <variablelist role="materials">
-<bridgehead renderas="sect3">Patches</bridgehead>
 
 <varlistentry>
 <term>Bash Dislay Wrap Patch - 1 KB:</term>

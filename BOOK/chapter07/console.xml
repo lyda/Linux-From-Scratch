@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-scripts-console">
-<title>Configuring the Linux console</title>
+<title>Configuring the Linux Console</title>
 <?dbhtml filename="console.html"?>
 
 <indexterm zone="ch-scripts-console">
@@ -15,7 +15,7 @@
 <command>console</command> initscript that sets up the keyboard map
 and the console font. If non-ASCII characters (British pound and Euro
 character are examples of non-ASCII characters) will not be used and
-the keyboard is a U.S. one, you can skip this section. Without the
+the keyboard is a U.S. one, skip this section. Without the
 configuration file, the console initscript will do nothing.</para>
 
 <para>The <command>console</command> script uses the
@@ -45,8 +45,8 @@ KEYMAP="es euro2"
 FONT="lat9-16 -u iso01"
 EOF</userinput></screen>
 
-<note><para>The FONT line above is correct only for the ISO-8859-15
-character set. If using ISO-8859-1 and, therefore, a pound sign
+<note><para>The FONT line above is correct only for the ISO 8859-15
+character set. If using ISO 8859-1 and, therefore, a pound sign
 instead of Euro, the correct FONT line is:</para>
 
 <screen><userinput>FONT="lat1-16"</userinput></screen></note>
@@ -78,7 +78,7 @@ control alt     keycode 111 =   Boot
 altgr   control alt keycode 111 = Boot
 EOF</userinput></screen>
 
-<para>Then tell the <command>console</command> script to load this
+<para>Tell the <command>console</command> script to load this
 snippet after the main keymap:</para>
 
 <screen><userinput>cat &gt;&gt;/etc/sysconfig/console &lt;&lt;"EOF"
@@ -93,7 +93,7 @@ even when booting into maintenance mode (by passing
 <parameter>init=/bin/sh</parameter> to the kernel), because the
 <command>console</command> bootscript will not be run in that
 situation. Additionally, the kernel will not set the screen font
-automatically. This should not pose many problems as ASCII characters
+automatically. This should not pose many problems because ASCII characters
 will be handled correctly, and it is unlikely that a user would need
 to rely on non-ASCII characters while in maintenance mode.</para>
 

@@ -36,18 +36,18 @@ many packages. Unpack the Binutils sources and run the script:
 <para>Also be aware of the name of the platform's dynamic linker,
 often referred to as the dynamic loader (not to be confused with the
 standard linker <command>ld</command> that is part of Binutils). The
-dynamic linker is provided by Glibc finds and loads the shared
-libraries needed by a program, prepares the program to run, and then
-runs it. The name of the dynamic linker will usually be
+dynamic linker provided by Glibc finds and loads the shared libraries
+needed by a program, prepares the program to run, and then runs it.
+The name of the dynamic linker will usually be
 <filename>ld-linux.so.2</filename>. On platforms that are less
 prevalent, the name might be <filename>ld.so.1</filename>, and newer
 64 bit platforms might be named something else entirely. The name of
 the platform's dynamic linker can be determined by looking in the
 <filename class="directory">/lib</filename> directory on the host
-system. A sure-fire way is to inspect a random binary from the host
-system by running: <userinput>readelf -l &lt;name of binary&gt; | grep
-interpreter</userinput> and noting the output. The authoritative
-reference covering all platforms is in the
+system. A sure-fire way to determine the name is to inspect a random
+binary from the host system by running: <userinput>readelf -l &lt;name
+of binary&gt; | grep interpreter</userinput> and noting the output.
+The authoritative reference covering all platforms is in the
 <filename>shlib-versions</filename> file in the root of the Glibc
 source tree.</para>
 </important>
@@ -59,14 +59,14 @@ method works:</para>
 <listitem><para>The process is similar in principle to
 cross-compiling, whereby tools installed in the same prefix work in
 cooperation, and thus utilize a little GNU
-<quote>magic</quote>.</para></listitem>
+<quote>magic</quote></para></listitem>
 
 <listitem><para>Careful manipulation of the standard linker's library
 search path ensures programs are linked only against chosen
 libraries</para></listitem>
 
 <listitem><para>Careful manipulation of <command>gcc</command>'s
-<filename>specs</filename> file to tell the compiler which target dynamic
+<filename>specs</filename> file tell the compiler which target dynamic
 linker will be used</para></listitem>
 </itemizedlist>
 
@@ -76,7 +76,7 @@ various feature tests on the assembler and linker to determine which
 software features to enable or disable. This is more important than
 one might first realize. An incorrectly configured GCC or Glibc can
 result in a subtly broken toolchain, where the impact of such breakage
-might not show up until near the end of the build of a whole
+might not show up until near the end of the build of an entire
 distribution. A test suite failure will usually alert this error
 before too much additional work is performed.</para>
 
@@ -88,7 +88,7 @@ linker is its library search order. Detailed information can be
 obtained from <command>ld</command> by passing it the
 <parameter>--verbose</parameter> flag. For example, an <command>ld
 --verbose | grep SEARCH</command> will illustrate the current search
-paths and their order. It shows what files are linked by
+paths and their order. It shows which files are linked by
 <command>ld</command> by compiling a dummy program and passing the
 <parameter>--verbose</parameter> switch to the linker. For example,
 <userinput>gcc dummy.c -Wl,--verbose 2&gt;&amp;1 | grep
@@ -129,7 +129,7 @@ details. Note the use of <parameter>CC="gcc -B/tools/bin/"</parameter>
 to control which binary tools are used and the use of the
 <parameter>-nostdinc</parameter> and <parameter>-isystem</parameter>
 flags to control the compiler's include search path. These items
-highlight an important aspect of the Glibc package -- it is very
+highlight an important aspect of the Glibc package&mdash;it is very
 self-sufficient in terms of its build machinery and generally does not
 rely on toolchain defaults.</para>
 
@@ -144,7 +144,7 @@ is vital to the whole process. As mentioned above, a hard-wired path
 to a dynamic linker is embedded into every Executable and Link Format
 (ELF)-shared executable.  This can be inspected by running:
 <userinput>readelf -l &lt;name of binary&gt; | grep
-interpreter</userinput>. Amending <command>gcc</command>'s specs file
+interpreter</userinput>. Amending gcc's specs file
 ensures that every program compiled from here through the end of this
 chapter will use the new dynamic linker in <filename
 class="directory">/tools/lib</filename>.</para>
@@ -166,14 +166,14 @@ class="directory">/tools</filename>.</para>
 
 <para>Upon entering the chroot environment in <xref
 linkend="chapter-building-system"/>, the first major package to be
-installed is Glibc, due to its self-sufficient nature that we
-mentioned above. Once this Glibc is installed into <filename
+installed is Glibc, due to its self-sufficient nature mentioned above.
+Once this Glibc is installed into <filename
 class="directory">/usr</filename>, perform a quick changeover of the
 toolchain defaults, then proceed in building the rest of the target
 LFS system.</para>
 
 <sect2>
-<title>Notes on static linking</title>
+<title>Notes on Static Linking</title>
 
 <para>Besides their specific task, most programs have to perform many
 common and sometimes trivial operations. These include allocating
@@ -184,7 +184,7 @@ all these basic functions in ready-made libraries. The major library
 on any Linux system is Glibc.</para>
 
 <para>There are two primary ways of linking the functions from a
-library to a program that uses them -- statically or dynamically. When
+library to a program that uses them&mdash;statically or dynamically. When
 a program is linked statically, the code of the used functions is
 included in the executable, resulting in a rather bulky program. When
 a program is dynamically linked, it includes a reference to the
@@ -196,7 +196,7 @@ programming interface of the dynamic linker (see the
 <para>Dynamic linking is the default on Linux and has three major
 advantages over static linking. First, only one copy of the executable
 library code is needed on the hard disk, instead of having multiple
-copies of the same code included into several of programs, thus saving
+copies of the same code included in several of programs, thus saving
 disk space. Second, when several programs use the same library
 function at the same time, only one copy of the function's code is
 required in core, thus saving memory space. Third, when a library
@@ -206,7 +206,7 @@ that make use of the improved function.</para>
 
 <para>If dynamic linking has several advantages, why then do we
 statically link the first two packages in this chapter? The reasons
-are threefold -- historical, educational, and technical. The
+are threefold&mdash;historical, educational, and technical. The
 historical reason is that earlier versions of LFS statically linked
 every program in this chapter. Educationally, knowing the difference
 between static and dynamic linking is useful. The technical benefit is

@@ -12,7 +12,7 @@
 <sect2 role="package"><title/>
 <para>The Findutils package contains programs to find files. Processes
 are provided to recursively search through a directory tree and to
-create, maintain and search a database (often faster than the recursive
+create, maintain, and search a database (often faster than the recursive
 find, but unreliable if the database has not been recently updated).</para>
 
 <segmentedlist>
@@ -24,7 +24,7 @@ find, but unreliable if the database has not been recently updated).</para>
 <segmentedlist>
 <segtitle>Findutils installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils,
-Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
+Diffutils, GCC, Gettext, Glibc, Grep, Make and and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -58,7 +58,7 @@ which is FHS-compliant.</para>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
-<seglistitem><seg>bigram, code, find, frcode, locate, updatedb and xargs</seg></seglistitem>
+<seglistitem><seg>bigram, code, find, frcode, locate, updatedb, and xargs</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -113,7 +113,7 @@ that contain a given string or match a given pattern.</para>
 <listitem>
 <para>updates the <command>locate</command> database. It scans
 the entire file system (including other file systems that are currently mounted,
-unless told not to) and puts every file name it finds to the database.</para>
+unless told not to) and puts every file name it finds into the database.</para>
 <indexterm zone="ch-system-findutils updatedb"><primary sortas="b-updatedb">updatedb</primary></indexterm>
 </listitem>
 </varlistentry>

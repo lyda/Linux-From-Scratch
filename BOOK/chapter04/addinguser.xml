@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-tools-addinguser">
-<title>Adding the lfs User</title>
+<title>Adding the LFS User</title>
 <?dbhtml filename="addinguser.html"?>
 
 <para>When logged in as user <emphasis>root</emphasis>, making a
@@ -32,7 +32,7 @@ useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput></screen>
 
 <varlistentry>
 <term><parameter>-g lfs</parameter></term>
-<listitem><para>This adds user <emphasis>lfs</emphasis> to group
+<listitem><para>This option adds user <emphasis>lfs</emphasis> to group
 <emphasis>lfs</emphasis></para></listitem>
 </varlistentry>
 
@@ -52,16 +52,16 @@ the special null device.</para></listitem>
 
 <varlistentry>
 <term><parameter>lfs</parameter></term>
-<listitem><para>The actual name for the created group and
+<listitem><para>This is the actual name for the created group and
 user</para></listitem>
 </varlistentry>
 </variablelist>
 
 <para>To log in as <emphasis>lfs</emphasis> (as opposed to switching
 to user <emphasis>lfs</emphasis> when
-logged in as <emphasis>root</emphasis> -- which does not require the
+logged in as <emphasis>root</emphasis>, which does not require the
 <emphasis>lfs</emphasis> user to have a
-password in that case), give <emphasis>lfs</emphasis> a password:</para>
+password), give <emphasis>lfs</emphasis> a password:</para>
 
 <screen><userinput>passwd lfs</userinput></screen>
 
@@ -72,7 +72,7 @@ password in that case), give <emphasis>lfs</emphasis> a password:</para>
 <screen><userinput>chown lfs $LFS/tools</userinput></screen>
 
 <para>If a separate working directory was created as suggested, give
-user lfs ownership of this directory too:</para>
+user lfs ownership of this directory:</para>
 
 <screen><userinput>chown lfs $LFS/sources</userinput></screen>
 

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-scripts-hosts">
-<title>Creating the /etc/hosts file</title>
+<title>Creating the /etc/hosts File</title>
 <?dbhtml filename="hosts.html"?>
 
 <indexterm zone="ch-scripts-hosts"><primary sortas="e-/etc/hosts">/etc/hosts</primary></indexterm>
@@ -25,7 +25,7 @@ FQDN, and possible aliases for use in the
 
 <para>Unless the computer is to be visible to the Internet (e.g.,
 there is a registered domain and a valid block of assigned IP
-addresses -- most users do not have this), make sure that the IP
+addresses&mdash;most users do not have this), make sure that the IP
 address is in the private network IP address range. Valid ranges
 are:</para>
 
@@ -67,7 +67,7 @@ EOF</userinput></screen>
 
 <para>The <replaceable>[192.168.1.1]</replaceable> and
 <replaceable>[&lt;value of HOSTNAME&gt;.example.org]</replaceable>
-values need to be changed for a specific users or to requirements (if
+values need to be changed for specific users or requirements (if
 assigned an IP address by a network/system administrator and the
 machine will be connected to an existing network).</para>
 

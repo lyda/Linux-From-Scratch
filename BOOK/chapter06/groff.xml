@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Groff installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
+Gawk, GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -29,7 +29,7 @@ Gawk, GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 <title>Installation of Groff</title>
 
 <para>Groff expects the environment variable <emphasis>PAGE</emphasis>
-to contain the default paper size. For those in the United States, the
+to contain the default paper size. For users in the United States, the
 command below is appropriate. Elsewhere, the
 <parameter>PAGE=letter</parameter> may need to be changed to
 <parameter>PAGE=A4</parameter>.</para>
@@ -63,7 +63,7 @@ ln -s tbl /usr/bin/gtbl</userinput></screen>
 <seglistitem><seg>addftinfo, afmtodit, eqn, eqn2graph, geqn (link to eqn), grn,
 grodvi, groff, groffer, grog, grolbp, grolj4, grops, grotty, gtbl (link to tbl), hpftodit,
 indxbib, lkbib, lookbib, mmroff, neqn, nroff, pfbtops, pic, pic2graph, post-grohtml,
-pre-grohtml, refer, soelim, tbl, tfmtodit, troff and zsoelim (link to soelim)</seg></seglistitem>
+pre-grohtml, refer, soelim, tbl, tfmtodit, troff, and zsoelim (link to soelim)</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -224,8 +224,8 @@ specified keys and reports any references found.</para>
 <term><command>lookbib</command></term>
 <listitem>
 <para>prints a prompt on the standard error (unless the standard input
-is not a terminal), reads from the standard input a line containing a
-set of keywords, searches the bibliographic databases in a specified
+is not a terminal), reads a line containing a
+set of keywords from the standard input, searches the bibliographic databases in a specified
 file for references containing those keywords, prints any references
 found on the standard output, and repeats this process until the end
 of input.</para>
@@ -306,7 +306,7 @@ within troff or TeX input files into commands understood by TeX or <command>trof
 that lines between <emphasis>.[</emphasis> and <emphasis>.]</emphasis>
 are interpreted as citations, and lines between
 <emphasis>.R1</emphasis> and <emphasis>.R2</emphasis> are interpreted
-as commands about how citations are to be processed.</para>
+as commands for how citations are to be processed.</para>
 <indexterm zone="ch-system-groff refer"><primary sortas="b-refer">refer</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -341,7 +341,8 @@ within troff input files into commands that are understood by <command>troff</co
 <varlistentry id="troff">
 <term><command>troff</command></term>
 <listitem>
-<para>is highly compatible with Unix <command>troff</command>. Usually it should be invoked using the
+<para>is highly compatible with Unix <command>troff</command>. It
+should usually be invoked using the
 <command>groff</command> command, which will also run preprocessors and post-processors in the
 appropriate order and with the appropriate options.</para>
 <indexterm zone="ch-system-groff troff"><primary sortas="b-troff">troff</primary></indexterm>

@@ -210,14 +210,14 @@ the flex.1 manual page, since that's the only one that exists.</para></listitem>
 
 <listitem><para>June 19, 2004 [matt]: chapter05 - hostreqs.  Provide clearer
 information regarding determining whether the host kernel is suitable for
-passing glibcs testsuite</para></listitem>
+passing glibcs test suite</para></listitem>
 
 <listitem><para>June 19, 2004 [matt]: chapter06 - creatingdirs.  Use
 `install -d` instead of `mkdir` (fixes bug #821)</para></listitem>
 
 <listitem><para>June 19, 2004 [matt]: chapter04 - addinguser.  Make the lfs user
 a member of the lfs group, in case hosts add a new user to a non-existent gid by
-default (which causes the glibc testsuite to fail). Fixes bug #856.</para>
+default (which causes the glibc test suite to fail). Fixes bug #856.</para>
 </listitem>
 
 <listitem><para>June 19, 2004 [matt]: chapter07 - console &amp; chapter 08 -
@@ -420,7 +420,7 @@ Man's configure, since it's not needed anymore.</para></listitem>
 <listitem><para>May 12th, 2004 [winkie]: Shorten the <quote>sed</quote> used
 on Gzip's <filename>gzexe.in</filename> file.</para></listitem>
 
-<listitem><para>May 12th, 2004 [winkie]: Fixed Coreutils testsuite execution.
+<listitem><para>May 12th, 2004 [winkie]: Fixed Coreutils test suite execution.
 </para></listitem>
 
 <listitem><para>May 11th, 2004 [winkie]: Don't build the PCH header for

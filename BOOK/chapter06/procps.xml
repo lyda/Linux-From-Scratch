@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Procps installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, GCC, Glibc,
-Make, Ncurses</seg></seglistitem>
+Make, and Ncurses</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -32,7 +32,7 @@ Make, Ncurses</seg></seglistitem>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Install the packag:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -49,7 +49,7 @@ Make, Ncurses</seg></seglistitem>
 <segtitle>Installed programs</segtitle>
 <segtitle>Installed library</segtitle>
 <seglistitem><seg>free, kill, pgrep, pkill,
-pmap, ps, skill, snice, sysctl, tload, top, uptime, vmstat, w and watch</seg>
+pmap, ps, skill, snice, sysctl, tload, top, uptime, vmstat, w, and watch</seg>
 <seg>libproc.so</seg></seglistitem>
 </segmentedlist>
 
@@ -159,7 +159,7 @@ logged on, and the system load averages.</para>
 <term><command>vmstat</command></term>
 <listitem>
 <para>reports virtual memory statistics, giving information about
-processes, memory, paging, block IO, traps, and CPU activity.</para>
+processes, memory, paging, block Input/Output (IO), traps, and CPU activity.</para>
 <indexterm zone="ch-system-procps vmstat"><primary sortas="b-vmstat">vmstat</primary></indexterm>
 </listitem>
 </varlistentry>

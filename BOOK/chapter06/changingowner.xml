@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-system-changingowner">
-<title>Changing ownership</title>
+<title>Changing Ownership</title>
 <?dbhtml filename="changingowner.html"?>
 
 <para>Currently, the <filename class="directory">/tools</filename>
@@ -13,7 +13,7 @@ exists only on the host system. Although the <filename
 class="directory">/tools</filename> directory can be deleted once the
 LFS system has been finished, it can be retained to build additional
 LFS systems. If the <filename class="directory">/tools</filename>
-directory is kept as it is, the files are owned by a user ID without a
+directory is kept as is, the files are owned by a user ID without a
 corresponding account. This is dangerous because a user account
 created later could get this same user ID and would own the <filename
 class="directory">/tools</filename> directory and all the files

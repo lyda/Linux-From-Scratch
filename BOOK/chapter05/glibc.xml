@@ -76,7 +76,7 @@ Storage (TLS). This is required in order for NPTL to work.
 
 <varlistentry>
 <term><parameter>--with-__thread</parameter></term>
-<listitem><para>This tells Glibc to include thread support. This is
+<listitem><para>This option tells Glibc to include thread support. It is
 required in order for TLS to be properly compiled.</para></listitem>
 </varlistentry>
 
@@ -103,7 +103,7 @@ etc.).</para></listitem>
 
 <varlistentry>
 <term><parameter>--without-cvs</parameter></term>
-<listitem><para>This is meant to prevent the Makefile files from
+<listitem><para>This prevents the Makefile files from
 attempting automatic CVS checkouts when using a CVS snapshot. While
 this command is not required, it is recommended because it suppresses
 an annoying, but harmless, warning about a missing autoconf
@@ -113,12 +113,12 @@ program.</para></listitem>
 <varlistentry>
 <term><parameter>--with-headers=/tools/glibc-kernheaders</parameter></term>
 <listitem><para>This tells Glibc to compile itself against the <quote>raw</quote> 
-kernel headers, so that it knows exactly what features the kernel has, and can 
-optimize itself accordingly. Not strictly necessary, but nice to use.</para></listitem>
+kernel headers, so that it knows exactly what features the kernel has and can 
+optimize itself accordingly.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<para>During this stage you might see the following warning:</para>
+<para>During this stage the following warning might appear:</para>
 
 <blockquote><screen><computeroutput>configure: WARNING:
 *** These auxiliary programs are missing or incompatible versions: msgfmt
@@ -126,13 +126,12 @@ optimize itself accordingly. Not strictly necessary, but nice to use.</para></li
 *** Check the INSTALL file for required versions.</computeroutput></screen></blockquote>
 
 <para>The missing or incompatible <command>msgfmt</command> program is
-generally harmless, but it is believed it can sometimes cause issues when
-running the test suite. <command>msgfmt</command> is part of the
-Gettext package which your distribution should provide. If you do have
-<command>msgfmt</command> but it is deemed incompatible, you have the
-option to upgrade your host system's Gettext package, or you can
-continue without it and see if the test suite runs without problems
-regardless.</para>
+generally harmless, but it can sometimes cause issues when running the
+test suite. This <command>msgfmt</command> program is part of the
+Gettext package which the host distribution should provide. If
+<command>msgfmt</command> is present but deemed incompatible, upgrade
+the host system's Gettext package or continue without it and see if
+the test suite runs without problems regardless.</para>
 
 <para>Compile the package:</para>
 
@@ -148,11 +147,11 @@ command will do so:</para>
 <para>For a discussion of test failures that are of particular
 importance, please see <xref linkend="ch-system-glibc"/>.</para>
 
-<para>In this chapter, some tests can be adversely affected by
+<para>In this chapter, some tests can be adversely effected by
 existing tools or environmental issues on the host system. Glibc test
-suite failures in this chapter are not typically worrisome. The Glibc
+suite failures in this chapter are typically not worrisome. The Glibc
 installed in <xref linkend="chapter-building-system"/> is the one that
-will ultimately end up being used, so that is the one that should pass
+will ultimately end up being used, so that is the one that needs to pass
 most tests (even in <xref linkend="chapter-building-system"/>, some
 failures could still occur, for example, with the math tests).</para>
 
@@ -175,9 +174,9 @@ touch /tools/etc/ld.so.conf</userinput></screen>
 
 <para>Different countries and cultures have varying conventions for
 how to communicate. These conventions range from the format for
-representing dates and times to more complex ones, such as the
-language spoken. The <quote>internationalization</quote> of GNU programs works by
-locale.</para>
+representing dates and times to more complex issues, such as the
+language spoken. The <quote>internationalization</quote> of GNU
+programs works by locale.</para>
 
 <note><para>If the test suites are not being run in this chapter (as
 per the recommendation), there is no need to install the locales now.
@@ -189,7 +188,7 @@ command:</para>
 
 <screen><userinput>make localedata/install-locales</userinput></screen>
 
-<para>To save yourself a lot of time, an alternative to running the
+<para>To save time, an alternative to running the
 previous command (which generates and installs every locale Glibc is
 aware of) is to install only those locales that are wanted and needed.
 This can be achieved by using the <command>localedef</command>
@@ -218,7 +217,7 @@ localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-glibc"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-glibc"/>.</para>
 </sect2>
 
 </sect1>

@@ -23,21 +23,21 @@
       </seglistitem>
     </segmentedlist>
     <segmentedlist>
-      <segtitle>iproute2 installation depends on</segtitle>
+      <segtitle>Iproute2 installation depends on</segtitle>
       <seglistitem>
-        <seg>sed, GCC, Glibc, Make, Linux-Headers</seg>
+        <seg>GCC, Glibc, Make, Linux-Headers, and Sed</seg>
       </seglistitem>
     </segmentedlist>
   </sect2>
   <sect2 role="installation">
-    <title>Installation of iproute2</title>
+    <title>Installation of Iproute2</title>
     <para>The <command>arpd</command> binary included in this package is
-          dependent on Berkeley DB.  As <command>arpd</command> is not a very
-          common requirement on a base Linux system we remove the dependency on
-          Berkeley DB by applying the patch using the command below.  If you
-          need the <command>arpd</command> binary, then instructions for
-          compiling Berkeley DB can be found in the <ulink
-          url="http://www.linuxfromscratch.org/blfs/view/cvs/content/databases.html#db">BLFS book</ulink>.
+          dependent on Berkeley DB.  Because <command>arpd</command> is not a very
+          common requirement on a base Linux system, remove the dependency on
+          Berkeley DB by applying the patch using the command below.  If 
+          the <command>arpd</command> binary is needed, instructions for
+          compiling Berkeley DB can be found in the BLFS Book at<ulink
+          url="http://www.linuxfromscratch.org/blfs/view/cvs/content/databases.html#db"/>.
     </para>
 
     <screen><userinput>patch -Np1 -i ../iproute2-&iproute2-patch-version;-remove_db-1.patch</userinput></screen>
@@ -56,8 +56,8 @@
     <term><parameter>SBINDIR=/sbin</parameter></term>
     <listitem><para>This makes sure that the iproute2 binaries will install into
       <filename class="directory">/sbin</filename>.  This is the correct
-      location according to the FHS, as some of the iproute2 binaries are used
-      in our bootscripts.</para>
+      location according to the FHS, because some of the iproute2 binaries are used
+      in the bootscripts.</para>
     </listitem>
     </varlistentry>
     </variablelist>
@@ -68,7 +68,7 @@
   </sect2>
 
   <sect2 id="contents-iproute2" role="content">
-    <title>Contents of iproute2</title>
+    <title>Contents of Iproute2</title>
     <segmentedlist>
       <segtitle>Installed programs</segtitle>
       <seglistitem>
@@ -84,7 +84,7 @@
           <command>ifstat</command>
         </term>
         <listitem>
-          <para>shows the interfaces statistic including the amount of transmitted
+          <para>shows the interfaces statistic, including the amount of transmitted
                 and received packages by interface.</para>
           <indexterm zone="ch-system-iproute2 ifstat">
             <primary sortas="b-ifstat">ifstat</primary>
@@ -98,43 +98,43 @@
         </term>
         <listitem>
 
-          <para>is the main executable. Has several different functions.</para>
+          <para>The main executable. It has several different functions:</para>
 
           <para><command>ip link <replaceable>[device]</replaceable></command>
-                allows you to look at the state of devices and to change it.
+                allows users to look at the state of devices and to make changes.
           </para>
 
-          <para><command>ip addr</command> allows you to look at addresses and
-                their properties, add new addresses and to delete old ones.
+          <para><command>ip addr</command> allows users to look at addresses and
+                their properties, add new addresses, and delete old ones.
           </para>
 
-          <para><command>ip neighbor</command> allows you to look at neighbour
-                bindings and their properties, add new neighbour entries and to
-                delete old ones.
+          <para><command>ip neighbor</command> allows users to look at
+		neighbor bindings and their properties, add new
+		neighbor entries, and delete old ones.
           </para>
 
-          <para><command>ip rule</command> allows you to look at the routing
+          <para><command>ip rule</command> allows users to look at the routing
                 policies and change them.
           </para>
 
-          <para><command>ip route</command> allows you to look at the routing
+          <para><command>ip route</command> allows users to look at the routing
                 table and change routing table rules.
           </para>
 
-          <para><command>ip tunnel</command> allows you to look at the ip
+          <para><command>ip tunnel</command> allows user to look at the ip
                 tunnels and their properties, and change them.
           </para>
 
-          <para><command>ip maddr</command> allows you to look at the multicast
+          <para><command>ip maddr</command> allows users to look at the multicast
                 addresses and their properties, and change them.
           </para>
 
-          <para><command>ip mroute</command> allows you to set, change, or
-                delete the mutlicast routing.
+          <para><command>ip mroute</command> allows users to set, change, or
+                delete the multicast routing.
           </para>
 
-          <para><command>ip monitor</command> allows you to monitor the state of
-                devices, addresses and routes continuously.
+          <para><command>ip monitor</command> allows users to
+		continously monitor the state of devices, addresses and routes.
           </para>
           <indexterm zone="ch-system-iproute2 ip">
             <primary sortas="b-ip">ip</primary>
@@ -223,27 +223,28 @@
           <command>tc</command>
         </term>
         <listitem>
-          <para>Traffic Controlling Executable. This is for QOS/COS
+          <para>Traffic Controlling Executable. This is for Quality Of
+Service (QOS) and Class Of Service (COS)
                 implementations.
           </para>
 
-          <para><command>tc qdisc</command> allows you to setup the queueing
+          <para><command>tc qdisc</command> allows users to setup the queueing
                 discipline.
           </para>
 
-          <para><command>tc class</command> allows you to setup classes based on
+          <para><command>tc class</command> allows users to setup classes based on
                 the queuing discipline scheduling.
           </para>
 
-          <para><command>tc estimator</command> allows you to estimate the
+          <para><command>tc estimator</command> allows users to estimate the
                 network flow into a network.
           </para>
 
-          <para><command>tc filter</command> allows you to setup the QOS/COS
+          <para><command>tc filter</command> allows users to setup the QOS/COS
                 packet filtering.
           </para>
 
-          <para><command>tc policy</command> allows you to setup the QOS/COS
+          <para><command>tc policy</command> allows users to setup the QOS/COS
                 policies.
           </para>
           <indexterm zone="ch-system-iproute2 ss">

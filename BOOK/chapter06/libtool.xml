@@ -23,7 +23,7 @@ interface.</para>
 <segmentedlist>
 <segtitle>Libtool installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
+GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

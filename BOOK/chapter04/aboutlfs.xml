@@ -27,7 +27,7 @@ will automatically replace <quote>$LFS</quote> with
 <quote>/mnt/lfs</quote> (or whatever the variable was set to) when it
 processes the command line.</para>
 
-<para>Don't forget to check that <quote>$LFS</quote> is set whenever
+<para>Do not forget to check that <quote>$LFS</quote> is set whenever
 you leave and reenter the current working environment (as when doing a
 <quote>su</quote> to <emphasis>root</emphasis> or another user).</para>
 

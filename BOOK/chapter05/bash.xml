@@ -38,7 +38,7 @@
 <term><parameter>--without-bash-malloc</parameter></term>
 <listitem><para>This options turns off the use of Bash's memory
 allocation (malloc) function which is known to cause segmentation
-faults. By turning this option off Bash will use the malloc functions
+faults. By turning this option off, Bash will use the malloc functions
 from Glibc which are more stable.</para></listitem>
 </varlistentry>
 </variablelist>
@@ -62,7 +62,7 @@ a shell:</para>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-bash"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-bash"/>.</para>
 </sect2>
 
 </sect1>

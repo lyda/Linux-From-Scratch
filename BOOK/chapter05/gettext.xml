@@ -37,7 +37,7 @@
 <variablelist>
 <varlistentry>
 <term><parameter>--disable-libasprintf</parameter></term>
-<listitem><para>This flag tells Gettext not to include its
+<listitem><para>This flag tells Gettext not to build the
 <filename>asprintf</filename> library. Because nothing in this chapter
 or the next requires this library and Gettext gets rebuilt later,
 exclude it to save time and space.</para></listitem>
@@ -70,7 +70,7 @@ patch to disable Java is available from the LFS Patches project at
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-gettext"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-gettext"/>.</para>
 </sect2>
 
 </sect1>

@@ -23,7 +23,7 @@ messages.</para>
 <segmentedlist>
 <segtitle>Util-linux installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils,
-Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, Zlib</seg></seglistitem>
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, and Zlib</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -94,8 +94,8 @@ fsck.cramfs, fsck.minix, getopt, hexdump, hwclock, ipcrm, ipcs, isosize, line,
 logger, look, losetup, mcookie, mkfs, mkfs.bfs, mkfs.cramfs, mkfs.minix, mkswap, 
 more, mount, namei, pg, pivot_root, ramsize (link to rdev), raw, rdev, readprofile, 
 rename, renice, rev, rootflags (link to rdev), script, setfdprm, setsid, setterm, 
-sfdisk, swapoff (link to swapon), swapon, tunelp, ul, umount, vidmode (link to rdev), 
-whereis and write</seg></seglistitem>
+sfdisk, swapdev, swapoff (link to swapon), swapon, tunelp, ul, umount, vidmode (link to rdev), 
+whereis, and write</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -121,7 +121,7 @@ and then invokes the <command>login</command> program.</para>
 <varlistentry id="blockdev">
 <term><command>blockdev</command></term>
 <listitem>
-<para>allows you to call block device ioctls from the command line.</para>
+<para>allows users to call block device ioctls from the command line.</para>
 <indexterm zone="ch-system-util-linux blockdev"><primary sortas="b-blockdev">blockdev</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -137,7 +137,7 @@ and then invokes the <command>login</command> program.</para>
 <varlistentry id="cfdisk">
 <term><command>cfdisk</command></term>
 <listitem>
-<para>is used to manipulate the partition table of the given device.</para>
+<para>manipulates the partition table of the given device.</para>
 <indexterm zone="ch-system-util-linux cfdisk"><primary sortas="b-cfdisk">cfdisk</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -161,8 +161,8 @@ and then invokes the <command>login</command> program.</para>
 <varlistentry id="colcrt">
 <term><command>colcrt</command></term>
 <listitem>
-<para>is used to filter <command>nroff</command> output for terminals
-that lack some capabilities such as overstriking and half-lines.</para>
+<para>filters <command>nroff</command> output for terminals
+that lack some capabilities, such as overstriking and half-lines.</para>
 <indexterm zone="ch-system-util-linux colcrt"><primary sortas="b-colcrt">colcrt</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -195,7 +195,7 @@ soft reset.</para>
 <varlistentry id="cytune">
 <term><command>cytune</command></term>
 <listitem>
-<para>is used to tune the parameters of the serial line drivers for
+<para>tunes the parameters of the serial line drivers for
 Cyclades cards.</para>
 <indexterm zone="ch-system-util-linux cytune"><primary sortas="b-cytune">cytune</primary></indexterm>
 </listitem>
@@ -204,7 +204,7 @@ Cyclades cards.</para>
 <varlistentry id="ddate">
 <term><command>ddate</command></term>
 <listitem>
-<para>gives the Discordian date, or converts the given Gregorian date
+<para>gives the Discordian date or converts the given Gregorian date
 to a Discordian one.</para>
 <indexterm zone="ch-system-util-linux ddate"><primary sortas="b-ddate">ddate</primary></indexterm>
 </listitem>
@@ -221,7 +221,7 @@ to a Discordian one.</para>
 <varlistentry id="elvtune">
 <term><command>elvtune</command></term>
 <listitem>
-<para>can be used to tune the performance and interactivity of a block
+<para>tunes the performance and interactivity of a block
 device.</para>
 <indexterm zone="ch-system-util-linux elvtune"><primary sortas="b-elvtune">elvtune</primary></indexterm>
 </listitem>
@@ -238,7 +238,7 @@ device.</para>
 <varlistentry id="fdisk">
 <term><command>fdisk</command></term>
 <listitem>
-<para>could be used to manipulate the partition table of the given device.</para>
+<para>manipulates the partition table of the given device.</para>
 <indexterm zone="ch-system-util-linux fdisk"><primary sortas="b-fdisk">fdisk</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -272,7 +272,7 @@ given device.</para>
 <varlistentry id="hexdump">
 <term><command>hexdump</command></term>
 <listitem>
-<para>dumps the given file in hexadecimal, or in another given format.</para>
+<para>dumps the given file in hexadecimal or in another given format.</para>
 <indexterm zone="ch-system-util-linux hexdump"><primary sortas="b-hexdump">hexdump</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -280,7 +280,7 @@ given device.</para>
 <varlistentry id="hwclock">
 <term><command>hwclock</command></term>
 <listitem>
-<para>is used to read or set the system's hardware clock, also called
+<para>reads or sets the system's hardware clock, also called
 the Real-Time Clock (RTC)) or Basic Input-Output System (BIOS)
 clock.</para>
 <indexterm zone="ch-system-util-linux hwclock"><primary sortas="b-hwclock">hwclock</primary></indexterm>
@@ -338,7 +338,7 @@ clock.</para>
 <varlistentry id="losetup">
 <term><command>losetup</command></term>
 <listitem>
-<para>is used to set up and control loop devices.</para>
+<para>sets up and controls loop devices.</para>
 <indexterm zone="ch-system-util-linux losetup"><primary sortas="b-losetup">losetup</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -355,7 +355,7 @@ clock.</para>
 <varlistentry id="mkfs">
 <term><command>mkfs</command></term>
 <listitem>
-<para>is used to build a file system on a device (usually a hard disk
+<para>builds a file system on a device (usually a hard disk
 partition).</para>
 <indexterm zone="ch-system-util-linux mkfs"><primary sortas="b-mkfs">mkfs</primary></indexterm>
 </listitem>
@@ -396,7 +396,7 @@ partition).</para>
 <varlistentry id="more">
 <term><command>more</command></term>
 <listitem>
-<para>is a filter for paging through text one screen at a time.</para>
+<para>a filter for paging through text one screen at a time.</para>
 <indexterm zone="ch-system-util-linux more"><primary sortas="b-more">more</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -438,7 +438,7 @@ current process.</para>
 <varlistentry id="ramsize">
 <term><command>ramsize</command></term>
 <listitem>
-<para>is used to set the size of the RAM disk in a bootable image.</para>
+<para>sets the size of the RAM disk in a bootable image.</para>
 <indexterm zone="ch-system-util-linux ramsize"><primary sortas="b-ramsize">ramsize</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -446,7 +446,7 @@ current process.</para>
 <varlistentry id="rdev">
 <term><command>rdev</command></term>
 <listitem>
-<para>is used to query and set the root device among other things in a
+<para>queries and sets the root device, among other things, in a
 bootable image.</para>
 <indexterm zone="ch-system-util-linux rdev"><primary sortas="b-rdev">rdev</primary></indexterm>
 </listitem>
@@ -471,7 +471,7 @@ bootable image.</para>
 <varlistentry id="renice">
 <term><command>renice</command></term>
 <listitem>
-<para>is used to alter the priority of running processes.</para>
+<para>alters the priority of running processes.</para>
 <indexterm zone="ch-system-util-linux renice"><primary sortas="b-renice">renice</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -487,7 +487,7 @@ bootable image.</para>
 <varlistentry id="rootflags">
 <term><command>rootflags</command></term>
 <listitem>
-<para>is used to set the rootflags in a bootable image.</para>
+<para>sets the rootflags in a bootable image.</para>
 <indexterm zone="ch-system-util-linux rootflags"><primary sortas="b-rootflags">rootflags</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -520,7 +520,7 @@ the terminal.</para>
 <varlistentry id="setterm">
 <term><command>setterm</command></term>
 <listitem>
-<para>is used to set terminal attributes.</para>
+<para>sets terminal attributes.</para>
 <indexterm zone="ch-system-util-linux setterm"><primary sortas="b-setterm">setterm</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -528,7 +528,7 @@ the terminal.</para>
 <varlistentry id="sfdisk">
 <term><command>sfdisk</command></term>
 <listitem>
-<para>is a disk partition table manipulator.</para>
+<para>a disk partition table manipulator.</para>
 <indexterm zone="ch-system-util-linux sfdisk"><primary sortas="b-sfdisk">sfdisk</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -536,7 +536,7 @@ the terminal.</para>
 <varlistentry id="swapdev">
 <term><command>swapdev</command></term>
 <listitem>
-<para>is used to set the swap device in a bootable image.</para>
+<para>sets the swap device in a bootable image.</para>
 <indexterm zone="ch-system-util-linux swapdev"><primary sortas="b-swapdev">swapdev</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -560,7 +560,7 @@ the terminal.</para>
 <varlistentry id="tunelp">
 <term><command>tunelp</command></term>
 <listitem>
-<para>is used to tune the parameters of the line printer.</para>
+<para>tunes the parameters of the line printer.</para>
 <indexterm zone="ch-system-util-linux tunelp"><primary sortas="b-tunelp">tunelp</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -568,7 +568,7 @@ the terminal.</para>
 <varlistentry id="ul">
 <term><command>ul</command></term>
 <listitem>
-<para>is a filter for translating underscores into
+<para>a filter for translating underscores into
 escape sequences indicating underlining for the terminal in use.</para>
 <indexterm zone="ch-system-util-linux ul"><primary sortas="b-ul">ul</primary></indexterm>
 </listitem>
@@ -585,7 +585,7 @@ escape sequences indicating underlining for the terminal in use.</para>
 <varlistentry id="vidmode">
 <term><command>vidmode</command></term>
 <listitem>
-<para>could be used to set the video mode in a bootable image.</para>
+<para>sets the video mode in a bootable image.</para>
 <indexterm zone="ch-system-util-linux vidmode"><primary sortas="b-vidmode">vidmode</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -602,7 +602,7 @@ for the given command.</para>
 <varlistentry id="write">
 <term><command>write</command></term>
 <listitem>
-<para>sends a message to the given user,
+<para>sends a message to the given user
 <emphasis>if</emphasis> that user has not disabled receipt of such messages.</para>
 <indexterm zone="ch-system-util-linux write"><primary sortas="b-write">write</primary></indexterm>
 </listitem>

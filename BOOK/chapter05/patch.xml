@@ -27,11 +27,13 @@
 <sect2 role="installation">
 <title>Installation of Patch</title>
 
-<para>Prepare Patch for compilation.  The preprocessor flag
-<parameter>-D_GNU_SOURCE</parameter> is only needed on the PowerPC
-platform, on other architectures it can be left it out:</para>
+<para>Prepare Patch for compilation:</para>
 
 <screen><userinput>CPPFLAGS=-D_GNU_SOURCE ./configure --prefix=/tools</userinput></screen>
+
+<para>The preprocessor flag <parameter>-D_GNU_SOURCE</parameter> is
+only needed on the PowerPC platform. It can be left out on other
+architectures.</para>
 
 <para>Compile the program:</para>
 
@@ -46,7 +48,7 @@ platform, on other architectures it can be left it out:</para>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-patch"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-patch"/>.</para>
 </sect2>
 
 </sect1>

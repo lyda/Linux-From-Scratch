@@ -16,7 +16,7 @@
   </xsl:template>
 
     <!--Title-->
-  <xsl:param name="index-title">Index of packages and important installed files</xsl:param>
+  <xsl:param name="index-title">Index of Packages and Important Installed Files</xsl:param>
   
   <xsl:template match="index" mode="title.markup">
     <xsl:value-of select="$index-title"/>

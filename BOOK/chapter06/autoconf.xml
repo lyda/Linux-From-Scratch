@@ -22,7 +22,7 @@ can automatically configure source code.</para>
 <segmentedlist>
 <segtitle>Autoconf installation depends on</segtitle>
 <seglistitem><seg>Bash, Coreutils, Diffutils, Grep,
-M4, Make, Perl, Sed</seg></seglistitem>
+M4, Make, Perl, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -52,7 +52,7 @@ M4, Make, Perl, Sed</seg></seglistitem>
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
 <seglistitem><seg>autoconf, autoheader, autom4te,
-autoreconf, autoscan, autoupdate and ifnames</seg></seglistitem>
+autoreconf, autoscan, autoupdate, and ifnames</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -61,10 +61,10 @@ autoreconf, autoscan, autoupdate and ifnames</seg></seglistitem>
 <varlistentry id="autoconf">
 <term><command>autoconf</command></term>
 <listitem>
-<para>is a tool for producing shell scripts that automatically
+<para>produces shell scripts that automatically
 configure software source code packages to adapt to many kinds of
 Unix-like systems. The configuration scripts it produces are
-independent -- running them does not require the autoconf program.</para>
+independent&mdash;running them does not require the autoconf program.</para>
 <indexterm zone="ch-system-autoconf autoconf"><primary sortas="b-autoconf">autoconf</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -92,7 +92,7 @@ independent -- running them does not require the autoconf program.</para>
 <para>automatically runs <command>autoconf</command>,
 <command>autoheader</command>, <command>aclocal</command>,
 <command>automake</command>, <command>gettextize</command>, and
-<command>libtoolize</command> in the correct order to save you time
+<command>libtoolize</command> in the correct order to save time
 when changes are made to autoconf and automake template files.</para>
 <indexterm zone="ch-system-autoconf autoreconf"><primary sortas="b-autoreconf">autoreconf</primary></indexterm>
 </listitem>
@@ -103,7 +103,7 @@ when changes are made to autoconf and automake template files.</para>
 <listitem>
 <para>helps to create a <filename>configure.in</filename> file for a
 software package. It examines the source files in a directory tree,
-searching them for common portability issues and creates a
+searching them for common portability issues, and creates a
 <filename>configure.scan</filename> file that serves as as a
 preliminary <filename>configure.in</filename> file for the
 package.</para>
@@ -124,7 +124,7 @@ names.</para>
 <varlistentry id="ifnames">
 <term><command>ifnames</command> </term>
 <listitem>
-<para>is helpful when writing a <filename>configure.in</filename> file
+<para>helps when writing <filename>configure.in</filename> files
 for a software package. It prints the identifiers that the package
 uses in C preprocessor conditionals. If a package has already been set
 up to have some portability, this program can help determine what

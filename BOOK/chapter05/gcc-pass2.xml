@@ -33,15 +33,15 @@ variables that override default optimizations have been defined, such
 as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
 unset them when building GCC.</para>
 
-<para>The tools required to test GCC and Binutils -- Tcl, Expect and
-DejaGNU -- are installed now. GCC and Binutils can now be rebuilt,
-linking them against the new Glibc and testing them properly (if
-running the test suites in this chapter). Please note that these test
-suites are highly dependent on properly functioning pseudo terminals
-(PTYs) which are provided by the host. PTYs are most commonly
-implemented via the <systemitem class="filesystem">devpts</systemitem>
-file system. Check to see if the host system is set up correctly in
-this regard by performing a quick test:</para>
+<para>The tools required to test GCC and Binutils&mdash;Tcl, Expect
+and DejaGNU&mdash;are installed now. GCC and Binutils can now be
+rebuilt, linking them against the new Glibc and testing them properly
+(if running the test suites in this chapter). Please note that these
+test suites are highly dependent on properly functioning PTYs which
+are provided by the host. PTYs are most commonly implemented via the
+<systemitem class="filesystem">devpts</systemitem> file system. Check
+to see if the host system is set up correctly in this regard by
+performing a quick test:</para>
 
 <screen><userinput>expect -c "spawn ls"</userinput></screen>
 
@@ -56,7 +56,7 @@ consult the LFS Wiki at <ulink url="&wiki-root;"/> for more
 information on how to get PTYs working.</para>
 
 <para>Because the C and the C++ compilers will be built, unpack both
-the core and the g++ tarballs (as well as testsuite, if you want to
+the core and the g++ tarballs (as well as test suite, if you want to
 run the tests). By unpacking them in the working directory, they will
 all unfold into a single <filename
 class="directory">gcc-&gcc-version;/</filename> subdirectory.</para>
@@ -73,7 +73,7 @@ circumstances, the GCC <command>fixincludes</command> script scans the
 system for header files that need to be fixed. It might find that some
 Glibc header files on the host system need to be fixed, and will fix
 them and put them in the GCC private include directory. In <xref
-linkend="chapter-building-system"/>, after the newer Glibc had been
+linkend="chapter-building-system"/>, after the newer Glibc has been
 installed, this private include directory will be searched before the
 system include directory.  This may result in GCC finding the fixed
 headers from the host system, which most likely will not match the
@@ -135,7 +135,7 @@ code.</para></listitem>
 <emphasis>atexit</emphasis>, to register C++ destructors for local
 statics and global objects.  This option is essential for fully
 standards-compliant handling of destructors. It also affects the C++
-ABI and therefore results in C++ shared libraries and C++ programs
+ABI, and therefore results in C++ shared libraries and C++ programs
 that are interoperable with other Linux
 distributions.</para></listitem>
 </varlistentry>
@@ -186,7 +186,7 @@ an example of how current GCC-&gcc-version; should look on
 i686-pc-linux-gnu, see <ulink
 url="http://gcc.gnu.org/ml/gcc-testresults/2004-07/msg00179.html"/>.</para>
 
-<para>Having a few unexpected failures often cannot be avoided. The
+<para>A few unexpected failures cannot always be avoided. The
 GCC developers are usually aware of these issues, but have not
 resolved them yet. Unless the test results are vastly different from
 those at the above URL, it is safe to continue.</para>
@@ -204,7 +204,7 @@ patch was not properly applied.</para></note>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-gcc"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-gcc"/>.</para>
 </sect2>
 
 </sect1>

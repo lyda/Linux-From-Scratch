@@ -22,7 +22,7 @@ converting Info documents.</para>
 <segmentedlist>
 <segtitle>Texinfo installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils,
-Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -81,7 +81,7 @@ done</userinput></screen>
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
 <seglistitem><seg>info, infokey, install-info,
-makeinfo, texi2dvi and texindex</seg></seglistitem>
+makeinfo, texi2dvi, and texindex</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -92,7 +92,7 @@ makeinfo, texi2dvi and texindex</seg></seglistitem>
 <listitem>
 <para>used to read Info documents. Info documents are similar to man
 pages, but often go much deeper than just explaining all the command
-line options. Compare for example <command>man bison</command> and
+line options. For example, compare <command>man bison</command> and
 <command>info bison</command>.</para>
 <indexterm zone="ch-system-texinfo info"><primary sortas="b-info">info</primary></indexterm>
 </listitem>
@@ -119,8 +119,8 @@ file.</para>
 <varlistentry id="makeinfo">
 <term><command>makeinfo</command></term>
 <listitem>
-<para>translates the given Texinfo source documents into various other
-formats: Info files, plain text, or HTML.</para>
+<para>translates the given Texinfo source documents into
+info files, plain text, or HTML.</para>
 <indexterm zone="ch-system-texinfo makeinfo"><primary sortas="b-makeinfo">makeinfo</primary></indexterm>
 </listitem>
 </varlistentry>

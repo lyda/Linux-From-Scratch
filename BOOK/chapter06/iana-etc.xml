@@ -42,7 +42,7 @@
 
 <segmentedlist>
 <segtitle>Installed files</segtitle>
-<seglistitem><seg>protocols, services</seg></seglistitem>
+<seglistitem><seg>protocols and services</seg></seglistitem>
 </segmentedlist>
 
 <indexterm zone="ch-system-iana-etc"><primary sortas="e-/etc/protocols">/etc/protocols</primary></indexterm>

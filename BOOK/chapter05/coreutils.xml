@@ -41,12 +41,12 @@ the many places where it is used can be updated. Backwards
 compatibility is achieved by setting the
 <emphasis>DEFAULT_POSIX2_VERSION</emphasis> environment variable to
 <quote>199209</quote> in the above command. If you do not want
-coreutils to be backwards compatible with the traditional syntax, then
+Coreutils to be backwards compatible with the traditional syntax, then
 omit setting the <emphasis>DEFAULT_POSIX2_VERSION</emphasis>
 environment variable. It is important to remember that doing so will
 have consequences, including the need to patch the many packages that
-still use the old syntax. We therefore recommend using the
-instructions exactly as given above.</para>
+still use the old syntax. Therefore, it is recommended that the
+instructions be followed exactly as given above.</para>
 
 <para>Compile the package:</para>
 
@@ -66,7 +66,7 @@ platforms, but generally are not a problem on Linux.</para>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-coreutils"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-coreutils"/>.</para>
 </sect2>
 
 </sect1>

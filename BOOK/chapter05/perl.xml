@@ -32,8 +32,8 @@ the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../perl-&perl-version;-libc-1.patch</userinput></screen>
 
-<para>Now prepare Perl for compilation (make sure you get the 'IO Fcntl POSIX'
-part of the command correct -- they are all letters):</para>
+<para>Now prepare Perl for compilation (make sure to get the 'IO Fcntl POSIX'
+part of the command correct&mdash;they are all letters):</para>
 
 <screen><userinput>./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX'</userinput></screen>
 
@@ -55,7 +55,7 @@ the next chapter.</para></listitem>
 <para>Although Perl comes with a test suite, it is not recommended to
 run it at this point. Only part of Perl was built and running
 <userinput>make test</userinput> now will cause the rest of Perl to be
-built as well which is unnecessary at this point. The test suite can
+built as well, which is unnecessary at this point. The test suite can
 be run in the next chapter if desired.</para>
 
 <para>Copy these tools and their libraries:</para>
@@ -67,7 +67,7 @@ cp -R lib/* /tools/lib/perl5/&perl-version;</userinput></screen>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-perl"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-perl"/>.</para>
 </sect2>
 
 </sect1>

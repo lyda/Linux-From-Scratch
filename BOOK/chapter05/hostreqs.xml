@@ -9,13 +9,13 @@
 
 <para>The host must be running at least a 2.6.2 kernel compiled with
 GCC-3.0 or higher. There are two main reasons for this high
-requirement. First, the Native Posix Threading Library (NPTL)
-testsuite will segfault if the host's kernel has not been compiled with
+requirement. First, the Native POSIX Threading Library (NPTL)
+test suite will segfault if the host's kernel has not been compiled with
 GCC-3.0 or a later version. Secondly, the 2.6.2 or later version of
 the kernel is required for the use of Udev. Udev creates devices
 dynamically by reading from the <systemitem
-class="filesystem">sysfs</systemitem> file system. However, only
-recently has support for this file system been implemented in most of
+class="filesystem">sysfs</systemitem> file system. However, support
+for this filesystem has only recently been implemented in most of
 the kernel drivers. We must be sure that all critical system devices
 get created properly.</para>
 
@@ -32,7 +32,7 @@ requirements outlined above, run the following command:</para>
 was not compiled using a GCC-3.0 (or later) compiler, one will need to
 be compiled.  The host system will then need to be rebooted to use the
 newly compiled kernel. Instructions for compiling the kernel and
-configuring the bootloader (assuming your host uses GRUB) are located
+configuring the bootloader (assuming the host uses GRUB) are located
 in <xref linkend="chapter-bootable"/>.</para>
 
 </sect1>

@@ -10,9 +10,9 @@
 <indexterm zone="ch-system-glibc"><primary sortas="a-Glibc">Glibc</primary></indexterm>
 
 <sect2 role="package"><title/>
-<para>The Glibc package contains the main C library. This library provides all
+<para>The Glibc package contains the main C library. This library provides 
 the basic routines for allocating memory, searching directories, opening and
-closing files, reading and writing them, string handling, pattern matching,
+closing files, reading and writing files, string handling, pattern matching,
 arithmetic, and so on.</para>
 
 <segmentedlist>
@@ -24,7 +24,7 @@ arithmetic, and so on.</para>
 <segmentedlist>
 <segtitle>Glibc installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-Gawk, GCC, Gettext, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
+Gawk, GCC, Gettext, Grep, Make, Perl, Sed, and Texinfo</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -42,12 +42,8 @@ unset them when building GCC.</para>
 perfectly, even though the compiler specs file and linker are still
 pointing at <filename class="directory">/tools</filename>. The specs
 and linker cannot be adjusted before the Glibc install because the
-Glibc autoconf tests would then give false results and defeat the goal
+Glibc autoconf tests would give false results and defeat the goal
 of achieving a clean build.</para>
-
-<para>Before starting to build Glibc, remember to unset any
-environment variables that override the default optimization
-flags.</para>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
@@ -55,7 +51,7 @@ directory in a dedicated build directory:</para>
 <screen><userinput>mkdir ../glibc-build
 cd ../glibc-build</userinput></screen>
 
-<para>Now prepare Glibc for compilation:</para>
+<para>Prepare Glibc for compilation:</para>
 
 <screen><userinput>../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons=nptl --with-tls \
@@ -103,8 +99,7 @@ host system issues. The exact reasons are not yet clear.</para></listitem>
 
 <listitem><para>The <emphasis>atime</emphasis> test sometimes fails
 when the LFS partition is mounted with the
-<parameter>noatime</parameter> option. This sometimes occurs because
-of other file system quirks as well.</para></listitem>
+<parameter>noatime</parameter> option.</para></listitem>
 
 <listitem><para>The <emphasis>shm</emphasis> test can fail when the
 host system is using the <systemitem
@@ -134,7 +129,7 @@ with:</para>
 
 <screen><userinput>make localedata/install-locales</userinput></screen>
 
-<para>To save yourself a lot of time, an alternative to running the
+<para>To save time, an alternative to running the
 previous command (which generates and installs every locale Glibc is
 aware of) is to install only those locales that are wanted and needed.
 This can be achieved by using the <command>localedef</command>
@@ -168,9 +163,9 @@ programmers making assumptions that break in such locales, LFS should
 not be used in locales that utilize multibyte character sets
 (including UTF-8) or right-to-left writing order.  Numerous unofficial
 and unstable patches are required to fix these problems, and it has
-been decided not to support such complex locales.  This applies to the
-ja_JP and fa_IR locales as well -- they have been installed only for
-GCC and Gettext tests to pass and the <command>watch</command> program
+been decided by the LFS developers not to support such complex locales.  This applies to the
+ja_JP and fa_IR locales as well&mdash;they have been installed only for
+GCC and Gettext tests to pass, and the <command>watch</command> program
 (part of the Procps package) does not work properly in them. Various
 attempts to circumvent these restrictions are documented in
 internationalization-related hints.</para>
@@ -216,7 +211,7 @@ rpc: files
 # End /etc/nsswitch.conf
 EOF</userinput></screen>
 
-<para>To find out what time zone you're in, run the following script:</para>
+<para>To determine the local time zone, run the following script:</para>
 
 <screen><userinput>tzselect</userinput></screen>
 
@@ -259,7 +254,7 @@ class="directory">/usr/lib</filename> for dynamic libraries that are
 needed by programs as they are run. However, if there are libraries in
 directories other than <filename class="directory">/lib</filename> and
 <filename class="directory">/usr/lib</filename>, these need to be
-added them to the <filename>/etc/ld.so.conf</filename> file in order
+added to the <filename>/etc/ld.so.conf</filename> file in order
 for the dynamic loader to find them. Two directories that are commonly
 known to contain additional libraries are <filename
 class="directory">/usr/local/lib</filename> and <filename
@@ -289,14 +284,14 @@ EOF</userinput></screen>
 <seglistitem><seg>catchsegv, gencat, getconf,
 getent, glibcbug, iconv, iconvconfig, ldconfig, ldd, lddlibc4, locale,
 localedef, mtrace, nscd, nscd_nischeck, pcprofiledump, pt_chown, rpcgen,
-rpcinfo, sln, sprof, tzselect, xtrace, zdump and zic</seg>
+rpcinfo, sln, sprof, tzselect, xtrace, zdump, and zic</seg>
 <seg>ld.so, libBrokenLocale.[a,so],
 libSegFault.so, libanl.[a,so], libbsd-compat.a, libc.[a,so], libc_nonshared.a,
 libcrypt.[a,so], libdl.[a,so], libg.a, libieee.a, libm.[a,so], libmcheck.a,
 libmemusage.so, libnsl.a, libnss_compat.so, libnss_dns.so, libnss_files.so,
 libnss_hesiod.so, libnss_nis.so, libnss_nisplus.so, libpcprofile.so,
-libpthread.[a,so], libresolv.[a,so], librpcsvc.a, librt.[a,so], libthread_db.so
-and libutil.[a,so]</seg></seglistitem>
+libpthread.[a,so], libresolv.[a,so], librpcsvc.a, librt.[a,so],
+libthread_db.so, and libutil.[a,so]</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -387,8 +382,8 @@ by each given program or shared library.</para>
 <varlistentry id="locale">
 <term><command>locale</command></term>
 <listitem>
-<para>a Perl program that tells the compiler
-to enable or disable the use of POSIX locales for built-in operations.</para>
+<para>tells the compiler to enable or disable the use of POSIX locales
+for built-in operations.</para>
 <indexterm zone="ch-system-glibc locale"><primary sortas="b-locale">locale</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -404,7 +399,7 @@ to enable or disable the use of POSIX locales for built-in operations.</para>
 <varlistentry id="mtrace">
 <term><command>mtrace</command></term>
 <listitem>
-<para>a program that reads and interprets a memory trace file and
+<para>reads and interprets a memory trace file and
 ouputs a summary in human-readable format.</para>
 <indexterm zone="ch-system-glibc mtrace"><primary sortas="b-mtrace">mtrace</primary></indexterm>
 </listitem>
@@ -438,7 +433,7 @@ service requests.</para>
 <varlistentry id="pt_chown">
 <term><command>pt_chown</command></term>
 <listitem>
-<para>is a helper program for <command>grantpt</command> to set
+<para>a helper program for <command>grantpt</command> to set
 the owner, group and access permissions of a slave pseudo terminal.</para>
 <indexterm zone="ch-system-glibc pt_chown"><primary sortas="b-pt_chown">pt_chown</primary></indexterm>
 </listitem>
@@ -447,7 +442,7 @@ the owner, group and access permissions of a slave pseudo terminal.</para>
 <varlistentry id="rpcgen">
 <term><command>rpcgen</command></term>
 <listitem>
-<para>generates C code to implement the Remote Procecure call (RPC) protocol.</para>
+<para>generates C code to implement the Remote Procecure Call (RPC) protocol.</para>
 <indexterm zone="ch-system-glibc rpcgen"><primary sortas="b-rpcgen">rpcgen</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -546,7 +541,7 @@ printing the currently executed function.</para>
 <term><filename class="libraryfile">libbsd-compat</filename></term>
 <listitem>
 <para>provides the portability needed
-in order to run certain BSD programs under Linux.</para>
+in order to run certain Berkey Software Distribution (BSD) programs under Linux.</para>
 <indexterm zone="ch-system-glibc libbsd-compat"><primary sortas="c-libbsd-compat">libbsd-compat</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -638,7 +633,7 @@ aliases, services, protocols, etc.</para>
 <term><filename class="libraryfile">libpcprofile</filename></term>
 <listitem>
 <para>contains profiling functions used
-to track the amount of CPU time spent in which source code lines.</para>
+to track the amount of CPU time spent in specific source code lines.</para>
 <indexterm zone="ch-system-glibc libpcprofile"><primary sortas="c-libpcprofile">libpcprofile</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -646,7 +641,7 @@ to track the amount of CPU time spent in which source code lines.</para>
 <varlistentry id="libpthread">
 <term><filename class="libraryfile">libpthread</filename></term>
 <listitem>
-<para>is the POSIX threads library.</para>
+<para>the POSIX threads library.</para>
 <indexterm zone="ch-system-glibc libpthread"><primary sortas="c-libpthread">libpthread</primary></indexterm>
 </listitem>
 </varlistentry>

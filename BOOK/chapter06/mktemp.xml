@@ -21,7 +21,7 @@ files in shell scripts.</para>
 
 <segmentedlist>
 <segtitle>Mktemp installation depends on</segtitle>
-<seglistitem><seg>Coreutils, Make, Patch</seg></seglistitem>
+<seglistitem><seg>Coreutils, Make, and Patch</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -66,7 +66,7 @@ make install-tempfile</userinput></screen>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
-<seglistitem><seg>mktemp, tempfile</seg></seglistitem>
+<seglistitem><seg>mktemp and tempfile</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>

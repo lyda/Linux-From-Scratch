@@ -22,7 +22,7 @@ the C and C++ compilers.</para>
 <segmentedlist>
 <segtitle>GCC installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils, Findutils,
-Gawk, Gettext, Glibc, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
+Gawk, Gettext, Glibc, Grep, Make, Perl, Sed, and Texinfo</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -36,7 +36,7 @@ variables that override default optimizations have been defined, such
 as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
 unset them when building GCC.</para>
 
-<para>Unpack both the gcc-core and the gcc-g++ tarballs -- they will
+<para>Unpack both the gcc-core and the gcc-g++ tarballs&mdash;they will
 unpack into the same directory. Likewise, extract the gcc-testsuite
 package.  The full GCC package contains additional compilers.
 Instructions for building these can be found at <ulink
@@ -70,10 +70,10 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput>make</userinput></screen>
 
-<important><para>The test suite for GCC in this section is considered
+<important><para>In this section, the test suite for GCC is considered
 critical. Do not skip it under any circumstance.</para></important>
 
-<para>Test the results, but don't stop at errors:</para>
+<para>Test the results, but do not stop at errors:</para>
 
 <screen><userinput>make -k check</userinput></screen>
 
@@ -82,7 +82,7 @@ previous chapter. The test suite notes from <xref
 linkend="ch-tools-gcc-pass2"/> are still relevant here. Be sure to
 refer back to them as necessary.</para>
 
-<para>Iinstall the package:</para>
+<para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -97,8 +97,8 @@ compiler. To satisfy those packages, create a symlink:</para>
 
 <screen><userinput>ln -s gcc /usr/bin/cc</userinput></screen>
 
-<note><para>At this point it is strongly recommended to repeat the
-sanity check we performed earlier in this chapter. Refer back to <xref
+<note><para>At this point, it is strongly recommended to repeat the
+sanity check performed earlier in this chapter. Refer back to <xref
 linkend="ch-system-readjusting"/> and repeat the check. If the results
 are in error, then the most likely reason is that the GCC Specs patch
 from <xref linkend="chapter-temporary-tools"/> was erroneously applied
@@ -114,7 +114,7 @@ here.</para></note>
 <segtitle>Installed libraries</segtitle>
 <seglistitem><seg>c++, cc (link to gcc),
 cc1, cc1plus, collect2, cpp, g++, gcc, gccbug, and gcov</seg>
-<seg>libgcc.a, libgcc_eh.a, libgcc_s.so, libstdc++.[a,so] and libsupc++.a</seg></seglistitem>
+<seg>libgcc.a, libgcc_eh.a, libgcc_s.so, libstdc++.[a,so], and libsupc++.a</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>

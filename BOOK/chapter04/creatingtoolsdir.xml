@@ -16,8 +16,7 @@ the final LFS system.  By keeping these programs in a separate
 directory, they can easily be discarded later after their use. This
 also prevents these programs from ending up in the host production
 directories (easy to do by accident in <xref
-linkend="chapter-temporary-tools"/>), which could be a very bad
-thing.</para>
+linkend="chapter-temporary-tools"/>).</para>
 
 <para>Create the required directory by running the following as
 <emphasis>root</emphasis>:</para>

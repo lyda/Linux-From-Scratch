@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>M4 installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils, GCC,
-Gettext, Glibc, Grep, Make, Perl, Sed</seg></seglistitem>
+Gettext, Glibc, Grep, Make, Perl, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

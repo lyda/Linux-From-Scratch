@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Patch installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
+GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -30,7 +30,7 @@ GCC, Glibc, Grep, Make, Sed</seg></seglistitem>
 
 <para>Prepare Patch for compilation.  The preprocessor flag
 <parameter>-D_GNU_SOURCE</parameter> is only needed on the PowerPC
-platform, on other architectures it can be left it out:</para>
+platform. It can be left it out on other architectures:</para>
 
 <screen><userinput>CPPFLAGS=-D_GNU_SOURCE ./configure --prefix=/usr</userinput></screen>
 
@@ -60,8 +60,8 @@ platform, on other architectures it can be left it out:</para>
 <varlistentry id="patch">
 <term><command>patch</command></term>
 <listitem>
-<para>modifies files according to a patch file. A patch file normally
-is a difference listing created with the <command>diff</command> program. By applying
+<para>modifies files according to a patch file. A patch file is normally
+a difference listing created with the <command>diff</command> program. By applying
 these differences to the original files, <command>patch</command> creates the patched
 versions.</para>
 <indexterm zone="ch-system-patch patch"><primary sortas="b-patch">patch</primary></indexterm>

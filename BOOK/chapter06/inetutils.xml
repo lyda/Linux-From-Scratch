@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Inetutils installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils,
-Diffutils, GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
+Diffutils, GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -40,7 +40,7 @@ situation:</para>
 
 <screen><userinput>patch -Np1 -i ../inetutils-&inetutils-version;-no_server_man_pages-1.patch</userinput></screen>
 
-<para>Now prepare Inetutils for compilation:</para>
+<para>Prepare Inetutils for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --libexecdir=/usr/sbin \
     --sysconfdir=/etc --localstatedir=/var \
@@ -54,7 +54,7 @@ situation:</para>
 <term><parameter>--disable-logger</parameter></term>
 <listitem><para>This option
 prevents Inetutils from installing the <command>logger</command> program, which is used by
-scripts to pass messages to the System Log Daemon. We do not install it
+scripts to pass messages to the System Log Daemon. do not install it
 because Util-linux installs a better version later.</para></listitem>
 </varlistentry>
 
@@ -68,7 +68,7 @@ installed with the Sysklogd package.</para></listitem>
 <varlistentry>
 <term><parameter>--disable-whois</parameter></term>
 <listitem><para>This option disables
-the building of the Inetutils whois client, which is woefully out of date.
+the building of the Inetutils whois client, which is out of date.
 Instructions for a better whois client are in the BLFS book.</para></listitem>
 </varlistentry>
 
@@ -105,7 +105,7 @@ place:</para>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
-<seglistitem><seg>ftp, ping, rcp, rlogin, rsh, talk, telnet and tftp</seg></seglistitem>
+<seglistitem><seg>ftp, ping, rcp, rlogin, rsh, talk, telnet, and tftp</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -154,7 +154,7 @@ place:</para>
 <varlistentry id="talk">
 <term><command>talk</command></term>
 <listitem>
-<para>used to chat with another user.</para>
+<para>is used to chat with another user.</para>
 <indexterm zone="ch-system-inetutils talk"><primary sortas="b-talk">talk</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-system-revisedchroot">
-<title>Cleaning up</title>
+<title>Cleaning Up</title>
 <?dbhtml filename="revisedchroot.html"?>
 
 <para>From now on, when reentering the chroot environment after
@@ -24,7 +24,7 @@ tar it up and store it in a safe place in case another LFS system will
 be built.</para>
 
 <note><para>Removing <filename class="directory">/tools</filename>
-will also remove the temporary copies of Tcl, Expect, and DejaGNU,
+will also remove the temporary copies of Tcl, Expect, and DejaGNU
 which were used for running the toolchain tests. To use these programs
 later on, they will need to be recompiled and re-installed. The
 installation instructions are the same as in <xref

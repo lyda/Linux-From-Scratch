@@ -11,7 +11,7 @@
 
 <sect2 role="package"><title/>
 <para>The Sysvinit package contains programs for controlling the startup,
-running, and shutdown of your system.</para>
+running, and shutdown of the system.</para>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -21,7 +21,7 @@ running, and shutdown of your system.</para>
 
 <segmentedlist>
 <segtitle>Sysvinit installation depends on</segtitle>
-<seglistitem><seg>Binutils, Coreutils, GCC, Glibc, Make</seg></seglistitem>
+<seglistitem><seg>Binutils, Coreutils, GCC, Glibc, and Make</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -105,7 +105,7 @@ character set to a user-defined one, which can be modified by running
 the <command>setfont</command> program. The console initscript from
 the LFS-Bootscripts package calls the <command>setfont</command>
 program during system startup. Sending this escape sequence is
-necessary for people who use non-ISO-8859-1 screen fonts, but it does
+necessary for people who use non-ISO 8859-1 screen fonts, but it does
 not affect native English speakers.</para>
 
 </sect2>
@@ -117,7 +117,7 @@ not affect native English speakers.</para>
 <segtitle>Installed programs</segtitle>
 <seglistitem><seg>halt, init, killall5, last, lastb (link to last), mesg, pidof (link to 
 killall5), poweroff (link to halt), reboot (link to halt), runlevel, shutdown, sulogin, telinit 
-(link to init), utmpdump and wall</seg></seglistitem>
+(link to init), utmpdump, and wall</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -128,7 +128,7 @@ killall5), poweroff (link to halt), reboot (link to halt), runlevel, shutdown, s
 <listitem>
 <para>normally invokes <command>shutdown</command> with the
 <parameter>-h</parameter> option, except when already in run-level 0,
-then it tells the kernel to halt the system.  First it notes in the
+then it tells the kernel to halt the system.  It notes in the
 file <filename>/var/log/wtmp</filename> that the system is being
 brought down.</para>
 <indexterm zone="ch-system-sysvinit halt"><primary sortas="b-halt">halt</primary></indexterm>
@@ -149,7 +149,7 @@ proceses it is instructed to.</para>
 <term><command>killall5</command></term>
 <listitem>
 <para>sends a signal to all processes, except the processes in its own
-session so it won't kill the shell running the script that called
+session so it will not kill the shell running the script that called
 it.</para>
 <indexterm zone="ch-system-sysvinit killall5"><primary sortas="b-killall5">killall5</primary></indexterm>
 </listitem>
@@ -160,7 +160,7 @@ it.</para>
 <listitem>
 <para>shows which users last logged in (and out),
 searching back through the <filename>/var/log/wtmp</filename> file. It
-also show system boots, shutdowns, and run-level changes.</para>
+also shows system boots, shutdowns, and run-level changes.</para>
 <indexterm zone="ch-system-sysvinit last"><primary sortas="b-last">last</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -248,7 +248,7 @@ normally invoked by <command>init</command> when the system goes into single use
 <term><command>utmpdump</command></term>
 <listitem>
 <para>displays the content of the given login file in a more
-user-friedly format.</para>
+user-friendly format.</para>
 <indexterm zone="ch-system-sysvinit utmpdump"><primary sortas="b-utmpdump">utmpdump</primary></indexterm>
 </listitem>
 </varlistentry>

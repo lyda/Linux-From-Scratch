@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Tar installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils,
-Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
+Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -59,8 +59,8 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 <varlistentry id="rmt">
 <term><command>rmt</command></term>
 <listitem>
-<para>is used to remotely manipulate a magnetic
-tape drive, through an interprocess communication connection.</para>
+<para>remotely manipulates a magnetic
+tape drive through an interprocess communication connection.</para>
 <indexterm zone="ch-system-tar rmt"><primary sortas="b-rmt">rmt</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -68,7 +68,7 @@ tape drive, through an interprocess communication connection.</para>
 <varlistentry id="tar">
 <term><command>tar</command></term>
 <listitem>
-<para>is used to create and extract files from archives, also known as tarballs.</para>
+<para>creates and extracts files from archives, also known as tarballs.</para>
 <indexterm zone="ch-system-tar tar"><primary sortas="b-tar">tar</primary></indexterm>
 </listitem>
 </varlistentry>

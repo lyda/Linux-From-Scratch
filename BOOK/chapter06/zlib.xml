@@ -21,7 +21,7 @@ some programs.</para>
 
 <segmentedlist>
 <segtitle>Zlib installation depends on</segtitle>
-<seglistitem><seg>Binutils, Coreutils, GCC, Glibc, Make, Sed</seg></seglistitem>
+<seglistitem><seg>Binutils, Coreutils, GCC, Glibc, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -82,8 +82,8 @@ into <filename class="directory">/lib</filename>:</para>
 
 <screen><userinput>mv /usr/lib/libz.so.* /lib</userinput></screen>
 
-<para>Fix the <filename class="symlink">/usr/lib/libz.so</filename> symlink
-after the above move:</para>
+<para>Fix the <filename class="symlink">/usr/lib/libz.so</filename>
+symlink:</para>
 
 <screen><userinput>ln -sf ../../lib/libz.so.1 /usr/lib/libz.so</userinput></screen>
 

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-scripts-sysklogd">
-<title>Configuring the sysklogd script</title>
+<title>Configuring the sysklogd Script</title>
 <?dbhtml filename="sysklogd.html"?>
 
 <indexterm zone="ch-scripts-sysklogd">

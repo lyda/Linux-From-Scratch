@@ -12,6 +12,8 @@
 </indexterm>
 
 <sect2 role="package"><title/>
+<para>The Linux-Libc-Headers package contains the
+<quote>sanitized</quote> kernel headers.</para>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -33,7 +35,7 @@
 kernel headers (straight from a kernel tarball) in <filename
 class="directory">/usr/include</filename>, but over the last few
 years, the kernel developers have taken a strong stance that this
-should not be done. This gave birth to the linux-libc-headers project,
+should not be done. This gave birth to the Linux-Libc-Headers Project,
 which was designed to maintain an API stable version of the Linux
 headers.</para>
 
@@ -46,7 +48,7 @@ cp -R include/linux /usr/include</userinput></screen>
 
 <screen><userinput>chown -R root:root /usr/include/{asm,linux}</userinput></screen>
 
-<para>Make sure all the users can read the headers:</para>
+<para>Make sure the users can read the headers:</para>
 
 <screen><userinput>find /usr/include/{asm,linux} -type d -exec chmod 755 {} \;
 find /usr/include/{asm,linux} -type f -exec chmod 644 {} \;</userinput></screen>

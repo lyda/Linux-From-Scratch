@@ -22,7 +22,7 @@ basic system characteristics.</para>
 <segmentedlist>
 <segtitle>Coreutils installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils, GCC,
-Gettext, Glibc, Grep, Make, Perl, Sed</seg></seglistitem>
+Gettext, Glibc, Grep, Make, Perl, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -52,7 +52,7 @@ installed by other packages:</para>
 <para>The test suite of Coreutils makes several assumptions about the
 presence of files and users that are not valid this early in the LFS
 build. Therefore, additional items need to be set up before running
-the tests. Skip down to <quote>Install the package</quote> if you are
+the tests. Skip down to <quote>Install the package</quote> if
 not running the test suite.</para>
 
 <para>Create two dummy groups and a dummy user name:</para>
@@ -107,7 +107,7 @@ mkdir, mkfifo, mknod, mv, nice, nl, nohup, od, paste, pathchk, pinky,
 pr, printenv, printf, ptx, pwd, readlink, rm, rmdir, seq, sha1sum,
 shred, sleep, sort, split, stat, stty, sum, sync, tac, tail, tee,
 test, touch, tr, true, tsort, tty, uname, unexpand, uniq, unlink,
-users, vdir, wc, who, whoami and yes</seg></seglistitem>
+users, vdir, wc, who, whoami, and yes</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -116,7 +116,7 @@ users, vdir, wc, who, whoami and yes</seg></seglistitem>
 <varlistentry id="basename">
 <term><command>basename</command></term>
 <listitem>
-<para>strips any path and a given suffix from a given file name.</para>
+<para>strips any path and a given suffix from a file name.</para>
 <indexterm zone="ch-system-coreutils basename"><primary sortas="b-basename">basename</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -161,7 +161,7 @@ each given file to the given user/group pair.</para>
 <varlistentry id="chroot">
 <term><command>chroot</command></term>
 <listitem>
-<para>runs a given command with the specified directory as the 
+<para>runs a command with the specified directory as the 
 <filename class="directory">/</filename> directory. The given command can be an interactive shell.
 On most systems only <emphasis>root</emphasis> can do this.</para>
 <indexterm zone="ch-system-coreutils chroot"><primary sortas="b-chroot">chroot</primary></indexterm>
@@ -272,7 +272,7 @@ environment variable to change the color scheme used by
 <term><command>du</command></term>
 <listitem>
 <para>reports the amount of disk space used by the current directory,
-by each of the given directories (including all subdirectories), or by
+by each of the given directories (including all subdirectories) or by
 each of the given files.</para>
 <indexterm zone="ch-system-coreutils du"><primary sortas="b-du">du</primary></indexterm>
 </listitem>
@@ -748,7 +748,7 @@ indicating success.</para>
 <varlistentry id="tsort">
 <term><command>tsort</command></term>
 <listitem>
-<para>performs a topological sort. It writes a totally ordered list
+<para>performs a topological sort. It writes a completely ordered list
 according to the partial ordering in a given file.</para>
 <indexterm zone="ch-system-coreutils tsort"><primary sortas="b-tsort">tsort</primary></indexterm>
 </listitem>

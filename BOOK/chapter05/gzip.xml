@@ -35,6 +35,8 @@
 
 <screen><userinput>make</userinput></screen>
 
+<para>This package does not come with a test suite.</para>
+
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
@@ -42,7 +44,7 @@
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-gzip"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-gzip"/>.</para>
 </sect2>
 
 </sect1>

@@ -27,9 +27,10 @@
 <sect2 role="installation">
 <title>Installation of Binutils</title>
 
-<para>It is important that Binutils be the first package to get compiled,
-because both Glibc and GCC perform various tests on the available linker and
-assembler to determine which of their own features to enable.</para>
+<para>It is important that Binutils be the first package compiled
+because both Glibc and GCC perform various tests on the available
+linker and assembler to determine which of their own features to
+enable.</para>
 
 <para>This package is known to have issues when its default
 optimization flags (including the <parameter>-march</parameter> and
@@ -100,7 +101,7 @@ should be linked statically. However, strictly speaking,
 <para>Compilation is now complete. Ordinarily we would now run the
 test suite, but at this early stage the test suite framework (Tcl,
 Expect, and DejaGNU) is not yet in place. The benefits of running the
-tests at this point would be minimal since the programs from this
+tests at this point are minimal since the programs from this
 first pass will soon be replaced by those from the second.</para>
 
 <para>Install the package:</para>
@@ -129,7 +130,7 @@ LIB_PATH=/tools/lib</parameter></term>
 <listitem><para>This option rebuilds everything in the
 <filename class="directory">ld</filename> subdirectory. Specifying the LIB_PATH
 Makefile variable on the command line allows us to override the default value
-and point it to our temporary tools location. The value of this variable
+and point it to the temporary tools location. The value of this variable
 specifies the linker's default library search path. This preparation
 is used later in the chapter.</para></listitem>
 </varlistentry>
@@ -142,7 +143,7 @@ current state later in this chapter.</para></warning>
 </sect2>
 
 <sect2 role="content"><title/>
-<para>The details on this package are found in <xref linkend="contents-binutils"/>.</para>
+<para>Details on this package are located in <xref linkend="contents-binutils"/>.</para>
 </sect2>
 
 </sect1>

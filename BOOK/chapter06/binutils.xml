@@ -22,7 +22,7 @@ handling object files.</para>
 <segmentedlist>
 <segtitle>Binutils installation depends on</segtitle>
 <seglistitem><seg>Bash, Coreutils, Diffutils, GCC, Gettext,
-Glibc, Grep, Make, Perl, Sed, Texinfo</seg></seglistitem>
+Glibc, Grep, Make, Perl, Sed, and Texinfo</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -36,9 +36,9 @@ variables that override default optimizations have been defined, such
 as <emphasis>CFLAGS</emphasis> and <emphasis>CXXFLAGS</emphasis>,
 unset them when building Binutils.</para>
 
-<para>Verify that your the terminals (PTYs) are working properly
-inside the chroot environment. Check that everything is set up
-correctly by performing a simple test:</para>
+<para>Verify that the PTYs are working properly inside the chroot
+environment. Check that everything is set up correctly by performing a
+simple test:</para>
 
 <screen><userinput>expect -c "spawn ls"</userinput></screen>
 
@@ -47,7 +47,7 @@ set up for proper PTY operation:</para>
 
 <screen><computeroutput>The system has no more ptys.  Ask your system administrator to create more.</computeroutput></screen>
 
-<para>The issue needs to be resolved before running the test suites
+<para>This issue needs to be resolved before running the test suites
 for Binutils and GCC.</para>
 
 <para>The Binutils documentation recommends building Binutils outside of the
@@ -101,8 +101,8 @@ some packages:</para>
 <segtitle>Installed programs</segtitle>
 <segtitle>Installed libraries</segtitle>
 <seglistitem><seg>addr2line, ar, as, c++filt, gprof, ld, nm, objcopy, objdump, 
-ranlib, readelf, size, strings and strip</seg>
-<seg>libiberty.a, libbfd.[a,so] and libopcodes.[a,so]</seg></seglistitem>
+ranlib, readelf, size, strings, and strip</seg>
+<seg>libiberty.a, libbfd.[a,so], and libopcodes.[a,so]</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -133,7 +133,7 @@ members of the archive).</para>
 <varlistentry id="as">
 <term><command>as</command></term>
 <listitem>
-<para>an assembler. It assembles the output of gcc into object
+<para>an assembler that assembles the output of gcc into object
 files.</para>
 <indexterm zone="ch-system-binutils as"><primary sortas="b-as">as</primary></indexterm>
 </listitem>
@@ -159,7 +159,7 @@ overloaded functions from clashing.</para>
 <varlistentry id="ld">
 <term><command>ld</command></term>
 <listitem>
-<para>a linker. It combines a number of object and archive files into a single file, 
+<para>a linker that combines a number of object and archive files into a single file, 
 relocating their data and tying up symbol references.</para>
 <indexterm zone="ch-system-binutils ld"><primary sortas="b-ld">ld</primary></indexterm>
 </listitem>
@@ -176,7 +176,7 @@ relocating their data and tying up symbol references.</para>
 <varlistentry id="objcopy">
 <term><command>objcopy</command></term>
 <listitem>
-<para>used to translate one type of object file into another.</para>
+<para>translates one type of object file into another.</para>
 <indexterm zone="ch-system-binutils objcopy"><primary sortas="b-objcopy">objcopy</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -225,7 +225,7 @@ members that are relocatable object files.</para>
 characters that are of at least the specified length (defaulting to
 four). For object files, it prints, by default, only the strings from
 the initializing and loading sections. For other types of files, it
-scans the whole file.</para>
+scans the entire file.</para>
 <indexterm zone="ch-system-binutils strings"><primary sortas="b-strings">strings</primary></indexterm>
 </listitem>
 </varlistentry>
@@ -243,7 +243,7 @@ scans the whole file.</para>
 <listitem>
 <para>contains routines used by various GNU programs, including
 <command>getopt</command>, <command>obstack</command>,
-<command>strerror</command>, <command>strtol</command> and
+<command>strerror</command>, <command>strtol</command>, and
 <command>strtoul</command>.</para>
 <indexterm zone="ch-system-binutils libiberty"><primary sortas="c-libiberty">libiberty</primary></indexterm>
 </listitem>

@@ -22,7 +22,7 @@ with Autoconf.</para>
 <segmentedlist>
 <segtitle>Automake installation depends on</segtitle>
 <seglistitem><seg>Autoconf, Bash, Coreutils,
-Diffutils, Grep, M4, Make, Perl, Sed</seg></seglistitem>
+Diffutils, Grep, M4, Make, Perl, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -51,9 +51,10 @@ Diffutils, Grep, M4, Make, Perl, Sed</seg></seglistitem>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
-<seglistitem><seg>acinstall, aclocal, aclocal-1.8, automake, automake-1.8, 
+<seglistitem><seg>acinstall, aclocal, aclocal-&automake-version;,
+automake, automake-&automake-version;,
 compile, config.guess, config.sub, depcomp, elisp-comp, install-sh, mdate-sh, 
-missing, mkinstalldirs, py-compile, symlink-tree, ylwrap</seg></seglistitem>
+missing, mkinstalldirs, py-compile, symlink-tree, and ylwrap</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -76,6 +77,15 @@ files based on the contents of <filename>configure.in</filename> files.</para>
 </listitem>
 </varlistentry>
 
+<varlistentry id="aclocal-version">
+<term><command>aclocal-&automake-version;</command></term>
+<listitem>
+<para>hard link to aclocal.</para>
+<indexterm zone="ch-system-automake aclocal-version"><primary
+sortas="b-aclocal-&automake-version;">aclocal-&automake-version;</primary></indexterm>
+</listitem>
+</varlistentry>
+
 <varlistentry id="automake">
 <term><command>automake</command></term>
 <listitem>
@@ -88,6 +98,15 @@ in the top-level directory. By scanning the
 appropriate <filename>Makefile.am</filename> file and generate the
 corresponding <filename>Makefile.in</filename> file.</para>
 <indexterm zone="ch-system-automake automake"><primary sortas="b-automake">automake</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="automake-version">
+<term><command>automake-&automake-version;</command></term>
+<listitem>
+<para>hard link to automake.</para>
+<indexterm zone="ch-system-automake automake-version"><primary
+sortas="b-automake-&automake-version;">automake-&automake-version;</primary></indexterm>
 </listitem>
 </varlistentry>
 
@@ -136,7 +155,7 @@ is generated in addition to the desired output.</para>
 <varlistentry id="install-sh">
 <term><command>install-sh</command></term>
 <listitem>
-<para>a script that installs a program, a script, or a data file.</para>
+<para>a script that installs a program, script, or data file.</para>
 <indexterm zone="ch-system-automake install-sh"><primary sortas="b-install-sh">install-sh</primary></indexterm>
 </listitem>
 </varlistentry>

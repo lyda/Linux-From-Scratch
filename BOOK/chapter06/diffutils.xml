@@ -22,7 +22,7 @@ between files or directories.</para>
 <segmentedlist>
 <segtitle>Diffutils installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils, GCC,
-Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
+Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -50,7 +50,7 @@ Gettext, Glibc, Grep, Make, Sed</seg></seglistitem>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
-<seglistitem><seg>cmp, diff, diff3 and sdiff</seg></seglistitem>
+<seglistitem><seg>cmp, diff, diff3, and sdiff</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>

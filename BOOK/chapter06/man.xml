@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>Man installation depends on</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Gawk, GCC,
-Glibc, Grep, Make, Sed</seg></seglistitem>
+Glibc, Grep, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
@@ -73,11 +73,11 @@ class="directory">/etc</filename> directory.</para></listitem>
 <screen><userinput>make install</userinput></screen>
 
 <note><para>To disable Select Graphic Rendition (SGR) escape
-sequences, you should edit the <filename>man.conf</filename> file and
+sequences, edit the <filename>man.conf</filename> file and
 add the <parameter>-c</parameter> switch to
 the <quote>NROFF</quote> variable.</para></note>
 
-<para>If your character set uses 8-bit characters, search for the line
+<para>If the character set uses 8-bit characters, search for the line
 beginning with <quote>NROFF</quote> in
 <filename>/etc/man.conf</filename>, and verify that it looks as
 follows:</para>
@@ -87,22 +87,23 @@ follows:</para>
 <para>Note that <quote>latin1</quote> should be used even if it is not
 the character set of the locale. The reason is that, according to the
 specification, <command>groff</command> has no means of typesetting
-characters outside ISO-8859-1 without some strange escape codes. When
-formatting manual pages, <command>groff</command> thinks that they are
-in the ISO-8859-1 encoding and this <parameter>-Tlatin1</parameter>
-switch tells <command>groff</command> to use the same encoding for
-output. Since <command>groff</command> does no recoding of input
-characters, the formatted result is really in the same encoding as
-input and therefore it is usable as the input for a pager.</para>
+characters outside International Organization for Standards
+(ISO) 8859-1 without some strange escape codes. When formatting manual
+pages, <command>groff</command> thinks that they are in the ISO 8859-1
+encoding and this <parameter>-Tlatin1</parameter> switch tells
+<command>groff</command> to use the same encoding for output. Since
+<command>groff</command> does no recoding of input characters, the
+formatted result is really in the same encoding as input, and therefore
+it is usable as the input for a pager.</para>
 
 <para>This does not solve the problem of a non-working
 <command>man2dvi</command> program for localized manual pages in
-non-ISO-8859-1 locales. Also, it does not work with multibyte
+non-ISO 8859-1 locales. Also, it does not work with multibyte
 character sets. The first problem does not currently have a solution.
-The second issue is not of a concern because the LFS installation does
+The second issue is not of concern because the LFS installation does
 not support multibyte character sets.</para>
 
-<para>Users can also refer to the BLFS page at <ulink
+<para>Users can also refer to the BLFS book page at <ulink
 url="&blfs-root;view/cvs/postlfs/compressdoc.html"/> which deals with
 formatting and compression issues for man pages.</para>
 
@@ -114,7 +115,7 @@ formatting and compression issues for man pages.</para>
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
 <seglistitem><seg>apropos, makewhatis, man,
-man2dvi, man2html and whatis</seg></seglistitem>
+man2dvi, man2html, and whatis</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
@@ -158,7 +159,7 @@ database for each page.</para>
 <varlistentry id="man2html">
 <term><command>man2html</command></term>
 <listitem>
-<para>converts a manual page into html.</para>
+<para>converts a manual page into HTML.</para>
 <indexterm zone="ch-system-man man2html"><primary sortas="b-man2html">man2html</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-scripts-setclock">
-<title>Configuring the setclock script</title>
+<title>Configuring the setclock Script</title>
 <?dbhtml filename="setclock.html"?>
 
 <indexterm zone="ch-scripts-setclock">
@@ -13,29 +13,29 @@
 
 <para>The <command>setclock</command> script reads the time from the hardware clock,
 also known as BIOS or the Complementary Metal Oxide Semiconductor
-(CMOS) clock. If the hardware clock is set to Universal Coordinated
-Time (UTC), this script will convert the hardware clock's time to
-your local time using the <filename>/etc/localtime</filename> file
-(which tells hwclock which timezone you are in). There is no way to
-detect whether or not your hardware clock is set to UTC time, so this
+(CMOS) clock. If the hardware clock is set to UTC, this script will convert the hardware clock's time to
+the local time using the <filename>/etc/localtime</filename> file
+(which tells the <command>hwclock</command> program which timezone the
+user is in). There is no way to
+detect whether or not the hardware clock is set to UTC time, so this
 needs to be manually configured.</para>
 
-<para>If you can't remember whether or not you have set your hardware
-clock to UTC time, you can find out by following this procedure. Run
-the <userinput>hwclock --show</userinput> command. This will tell you
-what the current time according to the hardware clock is. If this time
-matches whatever your watch says, then your hardware clock is set to
+<para>If you cannot remember whether or not the hardware
+clock is set to UTC time, find out by running
+the <userinput>hwclock --show</userinput> command. This will tell
+what the current time is according to the hardware clock. If this time
+matches whatever your watch says, then the hardware clock is set to
 local time. If the output from <command>hwclock</command> is not local
 time, chances are it is set to UTC time. Verify this by adding or
-subtracting the proper amount of hours for your timezone to this
+subtracting the proper amount of hours for the timezone to this
 <command>hwclock</command> time. For example, if you live in the MST
-timezone, which is also known as GMT -0700, add 7 hours to the local
-time. Then account for Daylight Savings Time which means you have to
-remove an hour (or only add 6 in the first place) during the summer
+timezone, which is also known as GMT -0700, add seven hours to the local
+time. Then, account for Daylight Savings Time, which requires
+substracting an hour (or only add six in the first place) during the summer
 months.</para>
 
 <para>Change the value of the <emphasis>UTC</emphasis> variable below
-to a value of <parameter>0</parameter> (zero) if your hardware clock
+to a value of <parameter>0</parameter> (zero) if the hardware clock
 is <emphasis>not</emphasis> set to UTC time.</para>
 
 <para>Create a new file <filename>/etc/sysconfig/clock</filename> by running

@@ -25,7 +25,7 @@ are scripts instead of binaries.</para>
 ones would be destroyed and the toolchain packages would need to be
 built all over again.</para>
 
-<para>To save another 30 MB, remove all the documentation:</para>
+<para>To save another 30 MB, remove the documentation:</para>
 
 <screen><userinput>rm -rf /tools/{doc,info,man}</userinput></screen>
 
