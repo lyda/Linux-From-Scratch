@@ -5,35 +5,43 @@
 # Description : Interface Down
 #
 # Authors     : Nathan Coulson - nathan@linuxfromscratch.org
-#		Kevin P. Fleming - kpfleming@linuxfromscratch.org
+#               Kevin P. Fleming - kpfleming@linuxfromscratch.org
 #
 # Version     : 00.01
 #
 # Notes       : the IFCONFIG variable is passed to the scripts found
-#		in the services directory, to indicate what file the
-# 		service should source to get environmental variables.
+#               in the services directory, to indicate what file the
+#               service should source to get environmental variables.
 #
 ########################################################################
 
 . /etc/sysconfig/rc 
 . ${rc_functions} 
 
+# Collect a list of configuration files for our interface
 if [ -n "${2}" ]; then
-	for file in ${@#$1}; do
+	for file in ${@#$1}; do # All parameters except $1
 		FILES="${FILES} ${network_devices}/ifconfig.${1}/${file}"
 	done
-elif [ -d "${network_devices}/ifconfig.${1}" -a "$FILESSET" != "1" ]; then
+elif [ -d "${network_devices}/ifconfig.${1}" ]; then
 	FILES=`echo ${network_devices}/ifconfig.${1}/*`
-	FILESSET=1
-elif [ "$FILESSET" != "1" ]; then
+else
 	FILES="${network_devices}/ifconfig.${1}"
 fi
 
+# Reverse the order configuration files are processed in
+for file in ${FILES}; do
+	FILES2="${file} ${FILES2}"
+done
+FILES=${FILES2}
+
+# Process each configuration file
 for file in ${FILES}; do
 	# skip backup files
 	if [ "${file}" != "${file%""~""}" ]; then
 		continue
 	fi
+
 	if [ ! -f "${file}" ]; then
 		boot_mesg "${file} is not a network configuration file or directory." ${WARNING}
 		echo_warning
@@ -54,6 +62,7 @@ for file in ${FILES}; do
 			continue
 		fi
 	
+		# This will run the service script, if SERVICE is set
 		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]; then
 			if ip link show ${1} > /dev/null 2>&1
 			then
