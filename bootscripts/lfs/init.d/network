@@ -11,16 +11,17 @@
 case "$1" in
 	start)
 		# Start all network interfaces which have ONBOOT in them.
-		for file in $network_devices/ifconfig.*
+		for file in $network_devices/ifconfig.* $network_devices/ifconfig.*/*
 		do
 			interface=${file##*/ifconfig.}
+			interface=${interface%%/*}
 			# verify that $file is a readable file, and does not end with a ~
-			if [ -r "$file" -a "$file" = "${file%""~""}" ]
+			elif [ -f "$file" -a "$file" = "${file%""~""}" ]
 			then
 				(
 					. "$file"
 					if [ "$ONBOOT" = "yes" ]; then
-						$network_devices/ifup $interface
+						$network_devices/ifup $interface ${file##*/ifconfig.${interface}/}
 					fi
 				)
 			fi
@@ -28,16 +29,17 @@ case "$1" in
 
 	stop)
 		# Stop all network interfaces
-		for file in $network_devices/ifconfig.*
+		for file in $network_devices/ifconfig.* $network_devices/ifconfig.*/*
 		do
 			interface=${file##*/ifconfig.}
+			interface=${interface%%/*}
 			# verify that $file is a readable file, and does not end with a ~
 			if [ -r "$file" -a "$file" = "${file%""~""}" ]
 			then
 				(
 					. "$file"
 					if [ "$ONBOOT" = "yes" ]; then
-						$network_devices/ifdown $interface
+						$network_devices/ifup $interface ${file##*/ifconfig.${interface}/}
 					fi
 				)
 			fi
