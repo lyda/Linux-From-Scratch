@@ -127,6 +127,23 @@
 	</chapter>
 	<chapter id="compiling"><title>Compiling</title>
 		<section id="before-ask-comp"><title>Before you ask on the list...</title>
+			<section id="optimizations"><title>If you are using optimizations:</title>
+				<para>
+					If you're getting errors and you're using optimizations,
+					try without optimizations. Even if the errors can't possibly
+					be related. I've see reports of configure scripts not
+					running because of optimization settings. Weird, huh?
+				</para>
+				<para>
+					Also, optimization settings that work for someone else
+					may not work for you. Settings that used to work may break
+					if you make the smallest, most innocent hardware change.
+				</para>
+				<para>
+					(If you don't know what optimization settings are,
+					don't worry, you don't need to.)
+				</para>
+			</section>
 		</section>
 		<section id="glibc22x-gcc2952"><title>Is it OK to use GCC 2.95.2 with GLIBC 2.2.x?</title>
 			<para>
