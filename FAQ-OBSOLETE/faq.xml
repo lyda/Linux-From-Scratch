@@ -9,7 +9,7 @@
 			<surname>Klein</surname>
 			<affiliation>
 				<address>
-					<email>sklein@mint.net</email>
+					<email>sk@sethwklein.net</email>
 				</address>
 			</affiliation>
 		</author>
@@ -44,7 +44,7 @@
 		<qandaentry><question><para>Contributing to this FAQ.</para></question>
 			<answer><para>If you have an addition or suggestion, please, let me know.
 				I can be reached at
-				<ulink url="mailto:sklein@mint.net">sklein@mint.net</ulink>,
+				<ulink url="mailto:sk@sethwklein.net">sk@sethwklein.net</ulink>,
 				and i read the lists thoroughly (but not always promptly).
 			</para></answer>
 			<answer><para>I want to stick to questions that have been asked at least
@@ -177,26 +177,26 @@
 			</para>
 			<para>Here's an example:
 			</para>
-			<screen>sklein ~/tmp $ cat > Makefile
+			<screen>sk ~/tmp $ cat > Makefile
 main:
 	gcc main.c
-sklein ~/tmp $ cat > main.c
+sk ~/tmp $ cat > main.c
 void main() { exit(0); }
-sklein ~/tmp $ make
+sk ~/tmp $ make
 gcc main.c
 <emphasis role="strong">main.c: In function `main':
 main.c:1: warning: return type of `main' is not `int'</emphasis>
-sklein ~/tmp $ ######## that worked ########
-sklein ~/tmp $ 
-sklein ~/tmp $ cat > main.c
+sk ~/tmp $ ######## that worked ########
+sk ~/tmp $ 
+sk ~/tmp $ cat > main.c
 int main() { e<emphasis role="strong">xx</emphasis>it(0) }
-sklein ~/tmp $ make
+sk ~/tmp $ make
 gcc main.c
 <emphasis role="strong">main.c: In function `main':
 main.c:1: parse error before `}'
 make: *** [main] Error 1</emphasis>
-sklein ~/tmp $ ######## that failed ########
-sklein ~/tmp $
+sk ~/tmp $ ######## that failed ########
+sk ~/tmp $
 			</screen></answer>
 		</qandaentry>
 		<qandaentry id="perm-denied"><question><para>I'm getting `/dev/null: Permission denied'</para></question>
@@ -224,10 +224,10 @@ user  Allow  an  ordinary  user to mount the file system.
 		<qandaentry id="conf-guess-fail"><question><para>configure can't guess my host type.</para></question>
 			<answer><para>Typical symptoms look like this:
 			</para>
-			<screen>sklein ~/tmp-0.0 $ ./configure 
+			<screen>sk ~/tmp-0.0 $ ./configure 
 creating cache ./config.cache
 checking host system type... <emphasis role="strong">configure: error: can not guess host type; you must specify one</emphasis>
-sklein ~/tmp-0.0 $
+sk ~/tmp-0.0 $
 			</screen>
 			<para>The problem is usually that the script can't run the compiler.
 				Usually it's just a missing /usr/bin/cc symlink. You can fix it like
@@ -243,17 +243,17 @@ ln -s gcc cc
 		<qandaentry id="missing-x-includes"><question><para>A package can't find Xlib.h.</para></question>
 			<answer><para>Typical symptoms look like this:
 			</para>
-			<screen>sklein ~/tmp $ cat > Makefile
+			<screen>sk ~/tmp $ cat > Makefile
 x11:
         gcc x11.c
-sklein ~/tmp $ cat > x11.c
+sk ~/tmp $ cat > x11.c
 #include &lt;X11/Xlib.h>
 int main() { exit(0); }
-sklein ~/tmp $ make
+sk ~/tmp $ make
 gcc x11.c
 <emphasis role="strong">x11.c:1: X11/Xlib.h: No such file or directory
 make: *** [x11] Error 1</emphasis>
-sklein ~/tmp $ 
+sk ~/tmp $ 
 			</screen>
 			<para>Creating a couple symlinks will fix this. Here are the commands:
 			</para>
