@@ -89,7 +89,8 @@ boot_mesg()
 	if [ -z "${BOOTMESG}" ]
 	then
 		BOOTMESG="${1}"
-		BOOTMESGCON="${2}${BOOTMESG_PREFIX}${1}"
+		# the color codes in ${2} could get messed up if not seperated
+		BOOTMESGCON=" \b${2} \b${BOOTMESG_PREFIX}${1}"
 
 	# Subsequent calls will overwrite the text already on the screen
 	# with replacement text by counting the lines in the last BOOTMESG
@@ -97,11 +98,12 @@ boot_mesg()
 	# It will also append our new text onto the BOOTMESG variable
 
 	else
-		local length=`echo -e -n "${BOOTMESGCON}" | sed -n -e "s/\$/\n/g;L ${WCOL}" | grep -c \$`
+		local length=`echo -e "${BOOTMESGCON}" | sed -n -e "s/\$/\n/g;L ${WCOL}" | grep -c \$`
 		local count=0
 		local i=0
 		BOOTMESG="${BOOTMESG}${1}"
-		BOOTMESGCON="${BOOTMESGCON}${2}${1}"
+		# the color codes in ${2} could get messed up if not seperated
+		BOOTMESGCON="${BOOTMESGCON} \b${2} \b${1}"
 		while [ "${count}" -lt "${length}" ]
 		do
 			echo -n -e "${CURS_UP}"
@@ -189,6 +191,9 @@ print_error_msg()
 	boot_mesg " lfs-dev@linuxfromscratch.org."
 	boot_mesg "\n\nPress Enter to continue..." ${INFO}
 	boot_mesg "" ${NORMAL}
+	# Reset BOOTMESG and BOOTMESGCON to keep from bleeding over again
+	BOOTMESG=""
+	BOOTMESGCON=""
 	read ENTER
 }
 
