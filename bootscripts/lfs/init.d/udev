@@ -29,15 +29,15 @@ case "$1" in
 
 		echo "Populating /dev with device nodes..."
 
-		# Assign udev to get hotplug events.  This will be overwritten
-		# in the hotplug bootscript
-		echo /sbin/udev > /proc/sys/kernel/hotplug
-
 		# Mount a temporary file system over /dev, so that any devices
 		# made or removed during this boot don't affect the next one.
 		# The reason we don't write to mtab is because we don't ever
 		# want /dev to be unavailable (such as by `umount -a').
 		mount -n -t ramfs ramfs /dev
+
+		# Assign udev to get hotplug events.  This will be overwritten
+		# in the hotplug bootscript.
+		echo /sbin/udev > /proc/sys/kernel/hotplug
 
 		# Populate /dev with all the devices that are already available,
 		# and save it's status so we can report failures.
