@@ -1,3 +1,11 @@
+n/a - March 16, 2005
+	* Reverted the change from loadproc to start_daemon,
+	  Moved compatibility code into one single function.
+
+n/a - March 01, 2005
+	* Moved the "if the interface is up" check from ifup to
+	  ipv4-static
+
 n/a - February 19, 2005
 	* Added evaluate_retval to the end of loadproc and killproc.
 	  lsb does not say that killproc should print [  OK  ],

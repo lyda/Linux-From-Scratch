@@ -523,14 +523,23 @@ getpids()
 #
 # Dependencies: nice
 #
-# Todo: This depreciates loadproc
+# Todo: LSB says this should be called start_daemon
+#       LSB does not say that it should call evaluate_retval
+#       It checks for PIDFILE, which is depreciated.
+#         Will be removed after BLFS 6.0
 #
 #*******************************************************************************
-start_daemon()
+loadproc()
 {
 	local pidfile=""
 	local forcestart=""
 	local nicelevel="10"
+
+# This will ensure compatibility with previous LFS Bootscripts
+	if [ -n "${PIDFILE}" ]
+	then
+		pidfile="${PIDFILE}"
+	fi
 
   while true
 	do
@@ -591,19 +600,8 @@ start_daemon()
 	fi
 
 	nice -n "${nicelevel}" "${@}"
+	evaluate_retval # This is "Probably" not LSB compliant, but required to be compatible with older bootscripts
 	return 0
-}
-
-# This will ensure compatibility with previous LFS Bootscripts
-loadproc()
-{
-	if [ -z "${PIDFILE}" ]
-	then
-		start_daemon -p "${PIDFILE}" $@
-	else
-		start_daemon $@
-	fi
-	evaluate_retval
 }
 
 #*******************************************************************************
@@ -621,9 +619,9 @@ loadproc()
 #
 # Dependencies: kill
 #
-# Todo: This checks for PIDFILE, which is depreciated
-#       This calls evaluate_retval, when the LSB does not mention any simular
-#       output
+# Todo: LSB does not say that it should call evaluate_retval
+#       It checks for PIDFILE, which is depreciated.
+#         Will be removed after BLFS 6.0
 #
 #*******************************************************************************
 killproc()

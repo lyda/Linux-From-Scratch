@@ -33,25 +33,8 @@ else
 fi
 
 
-# Activate the interface, if not activated
-if ip link show ${1} > /dev/null 2>&1
-then
-	link_status=`ip link show ${1} 2> /dev/null`
-	if [ -n "${link_status}" ]
-	then
-		if ! echo "${link_status}" | grep -q UP
-		then
-			boot_mesg "Bringing up the ${1} interface..."
-			ip link set ${1} up
-			evaluate_retval
-		fi
-	fi
-else
-	boot_mesg "Interface ${1} doesn't exist." ${WARNING}
-	echo_warning
-	exit 0
-fi
-
+boot_mesg "Bringing up the ${1} interface..."
+boot_mesg_flush
 
 # Process each configuration file
 for file in ${FILES}
@@ -65,6 +48,32 @@ do
 
 	(
 		. ${file}
+		if [ -n "${CHECK_LINK}" -o "${CHECK_LINK}" = "y" -o "${CHECK_LINK}" = "yes" -o "${CHECK_LINK}" = "1" ]
+		then
+
+			# Activate the interface, if not activated
+			if ip link show ${1} > /dev/null 2>&1
+			then
+				link_status=`ip link show ${1} 2> /dev/null`
+				if [ -n "${link_status}" ]
+				then
+					if ! echo "${link_status}" | grep -q UP
+					then
+						ip link set ${1} up
+						if [ "$?" != "0" ]
+						then
+							boot_mesg "Unable to activate ${1}." ${FAILURE}
+							echo_failure
+						fi
+					fi
+				fi
+			else
+				boot_mesg "Interface ${1} doesn't exist." ${WARNING}
+				echo_warning
+				exit 0
+			fi
+
+		fi
 		# This will run the service script, if SERVICE is set
 		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]
 		then
