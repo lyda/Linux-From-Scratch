@@ -119,8 +119,8 @@ here.</para></note>
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
 <segtitle>Installed libraries</segtitle>
-<seglistitem><seg>c++, cc (link to gcc),
-cc1, cc1plus, collect2, cpp, g++, gcc, gccbug, and gcov</seg>
+<seglistitem><seg>c++, cc (link to gcc), cpp, g++, gcc, gccbug, and
+gcov</seg>
 <seg>libgcc.a, libgcc_eh.a, libgcc_s.so, libstdc++.[a,so], and libsupc++.a</seg></seglistitem>
 </segmentedlist>
 

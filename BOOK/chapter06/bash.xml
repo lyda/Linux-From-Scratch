@@ -30,7 +30,9 @@ GCC, Glibc, Grep, Make, Ncurse, and Sed.</seg></seglistitem>
 
 <para>The following patch fixes a problem where Bash sometimes will
 only show 33 characters on a line and then wraps to the next
-line.</para>
+line. This patch modifies Bash's internal readline library. This patch
+is therefore only needed if the Readline package was not installed
+earlier in this chapter.</para>
 
 <screen><userinput>patch -Np1 -i ../bash-&bash-version;-display_wrap-1.patch</userinput></screen>
 

@@ -63,5 +63,9 @@ url="&blfs-root;view/cvs/introduction/pkgmgt.html"/>.  For a package
 management method specifically geared towards LFS, we recommend <ulink
 url="&hints-root;more_control_and_pkg_man.txt"/>.</para>
 
+<note><para>The remainder of this book is to be performed while logged
+in as user <emphasis>root</emphasis> and no longer as user
+<emphasis>lfs</emphasis>.</para></note>
+
 </sect1>
 

@@ -30,5 +30,11 @@ mount</quote> for each of these now:</para>
 mount -f -t tmpfs tmpfs $LFS/dev/shm
 mount -f -t devpts -o gid=4,mode=620 devpts $LFS/dev/pts</userinput></screen>
 
+<para>The <command>mount</command> commands executed above may result
+in the following warning message: <quote>can't open /etc/fstab: No
+such file or directory</quote>. This file&mdash;/etc/fstab&mdash;has
+not been created yet but is also not required for the file systems to
+be properly mounted. As such, the warning can be safely ignored.</para>
+
 </sect1>
 
