@@ -1,3 +1,7 @@
+n/a - June 26, 2004
+
+	* Fixed font for UK in /etc/sysconfig/console
+
 n/a - June 23, 2004
 
 	* Fixed a typo in the hotplug installation procedure
