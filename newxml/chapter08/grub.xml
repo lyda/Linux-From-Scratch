@@ -49,8 +49,6 @@ files -- you can use Tab everywhere to make Grub show the alternatives:</para>
 
 <screen><userinput>root (hd0,3)</userinput></screen>
 
-<!-- HACK - Force some whitespace to appease tidy -->
-<literallayout/>
 
 <warning><para>The following command will overwrite your current boot loader.
 Don't run the command if this is not what you want. For example, you may be
@@ -59,8 +57,6 @@ this scenario, it would probably make more sense to install Grub into the
 "boot sector" of the LFS partition, in which case the command would become:
 <userinput>setup (hd0,3)</userinput>.</para></warning>
 
-<!-- HACK - Force some whitespace to appease tidy -->
-<literallayout/>
 
 <para>Then tell it to install itself into the MBR (Master Boot Record) of
 <filename>hda</filename>:</para>
