@@ -35,6 +35,7 @@
 	&deps_version_not_match_package; <!-- remove after LFS release > 3.3 -->
 	&shutdown-on-fsck-error;
 	&new-version;
+	&its-hardlink-not-copy;
 	&delete_key_not_work;
 </qandadiv>
 <qandadiv id="fre"><title>Frequently Requested Enhancements</title>

@@ -24,6 +24,7 @@
 <!ENTITY how-to-find SYSTEM "how-to-find.xml">
 <!ENTITY kernel-header-copy SYSTEM "kernel-header-copy.xml">
 <!ENTITY kernel-modules SYSTEM "kernel-modules.xml">
+<!ENTITY its-hardlink-not-copy SYSTEM "its-hardlink-not-copy.xml">
 <!ENTITY less-prints-ad SYSTEM "less-prints-ad.xml">
 <!ENTITY lilo-errors SYSTEM "lilo-errors.xml">
 <!ENTITY missing-x-includes SYSTEM "missing-x-includes.xml">
