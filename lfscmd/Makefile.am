@@ -1,6 +1,5 @@
 bin_PROGRAMS = lfscmd
 lfscmd_SOURCES = src/main.c src/file.c src/stringfun.c src/xml.c
-INCLUDES = -I/usr/include/libxml2
 LDADD = -lxml2 -lm -lz $(LIBXML2_LIBS)
 AM_CFLAGS = -s -Os -W -Wall $(LIBXML2_CFLAGS)
 man_MANS = doc/lfscmd.1
