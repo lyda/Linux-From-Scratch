@@ -48,11 +48,7 @@ of achieving a clean build.</para>
 <para arch="raq2">NPTL is not supported under the MIPS architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
 
-<screen arch="raq2"><userinput>rm -rf nptl</userinput></screen>
-
-<para arch="raq2">This patch fixes a librt linking issue.</para>
-
-<screen arch="raq2"><userinput>patch -Np1 -i ../glibc-&glibc-version;-raq2_librt_linking-1.patch</userinput></screen>
+<screen arch="raq2"><userinput>rm -rf nptl*</userinput></screen>
 
 <para arch="raq2">This patch contains all the necessary patches for MIPS based system.</para>
 
