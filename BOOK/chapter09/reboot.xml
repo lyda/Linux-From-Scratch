@@ -12,7 +12,7 @@ your computer. However, you should be aware of a few things.  The system you
 have created in this book is quite minimal, and most likely will not have
 the functionality you would need to be able to continue forward.  By installing
 a few extra packages from the BLFS book while still in our current chroot
-enviornment, you can leave yourself in a much better position to continue on
+environment, you can leave yourself in a much better position to continue on
 once you reboot into your new LFS installation.  Installing a text mode web
 browser, such as Lynx, you can easily view the BLFS book in one virtual
 terminal, while building packages in another.  The GPM package will also allow
