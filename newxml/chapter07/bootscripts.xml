@@ -1,26 +1,50 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect1 id="aa-bootscripts" xreflabel="LFS-Bootscripts">
-<title>LFS-Bootscripts</title>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN" "http://www.docbook.org/xml/4.3CR3/docbookx.dtd">
+<sect1 xmlns:xi="http://www.w3.org/2003/XInclude" id="ch-scripts-bootscripts" xreflabel="Bootscripts">
+<title>Installing LFS-Bootscripts-1.12</title>
 <?dbhtml filename="bootscripts.html"?>
 
-<para>For installation instructions see <xref linkend="ch06-lfs-bootscripts"/>.</para>
+<para>The LFS-Bootscripts package contains a set of bootscripts.</para>
 
-<sect2><title>Official Download Location</title>
+<screen>Approximate build time:  0.1 SBU
+Required disk space:     0.3 MB</screen>
 
-<literallayout>LFS-Bootscripts (1.12): 
+<literallayout>Official download location for LFS-Bootscripts (1.12): 
 <ulink url="http://downloads.linuxfromscratch.org/"/></literallayout>
+
+<para>For its installation LFS-Bootscripts depends on: Bash, Coreutils.</para>
+
+
+
+<sect2>
+<title>Installation of LFS-Bootscripts</title>
+
+<para>Install the boot scripts simply by copying them to their
+destination:</para>
+
+<screen><userinput>cp -a rc.d sysconfig /etc</userinput></screen>
+
+<para>Make sure <emphasis>root</emphasis> is owner of the scripts:</para>
+
+<screen><userinput>chown -R root:root /etc/rc.d /etc/sysconfig</userinput></screen>
+
 </sect2>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="lfs-bootscripts-contents.xml"/>
 
+<sect2 id="contents-bootscripts"><title>Contents of LFS-bootscripts</title>
+
+<para><emphasis>Installed scripts</emphasis>: checkfs, cleanfs, functions,
+halt, ifdown, ifup, loadkeys, localnet, mountfs, mountproc, network, rc,
+reboot, sendsignals, setclock, swap, sysklogd and template</para>
+
+</sect2>
 
 
 <sect2><title>Short descriptions</title>
 
 <para>The <command>checkfs</command> script checks the file systems just
-before they are mounted (with the exception of journal and network based file
-systems).</para>
+before they are mounted (with the exception of journal and network based
+file systems).</para>
 
 <para>The <command>cleanfs</command> script removes files that shouldn't be
 preserved between reboots, such as those in <filename>/var/run/</filename> and
@@ -43,10 +67,10 @@ specified as proper for your keyboard layout.</para>
 local loopback device.</para>
 
 <para>The <command>mountfs</command> script mounts all file systems that
-aren't marked noauto or aren't network based.</para>
+aren't marked <emphasis>noauto</emphasis> or aren't network based.</para>
 
 <para>The <command>mountproc</command> script is used to mount the proc
-filesystem.</para>
+file system.</para>
 
 <para>The <command>network</command> script sets up network interfaces, such
 as network cards, and sets up the default gateway where applicable.</para>
@@ -73,10 +97,6 @@ kernel log daemons.</para>
 create your own bootscripts for your other daemons.</para>
 
 </sect2>
-
-
-
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="lfs-bootscripts-deps.xml"/>
 
 
 

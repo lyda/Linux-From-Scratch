@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect2><title>LFS-Bootscripts Installation Dependencies</title>
-
-<!-- <para>(Last checked against version &bootscripts-depversion;.)</para> -->
-
-<para>LFS-Bootscripts depends on: Bash, Coreutils.</para>
-
-</sect2>
