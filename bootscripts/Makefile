@@ -28,9 +28,9 @@ install: create-dirs create-service-dir
 	install -m ${CONFMODE} lfs/init.d/functions ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/halt          ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/console       ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/hotplug       ${EXTDIR}/rc.d/init.d
+	install -m ${MODE} lfs/init.d/hotplug       ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/localnet      ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/modules       ${EXTDIR}/rc.d/init.d
+	install -m ${MODE} lfs/init.d/modules       ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/mountfs       ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/mountkernfs   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/network       ${EXTDIR}/rc.d/init.d/
@@ -38,10 +38,10 @@ install: create-dirs create-service-dir
 	install -m ${MODE} lfs/init.d/reboot        ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/sendsignals   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/setclock      ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/syslog-ng	    ${EXTDIR}/rc.d/init.d
+	install -m ${MODE} lfs/init.d/syslog-ng	    ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/swap          ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/template      ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/udev          ${EXTDIR}/rc.d/init.d
+	install -m ${MODE} lfs/init.d/udev          ${EXTDIR}/rc.d/init.d/
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc0.d/K80network
 	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc0.d/K90syslog-ng
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
@@ -79,14 +79,14 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
-	install --backup=numbered -m ${CONFMODE} lfs/sysconfig/console     ${EXTDIR}/sysconfig/
-	install --backup=numbered -m ${CONFMODE} lfs/sysconfig/createfiles ${EXTDIR}/sysconfig/
-	install --backup=numbered -m ${CONFMODE} lfs/sysconfig/modules     ${EXTDIR}/sysconfig
-	install --backup=numbered -m ${CONFMODE} lfs/sysconfig/rc          ${EXTDIR}/sysconfig/
-	install                   -m ${MODE} lfs/sysconfig/network-devices/ifup   ${EXTDIR}/sysconfig/network-devices
-	install                   -m ${MODE} lfs/sysconfig/network-devices/ifdown ${EXTDIR}/sysconfig/network-devices
-	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static       ${EXTDIR}/sysconfig/network-devices/services
-	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services
+	if [ ! -f ${EXTDIR}/sysconfig/console     ]; then install -m ${CONFMODE} lfs/sysconfig/console     ${EXTDIR}/sysconfig/;	fi
+	if [ ! -f ${EXTDIR}/sysconfig/createfiles ]; then install -m ${CONFMODE} lfs/sysconfig/createfiles ${EXTDIR}/sysconfig/; fi
+	if [ ! -f ${EXTDIR}/sysconfig/modules     ]; then install -m ${CONFMODE} lfs/sysconfig/modules     ${EXTDIR}/sysconfig/; fi
+	if [ ! -f ${EXTDIR}/sysconfig/rc          ]; then install -m ${CONFMODE} lfs/sysconfig/rc          ${EXTDIR}/sysconfig/; fi
+	install                   -m ${MODE} lfs/sysconfig/network-devices/ifup   ${EXTDIR}/sysconfig/network-devices/
+	install                   -m ${MODE} lfs/sysconfig/network-devices/ifdown ${EXTDIR}/sysconfig/network-devices/
+	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static       ${EXTDIR}/sysconfig/network-devices/services/
+	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services/
 
 install-consolelog: create-dirs
 	install -m ${MODE} contrib/init.d/consolelog   ${EXTDIR}/rc.d/init.d
