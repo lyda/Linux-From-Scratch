@@ -74,6 +74,7 @@
 	&quake3;
 </qandadiv>
 <qandadiv id="fsc"><title>Frequently Sought Cluebits</title>
+	&no-poweroff;
 	&how-to-compile;
 	&should-i-keep-sources;
 	&dos-text;
