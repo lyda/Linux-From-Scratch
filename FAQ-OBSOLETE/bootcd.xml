@@ -1,7 +1,0 @@
-<qandaentry id="bootcd">
-<question><para>How do I make a bootable CD?</para></question>
-<answer><para>See the Boot-CD Hint and
-<ulink url="http://hints.linuxfromscratch.org/hints/bootcd.txt"/>.
-</para></answer>
-</qandaentry>
-
