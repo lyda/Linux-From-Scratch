@@ -59,6 +59,32 @@ lfs:
 
 	rm $(BASEDIR)/lfs-html.xml
 
+# ppc
+	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch ppc \
+	  --output $(BASEDIR)/lfs-html.xml stylesheets/lfs-profile.xsl index.xml
+
+	xsltproc --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
+	  -stringparam base.dir $(BASEDIR)/ppc/ stylesheets/lfs-chunked.xsl \
+	  $(BASEDIR)/lfs-html.xml
+
+	if [ ! -e $(BASEDIR)/ppc/stylesheets ]; then \
+	  mkdir -p $(BASEDIR)/ppc/stylesheets; \
+	fi;
+	cp stylesheets/*.css $(BASEDIR)/ppc/stylesheets
+
+	if [ ! -e $(BASEDIR)/ppc/images ]; then \
+	  mkdir -p $(BASEDIR)/ppc/images; \
+	fi;
+	cp $(XSLROOTDIR)/images/*.png \
+	  $(BASEDIR)/ppc/images
+	cd $(BASEDIR)/ppc/; sed -i -e "s@../stylesheets@stylesheets@g" \
+	  *.html
+	cd $(BASEDIR)/ppc/; sed -i -e "s@../images@images@g" \
+	  *.html
+
+	rm $(BASEDIR)/lfs-html.xml
+
+
 # common stuff
 	for filename in `find $(BASEDIR) -name "*.html"`; do \
 	  tidy -config tidy.conf $$filename; \

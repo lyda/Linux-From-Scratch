@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "6.1-testing-20041212">
+<!ENTITY version "6.1-testing-20042112">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-raq2 "&version;-RaQ2">
-<!ENTITY releasedate "December 12, 2004">
+<!ENTITY version-ppc "&version;-ppc">
+<!ENTITY releasedate "December 21, 2004">
 <!ENTITY milestone "6.1">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -76,5 +77,6 @@
 <!ENTITY texinfo-version "4.7">
 <!ENTITY util-linux-version "2.12i">
 <!ENTITY udev-version "046">
+<!ENTITY yaboot-version "1.3.13">
 <!ENTITY vim-version "6.3">
 <!ENTITY zlib-version "1.2.2">

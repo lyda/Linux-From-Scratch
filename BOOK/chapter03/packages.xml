@@ -452,6 +452,13 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </listitem>
 </varlistentry>
 
+<varlistentry arch="ppc">
+<term>Yaboot (&yaboot-version;) - 270 KB:</term>
+<listitem>
+<para><ulink url="http://penguinppc.org/bootloaders/yaboot/"/></para>
+</listitem>
+</varlistentry>
+
 <varlistentry>
 <term>Zlib (&zlib-version;) - 277 KB:</term>
 <listitem>
