@@ -1,6 +1,0 @@
-# Begin /etc/sysconfig/sysklogd
-
-SYSLOGD_OPTIONS="-m 0"
-KLOGD_OPTIONS="-c 2"
-
-# End /etc/sysconfig/sysklogd
