@@ -32,7 +32,7 @@ case "${1}" in
 			boot_mesg "\n\nPress Enter to continue..." ${INFO}
 			boot_mesg "" ${NORMAL}
 			read ENTER
-			halt -d -f -i -p
+			/etc/rc.d/init.d/halt stop
 		fi
 
 		# Mount a temporary file system over /dev, so that any devices
@@ -51,7 +51,7 @@ case "${1}" in
 			boot_mesg "\n\nPress Enter to continue..." ${INFO}
 			boot_mesg "" ${NORMAL}
 			read ENTER
-			halt -d -f -i -p
+			/etc/rc.d/init.d/halt stop
 		fi
 
 		# Assign udev to get hotplug events.  This will be overwritten

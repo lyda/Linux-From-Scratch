@@ -43,7 +43,7 @@ case "${1}" in
 			boot_mesg "\n\nPress enter to continue..." ${INFO}
 			boot_mesg "" ${NORMAL}
 			read ENTER
-			halt -f
+			/etc/rc.d/init.d/halt stop
 		fi
 
 		if [ -f /forcefsck ]
@@ -107,7 +107,7 @@ case "${1}" in
 			boot_mesg "\n\nPress Enter to continue..." ${INFO}
 			boot_mesg "" ${NORMAL}
 			read ENTER
-			halt -f
+			/etc/rc.d/init.d/halt stop
 		fi
 
 		if [ "${error_value}" -ge 16 ]
@@ -126,4 +126,4 @@ case "${1}" in
 		;;
 esac
 
-# End $rc_base/in:nit.d/checkfs
+# End $rc_base/init.d/checkfs

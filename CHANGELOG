@@ -1,5 +1,6 @@
 n/a - October 07, 2004
 	* statusproc modified not to send data to bootlog (Nathan Coulson)
+	* Fixed halt commands in checkfs and udev (James Robertson)
 
 n/a - October 04, 2004
 	* Fixes to commit on 2004/09/30 (James Robertson)
