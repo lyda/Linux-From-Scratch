@@ -15,7 +15,7 @@ any package large enough to warrent removal for disk space reasons
 can be installed in /opt as detailed by the FHS
 (perhaps in /opt/foo-x.x with a link from /opt/foo),
 and new releases can usually be installed over the old,
-although major upgrades and libraries are generally best upgraded
+although major upgrades and libraries are generally best done
 by rebuilding the system from the bottom up.
 </para></listitem>
 
@@ -25,6 +25,10 @@ It is available from
 <ulink url="http://www.rpm.org/"/>,
 and there is an RPM Hint to help with installation at
 <ulink url="http://hints.linuxfromscratch.org/hints/rpm.txt"/>.
+</para></listitem>
+
+<listitem><para>There is an RPM based LFS at
+<ulink url="http://www.puxedo.org/lvr/"/>
 </para></listitem>
 
 <listitem><para>There are several implementations of
@@ -77,6 +81,11 @@ It is available from
 <listitem><para>CheckInstall attempts log system calls made by
 "make install". It is available from
 <ulink url="http://asic-linux.com.mx/~izto/checkinstall/"/>.
+</para></listitem>
+
+<listitem><para>pkgutils,
+used by the CRUX distribution,
+is available from <ulink url="http://www.fukt.bth.se/~per/pkgutils/"/>.
 </para></listitem>
 
 <listitem><para>More information about these systems
