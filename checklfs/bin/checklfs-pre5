@@ -10,8 +10,8 @@ grep -q AMD /proc/cpuinfo
 
 curseslib=/usr/lib/libcurses.a
 ncurseslib=/usr/lib/libncurses.a
-glibc_minor=$(ls /lib/libc-*.so|cut -f 2 -d ".")
-glibc_micro=$(ls /lib/libc-*.so|cut -f 3 -d ".")
+glibc_minor=$(ls /lib/libc-2.*.so|cut -f 2 -d ".")
+glibc_micro=$(ls /lib/libc-2.*.so|cut -f 3 -d ".")
 
 if [ ! -f "$curseslib" ] && [ -f "$ncurseslib" ]; then
 	echo "You are missing the $curseslib symlink to"
