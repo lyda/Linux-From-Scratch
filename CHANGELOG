@@ -2,6 +2,7 @@ n/a    - February 4, 2004
 
 	* Fixed $WARNING $NORMAL and $ERROR lines, broken by changes in
 	  functions
+	* Changed above fixes to work with ash
 	* Fixed checkfs symlink in Makefile
 
 1.99.1 - February 2, 2004
