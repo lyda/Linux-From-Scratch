@@ -145,11 +145,6 @@
 				</para>
 			</section>
 		</section>
-		<section id="glibc22x-gcc2952"><title>Is it OK to use GCC 2.95.2 with GLIBC 2.2.x?</title>
-			<para>
-				No, use GCC 2.95.2.1.
-			</para>
-		</section>
 		<section id="sig11"><title>I'm getting fatal errors about signal 11.</title>
 			<para>
 				See <ulink url="http://www.bitwizard.nl/sig11/">http://www.bitwizard.nl/sig11/</ulink>.
@@ -274,12 +269,6 @@ ln -s ../X11/include/X11 X11
 				You may need to apply the fileutils patch.
 				It is available from <ulink
 				url="http://download.linuxfromscratch.org/conglomeration/">http://download.linuxfromscratch.org/conglomeration/</ulink>.
-			</para>
-		</section>
-		<section id="ncurses-streampos"><title>I'm getting errors about "struct streampos" when compiling ncurses.</title>
-			<para>
-				You're using GCC 2.95.2 with GLIBC 2.2.x. That doesn't work.
-				You need GCC 2.95.2.1 with GLIBC 2.2.x.
 			</para>
 		</section>
 		<section id="glibc-crypt"><title>Where is glibc-crypt-2.2.x?</title>
