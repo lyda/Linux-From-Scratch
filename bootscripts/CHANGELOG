@@ -2,6 +2,7 @@ n/a - September 26, 2004
 	* Added BOOTMESG_PREFIX variable, so users can optionally set a
 	  prefix for boot messages (James Robert)
 	* fixed localnet status, to use ip instead of ifconfig (Jim Gifford)
+	* Added consolelog to contrib (DJ Lucas)
 
 n/a - September 24, 2004
 	* Removed /dev/udev.tdb test
