@@ -4,10 +4,10 @@
 # Written by Kevin P. Fleming <kpfleming@linuxfromscratch.org>
 
 . /etc/sysconfig/rc 
-. $rc_functions 
-. $IFCONFIG
+. ${rc_functions} 
+. ${IFCONFIG}
 
-case "$TYPE" in
+case "${TYPE}" in
 	("" | "network")
 		need_ip=1
 		need_gateway=1
@@ -15,7 +15,7 @@ case "$TYPE" in
 
 	("default")
 		need_gateway=1
-		args="$args default"
+		args="${args} default"
 		desc="default"
 	;;
 
@@ -25,58 +25,63 @@ case "$TYPE" in
 
 	("unreachable")
 		need_ip=1
-		args="$args unreachable"
+		args="${args} unreachable"
 		desc="unreachable "
 	;;
 
 	(*)
-		boot_mesg "Unknown route type ($TYPE) in $IFCONFIG, cannot continue"
-		print_status failure
+		boot_mesg "Unknown route type (${TYPE}) in ${IFCONFIG}, cannot continue." ${FAILURE}
+		echo_failure
 		exit 1
 	;;
 esac
 
-if [ -n "$need_ip" ]; then
-	if [ -z "$IP" ]; then
-		boot_mesg "IP variable missing from $IFCONFIG, cannot continue"
-		print_status failure
+if [ -n "${need_ip}" ]
+then
+	if [ -z "${IP}" ]
+	then
+		boot_mesg "IP variable missing from ${IFCONFIG}, cannot continue." ${FAILURE}
+		echo_failure
 		exit 1
 	fi
 
-	if [ -z "$PREFIX" ]; then
-		boot_mesg "PREFIX variable missing from $IFCONFIG, cannot continue"
-		print_status failure
+	if [ -z "${PREFIX}" ]
+	then
+		boot_mesg "PREFIX variable missing from ${IFCONFIG}, cannot continue." ${FAILURE}
+		echo_failure
 		exit 1
 	fi
 	
-	args="$args $IP/$PREFIX"
-	desc="$desc$IP/$PREFIX"
+	args="${args} ${IP}/${PREFIX}"
+	desc="${desc}${IP}/${PREFIX}"
 fi
 
-if [ -n "$need_gateway" ]; then
-	if [ -z "$GATEWAY" ]; then
-		boot_mesg "GATEWAY variable missing from $IFCONFIG, cannot continue"
-		print_status failure
+if [ -n "${need_gateway}" ]
+then
+	if [ -z "${GATEWAY}" ]
+	then
+		boot_mesg "GATEWAY variable missing from ${IFCONFIG}, cannot continue." ${FAILURE}
+		echo_failure
 		exit 1
 	fi
-	args="$args via $GATEWAY"
+	args="${args} via ${GATEWAY}"
 fi
 
-case "$2" in
+case "${2}" in
 	up)
-		boot_mesg "Adding '$desc' route to the $1 interface..."
-		ip route add $args dev $1
+		boot_mesg "Adding '${desc}' route to the ${1} interface..."
+		ip route add ${args} dev ${1}
 		evaluate_retval
 	;;
 	
 	down)
-		boot_mesg "Removing '$desc' route from the $1 interface..."
-		ip route del $args dev $1
+		boot_mesg "Removing '${desc}' route from the ${1} interface..."
+		ip route del ${args} dev ${1}
 		evaluate_retval
 	;;
 	
 	*)
-		echo "Usage: $0 [interface] {up|down}"
+		echo "Usage: ${0} [interface] {up|down}"
 		exit 1
 	;;
 esac

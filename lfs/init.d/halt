@@ -4,9 +4,9 @@
 # Written by Gerard Beekmans  - gerard@linuxfromscratch.org
 
 . /etc/sysconfig/rc
-. $rc_functions
+. ${rc_functions}
 
-case "$1" in
+case "${1}" in
 	stop)
 		halt -d -f -i -p
 		;;

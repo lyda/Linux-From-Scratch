@@ -4,30 +4,33 @@
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
 . /etc/sysconfig/rc
-. $rc_functions
+. ${rc_functions}
 
-case "$1" in
+case "${1}" in
 	start)
-		boot_mesg "Mounting kernel-based file systems:"
+		boot_mesg "Mounting kernel-based file systems:" ${INFO}
 
-		if [ ! -e /proc/mounts ]; then
-			boot_mesg " /proc"
+		if [ ! -e /proc/mounts ]
+		then
+			boot_mesg " /proc" ${NORMAL}
 			mount -n /proc || failed=1
 		fi
 
 		# This should be mounted on a 2.6 kernel.
-		if grep -q '[[:space:]]sysfs' /proc/filesystems; then
-			if [ -d /sys -a ! -d /sys/block ]; then
-				boot_mesg " /sys"
+		if grep -q '[[:space:]]sysfs' /proc/filesystems
+		then
+			if [ -d /sys -a ! -d /sys/block ]
+			then
+				boot_mesg " /sys" ${NORMAL}
 				mount -n /sys || failed=1
 			fi
 		fi
 
-		(exit $failed)
+		(exit ${failed})
 		evaluate_retval
 		;;
 	*)
-		echo "Usage: $0 {start}"
+		echo "Usage: ${0} {start}"
 		exit 1
 		;;
 esac

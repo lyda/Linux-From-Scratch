@@ -5,19 +5,19 @@
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
 . /etc/sysconfig/rc
-. $rc_functions
+. ${rc_functions}
 . /etc/sysconfig/consolelog
 
-case "$1" in
+case "${1}" in
 
 	start)
-		sleep "$WAITTIME"
+		sleep "${WAITTIME}"
 		boot_mesg "Setting default kernel log level..."
-		dmesg -n "$LOGLEVEL"
+		dmesg -n "${LOGLEVEL}"
 		evaluate_retval
 	;;
 	*)
-		echo "Usage: $0 {start}"
+		echo "Usage: ${0} {start}"
 		exit 1
 	;;
 esac

@@ -4,15 +4,16 @@
 # Written by Gerard Beekmans  - gerard@linuxfromscratch.org
 
 . /etc/sysconfig/rc
-. $rc_functions
+. ${rc_functions}
 
-case "$1" in
+case "${1}" in
 	stop)
+		boot_mesg "Restarting system..."
 		reboot -d -f -i
 		;;
 
 	*)
-		echo "Usage: $0 {stop}"
+		echo "Usage: ${0} {stop}"
 		exit 1
 		;;
 

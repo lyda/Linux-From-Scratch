@@ -5,12 +5,12 @@
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
 . /etc/sysconfig/rc
-. $rc_functions
+. ${rc_functions}
 
-case "$1" in
+case "${1}" in
 	start)
 		boot_mesg "Remounting root file system in read-write mode..."
-		mount -n -o remount,rw /
+		mount -n -o remount,rw / &>/dev/null
 		evaluate_retval
 
 		# Remove fsck-related file system watermarks.
@@ -20,27 +20,28 @@ case "$1" in
 		> /etc/mtab
 		mount -f / || failed=1
 		mount -f /proc || failed=1
-		if grep -q '[[:space:]]sysfs' /proc/mounts ; then
+		if grep -q '[[:space:]]sysfs' /proc/mounts
+		then
 			mount -f /sys || failed=1
 		fi
-		(exit $failed)
+		(exit ${failed})
 		evaluate_retval
 
 		# This will mount all filesystems that do not have _netdev in
 		# their option list.  _netdev denotes a network filesystem.
 		boot_mesg "Mounting remaining file systems..."
-		mount -a -O no_netdev
+		mount -a -O no_netdev &>/dev/null
 		evaluate_retval
 		;;
 
 	stop)
 		boot_mesg "Unmounting all other currently mounted file systems..."
-		umount -a -d -r -t noramfs
+		umount -a -d -r -t noramfs &>/dev/null
 		evaluate_retval
 		;;
 
 	*)
-		echo "Usage: $0 {start|stop}"
+		echo "Usage: ${0} {start|stop}"
 		exit 1
 		;;
 esac

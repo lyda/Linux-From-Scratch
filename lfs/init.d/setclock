@@ -5,37 +5,37 @@
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
 
 . /etc/sysconfig/rc
-. $rc_functions
+. ${rc_functions}
 . /etc/sysconfig/clock
 
 CLOCKPARAMS=
 
-case "$UTC" in
+case "${UTC}" in
 	yes|true|1)
-		CLOCKPARAMS="$CLOCKPARAMS --utc"
+		CLOCKPARAMS="${CLOCKPARAMS} --utc"
 		;;
 
 	no|false|0)
-		CLOCKPARAMS="$CLOCKPARAMS --localtime"
+		CLOCKPARAMS="${CLOCKPARAMS} --localtime"
 		;;
 
 esac
 
-case $1 in
+case ${1} in
 	start)
 		boot_mesg "Setting system clock..."
-		hwclock --hctosys $CLOCKPARAMS
+		hwclock --hctosys ${CLOCKPARAMS} &>/dev/null
 		evaluate_retval
 		;;
 
 	stop)
 		boot_mesg "Setting hardware clock..."
-		hwclock --systohc $CLOCKPARAMS
+		hwclock --systohc ${CLOCKPARAMS} &>/dev/null
 		evaluate_retval
 		;;
 
 	*)
-		echo "Usage: $0 {start}"
+		echo "Usage: ${0} {start}"
 		;;
 
 esac

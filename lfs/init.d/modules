@@ -4,58 +4,65 @@
 # Written by Zack Winkles - winkie@linuxfromscratch.org
 
 . /etc/sysconfig/rc
-. $rc_functions
+. ${rc_functions}
 
 # Assure that the kernel has module support.
 [ -e /proc/ksyms -o -e /proc/modules ] || exit 0
 
-case "$1" in
+case "${1}" in
 	start)
+
+		dmesg -n 1
 		# Only try to load modules if the user has actually given us
 		# some modules to load.
-		if egrep -qv '^(#|$)' /etc/sysconfig/modules 2>/dev/null; then
+		if egrep -qv '^(#|$)' /etc/sysconfig/modules 2>/dev/null
+		then
 
 			# Read in the configuration file.
 			exec 9>&0 < /etc/sysconfig/modules
 
-				boot_mesg "Loading modules:"
+				boot_mesg "Loading modules:" ${INFO}
 
-				while read module args ; do
+				while read module args
+				do
 					# Ignore comments and blank lines.
-					case "$module" in
+					case "${module}" in
 						""|\#*) continue ;;
 					esac
 
 					# Attempt to load the module, making
 					# sure to pass any arguments provided.
-					modprobe $module $args
+					modprobe ${module} ${args}
 
 					# Print the module name if successful,
 					# otherwise take note.
-					if [ $? -eq 0 ]; then
-						boot_mesg " $module"
+					if [ ${?} -eq 0 ]
+					then
+						boot_mesg " ${module}" ${NORMAL}
 					else
-						failedmod="$failedmod $module"
+						failedmod="${failedmod} ${module}"
 					fi
 				done
 
 				# Print a message about successfully loaded
 				# modules on the correct line.
-				 print_status success
+				echo_ok
 
 				# Print a failure message with a list of any
 				# modules that may have failed to load.
-				if [ "$failedmod" ]; then
-					boot_mesg "Failed to load modules:$failedmod"
-					print_status failure
+				if [ "${failedmod}" ]
+				then
+					boot_mesg "Failed to load modules:${failedmod}" ${FAILURE}
+					echo_failure
 				fi
 
 			exec 0>&9 9>&-
 
 		fi
+		dmesg -n 6
 		;;
 	*)
-		echo "Usage: $0 {start}"
+		echo "Usage: ${0} {start}"
 		exit 1
 		;;
 esac

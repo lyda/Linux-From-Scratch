@@ -6,34 +6,33 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
-case "$1" in
+# Exit quietly if you do not have hotplug installed
+[ -x /sbin/hotplug ] || exit 0
+
+case "${1}" in
 	start|restart)
 		# Set hotplug as the default manager of hotplug events
 		echo /sbin/hotplug > /proc/sys/kernel/hotplug
 
 		boot_mesg "Loading modules for system devices..."
-		for rc in /etc/hotplug/*.rc; do
-			$rc $1
+		for rc in /etc/hotplug/*.rc
+		do
+			${rc} ${1}
 		done
-		print_status success
+		echo_ok
 		;;
 	stop)
 		# Remove hotplug as the default manager of hotplug events
 		echo /bin/true > /proc/sys/kernel/hotplug
-
-#		echo "Unloading modules for system devices..."
-#		for rc in /etc/hotplug/*.rc; do
-#			$rc stop
-#		done
-#		print_status success
 		;;
 	status)
-		for rc in /etc/hotplug/*.rc; do
-			$rc status
+		for rc in /etc/hotplug/*.rc
+		do
+			${rc} status
 		done
 		;;
 	*)
-		echo "Usage: $0 {start|stop|restart|status}"
+		echo "Usage: ${0} {start|stop|restart|status}"
 		exit 1
 		;;
 esac

@@ -1,10 +1,17 @@
+n/a - September 30, 2004
+	* Finished off boot_mesg() (James Robertson)
+	* Standardized all scripts to same variable format and other
+	  internal sh/bash function calls (James Robertson)
+	* Fully implemented boot_mesg across all scripts in sysconfig
+	  and init.d (James Robertson)
+
 n/a - September 26, 2004
 	* Added BOOTMESG_PREFIX variable, so users can optionally set a
-	  prefix for boot messages (James Robert)
-	* fixed localnet status, to use ip instead of ifconfig (Jim Gifford)
+	  prefix for boot messages (James Robertson)
+	* Fixed localnet status, to use ip instead of ifconfig (Jim Gifford)
 	* Added consolelog to contrib (DJ Lucas)
 	* loadproc and killproc can have the -nomsg parameter to avoid
-	  calling evaluate_retval or print_service (Jim Gifford)
+	  calling evaluate_retval or print_status (Jim Gifford)
 	* boot_mesg no longer explicitly adds a \n onto end of lines
 	* Added a function called boot_mesg_flush, which can
 	  dump the BOOTMESG to the bootlog.  This helps avoid making
@@ -20,22 +27,23 @@ n/a - September 23, 2004
 	* Modified hotplug's error checking
 	* Converted checkfs's error handling to use boot_mesg with
 	  color support
-	* added $INFO color to functions (James Robert)
+	* Added $INFO color to functions (James Robertson)
 
 n/a - September 22, 2004
 	* Removed the dependency on wl by replacing it with grep (Bryan Kadzban)
-	* fixed getpids, to remove unused pids obtained from $PIDFILE
-	* removed ${NORMAL} from echo "$BOOTMESG" in functions, and removed space
-	  added to each additional sentence tacked onto BOOTMESG
-	* boot_mesg now handles \n's properly, and does not dimish the size of the
-	  next line (James Robertson)
-	* boot_log has been added.  the echo_ functions commit the log,
+	* Fixed getpids, to remove unused pids obtained from $PIDFILE
+	* Removed ${NORMAL} from echo "$BOOTMESG" in functions, and removed
+	   space added to each additional sentence tacked onto BOOTMESG
+	* boot_mesg now handles \n's properly, and does not dimish the size of
+	  the next line (James Robertson)
+	* boot_log has been added.  The echo_ functions commit the log,
 	  and then clear the BOOTMSG variable
 	* All scriptes have been converted to use boot_mesg
 
 n/a - September 21, 2004
-	* boot_mesg has been enhanced.  Subsequent calls will overwrite previous text,
-	  and it will wrap text basedupon the variable ${WCOL}. (James Robert)
+	* boot_mesg has been enhanced.  Subsequent calls will overwrite previous
+	  text, and it will wrap text basedupon the variable ${WCOL}. 
+	  (James Robertson)
 	* Fixed mtu optional service typo (Kevin P Fleming)
 	* Added SOURCE variable to ipv4-static-route (Kevin P Fleming)
 
@@ -43,13 +51,14 @@ n/a - September 16, 2004
 	* nework interfaces are now brought down in reverse order
 
 n/a - September 15, 2004
-	* Added blue bracket, from dj's 3.0-pre1 bootscript package [echo_failure,
-	  echo_warning, and echo_ok]
-	* Added a new function called boot_mesg, meant to replace the echo command.
+	* Added blue bracket, from dj's 3.0-pre1 bootscript package 
+	  [echo_failure, echo_warning, and echo_ok]
+	* Added a new function called boot_mesg, meant to replace the echo
+	  command.
 	  This will give us the posibility of doing logging at a later date
 	* Do not set COLUMNS if COLUMNS is already set
-	* Modified getpids, loadproc, killproc, reloadproc, and statusproc as done by
-	  DJ
+	* Modified getpids, loadproc, killproc, reloadproc, and statusproc as
+	  done by DJ
 
 2.2.3 - September 04, 2004
 	* Tagged as 2.2.3
@@ -86,7 +95,8 @@ n/a - July 21, 2004
 
 n/a - July 13, 2004
 
-	* Added the PEER variable to the ifconfig.*/* file, done by Kevin P. Fleming
+	* Added the PEER variable to the ifconfig.*/* file, done by
+	  Kevin P. Fleming
 
 2.2.1 - July 12, 2004
 
@@ -94,16 +104,17 @@ n/a - July 13, 2004
 
 n/a - July 12, 2004
 
-	* Hotplug was moved from rcsysinit.d to rc{1,2,3,4,5} to help bring up/down
-	  network interfaces started by hotplug.  This has been revoked at this time
+	* Hotplug was moved from rcsysinit.d to rc{1,2,3,4,5} to help bring
+	  up/down network interfaces started by hotplug.  This has been revoked
+	  at this time
 	* Networking interfaces are now brought down in reverse order
 	* Moved the ONBOOT check to within ifup/ifdown, so we can bring up/down
 	  the interfaces at boottime/shutdown properly, done by Kevin P. Fleming
-	* use PREFIX instead of NETMASK for adding addresses in ipv4-static, done by
-	  Kevin P. Fleming
-	* fix reversal of services inside ifconfig.* directories in ifdown, done by
-	  Kevin P. Fleming
-	* add ipv4-static-route service, supplied by Kevin P. Fleming
+	* Use PREFIX instead of NETMASK for adding addresses in ipv4-static,
+	  done by Kevin P. Fleming
+	* Fix reversal of services inside ifconfig.* directories in ifdown,
+	  done by Kevin P. Fleming
+	* Add ipv4-static-route service, supplied by Kevin P. Fleming
 
 2.2.0 - July 12, 2004
 
@@ -116,19 +127,19 @@ n/a - July 11, 2004
 
 n/a - July 10, 2004
 
-	* We now use the ip program [from iproute2] instead of ipconfig [net-tools]
-	  to bring up/down ethernet interfaces, and local connections, submitted by
-	  Jim Gifford
+	* We now use the ip program [from iproute2] instead of ipconfig
+	  [net-tools] to bring up/down ethernet interfaces, and local
+	  connections, submitted by Jim Gifford
 	* Removed gateway backward compatibility
 	* Removed ifup-eth0 ifdown-eth0 compatibility
 	* Removed the "assume SERVICE=static if SERVICE is unset" compatibility
-	* pass the IFCONFIG environmental variable to services, so they can locate
-		the file with the parameters they must read
-	* rename static to ipv4-static
-	* Stage1 for network configuration via directories, ifup and ifdown modified,
-	  and the static service modified
+	* Pass the IFCONFIG environmental variable to services, so they can
+	  locate the file with the parameters they must read
+	* Rename static to ipv4-static
+	* Stage1 for network configuration via directories, ifup and ifdown
+	  modified, and the static service modified
 	* Stage2 for network configuration via directories complete, network was
-		modified to check within subdirectories for ONBOOT=yes.  Final Stage
+	  modified to check within subdirectories for ONBOOT=yes.  Final Stage
 
 n/a - July 8, 2004
 
@@ -166,7 +177,7 @@ n/a - June 29, 2004
 
 2.1.2 - June 27, 2004
 
-	* install the automatic module loading script by default
+	* Install the automatic module loading script by default
 	* Tagged as 2.1.2
 
 n/a - June 26, 2004
@@ -237,7 +248,7 @@ n/a - June 2, 2004
 
 n/a - June 1, 2004
 
-	* removed usbfs from mountkernfs, and mountfs
+	* Removed usbfs from mountkernfs, and mountfs
 	* Edited the udev script, so it'll always set /proc/sys/kernel/hotplug
 
 n/a - May 24, 2004
