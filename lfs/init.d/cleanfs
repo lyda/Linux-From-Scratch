@@ -47,7 +47,7 @@ case "$1" in
 
 		echo -n " /tmp"
 		cd /tmp &&
-		find . -xdev -mindepth 1 ! -name lost+found \
+		find . -depth -xdev -mindepth 1 ! -name lost+found \
 			-exec rm -rf {} \; || failed=1
 
 		echo -n " /var/lock"

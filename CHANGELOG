@@ -1,3 +1,7 @@
+n/a - June 30, 2004
+
+	* Pass -depth in cleanfs
+
 n/a - June 29, 2004
 
 	* Made the grep for ONBOOT in the network script more exact
