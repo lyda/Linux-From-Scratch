@@ -24,7 +24,7 @@ table like this:</para>
 /dev/<replaceable>[yyy]</replaceable>     swap         swap   pri=1           0     0
 proc           /proc        proc   defaults        0     0
 sysfs          /sys         sysfs  defaults        0     0
-devpts         /dev/pts     devpts gid=4,mode=620  0     0
+devpts         /dev/pts     devpts gid=2,mode=620  0     0
 shm            /dev/shm     tmpfs  defaults        0     0
 # End /etc/fstab</literal>
 EOF</userinput></screen>
@@ -52,16 +52,6 @@ class="directory">/dev/shm</filename> mount point optional. For more
 information, see
 <filename>Documentation/filesystems/tmpfs.txt</filename> in the kernel
 source tree.</para>
-
-<para>There are other lines which may be added to the
-<filename>/etc/fstab</filename> file. One example is a line for USB
-devices:</para>
-
-<screen>usbfs        /proc/bus/usb usbfs   devgid=14,devmode=0660 0 0 </screen>
-
-<para>This option will only work if <quote>Support for Host-side
-USB</quote> and <quote>USB device filesystem</quote> are compiled into
-the kernel (not as a module).</para>
 
 </sect1>
 

@@ -80,6 +80,16 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>March 6, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Fixed: Arch: All - Removed --without-cvs from glibc.</para></listitem>
+<listitem><para>Fixed: Arch: All - Corrected fstab gid for devpts.</para></listitem>
+<listitem><para>Fixed: Arch: All - Fixed Typos in download links.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>March 2, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Fixed: Arch: All - Bash Download Location.</para></listitem>

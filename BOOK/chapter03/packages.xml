@@ -140,21 +140,21 @@
 <varlistentry>
 <term>Glibc (&glibc-version;) - 13 MB:</term>
 <listitem>
-<para><ulink url="&gnu;/glibc/glibc-&glibc-version;.tar.bz2"/></para>
+<para><ulink url="&gnu;glibc/glibc-&glibc-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Glibc Libidn (&glibc-version;) - 99 KB:</term>
 <listitem>
-<para><ulink url="&gnu;/glibc/glibc-libidn-&glibc-version;.tar.bz2"/></para>
+<para><ulink url="&gnu;glibc/glibc-libidn-&glibc-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Glibc Linuxthreads (&glibc-version;) - 231 KB:</term>
 <listitem>
-<para><ulink url="&gnu;/glibc/glibc-linuxthreads-&glibc-version;.tar.bz2"/></para>
+<para><ulink url="&gnu;glibc/glibc-linuxthreads-&glibc-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
@@ -455,7 +455,7 @@
 <varlistentry>
 <term>Udev (&udev-version;) - 356 KB:</term>
 <listitem>
-<para><ulink url="&kernel;/linux/utils/kernel/hotplug/udev-&udev-version;.tar.bz2"/></para>
+<para><ulink url="&kernel;linux/utils/kernel/hotplug/udev-&udev-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
@@ -469,7 +469,7 @@
 <varlistentry>
 <term>Util-linux (&util-linux-version;) - 2.0 MB:</term>
 <listitem>
-<para><ulink url="&kernel;/linux/utils/util-linux/util-linux-&util-linux-version;.tar.bz2"/></para>
+<para><ulink url="&kernel;linux/utils/util-linux/util-linux-&util-linux-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
