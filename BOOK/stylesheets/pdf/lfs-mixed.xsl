@@ -73,7 +73,7 @@
     <xsl:choose>
       <xsl:when test="ancestor::varlistentry">
         <xsl:choose>
-          <xsl:when test="string-length($url) > 88">
+          <xsl:when test="string-length($url) > 90">
             <xsl:value-of select="substring($url, 1, 50)"/>
             <xsl:param name="rest" select="substring($url, 51)"/>
             <xsl:value-of select="substring-before($rest, '/')"/>
@@ -195,5 +195,34 @@
                     |processing-instruction()[preceding-sibling::listitem]"/>
     </fo:list-block>
   </xsl:template>
+
+    <!-- Addibg a bullet, and left alignament, for packages and paches list. -->
+
+<xsl:template match="varlistentry" mode="vl.as.blocks">
+  <xsl:variable name="id"><xsl:call-template name="object.id"/></xsl:variable>
+  <xsl:choose>
+    <xsl:when test="ancestor::variablelist/@role = 'materials'">
+      <fo:block id="{$id}" xsl:use-attribute-sets="list.item.spacing"
+          keep-together.within-column="always"
+          keep-with-next.within-column="always" text-align="left">
+        <xsl:text>&#x2022;   </xsl:text>
+        <xsl:apply-templates select="term"/>
+      </fo:block>
+      <fo:block margin-left="0.1in" text-align="left">
+        <xsl:apply-templates select="listitem"/>
+      </fo:block>
+    </xsl:when>
+    <xsl:otherwise>
+      <fo:block id="{$id}" xsl:use-attribute-sets="list.item.spacing"
+          keep-together.within-column="always"
+          keep-with-next.within-column="always">
+        <xsl:apply-templates select="term"/>
+      </fo:block>
+      <fo:block margin-left="0.25in">
+        <xsl:apply-templates select="listitem"/>
+      </fo:block>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
 
 </xsl:stylesheet>
