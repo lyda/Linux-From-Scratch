@@ -13,6 +13,7 @@ Network Configuration:
 		          bootup, and stopped on shutdown
 		- ONHOTPLUG: if set to yes, this interface will be started
 		             and stopped on hotplug events
+
 		sysconfig/network-devices/ifup-*:
 		sysconfig/network-devices/ifdown-*:
 		- These scripts are run instead of the SERVICE, if they
