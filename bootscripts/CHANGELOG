@@ -2,6 +2,8 @@ n/a - June 3, 2004
 
 	* Added '> /proc/sys/kernel/hotplug' to sendsignals, to disable hotplug
 	  events, which may start up new daemons
+	* Added elementry bootup logging support.  If it can write to
+	  /var/log/boot.log, it will
 
 n/a - June 2, 2004
 

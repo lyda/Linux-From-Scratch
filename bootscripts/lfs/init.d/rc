@@ -7,6 +7,16 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
+# Function used for logging
+logboot()
+{
+	if [ -w "/var/log/boot.log" ]; then
+		( "$@" | tee /var/log/boot.log && exit $PIPESTATUS )
+	else
+		"$@"
+	fi
+}
+
 # This sets a few default terminal options.
 stty sane
 
@@ -17,7 +27,7 @@ trap "" INT QUIT TSTP
 
 if [ "$runlevel" = "" ]
 then
-        echo "Usage: $0 <runlevel>" >&2
+        logboot echo "Usage: $0 <runlevel>" >&2
         exit 1
 fi
 
@@ -26,7 +36,7 @@ previous=$PREVLEVEL
 
 if [ ! -d $rc_base/rc$runlevel.d ]
 then
-        echo "$rc_base/rc$runlevel.d does not exist"
+        logboot echo "$rc_base/rc$runlevel.d does not exist"
         exit 1
 fi
 
@@ -47,19 +57,21 @@ then
                 then
                         if [ ! -f $prev_start ] && [ ! -f $sysinit_start ]
                         then
-                                echo -n -e $WARNING
-                                echo "$i can't be executed because it was"
-                                echo "not started in the previous runlevel ($previous)"
-                                echo -n -e $NORMAL
+                                logboot echo -n -e $WARNING
+                                logboot echo "$i can't be executed because it was"
+                                logboot echo "not started in the previous runlevel ($previous)"
+                                logboot echo -n -e $NORMAL
                                 continue
                         fi
                 fi
-                $i stop
+                logboot echo -n "$i stop:"
+                logboot $i stop
+                logboot echo
                 error_value=$?
 
                 if [ "$error_value" != "0" ]
                 then
-                        print_error_msg
+                        logboot print_error_msg
                 fi
         done
 fi
@@ -79,14 +91,14 @@ do
         check_script_status
 
 	case $runlevel in
-		0|6)	$i stop		;;
-		*)	$i start	;;
+                0|6) logboot echo -n "$i stop:"  && logboot $i stop	;;
+		*)   logboot echo -n "$i start:" && logboot $i start	;;
 	esac
         error_value=$?
 
         if [ "$error_value" != "0" ]
         then
-                print_error_msg
+                logboot print_error_msg
         fi
 done
 
