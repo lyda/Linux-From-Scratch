@@ -1,5 +1,5 @@
 Submitted By: Jim Gifford (patches at jg555 dot com)
-Date: 2005-01-13
+Date: 2005-01-14
 Initial Package Version: 3.1.x
 Origin: Jim Gifford
 Upstream Status: In Contrib
@@ -59,73 +59,6 @@ diff -Naur lfs-bootscripts-3.1.0.orig/Makefile lfs-bootscripts-3.1.0/Makefile
  	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc6.d/K80network
  	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc6.d/K90syslog-ng
  	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
-diff -Naur lfs-bootscripts-3.1.0.orig/lfs/init.d/checkfs lfs-bootscripts-3.1.0/lfs/init.d/checkfs
---- lfs-bootscripts-3.1.0.orig/lfs/init.d/checkfs	2004-12-30 21:23:29.000000000 -0800
-+++ lfs-bootscripts-3.1.0/lfs/init.d/checkfs	2005-01-13 17:04:34.000000000 -0800
-@@ -34,11 +34,13 @@
- 		then
- 			boot_mesg -n "/fastboot found, will not perform" ${INFO}
- 			boot_mesg " file system checks as requested."
-+			putlcd "Fast boot requested"
- 			echo_ok
- 			exit 0
- 		fi
- 
- 		boot_mesg "Mounting root file system in read-only mode..."
-+		putlcd "Mounting / in" "read-only mode"
- 		mount -n -o remount,ro / >/dev/null
- 		evaluate_retval
- 
-@@ -52,7 +54,8 @@
- 			boot_mesg -n " halted and powered off."
- 			boot_mesg -n "\n\nPress enter to continue..." ${INFO}
- 			boot_mesg "" ${NORMAL}
--			read ENTER
-+			putlcd "FileSystem Error" "Halting System"
-+			sleep 10
- 			/etc/rc.d/init.d/halt stop
- 		fi
- 
-@@ -60,6 +63,7 @@
- 		then
- 			boot_mesg -n "/forcefsck found, forcing file" ${INFO}
- 			boot_mesg " system checks as requested."
-+			putlcd "Forcing file" "system check"
- 			echo_ok
- 			options="-f"
- 		else
-@@ -67,9 +71,10 @@
- 		fi
- 
- 		boot_mesg "Checking file systems..."
-+		putlcd "Checking file"  "systems..."
- 		# Note: -a option used to be -p; but this fails e.g.
- 		# on fsck.minix
--		fsck ${options} -a -A -C -T 2>/dev/null
-+		e2fsck-lcd ${options} -a -A -C -T 2>/dev/null
- 		error_value=${?}
- 
- 		if [ "${error_value}" = 0 ]
-@@ -98,7 +103,8 @@
- 			boot_mesg -n " this system will be rebooted"
- 			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
- 			boot_mesg "" ${NORMAL}
--			read ENTER
-+                        putlcd "Errors corrected" "Rebooting"
-+			sleep 5
- 			reboot -f
- 		fi
- 
-@@ -116,7 +122,8 @@
- 			boot_mesg -n " halted and powered off."
- 			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
- 			boot_mesg "" ${NORMAL}
--			read ENTER
-+			putlcd "FileSystem Error" "Halting System"
-+			sleep 10
- 			/etc/rc.d/init.d/halt stop
- 		fi
- 
 diff -Naur lfs-bootscripts-3.1.0.orig/lfs/init.d/cleanfs lfs-bootscripts-3.1.0/lfs/init.d/cleanfs
 --- lfs-bootscripts-3.1.0.orig/lfs/init.d/cleanfs	2004-12-30 21:23:29.000000000 -0800
 +++ lfs-bootscripts-3.1.0/lfs/init.d/cleanfs	2005-01-13 17:07:02.000000000 -0800
@@ -277,30 +210,6 @@ diff -Naur lfs-bootscripts-3.1.0.orig/lfs/init.d/mountfs lfs-bootscripts-3.1.0/l
  		umount -a -d -r -t noramfs &>/dev/null
  		evaluate_retval
  		;;
-diff -Naur lfs-bootscripts-3.1.0.orig/lfs/init.d/mountkernfs lfs-bootscripts-3.1.0/lfs/init.d/mountkernfs
---- lfs-bootscripts-3.1.0.orig/lfs/init.d/mountkernfs	2004-12-30 21:23:29.000000000 -0800
-+++ lfs-bootscripts-3.1.0/lfs/init.d/mountkernfs	2005-01-13 17:09:04.000000000 -0800
-@@ -18,10 +18,12 @@
- case "${1}" in
- 	start)
- 		boot_mesg -n "Mounting kernel-based file systems:" ${INFO}
-+		
- 
- 		if [ ! -e /proc/mounts ]
- 		then
- 			boot_mesg -n " /proc" ${NORMAL}
-+			putlcd "Mounting:" "/proc"
- 			mount -n /proc || failed=1
- 		fi
- 
-@@ -31,6 +33,7 @@
- 			if [ -d /sys -a ! -d /sys/block ]
- 			then
- 				boot_mesg -n " /sys" ${NORMAL}
-+				putlcd "Mounting:" "/sys"
- 				mount -n /sys || failed=1
- 			fi
- 		fi
 diff -Naur lfs-bootscripts-3.1.0.orig/lfs/init.d/rc lfs-bootscripts-3.1.0/lfs/init.d/rc
 --- lfs-bootscripts-3.1.0.orig/lfs/init.d/rc	2004-12-30 21:23:29.000000000 -0800
 +++ lfs-bootscripts-3.1.0/lfs/init.d/rc	2005-01-13 17:04:34.000000000 -0800
@@ -452,27 +361,6 @@ diff -Naur lfs-bootscripts-3.1.0.orig/lfs/init.d/syslog-ng lfs-bootscripts-3.1.0
 +		putlcd "Stopping:" "system log"
  		killproc syslog-ng
  		;;
- 
-diff -Naur lfs-bootscripts-3.1.0.orig/lfs/init.d/udev lfs-bootscripts-3.1.0/lfs/init.d/udev
---- lfs-bootscripts-3.1.0.orig/lfs/init.d/udev	2004-12-30 21:23:29.000000000 -0800
-+++ lfs-bootscripts-3.1.0/lfs/init.d/udev	2005-01-13 17:04:34.000000000 -0800
-@@ -30,6 +30,7 @@
- case "${1}" in
- 	start)
- 		boot_mesg "Populating /dev with device nodes..."
-+		putlcd "Populating" "/dev"
- 		if ! grep -q '[[:space:]]sysfs' /proc/mounts
- 		then
- 			boot_log " The SysFS filesystem could not be found.  Unable to continue."
-@@ -40,7 +41,8 @@
- 			boot_mesg -n " will be halted and powered off."
- 			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
- 			boot_mesg "" ${NORMAL}
--			read ENTER
-+			putlcd "Missing RAMFS" "halting"
-+			sleep 10
- 			/etc/rc.d/init.d/halt stop
- 		fi
  
 diff -Naur lfs-bootscripts-3.1.0.orig/lfs/sysconfig/network-devices/ifdown lfs-bootscripts-3.1.0/lfs/sysconfig/network-devices/ifdown
 --- lfs-bootscripts-3.1.0.orig/lfs/sysconfig/network-devices/ifdown	2004-12-30 21:23:29.000000000 -0800
