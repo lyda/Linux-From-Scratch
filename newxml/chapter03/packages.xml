@@ -197,7 +197,7 @@ from the Glibc CVS repository. The following commands will download the current
 release and make a tarball from it:</para>
 
 <screen><userinput>cvs -z 9 -d :pserver:anoncvs@sources.redhat.com:/cvs/glibc \
-    export -d glibc-2.3.3-20031202 -D <quote>2003-12-02 UTC</quote> libc
+    export -d glibc-2.3.3-20031202 -D "2003-12-02 UTC" libc
 tar jcvf glibc-2.3.3-20031202.tar.bz2 glibc-2.3.3-20031202</userinput></screen>
 
 <para>Alternatively, we've made our own tarball available which you can
