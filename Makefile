@@ -88,6 +88,7 @@ install: create-dirs create-service-dir
 install-consolelog: create-dirs
 	install -m ${MODE} contrib/init.d/consolelog   ${EXTDIR}/rc.d/init.d
 	ln -sf ../init.d/consolelog  ${EXTDIR}/rc.d/rcsysinit.d/S00consolelog
+	install --backup=numbered -m ${CONFMODE} contrib/sysconfig/consolelog                                 ${EXTDIR}/sysconfig/
 
 install-hotplug: create-dirs
 	install -m ${MODE} contrib/init.d/hotplug      ${EXTDIR}/rc.d/init.d
@@ -96,6 +97,7 @@ install-hotplug: create-dirs
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 
 install-syslog-ng: create-dirs
+	install -d -m ${DIRMODE} ${EXTDIR}/syslog-ng
 	install -m ${MODE} contrib/init.d/syslog-ng	${EXTDIR}/rc.d/init.d
 	rm -f  ${EXTDIR}/sysconfig/sysklogd
 	rm -rf ${EXTDIR}/rc.d/init.d/sysklogd
@@ -108,6 +110,7 @@ install-syslog-ng: create-dirs
 	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc3.d/S10syslog-ng
 	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc4.d/S10syslog-ng
 	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc5.d/S10syslog-ng
+	install --backup=numbered -m ${CONFMODE} contrib/sysconfig/syslog-ng                           ${EXTDIR}/syslog-ng/
 
 install-service-mtu: create-service-dir
 	install -m ${MODE} contrib/sysconfig/network-devices/services/mtu ${EXTDIR}/sysconfig/network-devices/services
