@@ -87,6 +87,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>September 28th, 2004 [matt]: Minor correction - test
+suites are simply not mandatory in chapter 5, rather than not being recommended
+(bug 913 - Randy McMurchy).</para></listitem>
+
 <listitem><para>September 28th, 2004 [matt]: Added description of libexpect, and
 corrected the version number of the installed file (bug 912 - Randy McMurchy).
 </para></listitem>
