@@ -39,7 +39,7 @@ case "${1}" in
 		# made or removed during this boot don't affect the next one.
 		# The reason we don't write to mtab is because we don't ever
 		# want /dev to be unavailable (such as by `umount -a').
-		mount -n -t ramfs ramfs /dev
+		mount -n -t tmpfs tmpfs /dev
 		if [ ${?} != 0 ]
 		then
 			boot_log "Unable to mount a ramfs onto /dev."
@@ -54,9 +54,9 @@ case "${1}" in
 			/etc/rc.d/init.d/halt stop
 		fi
 
-		# Assign udev to get hotplug events.  This will be overwritten
-		# in the hotplug bootscript.
-		echo /sbin/udevsend > /proc/sys/kernel/hotplug
+		# Assign hotplug to get hotplug events.  The LFS Book disables
+		# automatically using hotplug until the system is ready for it
+		echo /sbin/hotplug > /proc/sys/kernel/hotplug
 
 		# Populate /dev with all the devices that are already available,
 		# and save it's status so we can report failures.
