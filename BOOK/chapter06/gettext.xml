@@ -61,6 +61,7 @@ ngettext, project-id, team-address, trigger, urlget, user-email, and xgettext</s
 <seg>libasprintf[a,so], libgettextlib[a,so], libgettextpo[a,so] and libgettextsrc[a,so]</seg></seglistitem>
 </segmentedlist>
 
+<beginpage/>
 <variablelist><bridgehead renderas="sect3">Short descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 

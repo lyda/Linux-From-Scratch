@@ -56,6 +56,7 @@ ln -s tbl /usr/bin/gtbl</userinput></screen>
 </sect2>
 
 
+<beginpage/>
 <sect2 id="contents-groff" role="content"><title>Contents of Groff</title>
 
 <segmentedlist>

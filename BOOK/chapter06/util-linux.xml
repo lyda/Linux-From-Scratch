@@ -50,7 +50,8 @@ mkdir -p /var/lib/hwclock</userinput></screen>
 default optimisation level is used.  The following command
 corrects the problem:</para>
 
-<screen><userinput>sed -i -e 's%^include ../MCONFIG%&amp;\n\nCFLAGS:=$(CFLAGS) -fno-unit-at-a-time%' fdisk/Makefile</userinput></screen>
+<screen><userinput>sed -i -e 's%^include ../MCONFIG%'\
+'&amp;\n\nCFLAGS:=$(CFLAGS) -fno-unit-at-a-time%' fdisk/Makefile</userinput></screen>
 
 <para>Prepare Util-linux for compilation:</para>
 
@@ -60,6 +61,7 @@ corrects the problem:</para>
 
 <screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes</userinput></screen>
 
+<beginpage/>
 <para>The meaning of the make parameters:</para>
 
 <variablelist>

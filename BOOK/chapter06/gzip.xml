@@ -59,6 +59,7 @@ ln -s gunzip /bin/uncompress</userinput></screen>
 </sect2>
 
 
+<beginpage/>
 <sect2 id="contents-gzip" role="content"><title>Contents of Gzip</title>
 
 <segmentedlist>

@@ -62,6 +62,7 @@ make install-tempfile</userinput></screen>
 </sect2>
 
 
+<beginpage/>
 <sect2 id="contents-mktemp" role="content"><title>Contents of Mktemp</title>
 
 <segmentedlist>

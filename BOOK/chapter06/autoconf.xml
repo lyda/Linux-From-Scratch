@@ -65,6 +65,7 @@ autoreconf, autoscan, autoupdate, and ifnames</seg></seglistitem>
 configure software source code packages to adapt to many kinds of
 Unix-like systems. The configuration scripts it produces are
 independent&mdash;running them does not require the autoconf program.</para>
+<para></para>
 <indexterm zone="ch-system-autoconf autoconf"><primary sortas="b-autoconf">autoconf</primary></indexterm>
 </listitem>
 </varlistentry>

@@ -116,6 +116,7 @@ replaced.</para>
 
 <screen><userinput>make install</userinput></screen>
 
+<beginpage/>
 <para>As a finishing touch, create a symlink. Many programs and
 scripts run <command>cc</command> instead of <command>gcc</command>, which is used to keep programs generic
 and therefore usable on all kinds of UNIX systems where the GNU C compiler

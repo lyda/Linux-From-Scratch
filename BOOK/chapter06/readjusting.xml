@@ -61,7 +61,8 @@ dynamic linker. A sed command accomplishes this:</para>
 <screen><userinput>sed -i 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g' \
     `gcc --print-file specs`</userinput></screen>
 
-<para>Copying and pasting the above is recommended. It is a good idea
+<para><phrase condition="html">Copying and pasting the above is
+recommended. </phrase>It is a good idea
 to visually inspect the specs file to verify the intended change was
 actually made.</para>
 

@@ -59,6 +59,7 @@ instead:</para>
 </sect2>
 
 
+<beginpage/>
 <sect2 id="conf-sysvinit" role="configuration"><title>Configuring Sysvinit</title>
 <indexterm zone="conf-sysvinit">
 <primary sortas="a-Sysvinit">Sysvinit</primary>
@@ -111,6 +112,7 @@ not effect native English speakers.</para>
 </sect2>
 
 
+<beginpage/>
 <sect2 id="contents-sysvinit" role="content"><title>Contents of Sysvinit</title>
 
 <segmentedlist>
@@ -232,6 +234,10 @@ and notifying all logged-in users.</para>
 <listitem>
 <para>allows <emphasis>root</emphasis> to log in. It is
 normally invoked by <command>init</command> when the system goes into single user mode.</para>
+<para></para>
+<para></para>
+<para></para>
+<para></para>
 <indexterm zone="ch-system-sysvinit sulogin"><primary sortas="b-sulogin">sulogin</primary></indexterm>
 </listitem>
 </varlistentry>

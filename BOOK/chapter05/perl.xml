@@ -58,6 +58,7 @@ run it at this point. Only part of Perl was built and running
 built as well, which is unnecessary at this point. The test suite can
 be run in the next chapter if desired.</para>
 
+<beginpage/>
 <para>Copy these tools and their libraries:</para>
 
 <screen><userinput>cp perl pod/pod2man /tools/bin

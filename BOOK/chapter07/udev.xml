@@ -124,6 +124,7 @@ class="directory">/sys</filename> filesystem for the information
 pertaining to this new device and create the <filename
 class="directory">/dev</filename> entry for it.</para>
 
+<beginpage/>
 <para>This brings us to one problem that exists with
 <command>udev</command>, and likewise with <systemitem
 class="filesystem">devfs</systemitem> before it. It is commonly
@@ -225,11 +226,11 @@ modules when any request is made to load the driver
 sites:</para>
 
 <itemizedlist>
-<listitem><para>A Userspace Implementation of devfs -- <ulink
+<listitem><para>A Userspace Implementation of devfs &ndash; <ulink
 url="http://www.kroah.com/linux/talks/ols_2003_udev_paper/Reprint-Kroah-Hartman-OLS2003.pdf"/></para></listitem>
-<listitem><para>udev FAQ -- <ulink
+<listitem><para>udev FAQ &ndash; <ulink
 url="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev-FAQ"/></para></listitem>
-<listitem><para>The Linux Kernel Driver Model -- <ulink
+<listitem><para>The Linux Kernel Driver Model &ndash; <ulink
 url="http://public.planetmirror.com/pub/lca/2003/proceedings/papers/Patrick_Mochel/Patrick_Mochel.pdf"/></para></listitem>
 </itemizedlist>
 </sect2>

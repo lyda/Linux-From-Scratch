@@ -60,6 +60,7 @@ line.</para>
 
 <screen><userinput>chmod 755 /usr/lib/*.&readline-version;</userinput></screen>
 
+<beginpage/>
 <para>Move the dynamic libraries to a more appropriate location:</para>
 
 <screen><userinput>mv /usr/lib/lib{readline,history}.so.5* /lib</userinput></screen>

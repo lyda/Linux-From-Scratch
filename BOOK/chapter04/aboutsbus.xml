@@ -37,7 +37,7 @@ rest of the system is compiled with the newer GCC-&gcc-version; (which is
 known to be approximately 30 percent slower). SBUs are also not
 highly accurate for Symmetric Multi-Processor (SMP)-based machines.</para>
 
-<para>To view actual timings for specific machines, we recommend
+<para>To view actual timings for a number of specific machines, we recommend
 <ulink url="&lfs-root;~bdubbs/"/>.</para>
 
 <para>In general, SBUs are not very accurate because they depend on many

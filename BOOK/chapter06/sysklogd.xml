@@ -50,6 +50,7 @@ Fix this bug by applying another patch:</para>
 </sect2>
 
 
+<beginpage/>
 <sect2 id="conf-sysklogd" role="configuration"><title>Configuring Sysklogd</title>
 <indexterm zone="conf-sysklogd">
 <primary sortas="a-Sysklogd">Sysklogd</primary>

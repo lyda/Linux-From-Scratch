@@ -59,6 +59,7 @@ cd ../glibc-build</userinput></screen>
     --libexecdir=/usr/lib/glibc \
     --with-headers=/tools/glibc-kernheaders</userinput></screen>
 
+<beginpage/>
 <para>The meaning of the new configure option:</para>
 
 <variablelist>
@@ -277,7 +278,7 @@ EOF</userinput></screen>
 
 </sect2>
 
-
+<beginpage/>
 <sect2 id="contents-glibc" role="content"><title>Contents of Glibc</title>
 
 <segmentedlist>

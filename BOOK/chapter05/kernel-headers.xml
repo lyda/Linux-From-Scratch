@@ -61,6 +61,7 @@ symlink:</para>
 cp -HR include/asm /tools/glibc-kernheaders
 cp -R include/asm-generic /tools/glibc-kernheaders</userinput></screen>
 
+<beginpage/>
 <para>Finally, install the cross-platform kernel header files:</para>
 
 <screen><userinput>cp -R include/linux /tools/glibc-kernheaders</userinput></screen>

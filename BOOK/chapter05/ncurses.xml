@@ -53,6 +53,7 @@ successfully.</para></listitem>
 </varlistentry>
 </variablelist>
 
+<beginpage/>
 <para>Compile the programs and libraries:</para>
 
 <screen><userinput>make</userinput></screen>

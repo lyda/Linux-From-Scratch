@@ -7,15 +7,20 @@
 <title>Creating a New Partition</title>
 <?dbhtml filename="creatingpartition.html"?>
 
-<para>In order to build a new Linux system, space is required -- an
-empty disk partition. If the computer does not have a free partition
-or room on any of the hard disks to make one, LFS can be built on the
-same partition where the current distribution is installed.</para>
+<para>In order to build a new Linux system, space is required in the
+form of an empty disk partition. If the computer does not have a free
+partition or room on any of the hard disks to make one, LFS can be
+built on the same partition where the current distribution is
+installed.</para>
 
-<note><para>This procedure is not recommended for your first LFS
-install, but if you are short on disk space and feel brave, you can
-use the hint at <ulink
-url="&hints-root;lfs_next_to_existing_systems.txt"/>.</para></note>
+<note><para>This advanced procedure is not recommended
+for your first LFS installation, but if you are short on
+disk space the following document can be helpful: <phrase
+condition="html"><ulink
+url="&hints-root;lfs_next_to_existing_systems.txt"/></phrase> <phrase
+condition="pdf"><emphasis>
+http://www.linuxfromscratch.org/hints/downloads/files/
+lfs_next_to_existing_systems.txt</emphasis></phrase> .</para></note>
 
 <para>A minimal system requires a partition of around 1.3 gigabytes
 (GB).  This is enough to store all the source tarballs and compile 
@@ -33,7 +38,7 @@ disk partition as swap space.  This space is used by the kernel to
 store seldom-used data to make room in memory for active processes.
 The swap partition for an LFS system can be the same as the one used
 by the host system, so another swap partition will not need to be
-created if your host system already uses one.</para>
+created if your host system already has one setup.</para>
 
 <para>Start a disk partitioning program such as
 <command>cfdisk</command> or <command>fdisk</command> with a command

@@ -74,6 +74,7 @@ Compiler).</para>
 <para>a wrapper for <command>bison</command>, meant for programs
 that still call <command>yacc</command> instead of <command>bison</command>.
 It calls <command>bison</command> with the <parameter>-y</parameter> option.</para>
+<para></para>
 <indexterm zone="ch-system-bison yacc"><primary sortas="b-yacc">yacc</primary></indexterm>
 </listitem>
 </varlistentry>

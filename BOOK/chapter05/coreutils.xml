@@ -59,6 +59,7 @@ test suite to run several additional tests that are considered
 relatively expensive (in terms of CPU power and memory usage) on some
 platforms, but generally are not a problem on Linux.</para>
 
+<beginpage/>
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
