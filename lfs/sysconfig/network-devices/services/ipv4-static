@@ -15,8 +15,9 @@ if [ -z "$IP" ]; then
 fi
 
 if [ -z "$PREFIX" ]; then
-	echo "PREFIX variable missing from $IFCONFIG, cannot continue"
-exit 1
+	echo -n "PREFIX variable missing from $IFCONFIG, "
+	echo    "assuming 24"
+	PREFIX=24
 fi
 
 args="$args $IP/$PREFIX"
