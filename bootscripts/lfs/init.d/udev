@@ -35,9 +35,6 @@ case "$1" in
 		# want /dev to be unavailable (such as by `umount -a').
 		mount -n -t ramfs ramfs /dev
 
-		# Start the Udev daemon
-		udevd &
-
 		# Assign udev to get hotplug events.  This will be overwritten
 		# in the hotplug bootscript.
 		echo /sbin/udevsend > /proc/sys/kernel/hotplug
