@@ -20,16 +20,10 @@ case "$1" in
 		grep -q '[[:space:]]sysfs' /proc/mounts && mount -f /sys
 		# add /dev above if you use devfs
 
-		# The following mount command will mount all file systems.  If
-		# you have any other filesystems that should not be or cannot be
-		# mounted at this time, add them to the NO_FS variable below.
-		# All file systems that are added to the variable in the form of
-		# no<filesystem> will be skipped.  Any network filesystems will
-		# not be mounted at this time
-
-		NO_FS="noproc,nosysfs"
+		# This will mount all filesystems that do not have _netdev in
+		# their option list.  _netdev denotes a network filesystem.
 		echo "Mounting remaining file systems..."
-		mount -a -t $NO_FS -O no_netdev
+		mount -a -O no_netdev
 		evaluate_retval
 		;;
 
