@@ -1,4 +1,13 @@
-n/a    - February 4, 2004
+n/a - February 7, 2004
+
+	* Added -s onto grep on network stop
+
+1.99.2 - February 6, 2004
+
+	* Added -s onto grep in network start
+	* Tagged as development release 1.99.2
+
+n/a - February 4, 2004
 
 	* Fixed $WARNING $NORMAL and $ERROR lines, broken by changes in
 	  functions
