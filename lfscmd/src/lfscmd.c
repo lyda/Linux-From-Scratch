@@ -66,7 +66,7 @@ int lfscmd (int argc, char **argv) {
           help(argv[0]);
     }
 
-    /* Get xmlfile */
+    /* Get xml file path */
     lfs.xmlfile = argv[optind];
 
     /* Validate arguments */
@@ -79,13 +79,10 @@ int lfscmd (int argc, char **argv) {
     doc = xmlParseFile(lfs.xmlfile);
     node = xmlDocGetRootElement(doc);
 
-    /* Check that document is well-formed */
-    if (NULL == doc)
-    error("Document not well-formed");
-
+    /* Check that the document is well-formed */
+    if (NULL == doc) error("Document not well-formed");
     /* Check for an empty root element */
-    if (NULL == node)
-    error("Empty root element");
+    if (NULL == node) error("Empty root element");
 
     return(lfscmd_parsexml(doc, node->children));
 }
@@ -106,7 +103,6 @@ int lfscmd_parsexml (xmlDocPtr doc, xmlNodePtr node) {
            lfs.sect = xmlNodeListGetString(doc, node->children, 1);
            lfs.status = 1;
         }
-
         /* Determine filename by section id */
         else if (string_comp("part", node->name)
              || (string_len(node->name) >= 4
@@ -115,20 +111,17 @@ int lfscmd_parsexml (xmlDocPtr doc, xmlNodePtr node) {
              if (NULL != xmlGetProp(node, "id"))
              lfs.fname = xmlGetProp(node, "id");
         }
-
         /* Display screen commands */
         else if (string_comp("screen", node->name)
-             && string_comp("userinput", node->children->name)) {
+              && string_comp("userinput", node->children->name)) {
 
              /* Match title or section with query */
              if (NULL != lfs.query) {
-                if (! regexec(&reg, lfs.sect, 0, NULL, 0)
-                   || ! regexec(&reg, lfs.fname, 0, NULL, 0))
-
-                   lfscmd_parse_screen(doc, node->children);
+                if (!regexec(&reg, lfs.sect, 0, NULL, 0)
+                 || !regexec(&reg, lfs.fname, 0, NULL, 0))
+                 lfscmd_parse_screen(doc, node->children);
              }
-             else
-               lfscmd_parse_screen(doc, node->children);
+             else lfscmd_parse_screen(doc, node->children);
         }
 
         /* Recursively traverse the tree */
@@ -143,15 +136,12 @@ int lfscmd_parsexml (xmlDocPtr doc, xmlNodePtr node) {
 int lfscmd_parse_screen (xmlDocPtr doc, xmlNodePtr node) {
     FILE *output = stdout;
 
-    if (NULL == lfs.fname)
-       lfs.fname = "unknown";
-    if (NULL == lfs.sect)
-       lfs.sect = "unknown";
+    if (NULL == lfs.fname) lfs.fname = "unknown";
+    if (NULL == lfs.sect)  lfs.sect  = "unknown";
 
     /* Append output to file */
-    if (1 == lfs.file)
-    output = write_file(lfs.fname, "a");
-
+    if (1 == lfs.file) output=write_file(lfs.fname, "a");
+    
     /* Output new page title */
     if (1 == lfs.status && 1 == lfs.title) {
        fprintf(output, "\n\n### %s: %s ###\n", lfs.fname, lfs.sect);
@@ -164,25 +154,23 @@ int lfscmd_parse_screen (xmlDocPtr doc, xmlNodePtr node) {
         /* Output content outside of "userinput" */
         if (string_comp("text", node->name)) {
             if (NULL != (lfs.cmd = node->content)) {
-               if (1 == lfs.execute)
-               system(lfs.cmd);
-               else
-               fprintf(output, "%s", lfs.cmd);
+               if (1 == lfs.execute) system(lfs.cmd);
+               else fprintf(output, "%s", lfs.cmd);
             }
         }
 
         /* Output commands */
-        else if (string_comp("userinput", node->name)) {
-
+        else if (string_comp("userinput", node->name))
+        {
             /* Strip double ampersands */
             if (NULL != (lfs.cmd = xmlNodeListGetString(doc, node->children, 1))) {
+            
                if (1 == lfs.execute)
-               system(string_strip(lfs.cmd, "&&"));
+                 system(string_strip(lfs.cmd, "&&"));
                else
-               fprintf(output, "%s", string_strip(lfs.cmd, "&&"));
+                 fprintf(output, "%s", string_strip(lfs.cmd, "&&"));
             }
         }
-
         node = node->next;
     }
 
@@ -194,9 +182,7 @@ int lfscmd_parse_screen (xmlDocPtr doc, xmlNodePtr node) {
        fclose(output);
 
        /* Make file executable */
-       if (1 == lfs.exe)
-       chmod(lfs.fname, 00755);
+       if (1 == lfs.exe) chmod(lfs.fname, 00755);
     }
-
     return(1);
 }

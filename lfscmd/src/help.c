@@ -24,8 +24,7 @@
 
 void help (const char *prog)
 {
-	fprintf(stderr,
-"Usage: %s [options] index.xml\n\
+fprintf(stderr, "Usage: %s [options] index.xml\n\
 Options:\n\
   -e\n\
      Execute commands.\n\
@@ -36,8 +35,7 @@ Options:\n\
   -t\n\
      Print titles (as comments).\n\
   -x\n\
-     Make file output executable.\n",
-prog);
+     Make file output executable.\n", prog);
 
     exit(1);
 }

@@ -27,8 +27,7 @@ char *locate_book (const char *varname) {
 	char *envptr, *env;
 	
 	envptr=getenv(varname);
-	if (NULL == envptr)
-		return(NULL);
+	if (NULL == envptr) return(NULL);
 	else {
 		/* Out of memory */
 		if (NULL==(env = (char *) malloc((string_len(envptr)+1) * sizeof(char)) ))

@@ -40,12 +40,11 @@ void error (const char *fmt, ...) {
 
 int string_cat (char *str1, const char *str2) {
     int c, d;
-
     c = string_len(str1);
     d = 0;
 
     while ('\0' != str2[d])
-    str1[c++] = str2[d++];
+      str1[c++] = str2[d++];
 
     str1[c] = '\0';
     return(d);
@@ -53,15 +52,11 @@ int string_cat (char *str1, const char *str2) {
 
 int string_comp (const char *str1, const char *str2) {
     int len;
-
     len = string_len(str1);
-    if (len != string_len(str2))
-    return(0);
-
-    for (; len > 0; len--) {
-        if (str1[len] != str2[len])
-	return(0);
-    }
+    
+    if (len != string_len(str2)) return(0);
+    for (; len > 0; len--)
+		if (str1[len] != str2[len]) return(0);
 
     return(1);
 }
@@ -69,12 +64,14 @@ int string_comp (const char *str1, const char *str2) {
 char *string_cpy (const char *str1) {
 	int c;
 	char *dest;
-
+	
+    /* Allocate space for new string */
 	c = 0;
 	dest = malloc((string_len(str1)+1) * sizeof(char));
+	
     while (*str1) {
-		dest[c] = *str1++;
-		c++;
+	  dest[c] = *str1++;
+	  c++;
 	}
 	
 	dest[c] = '\0';
@@ -91,9 +88,11 @@ char *string_snip (const char *string, const int start, const int end) {
     int c, d;
     char *str;
 
+    /* Allocate space for new string */
     str = malloc((end-start+1) * sizeof(char));
     d = 0;
 
+    /* Record text from start to stop */
     for (c=start; c < end; c++)
     str[d++] = string[c];
 
@@ -101,6 +100,7 @@ char *string_snip (const char *string, const int start, const int end) {
     return(str);
 }
 
+/* TODO: This function is nasty; recode. */
 char *string_strip (const char *string, const char *strip) {
     char *str, *tmp;
     int len_stp, len_str;
