@@ -6,6 +6,8 @@
 <para>The short answer is that
 if restarting make gets a little further every time,
 you have a hardware problem.
+(If make, or whatever you're running, fails at the same place every time,
+then it is not hardware.)
 </para>
 <para>Assuming you're not overclocking,
 the most likely hardware problem is bad memory
