@@ -301,6 +301,14 @@ ln -s ../X11/include/X11 X11
 				has relaxed it's export regulations.
 			</para>
 		</section>
+		<section id="lilo-errors"><title>What do those LILO errors mean?</title>
+			<para>
+				The documentation in the LILO distribution lists all errors
+				(such as when it prints "LI" and stops),
+				but a quick overview is available at <ulink
+				url="http://sdb.suse.de/sdb/en/html/kgw_lilo_errmsg.html">http://sdb.suse.de/sdb/en/html/kgw_lilo_errmsg.html</ulink>.
+			</para>
+		</section>
 		<section id="net-pf-x"><title>I'm getting errors about net-pf-?.</title>
 			<para>
 				When you compiled net-tools you enabled support for a protocol
