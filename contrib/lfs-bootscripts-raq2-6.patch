@@ -1,13 +1,13 @@
 Submitted By: Jim Gifford (patches at jg555 dot com)
 Date: 2005-03-30
-Initial Package Version: N/A
+Initial Package Version: 3.2.0
 Origin: Jim Gifford
-Upstream Status: N/A
-Description: Bootscript Updates for RaQ2
+Upstream Status: in contrib
+Description: Bootscript updates for the RaQ2
  
 diff -Naur bootscripts.orig/Makefile bootscripts/Makefile
 --- bootscripts.orig/Makefile	2005-03-31 04:10:50.000000000 +0000
-+++ bootscripts/Makefile	2005-03-31 04:13:05.053189832 +0000
++++ bootscripts/Makefile	2005-03-31 06:17:26.923813072 +0000
 @@ -29,6 +29,7 @@
  	install -m ${MODE} lfs/init.d/halt          ${EXTDIR}/rc.d/init.d/
  	install -m ${MODE} lfs/init.d/console       ${EXTDIR}/rc.d/init.d/
@@ -54,7 +54,7 @@ diff -Naur bootscripts.orig/Makefile bootscripts/Makefile
  	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 diff -Naur bootscripts.orig/lfs/init.d/checkfs bootscripts/lfs/init.d/checkfs
 --- bootscripts.orig/lfs/init.d/checkfs	2005-03-16 22:57:35.000000000 +0000
-+++ bootscripts/lfs/init.d/checkfs	2005-03-31 05:09:14.922891768 +0000
++++ bootscripts/lfs/init.d/checkfs	2005-03-31 06:27:41.554421320 +0000
 @@ -33,11 +33,13 @@
  		if [ -f /fastboot ]; then
  			boot_mesg -n "/fastboot found, will not perform" ${INFO}
@@ -103,7 +103,7 @@ diff -Naur bootscripts.orig/lfs/init.d/checkfs bootscripts/lfs/init.d/checkfs
 -			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
  			boot_mesg "" ${NORMAL}
 -			read ENTER
-+                        putlcd "Errors corrected" "Rebooting"
++			putlcd "Errors corrected" "Rebooting"
 +			sleep 5
  			reboot -f
  		fi
@@ -122,7 +122,7 @@ diff -Naur bootscripts.orig/lfs/init.d/checkfs bootscripts/lfs/init.d/checkfs
  
 diff -Naur bootscripts.orig/lfs/init.d/cleanfs bootscripts/lfs/init.d/cleanfs
 --- bootscripts.orig/lfs/init.d/cleanfs	2005-03-16 22:58:01.000000000 +0000
-+++ bootscripts/lfs/init.d/cleanfs	2005-03-31 05:09:14.933890096 +0000
++++ bootscripts/lfs/init.d/cleanfs	2005-03-31 06:17:26.927812464 +0000
 @@ -72,17 +72,21 @@
  case "${1}" in
  	start)
@@ -155,7 +155,7 @@ diff -Naur bootscripts.orig/lfs/init.d/cleanfs bootscripts/lfs/init.d/cleanfs
  		fi
 diff -Naur bootscripts.orig/lfs/init.d/console bootscripts/lfs/init.d/console
 --- bootscripts.orig/lfs/init.d/console	2005-03-16 22:58:21.000000000 +0000
-+++ bootscripts/lfs/init.d/console	2005-03-31 05:09:14.944888424 +0000
++++ bootscripts/lfs/init.d/console	2005-03-31 06:17:26.929812160 +0000
 @@ -25,18 +25,21 @@
  	start)
  		if [ -n "${KEYMAP}" ]; then
@@ -180,7 +180,7 @@ diff -Naur bootscripts.orig/lfs/init.d/console bootscripts/lfs/init.d/console
  		fi
 diff -Naur bootscripts.orig/lfs/init.d/functions bootscripts/lfs/init.d/functions
 --- bootscripts.orig/lfs/init.d/functions	2005-03-31 04:10:50.000000000 +0000
-+++ bootscripts/lfs/init.d/functions	2005-03-31 05:09:14.986882040 +0000
++++ bootscripts/lfs/init.d/functions	2005-03-31 06:17:26.932811704 +0000
 @@ -263,7 +263,8 @@
  	boot_mesg -n " the LFS book, please be so kind to inform us at"
  	boot_mesg " lfs-dev@linuxfromscratch.org.\n"
@@ -191,20 +191,9 @@ diff -Naur bootscripts.orig/lfs/init.d/functions bootscripts/lfs/init.d/function
  	boot_mesg "" ${NORMAL}
  	read ENTER
  }
-diff -Naur bootscripts.orig/lfs/init.d/halt bootscripts/lfs/init.d/halt
---- bootscripts.orig/lfs/init.d/halt	2005-03-12 01:31:41.000000000 +0000
-+++ bootscripts/lfs/init.d/halt	2005-03-31 05:09:15.005879152 +0000
-@@ -17,6 +17,7 @@
- 
- case "${1}" in
- 	stop)
-+		putlcd "Shutdown" "Completed"
- 		halt -d -f -i -p
- 		;;
- 	*)
 diff -Naur bootscripts.orig/lfs/init.d/hotplug bootscripts/lfs/init.d/hotplug
 --- bootscripts.orig/lfs/init.d/hotplug	2005-03-14 22:05:31.000000000 +0000
-+++ bootscripts/lfs/init.d/hotplug	2005-03-31 05:09:15.049872464 +0000
++++ bootscripts/lfs/init.d/hotplug	2005-03-31 06:17:26.935811248 +0000
 @@ -18,6 +18,7 @@
  case "${1}" in
  	start|restart)
@@ -232,7 +221,7 @@ diff -Naur bootscripts.orig/lfs/init.d/hotplug bootscripts/lfs/init.d/hotplug
  		for rc in /etc/hotplug/*.rc
 diff -Naur bootscripts.orig/lfs/init.d/laststart bootscripts/lfs/init.d/laststart
 --- bootscripts.orig/lfs/init.d/laststart	1970-01-01 00:00:00.000000000 +0000
-+++ bootscripts/lfs/init.d/laststart	2005-03-31 05:09:15.070869272 +0000
++++ bootscripts/lfs/init.d/laststart	2005-03-31 06:17:26.936811096 +0000
 @@ -0,0 +1,45 @@
 +#!/bin/sh
 +########################################################################
@@ -281,7 +270,7 @@ diff -Naur bootscripts.orig/lfs/init.d/laststart bootscripts/lfs/init.d/laststar
 +
 diff -Naur bootscripts.orig/lfs/init.d/localnet bootscripts/lfs/init.d/localnet
 --- bootscripts.orig/lfs/init.d/localnet	2005-03-12 01:31:41.000000000 +0000
-+++ bootscripts/lfs/init.d/localnet	2005-03-31 05:09:15.080867752 +0000
++++ bootscripts/lfs/init.d/localnet	2005-03-31 06:17:26.937810944 +0000
 @@ -19,17 +19,20 @@
  case "${1}" in
  	start)
@@ -305,7 +294,7 @@ diff -Naur bootscripts.orig/lfs/init.d/localnet bootscripts/lfs/init.d/localnet
  		;;
 diff -Naur bootscripts.orig/lfs/init.d/modules bootscripts/lfs/init.d/modules
 --- bootscripts.orig/lfs/init.d/modules	2005-03-16 23:03:11.000000000 +0000
-+++ bootscripts/lfs/init.d/modules	2005-03-31 05:09:15.091866080 +0000
++++ bootscripts/lfs/init.d/modules	2005-03-31 06:17:26.939810640 +0000
 @@ -60,6 +60,7 @@
  					# otherwise take note.
  					if [ ${?} -eq 0 ]; then
@@ -316,7 +305,7 @@ diff -Naur bootscripts.orig/lfs/init.d/modules bootscripts/lfs/init.d/modules
  					fi
 diff -Naur bootscripts.orig/lfs/init.d/mountfs bootscripts/lfs/init.d/mountfs
 --- bootscripts.orig/lfs/init.d/mountfs	2005-03-12 01:31:41.000000000 +0000
-+++ bootscripts/lfs/init.d/mountfs	2005-03-31 05:09:15.101864560 +0000
++++ bootscripts/lfs/init.d/mountfs	2005-03-31 06:17:26.940810488 +0000
 @@ -18,6 +18,7 @@
  case "${1}" in
  	start)
@@ -348,20 +337,9 @@ diff -Naur bootscripts.orig/lfs/init.d/mountfs bootscripts/lfs/init.d/mountfs
  		umount -a -d -r &>/dev/null
  		evaluate_retval
  		;;
-diff -Naur bootscripts.orig/lfs/init.d/mountkernfs bootscripts/lfs/init.d/mountkernfs
---- bootscripts.orig/lfs/init.d/mountkernfs	2005-03-16 23:03:32.000000000 +0000
-+++ bootscripts/lfs/init.d/mountkernfs	2005-03-31 05:09:15.111863040 +0000
-@@ -18,7 +18,6 @@
- case "${1}" in
- 	start)
- 		boot_mesg -n "Mounting kernel-based file systems:" ${INFO}
--
- 		if ! mountpoint /proc &> /dev/null; then
- 			boot_mesg -n " /proc" ${NORMAL}
- 			mount -n /proc || failed=1
 diff -Naur bootscripts.orig/lfs/init.d/rc bootscripts/lfs/init.d/rc
 --- bootscripts.orig/lfs/init.d/rc	2005-03-16 23:04:42.000000000 +0000
-+++ bootscripts/lfs/init.d/rc	2005-03-31 05:09:15.143858176 +0000
++++ bootscripts/lfs/init.d/rc	2005-03-31 06:17:26.943810032 +0000
 @@ -33,6 +33,7 @@
  
  if [ ! -d ${rc_base}/rc${runlevel}.d ]; then
@@ -390,7 +368,7 @@ diff -Naur bootscripts.orig/lfs/init.d/rc bootscripts/lfs/init.d/rc
  done
 diff -Naur bootscripts.orig/lfs/init.d/reboot bootscripts/lfs/init.d/reboot
 --- bootscripts.orig/lfs/init.d/reboot	2005-03-12 01:31:41.000000000 +0000
-+++ bootscripts/lfs/init.d/reboot	2005-03-31 05:09:15.153856656 +0000
++++ bootscripts/lfs/init.d/reboot	2005-03-31 06:17:26.944809880 +0000
 @@ -17,7 +17,6 @@
  
  case "${1}" in
@@ -401,12 +379,12 @@ diff -Naur bootscripts.orig/lfs/init.d/reboot bootscripts/lfs/init.d/reboot
  
 diff -Naur bootscripts.orig/lfs/init.d/sendsignals bootscripts/lfs/init.d/sendsignals
 --- bootscripts.orig/lfs/init.d/sendsignals	2005-03-16 23:05:03.000000000 +0000
-+++ bootscripts/lfs/init.d/sendsignals	2005-03-31 05:09:15.162855288 +0000
++++ bootscripts/lfs/init.d/sendsignals	2005-03-31 06:26:24.344469768 +0000
 @@ -18,6 +18,7 @@
  case "${1}" in
  	stop)
  		boot_mesg "Sending all processes the TERM signal..."
-+		putlcd "Sending:" " TERM signal"
++		putlcd "Sending:" "TERM signal"
  		killall5 -15
  		error_value=${?}
  
@@ -420,7 +398,7 @@ diff -Naur bootscripts.orig/lfs/init.d/sendsignals bootscripts/lfs/init.d/sendsi
  
 diff -Naur bootscripts.orig/lfs/init.d/setclock bootscripts/lfs/init.d/setclock
 --- bootscripts.orig/lfs/init.d/setclock	2005-03-12 01:31:41.000000000 +0000
-+++ bootscripts/lfs/init.d/setclock	2005-03-31 05:09:15.172853768 +0000
++++ bootscripts/lfs/init.d/setclock	2005-03-31 06:17:26.947809424 +0000
 @@ -32,12 +32,14 @@
  case ${1} in
  	start)
@@ -438,7 +416,7 @@ diff -Naur bootscripts.orig/lfs/init.d/setclock bootscripts/lfs/init.d/setclock
  		;;
 diff -Naur bootscripts.orig/lfs/init.d/sshd bootscripts/lfs/init.d/sshd
 --- bootscripts.orig/lfs/init.d/sshd	1970-01-01 00:00:00.000000000 +0000
-+++ bootscripts/lfs/init.d/sshd	2005-03-31 04:04:03.000000000 +0000
++++ bootscripts/lfs/init.d/sshd	2005-03-31 06:17:26.949809120 +0000
 @@ -0,0 +1,52 @@
 +#!/bin/sh
 +########################################################################
@@ -494,7 +472,7 @@ diff -Naur bootscripts.orig/lfs/init.d/sshd bootscripts/lfs/init.d/sshd
 +# End $rc_base/init.d/sshd
 diff -Naur bootscripts.orig/lfs/init.d/swap bootscripts/lfs/init.d/swap
 --- bootscripts.orig/lfs/init.d/swap	2005-03-12 01:31:41.000000000 +0000
-+++ bootscripts/lfs/init.d/swap	2005-03-31 05:09:15.182852248 +0000
++++ bootscripts/lfs/init.d/swap	2005-03-31 06:17:26.950808968 +0000
 @@ -18,12 +18,14 @@
  case "${1}" in
  	start)
@@ -512,7 +490,7 @@ diff -Naur bootscripts.orig/lfs/init.d/swap bootscripts/lfs/init.d/swap
  		;;
 diff -Naur bootscripts.orig/lfs/init.d/sysctl bootscripts/lfs/init.d/sysctl
 --- bootscripts.orig/lfs/init.d/sysctl	2005-03-16 23:05:21.000000000 +0000
-+++ bootscripts/lfs/init.d/sysctl	2005-03-31 05:09:15.192850728 +0000
++++ bootscripts/lfs/init.d/sysctl	2005-03-31 06:17:26.951808816 +0000
 @@ -21,6 +21,7 @@
  	start)
  		if [ -f "/etc/sysctl.conf" ]; then
@@ -523,7 +501,7 @@ diff -Naur bootscripts.orig/lfs/init.d/sysctl bootscripts/lfs/init.d/sysctl
  		fi
 diff -Naur bootscripts.orig/lfs/init.d/sysklogd bootscripts/lfs/init.d/sysklogd
 --- bootscripts.orig/lfs/init.d/sysklogd	2005-03-31 04:10:50.000000000 +0000
-+++ bootscripts/lfs/init.d/sysklogd	2005-03-31 05:09:15.202849208 +0000
++++ bootscripts/lfs/init.d/sysklogd	2005-03-31 06:17:26.952808664 +0000
 @@ -18,17 +18,21 @@
  case "${1}" in
  	start)
@@ -548,7 +526,7 @@ diff -Naur bootscripts.orig/lfs/init.d/sysklogd bootscripts/lfs/init.d/sysklogd
  
 diff -Naur bootscripts.orig/lfs/init.d/udev bootscripts/lfs/init.d/udev
 --- bootscripts.orig/lfs/init.d/udev	2005-03-16 23:05:42.000000000 +0000
-+++ bootscripts/lfs/init.d/udev	2005-03-31 05:09:15.223846016 +0000
++++ bootscripts/lfs/init.d/udev	2005-03-31 06:23:34.819884368 +0000
 @@ -39,7 +39,8 @@
  			boot_mesg -n " will be halted and powered off."
  			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
@@ -559,7 +537,7 @@ diff -Naur bootscripts.orig/lfs/init.d/udev bootscripts/lfs/init.d/udev
  			/etc/rc.d/init.d/halt stop
  		fi
  
-@@ -57,12 +58,13 @@
+@@ -57,7 +58,8 @@
  			boot_mesg -n " will be halted and powered off."
  			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
  			boot_mesg "" ${NORMAL}
@@ -569,25 +547,18 @@ diff -Naur bootscripts.orig/lfs/init.d/udev bootscripts/lfs/init.d/udev
  			/etc/rc.d/init.d/halt stop
  		fi
  
--		# Assign udevsend to get hotplug events. udevsend can manage the whole
--		# hotplug handling by taking over the kernel spawned event process
-+		# Assign hotplug to get hotplug events.  The LFS Book disables
-+		# automatically using hotplug until the system is ready for it
- 		echo /sbin/udevsend > /proc/sys/kernel/hotplug
- 
- 		# Populate /dev with all the devices that are already available,
 diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/ifdown bootscripts/lfs/sysconfig/network-devices/ifdown
---- bootscripts.orig/lfs/sysconfig/network-devices/ifdown	2005-03-17 06:07:08.000000000 +0000
-+++ bootscripts/lfs/sysconfig/network-devices/ifdown	2005-03-31 05:23:06.839421232 +0000
-@@ -61,6 +61,7 @@
- 				IFCONFIG=${file} ${network_devices}/services/${SERVICE} ${1} down
+--- bootscripts.orig/lfs/sysconfig/network-devices/ifdown	2005-03-31 06:14:54.610968000 +0000
++++ bootscripts/lfs/sysconfig/network-devices/ifdown	2005-03-31 06:20:38.332714496 +0000
+@@ -60,6 +60,7 @@
+ 				IFCONFIG=${file} ${network_devices}/services/${SERVICE} ${1} down ${ESSID}
  			else
  				boot_mesg "Interface ${1} doesn't exist." ${WARNING}
 +				putlcd "Interface ${1}" "doesn't exist."
  				echo_warning
  			fi
  		else
-@@ -79,6 +80,7 @@
+@@ -77,6 +78,7 @@
  	if [ -n "${link_status}" ]; then
  		if echo "${link_status}" | grep -q UP; then
  			boot_mesg "Bringing down the ${1} interface..."
@@ -596,27 +567,27 @@ diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/ifdown bootscripts/lfs
  			evaluate_retval
  		fi
 diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/ifup bootscripts/lfs/sysconfig/network-devices/ifup
---- bootscripts.orig/lfs/sysconfig/network-devices/ifup	2005-03-17 06:07:08.000000000 +0000
-+++ bootscripts/lfs/sysconfig/network-devices/ifup	2005-03-31 05:23:06.851419408 +0000
-@@ -32,6 +32,7 @@
- 
- 
- boot_mesg "Bringing up the ${1} interface..."
-+putlcd "Bringing up" "${1} interface"
- boot_mesg_flush
- 
- # Process each configuration file
-@@ -62,6 +63,7 @@
- 						ip link set ${1} up
- 						if [ "$?" != "0" ]; then
- 							boot_mesg "Unable to activate ${1}." ${FAILURE}
-+							putlcd "Unable to" "activate ${1}"
- 							echo_failure
- 						fi
- 					fi
+--- bootscripts.orig/lfs/sysconfig/network-devices/ifup	2005-03-31 06:14:47.316077000 +0000
++++ bootscripts/lfs/sysconfig/network-devices/ifup	2005-03-31 06:20:28.048277968 +0000
+@@ -24,6 +24,7 @@
+ 	if [ -n "${link_status}" ]; then
+ 		if ! echo "${link_status}" | grep -q UP; then
+ 			boot_mesg "Bringing up the ${1} interface..."
++			putlcd "Bringing up" "${1} interface"
+ 			ip link set ${1} up
+ 			evaluate_retval
+ 		fi
+@@ -70,6 +71,7 @@
+ 				IFCONFIG=${file} ${network_devices}/services/${SERVICE} ${1} up ${ESSID}
+ 			else
+ 				boot_mesg "Interface ${1} doesn't exist." ${WARNING}
++				putlcd "Interface ${1}" "doesn't exist."
+ 				echo_warning
+ 			fi
+ 		else
 diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static bootscripts/lfs/sysconfig/network-devices/services/ipv4-static
---- bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static	2005-03-16 23:08:28.000000000 +0000
-+++ bootscripts/lfs/sysconfig/network-devices/services/ipv4-static	2005-03-31 05:10:30.332427776 +0000
+--- bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static	2005-03-31 06:15:31.246398000 +0000
++++ bootscripts/lfs/sysconfig/network-devices/services/ipv4-static	2005-03-31 06:17:26.961807296 +0000
 @@ -50,6 +50,7 @@
  case "${2}" in
  	up)
@@ -633,11 +604,9 @@ diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static b
  				ip route add default via ${GATEWAY} dev ${1}
  				evaluate_retval
  			 fi
-@@ -66,13 +68,15 @@
- 	;;
- 	
+@@ -68,11 +70,13 @@
  	down)
-		if [ -n "${GATEWAY}" ];	then
+ 		if [ -n "${GATEWAY}" ];	then
  			boot_mesg "Removing default gateway..."
 +			putlcd "Removing" "default gateway"
  			ip route del default
@@ -650,8 +619,8 @@ diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static b
  		evaluate_retval
  	;;
 diff -Naur bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static-route bootscripts/lfs/sysconfig/network-devices/services/ipv4-static-route
---- bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static-route	2005-03-16 23:08:51.000000000 +0000
-+++ bootscripts/lfs/sysconfig/network-devices/services/ipv4-static-route	2005-03-31 05:10:30.343426104 +0000
+--- bootscripts.orig/lfs/sysconfig/network-devices/services/ipv4-static-route	2005-03-31 06:15:43.892476000 +0000
++++ bootscripts/lfs/sysconfig/network-devices/services/ipv4-static-route	2005-03-31 06:17:26.962807144 +0000
 @@ -74,12 +74,14 @@
  case "${2}" in
  	up)
