@@ -29,11 +29,13 @@
 
 <para>Prepare Patch for compilation:</para>
 
-<screen><userinput>CPPFLAGS=-D_GNU_SOURCE ./configure --prefix=/tools</userinput></screen>
+<!-- This is temporally until can test if there is other ways to do it -->
 
-<para>The preprocessor flag <parameter>-D_GNU_SOURCE</parameter> is
-only needed on the PowerPC platform. It can be left out on other
-architectures.</para>
+<screen arch="x86"><userinput>./configure --prefix=/tools</userinput></screen>
+
+<screen arch="raq2"><userinput>./configure --prefix=/tools</userinput></screen>
+
+<screen arch="ppc"><userinput>CPPFLAGS=-D_GNU_SOURCE ./configure --prefix=/tools</userinput></screen>
 
 <para>Compile the package:</para>
 

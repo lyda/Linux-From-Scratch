@@ -42,13 +42,13 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
-<seglistitem><seg></seg></seglistitem>
+<seglistitem><seg>Unchecked</seg></seglistitem>
 </segmentedlist>
-
+<!--
 <variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>
 
-<!--
+
 <varlistentry id="yaboot-rom-image.bin">
 <term><command>yaboot-rom-image.bin</command></term>
 <listitem>
@@ -56,9 +56,9 @@ GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
 <indexterm zone="ch-system-yaboot yaboot-rom-image.bin"><primary sortas="b-yaboot-rom-image.bin">yaboot-rom-image.bin</primary></indexterm>
 </listitem>
 </varlistentry>
--->
 
 </variablelist>
+-->
 
 </sect2>
 
