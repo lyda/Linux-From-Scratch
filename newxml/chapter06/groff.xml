@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch06-groff">
+<title>Installing Groff-1.19</title>
+<?dbhtml filename="groff.html"?>
+
+<screen>Estimated build time:           0.5 SBU
+Estimated required disk space:  43 MB</screen>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/groff-contents.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/groff-deps.xml"/>
+
+
+
+<sect2>
+<title>Installation of Groff</title>
+
+<para>Groff expects the environment variable PAGE to contain the default paper
+size. For those in the United States, the command below is appropriate.  If you
+live elsewhere, you may want to change <emphasis>PAGE=letter</emphasis> to
+<emphasis>PAGE=A4</emphasis>.</para>
+
+<para>Prepare Groff for compilation:</para>
+
+<screen><userinput>PAGE=letter ./configure --prefix=/usr</userinput></screen>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>And install it:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+<para>Some documentation programs, such as <userinput>xman</userinput>,
+will not work properly without the following symlinks:</para>
+
+<screen><userinput>ln -s soelim /usr/bin/zsoelim
+ln -s eqn /usr/bin/geqn
+ln -s tbl /usr/bin/gtbl</userinput></screen>
+
+</sect2>
+
+</sect1>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect2><title>Contents of Flex</title>
+
+<!-- <para>(Last checked against version &flex-contversion;.)</para> -->
+
+<para>The Flex package is used to generate programs which recognize
+patterns in text.</para>
+
+<para><emphasis>Installed programs</emphasis>: flex, flex++ (link to flex)
+and lex</para>
+
+<para><emphasis>Installed library</emphasis>: libfl.a</para>
+
+</sect2>

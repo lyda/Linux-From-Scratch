@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch06-bash">
+<title>Installing Bash-2.05b</title>
+<?dbhtml filename="bash.html"?>
+
+<screen>Estimated build time:           1.2 SBU
+Estimated required disk space:  27 MB</screen>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/bash-contents.xml"/>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/bash-deps.xml"/>
+
+
+
+<sect2>
+<title>Installation of Bash</title>
+
+<para>Bash has a number of bugs in it that cause it to not behave the 
+way it is expected at times. Fix this behaviour with the following
+patch:</para>
+
+<screen><userinput>patch -Np1 -i ../bash-2.05b-2.patch</userinput></screen>
+
+<para>Prepare Bash for compilation:</para>
+
+<screen><userinput>./configure --prefix=/usr --bindir=/bin</userinput></screen>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>This package has a test suite available which can perform a number of
+checks to ensure it built correctly.  Should you choose to run it, the 
+following command will do so:</para>
+
+<screen><userinput>make tests</userinput></screen>
+
+<para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+<para>And reload the newly compiled <userinput>bash</userinput> program:</para>
+
+<screen><userinput>exec /bin/bash --login +h</userinput></screen>
+
+</sect2>
+
+</sect1>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect2><title>E2fsprogs Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &e2fsprogs-depversion;.)</para> -->
+
+<para>E2fsprogs depends on: Bash, Binutils, Coreutils,
+Diffutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, Texinfo.</para>
+
+</sect2>

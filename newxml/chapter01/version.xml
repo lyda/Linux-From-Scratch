@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect1 id="ch01-version" xreflabel="Chapter 1 - Book Version">
-<title>Book version</title>
-<?dbhtml filename="version.html"?>
-
-<para>This is version CVS-20040102 of the Linux From Scratch book, dated
-January 2nd, 2004. If this book is more than two months old, a newer and better
-version is probably already available. To find out, check one of the mirrors
-listed on <ulink url="http://www.linuxfromscratch.org/"/>.</para>
-
-</sect1>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-gawk" xreflabel="Gawk">
+<title>Gawk</title>
+<?dbhtml filename="gawk.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-gawk"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>Gawk (3.1.3): 
+<ulink url="ftp://ftp.gnu.org/pub/gnu/gawk/"/>
+
+Gawk Libexecdir Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/gawk-3.1.3-libexecdir.patch"/></literallayout>
+</sect2>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gawk-contents.xml"/>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>gawk</command> is a program for manipulating text files.
+It is the GNU implementation of awk.</para>
+
+<para><command>grcat</command> dumps the group database
+<filename>/etc/group</filename>.</para>
+
+<para><command>igawk</command> gives gawk the ability to
+include files.</para>
+
+<para><command>pgawk</command> is the profiling version of gawk.</para>
+
+<para><command>pwcat</command> dumps the password database
+<filename>/etc/passwd</filename>.</para>
+
+</sect2>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gawk-deps.xml"/>
+
+
+
+</sect1>

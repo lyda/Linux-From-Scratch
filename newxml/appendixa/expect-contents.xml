@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect2><title>Contents of Expect</title>
+
+<!-- <para>(Last checked against version &expect-contversion;.)</para> -->
+
+<para>The Expect package provides a program that performs programmed dialogue
+with other interactive programs.</para>
+
+<para><emphasis>Installed program</emphasis>: expect</para>
+
+<para><emphasis>Installed library</emphasis>: libexpect5.39.a</para>
+
+</sect2>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch05-bzip2">
+<title>Installing Bzip2-1.0.2</title>
+<?dbhtml filename="bzip2.html"?>
+
+<screen>Estimated build time:           0.1 SBU
+Estimated required disk space:  2.5 MB</screen>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/bzip2-contents.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/bzip2-deps.xml"/>
+
+
+
+<sect2>
+<title>Installation of Bzip2</title>
+
+<para>The Bzip2 package doesn't contain a <userinput>configure</userinput>
+script. Compile and install it with a straightforward:</para>
+
+<screen><userinput>make PREFIX=/tools install</userinput></screen>
+
+</sect2>
+
+</sect1>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-less" xreflabel="Less">
+<title>Less</title>
+<?dbhtml filename="less.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-less"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>Less (381): 
+<ulink url="ftp://ftp.gnu.org/gnu/less/"/></literallayout>
+</sect2>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="less-contents.xml"/>
+
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>less</command> is a file viewer or pager. It displays the
+contents of the given file, letting you scroll around, find strings, and jump
+to marks.</para>
+
+<para><command>lessecho</command> is needed to expand metacharacters,
+such as * and ?, in filenames on Unix systems.</para>
+
+<para><command>lesskey</command> is used to specify the key bindings
+for less.</para>
+
+</sect2>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="less-deps.xml"/>
+
+
+
+</sect1>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch06-MAKEDEV">
+<title>Creating devices (Makedev-1.7)</title>
+<?dbhtml filename="makedev.html"?>
+
+<screen>Estimated build time:           0.1 SBU
+Estimated required disk space:  50 KB</screen>
+
+<sect2><title>Contents of MAKEDEV</title>
+
+<!-- <para>(Last checked against version &makedev-contversion;.)</para> -->
+
+<para>The MAKEDEV script creates the static device nodes which
+usually reside in the <filename class="directory">/dev</filename>
+directory. Detailed information about device nodes may be found
+in the <filename>Documentation/devices.txt</filename> file under
+the Linux kernel source tree.</para>
+
+<para><emphasis>Installed script</emphasis>: MAKEDEV</para>
+
+</sect2>
+
+
+<sect2>
+<title>MAKEDEV Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &makedev-depversion;.)</para> -->
+
+<para>MAKEDEV depends on: Bash, Coreutils.</para>
+
+</sect2>
+
+
+
+
+<sect2>
+<title>Creating devices</title>
+
+<para>Note that unpacking the <filename>MAKEDEV-1.7.bz2</filename>
+file doesn't create a directory for you to <userinput>cd</userinput> into, as
+the file contains only a shell script.</para>
+
+<para>Install the <userinput>MAKEDEV</userinput> script:</para>
+
+<screen><userinput>bzcat MAKEDEV-1.7.bz2 &gt; /dev/MAKEDEV
+chmod 754 /dev/MAKEDEV</userinput></screen>
+
+<para>Run the script to create the device files:</para>
+
+<screen><userinput>cd /dev
+./MAKEDEV -v generic-nopty</userinput></screen>
+
+<para>The meaning of the arguments:</para>
+
+<itemizedlist>
+<listitem><para><userinput>-v</userinput>: This tells the script to run in
+verbose mode.</para></listitem>
+
+<listitem><para><userinput>generic-nopty</userinput>: This instructs
+<userinput>MAKEDEV</userinput> to create a generic selection of commonly used
+device special files, except for the ptyXX and ttyXX range of files. We don't
+need those files because we are going to use Unix98 PTYs via the
+<emphasis>devpts</emphasis> file system.</para></listitem>
+</itemizedlist>
+
+<para>If it turns out that some special device <filename>zzz</filename> that
+you need is missing, try running <userinput>./MAKEDEV -v zzz</userinput>.
+Alternatively, you may create devices via the <userinput>mknod</userinput>
+program. Please refer to its man and info pages if you need more
+information.</para>
+
+<para>Additionally, if you were unable to mount the devpts filesystem earlier in
+the "Mounting the proc and devpts file systems" section, now is the time to
+try the alternatives. If your kernel supports the devfs file system, run the
+following command to mount devfs:</para>
+
+<screen><userinput>mount -t devfs devfs /dev</userinput></screen>
+
+<para>This will mount the devfs file system over the top of the new static
+<filename>/dev</filename> structure. This poses no problems, as the device nodes
+created are still present, they are just hidden by the new devfs
+filesystem.</para>
+
+<para>If this still doesn't work, the only option left is to use the MAKEDEV
+script to create the ptyXX and ttyXX range of files that would otherwise not be
+needed. Ensure you are still in the <filename>/dev</filename> directory then run
+<userinput>./MAKEDEV -v pty</userinput>. The downside of this is, we are
+creating an extra 512 device special files which will not be needed when we
+finally boot into the finished LFS system.</para>
+
+</sect2>
+
+</sect1>

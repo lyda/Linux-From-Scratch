@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-flex" xreflabel="Flex">
+<title>Flex</title>
+<?dbhtml filename="flex.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-flex"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>Flex (2.5.4a): 
+<ulink url="ftp://ftp.gnu.org/non-gnu/flex/"/></literallayout>
+</sect2>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="flex-contents.xml"/>
+
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>flex</command> is a tool for generating programs that
+recognize patterns in text. Pattern recognition is useful in many applications.
+From a set of rules on what to look for flex makes a program that looks for
+those patterns. The reason to use flex is that it is much easier to specify
+the rules for than to write the actual pattern-finding program.</para>
+
+<para><command>flex++</command> invokes a version of flex that is used
+exclusively for C++ scanners.</para>
+
+<para><command>libfl.a</command> is the flex library.</para>
+
+</sect2>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="flex-deps.xml"/>
+
+
+
+</sect1>

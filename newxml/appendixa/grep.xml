@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-grep" xreflabel="Grep">
+<title>Grep</title>
+<?dbhtml filename="grep.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-grep"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>Grep (2.5.1): 
+<ulink url="ftp://ftp.gnu.org/gnu/grep/"/></literallayout>
+</sect2>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grep-contents.xml"/>
+
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>egrep</command> prints lines matching an extended regular
+expression.</para>
+
+<para><command>fgrep</command> prints lines matching a list of fixed
+strings.</para>
+
+<para><command>grep</command> prints lines matching a basic regular
+expression.</para>
+
+</sect2>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grep-deps.xml"/>
+
+
+
+</sect1>

@@ -1,23 +1,19 @@
 TODO
 ~~~~
 
-1. Further split the XML sources up
-     * Split Appendix A up first
-     * Split Chapters 5 and 6 up, replacing content that's in appendixa/*.xml
-       with XInclude instructions  
-2. Reintroduce some entities that were removed during the cleanup
-3. Provide a css file to provide nicer output than whatever the UA's default is.
+1. Reintroduce some entities that were removed during the cleanup
+2. Provide a css file to provide nicer output than whatever the UA's default is.
    * Started - needs some comments regarding layout.
-4. Decide whether we want to use the strict or traditional XHTML DTD.  Note in
+3. Decide whether we want to use the strict or traditional XHTML DTD.  Note in
    particular http://www.sagehill.net/docbookxsl/OtherOutputForms.html#d0e23340.
-5. Move the legalinfo off the titlepage.
+4. Move the legalinfo off the titlepage.
      * Started
      * It generates it's own hyperlink ("Legal Notice") but the current book has
        it linked to via the "Copyright" message above
      * It writes the legalnotice out to a randomly named file under ${base.dir}
        instead of the more preferable ${base.dir}/prologue/legalnotice.html.
-6. Decide on what levels the TOCs should go down to.
+5. Decide on what levels the TOCs should go down to.
    * Section elements now no longer have a TOC generated for them - the book TOC
      remains unchanged as do the part and appendix level TOCs.
-7. Incorporate Alex's restructuring?
-8. Write some more stylesheets to produce alternative output formats.
+6. Incorporate Alex's restructuring?
+7. Write some more stylesheets to produce alternative output formats.

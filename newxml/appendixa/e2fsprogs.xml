@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-e2fsprogs" xreflabel="E2fsprogs">
+<title>E2fsprogs</title>
+<?dbhtml filename="e2fsprogs.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-e2fsprogs"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>E2fsprogs (1.34):
+<ulink url="ftp://download.sourceforge.net/pub/sourceforge/e2fsprogs/"/>
+<ulink url="http://download.sourceforge.net/e2fsprogs/"/></literallayout>
+</sect2>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="e2fsprogs-contents.xml"/>
+
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>badblocks</command> searches a device (usually a disk
+partition) for bad blocks.</para>
+
+<para><command>blkid</command> is a command line utility to locate and
+print block device attributes.</para>
+
+<para><command>chattr</command> changes the attributes of files on a
+second extended (ext2) filesystem.</para>
+
+<para><command>compile_et</command> is an error table compiler. It
+converts a table of error-code names and messages into a C source file
+suitable for use with the com_err library.</para>
+
+<para><command>debugfs</command> is a filesystem debugger. It can be
+used to examine and change the state of an ext2 filesystem.</para>
+
+<para><command>dumpe2fs</command> prints the super block and blocks group
+information for the filesystem present on a given device.</para>
+
+<para><command>e2fsck</command> is used to check, and optionally repair,
+second extended (ext2) filesystems, and also ext3 filesystems.</para>
+
+<para><command>e2image</command> is used to save critical ext2 filesystem
+data to a file.</para>
+
+<para><command>e2label</command> will display or change the filesystem
+label on the ext2 filesystem present on a given device.</para>
+
+<para><command>findfs</command> finds a file system by label or UUID.</para>
+
+<para><command>fsck</command> is used to check, and optionally repair,
+filesystems. By default it checks the filesystems listed in
+<filename>/etc/fstab</filename></para>
+
+<para><command>logsave</command> saves the output of a command in a logfile.</para>
+
+<para><command>lsattr</command> lists the attributes of files on a second
+extended filesystem.</para>
+
+<para><command>mk_cmds</command> converts a table of command names
+and help messages into a C source file suitable for use with the
+<filename>libss</filename> subsystem library.</para>
+
+<para><command>mke2fs</command> is used to create a second extended
+filesystem on the given device.</para>
+
+<para><command>mklost+found</command> is used to create a
+<filename>lost+found</filename> directory on a second extended filesystem.
+It pre-allocates disk blocks to this directory to lighten the task of e2fsck.</para>
+
+<para><command>resize2fs</command> can be used to enlarge or shrink an
+ext2 filesystem.</para>
+
+<para><command>tune2fs</command> is used adjust tunable filesystem
+parameters on a second extended filesystem.</para>
+
+<para><command>uuidgen</command> creates new universally unique
+identifiers (UUID). Each new UUID can reasonably be considered unique
+among all UUIDs created, on the local system and on other systems, in the
+past and in the future.</para>
+
+<para><command>libblkid</command> contains routines for device
+identification and token extraction.</para>
+
+<para><command>libcom_err</command> is the common error display routine.</para>
+
+<para><command>libe2p</command> is used by dumpe2fs, chattr, and lsattr.</para>
+
+<para><command>libext2fs</command> contains routines to enable user-level
+programs to manipulate an ext2 filesystem.</para>
+
+<para><command>libss</command> is used by debugfs.</para>
+
+<para><command>libuuid</command> contains routines for generating unique
+identifiers for objects that may be accessible beyond the local system.</para>
+
+</sect2>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="e2fsprogs-deps.xml"/>
+
+
+
+</sect1>

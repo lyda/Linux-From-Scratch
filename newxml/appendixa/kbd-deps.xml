@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect2><title>Kbd Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &kbd-depversion;.)</para> -->
+
+<para>Kbd depends on: Bash, Binutils, Bison, Coreutils,
+Diffutils, Flex, GCC, Gettext, Glibc, Grep, Gzip, M4, Make, Sed.</para>
+
+</sect2>

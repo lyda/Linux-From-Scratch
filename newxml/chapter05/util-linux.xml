@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch05-util-linux">
+<title>Installing Util-linux-2.12</title>
+<?dbhtml filename="util-linux.html"?>
+
+<screen>Estimated build time:           0.1 SBU
+Estimated required disk space:  8 MB</screen>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/util-linux-contents.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/util-linux-deps.xml"/>
+
+
+
+<sect2>
+<title>Installation of Util-linux</title>
+
+<para>Util-linux doesn't use the freshly installed headers and libraries from
+the /tools directory.  This is fixed by altering the configure script:</para>
+
+<screen><userinput>cp configure configure.backup
+sed "s@/usr/include@/tools/include@g" configure.backup &gt; configure</userinput></screen>
+
+<para>Prepare Util-linux for compilation:</para>
+
+<screen><userinput>./configure</userinput></screen>
+
+<para>Compile some support routines:</para>
+
+<screen><userinput>make -C lib</userinput></screen>
+
+<para>And, since you'll need only a couple of the utilities contained in this
+package, build just those:</para>
+
+<screen><userinput>make -C mount  mount umount
+make -C text-utils  more</userinput></screen>
+
+<para>Now copy these programs to the temporary tools directory:</para>
+
+<screen><userinput>cp mount/{,u}mount text-utils/more /tools/bin</userinput></screen>
+
+</sect2>
+
+</sect1>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch05-texinfo">
+<title>Installing Texinfo-4.6</title>
+<?dbhtml filename="texinfo.html"?>
+
+<screen>Estimated build time:           0.2 SBU
+Estimated required disk space:  16 MB</screen>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/texinfo-contents.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/texinfo-deps.xml"/>
+
+
+
+<sect2>
+<title>Installation of Texinfo</title>
+
+<para>Prepare Texinfo for compilation:</para>
+
+<screen><userinput>./configure --prefix=/tools</userinput></screen>
+
+<para>Compile the programs:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>This package has a test suite available which can perform a number of
+checks to ensure it built correctly.  Should you choose to run it, the 
+following command will do so:</para>
+
+<screen><userinput>make check</userinput></screen>
+
+<para>Then install them and their documentation:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+</sect2>
+
+</sect1>

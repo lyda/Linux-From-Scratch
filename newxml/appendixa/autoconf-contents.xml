@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect2><title>Contents of Autoconf</title>
+
+<!-- <para>(Last checked against version &autoconf-contversion;.)</para> -->
+
+<para>Autoconf produces shell scripts which automatically configure source
+code.</para>
+
+<para><emphasis>Installed programs</emphasis>: autoconf, autoheader, autom4te,
+autoreconf, autoscan, autoupdate and ifnames</para>
+
+</sect2>

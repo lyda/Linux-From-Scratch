@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-dejagnu" xreflabel="DejaGnu">
+<title>DejaGnu</title>
+<?dbhtml filename="dejagnu.html"?>
+
+<para>For installation instructions see <xref linkend="ch05-dejagnu"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>DejaGnu (1.4.3):
+<ulink url="ftp://ftp.gnu.org/gnu/dejagnu/"/></literallayout>
+</sect2>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="dejagnu-contents.xml"/>
+
+
+
+<sect2><title>Short description</title>
+
+<para><command>runtest</command> is the wrapper script that finds the proper
+expect shell and then runs DejaGnu.</para>
+
+</sect2>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="dejagnu-deps.xml"/>
+
+
+
+</sect1>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch05-ncurses">
+<title>Installing Ncurses-5.3</title>
+<?dbhtml filename="ncurses.html"?>
+
+<screen>Estimated build time:           0.7 SBU
+Estimated required disk space:  26 MB</screen>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/ncurses-contents.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/ncurses-deps.xml"/>
+
+
+
+<sect2>
+<title>Installation of Ncurses</title>
+
+<para>Fix a minor problem related to the <filename>etip.h</filename> header
+file:</para>
+
+<screen><userinput>patch -Np1 -i ../ncurses-5.3-etip-2.patch</userinput></screen>
+
+<para>Now prepare Ncurses for compilation:</para>
+
+<screen><userinput>./configure --prefix=/tools --with-shared \
+    --without-debug --without-ada --enable-overwrite</userinput></screen>
+
+<para>The meaning of the configure options:</para>
+
+<itemizedlist>
+<listitem><para><userinput>--without-ada</userinput>: This tells Ncurses not
+to build its Ada bindings, even if an Ada compiler is installed on the host.
+This must be done because once we enter the chroot environment, Ada will no
+longer be available.</para></listitem>
+
+<listitem><para><userinput>--enable-overwrite</userinput>: This tells Ncurses
+to install its header files into <filename class="directory">/tools/include</filename>
+instead of <filename class="directory">/tools/include/ncurses</filename> to
+ensure that other packages can find the Ncurses headers successfully.</para>
+</listitem></itemizedlist>
+
+<para>Compile the programs and libraries:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>Then install them and their documentation:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+</sect2>
+
+</sect1>

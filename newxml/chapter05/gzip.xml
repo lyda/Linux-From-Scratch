@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch05-gzip">
+<title>Installing Gzip-1.3.5</title>
+<?dbhtml filename="gzip.html"?>
+
+<screen>Estimated build time:           0.1 SBU
+Estimated required disk space:  2.6 MB</screen>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/gzip-contents.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/gzip-deps.xml"/>
+
+
+
+<sect2>
+<title>Installation of Gzip</title>
+
+<para>Prepare Gzip for compilation:</para>
+
+<screen><userinput>./configure --prefix=/tools</userinput></screen>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>And install it:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+</sect2>
+
+</sect1>

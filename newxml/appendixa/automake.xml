@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-automake" xreflabel="Automake">
+<title>Automake</title>
+<?dbhtml filename="automake.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-automake"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>Automake (1.8): 
+<ulink url="ftp://ftp.gnu.org/gnu/automake/"/></literallayout>
+</sect2>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="automake-contents.xml"/>
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>acinstall</command> is a script that installs
+aclocal-style M4 files.</para>
+
+<para><command>aclocal</command> generates <filename>aclocal.m4</filename>
+files based on the contents of <filename>configure.in</filename> files.</para>
+
+<para><command>automake</command> is a tool for automatically generating
+<filename>Makefile.in</filename>'s from files called
+<filename>Makefile.am</filename>. To create all the
+<filename>Makefile.in</filename> files for a package, run this program in the
+top level directory. By scanning the <filename>configure.in</filename>s it
+automatically finds each appropriate <filename>Makefile.am</filename> and
+generate the corresponding <filename>Makefile.in</filename>.</para>
+
+<para><command>compile</command> is a wrapper for compilers.</para>
+
+<para><command>config.guess</command> is a script that attempts to guess
+the canonical triplet for the given build, host, or target architecture.</para>
+
+<para><command>config.sub</command> is a configuration validation
+subroutine script.</para>
+
+<para><command>depcomp</command> is a script for compiling a program
+so that not only the desired output is generated but also dependency
+information.</para>
+
+<para><command>elisp-comp</command> byte-compiles Emacs Lisp code.</para>
+
+<para><command>install-sh</command> is a script that installs a program,
+a script, or a datafile.</para>
+
+<para><command>mdate-sh</command> is a script that prints the modification
+time of a file or directory.</para>
+
+<para><command>missing</command> is a script acting as a common stub for
+missing GNU programs during an installation.</para>
+
+<para><command>mkinstalldirs</command> is a script that creates a directory
+tree.</para>
+
+<para><command>py-compile</command> compiles a Python program.</para>
+
+<para><command>symlink-tree</command> is a script to create a symlink tree of
+a directory tree.</para>
+
+<para><command>ylwrap</command> is a wrapper for lex and yacc.</para>
+
+</sect2>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="automake-deps.xml"/>
+
+
+
+</sect1>

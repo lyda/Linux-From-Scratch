@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-findutils" xreflabel="Findutils">
+<title>Findutils</title>
+<?dbhtml filename="findutils.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-findutils"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>Findutils (4.3CR20):
+<ulink url="ftp://alpha.gnu.org/gnu/findutils/"/></literallayout>
+
+</sect2>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="findutils-contents.xml"/>
+
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>bigram</command> was formerly used to produce locate
+databases.</para>
+
+<para><command>code</command> was formerly used to produce locate
+databases. It is the ancestor of frcode.</para>
+
+<para><command>find</command> searches given directory trees for files
+matching the specified criteria.</para>
+
+<para><command>frcode</command> is called by updatedb to compress the
+list of file names. It uses front-compression, reducing the database size by a
+factor of 4 to 5.</para>
+
+<para><command>locate</command> searches through a database of file names,
+and reports the names that contain a given string or match a given pattern.</para>
+
+<para><command>updatedb</command> updates the locate database. It scans
+the entire filesystem (including other filesystems that are currently mounted,
+unless told not to) and puts every file name it finds in the database.</para>
+
+<para><command>xargs</command> can be used to apply a given command to
+a list of files.</para>
+
+</sect2>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="findutils-deps.xml"/>
+
+
+
+</sect1>

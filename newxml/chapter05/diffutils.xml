@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch05-diffutils">
+<title>Installing Diffutils-2.8.1</title>
+<?dbhtml filename="diffutils.html"?>
+
+<screen>Estimated build time:           0.1 SBU
+Estimated required disk space:  7.5 MB</screen>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/diffutils-contents.xml"/>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/diffutils-deps.xml"/>
+
+
+
+<sect2>
+<title>Installation of Diffutils</title>
+
+<para>Prepare Diffutils for compilation:</para>
+
+<screen><userinput>./configure --prefix=/tools</userinput></screen>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>And install it:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+</sect2>
+
+</sect1>

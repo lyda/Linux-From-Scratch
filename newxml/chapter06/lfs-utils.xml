@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="ch06-lfs-utils">
+<title>Installing Lfs-Utils-0.4.2</title>
+<?dbhtml filename="lfs-utils.html"?>
+
+<screen>Estimated build time:           0.1 SBU
+Estimated required disk space:  1.1 MB</screen>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/lfs-utils-contents.xml"/>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../appendixa/lfs-utils-deps.xml"/>
+
+
+
+<sect2>
+<title>Installation of Lfs-Utils</title>
+
+<para>Prepare Lfs-Utils for compilation:</para>
+
+<screen><userinput>./configure --prefix=/usr --with-libc</userinput></screen>
+
+<para>The meaning of the configure option:</para>
+
+<itemizedlist>
+<listitem><para><userinput>--with-libc</userinput>: This causes the
+<filename>mktemp</filename> program to use the <emphasis>mkstemp</emphasis>
+and <emphasis>mkdtemp</emphasis> functions from the system C
+library.</para></listitem>
+</itemizedlist>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>And install it:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+<para>Now copy two supporting files included in the Lfs-Utils tarball to
+their destination:</para>
+
+<screen><userinput>cp etc/{services,protocols} /etc</userinput></screen>
+
+<para>The <filename>/etc/services</filename> file is used to resolve service
+numbers to human-readable names, and the <filename>/etc/protocols</filename>
+does the same for protocol numbers.</para>
+
+</sect2>
+
+</sect1>

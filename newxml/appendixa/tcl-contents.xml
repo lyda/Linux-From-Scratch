@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect2><title>Contents of Tcl</title>
+
+<!-- <para>(Last checked against version &tcl-contversion;.)</para> -->
+
+<para>The Tcl package contains the Tool Command Language.</para>
+
+<para><emphasis>Installed programs</emphasis>: tclsh (link to tclsh8.4),
+tclsh8.4</para>
+
+<para><emphasis>Installed library</emphasis>: libtcl8.4.so</para>
+
+</sect2>

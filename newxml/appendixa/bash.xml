@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-bash" xreflabel="Bash">
+<title>Bash</title>
+<?dbhtml filename="bash.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-bash"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>Bash (2.05b): 
+<ulink url="ftp://ftp.gnu.org/gnu/bash/"/>
+
+Bash Patch:
+<ulink url="http://www.linuxfromscratch.org/patches/lfs/cvs/bash-2.05b-2.patch"/></literallayout>
+</sect2>
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bash-contents.xml"/>
+
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>bash</command> is a widely-used command interpreter. It
+performs all kinds of expansions and substitutions on a given command line
+before executing it, thus making this interpreter a powerful tool.</para>
+
+<para><command>bashbug</command> is a shell script to help the user
+compose and mail bug reports concerning bash in a standard format.</para>
+
+<para><command>sh</command> is a symlink to the bash program. When invoked
+as sh, bash tries to mimic the startup behavior of historical versions of sh as
+closely as possible, while conforming to the POSIX standard as well.</para>
+
+</sect2>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bash-deps.xml"/>
+
+
+
+</sect1>

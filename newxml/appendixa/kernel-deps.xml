@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect2><title>Linux Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &kernel-depversion;.)</para> -->
+
+<para>Linux depends on: Bash, Binutils, Coreutils, Findutils,
+GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, Sed.</para>
+
+</sect2>

@@ -24,7 +24,6 @@ headers</para>
 
 </sect2>
 
-<sect2><title> </title><para> </para></sect2>
 
 <sect2>
 <title>Linux Installation Dependencies</title>
@@ -37,7 +36,6 @@ GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, Sed.</para>
 </sect2>
 
 
-<sect2><title> </title><para> </para></sect2>
 
 <sect2>
 <title>Installation of the kernel</title>

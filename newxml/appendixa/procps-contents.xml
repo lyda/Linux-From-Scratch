@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect2><title>Contents of Procps</title>
+
+<!-- <para>(Last checked against version &procps-contversion;.)</para> -->
+
+<para>The Procps package provides programs to monitor and
+halt system processes. Procps gathers information about
+processes via the <filename>/proc</filename> directory.</para>
+
+<para><emphasis>Installed programs</emphasis>: free, kill, pgrep, pkill,
+pmap, ps, skill, snice, sysctl, tload, top, uptime, vmstat, w and watch</para>
+
+<para><emphasis>Installed library</emphasis>: libproc.so</para>
+
+</sect2>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect2><title>Contents of Zlib</title>
+
+<!-- <para>(Last checked against version &zlib-contversion;.)</para> -->
+
+<para>The Zlib package contains the libz library, which is used by some
+programs for its compression and uncompression functions.</para>
+
+<para><emphasis>Installed libraries</emphasis>: libz[a,so]</para>
+
+</sect2>

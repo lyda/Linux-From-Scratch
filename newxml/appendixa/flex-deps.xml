@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect2><title>Flex Installation Dependencies</title>
+
+<!-- <para>(Last checked against version &flex-depversion;.)</para> -->
+
+<para>Flex depends on: Bash, Binutils, Bison, Coreutils, Diffutils,
+GCC, Gettext, Glibc, Grep, M4, Make, Sed.</para>
+
+</sect2>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-libtool" xreflabel="Libtool">
+<title>Libtool</title>
+<?dbhtml filename="libtool.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-libtool"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>Libtool (1.5): 
+<ulink url="ftp://ftp.gnu.org/gnu/libtool/"/></literallayout>
+
+</sect2>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="libtool-contents.xml"/>
+
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>libtool</command> provides generalized library-building
+support services.</para>
+
+<para><command>libtoolize</command> provides a standard way to add
+libtool support to a package.</para>
+
+<para><command>libltdl</command> hides the various difficulties of
+dlopening libraries.</para>
+
+</sect2>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="libtool-deps.xml"/>
+
+
+
+</sect1>

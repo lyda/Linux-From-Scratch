@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
+<sect1 id="aa-procinfo" xreflabel="Procinfo">
+<title>Procinfo</title>
+<?dbhtml filename="procinfo.html"?>
+
+<para>For installation instructions see <xref linkend="ch06-procinfo"/>.</para>
+
+<sect2><title>Official Download Location</title>
+
+<literallayout>Procinfo (18):
+<ulink url="ftp://ftp.cistron.nl/pub/people/svm/"/></literallayout>
+</sect2>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="procinfo-contents.xml"/>
+
+
+
+<sect2><title>Short descriptions</title>
+
+<para><command>lsdev</command> lists the devices present in your system,
+and which IRQs and IO ports they use.</para>
+
+<para><command>procinfo</command> displays an overview of some of the info
+present in the virtual proc filesystem.</para>
+
+<para><command>socklist</command> lists the open sockets, reporting their
+type, portnumber, and other specifics.</para>
+
+</sect2>
+
+
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="procinfo-deps.xml"/>
+
+
+
+</sect1>
