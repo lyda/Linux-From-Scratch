@@ -1,0 +1,67 @@
+#!/bin/sh
+# Begin $rc_base/init.d/heimdal
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+# Heimdal bootscript submitted by Randy McMurchy - LFS-User@mcmurchy.com
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case "$1" in
+	start)  
+		echo "Starting KDC Server Daemon..."
+		if test -f "/var/run/kdc.pid"
+		then
+			print_status warning running
+		else
+			/usr/sbin/kdc &
+			sleep 1
+			if test -f "/var/run/kdc.pid"
+			then
+				print_status success
+			else
+				print_status failure
+			fi
+		fi
+		echo "Starting KDC kpasswdd Daemon..."
+		if test -f "/var/run/kpasswdd.pid"
+		then
+			print_status warning running
+		else
+			/usr/sbin/kpasswdd &
+			sleep 1
+			if test -f "/var/run/kpasswdd.pid"
+			then
+				print_status success
+			else
+				print_status failure
+			fi
+		fi
+		;;
+
+	stop)   
+		echo "Stopping KDC kpasswdd Daemon..."
+		killproc /usr/sbin/kpasswdd
+		echo "Stopping KDC Server Daemon..."
+		killproc /usr/sbin/kdc
+		;;
+
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+
+	status)
+		statusproc /usr/sbin/kdc
+		statusproc /usr/sbin/kpasswdd
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/heimdal

@@ -180,6 +180,16 @@ install-gpm: create-dirs
 	ln -sf  ../init.d/gpm ${EXTDIR}/rc.d/rc5.d/S70gpm
 	ln -sf  ../init.d/gpm ${EXTDIR}/rc.d/rc6.d/K10gpm
 
+install-heimdal: create-dirs
+	install -m 754 blfs/init.d/heimdal        ${EXTDIR}/rc.d/init.d/
+	ln -sf  ../init.d/heimdal ${EXTDIR}/rc.d/rc0.d/K42heimdal
+	ln -sf  ../init.d/heimdal ${EXTDIR}/rc.d/rc1.d/K42heimdal
+	ln -sf  ../init.d/heimdal ${EXTDIR}/rc.d/rc2.d/K42heimdal
+	ln -sf  ../init.d/heimdal ${EXTDIR}/rc.d/rc3.d/S28heimdal
+	ln -sf  ../init.d/heimdal ${EXTDIR}/rc.d/rc4.d/S28heimdal
+	ln -sf  ../init.d/heimdal ${EXTDIR}/rc.d/rc5.d/S28heimdal
+	ln -sf  ../init.d/heimdal ${EXTDIR}/rc.d/rc6.d/K42heimdal
+
 install-lisa: create-dirs
 	install -m 754 blfs/init.d/lisa       ${EXTDIR}/rc.d/init.d/
 	ln -sf  ../init.d/lisa ${EXTDIR}/rc.d/rc0.d/K35lisa
