@@ -31,7 +31,8 @@
 	&contributing-to-faq;
 </qandadiv>
 <qandadiv id="frb"><title>Frequently Reported Bugs</title>
-	&deps_version_not_match_package;
+	&when-next-lfs-release;
+	&deps_version_not_match_package; <!-- remove after LFS release > 3.3 -->
 	&shutdown-on-fsck-error;
 	&new-version;
 	&delete_key_not_work;

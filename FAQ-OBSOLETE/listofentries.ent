@@ -43,6 +43,7 @@
 <!ENTITY version-not-in-book SYSTEM "version-not-in-book.xml">
 <!ENTITY what-dist SYSTEM "what-dist.xml">
 <!ENTITY what-is-lfs SYSTEM "what-is-lfs.xml">
+<!ENTITY when-next-lfs-release SYSTEM "when-next-lfs-release.xml">
 <!ENTITY where-ncurses-mandrake SYSTEM "where-ncurses-mandrake.xml">
 <!ENTITY which-list SYSTEM "which-list.xml">
 <!ENTITY why-ed SYSTEM "why-ed.xml">
