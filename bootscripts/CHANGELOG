@@ -5,6 +5,7 @@ n/a - September 23, 2004
 	* Modified hotplug's error checking
 	* Converted checkfs's error handling to use boot_mesg with
 	  color support
+	* added $INFO color to functions
 
 n/a - September 22, 2004
 	* Removed the dependency on wl by replacing it with grep (Bryan Kadzban)
