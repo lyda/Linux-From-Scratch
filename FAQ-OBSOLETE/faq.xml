@@ -291,6 +291,13 @@ ln -s ../X11/include/X11 X11
 					url="http://www.linuxfromscratch.org/services/lfshints.php">http://www.linuxfromscratch.org/services/lfshints.php</ulink>.
 				</para>
 			</section>
+			<section id="add-gawk"><title>gawk instead of mawk</title>
+				<para>
+					While gawk has improved recently,
+					it is reported that mawk is still higher quality.
+					It is smaller, faster, and works reliably.
+				</para>
+			</section>
 		</section>
 		<section id="setup-polishing"><title>Polishing your setup.</title>
 			<para>
