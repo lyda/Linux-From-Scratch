@@ -7,27 +7,29 @@
 . /etc/sysconfig/rc
 . $rc_functions
 
+export PATH=$PATH:/opt/gnome-2.4/bin:/opt/gnome-2.4/sbin
+
 case "$1" in
 	start)
 		echo "Starting GDM..."
-		loadproc /opt/gnome-2.4/bin/gdm
+		loadproc gdm
 		;;
 
 	stop)
 		echo "Stopping GDM..."
 		if [ -f /var/run/gdm.pid ]; then
-			loadproc /opt/gnome-2.4/sbin/gdm-stop
+			loadproc gdm-stop
 		fi
 		;;
 
 	reload)
 		echo "Reloading GDM..."
-		reloadproc /opt/gnome-2.4/sbin/gdm-safe-restart
+		reloadproc gdm-safe-restart
 		;;
 
 	restart)
 		echo "Restarting GDM..."
-		loadproc /opt/gnome-2.4/sbin/gdm-restart
+		loadproc gdm-restart
 		;;
 
 	*)

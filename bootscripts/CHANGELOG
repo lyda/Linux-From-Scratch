@@ -1,3 +1,8 @@
+n/a - March 27, 2004
+
+	* Changed gdm path from hardcoded to program name.  There are 2 spots
+	  gnome can be installed
+
 n/a - March 26, 2004
 
 	* Updated fam daemon script.  It now uses the famd daemon instead of fam
