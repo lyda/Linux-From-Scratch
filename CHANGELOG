@@ -1,3 +1,8 @@
+n/a - June 21, 2004
+
+	* Re-ordered the "mount" and "echo" commands in the udev script, to
+	  prevent a possible race
+
 n/a - June 20, 2004
 
 	* Rolled back to the /dev/.udev.tdb check from 2.1.1, since the new
