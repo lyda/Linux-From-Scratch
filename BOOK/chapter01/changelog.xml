@@ -76,8 +76,11 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>Changelog Entries:</para>
+<itemizedlist>
 <listitem><para>Feburary 24, 2005 [jim]</para>
 <itemizedlist>
+<listitem><para>Changed: Book Format - Changed changelog format.</para></listitem>
 <listitem><para>Fixed: Arch: All - Bugzilla 1033 Gettext.</para></listitem>
 <listitem><para>Updated: Arch: Raq2 - Updated Colo to 1.1.7</para></listitem>
 <listitem><para>Updated: Arch: All - Updated Bzip2 to 1.0.3.</para></listitem>
@@ -99,7 +102,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>Added: Arch: PPC Yaboot</para></listitem>
 </itemizedlist>
 </listitem>
-
+</itemizedlist>
+</listitem>
 </itemizedlist>
 
 <para>Branch Synced from the Release of LFS 6.0 on February 23rd, 2005</para>
