@@ -1,7 +1,0 @@
-<qandaentry id="no-dev-eth0">
-<question><para>Where is /dev/eth0?</para></question>
-<answer><para>It isn't a real file. It exists in some kernel namespace.
-(And yes, you're not the first person to think
-that network devices should be real files just like everything else.)
-</para></answer>
-</qandaentry>
