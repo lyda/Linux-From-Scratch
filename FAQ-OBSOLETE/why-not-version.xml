@@ -33,6 +33,11 @@ for a patch that fixes it.
 -->
 </para></listitem>
 
+<listitem><para>gcc-3.3:
+Don't use this yet unless you're a developer and can fix errors
+because it breaks many packages.
+</para></listitem>
+
 <listitem><para>glibc-2.3.2:
 Add to your build instructions:
 <screen>touch /etc/ld.so.conf &amp;&amp;
