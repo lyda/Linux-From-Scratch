@@ -1,4 +1,9 @@
+n/a - March 23, 2004
+
+	* Cleaned the /tmp directory on bootup.  find command supplied by Zack
+
 n/a - March 20, 2004
+
 	* Added create-service-dir target and removed from create-dirs
 	* Changed service script install targets to use
 	  create-service-dir
