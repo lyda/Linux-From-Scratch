@@ -46,8 +46,8 @@ export LFS LC_ALL PATH</literal>
 EOF</userinput></screen>
 
 <para>The <command>set +h</command> command turns off
-<command>bash</command>'s hash function. Hashing is
-ordinarily a useful feature&mdash;bash uses a hash table to remember the
+<command>bash</command>'s hash function. Hashing is ordinarily a useful 
+feature&mdash;<command>bash</command> uses a hash table to remember the
 full pathnames of executable files to avoid searching the PATH time
 and again to find the same executable. However, the new tools
 should be used as soon as they are installed. By switching off the

@@ -72,7 +72,7 @@ password), give <emphasis>lfs</emphasis> a password:</para>
 <screen><userinput>chown lfs $LFS/tools</userinput></screen>
 
 <para>If a separate working directory was created as suggested, give
-user lfs ownership of this directory:</para>
+user <emphasis>lfs</emphasis> ownership of this directory:</para>
 
 <screen><userinput>chown lfs $LFS/sources</userinput></screen>
 

@@ -30,7 +30,7 @@ install the static Binutils, it will take
 package. Fortunately, most build times are shorter than the one
 for Binutils.</para>
 
-<para>Please note that if the system compiler on the host is gcc-2.x based, the
+<para>Please note that if the system compiler on the host is GCC-2.x based, the
 SBUs listed may be somewhat understated. This is because the SBU is
 based on the very first package, compiled with the old GCC, while the
 rest of the system is compiled with the newer GCC-&gcc-version; (which is

@@ -37,8 +37,8 @@ optional.</para></note>
 is running out of pseudo terminals (PTYs). This can result in a high
 number of failing tests. This may happen for several reasons, but the
 most likely cause is that the host system does not have the
-<emphasis>devpts</emphasis> file system set up correctly. This issue
-is discussed in greater detail in <xref
+<systemitem class="filesystem">devpts</systemitem> file system set up 
+correctly. This issue is discussed in greater detail in <xref
 linkend="chapter-temporary-tools"/>.</para>
 
 <para>Sometimes package test suites will give false failures. Consult
