@@ -7,7 +7,7 @@
 <title>Yaboot-&yaboot-version;</title>
 <?dbhtml filename="yaboot.html"?>
 
-<indexterm zone="ch-system-yaboot"><primary sortas="a-yaboot">yaboot</primary></indexterm>
+<indexterm zone="ch-system-yaboot"><primary sortas="a-Yaboot">Yaboot</primary></indexterm>
 
 <sect2 role="package"><title/>
 <para>The Yaboot package contains the PowerPC Boot Loader.</para>
@@ -59,35 +59,35 @@ install boot.msg /boot</userinput></screen>
 <?dbfo list-presentation="list"?>
 <?dbhtml list-presentation="table"?>
 
-<varlistentry id="yaboot-ofboot.b">
-<term><command>yaboot-ofboot.b</command></term>
+<varlistentry id="ofboot.b">
+<term><command>ofboot.b</command></term>
 <listitem>
 <para>Need Description</para>
-<indexterm zone="ch-system-yaboot ofboot.b"><primary sortas="b-yaboot-ofboot.b">yaboot-ofboot.b</primary></indexterm>
+<indexterm zone="ch-system-yaboot ofboot.b"><primary sortas="e-ofboot.b">ofboot.b</primary></indexterm>
 </listitem>
 </varlistentry>
 
-<varlistentry id="yaboot-yaboot">
-<term><command>yaboot-yaboot</command></term>
+<varlistentry id="yaboot">
+<term><command>yaboot</command></term>
 <listitem>
 <para>Need Description</para>
-<indexterm zone="ch-system-yaboot yaboot"><primary sortas="b-yaboot-yaboot">yaboot-yaboot</primary></indexterm>
+<indexterm zone="ch-system-yaboot yaboot"><primary sortas="b-yaboot">yaboot</primary></indexterm>
 </listitem>
 </varlistentry>
 
-<varlistentry id="yaboot-yaboot.conf">
-<term><command>yaboot-yaboot.conf</command></term>
+<varlistentry id="yaboot.conf">
+<term><command>yaboot.conf</command></term>
 <listitem>
 <para>Need Description</para>
-<indexterm zone="ch-system-yaboot yaboot.conf"><primary sortas="b-yaboot-yaboot.conf">yaboot-yaboot.conf</primary></indexterm>
+<indexterm zone="ch-system-yaboot yaboot.conf"><primary sortas="e-yaboot.conf">yaboot.conf</primary></indexterm>
 </listitem>
 </varlistentry>
 
-<varlistentry id="yaboot-boot.msg">
-<term><command>yaboot-boot.msg</command></term>
+<varlistentry id="boot.msg">
+<term><command>boot.msg</command></term>
 <listitem>
 <para>Need Description</para>
-<indexterm zone="ch-system-yaboot boot.msg"><primary sortas="b-yaboot-boot.msg">yaboot-boot.msg</primary></indexterm>
+<indexterm zone="ch-system-yaboot boot.msg"><primary sortas="e-boot.msg">yaboot-boot.msg</primary></indexterm>
 </listitem>
 </varlistentry>
 
