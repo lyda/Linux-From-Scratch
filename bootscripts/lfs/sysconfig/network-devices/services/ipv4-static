@@ -6,9 +6,7 @@
 
 . /etc/sysconfig/rc 
 . $rc_functions 
-# Passed from ifup, or ifdown.  Contains all parameters needed to
-# complete this script
-. $SOURCE
+. $IPCONFIG
 
 case "$2" in
 	up)
