@@ -11,16 +11,32 @@
 <primary sortas="d-setclock">setclock</primary>
 <secondary>configuring</secondary></indexterm>
 
-<para>This <command>setclock</command> script reads the time from your hardware clock, also
-known as BIOS or CMOS (Complementry Metal-Oxide Semiconductor) clock, and either converts that time to localtime
-using the <filename>/etc/localtime</filename> file (if the hardware clock
-is set to GMT) or not (if the hardware clock is already set to localtime).
-There is no way to auto-detect whether the hardware clock is set to GMT or
-not, so we need to configure that here ourselves.</para>
+<para>The <command>setclock</command> script reads the time from the hardware clock,
+also known as BIOS or the Complementary Metal Oxide Semiconductor
+(CMOS) clock. If the hardware clock is set to Universal Coordinated
+Time (UTC), this script will convert the hardware clock's time to
+your local time using the <filename>/etc/localtime</filename> file
+(which tells hwclock which timezone you are in). There is no way to
+detect whether or not your hardware clock is set to UTC time, so this
+needs to be manually configured.</para>
 
-<para>Change the value of the <emphasis>UTC</emphasis> variable below to a
-<parameter>0</parameter> (zero) if your hardware clock is not set to GMT
-time.</para>
+<para>If you can't remember whether or not you have set your hardware
+clock to UTC time, you can find out by following this procedure. Run
+the <userinput>hwclock --show</userinput> command. This will tell you
+what the current time according to the hardware clock is. If this time
+matches whatever your watch says, then your hardware clock is set to
+local time. If the output from <command>hwclock</command> is not local
+time, chances are it is set to UTC time. Verify this by adding or
+subtracting the proper amount of hours for your timezone to this
+<command>hwclock</command> time. For example, if you live in the MST
+timezone, which is also known as GMT -0700, add 7 hours to the local
+time. Then account for Daylight Savings Time which means you have to
+remove an hour (or only add 6 in the first place) during the summer
+months.</para>
+
+<para>Change the value of the <emphasis>UTC</emphasis> variable below
+to a value of <parameter>0</parameter> (zero) if your hardware clock
+is <emphasis>not</emphasis> set to UTC time.</para>
 
 <para>Create a new file <filename>/etc/sysconfig/clock</filename> by running
 the following:</para>
@@ -33,9 +49,9 @@ UTC=1
 # End /etc/sysconfig/clock
 EOF</userinput></screen>
 
-<para>Now, you may want to take a look at a very good hint explaining how we
-deal with time on LFS at <ulink url="&hints-root;time.txt"/>. 
-It explains issues such as time zones, UTC, and the TZ environment
-variable.</para>
+<para>A good hint explaining how to deal with time on LFS is available
+at <ulink url="&hints-root;time.txt"/>. It explains issues such as
+time zones, UTC, and the TZ environment variable.</para>
 
 </sect1>
+
