@@ -194,11 +194,9 @@ this means that you may have problems if you must use precompiled binaries
 as is often the case with closed source software.
 (The most recent version of Netscape is reported to be fine.)
 </para>
-<para>If you want to try gcc 3, make sure you're using glibc 2.2.5
-and search the mailing lists
-because there are a few fixable problems that you will encounter
-even with just the packages in the book.
-(Anyone have a document describing them that i could link to?)
+<para>If you want to try gcc 3, make sure you're using glibc 2.2.5 or later
+and get the ncurses patch from <ulink
+url="http://www.linuxfromscratch.org/~gerard/">http://www.linuxfromscratch.org/~gerard/</ulink>.
 </para></answer>
 </qandaentry>
 
