@@ -276,7 +276,9 @@ echo 'export LESSCHARSET=latin1' >> /etc/profile
 		<section id="which"><title>Where's which?</title>
 			<para>
 				It's not in there! A proper which is available at
-				<ulink url="http://www.xs4all.nl/~carlo17/which/">http://www.xs4all.nl/~carlo17/which/</ulink>,
+				<ulink url="http://www.xs4all.nl/~carlo17/which/">http://www.xs4all.nl/~carlo17/which/</ulink>
+				or from the GNU Project at
+				<ulink url="ftp://ftp.gnu.org/gnu/which/">ftp://ftp.gnu.org/gnu/which/</ulink>,
 				but the simplest thing is probably to create a shell script with these commands:
 			</para>
 			<screen>
