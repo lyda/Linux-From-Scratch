@@ -63,6 +63,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>sysklogd-1.4.1-kernel_headers-1.patch</para></listitem>
 <listitem><para>sysklogd-1.4.1-signal-1.patch</para></listitem>
 <listitem><para>sysvinit-2.85-proclen-1.patch</para></listitem>
+<listitem><para>texinfo-4.7-segfault-1.patch</para></listitem>
 <listitem><para>udev-030</para></listitem>
 <listitem><para>udev-config-1.permissions</para></listitem>
 <listitem><para>udev-config-1.rules</para></listitem>
@@ -84,6 +85,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>procinfo-18</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>September 13th, 2004 [jeremy]: Added the patch to resolve a
+segfault problem in the info program.</para></listitem>
 
 <listitem><para>September 13th, 2004 [jeremy]: Replaced the util-linux sed
 with a patch file instead.</para></listitem>

@@ -29,6 +29,10 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Texinfo</title>
 
+<para>Placeholder for patch information</para>
+
+<screen><userinput>patch -Np1 -i ../texinfo-&texinfo-version;-segfault-1.patch</userinput></screen>
+
 <para>Prepare Texinfo for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
