@@ -83,6 +83,12 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 29th, 2004 [gerard]: Added Appendix B -
+Acronyms.</para></listitem>
+
+<listitem><para>August 29th, 2004 [gerard]: Moved acknowledgements to
+Appendix A.</para></listitem>
+
 <listitem><para>August 29th, 2004 [matt]: Upgraded to autoconf-1.9.1,
 gawk-3.1.4, iproute2-2.6.8-040823, linux-2.6.8.1, m4-1.4.2, man-1.5o,
 procps-3.2.3 (removing unnecessary <command>rm</command> command,

@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<appendix id="appendixb" xreflabel="Appendix B">
+<?dbhtml dir="appendixb"?>
+<title/>
+<?dbhtml filename="acronymlist.html"?>
+
+<sect1 id="appendixb-acronymlist">
+<title>Acronyms</title>
+
+<variablelist>
+<?dbfo list-presentation="list"?>
+
+<varlistentry>
+<term><command>ABI</command></term><listitem><para>Application Binary Interface</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>ALFS</command></term><listitem><para>Automated Linux From Scratch</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>ALSA</command></term><listitem><para>Advanced Linux
+Sound Architecture</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>API</command></term><listitem><para>Application
+Programming Interface</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>ASCII</command></term><listitem><para>American Standard
+Code for Information Interchange</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>BIOS</command></term><listitem><para>Basic Input/Output
+System</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>BLFS</command></term><listitem><para>Beyond Linux From
+Scratch</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>BSD</command></term><listitem><para>Berkeley Software
+Distribution</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>chroot</command></term><listitem><para>change root</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>CMOS</command></term><listitem><para>Complementary
+Metal Oxide Semiconductor</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>COS</command></term>
+<listitem><para>Class Of Service</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>CPU</command></term>
+<listitem><para>Central Processing Unit</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>CRC</command></term>
+<listitem><para>Cyclic Redundancy Check</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>CVS</command></term>
+<listitem><para>Concurrent Versions System</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>DHCP</command></term>
+<listitem><para>Dynamic Host Configuration Protocol</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>DNS</command></term>
+<listitem><para>Domain Name Service</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>EGA</command></term>
+<listitem><para>Enhanced Graphics Adapter</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>ELF</command></term>
+<listitem><para>Executable and Link Format</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>EOF</command></term>
+<listitem><para>End Of File</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>EQN</command></term>
+<listitem><para>equation</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>EVMS</command></term>
+<listitem><para>Enterprise Volume Management System</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>ext2</command></term>
+<listitem><para>second extended file system</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>FAQ</command></term>
+<listitem><para>Frequently Asked Questions</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>FHS</command></term>
+<listitem><para>Filesystem Hierarchy Standard</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>FIFO</command></term>
+<listitem><para>First-In, First Out</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>FQDN</command></term>
+<listitem><para>Fully Qualified Domain Name</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>FTP</command></term>
+<listitem><para>File Transfer Protocol</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>GB</command></term>
+<listitem><para>Gibabytes</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>GCC</command></term>
+<listitem><para>GNU Compiler Collection</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>GID</command></term>
+<listitem><para>Group Identifier</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>GMT</command></term>
+<listitem><para>Greenwich Mean Tim</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>GPG</command></term>
+<listitem><para>GNU Privacy Guard</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>HTML</command></term>
+<listitem><para>HyperText Markup Language</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>IDE</command></term>
+<listitem><para>Integrated Drive Electronics</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>IEEE</command></term>
+<listitem><para>Institute of Electrical and Electronic Engineers</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>IO</command></term>
+<listitem><para>Input/Output</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>IP</command></term>
+<listitem><para>Internet Protocol</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>IPC</command></term>
+<listitem><para>Inter-Process Communication</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>IRC</command></term>
+<listitem><para>Internet Relay Chat</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>ISO</command></term>
+<listitem><para>International Organization for Standardization</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>ISP</command></term>
+<listitem><para>Internet Service Provider</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>KB</command></term>
+<listitem><para>Kilobytes</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>LDP</command></term>
+<listitem><para>Linux Documentation Project</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>LED</command></term>
+<listitem><para>Light Emitting Diode</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>LFS</command></term>
+<listitem><para>Linux From Scratch</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>LSB</command></term>
+<listitem><para>Linux Standards Base</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>LZ77</command></term>
+<listitem><para>Lempel-Ziv</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>MB</command></term>
+<listitem><para>Megabytes</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>MBR</command></term>
+<listitem><para>Master Boot Record</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>MD5</command></term>
+<listitem><para>Message Digest 5</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>NIC</command></term>
+<listitem><para>Network Interface Card</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>NLS</command></term>
+<listitem><para>Native Language Support</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>NNTP</command></term>
+<listitem><para>Network News Transport Protocol</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>NPTL</command></term>
+<listitem><para>Native POSIX Threading Librar</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>OSS</command></term>
+<listitem><para>Open Sound System</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>PCH</command></term>
+<listitem><para>Pre-Compiled Headers</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>PCRE</command></term>
+<listitem><para>Perl Compatible Regular Expression</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>PID</command></term>
+<listitem><para>Process Identifier</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>PLFS</command></term>
+<listitem><para>Pure Linux From Scratch</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>PTY</command></term>
+<listitem><para>pseudo terminal</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>QA</command></term>
+<listitem><para>Quality Assurance</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>QOS</command></term>
+<listitem><para>Quality Of Service</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>RAM</command></term>
+<listitem><para>Random Access Memory</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>RPC</command></term>
+<listitem><para>Remote Procedure Call</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>RTC</command></term>
+<listitem><para>Real Time Clock</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>SBU</command></term>
+<listitem><para>Static Binutils Unit</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>SCO</command></term>
+<listitem><para>Santa Cruz Operations</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>SGR</command></term>
+<listitem><para>Select Graphic Rendition</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>SHA1</command></term>
+<listitem><para>Secure-Hash Algorithm 1</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>SMP</command></term>
+<listitem><para>Symmetric Multi-Processor</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>TLDP</command></term>
+<listitem><para>The Linux Documentation Project</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>TFTP</command></term>
+<listitem><para>Trivial File Transfer Protocol</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>TLS</command></term>
+<listitem><para>Thread-Local Storage</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>UID</command></term>
+<listitem><para>User Identifier</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>umask</command></term>
+<listitem><para>user file-creation mask</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>USB</command></term>
+<listitem><para>Universal Serial Bus</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>UTC</command></term>
+<listitem><para>Coordinated Universal Time</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>UUID</command></term>
+<listitem><para>Universally Unique Identifie</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>VC</command></term>
+<listitem><para>Virtual Console</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>VGA</command></term>
+<listitem><para>Video Graphics Array</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><command>VT</command></term>
+<listitem><para>Virtual Terminal</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</appendix>
+
