@@ -1,3 +1,8 @@
+n/a - June 8, 2004
+
+	* Changed the location the optional module script is installed to
+	  /etc/rc.d/rcsysinit.d/S05modules.
+
 n/a - June 4, 2004
 
 	* Added a echo to the > /proc/sys/kernel/hotplug line, as > did not
