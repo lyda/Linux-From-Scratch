@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" [
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+-- openjade (as of 1.3) doesn't support getting DTDs from the net
+	"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
+--
+	"/usr/share/docbook/docbookx.dtd"
+	[
 
 <!ENTITY % listofentries SYSTEM "listofentries.ent">
 %listofentries;

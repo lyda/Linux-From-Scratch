@@ -42,7 +42,7 @@ think the whole file is one line with "^M" all through it.
 </itemizedlist>
 </para>
 <para>To change DOS to Unix, use
-<screen>cp &lt;filename> &lt;filename>.dos && cat &lt;filename>.dos | tr -d '\r' > &lt;filename>
+<screen>cp &lt;filename> &lt;filename>.dos &amp;&amp; cat &lt;filename>.dos | tr -d '\r' > &lt;filename>
 </screen>
 Other conversions will probably require sed or a different use of tr
 and are left as an exercise for the reader.
