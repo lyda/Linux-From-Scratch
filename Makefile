@@ -1,4 +1,4 @@
-ETCDIR=/tc
+ETCDIR=/etc
 EXTDIR=${DESTDIR}${ETCDIR}
 
 all: install
