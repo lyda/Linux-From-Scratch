@@ -37,7 +37,7 @@ configure command below, then remove it afterwards.</para></note>
 
 <para>Prepare Zlib for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --shared</userinput></screen>
+<screen><userinput>./configure --prefix=/usr --shared --libdir=/lib</userinput></screen>
 
 <para>Compile the package:</para>
 

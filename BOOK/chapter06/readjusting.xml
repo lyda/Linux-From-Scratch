@@ -57,7 +57,7 @@ problem. The above command takes care of this issue.</para>
 dynamic linker. A perl command accomplishes this:</para>
 
 <screen><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
-    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/@g;' \
+    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' \
         `gcc --print-file specs`</userinput></screen>
 
 <para>It is a good idea to visually inspect the specs file to verify the intended 

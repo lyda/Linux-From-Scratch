@@ -49,12 +49,6 @@ kernel team recommends that this command be issued prior to each
 kernel compilation. Do not rely on the source tree being clean after
 un-tarring.</para>
 
-<para>Also, ensure that the kernel does not attempt to pass
-hotplugging events to userspace until userspace specifies that it is
-ready:</para>
-
-<screen><userinput>sed -i 's@/sbin/hotplug@/bin/true@' kernel/kmod.c</userinput></screen>
-
 <para>If, in <xref linkend="ch-scripts-console" role=","/> it was decided to
 compile the keymap into the kernel, issue the command below:</para>
 

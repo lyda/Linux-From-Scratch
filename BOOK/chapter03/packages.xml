@@ -145,6 +145,13 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
+<term>Glibc-Linuxthreads (&glibc-version;) - 231 KB: </term>
+<listitem>
+<para><ulink url="http://ftp.gnu.org/gnu/glibc/"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
 <term>Grep (&grep-version;) - 545 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;grep/"/></para>

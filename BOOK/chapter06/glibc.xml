@@ -45,6 +45,12 @@ and linker cannot be adjusted before the Glibc install because the
 Glibc autoconf tests would give false results and defeat the goal
 of achieving a clean build.</para>
 
+<para>The linuxthreads tarball contains the man pages for the
+threading libraries installed by glibc.  Unpack the tarball from
+within the glibc source directory:</para>
+
+<screen><userinput>tar xjvf /sources/glibc-linuxthreads-&glibc-version;.tar.bz2</userinput></screen>
+
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
 
