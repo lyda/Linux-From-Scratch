@@ -2,9 +2,9 @@
 # Begin $network_devices/services/mtu
 
 # Written by Nathan Coulson <nathan@linuxfromscratch.org>
-# based upon the work of Jim Grifford <jim@linuxfromscratch.org>
+# based upon the work of Jim Gifford <jim@linuxfromscratch.org>
 
-# This sets the maxiumu amount of bytes that can be transmitted within
+# This sets the maximum amount of bytes that can be transmitted within
 # a packet.  By default, this value is set to 1500.
 
 . /etc/sysconfig/rc 
