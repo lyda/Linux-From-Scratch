@@ -575,12 +575,12 @@ url="http://hints.linuxfromscratch.org/hints/grub-howto.txt">http://hints.linuxf
 </qandaentry>
 
 <qandaentry id="add-gawk"><question><para>gawk instead of mawk</para></question>
-<answer><para>The gawk versus mawk debate involves much talk and little
-evidence. Due to the reportedly unstable history of gawk, the book still
-uses mawk. Personally, your (not) humble FAQ maintainer uses gawk because,
-unlike mawk it is configured with the GNU autoconf. One of the primary
-book editors also uses gawk for reasons covered, along with many other
-subjects, in this massive thread: <ulink
+<answer><para>The gawk versus mawk debate involves much talk
+and little evidence. Due to the reportedly unstable history of gawk,
+the book still uses mawk. Personally, your (not) humble FAQ maintainer
+uses gawk because, unlike mawk it is configured with GNU autoconf.
+One of the primary book editors also uses gawk for reasons covered,
+along with many other subjects, in this massive thread: <ulink
 url="http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/10/0290.html">http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/10/0290.html</ulink>
 </para></answer>
 </qandaentry>
