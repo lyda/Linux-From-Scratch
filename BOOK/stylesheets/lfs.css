@@ -14,9 +14,36 @@ body {
   text-align: center;
 }
 
-div.navheader ul li, div.navfooter ul li {
-	display: inline;
-  padding: 4em;
+.headerlinks {
+  border-bottom : solid 2px green;
+  padding-bottom: 0.5em;
+}
+
+.navfooter {
+  border-top : solid 2px green;
+  padding-top: 0.5em;
+  margin-top: 0.5em;
+}
+
+.prev {
+   float     : left;
+   text-align: left;
+   /* border    : solid 1px #ddd; */
+   padding-left: 2em;
+}
+
+.next {
+   float     : right;
+   text-align: right;
+   /* border    : solid 1px #0dd; */
+   padding-right: 2em;
+}
+
+.up {
+   /* border : solid 1px #ff0; */
+   width  : 10em;
+   /* background-color: #bbb; */
+   margin: 0px auto;
 }
 
 li.preface {
