@@ -61,10 +61,10 @@ print_error_msg()
         echo "If you're able to track this error down to a bug in one"
         echo "of the files provided by the LFS book, please be so kind"
         echo "to inform us at lfs-dev@linuxfromscratch.org"
+	echo -e -n $NORMAL
         echo
         echo
         echo "Press Enter to continue..."
-	echo -e -n $NORMAL
         read ENTER
 }
 
