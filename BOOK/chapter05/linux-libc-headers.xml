@@ -42,10 +42,7 @@ Interface (API) stable version of the Linux headers.</para>
 
 <para>Install the header files:</para>
 
-<screen arch="x86"><userinput>cp -R include/asm-i386 /usr/include/asm
-cp -R include/linux /usr/include</userinput></screen>
-
-<screen arch="ppc"><userinput>cp -R include/asm-ppc /usr/include/asm
+<screen><userinput>cp -R include/asm-i386 /usr/include/asm
 cp -R include/linux /usr/include</userinput></screen>
 
 </sect2>
