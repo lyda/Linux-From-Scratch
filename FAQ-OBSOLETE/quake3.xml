@@ -33,9 +33,9 @@ players may connect to the server for testing whenever they like.
 </para></listitem>
 
 <listitem><para>Games are held every week
-on Tuesday at 20:00 GMT
-and on Saturday at 22:00 GMT.
-Note that those times are in GMT
+on Tuesday at 20:00 UTC
+and on Saturday at 22:00 UTC.
+Note that those times are in UTC.
 </para></listitem>
 
 <listitem><para>Because the server is only for LFS users,
