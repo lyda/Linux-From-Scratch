@@ -6,7 +6,7 @@
 #
 # Authors     : Zack Winkles
 #
-# Version     : 00.00
+# Version     : 00.01
 #
 # Notes       :
 #
@@ -63,9 +63,9 @@ case "${1}" in
 			/etc/rc.d/init.d/halt stop
 		fi
 
-		# Assign hotplug to get hotplug events.  The LFS Book disables
-		# automatically using hotplug until the system is ready for it
-		echo /sbin/hotplug > /proc/sys/kernel/hotplug
+		# Assign udevsend to get hotplug events. udevsend can manage the whole
+		# hotplug handling by taking over the kernel spawned event process
+		echo /sbin/udevsend > /proc/sys/kernel/hotplug
 
 		# Populate /dev with all the devices that are already available,
 		# and save it's status so we can report failures.
