@@ -1,3 +1,8 @@
+n/a - April 12, 2004
+
+	* Added a automatic modules loading script to the contrib directory
+	  submitted by Zack
+
 2.0.3 - April 8, 2004
 
 	* Updated cleanfs, so it can create devices.  Supplied by Zack

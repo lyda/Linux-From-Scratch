@@ -1,0 +1,70 @@
+#!/bin/sh
+# Begin $rc_base/init.d/modules
+
+# Written by Zack Winkles - winkie.linuxfromscratch.org
+
+# This file uses /etc/sysconfig/modules as the configuration file,
+# where the format is 
+#
+# <module> <arguments>
+#
+# for each line.
+#
+# Blank lines and lines starting with # are ignored.
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+# Assure that the kernel has module support.
+[ -e /proc/ksyms -o -e /proc/modules ] || exit 1
+
+case "$1" in
+	start)
+		# Write out the module dependencies, if possible.
+		if [ -w /lib/modules/`uname -r` ]; then
+			echo "Calculating module dependencies..."
+			depmod --quick
+			evaluate_retval
+		fi
+
+		# Now read in the modules configuration script, and do stuff.
+		if [ "`egrep -v '^(#|$)' /etc/sysconfig/modules 2>/dev/null`" ]; then
+			exec 9>&0 < /etc/sysconfig/modules
+				# Let the user know what's going on.
+				echo -n "Loading modules:"
+
+				while read module args ; do
+					# Ignore comments and blank lines.
+					case "$module" in
+						""|\#*) continue ;;
+					esac
+
+					# Attempt to load the module.
+					modprobe $module $args
+
+					# Print the name if successful, otherwise take note.
+					if [ $? -eq 0 ]; then
+						echo -n " $module"
+					else
+						failedmod="$failedmod $module"
+					fi
+				done
+
+				# Let the user know about successfully loaded modules.
+				echo ; print_status success
+
+				# If any failed to load, let the user know.
+				if [ "$failedmod" ]; then
+					echo "Failed to load:$failedmod"
+					print_status failure
+				fi
+			exec 0>&9 9>&-
+		fi
+		;;
+	*)
+		echo "Usage: $0 {start}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/modules
