@@ -18,7 +18,7 @@ as one of the options when you installed your distribution.</para>
 partition and file system, the place where your new LFS system will be compiled
 and installed. Then in <xref linkend="chapter-getting-materials"/> you download all the
 packages and patches needed to build an LFS system, and store them on the new
-file system. In <xref linkend="chapter-preparation"/> you set up a good
+file system. In <xref linkend="chapter-final-preps"/> you set up a good
 environment to work in.</para>
 
 <para><xref linkend="chapter-temporary-tools"/> then discusses the installation of a number
