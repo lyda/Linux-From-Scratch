@@ -11,15 +11,18 @@
 case "$1" in
 	start)
 		echo "Bringing up the loopback interface..."
-		loadproc ifconfig lo 127.0.0.1
+		ifconfig lo 127.0.0.1
+		evaluate_retval
 
 		echo "Setting hostname to $HOSTNAME..."
-		loadproc hostname $HOSTNAME
+		hostname $HOSTNAME
+		evaluate_retval
 		;;
 
 	stop)
 		echo "Bringing down the loopback interface..."
-		loadproc ifconfig lo down
+		ifconfig lo down
+		evaluate_retval
 		;;
 
 	restart)
