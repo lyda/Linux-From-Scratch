@@ -33,6 +33,11 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 
 <screen><userinput>./configure --libdir=/usr/lib --enable-shared</userinput></screen>
 
+<para>Remove the installation of the groups program, and it's man page:</para>
+
+<screen><userinput>sed -i 's/groups$(EXEEXT) //' src/Makefile
+sed -i '/groups/d' man/Makefile</userinput></screen>
+
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
@@ -89,13 +94,6 @@ properly:</para>
 
 <screen><userinput>mkdir /etc/default</userinput></screen>
 
-<para>Coreutils has already installed a better
-<command>groups</command> program in <filename
-class="directory">/usr/bin</filename>.  Remove the one installed by
-Shadow:</para>
-
-<screen><userinput>rm /bin/groups</userinput></screen>
-<beginpage/>
 </sect2>
 
 
