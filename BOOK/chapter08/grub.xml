@@ -19,13 +19,13 @@ other architectures should be available in the usual resource-specific
 locations for those architectures.</para>
 
 <para>Boot loading can be a complex area, so a few cautionary
-words are in order. Be familiar with the current boot loader and any other
+words are in order. Be familiar with the current bootloader and any other
 operating systems present on the hard drive(s) that need to be
 bootable. Make sure that an emergency boot disk is ready to
 <quote>rescue</quote> the computer if the computer becomes
 unusable (un-bootable).</para>
 
-<para>Earlier, we compiled and installed the Grub boot loader software
+<para>Earlier, we compiled and installed the Grub bootloader software
 in preparation for this step. The procedure involves writing some
 special Grub files to specific locations on the hard drive. We highly
 recommend creating a Grub boot floppy diskette as a backup. Insert a
