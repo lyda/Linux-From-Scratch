@@ -403,7 +403,7 @@ tar jcvf glibc-2.3.4-20040408.tar.bz2 glibc-2.3.4-20040408</userinput></screen>
 
 <para>Alternatively, we've made our own tarball available which you can download
 from the following location:
-<ulink url="ftp://belfs.linux-phreak.net/belfs/glibc-2.3.4-20040408.tar.bz2"/>
+<ulink url="ftp://gaosu.rave.org/pub/linux/lfs/packages/conglomeration/glibc-2.3.4-20040408.tar.bz2"/>
 </para>
 </note>
 
