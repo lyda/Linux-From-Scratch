@@ -363,6 +363,7 @@ make: *** [all] Error 2
 			</para>
 		</section>
 -->
+<!-- 2001-09-29
 		<section id="glibc-crypt"><title>Where is glibc-crypt-2.2.x?</title>
 			<para>
 				As of glibc-2.2, you no longer need to get glibc-crypt separately.
@@ -370,6 +371,7 @@ make: *** [all] Error 2
 				has relaxed it's export regulations.
 			</para>
 		</section>
+-->
 		<section id="lilo-errors"><title>What do those LILO errors mean?</title>
 			<para>
 				The documentation in the LILO distribution lists all errors
