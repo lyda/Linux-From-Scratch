@@ -6,10 +6,6 @@
 source /etc/sysconfig/rc
 source $rc_functions
 
-# some bootscripts manage to mount /proc before this as a side effect
-# -e /proc/mounts may not be the best test,
-# but there is nothing that i know of like /dev/.devfsd
-# and /proc/mounts is the entire reason for mounting /proc at this point, so...
 if [ ! -e /proc/mounts ]; then
 	echo "Mounting proc file system..."
 	mount -n /proc
