@@ -186,9 +186,9 @@ Total size of these packages: 134 MB
 
 <note><para>1) File (&file-version;) may not be available by the time you read
 this. The site administrators of the master download location are known to occasionally
-remove old versions when new ones are released. Please refer to the
-<xref linkend="ch-system-file"/> section for an alternate download
-location.</para></note>
+remove old versions when new ones are released. An alternative download location
+that may have older versions available is <ulink
+url="ftp://ftp.astron.com/pub/file/"/>.</para></note>
 
 <note><para>2) As of this writing, the Glibc maintainers have decided in their
 wisdom not to make available new release tarballs for download. The only way to
