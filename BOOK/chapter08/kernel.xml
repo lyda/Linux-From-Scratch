@@ -34,6 +34,11 @@ compilation, and installation. Read the <filename>README</filename>
 file in the kernel source tree for alternate methods to the way this
 book configures the kernel.</para>
 
+<para arch="raq2">The following patch fixes some issues with MIPS based processors 
+and the kernel:</para>
+
+<screen arch="raq2"><userinput>patch -Np1 -i ../linux-&linux-version;-mips-1.patch</userinput></screen>
+
 <para>Prepare for compilation by running the following command:</para>
 
 <screen><userinput>make mrproper</userinput></screen>
@@ -65,8 +70,11 @@ qwerty/nl.map.gz</filename></phrase>.</para>
 
 <screen><userinput>make menuconfig</userinput></screen>
 
-<para>Alternatively, <command>make oldconfig</command> may be more appropriate in some
-situations. See the <filename>README</filename> file for more
+<para>Alternatively, <command arch="x86">make oldconfig</command>
+<command arch="raq2">cp arch/mips/configs/cobalt_defconfig .config &amp;&amp;
+make oldconfig</command> may be more appropriate in some
+situations. <phrase arch="raq2">This will build a basic system with no modules and 
+ext2 support only.</phrase> See the <filename>README</filename> file for more
 information.</para>
 
 <note><para>When configuring the kernel, be sure to enable the
@@ -142,10 +150,15 @@ url="http://www.linux-mips.org/archives/linux-mips/2002-04/msg00031.html"/>.</pa
 required to complete the installation. Some files need to be copied to
 the <filename class="directory">/boot</filename> directory.</para>
 
-<para>The path to the kernel image may vary depending on the platform
-being used. Issue the following command to install the kernel:</para>
+<para><!--The path to the kernel image may vary depending on the platform
+being used. -->Issue the following command to install the kernel:</para>
 
-<screen><userinput>cp arch/i386/boot/bzImage /boot/lfskernel-&linux-version;</userinput></screen>
+<screen arch="x86"><userinput>cp arch/i386/boot/bzImage /boot/lfskernel-&linux-version;</userinput></screen>
+
+<screen arch="raq2"><userinput>cp vmliux /boot/vmlinux-2.6.9
+cd /boot
+gzip -9 vmlinux-2.6.9
+</userinput></screen>
 
 <para><filename>System.map</filename> is a symbol file for the kernel.
 It maps the function entry points of every function in the kernel API,

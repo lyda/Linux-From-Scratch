@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-bootable-grub">
+<sect1 id="ch-bootable-grub" arch="x86">
 <title>Making the LFS System Bootable</title>
 <?dbhtml filename="grub.html"?>
 
