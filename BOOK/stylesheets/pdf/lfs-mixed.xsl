@@ -157,4 +157,43 @@
     </fo:inline>
   </xsl:template>
 
+    <!-- Left alingnament for itemizedlist -->
+  <xsl:template match="itemizedlist">
+    <xsl:variable name="id">
+      <xsl:call-template name="object.id"/>
+    </xsl:variable>
+    <xsl:variable name="label-width">
+      <xsl:call-template name="dbfo-attribute">
+        <xsl:with-param name="pis"
+                        select="processing-instruction('dbfo')"/>
+        <xsl:with-param name="attribute" select="'label-width'"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:if test="title">
+      <xsl:apply-templates select="title" mode="list.title.mode"/>
+    </xsl:if>
+    <!-- Preserve order of PIs and comments -->
+    <xsl:apply-templates
+        select="*[not(self::listitem
+                  or self::title
+                  or self::titleabbrev)]
+                |comment()[not(preceding-sibling::listitem)]
+                |processing-instruction()[not(preceding-sibling::listitem)]"/>
+    <fo:list-block id="{$id}" xsl:use-attribute-sets="list.block.spacing"
+                  provisional-label-separation="0.2em" text-align="left">
+      <xsl:attribute name="provisional-distance-between-starts">
+        <xsl:choose>
+          <xsl:when test="$label-width != ''">
+            <xsl:value-of select="$label-width"/>
+          </xsl:when>
+          <xsl:otherwise>1.5em</xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+      <xsl:apply-templates
+            select="listitem
+                    |comment()[preceding-sibling::listitem]
+                    |processing-instruction()[preceding-sibling::listitem]"/>
+    </fo:list-block>
+  </xsl:template>
+
 </xsl:stylesheet>
