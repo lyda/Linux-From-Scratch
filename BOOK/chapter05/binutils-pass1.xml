@@ -54,7 +54,7 @@ command like this: <userinput>time { ./configure ... &amp;&amp; ...
 
 <para>Now prepare Binutils for compilation:</para>
 
-<screen><userinput>../binutils-&binutils-version;/configure --prefix=/tools 
+<screen><userinput>../binutils-&binutils-version;/configure --prefix=/tools \
     --disable-nls</userinput></screen>
 
 <para>The meaning of the configure options:</para>
