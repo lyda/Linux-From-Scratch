@@ -13,7 +13,7 @@ files for the <command>bash</command> shell. While logged in as user
 following command to create a new <filename>.bash_profile</filename>:</para>
 
 <screen><userinput>cat &gt; ~/.bash_profile &lt;&lt; "EOF"
-exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
+<literal>exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash</literal>
 EOF</userinput></screen>
 
 <para>When logged on as user <emphasis>lfs</emphasis>, the
@@ -37,12 +37,12 @@ shell, which does not read the <filename>/etc/profile</filename> or
 <filename>.bashrc</filename> file now:</para>
 
 <screen><userinput>cat &gt; ~/.bashrc &lt;&lt; "EOF"
-set +h
+<literal>set +h
 umask 022
 LFS=/mnt/lfs
 LC_ALL=POSIX
 PATH=/tools/bin:/bin:/usr/bin
-export LFS LC_ALL PATH
+export LFS LC_ALL PATH</literal>
 EOF</userinput></screen>
 
 <para>The <command>set +h</command> command turns off

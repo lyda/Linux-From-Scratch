@@ -15,7 +15,7 @@ which must be checked, and in which order. Create a new file systems
 table like this:</para>
 
 <screen><userinput>cat &gt; /etc/fstab &lt;&lt; "EOF"
-# Begin /etc/fstab
+<literal># Begin /etc/fstab
 
 # file system  mount-point  fs-type  options         dump  fsck-order
 
@@ -25,7 +25,7 @@ proc           /proc        proc     defaults        0     0
 sysfs          /sys         sysfs    defaults        0     0
 devpts         /dev/pts     devpts   gid=4,mode=620  0     0
 shm            /dev/shm     tmpfs    defaults        0     0
-# End /etc/fstab
+# End /etc/fstab</literal>
 EOF</userinput></screen>
 
 <para>Replace <replaceable>[xxx]</replaceable>,

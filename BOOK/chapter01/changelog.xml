@@ -84,6 +84,10 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 31th, 2004 [manuel]: stylesheets. Several changes
+to improve HTML and PDF output. Some XML tags changes related with
+the stylesheets changes.</para></listitem>
+
 <listitem><para>August 30th, 2004 [matt]: chapter06/util-linux.xml.
 -funit-at-a-time is implied by -O2, and it was this specific option that was
 causing the runtime problems with sfdisk.  Instead of dropping to -O1

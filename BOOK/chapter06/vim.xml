@@ -103,7 +103,7 @@ overrides must come after this setting.  Create a default vim
 configuration file by running the following:</para>
 
 <screen><userinput>cat &gt; /etc/vimrc &lt;&lt; "EOF"
-" Begin /etc/vimrc
+<literal>" Begin /etc/vimrc
 
 set nocompatible
 set backspace=2
@@ -112,7 +112,7 @@ if (&amp;term == "iterm") || (&amp;term == "putty")
   set background=dark
 endif
 
-" End /etc/vimrc
+" End /etc/vimrc</literal>
 EOF</userinput></screen>
 
 <para>The <parameter>set nocompatible</parameter> makes

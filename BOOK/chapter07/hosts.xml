@@ -46,27 +46,27 @@ This is necessary for certain programs to operate correctly.</para>
 <filename>/etc/hosts</filename> file by running:</para>
 
 <screen><userinput>cat &gt; /etc/hosts &lt;&lt; "EOF"
-# Begin /etc/hosts (no network card version)
+<literal># Begin /etc/hosts (no network card version)
 
-127.0.0.1 <replaceable>[&lt;value of HOSTNAME&gt;.example.org]</replaceable> <replaceable>[value of HOSTNAME]</replaceable> localhost
+127.0.0.1 <replaceable>[&lt;HOSTNAME&gt;.example.org]</replaceable> <replaceable>[HOSTNAME]</replaceable> localhost
 
-# End /etc/hosts (no network card version)
+# End /etc/hosts (no network card version)</literal>
 EOF</userinput></screen>
 
 <para>If a network card is to be configured, create the 
 <filename>/etc/hosts</filename> file by running:</para>
 
 <screen><userinput>cat &gt; /etc/hosts &lt;&lt; "EOF"
-# Begin /etc/hosts (network card version)
+<literal># Begin /etc/hosts (network card version)
 
 127.0.0.1 localhost
-<replaceable>[192.168.1.1]</replaceable> <replaceable>[&lt;value of HOSTNAME&gt;.example.org]</replaceable> <replaceable>[value of HOSTNAME]</replaceable>
+<replaceable>[192.168.1.1]</replaceable> <replaceable>[&lt;HOSTNAME&gt;.example.org]</replaceable> <replaceable>[HOSTNAME]</replaceable>
 
-# End /etc/hosts (network card version)
+# End /etc/hosts (network card version)</literal>
 EOF</userinput></screen>
 
 <para>The <replaceable>[192.168.1.1]</replaceable> and
-<replaceable>[&lt;value of HOSTNAME&gt;.example.org]</replaceable>
+<replaceable>[HOSTNAME&gt;.example.org]</replaceable>
 values need to be changed for specific users or requirements (if
 assigned an IP address by a network/system administrator and the
 machine will be connected to an existing network).</para>
