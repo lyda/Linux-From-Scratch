@@ -2,7 +2,7 @@
 # Begin $network_devices/ifdown
 
 # Written by Nathan Coulson <nathan@linuxfromscratch.org>
-#        and Kevin P Fleming <kpfleming@linuxfromscratch.org>
+#        and Kevin P. Fleming <kpfleming@linuxfromscratch.org>
 #
 # the IFCONFIG variable is passed to the scripts found in the services directory,
 # to indicate what file the service should source to get environmental variables.
@@ -10,51 +10,63 @@
 . /etc/sysconfig/rc 
 . $rc_functions 
 
-if [ "$2" != "" ]
-then
-	for file in ${@#$1}
-	do
-	  FILES2="$FILES $network_devices/ifconfig.$1/$file"
+if [ -n "$2" ]; then
+	for file in ${@#$1}; do
+		FILES="$FILES $network_devices/ifconfig.$1/$file"
 	done
-elif [ -d "$network_devices/ifconfig.$1" ]
-then
-  FILES2="$network_devices/ifconfig.$1/*"
+elif [ -d "$network_devices/ifconfig.$1" ]; then
+	FILES=`echo $network_devices/ifconfig.$1/*`
 else
-  FILES2="$network_devices/ifconfig.$1"
+	FILES="$network_devices/ifconfig.$1"
 fi
 
-# Reverse the list of files to process
-for file in $FILES2
-do
-  FILES="$file $FILES"
+for file in $FILES; do
+	FILES2="$file $FILES2"
 done
 
-for file in $FILES
-do
-	if [ ! -f "$file" ]
-	then
-		echo "$file was not a file"
+for file in $FILES2; do
+	# skip backup files
+	if [ "$file" != "${file%""~""}" ]; then
+		continue
+	fi
+	if [ ! -f "$file" ]; then
+		echo "$file is not a network configuration file or directory"
 		continue
 	fi
 	(
 		. $file
-		# Will not process this service if started by hotplug, and ONHOTPLUG
+
+		# Will not process this service if started by boot, and ONBOOT
 		#	is not set to yes
-		if [ "$IN_HOTPLUG" = "1" -a "$ONHOTPLUG" != "yes" ]
-		then
-		  continue
+		if [ "$IN_BOOT" = "1" -a "$ONBOOT" != "yes" ]; then
+			continue
 		fi
 
-		if [ -n "$SERVICE" -a -x "$network_devices/services/$SERVICE" ]
-		then
-			IFCONFIG=$file \
-				$network_devices/services/${SERVICE} $1 down
+		# Will not process this service if started by hotplug, and ONHOTPLUG
+		#	is not set to yes
+		if [ "$IN_HOTPLUG" = "1" -a "$ONHOTPLUG" != "yes" ]; then
+			continue
+		fi
+	
+		if [ -n "$SERVICE" -a -x "$network_devices/services/$SERVICE" ]; then
+			IFCONFIG=$file $network_devices/services/${SERVICE} $1 down
 		else
 			echo -n "Unable to process $file, Either the SERVICE variable was not set, "
-			echo "or the script in question cannot be executed"
+			echo "or the specified service cannot be executed"
 			continue
 		fi
 	)
 done
+
+if [ -z "$2" ]; then
+	link_status=`ip link show $1 2> /dev/null`
+	if [ -n "$link_status" ]; then
+		if echo "$link_status" | grep -q UP ; then
+			echo "Taking down the $1 interface..."
+			ip link set $1 down
+			evaluate_retval
+		fi
+	fi
+fi
 
 # End $network_devices/ifdown

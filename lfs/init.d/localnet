@@ -18,24 +18,24 @@ case "$1" in
 		echo "Setting hostname to $HOSTNAME..."
 		hostname $HOSTNAME
 		evaluate_retval
-		;;
+	;;
 
 	stop)
 		echo "Bringing down the loopback interface..."
 		ip link set lo down
 		evaluate_retval
-		;;
+	;;
 
 	restart)
 		$0 stop
 		sleep 1
 		$0 start
-		;;
+	;;
 
 	status)
 		echo "Hostname is: $(hostname)"
 		ifconfig lo
-		;;
+	;;
 
 	*)
 		echo "Usage: $0 {start|stop|restart|status}"

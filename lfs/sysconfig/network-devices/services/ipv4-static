@@ -1,39 +1,37 @@
 #!/bin/sh
-# Begin $network_devices/services/static
+# Begin $network_devices/services/ipv4-static
 
 # Based upon lfs-bootscripts-1.12 $network_devices/if{down,up}
 # Rewritten by Nathan Coulson <nathan@linuxfromscratch.org>
+# Enhanced by Kevin P. Fleming <kpfleming@linuxfromscratch.org>
 
 . /etc/sysconfig/rc 
 . $rc_functions 
 . $IFCONFIG
 
+if [ -z "$IP" ]; then
+	echo "IP variable missing from $IFCONFIG, cannot continue"
+	exit 1
+fi
+
+if [ -z "$PREFIX" ]; then
+	echo "PREFIX variable missing from $IFCONFIG, cannot continue"
+exit 1
+fi
+
+args="$args $IP/$PREFIX"
+
+if [ -n "$BROADCAST" ]; then
+	args="$args broadcast $BROADCAST"
+fi
+
+
 case "$2" in
 	up)
-		if [ -z "$IP" ]
-		then
-			echo "IP variable missing for $IFCONFIG, cannot continue"
-			exit 1
-		fi
-
-		if [ -z "$NETMASK" ]
-		then
-			echo -n "NETMASK variable missing for $IFCONFIG, "
-			echo "using /24"
-			NETMASK=24
-		fi
-
-		if [ -z "$BROADCAST" ]
-		then
-			echo -n "BROADCAST variable missing for $IFCONFIG, "
-			echo "using default address"
-		fi
-
-		echo "Bringing up the $1 interface..."
-		ip link set $1 up
-		ip addr add $IP/$NETMASK broadcast $BROADCAST label $1 dev $1
+		echo "Adding IPV4 address $IP to the $1 interface..."
+		ip addr add $args dev $1
 		evaluate_retval
-
+	
 		if [ -n "$GATEWAY" ]; then
 			if ip route | grep -q default; then
 				echo "Gateway already setup; skipping..."
@@ -42,26 +40,26 @@ case "$2" in
 				echo "Setting up default gateway..."
 				ip route add default via $GATEWAY dev $1
 				evaluate_retval
-			fi
+			 fi
 		fi
 	;;
-
+	
 	down)
 		if [ -n "$GATEWAY" ]; then
 			echo "Removing default gateway..."
 			ip route del default
 			evaluate_retval
 		fi
-
-		echo "Bringing down the $1 interface..."
-		ip link set $1 down
+	
+		echo "Removing IPV4 address $IP from the $1 interface..."
+		ip addr del $args dev $1
 		evaluate_retval
 	;;
-
+	
 	*)
 		echo "Usage: $0 [interface] {up|down}"
 		exit 1
 	;;
 esac
 
-# End $network_devices/services/static
+# End $network_devices/services/ipv4-static
