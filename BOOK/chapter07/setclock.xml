@@ -31,7 +31,7 @@ subtracting the proper amount of hours for the timezone to this
 <command>hwclock</command> time. For example, if you live in the MST
 timezone, which is also known as GMT -0700, add seven hours to the local
 time. Then, account for Daylight Savings Time, which requires
-substracting an hour (or only add six in the first place) during the summer
+subtracting an hour (or only add six in the first place) during the summer
 months.</para>
 
 <para>Change the value of the <envar>UTC</envar> variable below
