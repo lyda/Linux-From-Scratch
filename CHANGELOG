@@ -1,12 +1,10 @@
-
-3.2.0 - March 30, 2005
+n/a - March 30, 2005
 	* Changed from syslog-ng to sysklogd (Archaic)
 	* Temporairly changed loadproc to return 0 if the program is
 	  already running (Nathan Coulson)
 	* Fixed (by reverting) ifup/ifdown/network (Nathan Coulson),
 	  Reported by Jim Gifford
 	* Fixed network up/down along with adding support of ONHOTPLUG
-	* Tagged as lfs-bootscripts-3.2.0 (Nathan Coulson)
 
 n/a - March 19, 2005
 	* Updated RaQ2 patch (Jim Gifford)
