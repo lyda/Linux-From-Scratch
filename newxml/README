@@ -14,6 +14,9 @@ DocBook XSL Stylesheets 1.65.1 - older versions of the stylesheets had a bug
 libxml2-2.6.7 & libxslt-1.1.4 - these releases have a couple of XInclude related
                                 bugfixes in them
 
+FOP-0.20.5 - required for PDF generation.  The easiest method of installation is
+             to download the binary tarball, extract it to /opt/fop and set
+             JAVA_HOME, FOP_HOME and PATH appropriately.
 
 Setting up the DTD
 ~~~~~~~~~~~~~~~~~~
@@ -47,7 +50,6 @@ tell the XML processors that any requests to the www.docbook.org domain should
 be routed through the local /etc/xml/docbook file (which subsequently rewrites
 those URIs to our local copy of the DTD).  This step won't be required once the
 official 4.3 release is made.
-
 
 Processing the sources
 ~~~~~~~~~~~~~~~~~~~~~~

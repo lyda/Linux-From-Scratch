@@ -1,25 +1,44 @@
 TODO
 ~~~~
 
-1. Decide on a validation method to use.  DTD's are not namespace aware
-   which may cause us problems in the future.  RelaxNG looks promising but
-   there's also the W3C's "XML Schema".  Docbook is available in both, and
-   libxml2 supports both.
-2. Provide a css file to provide nicer output than whatever the UA's default is.
-   * Started - needs some comments regarding layout.
-   * Binary/library names listed in "Short Description" sections should be in a
-     fixed-width font.
-   * URLs of "Official download locations" appear on the line below where they
-     should do in chapter 6.
-   * Header (naviagtion) areas, TOCs & "Titlepage" sections need font sizes &
-     style fixing.
-3. Decide whether we want to use the strict or transitional XHTML DTD.  Note in
-   particular http://www.sagehill.net/docbookxsl/OtherOutputForms.html#d0e23340.
-4. Do we want to use graphics in the navigation headers?
-5. The legalinfo page:
-     * It generates it's own hyperlink ("Legal Notice") but the current book has
-       it linked to via the "Copyright" message above.  Does this matter?
-6. Decide on what levels the TOCs should go down to.
-   * Section elements now no longer have a TOC generated for them - the book TOC
-     remains unchanged as do the part and appendix level TOCs.
-7. Write some more stylesheets to produce alternative output formats.
+1. General
+~~~~~~~~~~
+
+1.1.  Decide on a validation method to use.  DTD's are not namespace aware
+      which may cause us problems in the future.  RelaxNG looks promising but
+      there's also the W3C's "XML Schema".  Docbook is available in both, and
+      libxml2 supports both.
+
+2. HTML
+~~~~~~~
+
+2.1. Provide a css file to provide nicer output than whatever the UA's default
+     is.
+       * Started - needs some comments regarding layout.
+       * Binary/library names listed in "Short Description" sections should be
+         in a fixed-width font.
+       * URLs of "Official download locations" appear on the line below where
+         they should do in chapter 6.
+       * Header (naviagtion) areas, TOCs & "Titlepage" sections need font sizes
+         & style fixing.
+2.2. Decide whether we want to use the strict or transitional XHTML DTD. Note in
+     particular http://www.sagehill.net/docbookxsl/OtherOutputForms.html#d0e23340.
+2.3. The legalinfo page generates it's own hyperlink ("Legal Notice") but the
+     current book has it linked to via the "Copyright" message above.  Does this
+     matter?
+2.4. Decide on what levels the TOCs should go down to.
+       * Section elements now no longer have a TOC generated for them - the book         TOC remains unchanged as do the part and appendix level TOCs.
+
+3. PDF
+~~~~~~
+
+  3.1. Obtain feedback on the current layout.
+  3.2. Investigate the possibility of using PassiveTex in place of FOP.
+
+4. Other Formats
+~~~~~~~~~~~~~~~~
+
+  4.1. LaTeX - confirm that the publisher does in fact *need* this.
+  4.2. TXT & PS are possible using FOP, going via XSL:FO.
+  4.3. RTF may be possible in future versions of FOP.
+  4.4. nALFS profiles.
