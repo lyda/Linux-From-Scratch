@@ -44,6 +44,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Patch 2.5.9</para></listitem>
 <listitem><para>Perl 5.8.5</para></listitem>
 <listitem><para>Procps 3.2.5</para></listitem>
+<listitem><para>Psmisc 21.6</para></listitem>
 <listitem><para>Sed 4.14</para></listitem>
 <listitem><para>Shadow 4.0.7</para></listitem>
 <listitem><para>Sysvinit 2.8.6</para></listitem>
@@ -78,6 +79,17 @@ first a summary, then a detailed log.</para>
 </listitem>
 
 <listitem><para>Changelog Entries:</para>
+
+<itemizedlist>
+<listitem><para>March 12, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Psmisc to 21.6.</para></listitem>
+<listitem><para>Updated: Arch: All - Findutils to 4.2.19.</para></listitem>
+<listitem><para>Updated: Arch: All - Udev to 054.</para></listitem>
+<listitem><para>Updated: Arch: All - Hotplug instructions.</para></listitem>
+<listitem><para>Fixed: Arch: All - Typo in passwd file.</para></listitem>
+</itemizedlist>
+</listitem>
 
 <itemizedlist>
 <listitem><para>March 6, 2005 [jim]</para>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "7.0-multiarch-20050306">
+<!ENTITY version "7.0-multiarch-20050312">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-alpha "&version;-alpha">
 <!ENTITY version-ppc "&version;-PowerPC">
 <!ENTITY version-raq2 "&version;-RaQ2">
-<!ENTITY releasedate "March 6, 2005">
+<!ENTITY releasedate "March 12, 2005">
 <!ENTITY milestone "7.0">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -39,7 +39,7 @@
 <!ENTITY e2fsprogs-version "1.36">
 <!ENTITY expect-version "5.43.0">
 <!ENTITY file-version "4.13">
-<!ENTITY findutils-version "4.2.18">
+<!ENTITY findutils-version "4.2.19">
 <!ENTITY flex-version "2.5.31">
 <!ENTITY gawk-version "3.1.4">
 <!ENTITY gcc-version "3.4.3">
@@ -80,7 +80,7 @@
 <!ENTITY patch-version "2.5.9">
 <!ENTITY perl-version "5.8.6">
 <!ENTITY procps-version "3.2.5">
-<!ENTITY psmisc-version "21.5">
+<!ENTITY psmisc-version "21.6">
 <!ENTITY readline-version "5.0">
 <!ENTITY sed-version "4.1.4">
 <!ENTITY shadow-version "4.0.7">

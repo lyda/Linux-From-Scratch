@@ -24,7 +24,7 @@ command:</para>
 
 <screen><userinput>cat &gt; /etc/passwd &lt;&lt; "EOF"
 <literal>root:x:0:0:root:/root:/bin/bash
-nobody:x:65534:65534</literal>
+nobody:x:65534:65534:Nobody:/:/sbin/nologin</literal>
 EOF</userinput></screen>
 
 <para>The actual password for <emphasis>root</emphasis> (the <quote>x</quote>
