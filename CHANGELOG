@@ -1,3 +1,7 @@
+n/a - July 7, 2004
+
+	* Halted the computer, if unable to mount /dev as a ramfs
+
 n/a - July 6, 2004
 
 	* Moved the hotplug bootscript back to contrib, it will not be used in

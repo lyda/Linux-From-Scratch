@@ -34,6 +34,21 @@ case "$1" in
 		# The reason we don't write to mtab is because we don't ever
 		# want /dev to be unavailable (such as by `umount -a').
 		mount -n -t ramfs ramfs /dev
+		if [ $? != 0 ]
+		then
+			print_status failure
+			echo -n -e $FAILURE
+			echo
+			echo "Cannot mount a ramfs onto /dev, this system will be halted."
+			echo
+			echo -n "When you press Enter, this system will be halted."
+			echo -n -e $NORMAL
+			echo
+			echo "Press Enter to continue..."
+			read ENTER
+
+			halt -f
+		fi
 
 		# Assign udev to get hotplug events.  This will be overwritten
 		# in the hotplug bootscript.
