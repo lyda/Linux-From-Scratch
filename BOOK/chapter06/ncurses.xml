@@ -166,7 +166,7 @@ report its long name.</para>
 </varlistentry>
 
 <varlistentry id="libncurses">
-<term><filename class="libraryfile">>libncurses*</filename></term>
+<term><filename class="libraryfile">libncurses*</filename></term>
 <listitem>
 <para>contains functions to display text in many complex ways on a
 terminal screen. A good example of the use of these functions is the
