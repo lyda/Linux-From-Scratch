@@ -40,7 +40,7 @@ class="filesystem">devfs</systemitem> was merged into the 2.3.46
 kernel and was made generally available during the 2.4 series of
 stable kernels.  Although it was present in the kernel source itself,
 this method of creating devices dynamically never received
-overwhelming support from the core kernel developers.
+overwhelming support from the core kernel developers.</para>
 
 <para>The main problem with the approach adopted by <systemitem
 class="filesystem">devfs</systemitem> was the way that it handled
@@ -62,7 +62,8 @@ export a view of the system's structure to userspace processes.  With
 this userspace visible representation, the possibility of seeing a
 userspace replacement for <systemitem
 class="filesystem">devfs</systemitem> became much more
-realistic.</para> </sect2>
+realistic.</para>
+</sect2>
 
 <sect2>
 <title>Udev Implementation</title>
