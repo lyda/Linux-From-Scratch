@@ -13,6 +13,7 @@
   <xsl:include href="pdf/lfs-pagesetup.xsl"/>
   <xsl:include href="pdf/lfs-sections.xsl"/>
   <xsl:include href="pdf/lfs-mixed.xsl"/>
+  <xsl:include href="pdf/lfs-xref.xsl"/>
 
     <!-- Paper size required by the publisher -->
   <xsl:param name="paper.type" select="'Customized'"/>
