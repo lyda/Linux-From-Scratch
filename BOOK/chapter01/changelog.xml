@@ -74,6 +74,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July 15, 2004 [matt]: Fixed various networking inaccuracies
+(Kevin P. Fleming)</para></listitem>
+
 <listitem><para>July 14, 2004 [matt]: chapter07/network.xml - A couple
 of minor fixes for the network configuration</para></listitem>
 
