@@ -1,7 +1,0 @@
-<qandaentry id="alpha-fixes">
-<question><para>Is there information about LFS on the Alpha?</para></question>
-<answer><para>Kelledin maintains a list of fixes
-for building on the Alpha platform
-at <ulink url="http://skarpsey.dyndns.org/alpha-lfs/alpha.html"/>.
-</para></answer>
-</qandaentry>

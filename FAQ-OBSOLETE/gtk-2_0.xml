@@ -1,9 +1,0 @@
-<qandaentry id="gtk-2_0">
-<question><para>I'm getting errors building a package that requires GTK+,
-but I've installed GTK+ 2.x.</para></question>
-<answer><para>GTK+ 2.x and 1.2.x aren't compatible.
-The package you're installing may need GTK+ (and GLIB) 1.2.x.
-You can install GTK+ (and GLIB) 1.2.x next to 2.x.
-</para></answer>
-</qandaentry>
-
