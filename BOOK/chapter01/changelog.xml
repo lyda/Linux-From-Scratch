@@ -93,6 +93,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 18th, 2004 [winkie]: Don't warn about Binutils failures,
+since they don't happen with GCC 3.3.4.</para></listitem>
+
 <listitem><para>May 18th, 2004 [winkie]: Mount /dev/pts and /dev/shm once we're
 inside the chroot environment.</para></listitem>
 
