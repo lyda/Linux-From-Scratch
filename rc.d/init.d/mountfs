@@ -44,4 +44,3 @@ case "$1" in
 esac
 
 # End $rc_base/init.d/mountfs
-

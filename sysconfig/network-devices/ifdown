@@ -23,4 +23,5 @@ else
 	fi
 	$network_devices/services/${SERVICE} $1 down
 fi
+
 # End $network_devices/ifdown
