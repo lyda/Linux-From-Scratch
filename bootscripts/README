@@ -8,18 +8,12 @@ Network Configuration:
 	Configuration Files:
 		sysconfig/network-devices/ifconfig.*
 		- SERVICE: which script to run in services directory.
-			   defaults to SERVICE=static
 		- ONBOOT: if set to yes, this interface will be started on
 		          bootup, and stopped on shutdown
 		- ONHOTPLUG: if set to yes, this interface will be started
 		             and stopped on hotplug events.  This requires
 		             ifup and ifdown symlinked to /sbin, as well
 		             as the hotplug package
-
-		sysconfig/network-devices/ifup-*:
-		sysconfig/network-devices/ifdown-*:
-		- These scripts are run instead of the SERVICE, if they
-                  exist.  Depreciated, but remains for comatibility purpose
 
 		sysconfig/network
 		- HOSTNAME: Value of the system's hostname
