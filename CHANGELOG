@@ -1,8 +1,7 @@
 n/a - May 6, 2004
 
 	* Don't use loadproc in localnet, it's not meant for that
-	* Quote $PIDFILE when used with -n test parameter, since unexpected (and
-	  bad) behaviour results otherwise
+	* Quote tests of $PIDFILE, so that things behave when it's empty
 	* Removed unused kill -0 from killproc
 
 2.1.0 - May 4, 2004
