@@ -12,9 +12,10 @@ the number of different "solutions" should hint at some of the reasons.
 <listitem><para>No package management is really necessary.
 Unless it is desirable to monitor package file placement minutely,
 any package large enough to warrent removal for disk space reasons
-can be installed in /opt as detailed by the FHS.
-Libraries are generally best upgraded by rebuilding the system
-from the bottom up.
+can be installed in /opt as detailed by the FHS,
+and new releases can be installed over the old,
+although major upgrades and libraries are generally best upgraded
+by rebuilding the system from the bottom up.
 </para></listitem>
 
 <listitem><para>RPM, the Redhat Package Manager,
@@ -70,6 +71,11 @@ It is available from
 <listitem><para>CheckInstall attempts log system calls made by
 "make install". It is available from
 <ulink url="http://asic-linux.com.mx/~izto/checkinstall/"/>.
+</para></listitem>
+
+<listitem><para>More information about these systems
+and a few others is at
+<ulink url="http://hints.linuxfromscratch.org/hints.shtml#package"/>.
 </para></listitem>
 
 </itemizedlist>
