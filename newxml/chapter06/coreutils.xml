@@ -41,7 +41,7 @@ provided by Net-tools. Prevent its installation by applying a patch:</para>
 
 <para>Now prepare Coreutils for compilation:</para>
 
-<screen><userinput>DEFAULT_POSIX2_VERSION=1999209 ./configure --prefix=/usr</userinput></screen>
+<screen><userinput>DEFAULT_POSIX2_VERSION=199209 ./configure --prefix=/usr</userinput></screen>
 
 <para>Compile the package:</para>
 

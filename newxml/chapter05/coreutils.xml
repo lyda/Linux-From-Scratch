@@ -23,22 +23,22 @@
 
 <para>Prepare Coreutils for compilation:</para>
 
-<screen><userinput>DEFAULT_POSIX2_VERSION=1999209 ./configure --prefix=/tools</userinput></screen>
+<screen><userinput>DEFAULT_POSIX2_VERSION=199209 ./configure --prefix=/tools</userinput></screen>
 
 <para>This package has an issue when compiled against versions of glibc
-later than 3.3.2.  Some of the Coreutils utilities (such as
+later than 2.3.2.  Some of the Coreutils utilities (such as
 (<command>head</command>, <command>tail</command> and <command>sort</command>)
 will reject their traditional syntax, a syntax that has been in use for
 approximately 30 years. This old syntax is so pervasive that compatibility
 should be preserved until the many places where it is used can be
 updated.  Backwards compatibility is achieved by setting the
-DEFAULT_POSIX2_VERSION environment variable to "1999209" in the above
-command.  If, instead, you want to enforce the POSIX standard then you can set
-this variable to "200112", realising that doing so will mean you'll have to deal
-with the consequences yourself: patch the many packages that still use the old
-syntax.  We therefore recommend using the instructions exactly as given above.
-The behaviour of the coreutils binaries can be changed at runtime by setting the
-_POSIX2_VERSION environment variable to one of the two values described above.</para>
+DEFAULT_POSIX2_VERSION environment variable to "199209" in the above
+command.  If you don&apos;t want coreutils to be backwards compatible
+with the traditional syntax, then simply omit setting the DEFAULT_POSIX2_VERSION
+environment variable.  Realise though, that doing so will mean you&apos;ll have
+to deal with the consequences yourself: patch the many packages that still use
+the old syntax.  We therefore recommend using the instructions exactly as given
+above.</para>
 
 <para>Compile the package:</para>
 
