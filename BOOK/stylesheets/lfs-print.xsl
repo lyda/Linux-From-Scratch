@@ -12,20 +12,19 @@
   <xsl:include href="print/lfs-index.xsl"/>
   <xsl:include href="print/lfs-pagesetup.xsl"/>
 
-    <!-- Probably want to make the paper size configurable -->
-  <xsl:param name="paper.type" select="'A4'"/>
+    <!-- Paper size required by the publisher -->
+  <xsl:param name="paper.type" select="'Cunstommized'"/>
+  <xsl:param name="page.width">7.25in</xsl:param>
+  <xsl:param name="page.height">9.25in</xsl:param>
 
     <!-- Printing Style -->
   <xsl:param name="double.sided" select="1"/>
-  <xsl:param name="hyphenate">true</xsl:param>
+  <xsl:param name="hyphenate">false</xsl:param>
   <xsl:param name="alignment">justify</xsl:param>
-  
-    <!-- Hyphenate links -->
-  <xsl:param name="ulink.hyphenate" select="' '"></xsl:param>
 
     <!-- Font size -->
-  <xsl:param name="body.font.master">8</xsl:param>
-  <xsl:param name="body.font.size">10pt</xsl:param>
+  <xsl:param name="body.font.master">6</xsl:param>
+  <xsl:param name="body.font.size">8pt</xsl:param>
 
     <!-- TOC stuff -->
   <xsl:param name="generate.toc">
