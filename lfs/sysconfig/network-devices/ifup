@@ -21,7 +21,7 @@
 # Collect a list of configuration files for our interface
 if [ -n "${2}" ]
 then
-	for file in ${@#$1}
+	for file in ${@#$1} # All parameters except $1
 	do
 		FILES="${FILES} ${network_devices}/ifconfig.${1}/${file}"
 	done
