@@ -5,9 +5,9 @@
                 version="1.0">
 
 
-    <!-- This is a hack and isn't correct semantically. The beginpage tags must
-      be placed in the XML source only to render the final PDF output, and must
-      be removed after.-->
+    <!-- This is a hack and isn't correct semantically. Theoretically, the beginpage 
+      tags should be placed in the XML source only to render the PDF output and 
+      should be removed after it. But there is no a better way and we need this.-->
   <xsl:template match="beginpage">
     <fo:block break-after="page"/>
   </xsl:template>
@@ -86,8 +86,8 @@
     </xsl:if>
   </xsl:template>
 
-    <!-- Split URLs -->
-  <xsl:template name="hyphenate-url">
+    <!-- Split URLs (obsolete, keeped as reference) -->
+  <!--<xsl:template name="hyphenate-url">
     <xsl:param name="url" select="''"/>
     <xsl:choose>
       <xsl:when test="ancestor::varlistentry">
@@ -105,15 +105,15 @@
         </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:value-of select="$url"/>
+        <xsl:value-of select="$url"/>-->
       <!--  <xsl:value-of select="substring-before($url, '//')"/>
         <xsl:text>// </xsl:text>
         <xsl:call-template name="split-url">
           <xsl:with-param name="url2" select="substring-after($url, '//')"/>
         </xsl:call-template>-->
-      </xsl:otherwise>
+     <!-- </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
+  </xsl:template>-->
 
   <!--<xsl:template name="split-url">
     <xsl:choose>
