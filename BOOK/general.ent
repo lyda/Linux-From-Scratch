@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "&milestone;-20040516">
+<!ENTITY version "&milestone;">
 <!ENTITY releasedate "May 16, 2004">
 <!ENTITY milestone "5.1">
 
