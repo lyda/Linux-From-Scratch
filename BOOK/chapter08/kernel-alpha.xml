@@ -9,22 +9,9 @@
 
 <indexterm zone="ch-bootable-kernel"><primary sortas="a-Linux">Linux</primary></indexterm>
 
-<sect2 role="package"><title/>
-<para>The Linux package contains the kernel and the header files.</para>
-
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>4.20 SBU</seg>
-<seg>181 MB</seg></seglistitem>
-</segmentedlist>
-
-<segmentedlist>
-<segtitle>Linux installation depends on</segtitle>
-<seglistitem><seg>Bash, Binutils, Coreutils, Findutils,
-GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, and Sed</seg></seglistitem>
-</segmentedlist>
-</sect2>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../chapter08/kernel.xml"
+  xpointer="xpointer(/sect1/sect2[@role='package'])"/>
 
 <sect2 role="installation">
 <title>Installation of the kernel</title>
@@ -173,56 +160,9 @@ class="directory">linux-&linux-alpha-version;</filename> directory to ensure
 all files are owned by user <emphasis>root</emphasis>.</para>
 </sect2>
 
-
-<sect2 id="contents-kernel" role="content"><title>Contents of Linux</title>
-
-<segmentedlist>
-<segtitle>Installed files</segtitle>
-<seglistitem><seg>kernel, kernel headers,
-and System.map</seg></seglistitem>
-</segmentedlist>
-
-<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
-<?dbfo list-presentation="list"?>
-
-<varlistentry id="kernel">
-<term><filename>kernel</filename></term>
-<listitem>
-<para>The engine of the Linux system. When turning on the computer,
-the kernel is the first part of the operating system that gets loaded.
-It detects and initializes all components of the computer's hardware,
-then makes these components available as a tree of files to the
-software and turns a single CPU into a multitasking machine capable
-of running scores of programs seemingly at the same time.</para>
-<indexterm zone="ch-bootable-kernel kernel"><primary sortas="b-kernel">kernel</primary></indexterm>
-</listitem>
-</varlistentry>
-
-<varlistentry id="kernel-headers">
-<term><filename>kernel headers</filename></term>
-<listitem>
-<para>Defines the interface to the services that the kernel provides.
-The headers in the system's <filename
-class="directory">include</filename> directory should
-<emphasis>always</emphasis> be the ones against which Glibc was
-compiled and therefore, should <emphasis>not</emphasis> be replaced
-when upgrading the kernel.</para>
-<indexterm zone="ch-bootable-kernel kernel-headers"><primary sortas="e-kernel-headers">kernel headers</primary></indexterm>
-</listitem>
-</varlistentry>
-
-<varlistentry id="System.map">
-<term><filename>System.map</filename></term>
-<listitem>
-<para>A list of addresses and symbols; it maps the entry points and
-addresses of all the functions and data structures in the
-kernel</para>
-<indexterm zone="ch-bootable-kernel System.map"><primary sortas="e-/boot/System.map">/boot/System.map</primary></indexterm>
-</listitem>
-</varlistentry>
-</variablelist>
-
-</sect2>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../chapter08/kernel.xml"
+  xpointer="xpointer(/sect1/sect2[@role='content'])"/>
 
 </sect1>
 
