@@ -98,8 +98,9 @@ during the linking.</para>
 <para>The next package installed is GCC. An example of what can be
 seen during its run of <command>./configure</command> is:</para>
 
-<blockquote><screen><computeroutput>checking what assembler to use... /tools/i686-pc-linux-gnu/bin/as
-checking what linker to use... /tools/i686-pc-linux-gnu/bin/ld</computeroutput></screen></blockquote>
+<screen><computeroutput>checking what assembler to use... 
+        /tools/i686-pc-linux-gnu/bin/as
+checking what linker to use... /tools/i686-pc-linux-gnu/bin/ld</computeroutput></screen>
 
 <para>This is important for the reasons mentioned above. It also
 demonstrates that GCC's configure script does not search the PATH

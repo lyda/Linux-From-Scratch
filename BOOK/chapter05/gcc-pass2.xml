@@ -47,7 +47,8 @@ performing a quick test:</para>
 
 <para>The response might be:</para>
 
-<blockquote><screen><computeroutput>The system has no more ptys.  Ask your system administrator to create more.</computeroutput></screen></blockquote>
+<screen><computeroutput>The system has no more ptys.  
+Ask your system administrator to create more.</computeroutput></screen>
 
 <para>If the above message is received, the host does not have its
 PTYs set up properly. In this case, there is no point in running the
@@ -104,9 +105,9 @@ variables that override the default optimization flags.</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/tools \
     --libexecdir=/tools/lib --with-local-prefix=/tools \
-    --enable-clocale=gnu --enable-shared --enable-threads=posix \
-    --enable-__cxa_atexit --enable-languages=c,c++ \
-    --disable-libstdcxx-pch</userinput></screen>
+    --enable-clocale=gnu --enable-shared \
+    --enable-threads=posix --enable-__cxa_atexit \
+    --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
 
 <para>The meaning of the new configure options:</para>
 

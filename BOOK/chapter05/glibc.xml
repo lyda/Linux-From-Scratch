@@ -48,8 +48,9 @@ cd ../glibc-build</userinput></screen>
 
 <screen><userinput>../glibc-&glibc-version;/configure --prefix=/tools \
     --disable-profile --enable-add-ons=nptl --with-tls \
-    --with-__thread --enable-kernel=2.6.0 --with-binutils=/tools/bin \
-    --without-gd --without-cvs --with-headers=/tools/glibc-kernheaders</userinput></screen>
+    --with-__thread --enable-kernel=2.6.0 \
+    --with-binutils=/tools/bin --without-gd --without-cvs \
+    --with-headers=/tools/glibc-kernheaders</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
@@ -121,7 +122,8 @@ optimize itself accordingly.</para></listitem>
 <para>During this stage the following warning might appear:</para>
 
 <blockquote><screen><computeroutput>configure: WARNING:
-*** These auxiliary programs are missing or incompatible versions: msgfmt
+*** These auxiliary programs are missing or 
+*** incompatible versions: msgfmt
 *** some features will be disabled.
 *** Check the INSTALL file for required versions.</computeroutput></screen></blockquote>
 

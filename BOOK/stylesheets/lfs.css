@@ -233,6 +233,10 @@ pre.userinput {
   font-weight: bold;
 }
 
+.literal {
+  font-weight: normal;
+}
+
 pre.screen {
   color: #000;
   background-color: #e9e9e9;

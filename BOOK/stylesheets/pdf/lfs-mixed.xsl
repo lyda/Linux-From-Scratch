@@ -182,4 +182,11 @@
     </xsl:choose>-->
   </xsl:template>
 
+    <!-- Presentation of literal tag -->
+  <xsl:template match="literal">
+    <fo:inline  font-weight="normal">
+      <xsl:call-template name="inline.monoseq"/>
+    </fo:inline>
+  </xsl:template>
+
 </xsl:stylesheet>

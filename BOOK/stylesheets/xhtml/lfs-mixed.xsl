@@ -9,9 +9,7 @@
     <xsl:choose>
       <xsl:when test="child::* = userinput">
         <pre class="userinput">
-          <kbd class="command">
-            <xsl:value-of select="."/>
-          </kbd>
+            <xsl:apply-templates/>
         </pre>
       </xsl:when>
       <xsl:otherwise>
@@ -21,6 +19,20 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  
+  <xsl:template match="userinput">
+    <xsl:choose>
+      <xsl:when test="ancestor::screen">
+        <kbd class="command">
+          <xsl:apply-templates/>
+        </kbd>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-imports/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   
   <!-- variablelist -->
   <xsl:template match="variablelist">

@@ -38,9 +38,9 @@ community and to external pages, including HOWTOs, download locations,
 and websites.</para>
 
 <screen><userinput>cat &gt; $LFS/etc/group &lt;&lt; "EOF"
-root:x:0:
+<literal>root:x:0:
 bin:x:1:
-......
+......</literal>
 EOF</userinput></screen>
 
 <para>This format is used when creating configuration files. The first

@@ -80,7 +80,8 @@ readelf -l a.out | grep ': /tools'</userinput></screen>
 <para>If everything is working correctly, there should be no errors,
 and the output of the last command will be of the form:</para>
 
-<blockquote><screen><computeroutput>[Requesting program interpreter: /tools/lib/ld-linux.so.2]</computeroutput></screen></blockquote>
+<screen><computeroutput>[Requesting program interpreter: 
+    /tools/lib/ld-linux.so.2]</computeroutput></screen>
 
 <para>Note that <filename class="directory">/tools/lib</filename>
 appears as the prefix of the dynamic linker.</para>
