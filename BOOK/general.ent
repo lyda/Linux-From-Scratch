@@ -45,7 +45,7 @@
 <!ENTITY less-version "382">
 <!ENTITY libtool-version "1.5.8">
 <!ENTITY linux-version "2.6.8.1">
-<!ENTITY linux-libc-headers-version "2.6.8.0">
+<!ENTITY linux-libc-headers-version "2.6.8.1">
 <!ENTITY m4-version "1.4.2">
 <!ENTITY make-version "3.80">
 <!ENTITY man-version "1.5o">
