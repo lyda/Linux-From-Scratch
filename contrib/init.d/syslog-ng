@@ -1,0 +1,42 @@
+#!/bin/sh
+# Begin $rc_base/init.d/sysklogd - Syslogd and Klogd loaders
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case "$1" in
+	start)
+		echo "Starting system log daemon..."
+		loadproc syslog-ng
+		;;
+
+	stop)
+		echo "Stopping system log daemon..."
+		killproc syslog-ng
+		;;
+
+	reload)
+		echo "Reloading system log daemon config file..."
+		reloadproc syslog-ng 1
+		;;
+
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+
+	status)
+		statusproc syslog-ng
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|reload|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/sysklogd

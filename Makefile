@@ -91,6 +91,19 @@ install-hotplug: create-dirs
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 
+install-syslog-ng: create-dirs
+	install -m ${MODE} contrib/init.d/syslog-ng	${EXTDIR}/rc.d/init.d
+	rm -rf ${EXTDIR}/rc.d/init.d/sysklogd
+	rm -rf ${EXTDIR}/rc.d/rc{0,1,2,6}.d/K90sysklogd
+	rm -rf ${EXTDIR}/rc.d/rc{3,4,5}.d/S10sysklogd
+	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc0.d/K90syslog-ng
+	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc1.d/K90syslog-ng
+	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc2.d/K90syslog-ng
+	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc6.d/K90syslog-ng
+	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc3.d/S10syslog-ng
+	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc4.d/S10syslog-ng
+	ln -sf ../init.d/syslog-ng   ${EXTDIR}/rc.d/rc5.d/S10syslog-ng
+
 install-service-mtu: create-service-dir
 	install -m ${MODE} contrib/sysconfig/network-devices/services/mtu ${EXTDIR}/sysconfig/network-devices/services
 
