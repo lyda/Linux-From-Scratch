@@ -140,6 +140,15 @@
 					version. Search the list archives if you're curious.
 				</para>
 			</section>
+			<section id="dirty-sources"><title>If you didn't delete the source tree after your last attempt:</title>
+				<para>If you're getting errors and you tried compiling before
+					but didn't "rm -rf" the sources between,
+					delete and try again.
+					Basically, extract, configure, and make;
+					and if that fails delete the whole business
+					before starting over from "extract".
+				</para>
+			</section>
 		</section>
 		<section id="sig11"><title>I'm getting fatal errors about signal 11.</title>
 			<para>See <ulink url="http://www.bitwizard.nl/sig11/">http://www.bitwizard.nl/sig11/</ulink>.
