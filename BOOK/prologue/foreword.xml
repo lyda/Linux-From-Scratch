@@ -7,21 +7,33 @@
 <title>Foreword</title>
 <?dbhtml filename="foreword.html"?>
 
-<para>Having used a number of different Linux distributions, I was never
-fully satisfied with any of them. I didn't like the arrangement of
-the bootscripts. I didn't like the way certain programs were configured by
-default. Much more of that sort of thing bothered me. Finally I realized
-that if I wanted full satisfaction from my Linux system I would have to
-build my own system from scratch, using only the source code. I resolved
-not to use pre-compiled packages of any kind, nor CD-ROM or boot disk that
-would install some basic utilities. I would use my current Linux system to
-develop my own.</para>
+<para>Six years ago I embarked on the adventure known as Linux. I did
+what most you guys have done: download a distribution, install it, and
+work with it for a while. Then you don't quite like it and you hear
+about a different distribution that is supposed to be great and fix
+everything your current distribution does wrong. So you try that new
+distribution out for a while. You may even repeat that same cycle a
+few times.</para>
 
-<para>This wild idea seemed very difficult at the time and often seemed
-an impossible task. After sorting out all kinds of problems, such as
-dependencies and compile-time errors, a custom-built Linux system was
-created that was fully operational. I called this system a Linux From Scratch
-system, or LFS for short.</para>
+<para>After you have tried out a number of different distributions,
+you find that each has its strengths and weaknesses, but you can't
+seem to find that one system that brings you the most satisfaction.
+Personally, I came to the conclusion that to be truly satisfied with
+my Linux system, I would have to somehow combine those different
+systems into one <quote>perfect</quote> Linux system. It would then
+have all the strengths from various different systems, without their
+weaknesses.  But that surely is an impossible and daunting task. Or is
+it?</para>
+
+<para>You can do better than simply combining several distributions
+into one.  You can create your own Linux system from scratch.</para>
+
+<para>After figuring out things like circular dependencies, compile
+time errors and other related issues, a custom built Linux system was
+created and fully operational. I called this system a Linux From
+Scratch system, or LFS for short. This book will show you how it was
+done and how you can create your own LFS system, fully customized to
+your own needs and desires.</para>
 
 <para>I hope you will have a great time working on your own LFS!</para>
 
@@ -30,3 +42,4 @@ Gerard Beekmans
 gerard@linuxfromscratch.org</literallayout>
 
 </sect1>
+
