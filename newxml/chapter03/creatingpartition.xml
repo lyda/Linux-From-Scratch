@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3CR2//EN" "http://www.docbook.org/xml/4.3CR2/docbookx.dtd">
-<sect1 id="ch03-creatingpart">
+<sect1 id="space-creatingpartition">
 <title>Creating a new partition</title>
-<?dbhtml filename="creatingpart.html"?>
+<?dbhtml filename="creatingpartition.html"?>
 
 <para>In order to build our new Linux system, we will need some space:
 an empty disk partition. If you don't have a free partition, and no room
