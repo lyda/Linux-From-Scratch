@@ -56,15 +56,11 @@ problem. The above command takes care of this issue.</para>
 <para>Next, amend the GCC specs file so that it points to the new
 dynamic linker. A sed command accomplishes this:</para>
 
-<!-- Ampersands are needed to allow cut and paste -->
-
 <screen><userinput>sed -i 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g' \
     `gcc --print-file specs`</userinput></screen>
 
-<para><phrase condition="html">Copying and pasting the above is
-recommended. </phrase>It is a good idea
-to visually inspect the specs file to verify the intended change was
-actually made.</para>
+<para>It is a good idea to visually inspect the specs file to verify the intended 
+change was actually made.</para>
 
 <important><para>If working on a platform where the name of the
 dynamic linker is something other than
