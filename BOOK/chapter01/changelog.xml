@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-scatter-changelog">
+<title>Changelog</title>
+<?dbhtml filename="changelog.html"?>
+
+<para>This is version &version; of the Linux From Scratch book, dated
+&releasedate;. If this book is more than two months old, a newer and better
+version is probably already available. To find out, please check one of the
+mirrors via <ulink url="&lfs-root;"/>.</para>
+
+<para>Below is a list of changes made since the previous release of the book,
+first a summary, then a detailed log.</para>
+
+<itemizedlist>
+
+<listitem><para>Upgraded to:</para>
+<itemizedlist>
+<listitem><para>Arch: All - Automake 1.9.5</para></listitem>
+<listitem><para>Arch: All - Binutils 2.15.94.0.2.2</para></listitem>
+<listitem><para>Arch: All - Bison 2.0</para></listitem>
+<listitem><para>Arch: All - Bzip2 1.0.3</para></listitem>
+<listitem><para>Arch: All - Diffutils 2.8.7</para></listitem>
+<listitem><para>Arch: All - E2fsprogs 1.37</para></listitem>
+<listitem><para>Arch: All - Expect 1.43.0</para></listitem>
+<listitem><para>Arch: All - File 4.13</para></listitem>
+<listitem><para>Arch: All - Findutils 4.2.20</para></listitem>
+<listitem><para>Arch: All - GCC 3.4.3</para></listitem>
+<listitem><para>Arch: All - Gettext 0.14.3</para></listitem>
+<listitem><para>Arch: All - Glibc 2.3.4</para></listitem>
+<listitem><para>Arch: All - Grep 2.5.1a</para></listitem>
+<listitem><para>Arch: x86 - Grub 0.96</para></listitem>
+<listitem><para>Arch: All - Iana-Etc 1.04</para></listitem>
+<listitem><para>Arch: All - Iproute2 2.6.11-050330</para></listitem>
+<listitem><para>Arch: All - LFS-Bootscripts 3.2.0</para></listitem>
+<listitem><para>Arch: All - Libtool 1.5.14</para></listitem>
+<listitem><para>Arch: All - Linux 2.6.11.6</para></listitem>
+<listitem><para>Arch: All - Linux-libc-headers 2.6.11.2</para></listitem>
+<listitem><para>Arch: All - Man 1.5p</para></listitem>
+<listitem><para>Arch: All - Man-pages 2.01</para></listitem>
+<listitem><para>Arch: All - M4 1.43</para></listitem>
+<listitem><para>Arch: All - Patch 2.5.9</para></listitem>
+<listitem><para>Arch: All - Perl 5.8.5</para></listitem>
+<listitem><para>Arch: All - Procps 3.2.5</para></listitem>
+<listitem><para>Arch: All - Psmisc 21.6</para></listitem>
+<listitem><para>Arch: All - Sed 4.14</para></listitem>
+<listitem><para>Arch: All - Shadow 4.0.7</para></listitem>
+<listitem><para>Arch: All - Sysvinit 2.8.6</para></listitem>
+<listitem><para>Arch: All - Tar 1.15.1</para></listitem>
+<listitem><para>Arch: All - Texinfo 4.8</para></listitem>
+<listitem><para>Arch: All - Tcl 8.4.9</para></listitem>
+<listitem><para>Arch: All - Udev 056</para></listitem>
+<listitem><para>Arch: All - Util-linux 2.12q</para></listitem>
+<listitem><para>Arch: All - Zlib 1.2.2</para></listitem>
+<listitem><para>Arch: All - udev-config-2.rules</para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>Added:</para>
+<itemizedlist>
+<listitem><para>Arch: All - grep-2.5.1a-raq2_config_update-1.patch</para></listitem>
+<listitem><para>Arch: All - tar-1.15.1-sparse_fix-1.patch</para></listitem>
+<listitem><para>Arch: All - shadow-4.0.7-fix_lastlog-1.patch</para></listitem>
+<listitem><para>Arch: All - util-linux-2.12q-cramfs-1.patch</para></listitem>
+<listitem><para>Arch: PPC - Parted 1.6.22</para></listitem>
+<listitem><para>Arch: PPC - Yaboot 1.3.13</para></listitem>
+<listitem><para>Arch: RaQ2 - Colo 1.18</para></listitem>
+<listitem><para>Arch: RaQ2 - glibc-2.3.4-mips_syscall-2.patch</para></listitem>
+<listitem><para>Arch: RaQ2 - linux-libc-headers-2.6.11.2-raq2_fix-1.patch</para></listitem>
+<listitem><para>Arch: RaQ2 - linux-2.6.11.6-raq2_fix-3.patch</para></listitem>
+</itemizedlist>
+</listitem>
+ 
+<listitem><para>Removed:</para>
+<itemizedlist>
+<listitem><para>Arch: All - udev-config-2.permissions</para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>Changelog Entries:</para>
+
+<itemizedlist>
+<listitem><para>April 1, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Added: Arch: All - IPRoute2 to 2.6.11-050330.</para></listitem>
+<listitem><para>Patch: Arch: RaQ2 - Updated linux kernel patch for tulip fixes.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 31, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Added: Arch: PPC - Parted 1.6.22.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 31, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: Raq2 - Colo to 1.1.8.</para></listitem>
+<listitem><para>Updated: Arch: All - M4 to 1.4.3.</para></listitem>
+<listitem><para>Updated: Arch: All - LFS-Bootscritps to 3.2.0.</para></listitem>
+<listitem><para>Removed: RaQ2 - lfs-bootscripts-3.1.0-raq2-2.patch</para></listitem>
+<listitem><para>Fixed: Arch: All - Sysklogd missing files.</para></listitem>
+<listitem><para>Patch: Arch: RaQ2 - Updated linux kernel patch for 64 bit.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 30, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Re-Added: Arch: All - Sysklogd 1.4.1.</para></listitem>
+<listitem><para>Removed: Arch: All - Syslog-ng 1.6.6.</para></listitem>
+<listitem><para>Removed: Arch: All - Libol 0.3.15.</para></listitem>
+<listitem><para>Fixed: Arch: All - Patches download locations.</para></listitem>
+<listitem><para>Patch: Arch: RaQ2 - Fix compile issue on sysklogd.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 26, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Linux to 2.6.11.6.</para></listitem>
+<listitem><para>Updated: Arch: All - Linux-libc-headers to 2.6.11.2.</para></listitem>
+<listitem><para>Removed: Arch: RaQ2 - Patch for Linux-libc-headers, no longer needed</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 23, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: RaQ2 - Linux to 2.6.11.5.</para></listitem>
+<listitem><para>Updated: Arch: PPC - Updated based on Jermey Huntwork's livecd build.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 22, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - E2fsprogs to 1.37.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 21, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Patch: Arch: All - Shadow fix issue with shadow and lastlog.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 19, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: x86, PPC, Alpha - Linux to 2.6.11.5.</para></listitem>
+<listitem><para>Updated: Arch: All - Made the bootloader FHS symlink generic to all bootloaders.</para></listitem>
+<listitem><para>Updated: Arch: All - Udev to 056.</para></listitem>
+<listitem><para>Patch: Arch: All - Tar -S fail with files over 4 GB.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 18, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Findutils to 4.2.20.</para></listitem>
+<listitem><para>Fixed: Arch: All - Updated to IPRoute2 file size.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 16, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - IPRoute2 to 2.6.11-050314.</para></listitem>
+<listitem><para>Updated: Arch: x86, PPC, Alpha - Linux to 2.6.11.4.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 14, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Updated hotplug explanations from r4758. Thanx Matt</para></listitem>
+<listitem><para>Updated: Arch: All - Gettext to 0.14.3.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 13, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - IPRoute2 to 2.6.11-050310.</para></listitem>
+<listitem><para>Updated: Arch: x86, PPC, Alpha - Linux to 2.6.11.3.</para></listitem>
+<listitem><para>Updated: Arch: x86, PPC, Alpha - Linux-libc-headers to 2.6.11.0.</para></listitem>
+<listitem><para>Updated: Arch: All - Dynamically link the pass1 toolchain to
+workaround bug 1061 and remove all related explanatory text</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 12, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Psmisc to 21.6.</para></listitem>
+<listitem><para>Updated: Arch: All - Findutils to 4.2.19.</para></listitem>
+<listitem><para>Updated: Arch: All - Udev to 054.</para></listitem>
+<listitem><para>Updated: Arch: All - Hotplug instructions.</para></listitem>
+<listitem><para>Fixed: Arch: All - Typo in passwd file.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 6, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Fixed: Arch: All - Removed --without-cvs from glibc.</para></listitem>
+<listitem><para>Fixed: Arch: All - Corrected fstab gid for devpts.</para></listitem>
+<listitem><para>Fixed: Arch: All - Fixed Typos in download links.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>March 2, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Fixed: Arch: All - Bash Download Location.</para></listitem>
+<listitem><para>Fixed: Arch: All - Spelling of February.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>February 26, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Udev to 054.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>February 25, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Fixed: Arch: All - Duplicate tty in group file.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>February 24, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Gettext 0.14.2.</para></listitem>
+<listitem><para>Changed: Book Format - Changelog format.</para></listitem>
+<listitem><para>Fixed: Arch: All - Bugzilla 1033 Gettext.</para></listitem>
+<listitem><para>Updated: Arch: Raq2 - Colo to 1.1.7.</para></listitem>
+<listitem><para>Updated: Arch: All - Bzip2 to 1.0.3.</para></listitem>
+<listitem><para>Updated: Arch: All - Download file sizes.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>February 23, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Sync: With the 6.0 Release.</para></listitem>
+<listitem><para>Updated: Arch: All - Users and Groups to basic needs.</para></listitem>
+<listitem><para>Updated: Arch: All - Udev Configuration.</para></listitem>
+<listitem><para>Added Patch: Arch: RaQ2 glibc - which fixes the generation of the syscall.h file.</para></listitem>
+<listitem><para>Added Patch: Arch: RaQ2 grep - updated config.guess and config.sub.</para></listitem>
+<listitem><para>Added Patch: Arch: RaQ2 Linux - fixes MIPS Processor related issues.</para></listitem>
+<listitem><para>Added Patch: Arch: RaQ2 bootscripts - allows LCD Status during bootup.</para></listitem>
+<listitem><para>Added Patch: Arch: All iproute2 - fixes constant_htons build issue.</para></listitem>
+<listitem><para>Added: Arch: RaQ2 - Colo, OpenSSL, and OpenSSH.</para></listitem>
+<listitem><para>Added: Arch: PPC - Yaboot.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+</listitem>
+</itemizedlist>
+
+<para>Branch Synced from the Release of LFS 6.0 on February 23rd, 2005</para>
+
+</sect1>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="materials-patches">
+<title>Needed Patches</title>
+<?dbhtml filename="patches.html"?>
+
+<para>In addition to the packages, several patches are also required.
+These patches correct any mistakes in the packages that should be
+fixed by the maintainer.  The patches also make small modifications to
+make the packages easier to work with. The following patches will be
+needed to build an LFS system:</para>
+
+<variablelist role="materials">
+
+<varlistentry>
+<term>Bash Various Fixes - 21 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;bash/bash-&bash-version;-fixes-2.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Bash Avoid Wcontinued Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;bash/bash-&bash-version;-avoid_WCONTINUED-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Coreutils Suppress Uptime, Kill, Su Patch - 16 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;coreutils/coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="x86">
+<term>Coreutils Uname Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;coreutils/coreutils-&coreutils-version;-uname-2.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Expect Spawn Patch - 6 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;expect/expect-&expect-version;-spawn-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Flex Brokenness Patch - 8 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;flex/flex-&flex-version;-debian_fixes-4.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term> GCC Linkonce Patch - 12 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-linkonce-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>GCC No-Fixincludes Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-no_fixincludes-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>GCC Specs Patch - 14 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-specs-2.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>GLIBC Syscall Patch - 11 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;glibc/glibc-&glibc-version;-mips_syscall-2.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Grep RaQ2 Config Update Patch - 48 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;grep/grep-&grep-version;-raq2_config_update-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Inetutils Kernel Headers Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;inetutils/inetutils-&inetutils-version;-kernel_headers-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Inetutils No-Server-Man-Pages Patch - 4 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;inetutils/inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>IPRoute2 Disable DB Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;iproute2/iproute2-&iproute2-patch-version;-remove_db-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Linux-libc-headers RaQ2 Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;linux-libc-headers/linux-libc-headers-&linux-libc-headers-version;-raq2_fix-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Linux RaQ2 Patch - 164 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;linux/linux-&linux-version;-raq2_fix-3.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Mktemp Tempfile Patch - 3 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;mktemp/mktemp-&mktemp-version;-add_tempfile-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Perl Libc Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;perl/perl-&perl-version;-libc-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
+<term>Procps Signal 11 Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;procps/procps-&procps-version;-fix_mips-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Readline Various Fixes Patch - 6.9 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;readline/readline-&readline-version;-fixes-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Shadow Lastlog Fix Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;shadow/shadow-&shadow-version;-fix_lastlog-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Sysklogd Fixes Patch - 27 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;sysklogd/sysklogd-&sysklogd-version;-fixes-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Tar Sparse Fix Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;tar/tar-&tar-version;-sparse_fix-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Util-linux Cramfs Patch - 2 KB:</term> <listitem>
+<para><ulink url="&patches-root;util-linux/util-linux-&util-linux-version;-cramfs-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="ppc">
+<term>Yaboot (&yaboot-version;) - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;yaboot/yaboot-&yaboot-version;-fix-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>In addition to the above required patches, there exist a number of
+optional patches created by the LFS community. These optional patches
+solve minor problems or enable functionality that is not enabled by
+default. Feel free to peruse the patches database located at
+<ulink url="&lfs-root;patches/"/> and acquire any additional
+patches to suit the system needs.</para>
+
+</sect1>
+
