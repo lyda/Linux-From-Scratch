@@ -1,7 +1,16 @@
 #!/bin/sh
+########################################################################
 # Begin $rc_base/init.d/mountkernfs
-
-# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+#
+# Description : Mount proc and sysfs
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

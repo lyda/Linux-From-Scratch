@@ -1,11 +1,17 @@
 #!/bin/sh
-# Begin $rc_base/init.d/functions - Run Level Control Functions
-
-# Based on functions script from LFS-3.1 and earlier.
-# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
-
-# With code based on Matthias Benkmann's simpleinit-msb @
-# http://winterdrache.de/linux/newboot/index.html
+########################################################################
+# Begin $rc_base/init.d/functions
+#
+# Description : Run Level Control Functions
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       : With code based on Matthias Benkmann's simpleinit-msb
+#		http://winterdrache.de/linux/newboot/index.html
+#
+########################################################################
 
 ## Environmental setup
 # Setup default values for environment

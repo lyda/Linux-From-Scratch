@@ -1,7 +1,16 @@
 #!/bin/sh
-# Begin $rc_base/init.d/udev - Udev cold-plugging script
-
-# Written by Zack Winkles  - winkie@linuxfromscratch.org
+########################################################################
+# Begin $rc_base/init.d/udev
+#
+# Description : Udev cold-plugging script
+#
+# Authors     : Zack Winkles
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

@@ -1,11 +1,19 @@
 #!/bin/sh
+########################################################################
 # Begin $network_devices/ifdown
-
-# Written by Nathan Coulson <nathan@linuxfromscratch.org>
-#        and Kevin P. Fleming <kpfleming@linuxfromscratch.org>
 #
-# the IFCONFIG variable is passed to the scripts found in the services directory,
-# to indicate what file the service should source to get environmental variables.
+# Description : Interface Down
+#
+# Authors     : Nathan Coulson - nathan@linuxfromscratch.org
+#		Kevin P. Fleming - kpfleming@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       : the IFCONFIG variable is passed to the scripts found
+#		in the services directory, to indicate what file the
+# 		service should source to get environmental variables.
+#
+########################################################################
 
 . /etc/sysconfig/rc 
 . ${rc_functions} 

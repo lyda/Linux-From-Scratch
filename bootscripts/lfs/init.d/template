@@ -1,8 +1,16 @@
 #!/bin/sh
+########################################################################
 # Begin $rc_base/init.d/
-
-# Based on sysklogd script from LFS-3.1 and earlier.
-# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+#
+# Description :
+#
+# Authors     :
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

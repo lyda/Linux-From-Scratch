@@ -1,7 +1,16 @@
 #!/bin/sh
-# Begin $rc_base/init.d/cleanfs - Clean file system
-
-# Written by Gerard Beekmans  - gerard@linuxfromscratch.org
+########################################################################
+# Begin $rc_base/init.d/cleanfs
+#
+# Description : Clean file system
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

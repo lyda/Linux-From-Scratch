@@ -1,7 +1,16 @@
 #!/bin/sh
-# Begin $rc_base/init.d/halt - Halt Script
-
-# Written by Gerard Beekmans  - gerard@linuxfromscratch.org
+########################################################################
+# Begin $rc_base/init.d/halt
+#
+# Description : Halt Script
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

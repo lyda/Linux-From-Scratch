@@ -1,9 +1,17 @@
 #!/bin/sh
-# Begin $rc_base/init.d/console - Sets keymap and screen font
-
-# Based on loadkeys script from LFS-3.1 and earlier.
-# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
-# Screen font added by Alexander E. Patrakov
+########################################################################
+# Begin $rc_base/init.d/console
+#
+# Description : Sets keymap and screen font
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#		Alexander E. Patrakov
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

@@ -1,7 +1,16 @@
-#!/bin/bash
-# Begin $rc_base/init.d/swap - Swap Control Script
-
-# Written by Gerard Beekmans  - gerard@linuxfromscratch.org
+#!/bin/sh
+########################################################################
+# Begin $rc_base/init.d/swap
+#
+# Description : Swap Control Script
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

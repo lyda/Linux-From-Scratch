@@ -1,7 +1,16 @@
 #!/bin/sh
-# Begin $rc_base/init.d/hotplug - Load modules for system devices
-
-# Written by Zack Winkles - winkie@linuxfromscratch.org
+########################################################################
+# Begin $rc_base/init.d/hotplug
+#
+# Description : Load modules for system devices
+#
+# Authors     : Zack Winkles
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

@@ -1,10 +1,16 @@
-
-#/bin/sh
-# Begin $rc_base/init.d/rc - Main Run Level Control Script
-##### This is the proposed addition to add interactive bootscripts
-
-# Based on rc script from LFS-3.1 and earlier.
-# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+#!/bin/sh
+########################################################################
+# Begin $rc_base/init.d/rc
+#
+# Description : Main RunLevel Control Script - Interactive Version
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}

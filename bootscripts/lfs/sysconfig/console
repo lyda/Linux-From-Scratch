@@ -1,5 +1,15 @@
+########################################################################
 # Begin /etc/sysconfig/console
-# Uncomment the section corresponding to your country
+#
+# Description : Console script config file
+#
+# Authors     : Alexander E. Patrakov
+#
+# Version     : 00.00
+#
+# Notes       : Uncomment the section corresponding to your country
+#
+########################################################################
 
 # US-English users don't need this file at all, except when they
 # use framebuffer console.

@@ -1,8 +1,16 @@
 #!/bin/sh
-# Begin $rc_base/init.d/sendsignals - Sendsignals Script
-
-# Based on sendsignals script from LFS-3.1 and earlier.
-# Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+########################################################################
+# Begin $rc_base/init.d/sendsignals
+#
+# Description : Sendsignals Script
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
 
 . /etc/sysconfig/rc
 . ${rc_functions}
