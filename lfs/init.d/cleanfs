@@ -64,7 +64,7 @@ case "$1" in
 		  -exec rm -rf {} \;
 		evaluate_retval
 
-		if [ -r /etc/sysconfig/createfiles ]; then
+		if egrep -qv '^(#|$)' /etc/sysconfig/createfiles 2>/dev/null; then
 			echo "Creating files and directories..."
 			create_files
 			evaluate_retval

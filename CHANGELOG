@@ -3,6 +3,7 @@ n/a - June 15, 2004
 	* Reset /proc/sys/kernel/hotplug to /bin/true when running the "stop"
 	  command for hotplug
 	* Cleaned the output of the mountkernfs script
+	* Don't output "Creating files and directories" when it's a lie
 
 n/a - June 8, 2004
 
