@@ -29,8 +29,7 @@ case "${1}" in
 				interface=${file##*/ifconfig.}
 
 				# skip if $file is * (because nothing was found)
-				if [ "${interface}" = "*" ]
-				then
+				if [ "${interface}" = "*" ]; then
 					continue
 				fi
 
@@ -40,8 +39,7 @@ case "${1}" in
 				(
 					. ${file}
 					# If ONBOOT does not equal yes, process the next file
-					if [ "${ONBOOT}" != "yes" ]
-					then
+					if [ "${ONBOOT}" != "yes" ]; then
 						continue
 					fi
 
@@ -69,8 +67,7 @@ case "${1}" in
 			interface=${file##*/ifconfig.}
 
 			# skip if $file is * (because nothing was found)
-			if [ "${interface}" = "*" ]
-			then
+			if [ "${interface}" = "*" ]; then
 				continue
 			fi
 
@@ -80,8 +77,7 @@ case "${1}" in
 			(
 				. ${file}
 				# If ONBOOT does not equal yes, process the next file
-				if [ "${ONBOOT}" != "yes" ]
-				then
+				if [ "${ONBOOT}" != "yes" ]; then
 					continue
 				fi
 

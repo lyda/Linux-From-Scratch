@@ -19,14 +19,12 @@
 . ${rc_functions} 
 
 # Collect a list of configuration files for our interface
-if [ -n "${2}" ]
-then
+if [ -n "${2}" ]; then
 	for file in ${@#$1} # All parameters except $1
 	do
 		FILES="${FILES} ${network_devices}/ifconfig.${1}/${file}"
 	done
-elif [ -d "${network_devices}/ifconfig.${1}" ]
-then
+elif [ -d "${network_devices}/ifconfig.${1}" ]; then
 	FILES=`echo ${network_devices}/ifconfig.${1}/*`
 else
 	FILES="${network_devices}/ifconfig.${1}"
@@ -39,8 +37,7 @@ boot_mesg_flush
 # Process each configuration file
 for file in ${FILES}
 do
-	if [ ! -f "${file}" ]
-	then
+	if [ ! -f "${file}" ]; then
 		boot_mesg "${file} is not a network configuration file." ${WARNING}
 		echo_warning
 		continue
@@ -48,20 +45,15 @@ do
 
 	(
 		. ${file}
-		if [ -n "${CHECK_LINK}" -o "${CHECK_LINK}" = "y" -o "${CHECK_LINK}" = "yes" -o "${CHECK_LINK}" = "1" ]
-		then
+		if [ -n "${CHECK_LINK}" -o "${CHECK_LINK}" = "y" -o "${CHECK_LINK}" = "yes" -o "${CHECK_LINK}" = "1" ];	then
 
 			# Activate the interface, if not activated
-			if ip link show ${1} > /dev/null 2>&1
-			then
+			if ip link show ${1} > /dev/null 2>&1; then
 				link_status=`ip link show ${1} 2> /dev/null`
-				if [ -n "${link_status}" ]
-				then
-					if ! echo "${link_status}" | grep -q UP
-					then
+				if [ -n "${link_status}" ]; then
+					if ! echo "${link_status}" | grep -q UP; then
 						ip link set ${1} up
-						if [ "$?" != "0" ]
-						then
+						if [ "$?" != "0" ]; then
 							boot_mesg "Unable to activate ${1}." ${FAILURE}
 							echo_failure
 						fi
@@ -75,8 +67,7 @@ do
 
 		fi
 		# This will run the service script, if SERVICE is set
-		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]
-		then
+		if [ -n "${SERVICE}" -a -x "${network_devices}/services/${SERVICE}" ]; then
 			IFCONFIG=${file} ${network_devices}/services/${SERVICE} ${1} up
 		else
 			boot_mesg "Unable to process ${file}.  Either" ${FAILURE}

@@ -50,10 +50,8 @@ start_daemon()
 		esac
 	done
 
-	if [ -z "${forcestart}" ]
-	then
-		if [ -z "${pidfile}" ]
-		then
+	if [ -z "${forcestart}" ]; then
+		if [ -z "${pidfile}" ]; then
 			pidofproc "${1}" > /dev/null
 		else
 			pidofproc -p "${pidfile}" "${1}" > /dev/null
@@ -120,18 +118,15 @@ killproc()
 		esac
 	done
 
-	if [ "${#}" = "2" ]
-	then
+	if [ "${#}" = "2" ]; then
 		killsig="${2}"
-	elif [ "${#}" != "1" ]
-	then
+	elif [ "${#}" != "1" ]; then
 		shift 2
 		log_failure_msg "Excess Arguments: $@"
 		return 1
 	fi
 
-	if [ -z "${pidfile}" ]
-	then
+	if [ -z "${pidfile}" ]; then
 		pidlist=`pidofproc "${1}"`
 	else
 		pidlist=`pidofproc -p "${pidfile}" "${1}"`
@@ -140,8 +135,7 @@ killproc()
 	for pid in ${pidlist}
 	do
 		kill -${killsig:-TERM} ${pid} 2>/dev/null
-		if [ -z "${killsig}" ]
-		then
+		if [ -z "${killsig}" ]; then
 			# Wait up to 3 seconds, for ${pid} to terminate
 			local dtime=3
 			while [ "${dtime}" != "0" ]
@@ -155,14 +149,13 @@ killproc()
 		fi
 	done
 
-	if [ -z "${killsig}" ]
-	then
+	if [ -z "${killsig}" ]; then
 		pidofproc "${1}" 2> /dev/null
 	
-		if [ "$?" != "0" ] # Program was terminated
-		then
-			if [ -f "${pidfile}" ] # Pidfile Exists
-			then
+		# Program was terminated
+		if [ "$?" != "0" ]; then
+			# Pidfile Exists
+			if [ -f "${pidfile}" ];	then
 				rm -f "${pidfile}"
 			fi
 			return 0
@@ -170,8 +163,7 @@ killproc()
 			return 4 # Unknown Status
 		fi
 	else
-		if [ -z "${pidfile}" ]
-		then
+		if [ -z "${pidfile}" ]; then
 			pidofproc "${1}" 2> /dev/null
 		else
 			pidofproc -p "${pidfile}" "${1}" 2> /dev/null
@@ -220,25 +212,21 @@ pidofproc()
 		esac
 	done
 
-	if [ "${#}" != "1" ]
-	then
+	if [ "${#}" != "1" ]; then
 		shift 1
 		log_failure_msg "Excess Arguments: $@"
 		return 1
 	fi
 
-	if [ -n "${pidfile}" ]
-	then
-		if [ ! -r "${pidfile}" ]
-		then
+	if [ -n "${pidfile}" ]; then
+		if [ ! -r "${pidfile}" ]; then
 			return 3 # Program is not running
 		fi
 
 		lpids=`head -n 1 ${pidfile}`
 		for pid in ${lpids}
 		do
-			if [ "${pid}" -ne "$$" -a "${pid}" -ne "${PPID}" ]
-			then
+			if [ "${pid}" -ne "$$" -a "${pid}" -ne "${PPID}" ]; then
 				kill -0 "${pid}" > /dev/null &&
 				pidlist="${pidlist} ${pid}"
 			fi
@@ -251,22 +239,19 @@ pidofproc()
 		pidof "${1}"
 	fi
 
-	if [ "$?" != "0" ]
-	then
+	if [ "$?" != "0" ]; then
 		return 3 # Program is not running
 	fi
 }
 
 # Screen Dimentions
-if [ -z "${COLUMNS}" ]
-then
+if [ -z "${COLUMNS}" ]; then
   COLUMNS=$(stty size)
   COLUMNS=${COLUMNS##* }
 fi
 
 # When using remote connections, such as a serial port, stty size returns 0
-if [ "${COLUMNS}" = "0" ]
-then
+if [ "${COLUMNS}" = "0" ]; then
   COLUMNS=80
 fi
 

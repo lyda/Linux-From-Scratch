@@ -58,8 +58,7 @@ case "${1}" in
 
 					# Print the module name if successful,
 					# otherwise take note.
-					if [ ${?} -eq 0 ]
-					then
+					if [ ${?} -eq 0 ]; then
 						boot_mesg -n " ${module}" ${NORMAL}
 					else
 						failedmod="${failedmod} ${module}"
@@ -73,8 +72,7 @@ case "${1}" in
 
 				# Print a failure message with a list of any
 				# modules that may have failed to load.
-				if [ "${failedmod}" ]
-				then
+				if [ "${failedmod}" ]; then
 					boot_mesg "Failed to load modules:${failedmod}" ${FAILURE}
 					echo_failure
 				fi

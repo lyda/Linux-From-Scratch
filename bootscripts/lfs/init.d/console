@@ -17,29 +17,25 @@
 . ${rc_functions}
 
 # Native English speakers probably don't have /etc/sysconfig/console at all
-if [ -f /etc/sysconfig/console ]
-then
+if [ -f /etc/sysconfig/console ]; then
 	. /etc/sysconfig/console
 fi
 
 case "${1}" in
 	start)
-		if [ -n "${KEYMAP}" ]
-		then
+		if [ -n "${KEYMAP}" ]; then
 			boot_mesg "Loading keymap: ${KEYMAP}..."
 			loadkeys ${KEYMAP} &>/dev/null
 			evaluate_retval
 		fi
 
-		if [ -n "${KEYMAP_CORRECTIONS}" ]
-		then
+		if [ -n "${KEYMAP_CORRECTIONS}" ]; then
 			boot_mesg "Loading keymap corrections: ${KEYMAP_CORRECTIONS}..."
 			loadkeys ${KEYMAP_CORRECTIONS} &>/dev/null
 			evaluate_retval
 		fi
 
-		if [ -n "${FONT}" ]
-		then
+		if [ -n "${FONT}" ]; then
 			boot_mesg "Setting screen font to ${FONT}..."
 			setfont $FONT &>/dev/null
 			evaluate_retval

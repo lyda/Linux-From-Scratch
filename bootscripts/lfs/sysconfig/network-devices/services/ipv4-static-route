@@ -45,17 +45,14 @@ case "${TYPE}" in
 	;;
 esac
 
-if [ -n "${need_ip}" ]
-then
-	if [ -z "${IP}" ]
-	then
+if [ -n "${need_ip}" ]; then
+	if [ -z "${IP}" ]; then
 		boot_mesg "IP variable missing from ${IFCONFIG}, cannot continue." ${FAILURE}
 		echo_failure
 		exit 1
 	fi
 
-	if [ -z "${PREFIX}" ]
-	then
+	if [ -z "${PREFIX}" ]; then
 		boot_mesg "PREFIX variable missing from ${IFCONFIG}, cannot continue." ${FAILURE}
 		echo_failure
 		exit 1
@@ -65,10 +62,8 @@ then
 	desc="${desc}${IP}/${PREFIX}"
 fi
 
-if [ -n "${need_gateway}" ]
-then
-	if [ -z "${GATEWAY}" ]
-	then
+if [ -n "${need_gateway}" ]; then
+	if [ -z "${GATEWAY}" ]; then
 		boot_mesg "GATEWAY variable missing from ${IFCONFIG}, cannot continue." ${FAILURE}
 		echo_failure
 		exit 1
