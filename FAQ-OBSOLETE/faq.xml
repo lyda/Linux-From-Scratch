@@ -281,6 +281,24 @@ url="http://hints.linuxfromscratch.org/hints/bootcd.txt">http://hints.linuxfroms
 </para></answer>
 </qandaentry>
 
+<qandaentry id="portmap">
+<question><para>Where's portmap?</para></question>
+<answer><para>There are instructions in the NFS Hint at <ulink
+url="http://hints.linuxfromscratch.org/hints/nfs.txt">http://hints.linuxfromscratch.org/hints/nfs.txt</ulink>.
+</para></answer>
+<answer><para>Also, Marc Heerdink writes:
+<blockquote><para>I have a version of tcp_wrappers and portmap up that have both
+been patched with the debian patches, adapted Makefiles for LFS plus all
+compile warnings/problems were fixed. Additionally, an lfs-install.sh is
+included in both tarballs that provides a really quick and dirty way to
+install them. They can be found at <ulink
+url="http://www.linuxfromscratch.org/~gimli/">http://www.linuxfromscratch.org/~gimli/</ulink>.
+You may want to add a note about these packages for people who want to do
+it the easy way :)
+</para></blockquote>
+</para></answer>
+</qandaentry>
+
 		<qandaentry id="what-dist"><question><para>What distribution should I use to start from?</para></question>
 			<answer><para>Any recent distribution should be fine. If you have problems,
 				try installing and/or updating the development packages.
@@ -665,12 +683,6 @@ export LC_ALL=en_US
 </para></answer>
 </qandaentry>
 
-			<qandaentry id="portmap"><question><para>Where's portmap?</para></question>
-				<answer><para>The best way i know is to follow the instructions
-					for portmap in the NFS Hint at <ulink
-					url="http://hints.linuxfromscratch.org/hints/nfs.txt">http://hints.linuxfromscratch.org/hints/nfs.txt</ulink>.
-				</para></answer>
-			</qandaentry>
 			<qandaentry id="which"><question><para>Where's which?</para></question>
 				<answer><para>It's not in there! A proper which is available
 					from the GNU Project at
