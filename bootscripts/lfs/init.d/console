@@ -11,8 +11,6 @@
 # Native English speakers probably don't have /etc/sysconfig/console at all
 if [ -f /etc/sysconfig/console ]; then
 	. /etc/sysconfig/console
-else
-	exit 0
 fi
 
 case "$1" in
