@@ -404,7 +404,7 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Util-linux (&util-linux-version;) - 1,921 KB:</term>
+<term>Util-linux (&util-linux-version;) - 1,339 KB:</term>
 <listitem>
 <para><ulink url="&freshmeat;util-linux/"/></para>
 </listitem>

@@ -44,7 +44,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Texinfo 4.8</para></listitem>
 <listitem><para>Tcl 8.4.9</para></listitem>
 <listitem><para>Udev 050</para></listitem>
-<listitem><para>Util-linux 2.12p</para></listitem>
+<listitem><para>Util-linux 2.12q</para></listitem>
 <listitem><para>Zlib 1.2.2</para></listitem>
 </itemizedlist>
 </listitem>
@@ -72,6 +72,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>util-linux-2.12b-sfdisk-1.patch</para></listitem>
 <listitem><para>zlib-1.2.1-security-1.patch</para></listitem>
 </itemizedlist>
+</listitem>
+
+<listitem><para>January 29, 2005 [matt]: Upgraded to util-linux-2.12q.</para>
 </listitem>
 
 <listitem><para>January 27, 2005 [matt]: Added a warning that the
