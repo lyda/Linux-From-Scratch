@@ -103,7 +103,6 @@ seen during its run of <command>./configure</command> is:</para>
         /tools/i686-pc-linux-gnu/bin/as
 checking what linker to use... /tools/i686-pc-linux-gnu/bin/ld</computeroutput></screen>
 
-<beginpage/>
 <para>This is important for the reasons mentioned above. It also
 demonstrates that GCC's configure script does not search the PATH
 directories to find which tools to use. However, during the actual
@@ -168,7 +167,6 @@ the <xref linkend="chapter-temporary-tools"/> packages all build
 against the new Glibc in <filename
 class="directory">/tools</filename>.</para>
 
-<beginpage/>
 <para>Upon entering the chroot environment in <xref
 linkend="chapter-building-system"/>, the first major package to be
 installed is Glibc, due to its self-sufficient nature mentioned above.
@@ -176,6 +174,8 @@ Once this Glibc is installed into <filename
 class="directory">/usr</filename>, perform a quick changeover of the
 toolchain defaults, then proceed in building the rest of the target
 LFS system.</para>
+
+<beginpage/>
 
 <sect2>
 <title>Notes on Static Linking</title>

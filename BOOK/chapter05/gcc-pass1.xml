@@ -57,7 +57,9 @@ cd ../gcc-build</userinput></screen>
 <listitem><para>The purpose of this switch is to remove <filename class="directory">/usr/local/include</filename>
 from <command>gcc</command>'s include search path. This is not absolutely
 essential, however, it helps to minimize the influence of the host
-system.</para></listitem>
+system.</para>
+<beginpage/>
+</listitem>
 </varlistentry>
 
 <varlistentry>

@@ -57,7 +57,6 @@ environment variable that makes <application>Bash</application> and
 <application>Readline</application> use the
 <filename>/etc/inputrc</filename> file created earlier.</para>
 
-<beginpage/>
 <para>Replace <replaceable>[ll]</replaceable> below with the
 two-letter code for the desired language (e.g., <quote>en</quote>) and
 <replaceable>[CC]</replaceable> with the two-letter code for the

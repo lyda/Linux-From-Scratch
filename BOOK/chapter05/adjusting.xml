@@ -51,6 +51,8 @@ replacing every occurrence of <quote>/lib/ld-linux.so.2</quote> with
 <para>Be sure to visually inspect the specs file in order to verify the
 intended changes have been made.</para>
 
+<beginpage/>
+
 <important><para>If working on a platform where the name of the
 dynamic linker is something other than
 <filename class="libraryfile">ld-linux.so.2</filename>, replace

@@ -65,6 +65,8 @@ class="filesystem">devfs</systemitem> became much more
 realistic.</para>
 </sect2>
 
+<beginpage/>
+
 <sect2>
 <title>Udev Implementation</title>
 
@@ -124,7 +126,6 @@ class="directory">/sys</filename> filesystem for the information
 pertaining to this new device and create the <filename
 class="directory">/dev</filename> entry for it.</para>
 
-<beginpage/>
 <para>This brings us to one problem that exists with
 <command>udev</command>, and likewise with <systemitem
 class="filesystem">devfs</systemitem> before it. It is commonly

@@ -56,7 +56,6 @@ scripts are run, from 00 to 99&mdash;the lower the number the earlier it
 gets executed. When init switches to another run-level, the
 appropriate services get killed and others get started.</para>
 
-<beginpage/>
 <para>The real scripts are in <filename
 class="directory">/etc/rc.d/init.d</filename>. They do the actual
 work, and the symlinks all point to them. Killing links and starting
