@@ -79,6 +79,13 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry arch="raq2">
+<term>GLIBC Syscall Patch - 11 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;glibc/glibc-&glibc-version;-mips_syscall-2.patch"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry arch="raq2">
 <term>Grep RaQ2 Config Update Patch - 48 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;grep/grep-&grep-version;-raq2_config_update-1.patch"/></para>
@@ -107,16 +114,9 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry>
-<term>IPRoute2 Find Update Patch - 1 KB:</term>
+<term>IPRoute2 Constant Htons Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;iproute2/iproute2-&iproute2-patch-version;-find_update-1.patch"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term>IPRoute2 Free Error Patch - 1 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;iproute2/iproute2-&iproute2-patch-version;-free_error-2.patch"/></para>
+<para><ulink url="&patches-root;iproute2/iproute2-&iproute2-patch-version;-htons_fix-1.patch"/></para>
 </listitem>
 </varlistentry>
 

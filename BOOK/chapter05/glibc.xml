@@ -44,6 +44,10 @@ glibc-libidn-&glibc-version; tarball -- they will unfold into the same directory
 <para arch="alpha;x86">Unpack the glibc-libidn-&glibc-version; tarball -- it
 will unfold into the same directory.</para>
 
+<para arch="raq2">The following patch corrects the building of syscall.h::</para>
+
+<screen arch="raq2"><userinput>patch -Np1 -i ../glibc-&glibc-version;-mips_syscall-2.patch</userinput></screen>
+
 <para arch="ppc;raq2">NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
 
