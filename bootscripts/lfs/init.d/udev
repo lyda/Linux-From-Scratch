@@ -29,6 +29,10 @@ case "$1" in
 			echo /sbin/udev > /proc/sys/kernel/hotplug
 		fi
 
+		# Don't attempt to populate the /dev directory when something
+		# else has already set it up.
+		[ -f /dev/.udev.tdb ] && exit 0
+
 		echo "Populating /dev with device nodes..."
 
 		# Mount a temporary file system over /dev, so that any devices
