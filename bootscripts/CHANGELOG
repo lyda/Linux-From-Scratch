@@ -1,6 +1,10 @@
 n/a - April 24, 2004
 
 	* Added a example script for /etc/sysconfig/createfiles
+	* Added a check for /sys before mounting sysfs
+	* Added -t noramfs to umount on /etc/rc.d/init.d/mountfs.
+	  This will prevent /dev from being unmounted, if /proc/mounts
+	  is symlinked to /etc/mtab
 
 n/a - April 18, 2004
 

@@ -33,7 +33,7 @@ case "$1" in
 
 	stop)
 		echo "Unmounting all other currently mounted file systems..."
-		umount -a -d -r
+		umount -a -d -r -t noramfs
 		evaluate_retval
 		;;
 
