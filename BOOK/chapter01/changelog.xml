@@ -86,6 +86,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Updated: Arch: All - M4 to 1.4.3.</para></listitem>
 <listitem><para>Updated: Arch: All - LFS-Bootscritps to 3.2.0.</para></listitem>
 <listitem><para>Removed: RaQ2 - lfs-bootscripts-3.1.0-raq2-2.patch</para></listitem>
+<listitem><para>Fixed: Arch: All - Sysklogd missing files.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
