@@ -80,7 +80,7 @@
         <a>
           <xsl:if test="@xml:id">
             <xsl:attribute name="id">
-              <xsl:value-of select="@xnl:id"/>
+              <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
           </xsl:if>
           <xsl:attribute name="href"><xsl:value-of select="@xlink:href"/></xsl:attribute>
