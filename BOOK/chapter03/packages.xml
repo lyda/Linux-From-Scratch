@@ -215,7 +215,7 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>LFS-Bootscripts (&bootscripts-version;) - 16 KB:</term>
+<term>LFS-Bootscripts (&lfs-bootscripts-version;) - 16 KB:</term>
 <listitem>
 <para><ulink url="http://downloads.linuxfromscratch.org/"/></para>
 </listitem>
