@@ -6,9 +6,6 @@ a package that differs from the version in the book
 (either newer or older), try the version in the book.
 Sometimes there are reasons why the book uses a particular version.
 Search the list archives if you're curious.
-</para>
-<para>In particular, GCC 3 will cause problems.
-See the entry "<link linkend="gcc-3_0">Why isn't GCC 3.x in the book?</link>".
 </para></answer>
 </qandaentry>
 
