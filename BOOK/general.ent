@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "7.0-multiarch-20050323">
+<!ENTITY version "7.0-multiarch-20050326">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-alpha "&version;-alpha">
 <!ENTITY version-ppc "&version;-PowerPC">
 <!ENTITY version-raq2 "&version;-RaQ2">
-<!ENTITY releasedate "March 23, 2005">
+<!ENTITY releasedate "March 26, 2005">
 <!ENTITY milestone "7.0">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -61,9 +61,9 @@
 <!ENTITY libtool-version "1.5.10">
 <!ENTITY linux-version "2.6.11.5">
 <!ENTITY linux-dl-version "2.6">
-<!ENTITY linux-alpha-version "2.6.11.5">
-<!ENTITY linux-ppc-version "2.6.11.5">
-<!ENTITY linux-raq2-version "2.6.11.5">
+<!ENTITY linux-alpha-version "2.6.11.6">
+<!ENTITY linux-ppc-version "2.6.11.6">
+<!ENTITY linux-raq2-version "2.6.11.6">
 <!ENTITY linux-libc-headers-version "2.6.11.0">
 <!ENTITY linux-libc-headers-alpha-version "2.6.11.0">
 <!ENTITY linux-libc-headers-ppc-version "2.6.11.0">

@@ -85,6 +85,14 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>March 26, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Linux to 2.6.11.6.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>March 23, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: RaQ2 - Linux to 2.6.11.5.</para></listitem>
