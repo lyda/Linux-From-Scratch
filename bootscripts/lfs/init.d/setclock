@@ -23,8 +23,14 @@ esac
 
 case $1 in
 	start)
-		echo "Setting clock..."
+		echo "Setting system clock..."
 		hwclock --hctosys $CLOCKPARAMS
+		evaluate_retval
+		;;
+
+	stop)
+		echo "Setting hardware clock..."
+		hwclock --systohc $CLOCKPARAMS
 		evaluate_retval
 		;;
 
