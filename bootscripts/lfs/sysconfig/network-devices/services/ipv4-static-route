@@ -1,0 +1,80 @@
+#!/bin/sh
+# Begin $network_devices/services/ipv4-static-route
+
+# Written by Kevin P. Fleming <kpfleming@linuxfromscratch.org>
+
+. /etc/sysconfig/rc 
+. $rc_functions 
+. $IFCONFIG
+
+case "$TYPE" in
+	("" | "network")
+		need_ip=1
+		need_gateway=1
+	;;
+
+	("default")
+		need_gateway=1
+		args="$args default"
+		desc="default"
+	;;
+
+	("host")
+		need_ip=1
+	;;
+
+	("unreachable")
+		need_ip=1
+		args="$args unreachable"
+		desc="unreachable "
+	;;
+
+	(*)
+		echo "Unknown route type ($TYPE) in $IFCONFIG, cannot continue"
+		exit 1
+	;;
+esac
+
+if [ -n "$need_ip" ]; then
+	if [ -z "$IP" ]; then
+		echo "IP variable missing from $IFCONFIG, cannot continue"
+		exit 1
+	fi
+
+	if [ -z "$PREFIX" ]; then
+		echo "PREFIX variable missing from $IFCONFIG, cannot continue"
+		exit 1
+	fi
+	
+	args="$args $IP/$PREFIX"
+	desc="$desc$IP/$PREFIX"
+fi
+
+if [ -n "$need_gateway" ]; then
+	if [ -z "$GATEWAY" ]; then
+		echo "GATEWAY variable missing from $IFCONFIG, cannot continue"
+		exit 1
+	fi
+	args="$args via $GATEWAY"
+fi
+
+case "$2" in
+	up)
+		echo "Adding '$desc' route to the $1 interface..."
+		ip route add $args dev $1
+		evaluate_retval
+	;;
+	
+	down)
+		echo "Removing '$desc' route from the $1 interface..."
+		ip route del $args dev $1
+		evaluate_retval
+	;;
+	
+	*)
+		echo "Usage: $0 [interface] {up|down}"
+		exit 1
+	;;
+esac
+
+# End $network_devices/services/ipv4-static-route

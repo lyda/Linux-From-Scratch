@@ -3,6 +3,8 @@
 
 # Based on ethnet script from LFS-3.1 and earlier.
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
+# Rewritten by Nathan Coulson <nathan@linuxfromscratch.org>
+# Enhanced by Kevin P. Fleming <kpfleming@linuxfromscratch.org>
 
 . /etc/sysconfig/rc
 . $rc_functions
@@ -10,57 +12,40 @@
 
 case "$1" in
 	start)
-		# Start all network interfaces which have ONBOOT in them.
-		for file in $network_devices/ifconfig.* $network_devices/ifconfig.*/*
-		do
+		# Start all network interfaces
+		for file in $network_devices/ifconfig.*; do
 			interface=${file##*/ifconfig.}
-			interface=${interface%%/*}
 
-			# verify that $file is a readable file, and does not end with a ~
-			if [ -f "$file" -a "$file" = "${file%""~""}" ]
-			then
-				(
-					. "$file"
-					if [ "$file" != "$network_devices/ifconfig.$interface" ]
-					then
-						ARGS=${file##*/ifconfig.${interface}/}
-					fi
-					if [ "$ONBOOT" = "yes" ]; then
-						$network_devices/ifup $interface $ARGS
-					fi
-				)
+			# skip if $file is * (because nothing was found)
+			if [ "$interface" = "*" ]; then
+				continue
 			fi
+
+			# skip if $file ends with ~ (backup files)
+			if [ "$file" != "${file%""~""}" ]; then
+				continue
+			fi
+
+			IN_BOOT=1 $network_devices/ifup $interface
 		done
 	;;
 
 	stop)
-		# Reverse the list of files to process
-		FILES2="$network_devices/ifconfig.* $network_devices/ifconfig.*/*"
-		for file in $FILES2
-		do
-		  FILES="$file $FILES"
-		done
-
 		# Stop all network interfaces
-		for file in $FILES
-		do
+		for file in $network_devices/ifconfig.*; do
 			interface=${file##*/ifconfig.}
-			interface=${interface%%/*}
 
-			# verify that $file is a readable file, and does not end with a ~
-			if [ -f "$file" -a "$file" = "${file%""~""}" ]
-			then
-				(
-					. "$file"
-					if [ "$file" != "$network_devices/ifconfig.$interface" ]
-					then
-						ARGS=${file##*/ifconfig.${interface}/}
-					fi
-					if [ "$ONBOOT" = "yes" ]; then
-						$network_devices/ifdown $interface $ARGS
-					fi
-				)
+			# skip if $file is * (because nothing was found)
+			if [ "$interface" = "*" ]; then
+				continue
 			fi
+
+			# skip if $file ends with ~ (backup files)
+			if [ "$file" != "${file%""~""}" ]; then
+				continue
+			fi
+
+			IN_BOOT=1 $network_devices/ifdown $interface
 		done
 	;;
 
