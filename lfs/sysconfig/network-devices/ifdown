@@ -12,7 +12,10 @@
 
 if [ "$2" != "" ]
 then
-  FILES="$network_devices/ifconfig.$1/${@#1}"
+	for file in ${@#$1}
+	do
+	  FILES="$FILES $network_devices/ifconfig.$1/$file"
+	done
 elif [ -d "$network_devices/ifconfig.$1" ]
 then
   FILES="$network_devices/ifconfig.$1/*"
@@ -35,11 +38,13 @@ do
 		then
 		  continue
 		fi
-		if [ -n "$SERVICE" -a -x "network_devices/services/$SERVICE" ]
+
+		if [ -n "$SERVICE" -a -x "$network_devices/services/$SERVICE" ]
+		then
 			IFCONFIG=$file \
-			  $network_devices/services/${SERVICE} $1 down
+				$network_devices/services/${SERVICE} $1 down
 		else
-			echo -n"Unable to process $file, Either the SERVICE variable was not set, "
+			echo -n "Unable to process $file, Either the SERVICE variable was not set, "
 			echo "or the script in question cannot be executed"
 			continue
 		fi

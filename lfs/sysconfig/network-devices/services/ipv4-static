@@ -35,7 +35,7 @@ case "$2" in
 		evaluate_retval
 
 		if [ -n "$GATEWAY" ]; then
-			if ip route | grep -q default; then; then
+			if ip route | grep -q default; then
 				echo "Gateway already setup; skipping..."
 				print_status warning
 			else

@@ -15,17 +15,23 @@ case "$1" in
 		do
 			interface=${file##*/ifconfig.}
 			interface=${interface%%/*}
+
 			# verify that $file is a readable file, and does not end with a ~
-			elif [ -f "$file" -a "$file" = "${file%""~""}" ]
+			if [ -f "$file" -a "$file" = "${file%""~""}" ]
 			then
 				(
 					. "$file"
+					if [ "$file" != "$network_devices/ifconfig.$interface" ]
+					then
+						ARGS=${file##*/ifconfig.${interface}/}
+					fi
 					if [ "$ONBOOT" = "yes" ]; then
-						$network_devices/ifup $interface ${file##*/ifconfig.${interface}/}
+						$network_devices/ifup $interface $ARGS
 					fi
 				)
 			fi
 		done
+	;;
 
 	stop)
 		# Stop all network interfaces
@@ -33,31 +39,34 @@ case "$1" in
 		do
 			interface=${file##*/ifconfig.}
 			interface=${interface%%/*}
+
 			# verify that $file is a readable file, and does not end with a ~
 			if [ -f "$file" -a "$file" = "${file%""~""}" ]
 			then
 				(
 					. "$file"
+					if [ "$file" != "$network_devices/ifconfig.$interface" ]
+					then
+						ARGS=${file##*/ifconfig.${interface}/}
+					fi
 					if [ "$ONBOOT" = "yes" ]; then
-						$network_devices/ifup $interface ${file##*/ifconfig.${interface}/}
+						$network_devices/ifdown $interface $ARGS
 					fi
 				)
 			fi
 		done
-
-
-		;;
+	;;
 
 	restart)
 		$0 stop
 		sleep 1
 		$0 start
-		;;
+	;;
 
 	*)
 		echo "Usage: $0 {start|stop|restart}"
 		exit 1
-		;;
+	;;
 esac
 
 # End /etc/rc.d/init.d/network
