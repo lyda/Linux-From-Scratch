@@ -1,5 +1,7 @@
 LFS Wish List...
 ================
 
-    o rewrite of MAKEDEV shell script.
-        (please contact, Gerard and Jesse if your interested)
+Please see 
+http://www.linuxfromscratch.org/todo.php
+and
+http://www.linuxfromscratch.org/wish.php
