@@ -59,10 +59,10 @@ functions from the system C library.</para></listitem>
 <screen><userinput>make install
 make install-tempfile</userinput></screen>
 
+<beginpage/>
 </sect2>
 
 
-<beginpage/>
 <sect2 id="contents-mktemp" role="content"><title>Contents of Mktemp</title>
 
 <segmentedlist>

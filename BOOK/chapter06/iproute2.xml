@@ -65,9 +65,9 @@
     <para>Install the package:</para>
 
     <screen><userinput>make SBINDIR=/sbin install</userinput></screen>
+    <beginpage/>
   </sect2>
 
-  <beginpage/>
   <sect2 id="contents-iproute2" role="content">
     <title>Contents of Iproute2</title>
     <segmentedlist>

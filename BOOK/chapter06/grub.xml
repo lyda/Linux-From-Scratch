@@ -63,10 +63,10 @@ class="directory">/boot/grub</filename> directory. Most users will
 copy the <filename>e2fs_stage1_5</filename> and/or
 <filename>reiserfs_stage1_5</filename> files.</para>
 
+<beginpage/>
 </sect2>
 
 
-<beginpage/>
 <sect2 id="contents-grub" role="content"><title>Contents of Grub</title>
 
 <segmentedlist>

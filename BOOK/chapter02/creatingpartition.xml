@@ -17,10 +17,10 @@ installed.</para>
 for your first LFS installation, but if you are short on
 disk space the following document can be helpful: <phrase
 condition="html"><ulink
-url="&hints-root;lfs_next_to_existing_systems.txt"/></phrase> <phrase
-condition="pdf"><emphasis>
+url="&hints-root;lfs_next_to_existing_systems.txt"/></phrase><phrase
+condition="pdf"><ulink url="&hints-root;lfs_next_to_existing_systems.txt">
 http://www.linuxfromscratch.org/hints/downloads/files/
-lfs_next_to_existing_systems.txt</emphasis></phrase> .</para></note>
+lfs_next_to_existing_systems.txt</ulink></phrase>.</para></note>
 
 <para>A minimal system requires a partition of around 1.3 gigabytes
 (GB).  This is enough to store all the source tarballs and compile 

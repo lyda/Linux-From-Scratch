@@ -82,10 +82,7 @@ needed to build an LFS system:</para>
 <term>Inetutils No-Server-Man-Pages Patch - 4 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></para>
-<para></para>
-<para></para>
-<para></para>
-<para></para>
+<beginpage/>
 </listitem>
 </varlistentry>
 

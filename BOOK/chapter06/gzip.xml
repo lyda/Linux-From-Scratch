@@ -56,10 +56,10 @@ ln -s gzip /bin/gunzip
 ln -s gzip /bin/zcat
 ln -s gunzip /bin/uncompress</userinput></screen>
 
+<beginpage/>
 </sect2>
 
 
-<beginpage/>
 <sect2 id="contents-gzip" role="content"><title>Contents of Gzip</title>
 
 <segmentedlist>

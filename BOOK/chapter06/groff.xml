@@ -53,10 +53,10 @@ will not work properly without the following symlinks:</para>
 ln -s eqn /usr/bin/geqn
 ln -s tbl /usr/bin/gtbl</userinput></screen>
 
+<beginpage/>
 </sect2>
 
 
-<beginpage/>
 <sect2 id="contents-groff" role="content"><title>Contents of Groff</title>
 
 <segmentedlist>

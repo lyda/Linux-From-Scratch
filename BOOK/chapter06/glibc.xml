@@ -276,9 +276,9 @@ following:</para>
 # End /etc/ld.so.conf</literal>
 EOF</userinput></screen>
 
+<beginpage/>
 </sect2>
 
-<beginpage/>
 <sect2 id="contents-glibc" role="content"><title>Contents of Glibc</title>
 
 <segmentedlist>

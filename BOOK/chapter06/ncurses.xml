@@ -162,11 +162,8 @@ report its long name.</para>
 <term><command>tset</command></term>
 <listitem>
 <para>can be used to initialize terminals.</para>
-<para></para>
-<para></para>
-<para></para>
 <indexterm zone="ch-system-ncurses tset"><primary sortas="b-tset">tset</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="libncurses">

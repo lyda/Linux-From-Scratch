@@ -158,12 +158,8 @@ state of an ext2 file system.</para>
 <listitem>
 <para>prints the super block and blocks group information for the file
 system present on a given device.</para>
-<para></para>
-<para></para>
-<para></para>
-<para></para>
 <indexterm zone="ch-system-e2fsprogs dumpe2fs"><primary sortas="b-dumpe2fs">dumpe2fs</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="e2fsck">
@@ -340,9 +336,8 @@ past and in the future.</para>
 <listitem>
 <para>used by <command>dumpe2fs</command>, <command>chattr</command>,
 and <command>lsattr</command>.</para>
-<para></para>
 <indexterm zone="ch-system-e2fsprogs libe2p"><primary sortas="c-libe2p">libe2p</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="libext2fs">

@@ -107,12 +107,14 @@ not support multibyte character sets.</para>
 man&mdash;and info&mdash;pages can be found in the BLFS book at
 <phrase condition="html"><ulink
 url="&blfs-root;view/cvs/postlfs/compressdoc.html"/></phrase>
-<phrase condition="pdf"><emphasis>http://www.linuxfromscratch.org/blfs/view/cvs/postlfs/ compressdoc.html</emphasis></phrase>.</para>
+<phrase condition="pdf"><ulink
+url="&blfs-root;view/cvs/postlfs/compressdoc.html">http://www.linuxfromscratch.org/blfs/view/cvs/postlfs/ 
+compressdoc.html</ulink></phrase>.</para>
 
+<beginpage/>
 </sect2>
 
 
-<beginpage/>
 <sect2 id="contents-man" role="content"><title>Contents of Man</title>
 
 <segmentedlist>

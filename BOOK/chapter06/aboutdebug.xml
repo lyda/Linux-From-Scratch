@@ -45,10 +45,9 @@ software, a lot of disk space can be regained by removing these
 symbols. The next section shows how to strip all debugging symbols
 from the programs and libraries. Additional information on system
 optimization can be found at <phrase condition="html"><ulink
-url="&hints-root;optimization.txt"/></phrase>
-<phrase
-condition="pdf"><emphasis>http://www.linuxfromscratch.org/hints/downloads/files/ optimization.txt</emphasis></phrase>
-.</para>
+url="&hints-root;optimization.txt"/></phrase><phrase condition="pdf"><ulink
+url="&hints-root;optimization.txt">http://www.linuxfromscratch.org/hints/downloads/files/ 
+optimization.txt</ulink></phrase>.</para>
 
 </sect1>
 
