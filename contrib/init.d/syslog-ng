@@ -1,5 +1,5 @@
 #!/bin/sh
-# Begin $rc_base/init.d/sysklogd - Syslogd and Klogd loaders
+# Begin $rc_base/init.d/syslog-ng - Syslogd and Klogd loaders
 
 # Based on sysklogd script from LFS-3.1 and earlier.
 # Rewritten by Gerard Beekmans  - gerard@linuxfromscratch.org
@@ -39,4 +39,4 @@ case "$1" in
 		;;
 esac
 
-# End $rc_base/init.d/sysklogd
+# End $rc_base/init.d/syslog-ng
