@@ -20,10 +20,6 @@ make_extra_nodes() {
 
 case "$1" in
 	start)
-		# Don't attempt to populate the /dev directory when something
-		# else has already set it up.
-		[ -f /dev/.udev.tdb ] && exit 0
-
 		boot_mesg "Populating /dev with device nodes..."
 		if ! grep -q '[[:space:]]sysfs' /proc/mounts ; then
 			boot_log " sysfs filesystem not found.  Unable to continue"

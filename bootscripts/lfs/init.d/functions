@@ -43,10 +43,13 @@ FAILURE="\\033[1;31m"        # Failures are red
 INFO="\\033[1;36m"           # Information is light cyan
 BRACKET="\\033[1;34m"        # Brackets are blue
 
+BOOTMESG_PREFIX=""           # Text at the beginning of every line
+
 # Set screen and bootlog message values to ero
 BOOTMESG=""    #buffer for text meant for the logfile
 BOOTMESGCON="" #buffer for text meant for the console
 BOOTSERVICE=""
+
 
 #*******************************************************************************
 # Function - boot_mesg()
@@ -55,7 +58,7 @@ BOOTSERVICE=""
 #
 # Inputs:       $1 is the message
 #               $2 is the colorcode for the console
-#
+
 # Outputs:      Standard Output
 #
 # Dependencies: - grep, for counting \n's in a variable
@@ -73,7 +76,7 @@ boot_mesg()
 {
 	# First call to boot_mesg, set BOOTMESG normally
 	if [ -z "$BOOTMESG" ]; then
-		BOOTMESG="${1}"
+		BOOTMESG="${BOOTMESG_PREFIX} \b${1}"
 		BOOTMESGCON="${2}${1}"
 	# Subsequent calls will overwrite the text already on the screen
 	# with replacement text by counting the lines in the last BOOTMESG
@@ -82,7 +85,7 @@ boot_mesg()
 	else
 		local length=`echo -e "$BOOTMESGCON" | sed -n -e "s/\$/\n/g;L ${WCOL}" |grep -c \$`
 		local count=0
-		BOOTMESG="${BOOTMESG}${1}"
+		BOOTMESG="${BOOTMESG} \b${1}"
 		BOOTMESGCON="${BOOTMESGCON} \b${2} \b${1}"
 		while [ "${count}" -lt "${length}" ]; do
 			echo -e -n "$CURS_UP"
