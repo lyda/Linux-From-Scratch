@@ -36,7 +36,7 @@ running kernel.</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Copy a file that the <quote>install<quote> target omits.</para>
+<para>Copy a file that the <quote>install</quote> target omits.</para>
 
 <screen><userinput>cp etc/hotplug/pnp.distmap /etc/hotplug</userinput></screen> 
 
