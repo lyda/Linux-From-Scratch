@@ -4,9 +4,9 @@ than the one in the Book?</para></question>
 <answer><para>If this is your first time building LFS,
 using a version not in the book or varying from the book in any way
 is not a good idea.
-The IRC channel regulars have a saying, "FBGB", which
-(as Tux, the resident bot, is quick to say)
-means, "Follow Book, Good Book".
+The IRC channel regulars have a saying, "FBGB".
+As Tux, the resident bot, is quick to say,
+this means, "Follow Book, Good Book".
 They and the people on the lists have helped many an unhappy newbie
 who deviated from the book during that first build.
 </para>
@@ -19,6 +19,12 @@ experiment to your heart's content
 here are some notes for specific releases:
 </para>
 <itemizedlist>
+
+<listitem><para>flex-2.5.31:
+This release is reported broken
+and someone has said that the maintainer is aware.
+There will probably be a new release soon.
+</para></listitem>
 
 <listitem><para>glibc-2.3.2:
 Add to your build instructions:
