@@ -13,13 +13,13 @@ Scratch can be built on many different systems, it is impossible to
 provide accurate time estimates.  The biggest package (Glibc) will
 take approximately 20 minutes on the fastest systems, but could take
 up to three days on slower systems! Instead of providing actual times,
-the Static Binutils Unit (SBU) measure will be
+the Static Build Unit (SBU) measure will be
 used instead.</para>
 
 <para>The SBU measure works as follows. The first package to be compiled
 from this book is the statically-linked Binutils in <xref
 linkend="chapter-temporary-tools"/>.  The time it takes to compile
-this package is what will be referred to as the Static Binutils Unit
+this package is what will be referred to as the Static Build Unit
 or SBU. All other compile times will be expressed relative to this
 time.</para>
 
