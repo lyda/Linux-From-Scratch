@@ -1,3 +1,7 @@
+n/a - January 6, 2005
+	* fixed mountkernfs output (Nathan Coulson)
+	* reverted mountfs fakemounting (Nathan Coulson)
+
 n/a - January 5, 2005
 	* Attempted to simplify network bootup files (Nathan Coulson)
 	* Modified mountkernfs to use mountpoint (Nathan Coulson)
