@@ -44,9 +44,9 @@ print:
 	rm $(BASEDIR)/lfs-print.xml $(BASEDIR)/lfs-print.fo
 
 nochunks:
-	xsltproc --xinclude --nonet --output $(NOCHUNKS_OUTPUT) \
+	xsltproc --xinclude --nonet --output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
 	  stylesheets/lfs-nochunks.xsl index.xml
-	tidy -config tidy.conf $(NOCHUNKS_OUTPUT) || true
+	tidy -config tidy.conf $(BASEDIR)/$(NOCHUNKS_OUTPUT) || true
 
 validate:
 	xmllint --noout --nonet --xinclude --postvalid index.xml
