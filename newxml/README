@@ -7,7 +7,7 @@ Requirements
 DocBook XML DTD 4.3CR3 - this is required as the 4.2 version doesn't properly
                          support XIncludes
 
-DocBook XSL Stylesheets 1.65.0 - older versions of the stylesheets had a bug
+DocBook XSL Stylesheets 1.65.1 - older versions of the stylesheets had a bug
                                  which caused broken hyperlinks (they pointed to
                                  the wrong directory).
 

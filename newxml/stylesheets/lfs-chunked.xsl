@@ -4,7 +4,7 @@
                 version="1.0">
 
   <!-- We use XHTML -->
-  <xsl:import href="/usr/share/xml/docbook/xsl-stylesheets-1.65.0/xhtml/chunk.xsl"/>
+  <xsl:import href="/usr/share/xml/docbook/xsl-stylesheets-1.65.1/xhtml/chunk.xsl"/>
   <xsl:param name="chunker.output.encoding" select="'ISO-8859-1'"/>
 
   <!-- The CSS Stylesheet -->
@@ -14,11 +14,6 @@
   <xsl:param name="admon.graphics" select="1"/>
   <xsl:param name="admon.graphics.path">../images/</xsl:param>
   <xsl:param name="admon.graphics.extension" select="'.png'"/>
-
-  <!-- Use graphics in headers -->
-  <xsl:param name="navig.graphics" select="1"/>
-  <xsl:param name="navig.graphics.path">../images/</xsl:param>
-  <xsl:param name="navig.graphics.extension" select="'.png'"/>
 
   <!-- Legal Notice stuff -->
   <xsl:param name="generate.legalnotice.link" select="1"/>

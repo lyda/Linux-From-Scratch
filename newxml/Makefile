@@ -19,3 +19,9 @@ lfs:
 	  $(BASEDIR){index,part1,part2,part3,part4}.html
 	sed -i -e "s@../images@images@g" \
 	  $(BASEDIR){index,part1,part2,part3,part4}.html
+
+pdf:
+	bash entResolver output
+	cd ../output && xsltproc --xinclude --nonet --output lfs.fo \
+	  stylesheets/lfs-pdf.xsl index.xml
+	cd ../output && fop.sh lfs.fo lfs.pdf
