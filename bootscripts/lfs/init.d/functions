@@ -591,6 +591,7 @@ start_daemon()
 	fi
 
 	nice -n "${nicelevel}" "${@}"
+	return 0
 }
 
 # This will ensure compatibility with previous LFS Bootscripts
@@ -602,6 +603,7 @@ loadproc()
 	else
 		start_daemon $@
 	fi
+	evaluate_retval
 }
 
 #*******************************************************************************
@@ -620,6 +622,8 @@ loadproc()
 # Dependencies: kill
 #
 # Todo: This checks for PIDFILE, which is depreciated
+#       This calls evaluate_retval, when the LSB does not mention any simular
+#       output
 #
 #*******************************************************************************
 killproc()
@@ -682,7 +686,7 @@ killproc()
 				dtime=$(( ${dtime} - 1))
 			done
 			# If ${pid} is still running, kill it
-			kill -0 ${pid} && kill -KILL ${pid} 2>/dev/null
+			kill -0 ${pid} 2>/dev/null && kill -KILL ${pid} 2>/dev/null
 		fi
 	done
 
@@ -708,6 +712,8 @@ killproc()
 			pidofproc -p "${pidfile}" "${1}" 2> /dev/null
 		fi
 	fi
+
+	evaluate_retval # This is "Probably" not LSB compliant, but required to be compatible with older bootscripts
 }
 
 #*******************************************************************************
