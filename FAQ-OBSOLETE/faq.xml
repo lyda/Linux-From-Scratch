@@ -63,10 +63,43 @@
 		</section>
 		<section><title>Where is the best place to get help?</title>
 			<para>
+				When this FAQ fails to help, there are several places to go.
+			</para>
+			<para>
+				If you're having a problem with something in the book,
+				it never hurts to go back over the book.
+				It's surprising how easy it is to overlook little things.
+			</para>
+			<para>
+				If nothing else,
+				reading the appropriate man and info pages
+				will yield useful information on some subject,
+				if not what you were looking for,
+				and insure that you know enough not to embarrass yourself
+				if you have to ask someone.
+			</para>
+			<para>
+				<ulink url="http://www.linuxdoc.org/">http://www.linuxdoc.org/</ulink>
+				has the HOW-TOs and a great deal of other documentation.
+				You might find something there.
+			</para>
+			<para>
+				The linuxfromscratch.org site search includes the mailing lists.
+				Many questions have been discussed there at least once.  It's at
+				<ulink url="http://search.linuxfromscratch.org/">http://search.linuxfromscratch.org/</ulink>.
+			</para>
+			<para>
 				For support type help, IRC is often best. It's faster,
 				and doesn't clog the mailinglists.
 				Information on the LFS IRC channel is at
 				<ulink url="http://www.linuxfromscratch.org/services/irc.php">http://www.linuxfromscratch.org/services/irc.php</ulink>.
+			</para>
+			<para>
+				As a last resort, there are the mailing lists.
+				People will get frustrated with you if you use the wrong one or cross post.
+				Mailing list information is at
+				<ulink url="http://www.linuxfromscratch.org/services/mailinglistinfo.php">http://www.linuxfromscratch.org/services/mailinglistinfo.php</ulink>
+				and tells which list to use.
 			</para>
 		</section>
 		<section><title>What is LFS?</title>
