@@ -76,7 +76,7 @@ install-hotplug: create-dirs
 
 install-modules: create-dirs
 	install -m 754 contrib/init.d/modules ${EXTDIR}/rc.d/init.d
-	install -m 644 contrib/sysconfig/modules ${EXTDIR}/rc.d/sysconfig
+	install -m 644 contrib/sysconfig/modules ${EXTDIR}/sysconfig
 	ln -sf ../init.d/modules ${EXTDIR}/rc.d/rcsysinit.d/S57modules
 
 .PHONY: all create-dirs create-service-dir install install-hotplug install-modules
