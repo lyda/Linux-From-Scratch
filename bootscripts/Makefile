@@ -131,5 +131,5 @@ install-livecd: create-dirs create-service-dir
 	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services/
 
 .PHONY: all create-dirs create-service-dir \
-	install install-service-mtu
+	install install-service-mtu install-livecd
 
