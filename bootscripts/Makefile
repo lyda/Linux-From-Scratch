@@ -52,7 +52,7 @@ install: create-dirs create-service-dir
 	ln -s ../init.d/localnet    ${EXTDIR}/rc.d/rc6.d/K90localnet
 	ln -s ../init.d/reboot      ${EXTDIR}/rc.d/rc6.d/K99reboot
 	ln -s ../init.d/mountkernfs ${EXTDIR}/rc.d/rcsysinit.d/S00mountkernfs
-	ln -s ../init.d/swap        ${EXTDIR}/rc.d/rcsysinit.d/S10swap
+	ln -s ../init.d/swap        ${EXTDIR}/rc.d/rcsysinit.d/S20swap
 	ln -s ../init.d/checkfs     ${EXTDIR}/rc.d/rcsysinit.d/S30checkfs
 	ln -s ../init.d/mountfs     ${EXTDIR}/rc.d/rcsysinit.d/S40mountfs
 	ln -s ../init.d/cleanfs     ${EXTDIR}/rc.d/rcsysinit.d/S50cleanfs
