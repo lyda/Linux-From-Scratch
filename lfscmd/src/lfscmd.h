@@ -4,7 +4,7 @@
 #include <libxml/tree.h>
 
 struct LFSCMD {
-    int exe, file, title;
+    int exe, execute, file, title;
     int status;
     char *query, *xmlfile;
     char *cmd, *fname, *sect;

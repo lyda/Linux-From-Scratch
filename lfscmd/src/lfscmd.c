@@ -21,6 +21,7 @@
 #include <regex.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 #include "help.h"
 #include "string.h"
@@ -34,13 +35,14 @@ int lfscmd (int argc, char **argv) {
 
     /* Set defaults */
     lfs.exe     = 0;
+    lfs.execute = 0;
     lfs.file    = 0;
     lfs.title   = 0;
     lfs.status  = 0;
     lfs.query   = NULL;
     lfs.xmlfile = NULL;
 
-    while ((c = getopt (argc, argv, "fxtq:")) != -1)
+    while ((c = getopt (argc, argv, "fxteq:")) != -1)
     switch(c)
     {
        case 'f':
@@ -51,6 +53,9 @@ int lfscmd (int argc, char **argv) {
           break;
        case 't':
           lfs.title = 1;
+          break;
+       case 'e':
+          lfs.execute = 1;
           break;
        case 'q':
           lfs.query = optarg;
@@ -157,16 +162,24 @@ int lfscmd_parse_screen (xmlDocPtr doc, xmlNodePtr node) {
     {
         /* Output content outside of "userinput" */
         if (string_comp("text", node->name)) {
-            if (NULL != (lfs.cmd = node->content))
-            fprintf(output, "%s", lfs.cmd);
+            if (NULL != (lfs.cmd = node->content)) {
+               if (1 == lfs.execute)
+               system(lfs.cmd);
+               else
+               fprintf(output, "%s", lfs.cmd);
+            }
         }
 
         /* Output commands */
         else if (string_comp("userinput", node->name)) {
 
             /* Strip double ampersands */
-            if (NULL != (lfs.cmd = xmlNodeListGetString(doc, node->children, 1)))
-            fprintf(output, "%s", string_strip(lfs.cmd, "&&"));
+            if (NULL != (lfs.cmd = xmlNodeListGetString(doc, node->children, 1))) {
+               if (1 == lfs.execute)
+               system(string_strip(lfs.cmd, "&&"));
+               else
+               fprintf(output, "%s", string_strip(lfs.cmd, "&&"));
+            }
         }
 
         node = node->next;

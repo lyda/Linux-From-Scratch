@@ -9,6 +9,8 @@ DESCRIPTION
 	to either stdout or files.
 
 OPTIONS
+	-e     Execute commands.
+
 	-f     Write commands to their own file.
 
 	-q query
