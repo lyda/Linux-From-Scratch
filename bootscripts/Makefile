@@ -104,7 +104,7 @@ install-service-mtu: create-service-dir
 install-livecd: create-dirs create-service-dir
 	install -m ${CONFMODE} lfs/init.d/functions ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/halt          ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/hotplug       ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} contrib/livecd/hotplug   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/localnet      ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/rc            ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/reboot        ${EXTDIR}/rc.d/init.d/
@@ -113,10 +113,18 @@ install-livecd: create-dirs create-service-dir
 	install -m ${MODE} lfs/init.d/sysctl        ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/startup   ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} contrib/livecd/mountsqfs ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} contrib/livecd/network   ${EXTDIR}/rc.d/init.d/
+	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc0.d/K80network
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S60sendsignals
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc0.d/S90localnet
 	ln -sf ../init.d/halt        ${EXTDIR}/rc.d/rc0.d/S99halt
+	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc1.d/K80network
+	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc2.d/K80network
+	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc3.d/S20network
+	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc4.d/S20network
+	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc5.d/S20network
+	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc6.d/K80network
 	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc6.d/S60sendsignals
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc6.d/S90localnet
