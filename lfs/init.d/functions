@@ -52,6 +52,7 @@ echo_warning()
 # $i is inherited by the rc script
 print_error_msg()
 {
+	echo -e -n $FAILURE
         echo
         echo "You should not be reading this error message. It means"
         echo "that an unforseen error took place in $i,"
@@ -63,6 +64,7 @@ print_error_msg()
         echo
         echo
         echo "Press Enter to continue..."
+	echo -e -n $NORMAL
         read ENTER
 }
 

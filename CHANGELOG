@@ -2,6 +2,7 @@
 
 	* Renamed mountproc to mountkernfs
 	* Updated the README file
+	* Coloured the print_error_message in functions red
 	* Tagged as release 2.0.0
 
 1.99.4 - March 17, 2004
