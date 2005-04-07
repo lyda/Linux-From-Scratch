@@ -24,7 +24,7 @@
 
 <para>The following patch corrects the building of sysklogd:</para>
 
-<screen><userinput>patch -Np1 -i ../linux-libc-headers-&linux-libc-headers-raq2-version;-raq2_fix-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../linux-libc-headers-&linux-libc-headers-raq2-version;-mips_fix-1.patch</userinput></screen>
 
 <para>Install the header files:</para>
 

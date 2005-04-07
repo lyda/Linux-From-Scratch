@@ -107,9 +107,9 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry arch="raq2">
-<term>Linux-libc-headers RaQ2 Patch - 1 KB:</term>
+<term>Linux-libc-headers MIPS Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;linux-libc-headers/linux-libc-headers-&linux-libc-headers-version;-raq2_fix-1.patch"/></para>
+<para><ulink url="&patches-root;linux-libc-headers/linux-libc-headers-&linux-libc-headers-version;-mips_fix-1.patch"/></para>
 </listitem>
 </varlistentry>
 
