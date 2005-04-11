@@ -82,8 +82,7 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
-<listitem><para>April 11, 2005 [manuel]: Mention bzip2's testsuite.
-Replaced IPRuote2 patch by a sed command.</para></listitem>
+<listitem><para>April 11, 2005 [manuel]: Mention bzip2's testsuite.</para></listitem>
 
 <listitem><para>April 6, 2005 [matt]: Move e2fsprogs sed command to
 before entering the build directory (Steffen R. Knollmann).</para></listitem>
