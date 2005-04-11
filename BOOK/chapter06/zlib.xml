@@ -50,8 +50,6 @@ configure command below, then remove it afterwards.</para></note>
 
 <screen><userinput>make install</userinput></screen>
 
-
-
 <para>Build the static library:</para>
 
 <screen><userinput>make clean

@@ -54,7 +54,7 @@ problem. The above command takes care of this issue.</para>
 <para>Remove the Binutils source and build directories now.</para>
 
 <para>Next, amend the GCC specs file so that it points to the new
-dynamic linker. A perl command accomplishes this:</para>
+dynamic linker. A <command>perl</command> command accomplishes this:</para>
 
 <warning><para><emphasis>Do not</emphasis> run the following command
 more than once, it will adversely affect the outcome of software built
