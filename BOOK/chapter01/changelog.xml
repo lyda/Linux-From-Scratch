@@ -84,6 +84,14 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>April 12, 2005 [manuel]</para>
+<itemizedlist>
+<listitem><para>Fixed: Arch: All - Small redaction changes ported from trunk.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 11, 2005 [manuel]</para>
 <itemizedlist>
 <listitem><para>Fixed: Arch: All - Tags and text corrections ported from trunk.</para></listitem>
