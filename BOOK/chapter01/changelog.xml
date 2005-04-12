@@ -82,6 +82,9 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>April 12, 2005 [manuel]: Small redaction changes.
+Added tags to fix the PDF look in all chapters except chapter 06.</para></listitem>
+
 <listitem><para>April 11, 2005 [manuel]: Mention bzip2's testsuite.
 Several tags and text corrections.</para></listitem>
 

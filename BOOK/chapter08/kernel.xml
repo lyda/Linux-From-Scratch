@@ -55,7 +55,9 @@ compile the keymap into the kernel, issue the command below:</para>
 <para>Configure the kernel via a menu-driven interface. BLFS has some
 information regarding particular kernel configuration requirements of
 packages outside of LFS at <ulink 
-url="&blfs-root;view/svn/longindex.html#kernel-config-index"/>:</para>
+url="&blfs-root;view/svn/longindex.html#kernel-config-index"><phrase
+condition="pdf">&blfs-root;view/svn/
+longindex.html#kernel-config-index</phrase></ulink>:</para>
 
 <screen><userinput>make menuconfig</userinput></screen>
 
@@ -147,6 +149,8 @@ as well as the addresses of the kernel data structures for the running
 kernel. Issue the following command to install the map file:</para>
 
 <screen><userinput>cp System.map /boot/System.map-&linux-version;</userinput></screen>
+
+<beginpage/>
 
 <para>The kernel configuration file <filename>.config</filename>
 produced by the <command>make menuconfig</command> step
