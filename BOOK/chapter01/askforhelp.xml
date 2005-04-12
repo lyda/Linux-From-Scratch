@@ -64,6 +64,8 @@ is not necessary to include the entire output, but do include enough
 of the relevant information. Below is an example of the type of
 information to include from the screen output from <command>make</command>:</para>
 
+<beginpage/>
+
 <screen><computeroutput>gcc -DALIASPATH=\"/mnt/lfs/usr/share/locale:.\"
 -DLOCALEDIR=\"/mnt/lfs/usr/share/locale\" 
 -DLIBDIR=\"/mnt/lfs/usr/lib\"
