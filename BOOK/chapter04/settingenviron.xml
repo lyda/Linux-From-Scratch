@@ -84,6 +84,8 @@ hashing, limits the risk that old programs from
 the host are being used when they should not be used any
 longer.</para>
 
+<beginpage/>
+
 <para>Finally, to have the environment fully prepared for building the
 temporary tools, source the just-created user profile:</para>
 
