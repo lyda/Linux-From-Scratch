@@ -68,6 +68,8 @@ possibility:</para>
 
 <screen><userinput>rm -f /tools/lib/gcc/*/*/include/{pthread.h,bits/sigthread.h}</userinput></screen>
 
+<beginpage/>
+
 <caution><para>At this point, it is imperative to stop and ensure that
 the basic functions (compiling and linking) of the new toolchain are
 working as expected. To perform a sanity check, run the following

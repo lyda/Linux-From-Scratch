@@ -82,6 +82,8 @@ scripts, which are not needed.</para></listitem>
 
 <para>The source directories of both Tcl and Expect can now be removed.</para>
 
+<beginpage/>
+
 </sect2>
 
 <sect2 id="contents-expect" role="content"><title>Contents of Expect</title>

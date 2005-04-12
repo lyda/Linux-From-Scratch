@@ -164,6 +164,8 @@ target now because the compiler being used to compile this GCC was
 built from the exact same version of the GCC sources used
 earlier.</para>
 
+<beginpage/>
+
 <para>Compilation is now complete. As previously mentioned, running
 the test suites for the temporary tools compiled in this chapter is
 not mandatory. To run the GCC test suite anyway, use the following

@@ -78,7 +78,7 @@ for 2.6.x Linux kernels.</para></listitem>
 <term><parameter>--with-binutils=/tools/bin</parameter></term>
 <listitem><para>While not required, this switch ensures that there are
 no errors pertaining to which Binutils programs get used during the
-Glibc build.</para></listitem>
+Glibc build.</para><beginpage/></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -151,6 +151,8 @@ reissuing the <command>make check</command> command. The test suite should pick 
 off and continue. This stop-start sequence can be circumvented by
 issuing a <command>make -k check</command> command. If using this option, be sure to log the
 output so that the log file can be examined for failures later.</para>
+
+<beginpage/>
 
 <para>The install stage of Glibc will issue a harmless warning at the
 end about the absence of <filename>/tools/etc/ld.so.conf</filename>. 

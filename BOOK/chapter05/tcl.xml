@@ -70,6 +70,8 @@ will need its internal headers.</para></warning>
 
 <screen><userinput>ln -s tclsh8.4 /tools/bin/tclsh</userinput></screen>
 
+<beginpage/>
+
 </sect2>
 
 <sect2 id="contents-tcl" role="content"><title>Contents of Tcl</title>

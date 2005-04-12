@@ -48,7 +48,7 @@ cd ../gcc-build</userinput></screen>
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/tools \
     --libexecdir=/tools/lib --with-local-prefix=/tools \
     --disable-nls --enable-shared --enable-languages=c</userinput></screen>
-
+    
 <para>The meaning of the configure options:</para>
 
 <variablelist>
@@ -83,6 +83,8 @@ tarball.</para></listitem>
 <para>Continue with compiling the package:</para>
 
 <screen><userinput>make bootstrap</userinput></screen>
+
+<beginpage/>
 
 <para>The meaning of the make parameters:</para>
 

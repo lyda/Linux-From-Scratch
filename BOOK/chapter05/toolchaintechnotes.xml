@@ -80,6 +80,8 @@ might not show up until near the end of the build of an entire
 distribution. A test suite failure will usually alert this error
 before too much additional work is performed.</para>
 
+<beginpage/>
+
 <para>Binutils installs its assembler and linker in two locations,
 <filename class="directory">/tools/bin</filename> and <filename
 class="directory">/tools/$TARGET_TRIPLET/bin</filename>. The tools in
@@ -166,6 +168,8 @@ the core toolchain is self-contained and self-hosted. The remainder of
 the <xref linkend="chapter-temporary-tools"/> packages all build
 against the new Glibc in <filename
 class="directory">/tools</filename>.</para>
+
+<beginpage/>
 
 <para>Upon entering the chroot environment in <xref
 linkend="chapter-building-system"/>, the first major package to be
