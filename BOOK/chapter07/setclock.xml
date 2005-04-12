@@ -50,7 +50,9 @@ UTC=1
 EOF</userinput></screen>
 
 <para>A good hint explaining how to deal with time on LFS is available
-at <ulink url="&hints-root;time.txt"/>. It explains issues such as
+at <ulink url="&hints-root;time.txt"><phrase 
+condition="pdf">http://www.linuxfromscratch.org/
+hints/downloads/files/time.txt</phrase></ulink>. It explains issues such as
 time zones, UTC, and the <envar>TZ</envar> environment variable.</para>
 
 </sect1>

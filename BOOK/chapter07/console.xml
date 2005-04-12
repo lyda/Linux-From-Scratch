@@ -65,6 +65,8 @@ keymaps):</para>
 
 <screen><userinput>zgrep '\W14\W' <replaceable>[/path/to/your/keymap]</replaceable></userinput></screen>
 
+<beginpage/>
+
 <para>If the keycode 14 is Backspace instead of Delete, create the
 following keymap snippet to fix this issue:</para>
 

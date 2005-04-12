@@ -73,6 +73,8 @@ the following command:</para>
 
 <screen><userinput>locale -a</userinput></screen>
 
+<beginpage/>
+
 <para>Once the proper locale settings have been determined, create the
 <filename>/etc/profile</filename> file:</para>
 

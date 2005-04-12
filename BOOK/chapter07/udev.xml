@@ -190,6 +190,8 @@ manually create the devices. Consult the
 or the documentation for that driver to find the proper major/minor
 numbers.</para>
 
+<beginpage/>
+
 <para>2) A non-hardware device is required.  This is most common with
 the Advanced Linux Sound Architecture (ALSA) project's Open Sound
 System (OSS) compatibility module.  These types of devices can be

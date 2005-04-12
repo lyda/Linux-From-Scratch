@@ -14,9 +14,10 @@ hardware-dependent information.</para>
 
 <para>System-V style init scripts are employed in this book because they are
 widely used. For additional options, a hint detailing the BSD style
-init setup is available at
-<ulink
-url="http://www.linuxfromscratch.org/hints/downloads/files/bsd-init.txt"/>.
+init setup is available at <ulink
+url="http://www.linuxfromscratch.org/hints/downloads/files/bsd-init.txt"><phrase
+condition="pdf">http://www.linuxfromscratch.org/hints/
+downloads/files/bsd-init.txt</phrase></ulink>.
 Searching the LFS mailing lists for <quote>depinit</quote> will also offer
 additional choices.</para>
 
