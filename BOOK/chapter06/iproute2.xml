@@ -178,7 +178,7 @@
                 feature-complete replacement for the old
                 <command>rtstat</command> program</para>
           <indexterm zone="ch-system-iproute2 lnstat">
-            <primary sortas="b-cstat">lnstat</primary>
+            <primary sortas="b-lnstat">lnstat</primary>
           </indexterm>
         </listitem>
       </varlistentry>
