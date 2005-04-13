@@ -74,6 +74,8 @@ for f in *
 do install-info $f dir 2&gt;/dev/null
 done</userinput></screen>
 
+<beginpage/>
+
 </sect2>
 
 <sect2 id="contents-texinfo" role="content"><title>Contents of Texinfo</title>

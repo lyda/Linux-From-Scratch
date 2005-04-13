@@ -61,8 +61,10 @@ non-existent files. Recreate those symlinks:</para>
 
 <screen><userinput>ln -sf ../../lib/libncurses.so.5 /usr/lib/libncurses.so
 ln -sf libncurses.so /usr/lib/libcurses.so</userinput></screen>
-</sect2>
 
+<beginpage/>
+
+</sect2>
 
 <sect2 id="contents-ncurses" role="content"><title>Contents of Ncurses</title>
 

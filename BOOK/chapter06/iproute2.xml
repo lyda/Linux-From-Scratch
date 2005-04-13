@@ -115,6 +115,7 @@
           <indexterm zone="ch-system-iproute2 ifstat">
             <primary sortas="b-ifstat">ifstat</primary>
           </indexterm>
+          <beginpage/>
         </listitem>
       </varlistentry>
 

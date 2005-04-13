@@ -229,7 +229,7 @@ system date</para>
 <para>Copies a file using the given block size and count, while
 optionally performing conversions on it</para>
 <indexterm zone="ch-system-coreutils dd"><primary sortas="b-dd">dd</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="df">

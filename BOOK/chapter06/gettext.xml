@@ -121,7 +121,7 @@ directory of a package to begin internationalizing it</para>
 <listitem>
 <para>Displays a network hostname in various forms</para>
 <indexterm zone="ch-system-gettext hostname-gettext"><primary sortas="b-hostname-gettext">hostname</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="msgattrib">
