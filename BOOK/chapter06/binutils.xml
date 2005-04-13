@@ -76,6 +76,8 @@ used if the system was used to cross-compile (for example, compiling a
 package on an Intel machine that generates code that can be executed
 on PowerPC machines).</para>
 
+<beginpage/>
+
 <important><para>The test suite for Binutils in this section is
 considered critical. Do not skip it under any
 circumstances.</para></important>

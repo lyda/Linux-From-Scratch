@@ -76,6 +76,8 @@ paths to binaries it has executed. In order to use the newly compiled
 binaries as soon as they are installed, turn off this function for the
 duration of this chapter.</para>
 
+<beginpage/>
+
 <para>The <command>login</command>, <command>agetty</command>, and
 <command>init</command> programs (and others) use a number of log
 files to record information such as who was logged into the system and

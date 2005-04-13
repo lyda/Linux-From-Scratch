@@ -59,7 +59,8 @@ the package installs.</para>
 <para>To keep track of which package installs particular files, a package
 manager can be used. For a general overview of different styles of package
 managers, please refer to <ulink
-url="&blfs-root;view/svn/introduction/important.html"/>.
+url="&blfs-root;view/svn/introduction/important.html"><phrase 
+condition="pdf">&blfs-root;view/svn/ introduction/important.html</phrase></ulink>.
 For a package management method specifically geared towards LFS, we recommend <ulink
 url="&hints-root;more_control_and_pkg_man.txt"/>.</para>
 

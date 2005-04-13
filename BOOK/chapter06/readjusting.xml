@@ -71,6 +71,8 @@ dynamic linker in the above commands. Refer back to <xref
 linkend="ch-tools-toolchaintechnotes" role=","/> if
 necessary.</para></important>
 
+<beginpage/>
+
 <caution><para>It is imperative at this point to stop and ensure that
 the basic functions (compiling and linking) of the adjusted toolchain
 are working as expected. To do this, perform a sanity

@@ -174,7 +174,7 @@ gcov</seg>
 <listitem>
 <para>A shell script used to help create useful bug reports</para>
 <indexterm zone="ch-system-gcc gccbug"><primary sortas="b-gccbug">gccbug</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="gcov">
