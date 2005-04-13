@@ -88,7 +88,7 @@
         <listitem>
           <para>Connection status utility</para>
           <indexterm zone="ch-system-iproute2 ctstat">
-            <primary sortas="b-cstat">ctstat</primary>
+            <primary sortas="b-ctstat">ctstat</primary>
           </indexterm>
         </listitem>
       </varlistentry>
