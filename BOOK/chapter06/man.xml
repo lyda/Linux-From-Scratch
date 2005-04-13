@@ -78,6 +78,8 @@ follows:</para>
 
 <screen>NROFF  /usr/bin/nroff -Tlatin1 -mandoc</screen>
 
+<beginpage/>
+
 <para>Note that <quote>latin1</quote> should be used even if it is not
 the character set of the locale. The reason is that, according to the
 specification, <command>groff</command> has no means of typesetting

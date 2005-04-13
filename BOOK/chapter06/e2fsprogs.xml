@@ -85,6 +85,8 @@ information regarding EVMS.</para></listitem>
 <para>To test the results, issue:
 <userinput>make check</userinput>.</para>
 
+<beginpage/>
+
 <para>Install most of the package:</para>
 
 <screen><userinput>make install</userinput></screen>

@@ -133,7 +133,7 @@ the canonical triplet for the given build, host, or target architecture</para>
 <listitem>
 <para>A configuration validation subroutine script</para>
 <indexterm zone="ch-system-automake config.sub"><primary sortas="b-config.sub">config.sub</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="depcomp">

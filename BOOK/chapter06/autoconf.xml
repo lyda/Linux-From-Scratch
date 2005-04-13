@@ -119,7 +119,7 @@ package</para>
 calls <command>autoconf</command> macros by their old names to use the 
 current macro names</para>
 <indexterm zone="ch-system-autoconf autoupdate"><primary sortas="b-autoupdate">autoupdate</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="ifnames">

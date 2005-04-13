@@ -61,7 +61,6 @@ that reason, remove the network hotplug agent:</para>
 
 </sect2>
 
-
 <sect2 id="contents-hotplug" role="content"><title>Contents of Hotplug</title>
 
 <segmentedlist>
@@ -73,6 +72,8 @@ that reason, remove the network hotplug agent:</para>
 <seg>/etc/hotplug/hotplug.functions, /etc/hotplug/blacklist, /etc/hotplug/{pci,usb}, 
 /etc/hotplug/usb.usermap, /etc/hotplug.d, /var/log/hotplug/events</seg></seglistitem>
 </segmentedlist>
+
+<beginpage/>
 
 <variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>

@@ -135,7 +135,7 @@ showconsolefont, showkey, unicode_start, and unicode_stop</seg></seglistitem>
 <listitem>
 <para>Loads the kernel unicode-to-font mapping table</para>
 <indexterm zone="ch-system-kbd loadunimap"><primary sortas="b-loadunimap">loadunimap</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="mapscrn">
