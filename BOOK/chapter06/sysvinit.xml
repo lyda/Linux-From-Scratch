@@ -50,8 +50,9 @@ instead:</para>
 
 <screen><userinput>make -C src install</userinput></screen>
 
-</sect2>
+<beginpage/>
 
+</sect2>
 
 <sect2 id="conf-sysvinit" role="configuration"><title>Configuring Sysvinit</title>
 <indexterm zone="conf-sysvinit">
@@ -102,8 +103,9 @@ program during system startup. Sending this escape sequence is
 necessary for people who use non-ISO 8859-1 screen fonts, but it does
 not effect native English speakers.</para>
 
-</sect2>
+<beginpage/>
 
+</sect2>
 
 <sect2 id="contents-sysvinit" role="content"><title>Contents of Sysvinit</title>
 
