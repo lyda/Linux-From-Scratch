@@ -30,14 +30,14 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: All - Findutils 4.2.20</para></listitem>
 <listitem><para>Arch: All - GCC 3.4.3</para></listitem>
 <listitem><para>Arch: All - Gettext 0.14.4</para></listitem>
-<listitem><para>Arch: All - Glibc 2.3.4</para></listitem>
+<listitem><para>Arch: All - Glibc 2.3.5</para></listitem>
 <listitem><para>Arch: All - Grep 2.5.1a</para></listitem>
 <listitem><para>Arch: x86 - Grub 0.96</para></listitem>
 <listitem><para>Arch: All - Iana-Etc 1.04</para></listitem>
 <listitem><para>Arch: All - Iproute2 2.6.11-050330</para></listitem>
 <listitem><para>Arch: All - LFS-Bootscripts 3.2.0</para></listitem>
 <listitem><para>Arch: All - Libtool 1.5.14</para></listitem>
-<listitem><para>Arch: All - Linux 2.6.11.6</para></listitem>
+<listitem><para>Arch: All - Linux 2.6.11.7</para></listitem>
 <listitem><para>Arch: All - Linux-libc-headers 2.6.11.2</para></listitem>
 <listitem><para>Arch: All - Man 1.5p</para></listitem>
 <listitem><para>Arch: All - Man-pages 2.01</para></listitem>
@@ -87,6 +87,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>April 13, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Gettext to 0.14.4.</para></listitem>
+<listitem><para>Updated: Arch: All - Glibc to 2.3.5.</para></listitem>
 <listitem><para>Updated: Arch: All - Linux to 2.6.11.7.</para></listitem>
 </itemizedlist>
 </listitem>
