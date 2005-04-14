@@ -58,9 +58,9 @@
 <!ENTITY libtool-version "1.5.10">
 <!ENTITY linux-version "2.6.11.5">
 <!ENTITY linux-dl-version "2.6">
-<!ENTITY linux-alpha-version "2.6.11.6">
-<!ENTITY linux-ppc-version "2.6.11.6">
-<!ENTITY linux-raq2-version "2.6.11.6">
+<!ENTITY linux-alpha-version "2.6.11.7">
+<!ENTITY linux-ppc-version "2.6.11.7">
+<!ENTITY linux-raq2-version "2.6.11.7">
 <!ENTITY linux-libc-headers-version "2.6.11.2">
 <!ENTITY linux-libc-headers-alpha-version "2.6.11.2">
 <!ENTITY linux-libc-headers-ppc-version "2.6.11.2">
