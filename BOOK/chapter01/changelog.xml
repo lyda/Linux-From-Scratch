@@ -86,7 +86,8 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>April 15, 2005 [jim]</para>
 <itemizedlist>
-<listitem><para>Updated: Arch: All - Udev 057.</para></listitem>
+<listitem><para>Updated: Arch: All - Udev to 057.</para></listitem>
+<listitem><para>Updated: Arch: All - File to 4.13.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
@@ -94,7 +95,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>April 14, 2005 [jim]</para>
 <itemizedlist>
-<listitem><para>Updated: Arch: All - Man-pages 2.02.</para></listitem>
+<listitem><para>Updated: Arch: All - Man-pages to 2.02.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
