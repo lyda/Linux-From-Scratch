@@ -1,3 +1,7 @@
+n/a - April 17, 2005
+	* removed touch from hotplug bootscript (Matthew Burgess)
+	* moved commands around in localnet bootscript (Andrew Benton)
+
 3.2.0 - March 30, 2005
 	* Changed from syslog-ng to sysklogd (Archaic)
 	* Temporairly changed loadproc to return 0 if the program is

@@ -25,11 +25,8 @@ case "${1}" in
 		echo_ok
 		;;
 	stop)
-		# Remove /var/log/hotplug/events
-		rm /var/log/hotplug/events
-
-		# Recreate /var/log/hotplug/events
-		touch /var/log/hotplug/events
+		# Remove and Recreate /var/log/hotplug/events
+		> /var/log/hotplug/events
 
 		;;
 	status)
