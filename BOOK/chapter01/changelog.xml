@@ -84,10 +84,19 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
-<listitem><para>April 12, 2005 [manuel]</para>
+<listitem><para>April 17, 2005 [manuel]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Updated the stylesheets to use
 DocBook-XSL 1.68.1.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>April 16, 2005 [matt]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Updated documentation. Contributed by
+Ken Moffat, Alexander Patrakov, Andrew Benton, Allard Welter, and Peter Ennis</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
