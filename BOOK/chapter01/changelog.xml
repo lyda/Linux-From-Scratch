@@ -84,6 +84,15 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>April 12, 2005 [manuel]</para>
+<itemizedlist>
+<listitem><para>Updated: Arch: All - Updated the stylesheets to use
+DocBook-XSL 1.68.1.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 15, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - Udev to 057.</para></listitem>
