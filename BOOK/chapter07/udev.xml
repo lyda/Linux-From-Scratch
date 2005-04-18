@@ -179,8 +179,6 @@ manually create the devices. Consult the
 or the documentation for that driver to find the proper major/minor
 numbers.</para>
 
-<beginpage/>
-
 <para>2) A non-hardware device is required.  This is most common with
 the Advanced Linux Sound Architecture (ALSA) project's Open Sound
 System (OSS) compatibility module.  These types of devices can be
@@ -189,7 +187,7 @@ handled in one of two ways:</para>
 <itemizedlist>
 
 <listitem><para>Adding the module names to
-<filename>/etc/sysconfig/modules</filename></para></listitem>
+<filename>/etc/sysconfig/modules</filename></para><beginpage/></listitem>
 <listitem><para>Using an
 <quote>install</quote> line in
 <filename>/etc/modprobe.conf</filename>. This tells the

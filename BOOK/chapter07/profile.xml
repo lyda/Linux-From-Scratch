@@ -69,8 +69,6 @@ the following command:</para>
 
 <screen><userinput>locale -a</userinput></screen>
 
-<beginpage/>
-
 <para>Locales can have a number of synonyms, e.g. <quote>ISO-8859-1</quote> is
 also referred to as <quote>iso8859-1</quote> and <quote>iso88591</quote>.
 Some applications cannot handle the various synonyms correctly, so it is safest
