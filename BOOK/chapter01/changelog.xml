@@ -87,7 +87,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>April 19, 2005 [jim]</para>
 <itemizedlist>
-<listitem><para>Removed: Arch: All - Uneeded sysvinit-proclen patch.</para></listitem>
+<listitem><para>Removed: Arch: All - sysvinit-proclen patch.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
