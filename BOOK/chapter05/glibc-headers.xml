@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-cross-tools-glibc-headers" role="wrap">
+<title>Glibc-&glibc-version; Headers</title>
+<?dbhtml filename="glibc-headers.html"?>
+
+<indexterm zone="ch-cross-tools-glibc-headers">
+<primary sortas="a-Glibc">Glibc Headers</primary>
+<secondary>tools</secondary></indexterm>
+
+<sect2 role="package"><title/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter08/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>0.1 SBU</seg><seg>1 MB</seg></seglistitem>
+</segmentedlist>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter08/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of Glibc Headers</title>
+
+<para arch="raq2">Building for a Linuxthreads based glibc you will need to
+Unpack the glibc-linuxthreads-&glibc-version;tarball -- they will unfold
+into the same directory.</para>
+
+<para>Next, we will copy the header files we need:</para>
+
+<para arch="alpha;ppc;x86">For NPTL we use the following commands:</para>
+
+<screen arch="alpha;ppc;x86"><userinput>cp nptl/sysdeps/pthread/pthread.h /tools/include/</userinput></screen>
+
+<para arch="alpha;ppc;x86">Now we copy the architecture specific headers over:</para>
+
+<screen arch="x86"><userinput>cp nptl/sysdeps/unix/sysv/linux/i386/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
+<screen arch="ppc"><userinput>cp nptl/sysdeps/unix/sysv/linux/powerpc/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
+<screen arch="alpha"><userinput>cp nptl/sysdeps/unix/sysv/linux/alpha/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
+
+<para arch="raq2">For Linuxthreads we use the following commands:</para>
+
+<screen arch="raq2"><userinput>cp linuxthreads/sysdeps/pthread/pthread.h /tools/include/
+cp linuxthreads/sysdeps/pthread/bits/pthreadtypes.h /tools/include/bits/
+cp linuxthreads/sysdeps/pthread/bits/initspin.h /tools/include/bits/</userinput></screen>
+
+</sect2>
+
+</sect1>

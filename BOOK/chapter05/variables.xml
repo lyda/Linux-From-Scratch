@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-crosstools-variables">
+<title>Build Variables</title>
+<?dbhtml filename="variables.html"?>
+
+<para>We will need to install config.guess from binutils:</para>
+
+<screen>tar jxvf binutils-&binutils-version;.tar.bz2 binutils-&binutils-version;/config.guess
+install -m755 binutils-&binutils-version;/config.guess /cross-tools/bin</screen>
+
+<para>Configuration # 1 - Creating different architecture tools.</para>
+
+<para>During the building of the cross-compile tools you will need to set a few variables
+that will be dependent on your particular needs. The first variable will be the of the 
+HOST machine. You will need to set the CHOST triplet to match your particular needs.
+To set this information you can issue the following command:</para>
+
+<screen><userinput>export LFS_HOST="`config.guess`"</userinput></screen>
+
+<para>Now you will need to set the target triplet for the target architecure. You
+can do this by running the same command as above, just running it on the
+target machine. If you can't run the command on the target machine, you can
+use the table at the bottom of this page. Set the command using the
+method listed below:</para>
+
+<screen><userinput>export LFS_TARGET="{target triplet}"</userinput></screen>
+
+<para>Configuration # 2 - Creating same architecture tools.</para>
+
+<para>You can also create "clean" tools on your current distro. This will
+ensure that you have all the prerequisites for the LFS build.</para>
+
+<para>You will need to set your host target triplet a little differently.
+To set this information you can issue the following command:</para>
+
+<screen><userinput>export LFS_HOST="`config.guess | sed 's/unknown/cross/g'`"</userinput></screen>
+
+<para>Now you will need to set the target triplet for the target, which
+in this case is very simple. Set the command using the method listed below:</para>
+
+<screen><userinput>export LFS_TARGET="`config.guess`"</userinput></screen>
+
+<para>List of architectures and target triplets</para>
+
+<table><title>Target Triplets</title>
+  <tgroup cols="2" align="center">
+     <colspec colname="Processor"/>
+     <colspec colname="Triplet"/>
+     <thead>
+        <row>
+           <entry>Architecture</entry>
+           <entry>Target Triplet</entry>
+        </row>
+     </thead>
+     <tbody>
+        <row>
+           <entry>Pentium, K6, 586 Compatibles</entry>
+           <entry>i586-unknown-linux-gnu</entry>
+        </row>
+        <row>
+           <entry>Pentium II, Pentium III, Pentium 4</entry>
+           <entry>i686-unknown-linux-gnu</entry>
+        </row>
+        <row>
+           <entry>Athlon, Duron</entry>
+           <entry>i686-unknown-linux-gnu</entry>
+        </row>
+        <row>
+           <entry>Athlon64</entry>
+           <entry>x86_64-unknown-linux-gnu</entry>
+        </row>
+        <row>
+           <entry>PowerPC</entry>
+           <entry>ppc-unknown-linux-gnu</entry>
+        </row>
+        <row>
+           <entry>PowerPC64</entry>
+           <entry>ppc64-unknown-linux-gnu</entry>
+        </row>
+        <row>
+           <entry>MIPS</entry>
+           <entry>mips-unknown-linux-gnu</entry>
+        </row>
+        <row>
+           <entry>MIPS 64</entry>
+           <entry>mips64-unknown-linux-gnu</entry>
+        </row>
+        <row>
+           <entry>MIPS Little Endian</entry>
+           <entry>mipsel-unknown-linux-gnu</entry>
+        </row>
+        <row>
+           <entry>MIPS 64 Little Endian</entry>
+           <entry>mips64el-unknown-linux-gnu</entry>
+        </row>
+     </tbody>
+   </tgroup>
+</table>
+
+
+
+</sect1>
+

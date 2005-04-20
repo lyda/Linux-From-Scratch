@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "7.0-cross-lfs-20050404">
+<!ENTITY version "7.0-cross-lfs-20050418">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-alpha "&version;-alpha">
 <!ENTITY version-ppc "&version;-PowerPC">
 <!ENTITY version-raq2 "&version;-RaQ2">
-<!ENTITY releasedate "April 4, 2005">
+<!ENTITY releasedate "April 18, 2005">
 <!ENTITY milestone "7.0">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -42,8 +42,8 @@
 <!ENTITY flex-version "2.5.31">
 <!ENTITY gawk-version "3.1.4">
 <!ENTITY gcc-version "3.4.3">
-<!ENTITY gettext-version "0.14.3">
-<!ENTITY glibc-version "2.3.4">
+<!ENTITY gettext-version "0.14.4">
+<!ENTITY glibc-version "2.3.5">
 <!ENTITY grep-version "2.5.1a">
 <!ENTITY groff-version "1.19.1">
 <!ENTITY grub-version "0.96">
@@ -57,11 +57,11 @@
 <!ENTITY less-version "382">
 <!ENTITY lfs-bootscripts-version "3.2.0">
 <!ENTITY libtool-version "1.5.10">
-<!ENTITY linux-version "2.6.11.5">
+<!ENTITY linux-version "2.6.11.7">
 <!ENTITY linux-dl-version "2.6">
-<!ENTITY linux-alpha-version "2.6.11.6">
-<!ENTITY linux-ppc-version "2.6.11.6">
-<!ENTITY linux-raq2-version "2.6.11.6">
+<!ENTITY linux-alpha-version "2.6.11.7">
+<!ENTITY linux-ppc-version "2.6.11.7">
+<!ENTITY linux-raq2-version "2.6.11.7">
 <!ENTITY linux-libc-headers-version "2.6.11.2">
 <!ENTITY linux-libc-headers-alpha-version "2.6.11.2">
 <!ENTITY linux-libc-headers-ppc-version "2.6.11.2">
@@ -69,7 +69,7 @@
 <!ENTITY m4-version "1.4.3">
 <!ENTITY make-version "3.80">
 <!ENTITY man-version "1.5p">
-<!ENTITY man-pages-version "2.01">
+<!ENTITY man-pages-version "2.02">
 <!ENTITY mktemp-version "1.5">
 <!ENTITY module-init-tools-version "3.1">
 <!ENTITY ncurses-version "5.4">

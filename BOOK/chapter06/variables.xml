@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-tools-variables">
+<title>Build Variables</title>
+<?dbhtml filename="variables.html"?>
+
+<para>We will need to setup target specific variables for the compiler
+and linkers:</para>
+
+<screen><userinput>export CC="${LFS_TARGET}-gcc"
+export CXX="${LFS_TARGET}-g++"
+export AR="${LFS_TARGET}-ar"
+export RANLIB="${LFS_TARGET}-ranlib"
+export LD="${LFS_TARGET}-ld"</userinput></screen>
+
+</sect1>
+

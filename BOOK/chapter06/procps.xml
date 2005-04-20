@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-tools-procps" role="wrap">
+<title>Procps-&procps-version;</title>
+<?dbhtml filename="procps.html"?>
+
+<indexterm zone="ch-tools-procps"><primary sortas="a-Procps">Procps</primary></indexterm>
+
+<sect2 role="package"><title/>
+<para>The Procps package contains programs for monitoring processes.</para>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>0.1 SBU</seg><seg>6.2 MB</seg></seglistitem>
+</segmentedlist>
+
+<segmentedlist>
+<segtitle>&dependencies;</segtitle>
+<seglistitem><seg>Bash, Binutils, Coreutils, GCC, Glibc,
+Make, and Ncurses</seg></seglistitem>
+</segmentedlist>
+</sect2>
+
+<sect2 role="installation">
+
+<title>Installation of Procps</title>
+
+<para arch="raq2">The patch below fixes the issue with the procps. Without this patch
+when the command ps aux is run you will receive a signal 11.</para>
+
+<screen arch="raq2"><userinput>patch -Np1 -i ../procps-&procps-version;-fix_mips-1.patch</userinput></screen>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make LDFLAGS="-s"</userinput></screen>
+
+<para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+</sect2>
+
+<sect2 role="content"><title/>
+<para>Details on this package are located in <xref
+linkend="contents-procps" role="."/></para>
+</sect2>
+
+</sect1>
+

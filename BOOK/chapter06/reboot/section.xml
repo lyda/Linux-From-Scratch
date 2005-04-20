@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+<chapter id="chapter-temporary-tools-reboot" xreflabel="Chapter 6 Reboot">
+<?dbhtml dir="reboot"?>
+<title>If your Rebooting</title>
+<?dbhtml filename="section.html"?>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="e2fsprogs.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sysvinit.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="module-init-tools.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="inetutils.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="util-linux.xml"/>
+
+</chapter>

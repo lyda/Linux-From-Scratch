@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<chapter id="chapter-cross-tools" xreflabel="Chapter 5">
+<?dbhtml dir="chapter05"?>
+<title>Constructing Cross-Compile Tools</title>
+<?dbhtml filename="chapter05.html"?>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="cflags.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="variables.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers.xml"/> <!-- x86 -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers-alpha.xml"/> <!-- alpha -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers-ppc.xml"/> <!-- ppc -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers-raq2.xml"/> <!-- raq2 -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc-headers.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="binutils.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gcc-static.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc-startfiles.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gcc-shared.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gcc-final.xml"/>
+
+</chapter>

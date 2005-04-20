@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-tools-gettext" role="wrap">
+<title>Gettext-&gettext-version;</title>
+<?dbhtml filename="gettext.html"?>
+
+<indexterm zone="ch-tools-gettext">
+<primary sortas="a-Gettext">Gettext</primary>
+<secondary>tools</secondary></indexterm>
+
+<sect2 role="package"><title/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter08/gettext.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>0.5 SBU</seg><seg>55 MB</seg></seglistitem>
+</segmentedlist>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter08/gettext.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of Gettext</title>
+
+<para>Gettext has an issue with cross-compiling where it
+can't find getline. So we fix it here:</para>
+
+<screen><userinput>echo "am_cv_func_working_getline=yes" &gt;&gt; config.cache</userinput></screen>
+
+<para>Prepare Gettext for compilation:</para>
+
+<screen><userinput>./configure --prefix=/tools --disable-libasprintf \
+--without-csharp --cache-file=config.cache</userinput></screen>
+
+<para>The meaning of the configure options:</para>
+
+<variablelist>
+<varlistentry>
+<term><parameter>--disable-libasprintf</parameter></term>
+<listitem><para>This flag tells Gettext not to build the
+<filename class="libraryfile">asprintf</filename> library. Because nothing in this 
+chapter or the next requires this library and Gettext gets rebuilt later,
+exclude it to save time and space.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><parameter>--without-csharp</parameter></term>
+<listitem><para>This tells Gettext not to use a C# compiler, even if a
+C# compiler is installed on the host. This needs to be done because
+once we enter the chroot environment, C# will no longer be
+available.</para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make LDFLAGS="-s"</userinput></screen>
+
+<para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+</sect2>
+
+<sect2 role="content"><title/>
+<para>Details on this package are located in <xref linkend="contents-gettext" role="."/></para>
+</sect2>
+
+</sect1>
+
