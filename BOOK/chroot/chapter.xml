@@ -3,10 +3,10 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-temporary-tools-chroot" xreflabel="Chapter 6 Chroot">
+<chapter id="chapter-temporary-tools-chroot" xreflabel="If you'r Chrooting">
 <?dbhtml dir="chroot"?>
-<title>If your Chrooting</title>
-<?dbhtml filename="section.html"?>
+<title>If you'r Chrooting</title>
+<?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernfs.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chroot.xml"/>

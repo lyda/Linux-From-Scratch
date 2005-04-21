@@ -3,10 +3,10 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-bootscripts" xreflabel="Chapter 9">
-<?dbhtml dir="chapter09"?>
+<chapter id="chapter-bootscripts" xreflabel="Setting Up System Bootscripts">
+<?dbhtml dir="bootscripts"?>
 <title>Setting Up System Bootscripts</title>
-<?dbhtml filename="chapter09.html"?>
+<?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bootscripts.xml"/>

@@ -3,10 +3,10 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-getting-materials" xreflabel="Chapter 3">
-<?dbhtml dir="chapter03"?>
+<chapter id="chapter-getting-materials" xreflabel="Packages and Patches">
+<?dbhtml dir="materials"?>
 <title>Packages and Patches</title>
-<?dbhtml filename="chapter03.html"?>
+<?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="packages.xml"/>

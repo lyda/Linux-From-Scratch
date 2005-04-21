@@ -3,10 +3,10 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-temp-tools" xreflabel="Chapter 7">
-<?dbhtml dir="chapter07"?>
+<chapter id="chapter-temp-tools" xreflabel="Constructing a Temporary Tools">
+<?dbhtml dir="temp-tools"?>
 <title>Constructing a Temporary Tools</title>
-<?dbhtml filename="chapter07.html"?>
+<?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="tcl.xml"/>

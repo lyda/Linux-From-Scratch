@@ -3,10 +3,10 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-finalizing" xreflabel="Chapter 11">
-<?dbhtml dir="chapter11"?>
+<chapter id="chapter-finalizing" xreflabel="The End">
+<?dbhtml dir="the-end"?>
 <title>The End</title>
-<?dbhtml filename="chapter11.html"?>
+<?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="theend.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="getcounted.xml"/>

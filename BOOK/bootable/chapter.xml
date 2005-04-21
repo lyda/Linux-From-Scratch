@@ -3,10 +3,10 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-bootable" xreflabel="Chapter 10">
-<?dbhtml dir="chapter10"?>
+<chapter id="chapter-bootable" xreflabel="Making the LFS System Bootable">
+<?dbhtml dir="bootable"?>
 <title>Making the LFS System Bootable</title>
-<?dbhtml filename="chapter10.html"?>
+<?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="fstab.xml"/>

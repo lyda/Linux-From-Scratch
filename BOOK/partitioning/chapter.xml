@@ -3,10 +3,10 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-partitioning" xreflabel="Chapter 2">
-<?dbhtml dir="chapter02"?>
+<chapter id="chapter-partitioning" xreflabel="Preparing a New Partition">
+<?dbhtml dir="partitioning"?>
 <title>Preparing a New Partition</title>
-<?dbhtml filename="chapter02.html"?>
+<?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="creatingpartition.xml"/>

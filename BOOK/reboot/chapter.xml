@@ -3,10 +3,10 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-temporary-tools-reboot" xreflabel="Chapter 6 Reboot">
+<chapter id="chapter-temporary-tools-reboot" xreflabel="If you'r Rebooting">
 <?dbhtml dir="reboot"?>
-<title>If your Rebooting</title>
-<?dbhtml filename="section.html"?>
+<title>If you'r Rebooting</title>
+<?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="e2fsprogs.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sysvinit.xml"/>

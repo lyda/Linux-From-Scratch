@@ -3,10 +3,10 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-final-preps" xreflabel="Chapter 4">
-<?dbhtml dir="chapter04"?>
+<chapter id="chapter-final-preps" xreflabel="Final Preparations">
+<?dbhtml dir="final-preps"?>
 <title>Final Preparations</title>
-<?dbhtml filename="chapter04.html"?>
+<?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="aboutlfs.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="creatingtoolsdir.xml"/>

@@ -3,10 +3,10 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-cross-tools" xreflabel="Chapter 5">
-<?dbhtml dir="chapter05"?>
+<chapter id="chapter-cross-tools" xreflabel="Constructing Cross-Compile Tools">
+<?dbhtml dir="cross-tools"?>
 <title>Constructing Cross-Compile Tools</title>
-<?dbhtml filename="chapter05.html"?>
+<?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="cflags.xml"/>
