@@ -12,14 +12,14 @@
 <secondary>tools, headers</secondary></indexterm>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-	href="../chapter06/linux-libc-headers.xml"
+	href="linux-libc-headers.xml"
 	xpointer="xpointer(/sect1/sect2[@role='package'])"/>
 
 <sect2 role="installation">
 <title>Installation of Linux-Libc-Headers</title>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../chapter06/linux-libc-headers.xml"
+  href="linux-libc-headers.xml"
   xpointer="xpointer(/sect1/sect2[@role='installation']/para[1])"/>
 
 <para>Install the header files:</para>
@@ -30,7 +30,7 @@ cp -R include/linux /tools/include</userinput></screen>
 </sect2>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../chapter06/linux-libc-headers.xml"
+  href="linux-libc-headers.xml"
   xpointer="xpointer(/sect1/sect2[@role='content'])"/>
 
 </sect1>
