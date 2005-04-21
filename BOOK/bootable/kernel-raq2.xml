@@ -10,7 +10,7 @@
 <indexterm zone="ch-bootable-kernel"><primary sortas="a-Linux">Linux</primary></indexterm>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../chapter10/kernel.xml"
+  href="kernel.xml"
   xpointer="xpointer(/sect1/sect2[@role='package'])"/>
 
 <sect2 role="installation">
@@ -164,7 +164,7 @@ all files are owned by user <emphasis>root</emphasis>.</para>
 </sect2>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../chapter10/kernel.xml"
+  href="kernel.xml"
   xpointer="xpointer(/sect1/sect2[@role='content'])"/>
 
 </sect1>
