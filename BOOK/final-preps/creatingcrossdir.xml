@@ -21,7 +21,7 @@ linkend="chapter-cross-tools"/>).</para>
 <para>Create the required directory by running the following as
 <emphasis>lfs</emphasis>:</para>
 
-<screen><userinput>mkdir $HOME/cross-tools</userinput></screen>
+<screen><userinput>install -d $HOME/cross-tools</userinput></screen>
 
 <para>Grant <emphasis>lfs</emphasis> full access to
 <filename class="directory">$HOME/cross-tools</filename> by making

@@ -38,7 +38,7 @@ into the same directory.</para>
 <screen arch="alpha;ppc;x86"><userinput>cp nptl/sysdeps/pthread/pthread.h /tools/include/</userinput></screen>
 
 <para arch="alpha;ppc;x86">Now we copy the architecture specific headers over:</para>
-<screen arch="alpha;ppc;x86"><userinput>mkdir /tools/include/bits</userinput></screen>
+<screen arch="alpha;ppc;x86"><userinput>install -d /tools/include/bits</userinput></screen>
 <screen arch="x86"><userinput>cp nptl/sysdeps/unix/sysv/linux/i386/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
 <screen arch="ppc"><userinput>cp nptl/sysdeps/unix/sysv/linux/powerpc/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
 <screen arch="alpha"><userinput>cp nptl/sysdeps/unix/sysv/linux/alpha/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>

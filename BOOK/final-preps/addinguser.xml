@@ -78,7 +78,7 @@ chown lfs $HOME/cross-tools</userinput></screen>
 will show you how to create the directory and give
 user <emphasis>lfs</emphasis> ownership of this directory:</para>
 
-<screen><userinput>mkdir $LFS/sources
+<screen><userinput>install -d $LFS/sources
 chown lfs $LFS/sources</userinput></screen>
 
 <para>Next, login as user <emphasis>lfs</emphasis>. This can be done

@@ -9,7 +9,7 @@
 
 <para>We will need to install config.guess from binutils:</para>
 
-<screen><userinput>mkdir /cross-tools/bin
+<screen><userinput>install -d /cross-tools/bin
 tar -xjvf binutils-&binutils-version;.tar.bz2 binutils-&binutils-version;/config.guess
 install -m755 binutils-&binutils-version;/config.guess /cross-tools/bin</userinput></screen>
 
@@ -45,6 +45,12 @@ To set this information you can issue the following command:</para>
 in this case is very simple. Set the command using the method listed below:</para>
 
 <screen><userinput>export LFS_TARGET="`config.guess`"</userinput></screen>
+
+<para>Now lets verify are targets are set before we continue on. Use
+the following command to check you host and target variables:</para>
+
+<screen><userinput>echo "We are building for ${LFS_TARGET}"
+echo "Our host is ${LFS_HOST}"</userinput></screen>
 
 <para>List of architectures and target triplets</para>
 

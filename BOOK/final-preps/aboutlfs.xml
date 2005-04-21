@@ -22,7 +22,7 @@ variable can be set with:</para>
 <screen><userinput>export LFS=/mnt/lfs</userinput></screen>
 
 <para>Having this variable set is beneficial in that commands such as
-<command>mkdir $LFS/tools</command> can be typed literally. The shell
+<command>install -d $LFS/tools</command> can be typed literally. The shell
 will automatically replace <quote>$LFS</quote> with
 <quote>/mnt/lfs</quote> (or whatever the variable was set to) when it
 processes the command line.</para>
@@ -30,7 +30,7 @@ processes the command line.</para>
 <para>If you haven't created the /mnt/lfs directory, do so at this time
 by issuing the following commands:</para>
 
-<screen><userinput>mkdir $LFS</userinput></screen>
+<screen><userinput>install -d $LFS</userinput></screen>
 
 <para>Do not forget to check that <envar>$LFS</envar> is set whenever
 you leave and reenter the current working environment (as when doing a

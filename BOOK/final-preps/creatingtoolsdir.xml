@@ -21,7 +21,7 @@ linkend="chapter-temporary-tools"/>).</para>
 <para>Create the required directory by running the following as
 <emphasis>root</emphasis>:</para>
 
-<screen><userinput>mkdir $LFS/tools</userinput></screen>
+<screen><userinput>install -d $LFS/tools</userinput></screen>
 
 <para>Grant <emphasis>lfs</emphasis> full access to
 <filename class="directory">$LFS/tools</filename> and

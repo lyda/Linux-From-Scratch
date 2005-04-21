@@ -24,7 +24,8 @@
 
 <para>Install the header files:</para>
 
-<screen><userinput>cp -R include/asm-alpha /tools/include/asm
+<screen><userinput>install -d /tools/include/asm
+cp -R include/asm-alpha /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
 
 </sect2>
