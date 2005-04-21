@@ -84,7 +84,16 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
-<listitem><para>April [jim]</para>
+<listitem><para>April 21, 2005 [manuel]</para>
+<itemizedlist>
+<listitem><para>Full sources restructuration to not be constrained any more by
+hardcoded chapters numbers.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>April 20, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>This BOOK is an update of the multi-arch book for the
 cross-compile usage scenario.</para></listitem>
