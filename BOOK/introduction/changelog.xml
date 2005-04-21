@@ -86,6 +86,14 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>April 21, 2005 [jhuntwork]</para>
 <itemizedlist>
+<listitem><para>Removed instruction to run command as root in final-preps/creatingcrossdir.xml.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem><para>April 21, 2005 [jhuntwork]</para>
+<itemizedlist>
 <listitem><para>Added missing userinput tags in cross-tools/variables.xml.</para></listitem>
 </itemizedlist>
 </listitem>

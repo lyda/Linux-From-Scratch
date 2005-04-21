@@ -18,8 +18,7 @@ also prevents these programs from ending up in the host production
 directories (easy to do by accident in <xref
 linkend="chapter-cross-tools"/>).</para>
 
-<para>Create the required directory by running the following as
-<emphasis>root</emphasis>:</para>
+<para>Create the required directory by running the following:</para>
 
 <screen><userinput>mkdir $HOME/cross-tools</userinput></screen>
 
