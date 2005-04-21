@@ -23,6 +23,12 @@ linkend="chapter-temporary-tools"/>).</para>
 
 <screen><userinput>mkdir $LFS/tools</userinput></screen>
 
+<para>Grant <emphasis>lfs</emphasis> full access to
+<filename class="directory">$LFS/tools</filename> and
+<emphasis>lfs</emphasis> the directory owner:</para>
+
+<screen><userinput>chown lfs $LFS/tools</userinput></screen>
+
 <para>The next step is to create a <filename class="symlink">/tools</filename> 
 symlink on the host system.  This will point to the newly-created directory on
 the LFS partition. Run this command as <emphasis>root</emphasis> as

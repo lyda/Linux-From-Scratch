@@ -74,10 +74,12 @@ password), give <emphasis>lfs</emphasis> a password:</para>
 chown lfs $HOME/cross-tools</userinput></screen>
 
 
-<para>If a separate working directory was created as suggested, give
+<para>If a separate working directory was created as suggested, we
+will show you how to create the directory and give
 user <emphasis>lfs</emphasis> ownership of this directory:</para>
 
-<screen><userinput>chown lfs $LFS/sources</userinput></screen>
+<screen><userinput>mkdir $LFS/sources
+chown lfs $LFS/sources</userinput></screen>
 
 <para>Next, login as user <emphasis>lfs</emphasis>. This can be done
 via a virtual console, through a display manager, or with the

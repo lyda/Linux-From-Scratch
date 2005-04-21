@@ -23,6 +23,12 @@ linkend="chapter-cross-tools"/>).</para>
 
 <screen><userinput>mkdir $HOME/cross-tools</userinput></screen>
 
+<para>Grant <emphasis>lfs</emphasis> full access to
+<filename class="directory">$HOME/cross-tools</filename> by making
+<emphasis>lfs</emphasis> the directory owner:</para>
+
+<screen><userinput>chown lfs $HOME/cross-tools</userinput></screen>
+
 <para>The next step is to create a <filename class="symlink">/cross-tools</filename> 
 symlink on the host system.  This will point to the newly-created directory in
 your home directory. Since normal users will not have permissions to write
