@@ -67,7 +67,7 @@ make</userinput></screen>
 
 <para>Copy libiberty.h file to /cross-tools/include directory:</para>
 
-<screen>cp ../binutils-&binutils-version;/include/libiberty.h /tools/include</screen>
+<screen><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /tools/include</userinput></screen>
 
 </sect2>
 
