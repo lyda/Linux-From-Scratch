@@ -89,6 +89,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Added chroot/reboot specific changes.</para></listitem>
 <listitem><para>Added perl to final-system.</para></listitem>
 <listitem><para>Fixed index of final-system chapter.</para></listitem>
+<listitem><para>Added make $LFS directory.</para></listitem>
 </itemizedlist>
 </listitem>
 
