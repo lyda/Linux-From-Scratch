@@ -9,7 +9,8 @@
 
 <para>We will need to install config.guess from binutils:</para>
 
-<screen><userinput>tar -xjvf binutils-&binutils-version;.tar.bz2 binutils-&binutils-version;/config.guess
+<screen><userinput>mkdir /cross-tools/bin
+tar -xjvf binutils-&binutils-version;.tar.bz2 binutils-&binutils-version;/config.guess
 install -m755 binutils-&binutils-version;/config.guess /cross-tools/bin</userinput></screen>
 
 <para>Configuration # 1 - Creating different architecture tools.</para>
