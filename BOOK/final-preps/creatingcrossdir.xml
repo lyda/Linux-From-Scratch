@@ -24,8 +24,7 @@ linkend="chapter-cross-tools"/>).</para>
 
 <para>The next step is to create a <filename class="symlink">/cross-tools</filename> 
 symlink on the host system.  This will point to the newly-created directory on
-you home drive. Run this command as <emphasis>root</emphasis> as
-well:</para>
+you home drive. Run this command as <emphasis>root</emphasis>:</para>
 
 <screen><userinput>ln -s $HOME/cross-tools /</userinput></screen>
 
