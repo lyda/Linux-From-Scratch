@@ -38,9 +38,9 @@ patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
 
-<screen>echo "
+<screen><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> ../gcc-3.4.3/gcc/config/linux.h</screen>
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> ../gcc-3.4.3/gcc/config/linux.h</userinput></screen>
 
 <para>The GCC documentation recommends building GCC outside of the
 source directory in a dedicated build directory:</para>
@@ -51,7 +51,7 @@ cd ../gcc-build</userinput></screen>
 <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
-    --host=${LFS_HOST} --target=${LFS_TARGET}
+    --host=${LFS_HOST} --target=${LFS_TARGET} \
     --with-local-prefix=/tools --disable-nls --disable-shared \
     --enable-languages=c</userinput></screen>
 
