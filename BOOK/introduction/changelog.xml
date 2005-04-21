@@ -82,6 +82,13 @@ first a summary, then a detailed log.</para>
 </listitem>
 
 <itemizedlist>
+</itemizedlist><listitem><para>Changelog Entries:</para>
+
+<listitem><para>April 21, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Added chroot/reboot specific changes.</para></listitem>
+</itemizedlist>
+</listitem>
 
 <listitem><para>April 21, 2005 [jhuntwork]</para>
 <itemizedlist>
@@ -89,7 +96,6 @@ first a summary, then a detailed log.</para>
 to build of binutils.</para></listitem>
 </itemizedlist>
 </listitem>
-</itemizedlist><listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
 <listitem><para>April 21, 2005 [jhuntwork]</para>
