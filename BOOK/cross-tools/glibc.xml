@@ -62,8 +62,9 @@ cd ../glibc-build</userinput></screen>
 <para>Next, prepare Glibc for compilation:</para>
 
 <screen><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
-    RANLIB="${LFS_TARGET}-ranlib" --host=${LFS_BUILD} --target=${LFS_TARGET} \
+    RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
+    --host=${LFS_HOST} --target=${LFS_TARGET} \
     --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --without-gd --with-headers=/tools/include \
