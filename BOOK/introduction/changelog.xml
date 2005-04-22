@@ -83,16 +83,30 @@ first a summary, then a detailed log.</para>
 
 <listitem><para>Changelog Entries:</para>
 
+<!-- Changelog template
+<itemizedlist>
+<listitem><para>Date [name]</para>
+<itemizedlist>
+<listitem><para>Changelog.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+-->
+
+<itemizedlist>
 <listitem><para>April 22, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Added missing headers creation in cross-lfs glibc-headers.</para></listitem>
 <listitem><para>Added export of ${LFS_HOST} and ${LFS_TARGET} to ~/.bashrc.</para></listitem>
 <listitem><para>Added what to do if you need to stop/start a build in cross-tools
-and temp-tools</listitem></para>
+and temp-tools</para></listitem>
 <listitem><para>Fixed Typo.</para></listitem>
+<listitem><para>Fixed changelog.</para></listitem>
 </itemizedlist>
 </listitem>
+</itemizedlist>
 
+<itemizedlist>
 <listitem><para>April 21, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Added chroot/reboot specific changes.</para></listitem>
@@ -105,13 +119,16 @@ and temp-tools</listitem></para>
 <listitem><para>Fixed Linux-libc-headers install in cross-tools.</para></listitem>
 </itemizedlist>
 </listitem>
+</itemizedlist>
 
+<itemizedlist>
 <listitem><para>April 21, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Changed setting of LFS_HOST for target-triplets without 'unknown' and added --host flag
 to build of binutils.</para></listitem>
 </itemizedlist>
 </listitem>
+</itemizedlist>
 
 <itemizedlist>
 <listitem><para>April 21, 2005 [jhuntwork]</para>

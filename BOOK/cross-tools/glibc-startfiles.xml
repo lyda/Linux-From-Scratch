@@ -56,10 +56,10 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</screen>
 
 <para arch="alpha;ppc;x86;">To create NPTL Startfiles using the following configure line:</para>
 
-<screen arch="alpha;ppc;x86;"><userinput>CC="/cross-tools/${LFS_TARGET}-gcc" AR="/cross-tools/${LFS_TARGET}-ar" \
-    RANLIB="/cross-tools/${LFS_TARGET}-ranlib \
+<screen arch="alpha;ppc;x86;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
+    RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST}
+    --host=${LFS_TARGET} --build=${LFS_HOST} \
     --without-cvs --disable-profile --enable-add-ons \
     --with-tls --enable-kernel=2.6.0 --with-__thread \
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
@@ -67,10 +67,10 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</screen>
 
 <para arch="raq2">To create Linuxthread Startfiles using the following configure line:</para>
 
-<screen arch="raq2"><userinput>CC="/cross-tools/${LFS_TARGET}-gcc" AR="/cross-tools/${LFS_TARGET}-ar" \
-    RANLIB="/cross-tools/${LFS_TARGET}-ranlib \
+<screen arch="raq2"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
+    RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST}
+    --host=${LFS_TARGET} --build=${LFS_HOST} \
     --without-cvs --disable-profile --enable-add-ons \
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --disable-selinux</userinput></screen>

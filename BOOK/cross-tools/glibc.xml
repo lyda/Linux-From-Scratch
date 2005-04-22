@@ -69,7 +69,6 @@ cd ../glibc-build</userinput></screen>
     --without-gd --with-headers=/tools/include \
     --disable-selinux</userinput></screen>
 
-
 <para>The meaning of the configure options:</para>
 
 <variablelist>
