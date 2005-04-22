@@ -52,7 +52,7 @@ the following command to check you host and target variables:</para>
 <screen><userinput>echo "We are building for ${LFS_TARGET}"
 echo "Our host is ${LFS_HOST}"</userinput></screen>
 
-<para>Now we will make add these to ~/.bashrc, just in
+<para>Now we will add these to ~/.bashrc, just in
 case you have to exit and restart building later:</para>
 
 <screen><userinput>echo "export LFS_HOST=${LFS_HOST}" >> ~/.bashrc
