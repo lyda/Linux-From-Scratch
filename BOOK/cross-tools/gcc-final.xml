@@ -33,7 +33,7 @@ compiler nor the test suite will be needed here.</para>
 <para>First correct a known problem and make an essential adjustment:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-no_fixincludes-1.patch
-patch -Np1 -i ../gcc-&gcc-version;-cross_specs-1.patch</userinput></screen>
+patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
 
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
