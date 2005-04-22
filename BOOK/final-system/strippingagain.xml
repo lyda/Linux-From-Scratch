@@ -22,7 +22,7 @@ backup of the current situation.</para>
 <para>Before performing the stripping, take special care to ensure that
 none of the binaries that are about to be stripped are running. If
 unsure whether the user entered chroot with the command given in
-<xref linkend="ch-chroot" role=","/> first exit from
+<xref linkend="chapter-chroot" role=","/> first exit from
 chroot:</para>
 
 <screen><userinput>logout</userinput></screen>

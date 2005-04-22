@@ -94,6 +94,15 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>April 22, 2005 [manuel]</para>
+<itemizedlist>
+<listitem><para>Several ID values changes to match the current dirs structure.
+Renamed administrativa.xml to resources.xml.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 22, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Added missing headers creation in cross-lfs glibc-headers.</para></listitem>
