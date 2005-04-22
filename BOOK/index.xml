@@ -41,6 +41,7 @@
 
 <part id="part5">
 <title>Building the LFS System</title>
+<?dbhtml filename="part5.html"?>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="temp-tools/chapter.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="final-system/chapter.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bootscripts/chapter.xml"/>

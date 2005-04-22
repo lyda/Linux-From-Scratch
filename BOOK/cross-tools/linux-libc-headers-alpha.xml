@@ -25,8 +25,11 @@
 <para>Install the header files:</para>
 
 <screen><userinput>install -d /tools/include
+install -d /cross-tools/${LFS_TARGET}/include
 cp -R include/asm-alpha /tools/include/asm
-cp -R include/linux /tools/include</userinput></screen>
+cp -R include/linux /tools/include
+ln -s /tools/include/asm /cross-tools/${LFS_TARGET}/include
+ln -s /tools/include/linux /cross-tools/${LFS_TARGET}/include</userinput></screen>
 
 </sect2>
 

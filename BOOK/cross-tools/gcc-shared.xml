@@ -45,6 +45,8 @@ location:</para>
 <para>Now we will change gcc's search path to look into /tools only:</para>
 
 <screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
+gcc/Makefile.in
+sed -i "s@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
 gcc/Makefile.in</userinput></screen>
 
 <para>Now we will disable gcc's linking to libc since it doesn't exist yet:</para>
