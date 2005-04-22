@@ -102,6 +102,7 @@ first a summary, then a detailed log.</para>
 and temp-tools</para></listitem>
 <listitem><para>Fixed Typo.</para></listitem>
 <listitem><para>Fixed changelog.</para></listitem>
+<listitem><para>Fixed build issue glibc-full in cross-tools.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

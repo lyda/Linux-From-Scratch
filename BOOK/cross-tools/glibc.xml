@@ -61,10 +61,23 @@ cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
+<para arch="alpha;ppc;x86;">For NPTL enabled systems we will need to add the following lines to config.cache</para>
+<screen>echo "libc_cv_forced_unwind=yes" > config.cache
+echo "libc_cv_c_cleanup=yes" >> config.cache</screen>
+
+<screen arch="alpha;ppc;x86;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_HOST} --target=${LFS_TARGET} \
+    --host=${LFS_HOST} --build=${LFS_TARGET} \
+    --disable-profile --enable-add-ons \
+    --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
+    --without-gd --with-headers=/tools/include \
+    --disable-selinux --cache-file=config.cache</userinput></screen>
+
+<screen arch="raq2"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
+    RANLIB="${LFS_TARGET}-ranlib" \
+    ../glibc-&glibc-version;/configure --prefix=/tools \
+    --host=${LFS_HOST} --build=${LFS_TARGET} \
     --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --without-gd --with-headers=/tools/include \
