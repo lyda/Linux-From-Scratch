@@ -81,13 +81,15 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
-<itemizedlist>
-</itemizedlist><listitem><para>Changelog Entries:</para>
+<listitem><para>Changelog Entries:</para>
 
 <listitem><para>April 22, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Added missing headers creation in cross-lfs glibc-headers.</para></listitem>
-<listitem><para>Added export of ${LFS_HOST} and ${LFS_TARGET} to ~/bashrc.</para></listitem>
+<listitem><para>Added export of ${LFS_HOST} and ${LFS_TARGET} to ~/.bashrc.</para></listitem>
+<listitem><para>Added what to do if you need to stop/start a build in cross-tools
+and temp-tools</listitem></para>
+<listitem><para>Fixed Typo.</para></listitem>
 </itemizedlist>
 </listitem>
 

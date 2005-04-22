@@ -10,5 +10,9 @@
 <para>This chapter shows you how to create cross platform
 tools.</para>
 
+<para>If for some reason you have to stop and come back later,
+remember to use the su - lfs command, and it will setup the
+build environment that you left.</para>
+
 </sect1>
 
