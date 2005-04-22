@@ -42,7 +42,7 @@ location:</para>
 #undef STARTFILE_PREFIX_SPEC
 #define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> ../gcc-3.4.3/gcc/config/linux.h</screen>
 
-<para>Now we will change gcc's search path to look into /cross-tools only:</para>
+<para>Now we will change gcc's search path to look into /tools only:</para>
 
 <screen>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
 Makefile.in</screen>

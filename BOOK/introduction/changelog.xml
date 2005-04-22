@@ -92,6 +92,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Added make $LFS directory.</para></listitem>
 <listitem><para>Fixed chapter 4 typo's and bad text.</para></listitem>
 <listitem><para>Fixed chapter 5 typo's and bad text.</para></listitem>
+<listitem><para>Fixed Static GCC build in cross-tools.</para></listitem>
 </itemizedlist>
 </listitem>
 
