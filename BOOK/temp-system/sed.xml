@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-sed" role="wrap">
+<sect1 id="ch-temp-system-sed" role="wrap">
 <title>Sed-&sed-version;</title>
 <?dbhtml filename="sed.html"?>
 
-<indexterm zone="ch-tools-sed">
+<indexterm zone="ch-temp-system-sed">
 <primary sortas="a-Sed">Sed</primary>
 <secondary>tools</secondary></indexterm>
 

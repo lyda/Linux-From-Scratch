@@ -7,12 +7,12 @@
 <title>Creating the passwd, group, and log Files</title>
 <?dbhtml filename="pwdgroup.html"?>
 
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/etc/passwd">/etc/passwd</primary></indexterm>
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/etc/group">/etc/group</primary></indexterm>
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/var/run/utmp">/var/run/utmp</primary></indexterm>
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/var/log/btmp">/var/log/btmp</primary></indexterm>
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/var/log/lastlog">/var/log/lastlog</primary></indexterm>
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-/var/log/wtmp">/var/log/wtmp</primary></indexterm>
+<indexterm zone="ch-chroot-pwdgroup"><primary sortas="e-/etc/passwd">/etc/passwd</primary></indexterm>
+<indexterm zone="ch-chroot-pwdgroup"><primary sortas="e-/etc/group">/etc/group</primary></indexterm>
+<indexterm zone="ch-chroot-pwdgroup"><primary sortas="e-/var/run/utmp">/var/run/utmp</primary></indexterm>
+<indexterm zone="ch-chroot-pwdgroup"><primary sortas="e-/var/log/btmp">/var/log/btmp</primary></indexterm>
+<indexterm zone="ch-chroot-pwdgroup"><primary sortas="e-/var/log/lastlog">/var/log/lastlog</primary></indexterm>
+<indexterm zone="ch-chroot-pwdgroup"><primary sortas="e-/var/log/wtmp">/var/log/wtmp</primary></indexterm>
 
 <para>In order for user <emphasis>root</emphasis> to be able to login
 and for the name <quote>root</quote> to be recognized, there need to

@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-gettext" role="wrap">
+<sect1 id="ch-temp-system-gettext" role="wrap">
 <title>Gettext-&gettext-version;</title>
 <?dbhtml filename="gettext.html"?>
 
-<indexterm zone="ch-tools-gettext">
+<indexterm zone="ch-temp-system-gettext">
 <primary sortas="a-Gettext">Gettext</primary>
 <secondary>tools</secondary></indexterm>
 

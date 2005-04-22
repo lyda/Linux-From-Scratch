@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-binutils" role="wrap">
+<sect1 id="ch-temp-system-binutils" role="wrap">
 <title>Binutils-&binutils-version;</title>
 <?dbhtml filename="binutils.html"?>
 
-<indexterm zone="ch-tools-binutils">
+<indexterm zone="ch-temp-system-binutils">
 <primary sortas="a-Binutils">Binutils</primary>
 <secondary>tools</secondary></indexterm>
 

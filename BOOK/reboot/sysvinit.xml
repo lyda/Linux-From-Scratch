@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-sysvinit" role="wrap">
+<sect1 id="ch-reboot-sysvinit" role="wrap">
 <title>Sysvinit-&sysvinit-version;</title>
 <?dbhtml filename="sysvinit.html"?>
 
-<indexterm zone="ch-tools-sysvinit"><primary sortas="a-Sysvinit">Sysvinit</primary></indexterm>
+<indexterm zone="ch-reboot-sysvinit"><primary sortas="a-Sysvinit">Sysvinit</primary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/sysvinit.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>

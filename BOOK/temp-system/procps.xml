@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-procps" role="wrap">
+<sect1 id="ch-temp-system-procps" role="wrap">
 <title>Procps-&procps-version;</title>
 <?dbhtml filename="procps.html"?>
 
-<indexterm zone="ch-tools-procps"><primary sortas="a-Procps">Procps</primary></indexterm>
+<indexterm zone="ch-temp-system-procps"><primary sortas="a-Procps">Procps</primary></indexterm>
 
 <sect2 role="package"><title/>
 <para>The Procps package contains programs for monitoring processes.</para>

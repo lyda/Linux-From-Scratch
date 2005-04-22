@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-e2fsprogs" role="wrap">
+<sect1 id="ch-reboot-e2fsprogs" role="wrap">
 <title>E2fsprogs-&e2fsprogs-version;</title>
 <?dbhtml filename="e2fsprogs.html"?>
 
-<indexterm zone="ch-tools-e2fsprogs"><primary sortas="a-E2fsprogs">E2fsprogs</primary></indexterm>
+<indexterm zone="ch-reboot-e2fsprogs"><primary sortas="a-E2fsprogs">E2fsprogs</primary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/e2fsprogs.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>

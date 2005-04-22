@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-patch" role="wrap">
+<sect1 id="ch-temp-system-patch" role="wrap">
 <title>Patch-&patch-version;</title>
 <?dbhtml filename="patch.html"?>
 
-<indexterm zone="ch-tools-patch">
+<indexterm zone="ch-temp-system-patch">
 <primary sortas="a-Patch">Patch</primary>
 <secondary>tools</secondary></indexterm>
 

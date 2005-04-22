@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-tar" role="wrap">
+<sect1 id="ch-temp-system-tar" role="wrap">
 <title>Tar-&tar-version;</title>
 <?dbhtml filename="tar.html"?>
 
-<indexterm zone="ch-tools-tar">
+<indexterm zone="ch-temp-system-tar">
 <primary sortas="a-Tar">Tar</primary>
 <secondary>tools</secondary></indexterm>
 

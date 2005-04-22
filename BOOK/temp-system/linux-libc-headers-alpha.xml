@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-linux-libc-headers" role="wrap" arch="alpha">
+<sect1 id="ch-temp-system-linux-libc-headers" role="wrap" arch="alpha">
 <title>Linux-Libc-Headers-&linux-libc-headers-alpha-version;</title>
 <?dbhtml filename="linux-libc-headers.html"?>
 
-<indexterm zone="ch-tools-linux-libc-headers">
+<indexterm zone="ch-temp-system-linux-libc-headers">
 <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
 <secondary>tools, headers</secondary></indexterm>
 

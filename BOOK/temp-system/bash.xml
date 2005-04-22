@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-bash" role="wrap">
+<sect1 id="ch-temp-system-bash" role="wrap">
 <title>Bash-&bash-version;</title>
 <?dbhtml filename="bash.html"?>
 
-<indexterm zone="ch-tools-bash">
+<indexterm zone="ch-temp-system-bash">
 <primary sortas="a-Bash">Bash</primary>
 <secondary>tools</secondary></indexterm>
 

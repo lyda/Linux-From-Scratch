@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-temp-tools" xreflabel="Constructing a Temporary Tools">
+<chapter id="chapter-temporary-tools" xreflabel="Constructing a Temporary Tools">
 <?dbhtml dir="temp-tools"?>
 <title>Constructing a Temporary Tools</title>
 <?dbhtml filename="chapter.html"?>

@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-flex" role="wrap">
+<sect1 id="ch-temp-system-flex" role="wrap">
 <title>Flex-&flex-version;</title>
 <?dbhtml filename="flex.html"?>
 
-<indexterm zone="ch-tools-flex">
+<indexterm zone="ch-temp-system-flex">
 <primary sortas="a-Flex">Flex</primary>
 <secondary>tools</secondary></indexterm>
 

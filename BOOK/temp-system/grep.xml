@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-grep" role="wrap">
+<sect1 id="ch-temp-system-grep" role="wrap">
 <title>Grep-&grep-version;</title>
 <?dbhtml filename="grep.html"?>
 
-<indexterm zone="ch-tools-grep">
+<indexterm zone="ch-temp-system-grep">
 <primary sortas="a-Grep">Grep</primary>
 <secondary>tools</secondary></indexterm>
 

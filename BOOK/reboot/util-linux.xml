@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-util-linux" role="wrap">
+<sect1 id="ch-reboot-util-linux" role="wrap">
 <title>Util-linux-&util-linux-version;</title>
 <?dbhtml filename="util-linux.html"?>
 
-<indexterm zone="ch-tools-util-linux">
+<indexterm zone="ch-reboot-util-linux">
 <primary sortas="a-Util-linux">Util-linux</primary>
 <secondary>tools</secondary></indexterm>
 

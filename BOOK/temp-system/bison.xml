@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-bison" xreflabel="Bison" role="wrap">
+<sect1 id="ch-temp-system-bison" xreflabel="Bison" role="wrap">
 <title>Bison-&bison-version;</title>
 <?dbhtml filename="bison.html"?>
 
-<indexterm zone="ch-tools-bison">
+<indexterm zone="ch-temp-system-bison">
 <primary sortas="a-Bison">Bison</primary>
 <secondary>tools</secondary></indexterm>
 

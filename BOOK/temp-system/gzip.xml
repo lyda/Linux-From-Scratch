@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-gzip" role="wrap">
+<sect1 id="ch-temp-system-gzip" role="wrap">
 <title>Gzip-&gzip-version;</title>
 <?dbhtml filename="gzip.html"?>
 
-<indexterm zone="ch-tools-gzip">
+<indexterm zone="ch-temp-system-gzip">
 <primary sortas="a-Gzip">Gzip</primary>
 <secondary>tools</secondary></indexterm>
 

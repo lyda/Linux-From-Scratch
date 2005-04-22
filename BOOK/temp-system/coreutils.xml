@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-coreutils" role="wrap">
+<sect1 id="ch-temp-system-coreutils" role="wrap">
 <title>Coreutils-&coreutils-version;</title>
 <?dbhtml filename="coreutils.html"?>
 
-<indexterm zone="ch-tools-coreutils">
+<indexterm zone="ch-temp-system-coreutils">
 <primary sortas="a-Coreutils">Coreutils</primary>
 <secondary>tools</secondary></indexterm>
 

@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-make" role="wrap">
+<sect1 id="ch-temp-system-make" role="wrap">
 <title>Make-&make-version;</title>
 <?dbhtml filename="make.html"?>
 
-<indexterm zone="ch-tools-make">
+<indexterm zone="ch-temp-system-make">
 <primary sortas="a-Make">Make</primary>
 <secondary>tools</secondary></indexterm>
 

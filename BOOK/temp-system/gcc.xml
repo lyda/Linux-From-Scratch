@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-gcc" role="wrap">
+<sect1 id="ch-temp-system-gcc" role="wrap">
 <title>GCC-&gcc-version;</title>
 <?dbhtml filename="gcc.html"?>
 
-<indexterm zone="ch-tools-gcc">
+<indexterm zone="ch-temp-system-gcc">
 <primary sortas="a-GCC">GCC</primary>
 <secondary>tools</secondary></indexterm>
 

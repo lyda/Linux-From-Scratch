@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-scatter-administrativa">
+<sect1 id="ch-intro-resources">
 <title>Resources</title>
 <?dbhtml filename="resources.html"?>
 

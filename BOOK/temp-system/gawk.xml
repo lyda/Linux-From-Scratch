@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-gawk" role="wrap">
+<sect1 id="ch-temp-system-gawk" role="wrap">
 <title>Gawk-&gawk-version;</title>
 <?dbhtml filename="gawk.html"?>
 
-<indexterm zone="ch-tools-gawk">
+<indexterm zone="ch-temp-system-gawk">
 <primary sortas="a-Gawk">Gawk</primary>
 <secondary>tools</secondary></indexterm>
 

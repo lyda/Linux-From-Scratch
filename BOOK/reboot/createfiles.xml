@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-createfiles">
+<sect1 id="ch-reboot-createfiles">
 <title>Creating Essential Symlinks</title>
 <?dbhtml filename="createfiles.html"?>
 

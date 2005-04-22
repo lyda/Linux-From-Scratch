@@ -3,16 +3,16 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-pwdgroup">
+<sect1 id="ch-reboot-pwdgroup">
 <title>Creating the passwd, group, and log Files</title>
 <?dbhtml filename="pwdgroup.html"?>
 
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-${LFS}/etc/passwd">${LFS}/etc/passwd</primary></indexterm>
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-${LFS}/etc/group">${LFS}/etc/group</primary></indexterm>
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-${LFS}/var/run/utmp">${LFS}/var/run/utmp</primary></indexterm>
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-${LFS}/var/log/btmp">${LFS}/var/log/btmp</primary></indexterm>
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-${LFS}/var/log/lastlog">${LFS}/var/log/lastlog</primary></indexterm>
-<indexterm zone="ch-system-pwdgroup"><primary sortas="e-${LFS}/var/log/wtmp">${LFS}/var/log/wtmp</primary></indexterm>
+<indexterm zone="ch-reboot-pwdgroup"><primary sortas="e-${LFS}/etc/passwd">${LFS}/etc/passwd</primary></indexterm>
+<indexterm zone="ch-reboot-pwdgroup"><primary sortas="e-${LFS}/etc/group">${LFS}/etc/group</primary></indexterm>
+<indexterm zone="ch-reboot-pwdgroup"><primary sortas="e-${LFS}/var/run/utmp">${LFS}/var/run/utmp</primary></indexterm>
+<indexterm zone="ch-reboot-pwdgroup"><primary sortas="e-${LFS}/var/log/btmp">${LFS}/var/log/btmp</primary></indexterm>
+<indexterm zone="ch-reboot-pwdgroup"><primary sortas="e-${LFS}/var/log/lastlog">${LFS}/var/log/lastlog</primary></indexterm>
+<indexterm zone="ch-reboot-pwdgroup"><primary sortas="e-${LFS}/var/log/wtmp">${LFS}/var/log/wtmp</primary></indexterm>
 
 <para>In order for user <emphasis>root</emphasis> to be able to login
 and for the name <quote>root</quote> to be recognized, there need to

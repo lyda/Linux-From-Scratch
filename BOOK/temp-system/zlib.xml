@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-zlib" role="wrap">
+<sect1 id="ch-temp-system-zlib" role="wrap">
 <title>Zlib-&zlib-version;</title>
 <?dbhtml filename="zlib.html"?>
 
-<indexterm zone="ch-tools-zlib"><primary sortas="a-Zlib">Zlib</primary></indexterm>
+<indexterm zone="ch-temp-system-zlib"><primary sortas="a-Zlib">Zlib</primary></indexterm>
 
 <sect2 role="package"><title/>
 <para>The Zlib package contains compression and un-compression routines used by

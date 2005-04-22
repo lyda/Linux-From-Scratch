@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-ncurses" role="wrap">
+<sect1 id="ch-temp-system-ncurses" role="wrap">
 <title>Ncurses-&ncurses-version;</title>
 <?dbhtml filename="ncurses.html"?>
 
-<indexterm zone="ch-tools-ncurses">
+<indexterm zone="ch-temp-system-ncurses">
 <primary sortas="a-Ncurses">Ncurses</primary>
 <secondary>tools</secondary></indexterm>
 
