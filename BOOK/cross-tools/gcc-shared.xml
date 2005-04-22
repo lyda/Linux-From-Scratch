@@ -44,12 +44,12 @@ location:</para>
 
 <para>Now we will change gcc's search path to look into /tools only:</para>
 
-<screen>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
-gcc/Makefile.in</screen>
+<screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
+gcc/Makefile.in</userinput></screen>
 
 <para>Now we will disable gcc's linking to libc since it doesn't exist yet:</para>
 
-<screen>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver</screen>
+<screen><userinput>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver</userinput></screen>
 
 <para>The GCC documentation recommends building GCC outside of the
 source directory in a dedicated build directory:</para>
