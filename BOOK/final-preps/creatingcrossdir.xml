@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-creatingcrossdir">
+<sect1 id="ch-final-preps-creatingcrossdir">
 <title>Creating the $HOME/cross-tools Directory</title>
 <?dbhtml filename="creatingcrossdir.html"?>
 

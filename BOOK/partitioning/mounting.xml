@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="space-mounting">
+<sect1 id="ch-partitioning-mounting">
 <title>Mounting the New Partition</title>
 <?dbhtml filename="mounting.html"?>
 

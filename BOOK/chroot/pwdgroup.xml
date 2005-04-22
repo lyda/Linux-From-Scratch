@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-pwdgroup">
+<sect1 id="ch-chroot-pwdgroup">
 <title>Creating the passwd, group, and log Files</title>
 <?dbhtml filename="pwdgroup.html"?>
 

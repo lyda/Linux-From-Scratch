@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-chroot">
+<sect1 id="ch-chroot-chroot">
 <title>Entering the Chroot Environment</title>
 <?dbhtml filename="chroot.html"?>
 

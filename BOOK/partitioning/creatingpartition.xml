@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="space-creatingpartition">
+<sect1 id="ch-partitioning-creatingpartition">
 <title>Creating a New Partition</title>
 <?dbhtml filename="creatingpartition.html"?>
 

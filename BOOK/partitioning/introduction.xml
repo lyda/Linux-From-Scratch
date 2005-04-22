@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="space-introduction">
+<sect1 id="ch-partitioning-introduction">
 <title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
 

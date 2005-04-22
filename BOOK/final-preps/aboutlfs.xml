@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="prepare-aboutlfs">
+<sect1 id="ch-final-preps-aboutlfs">
 <title>About $LFS</title>
 <?dbhtml filename="aboutlfs.html"?>
 

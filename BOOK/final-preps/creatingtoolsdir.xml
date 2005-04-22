@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-tools-creatingtoolsdir">
+<sect1 id="ch-final-preps-creatingtoolsdir">
 <title>Creating the $LFS/tools Directory</title>
 <?dbhtml filename="creatingtoolsdir.html"?>
 

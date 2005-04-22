@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-crosstools-introduction">
+<sect1 id="ch-cross-tools-introduction">
 <title>Introduction</title>
 <?dbhtml filename="introduction.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-creatingdirs">
+<sect1 id="ch-chroot-creatingdirs">
 <title>Creating Directories</title>
 <?dbhtml filename="creatingdirs.html"?>
 

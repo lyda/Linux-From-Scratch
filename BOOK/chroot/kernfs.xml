@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-kernfs">
+<sect1 id="ch-chroot-kernfs">
 <title>Mounting Virtual Kernel File Systems</title>
 <?dbhtml filename="kernfs.html"?>
 

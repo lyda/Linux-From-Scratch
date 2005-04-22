@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-crosstools-cflags">
+<sect1 id="ch-cross-tools-cflags">
 <title>Build CFLAGS</title>
 <?dbhtml filename="cflags.html"?>
 

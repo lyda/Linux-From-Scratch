@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-temporary-tools-chroot" xreflabel="If you'r Chrooting">
+<chapter id="chapter-chroot" xreflabel="If you'r Chrooting">
 <?dbhtml dir="chroot"?>
 <title>If you'r Chrooting</title>
 <?dbhtml filename="chapter.html"?>

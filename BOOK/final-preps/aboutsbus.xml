@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="prepare-aboutsbus">
+<sect1 id="ch-final-preps-aboutsbus">
 <title>About SBUs</title>
 <?dbhtml filename="aboutsbus.html"?>
 

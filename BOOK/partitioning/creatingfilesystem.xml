@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="space-creatingfilesystem">
+<sect1 id="ch-partitioning-creatingfilesystem">
 <title>Creating a File System on the Partition</title>
 <?dbhtml filename="creatingfilesystem.html"?>
 

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-temp-tools-adjusting">
+<sect1 id="ch-system-adjusting">
 <title>Adjusting the Toolchain</title>
 <?dbhtml filename="adjusting.html"?>
 

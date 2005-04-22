@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-system-changingowner">
+<sect1 id="ch-chroot-changingowner">
 <title>Changing Ownership</title>
 <?dbhtml filename="changingowner.html"?>
 

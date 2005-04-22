@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="prepare-askforhelp">
+<sect1 id="ch-intro-askforhelp">
 <title>Help</title>
 <?dbhtml filename="askforhelp.html"?>
 

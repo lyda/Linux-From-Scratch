@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="materials-packages">
+<sect1 id="ch-materials-packages">
 <title>All Packages</title>
 <?dbhtml filename="packages.html"?>
 
