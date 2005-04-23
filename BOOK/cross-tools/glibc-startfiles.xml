@@ -51,8 +51,8 @@ cd ../glibc-build</userinput></screen>
 <para>Next, prepare Glibc for compilation:</para>
 
 <para arch="alpha;ppc;x86;">For NPTL enabled systems we will need to add the following lines to config.cache</para>
-<screen>echo "libc_cv_forced_unwind=yes" > config.cache
-echo "libc_cv_c_cleanup=yes" >> config.cache</screen>
+<screen><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
+echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
 
 <para arch="alpha;ppc;x86;">To create NPTL Startfiles using the following configure line:</para>
 
@@ -117,7 +117,7 @@ correctly, but will not otherwise affect the build.</para></listitem>
 <para>Since we are only creating the glibc startfiles at this time
 we will need to manually copy files over.</para>
 
-<screen><userinput>mkdir -p /tools/lib
+<screen><userinput>install -d /tools/lib
 cp -fp csu/crt[i1n].o /tools/lib</userinput></screen>
 
 </sect2>

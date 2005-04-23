@@ -60,8 +60,8 @@ directory in a dedicated build directory:</para>
 cd ../glibc-build</userinput></screen>
 
 <para arch="alpha;ppc;x86;">For NPTL enabled systems we will need to add the following lines to config.cache</para>
-<screen>echo "libc_cv_forced_unwind=yes" > config.cache
-echo "libc_cv_c_cleanup=yes" >> config.cache</screen>
+<screen><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
+echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
