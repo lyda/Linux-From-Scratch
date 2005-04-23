@@ -40,11 +40,11 @@ location:</para>
 
 <screen><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/cross-tools/lib/\"" >> ../gcc-3.4.3/gcc/config/linux.h</userinput></screen>
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> ../gcc-3.4.3/gcc/config/linux.h</userinput></screen>
 
 <para>Now we will change gcc's search path to look into /cross-tools only:</para>
 
-<screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /cross-tools/include@g" \
+<screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
 gcc/Makefile.in</userinput></screen>
 
 <para>The GCC documentation recommends building GCC outside of the
