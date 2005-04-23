@@ -38,9 +38,9 @@ patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
 
-<screen>echo "
+<screen><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/cross-tools/lib/\"" >> ../gcc-3.4.3/gcc/config/linux.h</screen>
+#define STARTFILE_PREFIX_SPEC \"/cross-tools/lib/\"" >> ../gcc-3.4.3/gcc/config/linux.h</userinput></screen>
 
 <para>Now we will change gcc's search path to look into /cross-tools only:</para>
 
