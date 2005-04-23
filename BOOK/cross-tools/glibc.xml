@@ -59,11 +59,11 @@ directory in a dedicated build directory:</para>
 <screen><userinput>mkdir ../glibc-build
 cd ../glibc-build</userinput></screen>
 
-<para>Next, prepare Glibc for compilation:</para>
-
 <para arch="alpha;ppc;x86;">For NPTL enabled systems we will need to add the following lines to config.cache</para>
 <screen>echo "libc_cv_forced_unwind=yes" > config.cache
 echo "libc_cv_c_cleanup=yes" >> config.cache</screen>
+
+<para>Next, prepare Glibc for compilation:</para>
 
 <screen arch="alpha;ppc;x86;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \

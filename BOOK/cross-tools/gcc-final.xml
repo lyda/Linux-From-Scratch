@@ -56,7 +56,7 @@ cd ../gcc-build</userinput></screen>
 <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
-    --target=${LFS_TARGET} --libexecdir=/cross-tools/lib --with-local-prefix=/cross-tools \
+    --target=${LFS_TARGET} --libexecdir=/cross-tools/lib --with-local-prefix=/tools \
     --disable-nls --enable-shared --enable-languages=c,c++ --enable-__cxa_atexit \
     --enable-c99 --enable-long-long --enable-threads=posix</userinput></screen>
 
