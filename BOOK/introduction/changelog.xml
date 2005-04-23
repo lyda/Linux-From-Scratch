@@ -94,6 +94,15 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>Date [jim]</para>
+<itemizedlist>
+<listitem><para>Removed uneeded perl-pass1.xml.</para></listitem>
+<listitem><para>Updated commands in gcc for cross-tools.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 23, 2005 [manuel]</para>
 <itemizedlist>
 <listitem><para>Added final-system/perl-pass1.xml to can validate 

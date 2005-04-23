@@ -40,7 +40,7 @@ location:</para>
 
 <screen><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> ../gcc-3.4.3/gcc/config/linux.h</userinput></screen>
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
 
 <para>Now we will change gcc's search path to look into /tools only:</para>
 

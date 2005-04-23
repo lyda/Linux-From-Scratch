@@ -40,12 +40,7 @@ location:</para>
 
 <screen><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> ../gcc-3.4.3/gcc/config/linux.h</userinput></screen>
-
-<para>Now we will change gcc's search path to look into /cross-tools only:</para>
-
-<screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
-gcc/Makefile.in</userinput></screen>
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
 
 <para>The GCC documentation recommends building GCC outside of the
 source directory in a dedicated build directory:</para>
@@ -56,7 +51,7 @@ cd ../gcc-build</userinput></screen>
 <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
-    --target=${LFS_TARGET} --libexecdir=/cross-tools/lib --with-local-prefix=/tools \
+    --target=${LFS_TARGET} --with-local-prefix=/tools \
     --disable-nls --enable-shared --enable-languages=c,c++ --enable-__cxa_atexit \
     --enable-c99 --enable-long-long --enable-threads=posix</userinput></screen>
 
@@ -64,7 +59,7 @@ cd ../gcc-build</userinput></screen>
 
 <variablelist>
 <varlistentry>
-<term><parameter>--with-local-prefix=/cross-tools</parameter></term>
+<term><parameter>--with-local-prefix=/tools</parameter></term>
 <listitem><para>The purpose of this switch is to remove <filename class="directory">/usr/local/include</filename>
 from <command>gcc</command>'s include search path. This is not absolutely
 essential, however, it helps to minimize the influence of the host
