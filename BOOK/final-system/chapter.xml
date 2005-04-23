@@ -9,7 +9,7 @@
 <?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="perl.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="perl-pass1.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="adjusting.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="binutils.xml"/>
