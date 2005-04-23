@@ -113,6 +113,7 @@ and temp-tools</para></listitem>
 <listitem><para>Fixed changelog.</para></listitem>
 <listitem><para>Fixed build issue glibc-full in cross-tools.</para></listitem>
 <listitem><para>Fixed patch name for GCC-Final.</para></listitem>
+<listitem><para>Added export of ${LFS_TARGET} tools from temp-system to ~/.bashrc</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

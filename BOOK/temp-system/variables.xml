@@ -16,5 +16,14 @@ export AR="${LFS_TARGET}-ar"
 export RANLIB="${LFS_TARGET}-ranlib"
 export LD="${LFS_TARGET}-ld"</userinput></screen>
 
+<para>Lets add the build variables to ~/.bashrc to prevent issues if
+we stop and come back later:</para>
+
+<screen><userinput>echo "export CC=\""${LFS_TARGET}-gcc\"" >> ~/.bashrc
+echo "\"export CXX="${LFS_TARGET}-g++\"" >> ~/.bashrc
+echo "\"export AR="${LFS_TARGET}-ar\"" >> ~/.bashrc
+echo "\"export RANLIB="${LFS_TARGET}-ranlib\"" >> ~/.bashrc
+echo "\"export LD="${LFS_TARGET}-ld\"" >> ~/.bashrc</userinput></screen>
+
 </sect1>
 
