@@ -101,7 +101,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>Updated bash patch, thanx Jeremy Utley.</para></listitem>
 <listitem><para>Removed bad setting /tools to LFS user, thanx Jeremy Utley.</para></listitem>
 <listitem><para>Fixed a possible issue due to target triplets have either
-pc or unknown, thanx Jermy Utley.</para></listitem>
+pc or unknown, thanx Jermey Utley.</para></listitem>
+<listitem><para>Fixed typo on Binutils, thanx Jeremy Utley.</para></listitem>
+<listitem><para>Removed libidn in cross-tools glibc start files.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

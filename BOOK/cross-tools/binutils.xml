@@ -47,7 +47,7 @@ cd ../binutils-build</userinput></screen>
 
 <variablelist>
 <varlistentry>
-<term><parameter>--with-lib-path=/cross-tools/lib</parameter></term>
+<term><parameter>--with-lib-path=/tools/lib</parameter></term>
 <listitem><para>This tells the configure script to specify the library
 search path during the compilation of Binutils, resulting in <filename
 class="directory">/cross-tools/lib</filename> being passed to the linker.
@@ -66,7 +66,7 @@ make</userinput></screen>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Copy libiberty.h file to /cross-tools/include directory:</para>
+<para>Copy libiberty.h file to /tools/include directory:</para>
 
 <screen><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /tools/include</userinput></screen>
 

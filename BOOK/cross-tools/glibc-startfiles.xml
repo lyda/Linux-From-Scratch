@@ -27,11 +27,8 @@
 <sect2 role="installation">
 <title>Installation of Glibc Startfiles</title>
 
-<para arch="raq2">Unpack the glibc-linuxthreads-&glibc-version; <emphasis>and</emphasis> the
-glibc-libidn-&glibc-version; tarball -- they will unfold into the same directory.</para>
-
-<para arch="alpha;ppc;x86;">Unpack the glibc-libidn-&glibc-version; tarball -- it
-will unfold into the same directory.</para>
+<para arch="raq2">Unpack the glibc-linuxthreads-&glibc-version; <emphasis>and</emphasis>
+tarball -- it will unfold into the same directory.</para>
 
 <para arch="raq2">The following patch corrects the building of syscall.h:</para>
 
