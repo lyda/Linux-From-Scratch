@@ -30,10 +30,9 @@
 <para>Unpack only the gcc-core tarball because neither the C++
 compiler nor the test suite will be needed here.</para>
 
-<para>First correct a known problem and make an essential adjustment:</para>
+<para>First we make an essential adjustment:</para>
 
-<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-no_fixincludes-1.patch
-patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
 
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
@@ -41,6 +40,11 @@ location:</para>
 <screen><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
 #define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
+
+<para>Now we will change gcc's search path to look into /tools only:</para>
+
+<screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
+gcc/Makefile.in</userinput></screen>
 
 <para>The GCC documentation recommends building GCC outside of the
 source directory in a dedicated build directory:</para>

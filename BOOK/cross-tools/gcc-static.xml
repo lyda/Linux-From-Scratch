@@ -4,12 +4,12 @@
   %general-entities;
 ]>
 <sect1 id="ch-cross-tools-gcc-static" role="wrap">
-<title>GCC-&gcc-version; - Cross Compiler Static</title>
+<title>Cross GCC-&gcc-version; - Static libgcc</title>
 <?dbhtml filename="gcc-static.html"?>
 
 <indexterm zone="ch-cross-tools-gcc-static">
 <primary sortas="a-GCC">GCC</primary>
-<secondary>cross-tools, static</secondary></indexterm>
+<secondary>cross gcc, static libgcc</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
@@ -25,15 +25,14 @@
 </sect2>
 
 <sect2 role="installation">
-<title>Installation of GCC Cross Compiler</title>
+<title>Installation of Cross GCC Compiler with Static libgcc</title>
 
 <para>Unpack only the gcc-core tarball because neither the C++
 compiler nor the test suite will be needed here.</para>
 
-<para>First correct a known problem and make an essential adjustment:</para>
+<para>First correct we make an essential adjustment:</para>
 
-<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-no_fixincludes-1.patch
-patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
 
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>

@@ -63,7 +63,7 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
     --without-cvs --disable-profile --enable-add-ons \
     --with-tls --enable-kernel=2.6.0 --with-__thread \
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
-    --disable-selinux --cache-file=config.cache</userinput></screen>
+    --cache-file=config.cache</userinput></screen>
 
 <para arch="raq2">To create Linuxthread Startfiles using the following configure line:</para>
 
@@ -72,8 +72,7 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
     --without-cvs --disable-profile --enable-add-ons \
-    --with-binutils=/cross-tools/bin --with-headers=/tools/include \
-    --disable-selinux</userinput></screen>
+    --with-binutils=/cross-tools/bin --with-headers=/tools/include</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 

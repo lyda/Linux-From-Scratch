@@ -94,7 +94,18 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
-<listitem><para>Date [jim]</para>
+<listitem><para>April 24, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Fixed binutils in cross-tools to prevent borkage in final gcc, thanx Ryan Oliver.</para></listitem>
+<listitem><para>Fixed up wording based on Ryan's input.</para></listitem>
+<listitem><para>Updated bash patch, thanx Jeremy Utley.</para></listitem>
+<listitem><para>Removed bad setting /tools to LFS user, thanx Jeremy Utley.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+
+<listitem><para>April 23, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Removed uneeded perl-pass1.xml.</para></listitem>
 <listitem><para>Updated commands in gcc for cross-tools.</para></listitem>
