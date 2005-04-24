@@ -31,6 +31,11 @@
 <sect2 role="installation">
 <title>Installation of Cross Binutils</title>
 
+<para>To make sure that we use the proper syntax for a couple of tools, we apply the following patch:</para>
+<para>First to make sure that we use the proper syntax for a couple of tools:</para>
+
+<screen><userinput>patch -Np1 -i ../binutils-&binutils-version;-posix-1.patch</userinput></screen>
+
 <para>Create a separate build directory again:</para>
 
 <screen><userinput>mkdir ../binutils-build

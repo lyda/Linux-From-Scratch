@@ -27,12 +27,15 @@
 <sect2 role="installation">
 <title>Installation of GCC Cross Compiler</title>
 
-<para>Unpack only the gcc-core tarball because neither the C++
-compiler nor the test suite will be needed here.</para>
-
-<para>First we make an essential adjustment:</para>
+<para>We will make a couple essential adjustments to the specs file to point
+to use our build environment:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
+
+<para>To make sure that we use the proper syntax for a couple of tools, we apply
+the following patch:</para>
+
+<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-posix-1.patch</userinput></screen>
 
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>

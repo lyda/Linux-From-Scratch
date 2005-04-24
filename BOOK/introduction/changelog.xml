@@ -106,6 +106,7 @@ pc or unknown, thanks Jeremy Utley.</para></listitem>
 <listitem><para>Removed libidn in cross-tools glibc start files.</para></listitem>
 <listitem><para>Removed --disable-selinux from cross-tools glibc.</para></listitem>
 <listitem><para>Fixed variables in temp-system to add to ~/.bashrc properly.</para></listitem>
+<listitem><para>Added posix patches.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

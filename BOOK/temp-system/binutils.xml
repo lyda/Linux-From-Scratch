@@ -32,12 +32,10 @@ because both Glibc and GCC perform various tests on the available
 linker and assembler to determine which of their own features to
 enable.</para>
 
-<para>This package is known to have issues when its default
-optimization flags (including the <parameter>-march</parameter> and
-<parameter>-mcpu</parameter> options) are changed. If any environment
-variables that override default optimizations have been defined, such
-as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
-unset them when building Binutils.</para>
+<para>To make sure that we use the proper syntax for a couple of tools, we apply
+the following patch:</para>
+
+<screen><userinput>patch -Np1 -i ../binutils-&binutils-version;-posix-1.patch</userinput></screen>
 
 <para>The Binutils documentation recommends building Binutils outside of the
 source directory in a dedicated build directory:</para>
@@ -51,7 +49,6 @@ the configuration, up to and including the first install. To achieve
 this easily, wrap the four commands in a <command>time</command>
 command like this: <userinput>time { ./configure ... &amp;&amp; ...
 &amp;&amp; ... &amp;&amp; make install; }</userinput>.</para></note>
-
 
 <para>Now prepare Binutils for compilation:</para>
 

@@ -26,15 +26,15 @@
 <sect2 role="installation">
 <title>Installation of GCC</title>
 
-<para>Because the C and the C++ compilers will be built, unpack both
-the core and the g++ tarballs (as well as test suite, if you want to
-run the tests). By unpacking them in the working directory, they will
-all unfold into a single <filename
-class="directory">gcc-&gcc-version;/</filename> subdirectory.</para>
-
-<para>First correct a known problem and make an essential adjustment:</para>
+<para>We will make a couple essential adjustments to the specs file to point
+to use our build environment:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
+
+<para>To make sure that we use the proper syntax for a couple of tools, we apply
+the following patch:</para>
+
+<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-posix-1.patch</userinput></screen>
 
 <!-- This patch may or may not be needed testing needs to be done
 patch -Np1 -i ../gcc-&gcc-version;-fix_configure_for_target_native-1.patch
