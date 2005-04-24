@@ -36,10 +36,9 @@ method listed below:</para>
 ensure that you have all the prerequisites for the LFS build.</para>
 
 <para>You will need to set your host target triplet a little differently.
-To set this information you can issue the following command:</para>
+To set this information you can issue the following commands:</para>
 
-<screen arch="alpha;ppc"><userinput>export LFS_HOST="`config.guess | sed 's/unknown/cross/g'`"</userinput></screen>
-<screen arch="x86"><userinput>export LFS_HOST="`config.guess | sed 's/pc/cross/g'`"</userinput></screen>
+<screen><userinput>export LFS_HOST="`config.guess | sed -e 's/unknown/cross/g' -e 's/pc/cross/g'`"</userinput></screen>
 
 <para>Now you will need to set the target triplet for the target, which
 in this case is very simple. Set the command using the method listed below:</para>
