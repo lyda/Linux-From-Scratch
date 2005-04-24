@@ -96,7 +96,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>April 24, 2005 [jim]</para>
 <itemizedlist>
-<listitem><para>Fixed binutils in cross-tools to prevent borkage in final gcc, thanks Ryan Oliver.</para></listitem>
+<listitem><para>Fixed binutils in cross-tools to prevent improper linkage in final gcc, thanks Ryan Oliver.</para></listitem>
 <listitem><para>Fixed up wording based on Ryan's input.</para></listitem>
 <listitem><para>Updated bash patch, thanks Jeremy Utley.</para></listitem>
 <listitem><para>Removed bad setting /tools to LFS user, thanks Jeremy Utley.</para></listitem>
@@ -104,6 +104,7 @@ first a summary, then a detailed log.</para>
 pc or unknown, thanks Jeremy Utley.</para></listitem>
 <listitem><para>Fixed typo on Binutils, set to incorrect directory thanks Jeremy Utley.</para></listitem>
 <listitem><para>Removed libidn in cross-tools glibc start files.</para></listitem>
+<listitem><para>Removed --disable-selinux from cross-tools glibc.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
