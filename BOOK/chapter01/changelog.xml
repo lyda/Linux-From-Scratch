@@ -87,7 +87,8 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>April 24, 2005 [jim]</para>
 <itemizedlist>
-<listitem><para>Updatedd: Arch: All - updated bash patch, thanx Jermey Utley.</para></listitem>
+<listitem><para>Updated: Arch: All - updated bash patch, thanx Jermey Utley.</para></listitem>
+<listitem><para>Fixed: Arch: All - forgot to update diffutils.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
