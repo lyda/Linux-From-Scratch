@@ -11,29 +11,29 @@
 Create a directory tree. Issuing the following commands will create a
 standard tree:</para>
  
-<screen><userinput>install -d /{bin,boot,dev,etc/opt,home,lib,mnt}
-install -d /{sbin,srv,usr/local,var,opt}
-install -d /root -m 0750
-install -d /tmp /var/tmp -m 1777
-install -d /media/{floppy,cdrom}
-install -d /usr/{bin,include,lib,sbin,share,src}
-ln -s share/{man,doc,info} /usr
-install -d /usr/share/{doc,info,locale,man}
-install -d /usr/share/{misc,terminfo,zoneinfo}
-install -d /usr/share/man/man{1,2,3,4,5,6,7,8}
-install -d /usr/local/{bin,etc,include,lib,sbin,share,src}
-ln -s share/{man,doc,info} /usr/local
-install -d /usr/local/share/{doc,info,locale,man}
-install -d /usr/local/share/{misc,terminfo,zoneinfo}
-install -d /usr/local/share/man/man{1,2,3,4,5,6,7,8}
-install -d /var/{lock,log,mail,run,spool}
-install -d /var/{opt,cache,lib/{misc,locate},local}
-install -d /opt/{bin,doc,include,info}
-install -d /opt/{lib,man/man{1,2,3,4,5,6,7,8}}</userinput></screen>
+<screen><userinput>install -d /${LFS}/{bin,boot,dev,etc/opt,home,lib,mnt}
+install -d /${LFS}/{sbin,srv,usr/local,var,opt}
+install -d /${LFS}/root -m 0750
+install -d /${LFS}/tmp /var/tmp -m 1777
+install -d /${LFS}/media/{floppy,cdrom}
+install -d /${LFS}/usr/{bin,include,lib,sbin,share,src}
+ln -s share/{man,doc,info} ${LFS}/usr
+install -d /${LFS}/usr/share/{doc,info,locale,man}
+install -d /${LFS}/usr/share/{misc,terminfo,zoneinfo}
+install -d /${LFS}/usr/share/man/man{1,2,3,4,5,6,7,8}
+install -d /${LFS}/usr/local/{bin,etc,include,lib,sbin,share,src}
+ln -s share/{man,doc,info} ${LFS}/usr/local
+install -d /${LFS}/usr/local/share/{doc,info,locale,man}
+install -d /${LFS}/usr/local/share/{misc,terminfo,zoneinfo}
+install -d /${LFS}/usr/local/share/man/man{1,2,3,4,5,6,7,8}
+install -d /${LFS}/var/{lock,log,mail,run,spool}
+install -d /${LFS}/var/{opt,cache,lib/{misc,locate},local}
+install -d /${LFS}/opt/{bin,doc,include,info}
+install -d /${LFS}/opt/{lib,man/man{1,2,3,4,5,6,7,8}}</userinput></screen>
 
 <para arch="raq2">FIXME. Some explanation is needed here for the next commands.</para>
 
-<screen arch="raq2"><userinput>cd /boot
+<screen arch="raq2"><userinput>cd ${LFS}/boot
 ln -s . boot</userinput></screen>
 
 <para>Directories are, by default, created with permission mode 755,
@@ -43,11 +43,11 @@ two changes are made&mdash;one to the home directory of user
 temporary files.</para>
 
 <para>The first mode change ensures that not just anybody can enter
-the <filename class="directory">/root</filename> directory&mdash;the same
+the <filename class="directory">${LFS}/root</filename> directory&mdash;the same
 as a normal user would do with his or her home directory. The second
 mode change makes sure that any user can write to the <filename
-class="directory">/tmp</filename> and <filename
-class="directory">/var/tmp</filename> directories, but cannot remove
+class="directory">/${LFS}/tmp</filename> and <filename
+class="directory">${LFS}/var/tmp</filename> directories, but cannot remove
 other users' files from them. The latter is prohibited by the
 so-called <quote>sticky bit,</quote> the highest bit (1) in the 1777
 bit mask.</para>
@@ -60,11 +60,11 @@ bit mask.</para>
 (FHS) standard (available at <ulink
 url="http://www.pathname.com/fhs/"/>). Besides the tree created above,
 this standard stipulates the existence of <filename
-class="directory">/usr/local/games</filename> and <filename
-class="directory">/usr/share/games</filename>.  We do not recommend
+class="directory">${LFS}/usr/local/games</filename> and <filename
+class="directory">${LFS}/usr/share/games</filename>.  We do not recommend
 these for a base system, however, feel free to make the system
 FHS-compliant.  The FHS is not precise as to the structure of the
-<filename class="directory">/usr/local/share</filename> subdirectory,
+<filename class="directory">${LFS}/usr/local/share</filename> subdirectory,
 so we created only the directories that are needed.</para>
 
 </sect2>
