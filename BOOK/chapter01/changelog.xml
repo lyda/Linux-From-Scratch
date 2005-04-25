@@ -89,6 +89,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Updated: Arch: All - updated bash patch, thanx Jermey Utley.</para></listitem>
 <listitem><para>Fixed: Arch: All - forgot to update diffutils.</para></listitem>
+<listitem><para>Fixed: Arch: All - forgot to update flex patch.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
