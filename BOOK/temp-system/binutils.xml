@@ -79,12 +79,6 @@ temporary tools.</para></listitem>
 make headers -C bfd
 make</userinput></screen>
 
-<para>Compilation is now complete. Ordinarily we would now run the
-test suite, but at this early stage the test suite framework (Tcl,
-Expect, and DejaGNU) is not yet in place. The benefits of running the
-tests at this point are minimal since the programs from this
-first pass will soon be replaced by those from the second.</para>
-
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
