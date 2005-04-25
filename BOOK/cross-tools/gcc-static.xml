@@ -30,7 +30,7 @@
 <para>Unpack only the gcc-core tarball because neither the C++
 compiler nor the test suite will be needed here.</para>
 
-<para>We will make a couple essential adjustments to the specs file to point
+<para>We will make a couple of essential adjustments to the specs file to point
 to use our build environment:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>

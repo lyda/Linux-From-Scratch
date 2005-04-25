@@ -27,7 +27,7 @@
 <sect2 role="installation">
 <title>Installation of Cross GCC with Shared libgcc</title>
 
-<para>We will make a couple essential adjustments to the specs file to point
+<para>We will make a couple of essential adjustments to the specs file to point
 to use our build environment:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>

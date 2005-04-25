@@ -52,15 +52,16 @@ sed -e 's@root@0@g' \
 <para>Compile the package:</para>
 
 <screen><userinput>make -C src clobber
-make -C src CC="${LFS_TARGET}-gcc" LDFLAGS="-s""</userinput></screen>
+make -C src CC="${LFS_TARGET}-gcc" LDFLAGS="-s"</userinput></screen>
 
 <para>Install the package:</para>
 
-<screen><userinput>mkdir -p ${LFS}/usr/bin
-mkdir -p ${LFS}/usr/include
-mkdir -p ${LFS}/usr/share/man/man{1,5,8}
-mkdir ${LFS}/etc
-make -C src install</userinput></screen>
+<screen><userinput>install -d ${LFS}/bin
+install -d ${LFS}/usr/bin
+install -d ${LFS}/usr/include
+install -d ${LFS}/usr/share/man/man{1,5,8}
+install -d ${LFS}/etc
+make -C src install INSTALL="install"</userinput></screen>
 
 </sect2>
 
@@ -104,16 +105,6 @@ su:S016:once:/sbin/sulogin</literal>
 
 <literal># End /etc/inittab</literal>
 EOF</userinput></screen>
-
-<para arch="x86">The <parameter>-I '\033(K'</parameter> option tells
-<command>agetty</command> to send this escape sequence to the terminal
-before doing anything else. This escape sequence switches the console
-character set to a user-defined one, which can be modified by running
-the <command>setfont</command> program. The <command>console</command>
-initscript from the LFS-Bootscripts package calls the <command>setfont</command>
-program during system startup. Sending this escape sequence is
-necessary for people who use non-ISO 8859-1 screen fonts, but it does
-not effect native English speakers.</para>
 
 </sect2>
 

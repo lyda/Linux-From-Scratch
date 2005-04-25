@@ -27,8 +27,8 @@
 <sect2 role="installation">
 <title>Installation of GCC Cross Compiler</title>
 
-<para>We will make a couple essential adjustments to the specs file to point
-to use our build environment:</para>
+<para>We will make a couple of essential adjustments to the specs file to point
+to our build environment:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
 

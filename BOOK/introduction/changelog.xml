@@ -100,6 +100,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>Added a chown to the LFS directory to prevent issues with the reboot
 scenario.</para></listitem>
 <listitem><para>Corrected a build issue with e2fsprogs in reboot.</para></listitem>
+<listitem><para>Corrected grammer in gcc builds. Thanks Matt.</para></listitem?
+<listitem><para>Corrected a build issue that prevent sysvinit in reboot to install.</para></listitem>
+<listitem><para>Removed an uneeded patch from inetutils in reboot.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
