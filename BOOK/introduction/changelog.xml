@@ -108,6 +108,7 @@ pc or unknown, thanks Jeremy Utley.</para></listitem>
 <listitem><para>Fixed variables in temp-system to add to ~/.bashrc properly.</para></listitem>
 <listitem><para>Added posix patches.</para></listitem>
 <listitem><para>Fixed typos in temp-system binutils.</para></listitem>
+<listitem><para>Fixed typos in temp-system gcc.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

@@ -40,45 +40,19 @@ the following patch:</para>
 patch -Np1 -i ../gcc-&gcc-version;-fix_configure_for_target_native-1.patch
 -->
 
-<para>The first patch disables the GCC <command>fixincludes</command>
-script. This was briefly mentioned earlier, but a more in-depth
-explanation of the fixincludes process is warranted here. Under normal
-circumstances, the GCC <command>fixincludes</command> script scans the
-system for header files that need to be fixed. It might find that some
-Glibc header files on the host system need to be fixed, and will fix
-them and put them in the GCC private include directory. In <xref
-linkend="chapter-building-system"/>, after the newer Glibc has been
-installed, this private include directory will be searched before the
-system include directory.  This may result in GCC finding the fixed
-headers from the host system, which most likely will not match the
-Glibc version used for the LFS system.</para>
-
-<para>The second patch changes GCC's default location of the dynamic
-linker (typically <filename class="libraryfile">ld-linux.so.2</filename>). It also removes
-<filename class="directory">/usr/include</filename> from GCC's include
-search path. Patching now rather than adjusting the specs file after
-installation ensures that the new dynamic linker is used during the
-actual build of GCC. That is, all of the final (and temporary)
-binaries created during the build will link against the new
-Glibc.</para>
-
-<para>The third patch allows gcc to build a complete cross-target</para>
-
-<important><para>The above patches are critical in ensuring a
-successful overall build. Do not forget to apply
-them.</para></important>
-
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
 
-<screen>echo "
+<screen><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> ../gcc-3.4.3/gcc/config/linux.h</screen>
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
 
 <para>Now we will change cpp's search path not to look in /usr/include:</para>
 
-<screen>sed -i '/#define STANDARD_INCLUDE_DIR/s@"/usr/include"@0@g'
-cppdefault.c</screen>
+<screen><userinput>sed -i '/#define STANDARD_INCLUDE_DIR/s@"/usr/include"@0@g' gcc/cppdefault.c</userinput></screen>
+
+<important><para>The above patches and sed's are critical in ensuring a
+successful overall build. Do not forget to apply them.</para></important>
 
 <para>Create a separate build directory again:</para>
 
