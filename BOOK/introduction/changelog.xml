@@ -94,6 +94,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>April 25, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Removed testsuite information from reboot.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 24, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Fixed binutils in cross-tools to prevent improper linkage in final gcc, thanks Ryan Oliver.</para></listitem>

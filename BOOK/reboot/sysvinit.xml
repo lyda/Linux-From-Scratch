@@ -45,7 +45,7 @@ build:</para>
 
 <screen><userinput>cp src/Makefile src/Makefile.orig
 sed -e 's@root@0@g' \
-    -e "s@/dev/initctl@$(LFS)&amp;@g" \
+    -e "s@/dev/initctl@${LFS}&amp;@g" \
     -e 's@\(mknod \)-m \([0-9]* \)\(.* \)p@\1\3p; chmod \2\3@g' \
     src/Makefile.orig > src/Makefile</userinput></screen>
 

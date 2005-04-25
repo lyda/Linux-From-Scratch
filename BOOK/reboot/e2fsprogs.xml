@@ -74,9 +74,6 @@ information regarding EVMS.</para></listitem>
 
 <screen><userinput>make LDFLAGS="-s"</userinput></screen>
 
-<para>To test the results, issue:
-<userinput>make check</userinput>.</para>
-
 <para>Install most of the package:</para>
 
 <screen><userinput>make install</userinput></screen>
