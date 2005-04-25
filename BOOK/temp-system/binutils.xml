@@ -75,7 +75,8 @@ temporary tools.</para></listitem>
 
 <para>Continue with compiling the package:</para>
 
-<screen><userinput>make headers -C bfd
+<screen><userinput>make configure-host
+make headers -C bfd
 make</userinput></screen>
 
 <para>Compilation is now complete. Ordinarily we would now run the
