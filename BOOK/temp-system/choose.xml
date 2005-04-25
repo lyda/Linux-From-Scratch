@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-temp-system-choose">
+<title>Reboot or Chroot?</title>
+<?dbhtml filename="choose.html"?>
+
+<para>TO BE WRITTEN...
+Introductory text about the diferecies between the reboot and chroot method
+ and who can use any of them or who can use only one.</para>
+ 
+ <para>For the reboot method, follow to <xref linkend="chapter-reboot"/>.</para>
+ 
+ <para>For the chroot method, follow to <xref linkend="chapter-chroot"/>.</para>
+
+</sect1>
+
