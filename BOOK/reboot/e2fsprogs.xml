@@ -33,7 +33,7 @@ cd build</userinput></screen>
 
 <para>Prepare E2fsprogs for compilation:</para>
 
-<screen><userinput>../configure --prefix=/tools --with-root-prefix="" \
+<screen><userinput>../configure --prefix=/tools \
 --enable-elf-shlibs --disable-evms \
 --host=${LFS_TARGET}</userinput></screen>
 

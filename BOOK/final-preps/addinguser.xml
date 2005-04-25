@@ -66,10 +66,12 @@ password), give <emphasis>lfs</emphasis> a password:</para>
 <screen><userinput>passwd lfs</userinput></screen>
 
 <para>Grant <emphasis>lfs</emphasis> full access to
+<filename class="directory">$LFS</filename>
 <filename class="directory">$LFS/tools</filename> 
 by making <emphasis>lfs</emphasis> the directory owner:</para>
 
-<screen><userinput>chown lfs $LFS/tools</userinput></screen>
+<screen><userinput>chown $LFS
+chown lfs $LFS/tools</userinput></screen>
 
 <para>If a separate working directory was created as suggested, we
 will show you how to create the directory and give

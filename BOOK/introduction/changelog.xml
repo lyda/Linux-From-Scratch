@@ -97,6 +97,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>April 25, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Removed testsuite information from reboot.</para></listitem>
+<listitem><para>Added a chown to the LFS directory to prevent issues with the reboot
+scenario.</para></listitem>
+<listitem><para>Corrected a build issue with e2fsprogs in reboot.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
