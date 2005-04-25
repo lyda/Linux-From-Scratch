@@ -97,7 +97,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>April 25, 2005 [manuel]</para>
 <itemizedlist>
 <listitem><para>Added temp-system/choose.xml to can select the reboot 
-or chroot method.</para></listitem>
+or chroot method. Modified the navigational XSL engine to read the book linearly
+regardless if the user choose the reboot or the chroot method.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
