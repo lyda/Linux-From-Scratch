@@ -1,7 +1,7 @@
 BASEDIR=~/lfs-book
 CHUNK_QUIET=0
-PDF_OUTPUT=LFS-BOOK.pdf
-NOCHUNKS_OUTPUT=LFS-BOOK.html
+PDF_OUTPUT=LFS-BOOK-$(ARCH).pdf
+NOCHUNKS_OUTPUT=LFS-BOOK-$(ARCH).html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
 ARCH=x86
 
@@ -11,7 +11,8 @@ lfs:
 
 # x86
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch x86 \
-	  -stringparam base.dir $(BASEDIR)/x86/ stylesheets/lfs-chunked.xsl index.xml
+	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/x86/ \
+		stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/x86/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/x86/stylesheets; \
@@ -30,7 +31,8 @@ lfs:
 
 # alpha
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch alpha \
-	  -stringparam base.dir $(BASEDIR)/alpha/ stylesheets/lfs-chunked.xsl index.xml
+	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/alpha/ \
+		stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/alpha/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/alpha/stylesheets; \
@@ -49,7 +51,8 @@ lfs:
 
 # ppc
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch ppc \
-	  -stringparam base.dir $(BASEDIR)/ppc/ stylesheets/lfs-chunked.xsl index.xml
+	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/ppc/ \
+		stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/ppc/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/ppc/stylesheets; \
@@ -68,7 +71,8 @@ lfs:
 
 # raq2
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch raq2 \
-	  -stringparam base.dir $(BASEDIR)/raq2/ stylesheets/lfs-chunked.xsl index.xml
+	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/raq2/ \
+		stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/raq2/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/raq2/stylesheets; \
@@ -97,29 +101,30 @@ lfs:
 
 html:
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch $(ARCH) \
-	  -stringparam base.dir $(BASEDIR)/ stylesheets/lfs-chunked.xsl index.xml
+	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/$(ARCH)/ \
+		stylesheets/lfs-chunked.xsl index.xml
 
-	if [ ! -e $(BASEDIR)/stylesheets ]; then \
-	  mkdir -p $(BASEDIR)/stylesheets; \
+	if [ ! -e $(BASEDIR)/$(ARCH)/stylesheets ]; then \
+	  mkdir -p $(BASEDIR)/$(ARCH)/stylesheets; \
 	fi;
-	cp stylesheets/*.css $(BASEDIR)/stylesheets
+	cp stylesheets/*.css $(BASEDIR)/$(ARCH)/stylesheets
 
-	if [ ! -e $(BASEDIR)/images ]; then \
-	  mkdir -p $(BASEDIR)/images; \
+	if [ ! -e $(BASEDIR)/$(ARCH)/images ]; then \
+	  mkdir -p $(BASEDIR)/$(ARCH)/images; \
 	fi;
 	cp $(XSLROOTDIR)/images/*.png \
-	  $(BASEDIR)/images
-	cd $(BASEDIR)/; sed -i -e "s@../stylesheets@stylesheets@g" \
+	  $(BASEDIR)/$(ARCH)/images
+	cd $(BASEDIR)/$(ARCH)/; sed -i -e "s@../stylesheets@stylesheets@g" \
 	  *.html
-	cd $(BASEDIR)/; sed -i -e "s@../images@images@g" \
+	cd $(BASEDIR)/$(ARCH)/; sed -i -e "s@../images@images@g" \
 	  *.html
 
-	for filename in `find $(BASEDIR) -name "*.html"`; do \
+	for filename in `find $(BASEDIR)/$(ARCH) -name "*.html"`; do \
 	  tidy -config tidy.conf $$filename; \
 	  true; \
 	done;
 
-	for filename in `find $(BASEDIR) -name "*.html"`; do \
+	for filename in `find $(BASEDIR)/$(ARCH)/ -name "*.html"`; do \
 	  sed -i -e "s@text/html@application/xhtml+xml@g" $$filename; \
 	done;
 
