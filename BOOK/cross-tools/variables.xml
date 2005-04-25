@@ -54,8 +54,8 @@ echo "Our host is ${LFS_HOST}"</userinput></screen>
 <para>Now we will add these to ~/.bashrc, just in
 case you have to exit and restart building later:</para>
 
-<screen><userinput>echo "export LFS_HOST=${LFS_HOST}" >> ~/.bashrc
-echo "export LFS_TARGET=${LFS_TARGET}" >> ~/.bashrc</userinput></screen>
+<screen><userinput>echo export LFS_HOST=\""${LFS_HOST}\"" >> ~/.bashrc
+echo export LFS_TARGET=\""${LFS_TARGET}\"" >> ~/.bashrc</userinput></screen>
 
 <para>List of architectures and target triplets</para>
 

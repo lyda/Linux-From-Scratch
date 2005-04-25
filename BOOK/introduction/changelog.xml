@@ -110,7 +110,11 @@ pc or unknown, thanks Jeremy Utley.</para></listitem>
 <listitem><para>Fixed typos in temp-system binutils.</para></listitem>
 <listitem><para>Removed uncessary information from temp-system gcc.</para></listitem>
 <listitem><para>Removed uneeded sed from temp-system zlib.</para></listitem>
-<listitem><para>Removed uneeded sed from temp-system zlib.</para></listitem>
+<listitem><para>Removed uneeded sed from temp-system gawk.</para></listitem>
+<listitem><para>Fixed typo in gzip in temp-system.</para></listitem>
+<listitem><para>Fixed typo in diffutils in temp-system.</para></listitem>
+<listitem><para>Removed textsuite information from temp-system.</para></listitem>
+<listitem><para>Added missing udev in reboot.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

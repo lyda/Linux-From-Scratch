@@ -29,7 +29,7 @@
 
 <para>Setup configure so it can use cross-compiled tools:</para>
 
-<screen><userinput>sed -i "s@nm conftest@${TARGET}-&amp;@" configure</userinput></screen>
+<screen><userinput>sed -i "s@nm conftest@${LFS_TARGET}-&amp;@" configure</userinput></screen>
 
 <para>Prepare Gzip for compilation:</para>
 
