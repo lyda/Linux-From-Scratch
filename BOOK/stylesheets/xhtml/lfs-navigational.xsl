@@ -91,7 +91,7 @@
               <xsl:choose>
                 <xsl:when test="$next[@id='chapter-chroot'] or 
                         $next[@id='chapter-reboot']">
-                  <a accesskey="p">
+                  <a accesskey="n">
                     <xsl:attribute name="href">
                       <xsl:call-template name="href.target">
                         <xsl:with-param name="object" 
@@ -253,7 +253,7 @@
               <xsl:choose>
                 <xsl:when test="$next[@id='chapter-chroot'] or 
                         $next[@id='chapter-reboot']">
-                  <a accesskey="p">
+                  <a accesskey="n">
                     <xsl:attribute name="href">
                       <xsl:call-template name="href.target">
                         <xsl:with-param name="object" 
