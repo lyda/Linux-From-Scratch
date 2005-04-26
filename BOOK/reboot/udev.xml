@@ -39,12 +39,12 @@ devices nodes are to be created.</para></listitem>
 
 <para>Install the package:</para>
 
-<screen><userinput>make udevdir=/dev install</userinput></screen>
+<screen><userinput>make DESTDIR=${LFS} udevdir=/dev install</userinput></screen>
 
 <para>Udev's configuration is far from ideal by default, so install
 the configuration files here:</para>
 
-<screen><userinput>cp ../udev-config-2.rules /etc/udev/rules.d/25-lfs.rules</userinput></screen>
+<screen><userinput>cp ../udev-config-2.rules ${LFS}/etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
 </sect2>
 
