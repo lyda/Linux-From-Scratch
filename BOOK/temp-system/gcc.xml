@@ -130,7 +130,10 @@ earlier.</para>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+<para>Many packages use the name <command>cc</command> to call the C
+compiler. To satisfy those packages, create a symlink:</para>
+
+<screen><userinput>ln -s gcc /tools/bin/cc</userinput></screen>
 
 <sect2 role="content"><title/>
 <para>Details on this package are located in <xref
