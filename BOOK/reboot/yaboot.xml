@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-yaboot-yaboot" arch="ppc">
+<sect1 id="ch-reboot-yaboot" arch="ppc">
 <title>Making the LFS system bootable</title>
 <?dbhtml filename="yaboot.html"?>
 
-<indexterm zone="ch-yaboot-yaboot">
+<indexterm zone="ch-reboot-yaboot">
 <primary sortas="a-Yaboot">Yaboot</primary>
 <secondary>reboot, configuring</secondary></indexterm>
 
