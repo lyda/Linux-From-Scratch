@@ -35,8 +35,8 @@ a multi-architecture build:</para>
 <para>The Bzip2 package does not contain a <command>configure</command>
 script. Compile it with:</para>
 
-<screen><userinput>make CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
-RANLIB="${LFS_TARGET}-ranlib" LDFLAGS="-s"</userinput></screen>
+<screen><userinput>make CC="${CC}" AR="${AR}" \
+RANLIB="${RANLIB}" LDFLAGS="-s"</userinput></screen>
 
 <para>Install the package:</para>
 
