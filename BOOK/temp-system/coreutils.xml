@@ -36,7 +36,7 @@ defined when cross-compiling. So we define it:</para>
 
 <screen><userinput>DEFAULT_POSIX2_VERSION=199209 \
 ./configure --prefix=/tools --cache-file=config.cache \
---build=${LFS_BUILD} --host=${LFS_TARGET}</userinput></screen>
+--build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
 
 <para>Compile the package:</para>
 
