@@ -10,6 +10,7 @@
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="tcl.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="expect.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="dejagnu.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="texinfo.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers.xml"/> <!-- x86 -->
