@@ -116,6 +116,7 @@ scenario.</para></listitem>
 <listitem><para>Fixed Creating directories in reboot.</para></listitem>
 <listitem><para>Fixed Essential symlinks in reboot.</para></listitem>
 <listitem><para>Added udev in reboot.</para></listitem>
+<listitem><para>Adding the kernel and bootloaders to finish the reboot section.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

@@ -16,5 +16,12 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="creatingdirs.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="createfiles.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="pwdgroup.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernel.xml"/> <!-- x86 -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernel-alpha.xml"/> <!-- alpha -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernel-ppc.xml"/> <!-- ppc -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernel-raq2.xml"/> <!-- raq2 -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grub.xml"/> <!-- x86 -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="yaboot.xml"/> <!-- ppc -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="colo.xml"/> <!-- raq2 -->
 
 </chapter>
