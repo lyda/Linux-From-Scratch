@@ -94,6 +94,15 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>April 26, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Fixed typos and names of 'Chroot' or 'Reboot' sections.</para></listitem>
+<listitem><para>Corrected a chown command in the Adding the LFS User section.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 25, 2005 [manuel]</para>
 <itemizedlist>
 <listitem><para>Added temp-system/choose.xml to can select the reboot 
@@ -210,21 +219,7 @@ and temp-tools</para></listitem>
 <itemizedlist>
 <listitem><para>Changed setting of LFS_HOST for target-triplets without 'unknown' and added --host flag
 to build of binutils.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
-
-<itemizedlist>
-<listitem><para>April 21, 2005 [jhuntwork]</para>
-<itemizedlist>
 <listitem><para>Removed instruction to run command as root in final-preps/creatingcrossdir.xml.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
-
-<itemizedlist>
-<listitem><para>April 21, 2005 [jhuntwork]</para>
-<itemizedlist>
 <listitem><para>Added missing userinput tags in cross-tools/variables.xml.</para></listitem>
 </itemizedlist>
 </listitem>
