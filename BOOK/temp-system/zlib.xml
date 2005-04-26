@@ -7,11 +7,11 @@
 <title>Zlib-&zlib-version;</title>
 <?dbhtml filename="zlib.html"?>
 
-<indexterm zone="ch-temp-system-zlib"><primary sortas="a-Zlib">Zlib</primary></indexterm>
+<indexterm zone="ch-temp-system-zlib"><primary sortas="a-Zlib">Zlib</primary>
+<secondary>temporary system</secondary></indexterm>
 
 <sect2 role="package"><title/>
-<para>The Zlib package contains compression and un-compression routines used by
-some programs.</para>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/zlib.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -19,10 +19,8 @@ some programs.</para>
 <seglistitem><seg>0.1 SBU</seg><seg>1.5 MB</seg></seglistitem>
 </segmentedlist>
 
-<segmentedlist>
-<segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Binutils, Coreutils, GCC, Glibc, Make, and Sed</seg></seglistitem>
-</segmentedlist>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/zlib.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+
 </sect2>
 
 <sect2 role="installation">

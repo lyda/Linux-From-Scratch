@@ -9,7 +9,7 @@
 
 <indexterm zone="ch-temp-system-bison">
 <primary sortas="a-Bison">Bison</primary>
-<secondary>tools</secondary></indexterm>
+<secondary>temporary syatem</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/bison.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
