@@ -29,13 +29,13 @@ preparation for this step. Now we will configure our system to boot using
 Colo. Here is a simpe default.colo to use.</para>
 
 <screen><userinput>cat &gt; /boot/default.colo &lt;&lt; "EOF"
-#:CoLo:#
+<literal>#:CoLo:#
 #
 # load linux
 #
 lcd 'Booting 2.6.9...'
 load vmlinux-2.6.9.gz
-execute root=/dev/hda2 console=ttyS0,115200 ide1=noprobe
+execute root=/dev/hda2 console=ttyS0,115200 ide1=noprobe</literal>
 EOF</userinput></screen>
 
 <para>Included in /usr/lib/colo/examples are more examples of a
