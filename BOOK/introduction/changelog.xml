@@ -98,6 +98,8 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Fixed typos and names of 'Chroot' or 'Reboot' sections.</para></listitem>
 <listitem><para>Corrected a chown command in the Adding the LFS User section.</para></listitem>
+<listitem><para>Removed spurious command to chown lfs $HOME/cross-tools. If the user is following the book,
+that directory will be created by lfs and will by default be owned by lfs.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
