@@ -39,11 +39,11 @@ directory. This is fixed by altering the configure script:</para>
 
 <para>Compile the package:</para>
 
-<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no CPUOPT=""</userinput></screen>
+<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no CPUOPT="" ARCH="" CPU=""</userinput></screen>
 
 <para>Install the package:</para>
 
-<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no CPUOPT="" DESTDIR=${LFS} install</userinput></screen>
+<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no CPUOPT="" ARCH="" CPU="" DESTDIR=${LFS} install</userinput></screen>
 
 </sect2>
 
