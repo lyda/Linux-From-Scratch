@@ -99,6 +99,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Fixed typos in gcc-final in cross-tools.</para></listitem>
 <listitem><para>Updated util-linux instructions to ignore ARCH and CPU variables.</para></listitem>
 <listitem><para>Fixed glibc in cross-tools, to force threads and tls support.</para></listitem>
+<listitem><para>Changed target-triplet table to use -pc- instead of -unknown-.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
