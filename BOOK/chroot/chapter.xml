@@ -16,6 +16,5 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="createfiles.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="pwdgroup.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="devices.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="revisedchroot.xml"/>
 
 </chapter>
