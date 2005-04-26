@@ -30,7 +30,9 @@
 <para>Gawk has issue with versioning during cross-compile, so
 we will force the version info:</para>
 
-<screen><userinput>sed -i 's@\(fullname=gawk-\).*\(;.*\)@\1\&gawk-version; \2@g' Makefile.in</userinput></screen>
+<screen><userinput>GAWK_VERSION="&gawk-version;"
+sed -i 's@\(fullname=gawk-\).*\(;.*\)@\1\$(GAWK_VERSION) \2@g' Makefile.in
+unset GAWK_VERSION</userinput></screen>
 
 <para>Prepare Gawk for compilation:</para>
 

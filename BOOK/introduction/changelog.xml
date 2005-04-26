@@ -111,6 +111,7 @@ that directory will be created by lfs and will by default be owned by lfs.</para
 <listitem><para>Added missing --host flag to the cross-tool's gcc-final build.</para></listitem>
 <listitem><para>Changed comment about libidn to a note to make it more visible.</para></listitem>
 <listitem><para>Removed reference to gcc-core tarball.</para></listitem>
+<listitem><para>Fixed sed command for gawk versioning - wouldn't work when using numbers directly.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
