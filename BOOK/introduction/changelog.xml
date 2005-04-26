@@ -114,7 +114,8 @@ that directory will be created by lfs and will by default be owned by lfs.</para
 <listitem><para>Fixed sed command for gawk versioning - wouldn't work when using numbers directly.</para></listitem>
 <listitem><para>Changed variables from ${LFS_BUILD} to ${LFS_HOST} - we never set a LFS_BUILD
 variable; we only use a modified LFS_HOST when it matches the target arch.</para></listitem>
-<listitem><para>Added missing --host flag for Chapter 6 grep.</para></listitem>
+<listitem><para>Added missing --host flag for various Chapter 6 packages.</para></listitem>
+<listitem><para>Moved instructions for populating dev till after directories are created.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
