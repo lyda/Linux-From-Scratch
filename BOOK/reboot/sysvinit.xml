@@ -69,7 +69,7 @@ make -C src install INSTALL="install"</userinput></screen>
 <sect2 id="conf-tools-sysvinit" role="configuration"><title>Configuring Sysvinit</title>
 <indexterm zone="conf-tools-sysvinit">
 <primary sortas="a-Sysvinit">Sysvinit</primary>
-<secondary>configuring</secondary></indexterm>
+<secondary>reboot, configuring</secondary></indexterm>
 
 <indexterm zone="conf-tools-sysvinit"><primary sortas="e-${LFS}/etc/inittab">${LFS}/etc/inittab</primary></indexterm>
 

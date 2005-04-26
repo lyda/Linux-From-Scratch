@@ -7,7 +7,7 @@
 <title>Udev-&udev-version;</title>
 <?dbhtml filename="udev.html"?>
 
-<indexterm zone="ch-reboot-udev"><primary sortas="a-Udev">Ydev</primary>
+<indexterm zone="ch-reboot-udev"><primary sortas="a-Udev">Udev</primary>
 <secondary>reboot</secondary></indexterm>
 
 <sect2 role="package"><title/>
