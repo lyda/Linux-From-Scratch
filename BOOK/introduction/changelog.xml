@@ -94,6 +94,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>April 26, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Fixed typos in gcc-final in cross-tools.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 26, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Fixed typos and names of 'Chroot' or 'Reboot' sections.</para></listitem>
