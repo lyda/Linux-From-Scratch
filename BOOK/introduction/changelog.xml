@@ -97,6 +97,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>April 26, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Fixed typos in gcc-final in cross-tools.</para></listitem>
+<listitem><para>Updated util-linux instructions to ignore ARCH and CPU variables.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
