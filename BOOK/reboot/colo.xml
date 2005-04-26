@@ -9,7 +9,7 @@
 
 <indexterm zone="ch-reboot-colo">
 <primary sortas="a-Colo">Colo</primary>
-<secondary>configuring</secondary></indexterm>
+<secondary>reboot, configuring</secondary></indexterm>
 
 <para>Your shiny new LFS system is almost complete. One of the last things to
 do is ensure you can boot it. The instructions below apply only to

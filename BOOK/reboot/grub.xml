@@ -9,7 +9,7 @@
 
 <indexterm zone="ch-reboot-grub">
 <primary sortas="a-Grub">Grub</primary>
-<secondary>configuring</secondary></indexterm>
+<secondary>reboot, configuring</secondary></indexterm>
 
 <para>Your shiny new LFS system is almost complete. One of the last
 things to do is to ensure that the system can be properly booted. The

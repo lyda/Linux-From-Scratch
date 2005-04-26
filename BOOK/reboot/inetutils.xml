@@ -7,7 +7,8 @@
 <title>Inetutils-&inetutils-version;</title>
 <?dbhtml filename="inetutils.html"?>
 
-<indexterm zone="ch-reboot-inetutils"><primary sortas="a-Inetutils">Inetutils</primary></indexterm>
+<indexterm zone="ch-reboot-inetutils"><primary sortas="a-Inetutils">Inetutils</primary>
+<secondary>reboot</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/inetutils.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>

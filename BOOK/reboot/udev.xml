@@ -7,7 +7,8 @@
 <title>Udev-&udev-version;</title>
 <?dbhtml filename="udev.html"?>
 
-<indexterm zone="ch-reboot-udev"><primary sortas="a-Udev">Ydev</primary></indexterm>
+<indexterm zone="ch-reboot-udev"><primary sortas="a-Udev">Ydev</primary>
+<secondary>reboot</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/udev.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>

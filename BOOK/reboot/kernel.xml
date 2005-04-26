@@ -7,7 +7,8 @@
 <title>Linux-&linux-version;</title>
 <?dbhtml filename="kernel.html"?>
 
-<indexterm zone="ch-reboot-kernel"><primary sortas="a-Linux">Linux</primary></indexterm>
+<indexterm zone="ch-reboot-kernel"><primary sortas="a-Linux">Linux</primary>
+<secondary>reboot</secondary></indexterm>
 
 <sect2 role="package"><title/>
 
