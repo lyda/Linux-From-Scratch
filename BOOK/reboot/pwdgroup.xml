@@ -61,7 +61,6 @@ do not already exist. Initialize the log files and give them
 proper permissions:</para>
 
 <screen><userinput>touch ${LFS}/var/run/utmp ${LFS}/var/log/{btmp,lastlog,wtmp}
-chgrp utmp ${LFS}/var/run/utmp ${LFS}/var/log/lastlog
 chmod 664 ${LFS}/var/run/utmp ${LFS}/var/log/lastlog</userinput></screen>
 
 <para>The <filename>${LFS}/var/run/utmp</filename> file records the users

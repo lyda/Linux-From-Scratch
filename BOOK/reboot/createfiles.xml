@@ -12,9 +12,9 @@ exist. In order to satisfy these programs, create a number of symbolic
 links which will be replaced by real files throughout the course of
 this chapter after the software has been installed.</para>
 
-<screen><userinput>ln -s ${LFS}/tools/bin/{bash,cat,pwd,stty} ${LFS}/bin
-ln -s ${LFS}/tools/bin/perl ${LFS}/usr/bin
-ln -s ${LFS}/tools/lib/libgcc_s.so{,.1} ${LFS}/usr/lib
+<screen><userinput>ln -s /tools/bin/{bash,cat,pwd,stty} ${LFS}/bin
+ln -s /tools/bin/perl ${LFS}/usr/bin
+ln -s /tools/lib/libgcc_s.so{,.1} ${LFS}/usr/lib
 ln -s bash ${LFS}/bin/sh</userinput></screen>
 
 </sect1>

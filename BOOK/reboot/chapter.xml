@@ -12,6 +12,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sysvinit.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="module-init-tools.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="inetutils.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="udev.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="creatingdirs.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="createfiles.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="pwdgroup.xml"/>

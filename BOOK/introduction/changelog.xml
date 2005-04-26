@@ -114,6 +114,8 @@ scenario.</para></listitem>
 <listitem><para>Corrected a build issue that prevent sysvinit in reboot to install.</para></listitem>
 <listitem><para>Removed an uneeded patch from inetutils in reboot.</para></listitem>
 <listitem><para>Fixed Creating directories in reboot.</para></listitem>
+<listitem><para>Fixed Essential symlinks in reboot.</para></listitem>
+<listitem<para>Added udev in reboot.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
