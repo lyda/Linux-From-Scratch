@@ -27,9 +27,6 @@
 <sect2 role="installation">
 <title>Installation of Cross GCC Compiler with Static libgcc</title>
 
-<para>Unpack only the gcc-core tarball because neither the C++
-compiler nor the test suite will be needed here.</para>
-
 <para>We will make a couple of essential adjustments to the specs file to point
 to use our build environment:</para>
 

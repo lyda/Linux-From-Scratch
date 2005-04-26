@@ -109,6 +109,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>Removed spurious command to chown lfs $HOME/cross-tools. If the user is following the book,
 that directory will be created by lfs and will by default be owned by lfs.</para></listitem>
 <listitem><para>Added missing --host flag to the cross-tool's gcc-final build.</para></listitem>
+<listitem><para>Changed comment about libidn to a note to make it more visible.</para></listitem>
+<listitem><para>Removed reference to gcc-core tarball.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
