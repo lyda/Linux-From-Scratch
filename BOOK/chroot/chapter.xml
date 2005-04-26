@@ -8,6 +8,7 @@
 <title>If You Are Going to Chroot</title>
 <?dbhtml filename="chapter.html"?>
 
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="util-linux.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernfs.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chroot.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="changingowner.xml"/>
