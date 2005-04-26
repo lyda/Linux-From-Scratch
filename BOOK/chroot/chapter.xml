@@ -3,9 +3,9 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-chroot" xreflabel="If you'r Chrooting">
+<chapter id="chapter-chroot" xreflabel="If You Are Going to Chroot">
 <?dbhtml dir="chroot"?>
-<title>If you'r Chrooting</title>
+<title>If You Are Going to Chroot</title>
 <?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="kernfs.xml"/>

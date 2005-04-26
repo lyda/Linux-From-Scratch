@@ -3,9 +3,9 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter-reboot" xreflabel="If you'r Rebooting">
+<chapter id="chapter-reboot" xreflabel="If You Are Going to Reboot">
 <?dbhtml dir="reboot"?>
-<title>If you'r Rebooting</title>
+<title>If You Are Going to Reboot</title>
 <?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="e2fsprogs.xml"/>
