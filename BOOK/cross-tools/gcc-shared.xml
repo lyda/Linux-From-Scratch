@@ -9,7 +9,7 @@
 
 <indexterm zone="ch-cross-tools-gcc-shared">
 <primary sortas="a-GCC">GCC</primary>
-<secondary>cross gcc, shared libgcc</secondary></indexterm>
+<secondary>cross tools, shared libgcc</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>

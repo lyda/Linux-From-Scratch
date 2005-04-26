@@ -9,7 +9,7 @@
 
 <indexterm zone="ch-cross-tools-linux-libc-headers">
 <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
-<secondary>cross-tools, headers</secondary></indexterm>
+<secondary>cross tools</secondary></indexterm>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="linux-libc-headers.xml"

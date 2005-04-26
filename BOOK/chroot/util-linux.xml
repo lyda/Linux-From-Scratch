@@ -9,7 +9,7 @@
 
 <indexterm zone="ch-chroot-util-linux">
 <primary sortas="a-Util-linux">Util-linux</primary>
-<secondary>tools</secondary></indexterm>
+<secondary>chroot</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/util-linux.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
