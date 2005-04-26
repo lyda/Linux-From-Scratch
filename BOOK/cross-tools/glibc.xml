@@ -72,6 +72,7 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
     --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --without-gd --with-headers=/tools/include \
+    --with-tls --with-__thread \
     --cache-file=config.cache</userinput></screen>
 
 <screen arch="raq2"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
