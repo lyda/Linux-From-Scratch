@@ -101,6 +101,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Fixed glibc in cross-tools, to force threads and tls support.</para></listitem>
 <listitem><para>Changed target-triplet table to use -pc- instead of -unknown-.</para></listitem>
 <listitem><para>Fixed binutils build issue in temp-system, Thanks Richard Downing.</para></listitem>
+<listitem><para>Removed bintuils copy libiberty, duplicated from previous chapter.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

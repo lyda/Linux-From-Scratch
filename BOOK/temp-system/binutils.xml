@@ -83,10 +83,6 @@ make</userinput></screen>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Copy libiberty.h file to /tools/include directory:</para>
-
-<screen><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /tools/include</userinput></screen>
-
 </sect2>
 
 <sect2 role="content"><title/>
