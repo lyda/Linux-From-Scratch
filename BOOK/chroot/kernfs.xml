@@ -7,6 +7,12 @@
 <title>Mounting Virtual Kernel File Systems</title>
 <?dbhtml filename="kernfs.html"?>
 
+<para>From this point on, we will be running all commands as
+the <emphasis>root</emphasis> user. So begin by exiting from the su
+as <emphasis>lfs</emphasis>.
+
+<screen><userinput>exit</userinput></screen>
+
 <para>Various file systems exported by the kernel do not exist on the
 hard drive, but are used to communicate to and from the kernel
 itself.</para>
