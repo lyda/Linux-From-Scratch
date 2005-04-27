@@ -54,8 +54,8 @@ command like this: <userinput>time { ./configure ... &amp;&amp; ...
 
 <screen><userinput>../binutils-&binutils-version;/configure \
      --prefix=/tools --build=${LFS_HOST} --target=${LFS_TARGET} \
-     --disable-nls --enable-shared --enable-64-bit-bfd \
-     --with-lib-path=/tools/lib</userinput></screen>
+     --host=${LFS_TARGET} --disable-nls --enable-shared \
+     --enable-64-bit-bfd --with-lib-path=/tools/lib</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 

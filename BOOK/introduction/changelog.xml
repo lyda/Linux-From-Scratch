@@ -100,6 +100,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Updated util-linux instructions to ignore ARCH and CPU variables.</para></listitem>
 <listitem><para>Fixed glibc in cross-tools, to force threads and tls support.</para></listitem>
 <listitem><para>Changed target-triplet table to use -pc- instead of -unknown-.</para></listitem>
+<listitem><para>Fixed binutils build issue in temp-system, Thanks Richard Downing.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
