@@ -34,7 +34,7 @@
 <para>Prepare Gzip for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools \
---host=${LFS_TARGET}</userinput></screen>
+   --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET}</userinput></screen>
 
 <para>Compile the package:</para>
 

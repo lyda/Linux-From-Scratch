@@ -30,14 +30,11 @@
 <para>Prepare Gawk for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools \
---build=${LFS_HOST} --host=${LFS_TARGET} </userinput></screen>
+   --build=${LFS_HOST} --host=${LFS_TARGET} </userinput></screen>
 
 <para>Compile the package:</para>
 
 <screen><userinput>make LDFLAGS="-s"</userinput></screen>
-
-<para>To test the results (not necessary), issue: <userinput>make
-check</userinput>.</para>
 
 <para>Install the package:</para>
 

@@ -29,7 +29,7 @@
 <para>Prepare Module-Init-Tools for compilation:</para>
 
 <screen><userinput>./configure --prefix=/ \
---host=${LFS_HOST}</userinput></screen>
+   --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET}</userinput></screen>
 
 <para>Compile the package:</para>
 

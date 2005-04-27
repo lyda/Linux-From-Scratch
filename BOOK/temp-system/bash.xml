@@ -39,7 +39,7 @@ it to hang inappropriately.  This patch fixes the problem:</para>
 <para>Prepare Bash for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools --without-bash-malloc \
---host=${LFS_TARGET}</userinput></screen>
+   --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET}</userinput></screen>
 
 <para>The meaning of the configure option:</para>
 
