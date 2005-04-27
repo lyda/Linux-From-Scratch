@@ -9,7 +9,7 @@
 
 <para>From this point on, we will be running all commands as
 the <emphasis>root</emphasis> user. So begin by exiting from the su
-as <emphasis>lfs</emphasis>.
+as <emphasis>lfs</emphasis>.</para>
 
 <screen><userinput>exit</userinput></screen>
 
