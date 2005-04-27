@@ -102,6 +102,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changed target-triplet table to use -pc- instead of -unknown-.</para></listitem>
 <listitem><para>Fixed binutils build issue in temp-system, Thanks Richard Downing.</para></listitem>
 <listitem><para>Removed bintuils copy libiberty, duplicated from previous chapter.</para></listitem>
+<listitem><para>Removed gawk sed, not needed anymore.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
