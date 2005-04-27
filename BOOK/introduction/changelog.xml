@@ -122,6 +122,7 @@ variable; we only use a modified LFS_HOST when it matches the target arch.</para
 <listitem><para>Added missing --host flag for various Chapter 6 packages.</para></listitem>
 <listitem><para>Moved instructions for populating dev till after directories are created.</para></listitem>
 <listitem><para>Added symlink for temp-system cc.</para></listitem>
+<listitem><para>Added a sed to change fixincludes search path, thanks Ryan Oliver.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

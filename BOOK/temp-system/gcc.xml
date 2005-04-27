@@ -51,6 +51,12 @@ location:</para>
 
 <screen><userinput>sed -i '/#define STANDARD_INCLUDE_DIR/s@"/usr/include"@0@g' gcc/cppdefault.c</userinput></screen>
 
+<para>Also, we need to set the directory searched by the fixincludes process for
+system headers, so it won't look at the host's headers:</para>
+
+<screen><userinput>sed -i 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
+gcc/Makefile.in</userinput></screen>
+
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>
 
