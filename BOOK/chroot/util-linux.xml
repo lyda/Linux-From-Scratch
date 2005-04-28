@@ -45,7 +45,7 @@ directory. This is fixed by altering the configure script:</para>
 are needed, build only those:</para>
 
 <screen><userinput>make ARCH="" CPU="" -C mount mount umount
-make -C text-utils more</userinput></screen>
+make ARCH="" CPU="" -C text-utils more</userinput></screen>
 
 <para>This package does not come with a test suite.</para>
 
