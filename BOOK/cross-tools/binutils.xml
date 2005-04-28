@@ -55,7 +55,7 @@ cd ../binutils-build</userinput></screen>
 <term><parameter>--with-lib-path=/tools/lib</parameter></term>
 <listitem><para>This tells the configure script to specify the library
 search path during the compilation of Binutils, resulting in <filename
-class="directory">/cross-tools/lib</filename> being passed to the linker.
+class="directory">/tools/lib</filename> being passed to the linker.
 This prevents the linker from searching through library directories on
 the host.</para></listitem>
 </varlistentry>
