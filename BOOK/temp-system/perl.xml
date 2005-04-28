@@ -9,7 +9,7 @@
 
 <indexterm zone="ch-temp-tools-perl">
 <primary sortas="a-Perl">Perl</primary>
-<secondary>temporary tools</secondary></indexterm>
+<secondary>tools</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/perl.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
@@ -62,7 +62,7 @@ be run in the next chapter if desired.</para>
 <para>Copy these tools and their libraries:</para>
 
 <screen><userinput>cp perl pod/pod2man /tools/bin
-mkdir -p /tools/lib/perl5/&perl-version;
+install -d /tools/lib/perl5/&perl-version;
 cp -R lib/* /tools/lib/perl5/&perl-version;</userinput></screen>
 
 </sect2>

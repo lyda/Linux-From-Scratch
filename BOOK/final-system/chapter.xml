@@ -13,7 +13,6 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers-alpha.xml"/> <!-- alpha -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers-ppc.xml"/> <!-- ppc -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers-raq2.xml"/> <!-- raq2 -->
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="perl.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="adjusting.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="binutils.xml"/>
@@ -33,6 +32,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="flex.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gettext.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="inetutils.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="perl.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="iproute2.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="texinfo.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="autoconf.xml"/>

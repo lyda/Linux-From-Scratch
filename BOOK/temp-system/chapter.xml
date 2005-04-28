@@ -29,7 +29,9 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ncurses.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="patch.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="tar.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="texinfo.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bash.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="perl.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="choose.xml"/>
 
 </chapter>

@@ -67,7 +67,8 @@ cd ../glibc-build</userinput></screen>
 
 <para>Prepare Glibc for compilation:</para>
 
-<screen><userinput>../glibc-&glibc-version;/configure --prefix=/usr \
+<screen><userinput>CC="/tools/bin/gcc" CXX="/tools/bin/g++" \
+    ../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
     --libexecdir=/usr/lib/glibc</userinput></screen>
 
