@@ -3,13 +3,13 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-temp-tools-perl" role="wrap">
+<sect1 id="ch-temp-system-perl" role="wrap">
 <title>Perl-&perl-version;</title>
 <?dbhtml filename="perl.html"?>
 
-<indexterm zone="ch-temp-tools-perl">
+<indexterm zone="ch-temp-system-perl">
 <primary sortas="a-Perl">Perl</primary>
-<secondary>tools</secondary></indexterm>
+<secondary>temporary system</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/perl.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
