@@ -55,7 +55,7 @@ location:</para>
 system headers, so it won't look at the host's headers:</para>
 
 <screen><userinput>sed -i 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
-gcc/Makefile.in</userinput></screen>
+   gcc/Makefile.in</userinput></screen>
 
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>
@@ -75,7 +75,7 @@ variables that override the default optimization flags.</para>
     --libexecdir=/tools/lib --with-local-prefix=/tools \
     --enable-long-long --enable-c99 --enable-shared \
     --enable-threads=posix --enable-__cxa_atexit \
-    --disable-nls --enable-languages=c,c++</userinput></screen>
+    --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
 
 <para>The meaning of the new configure options:</para>
 

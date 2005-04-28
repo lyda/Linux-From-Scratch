@@ -47,7 +47,7 @@ location:</para>
 <para>Now we will change gcc's search path to look into /tools only:</para>
 
 <screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
-gcc/Makefile.in</userinput></screen>
+  gcc/Makefile.in</userinput></screen>
 
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>

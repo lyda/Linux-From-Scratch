@@ -94,6 +94,15 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>April 27, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Fixed some minor formatting issues.</para></listitem>
+<listitem><para>Added --disable-libstdcxx-pch back to gcc in temp-system.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 26, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Fixed typos in gcc-final in cross-tools.</para></listitem>
