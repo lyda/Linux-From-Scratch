@@ -97,6 +97,9 @@ first a summary, then a detailed log.</para>
 <listitem><para>April 28, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Moved temp-tools linux-libc-headers to final-system.</para></listitem>
+<listitem><para>Added perl back to temp-system.</para></listitem>
+<listitem><para>Moved temp-tools texinfo to temp-system.</para></listitem>
+<listitem><para>Added CC and CXX to final-system build of glibc and gcc.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
