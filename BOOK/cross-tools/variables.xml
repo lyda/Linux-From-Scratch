@@ -57,6 +57,11 @@ case you have to exit and restart building later:</para>
 <screen><userinput>echo export LFS_HOST=\""${LFS_HOST}\"" >> ~/.bashrc
 echo export LFS_TARGET=\""${LFS_TARGET}\"" >> ~/.bashrc</userinput></screen>
 
+<para>Let's also create a file with the variables for the final-system
+glibc build:</para>
+
+<screen><userinput>echo "${LFS_TARGET}" > /tools/lib/target</userinput></screen>
+
 <para>List of architectures and target triplets</para>
 
 <table><title>Target Triplets</title>
