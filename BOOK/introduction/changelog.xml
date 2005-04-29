@@ -94,6 +94,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>April 29, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Swapped --host and --build for glibc in cross-tools, minor changes to gcc.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 28, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Moved temp-tools linux-libc-headers to final-system.</para></listitem>

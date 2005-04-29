@@ -61,7 +61,7 @@ cd ../glibc-build</userinput></screen>
 <screen arch="raq2"><userinput>CC="gcc" ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} --enable-add-ons \
     --disable-sanity-checks --with-headers=/tools/include \
-    --with-binutils=/cross-tools/${LFS_TARGET}/bin</userinput></screen>
+    --enable-kernel=2.6.0 --with-binutils=/cross-tools/${LFS_TARGET}/bin</userinput></screen>
 
 <para>Now  Install the package:</para>
 

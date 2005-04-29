@@ -64,7 +64,8 @@ cd ../gcc-build</userinput></screen>
     --target=${LFS_TARGET} --host=${LFS_HOST} \
     --with-local-prefix=/tools --disable-nls --enable-shared \
     --enable-languages=c,c++ --enable-__cxa_atexit \
-    --enable-c99 --enable-long-long --enable-threads=posix</userinput></screen>
+    --enable-c99 --enable-long-long --enable-threads=posix \
+    --enable-multilib=no</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 

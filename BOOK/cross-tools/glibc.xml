@@ -69,7 +69,7 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
 <screen arch="alpha;ppc;x86;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_HOST} --build=${LFS_TARGET} \
+    --host=${LFS_TARGET} --build=${LFS_HOST} \
     --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --without-gd --with-headers=/tools/include \
@@ -79,7 +79,7 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
 <screen arch="raq2"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_HOST} --build=${LFS_TARGET} \
+    --host=${LFS_TARGET} --build=${LFS_HOST} \
     --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --without-gd --with-headers=/tools/include</userinput></screen>

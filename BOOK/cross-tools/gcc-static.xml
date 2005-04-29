@@ -37,6 +37,7 @@ the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-posix-1.patch</userinput></screen>
 
+
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
 
@@ -63,7 +64,7 @@ cd ../gcc-build</userinput></screen>
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --host=${LFS_HOST} --target=${LFS_TARGET} \
     --with-local-prefix=/tools --disable-nls --disable-shared \
-    --enable-languages=c</userinput></screen>
+    --enable-multilib=no --enable-languages=c</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
@@ -92,7 +93,7 @@ tarball.</para></listitem>
 
 <para>Install the package:</para>
 
-<screen><userinput>make all-gcc install</userinput></screen>
+<screen><userinput>make install-gcc</userinput></screen>
 
 </sect2>
 
