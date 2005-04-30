@@ -31,7 +31,7 @@
 
 <screen><userinput>./configure --prefix=/tools --with-shared \
    --host=${LFS_TARGET} --without-debug \
-   --without-ada --enable-overwrite</userinput></screen>
+   --with-build-cc=gcc</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
