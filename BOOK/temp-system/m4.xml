@@ -30,7 +30,7 @@
 <para>Prepare M4 for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools \
-   --target=${LFS_TARGET}</userinput></screen>
+   --host=${LFS_TARGET}</userinput></screen>
 
 <para>Compile the package:</para>
 

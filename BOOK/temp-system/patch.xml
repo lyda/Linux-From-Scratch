@@ -30,7 +30,7 @@
 <para>Prepare Patch for compilation:</para>
 
 <screen><userinput>CPPFLAGS=-D_GNU_SOURCE ./configure --prefix=/tools \
-   --target=${LFS_TARGET}</userinput></screen>
+   --host=${LFS_TARGET}</userinput></screen>
 
 <para>Compile the package:</para>
 

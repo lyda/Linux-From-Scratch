@@ -34,7 +34,7 @@
 <para>Prepare Grep for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools \
-   --target=${LFS_TARGET} --disable-perl-regexp \
+   --host=${LFS_TARGET} --disable-perl-regexp \
    --with-included-regex</userinput></screen>
 
 <para>The meaning of the configure options:</para>
