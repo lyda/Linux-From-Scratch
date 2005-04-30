@@ -44,9 +44,8 @@ cd ../binutils-build</userinput></screen>
 <para>Prepare Binutils for compilation:</para>
 
 <screen><userinput>../binutils-&binutils-version;/configure --prefix=/cross-tools \
-   --target=${LFS_TARGET} --host=${LFS_HOST} \
-   --with-lib-path=/tools/lib --disable-nls \
-   --enable-shared -enable-64-bit-bfd</userinput></screen>
+   --host=${LFS_HOST} --target=${LFS_TARGET} --with-lib-path=/tools/lib \
+   --disable-nls --enable-shared --enable-64-bit-bfd</userinput></screen>
 
 <para>The meaning of the new configure option:</para>
 

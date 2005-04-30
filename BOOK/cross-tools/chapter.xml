@@ -15,8 +15,8 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers-alpha.xml"/> <!-- alpha -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers-ppc.xml"/> <!-- ppc -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="linux-libc-headers-raq2.xml"/> <!-- raq2 -->
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc-headers.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="binutils.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc-headers.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gcc-static.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc-startfiles.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gcc-shared.xml"/>

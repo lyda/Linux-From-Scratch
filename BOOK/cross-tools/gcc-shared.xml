@@ -51,7 +51,13 @@ location:</para>
 
 <para>Now we will disable gcc's linking to libc since it doesn't exist yet:</para>
 
-<screen><userinput>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver</userinput></screen>
+<screen><userinput>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver \
+   gcc/config/t-libunwind</userinput></screen>
+
+<para>No disable -B in Makefile.in, so it doesn't pick up the host's header
+files:</para>
+
+<screen><userinput>sed -i '/FLAGS_FOR_TARGET.*\/lib\//s@-B[^ ]*/lib/@@g' configure configure.in</userinput></screen>
 
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>

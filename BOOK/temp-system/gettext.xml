@@ -35,8 +35,8 @@ can't find getline. So we fix it here:</para>
 <para>Prepare Gettext for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools \
-   --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
-   --disable-libasprintf --without-csharp --cache-file=config.cache</userinput></screen>
+   --target=${LFS_TARGET} --disable-libasprintf \
+   --without-csharp --cache-file=config.cache</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 

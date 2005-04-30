@@ -59,7 +59,7 @@ cd ../binutils-build</userinput></screen>
 
 <para>Prepare Binutils for compilation:</para>
 
-<screen><userinput>CC="/tools/bin/gcc" ../binutils-&binutils-version;/configure --prefix=/usr \
+<screen><userinput>../binutils-&binutils-version;/configure --prefix=/usr \
     --enable-shared</userinput></screen>
 
 <para>Compile the package:</para>

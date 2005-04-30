@@ -38,11 +38,8 @@ unset them when building Glibc.</para>
 the method suggested in this book puts the stability of the system at
 risk.</para>
 
-<note><para arch="raq2">Unpack the glibc-linuxthreads-&glibc-version; <emphasis>and</emphasis> the
-glibc-libidn-&glibc-version; tarball from within the glibc-&glibc-version; directory.</para>
-
-<para arch="alpha;ppc;x86">Unpack the glibc-libidn-&glibc-version; tarball from
-from within the glibc-&glibc-version; directory.</para></note>
+<para arch="raq2">Unpack the glibc-linuxthreads-&glibc-version; <emphasis>and</emphasis>
+tarball -- it will unfold into the same directory.</para>
 
 <para arch="raq2">The following patch corrects the building of syscall.h:</para>
 
@@ -70,19 +67,17 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
-    --disable-profile --enable-add-ons \
-    --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
-    --without-gd --with-headers=/tools/include \
-    --with-tls --with-__thread \
+    --without-cvs --disable-profile --enable-add-ons \
+    --with-tls --enable-kernel=2.6.0 --with-__thread \
+    --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
 
 <screen arch="raq2"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
-    --disable-profile --enable-add-ons \
-    --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
-    --without-gd --with-headers=/tools/include</userinput></screen>
+    --without-cvs --disable-profile --enable-add-ons \
+    --with-binutils=/cross-tools/bin --with-headers=/tools/include</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
