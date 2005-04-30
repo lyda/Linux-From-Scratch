@@ -31,7 +31,7 @@
 
 <screen><userinput>./configure --prefix=/tools --with-shared \
    --host=${LFS_TARGET} --without-debug \
-   --with-build-cc=gcc</userinput></screen>
+   --with-build-cc=${LFS_TARGET}-gcc</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 

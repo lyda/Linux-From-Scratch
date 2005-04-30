@@ -52,9 +52,9 @@ command like this: <userinput>time { ./configure ... &amp;&amp; ...
 
 <para>Now prepare Binutils for compilation:</para>
 
-<screen><userinput>../binutils-&binutils-version;/configure \
-     --prefix=/tools --host=${LFS_TARGET} --disable-nls --enable-shared \
-     --enable-64-bit-bfd</userinput></screen>
+<screen><userinput>../binutils-&binutils-version;/configure --prefix=/tools \
+     --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
+     --disable-nls --enable-shared --enable-64-bit-bfd</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 

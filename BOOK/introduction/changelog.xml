@@ -100,6 +100,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Removed libidn from glibc builds in cross-tools.</para></listitem>
 <listitem><para>Removed --host --build from temp-system.</para></listitem>
 <listitem><para>Removed the /tools/lib/lfstarget file.</para></listitem>
+<listitem><para>Updates from Ryan's updated scripts.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

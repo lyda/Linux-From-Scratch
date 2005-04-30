@@ -36,9 +36,9 @@ the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-posix-1.patch</userinput></screen>
 
-<!-- This patch may or may not be needed testing needs to be done
-patch -Np1 -i ../gcc-&gcc-version;-fix_configure_for_target_native-1.patch
--->
+<para>Fixes configure logic when target triplet = target triplet:</para>
+
+<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-fix_configure_for_target_native-1.patch</userinput></screen>
 
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
@@ -56,6 +56,11 @@ system headers, so it won't look at the host's headers:</para>
 
 <screen><userinput>sed -i 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
    gcc/Makefile.in</userinput></screen>
+
+<para>User our cross-complier instead of the one gcc builds, named xgcc:</para>
+
+<screen><userinput>sed -i "s@\./xgcc@/tools/bin/${LFS_TARGET}-gcc@g" \
+   gcc/mklibgcc.in</userinput></screen>
 
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>
