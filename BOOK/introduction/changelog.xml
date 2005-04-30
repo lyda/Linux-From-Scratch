@@ -106,6 +106,17 @@ first a summary, then a detailed log.</para>
 </itemizedlist>
 
 <itemizedlist>
+<listitem><para>April 30, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Removed building of texinfo in chapter 6 (matching the scripts).</para></listitem>
+<listitem><para>Moved building of perl in chapter 6 to chapter 9 (Puts it in same place as other tools needed for
+testing, and means that it won't be cross-compiled).</para></listitem>
+<listitem><para>Changed chapter 6 ncurses build flags back to --with-build-cc=gcc to match the target scripts.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>April 29, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Swapped --host and --build for glibc in cross-tools, minor changes to gcc.</para></listitem>

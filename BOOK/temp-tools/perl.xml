@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-temp-system-perl" role="wrap">
+<sect1 id="ch-temp-tools-perl" role="wrap">
 <title>Perl-&perl-version;</title>
 <?dbhtml filename="perl.html"?>
 
-<indexterm zone="ch-temp-system-perl">
+<indexterm zone="ch-temp-tools-perl">
 <primary sortas="a-Perl">Perl</primary>
 <secondary>temporary system</secondary></indexterm>
 
