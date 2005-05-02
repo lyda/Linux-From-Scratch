@@ -99,6 +99,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>Added fix_test patch to final glibc build.</para></listitem>
 <listitem><para>Added sed to shared and final cross gcc to fix libgcc_s.so search path (thanks Eric-Jan).</para></listitem>
 <listitem><para>Removed stale reference to libidn in glibc-headers section.</para></listitem>
+<listitem><para>Reverted build instructions for temp util-linux and final ncurses.</para></listitem>
+<listitem><para>Removed kernel headers patch for inet-utils - fixed with linux-libc-headers-2.6.11.2.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
