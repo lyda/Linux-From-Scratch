@@ -94,13 +94,11 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
-<listitem><para>April 29, 2005 [jim]</para>
+<listitem><para>May 1, 2005 [jhuntwork]</para>
 <itemizedlist>
-<listitem><para>Updated gcc builds in cross-tools, to match cross-lfs scripts.</para></listitem>
-<listitem><para>Removed libidn from glibc builds in cross-tools.</para></listitem>
-<listitem><para>Removed --host --build from temp-system.</para></listitem>
-<listitem><para>Removed the /tools/lib/lfstarget file.</para></listitem>
-<listitem><para>Updates from Ryan's updated scripts.</para></listitem>
+<listitem><para>Added fix_test patch to final glibc build.</para></listitem>
+<listitem><para>Added sed to shared gcc to fix libgcc_s.so search path (thanks Eric-Jan).</para></listitem>
+<listitem><para>Removed stale reference to libidn in glibc-headers section.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
@@ -117,6 +115,17 @@ testing, and means that it won't be cross-compiled).</para></listitem>
 </itemizedlist>
 
 <itemizedlist>
+<listitem><para>April 29, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated gcc builds in cross-tools, to match cross-lfs scripts.</para></listitem>
+<listitem><para>Removed libidn from glibc builds in cross-tools.</para></listitem>
+<listitem><para>Removed --host --build from temp-system.</para></listitem>
+<listitem><para>Removed the /tools/lib/lfstarget file.</para></listitem>
+<listitem><para>Updates from Ryan's updated scripts.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
 <listitem><para>April 29, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Swapped --host and --build for glibc in cross-tools, minor changes to gcc.</para></listitem>

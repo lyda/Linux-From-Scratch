@@ -54,10 +54,15 @@ location:</para>
 <screen><userinput>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver \
    gcc/config/t-libunwind</userinput></screen>
 
-<para>No disable -B in Makefile.in, so it doesn't pick up the host's header
+<para>Now disable -B in Makefile.in, so it doesn't pick up the host's header
 files:</para>
 
 <screen><userinput>sed -i '/FLAGS_FOR_TARGET.*\/lib\//s@-B[^ ]*/lib/@@g' configure configure.in</userinput></screen>
+
+<para>Finally, we change the hard-coded "/usr/lib" found in gcc/gcc.c to "/tools/lib",
+ensuring that gcc doesn't find and use a libgcc_s.so that may exist on the host machine:</para>
+
+<screen <userinput>sed -i "/standard_exec_prefix_/s@/usr@/tools@g" gcc/gcc.c</screen></userinput>
 
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>
