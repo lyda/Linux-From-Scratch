@@ -1,3 +1,6 @@
+3.2.1 - May 1, 2005
+	* Tagged as 3.2.1 (Nathan Coulson)
+
 n/a - April 17, 2005
 	* removed touch from hotplug bootscript (Matthew Burgess)
 	* moved commands around in localnet bootscript (Andrew Benton)
