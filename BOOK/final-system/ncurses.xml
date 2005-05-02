@@ -31,8 +31,8 @@ Gawk, GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 
 <para>Prepare Ncurses for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --with-shared \
---without-debug</userinput></screen>
+<screen><userinput>./configure --prefix=/usr --libdir=/lib \
+--with-shared --without-debug</userinput></screen>
 
 <para>Compile the package:</para>
 
@@ -42,13 +42,13 @@ Gawk, GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Move the Ncurses shared libraries to the proper locations:</para>
+<para>Move the Ncurses static libraries to the proper locations:</para>
 
-<screen><userinput>mv /usr/lib/lib{panel,menu,form,ncurses}.so.5* /lib</userinput></screen>
+<screen><userinput>mv /lib/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib</userinput></screen>
 
 <para>Create symlinks in <filename class="directory">/usr/lib:</filename></para>
 
-<screen><userinput>rm /usr/lib/lib{ncurses,menu,panel,form}.so
+<screen><userinput>rm /lib/lib{ncurses,menu,panel,form}.so
 ln -sf ../../lib/libncurses.so.5 /usr/lib/libncurses.so
 ln -sf ../../lib/libmenu.so.5 /usr/lib/libmenu.so
 ln -sf ../../lib/libpanel.so.5 /usr/lib/libpanel.so
