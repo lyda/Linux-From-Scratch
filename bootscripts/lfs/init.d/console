@@ -1,0 +1,50 @@
+#!/bin/sh
+########################################################################
+# Begin $rc_base/init.d/console
+#
+# Description : Sets keymap and screen font
+#
+# Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
+#		Alexander E. Patrakov
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
+
+. /etc/sysconfig/rc
+. ${rc_functions}
+
+# Native English speakers probably don't have /etc/sysconfig/console at all
+if [ -f /etc/sysconfig/console ]; then
+	. /etc/sysconfig/console
+fi
+
+case "${1}" in
+	start)
+		if [ -n "${KEYMAP}" ]; then
+			boot_mesg "Loading keymap: ${KEYMAP}..."
+			loadkeys ${KEYMAP} &>/dev/null
+			evaluate_retval
+		fi
+
+		if [ -n "${KEYMAP_CORRECTIONS}" ]; then
+			boot_mesg "Loading keymap corrections: ${KEYMAP_CORRECTIONS}..."
+			loadkeys ${KEYMAP_CORRECTIONS} &>/dev/null
+			evaluate_retval
+		fi
+
+		if [ -n "${FONT}" ]; then
+			boot_mesg "Setting screen font to ${FONT}..."
+			setfont $FONT &>/dev/null
+			evaluate_retval
+		fi
+		;;
+	*)
+		echo "Usage: ${0} {start}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/console

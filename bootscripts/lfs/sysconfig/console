@@ -1,0 +1,86 @@
+########################################################################
+# Begin /etc/sysconfig/console
+#
+# Description : Console script config file
+#
+# Authors     : Alexander E. Patrakov
+#
+# Version     : 00.00
+#
+# Notes       : Uncomment the section corresponding to your country
+#
+########################################################################
+
+# US-English users don't need this file at all, except when they
+# use framebuffer console.
+# For framebuffer users from USA or Australia:
+#
+# FONT="default8x16"
+# WARNING: this is not the same as the kernel default font!
+
+# Users from Great Britain:
+#
+# KEYMAP="uk"
+# FONT="lat1-16"
+
+# Belarussian users need to download additional fonts (TODO)
+
+# Belgium, with Euro character (information from Belgian-HOWTO)
+#
+# KEYMAP="be-latin1"
+# KEYMAP_CORRECTIONS="euro"
+# FONT="lat9-16 -u lat1"
+
+# Chinese is not supported by LFS and needs special tools
+
+# Czechia
+#
+# KEYMAP="cz-lat2"
+# FONT="lat2-16"
+
+# Hungary
+#
+# KEYMAP="hu"
+# FONT="lat2-16"
+
+# Latvian users need to download additional files from
+# http://linux.ma-1.lv/ll10nt/Latvian-HOWTO/files/konsole-files.tar.gz
+
+# Russia, one of many variants actually used
+# See the book for the contents of /etc/kbd/bs-sends-del
+#
+# KEYMAP="ru-ms"
+# KEYMAP_CORRECTIONS="/etc/kbd/bs-sends-del"
+# FONT="cp866-8x16 -m koi2alt"
+
+# Serbia (latin)
+# Need to download:
+# http://gd.tuwien.ac.at/opsys/linux/Owl/pool/sources/console-tools/kbd-sr.map.gz
+# and put it into /usr/share/kbd/keymaps/i386/qwertz/sr.map.gz
+#
+# KEYMAP="sr"
+# FONT="lat2-16"
+
+# TODO: add Serbian Cyrillic settings
+
+# Spain, with Euro character (information from
+# http://www.linuxforum.com/forums/index.php?showtopic=14590)
+#
+# KEYMAP="es"
+# KEYMAP_CORRECTIONS="euro"
+# FONT="lat9-16 -u lat1"
+
+# Slovenia
+#
+# KEYMAP="slovene"
+# FONT="lat2-16"
+
+# Croatia
+#
+# KEYMAP="croat"
+# FONT="lat2-16"
+
+# TODO: for Slovakia, there are four variants
+
+
+# End /etc/sysconfig/console

@@ -1,0 +1,25 @@
+########################################################################
+# Begin /etc/sysconfig/rc
+#
+# Description : rc script configuration file - Interactive Version
+#
+# Authors     :
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
+
+rc_base=/etc/rc.d
+rc_functions=${rc_base}/init.d/functions
+network_devices=/etc/sysconfig/network-devices
+
+# Setup for interactive startup
+DISTRO="Linux From Scratch"
+ITIME="2"
+PTAB="22"
+IPROMPT="yes"
+# End setup for interactive
+
+# End /etc/sysconfig/rc

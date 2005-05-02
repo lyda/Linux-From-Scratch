@@ -1,0 +1,31 @@
+#!/bin/sh
+##################################################################
+# Begin $rc_base/init.d/mountsqfs
+#
+# Description : Mounts squashed usr dir on livecd
+#
+# Authors     : Jeremy Huntwork, jhuntwork@linuxfromscratch.org
+#
+# Date 	      : 2005-01-26
+#
+##################################################################
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case "$1" in
+	start)
+		cd /
+		boot_mesg "Mounting squashed usr directory..."
+		mkdir /usr
+		mount -t squashfs /.cdrom/usr.sqfs /usr -o loop
+		echo_ok
+		;;
+
+	*)
+		echo "Usage: $0 {start}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/
