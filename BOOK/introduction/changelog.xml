@@ -94,6 +94,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>May 2, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Fixed Grub instructions (stages kept in /usr/lib/grub now).</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>May 1, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Added fix_test patch to final glibc build.</para></listitem>

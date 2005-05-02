@@ -56,7 +56,7 @@ workstations.</para>
 
 <screen><userinput>make install
 mkdir /boot/grub
-cp /usr/share/grub/i386-pc/stage{1,2} /boot/grub</userinput></screen>
+cp /usr/lib/grub/i386-pc/stage{1,2} /boot/grub</userinput></screen>
 
 <para>Replace <filename class="directory">i386-pc</filename> with whatever
 directory is appropriate for the hardware in use.</para>
