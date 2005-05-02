@@ -126,6 +126,7 @@ testing, and means that it won't be cross-compiled).</para></listitem>
 </listitem>
 </itemizedlist>
 
+<itemizedlist>
 <listitem><para>April 29, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Swapped --host and --build for glibc in cross-tools, minor changes to gcc.</para></listitem>
