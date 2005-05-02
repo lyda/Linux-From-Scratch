@@ -62,7 +62,7 @@ files:</para>
 <para>Finally, we change the hard-coded "/usr/lib" found in gcc/gcc.c to "/tools/lib",
 ensuring that gcc doesn't find and use a libgcc_s.so that may exist on the host machine:</para>
 
-<screen <userinput>sed -i "/standard_exec_prefix_/s@/usr@/tools@g" gcc/gcc.c</screen></userinput>
+<screen><userinput>sed -i "/standard_exec_prefix_/s@/usr@/tools@g" gcc/gcc.c</screen></userinput>
 
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>
