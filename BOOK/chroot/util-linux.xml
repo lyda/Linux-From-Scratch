@@ -35,22 +35,23 @@ directory. This is fixed by altering the configure script:</para>
 
 <para>Prepare Util-linux for compilation:</para>
 
-<screen><userinput>./configure --host=${LFS_TARGET}</userinput></screen>
+<screen><userinput>./configure</userinput></screen>
 
 <para>Compile some support routines:</para>
 
-<screen><userinput>make -C lib</userinput></screen>
+<screen><userinput>make ARCH="" CPU="" -C lib</userinput></screen>
 
 <para>Since only a couple of the utilities contained in this package
 are needed, build only those:</para>
 
-<screen><userinput>make -C mount mount umount</userinput></screen>
+<screen><userinput>make ARCH="" CPU="" -C mount mount umount
+make ARCH="" CPU="" -C text-utils more</userinput></screen>
 
 <para>This package does not come with a test suite.</para>
 
 <para>Copy these programs to the temporary tools directory:</para>
 
-<screen><userinput>cp mount/{,u}mount /tools/bin</userinput></screen>
+<screen><userinput>cp mount/{,u}mount text-utils/more /tools/bin</userinput></screen>
 
 </sect2>
 

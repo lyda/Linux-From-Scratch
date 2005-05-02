@@ -30,8 +30,8 @@
 <para>Prepare Ncurses for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools --with-shared \
-   --host=${LFS_TARGET} --without-debug \
-   --with-build-cc=gcc</userinput></screen>
+   --host=${LFS_TARGET} --without-debug --without-ada \
+   --enable-overwrite --with-build-cc=gcc</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
