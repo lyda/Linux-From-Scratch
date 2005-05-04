@@ -102,7 +102,7 @@ hr {
       </div>
       <div class="toc">
         <h3>
-          <xsl:text>Choose your architecture</xsl:text>
+          <xsl:text>Choose the architecture of your target machine</xsl:text>
         </h3>
         <ul>
           <li>
@@ -114,25 +114,11 @@ hr {
           </li>
           <li>
             <h4>
-              <a href="alpha">
-                <xsl:text>Alpha</xsl:text>
-              </a>
-	    </h4>
-	  </li>
-          <li>
-            <h4>
               <a href="ppc">
                 <xsl:text>PowerPC</xsl:text>
               </a>
 	    </h4>
 	  </li>
-          <li>
-            <h4>
-              <a href="raq2">
-                <xsl:text>Colbalt RaQ2/Cube2</xsl:text>
-              </a>
-            </h4>
-          </li>
         </ul>
       </div>
     </div>

@@ -1,41 +1,9 @@
 BASEDIR=~/lfs-book
 CHUNK_QUIET=0
-PDF_OUTPUT=LFS-BOOK.pdf
-NOCHUNKS_OUTPUT=LFS-BOOK.html
+PDF_OUTPUT=LFS-BOOK-$(ARCH).pdf
+NOCHUNKS_OUTPUT=LFS-BOOK-$(ARCH).html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
 ARCH=x86
-
-# --Setup to only make one arch, for testing of the cross-tools
-all: testing
-
-testing:
-	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch x86 \
-	 -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/ \
-	stylesheets/lfs-chunked.xsl index.xml
-
-	if [ ! -e $(BASEDIR)/stylesheets ]; then \
-	 mkdir -p $(BASEDIR)/stylesheets; \
-	fi;
-	cp stylesheets/*.css $(BASEDIR)/stylesheets
-
-	if [ ! -e $(BASEDIR)/images ]; then \
-	 mkdir -p $(BASEDIR)/images; \
-	fi;
-	cp $(XSLROOTDIR)/images/*.png \
-	 $(BASEDIR)/images
-	cd $(BASEDIR)/; sed -i -e "s@../stylesheets@stylesheets@g" \
-	 *.html
-	cd $(BASEDIR)/; sed -i -e "s@../images@images@g" \
-	 *.html
-
-	for filename in `find $(BASEDIR) -name "*.html"`; do \
-	 tidy -config tidy.conf $$filename; \
-	 true; \
-	done;
-
-	for filename in `find $(BASEDIR) -name "*.html"`; do \
-	 sed -i -e "s@text/html@application/xhtml+xml@g" $$filename; \
-	done;
 
 lfs:
 # top-level index.html
@@ -43,7 +11,8 @@ lfs:
 
 # x86
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch x86 \
-	  -stringparam base.dir $(BASEDIR)/x86/ stylesheets/lfs-chunked.xsl index.xml
+	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/x86/ \
+		stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/x86/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/x86/stylesheets; \
@@ -62,13 +31,14 @@ lfs:
 
 # alpha
 #	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch alpha \
-#	  -stringparam base.dir $(BASEDIR)/alpha/ stylesheets/lfs-chunked.xsl index.xml
-#
+#	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/alpha/ \
+#		stylesheets/lfs-chunked.xsl index.xml
+
 #	if [ ! -e $(BASEDIR)/alpha/stylesheets ]; then \
 #	  mkdir -p $(BASEDIR)/alpha/stylesheets; \
 #	fi;
 #	cp stylesheets/*.css $(BASEDIR)/alpha/stylesheets
-#
+
 #	if [ ! -e $(BASEDIR)/alpha/images ]; then \
 #	  mkdir -p $(BASEDIR)/alpha/images; \
 #	fi;
@@ -78,35 +48,37 @@ lfs:
 #	  *.html
 #	cd $(BASEDIR)/alpha/; sed -i -e "s@../images@images@g" \
 #	  *.html
-#
+
 # ppc
-#	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch ppc \
-#	  -stringparam base.dir $(BASEDIR)/ppc/ stylesheets/lfs-chunked.xsl index.xml
-#
-#	if [ ! -e $(BASEDIR)/ppc/stylesheets ]; then \
-#	  mkdir -p $(BASEDIR)/ppc/stylesheets; \
-#	fi;
-#	cp stylesheets/*.css $(BASEDIR)/ppc/stylesheets
-#
-#	if [ ! -e $(BASEDIR)/ppc/images ]; then \
-#	  mkdir -p $(BASEDIR)/ppc/images; \
-#	fi;
-#	cp $(XSLROOTDIR)/images/*.png \
-#	  $(BASEDIR)/ppc/images
-#	cd $(BASEDIR)/ppc/; sed -i -e "s@../stylesheets@stylesheets@g" \
-#	  *.html
-#	cd $(BASEDIR)/ppc/; sed -i -e "s@../images@images@g" \
-#	  *.html
-#
+	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch ppc \
+	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/ppc/ \
+		stylesheets/lfs-chunked.xsl index.xml
+
+	if [ ! -e $(BASEDIR)/ppc/stylesheets ]; then \
+	  mkdir -p $(BASEDIR)/ppc/stylesheets; \
+	fi;
+	cp stylesheets/*.css $(BASEDIR)/ppc/stylesheets
+
+	if [ ! -e $(BASEDIR)/ppc/images ]; then \
+	  mkdir -p $(BASEDIR)/ppc/images; \
+	fi;
+	cp $(XSLROOTDIR)/images/*.png \
+	  $(BASEDIR)/ppc/images
+	cd $(BASEDIR)/ppc/; sed -i -e "s@../stylesheets@stylesheets@g" \
+	  *.html
+	cd $(BASEDIR)/ppc/; sed -i -e "s@../images@images@g" \
+	  *.html
+
 # raq2
 #	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch raq2 \
-#	  -stringparam base.dir $(BASEDIR)/raq2/ stylesheets/lfs-chunked.xsl index.xml
+#	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/raq2/ \
+#		stylesheets/lfs-chunked.xsl index.xml
 #
 #	if [ ! -e $(BASEDIR)/raq2/stylesheets ]; then \
 #	  mkdir -p $(BASEDIR)/raq2/stylesheets; \
 #	fi;
 #	cp stylesheets/*.css $(BASEDIR)/raq2/stylesheets
-#
+
 #	if [ ! -e $(BASEDIR)/raq2/images ]; then \
 #	  mkdir -p $(BASEDIR)/raq2/images; \
 #	fi;
@@ -116,7 +88,7 @@ lfs:
 #	  *.html
 #	cd $(BASEDIR)/raq2/; sed -i -e "s@../images@images@g" \
 #	  *.html
-#
+
 # common stuff
 	for filename in `find $(BASEDIR) -name "*.html"`; do \
 	  tidy -config tidy.conf $$filename; \
@@ -129,29 +101,30 @@ lfs:
 
 html:
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch $(ARCH) \
-	  -stringparam base.dir $(BASEDIR)/ stylesheets/lfs-chunked.xsl index.xml
+	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/$(ARCH)/ \
+		stylesheets/lfs-chunked.xsl index.xml
 
-	if [ ! -e $(BASEDIR)/stylesheets ]; then \
-	  mkdir -p $(BASEDIR)/stylesheets; \
+	if [ ! -e $(BASEDIR)/$(ARCH)/stylesheets ]; then \
+	  mkdir -p $(BASEDIR)/$(ARCH)/stylesheets; \
 	fi;
-	cp stylesheets/*.css $(BASEDIR)/stylesheets
+	cp stylesheets/*.css $(BASEDIR)/$(ARCH)/stylesheets
 
-	if [ ! -e $(BASEDIR)/images ]; then \
-	  mkdir -p $(BASEDIR)/images; \
+	if [ ! -e $(BASEDIR)/$(ARCH)/images ]; then \
+	  mkdir -p $(BASEDIR)/$(ARCH)/images; \
 	fi;
 	cp $(XSLROOTDIR)/images/*.png \
-	  $(BASEDIR)/images
-	cd $(BASEDIR)/; sed -i -e "s@../stylesheets@stylesheets@g" \
+	  $(BASEDIR)/$(ARCH)/images
+	cd $(BASEDIR)/$(ARCH)/; sed -i -e "s@../stylesheets@stylesheets@g" \
 	  *.html
-	cd $(BASEDIR)/; sed -i -e "s@../images@images@g" \
+	cd $(BASEDIR)/$(ARCH)/; sed -i -e "s@../images@images@g" \
 	  *.html
 
-	for filename in `find $(BASEDIR) -name "*.html"`; do \
+	for filename in `find $(BASEDIR)/$(ARCH) -name "*.html"`; do \
 	  tidy -config tidy.conf $$filename; \
 	  true; \
 	done;
 
-	for filename in `find $(BASEDIR) -name "*.html"`; do \
+	for filename in `find $(BASEDIR)/$(ARCH)/ -name "*.html"`; do \
 	  sed -i -e "s@text/html@application/xhtml+xml@g" $$filename; \
 	done;
 
@@ -184,9 +157,9 @@ validate:
 	xmllint --noout --nonet --postvalid index-x86.xml
 
 # alpha
-	xsltproc --xinclude --nonet -stringparam profile.arch alpha \
-		 --output index-alpha.xml stylesheets/lfs-profile.xsl index.xml
-	xmllint --noout --nonet --postvalid index-alpha.xml
+#	xsltproc --xinclude --nonet -stringparam profile.arch alpha \
+#		 --output index-alpha.xml stylesheets/lfs-profile.xsl index.xml
+#	xmllint --noout --nonet --postvalid index-alpha.xml
 
 # ppc
 	xsltproc --xinclude --nonet -stringparam profile.arch ppc \
@@ -194,9 +167,9 @@ validate:
 	xmllint --noout --nonet --postvalid index-ppc.xml
 
 # raq2
-	xsltproc --xinclude --nonet -stringparam profile.arch raq2 \
-		 --output index-raq2.xml stylesheets/lfs-profile.xsl index.xml
-	xmllint --noout --nonet --postvalid index-raq2.xml
+#	xsltproc --xinclude --nonet -stringparam profile.arch raq2 \
+#		 --output index-raq2.xml stylesheets/lfs-profile.xsl index.xml
+#	xmllint --noout --nonet --postvalid index-raq2.xml
 
 # clean-up
 	rm index-x86.xml index-alpha.xml index-ppc.xml index-raq2.xml

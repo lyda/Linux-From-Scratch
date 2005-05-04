@@ -96,6 +96,16 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>May 4, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Fixed CC variable used in glibc headers.</para></listitem>
+<listitem><para>Added ppc specific info to glibc headers build.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+
+<itemizedlist>
 <listitem><para>May 2, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Fixed Grub instructions (stages kept in /usr/lib/grub now).</para></listitem>

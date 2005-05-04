@@ -22,8 +22,6 @@
   href="linux-libc-headers.xml"
   xpointer="xpointer(/sect1/sect2[@role='installation']/para[1])"/>
 
-<para>Install the header files:</para>
-
 <screen><userinput>install -d /tools/include
 cp -R include/asm-ppc /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
