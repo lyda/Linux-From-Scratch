@@ -61,6 +61,7 @@ first a summary, then a detailed log.</para>
 
 <listitem><para>Added:</para>
 <itemizedlist>
+<listitem><para>Arch: All - gcc-3.4.3-cross_search_paths-1.patch</para></listitem>
 <listitem><para>Arch: All - glibc-2.3.5-fix_test-1.patch</para></listitem>
 <listitem><para>Arch: All - grep-2.5.1a-raq2_config_update-1.patch</para></listitem>
 <listitem><para>Arch: All - tar-1.15.1-sparse_fix-1.patch</para></listitem>
@@ -100,6 +101,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Fixed CC variable used in glibc headers.</para></listitem>
 <listitem><para>Added ppc specific info to glibc headers build.</para></listitem>
+<listitem><para>Added patch for gcc to fix gcc.c's search paths.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

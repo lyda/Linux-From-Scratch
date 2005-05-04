@@ -37,6 +37,11 @@ the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-posix-1.patch</userinput></screen>
 
+<para>Now, we change the hard-coded "/usr/" found in gcc/gcc.c to "/cross-tools/",     
+ensuring that gcc doesn't find and use a libgcc_s.so that may exist on the host machine:</para>
+
+<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-cross_search_paths-1.patch</userinput></screen>
+
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
 
@@ -49,15 +54,10 @@ location:</para>
 <screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
   gcc/Makefile.in</userinput></screen>
 
-<para>Now disable -B in Makefile.in, so it doesn't pick up the host's header
+<para>Finally, disable -B in Makefile.in, so it doesn't pick up the host's header
 files:</para>
 
 <screen><userinput>sed -i '/FLAGS_FOR_TARGET.*\/lib\//s@-B[^ ]*/lib/@@g' configure configure.in</userinput></screen>
-
-<para>Finally, we change the hard-coded "/usr/lib" found in gcc/gcc.c to "/tools/lib",
-ensuring that gcc doesn't find and use a libgcc_s.so that may exist on the host machine:</para>
-
-<screen><userinput>sed -i "/standard_exec_prefix_/s@/usr@/tools@g" gcc/gcc.c</userinput></screen>
 
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>
