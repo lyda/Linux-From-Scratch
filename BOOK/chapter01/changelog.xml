@@ -89,6 +89,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>May 5, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Removed: Arch: All - Inetutils Kernel Header patch, not needed any more.</para></listitem>
+<listitem><para>Updated: Arch: All - Linux to 2.6.11.8.</para></listitem>
 </itemizedlist>
 </listitem>
 
