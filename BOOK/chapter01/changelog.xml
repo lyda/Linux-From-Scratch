@@ -94,6 +94,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Fixed: Arch: RaQ2 - Missing linux patch.</para></listitem>
 </itemizedlist>
 </listitem>
+</itemizedlist>
 
 <itemizedlist>
 <listitem><para>April 26, 2005 [jim]</para>
@@ -101,8 +102,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>Updated: Arch: All - Libtool to 1.5.16.</para></listitem>
 </itemizedlist>
 </listitem>
-
 </itemizedlist>
+	
 <itemizedlist>
 <listitem><para>April 24, 2005 [jim]</para>
 <itemizedlist>
