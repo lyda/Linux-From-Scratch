@@ -50,13 +50,13 @@ cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<para arch="alpha;ppc;x86;">For NPTL enabled systems we will need to add the following lines to config.cache</para>
-<screen><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
+<para arch="ppc;x86;">For NPTL enabled systems we will need to add the following lines to config.cache</para>
+<screen arch="ppc;x86;"><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
 echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
 
-<para arch="alpha;ppc;x86;">To create NPTL Startfiles use the following configure line:</para>
+<para arch="ppc;x86;">To create NPTL Startfiles use the following configure line:</para>
 
-<screen arch="alpha;ppc;x86;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
+<screen arch="ppc;x86;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
