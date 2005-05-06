@@ -30,7 +30,7 @@
 <!ENTITY autoconf-version "2.59">
 <!ENTITY automake-version "1.9.5">
 <!ENTITY bash-version "3.0">
-<!ENTITY binutils-version "2.15.94.0.2.2">
+<!ENTITY binutils-version "2.16">
 <!ENTITY bison-version "2.0">
 <!ENTITY bzip2-version "1.0.3">
 <!ENTITY colo-version "1.17">
@@ -59,7 +59,7 @@
 <!ENTITY less-version "382">
 <!ENTITY lfs-bootscripts-version "3.2.1">
 <!ENTITY libtool-version "1.5.10">
-<!ENTITY linux-version "2.6.11.7">
+<!ENTITY linux-version "2.6.11.8">
 <!ENTITY linux-dl-version "2.6">
 <!ENTITY linux-alpha-version "2.6.11.7">
 <!ENTITY linux-ppc-version "2.6.11.7">

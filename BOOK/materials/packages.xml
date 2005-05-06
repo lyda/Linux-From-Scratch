@@ -35,7 +35,7 @@
 <varlistentry>
 <term>Binutils (&binutils-version;) - 11 MB:</term>
 <listitem>
-<para><ulink url="&kernel;linux/devel/binutils/binutils-&binutils-version;.tar.bz2"/></para>
+<para><ulink url="&gnu;binutils/binutils-&binutils-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
