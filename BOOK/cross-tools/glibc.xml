@@ -38,17 +38,20 @@ unset them when building Glibc.</para>
 the method suggested in this book puts the stability of the system at
 risk.</para>
 
-<para arch="raq2">Unpack the glibc-linuxthreads-&glibc-version; <emphasis>and</emphasis>
-tarball -- it will unfold into the same directory.</para>
+<para arch="raq2;sparc;">This architecture does not currently support NPTL,
+so we will have to include Glibc Linuxthreads as a threading library.
+Building for a Linuxthreads based glibc you will need to
+unpack the glibc-linuxthreads-&glibc-version; tarball from
+within the glibc-&glibc-version; directory.</para>
 
 <para arch="raq2">The following patch corrects the building of syscall.h:</para>
 
 <screen arch="raq2"><userinput>patch -Np1 -i ../glibc-&glibc-version;-mips_syscall-1.patch</userinput></screen>
 
-<para arch="raq2">NPTL is not supported under this architecture, so we are going to
+<para arch="raq2;sparc;">NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
 
-<screen arch="raq2"><userinput>rm -rf nptl*</userinput></screen>
+<screen arch="raq2;sparc;"><userinput>rm -rf nptl*</userinput></screen>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
@@ -56,14 +59,14 @@ directory in a dedicated build directory:</para>
 <screen><userinput>mkdir ../glibc-build
 cd ../glibc-build</userinput></screen>
 
-<para arch="alpha;ppc;x86;">For NPTL enabled systems we will need to add the following lines to config.cache</para>
+<para arch="ppc;x86;">For NPTL enabled systems we will need to add the following lines to config.cache</para>
 
-<screen arch="alpha;ppc;x86"><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
+<screen arch="ppc;x86"><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
 echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen arch="alpha;ppc;x86;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
+<screen arch="ppc;x86;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
@@ -72,12 +75,13 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
 
-<screen arch="raq2"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
+<screen arch="raq2;sparc;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
     --without-cvs --disable-profile --enable-add-ons \
-    --with-binutils=/cross-tools/bin --with-headers=/tools/include</userinput></screen>
+    --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
+    --with-headers=/tools/include</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
