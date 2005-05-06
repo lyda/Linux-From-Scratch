@@ -101,6 +101,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Created sparc specific linux-libc-headers page.</para></listitem>
 <listitem><para>Updated sparc commands for glibc-headers.</para></listitem>
+<listitem><para>Updated text concerning linuxthreads.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
