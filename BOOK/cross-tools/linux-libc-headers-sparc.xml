@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-cross-tools-linux-libc-headers" role="wrap" arch="alpha">
+<sect1 id="ch-cross-tools-linux-libc-headers" role="wrap" arch="sparc">
 <title>Linux-Libc-Headers-&linux-libc-headers-alpha-version;</title>
 <?dbhtml filename="linux-libc-headers.html"?>
 
@@ -25,7 +25,7 @@
 <para>Install the header files:</para>
 
 <screen><userinput>install -d /tools/include
-cp -R include/asm-alpha /tools/include/asm
+cp -R include/asm-sparc /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
 
 </sect2>
