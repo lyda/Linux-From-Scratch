@@ -79,10 +79,18 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: All - udev-config-2.permissions</para></listitem>
 <listitem><para>Arch: All - iproute2-2.6.11-050330-remove_db-1.patch</para></listitem>
 <listitem><para>Arch: All - sysvinit-2.85-proclen-1.patch</para></listitem>
+<listitem><para>Arch: All - inetutils-1.4.2-kernel_headers-1.patch</para></listitem>
 </itemizedlist>
 </listitem>
 
 <listitem><para>Changelog Entries:</para>
+
+<itemizedlist>
+<listitem><para>May 5, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Removed: Arch: All - Inetutils Kernel Header patch, not needed any more.</para></listitem>
+</itemizedlist>
+</listitem>
 
 <itemizedlist>
 <listitem><para>April 26, 2005 [jim]</para>
