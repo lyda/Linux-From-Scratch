@@ -62,7 +62,7 @@ cd ../glibc-build</userinput></screen>
 
 <screen arch="ppc;"><userinput>CC="${CC-gcc}" ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} --without-cvs \
-    --disable-sanity-checks --enable-kernel=2.6.0 \ 
+    --disable-sanity-checks --enable-kernel=2.6.0 \
     --with-headers=/tools/include \
     --with-binutils=/cross-tools/${LFS_TARGET}/bin \
     --cache-file=config.cache</userinput></screen>

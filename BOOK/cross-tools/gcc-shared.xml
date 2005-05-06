@@ -84,7 +84,7 @@ cd ../gcc-build</userinput></screen>
 
 <variablelist>
 <varlistentry>
-<term><parameter>--with-local-prefix=/cross-tools</parameter></term>
+<term><parameter>--with-local-prefix=/tools</parameter></term>
 <listitem><para>The purpose of this switch is to remove <filename class="directory">/usr/local/include</filename>
 from <command>gcc</command>'s include search path. This is not absolutely
 essential, however, it helps to minimize the influence of the host

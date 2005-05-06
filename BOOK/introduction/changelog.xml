@@ -97,6 +97,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>May 5, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Initial commit of sparc32 arch.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>May 4, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Fixed CC variable used in glibc headers.</para></listitem>

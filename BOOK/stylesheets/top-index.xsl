@@ -119,6 +119,13 @@ hr {
               </a>
 	    </h4>
 	  </li>
+	  <li>
+	    <h4>
+	     <a href="sparc">
+		<xsl:text>Sparc32</xsl:text>
+	     </a>
+	    </h4>
+	  </li>
         </ul>
       </div>
     </div>

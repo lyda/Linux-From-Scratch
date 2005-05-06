@@ -29,25 +29,25 @@ lfs:
 	cd $(BASEDIR)/x86/; sed -i -e "s@../images@images@g" \
 	  *.html
 
-# alpha
-#	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch alpha \
-#	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/alpha/ \
-#		stylesheets/lfs-chunked.xsl index.xml
+# sparc
+	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch sparc \
+	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/sparc/ \
+		stylesheets/lfs-chunked.xsl index.xml
 
-#	if [ ! -e $(BASEDIR)/alpha/stylesheets ]; then \
-#	  mkdir -p $(BASEDIR)/alpha/stylesheets; \
-#	fi;
-#	cp stylesheets/*.css $(BASEDIR)/alpha/stylesheets
+	if [ ! -e $(BASEDIR)/sparc/stylesheets ]; then \
+	  mkdir -p $(BASEDIR)/sparc/stylesheets; \
+	fi;
+	cp stylesheets/*.css $(BASEDIR)/sparc/stylesheets
 
-#	if [ ! -e $(BASEDIR)/alpha/images ]; then \
-#	  mkdir -p $(BASEDIR)/alpha/images; \
-#	fi;
-#	cp $(XSLROOTDIR)/images/*.png \
-#	  $(BASEDIR)/alpha/images
-#	cd $(BASEDIR)/alpha/; sed -i -e "s@../stylesheets@stylesheets@g" \
-#	  *.html
-#	cd $(BASEDIR)/alpha/; sed -i -e "s@../images@images@g" \
-#	  *.html
+	if [ ! -e $(BASEDIR)/sparc/images ]; then \
+	  mkdir -p $(BASEDIR)/sparc/images; \
+	fi;
+	cp $(XSLROOTDIR)/images/*.png \
+	  $(BASEDIR)/sparc/images
+	cd $(BASEDIR)/sparc/; sed -i -e "s@../stylesheets@stylesheets@g" \
+	  *.html
+	cd $(BASEDIR)/sparc/; sed -i -e "s@../images@images@g" \
+	  *.html
 
 # ppc
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch ppc \
