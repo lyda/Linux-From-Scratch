@@ -5,11 +5,12 @@ NOCHUNKS_OUTPUT=LFS-BOOK-$(ARCH).html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
 ARCH=x86
 
-lfs:
-# top-level index.html
+lfs: toplevel x86 sparc ppc common
+
+toplevel:
 	xsltproc --nonet --output $(BASEDIR)/index.html stylesheets/top-index.xsl prologue/bookinfo.xml
 
-# x86
+x86: 
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch x86 \
 	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/x86/ \
 		stylesheets/lfs-chunked.xsl index.xml
@@ -29,7 +30,7 @@ lfs:
 	cd $(BASEDIR)/x86/; sed -i -e "s@../images@images@g" \
 	  *.html
 
-# sparc
+sparc: 
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch sparc \
 	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/sparc/ \
 		stylesheets/lfs-chunked.xsl index.xml
@@ -49,7 +50,7 @@ lfs:
 	cd $(BASEDIR)/sparc/; sed -i -e "s@../images@images@g" \
 	  *.html
 
-# ppc
+ppc:
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch ppc \
 	  -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/ppc/ \
 		stylesheets/lfs-chunked.xsl index.xml
@@ -89,7 +90,7 @@ lfs:
 #	cd $(BASEDIR)/raq2/; sed -i -e "s@../images@images@g" \
 #	  *.html
 
-# common stuff
+common:
 	for filename in `find $(BASEDIR) -name "*.html"`; do \
 	  tidy -config tidy.conf $$filename; \
 	  true; \
@@ -174,3 +175,4 @@ validate:
 # clean-up
 	rm index-x86.xml index-sparc.xml index-ppc.xml index-raq2.xml
 
+.PHONY: lfs toplevel x86 sparc ppc html pdf nochunks validate
