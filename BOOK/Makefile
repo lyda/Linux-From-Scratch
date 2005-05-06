@@ -156,10 +156,10 @@ validate:
 		 --output index-x86.xml stylesheets/lfs-profile.xsl index.xml
 	xmllint --noout --nonet --postvalid index-x86.xml
 
-# alpha
-#	xsltproc --xinclude --nonet -stringparam profile.arch alpha \
-#		 --output index-alpha.xml stylesheets/lfs-profile.xsl index.xml
-#	xmllint --noout --nonet --postvalid index-alpha.xml
+# sparc
+	xsltproc --xinclude --nonet -stringparam profile.arch sparc \
+		 --output index-sparc.xml stylesheets/lfs-profile.xsl index.xml
+	xmllint --noout --nonet --postvalid index-alpha.xml
 
 # ppc
 	xsltproc --xinclude --nonet -stringparam profile.arch ppc \
@@ -172,5 +172,5 @@ validate:
 #	xmllint --noout --nonet --postvalid index-raq2.xml
 
 # clean-up
-	rm index-x86.xml index-alpha.xml index-ppc.xml index-raq2.xml
+	rm index-x86.xml index-sparc.xml index-ppc.xml index-raq2.xml
 
