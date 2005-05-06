@@ -41,9 +41,17 @@ the following patch:</para>
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
 
-<screen><userinput>echo "
+<screen arch="x86;raq2;"><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
 #define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
+
+<screen arch="sparc"><userinput>echo "
+#undef STARTFILE_PREFIX_SPEC
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/sparc/linux.h</userinput></screen>
+
+<screen arch="ppc"><userinput>echo "
+#undef STARTFILE_PREFIX_SPEC
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/rs6000/linux.h</userinput></screen>
 
 <para>Now we will change gcc's search path to look into /tools only:</para>
 

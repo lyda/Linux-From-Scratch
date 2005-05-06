@@ -103,6 +103,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Updated sparc commands for glibc-headers.</para></listitem>
 <listitem><para>Updated text concerning linuxthreads.</para></listitem>
 <listitem><para>Updated sparc commands for glibc-startfiles.</para></listitem>
+<listitem><para>Fixed startfile prefix commands to work with multiple archs.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
