@@ -99,7 +99,17 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
-<listitem><para>May 5, 2005 [jhuntwork]</para>
+<listitem><para>May 7, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Fixed version info for final linux-libc-headers (sparc).</para></listitem>
+<listitem><para>Removed glibc test patch for archs that do not use NPTL.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+
+<itemizedlist>
+<listitem><para>May 6, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Created sparc specific linux-libc-headers page.</para></listitem>
 <listitem><para>Updated sparc commands for cross-tools glibc.</para></listitem>

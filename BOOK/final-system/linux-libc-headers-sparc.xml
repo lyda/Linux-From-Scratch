@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-final-system-linux-libc-headers" role="wrap" arch="sparc">
-<title>Linux-Libc-Headers-&linux-libc-headers-sparc-version;</title>
+<title>Linux-Libc-Headers-&linux-libc-headers-version;</title>
 <?dbhtml filename="linux-libc-headers.html"?>
 
 <indexterm zone="ch-final-system-linux-libc-headers">
