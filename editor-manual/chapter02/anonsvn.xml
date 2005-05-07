@@ -15,7 +15,7 @@ that these assume you are using bash or a similar shell:</para>
 
 <para>This will "check out" the current revision of the LFS book into
 a directory named "lfs-trunk".  When you wish to update your local copy (often called a
-sandbox), simply cd into the directory and run:</para>
+working copy), simply cd into the directory and run:</para>
 
 <screen><userinput>svn up</userinput></screen>
 
