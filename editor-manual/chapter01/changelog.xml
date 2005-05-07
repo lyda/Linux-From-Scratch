@@ -33,7 +33,8 @@ first a summary, then a detailed log.</para>
     <itemizedlist>
      <listitem><para>Upgraded to DocBook 4.4.</para></listitem>
      <listitem><para>Added a changelog, stylesheets and a Makefile.</para></listitem>
-     <listitem><para>Updated text in the preface, swapped CVS for SVN.</para></listitem>
+     <listitem><para>Updated text in the preface, swapped CVS for Subversion.</para></listitem>
+     <listitem><para>Updated text in Chapter01/introduction.</para></listitem>
     </itemizedlist>
    </listitem>
   </itemizedlist>

@@ -12,12 +12,12 @@
 the mailing lists <userinput>lfs-book</userinput>,
 <userinput>lfs-dev</userinput> and (to a lesser extent) 
 <userinput>lfs-support</userinput>. Secondly the Bugzilla tracking
-system, and thirdly the CVS server where the book itself is
+system, and thirdly the Subversion server where the book itself is
 stored. All of these services are provided by the server
 <userinput>linuxfromscratch.org</userinput> also known as
 <userinput>belgarath.linuxfromscratch.org</userinput> or more usually,
 <userinput>belgarath</userinput>. This single server provides mailing
-lists, web hosting, CVS hosting, ftp hosting, the Bugzilla system and
+lists, web hosting, Subversion hosting, the Bugzilla system and
 basically everything we use to work on the LFS project.</para>
 
 <para>The actual LFS book itself is written using Docbook-XML and at
@@ -28,7 +28,8 @@ notice that it will reference the entity &amp;book;. Look up the entity
 <filename>book/book.xml</filename>. Continue in this way and you'll find
 your way around the book soon enough.</para>
 
-<para>The Bugzilla bug-tracking system for LFS can be found at <ulink url="http://bugs.linuxfromscratch.org"/>. In order to be able to
+<para>The Bugzilla bug-tracking system for LFS can be found at
+<ulink url="http://bugs.linuxfromscratch.org"/>. In order to be able to
 add, remove and edit bugs, you need to add an account and make sure you
 are logged in whenever you wish to perform such an action.  You can
 query and read the bug database without logging in or creating a user.
@@ -37,7 +38,7 @@ Note that all bugzilla messages are copied to the
 should be subscribed to this and the <userinput>lfs-dev</userinput>
 list at a minimum.</para>
 
-<para>Finally, there is the CVS server which will be discussed in the
+<para>Finally, there is the Subversion server which will be discussed in the
 following chapters.</para>
 
 </sect1>
