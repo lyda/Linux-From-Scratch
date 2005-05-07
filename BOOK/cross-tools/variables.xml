@@ -88,7 +88,7 @@ echo export LFS_TARGET=\""${LFS_TARGET}\"" >> ~/.bashrc</userinput></screen>
         </row>
         <row>
            <entry>PowerPC</entry>
-           <entry>ppc-unknown-linux-gnu</entry>
+           <entry>powerpc-unknown-linux-gnu</entry>
         </row>
         <row>
            <entry>PowerPC64</entry>
@@ -109,6 +109,14 @@ echo export LFS_TARGET=\""${LFS_TARGET}\"" >> ~/.bashrc</userinput></screen>
         <row>
            <entry>MIPS 64 Little Endian</entry>
            <entry>mips64el-unknown-linux-gnu</entry>
+        </row>
+        <row> 
+           <entry>Sparc32</entry>
+           <entry>sparc-unknown-linux-gnu</entry>
+        </row>
+	<row> 
+           <entry>UltraSPARC (Sparc64)</entry>
+           <entry>sparc64-unknown-linux-gnu</entry>
         </row>
      </tbody>
    </tgroup>

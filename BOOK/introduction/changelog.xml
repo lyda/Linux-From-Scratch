@@ -104,6 +104,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Updated text concerning linuxthreads.</para></listitem>
 <listitem><para>Fixed startfile prefix commands to work with multiple archs.</para></listitem>
 <listitem><para>Upgraded binutils and kernel versions.</para></listitem>
+<listitem><para>Added target triplets for Sparc and adjusted ppc target triplet.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
