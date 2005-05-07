@@ -4,9 +4,9 @@
   %general-entities;
 ]>
 
-<chapter id="chapter02" xreflabel="CVS Access">
+<chapter id="chapter02" xreflabel="Subversion Access">
 <?dbhtml filename="chapter02.html"?>
-<title>CVS Access</title>
+<title>Subversion Access</title>
 <?dbhtml dir="chapter02"?>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
