@@ -35,7 +35,7 @@ first a summary, then a detailed log.</para>
      <listitem><para>Added a changelog, stylesheets and a Makefile.</para></listitem>
      <listitem><para>Updated text in the preface, swapped CVS for Subversion.</para></listitem>
      <listitem><para>Updated text in Chapter01/introduction.</para></listitem>
-     <listitem><para>Updated text in Chapter02/introduction.</para></listitem>
+     <listitem><para>Updated text in Chapter02.</para></listitem>
     </itemizedlist>
    </listitem>
   </itemizedlist>

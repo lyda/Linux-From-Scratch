@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch02-anonsvn">
+<title>Anonymous Access</title>
+<?dbhtml filename="anonsvn.html"?>
+
+<para>To get anonymous access, simply use the following commands (note
+that these assume you are using bash or a similar shell:</para>
+
+<screen><userinput>svn co svn://svn.linuxfromscratch.org/LFS/trunk/BOOK lfs-trunk</userinput></screen>
+
+<para>This will "check out" the current revision of the LFS book into
+a directory named "lfs-trunk".  When you wish to update your local copy (often called a
+sandbox), simply cd into the directory and run:</para>
+
+<screen><userinput>svn up</userinput></screen>
+
+</sect1>
