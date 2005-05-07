@@ -5,17 +5,17 @@
 ]>
 
 <sect1 id="ch03-diff">
-  <title>cvs diff</title>
+  <title>svn diff/di</title>
   <?dbhtml filename="diff.html"?>
 
-  <para><userinput>cvs diff</userinput>. This is useful for three different
-    purposes.
+  <para><userinput>svn diff</userinput>, or <userinput>svn di</userinput>.
+    This is useful for three different purposes.
   </para>
 
-  <para>Firstly, those without write access to the LFS CVS server can use it to
+  <para>Firstly, those without write access to the LFS Subversion server can use it to
     generate patches to send to <userinput>lfs-dev</userinput>. To do this,
-    simply edit the files in your local sandbox then run
-    <userinput>cvs diff -u &gt; FILE.patch</userinput> from the root of your LFS
+    simply edit the files in your local working copy then run
+    <userinput>svn diff &gt; FILE.patch</userinput> from the root of your LFS
     directory. You can then attach this file to a message to the
     <userinput>lfs-dev</userinput> list where someone with editing rights will
     pick it up and apply it to the book.
@@ -25,22 +25,16 @@
     a file by running:
   </para>
 
-  <para><screen><userinput>cvs diff -u -r revision1 -r revision2 FILENAME</userinput></screen></para>
+  <para><screen><userinput>svn diff -r revision1:revision2 FILENAME</userinput></screen></para>
 
-  <para>For example: <userinput>cvs diff -u -r 1.68 -r 1.69 index.xml</userinput>
-    will output a unified diff showing the changes between revisions 1.68 and
-    1.69 of <filename>index.xml</filename>.
+  <para>For example: <userinput>svn diff -r 100:99 index.xml</userinput>
+    will output a diff showing the changes between revisions 100 and
+    99 of <filename>index.xml</filename>.
   </para>
 
-  <para>Remember that when using cvs diff, you nearly
-    <emphasis>always</emphasis> want to output a unified diff and so either use
-    the <userinput>-u</userinput> switch or add it to your
-    <filename>~/.cvsrc</filename> file.
-  </para>
-
-  <para>A third use it to recursive request all the changes between your local
-    copy and the copy on the CVS server. This is handy to do before running
-    <userinput>cvs update</userinput> to see what exactly has changed since the
+  <para>A third use is to use it to recursively request all the changes between your working
+    copy and the copy on the Subversion server. This is handy to do before running
+    <userinput>svn update</userinput> to see what exactly has changed since the
     last time you ran the update command.
   </para>
 </sect1>
