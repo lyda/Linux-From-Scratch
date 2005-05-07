@@ -11,7 +11,7 @@
 
 <para>This manual will teach you all that you need to know in order to
 properly edit the LFS-Book. It will cover some basic issues like accessing
-CVS over SSH and the CVS commands you will be used. It will also discuss
+SVN over SSH and the SVN commands you will use. It will also discuss
 the proper sequence of doing things like upgrading a package (both in the
 book as well as the FTP server) and how to work with the bug tracking
 database.</para>
