@@ -12,7 +12,7 @@
 projects (and some others). The tree which we are interested in for
 LFS editing is (unsurprisingly) the LFS tree.  A complete list of the
 modules which are available can be found using the cvsweb interface at
-<ulink url="http://svn.linuxfromscratch.org/index.cgi/"/>.</para> 
+<ulink url="http://svn.linuxfromscratch.org"/>.</para> 
 
 <para>There are two types of Subversion access provided to the LFS tree.
 Firstly, there is anonymous read-only access which anyone can use.
