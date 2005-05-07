@@ -5,15 +5,19 @@
 ]>
 
 <sect1 id="ch03-commit">
-  <title>cvs commit/ci</title>
+  <title>svn commit/ci</title>
   <?dbhtml filename="commit.html"?>
 
-  <para><userinput>cvs commit</userinput> or <userinput>cvs ci</userinput>. This
-    command recursively sends your changes to the CVS server. It will commit
+  <para><userinput>svn commit</userinput> or <userinput>svn ci</userinput>. This
+    command recursively sends your changes to the Subversion server. It will commit
     changed files, added files and deleted files. The -m option can be used to
     pass a log message to the command. If you don't specify a
     <emphasis>-m "MESSAGE"</emphasis>, then it will open the default editor and
-    ask you to type in a log. Please don't use empty log messages (see later in
+    ask you to type in a log. The default editor is specified by the environment
+    variable, $SVN_EDITOR. For example, to set your default editor to vim, run:</para>
+   <screen><userinput>export SVN_EDITOR=vim</userinput></screen>
+  <para>
+    Please don't use empty log messages (see later in
     this document on the policy which governs them).
   </para>
 </sect1>
