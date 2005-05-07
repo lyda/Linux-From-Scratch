@@ -24,7 +24,7 @@
 
 <para>Install the header files:</para>
 
-<screen><userinput>cp -R include/asm-alpha /usr/include/asm
+<screen><userinput>cp -R include/asm-sparc /usr/include/asm
 cp -R include/linux /usr/include</userinput></screen>
 
 <para>Ensure that all the headers are owned by root:</para>
