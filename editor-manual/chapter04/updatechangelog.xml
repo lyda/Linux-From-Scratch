@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
-"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch04-updatechangelog">
   <title>Update chapter01/changelog.xml</title>
-  <?dbhtml filename="updatechangelog.html" dir="chapter04"?>
+  <?dbhtml filename="updatechangelog.html"?>
 
   <para>Changelog updates should <emphasis>always</emphasis> be provided with
     the exception of small typo fixes. You don't need to add "fixed small typo

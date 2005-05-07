@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
-"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch03-add">
   <title>cvs add</title>
-  <?dbhtml filename="add.html" dir="chapter03"?>
+  <?dbhtml filename="add.html"?>
 
   <para><userinput>cvs add</userinput>. When you created a new file, you need to
     tell the CVS server about it. Note that the file won't appear in the

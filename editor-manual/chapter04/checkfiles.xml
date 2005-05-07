@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
-"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch04-checkfiles">
   <title>Check all relevant files have been added and removed</title>
-  <?dbhtml filename="checkfiles.html" dir="chapter04"?>
+  <?dbhtml filename="checkfiles.html"?>
 
   <para>If you are adding files, you need to run a
     <userinput>cvs add</userinput> command on each of them (something like

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
-"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch06-renderchecklinks">
   <title>Render the book and check links</title>
-  <?dbhtml filename="renderchecklinks.html" dir="chapter06"?>
+  <?dbhtml filename="renderchecklinks.html"?>
 
   <para>Now that you're done, make sure the book renders properly and check the
     links in <emphasis>Chapter 3</emphasis> to make sure the new package links

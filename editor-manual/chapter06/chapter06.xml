@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
-"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter06">
-  <title>Package upgrade procedures</title>
-  <?dbhtml filename="chapter06" dir="chapter06"?>
+
+<chapter id="chapter06" xreflabel="Package Upgrade Procedures">
+ <?dbhtml filename="chapter06.html"?>
+  <title>Package Upgrade Procedures</title>
+ <?dbhtml dir="chapter06"?>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="updatebugzilla.xml"/>

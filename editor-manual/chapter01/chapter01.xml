@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
-"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter id="chapter01">
+
+<chapter id="chapter01" xreflabel="LFS Development">
+<?dbhtml filename"chapter01.html"?>
 <title>LFS Development</title>
-<?dbhtml filename="chapter01.html" dir="chapter01"?>
+<?dbhtml dir="chapter01"?>
 
 <para>LFS development takes place using three main systems. Firstly,
 the mailing lists <userinput>lfs-book</userinput>,
