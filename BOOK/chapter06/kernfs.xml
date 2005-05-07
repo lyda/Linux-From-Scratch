@@ -13,7 +13,7 @@ itself.</para>
 
 <para>Begin by creating directories onto which the file systems will be mounted:</para>
 
-<screen arch="x86"><userinput>mkdir -p $LFS/{proc,sys}</userinput></screen>
+<screen arch="x86;ppc;"><userinput>mkdir -p $LFS/{proc,sys}</userinput></screen>
 
 <screen arch="raq2"><userinput>mkdir -p $LFS/{proc,sys,dev/{shm,pts}}</userinput></screen>
 

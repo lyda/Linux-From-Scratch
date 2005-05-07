@@ -86,6 +86,15 @@ first a summary, then a detailed log.</para>
 <listitem><para>Changelog Entries:</para>
 
 <itemizedlist>
+<listitem><para>May 7, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Fixed: Arch: PPC - Missing commands for creating $LFS/{proc,sys}.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+
+<itemizedlist>
 <listitem><para>May 5, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Removed: Arch: All - Inetutils Kernel Header patch, not needed any more.</para></listitem>
