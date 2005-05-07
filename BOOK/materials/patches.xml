@@ -149,6 +149,14 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry>
+<term>Ncurses 20050319 Patch - 321 KB:</term>
+<listitem>
+<para><ulink url="ftp://invisible-island.net/ncurses/&ncurses-version;/ncurses-&ncurses-version;-20050319-patch.sh.bz2"/></para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
 <term>Perl Libc Patch - 1 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;perl/perl-&perl-version;-libc-1.patch"/></para>

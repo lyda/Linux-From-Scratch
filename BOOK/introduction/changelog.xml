@@ -64,6 +64,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: All - gcc-3.4.3-cross_search_paths-1.patch</para></listitem>
 <listitem><para>Arch: All - glibc-2.3.5-fix_test-1.patch</para></listitem>
 <listitem><para>Arch: All - grep-2.5.1a-raq2_config_update-1.patch</para></listitem>
+<listitem><para>Arch: All - ncurses-5.4-20050319.sh.bz2 (Patch)</para></listitem>
 <listitem><para>Arch: All - tar-1.15.1-sparse_fix-1.patch</para></listitem>
 <listitem><para>Arch: All - shadow-4.0.7-fix_lastlog-1.patch</para></listitem>
 <listitem><para>Arch: All - util-linux-2.12q-cramfs-1.patch</para></listitem>
@@ -105,6 +106,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Fixed startfile prefix commands to work with multiple archs.</para></listitem>
 <listitem><para>Upgraded binutils and kernel versions.</para></listitem>
 <listitem><para>Added target triplets for Sparc and adjusted ppc target triplet.</para></listitem>
+<listitem><para>Added patch for ncurses which fixes cross-compile build issues.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
