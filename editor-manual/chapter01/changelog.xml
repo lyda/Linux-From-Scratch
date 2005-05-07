@@ -8,7 +8,7 @@
 <?dbhtml filename="changelog.html"?>
 
 <para>This is version &version; of the Linux From Scratch Editor's Manual, dated
-&releasedate;.
+&releasedate;.</para>
 
 <para>Below is a list of changes made since the previous release of the book,
 first a summary, then a detailed log.</para>
