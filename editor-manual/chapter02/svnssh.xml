@@ -5,7 +5,7 @@
 ]>
 
 <sect1 id="ch02-svnssh">
-<title>CVS SSH Access (for editors)</title>
+<title>Subversion SSH Access (for editors)</title>
 <?dbhtml filename="svnssh.html"?>
 
 <para>For editors, access is slightly more complicated. You first of
