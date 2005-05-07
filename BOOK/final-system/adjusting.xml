@@ -14,7 +14,7 @@ dynamic linker. A perl command accomplishes this:</para>
 more than once, it will adversely affect the outcome of software built
 after this step.</para></warning>
 
-<screen arch="x86"><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
+<screen arch="x86;sparc;"><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' \
         `gcc --print-file specs`</userinput></screen>
 
