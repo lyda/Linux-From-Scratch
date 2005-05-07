@@ -4,9 +4,9 @@
   %general-entities;
 ]>
 
-<chapter id="chapter03" xreflabel="Basic CVS Commands">
+<chapter id="chapter03" xreflabel="Basic Subversion Commands">
 <?dbhtml filename="chapter03.html"?>
-  <title>Basic CVS Commands</title>
+  <title>Basic Subversion Commands</title>
 <?dbhtml dir="chapter03"?>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
