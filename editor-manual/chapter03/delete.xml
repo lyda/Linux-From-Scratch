@@ -5,12 +5,13 @@
 ]>
 
 <sect1 id="ch03-delete">
-  <title>cvs delete/remove</title>
+  <title>svn delete/del/remove/rm</title>
   <?dbhtml filename="delete.html"?>
 
-  <para><userinput>cvs delete</userinput> or <userinput>cvs remove</userinput>.
+  <para><userinput>svn delete</userinput>, <userinput>svn del</userinput>,
+    <userinput>svn remove</userinput>, or <userinput>svn rm</userinput>.
     This does what it says: remove (a) file(s) from the repository on belgarath.
-    Note that you have to have deleted the file locally before you can run this.    Again, the file will not be deleted from the server until you do a
-    <userinput>cvs commit</userinput>.
+    Again, the file will not be deleted from the server until you do a
+    <userinput>svn commit</userinput>.
   </para>
 </sect1>
