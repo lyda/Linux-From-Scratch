@@ -88,7 +88,7 @@ needed to build an LFS system:</para>
 <varlistentry>
 <term>GCC Specs Patch - 14 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-specs-2.patch"/></para>
+<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-specs-3.patch"/></para>
 </listitem>
 </varlistentry>
 

@@ -62,6 +62,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Added:</para>
 <itemizedlist>
 <listitem><para>Arch: All - gcc-3.4.3-cross_search_paths-1.patch</para></listitem>
+<listitem><para>Arch: All - gcc-3.4.3-specs-3.patch</para></listitem>
 <listitem><para>Arch: All - glibc-2.3.5-fix_test-1.patch</para></listitem>
 <listitem><para>Arch: All - grep-2.5.1a-raq2_config_update-1.patch</para></listitem>
 <listitem><para>Arch: All - ncurses-5.4-20050319.sh.bz2 (Patch)</para></listitem>
@@ -107,6 +108,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Upgraded binutils and kernel versions.</para></listitem>
 <listitem><para>Added target triplets for Sparc and adjusted ppc target triplet.</para></listitem>
 <listitem><para>Added patch for ncurses which fixes cross-compile build issues.</para></listitem>
+<listitem><para>Updated gcc specs patch.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

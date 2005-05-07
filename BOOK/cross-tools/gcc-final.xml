@@ -30,7 +30,7 @@
 <para>We will make a couple of essential adjustments to the specs file to point
 to our build environment:</para>
 
-<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-specs-3.patch</userinput></screen>
 
 <para>To make sure that we use the proper syntax for a couple of tools, we apply
 the following patch:</para>
