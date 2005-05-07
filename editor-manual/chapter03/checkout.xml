@@ -5,15 +5,15 @@
 ]>
 
 <sect1 id="ch03-checkout">
-  <title>cvs checkout/co</title>
+  <title>svn checkout/co</title>
   <?dbhtml filename="checkout.html"?>
 
-  <para><userinput>cvs checkout</userinput> or <userinput>cvs co</userinput>.
-    This command is used to pull a CVS tree such as
+  <para><userinput>svn checkout</userinput> or <userinput>svn co</userinput>.
+    This command is used to pull a Subversion directory such as
     <filename>LFS/BOOK</filename> (the LFS book) or <filename>BLFS</filename>
     (the BLFS book) from the server.  You should only need to do this once. If
     we mess around with the directory structure (as sometimes is necessary),
-    you may occasionally need to delete your local sandbox and re-check it out.
+    you may occasionally need to delete your local working copy and re-check it out.
     If this is going to be needed, it will usually be because the Editor will
     have made a <emphasis>large</emphasis> change and it'll be announced at
     least on the <filename>lfs-book</filename> list.

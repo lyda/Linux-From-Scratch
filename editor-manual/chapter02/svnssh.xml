@@ -32,7 +32,7 @@ this.) Make sure that the ~/.ssh directory on belgarath is mode 700:</para>
 <para>Once you have this setup, try to checkout the latest LFS book revision by
 running:</para>
 
-<screen><userinput>svn co svn+ssh://svn.linuxfromscratch.org/LFS/trunk/BOOK lfs-trunk
+<screen><userinput>svn checkout svn+ssh://svn.linuxfromscratch.org/LFS/trunk/BOOK lfs-trunk
 </userinput></screen>
 
 <para>If this works, you'll pull the current book into lfs-trunk and you
@@ -43,6 +43,6 @@ you use a <userinput>svn ci</userinput> command.</para>
 <para>As with anonymous access, you can update your local copy by simply
 cd'ing into the LFS directory and running:</para>
 
-<para><screen><userinput>svn up</userinput></screen></para>
+<para><screen><userinput>svn update</userinput></screen></para>
 
 </sect1>
