@@ -29,7 +29,7 @@ this.) Make sure that the ~/.ssh directory on belgarath is mode 700:</para>
 
 <screen><userinput>chmod -R 700 ~/.ssh</userinput></screen>
 
-<para>Once you have this setup, try to checkout the latestt LFS book revision by
+<para>Once you have this setup, try to checkout the latest LFS book revision by
 running:</para>
 
 <screen><userinput>svn co svn+ssh://svn.linuxfromscratch.org/LFS/trunk/BOOK lfs-trunk
