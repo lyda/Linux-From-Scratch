@@ -20,13 +20,12 @@ stored. All of these services are provided by the server
 lists, web hosting, Subversion hosting, the Bugzilla system and
 basically everything we use to work on the LFS project.</para>
 
-<para>The actual LFS book itself is written using Docbook-XML and at
-first can seem to be a daunting tangle of files. If you're confused, start
-by looking at <filename>index.xml</filename>. At the bottom, you will
-notice that it will reference the entity &amp;book;. Look up the entity
-&amp;book; and you will see that it points to the file
-<filename>book/book.xml</filename>. Continue in this way and you'll find
-your way around the book soon enough.</para>
+<para>The LFS book is written using Docbook-XML and is split into a number of
+XML files.  The directories in the source tree represent the chapters of the
+book, and each XML file within a directory typically contains the text for a
+section within that chapter.  This structure is designed to enable a contributor
+to quickly locate the particular area of the book they are wanting to edit.
+</para>
 
 <para>The Bugzilla bug-tracking system for LFS can be found at
 <ulink url="http://bugs.linuxfromscratch.org"/>. In order to be able to
