@@ -102,6 +102,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>May 8, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Upgraded libtool to 1.5.16.</para></listitem>
+<listitem><para>Fixed patch configure instructions in final-system to include sparc arch.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
