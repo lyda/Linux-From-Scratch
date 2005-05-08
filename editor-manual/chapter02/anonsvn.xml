@@ -13,9 +13,10 @@ that these assume you are using bash or a similar shell:</para>
 
 <screen><userinput>svn checkout svn://svn.linuxfromscratch.org/LFS/trunk/BOOK lfs-trunk</userinput></screen>
 
-<para>This will "check out" the current revision of the LFS book into
-a directory named "lfs-trunk".  When you wish to update your local copy (often called a
-working copy), simply cd into the directory and run:</para>
+<para>This will <quote>check out</quote> the current revision of the LFS book
+into a directory named <filename class="directory">lfs-trunk</filename>.  When
+you wish to update your local copy (often called a working copy), simply
+<command>cd</command> into the directory and run:</para>
 
 <screen><userinput>svn update</userinput></screen>
 
