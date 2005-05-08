@@ -29,6 +29,7 @@ first a summary, then a detailed log.</para>
  <listitem><para>Changelog Entries:</para>
 
   <itemizedlist>
+   <listitem><para>May 8, 2005 [matt]: chapter03/checkout.xml: Minor wording and tagging improvements</para></listitem>
    <listitem><para>May 8, 2005 [matt]: chapter03/introduction.xml: Minor wording and tagging improvements</para></listitem>
    <listitem><para>May 8, 2005 [matt]: chapter02/svnssh.xml: Minor wording and tagging improvements</para></listitem>
    <listitem><para>May 8, 2005 [matt]: chapter02/anonsvn.xml: Improve docbook markup</para></listitem>
