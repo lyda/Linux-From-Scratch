@@ -9,13 +9,18 @@
   <?dbhtml filename="update.html"?>
 
   <para><userinput>svn update</userinput> or <userinput>svn up</userinput>.
-    This command syncs your local working copy with the server and is probably, along
-    with <userinput>svn commit</userinput> the command you will use most
-    frequently. If you have made local changes, it'll try and merge any changes
-    on the server with your changes <emphasis>on your machine</emphasis>. You
-    should always do a manual <userinput>svn update</userinput> before trying to
-    commit changes in order to check that everything is alright and ready to go
-    (although when you do a <userinput>svn commit</userinput>, it will warn you
-    if there is a problem).
+    This command synchorinses your local working copy with the server and is
+    probably, along with <userinput>svn commit</userinput> the command you will
+    use most frequently. If you have made local changes, Subversion will try to
+    merge any changes on the server with the changes you have made <emphasis>on
+    your machine</emphasis>.
+  </para>
+
+  <para>You should always do a manual <command>svn <option>update</option>
+    </command> before trying to commit changes in order to ensure that there are
+    no conflicts with changes that have been made since you started your work.
+    Note that <command>svn <option>commit</option></command> will warn you if
+    there is a conflict, in case you forget to perform an <command>svn
+    <option>update</option></command>.
   </para>
 </sect1>
