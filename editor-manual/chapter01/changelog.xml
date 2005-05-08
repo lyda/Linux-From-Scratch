@@ -31,6 +31,7 @@ first a summary, then a detailed log.</para>
   <itemizedlist>
    <listitem><para>May 8, 2005 [matthew]</para>
      <itemizedlist>
+       <listitem><para>chapter03/diff.xml: Minor wording improvements</para></listitem>
        <listitem><para>chapter03/commit.xml: Minor wording and tagging improvements.  Also add explanation of <option>-F</option> option to <command>svn <option>commit</option></command></para></listitem>
        <listitem><para>Re-arranged most recent Changelog entries</para></listitem>
        <listitem><para>chapter03/update.xml: Minor wording and tagging improvements</para></listitem>

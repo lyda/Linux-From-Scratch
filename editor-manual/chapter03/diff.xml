@@ -17,8 +17,8 @@
     simply edit the files in your local working copy then run
     <userinput>svn diff &gt; FILE.patch</userinput> from the root of your LFS
     directory. You can then attach this file to a message to the
-    <userinput>lfs-dev</userinput> list where someone with editing rights will
-    pick it up and apply it to the book.
+    <userinput>lfs-dev</userinput> list where editors can review the patch and
+    apply it to the book.
   </para>
 
   <para>The second use is to find out what has changed between two revisions of
@@ -32,7 +32,7 @@
     100 of <filename>index.xml</filename>.
   </para>
 
-  <para>A third use is to use it to recursively request all the changes between your working
+  <para>A third use is to recursively request all the changes between your working
     copy and the copy on the Subversion server. This is handy to do before running
     <userinput>svn update</userinput> to see what exactly has changed since the
     last time you ran the update command.
