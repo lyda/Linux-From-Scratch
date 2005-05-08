@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-system-silo" role="wrap" arch="sparc">
+<title>Silo-&silo-version;</title>
+<?dbhtml filename="silo.html"?>
+
+<indexterm zone="ch-system-silo"><primary sortas="a-Silo">Silo</primary></indexterm>
+
+<sect2 role="package"><title/>
+<para>The Silo package contains the Sparc Improved boot LOader.</para>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>0.2 SBU</seg><seg>10 MB</seg></seglistitem>
+</segmentedlist>
+
+<segmentedlist>
+<segtitle>&dependencies;</segtitle>
+<seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Ncurses, Sed, Elftoaout</seg></seglistitem>
+</segmentedlist>
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of Silo</title>
+
+<para>Compile the Silo package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+</sect2>
+
+<sect2 id="contents-silo" role="content"><title>Contents of Silo</title>
+
+<segmentedlist>
+<segtitle>Installed programs</segtitle>
+<seglistitem><seg>Unchecked</seg></seglistitem>
+</segmentedlist>
+
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
+<?dbhtml list-presentation="table"?>
+
+<varlistentry id="silo">
+<term><command>silo</command></term>
+<listitem>
+<para>Need Description</para>
+<indexterm zone="ch-system-silo silo"><primary sortas="a-silo">silo</primary></indexterm>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>

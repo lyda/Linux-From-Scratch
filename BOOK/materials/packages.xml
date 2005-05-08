@@ -417,6 +417,13 @@
 </listitem>
 </varlistentry>
 
+<varlistentry arch="sparc">
+<term>Silo (&silo-version;) - 144 KB:</term>
+<listitem>
+<para><ulink url="http://www.sparc-boot.org/pub/silo/silo-&silo-version;.tar.bz2"/></para>
+</listitem>
+</varlistentry>
+
 <varlistentry>
 <term>Sysklogd (&sysklogd-version;) - 80 KB:</term>
 <listitem>

@@ -62,12 +62,13 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mktemp.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="hotplug.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="iana-etc.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grub.xml"/> <!-- x87 -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="grub.xml"/> <!-- x86 -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="colo.xml"/> <!-- raq2 -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="yaboot.xml"/> <!-- ppc -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="parted.xml"/> <!-- ppc -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="openssl.xml"/> <!-- raq2 -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="openssh.xml"/> <!-- raq2 -->
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="silo.xml"/> <!-- sparc -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="aboutdebug.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="strippingagain.xml"/>
 
