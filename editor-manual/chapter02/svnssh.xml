@@ -8,10 +8,10 @@
 <title>Subversion SSH Access (for editors)</title>
 <?dbhtml filename="svnssh.html"?>
 
-<para>For editors, access is slightly more complicated. You first of
-all need to generate yourself an ssh key-pair. You then need to upload
-your public key into your <filename>~/.ssh</filename> directory on
-belgarath. To generate the keys run:</para>
+<para>For editors, access is slightly more complicated. You first of all need
+to generate an ssh key-pair. You then need to upload your public key into your
+<filename>~/.ssh</filename> directory on belgarath. To generate the keys run:
+</para>
 
 <para><screen><userinput>ssh-keygen -t dsa</userinput></screen></para>
 
@@ -19,7 +19,7 @@ belgarath. To generate the keys run:</para>
 them in .ssh (as <filename>id_dsa</filename> and
 <filename>id_dsa.pub</filename>) unless you already have ssh keys there.
 When prompted for a passphrase just press enter (unless you want to have
-to give the phrase <emphasis>every</emphasis> time you perform a cvs
+to give the phrase <emphasis>every</emphasis> time you perform a subversion
 operation.  Having generated your keys, upload
 <filename>~/.ssh/id_dsa.pub</filename> to belgarath and move it to
 <filename>~/.ssh/authorized_keys2</filename> <emphasis>on
@@ -35,13 +35,14 @@ running:</para>
 <screen><userinput>svn checkout svn+ssh://svn.linuxfromscratch.org/LFS/trunk/BOOK lfs-trunk
 </userinput></screen>
 
-<para>If this works, you'll pull the current book into lfs-trunk and you
-will have your own local working copy.  You will also have write access so from
-now on be extra careful, but note that <emphasis>no</emphasis> changes will be made until
-you use a <userinput>svn ci</userinput> command.</para>
+<para>If this works, you'll checkout a copy of the current book to
+<filename class="directory">lfs-trunk</filename> and you will have your own
+local working copy.  You will also have write access so from now on be extra
+careful, but note that <emphasis>no</emphasis> changes will be made until you
+issue a <userinput>svn commit</userinput> command.</para>
 
 <para>As with anonymous access, you can update your local copy by simply
-cd'ing into the LFS directory and running:</para>
+<command>cd</command>'ing into the LFS directory and running:</para>
 
 <para><screen><userinput>svn update</userinput></screen></para>
 
