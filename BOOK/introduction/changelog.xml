@@ -106,6 +106,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Fixed patch configure instructions in final-system to include sparc arch.</para></listitem>
 <listitem><para>Fixed sysvinit instructions in final-system to include sparc and ppc archs.</para></listitem>
 <listitem><para>Added Silo bootloader for Sparc (Still missing some instructions)</para></listitem>
+<listitem><para>Initial addition of Sparc64 arch</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

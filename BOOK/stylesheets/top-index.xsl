@@ -126,6 +126,13 @@ hr {
 	     </a>
 	    </h4>
 	  </li>
+          <li>
+            <h4>
+             <a href="sparc64">
+                <xsl:text>Sparc64/UltraSPARC [This book is currently broken]</xsl:text>
+             </a>
+            </h4>
+          </li>
         </ul>
       </div>
     </div>

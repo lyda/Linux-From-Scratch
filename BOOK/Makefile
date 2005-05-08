@@ -5,7 +5,7 @@ NOCHUNKS_OUTPUT=LFS-BOOK-$(ARCH).html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
 ARCH=x86
 
-lfs: toplevel x86 sparc ppc common
+lfs: toplevel x86 sparc sparc64 ppc common
 
 toplevel:
 	xsltproc --nonet --output $(BASEDIR)/index.html stylesheets/top-index.xsl prologue/bookinfo.xml
@@ -49,6 +49,26 @@ sparc:
 	  *.html
 	cd $(BASEDIR)/sparc/; sed -i -e "s@../images@images@g" \
 	  *.html
+
+sparci64:
+	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch sparc64 \
+          -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/sparc64/ \
+                stylesheets/lfs-chunked.xsl index.xml
+
+	if [ ! -e $(BASEDIR)/sparc64/stylesheets ]; then \
+          mkdir -p $(BASEDIR)/sparc64/stylesheets; \
+        fi;
+	cp stylesheets/*.css $(BASEDIR)/sparc64/stylesheets
+
+	if [ ! -e $(BASEDIR)/sparc64/images ]; then \
+          mkdir -p $(BASEDIR)/sparc64/images; \
+        fi;
+	cp $(XSLROOTDIR)/images/*.png \
+          $(BASEDIR)/sparc64/images
+	cd $(BASEDIR)/sparc64/; sed -i -e "s@../stylesheets@stylesheets@g" \
+          *.html
+	cd $(BASEDIR)/sparc64/; sed -i -e "s@../images@images@g" \
+          *.html
 
 ppc:
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch ppc \
