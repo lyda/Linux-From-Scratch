@@ -36,7 +36,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: All - Iana-Etc 1.04</para></listitem>
 <listitem><para>Arch: All - Iproute2 2.6.11-050330</para></listitem>
 <listitem><para>Arch: All - LFS-Bootscripts 3.2.1</para></listitem>
-<listitem><para>Arch: All - Libtool 1.5.14</para></listitem>
+<listitem><para>Arch: All - Libtool 1.5.16</para></listitem>
 <listitem><para>Arch: All - Linux 2.6.11.8</para></listitem>
 <listitem><para>Arch: All - Linux-libc-headers 2.6.11.2</para></listitem>
 <listitem><para>Arch: All - Man 1.5p</para></listitem>
@@ -97,6 +97,14 @@ first a summary, then a detailed log.</para>
 </listitem>
 </itemizedlist>
 -->
+
+<itemizedlist>
+<listitem><para>May 8, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Upgraded libtool to 1.5.16.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
 
 <itemizedlist>
 <listitem><para>May 7, 2005 [jhuntwork]</para>
