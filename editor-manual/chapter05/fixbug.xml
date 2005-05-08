@@ -8,7 +8,7 @@
   <title>Mark a bug fixed</title>
   <?dbhtml filename="fixbug.html"?>
 
-  <para>Bug fixed, changes commited to CVS, now mark the bug fixed.</para>
+  <para>Bug fixed, changes commited to Subversion, now mark the bug fixed.</para>
 
   <itemizedlist>
     <listitem><para>Go to the bug you fixed and is assigned to you.</para>
