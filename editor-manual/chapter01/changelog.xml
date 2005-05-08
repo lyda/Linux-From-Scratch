@@ -29,6 +29,7 @@ first a summary, then a detailed log.</para>
  <listitem><para>Changelog Entries:</para>
 
   <itemizedlist>
+   <listitem><para>May 8, 2005 [matt]: Fix validation error in chapter04/checkfiles.xml</para></listitem>
    <listitem><para>May 8, 2005 [matt]: Reworded explanation of book XML structure - we use XIncludes now, not entities.</para></listitem>
    <listitem><para>May 8, 2005 [jhuntwork]</para>
     <itemizedlist>

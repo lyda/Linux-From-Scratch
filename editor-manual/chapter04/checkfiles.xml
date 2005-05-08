@@ -15,7 +15,7 @@
   <para>If you think you're ready to commit, run <userinput>svn status</userinput>
     or <userinput>svn st</userinput> to see what changes the commit will make.</para>
 
-   <note>Example to go here</note> 
+   <note><para>Example to go here</para></note> 
 
   <para>Once you know why you're getting each symbol, and they're all correct,
     you can proceed to the next step.
