@@ -8,6 +8,7 @@
 <subtitle arch="x86">Version &version-x86;</subtitle>
 <subtitle arch="alpha">Version &version-alpha;</subtitle>
 <subtitle arch="sparc">Version &version-sparc;</subtitle>
+<subtitle arch="sparc64">Version &version-sparc64;</subtitle>
 <subtitle arch="ppc">Version &version-ppc;</subtitle>
 <subtitle arch="raq2">Version &version-raq2;</subtitle>
 
