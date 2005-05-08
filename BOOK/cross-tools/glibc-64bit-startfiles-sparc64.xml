@@ -48,7 +48,7 @@ cd ../glibc-build</userinput></screen>
 
 <para>To create Linuxthread Startfiles use the following configure line:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc -m64 -mcpu=ultrasparc" \
+<screen><userinput>CC="${LFS_TARGET}-gcc -m64 -mcpu=ultrasparc -mtune=ultrasparc" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \

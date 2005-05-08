@@ -75,7 +75,7 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>
 
-<screen arch="sparc64;"><userinput>CC="${LFS_TARGET}-gcc -m32 -mcpu=ultrasparc" \
+<screen arch="sparc64;"><userinput>CC="${LFS_TARGET}-gcc -m32 -mcpu=ultrasparc -mtune=ultrasparc" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host="sparcv9-unknown-linux-gnu" --build=${LFS_HOST} \
