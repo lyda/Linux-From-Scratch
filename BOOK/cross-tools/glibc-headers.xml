@@ -27,16 +27,16 @@
 <sect2 role="installation">
 <title>Installation of Glibc Headers</title>
 
-<para arch="raq2;sparc;">This architecture does not currently support NPTL,
+<para arch="raq2;sparc;sparc64;">This architecture does not currently support NPTL,
 so we will have to include Glibc Linuxthreads as a threading library.
 Building for a Linuxthreads based glibc you will need to
 unpack the glibc-linuxthreads-&glibc-version; tarball from
 within the glibc-&glibc-version; directory.</para>
 
-<para arch="raq2;sparc;">NPTL is not supported under this architecture, so we are going to
+<para arch="raq2;sparc;sparc64;">NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
 
-<screen arch="raq2;sparc;"><userinput>rm -rf nptl*</userinput></screen>
+<screen arch="raq2;sparc;sparc64;"><userinput>rm -rf nptl*</userinput></screen>
 
 <para arch="raq2">The following patch corrects the building of syscall.h:</para>
 
@@ -54,7 +54,7 @@ cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen arch="raq2;sparc;x86;"><userinput>CC="${CC-gcc}" ../glibc-&glibc-version;/configure --prefix=/tools \
+<screen arch="raq2;sparc;sparc64;x86;"><userinput>CC="${CC-gcc}" ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} --without-cvs \
     --disable-sanity-checks --enable-kernel=2.6.0 \
     --with-headers=/tools/include \
@@ -86,14 +86,14 @@ cp bits/stdio_lim.h /tools/include/bits</userinput></screen>
 
 <screen arch="ppc;x86"><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/pthread/pthread.h /tools/include/</userinput></screen>
 
-<para arch="sparc;x86">Now we copy the architecture specific headers over:</para>
+<para arch="x86;ppc;">Now we copy the architecture specific headers over:</para>
 <screen arch="x86"><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/i386/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
 <screen arch="ppc"><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/powerpc/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
 <screen arch="alpha"><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/alpha/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
 
-<para arch="raq2;sparc;">For Linuxthreads we use the following commands:</para>
+<para arch="raq2;sparc;sparc64">For Linuxthreads we use the following commands:</para>
 
-<screen arch="raq2;sparc;"><userinput>cp ../glibc-&glibc-version;/linuxthreads/sysdeps/pthread/pthread.h /tools/include/
+<screen arch="raq2;sparc;sparc64"><userinput>cp ../glibc-&glibc-version;/linuxthreads/sysdeps/pthread/pthread.h /tools/include/
 cp ../glibc-&glibc-version;/linuxthreads/sysdeps/pthread/bits/pthreadtypes.h /tools/include/bits/
 cp ../glibc-&glibc-version;/linuxthreads/sysdeps/pthread/bits/initspin.h /tools/include/bits/</userinput></screen>
 

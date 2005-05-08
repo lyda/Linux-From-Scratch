@@ -109,6 +109,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Initial addition of Sparc64 arch</para></listitem>
 <listitem><para>Added Sparc64 version entity to bookinfo</para></listitem>
 <listitem><para>Added Sparc64 linux-libc-headers page and adjusted sparc linux-libc-headers</para></listitem>
+<listitem><para>Added Sparc64 specific instructions to glibc-headers in cross-tools</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
