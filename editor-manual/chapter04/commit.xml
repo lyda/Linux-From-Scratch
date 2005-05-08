@@ -9,31 +9,31 @@
 <?dbhtml filename="commit.html"?>
 
 <para>Once you are sure that everything renders and that you know which
-files you wish to commit, you're ready. A transaction log of the CVS commit
+files you wish to commit, you're ready. A transaction log of the Subversion commit
 will be emailed to the <userinput>lfs-book</userinput> mailinglist so we
 all can see right away what you did. The commit emails contain some basic
-info (log, changes to which files) including a <emphasis>diff -u</emphasis>
+info (log, changes to which files) including a <emphasis>diff</emphasis>
 format output.</para>
 
 <para>Before you actually commit, spend two seconds thinking about the
-log you are going to add. As mentioned in the section on CVS
+log you are going to add. As mentioned in the section on Subversion
 commands, comments should <emphasis>always</emphasis> be used when
-commiting to CVS. Even if the comment is just 'small typo fix', that'll
-do. Other usual comments are 'update to package-x.y.z' or 'fixed
+commiting to the repository. Even if the comment is just 'small typo fix',
+that'll do. Other usual comments are 'update to package-x.y.z' or 'fixed
 installation instructions of package foo'.</para>
 
-<para>To commit, you use the <userinput>cvs commit</userinput> or
-<userinput>cvs ci</userinput> command. A good example of a commit
+<para>To commit, you use the <userinput>svn commit</userinput> or
+<userinput>svn ci</userinput> command. A good example of a commit
 command could be:</para>
 
-<para><screen><userinput>cvs ci -m "Fixed typo in chapter 05/bash-inst.xml" \
-index.xml chapter01/changelog.xml chapter05/bash-inst.xml</userinput></screen></para>
+<screen><userinput>svn ci -m "Fixed typo in chapter 05/bash-inst.xml" \
+index.xml chapter01/changelog.xml chapter05/bash-inst.xml</userinput></screen>
 
 <para>If you have only made the changes regarding this package to your tree,
 then you can save time by simply running the following from the root of
-your local LFS sandbox:</para>
+your local LFS working copy:</para>
 
-<para><screen><userinput>cvs ci -m "Fixed typo in chapter05/bash-inst.xml"</userinput></screen></para>
+<screen><userinput>svn ci -m "Fixed typo in chapter05/bash-inst.xml"</userinput></screen>
 
 <para>The first command is more useful when you've modified files you don't
 want to commit at this time, or which require a different log message (for
