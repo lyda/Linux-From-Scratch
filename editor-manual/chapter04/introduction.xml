@@ -11,18 +11,17 @@
   <para>Here is a summary list of things to do before committing changes:</para>
 
   <itemizedlist>
-    <listitem><para>Test the instructions you are adding</para></listitem>
-    <listitem><para>Update <filename>index.xml</filename> with the new date and
-      / or updated entities if necessary.</para>
+    <listitem><para>Test the instructions you are adding.</para></listitem>
+    <listitem><para>Update <filename>general.ent</filename> with the new date.</para>
     </listitem>
-    <listitem><para>Update <filename>chapter01/changelog.xml</filename></para>
+    <listitem><para>Update <filename>chapter01/changelog.xml.</filename></para>
     </listitem>
     <listitem><para>Check that all relevant files have been
-      <userinput>cvs add</userinput>'d or <userinput>remove</userinput>'d.
+      <userinput>svn add</userinput>'d or <userinput>remove</userinput>'d.
       </para>
     </listitem>
     <listitem><para>Check that the book renders properly.</para></listitem>
-    <listitem><para>Commit it</para></listitem>
-    <listitem><para>Update bugzilla to reflect the changes</para></listitem>
+    <listitem><para>Commit it.</para></listitem>
+    <listitem><para>Update bugzilla to reflect the changes.</para></listitem>
   </itemizedlist>
 </sect1>
