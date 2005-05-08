@@ -20,9 +20,9 @@
   </listitem>
 
   <listitem><para>Select the proper <emphasis>Version</emphasis>. You most
-    always will choose the <emphasis>CVS</emphasis> version. It doesn't make
-    sense to report a bug against an old version if it's no longer in CVS. If it
-    is, then CVS is newer than a previously released stable book version.  The
+    always will choose the <emphasis>SVN</emphasis> version. It doesn't make
+    sense to report a bug against an old version if it's no longer in Subversion. If it
+    is, then SVN is newer than a previously released stable book version.  The
     versions are basically there only for people who don't edit the book and who
     want to report a bug against the book version they have.</para>
   </listitem>
