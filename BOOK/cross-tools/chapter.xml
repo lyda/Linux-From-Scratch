@@ -20,6 +20,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc-headers.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gcc-static.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc-startfiles.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc-64bit-startfiles-sparc64.xml"/> <!-- sparc64 -->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gcc-shared.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="glibc.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="gcc-final.xml"/>
