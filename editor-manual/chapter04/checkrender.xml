@@ -10,11 +10,21 @@
 
   <para>Before commiting any changes, it's important to check that you have all
     the syntax correct and that the book can actually pass through
-    <userinput>openjade</userinput> without making it belch.  Instructions on
-    how to render the book can be obtained by reading the
-    <filename>INSTALL</filename> and <filename>README</filename> files that are
-    in the LFS CVS repository. It's generally best to have a script which
-    automatically does it all for you. If not better, at least it's easier as
-    you don't have to type out the long openjade command all the time.
+    <command>xsltproc</command> without any problems.  Instructions on how to
+    render the book can be obtained by reading the <filename>INSTALL</filename>
+    and <filename>README</filename> files that are in the LFS Subversion
+    repository.
+  </para>
+
+  <para>The <filename>Makefile</filename> that accompanies the XML sources for
+    the book have various targets that aid in the rendering of the book.
+    Firstly, <command>make <option>validate</option></command> ensures that the
+    XML is valid, and that further processing with <command>xsltproc</command>
+    won't fail.  This target was added because rendering the full book into HTML
+    or PDF can take some time.  The most common cause of rendering failures is
+    because of invalid XML, hence this target was added as a time-saving
+    measure. Secondly, <command>make</command> will render the HTML output.
+    Finally, <command>make <option>pdf</option></command> will render the PDF
+    output.
   </para>
 </sect1>

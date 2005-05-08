@@ -20,6 +20,7 @@
       <userinput>svn add</userinput>'d or <userinput>remove</userinput>'d.
       </para>
     </listitem>
+    <listitem><para>Check the validity of the XML.</para></listitem>
     <listitem><para>Check that the book renders properly.</para></listitem>
     <listitem><para>Commit it.</para></listitem>
     <listitem><para>Update bugzilla to reflect the changes.</para></listitem>
