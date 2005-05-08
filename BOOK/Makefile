@@ -50,7 +50,7 @@ sparc:
 	cd $(BASEDIR)/sparc/; sed -i -e "s@../images@images@g" \
 	  *.html
 
-sparci64:
+sparc64:
 	xsltproc --xinclude --nonet -stringparam profile.condition html -stringparam profile.arch sparc64 \
           -stringparam chunk.quietly $(CHUNK_QUIET)  -stringparam base.dir $(BASEDIR)/sparc64/ \
                 stylesheets/lfs-chunked.xsl index.xml
