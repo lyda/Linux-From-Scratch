@@ -10,7 +10,7 @@
  <?dbhtml dir="chapter04"?>
  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="test.xml"/>
- <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="updateindex.xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="updategeneralent.xml"/>
  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="updatechangelog.xml"/>
  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="checkfiles.xml"/>
  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="commit.xml"/>

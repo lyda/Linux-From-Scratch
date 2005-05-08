@@ -4,12 +4,12 @@
   %general-entities;
 ]>
 
-<sect1 id="ch04-updateindex">
-  <title>Updating index.xml</title>
-  <?dbhtml filename="updateindex.html"?>
+<sect1 id="ch04-updategeneralent">
+  <title>Updating general.ent</title>
+  <?dbhtml filename="updategeneralent.html"?>
 
   <para>The following elements should be updated in the
-    <filename>index.xml</filename> file whenever <emphasis>any</emphasis> change
+    <filename>general.ent</filename> file whenever <emphasis>any</emphasis> change
     (including small typo fixes) is made:
   </para>
 
@@ -20,6 +20,6 @@
   <para>The two dates must be the same, and the first is in the YYYYMMDD format.
   </para>
 
-  <para>Effectively, you'll only do this if you happen to be the first person on    a particular day who made a change.
-  </para>
+  <para>Effectively, you'll only do this if you happen to be the first person on 
+   a particular day who made a change.</para>
 </sect1>
