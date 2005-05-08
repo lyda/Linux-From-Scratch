@@ -9,7 +9,7 @@
   <?dbhtml filename="update.html"?>
 
   <para><userinput>svn update</userinput> or <userinput>svn up</userinput>.
-    This command synchorinses your local working copy with the server and is
+    This command synchronizes your local working copy with the server and is
     probably, along with <userinput>svn commit</userinput> the command you will
     use most frequently. If you have made local changes, Subversion will try to
     merge any changes on the server with the changes you have made <emphasis>on
