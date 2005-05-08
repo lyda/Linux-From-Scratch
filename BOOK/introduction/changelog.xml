@@ -103,6 +103,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Upgraded libtool to 1.5.16.</para></listitem>
 <listitem><para>Fixed patch configure instructions in final-system to include sparc arch.</para></listitem>
+<listitem><para>Fixed sysvinit instructions in final-system to include sparc and ppc archs.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

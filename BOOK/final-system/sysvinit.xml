@@ -44,7 +44,7 @@ instead:</para>
 
 <para>Compile the package:</para>
 
-<screen arch="x86"><userinput>make -C src</userinput></screen>
+<screen arch="x86;ppc;sparc;"><userinput>make -C src</userinput></screen>
 
 <screen arch="raq2"><userinput>make -C src clobber
 make -C src</userinput></screen>
@@ -86,7 +86,7 @@ ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now
 
 su:S016:once:/sbin/sulogin</literal>
 
-<literal arch="x86">1:2345:respawn:/sbin/agetty -I '\033(K' tty1 9600
+<literal arch="x86;ppc;sparc;">1:2345:respawn:/sbin/agetty -I '\033(K' tty1 9600
 2:2345:respawn:/sbin/agetty -I '\033(K' tty2 9600
 3:2345:respawn:/sbin/agetty -I '\033(K' tty3 9600
 4:2345:respawn:/sbin/agetty -I '\033(K' tty4 9600
