@@ -9,11 +9,11 @@
   <?dbhtml filename="checkfiles.html"?>
 
   <para>If you are adding files, you need to run a
-    <userinput>svn add</userinput> command on each of them (something like
-    <userinput>svn add chapter06/kernel*.xml</userinput> will work).</para>
+    <command>svn <option>add</option></command> command on each of them (something like
+    <command>svn <option>add</option> <option>chapter06/kernel*.xml</option></command> will work).</para>
 
-  <para>If you think you're ready to commit, run <userinput>svn status</userinput>
-    or <userinput>svn st</userinput> to see what changes the commit will make.</para>
+  <para>If you think you're ready to commit, run <command>svn <option>status</option></command>
+    or <command>svn <option>st</option></command> to see what changes the commit will make.</para>
 
    <note><para>Example to go here</para></note> 
 
