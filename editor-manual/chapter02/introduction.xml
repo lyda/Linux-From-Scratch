@@ -11,7 +11,7 @@
 <para>The belgarath Subversion server provides services for all of the *LFS
 projects (and some others). The tree which we are interested in for
 LFS editing is (unsurprisingly) the LFS tree.  A complete list of the
-modules which are available can be found using the cvsweb interface at
+modules which are available can be found using the viewcvs interface at
 <ulink url="http://svn.linuxfromscratch.org"/>.</para> 
 
 <para>There are two types of Subversion access provided to the LFS tree.
