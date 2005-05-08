@@ -5,95 +5,17 @@
 ]>
 
 <sect1 id="ch04-checkfiles">
-  <title>Check all relevant files have been added and removed</title>
+  <title>Check All Relevant Files</title>
   <?dbhtml filename="checkfiles.html"?>
 
   <para>If you are adding files, you need to run a
-    <userinput>cvs add</userinput> command on each of them (something like
-    <userinput>cvs add chapter06/kernel*.xml</userinput> will work).  A good
-    trick if you've only added files (not taken any away) is to run a
-    <userinput>cvs up</userinput> which will give an output something like this:
-  </para>
+    <userinput>svn add</userinput> command on each of them (something like
+    <userinput>svn add chapter06/kernel*.xml</userinput> will work).</para>
 
-  <para><screen>gerard:~/lfs-book$ cvs up
-? temp/thisfileneedstobeadded
-cvs server: Updating .
-cvs server: Updating appendixa
-[snip]
-cvs server: Updating temp
-A temp/thisfileadded
-R temp/thisfilehasbeendeleted
-M temp/thisfilehasbeenmodified
-U temp/thisfilehasbeenupdatedfromtheserver
-RCS file: /home/cvsroot/LFS/BOOK/temp/thisfilehasconflicts,v
-retrieving revision 1.1
-retrieving revision 1.2
-Merging differences between 1.1 and 1.2 into thisfilehasconflicts
-rcsmerge: warning: conflicts during merge
-cvs server: conflicts found in temp/thisfilehasconflicts
-C temp/thisfilehasconflicts
-RCS file: /home/cvsroot/LFS/BOOK/temp/thisfilehashadchangesmergedin,v
-retrieving revision 1.1
-retrieving revision 1.2
-Merging differences between 1.1 and 1.2 into
-thisfilehashadchangesmergedin
-M temp/thisfilehashadchangesmergedin
-cvs server: Updating template</screen>
-  </para>
+  <para>If you think you're ready to commit, run <userinput>svn status</userinput>
+    or <userinput>svn st</userinput> to see what changes the commit will make.</para>
 
-  <para>([snip]'s were added by me, not the server). If you look at the first
-    column, you will see various different letters which all mean different
-    things.
-  </para>
-
-  <para><userinput>?</userinput>: This is what CVS reports when it doesn't know
-    what to do with a file.  Generally it means that you've forgotten to
-    <userinput>cvs add</userinput> a file to the repository but can also just be
-    temporary editor files which CVS doesn't know what to do with.  If it's just
-    temporary files, don't worry, it won't try and commit them when you do a
-    <userinput>cvs ci</userinput> because you haven't added them. Instead it'll
-    just leave them alone.
-  </para>
-
-  <para><userinput>A</userinput>: This is a file which has been added to CVS
-    using <userinput>cvs add</userinput> but has not yet been committed.  When
-    you're ready to commit it, simply do a <userinput>cvs ci</userinput> on it
-    (and don't forget that nearly all cvs operations can be performed on as many
-    files at once as you like; indeed, if you specify no file, it'll either give
-    you an error (if it doesn't make sense; like with
-    <userinput>cvs add</userinput> or <userinput>delete</userinput>) or simply
-    perform the action on all files from that directory downwards in the tree;
-    for example with <userinput>cvs ci</userinput>).
-  </para>
-
-  <para><userinput>R</userinput>: This is a file which has been removed from CVS
-    using <userinput>cvs delete</userinput> but has not yet been committed. The
-    equivalent of 'A' for added files.
-  </para>
-
-  <para><userinput>M</userinput>: This is a file which has been modified in your
-    local repository and hasn't been checked in. If there have also been changes
-    in the remote copy, it means that CVS successfully merged them. Even so, if
-    (as in the file thisfilehashadchangesmergedin above) changes have been
-    automatically merged, you should look them over to check that they make
-    sense. Then, when you're ready, commit.
-  </para>
-
-  <para><userinput>U</userinput>: This is a file which was unchanged locally but
-    changed remotely. The changes were successfully applied to your local copy.
-    You don't need to commit on this message as you haven't made any local
-    changes.
-  </para>
-
-  <para><userinput>C</userinput>: This one can be a nasty one to resolve. It
-    means that you have made local changes but at the same time someone has made
-    remote changes which can't be automatically merged with yours.  You will
-    have to go through the files (usually named with .'s and version numbers)
-    and sort the conflict out yourself. Due to the nature of the LFS book, this
-    doesn't happen very often. But if you make local changes and wait a long
-    time to commit them, somebody else may eventually edit that same file and
-    commit it before you do. When that happens, these conflicts happen.
-  </para>
+   <note>Example to go here</note> 
 
   <para>Once you know why you're getting each symbol, and they're all correct,
     you can proceed to the next step.
