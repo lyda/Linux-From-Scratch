@@ -30,9 +30,7 @@ GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 
 <para>Prepare Patch for compilation:</para>
 
-<screen arch="x86;alpha;raq2;sparc;"><userinput>./configure --prefix=/usr</userinput></screen>
-
-<screen arch="ppc"><userinput>CPPFLAGS=-D_GNU_SOURCE ./configure --prefix=/usr</userinput></screen>
+<screen><userinput>./configure --prefix=/usr</userinput></screen>
 
 <para>Compile the package:</para>
 
