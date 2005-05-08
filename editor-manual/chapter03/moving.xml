@@ -8,9 +8,10 @@
   <title>svn move/mv/rename/ren</title>
   <?dbhtml filename="moving.html"?>
 
-  <para><userinput>svn move</userinput>, <userinput>svn mv</userinput>, 
-    <userinput>svn rename</userinput> or <userinput>svn ren</userinput>.
-    These commands move files from one location to another. Note that the changes will only be
-    reflected on the Subversion server after you run the <userinput>svn commit</userinput>
-    command.</para>
+  <para><command>svn <option>move</option></command>, <command>svn <option>mv
+    </option></command>, <command>svn <option>rename</option></command> or
+    <command>svn <option>ren</option></command>. These commands move files from
+    one location to another. Note that the changes will only be reflected on the
+    Subversion server after you run the <command>svn <option>commit</option>
+    </command> command.</para>
 </sect1>
