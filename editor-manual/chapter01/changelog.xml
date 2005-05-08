@@ -29,6 +29,14 @@ first a summary, then a detailed log.</para>
  <listitem><para>Changelog Entries:</para>
 
   <itemizedlist>
+   <listitem><para>May 8, 2005 [jhuntwork]</para>
+    <itemizedlist>
+     <listitem><para>Removed unnecessary comments about CVS in chapter 3 moving, thanks Randy McMurchy</para></listitem>
+    </itemizedlist>
+   </listitem>
+  </itemizedlist>
+
+  <itemizedlist>
    <listitem><para>May 7, 2005 [jhuntwork]</para>
     <itemizedlist>
      <listitem><para>Upgraded to DocBook 4.4.</para></listitem>

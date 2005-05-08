@@ -10,11 +10,7 @@
 
   <para><userinput>svn move</userinput>, <userinput>svn mv</userinput>, 
     <userinput>svn rename</userinput> or <userinput>svn ren</userinput>.
-    These commands move files from one location to another. One of the (many)
-    complaints against CVS was that it had no
-    concept of 1) moving files or 2) versioning directories.  If you needed to
-    move a file, it was generally better to do it on the server manually. With
-    Subversion, it's all a piece of cake. Note that the changes will only be
+    These commands move files from one location to another. Note that the changes will only be
     reflected on the Subversion server after you run the <userinput>svn commit</userinput>
     command.</para>
 </sect1>
