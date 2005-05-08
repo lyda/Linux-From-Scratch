@@ -27,7 +27,7 @@
 <sect2 role="installation">
 <title>Installation of Glibc Startfiles</title>
 
-<para arch="raq2;sparc;">This architecture does not currently support NPTL,
+<para arch="raq2;sparc;sparc64;">This architecture does not currently support NPTL,
 so we will have to include Glibc Linuxthreads as a threading library.
 Building for a Linuxthreads based glibc you will need to
 unpack the glibc-linuxthreads-&glibc-version; tarball from
@@ -37,10 +37,10 @@ within the glibc-&glibc-version; directory.</para>
 
 <screen arch="raq2"><userinput>patch -Np1 -i ../glibc-&glibc-version;-mips_syscall-1.patch</userinput></screen>
 
-<para arch="raq2;sparc;">NPTL is not supported under this architecture, so we are going to
+<para arch="raq2;sparc;sparc64;">NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
 
-<screen arch="raq2;sparc;"><userinput>rm -rf nptl*</userinput></screen>
+<screen arch="raq2;sparc;sparc64;"><userinput>rm -rf nptl*</userinput></screen>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
@@ -65,12 +65,20 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
 
-<para arch="raq2;sparc">To create Linuxthread Startfiles use the following configure line:</para>
+<para arch="raq2;sparc;sparc64;">To create Linuxthread Startfiles use the following configure line:</para>
 
 <screen arch="raq2;sparc;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
+    --without-cvs --disable-profile --enable-add-ons \
+    --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
+    --with-headers=/tools/include</userinput></screen>
+
+<screen arch="sparc64;"><userinput>CC="${LFS_TARGET}-gcc -m32 -mcpu=ultrasparc" \
+    AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
+    ../glibc-&glibc-version;/configure --prefix=/tools \
+    --host="sparcv9-unknown-linux-gnu" --build=${LFS_HOST} \
     --without-cvs --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>
