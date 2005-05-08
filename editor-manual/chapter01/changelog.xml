@@ -29,14 +29,20 @@ first a summary, then a detailed log.</para>
  <listitem><para>Changelog Entries:</para>
 
   <itemizedlist>
-   <listitem><para>May 8, 2005 [matt]: chapter03/update.xml: Minor wording and tagging improvements</para></listitem>
-   <listitem><para>May 8, 2005 [matt]: chapter03/checkout.xml: Minor wording and tagging improvements</para></listitem>
-   <listitem><para>May 8, 2005 [matt]: chapter03/introduction.xml: Minor wording and tagging improvements</para></listitem>
-   <listitem><para>May 8, 2005 [matt]: chapter02/svnssh.xml: Minor wording and tagging improvements</para></listitem>
-   <listitem><para>May 8, 2005 [matt]: chapter02/anonsvn.xml: Improve docbook markup</para></listitem>
-   <listitem><para>May 8, 2005 [matt]: We use viewcvs for online repository browsing, not cvsweb</para></listitem>
-   <listitem><para>May 8, 2005 [matt]: Fix validation error in chapter04/checkfiles.xml</para></listitem>
-   <listitem><para>May 8, 2005 [matt]: Reworded explanation of book XML structure - we use XIncludes now, not entities.</para></listitem>
+   <listitem><para>May 8, 2005 [matthew]</para>
+     <itemizedlist>
+       <listitem><para>Re-arranged most recent Changelog entries</para></listitem>
+       <listitem><para>chapter03/update.xml: Minor wording and tagging improvements</para></listitem>
+       <listitem><para>chapter03/checkout.xml: Minor wording and tagging improvements</para></listitem>
+       <listitem><para>chapter03/introduction.xml: Minor wording and tagging improvements</para></listitem>
+       <listitem><para>chapter02/svnssh.xml: Minor wording and tagging improvements</para></listitem>
+       <listitem><para>chapter02/anonsvn.xml: Improve docbook markup</para></listitem>
+       <listitem><para>chapter02/introduction.xml: We use viewcvs for online repository browsing, not cvsweb</para></listitem>
+       <listitem><para>chapter04/checkfiles.xml: Fix validation error</para></listitem>
+       <listitem><para>chapter01/introduction.xml: Reworded explanation of book XML structure - we use XIncludes now, not entities.</para></listitem>
+     </itemizedlist>
+   </listitem>
+
    <listitem><para>May 8, 2005 [jhuntwork]</para>
     <itemizedlist>
      <listitem><para>Removed unnecessary comments about CVS in chapter 3 moving, thanks Randy McMurchy</para></listitem>
