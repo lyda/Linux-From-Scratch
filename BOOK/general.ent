@@ -67,6 +67,8 @@
 <!ENTITY linux-raq2-version "2.6.11.7">
 <!ENTITY linux-libc-headers-version "2.6.11.2">
 <!ENTITY linux-libc-headers-alpha-version "2.6.11.2">
+<!ENTITY linux-libc-headers-sparc-version "2.6.11.2">
+<!ENTITY linux-libc-headers-sparc64-version "2.6.11.2">
 <!ENTITY linux-libc-headers-ppc-version "2.6.11.2">
 <!ENTITY linux-libc-headers-raq2-version "2.6.11.2">
 <!ENTITY m4-version "1.4.3">

@@ -108,6 +108,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Added Silo bootloader for Sparc (Still missing some instructions)</para></listitem>
 <listitem><para>Initial addition of Sparc64 arch</para></listitem>
 <listitem><para>Added Sparc64 version entity to bookinfo</para></listitem>
+<listitem><para>Added Sparc64 linux-libc-headers page and adjusted sparc linux-libc-headers</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

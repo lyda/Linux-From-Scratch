@@ -3,8 +3,8 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-cross-tools-linux-libc-headers" role="wrap" arch="sparc">
-<title>Linux-Libc-Headers-&linux-libc-headers-sparc-version;</title>
+<sect1 id="ch-cross-tools-linux-libc-headers" role="wrap" arch="sparc64">
+<title>Linux-Libc-Headers-&linux-libc-headers-sparc64-version;</title>
 <?dbhtml filename="linux-libc-headers.html"?>
 
 <indexterm zone="ch-cross-tools-linux-libc-headers">
@@ -23,7 +23,7 @@
   xpointer="xpointer(/sect1/sect2[@role='installation']/para[1])"/>
 
 <screen><userinput>install -d /tools/include
-cp -R include/asm-sparc /tools/include/asm
+cp -R include/asm-sparc64 /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
 
 </sect2>
