@@ -8,15 +8,17 @@
   <title>Introduction</title>
  <?dbhtml filename="introduction.html"?>
 
-  <para>Let's get familiar with the basic
-    set of commands which all editors will use on an almost daily basis. There
-    are many more options available than the ones listed here, so you will want
-    to read the Subversion documentation at some point located at
-    <ulink url="http://svnbook.red-bean.com/"/>, and run the <userinput>svn
-    help</userinput> command.
+  <para>Let's get familiar with the basic set of commands which all editors will
+    use on an almost daily basis. There are many more options available than the
+    ones listed here, so you will want to read the Subversion documentation
+    (<ulink url="http://svnbook.red-bean.com/"/>) at some point.
+    <command>svn <option>help</option></command> also provides a useful quick
+    reference for Subversion commands.
   </para>
 
-  <para>Some commands have two forms, the long and the short. We'll list both in
-    the descriptions.
+  <para>Some Subversion commands have multiple forms, the canonical command and
+    one or more aliases.  We'll list the canonical form and an alias in the
+    descriptions.  <command>svn <option>help</option></command> provides a list
+    of all Subversion commands with all of their aliases.
   </para>
 </sect1>
