@@ -27,9 +27,9 @@
 
   <para><screen><userinput>svn diff -r revision1:revision2 FILENAME</userinput></screen></para>
 
-  <para>For example: <userinput>svn diff -r 100:99 index.xml</userinput>
-    will output a diff showing the changes between revisions 100 and
-    99 of <filename>index.xml</filename>.
+  <para>For example: <userinput>svn diff -r 99:100 index.xml</userinput>
+    will output a diff showing the changes between revisions 99 and
+    100 of <filename>index.xml</filename>.
   </para>
 
   <para>A third use is to use it to recursively request all the changes between your working
