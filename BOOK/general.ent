@@ -3,7 +3,7 @@
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-ppc "&version;-PowerPC">
 <!ENTITY version-sparc "&version;-Sparc">
-<!ENTITY version-sparc "&version;-Sparc64">
+<!ENTITY version-sparc64 "&version;-Sparc64">
 <!ENTITY version-alpha "&version;-alpha">
 <!ENTITY version-raq2 "&version;-RaQ2">
 
