@@ -97,7 +97,7 @@ cd ../gcc-build</userinput></screen>
 
 <screen arch="sparc64;"><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --host=${LFS_HOST} --target=${LFS_TARGET} \
-    --with-local-prefix=/tools --disable-nls --disable-shared \
+    --with-local-prefix=/tools --disable-nls --enable-shared \
     --with-cpu=ultrasparc --enable-languages=c</userinput></screen>
 
 <para>The meaning of the configure options:</para>
