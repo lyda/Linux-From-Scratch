@@ -30,13 +30,13 @@ for arch in sparc64 sparc ; do cd /tools/include/asm-${arch}; hdrs=`ls *.h`; \
 HDRS=`echo ${HDRS} ${hdrs} | sort | uniq`; done
 cd $startdir
 for hdr in ${HDRS}; do name=`basename ${hdr} | tr [a-z]. [A-Z]_` \
-cat > /tools/include/asm/${hdr} << EOF
+cat &gt; /tools/include/asm/${hdr} &lt;&lt; EOF
 #ifndef __STUB__${name}__
 #define __STUB__${name}__
 EOF
 if [ -f /tools/include/asm-sparc64/${hdr} ]; then
 if [ -f /tools/include/asm-sparc/${hdr} ]; then
-cat >> /tools/include/asm/${hdr} << EOF
+cat &gt;&gt; /tools/include/asm/${hdr} &lt;&lt; EOF
 #ifdef __arch64__
 #include &lt;asm-sparc64/${hdr}&gt;
 #else
@@ -44,20 +44,20 @@ cat >> /tools/include/asm/${hdr} << EOF
 #endif
 EOF
 else
-cat >> /tools/include/asm/${hdr} << EOF
+cat &gt;&gt; /tools/include/asm/${hdr} &lt;&lt; EOF
 #ifdef __arch64__
 #include &lt;asm-sparc64/${hdr}&gt;
 #endif
 EOF
 fi
 else
-cat >> /tools/include/asm/${hdr} << EOF
+cat &gt;&gt; /tools/include/asm/${hdr} &lt;&lt; EOF
 #ifndef __arch64__
 #include &lt;asm-sparc/${hdr}&gt;
 #endif
 EOF
 fi
-cat >> /tools/include/asm/${hdr} << EOF
+cat &gt;&gt; /tools/include/asm/${hdr} &lt;&lt; EOF
 #endif /* __STUB__${name}__ */
 EOF
 echo " - /tools/include/asm/${hdr} created"
