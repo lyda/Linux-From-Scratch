@@ -5,9 +5,8 @@ NOCHUNKS_OUTPUT=LFS-EDITORS-GUIDE.html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
 
 lfs:
-	xsltproc --xinclude --nonet -stringparam profile.condition html \
-	-stringparam chunk.quietly $(CHUNK_QUIET) -stringparam base.dir \
-	$(BASEDIR)/ stylesheets/lfs-chunked.xsl index.xml
+	xsltproc --xinclude --nonet -stringparam chunk.quietly $(CHUNK_QUIET) \
+	-stringparam base.dir $(BASEDIR)/ stylesheets/lfs-chunked.xsl index.xml
 
 	if [ ! -e $(BASEDIR)/stylesheets ]; then \
 	  mkdir -p $(BASEDIR)/stylesheets; \
