@@ -76,6 +76,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Arch: RaQ2 - linux-libc-headers-2.6.11.2-raq2_fix-1.patch</para></listitem>
 <listitem><para>Arch: RaQ2 - linux-2.6.11.6-raq2_fix-3.patch</para></listitem>
 <listitem><para>Arch: Sparc - Silo 1.4.9</para></listitem>
+<listitem><para>Arch: Sparc64 - binutils-2.16-genscripts_multilib-2.patch</para></listitem>
 </itemizedlist>
 </listitem>
  
@@ -102,6 +103,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>May 9, 2005 [jhuntwork]</para>
 <itemizedlist>
+<listitem><para>Cross-tools: Added a necessary patch to binutils for multilib environments.</para></listitem>
 <listitem><para>Cross-tools: Added sparc64 specific instructions to final gcc.</para></listitem>
 <listitem><para>Cross-tools: Fixed sparc64 shared gcc instructions, added full glibc 64-bit.</para></listitem>
 </itemizedlist>
