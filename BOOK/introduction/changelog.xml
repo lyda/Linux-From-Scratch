@@ -102,6 +102,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>May 9, 2005 [jhuntwork]</para>
 <itemizedlist>
+<listitem><para>Cross-tools: Added sparc64 specific instructions to final gcc.</para></listitem>
 <listitem><para>Cross-tools: Fixed sparc64 shared gcc instructions, added full glibc 64-bit.</para></listitem>
 </itemizedlist>
 </listitem>

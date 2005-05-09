@@ -52,6 +52,13 @@ location:</para>
 <screen arch="sparc"><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
 #define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/sparc/linux.h</userinput></screen>
+
+<screen arch="sparc64"><userinput>echo "
+#undef STARTFILE_PREFIX_SPEC
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/sparc/linux.h
+echo "
+#undef STARTFILE_PREFIX_SPEC
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/sparc/linux64.h</userinput></screen>
  
 <screen arch="ppc"><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC 
@@ -78,12 +85,19 @@ cd ../gcc-build</userinput></screen>
 
 <para>Prepare GCC for compilation:</para>
 
-<screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
+<screen arch="x86;ppc;sparc;raq2;"><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --target=${LFS_TARGET} --host=${LFS_HOST} \
     --with-local-prefix=/tools --disable-nls --enable-shared \
     --enable-languages=c,c++ --enable-__cxa_atexit \
     --enable-c99 --enable-long-long --enable-threads=posix \
     --enable-multilib=no</userinput></screen>
+
+<screen arch="sparc64"><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
+    --target=${LFS_TARGET} --host=${LFS_HOST} \
+    --with-local-prefix=/tools --disable-nls --enable-shared \
+    --enable-languages=c,c++ --enable-__cxa_atexit \
+    --enable-c99 --enable-long-long --enable-threads=posix \
+    --with-cpu=ultrasparc</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
