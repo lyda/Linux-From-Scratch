@@ -29,7 +29,7 @@ header from either asm-sparc or asm-sparc64:</para>
 
 <screen><userinput>cp -R include/asm-sparc64 /tools/include/
 cp -R include/asm-sparc /tools/include/
-cp -R include/asm-sparc-biarc /tools/include/asm
+cp -R include/asm-sparc-biarch /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
 </sect2>
 
