@@ -38,22 +38,22 @@ if [ -f /tools/include/asm-sparc64/${hdr} ]; then
 if [ -f /tools/include/asm-sparc/${hdr} ]; then
 cat >> /tools/include/asm/${hdr} << EOF
 #ifdef __arch64__
-#include <asm-sparc64/${hdr}>
+#include &lt;asm-sparc64/${hdr}&gt;
 #else
-#include <asm-sparc/${hdr}>
+#include &lt;asm-sparc/${hdr}&gt;
 #endif
 EOF
 else
 cat >> /tools/include/asm/${hdr} << EOF
 #ifdef __arch64__
-#include <asm-sparc64/${hdr}>
+#include &lt;asm-sparc64/${hdr}&gt;
 #endif
 EOF
 fi
 else
 cat >> /tools/include/asm/${hdr} << EOF
 #ifndef __arch64__
-#include <asm-sparc/${hdr}>
+#include &lt;asm-sparc/${hdr}&gt;
 #endif
 EOF
 fi
