@@ -115,6 +115,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>Added Sparc64 specific instructions to glibc-startfiles in cross-tools (64-bit)</para></listitem>
 <listitem><para>Added Sparc64 specific instructions to gcc-shared in cross-tools</para></listitem>
 <listitem><para>Added Sparc64 specific instructions to glibc in cross-tools(32-bit)</para></listitem>
+<listitem><para>Edited sparc64 specific instructions for linux-libc-headers in cross-tools for multilib.
+This may have to be re-thought, the commands are long and awkward.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

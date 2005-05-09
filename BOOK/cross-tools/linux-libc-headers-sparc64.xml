@@ -22,8 +22,46 @@
   href="linux-libc-headers.xml"
   xpointer="xpointer(/sect1/sect2[@role='installation']/para[1])"/>
 
-<screen><userinput>install -d /tools/include
-cp -R include/asm-sparc64 /tools/include/asm
+<screen><userinput>install -d /tools/include/asm
+cp -R include/asm-sparc64 /tools/include/
+cp -R include/asm-sparc /tools/include/
+startdir=`pwd`
+for arch in sparc64 sparc ; do cd /tools/include/asm-${arch}; hdrs=`ls *.h`; \
+HDRS=`echo ${HDRS} ${hdrs} | sort | uniq`; done
+cd $startdir
+for hdr in ${HDRS}; do name=`basename ${hdr} | tr [a-z]. [A-Z]_` \
+cat > /tools/include/asm/${hdr} << EOF
+#ifndef __STUB__${name}__
+#define __STUB__${name}__
+EOF
+if [ -f /tools/include/asm-sparc64/${hdr} ]; then
+if [ -f /tools/include/asm-sparc/${hdr} ]; then
+cat >> /tools/include/asm/${hdr} << EOF
+#ifdef __arch64__
+#include <asm-sparc64/${hdr}>
+#else
+#include <asm-sparc/${hdr}>
+#endif
+EOF
+else
+cat >> /tools/include/asm/${hdr} << EOF
+#ifdef __arch64__
+#include <asm-sparc64/${hdr}>
+#endif
+EOF
+fi
+else
+cat >> /tools/include/asm/${hdr} << EOF
+#ifndef __arch64__
+#include <asm-sparc/${hdr}>
+#endif
+EOF
+fi
+cat >> /tools/include/asm/${hdr} << EOF
+#endif /* __STUB__${name}__ */
+EOF
+echo " - /tools/include/asm/${hdr} created"
+done
 cp -R include/linux /tools/include</userinput></screen>
 
 </sect2>
