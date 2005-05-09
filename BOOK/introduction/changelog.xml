@@ -100,6 +100,15 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>May 9, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Cross-tools: Fixed sparc64 shared gcc instructions, added full glibc 64-bit.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+
+<itemizedlist>
 <listitem><para>May 8, 2005 [jhuntwork]</para>
 <itemizedlist>
 <listitem><para>Upgraded libtool to 1.5.16.</para></listitem>
