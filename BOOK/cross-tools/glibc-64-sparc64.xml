@@ -70,7 +70,7 @@ shared libraries:</para>
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include --without-gd \
     --mandir=/tools/share/man --infodir=/tools/share/info \
-    --libexecdir=/tools/lib/glibc</userinput></screen>
+    --libexecdir=/tools/lib64/glibc</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
