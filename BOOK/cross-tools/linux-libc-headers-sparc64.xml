@@ -27,7 +27,8 @@ header from either asm-sparc or asm-sparc64:</para>
   href="linux-libc-headers.xml"
   xpointer="xpointer(/sect1/sect2[@role='installation']/para[1])"/>
 
-<screen><userinput>cp -R include/asm-sparc64 /tools/include/
+<screen><userinput>install -d /tools/include
+cp -R include/asm-sparc64 /tools/include/
 cp -R include/asm-sparc /tools/include/
 cp -R include/asm-sparc-biarch /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
