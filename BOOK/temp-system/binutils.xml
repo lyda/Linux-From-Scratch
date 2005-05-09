@@ -57,7 +57,7 @@ command like this: <userinput>time { ./configure ... &amp;&amp; ...
 
 <para>Now prepare Binutils for compilation:</para>
 
-<screeni arch="x86;sparc;ppc;raq2;"><userinput>../binutils-&binutils-version;/configure --prefix=/tools \
+<screen arch="x86;sparc;ppc;raq2;"><userinput>../binutils-&binutils-version;/configure --prefix=/tools \
      --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
      --disable-nls --enable-shared --enable-64-bit-bfd</userinput></screen>
 
