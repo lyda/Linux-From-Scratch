@@ -27,8 +27,12 @@ first a summary, then a detailed log.</para>
  </listitem>
 
  <listitem><para>Changelog Entries:</para>
-
   <itemizedlist>
+   <listitem><para>May 9, 2005 [matthew]</para>
+     <itemizedlist>
+       <listitem><para>chapter05/fixbug.xml and chapter05/enternewbugs.xml: Minor wording improvements</para></listitem>
+	 </itemizedlist>
+   </listitem>
    <listitem><para>May 8, 2005 [matthew]</para>
      <itemizedlist>
        <listitem><para>chapter04/checkfiles.xml: Minor tagging improvements</para></listitem>

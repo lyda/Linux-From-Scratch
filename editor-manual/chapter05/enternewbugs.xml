@@ -34,7 +34,7 @@
   <listitem><para>Select the <emphasis>Resolution Priority</emphasis>. Use your
     own judgement on how important fixing this bug is. If you're not sure just
     leave the default. Priorities are periodically re-evaluated and changed
-    anyways (what may be P5 a month ago may be changed to a P1 now because it's
+    anyway (what may be P5 a month ago may be changed to a P1 now because it's
     finally time to fix it).</para>
   </listitem>
 

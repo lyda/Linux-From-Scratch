@@ -8,7 +8,9 @@
   <title>Mark a bug fixed</title>
   <?dbhtml filename="fixbug.html"?>
 
-  <para>Bug fixed, changes commited to Subversion, now mark the bug fixed.</para>
+  <para>Once you have fixed a bug and have committed the relevant changes into
+        the Subversion repository, you need to mark the bug fixed in Bugzilla.
+  </para>
 
   <itemizedlist>
     <listitem><para>Go to the bug you fixed and is assigned to you.</para>
