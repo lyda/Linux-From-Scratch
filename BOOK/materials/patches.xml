@@ -37,7 +37,7 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry arch="sparc64">
-<term>Binutils Multilib Patch - 1 KB:</term>
+<term>Binutils Multilib Patch - 3 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;binutils/binutils-&binutils-version;-genscripts_multilib-2.patch"/></para>
 </listitem>
