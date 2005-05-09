@@ -8,7 +8,7 @@
   <title>Introduction</title>
   <?dbhtml filename="introduction.html"?>
 
-  <para>Updating a package in the LFS-Book consists of three phases:</para>
+  <para>Updating a package in the LFS-Book consists of the following:</para>
 
   <itemizedlist>
 
@@ -16,13 +16,8 @@
       version of a package.</para>
     </listitem>
 
-    <listitem><para>Updating the LFS FTP archive to this new package can be
-      downloaded when it's added to the book. This includes creating a new
-      lfs-packages tarball.</para>
-    </listitem>
-
-    <listitem><para>Updating the book to reflect the new version of package and
-      lfs-packages tarballs.</para>
+    <listitem><para>Updating the book to reflect the new version of the package
+      and lfs-packages tarballs.</para>
     </listitem>
   </itemizedlist>
 </sect1>

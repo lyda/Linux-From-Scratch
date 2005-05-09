@@ -13,8 +13,7 @@
 
   <itemizedlist>
 
-    <listitem><para>Assign yourself to the bug for this new package (you'll find
-      it in Bug #30's Dependency Tree. See previous section).</para>
+    <listitem><para>Assign yourself to the bug for this new package.</para>
     </listitem>
 
     <listitem><para>Download the package to belgarath in your home directory.
@@ -29,21 +28,24 @@
       are used twice, in chapter 5 and in chapter 6.</para>
     </listitem>
 
-    <listitem><para>Update the installation instructions in the book if
+    <listitem><para>Update the installation instructions in the book, if
       necessary.</para>
     </listitem>
 
     <listitem><para>When the package compiles properly and the package works too
       (doesn't seg. fault or show other errors when trying to execute programs
-      from it), then open the <filename>entities/packagename.ent</filename> in
+      from it), then open the <filename>entities/general.ent</filename> in
       an editor.</para>
     </listitem>
 
     <listitem><para>Find the <emphasis>package-version</emphasis> entity and
-      update its value to the new version. Don't change the
-      <emphasis>package-depversion</emphasis> and
-      <emphasis>package-contentversion</emphasis> unless you re-checked the
-      dependencies and contents of the new version.</para>
+      update its value to the new version.</para>
+    </listitem>
+
+	<listitem><para>Update the list of files installed by the new version of the
+      package.  This can be trivially gathered by using <command>find</command>
+      immediately prior to and immediately after installing the new version and
+      <command>diff</command>ing the output.</para>
     </listitem>
 
     <listitem><para>Run <userinput>ls -l package-version.tar.bz2</userinput> on
@@ -53,8 +55,6 @@
       <emphasis>package-size</emphasis> entity.</para>
     </listitem>
 
-    <listitem><para>Commit changes to CVS and continue immediately with the next
-      section which will update the LFS FTP archive.</para>
-    </listitem>
+    <listitem><para>Commit your changes to the SVN repository.</para></listitem>
   </itemizedlist>
 </sect1>

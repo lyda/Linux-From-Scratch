@@ -30,6 +30,9 @@ first a summary, then a detailed log.</para>
   <itemizedlist>
    <listitem><para>May 9, 2005 [matthew]</para>
      <itemizedlist>
+       <listitem><para>chapter06: Minor wording improvements and remove mention
+         of FTP updates as this is handled by the FTP maintainers now.</para>
+       </listitem>
        <listitem><para>chapter05/fixbug.xml and chapter05/enternewbugs.xml: Minor wording improvements</para></listitem>
 	 </itemizedlist>
    </listitem>

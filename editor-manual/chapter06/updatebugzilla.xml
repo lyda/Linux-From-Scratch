@@ -13,19 +13,14 @@
     released, but at least announce it.
   </para>
 
-  <para>We have a special bug for packages updates, Bug #30. All package update
-    bugs are individual bugs, but they are all linked to Bug 30. Bug 30 is the
-    parent bug so to speak.
-  </para>
-
   <itemizedlist>
 
-  <listitem><para>Go to Bug #30's Dependency Tree at <ulink
-    url="http://bugs.linuxfromscratch.org/showdependencytree.cgi?id=30"/></para>  </listitem>
+  <listitem><para>Go to Bugzilla's query page at <ulink
+    url="http://bugs.linuxfromscratch.org/query.cgi"/></para>  </listitem>
 
-  <listitem><para>Find the package that was just updated in this list and click
-    on its link (the link text will be crossed out (ie: a line through it which
-    means it's currently a fixed bug).</para>
+  <listitem><para>Type the name of the package into the summary field and choose
+    all of the statuses to ensure that the package version tracking bug will be
+    found.</para>
   </listitem>
 
   <listitem><para>Update the <emphasis>Summary</emphasis> field to reflect the
