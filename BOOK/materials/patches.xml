@@ -134,6 +134,14 @@ needed to build an LFS system:</para>
 </listitem>
 </varlistentry>
 
+<varlistentry arch="sparc64">
+<term>Linux-libc-headers Sparc Biarch Patch - 80 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;linux-libc-headers/linux-libc-headers-&linux-libc-headers-version;-sparc_biarch-1.patch"/></para>
+</listitem>
+</varlistentry>
+
+
 <varlistentry arch="raq2">
 <term>Linux RaQ2 Patch - 164 KB:</term>
 <listitem>

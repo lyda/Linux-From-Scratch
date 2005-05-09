@@ -18,52 +18,19 @@
 <sect2 role="installation">
 <title>Installation of Linux-Libc-Headers</title>
 
+<para>The following patch contains header stubs which link to the proper
+header from either asm-sparc or asm-sparc64:</para>
+<screen><userinput>patch -Np1 -i ../linux-libc-headers-&linux-libc-headers-version;-sparc_biarch-1.patch
+</userinput></screen>
+
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="linux-libc-headers.xml"
   xpointer="xpointer(/sect1/sect2[@role='installation']/para[1])"/>
 
-<screen><userinput>install -d /tools/include/asm
-cp -R include/asm-sparc64 /tools/include/
+<screen><userinput>cp -R include/asm-sparc64 /tools/include/
 cp -R include/asm-sparc /tools/include/
-startdir=`pwd`
-for arch in sparc64 sparc ; do cd /tools/include/asm-${arch}; hdrs=`ls *.h`; \
-HDRS=`echo ${HDRS} ${hdrs} | sort | uniq`; done
-cd $startdir
-for hdr in ${HDRS}; do name=`basename ${hdr} | tr [a-z]. [A-Z]_` \
-cat &gt; /tools/include/asm/${hdr} &lt;&lt; EOF
-#ifndef __STUB__${name}__
-#define __STUB__${name}__
-EOF
-if [ -f /tools/include/asm-sparc64/${hdr} ]; then
-if [ -f /tools/include/asm-sparc/${hdr} ]; then
-cat &gt;&gt; /tools/include/asm/${hdr} &lt;&lt; EOF
-#ifdef __arch64__
-#include &lt;asm-sparc64/${hdr}&gt;
-#else
-#include &lt;asm-sparc/${hdr}&gt;
-#endif
-EOF
-else
-cat &gt;&gt; /tools/include/asm/${hdr} &lt;&lt; EOF
-#ifdef __arch64__
-#include &lt;asm-sparc64/${hdr}&gt;
-#endif
-EOF
-fi
-else
-cat &gt;&gt; /tools/include/asm/${hdr} &lt;&lt; EOF
-#ifndef __arch64__
-#include &lt;asm-sparc/${hdr}&gt;
-#endif
-EOF
-fi
-cat &gt;&gt; /tools/include/asm/${hdr} &lt;&lt; EOF
-#endif /* __STUB__${name}__ */
-EOF
-echo " - /tools/include/asm/${hdr} created"
-done
+cp -R include/asm-sparc-biarc /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
-
 </sect2>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
