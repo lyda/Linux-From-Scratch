@@ -103,6 +103,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>May 9, 2005 [jhuntwork]</para>
 <itemizedlist>
+<listitem><para>Temp-System: Added Sparc64 instructions to binutils.</para></listitem>
 <listitem><para>Cross-tools: Added a necessary patch to binutils for multilib environments.</para></listitem>
 <listitem><para>Cross-tools: Added sparc64 specific instructions to final gcc.</para></listitem>
 <listitem><para>Cross-tools: Fixed sparc64 shared gcc instructions, added full glibc 64-bit.</para></listitem>
