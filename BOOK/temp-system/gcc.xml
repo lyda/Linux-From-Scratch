@@ -50,6 +50,13 @@ location:</para>
 <screen arch="sparc"><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
 #define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/sparc/linux.h</userinput></screen>
+
+<screen arch="sparc64"><userinput>echo "
+#undef STARTFILE_PREFIX_SPEC
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/sparc/linux.h
+echo "
+#undef STARTFILE_PREFIX_SPEC
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/sparc/linux64.h</userinput></screen>
  
 <screen arch="ppc"><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC  
@@ -65,10 +72,16 @@ system headers, so it won't look at the host's headers:</para>
 <screen><userinput>sed -i 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
    gcc/Makefile.in</userinput></screen>
 
-<para>User our cross-complier instead of the one gcc builds, named xgcc:</para>
+<para>Use our cross-complier instead of the one gcc builds, named xgcc:</para>
 
-<screen><userinput>sed -i "s@\./xgcc@/tools/bin/${LFS_TARGET}-gcc@g" \
+<screen><userinput>sed -i "s@\./xgcc@/cross-tools/bin/${LFS_TARGET}-gcc@g" \
    gcc/mklibgcc.in</userinput></screen>
+
+<para arch="sparc64">When searching for the multilibs, force the build to use the
+results of --print-multi-lib from our cross-compiler, not the native compiler gcc builds now.</para>
+
+<screen><userinput arch="sparc64">sed -i \
+"/MULTILIBS/s@\$(GCC_FOR_TARGET)@/cross-tools/bin/${LFS_TARGET}-gcc@g" gcc/Makefile.in</userinput></screen>
 
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>
@@ -83,11 +96,19 @@ variables that override the default optimization flags.</para>
 
 <para>Now prepare GCC for compilation:</para>
 
-<screen><userinput>../gcc-&gcc-version;/configure --prefix=/tools \
+<screen arch="x86;ppc;sparc;raq2;"><userinput>../gcc-&gcc-version;/configure --prefix=/tools \
     --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
     --libexecdir=/tools/lib --with-local-prefix=/tools --enable-long-long \
     --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
     --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
+
+<screen arch="sparc64"><userinput>CC="${LFS_TARGET}-gcc -m64 -mcpu=ultrasparc" \
+    ../gcc-&gcc-version;/configure --prefix=/tools --libdir=/tools/lib64 \
+    --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
+    --libexecdir=/tools/lib64 --with-local-prefix=/tools --enable-long-long \
+    --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
+    --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch \
+    --with-cpu=ultrasparc</userinput></screen>
 
 <para>The meaning of the new configure options:</para>
 
