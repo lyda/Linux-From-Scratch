@@ -3,11 +3,11 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-temp-system-zlib" role="wrap">
-<title>Zlib-&zlib-version;</title>
-<?dbhtml filename="zlib.html"?>
+<sect1 id="ch-temp-system-zlib 32-Bit" role="wrap">
+<title>Zlib-&zlib-version; 32-Bit</title>
+<?dbhtml filename="zlib32.html"?>
 
-<indexterm zone="ch-temp-system-zlib"><primary sortas="a-Zlib">Zlib</primary>
+<indexterm zone="ch-temp-system-zlib-32"><primary sortas="a-Zlib-32">Zlib-32</primary>
 <secondary>temporary system</secondary></indexterm>
 
 <sect2 role="package"><title/>
@@ -28,10 +28,8 @@
 
 <para>Prepare Zlib for compilation:</para>
 
-<screen arch="x86;ppc;raq2;sparc;"><userinput>./configure --prefix=/tools --shared</userinput></screen>
-
-<screen arch="sparc64"><userinput>CC="${LFS_TARGET}-gcc -m64 -mcpu=ultrasparc" \
-     ./configure --prefix=/tools --shared --libdir=/tools/lib64</userinput></screen>
+<screen><userinput>CC="${LFS_TARGET}-gcc -m32 -mcpu=ultrasparc" \
+     ./configure --prefix=/tools --shared</userinput></screen>
 
 <para>Compile the package:</para>
 
