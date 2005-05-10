@@ -31,7 +31,7 @@
 <screen arch="x86;ppc;raq2;sparc;"><userinput>./configure --prefix=/tools --shared</userinput></screen>
 
 <screen arch="sparc64"><userinput>CC="${LFS_TARGET}-gcc -m64 -mcpu=ultrasparc" \
-     ./configure --prefix=/tools --shared --libdir=/tools/lib64</userinput></screen>
+   ./configure --prefix=/tools --shared --libdir=/tools/lib64</userinput></screen>
 
 <para>Compile the package:</para>
 

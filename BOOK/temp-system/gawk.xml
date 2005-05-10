@@ -29,7 +29,11 @@
 
 <para>Prepare Gawk for compilation:</para>
 
-<screen><userinput>./configure --prefix=/tools \
+<screen arch="x86;ppx;sparc;raq2;"><userinput>./configure --prefix=/tools \
+   --build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
+
+<screen arch="sparc64"><userinput>CC="${LFS_TARGET}-gcc -m64 -mcpu=ultrasparc" \
+   ./configure --prefix=/tools \
    --build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
 
 <para>Compile the package:</para>

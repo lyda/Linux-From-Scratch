@@ -103,6 +103,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>May 9, 2005 [jhuntwork]</para>
 <itemizedlist>
+<listitem><para>Temp-System: Added Sparc64 instructions to gawk, minor fixes to zlib pages.</para></listitem>
 <listitem><para>Temp-System: Added Sparc64 instructions to zlib, and created a zlib-32 page.</para></listitem>
 <listitem><para>Temp-System: Added Sparc64 instructions to gcc, fixed a sed for all archs.</para></listitem>
 <listitem><para>Temp-System: Added Sparc64 instructions to binutils.</para></listitem>

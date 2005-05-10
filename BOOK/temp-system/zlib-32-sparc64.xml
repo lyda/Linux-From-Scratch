@@ -29,7 +29,7 @@
 <para>Prepare Zlib for compilation:</para>
 
 <screen><userinput>CC="${LFS_TARGET}-gcc -m32 -mcpu=ultrasparc" \
-     ./configure --prefix=/tools --shared</userinput></screen>
+   ./configure --prefix=/tools --shared</userinput></screen>
 
 <para>Compile the package:</para>
 
