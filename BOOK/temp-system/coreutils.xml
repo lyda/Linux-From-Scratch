@@ -34,7 +34,11 @@ defined when cross-compiling. So we define it:</para>
 
 <para>Prepare Coreutils for compilation:</para>
 
-<screen><userinput>DEFAULT_POSIX2_VERSION=199209 \
+<screen arch="x86;ppc;sparc;raq2;"><userinput>DEFAULT_POSIX2_VERSION=199209 \
+   ./configure --prefix=/tools --cache-file=config.cache \
+   --build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
+
+<screen arch="sparc64"><userinput>DEFAULT_POSIX2_VERSION=199209 CC="${LFS_TARGET}-gcc -m64 -mcpu=ultrasparc" \
    ./configure --prefix=/tools --cache-file=config.cache \
    --build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
 
