@@ -12,7 +12,7 @@
 <secondary>cross tools, 64bit startfiles</secondary></indexterm>
 
 <sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/x86/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -20,7 +20,7 @@
 <seglistitem><seg>11.8 SBU</seg><seg>800 MB</seg></seglistitem>
 </segmentedlist>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/x86/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
 
 </sect2>
 
