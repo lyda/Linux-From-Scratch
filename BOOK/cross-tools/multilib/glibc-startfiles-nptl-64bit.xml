@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-cross-tools-glibc-startfiles-64bit" role="wrap">
+<title>Glibc-&glibc-version; 64-bit Startfiles</title>
+<?dbhtml filename="glibc-startfiles-64.html"?>
+
+<indexterm zone="ch-cross-tools-glibc-startfiles-64bit">
+<primary sortas="a-Glibc">Glibc</primary>
+<secondary>cross tools, 64bit startfiles</secondary></indexterm>
+
+<sect2 role="package"><title/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/x86/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>11.8 SBU</seg><seg>800 MB</seg></seglistitem>
+</segmentedlist>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/x86/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of Glibc Startfiles</title>
+
+<para>This architecture does not currently support NPTL,
+so we will have to include Glibc Linuxthreads as a threading library.
+Building for a Linuxthreads based glibc you will need to
+unpack the glibc-linuxthreads-&glibc-version; tarball from
+within the glibc-&glibc-version; directory.</para>
+
+<para>The Glibc documentation recommends building Glibc outside of the source
+directory in a dedicated build directory:</para>
+
+<screen><userinput>mkdir ../glibc-build
+cd ../glibc-build</userinput></screen>
+
+<para>Next, prepare Glibc for compilation:</para>
+
+<para>For NPTL enabled systems we will need to add the following lines to config.cache</para>
+
+<screen><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
+echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
+
+<para>To create NPTL Startfiles use the following configure line:</para>
+
+<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD64}" AR="${LFS_TARGET}-ar" \
+    RANLIB="${LFS_TARGET}-ranlib" \
+    ../glibc-&glibc-version;/configure --prefix=/tools \
+    --host=${LFS_TARGET} --build=${LFS_HOST} \
+    --without-cvs --disable-profile --enable-add-ons \
+    --with-tls --enable-kernel=2.6.0 --with-__thread \
+    --with-binutils=/cross-tools/bin --with-headers=/tools/include \
+    --cache-file=config.cache</userinput></screen>
+
+<para>The meaning of the configure options:</para>
+
+<variablelist>
+<varlistentry>
+<term><parameter>--enable-kernel=2.6.0</parameter></term>
+<listitem><para>This tells Glibc to compile the library with support
+for 2.6.x Linux kernels.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><parameter>--with-binutils=/cross-tools/bin</parameter></term>
+<listitem><para>While not required, this switch ensures that there are
+no errors pertaining to which Binutils programs get used during the
+Glibc build.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><parameter>--with-headers=/tools/include</parameter></term>
+<listitem><para>This tells Glibc to compile itself against the headers recently
+installed to the tools directory, so that it knows exactly what features the
+kernel has and can optimize itself accordingly.</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make csu/subdir_lib</userinput></screen>
+
+<para>Since we are only creating the glibc startfiles at this time
+we will need to manually copy files over.</para>
+
+<screen><userinput>install -d /tools/lib64
+cp -fp csu/crt[i1n].o /tools/lib64</userinput></screen>
+
+</sect2>
+
+</sect1>
+

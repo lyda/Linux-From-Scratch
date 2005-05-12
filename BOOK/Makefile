@@ -3,7 +3,7 @@ CHUNK_QUIET=1
 PDF_OUTPUT=LFS-BOOK-$(ARCH).pdf
 NOCHUNKS_OUTPUT=LFS-BOOK-$(ARCH).html
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
-ARCH=x86 sparc sparc64 raq2 ppc
+ARCH=x86 x86_64 sparc sparc64 raq2 ppc
 
 # HTML Rendering Chunked
 define HTML_RENDER

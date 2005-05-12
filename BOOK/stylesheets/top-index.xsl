@@ -114,6 +114,13 @@ hr {
           </li>
           <li>
             <h4>
+              <a href="x86_64">
+                <xsl:text>x86_64 [This book is currently broken]</xsl:text>
+              </a>
+            </h4>
+          </li>
+          <li>
+            <h4>
               <a href="ppc">
                 <xsl:text>PowerPC</xsl:text>
               </a>
