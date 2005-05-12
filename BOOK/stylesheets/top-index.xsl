@@ -119,6 +119,13 @@ hr {
               </a>
 	    </h4>
 	  </li>
+          <li>
+            <h4>
+              <a href="raq2">
+                <xsl:text>MIPS Based Cobalt RaQ1/RaQ2 Qube1/Qube2</xsl:text>
+              </a>
+	    </h4>
+	  </li>
 	  <li>
 	    <h4>
 	     <a href="sparc">
