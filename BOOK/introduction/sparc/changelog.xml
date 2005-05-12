@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-intro-changelog-sparc">
+<title>Changelog for Sparc</title>
+<?dbhtml filename="changelog-sparc.html"?>
+
+<para>This is version &version; of the Linux From Scratch book, dated
+&releasedate;. If this book is more than two months old, a newer and better
+version is probably already available. To find out, please check one of the
+mirrors via <ulink url="&lfs-root;"/>.</para>
+
+<para>Below is a list of changes made since the previous release of the book,
+first a summary, then a detailed log.</para>
+
+<itemizedlist>
+
+<listitem><para>Upgraded to:</para>
+<itemizedlist>
+<listitem><para></para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>Added:</para>
+<itemizedlist>
+<listitem><para>Arch: Sparc - Silo 1.4.9</para></listitem>
+</itemizedlist>
+</listitem>
+ 
+<listitem><para>Removed:</para>
+<itemizedlist>
+<listitem><para></para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>Changelog Entries:</para>
+
+<!-- Changelog template
+<itemizedlist>
+<listitem><para>Date [name]</para>
+<itemizedlist>
+<listitem><para>Changelog.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+-->
+
+<itemizedlist>
+<listitem><para>May 10, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>This BOOK is an update of the cross-lfs book into a new format style.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+</listitem>
+</itemizedlist>
+
+</sect1>

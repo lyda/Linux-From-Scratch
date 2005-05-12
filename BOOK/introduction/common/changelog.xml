@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-intro-changelog">
+<title>Changelog</title>
+<?dbhtml filename="changelog.html"?>
+
+<para>This is version &version; of the Linux From Scratch book, dated
+&releasedate;. If this book is more than two months old, a newer and better
+version is probably already available. To find out, please check one of the
+mirrors via <ulink url="&lfs-root;"/>.</para>
+
+<para>Below is a list of changes made since the previous release of the book,
+first a summary, then a detailed log.</para>
+
+<itemizedlist>
+
+<listitem><para>Upgraded to:</para>
+<itemizedlist>
+<listitem><para>Arch: All - Automake 1.9.5</para></listitem>
+<listitem><para>Arch: All - Binutils 2.16</para></listitem>
+<listitem><para>Arch: All - Bison 2.0</para></listitem>
+<listitem><para>Arch: All - Bzip2 1.0.3</para></listitem>
+<listitem><para>Arch: All - Diffutils 2.8.7</para></listitem>
+<listitem><para>Arch: All - E2fsprogs 1.37</para></listitem>
+<listitem><para>Arch: All - Expect 1.43.0</para></listitem>
+<listitem><para>Arch: All - File 4.13</para></listitem>
+<listitem><para>Arch: All - Findutils 4.2.20</para></listitem>
+<listitem><para>Arch: All - GCC 3.4.3</para></listitem>
+<listitem><para>Arch: All - Gettext 0.14.4</para></listitem>
+<listitem><para>Arch: All - Glibc 2.3.5</para></listitem>
+<listitem><para>Arch: All - Grep 2.5.1a</para></listitem>
+<listitem><para>Arch: All - Iana-Etc 1.04</para></listitem>
+<listitem><para>Arch: All - Iproute2 2.6.11-050330</para></listitem>
+<listitem><para>Arch: All - LFS-Bootscripts 3.2.1</para></listitem>
+<listitem><para>Arch: All - Libtool 1.5.16</para></listitem>
+<listitem><para>Arch: All - Linux 2.6.11.8</para></listitem>
+<listitem><para>Arch: All - Linux-libc-headers 2.6.11.2</para></listitem>
+<listitem><para>Arch: All - Man 1.5p</para></listitem>
+<listitem><para>Arch: All - Man-pages 2.02</para></listitem>
+<listitem><para>Arch: All - M4 1.43</para></listitem>
+<listitem><para>Arch: All - Patch 2.5.9</para></listitem>
+<listitem><para>Arch: All - Perl 5.8.5</para></listitem>
+<listitem><para>Arch: All - Procps 3.2.5</para></listitem>
+<listitem><para>Arch: All - Psmisc 21.6</para></listitem>
+<listitem><para>Arch: All - Sed 4.14</para></listitem>
+<listitem><para>Arch: All - Shadow 4.0.7</para></listitem>
+<listitem><para>Arch: All - Sysvinit 2.8.6</para></listitem>
+<listitem><para>Arch: All - Tar 1.15.1</para></listitem>
+<listitem><para>Arch: All - Texinfo 4.8</para></listitem>
+<listitem><para>Arch: All - Tcl 8.4.9</para></listitem>
+<listitem><para>Arch: All - Udev 056</para></listitem>
+<listitem><para>Arch: All - Util-linux 2.12q</para></listitem>
+<listitem><para>Arch: All - Zlib 1.2.2</para></listitem>
+<listitem><para>Arch: All - udev-config-2.rules</para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>Added:</para>
+<itemizedlist>
+<listitem><para>Arch: All - gcc-3.4.3-cross_search_paths-1.patch</para></listitem>
+<listitem><para>Arch: All - gcc-3.4.3-specs-3.patch</para></listitem>
+<listitem><para>Arch: All - glibc-2.3.5-fix_test-1.patch</para></listitem>
+<listitem><para>Arch: All - grep-2.5.1a-raq2_config_update-1.patch</para></listitem>
+<listitem><para>Arch: All - ncurses-5.4-20050319.sh.bz2 (Patch)</para></listitem>
+<listitem><para>Arch: All - tar-1.15.1-sparse_fix-1.patch</para></listitem>
+<listitem><para>Arch: All - shadow-4.0.7-fix_lastlog-1.patch</para></listitem>
+<listitem><para>Arch: All - util-linux-2.12q-cramfs-1.patch</para></listitem>
+</itemizedlist>
+</listitem>
+ 
+<listitem><para>Removed:</para>
+<itemizedlist>
+<listitem><para>Arch: All - udev-config-2.permissions</para></listitem>
+<listitem><para>Arch: All - iproute2-2.6.11-050330-remove_db-1.patch</para></listitem>
+<listitem><para>Arch: All - inetutils-1.4.2-kernel_headers-1.patch</para></listitem>
+</itemizedlist>
+</listitem>
+
+<listitem><para>Changelog Entries:</para>
+
+<!-- Changelog template
+<itemizedlist>
+<listitem><para>Date [name]</para>
+<itemizedlist>
+<listitem><para>Changelog.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+-->
+
+<itemizedlist>
+<listitem><para>May 10, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>This BOOK is an update of the cross-lfs book into a new format style.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+</listitem>
+</itemizedlist>
+
+<para>Branch Synced from the Release of LFS 6.0 on February 23rd, 2005</para>
+
+</sect1>
