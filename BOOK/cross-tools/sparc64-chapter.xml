@@ -19,7 +19,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/glibc-startfiles.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/glibc-startfiles-linuxthreads-64bit.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/gcc-shared.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/glibc.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/glibc-linuxthreads.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/glibc-linuxthreads-64bit.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/gcc-final.xml"/>
 

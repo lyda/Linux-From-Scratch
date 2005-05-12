@@ -57,13 +57,15 @@ cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
-    RANLIB="${LFS_TARGET}-ranlib" \
+<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD32}" \
+    AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST} \
+    --host="sparcv9-unknown-linux-gnu" --build=${LFS_HOST} \
     --without-cvs --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
-    --with-headers=/tools/include</userinput></screen>
+    --with-headers=/tools/include --without-gd \
+    --mandir=/tools/share/man --infodir=/tools/share/info \
+    --libexecdir=/tools/lib/glibc</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
