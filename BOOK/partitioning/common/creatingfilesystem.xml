@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
 <sect1 id="ch-partitioning-creatingfilesystem">
@@ -31,13 +31,6 @@ swap partition, there is no need to format it.</para>
 
 <para>Replace <replaceable>[yyy]</replaceable> with the name of the swap
 partition.</para>
-
-<para arch="raq2">If you used the partition scheme that was recommended, here are the
-commands you can use to format the necessary drives:</para>
-
-<screen arch="raq2"><userinput>mke2fs -r 0 /dev/hda1
-mke2fs /dev/hda2
-mkswap /dev/hda3</userinput></screen>
 
 </sect1>
 

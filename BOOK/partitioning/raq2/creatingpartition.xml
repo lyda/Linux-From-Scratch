@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
 <sect1 id="ch-partitioning-creatingpartition">
@@ -53,41 +53,17 @@ partition. Also remember the designation of the swap partition. These
 names will be needed later for the <filename>/etc/fstab</filename>
 file.</para>
 
-<para arch="raq2">On a Cobalt RaQ2/Cube2 we use the existing firmware for a boot loader,
+<para>On a Cobalt RaQ2/Cube2 we use the existing firmware for a boot loader,
 it requires an ext2 revision 0 partition to boot from. So here is the
 recommended partition for a Cobalt RaQ2/Cube2 system:</para>
 
-<itemizedlist arch="raq2">
+<itemizedlist>
 <listitem><para>The first partition should be 50-100 MB.</para></listitem>
 <listitem><para>The second partition should be all the remaining space minus the
 amount of RAM in the system.</para></listitem>
 <listitem><para>The third partition is going to be your swap partition, which will
 be the same amount as the RAM installed in the system.</para></listitem>
 </itemizedlist>
-
-<para arch="alpha">Alphas have one of 2 BIOSes, Alphaboot or SRM. Some models have both
-and you can switch between them at powerup. Each bios has a different
-boot method. Milo is cool because it can be blown into flash for a
-FAST boot, but its built against an older linux kernel and crashes
-with some hardware, like a SCSI controller. aboot is simple if you
-can use it, but needs BSD partitions. aboot doesn't really let you do
-much at boot time that crosses devices. If you load aboot from hda,
-your root needs to be on hda. install aboot on hdb if you want to move
-your root to hdb. Once linux is loaded, you can do whatever you want.
-Milo can handle loading the kernel from one disk and the root on
-another.</para>
-
-<para arch="alpha">If you boot with SRM and aboot, you *MUST* use BSD style partitions.
-You *MUST* also leave the first 2 cylinders unused as they will
-contain your boot loader. I've read that partition 3 should always be
-the full disk even though it overlaps with other partitions, but in my
-experience that doesn't matter.  If you choose to not use an EXT2 or
-EXT3 root filesystem, you'll need to go through some extra hoops to
-install aboot.</para>
-
-<para arch="alpha">If you boot with Milo, use msdos partitions, and make the first
-partition large enough for at least 2 kernels (I would use about
-500Megs) and make it a FAT filesystem.</para>
 
 </sect1>
 

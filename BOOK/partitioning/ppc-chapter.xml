@@ -8,9 +8,9 @@
 <title>Preparing a New Partition</title>
 <?dbhtml filename="chapter.html"?>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="creatingpartition.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="creatingfilesystem.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mounting.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/creatingpartition.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/creatingfilesystem.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/mounting.xml"/>
 
 </chapter>
