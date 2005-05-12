@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
 <sect1 id="ch-cross-tools-gcc-final" role="wrap">
@@ -12,7 +12,7 @@
 <secondary>cross tools, final</secondary></indexterm>
 
 <sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -20,7 +20,7 @@
 <seglistitem><seg>4.4 SBU</seg><seg>300 MB</seg></seglistitem>
 </segmentedlist>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
 
 </sect2>
 
@@ -45,24 +45,9 @@ libgcc_s.so when cross-compling:</para>
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
 
-<screen arch="x86;raq2;"><userinput>echo "
-#undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
-
-<screen arch="sparc"><userinput>echo "
+<screen><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
 #define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/sparc/linux.h</userinput></screen>
-
-<screen arch="sparc64"><userinput>echo "
-#undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/sparc/linux.h
-echo "
-#undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/sparc/linux64.h</userinput></screen>
- 
-<screen arch="ppc"><userinput>echo "
-#undef STARTFILE_PREFIX_SPEC 
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/rs6000/linux.h</userinput></screen>
 
 <para>Now we will change gcc's search path to look into /tools only:</para>
 
@@ -85,19 +70,12 @@ cd ../gcc-build</userinput></screen>
 
 <para>Prepare GCC for compilation:</para>
 
-<screen arch="x86;ppc;sparc;raq2;"><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
+<screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --target=${LFS_TARGET} --host=${LFS_HOST} \
     --with-local-prefix=/tools --disable-nls --enable-shared \
     --enable-languages=c,c++ --enable-__cxa_atexit \
     --enable-c99 --enable-long-long --enable-threads=posix \
     --enable-multilib=no</userinput></screen>
-
-<screen arch="sparc64"><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
-    --target=${LFS_TARGET} --host=${LFS_HOST} \
-    --with-local-prefix=/tools --disable-nls --enable-shared \
-    --enable-languages=c,c++ --enable-__cxa_atexit \
-    --enable-c99 --enable-long-long --enable-threads=posix \
-    --with-cpu=ultrasparc</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 

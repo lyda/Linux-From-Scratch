@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
 <sect1 id="ch-cross-tools-linux-libc-headers" role="wrap" arch="x86">
@@ -13,7 +13,7 @@
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-	href="../final-system/linux-libc-headers.xml"
+	href="../../final-system/x86/linux-libc-headers.xml"
 	xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
 <segmentedlist>
@@ -23,7 +23,7 @@
 </segmentedlist>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-	href="../final-system/linux-libc-headers.xml"
+	href="../../final-system/x86/linux-libc-headers.xml"
 	xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
 
 </sect2>
@@ -34,7 +34,7 @@
 <para>Install the header files:</para>
 
 <screen><userinput>install -d /tools/include
-cp -R include/asm-i386 /tools/include/asm
+cp -R include/asm-mips /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
 
 </sect2>

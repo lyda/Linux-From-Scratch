@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
 <sect1 id="ch-cross-tools-glibc" role="wrap">
@@ -12,7 +12,7 @@
 <secondary>cross tools</secondary></indexterm>
 
 <sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/x86/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -20,7 +20,7 @@
 <seglistitem><seg>11.8 SBU</seg><seg>800 MB</seg></seglistitem>
 </segmentedlist>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../final-system/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/x86/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
 
 </sect2>
 
@@ -38,35 +38,20 @@ unset them when building Glibc.</para>
 the method suggested in this book puts the stability of the system at
 risk.</para>
 
-<para arch="raq2;sparc;sparc64;">This architecture does not currently support NPTL,
-so we will have to include Glibc Linuxthreads as a threading library.
-Building for a Linuxthreads based glibc you will need to
-unpack the glibc-linuxthreads-&glibc-version; tarball from
-within the glibc-&glibc-version; directory.</para>
-
-<para arch="raq2">The following patch corrects the building of syscall.h:</para>
-
-<screen arch="raq2"><userinput>patch -Np1 -i ../glibc-&glibc-version;-mips_syscall-1.patch</userinput></screen>
-
-<para arch="raq2;sparc;sparc64;">NPTL is not supported under this architecture, so we are going to
-remove the nptl directory from the Glibc source:</para>
-
-<screen arch="raq2;sparc;sparc64;"><userinput>rm -rf nptl*</userinput></screen>
-
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
 
 <screen><userinput>mkdir ../glibc-build
 cd ../glibc-build</userinput></screen>
 
-<para arch="ppc;x86;">For NPTL enabled systems we will need to add the following lines to config.cache</para>
+<para>For NPTL enabled systems we will need to add the following lines to config.cache</para>
 
-<screen arch="ppc;x86"><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
+<screen><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
 echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen arch="ppc;x86;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
+<screen><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
@@ -74,24 +59,6 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
     --with-tls --enable-kernel=2.6.0 --with-__thread \
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
-
-<screen arch="raq2;sparc;"><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
-    RANLIB="${LFS_TARGET}-ranlib" \
-    ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST} \
-    --without-cvs --disable-profile --enable-add-ons \
-    --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
-    --with-headers=/tools/include</userinput></screen>
-
-<screen arch="sparc64;"><userinput>CC="${LFS_TARGET}-gcc -m32 -mcpu=ultrasparc -mtune=ultrasparc" \
-    AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
-    ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host="sparcv9-unknown-linux-gnu" --build=${LFS_HOST} \
-    --without-cvs --disable-profile --enable-add-ons \
-    --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
-    --with-headers=/tools/include --without-gd \
-    --mandir=/tools/share/man --infodir=/tools/share/info \
-    --libexecdir=/tools/lib/glibc</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
 <sect1 id="ch-cross-tools-binutils" role="wrap">
@@ -13,7 +13,7 @@
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-	href="../final-system/binutils.xml"
+	href="../../final-system/common/binutils.xml"
 	xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
 <segmentedlist>
@@ -23,7 +23,7 @@
 </segmentedlist>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-	href="../final-system/binutils.xml"
+	href="../../final-system/common/binutils.xml"
 	xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
 
 </sect2>
@@ -35,11 +35,6 @@
 <para>First to make sure that we use the proper syntax for a couple of tools:</para>
 
 <screen><userinput>patch -Np1 -i ../binutils-&binutils-version;-posix-1.patch</userinput></screen>
-
-<para arch="sparc64">The following patch makes binutils search in both the lib and lib64
-directories in a multilib environment:</para>
-
-<screen arch="sparc64"><userinput>patch -Np1 -i ../binutils-&binutils-version;-genscripts_multilib-1.patch</userinput></screen>
 
 <para>Create a separate build directory again:</para>
 
