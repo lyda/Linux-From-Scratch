@@ -3,13 +3,13 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-cross-tools-glibc-startfiles" role="wrap">
-<title>Glibc-&glibc-version; Startfiles</title>
-<?dbhtml filename="glibc-startfiles.html"?>
+<sect1 id="ch-cross-tools-glibc" role="wrap">
+<title>Glibc-&glibc-version;</title>
+<?dbhtml filename="glibc.html"?>
 
-<indexterm zone="ch-cross-tools-glibc-startfiles">
+<indexterm zone="ch-cross-tools-glibc">
 <primary sortas="a-Glibc">Glibc</primary>
-<secondary>cross tools, startfiles</secondary></indexterm>
+<secondary>cross tools</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/x86/glibc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
@@ -25,17 +25,18 @@
 </sect2>
 
 <sect2 role="installation">
-<title>Installation of Glibc Startfiles</title>
+<title>Installation of Glibc</title>
 
-<para>This architecture does not currently support NPTL,
-so we will have to include Glibc Linuxthreads as a threading library.
-Building for a Linuxthreads based glibc you will need to
-unpack the glibc-linuxthreads-&glibc-version; tarball from
-within the glibc-&glibc-version; directory.</para>
+<para>This package is known to have issues when its default
+optimization flags (including the <parameter>-march</parameter> and
+<parameter>-mcpu</parameter> options) are changed. If any environment
+variables that override default optimizations have been defined, such
+as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
+unset them when building Glibc.</para>
 
-<para>The following patch corrects the building of syscall.h:</para>
-
-<screen><userinput>patch -Np1 -i ../glibc-&glibc-version;-mips_syscall-1.patch</userinput></screen>
+<para>It should be noted that compiling Glibc in any way other than
+the method suggested in this book puts the stability of the system at
+risk.</para>
 
 <para>NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
@@ -50,8 +51,6 @@ cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<para>To create Linuxthread Startfiles use the following configure line:</para>
-
 <screen><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
@@ -63,6 +62,19 @@ cd ../glibc-build</userinput></screen>
 <para>The meaning of the configure options:</para>
 
 <variablelist>
+<varlistentry>
+<term><parameter>--disable-profile</parameter></term>
+<listitem><para>This builds the libraries without profiling
+information. Omit this option if profiling on the temporary tools is
+necessary.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><parameter>--enable-add-ons</parameter></term>
+<listitem><para>This tells Glibc to use the NPTL add-on as its threading 
+library.</para></listitem>
+</varlistentry>
+
 <varlistentry>
 <term><parameter>--enable-kernel=2.6.0</parameter></term>
 <listitem><para>This tells Glibc to compile the library with support
@@ -77,6 +89,14 @@ Glibc build.</para></listitem>
 </varlistentry>
 
 <varlistentry>
+<term><parameter>--without-gd</parameter></term>
+<listitem><para>This prevents the build of the
+<command>memusagestat</command> program, which insists on linking
+against the host's libraries (libgd, libpng, libz,
+etc.).</para></listitem>
+</varlistentry>
+
+<varlistentry>
 <term><parameter>--with-headers=/tools/include</parameter></term>
 <listitem><para>This tells Glibc to compile itself against the headers recently
 installed to the tools directory, so that it knows exactly what features the
@@ -85,16 +105,35 @@ kernel has and can optimize itself accordingly.</para></listitem>
 
 </variablelist>
 
+<para>During this stage the following warning might appear:</para>
+
+<blockquote><screen><computeroutput>configure: WARNING:
+*** These auxiliary programs are missing or 
+*** incompatible versions: msgfmt
+*** some features will be disabled.
+*** Check the INSTALL file for required versions.</computeroutput></screen></blockquote>
+
+<para>The missing or incompatible <command>msgfmt</command> program is
+generally harmless, but it can sometimes cause issues when running the
+test suite. This <command>msgfmt</command> program is part of the
+Gettext package which the host distribution should provide. If
+<command>msgfmt</command> is present but deemed incompatible, upgrade
+the host system's Gettext package or continue without it and see if
+the test suite runs without problems regardless.</para>
+
 <para>Compile the package:</para>
 
-<screen><userinput>make csu/subdir_lib</userinput></screen>
+<screen><userinput>make</userinput></screen>
 
-<para>Since we are only creating the glibc startfiles at this time
-we will need to manually copy files over.</para>
+<para>Install the package:</para>
 
-<screen><userinput>install -d /tools/lib
-cp -fp csu/crt[i1n].o /tools/lib</userinput></screen>
+<screen><userinput>make install</userinput></screen>
 
+</sect2>
+
+<sect2 role="content"><title/>
+<para>Details on this package are located in <xref
+linkend="contents-glibc" role="."/></para>
 </sect2>
 
 </sect1>
