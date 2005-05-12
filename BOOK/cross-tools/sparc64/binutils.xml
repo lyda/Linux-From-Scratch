@@ -35,6 +35,11 @@
 
 <screen><userinput>patch -Np1 -i ../binutils-&binutils-version;-posix-1.patch</userinput></screen>
 
+<para>The following patch makes binutils search in both the lib and lib64
+directories in a multilib environment:</para>
+
+<screen><userinput>patch -Np1 -i ../binutils-&binutils-version;-genscripts_multilib-2.patch</userinput></screen>
+
 <para>Create a separate build directory again:</para>
 
 <screen><userinput>mkdir ../binutils-build
