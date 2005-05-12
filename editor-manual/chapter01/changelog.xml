@@ -28,6 +28,11 @@ first a summary, then a detailed log.</para>
 
  <listitem><para>Changelog Entries:</para>
   <itemizedlist>
+   <listitem><para>May 12, 2005 [matthew]</para>
+     <itemizedlist>
+       <listitem><para>General: Correctly tag mailing list addresses</para></listitem>
+     </itemizedlist>
+   </listitem>
    <listitem><para>May 9, 2005 [matthew]</para>
      <itemizedlist>
        <listitem><para>chapter06: Minor wording improvements and remove mention

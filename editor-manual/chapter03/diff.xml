@@ -13,7 +13,7 @@
   </para>
 
   <para>Firstly, those without write access to the LFS Subversion server can use it to
-    generate patches to send to <userinput>lfs-dev</userinput>. To do this,
+    generate patches to send to <email>lfs-dev@linuxfromscratch.org</email>. To do this,
     simply edit the files in your local working copy then run
     <userinput>svn diff &gt; FILE.patch</userinput> from the root of your LFS
     directory. You can then attach this file to a message to the

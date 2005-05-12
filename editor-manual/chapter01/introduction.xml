@@ -9,9 +9,9 @@
 <?dbhtml filename="introduction.html"?>
 
 <para>LFS development takes place using three main systems. Firstly,
-the mailing lists <userinput>lfs-book</userinput>,
-<userinput>lfs-dev</userinput> and (to a lesser extent) 
-<userinput>lfs-support</userinput>. Secondly the Bugzilla tracking
+the mailing lists <email>lfs-book@linuxfromscratch.org</email>,
+<email>lfs-dev@linuxfromscratch.org</email> and (to a lesser extent) 
+<email>lfs-support@linuxfromscratch.org</email>. Secondly the Bugzilla tracking
 system, and thirdly the Subversion server where the book itself is
 stored. All of these services are provided by the server
 <userinput>linuxfromscratch.org</userinput> also known as
@@ -33,8 +33,8 @@ add, remove and edit bugs, you need to add an account and make sure you
 are logged in whenever you wish to perform such an action.  You can
 query and read the bug database without logging in or creating a user.
 Note that all bugzilla messages are copied to the
-<userinput>lfs-book</userinput> mailing list and that all editors
-should be subscribed to this and the <userinput>lfs-dev</userinput>
+<email>lfs-book@linuxfromscratch.org</email> mailing list and that all editors
+should be subscribed to this and the <email>lfs-dev@linuxfromscratch.org</email>
 list at a minimum.</para>
 
 <para>Finally, there is the Subversion server which will be discussed in the

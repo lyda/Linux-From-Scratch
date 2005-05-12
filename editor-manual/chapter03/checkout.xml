@@ -16,6 +16,6 @@
     need to delete your local working copy and re-check it out.
     If this is going to be needed, it will usually be because an editor will
     have made a <emphasis>large</emphasis> change and it will be announced at
-    least on the <filename>lfs-book</filename> list.
+    least on the <email>lfs-book@linuxfromscratch.org</email> list.
   </para>
 </sect1>

@@ -10,7 +10,7 @@
 
 <para>Once you are sure that everything renders and that you know which
 files you wish to commit, you're ready. A transaction log of the Subversion commit
-will be emailed to the <userinput>lfs-book</userinput> mailinglist so we
+will be emailed to the <email>lfs-book@linuxfromscratch.org</email> mailinglist so we
 all can see right away what you did. The commit emails contain some basic
 info (log, changes to which files) including a <emphasis>diff</emphasis>
 format output.</para>

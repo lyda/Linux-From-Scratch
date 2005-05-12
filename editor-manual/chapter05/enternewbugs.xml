@@ -46,7 +46,7 @@
 
   <listitem><para>If you don't want to assign yourself to it right away, leave
     the <emphasis>Assigned To</emphasis> field blank. It'll be assigned to
-    <emphasis>lfs-book@linuxfromscratch.org</emphasis> then, until a real editor
+    <email>lfs-book@linuxfromscratch.org</email> then, until a real editor
     changes that to himself.</para>
   </listitem>
 
@@ -57,7 +57,7 @@
 
   <listitem><para>As the last step, click on the <emphasis>Commit</emphasis>
     button to commit your changes to the database. A log of this will be sent to
-    the lfs-book mailinglist.</para>
+    the <email>lfs-book@linuxfromscratch.org</email> mailinglist.</para>
   </listitem>
 </itemizedlist>
 
