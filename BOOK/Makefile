@@ -39,7 +39,7 @@ endef
 
 # Validation
 define VALIDATE
-        echo "Validating $$arch..." ; \
+	echo "Validating $$arch..." ; \
         xsltproc --xinclude --nonet --output $(PWD)/index-$$arch.xml \
            ${PWD}/stylesheets/lfs-profile.xsl $(PWD)/$$arch-index.xml ; \
         xmllint --noout --nonet --postvalid $(PWD)/index-$$arch.xml

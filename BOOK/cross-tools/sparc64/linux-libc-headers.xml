@@ -31,6 +31,12 @@
 <sect2 role="installation">
 <title>Installation of Linux-Libc-Headers</title>
 
+<para>The following patch contains header stubs which link to the proper
+header from either asm-sparc or asm-sparc64:</para>
+
+<screen><userinput>patch -Np1 -i ../linux-libc-headers-&linux-libc-headers-version;-sparc_biarch-1.patch
+</userinput></screen>
+
 <para>Install the header files:</para>
 
 <screen><userinput>install -d /tools/include
