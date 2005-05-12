@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
 <sect1 id="ch-chroot-creatingdirs">
@@ -31,11 +31,6 @@ install -d /var/{opt,cache,lib/{misc,locate},local}
 install -d /opt/{bin,doc,include,info}
 install -d /opt/{lib,man/man{1,2,3,4,5,6,7,8}}</userinput></screen>
 
-<para arch="raq2">FIXME. Some explanation is needed here for the next commands.</para>
-
-<screen arch="raq2"><userinput>cd /boot
-ln -s . boot</userinput></screen>
-
 <para>Directories are, by default, created with permission mode 755,
 but this is not desirable for all directories. In the commands above,
 two changes are made&mdash;one to the home directory of user
@@ -51,7 +46,6 @@ class="directory">/var/tmp</filename> directories, but cannot remove
 other users' files from them. The latter is prohibited by the
 so-called <quote>sticky bit,</quote> the highest bit (1) in the 1777
 bit mask.</para>
-
 
 <sect2>
 <title>FHS Compliance Note</title>
