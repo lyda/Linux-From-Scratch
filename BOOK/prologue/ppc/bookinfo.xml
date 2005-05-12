@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE bookinfo PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
 <bookinfo>
 <title>Linux From Scratch</title>
-<subtitle arch="x86">Version &version-x86;</subtitle>
-<subtitle arch="alpha">Version &version-alpha;</subtitle>
-<subtitle arch="sparc">Version &version-sparc;</subtitle>
-<subtitle arch="sparc64">Version &version-sparc64;</subtitle>
-<subtitle arch="ppc">Version &version-ppc;</subtitle>
-<subtitle arch="raq2">Version &version-raq2;</subtitle>
-
+<subtitle>Version &version-ppc;</subtitle>
 
 <authorgroup>
 <author><firstname>Gerard</firstname><surname>Beekmans</surname></author>
