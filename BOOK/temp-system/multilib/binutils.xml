@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-temp-system-binutils" role="wrap">
+<title>Binutils-&binutils-version;</title>
+<?dbhtml filename="binutils.html"?>
+
+<indexterm zone="ch-temp-system-binutils">
+<primary sortas="a-Binutils">Binutils</primary>
+<secondary>temporary system</secondary></indexterm>
+
+<sect2 role="package"><title/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/binutils.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>1.0 SBU</seg><seg>194 MB</seg></seglistitem>
+</segmentedlist>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/binutils.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of Binutils</title>
+
+<para>It is important that Binutils be the first package compiled
+because both Glibc and GCC perform various tests on the available
+linker and assembler to determine which of their own features to
+enable.</para>
+
+<para>To make sure that we use the proper syntax for a couple of tools, we apply
+the following patch:</para>
+
+<screen><userinput>patch -Np1 -i ../binutils-&binutils-version;-posix-1.patch</userinput></screen>
+
+<para>The following patch makes binutils search in both the lib and lib64
+directories in a multilib environment:</para>
+
+<screen><userinput>patch -Np1 -i ../binutils-&binutils-version;-genscripts_multilib-1.patch</userinput></screen>
+
+<para>The Binutils documentation recommends building Binutils outside of the
+source directory in a dedicated build directory:</para>
+
+<screen><userinput>mkdir ../binutils-build
+cd ../binutils-build</userinput></screen>
+
+<note><para>In order for the SBU values listed in the rest of the book
+to be of any use, measure the time it takes to build this package from
+the configuration, up to and including the first install. To achieve
+this easily, wrap the four commands in a <command>time</command>
+command like this: <userinput>time { ./configure ... &amp;&amp; ...
+&amp;&amp; ... &amp;&amp; make install; }</userinput>.</para></note>
+
+<para>Now prepare Binutils for compilation:</para>
+
+<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD64}" \
+     ../binutils-&binutils-version;/configure --prefix=/tools \
+     --libdir=/tools/lib64 --with-lib-path=/tools/lib \
+     --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
+     --disable-nls --enable-shared --enable-64-bit-bfd</userinput></screen>
+
+<para>The meaning of the configure options:</para>
+
+<variablelist>
+<varlistentry>
+<term><parameter>--prefix=/tools</parameter></term>
+<listitem><para>This tells the configure script to prepare to install the Binutils
+programs in the <filename class="directory">/tools</filename> directory.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><parameter>--disable-nls</parameter></term>
+<listitem><para>This disables internationalization. This is not needed for the
+temporary tools.</para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>Continue with compiling the package:</para>
+
+<screen><userinput>make configure-host
+make headers -C bfd
+make</userinput></screen>
+
+<para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+</sect2>
+
+<sect2 role="content"><title/>
+<para>Details on this package are located in <xref
+linkend="contents-binutils" role="."/></para>
+</sect2>
+
+</sect1>
+
