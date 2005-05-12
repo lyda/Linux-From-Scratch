@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-bootable-kernel" role="wrap" arch="alpha">
-<title>Linux-&linux-alpha-version;</title>
+<sect1 id="ch-bootable-kernel" role="wrap">
+<title>Linux-&linux-version;</title>
 <?dbhtml filename="kernel.html"?>
 
 <indexterm zone="ch-bootable-kernel"><primary sortas="a-Linux">Linux</primary></indexterm>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="kernel.xml"
-  xpointer="xpointer(/sect1/sect2[@role='package'])"/>
+<sect2 role="package"><title/>
+<para>The Linux package contains the kernel and the header files.</para>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>4.20 SBU</seg>
+<seg>181 MB</seg></seglistitem>
+</segmentedlist>
+
+<segmentedlist>
+<segtitle>&dependencies;</segtitle>
+<seglistitem><seg>Bash, Binutils, Coreutils, Findutils,
+GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, and Sed</seg></seglistitem>
+</segmentedlist>
+</sect2>
 
 <sect2 role="installation">
 <title>Installation of the kernel</title>
@@ -49,15 +62,23 @@ compile the keymap into the kernel, issue the command below:</para>
 
 <screen><userinput>make menuconfig</userinput></screen>
 
-<para>Alternatively, <command>make oldconfig</command> may be more appropriate in some
+<para>Alternatively, <command>make oldconfig</command>
+may be more appropriate in some
 situations. <phrase>This will build a basic system with no modules and 
 ext2 support only.</phrase> See the <filename>README</filename> file for more
 information.</para>
 
+<note><para>When configuring the kernel, be sure to enable the
+<quote>Support for hot-pluggable devices</quote> option under the
+<quote>General Setup</quote> menu. This enables hotplug events that
+are used by <command>udev</command> to populate the <filename
+class="directory">/dev</filename> directory with device
+nodes.</para></note>
+
 <para>If desired, skip kernel configuration by copying the kernel
 config file, <filename>.config</filename>, from the host system
 (assuming it is available) to the unpacked <filename
-class="directory">linux-&linux-alpha-version;</filename> directory. However,
+class="directory">linux-&linux-version;</filename> directory. However,
 we do not recommend this option. It is often better to explore all the
 configuration menus and create the kernel configuration from
 scratch.</para>
@@ -86,7 +107,7 @@ with gcc 2.95.x.</para></note>
 <filename>/etc/modprobe.conf</filename> file may be needed.
 Information pertaining to modules and kernel configuration is
 located in the kernel documentation in the <filename
-class="directory">linux-&linux-alpha-version;/Documentation</filename>
+class="directory">linux-&linux-version;/Documentation</filename>
 directory. The <emphasis>modprobe.conf</emphasis> man page may also be
 of interest.</para>
 
@@ -122,14 +143,14 @@ the <filename class="directory">/boot</filename> directory.</para>
 <para><!--The path to the kernel image may vary depending on the platform
 being used. -->Issue the following command to install the kernel:</para>
 
-<screen><userinput>cp vmlinux /boot/vmlinux-&linux-version;</userinput></screen>
+<screen><userinput>cp arch/i386/boot/bzImage /boot/lfskernel-&linux-version;</userinput></screen>
 
 <para><filename>System.map</filename> is a symbol file for the kernel.
 It maps the function entry points of every function in the kernel API,
 as well as the addresses of the kernel data structures for the running
 kernel. Issue the following command to install the map file:</para>
 
-<screen><userinput>cp System.map /boot/System.map-&linux-alpha-version;</userinput></screen>
+<screen><userinput>cp System.map /boot/System.map-&linux-version;</userinput></screen>
 
 <para>The kernel configuration file <filename>.config</filename>
 produced by the <command>make menuconfig</command> step
@@ -137,7 +158,7 @@ above contains all the configuration selections for the kernel
 that was just compiled. It is a good idea to keep this file for future
 reference:</para>
 
-<screen><userinput>cp .config /boot/config-&linux-alpha-version;</userinput></screen>
+<screen><userinput>cp .config /boot/config-&linux-version;</userinput></screen>
 
 <para>It is important to note that the files in the kernel source
 directory are not owned by <emphasis>root</emphasis>. Whenever a
@@ -153,13 +174,61 @@ source.</para>
 
 <para>If the kernel source tree is going to retained, run
 <command>chown -R 0:0</command> on the <filename
-class="directory">linux-&linux-alpha-version;</filename> directory to ensure
+class="directory">linux-&linux-version;</filename> directory to ensure
 all files are owned by user <emphasis>root</emphasis>.</para>
 </sect2>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="kernel.xml"
-  xpointer="xpointer(/sect1/sect2[@role='content'])"/>
+
+<sect2 id="contents-kernel" role="content"><title>Contents of Linux</title>
+
+<segmentedlist>
+<segtitle>Installed files</segtitle>
+<seglistitem><seg>kernel, kernel headers,
+and System.map</seg></seglistitem>
+</segmentedlist>
+
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
+<?dbhtml list-presentation="table"?>
+
+<varlistentry id="kernel">
+<term><filename>kernel</filename></term>
+<listitem>
+<para>The engine of the Linux system. When turning on the computer,
+the kernel is the first part of the operating system that gets loaded.
+It detects and initializes all components of the computer's hardware,
+then makes these components available as a tree of files to the
+software and turns a single CPU into a multitasking machine capable
+of running scores of programs seemingly at the same time.</para>
+<indexterm zone="ch-bootable-kernel kernel"><primary sortas="b-kernel">kernel</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="kernel-headers">
+<term><filename>kernel headers</filename></term>
+<listitem>
+<para>Defines the interface to the services that the kernel provides.
+The headers in the system's <filename
+class="directory">include</filename> directory should
+<emphasis>always</emphasis> be the ones against which Glibc was
+compiled and therefore, should <emphasis>not</emphasis> be replaced
+when upgrading the kernel.</para>
+<indexterm zone="ch-bootable-kernel kernel-headers"><primary sortas="e-kernel-headers">kernel headers</primary></indexterm>
+</listitem>
+</varlistentry>
+
+<varlistentry id="System.map">
+<term><filename>System.map</filename></term>
+<listitem>
+<para>A list of addresses and symbols; it maps the entry points and
+addresses of all the functions and data structures in the
+kernel</para>
+<indexterm zone="ch-bootable-kernel System.map"><primary sortas="e-/boot/System.map">/boot/System.map</primary></indexterm>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
 
 </sect1>
 
