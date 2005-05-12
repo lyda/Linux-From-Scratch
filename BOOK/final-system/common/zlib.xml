@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-system-zlib" role="wrap">
+<title>Zlib-&zlib-version;</title>
+<?dbhtml filename="zlib.html"?>
+
+<indexterm zone="ch-system-zlib"><primary sortas="a-Zlib">Zlib</primary></indexterm>
+
+<sect2 role="package"><title/>
+<para>The Zlib package contains compression and un-compression routines used by
+some programs.</para>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>0.1 SBU</seg><seg>1.5 MB</seg></seglistitem>
+</segmentedlist>
+
+<segmentedlist>
+<segtitle>&dependencies;</segtitle>
+<seglistitem><seg>Binutils, Coreutils, GCC, Glibc, Make, and Sed</seg></seglistitem>
+</segmentedlist>
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of Zlib</title>
+
+<note><para>Zlib is known to build its shared library incorrectly if
+<envar>CFLAGS</envar> is specified in the environment. If using a 
+specified <envar>CFLAGS</envar>
+variable, be sure to add the <parameter>-fPIC</parameter> directive to
+the <envar>CFLAGS</envar> variable for the duration of the
+configure command below, then remove it afterwards.</para></note>
+
+<para>Prepare Zlib for compilation:</para>
+
+<screen><userinput>./configure --prefix=/usr --shared</userinput></screen>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>To test the results, issue:
+<userinput>make check</userinput>.</para>
+
+<para>Install the shared library:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+
+
+<para>Build the static library:</para>
+
+<screen><userinput>make clean
+./configure --prefix=/usr
+make</userinput></screen>
+
+<para>To test the results again, issue:
+<userinput>make check</userinput>.</para>
+
+<para>Install the static library:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+<para>Fix the permissions on the static library:</para>
+
+<screen><userinput>chmod 644 /usr/lib/libz.a</userinput></screen>
+
+<para>It is good policy and common practice to place important
+libraries into the <filename class="directory">/lib</filename>
+directory. This is most important in scenarios where <filename
+class="directory">/usr</filename> is on a separate partition.
+Essentially, the run-time components of any libraries that are used by
+programs in <filename class="directory">/bin</filename> or <filename
+class="directory">/sbin</filename> should reside in <filename
+class="directory">/lib</filename> so that they are on the root
+partition and available in the event of <filename
+class="directory">/usr</filename> being inaccessible.</para>
+
+<para>For the above reason, move the run-time components of the shared Zlib
+into <filename class="directory">/lib</filename>:</para>
+
+<screen><userinput>mv /usr/lib/libz.so.* /lib</userinput></screen>
+
+<para>Fix the <filename class="symlink">/usr/lib/libz.so</filename>
+symlink:</para>
+
+<screen><userinput>ln -sf ../../lib/libz.so.1 /usr/lib/libz.so</userinput></screen>
+
+</sect2>
+
+
+<sect2 id="contents-zlib" role="content"><title>Contents of Zlib</title>
+
+<segmentedlist>
+<segtitle>Installed libraries</segtitle>
+<seglistitem><seg>libz[a,so]</seg></seglistitem>
+</segmentedlist>
+
+<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
+<?dbfo list-presentation="list"?>
+<?dbhtml list-presentation="table"?>
+
+<varlistentry id="libz">
+<term><filename class="libraryfile">libz</filename></term>
+<listitem>
+<para>Contains compression and un-compression
+functions used by some programs</para>
+<indexterm zone="ch-system-zlib libz"><primary sortas="c-libz">libz</primary></indexterm>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+</sect1>
+

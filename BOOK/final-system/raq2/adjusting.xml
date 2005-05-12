@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-system-adjusting">
+<title>Adjusting the Toolchain</title>
+<?dbhtml filename="adjusting.html"?>
+
+<para>Now we amend the GCC specs file so that it points to the new
+dynamic linker. A perl command accomplishes this:</para>
+
+<warning><para><emphasis>Do not</emphasis> run the following command
+more than once, it will adversely affect the outcome of software built
+after this step.</para></warning>
+
+<screen><userinput>perl -pi -e 's@ /tools/lib/ld.so.1@ /lib/ld.so.1@g;' \
+    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' \
+    `gcc --print-file specs`</userinput></screen>
+
+<para>It is a good idea to visually inspect the specs file to verify the intended 
+change was actually made.</para>
+
+<para>Note that <filename class="directory">/lib</filename> is now
+the prefix of our dynamic linker.</para>
+
+</sect1>
+
