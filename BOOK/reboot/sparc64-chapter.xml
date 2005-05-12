@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+<chapter id="chapter-reboot" xreflabel="If You Are Going to Reboot">
+<?dbhtml dir="reboot"?>
+<title>If You Are Going to Reboot</title>
+<?dbhtml filename="chapter.html"?>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/e2fsprogs.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/sysvinit.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/module-init-tools.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/inetutils.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/util-linux.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/udev.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/creatingdirs.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/createfiles.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/pwdgroup.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/kernel.xml"/>
+
+</chapter>

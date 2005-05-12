@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-reboot-kernel" role="wrap" arch="ppc">
+<sect1 id="ch-reboot-kernel" role="wrap">
 <title>Linux-&linux-version;</title>
 <?dbhtml filename="kernel.html"?>
 
@@ -11,7 +11,7 @@
 <secondary>reboot</secondary></indexterm>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="kernel.xml"
+  href="../x86/kernel.xml"
   xpointer="xpointer(/sect1/sect2[@role='package'])"/>
 
 <sect2 role="installation">
@@ -167,7 +167,7 @@ all files are owned by user <emphasis>root</emphasis>.</para>
 </sect2>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="kernel.xml"
+  href="../x86/kernel.xml"
   xpointer="xpointer(/sect1/sect2[@role='content'])"/>
 
 </sect1>
