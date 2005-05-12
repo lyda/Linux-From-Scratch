@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-materials-patches">
+<sect1 id="ch-materials-patches-common">
 <title>Needed Patches</title>
 <?dbhtml filename="patches.html"?>
 
@@ -36,24 +36,10 @@ needed to build an LFS system:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry arch="sparc64">
-<term>Binutils Multilib Patch - 3 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;binutils/binutils-&binutils-version;-genscripts_multilib-1.patch"/></para>
-</listitem>
-</varlistentry>
-
 <varlistentry>
 <term>Coreutils Suppress Uptime, Kill, Su Patch - 16 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;coreutils/coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="x86">
-<term>Coreutils Uname Patch - 1 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;coreutils/coreutils-&coreutils-version;-uname-2.patch"/></para>
 </listitem>
 </varlistentry>
 
@@ -99,24 +85,10 @@ needed to build an LFS system:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry arch="raq2">
-<term>GLIBC Syscall Patch - 11 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;glibc/glibc-&glibc-version;-mips_syscall-1.patch"/></para>
-</listitem>
-</varlistentry>
-
 <varlistentry>
 <term>GLIBC Test Patch - 11 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;glibc/glibc-&glibc-version;-fix_test-1.patch"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="raq2">
-<term>Grep RaQ2 Config Update Patch - 48 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;grep/grep-&grep-version;-raq2_config_update-1.patch"/></para>
 </listitem>
 </varlistentry>
 
@@ -134,28 +106,6 @@ needed to build an LFS system:</para>
 </listitem>
 </varlistentry>
 
-<varlistentry arch="raq2">
-<term>Linux-libc-headers RaQ2 Patch - 1 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;linux-libc-headers/linux-libc-headers-&linux-libc-headers-version;-raq2_fix-1.patch"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="sparc64">
-<term>Linux-libc-headers Sparc Biarch Patch - 80 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;linux-libc-headers/linux-libc-headers-&linux-libc-headers-version;-sparc_biarch-1.patch"/></para>
-</listitem>
-</varlistentry>
-
-
-<varlistentry arch="raq2">
-<term>Linux RaQ2 Patch - 164 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;linux/linux-&linux-version;-raq2_fix-3.patch"/></para>
-</listitem>
-</varlistentry>
-
 <varlistentry>
 <term>Mktemp Tempfile Patch - 3 KB:</term>
 <listitem>
@@ -170,18 +120,10 @@ needed to build an LFS system:</para>
 </listitem>
 </varlistentry>
 
-
 <varlistentry>
 <term>Perl Libc Patch - 1 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;perl/perl-&perl-version;-libc-1.patch"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="raq2">
-<term>Procps Signal 11 Patch - 1 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;procps/procps-&procps-version;-fix_mips-1.patch"/></para>
 </listitem>
 </varlistentry>
 
@@ -216,13 +158,6 @@ needed to build an LFS system:</para>
 <varlistentry>
 <term>Util-linux Cramfs Patch - 2 KB:</term> <listitem>
 <para><ulink url="&patches-root;util-linux/util-linux-&util-linux-version;-cramfs-1.patch"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="ppc">
-<term>Yaboot (&yaboot-version;) - 1 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;yaboot/yaboot-&yaboot-version;-fix-1.patch"/></para>
 </listitem>
 </varlistentry>
 

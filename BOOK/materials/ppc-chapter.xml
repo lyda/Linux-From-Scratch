@@ -8,8 +8,10 @@
 <title>Packages and Patches</title>
 <?dbhtml filename="chapter.html"?>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="packages.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="patches.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/packages.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ppc/packages.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/patches.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ppc/patches.xml"/>
 
 </chapter>

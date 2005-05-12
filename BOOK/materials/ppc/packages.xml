@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-materials-packages-ppc">
+<title>All Packages for PowerPC</title>
+<?dbhtml filename="packages-ppc.html"?>
+
+<para>Download or otherwise obtain the following packages:</para>
+
+<variablelist role="materials">
+
+<varlistentry>
+<term>Linux (&linux-ppc-version;) - 35 MB:</term>
+<listitem>
+<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-version;.tar.bz2"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Linux-Libc-Headers (&linux-libc-headers-ppc-version;) - 2.5 MB:</term>
+<listitem>
+<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-ppc-version;.tar.bz2"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Parted (&parted-version;) - 1.4 MB:</term>
+<listitem>
+<para><ulink url="&gnu;/parted-&parted-version;.tar.gz"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Yaboot (&yaboot-version;) - 270 KB:</term>
+<listitem>
+<para><ulink url="http://penguinppc.org/bootloaders/yaboot/yaboot-&yaboot-version;.tar.gz"/></para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>Total size of these packages: about 171 MB</para>
+
+</sect1>

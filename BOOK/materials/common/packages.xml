@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-materials-packages">
+<sect1 id="ch-materials-packages-common">
 <title>All Packages</title>
 <?dbhtml filename="packages.html"?>
 
@@ -50,13 +50,6 @@
 <term>Bzip2 (&bzip2-version;) - 654 KB:</term>
 <listitem>
 <para><ulink url="http://www.bzip.org/&bzip2-version;/bzip-&bzip2-version;.tar.gz"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="raq2">
-<term>Colo (&colo-version;) - 240 KB:</term>
-<listitem>
-<para><ulink url="http://www.colonel-panic.org/cobalt-mips/colo/colo-&colo-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
@@ -179,13 +172,6 @@
 </listitem>
 </varlistentry>
 
-<varlistentry arch="x86">
-<term>Grub (&grub-version;) - 963 KB:</term>
-<listitem>
-<para><ulink url="&alpha-gnu;grub/grub-&grub-version;.tar.gz"/></para>
-</listitem>
-</varlistentry>
-
 <varlistentry>
 <term>Hotplug (&hotplug-version;) - 38 KB:</term>
 <listitem>
@@ -242,62 +228,6 @@
 </listitem>
 </varlistentry>
 
-<varlistentry arch="x86">
-<term>Linux (&linux-version;) - 35 MB:</term>
-<listitem>
-<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="alpha">
-<term>Linux (&linux-alpha-version;) - 35 MB:</term>
-<listitem>
-<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-alpha-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="ppc">
-<term>Linux (&linux-ppc-version;) - 35 MB:</term>
-<listitem>
-<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="raq2">
-<term>Linux (&linux-raq2-version;) - 35 MB:</term>
-<listitem>
-<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-raq2-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="x86">
-<term>Linux-Libc-Headers (&linux-libc-headers-version;) - 2.5 MB:</term>
-<listitem>
-<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="alpha">
-<term>Linux-Libc-Headers (&linux-libc-headers-alpha-version;) - 2.5 MB:</term>
-<listitem>
-<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-alpha-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="ppc">
-<term>Linux-Libc-Headers (&linux-libc-headers-ppc-version;) - 2.5 MB:</term>
-<listitem>
-<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-ppc-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="raq2">
-<term>Linux-Libc-Headers (&linux-libc-headers-raq2-version;) - 2.6 MB:</term>
-<listitem>
-<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-raq2-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
-
 <varlistentry>
 <term>M4 (&m4-version;) - 298 KB:</term>
 <listitem>
@@ -347,31 +277,10 @@
 </listitem>
 </varlistentry>
 
-<varlistentry arch="raq2">
-<term>OpenSSH (&openssh-version;) - 835 KB:</term>
-<listitem>
-<para><ulink url="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-&openssh-version;.tar.gz"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="raq2">
-<term>OpenSSL (&openssl-version;) - 3.0 MB:</term>
-<listitem>
-<para><ulink url="http://www.openssl.org/source/openssl-&openssl-version;.tar.gz"/></para>
-</listitem>
-</varlistentry>
-
 <varlistentry>
 <term>Patch (&patch-version;) - 183 KB:</term>
 <listitem>
 <para><ulink url="&alpha-gnu;diffutils/patch-&patch-version;.tar.gz"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="ppc">
-<term>Parted (&parted-version;) - 1.4 MB:</term>
-<listitem>
-<para><ulink url="&gnu;/parted-&parted-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
@@ -414,13 +323,6 @@
 <term>Shadow (&shadow-version;) - 996 KB:</term>
 <listitem>
 <para><ulink url="ftp://ftp.pld.org.pl/software/shadow/shadow-&shadow-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="sparc">
-<term>Silo (&silo-version;) - 144 KB:</term>
-<listitem>
-<para><ulink url="http://www.sparc-boot.org/pub/silo/silo-&silo-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
@@ -491,13 +393,6 @@
 <term>Vim (&vim-version;) language files (optional) - 1.0 MB:</term>
 <listitem>
 <para><ulink url="ftp://ftp.vim.org/pub/vim/extra/vim-&vim-version;-lang.tar.gz"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry arch="ppc">
-<term>Yaboot (&yaboot-version;) - 270 KB:</term>
-<listitem>
-<para><ulink url="http://penguinppc.org/bootloaders/yaboot/yaboot-&yaboot-version;.tar.gz"/></para>
 </listitem>
 </varlistentry>
 
