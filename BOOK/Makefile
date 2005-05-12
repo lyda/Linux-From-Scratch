@@ -91,4 +91,4 @@ cleanup:
 	rm -f $(PWD)/index-$$arch.xml ; \
 	done
 
-.PHONY: lfs toplevel pdf nochunks validate validation cleanup
+.PHONY: lfs toplevel common render nochunk nochunk nochunk_render validate validation cleanup
