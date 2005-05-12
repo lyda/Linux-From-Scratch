@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+<sect1 id="ch-intro-acknowledgements">
+<title>Acknowledgements</title>
+<?dbhtml filename="acknowledgements.html"?>
+
+<para>The editors of the book would like to acknowledge people who
+have assisted in making the book, what it is today.</para>
+
+<itemizedlist>
+<listitem><para>Nathan Coulson - Bootscripts, typo, and content fixes.</para></listitem>
+<listitem><para>Richard Downing - Testing, typo, and content fixes.</para></listitem>
+<listitem><para>Peter Ennis - Typo and content fixes.</para></listitem>
+<listitem><para>Tony Morgan - Typo and content fixes.</para></listitem>
+<listitem><para>Ryan Oliver - Developer of the Cross-LFS scripts.</para></listitem>
+</itemizedlist>
+
+<para>Thank you all for your support.</para>
+
+</sect1>
+

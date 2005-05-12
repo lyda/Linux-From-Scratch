@@ -8,6 +8,7 @@
 <title>Introduction</title>
 <?dbhtml filename="chapter.html"?>
 
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/acknowledgements.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/how.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/changelog.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ppc/changelog.xml"/>
