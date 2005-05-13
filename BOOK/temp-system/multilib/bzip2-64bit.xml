@@ -31,7 +31,8 @@
 <title>Installation of Bzip2</title>
 
 <para>We need to remove the tests to since they won't work on
-a multi-architecture build:</para>
+a multi-architecture build, and tell change the default lib path
+to lib64:</para>
 
 <screen><userinput>sed -i -e 's@^\(all:.*\) test@\1@g' \
   -e 's@/lib\(/\| \|$\)@/lib64\1@g' Makefile</userinput></screen>
