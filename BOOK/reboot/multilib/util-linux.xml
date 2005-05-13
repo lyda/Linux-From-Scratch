@@ -41,6 +41,10 @@ linux-libc-headers.  The following patch properly fixes that issue</para>
 
 <screen><userinput>patch -Np1 -i ../&util-linux-cramfs-patch;</userinput></screen>
 
+<para>Util-Linux needs the CC variable set to include the Build flags:</para>
+
+<screen><userinput>export CC="${LFS_TARGET}-gcc ${BUILD64}"</userinput></screen>
+
 <para>Prepare Util-linux for compilation:</para>
 
 <screen><userinput>./configure</userinput></screen>
