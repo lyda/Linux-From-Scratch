@@ -94,6 +94,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>May 13, 2005 [jhuntwork]</para>
 <itemizedlist>
+<listitem><para>Temp-System: Added multilib build instructions for bzi2.</para></listitem>
 <listitem><para>Changed CC="${LFS_TARGET}-gcc buildflags" to CC="${CC} buildflags".</para></listitem>
 </itemizedlist>
 </listitem>

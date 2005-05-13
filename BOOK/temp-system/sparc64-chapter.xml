@@ -16,7 +16,8 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/zlib-64bit.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gawk.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/coreutils.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/bzip2.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bzip2.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bzip2-64bit.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gzip.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/diffutils.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/findutils.xml"/>

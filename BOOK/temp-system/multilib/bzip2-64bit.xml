@@ -33,12 +33,13 @@
 <para>We need to remove the tests to since they won't work on
 a multi-architecture build:</para>
 
-<screen><userinput>sed -i 's@^\(all:.*\) test@\1@g' Makefile</userinput></screen>
+<screen><userinput>sed -i -e 's@^\(all:.*\) test@\1@g' \
+  's@/lib\(/\| \|$\)@/lib64\1@g' Makefile</userinput></screen>
 
 <para>The Bzip2 package does not contain a <command>configure</command>
 script. Compile it with:</para>
 
-<screen><userinput>make CC="${CC} ${BUILD32}" AR="${AR}" \
+<screen><userinput>make CC="${CC} ${BUILD64}" AR="${AR}" \
 RANLIB="${RANLIB}" LDFLAGS="-s"</userinput></screen>
 
 <para>Install the package:</para>
