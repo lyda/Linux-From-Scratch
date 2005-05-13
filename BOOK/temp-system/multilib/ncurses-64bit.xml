@@ -7,7 +7,7 @@
 ]>
 
 <sect1 id="ch-temp-system-ncurses-64bit" role="wrap">
-<title>Ncurses-&ncurses-versioni; 64-Bit</title>
+<title>Ncurses-&ncurses-version; 64-Bit</title>
 <?dbhtml filename="ncurses-64.html"?>
 
 <indexterm zone="ch-temp-system-ncurses-64bit">
