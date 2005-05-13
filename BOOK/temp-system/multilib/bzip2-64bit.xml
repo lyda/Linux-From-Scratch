@@ -6,12 +6,12 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-temp-system-bzip2" role="wrap">
-<title>Bzip2-&bzip2-version;</title>
-<?dbhtml filename="bzip2.html"?>
+<sect1 id="ch-temp-system-bzip2-64bit" role="wrap">
+<title>Bzip2-&bzip2-version; 64-Bit</title>
+<?dbhtml filename="bzip2-64.html"?>
 
-<indexterm zone="ch-temp-system-bzip2">
-<primary sortas="a-Bzip2">Bzip2</primary>
+<indexterm zone="ch-temp-system-bzip2-64bit">
+<primary sortas="a-Bzip2">Bzip2 64-Bit</primary>
 <secondary>temporary system</secondary></indexterm>
 
 <sect2 role="package"><title/>
