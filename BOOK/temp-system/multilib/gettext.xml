@@ -37,7 +37,8 @@ can't find getline. So we fix it here:</para>
 
 <para>Prepare Gettext for compilation:</para>
 
-<screen><userinput>CC="${CC} ${BUILD32}" ./configure --prefix=/tools \
+<screen><userinput>CC="${CC} ${BUILD32}" CXX="${CXX} ${BUILD32}" \
+   ./configure --prefix=/tools \
    --host=${LFS_TARGET} --disable-libasprintf \
    --without-csharp --cache-file=config.cache</userinput></screen>
 
