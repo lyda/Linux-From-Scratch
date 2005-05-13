@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-reboot-udev" role="wrap">
+<title>Udev-&udev-version;</title>
+<?dbhtml filename="udev.html"?>
+
+<indexterm zone="ch-reboot-udev"><primary sortas="a-Udev">Udev</primary>
+<secondary>reboot</secondary></indexterm>
+
+<sect2 role="package"><title/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/udev.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>0.2 SBU</seg><seg>5.2 MB</seg></seglistitem>
+</segmentedlist>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/udev.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of Udev</title>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make CROSS="${LFS_TARGET}-" udevdir=/dev</userinput></screen>
+
+<variablelist>
+<varlistentry>
+<term><parameter>udevdir=/dev</parameter></term>
+<listitem><para>This tells <command>udev</command> in which directory
+devices nodes are to be created.</para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>Ensure that udev uses our cross-compiler and builds 64-bit binaries:</para>
+
+<screen><userinput>export CC="${LFS_TARGET}-gcc ${BUILD64}"</userinput></screen>
+
+<para>Install the package:</para>
+
+<screen><userinput>make DESTDIR=${LFS} udevdir=/dev install</userinput></screen>
+
+<para>Udev's configuration is far from ideal by default, so install
+the configuration files here:</para>
+
+<screen><userinput>cp ../udev-config-2.rules ${LFS}/etc/udev/rules.d/25-lfs.rules</userinput></screen>
+
+<para>Reset CC to default environment variable:</para>
+
+<screen><userinput>source ~/.bash_profile</userinput></screen>
+
+</sect2>
+
+<sect2 role="content"><title/>
+<para>Details on this package are located in <xref
+linkend="contents-udev" role="."/></para>
+</sect2>
+
+</sect1>
+
+
