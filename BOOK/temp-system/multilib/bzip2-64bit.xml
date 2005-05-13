@@ -42,6 +42,10 @@ script. Compile it with:</para>
 <screen><userinput>make CC="${CC} ${BUILD64}" AR="${AR}" \
 RANLIB="${RANLIB}" LDFLAGS="-s"</userinput></screen>
 
+<para>Remove the 32-bit bzip2 binaries, as we want to use the 64-bit ones:</para>
+
+<screen><userinput>rm -f /tools/bin/bz*</userinput></screen>
+
 <para>Install the package:</para>
 
 <screen><userinput>make PREFIX=/tools install</userinput></screen>
