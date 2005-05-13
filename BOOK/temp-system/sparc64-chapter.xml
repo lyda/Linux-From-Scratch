@@ -23,8 +23,8 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/findutils.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/m4.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bison.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/flex.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/make.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/flex.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/make.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/grep.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/sed.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gettext.xml"/>
