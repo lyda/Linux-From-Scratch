@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-reboot-inetutils" role="wrap">
+<title>Inetutils-&inetutils-version;</title>
+<?dbhtml filename="inetutils.html"?>
+
+<indexterm zone="ch-reboot-inetutils"><primary sortas="a-Inetutils">Inetutils</primary>
+<secondary>reboot</secondary></indexterm>
+
+<sect2 role="package"><title/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/inetutils.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>0.2 SBU</seg><seg>5.2 MB</seg></seglistitem>
+</segmentedlist>
+
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/inetutils.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of Inetutils</title>
+
+<para>All programs that come with Inetutils will not be installed.
+However, the Inetutils build system will insist on installing all the
+man pages anyway. The following patch will correct this
+situation:</para>
+
+<screen><userinput>patch -Np1 -i ../&inetutils-man_pages-patch;</userinput></screen>
+
+<para>Prepare Inetutils for compilation:</para>
+
+<screen><userinput>CC="${CC} ${BUILD64}" \
+   ./configure --prefix=/usr --libexecdir=/usr/sbin \
+   --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
+   --sysconfdir=/etc --disable-logger --disable-syslogd \
+   --disable-whois --disable-servers</userinput></screen>
+
+<para>The meaning of the configure options:</para>
+
+<variablelist>
+<varlistentry>
+<term><parameter>--disable-logger</parameter></term>
+<listitem><para>This option
+prevents Inetutils from installing the <command>logger</command> program, which is used by
+scripts to pass messages to the System Log Daemon. Do not install it
+because Util-linux installs a better version later.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><parameter>--disable-syslogd</parameter></term>
+<listitem><para>This option
+prevents Inetutils from installing the System Log Daemon, which is
+installed with the Sysklogd package.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><parameter>--disable-whois</parameter></term>
+<listitem><para>This option disables
+the building of the Inetutils <command>whois</command> client, which is out of date.
+Instructions for a better <command>whois</command> client are in the BLFS book.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><parameter>--disable-servers</parameter></term>
+<listitem><para>This disables the installation of the various network
+servers included as part of the Inetutils package. These servers are
+deemed not appropriate in a basic LFS system. Some are insecure by
+nature and are only considered safe on trusted networks. More
+information can be found at <ulink
+url="&blfs-root;view/svn/basicnet/inetutils.html"/>. Note that
+better replacements are available for many of these
+servers.</para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make LDFLAGS="-s"</userinput></screen>
+
+<para>Install the package:</para>
+
+<screen><userinput>make DESTDIR="${LFS}" install</userinput></screen>
+
+</sect2>
+
+<sect2 role="content"><title/>
+<para>Details on this package are located in <xref
+linkend="contents-inetutils" role="."/></para>
+</sect2>
+
+</sect1>
+

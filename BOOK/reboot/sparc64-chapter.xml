@@ -11,7 +11,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/e2fsprogs.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/sysvinit.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/module-init-tools.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/inetutils.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/inetutils.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/util-linux.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/udev.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/creatingdirs.xml"/>
