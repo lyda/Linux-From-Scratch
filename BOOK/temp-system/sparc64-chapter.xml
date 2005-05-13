@@ -27,7 +27,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/make.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/grep.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/sed.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gettext.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gettext.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/ncurses.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/patch.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/tar.xml"/>
