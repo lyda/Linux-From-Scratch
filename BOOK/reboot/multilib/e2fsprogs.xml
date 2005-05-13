@@ -92,7 +92,8 @@ information regarding EVMS.</para></listitem>
 
 <para>Create needed symlinks for a bootable system:</para>
 
-<screen><userinput>cd ${LFS}/sbin
+<screen><userinput>install -d ${LFS}/sbin
+cd ${LFS}/sbin
 ln -sf ../tools/sbin/fsck.ext2 .
 ln -sf ../tools/sbin/fsck.ext3 .
 ln -sf ../tools/sbin/e2fsck .</userinput></screen>
