@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
+
 <sect1 id="ch-system-gzip" role="wrap">
 <title>Gzip-&gzip-version;</title>
 <?dbhtml filename="gzip.html"?>
@@ -28,6 +31,12 @@ GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 
 <sect2 role="installation">
 <title>Installation of Gzip</title>
+
+<para>The following patch fixes two security vulnerabilities in gzip: 
+1 - A path traversal bug when using the -N option (CAN-2005-1228)
+2 - race condition in the file permission restore code (CAN-2005-0998)</para>
+
+<screen><userinput>patch -Np1 -i ../&gzip-security_fix-patch;</userinput></screen>
 
 <para>Prepare Gzip for compilation:</para>
 

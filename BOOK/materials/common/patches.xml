@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
 <sect1 id="ch-materials-patches-common">
 <title>Needed Patches</title>
@@ -18,146 +20,160 @@ needed to build an LFS system:</para>
 <varlistentry>
 <term>Bash Various Fixes - 23 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;bash/bash-&bash-version;-fixes-3.patch"/></para>
+<para><ulink url="&patches-root;bash/&bash-fixes-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Bash Avoid Wcontinued Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;bash/bash-&bash-version;-avoid_WCONTINUED-1.patch"/></para>
+<para><ulink url="&patches-root;bash/&bash-avoid_WCONTINUED-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Binutils Posix Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;binutils/binutils-&binutils-version;-posix-1.patch"/></para>
+<para><ulink url="&patches-root;binutils/&binutils-posix-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Coreutils Suppress Uptime, Kill, Su Patch - 16 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;coreutils/coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch"/></para>
+<para><ulink url="&patches-root;coreutils/&coreutils-suppress-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Expect Spawn Patch - 6 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;expect/expect-&expect-version;-spawn-1.patch"/></para>
+<para><ulink url="&patches-root;expect/&expect-spawn-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Flex Brokenness Patch - 8 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;flex/flex-&flex-version;-debian_fixes-4.patch"/></para>
+<para><ulink url="&patches-root;flex/&flex-fixes-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term> GCC Cross Search Paths Patch - 2 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-cross_search_paths-1.patch"/></para>
+<para><ulink url="&patches-root;gcc/&gcc-cross_search-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term> GCC Fix for Native build - 4 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;gcc/&gcc-fix_native-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term> GCC Linkonce Patch - 12 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-linkonce-1.patch"/></para>
+<para><ulink url="&patches-root;gcc/&gcc-linkonce-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>GCC Posix Patch - 11 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-posix-1.patch"/></para>
+<para><ulink url="&patches-root;gcc/&gcc-posix-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>GCC Specs Patch - 14 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;gcc/gcc-&gcc-version;-specs-3.patch"/></para>
+<para><ulink url="&patches-root;gcc/&gcc-specs-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>GLIBC Test Patch - 11 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;glibc/glibc-&glibc-version;-fix_test-1.patch"/></para>
+<para><ulink url="&patches-root;glibc/&glibc-testfix-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Gzip Security Fix Patch - 2 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;gzip/&gzip-security_fix-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Inetutils No-Server-Man-Pages Patch - 4 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;inetutils/inetutils-&inetutils-version;-no_server_man_pages-1.patch"/></para>
+<para><ulink url="&patches-root;inetutils/&inetutils-man_pages-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>IPRoute2 Disable DB Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;iproute2/iproute2-&iproute2-patch-version;-remove_db-1.patch"/></para>
+<para><ulink url="&patches-root;iproute2/&iproute2-db_remove-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Mktemp Tempfile Patch - 3 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;mktemp/mktemp-&mktemp-version;-add_tempfile-1.patch"/></para>
+<para><ulink url="&patches-root;mktemp/&mktemp-tempfile-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Ncurses 20050319 Patch - 321 KB:</term>
+<term>Ncurses Fixes Patch - 321 KB:</term>
 <listitem>
-<para><ulink url="ftp://invisible-island.net/ncurses/&ncurses-version;/ncurses-&ncurses-version;-20050319-patch.sh.bz2"/></para>
+<para><ulink url="ftp://invisible-island.net/ncurses/&ncurses-version;/&ncurses-update-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Perl Libc Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;perl/perl-&perl-version;-libc-1.patch"/></para>
+<para><ulink url="&patches-root;perl/&perl-libc-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Readline Various Fixes Patch - 6.9 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;readline/readline-&readline-version;-fixes-1.patch"/></para>
+<para><ulink url="&patches-root;readline/&readline-fixes-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Shadow Lastlog Fix Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;shadow/shadow-&shadow-version;-fix_lastlog-1.patch"/></para>
+<para><ulink url="&patches-root;shadow/&shadow-lastlog-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Sysklogd Fixes Patch - 27 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;sysklogd/sysklogd-&sysklogd-version;-fixes-1.patch"/></para>
+<para><ulink url="&patches-root;sysklogd/&sysklogd-fixes-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Tar Sparse Fix Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;tar/tar-&tar-version;-sparse_fix-1.patch"/></para>
+<para><ulink url="&patches-root;tar/&tar-sparse_fix-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Util-linux Cramfs Patch - 2 KB:</term> <listitem>
-<para><ulink url="&patches-root;util-linux/util-linux-&util-linux-version;-cramfs-1.patch"/></para>
+<para><ulink url="&patches-root;util-linux/&util-linux-cramfs-patch;"/></para>
 </listitem>
 </varlistentry>
 

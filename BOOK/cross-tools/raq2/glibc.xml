@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
+
 <sect1 id="ch-cross-tools-glibc" role="wrap">
 <title>Glibc-&glibc-version;</title>
 <?dbhtml filename="glibc.html"?>
@@ -46,7 +49,7 @@ within the glibc-&glibc-version; directory.</para>
 
 <para>The following patch corrects the building of syscall.h:</para>
 
-<screen><userinput>patch -Np1 -i ../glibc-&glibc-version;-mips_syscall-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&glibc-raq2_syscall-patch;</userinput></screen>
 
 <para>NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
+
 <sect1 id="ch-cross-tools-binutils" role="wrap">
 <title>Cross Binutils-&binutils-version;</title>
 <?dbhtml filename="binutils.html"?>
@@ -33,12 +36,12 @@
 
 <para>To make sure that we use the proper syntax for a couple of tools, we apply the following patch:</para>
 
-<screen><userinput>patch -Np1 -i ../binutils-&binutils-version;-posix-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&binutils-posix-patch;</userinput></screen>
 
 <para>The following patch makes binutils search in both the lib and lib64
 directories in a multilib environment:</para>
 
-<screen><userinput>patch -Np1 -i ../binutils-&binutils-version;-genscripts_multilib-2.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&binutils-multilib-patch;</userinput></screen>
 
 <para>Create a separate build directory again:</para>
 

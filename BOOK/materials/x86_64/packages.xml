@@ -19,16 +19,16 @@
 </varlistentry>
 
 <varlistentry>
-<term>Linux (&linux-version;) - 35 MB:</term>
+<term>Linux (&linux-x86_64-version;) - 35 MB:</term>
 <listitem>
-<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-version;.tar.bz2"/></para>
+<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-x86_64-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Linux-Libc-Headers (&linux-libc-headers-version;) - 2.5 MB:</term>
+<term>Linux-Libc-Headers (&linux-libc-headers-x86_64-version;) - 2.5 MB:</term>
 <listitem>
-<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-version;.tar.bz2"/></para>
+<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-x86_64-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 

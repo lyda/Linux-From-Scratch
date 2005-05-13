@@ -6,11 +6,11 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-silo" role="wrap">
+<sect1 id="ch-reboot-silo" role="wrap">
 <title>Silo-&silo-version;</title>
 <?dbhtml filename="silo.html"?>
 
-<indexterm zone="ch-system-silo"><primary sortas="a-Silo">Silo</primary></indexterm>
+<indexterm zone="ch-reboot-silo"><primary sortas="a-Silo">Silo</primary></indexterm>
 
 <sect2 role="package"><title/>
 <para>The Silo package contains the Sparc Improved boot LOader.</para>
@@ -38,29 +38,6 @@ GCC, Glibc, Grep, Make, Ncurses, Sed, Elftoaout</seg></seglistitem>
 <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
-
-</sect2>
-
-<sect2 id="contents-silo" role="content"><title>Contents of Silo</title>
-
-<segmentedlist>
-<segtitle>Installed programs</segtitle>
-<seglistitem><seg>Unchecked</seg></seglistitem>
-</segmentedlist>
-
-<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
-<?dbfo list-presentation="list"?>
-<?dbhtml list-presentation="table"?>
-
-<varlistentry id="silo">
-<term><command>silo</command></term>
-<listitem>
-<para>Need Description</para>
-<indexterm zone="ch-system-silo silo"><primary sortas="a-silo">silo</primary></indexterm>
-</listitem>
-</varlistentry>
-
-</variablelist>
 
 </sect2>
 

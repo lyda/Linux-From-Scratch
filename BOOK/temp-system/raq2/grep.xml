@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
+
 <sect1 id="ch-temp-system-grep" role="wrap">
 <title>Grep-&grep-version;</title>
 <?dbhtml filename="grep.html"?>
@@ -29,7 +32,7 @@
 
 <para>This patch updates config.guess and config.sub for RaQ2 servers.</para>
 
-<screen><userinput>patch -Np1 -i ../grep-&grep-version;-raq2_config_update-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&grep-raq2_update-patch;</userinput></screen>
 
 <para>Prepare Grep for compilation:</para>
 

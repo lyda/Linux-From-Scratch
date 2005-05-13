@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
+
 <sect1 id="ch-bootable-kernel" role="wrap">
-<title>Linux-&linux-version;</title>
+<title>Linux-&linux-x86_64-version;</title>
 <?dbhtml filename="kernel.html"?>
 
 <indexterm zone="ch-bootable-kernel"><primary sortas="a-Linux">Linux</primary></indexterm>
@@ -78,7 +81,7 @@ nodes.</para></note>
 <para>If desired, skip kernel configuration by copying the kernel
 config file, <filename>.config</filename>, from the host system
 (assuming it is available) to the unpacked <filename
-class="directory">linux-&linux-version;</filename> directory. However,
+class="directory">linux-&linux-x86_64-version;</filename> directory. However,
 we do not recommend this option. It is often better to explore all the
 configuration menus and create the kernel configuration from
 scratch.</para>
@@ -107,7 +110,7 @@ with gcc 2.95.x.</para></note>
 <filename>/etc/modprobe.conf</filename> file may be needed.
 Information pertaining to modules and kernel configuration is
 located in the kernel documentation in the <filename
-class="directory">linux-&linux-version;/Documentation</filename>
+class="directory">linux-&linux-x86_64-version;/Documentation</filename>
 directory. The <emphasis>modprobe.conf</emphasis> man page may also be
 of interest.</para>
 
@@ -143,14 +146,14 @@ the <filename class="directory">/boot</filename> directory.</para>
 <para><!--The path to the kernel image may vary depending on the platform
 being used. -->Issue the following command to install the kernel:</para>
 
-<screen><userinput>cp arch/i386/boot/bzImage /boot/lfskernel-&linux-version;</userinput></screen>
+<screen><userinput>cp arch/i386/boot/bzImage /boot/lfskernel-&linux-x86_64-version;</userinput></screen>
 
 <para><filename>System.map</filename> is a symbol file for the kernel.
 It maps the function entry points of every function in the kernel API,
 as well as the addresses of the kernel data structures for the running
 kernel. Issue the following command to install the map file:</para>
 
-<screen><userinput>cp System.map /boot/System.map-&linux-version;</userinput></screen>
+<screen><userinput>cp System.map /boot/System.map-&linux-x86_64-version;</userinput></screen>
 
 <para>The kernel configuration file <filename>.config</filename>
 produced by the <command>make menuconfig</command> step
@@ -158,7 +161,7 @@ above contains all the configuration selections for the kernel
 that was just compiled. It is a good idea to keep this file for future
 reference:</para>
 
-<screen><userinput>cp .config /boot/config-&linux-version;</userinput></screen>
+<screen><userinput>cp .config /boot/config-&linux-x86_64-version;</userinput></screen>
 
 <para>It is important to note that the files in the kernel source
 directory are not owned by <emphasis>root</emphasis>. Whenever a
@@ -174,7 +177,7 @@ source.</para>
 
 <para>If the kernel source tree is going to retained, run
 <command>chown -R 0:0</command> on the <filename
-class="directory">linux-&linux-version;</filename> directory to ensure
+class="directory">linux-&linux-x86_64-version;</filename> directory to ensure
 all files are owned by user <emphasis>root</emphasis>.</para>
 </sect2>
 

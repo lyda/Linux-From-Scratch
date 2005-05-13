@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
+
 <sect1 id="ch-bootable-kernel" role="wrap">
 <title>Linux-&linux-raq2-version;</title>
 <?dbhtml filename="kernel.html"?>
@@ -24,7 +27,7 @@ book configures the kernel.</para>
 <para>The following patch fixes some issues with MIPS based processors 
 and the kernel:</para>
 
-<screen><userinput>patch -Np1 -i ../linux-&linux-raq2-version;-raq2_fix-3.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&linux-raq2-patch;</userinput></screen>
 
 <para>Prepare for compilation by running the following command:</para>
 
@@ -127,8 +130,8 @@ the <filename class="directory">/boot</filename> directory.</para>
 <para><!--The path to the kernel image may vary depending on the platform
 being used. -->Issue the following command to install the kernel:</para>
 
-<screen><userinput>cp vmlinux /boot/vmlinux-&linux-version;
-gzip -9 /boot/vmlinux-&linux-version;</userinput></screen>
+<screen><userinput>cp vmlinux /boot/vmlinux-&linux-raq2-version;
+gzip -9 /boot/vmlinux-&linux-raq2-version;</userinput></screen>
 
 <para><filename>System.map</filename> is a symbol file for the kernel.
 It maps the function entry points of every function in the kernel API,

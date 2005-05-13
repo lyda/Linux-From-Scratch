@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
 <sect1 id="ch-reboot-colo">
 <title>Making the LFS system bootable</title>
@@ -33,8 +35,8 @@ Colo. Here is a simpe default.colo to use.</para>
 #
 # load linux
 #
-lcd 'Booting 2.6.9...'
-load vmlinux-2.6.9.gz
+lcd 'Booting &linux-raq2-version;...'
+load vmlinux-&linux-raq2-version;.gz
 execute root=/dev/hda2 console=ttyS0,115200 ide1=noprobe
 EOF</userinput></screen>
 

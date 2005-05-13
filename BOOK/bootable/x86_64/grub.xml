@@ -100,7 +100,7 @@ color green/black light-green/black
 # The first entry is for LFS.
 title LFS &version;
 root (hd0,3)
-kernel /boot/lfskernel-&linux-version; root=/dev/hda4</literal>
+kernel /boot/lfskernel-&linux-x86_64-version; root=/dev/hda4</literal>
 EOF</userinput></screen>
 
 

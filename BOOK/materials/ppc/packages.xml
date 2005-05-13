@@ -14,7 +14,7 @@
 <varlistentry>
 <term>Linux (&linux-ppc-version;) - 35 MB:</term>
 <listitem>
-<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-version;.tar.bz2"/></para>
+<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-ppc-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 

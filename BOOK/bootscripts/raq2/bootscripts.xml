@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
 <sect1 id="ch-scripts-bootscripts" role="wrap">
 <title>LFS-Bootscripts-&lfs-bootscripts-version;</title>
@@ -32,7 +34,7 @@
 <para>The following patch allows the RaQ2/Qube2 use the LCD Screen
 with the bootscripts:</para>
 
-<screen><userinput>patch -Np1 -i contrib/lfs-bootscripts-raq2-7.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i contrib/&lfs-bootscripts-raq2-patch;</userinput></screen>
 
 <screen><userinput>make install</userinput></screen>
 

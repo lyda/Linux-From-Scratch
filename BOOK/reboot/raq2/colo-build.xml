@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-reboot-colo-build" role="wrap">
+<title>Colo-&colo-version;</title>
+<?dbhtml filename="colo-build.html"?>
+
+<indexterm zone="ch-reboot-colo-build"><primary sortas="a-Colo-Build">Colo</primary></indexterm>
+
+<sect2 role="package"><title/>
+<para>The Colo package contains the Cobalt Boot Loader.</para>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>0.2 SBU</seg><seg>10 MB</seg></seglistitem>
+</segmentedlist>
+
+<segmentedlist>
+<segtitle>&dependencies;</segtitle>
+<seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
+</segmentedlist>
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of Colo</title>
+
+<para>Compile the Colo package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>Install the package:</para>
+
+<screen><userinput>install -d  ${LFS}/usr/lib/colo/examples
+install binaries/colo-chain.elf ${LFS}/usr/lib/colo
+install binaries/colo-rom-image.bin ${LFS}/usr/lib/colo
+install tools/colo-perm/colo-perm ${LFS}/sbin
+install tools/colo-perm/colo-perm.8 ${LFS}/usr/man/man8
+install tools/elf2rfx/elf2rfx ${LFS}/sbin
+install tools/flash-tool/flash-tool ${LFS}/sbin
+install tools/flash-tool/flash-tool.8 ${LFS}/usr/man/man8
+install tools/lcdtools/e2fsck-lcd/e2fsck-lcd ${LFS}/sbin
+install tools/lcdtools/e2fsck-lcd/e2fsck-lcd.8 ${LFS}/usr/man/man8
+install tools/lcdtools/liblcd/liblcd.a ${LFS}/lib
+install tools/lcdtools/paneld/paneld ${LFS}/sbin
+install tools/lcdtools/paneld/paneld.8 ${LFS}/usr/man/man8
+install tools/lcdtools/putlcd/putlcd ${LFS}/sbin
+install tools/lcdtools/putlcd/putlcd.8 ${LFS}/usr/man/man8
+install tools/md5rom/md5rom ${LFS}/sbin
+install tools/md5rom/md5rom.8 ${LFS}/usr/man/man8
+install examples/menu.colo ${LFS}/usr/lib/colo/examples
+install examples/simple.colo ${LFS}/usr/lib/colo/examples
+cp binaries/colo-chain.elf ${LFS}/boot/vmlinux
+gzip -9 ${LFS}/boot/vmlinux</userinput></screen>
+
+</sect2>
+
+</sect1>

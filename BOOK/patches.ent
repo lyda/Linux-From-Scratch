@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Start of Common Patches -->
+<!ENTITY bash-fixes-patch "bash-&bash-version;-fixes-3.patch">
+<!ENTITY bash-avoid_WCONTINUED-patch "bash-&bash-version;-avoid_WCONTINUED-1.patch">
+
+<!ENTITY binutils-posix-patch "binutils-&binutils-version;-posix-1.patch">
+
+<!ENTITY coreutils-suppress-patch "coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch">
+
+<!ENTITY expect-spawn-patch "expect-&expect-version;-spawn-1.patch">
+
+<!ENTITY flex-fixes-patch "flex-&flex-version;-debian_fixes-4.patch">
+
+<!ENTITY gcc-cross_search-patch "gcc-&gcc-version;-cross_search_paths-1.patch">
+<!ENTITY gcc-fix_native-patch  "gcc-&gcc-version;-fix_configure_for_target_native-1.patch">
+<!ENTITY gcc-linkonce-patch "gcc-&gcc-version;-linkonce-1.patch">
+<!ENTITY gcc-posix-patch "gcc-&gcc-version;-posix-1.patch">
+<!ENTITY gcc-specs-patch "gcc-&gcc-version;-specs-3.patch">
+
+<!ENTITY glibc-testfix-patch "glibc-&glibc-version;-fix_test-1.patch">
+
+<!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch"> 
+
+<!ENTITY inetutils-man_pages-patch "inetutils-&inetutils-version;-no_server_man_pages-1.patch">
+
+<!ENTITY iproute2-db_remove-patch "iproute2-&iproute2-patch-version;-remove_db-1.patch">
+
+<!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-1.patch">
+
+<!ENTITY ncurses-update-patch "ncurses-&ncurses-version;-20050319-patch.sh.bz2">
+
+<!ENTITY perl-libc-patch "perl-&perl-version;-libc-1.patch">
+
+<!ENTITY readline-fixes-patch "readline-&readline-version;-fixes-1.patch">
+
+<!ENTITY shadow-lastlog-patch "shadow-&shadow-version;-fix_lastlog-1.patch">
+
+<!ENTITY sysklogd-fixes-patch "sysklogd-&sysklogd-version;-fixes-1.patch">
+
+<!ENTITY tar-sparse_fix-patch "tar-&tar-version;-sparse_fix-1.patch">
+
+<!ENTITY util-linux-cramfs-patch "&patches-root;util-linux/util-linux-&util-linux-version;-cramfs-1.patch">
+
+<!-- Start of multilib patches -->
+
+<!ENTITY binutils-multilib-patch "binutils-&binutils-version;-genscripts_multilib-1.patch">
+
+<!-- Start of x86 patches -->
+
+<!ENTITY coreutils-x86_uname-patch "coreutils-&coreutils-version;-uname-2.patch">
+
+<!-- Start of ppc patches -->
+
+<!ENTITY yaboot-fix-patch "yaboot-&yaboot-version;-fix-1.patch">
+
+<!-- Start of sparc patches -->
+
+<!-- Start of sparc64 patches -->
+
+<!ENTITY linux-libc-headers-sparc_biarch-patch "linux-libc-headers-&linux-libc-headers-sparc64-version;-sparc_biarch-1.patch">
+
+<!-- Start of raq2 patches -->
+
+<!ENTITY glibc-raq2_syscall-patch "glibc-&glibc-version;-mips_syscall-1.patch">
+
+<!ENTITY grep-raq2_update-patch "grep-&grep-version;-raq2_config_update-1.patch">
+
+<!ENTITY lfs-bootscripts-raq2-patch "lfs-bootscripts-raq2-8.patch">
+
+<!ENTITY linux-libc-headers-raq2-patch "linux-libc-headers-&linux-libc-headers-raq2-version;-raq2_fix-1.patch">
+
+<!ENTITY linux-raq2-patch "linux-&linux-raq2-version;-raq2_fix-3.patch">
+
+<!ENTITY procps-mips-patch "procps-&procps-version;-fix_mips-1.patch">
