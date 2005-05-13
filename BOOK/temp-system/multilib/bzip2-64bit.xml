@@ -34,7 +34,7 @@
 a multi-architecture build:</para>
 
 <screen><userinput>sed -i -e 's@^\(all:.*\) test@\1@g' \
-  's@/lib\(/\| \|$\)@/lib64\1@g' Makefile</userinput></screen>
+  -e 's@/lib\(/\| \|$\)@/lib64\1@g' Makefile</userinput></screen>
 
 <para>The Bzip2 package does not contain a <command>configure</command>
 script. Compile it with:</para>
