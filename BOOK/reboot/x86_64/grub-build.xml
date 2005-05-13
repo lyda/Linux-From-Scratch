@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-system-grub-build" role="wrap">
+<title>Grub-&grub-version;</title>
+<?dbhtml filename="grub-build.html"?>
+
+<indexterm zone="ch-system-grub-build"><primary sortas="a-Grub-Build">Grub</primary></indexterm>
+
+<sect2 role="package"><title/>
+<para>The Grub package contains the Grand Unified Bootloader.</para>
+
+<segmentedlist>
+<segtitle>&buildtime;</segtitle>
+<segtitle>&diskspace;</segtitle>
+<seglistitem><seg>0.2 SBU</seg><seg>10 MB</seg></seglistitem>
+</segmentedlist>
+
+<segmentedlist>
+<segtitle>&dependencies;</segtitle>
+<seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
+GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
+</segmentedlist>
+</sect2>
+
+<sect2 role="installation">
+<title>Installation of Grub</title>
+
+<para>This package is known to have issues when its default
+optimization flags (including the <parameter>-march</parameter> and
+<parameter>-mcpu</parameter> options) are changed. If any environment
+variables that override default optimizations have been defined, such
+as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
+unset them when building Grub.</para>
+
+<para>Prepare Grub for compilation:</para>
+
+<screen><userinput>./configure --prefix=${LFS}/usr</userinput></screen>
+
+<para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+<para>Install the package:</para>
+
+<screen><userinput>make install
+mkdir ${LFS}/boot/grub
+cp ${LFS}/usr/lib/grub/i386-pc/stage{1,2} ${LFS}/boot/grub</userinput></screen>
+
+<para>Replace <filename class="directory">i386-pc</filename> with whatever
+directory is appropriate for the hardware in use.</para>
+
+<para>The <filename class="directory">i386-pc</filename> directory
+contains a number of <filename>*stage1_5</filename> files, different
+ones for different file systems. Review the files available and copy
+the appropriate ones to the <filename
+class="directory">${LFS}/boot/grub</filename> directory. Most users will
+copy the <filename>e2fs_stage1_5</filename> and/or
+<filename>reiserfs_stage1_5</filename> files.</para>
+
+</sect2>
+
+</sect1>
+
