@@ -31,7 +31,7 @@
 
 <para>Prepare Zlib for compilation:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD32}" \
+<screen><userinput>CC="${CC} ${BUILD32}" \
    ./configure --prefix=/tools --shared</userinput></screen>
 
 <para>Compile the package:</para>

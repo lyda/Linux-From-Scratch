@@ -37,7 +37,7 @@ defined when cross-compiling. So we define it:</para>
 
 <para>Prepare Coreutils for compilation:</para>
 
-<screen><userinput>DEFAULT_POSIX2_VERSION=199209 CC="${LFS_TARGET}-gcc ${BUILD64}" \
+<screen><userinput>DEFAULT_POSIX2_VERSION=199209 CC="${CC} ${BUILD64}" \
    ./configure --prefix=/tools --cache-file=config.cache \
    --build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
 

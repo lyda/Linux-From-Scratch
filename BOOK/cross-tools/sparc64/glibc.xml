@@ -60,7 +60,7 @@ cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD32}" \
+<screen><userinput>CC="${CC} ${BUILD32}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host="sparcv9-unknown-linux-gnu" --build=${LFS_HOST} \

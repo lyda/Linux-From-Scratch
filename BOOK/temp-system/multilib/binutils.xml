@@ -60,7 +60,7 @@ command like this: <userinput>time { ./configure ... &amp;&amp; ...
 
 <para>Now prepare Binutils for compilation:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD64}" \
+<screen><userinput>CC="${CC} ${BUILD64}" \
      ../binutils-&binutils-version;/configure --prefix=/tools \
      --libdir=/tools/lib64 --with-lib-path=/tools/lib \
      --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \

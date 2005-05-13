@@ -32,7 +32,7 @@
 
 <para>Prepare Gawk for compilation:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD64}" \
+<screen><userinput>CC="${CC} ${BUILD64}" \
    ./configure --prefix=/tools \
    --build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
 
