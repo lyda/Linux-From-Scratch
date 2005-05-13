@@ -19,22 +19,32 @@ define HTML_RENDER
 	cd $(BASEDIR)/$$arch/; sed -i -e "s@../images@images@g" *.html
 endef
 
-# PDF Rendering
-define PDF_RENDER
-	echo "Rendering PDF of $$arch..." ; \
-        xsltproc --xinclude --nonet --output $(BASEDIR)/lfs-pdf.fo \
-                $(PWD)/stylesheets/lfs-pdf.xsl $$arch-index.xml ; \
-        sed -i -e "s/inherit/all/" $(BASEDIR)/lfs-pdf.fo ; \
-        fop.sh $(BASEDIR)/lfs-pdf.fo $(BASEDIR)/LFS-BOOK-$$arch.pdf ; \
-        rm $(BASEDIR)/lfs-pdf.fo
-endef
-
 # HTML Rendering No Chunks
 define HTML_RENDER2
 	echo "Rendering Single File HTML of $$arch..." ; \
 	xsltproc --xinclude --nonet -stringparam profile.condition html \
 	   --output $(BASEDIR)/LFS-BOOK-$$arch.html \
 	   $(PWD)/stylesheets/lfs-nochunks.xsl $$arch-index.xml
+endef
+
+# PDF Rendering
+define PDF_RENDER
+	echo "Rendering PDF of $$arch..." ; \
+        xsltproc --xinclude --nonet --output $(BASEDIR)/lfs-pdf.fo \
+                $(PWD)/stylesheets/lfs-pdf.xsl $$arch-index.xml ; \
+        sed -i -e "s/inherit/all/" $(BASEDIR)/lfs-pdf.fo ; \
+        fop.sh $(BASEDIR)/lfs-pdf.fo -pdf $(BASEDIR)/LFS-BOOK-$$arch.pdf ; \
+        rm $(BASEDIR)/lfs-pdf.fo
+endef
+
+# Plain Text Rendering
+define TEXT_RENDER
+        echo "Rendering Text of $$arch..." ; \
+        xsltproc --xinclude --nonet --output $(BASEDIR)/lfs-pdf.fo \
+                $(PWD)/stylesheets/lfs-pdf.xsl $$arch-index.xml ; \
+        sed -i -e "s/inherit/all/" $(BASEDIR)/lfs-pdf.fo ; \
+        fop.sh $(BASEDIR)/lfs-pdf.fo -txt $(BASEDIR)/LFS-BOOK-$$arch.txt ; \
+        rm $(BASEDIR)/lfs-pdf.fo
 endef
 
 # Validation
@@ -78,6 +88,11 @@ pdf:
 	$(PDF_RENDER) ; \
 	done
 
+text:
+	@for arch in $(ARCH) ; do \
+	$(TEXT_RENDER) ; \
+	done
+
 validate: validation cleanup
 
 validation:
@@ -91,4 +106,4 @@ cleanup:
 	rm -f $(PWD)/index-$$arch.xml ; \
 	done
 
-.PHONY: lfs toplevel common render nochunk nochunk nochunk_render validate validation cleanup
+.PHONY: lfs toplevel common render nochunk nochunk nochunk_render pdf text validate validation cleanup

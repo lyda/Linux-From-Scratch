@@ -56,7 +56,7 @@ sed -e 's@root@0@g' \
 <para>Compile the package:</para>
 
 <screen><userinput>make -C src clobber
-make -C src CC="${LFS_TARGET}-gcc" LDFLAGS="-s"</userinput></screen>
+make -C src CC="${CC}" LDFLAGS="-s"</userinput></screen>
 
 <para>Install the package:</para>
 
