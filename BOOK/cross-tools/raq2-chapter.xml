@@ -13,6 +13,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/variables.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/linux-libc-headers.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/binutils.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/glibc-headers.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/gcc-static.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/glibc-startfiles.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/gcc-shared.xml"/>
