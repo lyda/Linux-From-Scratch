@@ -98,7 +98,8 @@ first a summary, then a detailed log.</para>
 <listitem><para>Fixed util-linux patch entity.</para></listitem>
 <listitem><para>Updated libtool to 1.15.18.</para></listitem>
 <listitem><para>Updated linux to 2.6.11.10.</para></listitem>
-<listitem><para>Updated Grub to 097.<para></listitem>
+<listitem><para>Updated Grub to 097.</para></listitem>
+<listitem><para>Added missing glibc-headers to cross-tools.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
