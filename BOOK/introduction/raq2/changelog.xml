@@ -51,6 +51,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>May 19, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Updated openssl to 0.97g.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>May 10, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>This BOOK is an update of the cross-lfs book into a new format style.</para></listitem>

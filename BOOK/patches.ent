@@ -40,7 +40,7 @@
 
 <!ENTITY tar-sparse_fix-patch "tar-&tar-version;-sparse_fix-1.patch">
 
-<!ENTITY util-linux-cramfs-patch "&patches-root;util-linux/util-linux-&util-linux-version;-cramfs-1.patch">
+<!ENTITY util-linux-cramfs-patch "util-linux-&util-linux-version;-cramfs-1.patch">
 
 <!-- Start of multilib patches -->
 

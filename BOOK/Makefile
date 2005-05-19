@@ -33,7 +33,7 @@ define PDF_RENDER
         xsltproc --xinclude --nonet --output $(BASEDIR)/lfs-pdf.fo \
                 $(PWD)/stylesheets/lfs-pdf.xsl $$arch-index.xml ; \
         sed -i -e "s/inherit/all/" $(BASEDIR)/lfs-pdf.fo ; \
-        fop.sh $(BASEDIR)/lfs-pdf.fo -pdf $(BASEDIR)/LFS-BOOK-$$arch.pdf ; \
+        fop.sh -q $(BASEDIR)/lfs-pdf.fo -pdf $(BASEDIR)/LFS-BOOK-$$arch.pdf ; \
         rm $(BASEDIR)/lfs-pdf.fo
 endef
 
@@ -43,7 +43,7 @@ define TEXT_RENDER
         xsltproc --xinclude --nonet --output $(BASEDIR)/lfs-pdf.fo \
                 $(PWD)/stylesheets/lfs-pdf.xsl $$arch-index.xml ; \
         sed -i -e "s/inherit/all/" $(BASEDIR)/lfs-pdf.fo ; \
-        fop.sh $(BASEDIR)/lfs-pdf.fo -txt $(BASEDIR)/LFS-BOOK-$$arch.txt ; \
+        fop.sh $(BASEDIR)/lfs-pdf.fo -txt.utf-8 -txt $(BASEDIR)/LFS-BOOK-$$arch.txt ; \
         rm $(BASEDIR)/lfs-pdf.fo
 endef
 
