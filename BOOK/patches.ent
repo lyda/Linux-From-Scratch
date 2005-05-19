@@ -70,6 +70,6 @@
 
 <!ENTITY linux-libc-headers-raq2-patch "linux-libc-headers-&linux-libc-headers-raq2-version;-raq2_fix-1.patch">
 
-<!ENTITY linux-raq2-patch "linux-&linux-raq2-version;-raq2_fix-3.patch">
+<!ENTITY linux-raq2-patch "linux-&linux-raq2-version;-raq2_fix-1.patch">
 
 <!ENTITY procps-mips-patch "procps-&procps-version;-fix_mips-1.patch">
