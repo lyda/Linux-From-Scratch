@@ -53,7 +53,7 @@ cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="${CC-gcc}" ../glibc-&glibc-version;/configure --prefix=/tools \
+<screen><userinput>CC="${LFS_TARGET}-gcc" ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} --without-cvs \
     --disable-sanity-checks --enable-kernel=2.6.0 \
     --with-headers=/tools/include \

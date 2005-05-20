@@ -54,6 +54,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>May 19, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated openssl to 0.97g.</para></listitem>
+<listitem><para>Added gcc no threads build, to fix error during compiling. This may be temporary.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
