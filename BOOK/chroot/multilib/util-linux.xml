@@ -38,6 +38,10 @@ directory. This is fixed by altering the configure script:</para>
 sed 's@/usr/include@/tools/include@g' configure.orig > configure
 chmod 755 configure</userinput></screen>
 
+<para>Ensure that util-linux uses the proper flags for our compile:</para>
+
+<screen><userinput>export CC="${CC} ${BUILD64}"</userinput></screen>
+
 <para>Prepare Util-linux for compilation:</para>
 
 <screen><userinput>./configure</userinput></screen>
