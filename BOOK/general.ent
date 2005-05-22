@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "7.0-multiarch-20050508">
+<!ENTITY version "7.0-multiarch-20050522">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-alpha "&version;-alpha">
 <!ENTITY version-ppc "&version;-PowerPC">
 <!ENTITY version-raq2 "&version;-RaQ2">
-<!ENTITY releasedate "May 8, 2005">
+<!ENTITY releasedate "May 22, 2005">
 <!ENTITY milestone "7.0">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -28,7 +28,7 @@
 <!ENTITY autoconf-version "2.59">
 <!ENTITY automake-version "1.9.5">
 <!ENTITY bash-version "3.0">
-<!ENTITY binutils-version "2.15.94.0.2.2">
+<!ENTITY binutils-version "2.16">
 <!ENTITY bison-version "2.0">
 <!ENTITY bzip2-version "1.0.3">
 <!ENTITY colo-version "1.19">
