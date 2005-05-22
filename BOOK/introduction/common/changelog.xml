@@ -93,6 +93,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>May 22, 2005 [jhuntwork]</para>
+<itemizedlist>
+<listitem><para>Fixed url for Bzip2.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>May 19, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Fixed util-linux patch entity.</para></listitem>
