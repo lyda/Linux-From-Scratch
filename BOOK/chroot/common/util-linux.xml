@@ -34,9 +34,8 @@
 libraries from the <filename class="directory">/tools</filename>
 directory. This is fixed by altering the configure script:</para>
 
-<screen><userinput>mv configure configure.orig
-sed 's@/usr/include@/tools/include@g' configure.orig > configure
-chmod 755 configure</userinput></screen>
+<screen><userinput>cp -p configure configure.orig
+sed 's@/usr/include@/tools/include@g' configure.orig > configure</userinput></screen>
 
 <para>Prepare Util-linux for compilation:</para>
 
