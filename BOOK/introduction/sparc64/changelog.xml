@@ -50,6 +50,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>May 22, 2005 [jhuntwork]</para>
 <itemizedlist>
+<listitem><para>Changed the way we enter chroot and added a 64-bit tcl install.</para></listitem>
 <listitem><para>Changed binutils install in temp-system to copy libiberty.h to /tools/include.</para></listitem>
 </itemizedlist>
 </listitem>
