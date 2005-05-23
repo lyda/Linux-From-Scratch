@@ -65,7 +65,7 @@ install -d ${LFS}/usr/bin
 install -d ${LFS}/usr/include
 install -d ${LFS}/usr/share/man/man{1,5,8}
 install -d ${LFS}/etc
-make -C src install INSTALL="install"</userinput></screen>
+make -C src install INSTALL="install" ROOT="${LFS}"</userinput></screen>
 
 </sect2>
 

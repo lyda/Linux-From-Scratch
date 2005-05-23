@@ -56,6 +56,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>May 23, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Fixed sysvinit reboot install.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>May 19, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated openssl to 0.97g.</para></listitem>
