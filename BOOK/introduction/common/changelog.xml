@@ -98,6 +98,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Updated gettext to 0.14.5.</para></listitem>
 <listitem><para>Changed changelogs to use entities.</para></listitem>
+<listitem><para>IPRoute2 removed patch and changed to a sed.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

@@ -33,17 +33,16 @@
     </segmentedlist>
   </sect2>
   <sect2 role="installation">
-    <title>Installation of Iproute2</title>
     <para>The <command>arpd</command> binary included in this package is
           dependent on Berkeley DB.  Because <command>arpd</command> is not a very
           common requirement on a base Linux system, remove the dependency on
-          Berkeley DB by applying the patch using the command below.  If 
+          Berkeley DB by applying the <command>sed</command> command below.  If 
           the <command>arpd</command> binary is needed, instructions for
           compiling Berkeley DB can be found in the BLFS Book at <ulink
           url="&blfs-root;view/svn/content/databases.html#db"/>.
     </para>
 
-    <screen><userinput>patch -Np1 -i ../&iproute2-db_remove-patch;</userinput></screen>
+    <screen><userinput>sed -i '/^TARGETS/s@arpd@@g' misc/Makefile</userinput></screen>
 
     <para>Prepare Iproute2 for compilation:</para>
     <screen><userinput>./configure </userinput></screen>
