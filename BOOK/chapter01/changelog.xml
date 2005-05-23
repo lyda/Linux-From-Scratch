@@ -84,6 +84,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>May 23nd, 2005 [manuel]: Minor wording improvements (thanks to
+Peter Ennis)</para></listitem>
+
 <listitem><para>May 22nd, 2005 [matt]: Updated to Linux-2.6.11.10.</para></listitem>
 
 <listitem><para>May 15th, 2005 [matt]: Added gzip security patch.</para></listitem>
