@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "7.0-cross-lfs-20050522">
+<!ENTITY version "7.0-cross-lfs-20050523">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-ppc "&version;-PowerPC">
 <!ENTITY version-sparc "&version;-Sparc">
 <!ENTITY version-sparc64 "&version;-Sparc64">
 <!ENTITY version-raq2 "&version;-RaQ2">
 
-<!ENTITY releasedate "May 22, 2005">
+<!ENTITY releasedate "May 23, 2005">
 <!ENTITY milestone "7.0">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -44,7 +44,7 @@
 <!ENTITY flex-version "2.5.31">
 <!ENTITY gawk-version "3.1.4">
 <!ENTITY gcc-version "3.4.3">
-<!ENTITY gettext-version "0.14.4">
+<!ENTITY gettext-version "0.14.5">
 <!ENTITY glibc-version "2.3.5">
 <!ENTITY grep-version "2.5.1a">
 <!ENTITY groff-version "1.19.1">
