@@ -66,14 +66,6 @@ Details on the <envar>TZ</envar> environment variable is provided in
 <screen><userinput>make install</userinput></screen>
 
 
-<warning><para><emphasis>Do not</emphasis> remove the
-<filename class="directory">tcl&tcl-version;</filename> source directory yet, as the next package
-will need its internal headers.</para></warning>
-
-<para>Now make a necessary symbolic link:</para>
-
-<screen><userinput>ln -s tclsh8.4 /tools/bin/tclsh</userinput></screen>
-
 </sect2>
 
 <sect2 id="contents-tcl" role="content"><title>Contents of Tcl</title>
@@ -93,14 +85,6 @@ will need its internal headers.</para></warning>
 <listitem>
 <para>The Tcl command shell</para>
 <indexterm zone="ch-temp-tools-tcl tclsh8.4"><primary sortas="b-tclsh8.4">tclsh8.4</primary></indexterm>
-</listitem>
-</varlistentry>
-
-<varlistentry id="tclsh">
-<term><command>tclsh</command></term>
-<listitem>
-<para>A link to tclsh8.4</para>
-<indexterm zone="ch-temp-tools-tcl tclsh"><primary sortas="b-tclsh">tclsh</primary></indexterm>
 </listitem>
 </varlistentry>
 
