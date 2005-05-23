@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
 <sect1 id="ch-intro-changelog">
 <title>Changelog</title>
@@ -19,56 +21,55 @@ first a summary, then a detailed log.</para>
 
 <listitem><para>Upgraded to:</para>
 <itemizedlist>
-<listitem><para>Arch: All - Automake 1.9.5</para></listitem>
-<listitem><para>Arch: All - Binutils 2.16</para></listitem>
-<listitem><para>Arch: All - Bison 2.0</para></listitem>
-<listitem><para>Arch: All - Bzip2 1.0.3</para></listitem>
-<listitem><para>Arch: All - Diffutils 2.8.7</para></listitem>
-<listitem><para>Arch: All - E2fsprogs 1.37</para></listitem>
-<listitem><para>Arch: All - Expect 1.43.0</para></listitem>
-<listitem><para>Arch: All - File 4.13</para></listitem>
-<listitem><para>Arch: All - Findutils 4.2.20</para></listitem>
-<listitem><para>Arch: All - GCC 3.4.3</para></listitem>
-<listitem><para>Arch: All - Gettext 0.14.5</para></listitem>
-<listitem><para>Arch: All - Glibc 2.3.5</para></listitem>
-<listitem><para>Arch: All - Grep 2.5.1a</para></listitem>
-<listitem><para>Arch: All - Grub 097</para></listitem>
-<listitem><para>Arch: All - Iana-Etc 1.04</para></listitem>
-<listitem><para>Arch: All - Iproute2 2.6.11-050330</para></listitem>
-<listitem><para>Arch: All - LFS-Bootscripts 3.2.1</para></listitem>
-<listitem><para>Arch: All - Libtool 1.5.18</para></listitem>
-<listitem><para>Arch: All - Linux 2.6.11.10</para></listitem>
-<listitem><para>Arch: All - Linux-libc-headers 2.6.11.2</para></listitem>
-<listitem><para>Arch: All - Man 1.5p</para></listitem>
-<listitem><para>Arch: All - Man-pages 2.02</para></listitem>
-<listitem><para>Arch: All - M4 1.43</para></listitem>
-<listitem><para>Arch: All - Patch 2.5.9</para></listitem>
-<listitem><para>Arch: All - Perl 5.8.5</para></listitem>
-<listitem><para>Arch: All - Procps 3.2.5</para></listitem>
-<listitem><para>Arch: All - Psmisc 21.6</para></listitem>
-<listitem><para>Arch: All - Sed 4.14</para></listitem>
-<listitem><para>Arch: All - Shadow 4.0.7</para></listitem>
-<listitem><para>Arch: All - Sysvinit 2.8.6</para></listitem>
-<listitem><para>Arch: All - Tar 1.15.1</para></listitem>
-<listitem><para>Arch: All - Texinfo 4.8</para></listitem>
-<listitem><para>Arch: All - Tcl 8.4.9</para></listitem>
-<listitem><para>Arch: All - Udev 056</para></listitem>
-<listitem><para>Arch: All - Util-linux 2.12q</para></listitem>
-<listitem><para>Arch: All - Zlib 1.2.2</para></listitem>
+<listitem><para>Arch: All - Automake &automake-version;</para></listitem>
+<listitem><para>Arch: All - Binutils &binutils-version;</para></listitem>
+<listitem><para>Arch: All - Bison &bison-version;</para></listitem>
+<listitem><para>Arch: All - Bzip2 &bzip2-version;</para></listitem>
+<listitem><para>Arch: All - Diffutils &diffutils-version;</para></listitem>
+<listitem><para>Arch: All - E2fsprogs &e2fsprogs-version;</para></listitem>
+<listitem><para>Arch: All - Expect &expect-version;</para></listitem>
+<listitem><para>Arch: All - File &file-version;</para></listitem>
+<listitem><para>Arch: All - Findutils &findutils-version;</para></listitem>
+<listitem><para>Arch: All - GCC &gcc-version;</para></listitem>
+<listitem><para>Arch: All - Gettext &gettext-version;</para></listitem>
+<listitem><para>Arch: All - Glibc &glibc-version;</para></listitem>
+<listitem><para>Arch: All - Grep &grep-version;</para></listitem>
+<listitem><para>Arch: All - Iana-Etc &iana-etc-version;</para></listitem>
+<listitem><para>Arch: All - Iproute2 &iproute2-version;</para></listitem>
+<listitem><para>Arch: All - LFS-Bootscripts &lfs-bootscripts-version;</para></listitem>
+<listitem><para>Arch: All - Libtool &libtool-version;</para></listitem>
+<listitem><para>Arch: All - Man &man-version;</para></listitem>
+<listitem><para>Arch: All - Man-pages &man-pages-version;</para></listitem>
+<listitem><para>Arch: All - M4 &m4-version;</para></listitem>
+<listitem><para>Arch: All - Patch &patch-version;</para></listitem>
+<listitem><para>Arch: All - Perl &perl-version;</para></listitem>
+<listitem><para>Arch: All - Procps &procps-version;</para></listitem>
+<listitem><para>Arch: All - Psmisc &psmisc-version;</para></listitem>
+<listitem><para>Arch: All - Sed &sed-version;</para></listitem>
+<listitem><para>Arch: All - Shadow &shadow-version;</para></listitem>
+<listitem><para>Arch: All - Sysvinit &sysvinit-version;</para></listitem>
+<listitem><para>Arch: All - Tar &tar-version;</para></listitem>
+<listitem><para>Arch: All - Texinfo &texinfo-version;</para></listitem>
+<listitem><para>Arch: All - Tcl &tcl-version;</para></listitem>
+<listitem><para>Arch: All - Udev &udev-version;</para></listitem>
+<listitem><para>Arch: All - Util-linux &util-linux-version;</para></listitem>
+<listitem><para>Arch: All - Zlib &zlib-version;</para></listitem>
 <listitem><para>Arch: All - udev-config-2.rules</para></listitem>
 </itemizedlist>
 </listitem>
 
 <listitem><para>Added:</para>
 <itemizedlist>
-<listitem><para>Arch: All - gcc-3.4.3-cross_search_paths-1.patch</para></listitem>
-<listitem><para>Arch: All - gcc-3.4.3-specs-3.patch</para></listitem>
-<listitem><para>Arch: All - glibc-2.3.5-fix_test-1.patch</para></listitem>
-<listitem><para>Arch: All - grep-2.5.1a-raq2_config_update-1.patch</para></listitem>
-<listitem><para>Arch: All - ncurses-5.4-20050319.sh.bz2 (Patch)</para></listitem>
-<listitem><para>Arch: All - tar-1.15.1-sparse_fix-1.patch</para></listitem>
-<listitem><para>Arch: All - shadow-4.0.7-fix_lastlog-1.patch</para></listitem>
-<listitem><para>Arch: All - util-linux-2.12q-cramfs-1.patch</para></listitem>
+<listitem><para>Arch: All - &binutils-posix-patch;</para></listitem>
+<listitem><para>Arch: All - &gcc-cross_search-patch;</para></listitem>
+<listitem><para>Arch: All - &gcc-specs-patch;</para></listitem>
+<listitem><para>Arch: All - &gcc-posix-patch;</para></listitem>
+<listitem><para>Arch: All - &glibc-testfix-patch;</para></listitem>
+<listitem><para>Arch: All - &gzip-security_fix-patch;</para></listitem>
+<listitem><para>Arch: All - &ncurses-update-patch; (Patch)</para></listitem>
+<listitem><para>Arch: All - &tar-sparse_fix-patch;</para></listitem>
+<listitem><para>Arch: All - &shadow-lastlog-patch;</para></listitem>
+<listitem><para>Arch: All - &util-linux-cramfs-patch;</para></listitem>
 </itemizedlist>
 </listitem>
  
@@ -96,6 +97,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>May 23, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated gettext to 0.14.5.</para></listitem>
+<listitem><para>Changed changelogs to use entities.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
 <sect1 id="ch-intro-changelog-ppc">
 <title>Changelog for PowerPC</title>
@@ -19,14 +21,15 @@ first a summary, then a detailed log.</para>
 
 <listitem><para>Upgraded to:</para>
 <itemizedlist>
-<listitem><para></para></listitem>
+<listitem><para>Arch: PPC - Linux &linux-ppc-version;</para></listitem>
+<listitem><para>Arch: PPC - Linux-libc-headers &linux-libc-headers-ppc-version;</para></listitem>
 </itemizedlist>
 </listitem>
 
 <listitem><para>Added:</para>
 <itemizedlist>
-<listitem><para>Arch: PPC - Parted 1.6.22</para></listitem>
-<listitem><para>Arch: PPC - Yaboot 1.3.13</para></listitem>
+<listitem><para>Arch: PPC - Parted &parted-version;</para></listitem>
+<listitem><para>Arch: PPC - Yaboot &yaboot-version;</para></listitem>
 </itemizedlist>
 </listitem>
  

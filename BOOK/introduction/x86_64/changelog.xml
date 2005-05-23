@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
+  %patches-entities;
 ]>
-<sect1 id="ch-intro-changelog-x86">
-<title>Changelog for x86</title>
-<?dbhtml filename="changelog-x86.html"?>
+<sect1 id="ch-intro-changelog-x86_64">
+<title>Changelog for x86_64</title>
+<?dbhtml filename="changelog-x86_64.html"?>
 
 <para>This is version &version; of the Linux From Scratch book, dated
 &releasedate;. If this book is more than two months old, a newer and better
@@ -19,7 +21,9 @@ first a summary, then a detailed log.</para>
 
 <listitem><para>Upgraded to:</para>
 <itemizedlist>
-<listitem><para>Arch: x86 - Grub 0.96</para></listitem>
+<listitem><para>Arch: x86_64 - Linux &linux-x86_64-version;</para></listitem>
+<listitem><para>Arch: x86_64 - Linux-libc-headers &linux-libc-headers-x86_64-version;</para></listitem>
+<listitem><para>Arch: x86_64 - Grub &grub-version;</para></listitem>
 </itemizedlist>
 </listitem>
 
