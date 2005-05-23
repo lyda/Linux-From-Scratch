@@ -44,6 +44,7 @@ linkend="chapter-building-system"/>.</para>
 <para>Prepare Tcl for compilation:</para>
 
 <screen><userinput>cd unix
+sed -i 's@\$(prefix)/lib@\$(prefix)/lib64@g' Makefile.in
 CC="gcc ${BUILD64}" ./configure --prefix=/tools --libdir=/tools/lib64</userinput></screen>
 
 <para>Build the package:</para>
