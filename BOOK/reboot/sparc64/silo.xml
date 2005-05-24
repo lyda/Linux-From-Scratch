@@ -13,31 +13,7 @@
 <indexterm zone="ch-reboot-silo"><primary sortas="a-Silo">Silo</primary></indexterm>
 
 <sect2 role="package"><title/>
-<para>The Silo package contains the Sparc Improved boot LOader.</para>
-
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.2 SBU</seg><seg>10 MB</seg></seglistitem>
-</segmentedlist>
-
-<segmentedlist>
-<segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make, Ncurses, Sed, Elftoaout</seg></seglistitem>
-</segmentedlist>
-</sect2>
-
-<sect2 role="installation">
-<title>Installation of Silo</title>
-
-<para>Compile the Silo package:</para>
-
-<screen><userinput>make</userinput></screen>
-
-<para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
+<para>This is for the configuration of silo, similar to what is in bootscripts.</para>
 
 </sect2>
 

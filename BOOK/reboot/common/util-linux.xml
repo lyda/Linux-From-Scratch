@@ -36,6 +36,11 @@ directory. This is fixed by altering the configure script:</para>
 
 <screen><userinput>sed -i 's@/usr/include@/tools/include@g' configure</userinput></screen>
 
+<para>Util-linux installs uses -o root, the following sed removes that
+since we don't have users setup yet:</para>
+
+<screen><userinput>sed -i 's|-o root||' MCONFIG</userinput></screen>
+
 <para>Util-linux has a compilation error against newer versions of the
 linux-libc-headers.  The following patch properly fixes that issue</para>
 
@@ -52,9 +57,7 @@ linux-libc-headers.  The following patch properly fixes that issue</para>
 <para>Install the package as root:</para>
 
 <screen><userinput>exit
-cd ${LFS}/sources/util-linux-&util-linux-version;
-make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no CPUOPT="" ARCH="" CPU="" DESTDIR=${LFS} install
-su - lfs</userinput></screen>
+make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no USE_TTY_GROUP=no CPUOPT="" ARCH="" CPU="" DESTDIR=${LFS} install</userinput></screen>
 
 </sect2>
 

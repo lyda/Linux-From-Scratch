@@ -30,7 +30,7 @@ you can rescue your computer if, by any chance, your computer becomes unusable
 preparation for this step. Now we will configure our system to boot using 
 Colo. Here is a simpe default.colo to use.</para>
 
-<screen><userinput>cat &gt; /boot/default.colo &lt;&lt; "EOF"
+<screen><userinput>cat &gt; ${LFS}/boot/default.colo &lt;&lt; "EOF"
 #:CoLo:#
 #
 # load linux
@@ -39,15 +39,5 @@ lcd 'Booting &linux-raq2-version;...'
 load vmlinux-&linux-raq2-version;.gz
 execute root=/dev/hda2 console=ttyS0,115200 ide1=noprobe
 EOF</userinput></screen>
-
-<para>Included in /usr/lib/colo/examples are more examples of a
-default.colo file.</para>
-
-<para>The FHS stipulates that Bootloader's configuration file should be symlinked to
-/etc/{Bootloader Name}.  To satisfy this requirement for colo, issue the
-following command:</para>
-
-<screen><userinput>mkdir /etc/colo &amp;&amp;
-ln -s /boot/colo/default.colo /etc/colo</userinput></screen>
 
 </sect1>

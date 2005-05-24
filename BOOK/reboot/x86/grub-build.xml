@@ -13,7 +13,7 @@
 <indexterm zone="ch-system-grub-build"><primary sortas="a-Grub-Build">Grub</primary></indexterm>
 
 <sect2 role="package"><title/>
-<para>The Grub package contains the Grand Unified Bootloader.</para>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/x86/grub.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -21,11 +21,7 @@
 <seglistitem><seg>0.2 SBU</seg><seg>10 MB</seg></seglistitem>
 </segmentedlist>
 
-<segmentedlist>
-<segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
-</segmentedlist>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/x86/grub.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
 </sect2>
 
 <sect2 role="installation">
@@ -40,7 +36,8 @@ unset them when building Grub.</para>
 
 <para>Prepare Grub for compilation:</para>
 
-<screen><userinput>./configure --prefix=${LFS}/usr</userinput></screen>
+<screen><userinput>./configure --prefix=${LFS}/usr \
+   --host=${LFS_TARGET}</userinput></screen>
 
 <para>Compile the package:</para>
 
@@ -63,6 +60,11 @@ class="directory">${LFS}/boot/grub</filename> directory. Most users will
 copy the <filename>e2fs_stage1_5</filename> and/or
 <filename>reiserfs_stage1_5</filename> files.</para>
 
+</sect2>
+
+<sect2 role="content"><title/>
+<para>Details on this package are located in <xref
+linkend="contents-grub" role="."/></para>
 </sect2>
 
 </sect1>

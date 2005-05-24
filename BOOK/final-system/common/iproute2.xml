@@ -33,8 +33,8 @@
     </segmentedlist>
   </sect2>
   <sect2 role="installation">
-    <title>Installation of Iproute2</title>
-    <para>The <command>arpd</command> binary included in this package is
+  <title>Installation of IPRoute2</title>
+  <para>The <command>arpd</command> binary included in this package is
           dependent on Berkeley DB.  Because <command>arpd</command> is not a very
           common requirement on a base Linux system, remove the dependency on
           Berkeley DB by applying the <command>sed</command> command below.  If 

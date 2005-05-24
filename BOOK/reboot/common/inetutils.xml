@@ -39,9 +39,8 @@ situation:</para>
 <para>Prepare Inetutils for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --libexecdir=/usr/sbin \
-    --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
-    --sysconfdir=/etc --disable-logger --disable-syslogd \
-    --disable-whois --disable-servers</userinput></screen>
+    --host=${LFS_TARGET} --sysconfdir=/etc --disable-logger \
+    --disable-syslogd --disable-whois --disable-servers</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 

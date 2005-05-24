@@ -94,6 +94,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>May 24, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Finishing the reboot section.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>May 23, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated gettext to 0.14.5.</para></listitem>

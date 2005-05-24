@@ -5,7 +5,6 @@
   %general-entities;
   %patches-entities;
 ]>
-
 <sect1 id="ch-system-grub" role="wrap">
 <title>Grub-&grub-version;</title>
 <?dbhtml filename="grub.html"?>

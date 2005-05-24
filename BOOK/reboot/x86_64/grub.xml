@@ -31,8 +31,8 @@ special Grub files to specific locations on the hard drive. We highly
 recommend creating a Grub boot floppy diskette as a backup. Insert a
 blank floppy diskette and run the following commands:</para>
 
-<screen><userinput>dd if=/boot/grub/stage1 of=/dev/fd0 bs=512 count=1
-dd if=/boot/grub/stage2 of=/dev/fd0 bs=512 seek=1</userinput></screen>
+<screen><userinput>dd if=${LFS}/boot/grub/stage1 of=/dev/fd0 bs=512 count=1
+dd if=${LFS}/boot/grub/stage2 of=/dev/fd0 bs=512 seek=1</userinput></screen>
 
 <para>Remove the diskette and store it somewhere safe. Now, run the
 <command>grub</command> shell:</para>
@@ -85,7 +85,7 @@ to it. Quit the <command>grub</command> shell:</para>
 
 <para>Create a <quote>menu list</quote> file defining Grub's boot menu:</para>
 
-<screen><userinput>cat &gt; /boot/grub/menu.lst &lt;&lt; "EOF"
+<screen><userinput>cat &gt; ${LFS}/boot/grub/menu.lst &lt;&lt; "EOF"
 <literal># Begin /boot/grub/menu.lst
 
 # By default boot the first menu entry.
@@ -100,9 +100,8 @@ color green/black light-green/black
 # The first entry is for LFS.
 title LFS &version;
 root (hd0,3)
-kernel /boot/lfskernel-&linux-x86_64-version; root=/dev/hda4</literal>
+kernel /boot/lfskernel-&linux-x86-version; root=/dev/hda4</literal>
 EOF</userinput></screen>
-
 
 <para>Add an entry for the host distribution if desired. It might look
 like this:</para>
@@ -113,26 +112,6 @@ root (hd0,2)
 kernel /boot/kernel-2.6.5 root=/dev/hda3
 initrd /boot/initrd-2.6.5</literal>
 EOF</userinput></screen>
-
-<para>If dual-booting Windows, the following entry will allow
-booting it:</para>
-
-<screen><userinput>cat &gt;&gt; /boot/grub/menu.lst &lt;&lt; "EOF"
-<literal>title Windows
-rootnoverify (hd0,0)
-chainloader +1</literal>
-EOF</userinput></screen>
-
-<para>If <command>info grub</command> does not provide all necessary material, additional
-information regarding Grub is located on its website at:
-<ulink url="http://www.gnu.org/software/grub/"/>.</para>
-
-<para>The FHS stipulates that Bootloader's configuration file should be symlinked to
-/etc/{Bootloader Name}.  To satisfy this requirement for grub, issue the
-following command:</para>
-
-<screen><userinput>mkdir /etc/grub &amp;&amp;
-ln -s /boot/grub/menu.lst /etc/grub</userinput></screen>
 
 </sect1>
 

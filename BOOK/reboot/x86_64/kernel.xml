@@ -50,20 +50,11 @@ ready:</para>
 
 <screen><userinput>sed -i 's@/sbin/hotplug@/bin/true@' kernel/kmod.c</userinput></screen>
 
-<para>If, in <xref linkend="ch-scripts-console" role=","/> it was decided to
-compile the keymap into the kernel, issue the command below:</para>
-
-<screen><userinput>loadkeys -m /usr/share/kbd/keymaps/<replaceable>[path to  keymap]</replaceable> &gt; \
-    drivers/char/defkeymap.c</userinput></screen>
-
-<para>For example, if using a Dutch keyboard, use
-<filename>/usr/share/kbd/keymaps/i386/qwerty/nl.map.gz</filename>.</para>
-
 <para>Configure the kernel via a menu-driven interface:</para>
 
-<screen><userinput>make menuconfig</userinput></screen>
+<screen><userinput>make ARCH=x86_64 CROSS_COMPILE=${TARGET}- menuconfig</userinput></screen>
 
-<para>Alternatively, <command>make oldconfig</command>
+<para>Alternatively, <command>make ARCH=x86_64 CROSS_COMPILE=${TARGET}- oldconfig</command>
 may be more appropriate in some
 situations. <phrase>This will build a basic system with no modules and 
 ext2 support only.</phrase> See the <filename>README</filename> file for more
@@ -73,7 +64,7 @@ information.</para>
 <quote>Support for hot-pluggable devices</quote> option under the
 <quote>General Setup</quote> menu. This enables hotplug events that
 are used by <command>udev</command> to populate the <filename
-class="directory">/dev</filename> directory with device
+class="directory">${LFS}/dev</filename> directory with device
 nodes.</para></note>
 
 <para>If desired, skip kernel configuration by copying the kernel
@@ -102,10 +93,10 @@ with gcc 2.95.x.</para></note>
 
 <para>Compile the kernel image and modules:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>make ARCH=x86_64 CROSS_COMPILE=${TARGET}-</userinput></screen>
 
 <para>If using kernel modules, an
-<filename>/etc/modprobe.conf</filename> file may be needed.
+<filename>${LFS}/etc/modprobe.conf</filename> file may be needed.
 Information pertaining to modules and kernel configuration is
 located in the kernel documentation in the <filename
 class="directory">linux-&linux-x86_64-version;/Documentation</filename>
@@ -119,7 +110,7 @@ The problem is that Udev will create a device node only if Hotplug or
 a user-written script inserts the corresponding module into the
 kernel, and not all modules are detectable by Hotplug. Note that
 statements like the one below in the
-<filename>/etc/modprobe.conf</filename> file do not work with
+<filename>${LFS}/etc/modprobe.conf</filename> file do not work with
 Udev:</para>
 
 <para><screen>alias char-major-XXX some-module</screen></para>
@@ -130,7 +121,8 @@ configuration, especially if this is the first time using Udev.</para>
 
 <para>Install the modules, if the kernel configuration uses them:</para>
 
-<screen><userinput>make modules_install</userinput></screen>
+<screen><userinput>make ARCH=x86_64 CROSS_COMPILE=${TARGET}- \
+   INSTALL_MOD_PATH=${LFS} modules_install</userinput></screen>
 
 <para>If there are many modules and very little space, consider
 stripping and compressing the modules. For most users, such
@@ -139,19 +131,19 @@ space, see <ulink url="http://www.linux-mips.org/archives/linux-mips/2002-04/msg
 
 <para>After kernel compilation is complete, additional steps are
 required to complete the installation. Some files need to be copied to
-the <filename class="directory">/boot</filename> directory.</para>
+the <filename class="directory">${LFS}/boot</filename> directory.</para>
 
 <para><!--The path to the kernel image may vary depending on the platform
 being used. -->Issue the following command to install the kernel:</para>
 
-<screen><userinput>cp arch/i386/boot/bzImage /boot/lfskernel-&linux-x86_64-version;</userinput></screen>
+<screen><userinput>cp arch/i386${LFS}/boot/bzImage ${LFS}/boot/lfskernel-&linux-x86_64-version;</userinput></screen>
 
 <para><filename>System.map</filename> is a symbol file for the kernel.
 It maps the function entry points of every function in the kernel API,
 as well as the addresses of the kernel data structures for the running
 kernel. Issue the following command to install the map file:</para>
 
-<screen><userinput>cp System.map /boot/System.map-&linux-x86_64-version;</userinput></screen>
+<screen><userinput>cp System.map ${LFS}/boot/System.map-&linux-x86_64-version;</userinput></screen>
 
 <para>The kernel configuration file <filename>.config</filename>
 produced by the <command>make menuconfig</command> step
@@ -159,7 +151,7 @@ above contains all the configuration selections for the kernel
 that was just compiled. It is a good idea to keep this file for future
 reference:</para>
 
-<screen><userinput>cp .config /boot/config-&linux-x86_64-version;</userinput></screen>
+<screen><userinput>cp .config ${LFS}/boot/config-&linux-x86_64-version;</userinput></screen>
 
 <para>It is important to note that the files in the kernel source
 directory are not owned by <emphasis>root</emphasis>. Whenever a
