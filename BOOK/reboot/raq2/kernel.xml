@@ -46,9 +46,9 @@ ready:</para>
 
 <para>Configure the kernel via a menu-driven interface:</para>
 
-<screen><userinput>make ARCH=mips CROSS-COMPILE=${LFS_TARGET}- menuconfig</userinput></screen>
+<screen><userinput>make ARCH=mips CROSS_COMPILE=${LFS_TARGET}- menuconfig</userinput></screen>
 
-<para>Alternatively, <command>make ARCH=mips CROSS-COMPILE=${LFS_TARGET}- oldconfig</command> may be more appropriate in some
+<para>Alternatively, <command>make ARCH=mips CROSS_COMPILE=${LFS_TARGET}- oldconfig</command> may be more appropriate in some
 situations. <phrase>This will build a basic system with no modules and 
 ext2 support only.</phrase> See the <filename>README</filename> file for more
 information.</para>
@@ -79,7 +79,7 @@ with gcc 2.95.x.</para></note>
 
 <para>Compile the kernel image and modules:</para>
 
-<screen><userinput>make ARCH=mips CROSS-COMPILE=${LFS_TARGET}-</userinput></screen>
+<screen><userinput>make ARCH=mips CROSS_COMPILE=${LFS_TARGET}-</userinput></screen>
 
 <para>If using kernel modules, an
 <filename>/etc/modprobe.conf</filename> file may be needed.
@@ -107,7 +107,7 @@ configuration, especially if this is the first time using Udev.</para>
 
 <para>Install the modules, if the kernel configuration uses them:</para>
 
-<screen><userinput>make ARCH=mips CROSS-COMPILE=${LFS_TARGET} \
+<screen><userinput>make ARCH=mips CROSS_COMPILE=${LFS_TARGET} \
    INSTALL_MOD_PATH=${LFS} modules_install</userinput></screen>
 
 <para>If there are many modules and very little space, consider
