@@ -33,6 +33,7 @@
     </segmentedlist>
   </sect2>
   <sect2 role="installation">
+    <title>Installation of Iproute2</title>
     <para>The <command>arpd</command> binary included in this package is
           dependent on Berkeley DB.  Because <command>arpd</command> is not a very
           common requirement on a base Linux system, remove the dependency on
