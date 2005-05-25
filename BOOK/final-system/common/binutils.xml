@@ -27,7 +27,8 @@
       <segtitle>&diskspace;</segtitle>
 
       <seglistitem>
-        <seg>Not cheked yet</seg><seg>Not cheked yet</seg>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
       </seglistitem>
     </segmentedlist>
 
