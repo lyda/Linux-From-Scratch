@@ -107,7 +107,7 @@ configuration, especially if this is the first time using Udev.</para>
 
 <para>Install the modules, if the kernel configuration uses them:</para>
 
-<screen><userinput>make ARCH=mips CROSS_COMPILE=${LFS_TARGET} \
+<screen><userinput>make ARCH=mips CROSS_COMPILE=${LFS_TARGET)= \
    INSTALL_MOD_PATH=${LFS} modules_install</userinput></screen>
 
 <para>If there are many modules and very little space, consider
