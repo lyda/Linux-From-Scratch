@@ -61,6 +61,7 @@
 
     <variablelist>
       <title>The meaning of the make option:</title>
+
       <varlistentry>
         <term><parameter>SHLIB_XLDFLAGS=-lncurses</parameter></term>
         <listitem>
