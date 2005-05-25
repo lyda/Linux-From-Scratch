@@ -50,12 +50,10 @@ endef
 # Validation
 define VALIDATE
 	echo "Validating $$arch..." ; \
-        xsltproc --xinclude --nonet --output $(PWD)/index-$$arch.xml \
-           ${PWD}/stylesheets/lfs-profile.xsl $(PWD)/$$arch-index.xml ; \
-        xmllint --noout --nonet --postvalid $(PWD)/index-$$arch.xml
+        xmllint --xinclude --noout --nonet --postvalid $(PWD)/$$arch-index.xml
 endef
 
-lfs: cleanup toplevel render common cleanup
+lfs: toplevel render common
 
 toplevel:
 	@xsltproc --nonet --output $(BASEDIR)/index.html $(PWD)/stylesheets/top-index.xsl $(PWD)/index.xml
@@ -93,17 +91,9 @@ text:
 	$(TEXT_RENDER) ; \
 	done
 
-validate: cleanup validation cleanup
-
-validation:
+validate:
 	@for arch in $(ARCH) ; do \
 	$(VALIDATE) ; \
 	done
 
-cleanup:
-	@for arch in $(ARCH) ; do \
-	echo "Removing index-$$arch.xml" ; \
-	rm -f $(PWD)/index-$$arch.xml ; \
-	done
-
-.PHONY: lfs toplevel common render nochunk nochunk nochunk_render pdf text validate validation cleanup
+.PHONY: lfs toplevel common render nochunk nochunk_render pdf text validate 
