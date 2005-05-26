@@ -4,7 +4,7 @@
   %general-entities;
 ]>
 <sect1 id="ch-reboot-fstab">
-<title>Creating the /etc/fstab File</title>
+<title>Creating the ${LFS}/etc/fstab File</title>
 <?dbhtml filename="fstab.html"?>
 
 <indexterm zone="ch-reboot-fstab"><primary sortas="e-/etc/fstab">/etc/fstab</primary></indexterm>

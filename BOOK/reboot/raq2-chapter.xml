@@ -20,6 +20,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/kernel.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/colo-build.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/colo.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/devices.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/fstab.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/bootscripts.xml"/>
 
