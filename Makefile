@@ -4,7 +4,6 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 
-
 all: install
 
 create-dirs:
@@ -145,6 +144,36 @@ install-livecd: create-dirs create-service-dir
 	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static       ${EXTDIR}/sysconfig/network-devices/services/
 	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services/
 
+minimal: create-dirs create-service-dir
+	install -m ${MODE} lfs/init.d/checkfs       ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/cleanfs       ${EXTDIR}/rc.d/init.d/
+	install -m ${CONFMODE} lfs/init.d/functions ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/halt          ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/localnet      ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/mountfs       ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/mountkernfs   ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/rc            ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/reboot        ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/sendsignals   ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/setclock      ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/swap          ${EXTDIR}/rc.d/init.d/
+	install -m ${MODE} lfs/init.d/udev          ${EXTDIR}/rc.d/init.d/
+	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S60sendsignals
+	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rc0.d/S70mountfs
+	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rc0.d/S80swap
+	ln -sf ../init.d/halt        ${EXTDIR}/rc.d/rc0.d/S99halt
+	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc6.d/S60sendsignals
+	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rc6.d/S70mountfs
+	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rc6.d/S80swap
+	ln -sf ../init.d/reboot      ${EXTDIR}/rc.d/rc6.d/S99reboot
+	ln -sf ../init.d/mountkernfs ${EXTDIR}/rc.d/rcsysinit.d/S00mountkernfs
+	ln -sf ../init.d/udev        ${EXTDIR}/rc.d/rcsysinit.d/S10udev
+	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rcsysinit.d/S20swap
+	ln -sf ../init.d/checkfs     ${EXTDIR}/rc.d/rcsysinit.d/S30checkfs
+	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rcsysinit.d/S40mountfs
+	ln -sf ../init.d/cleanfs     ${EXTDIR}/rc.d/rcsysinit.d/S50cleanfs
+	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
+	if [ ! -f ${EXTDIR}/sysconfig/rc          ]; then install -m ${CONFMODE} lfs/sysconfig/rc          ${EXTDIR}/sysconfig/; fi
 
 install-net-agent:
 	install                   -m 755 contrib/hotplug/net.agent   ${EXTDIR}/hotplug
