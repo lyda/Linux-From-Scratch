@@ -12,7 +12,7 @@ Create a directory tree. Issuing the following commands will create a
 standard tree:</para>
  
 <screen><userinput>install -d ${LFS}/{bin,boot,dev,etc/opt,home,lib,mnt}
-install -d ${LFS}/{sbin,srv,usr/local,var,opt}
+install -d ${LFS}/{sbin,srv,usr/local,var,opt,proc,sys}
 install -d ${LFS}/root -m 0750
 install -d ${LFS}/tmp ${LFS}/var/tmp -m 1777
 install -d ${LFS}/media/{floppy,cdrom}
