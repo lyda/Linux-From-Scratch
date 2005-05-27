@@ -56,6 +56,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>May 27, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Added Missing directories to reboot section.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>May 25, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Updated Colo to 1.19.</para></listitem>
