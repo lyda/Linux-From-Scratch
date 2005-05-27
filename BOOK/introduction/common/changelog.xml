@@ -98,6 +98,7 @@ first a summary, then a detailed log.</para>
 <itemizedlist>
 <listitem><para>Adding necessary changes to the reboot section.</para></listitem>
 <listitem><para>Adding a modified devices page to reboot section.</para></listitem>
+<listitem><para>Adding environment to the reboot section.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>

@@ -23,7 +23,7 @@ be relevant entries in the <filename>${LFS}/etc/passwd</filename> and
 command:</para>
 
 <screen><userinput>cat &gt; ${LFS}/etc/passwd &lt;&lt; "EOF"
-<literal>root:x:0:0:root:/root:/bin/bash
+<literal>root::0:0:root:/root:/bin/bash
 nobody:x:65534:65534:Nobody:/:/sbin/nologin</literal>
 EOF</userinput></screen>
 

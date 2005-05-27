@@ -34,7 +34,7 @@
 
 <para>Make bootscripts usable at boot:</para>
 
-<screen><userinput>sed -i 's|/bin:/usr/bin:/sbin:/usr/sbin|/tools/bin:/bin:/sbin|g' \
+<screen><userinput>sed -i 's|/bin:/usr/bin:/sbin:/usr/sbin|/tools/bin:/tools/sbin:/bin:/sbin|g' \
    ${LFS}/etc/init.d/functions
    sed -i 's@mount -f /sys || failed=1@mount -f /sys | udevstart || failed=1@' mountfs</userinput></screen>
 
