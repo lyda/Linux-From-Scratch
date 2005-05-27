@@ -94,6 +94,14 @@ first a summary, then a detailed log.</para>
 -->
 
 <itemizedlist>
+<listitem><para>May 27, 2005 [jim]</para>
+<itemizedlist>
+<listitem><para>Adding ownership change to prevent issues during reboot.</para></listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
 <listitem><para>May 26, 2005 [jim]</para>
 <itemizedlist>
 <listitem><para>Adding necessary changes to the reboot section.</para></listitem>
