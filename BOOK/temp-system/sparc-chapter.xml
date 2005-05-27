@@ -19,9 +19,11 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gzip.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/diffutils.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/findutils.xml"/>
+<!--
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/m4.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/bison.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/flex.xml"/>
+-->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/make.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/grep.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/sed.xml"/>

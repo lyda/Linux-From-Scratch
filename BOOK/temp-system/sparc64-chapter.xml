@@ -21,9 +21,11 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gzip.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/diffutils.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/findutils.xml"/>
+<!--
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/m4.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bison.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/flex.xml"/>
+-->
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/make.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/grep.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/sed.xml"/>

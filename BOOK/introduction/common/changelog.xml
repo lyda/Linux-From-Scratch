@@ -99,6 +99,7 @@ first a summary, then a detailed log.</para>
 <listitem><para>Adding ownership change to prevent issues during reboot.</para></listitem>
 <listitem><para>Added a what's next to the last part of the reboot section.</para></listitem>
 <listitem><para>Updated linux to 2.6.11.11.</para></listitem>
+<listitem><para>Removed flex, bison, and m4 from temp-system, since we are using FSF binutils.</para></listitem>
 </itemizedlist>
 </listitem>
 </itemizedlist>
