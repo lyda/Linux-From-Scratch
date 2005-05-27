@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-reboot-cflags">
+<sect1 id="ch-reboot-whatnext">
 <title>What to do next</title>
 <?dbhtml filename="whatnext.html"?>
 
