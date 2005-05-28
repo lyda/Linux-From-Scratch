@@ -68,6 +68,8 @@ cp -R include/linux /usr/include</userinput></screen>
 <screen><userinput>find /usr/include/{asm,linux} -type d -exec chmod 755 {} \;
 find /usr/include/{asm,linux} -type f -exec chmod 644 {} \;</userinput></screen>
 
+    <para/>
+
   </sect2>
 
   <sect2 id="contents-linux-libc-headers" role="content">
