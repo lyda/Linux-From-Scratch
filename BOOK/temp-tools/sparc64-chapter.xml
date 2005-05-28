@@ -16,5 +16,6 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/dejagnu.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl-64bit.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/texinfo.xml"/>
 
 </chapter>
