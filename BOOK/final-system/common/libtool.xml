@@ -16,7 +16,7 @@
     <primary sortas="a-Libtool">Libtool</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-libtool" role="package">
     <title/>
 
     <para>The Libtool package contains the GNU generic library support script.
@@ -44,7 +44,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-libtool" role="installation">
     <title>Installation of Libtool</title>
 
     <para>Prepare Libtool for compilation:</para>

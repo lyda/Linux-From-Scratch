@@ -16,7 +16,7 @@
     <primary sortas="a-Shadow">Shadow</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-shadow" role="package">
     <title/>
 
     <para>The Shadow package contains programs for handling passwords in a
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-shadow" role="installation">
     <title>Installation of Shadow</title>
 
     <para>Shadow fails to update the time of last login as noted by
@@ -160,7 +160,7 @@ sed -i -e 's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
 
   </sect2>
 
-  <sect2 role="configuration">
+  <sect2 id="root-password" role="configuration">
     <title>Setting the root password</title>
 
     <para>Choose a password for user <systemitem

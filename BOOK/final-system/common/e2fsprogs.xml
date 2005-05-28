@@ -16,7 +16,7 @@
     <primary sortas="a-E2fsprogs">E2fsprogs</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-e2fsprogs" role="package">
     <title/>
 
     <para>The E2fsprogs package contains the utilities for handling the
@@ -43,9 +43,9 @@
       </seglistitem>
     </segmentedlist>
 
-</sect2>
+  </sect2>
 
-<sect2 role="installation">
+  <sect2 id="install-e2fsprogs" role="installation">
     <title>Installation of E2fsprogs</title>
 
     <para>It is recommended that E2fsprogs be built in a subdirectory of

@@ -16,7 +16,7 @@
     <primary sortas="a-Man-pages">Man-pages</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-man-pages" role="package">
     <title/>
 
     <para>The Man-pages package contains over 1,200 manual pages.</para>
@@ -41,7 +41,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-man-pages" role="installation">
     <title>Installation of Man-pages</title>
 
     <para>Install Man-pages by running:</para>

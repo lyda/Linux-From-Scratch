@@ -16,7 +16,7 @@
     <primary sortas="a-Gzip">Gzip</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-gzip" role="package">
     <title/>
 
     <para>The Gzip package contains programs for compressing and decompressing
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-gzip" role="installation">
     <title>Installation of Gzip</title>
 
     <para>The following patch fixes two security vulnerabilities in Gzip.

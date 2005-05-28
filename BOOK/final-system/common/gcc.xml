@@ -16,7 +16,7 @@
     <primary sortas="a-GCC">GCC</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-gcc" role="package">
     <title/>
 
     <para>The GCC package contains the GNU compiler collection, which includes
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-gcc" role="installation">
     <title>Installation of GCC</title>
 
     <para>This package is known to have issues when its default
@@ -103,14 +103,12 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput>ln -s ../usr/bin/cpp /lib</userinput></screen>
 
-
     <para>Many packages use the name <command>cc</command> to call the C
     compiler. To satisfy those packages, create a symlink:</para>
 
 <screen><userinput>ln -s gcc /usr/bin/cc</userinput></screen>
 
   </sect2>
-
 
   <sect2 id="contents-gcc" role="content">
     <title>Contents of GCC</title>

@@ -16,7 +16,7 @@
     <primary sortas="a-Hotplug">Hotplug</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-hotplug" role="package">
     <title/>
 
     <para>The Hotplug package contains scripts that react upon hotplug events
@@ -46,7 +46,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-hotplug" role="installation">
     <title>Installation of Hotplug</title>
 
     <para>Install the Hotplug package:</para>

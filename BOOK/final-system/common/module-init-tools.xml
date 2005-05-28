@@ -16,7 +16,7 @@
     <primary sortas="a-Module-Init-Tools">Module-Init-Tools</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-module-init-tools" role="package">
     <title/>
 
     <para>The Module-Init-Tools package contains programs for handling kernel
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-module-init-tools" role="installation">
     <title>Installation of Module-Init-Tools</title>
 
     <para>Prepare Module-Init-Tools for compilation:</para>

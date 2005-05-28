@@ -16,7 +16,7 @@
     <primary sortas="a-Iana-Etc">Iana-Etc</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-iana-etc" role="package">
     <title/>
 
     <para>The Iana-Etc package provides data for network services and
@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-iana-etc" role="installation">
     <title>Installation of Iana-Etc</title>
 
     <para>Parse the data:</para>

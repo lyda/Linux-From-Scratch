@@ -16,7 +16,7 @@
     <primary sortas="a-Man">Man</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-man" role="package">
     <title/>
 
     <para>The Man package contains programs for finding and viewing manual
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-man" role="installation">
     <title>Installation of Man</title>
 
     <para>A few adjustments need to be made to the sources of Man.</para>

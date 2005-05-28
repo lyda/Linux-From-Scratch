@@ -16,7 +16,7 @@
     <primary sortas="a-Sysklogd">Sysklogd</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-sysklogd" role="package">
     <title/>
 
     <para>The Sysklogd package contains programs for logging system messages,
@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-sysklogd" role="installation">
     <title>Installation of Sysklogd</title>
 
     <para>The following patch fixes various issues, including a problem building

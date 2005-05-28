@@ -13,7 +13,7 @@
     <primary sortas="a-Sysvinit">Sysvinit</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-sysvinit" role="package">
     <title/>
 
     <para>The Sysvinit package contains programs for controlling the startup,
@@ -39,7 +39,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-sysvinit" role="installation">
     <title>Installation of Sysvinit</title>
 
     <para>When run-levels are changed (for example, when halting the

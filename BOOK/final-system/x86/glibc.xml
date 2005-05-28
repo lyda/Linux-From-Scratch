@@ -16,7 +16,7 @@
     <primary sortas="a-Glibc">Glibc</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-glibc" role="package">
     <title/>
 
     <para>The Glibc package contains the main C library. This library provides
@@ -45,7 +45,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-glibc" role="installation">
     <title>Installation of Glibc</title>
 
     <para>This package is known to behave badly when you change its default
@@ -168,7 +168,7 @@ cd ../glibc-build</userinput></screen>
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="i18n-glibc" role="installation">
     <title>Internationalization</title>
 
     <para>The locales that can make the system respond in a different

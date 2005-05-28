@@ -16,7 +16,7 @@
     <primary sortas="a-Texinfo">Texinfo</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-texinfo" role="package">
     <title/>
 
     <para>The Texinfo package contains programs for reading, writing, and
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-texinfo" role="installation">
     <title>Installation of Texinfo</title>
 
     <para>Prepare Texinfo for compilation:</para>

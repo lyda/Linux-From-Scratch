@@ -16,7 +16,7 @@
     <primary sortas="a-Flex">Flex</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-flex" role="package">
     <title/>
 
     <para>The Flex package contains a utility for generating programs that
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-flex" role="installation">
     <title>Installation of Flex</title>
 
     <para>Flex contains several known bugs. Fix these with the following

@@ -16,7 +16,7 @@
     <primary sortas="a-Binutils">Binutils</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-binutils" role="package">
     <title/>
 
     <para>The Binutils package contains a linker, an assembler, and other
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-binutils" role="installation">
     <title>Installation of Binutils</title>
 
     <para>This package is known to have issues when its default
@@ -112,7 +112,6 @@ cd ../binutils-build</userinput></screen>
 <screen><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /usr/include</userinput></screen>
 
   </sect2>
-
 
   <sect2 id="contents-binutils" role="content">
     <title>Contents of Binutils</title>

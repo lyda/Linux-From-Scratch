@@ -16,7 +16,7 @@
     <primary sortas="a-Coreutils">Coreutils</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-coreutils" role="package">
     <title/>
 
     <para>The Coreutils package contains utilities for showing and setting the
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-coreutils" role="installation">
     <title>Installation of Coreutils</title>
 
     <para>Prevent Coreutils from installing binaries that will be later be

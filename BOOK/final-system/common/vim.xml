@@ -16,7 +16,7 @@
     <primary sortas="a-Vim">Vim</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-vim" role="package">
     <title/>
 
     <para>The Vim package contains a powerful text editor.</para>
@@ -51,7 +51,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-vim" role="installation">
     <title>Installation of Vim</title>
 
     <para>First, unpack both <filename>vim-&vim-version;.tar.bz2</filename>

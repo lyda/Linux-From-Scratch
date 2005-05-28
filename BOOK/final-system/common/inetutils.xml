@@ -16,7 +16,7 @@
     <primary sortas="a-Inetutils">Inetutils</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-inetutils" role="package">
     <title/>
 
     <para>The Inetutils package contains programs for basic networking.</para>
@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-inetutils" role="installation">
     <title>Installation of Inetutils</title>
 
     <para>All programs that come with Inetutils will not be installed.

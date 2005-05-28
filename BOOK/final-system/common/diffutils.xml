@@ -16,7 +16,7 @@
     <primary sortas="a-Diffutils">Diffutils</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-diffutils" role="package">
     <title/>
 
     <para>The Diffutils package contains programs that show the differences
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-diffutils" role="installation">
     <title>Installation of Diffutils</title>
 
     <para>Prepare Diffutils for compilation:</para>
