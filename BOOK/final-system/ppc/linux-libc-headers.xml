@@ -13,7 +13,7 @@
   <title>Linux-Libc-Headers-&linux-libc-headers-ppc-version;</title>
 
   <indexterm zone="ch-final-system-linux-libc-headers">
-  <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
+    <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
   </indexterm>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
