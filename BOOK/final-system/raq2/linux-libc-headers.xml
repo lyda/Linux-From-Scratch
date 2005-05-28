@@ -27,6 +27,8 @@
     href="../x86/linux-libc-headers.xml"
     xpointer="xpointer(id('install-linux-libc-headers')/para[1])"/>
 
+    <para>The following patch corrects the building of Sysklogd:</para>
+
 <screen><userinput>patch -Np1 -i ../&linux-libc-headers-raq2-patch;</userinput></screen>
 
     <para>Install the header files:</para>
