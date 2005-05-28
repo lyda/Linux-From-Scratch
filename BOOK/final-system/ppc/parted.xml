@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,67 +8,88 @@
 ]>
 
 <sect1 id="ch-system-parted" role="wrap">
-<title>Parted-&parted-version;</title>
-<?dbhtml filename="parted.html"?>
+  <?dbhtml filename="parted.html"?>
 
-<indexterm zone="ch-system-parted"><primary sortas="a-Parted">Parted</primary></indexterm>
+  <title>Parted-&parted-version;</title>
 
-<sect2 role="package"><title/>
-<para>Parted is a program for creating, copying and modifying partitions, and the file systems on them.
-Parted is especially useful on ppc machines in that, unlike fdisk, it accurately reads Macintosh partition maps.
-</para>
+  <indexterm zone="ch-system-parted">
+    <primary sortas="a-Parted">Parted</primary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.2 SBU</seg><seg>10 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<segmentedlist>
-<segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make, Ncurses, Sed</seg></seglistitem>
-</segmentedlist>
-</sect2>
+    <para>Parted is a program for creating, copying and modifying partitions,
+    and the file systems on them. Parted is especially useful on PPC machines
+    in that, unlike <command>fdisk</command>, it accurately reads Macintosh
+    partition maps.</para>
 
-<sect2 role="installation">
-<title>Installation of Parted</title>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<para>Prepare Parted for compilation:</para>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <segmentedlist>
+      <segtitle>&dependencies;</segtitle>
+
+      <seglistitem>
+        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep,
+        Make, Ncurses, Sed</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Parted</title>
+
+    <para>Prepare Parted for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
 
-<para>Compile the Parted package:</para>
+    <para>Compile the Parted package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Install the package:</para>
+    <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+  </sect2>
 
-<sect2 id="contents-parted" role="content"><title>Contents of Parted</title>
+  <sect2 id="contents-parted" role="content">
+    <title>Contents of Parted</title>
 
-<segmentedlist>
-<segtitle>Installed programs</segtitle>
-<seglistitem><seg>Unchecked</seg></seglistitem>
-</segmentedlist>
+    <segmentedlist>
+      <segtitle>Installed programs</segtitle>
 
-<variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
-<?dbfo list-presentation="list"?>
-<?dbhtml list-presentation="table"?>
+      <seglistitem>
+        <seg>Unchecked</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<varlistentry id="parted">
-<term><command>parted</command></term>
-<listitem>
-<para>Need Description</para>
-<indexterm zone="ch-system-parted parted"><primary sortas="e-parted">parted</primary></indexterm>
-</listitem>
-</varlistentry>
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
 
-</variablelist>
+      <varlistentry id="parted">
+        <term><command>parted</command></term>
+        <listitem>
+          <para>Need Description</para>
+          <indexterm zone="ch-system-parted parted">
+            <primary sortas="e-parted">parted</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
 
-</sect2>
+    </variablelist>
+
+  </sect2>
 
 </sect1>
