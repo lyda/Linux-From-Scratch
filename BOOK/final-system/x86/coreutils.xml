@@ -16,28 +16,9 @@
     <primary sortas="a-Coreutils">Coreutils</primary>
   </indexterm>
 
-  <sect2 role="package">
-    <title/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/coreutils.xml"
-    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
-
-    <segmentedlist>
-      <segtitle>&buildtime;</segtitle>
-      <segtitle>&diskspace;</segtitle>
-
-      <seglistitem>
-        <seg>Not checked yet</seg>
-        <seg>Not checked yet</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/coreutils.xml"
-    xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/coreutils.xml"
+  xpointer="xpointer(/sect1/sect2[@role='package'])"/>
 
   <sect2 role="installation">
     <title>Installation of Coreutils</title>
