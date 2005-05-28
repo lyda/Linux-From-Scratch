@@ -18,16 +18,14 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/linux-libc-headers.xml"
-  xpointer="xpointer(/sect1/sect2[@role='package'])"/>
+  xpointer="xpointer(id('package-linux-libc-headers'))"/>
 
   <sect2 role="installation">
     <title>Installation of Linux-Libc-Headers</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/linux-libc-headers.xml"
-    xpointer="xpointer(/sect1/sect2[@role='installation']/para[1])"/>
-
-    <para>The following patch corrects the building of Sysklogd:</para>
+    xpointer="xpointer(id('install-linux-libc-headers')/para[1])"/>
 
 <screen><userinput>patch -Np1 -i ../&linux-libc-headers-raq2-patch;</userinput></screen>
 
@@ -38,7 +36,8 @@ cp -R include/linux /usr/include</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/linux-libc-headers.xml"
-    xpointer="xpointer(/sect1/sect2[2]/para[3]/range-to(/sect1/sect2[2]/para[last()]))"/>
+    xpointer="xpointer(id('install-linux-libc-headers')/para[3]/range-to(id('install-linux-libc-headers')/para[last()]))"/>
+
 
   </sect2>
 

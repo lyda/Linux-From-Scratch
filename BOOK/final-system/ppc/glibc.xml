@@ -18,15 +18,15 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/glibc.xml"
-  xpointer="xpointer(/sect1/sect2[@role='package'])"/>
+  xpointer="xpointer(id('package-glibc'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/glibc.xml"
-  xpointer="xpointer(/sect1/sect2[2])"/>
+  xpointer="xpointer(id('install-glibc'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/glibc.xml"
-  xpointer="xpointer(/sect1/sect2[3])"/>
+  xpointer="xpointer(id('i18n-glibc'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/glibc.xml"

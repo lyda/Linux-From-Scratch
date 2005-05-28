@@ -18,7 +18,7 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/coreutils.xml"
-  xpointer="xpointer(/sect1/sect2[@role='package'])"/>
+  xpointer="xpointer(id('package-coreutils'))"/>
 
   <sect2 role="installation">
     <title>Installation of Coreutils</title>
@@ -32,7 +32,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/coreutils.xml"
-    xpointer="xpointer(/sect1/sect2[2]/para[1]/range-to(/sect1/sect2[2]/para[last()]))"/>
+    xpointer="xpointer(id('install-coreutils')/para[1]/range-to(id('install-coreutils')/para[last()]))"/>
 
   </sect2>
 
