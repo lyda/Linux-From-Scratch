@@ -104,6 +104,8 @@ mv /usr/bin/chroot /usr/sbin</userinput></screen>
 
 <screen><userinput>ln -s ../../bin/install /usr/bin</userinput></screen>
 
+    <para/>
+
   </sect2>
 
   <sect2 id="contents-coreutils" role="content">
