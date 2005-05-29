@@ -40,7 +40,6 @@ cp -R include/linux /usr/include</userinput></screen>
     href="../x86/linux-libc-headers.xml"
     xpointer="xpointer(id('install-linux-libc-headers')/para[3]/range-to(id('install-linux-libc-headers')/para[last()]))"/>
 
-
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

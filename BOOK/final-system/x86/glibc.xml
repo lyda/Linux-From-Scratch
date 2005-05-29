@@ -156,6 +156,8 @@ cd ../glibc-build</userinput></screen>
     <para>Build the linuxthreads man pages, which are a great reference
     on the threading API (applicable to NPTL as well):</para>
 
+    <para/>
+
     <para>Unpack the glibc-linuxthreads-&glibc-version; tarball&mdash;it
     is needed for the next two make commands. You can ignore this if you do
     want the threading API man pages.</para>
@@ -165,6 +167,8 @@ cd ../glibc-build</userinput></screen>
     <para>Install these pages:</para>
 
 <screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man install</userinput></screen>
+
+    <para/>
 
   </sect2>
 

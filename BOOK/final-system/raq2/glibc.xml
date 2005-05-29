@@ -18,130 +18,50 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/glibc.xml"
-  xpointer="xpointer(/sect1/sect2[@role='package'])"/>
+  xpointer="xpointer(id('package-glibc'))"/>
 
   <sect2 role="installation">
     <title>Installation of Glibc</title>
 
-<para>This package is known to behave badly when you change its default
-optimization flags (including the <parameter>-march</parameter> and
-<parameter>-mcpu</parameter> options). Therefore, if you have defined any
-environment variables that override default optimizations, such as CFLAGS and
-CXXFLAGS, we recommend un-setting them when building Glibc.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[1])"/>
 
-<para>This architecture does not currently support NPTL,
-so we will have to include Glibc Linuxthreads as a threading library.
-Building for a Linuxthreads based glibc you will need to
-unpack the glibc-linuxthreads-&glibc-version; tarball from
-within the glibc-&glibc-version; directory.</para>
+    <para>This architecture does not currently support NPTL, so we will
+    have to include Glibc Linuxthreads as a threading library. Building
+    for a Linuxthreads based glibc you will need to unpack the
+    <filename>glibc-linuxthreads-&glibc-version;</filename> tarball from
+    within the <filename class="directory">glibc-&glibc-version;</filename>
+    directory.</para>
 
-<para>The Glibc build system is self-contained and will install
-perfectly, even though the compiler specs file and linker are still
-pointing at <filename class="directory">/tools</filename>. The specs
-and linker cannot be adjusted before the Glibc install because the
-Glibc autoconf tests would give false results and defeat the goal
-of achieving a clean build.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[2])"/>
 
-<para>The following patch corrects the building of syscall.h:</para>
+    <para>The following patch corrects the building of
+    <filename class="headerfile">syscall.h</filename>:</para>
 
 <screen><userinput>patch -Np1 -i ../&glibc-raq2_syscall-patch;</userinput></screen>
 
-<para>NPTL is not supported under this architecture, so we are going to
-remove the nptl directory from the Glibc source:</para>
+    <para>NPTL is not supported under this architecture, so we are going to
+    remove the <filename class="directory">nptl</filename> directory from
+    the Glibc source:</para>
 
 <screen><userinput>rm -rf nptl*</userinput></screen>
 
-<para>The Glibc documentation recommends building Glibc outside of the source
-directory in a dedicated build directory:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[4]/range-to(id('install-glibc')/para[12]))"/>
 
-<screen><userinput>mkdir ../glibc-build
-cd ../glibc-build</userinput></screen>
-
-<para>Prepare Glibc for compilation:</para>
-
-<screen><userinput>../glibc-&glibc-version;/configure --prefix=/usr \
-    --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
-    --libexecdir=/usr/lib/glibc</userinput></screen>
-
-<para>The meaning of the new configure option:</para>
-
-<variablelist>
-<varlistentry>
-<term><parameter>--libexecdir=/usr/lib/glibc</parameter></term>
-<listitem><para>This changes the location of the
-<command>pt_chown</command> program from its default of <filename
-class="directory">/usr/libexec</filename> to <filename
-class="directory">/usr/lib/glibc</filename>.</para></listitem>
-</varlistentry>
-</variablelist>
-
-<para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
-
-<important><para>In this section, the test suite for Glibc is
-considered critical. Do not skip it under any
-circumstance.</para></important>
-
-<para>Test the results:</para>
-
-<screen><userinput>make check</userinput></screen>
-
-<para>The Glibc test suite is highly dependent on certain functions of
-the host system, in particular the kernel. In general, the Glibc test
-suite is always expected to pass. However, in certain circumstances,
-some failures are unavoidable. This is a list of the most common
-issues:</para>
-
-<itemizedlist>
-<listitem><para>The <emphasis>math</emphasis> tests sometimes fail when running
-on systems where the CPU is not a relatively new genuine Intel or authentic AMD.
-Certain optimization settings are also known to be a factor here.</para></listitem>
-
-<listitem><para>The <emphasis>gettext</emphasis> test sometimes fails due to
-host system issues. The exact reasons are not yet clear.</para></listitem>
-
-<listitem><para>The <emphasis>atime</emphasis> test sometimes fails
-when the LFS partition is mounted with the
-<parameter>noatime</parameter> option.</para></listitem>
-
-<listitem><para>The <emphasis>shm</emphasis> test can fail when the
-host system is using the <systemitem
-class="filesystem">devfs</systemitem> file system but does not have
-the <systemitem class="filesystem">tmpfs</systemitem> file system
-mounted at <filename class="directory">/dev/shm</filename>.  This
-occurs because of a lack of support for <systemitem
-class="filesystem">tmpfs</systemitem> in the
-kernel.</para></listitem>
-
-<listitem><para>When running on older and slower hardware, some tests
-can fail because of test timeouts being exceeded.</para></listitem>
-</itemizedlist>
-
-<para>Though it is a harmless message, the install stage of Glibc will
-complain about the absence of <filename>/etc/ld.so.conf</filename>.
-Prevent this warning with:</para>
-
-<screen><userinput>touch /etc/ld.so.conf</userinput></screen>
-
-<para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
-
-<para>Build the linuxthreads man pages, which are a great reference
-on the threading API (applicable to NPTL as well):</para>
-
-<screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man</userinput></screen>
-
-<para>Install these pages:</para>
-
-<screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/screen[8]/range-to(id('install-glibc')/para[last()]))"/>
 
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/glibc.xml"
-  xpointer="xpointer(/sect1/sect2[3])"/>
+  xpointer="xpointer(id('i18n-glibc'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/glibc.xml"
