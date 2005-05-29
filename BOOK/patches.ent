@@ -16,7 +16,7 @@
 <!ENTITY gcc-fix_native-patch  "gcc-&gcc-version;-fix_configure_for_target_native-1.patch">
 <!ENTITY gcc-linkonce-patch "gcc-&gcc-version;-linkonce-1.patch">
 <!ENTITY gcc-posix-patch "gcc-&gcc-version;-posix-1.patch">
-<!ENTITY gcc-specs-patch "gcc-&gcc-version;-specs-3.patch">
+<!ENTITY gcc-specs-patch "gcc-&gcc-version;-specs-2.patch">
 
 <!ENTITY glibc-testfix-patch "glibc-&glibc-version;-fix_test-1.patch">
 
