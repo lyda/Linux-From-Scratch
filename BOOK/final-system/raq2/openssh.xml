@@ -16,7 +16,7 @@
     <primary sortas="a-openssh">OpenSSH</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-openssh" role="package">
     <title/>
 
     <para> The OpenSSH package contains ssh clients and the sshd daemon.
@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-openssh" role="installation">
     <title>Installation of OpenSSH</title>
 
     <para>Need to create a chroot-jail for OpenSSH:</para>

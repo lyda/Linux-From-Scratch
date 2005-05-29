@@ -16,7 +16,7 @@
     <primary sortas="a-Openssl">Openssl</primary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-openssl" role="package">
     <title/>
 
     <para>The OpenSSL package contains management tools and libraries
@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-openssl" role="installation">
     <title>Installation of OpenSSL</title>
 
     <para>Prepare OpenSSL for compilation:</para>
