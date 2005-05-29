@@ -7,12 +7,12 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-final-system-linux-libc-headers" role="wrap">
+<sect1 id="ch-system-linux-libc-headers" role="wrap">
   <?dbhtml filename="linux-libc-headers.html"?>
 
   <title>Linux-Libc-Headers-&linux-libc-headers-x86-version;</title>
 
-  <indexterm zone="ch-final-system-linux-libc-headers">
+  <indexterm zone="ch-system-linux-libc-headers">
     <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
   </indexterm>
 
@@ -93,7 +93,7 @@ find /usr/include/{asm,linux} -type f -exec chmod 644 {} \;</userinput></screen>
         class="headerfile">/usr/include/{asm,linux}/*.h</filename></term>
         <listitem>
           <para>The Linux headers API</para>
-          <indexterm zone="ch-final-system-linux-libc-headers linux-libc-headers">
+          <indexterm zone="ch-system-linux-libc-headers linux-libc-headers">
             <primary
             sortas="e-/usr/include/{asm,linux}/*.h">/usr/include/{asm,linux}/*.h</primary>
           </indexterm>
