@@ -109,12 +109,11 @@ cp -r certs /etc/ssl</userinput></screen>
       <varlistentry id="libcrypto">
         <term><filename class='libraryfile'>libcrypto</filename></term>
         <listitem>
-          <para>implements a wide range of cryptographic algorithms used in
+          <para>Implements a wide range of cryptographic algorithms used in
           various Internet standards. The services provided by  this library
-          are used by the OpenSSL implementations of
-          SSL, TLS and S/MIME, and they have also been used to implement
-          OpenSSH, OpenPGP,
-          and other cryptographic standards.</para>
+          are used by the OpenSSL implementations of SSL, TLS and S/MIME,
+          and they have also been used to implement OpenSSH, OpenPGP, and
+          other cryptographic standards</para>
           <indexterm zone="ch-system-openssl libcrypto">
             <primary sortas="c-libcrypto">libcrypto</primary>
           </indexterm>
@@ -124,9 +123,9 @@ cp -r certs /etc/ssl</userinput></screen>
       <varlistentry id="libssl">
         <term><filename class='libraryfile'>libssl</filename></term>
         <listitem>
-          <para>implements the Secure Sockets Layer (SSL v2/v3) and Transport
+          <para>Implements the Secure Sockets Layer (SSL v2/v3) and Transport
           Layer Security (TLS v1) protocols. It provides a rich API, documentation
-          on which can be found by running <command>man 3 ssl</command>.</para>
+          on which can be found by running <command>man 3 ssl</command></para>
           <indexterm zone="ch-system-openssl libssl">
             <primary sortas="c-libssl">libssl</primary>
           </indexterm>
