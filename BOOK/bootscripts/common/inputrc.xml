@@ -1,51 +1,55 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
    <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch-scripts-inputrc">
-<title>Creating the /etc/inputrc File</title>
-<?dbhtml filename="inputrc.html"?>
+  <?dbhtml filename="inputrc.html"?>
 
-<indexterm zone="ch-scripts-inputrc"><primary sortas="e-/etc/inputrc">/etc/inputrc</primary></indexterm>
+  <title>Creating the /etc/inputrc File</title>
 
-<para>The <filename>/etc/inputrc</filename> file deals with mapping
-the keyboard for specific situations. This file is the start-up file
-used by <application>Readline</application>, the input-related
-library used by <application>Bash</application> and most other
-shells.</para>
+  <indexterm zone="ch-scripts-inputrc">
+    <primary sortas="e-/etc/inputrc">/etc/inputrc</primary>
+  </indexterm>
 
-<para>For more information, see the bash info page, section
-<emphasis>Readline Init File</emphasis>. The readline info page is
-also a good source of information.</para>
+  <para>The <filename>/etc/inputrc</filename> file deals with mapping
+  the keyboard for specific situations. This file is the start-up file
+  used by Readline, the input-related library used by Bash and most
+  other shells.</para>
 
-<para>Global values are set in <filename>/etc/inputrc</filename>.
-Personal user values are set in <filename>~/.inputrc</filename>. The
-<filename>~/.inputrc</filename> file will override the global settings
-file. A later page sets up Bash to use
-<filename>/etc/inputrc</filename> if there is no
-<filename>.inputrc</filename> for a user when
-<filename>/etc/profile</filename> is read (usually at login). To make
-the system use both, or to negate global keyboard handling, it is a
-good idea to place a default <filename>.inputrc</filename> into the
-<filename class="directory">/etc/skel</filename> directory for use
-with new users.</para>
+  <para>For more information, see the <command>bash</command> info
+  page, section <emphasis>Readline Init File</emphasis>. The
+  <command>readline</command> info page is also a good source of
+  information.</para>
 
-<para>Below is a base <filename>/etc/inputrc</filename>, along with
-comments to explain what the various options do. Note that comments
-cannot be on the same line as commands.</para>
+  <para>Global values are set in <filename>/etc/inputrc</filename>.
+  Personal user values are set in <filename>~/.inputrc</filename>. The
+  <filename>~/.inputrc</filename> file will override the global settings
+  file. A later page sets up Bash to use <filename>/etc/inputrc</filename>
+  if there is no <filename>.inputrc</filename> for a user when
+  <filename>/etc/profile</filename> is read (usually at login). To make
+  the system use both, or to negate global keyboard handling, it is a good
+  idea to place a default <filename>.inputrc</filename> into the
+  <filename class="directory">/etc/skel</filename> directory for use with
+  new users.</para>
 
-<para>To create the <filename>.inputrc</filename> in <filename
-class="directory">/etc/skel</filename> using the command below, change
-the command's output to <filename
-class="directory">/etc/skel/.inputrc</filename> and be sure to
-check/set permissions afterward. Copy that file to
-<filename>/etc/inputrc</filename> and the home directory of any user
-already existing on the system, including <emphasis>root</emphasis>,
-that needs a private version of the file. Be certain to use the
-<parameter>-p</parameter> parameter of <command>cp</command> to
-maintain permissions and be sure to change owner and group
-appropriately.</para>
+  <para>Below is a base <filename>/etc/inputrc</filename>, along with
+  comments to explain what the various options do. Note that comments
+  cannot be on the same line as commands.</para>
+
+  <para>To create the <filename>.inputrc</filename> in
+  <filename class="directory">/etc/skel</filename> using the command
+  below, change the command's output to
+  <filename class="directory">/etc/skel/.inputrc</filename> and be
+  sure to check/set permissions afterward. Copy that file to
+  <filename>/etc/inputrc</filename> and the home directory of any user
+  already existing on the system, including
+  <systemitem class="username">root</systemitem>, that needs a private
+  version of the file. Be certain to use the <option>-p</option> parameter
+  of <command>cp</command> to maintain permissions and be sure to change
+  owner and group appropriately.</para>
 
 <screen><userinput>cat &gt; /etc/inputrc &lt;&lt; "EOF"
 <literal># Begin /etc/inputrc
@@ -55,7 +59,7 @@ appropriately.</para>
 set horizontal-scroll-mode Off
 
 # Enable 8bit input
-set meta-flag On 
+set meta-flag On
 set input-meta On
 
 # Turns off 8th bit stripping
@@ -67,8 +71,8 @@ set output-meta On
 # none, visible or audible
 set bell-style none
 
-# All of the following map the escape sequence of the 
-# value contained inside the 1st argument to the 
+# All of the following map the escape sequence of the
+# value contained inside the 1st argument to the
 # readline specific functions
 
 "\eOd": backward-word
@@ -94,4 +98,3 @@ set bell-style none
 EOF</userinput></screen>
 
 </sect1>
-
