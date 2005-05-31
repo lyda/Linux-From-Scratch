@@ -8,7 +8,7 @@
 <sect1 id="ch-bootable-yaboot" arch="ppc">
   <?dbhtml filename="yaboot.html"?>
 
-  <title>Making the LFS system bootable</title>
+  <title>Making the LFS System Bootable</title>
 
   <indexterm zone="ch-bootable-yaboot">
     <primary sortas="a-Yaboot">Yaboot</primary>
