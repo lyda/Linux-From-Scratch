@@ -87,10 +87,9 @@
 
     <para>If desired, skip kernel configuration by copying the kernel
     config file, <filename>.config</filename>, from the host system
-    (assuming it is available) to the unpacked <filename
-    class="directory">linux-&linux-x86-version;</filename> directory.
-    However, we do not recommend this option. It is often better to
-    explore all the configuration menus and create the kernel configuration
+    (assuming it is available) to the root directory of the unpacked kernel
+    sources. However, we do not recommend this option. It is often better
+    to explore all the configuration menus and create the kernel configuration
     from scratch.</para>
 
     <para>For POSIX-shared memory support, ensure that the kernel config
@@ -119,8 +118,8 @@
     <filename>/etc/modprobe.conf</filename> file may be needed.
     Information pertaining to modules and kernel configuration is
     located in the kernel documentation in the <filename
-    class="directory">linux-&linux-x86-version;/Documentation</filename>
-    directory. The <filename>modprobe.conf</filename> man page may also
+    class="directory">Documentation</filename> directory of the kernel
+    sources tree. The <filename>modprobe.conf</filename> man page may also
     be of interest.</para>
 
     <para>Be very careful when reading other documentation because it
