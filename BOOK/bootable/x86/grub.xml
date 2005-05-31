@@ -130,8 +130,8 @@ EOF</userinput></screen>
   website at: <ulink url="http://www.gnu.org/software/grub/"/>.</para>
 
   <para>The FHS stipulates that Bootloader's configuration file should
-  be symlinked to /etc/{Bootloader Name}.  To satisfy this requirement
-  for Grub, issue the following command:</para>
+  be symlinked to <filename class="symlink">/etc/{Bootloader Name}</filename>.
+  To satisfy this requirement for Grub, issue the following command:</para>
 
 <screen><userinput>mkdir /etc/grub &amp;&amp;
 ln -s /boot/grub/menu.lst /etc/grub</userinput></screen>
