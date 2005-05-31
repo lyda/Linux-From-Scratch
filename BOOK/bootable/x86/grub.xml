@@ -87,6 +87,8 @@ dd if=/boot/grub/stage2 of=/dev/fd0 bs=512 seek=1</userinput></screen>
   <para>Create a <quote>menu list</quote> file defining Grub's boot
   menu:</para>
 
+  <para/>
+
 <screen><userinput>cat &gt; /boot/grub/menu.lst &lt;&lt; "EOF"
 <literal># Begin /boot/grub/menu.lst
 
@@ -135,5 +137,7 @@ EOF</userinput></screen>
 
 <screen><userinput>mkdir /etc/grub &amp;&amp;
 ln -s /boot/grub/menu.lst /etc/grub</userinput></screen>
+
+  <para/>
 
 </sect1>
