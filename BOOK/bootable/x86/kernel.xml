@@ -170,8 +170,9 @@
 <screen><userinput>cp .config /boot/config-&linux-x86-version;</userinput></screen>
 
     <para>It is important to note that the files in the kernel source
-    directory are not owned by <emphasis>root</emphasis>. Whenever a
-    package is unpacked as user <emphasis>root</emphasis> (like we did
+    directory are not owned by <systemitem class="username">root</systemitem>.
+    Whenever a package is unpacked as user <systemitem
+    class="username">root</systemitem> (like we did
     inside chroot), the files have the user and group IDs of whatever
     they were on the packager's computer. This is usually not a problem
     for any other package to be installed because the source tree is
