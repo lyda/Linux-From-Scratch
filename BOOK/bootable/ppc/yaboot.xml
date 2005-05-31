@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch-bootable-yaboot" arch="ppc">
-<title>Making the LFS system bootable</title>
-<?dbhtml filename="yaboot.html"?>
+  <?dbhtml filename="yaboot.html"?>
 
-<indexterm zone="ch-bootable-yaboot">
-<primary sortas="a-Yaboot">Yaboot</primary>
-<secondary>configuring</secondary></indexterm>
+  <title>Making the LFS system bootable</title>
 
-<para>This is a place holder for yaboot</para>
+  <indexterm zone="ch-bootable-yaboot">
+    <primary sortas="a-Yaboot">Yaboot</primary>
+  <secondary>configuring</secondary></indexterm>
+
+  <para>This is a place holder for configuring yaboot</para>
+
 </sect1>
