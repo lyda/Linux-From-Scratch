@@ -73,6 +73,8 @@
 
 <screen><userinput>make menuconfig</userinput></screen>
 
+    <para/>
+
     <para>Alternatively, <command>make oldconfig</command> may be more
     appropriate in some situations. See the <filename>README</filename>
     file for more information.</para>
@@ -152,6 +154,8 @@
     the <filename class="directory">/boot</filename> directory.</para>
 
     <para>Issue the following command to install the kernel:</para>
+
+    <para/>
 
 <screen><userinput>cp arch/i386/boot/bzImage /boot/lfskernel-&linux-x86-version;</userinput></screen>
 
