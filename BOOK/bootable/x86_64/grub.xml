@@ -13,7 +13,7 @@
   <secondary>configuring</secondary></indexterm>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/kernel.xml"
+  href="../x86/grub.xml"
   xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[11]))"/>
 
 <screen><userinput>cat &gt; /boot/grub/menu.lst &lt;&lt; "EOF"
@@ -35,7 +35,7 @@ kernel /boot/lfskernel-&linux-x86_64-version; root=/dev/hda4</literal>
 EOF</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/kernel.xml"
+  href="../x86/grub.xml"
   xpointer="xpointer(/sect1/para[12]/range-to(/sect1/para[last()]))"/>
 
 </sect1>
