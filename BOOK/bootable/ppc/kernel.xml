@@ -25,25 +25,25 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[1]/range-to(id('install-kernel')/para[18]))"/>
+    xpointer="xpointer(id('install-kernel')/para[1]/range-to(id('install-kernel')/para[20]))"/>
 
 <screen><userinput>cp vmlinux /boot/lfskernel-&linux-ppc-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[19])"/>
+    xpointer="xpointer(id('install-kernel')/para[21])"/>
 
 <screen><userinput>cp System.map /boot/System.map-&linux-ppc-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[20])"/>
+    xpointer="xpointer(id('install-kernel')/para[22])"/>
 
 <screen><userinput>cp .config /boot/config-&linux-ppc-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[21])"/>
+    xpointer="xpointer(id('install-kernel')/para[23])"/>
 
     <para>If the kernel source tree is going to retained, run
     <command>chown -R 0:0</command> on the <filename
