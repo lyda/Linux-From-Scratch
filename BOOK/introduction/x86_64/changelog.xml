@@ -1,65 +1,78 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
   %patches-entities;
 ]>
+
 <sect1 id="ch-intro-changelog-x86_64">
-<title>Changelog for x86_64</title>
-<?dbhtml filename="changelog-x86_64.html"?>
+  <?dbhtml filename="changelog-x86_64.html"?>
 
-<para>This is version &version; of the Linux From Scratch book, dated
-&releasedate;. If this book is more than two months old, a newer and better
-version is probably already available. To find out, please check one of the
-mirrors via <ulink url="&lfs-root;"/>.</para>
+  <title>Changelog for x86_64</title>
 
-<para>Below is a list of changes made since the previous release of the book,
-first a summary, then a detailed log.</para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/changelog.xml"
+  xpointer="xpointer(/sect1/para[1])"/>
 
-<itemizedlist>
+  <itemizedlist>
+    <title>Upgraded to:</title>
 
-<listitem><para>Upgraded to:</para>
-<itemizedlist>
-<listitem><para>Arch: x86_64 - Linux &linux-x86_64-version;</para></listitem>
-<listitem><para>Arch: x86_64 - Linux-libc-headers &linux-libc-headers-x86_64-version;</para></listitem>
-<listitem><para>Arch: x86_64 - Grub &grub-version;</para></listitem>
-</itemizedlist>
-</listitem>
+    <listitem>
+      <para>Linux &linux-x86_64-version;</para>
+    </listitem>
+    <listitem>
+      <para>Linux-libc-headers &linux-libc-headers-x86_64-version;</para>
+    </listitem>
+    <listitem>
+      <para>Grub &grub-version;</para>
+    </listitem>
+  </itemizedlist>
 
-<listitem><para>Added:</para>
-<itemizedlist>
-<listitem><para></para></listitem>
-</itemizedlist>
-</listitem>
- 
-<listitem><para>Removed:</para>
-<itemizedlist>
-<listitem><para></para></listitem>
-</itemizedlist>
-</listitem>
 
-<listitem><para>Changelog Entries:</para>
+  <itemizedlist>
+    <title>Added:</title>
+
+    <listitem>
+      <para>None</para>
+    </listitem>
+  </itemizedlist>
+
+  <itemizedlist>
+    <title>Removed:</title>
+
+    <listitem>
+      <para>None</para>
+    </listitem>
+  </itemizedlist>
+
+  <itemizedlist>
+    <title>Changelog Entries:</title>
 
 <!-- Changelog template
-<itemizedlist>
-<listitem><para>Date [name]</para>
-<itemizedlist>
-<listitem><para>Changelog.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+
+    <listitem>
+      <para>Date</para>
+      <itemizedlist>
+        <listitem>
+          <para>[name] - Changelog.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
 -->
 
-<itemizedlist>
-<listitem><para>May 10, 2005 [jim]</para>
-<itemizedlist>
-<listitem><para>This BOOK is an update of the cross-lfs book into a new format style.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 10, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - This BOOK is an update of the cross-lfs book into a new
+          format style.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-</listitem>
-</itemizedlist>
+  </itemizedlist>
 
 </sect1>
