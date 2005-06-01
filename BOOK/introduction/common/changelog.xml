@@ -1,195 +1,337 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
   %patches-entities;
 ]>
+
 <sect1 id="ch-intro-changelog">
-<title>Changelog</title>
-<?dbhtml filename="changelog.html"?>
+  <?dbhtml filename="changelog.html"?>
 
-<para>This is version &version; of the Linux From Scratch book, dated
-&releasedate;. If this book is more than two months old, a newer and better
-version is probably already available. To find out, please check one of the
-mirrors via <ulink url="&lfs-root;"/>.</para>
+  <title>Changelog</title>
 
-<para>Below is a list of changes made since the previous release of the book,
-first a summary, then a detailed log.</para>
+  <para>This is version &version; of the Linux From Scratch book, dated
+  &releasedate;. If this book is more than two months old, a newer and better
+  version is probably already available. To find out, please check one of the
+  mirrors via <ulink url="&lfs-root;"/>.</para>
 
-<itemizedlist>
+  <para>Below is a list of changes made since the previous release of the book,
+  first a summary, then a detailed log.</para>
 
-<listitem><para>Upgraded to:</para>
-<itemizedlist>
-<listitem><para>Arch: All - Automake &automake-version;</para></listitem>
-<listitem><para>Arch: All - Binutils &binutils-version;</para></listitem>
-<listitem><para>Arch: All - Bison &bison-version;</para></listitem>
-<listitem><para>Arch: All - Bzip2 &bzip2-version;</para></listitem>
-<listitem><para>Arch: All - Diffutils &diffutils-version;</para></listitem>
-<listitem><para>Arch: All - E2fsprogs &e2fsprogs-version;</para></listitem>
-<listitem><para>Arch: All - Expect &expect-version;</para></listitem>
-<listitem><para>Arch: All - File &file-version;</para></listitem>
-<listitem><para>Arch: All - Findutils &findutils-version;</para></listitem>
-<listitem><para>Arch: All - GCC &gcc-version;</para></listitem>
-<listitem><para>Arch: All - Gettext &gettext-version;</para></listitem>
-<listitem><para>Arch: All - Glibc &glibc-version;</para></listitem>
-<listitem><para>Arch: All - Grep &grep-version;</para></listitem>
-<listitem><para>Arch: All - Iana-Etc &iana-etc-version;</para></listitem>
-<listitem><para>Arch: All - Iproute2 &iproute2-version;</para></listitem>
-<listitem><para>Arch: All - LFS-Bootscripts &lfs-bootscripts-version;</para></listitem>
-<listitem><para>Arch: All - Libtool &libtool-version;</para></listitem>
-<listitem><para>Arch: All - Man &man-version;</para></listitem>
-<listitem><para>Arch: All - Man-pages &man-pages-version;</para></listitem>
-<listitem><para>Arch: All - M4 &m4-version;</para></listitem>
-<listitem><para>Arch: All - Patch &patch-version;</para></listitem>
-<listitem><para>Arch: All - Perl &perl-version;</para></listitem>
-<listitem><para>Arch: All - Procps &procps-version;</para></listitem>
-<listitem><para>Arch: All - Psmisc &psmisc-version;</para></listitem>
-<listitem><para>Arch: All - Sed &sed-version;</para></listitem>
-<listitem><para>Arch: All - Shadow &shadow-version;</para></listitem>
-<listitem><para>Arch: All - Sysvinit &sysvinit-version;</para></listitem>
-<listitem><para>Arch: All - Tar &tar-version;</para></listitem>
-<listitem><para>Arch: All - Texinfo &texinfo-version;</para></listitem>
-<listitem><para>Arch: All - Tcl &tcl-version;</para></listitem>
-<listitem><para>Arch: All - Udev &udev-version;</para></listitem>
-<listitem><para>Arch: All - Util-linux &util-linux-version;</para></listitem>
-<listitem><para>Arch: All - Zlib &zlib-version;</para></listitem>
-<listitem><para>Arch: All - udev-config-2.rules</para></listitem>
-</itemizedlist>
-</listitem>
+  <itemizedlist>
+    <title>Upgraded to:</title>
 
-<listitem><para>Added:</para>
-<itemizedlist>
-<listitem><para>Arch: All - &binutils-posix-patch;</para></listitem>
-<listitem><para>Arch: All - &gcc-cross_search-patch;</para></listitem>
-<listitem><para>Arch: All - &gcc-specs-patch;</para></listitem>
-<listitem><para>Arch: All - &gcc-posix-patch;</para></listitem>
-<listitem><para>Arch: All - &glibc-testfix-patch;</para></listitem>
-<listitem><para>Arch: All - &gzip-security_fix-patch;</para></listitem>
-<listitem><para>Arch: All - &ncurses-update-patch; (Patch)</para></listitem>
-<listitem><para>Arch: All - &tar-sparse_fix-patch;</para></listitem>
-<listitem><para>Arch: All - &shadow-lastlog-patch;</para></listitem>
-<listitem><para>Arch: All - &util-linux-cramfs-patch;</para></listitem>
-</itemizedlist>
-</listitem>
- 
-<listitem><para>Removed:</para>
-<itemizedlist>
-<listitem><para>Arch: All - udev-config-2.permissions</para></listitem>
-<listitem><para>Arch: All - iproute2-2.6.11-050330-remove_db-1.patch</para></listitem>
-<listitem><para>Arch: All - inetutils-1.4.2-kernel_headers-1.patch</para></listitem>
-</itemizedlist>
-</listitem>
+    <listitem>
+      <para>Arch: All - Automake &automake-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Binutils &binutils-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Bison &bison-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Bzip2 &bzip2-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Diffutils &diffutils-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - E2fsprogs &e2fsprogs-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Expect &expect-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - File &file-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Findutils &findutils-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - GCC &gcc-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Gettext &gettext-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Glibc &glibc-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Grep &grep-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Iana-Etc &iana-etc-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Iproute2 &iproute2-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - LFS-Bootscripts &lfs-bootscripts-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Libtool &libtool-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Man &man-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Man-pages &man-pages-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - M4 &m4-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Patch &patch-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Perl &perl-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Procps &procps-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Psmisc &psmisc-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Sed &sed-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Shadow &shadow-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Sysvinit &sysvinit-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Tar &tar-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Texinfo &texinfo-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Tcl &tcl-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Udev &udev-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Util-linux &util-linux-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - Zlib &zlib-version;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - udev-config-2.rules</para>
+    </listitem>
+  </itemizedlist>
 
-<listitem><para>Changelog Entries:</para>
+  <itemizedlist>
+    <title>Added:</title>
+
+    <listitem>
+      <para>Arch: All - &binutils-posix-patch;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - &gcc-cross_search-patch;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - &gcc-specs-patch;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - &gcc-posix-patch;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - &glibc-testfix-patch;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - &gzip-security_fix-patch;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - &ncurses-update-patch; (Patch)</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - &tar-sparse_fix-patch;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - &shadow-lastlog-patch;</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - &util-linux-cramfs-patch;</para>
+    </listitem>
+  </itemizedlist>
+
+  <itemizedlist>
+    <title>Removed:</title>
+
+    <listitem>
+      <para>Arch: All - udev-config-2.permissions</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - iproute2-2.6.11-050330-remove_db-1.patch</para>
+    </listitem>
+    <listitem>
+      <para>Arch: All - inetutils-1.4.2-kernel_headers-1.patch</para>
+    </listitem>
+  </itemizedlist>
+
+
+  <itemizedlist>
+    <title>Changelog Entries:</title>
 
 <!-- Changelog template
-<itemizedlist>
-<listitem><para>Date [name]</para>
-<itemizedlist>
-<listitem><para>Changelog.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+
+    <listitem>
+      <para>Date [name]</para>
+      <itemizedlist>
+        <listitem>
+          <para>Changelog.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
 -->
 
-<itemizedlist>
-<listitem><para>May 28, 2005 [jim]</para>
-<itemizedlist>
-<listitem><para>Added texinfo to temp-tools section, will allow binutils to make info pages..</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 28, 2005 [jim]</para>
+      <itemizedlist>
+        <listitem>
+          <para>Added Texinfo to temp-tools section, will allow Binutils
+          to make their info pages on the final-system build.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-<itemizedlist>
-<listitem><para>May 27, 2005 [jim]</para>
-<itemizedlist>
-<listitem><para>Adding ownership change to prevent issues during reboot.</para></listitem>
-<listitem><para>Added a what's next to the last part of the reboot section.</para></listitem>
-<listitem><para>Updated linux to 2.6.11.11.</para></listitem>
-<listitem><para>Removed flex, bison, and m4 from temp-system, since we are using FSF binutils.</para></listitem>
-<listitem><para>Updated gcc to 3.4.4.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 27, 2005 [jim]</para>
+      <itemizedlist>
+        <listitem>
+          <para>Adding ownership change to prevent issues during reboot.</para>
+        </listitem>
+        <listitem>
+          <para>Added a what's next to the last part of the reboot section.</para>
+        </listitem>
+        <listitem>
+          <para>Updated linux to 2.6.11.11.</para>
+        </listitem>
+        <listitem>
+          <para>Removed flex, bison, and m4 from temp-system, since we are
+          using FSF binutils.</para>
+        </listitem>
+        <listitem>
+          <para>Updated gcc to 3.4.4.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-<itemizedlist>
-<listitem><para>May 26, 2005 [jim]</para>
-<itemizedlist>
-<listitem><para>Adding necessary changes to the reboot section.</para></listitem>
-<listitem><para>Adding a modified devices page to reboot section.</para></listitem>
-<listitem><para>Adding environment to the reboot section.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 26, 2005 [jim]</para>
+      <itemizedlist>
+        <listitem>
+          <para>Adding necessary changes to the reboot section.</para>
+        </listitem>
+        <listitem>
+          <para>Adding a modified devices page to reboot section.</para>
+        </listitem>
+        <listitem>
+          <para>Adding environment to the reboot section.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-<itemizedlist>
-<listitem><para>May 24, 2005 [jim]</para>
-<itemizedlist>
-<listitem><para>Finishing the reboot section.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 24, 2005 [jim]</para>
+      <itemizedlist>
+        <listitem>
+          <para>Finishing the reboot section.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-<itemizedlist>
-<listitem><para>May 23, 2005 [jim]</para>
-<itemizedlist>
-<listitem><para>Updated gettext to 0.14.5.</para></listitem>
-<listitem><para>Changed changelogs to use entities.</para></listitem>
-<listitem><para>IPRoute2 removed patch and changed to a sed.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 23, 2005 [jim]</para>
+      <itemizedlist>
+        <listitem>
+          <para>Updated gettext to 0.14.5.</para>
+        </listitem>
+        <listitem>
+          <para>Changed changelogs to use entities.</para>
+        </listitem>
+        <listitem>
+          <para>IPRoute2 removed patch and changed to a sed.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-<itemizedlist>
-<listitem><para>May 22, 2005 [jhuntwork]</para>
-<itemizedlist>
-<listitem><para>Fixed url for Bzip2.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 22, 2005 [jhuntwork]</para>
+      <itemizedlist>
+        <listitem>
+          <para>Fixed url for Bzip2.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-<itemizedlist>
-<listitem><para>May 19, 2005 [jim]</para>
-<itemizedlist>
-<listitem><para>Fixed util-linux patch entity.</para></listitem>
-<listitem><para>Updated libtool to 1.15.18.</para></listitem>
-<listitem><para>Updated linux to 2.6.11.10.</para></listitem>
-<listitem><para>Updated Grub to 097.</para></listitem>
-<listitem><para>Added missing glibc-headers to cross-tools.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 19, 2005 [jim]</para>
+      <itemizedlist>
+        <listitem>
+          <para>Fixed util-linux patch entity.</para>
+        </listitem>
+        <listitem>
+          <para>Updated libtool to 1.15.18.</para>
+        </listitem>
+        <listitem>
+          <para>Updated linux to 2.6.11.10.</para>
+        </listitem>
+        <listitem>
+          <para>Updated Grub to 097.</para>
+        </listitem>
+        <listitem>
+          <para>Added missing glibc-headers to cross-tools.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-<itemizedlist>
-<listitem><para>May 16, 2005 [jhuntwork]</para>
-<itemizedlist>
-<listitem><para>Changed sparc64 to use glibc-linuxthreads.xml in multilib.</para></listitem>
-<listitem><para>Fixed setting of CC variable in cross-tools/multilib/glibc-linuxthreads-64bit.xml</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 16, 2005 [jhuntwork]</para>
+      <itemizedlist>
+        <listitem>
+          <para>Changed sparc64 to use glibc-linuxthreads.xml in multilib.</para>
+        </listitem>
+        <listitem>
+          <para>Fixed setting of CC variable in
+          cross-tools/multilib/glibc-linuxthreads-64bit.xml</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-<itemizedlist>
-<listitem><para>May 13, 2005 [jhuntwork]</para>
-<itemizedlist>
-<listitem><para>Temp-System: Added multilib build instructions for bzip2.</para></listitem>
-<listitem><para>Changed CC="${LFS_TARGET}-gcc buildflags" to CC="${CC} buildflags".</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 13, 2005 [jhuntwork]</para>
+      <itemizedlist>
+        <listitem>
+          <para>Temp-System: Added multilib build instructions for bzip2.</para>
+        </listitem>
+        <listitem>
+          <para>Changed CC="${LFS_TARGET}-gcc buildflags" to
+          CC="${CC} buildflags".</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-<itemizedlist>
-<listitem><para>May 10, 2005 [jim]</para>
-<itemizedlist>
-<listitem><para>This BOOK is an update of the cross-lfs book into a new format style.</para></listitem>
-</itemizedlist>
-</listitem>
-</itemizedlist>
+    <listitem>
+      <para>May 10, 2005 [jim]</para>
+      <itemizedlist>
+        <listitem>
+          <para>This BOOK is an update of the cross-lfs book into a new
+          format style.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
-</listitem>
-</itemizedlist>
+  </itemizedlist>
 
-<para>Branch Synced from the Release of LFS 6.0 on February 23rd, 2005</para>
+  <para>Branch Synced from the Release of LFS 6.0 on February 23rd, 2005</para>
 
 </sect1>
