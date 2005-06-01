@@ -4,6 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
+
 <bookinfo>
   <title>Linux From Scratch</title>
   <subtitle>Version &version-raq2;</subtitle>
