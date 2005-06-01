@@ -11,25 +11,21 @@
   <title>Changelog for x86</title>
   <?dbhtml filename="changelog-x86.html"?>
 
-  <para>This is version &version; of the Linux From Scratch book, dated
-  &releasedate;. If this book is more than two months old, a newer and better
-  version is probably already available. To find out, please check one of the
-  mirrors via <ulink url="&lfs-root;"/>.</para>
-
-  <para>Below is a list of changes made since the previous release of the book,
-  first a summary, then a detailed log.</para>
+  <para>Below is a list of changes specifics for this architecture made
+  since the previous release of the book. For general changes see
+  <xref linkend="ch-intro-changelog"/>,</para>
 
   <itemizedlist>
     <title>Upgraded to:</title>
 
     <listitem>
-      <para>Arch: x86 - Linux &linux-x86-version;</para>
+      <para>Linux &linux-x86-version;</para>
     </listitem>
     <listitem>
-      <para>Arch: x86 - Linux-libc-headers &linux-libc-headers-x86-version;</para>
+      <para>Linux-libc-headers &linux-libc-headers-x86-version;</para>
     </listitem>
     <listitem>
-      <para>Arch: x86 - Grub &grub-version;</para>
+      <para>Grub &grub-version;</para>
     </listitem>
   </itemizedlist>
 
@@ -56,10 +52,10 @@
 <!-- Changelog template
 
     <listitem>
-      <para>Date [name]</para>
+      <para>Date</para>
       <itemizedlist>
         <listitem>
-          <para>Changelog.</para>
+          <para>[name] - Changelog.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -67,10 +63,10 @@
 -->
 
     <listitem>
-      <para>May 10, 2005 [jim]</para>
+      <para>May 10, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>This BOOK is an update of the cross-lfs book into a new
+          <para>[jim] - This BOOK is an update of the cross-lfs book into a new
           format style.</para>
         </listitem>
       </itemizedlist>
