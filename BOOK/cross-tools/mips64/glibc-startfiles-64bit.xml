@@ -98,11 +98,6 @@ we will need to manually copy files over.</para>
 <screen><userinput>install -d /tools/lib64
 cp -fp csu/crt[i1n].o /tools/lib64</userinput></screen>
 
-<para>Now we link the 64 bit library to /tools/lib so that 64 bit is
-our default.</para>
-
-<screen><userinput>ln -s /tools/lib64 /tools/lib</userinput></screen>
-
 </sect2>
 
 </sect1>

@@ -22,6 +22,6 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/gcc-shared.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/glibc.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/glibc-64bit.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/gcc-final.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/gcc-final.xml"/>
 
 </chapter>
