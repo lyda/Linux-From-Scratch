@@ -7,8 +7,8 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-intro-changelog-mips">
-  <?dbhtml filename="changelog-mips.html"?>
+<sect1 id="ch-intro-changelog-mips64">
+  <?dbhtml filename="changelog-mips64.html"?>
 
   <title>Changelog for MIPS 64 Bit</title>
 
@@ -20,10 +20,10 @@
     <title>Upgraded to:</title>
 
     <listitem>
-      <para>Linux &linux-mips-version;</para>
+      <para>Linux &linux-mips64-version;</para>
     </listitem>
     <listitem>
-      <para>Linux-libc-headers &linux-libc-headers-mips-version;</para>
+      <para>Linux-libc-headers &linux-libc-headers-mips64-version;</para>
     </listitem>
   </itemizedlist>
 
@@ -44,10 +44,10 @@
       <para>&glibc-mips_syscall-patch;</para>
     </listitem>
     <listitem>
-      <para>&linux-libc-headers-mips-patch;</para>
+      <para>&linux-libc-headers-mips64-patch;</para>
     </listitem>
     <listitem>
-      <para>&linux-mips-patch;</para>
+      <para>&linux-mips64-patch;</para>
     </listitem>
   </itemizedlist>
 
@@ -68,51 +68,11 @@
 -->
 
     <listitem>
-      <para>May 27, 2005</para>
+      <para>June 1, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[jim] - Added Missing directories to reboot section.</para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-
-    <listitem>
-      <para>May 25, 2005</para>
-      <itemizedlist>
-        <listitem>
-          <para>[jim] - Updated Colo to 1.19.</para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-
-    <listitem>
-      <para>May 23, 2005</para>
-      <itemizedlist>
-        <listitem>
-          <para>[jim] - Fixed sysvinit reboot install.</para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-
-    <listitem>
-      <para>May 19, 2005</para>
-      <itemizedlist>
-        <listitem>
-          <para>[jim] - Updated openssl to 0.97g.</para>
-        </listitem>
-        <listitem>
-          <para>[jim] - Added gcc no threads build, to fix error during compiling.
-          This may be temporary.</para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-
-    <listitem>
-      <para>May 10, 2005</para>
-      <itemizedlist>
-        <listitem>
-          <para>[jim] - This BOOK is an update of the cross-lfs book into a new
-          format style.</para>
+          <para>[jim] - This is a copy of the mips book modified for the MIPS64.</para>
+          <para>[jim] - Added 64Bit build of glibc and glibc startfiles.</para>
         </listitem>
       </itemizedlist>
     </listitem>
