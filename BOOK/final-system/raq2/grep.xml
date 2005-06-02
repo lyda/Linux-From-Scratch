@@ -24,9 +24,9 @@
     <title>Installation of Grep</title>
 
     <para>This patch updates <filename>config.guess</filename> and
-    <filename>config.sub</filename> for RaQ2 server.</para>
+    <filename>config.sub</filename> for MIPS processors.</para>
 
-<screen><userinput>patch -Np1 -i ../&grep-raq2_update-patch;</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&grep-mips_update-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/grep.xml"

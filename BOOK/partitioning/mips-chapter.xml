@@ -9,8 +9,8 @@
 <?dbhtml filename="chapter.html"?>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/creatingpartition.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/creatingfilesystem.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/creatingpartition.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/creatingfilesystem.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/mounting.xml"/>
 
 </chapter>

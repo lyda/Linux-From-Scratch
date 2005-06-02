@@ -36,14 +36,14 @@ Building for a Linuxthreads based glibc you will need to
 unpack the glibc-linuxthreads-&glibc-version; tarball from
 within the glibc-&glibc-version; directory.</para>
 
+<para>The following patch corrects the building of syscall.h:</para>
+
+<screen><userinput>patch -Np1 -i ../&glibc-mips_syscall-patch;</userinput></screen>
+
 <para>NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
 
 <screen><userinput>rm -rf nptl*</userinput></screen>
-
-<para>The following patch corrects the building of syscall.h:</para>
-
-<screen><userinput>patch -Np1 -i ../&glibc-raq2_syscall-patch;</userinput></screen>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>

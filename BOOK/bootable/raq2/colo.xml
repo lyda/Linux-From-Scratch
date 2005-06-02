@@ -5,7 +5,7 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-bootable-colo" arch="raq2">
+<sect1 id="ch-bootable-colo">
   <?dbhtml filename="colo.html"?>
 
   <title>Making the LFS System Bootable</title>
@@ -14,9 +14,12 @@
     <primary sortas="a-Colo">Colo</primary>
   <secondary>configuring</secondary></indexterm>
 
+  <note><para>This bootloader is for the MIPS based cobalt servers RaQ,
+  RaQ2, Qube, or the Qube2.</para></note>
+
   <para>Your shiny new LFS system is almost complete. One of the last
   things to do is ensure you can boot it. The instructions below apply
-  only to Colbalt RaQ2/Cube2 servers. Information on <quote>boot
+  only to Colbalt mips/Cube2 servers. Information on <quote>boot
   loading</quote> for other architectures should be available in the
   usual resource-specific locations for those architectures.</para>
 
@@ -34,8 +37,8 @@
 #
 # load linux
 #
-lcd 'Booting &linux-raq2-version;...'
-load vmlinux-&linux-raq2-version;.gz
+lcd 'Booting &linux-mips-version;...'
+load vmlinux-&linux-mips-version;.gz
 execute root=/dev/hda2 console=ttyS0,115200 ide1=noprobe</literal>
 EOF</userinput></screen>
 

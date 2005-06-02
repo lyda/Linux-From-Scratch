@@ -6,13 +6,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-cross-tools-gcc-shared" role="wrap">
-<title>Cross GCC-&gcc-version; with Shared libgcc</title>
-<?dbhtml filename="gcc-shared.html"?>
+<sect1 id="ch-cross-tools-gcc-final" role="wrap">
+<title>GCC-&gcc-version; - Cross Compiler Final</title>
+<?dbhtml filename="gcc-final.html"?>
 
-<indexterm zone="ch-cross-tools-gcc-shared">
+<indexterm zone="ch-cross-tools-gcc-final">
 <primary sortas="a-GCC">GCC</primary>
-<secondary>cross tools, shared libgcc</secondary></indexterm>
+<secondary>cross tools, final</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
@@ -28,7 +28,7 @@
 </sect2>
 
 <sect2 role="installation">
-<title>Installation of Cross GCC with Shared libgcc</title>
+<title>Installation of GCC Cross Compiler</title>
 
 <para>We will make a couple of essential adjustments to the specs file to point
 to our build environment:</para>
@@ -55,12 +55,7 @@ location:</para>
 <para>Now we will change gcc's search path to look into /tools only:</para>
 
 <screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
-   gcc/Makefile.in</userinput></screen>
-
-<para>Now we will disable gcc's linking to libc since it doesn't exist yet:</para>
-
-<screen><userinput>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver \
-   gcc/config/t-libunwind</userinput></screen>
+  gcc/Makefile.in</userinput></screen>
 
 <para>Finally, disable -B in Makefile.in, so it doesn't pick up the host's header
 files:</para>
@@ -79,9 +74,10 @@ cd ../gcc-build</userinput></screen>
 <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
-    --host=${LFS_HOST} --target=${LFS_TARGET} \
+    --target=${LFS_TARGET} --host=${LFS_HOST} \
     --with-local-prefix=/tools --disable-nls --enable-shared \
-    --enable-multilib=no --enable-languages=c</userinput></screen>
+    --enable-languages=c,c++ --enable-__cxa_atexit \
+    --enable-c99 --enable-long-long --enable-threads=posix</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 
@@ -106,11 +102,11 @@ tarball.</para></listitem>
 
 <para>Continue with compiling the package:</para>
 
-<screen><userinput>make all-gcc</userinput></screen>
+<screen><userinput>make</userinput></screen>
 
 <para>Install the package:</para>
 
-<screen><userinput>make install-gcc</userinput></screen>
+<screen><userinput>make install</userinput></screen>
 
 </sect2>
 

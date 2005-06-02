@@ -11,14 +11,14 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/cflags.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/variables.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/linux-libc-headers.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/linux-libc-headers.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/binutils.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/gcc-no-threads.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/glibc-headers.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/gcc-static.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/glibc-startfiles.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/gcc-shared.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/glibc.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/gcc-final.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/gcc-no-threads.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/glibc-headers.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/gcc-static.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/glibc-startfiles.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/gcc-shared.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/glibc.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/gcc-final.xml"/>
 
 </chapter>

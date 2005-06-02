@@ -10,8 +10,8 @@
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/packages.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/packages.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/packages.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/patches.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/patches.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/patches.xml"/>
 
 </chapter>

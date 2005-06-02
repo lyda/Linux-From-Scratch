@@ -6,13 +6,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-cross-tools-gcc-static" role="wrap">
-<title>Cross GCC-&gcc-version; - Static libgcc</title>
-<?dbhtml filename="gcc-static.html"?>
+<sect1 id="ch-cross-tools-gcc-shared" role="wrap">
+<title>Cross GCC-&gcc-version; with Shared libgcc</title>
+<?dbhtml filename="gcc-shared.html"?>
 
-<indexterm zone="ch-cross-tools-gcc-static">
+<indexterm zone="ch-cross-tools-gcc-shared">
 <primary sortas="a-GCC">GCC</primary>
-<secondary>cross tools, static libgcc</secondary></indexterm>
+<secondary>cross tools, shared libgcc</secondary></indexterm>
 
 <sect2 role="package"><title/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
@@ -28,10 +28,10 @@
 </sect2>
 
 <sect2 role="installation">
-<title>Installation of Cross GCC Compiler with Static libgcc</title>
+<title>Installation of Cross GCC with Shared libgcc</title>
 
 <para>We will make a couple of essential adjustments to the specs file to point
-to use our build environment:</para>
+to our build environment:</para>
 
 <screen><userinput>patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
 
@@ -39,6 +39,11 @@ to use our build environment:</para>
 the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../&gcc-posix-patch;</userinput></screen>
+
+<para>The following patch ensures that gcc does not search the /usr directory for
+libgcc_s.so when cross-compling:</para>
+
+<screen><userinput>patch -Np1 -i ../&gcc-cross_search-patch;</userinput></screen>
 
 <para>Now we will need to setup our StartFile Spec to the correct library
 location:</para>
@@ -51,6 +56,16 @@ location:</para>
 
 <screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
    gcc/Makefile.in</userinput></screen>
+
+<para>Now we will disable gcc's linking to libc since it doesn't exist yet:</para>
+
+<screen><userinput>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver \
+   gcc/config/t-libunwind</userinput></screen>
+
+<para>Finally, disable -B in Makefile.in, so it doesn't pick up the host's header
+files:</para>
+
+<screen><userinput>sed -i '/FLAGS_FOR_TARGET.*\/lib\//s@-B[^ ]*/lib/@@g' configure configure.in</userinput></screen>
 
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>
@@ -65,8 +80,8 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --host=${LFS_HOST} --target=${LFS_TARGET} \
-    --with-local-prefix=/tools --disable-nls --disable-shared \
-    --enable-multilib=no --enable-languages=c</userinput></screen>
+    --with-local-prefix=/tools --disable-nls --enable-shared \
+    --enable-languages=c</userinput></screen>
 
 <para>The meaning of the configure options:</para>
 

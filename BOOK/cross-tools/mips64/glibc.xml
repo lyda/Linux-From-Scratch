@@ -49,7 +49,7 @@ within the glibc-&glibc-version; directory.</para>
 
 <para>The following patch corrects the building of syscall.h:</para>
 
-<screen><userinput>patch -Np1 -i ../&glibc-raq2_syscall-patch;</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&glibc-mips_syscall-patch;</userinput></screen>
 
 <para>NPTL is not supported under this architecture, so we are going to
 remove the nptl directory from the Glibc source:</para>
@@ -62,12 +62,16 @@ directory in a dedicated build directory:</para>
 <screen><userinput>mkdir ../glibc-build
 cd ../glibc-build</userinput></screen>
 
+<para>Now we make sure the Glibc goes into /tools/lib32:</para>
+
+<screen><userinput>echo "slibdir=/tools/lib32" >> configparms</userinput></screen>
+
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
+<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD32}" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST} \
+    --host=${LFS_TARGET} --build=${LFS_HOST} --libdir=/tools/lib32 \
     --without-cvs --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>

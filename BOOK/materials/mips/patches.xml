@@ -6,9 +6,9 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-materials-patches-raq2">
-<title>Needed Patches for RaQ2</title>
-<?dbhtml filename="patches-raq2.html"?>
+<sect1 id="ch-materials-patches-mips">
+<title>Needed Patches for MIPS</title>
+<?dbhtml filename="patches-mips.html"?>
 
 <para>In addition to the packages, several patches are also required.
 These patches correct any mistakes in the packages that should be
@@ -21,28 +21,28 @@ needed to build an LFS system:</para>
 <varlistentry>
 <term>GLIBC Syscall Patch - 11 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;glibc/&glibc-raq2_syscall-patch;"/></para>
+<para><ulink url="&patches-root;glibc/&glibc-mips_syscall-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Grep RaQ2 Config Update Patch - 48 KB:</term>
+<term>Grep Config Update Patch - 48 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;grep/&grep-raq2_update-patch;"/></para>
+<para><ulink url="&patches-root;grep/&grep-mips_update-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Linux-libc-headers RaQ2 Patch - 1 KB:</term>
+<term>Linux-libc-headers Patch - 1 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;linux-libc-headers/&linux-libc-headers-raq2-patch;"/></para>
+<para><ulink url="&patches-root;linux-libc-headers/&linux-libc-headers-mips-patch;"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Linux RaQ2 Patch - 164 KB:</term>
+<term>Linux Patch - 164 KB:</term>
 <listitem>
-<para><ulink url="&patches-root;linux/&linux-raq2-patch;"/></para>
+<para><ulink url="&patches-root;linux/&linux-mips-patch;"/></para>
 </listitem>
 </varlistentry>
 

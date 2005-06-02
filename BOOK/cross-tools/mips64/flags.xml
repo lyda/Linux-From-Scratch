@@ -10,13 +10,15 @@
 <para>We will need to setup target specific flags for the compiler
 and linkers.</para>
 
-<screen><userinput>export BUILD32="-m32 -mcpu=ultrasparc"
-export BUILD64="-m64 -mcpu=ultrasparc"</userinput></screen>
+<screen><userinput>export LFS_TARGET32="`echo ${LFS_TARGET} | sed -e 's/64//g'`"
+export BUILD32="-mabi=n32"
+export BUILD64="-mabi=64"</userinput></screen>
 
 <para>Lets add the build flags to ~/.bashrc to prevent issues if
 we stop and come back later.</para>
 
-<screen><userinput>echo export BUILD32=\""${BUILD32}\"" &gt;&gt; ~/.bashrc
+<screen><userinput>echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bashrc
+echo export BUILD32=\""${BUILD32}\"" &gt;&gt; ~/.bashrc
 echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
 </sect1>

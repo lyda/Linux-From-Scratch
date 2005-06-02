@@ -54,20 +54,22 @@
 
 <!-- Start of sparc patches -->
 
-<!-- Start of sparc64 patches -->
-
 <!ENTITY linux-libc-headers-sparc_biarch-patch "linux-libc-headers-&linux-libc-headers-sparc64-version;-sparc_biarch-1.patch">
 
-<!-- Start of raq2 patches -->
+<!-- Start of mips patches -->
 
-<!ENTITY glibc-raq2_syscall-patch "glibc-&glibc-version;-mips_syscall-1.patch">
+<!ENTITY glibc-mips_syscall-patch "glibc-&glibc-version;-mips_syscall-1.patch">
 
-<!ENTITY grep-raq2_update-patch "grep-&grep-version;-raq2_config_update-1.patch">
+<!ENTITY grep-mips_update-patch "grep-&grep-version;-mips_config_update-1.patch">
 
 <!ENTITY lfs-bootscripts-raq2-patch "lfs-bootscripts-raq2-8.patch">
 
-<!ENTITY linux-libc-headers-raq2-patch "linux-libc-headers-&linux-libc-headers-raq2-version;-raq2_fix-1.patch">
+<!ENTITY linux-libc-headers-mips-patch "linux-libc-headers-&linux-libc-headers-mips-version;-mips_fix-1.patch">
+<!ENTITY linux-libc-headers-mips64-patch "linux-libc-headers-&linux-libc-headers-mips64-version;-mips_fix-1.patch">
 
-<!ENTITY linux-raq2-patch "linux-&linux-raq2-version;-raq2_fix-1.patch">
+<!ENTITY linux-mips-patch "linux-&linux-mips-version;-mips_fix-1.patch">
+<!ENTITY linux-mips64-patch "linux-&linux-mips64-version;-mips_fix-1.patch">
 
 <!ENTITY procps-mips-patch "procps-&procps-version;-fix_mips-1.patch">
+
+

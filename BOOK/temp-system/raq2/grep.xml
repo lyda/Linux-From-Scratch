@@ -30,9 +30,9 @@
 <sect2 role="installation">
 <title>Installation of Grep</title>
 
-<para>This patch updates config.guess and config.sub for RaQ2 servers.</para>
+<para>This patch updates config.guess and config.sub for MIPS processors.</para>
 
-<screen><userinput>patch -Np1 -i ../&grep-raq2_update-patch;</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&grep-mips_update-patch;</userinput></screen>
 
 <para>Prepare Grep for compilation:</para>
 

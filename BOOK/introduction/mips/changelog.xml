@@ -7,10 +7,10 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-intro-changelog-raq2">
-  <?dbhtml filename="changelog-raq2.html"?>
+<sect1 id="ch-intro-changelog-mips">
+  <?dbhtml filename="changelog-mips.html"?>
 
-  <title>Changelog for RaQ2</title>
+  <title>Changelog for MIPS</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/changelog.xml"
@@ -20,10 +20,10 @@
     <title>Upgraded to:</title>
 
     <listitem>
-      <para>Linux &linux-raq2-version;</para>
+      <para>Linux &linux-mips-version;</para>
     </listitem>
     <listitem>
-      <para>Linux-libc-headers &linux-libc-headers-raq2-version;</para>
+      <para>Linux-libc-headers &linux-libc-headers-mips-version;</para>
     </listitem>
   </itemizedlist>
 
@@ -41,13 +41,13 @@
       <para>OpenSSH &openssh-version;</para>
     </listitem>
     <listitem>
-      <para>&glibc-raq2_syscall-patch;</para>
+      <para>&glibc-mips_syscall-patch;</para>
     </listitem>
     <listitem>
-      <para>&linux-libc-headers-raq2-patch;</para>
+      <para>&linux-libc-headers-mips-patch;</para>
     </listitem>
     <listitem>
-      <para>&linux-raq2-patch;</para>
+      <para>&linux-mips-patch;</para>
     </listitem>
   </itemizedlist>
 

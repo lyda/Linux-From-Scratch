@@ -29,7 +29,7 @@
 
     <para>The following patch corrects the building of Sysklogd:</para>
 
-<screen><userinput>patch -Np1 -i ../&linux-libc-headers-raq2-patch;</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&linux-libc-headers-mips-patch;</userinput></screen>
 
     <para>Install the header files:</para>
 

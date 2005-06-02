@@ -128,8 +128,15 @@ hr {
 	  </li>
           <li>
             <h4>
-              <a href="raq2">
-                <xsl:text>MIPS Based Cobalt RaQ1/RaQ2 Qube1/Qube2</xsl:text>
+              <a href="mips">
+                <xsl:text>MIPS 32 Bit</xsl:text>
+              </a>
+	    </h4>
+	  </li>
+	  <li>
+            <h4>
+              <a href="mips64">
+                <xsl:text>MIPS 64 Bit</xsl:text>
               </a>
 	    </h4>
 	  </li>

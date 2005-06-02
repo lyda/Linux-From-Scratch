@@ -10,7 +10,7 @@
 <sect1 id="ch-bootable-kernel" role="wrap">
   <?dbhtml filename="kernel.html"?>
 
-  <title>Linux-&linux-raq2-version;</title>
+  <title>Linux-&linux-mips-version;</title>
 
   <indexterm zone="ch-bootable-kernel">
   <primary sortas="a-Linux">Linux</primary>
@@ -30,7 +30,7 @@
     <para>The following patch fixes some issues with MIPS based
     processors and the kernel:</para>
 
-<screen><userinput>patch -Np1 -i ../&linux-raq2-patch;</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&linux-mips-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
@@ -45,20 +45,20 @@
     href="../x86/kernel.xml"
     xpointer="xpointer(id('install-kernel')/para[9]/range-to(id('install-kernel')/para[20]))"/>
 
-<screen><userinput>cp vmlinux /boot/vmlinux-&linux-raq2-version;
-gzip -9 /boot/vmlinux-&linux-raq2-version;</userinput></screen>
+<screen><userinput>cp vmlinux /boot/vmlinux-&linux-mips-version;
+gzip -9 /boot/vmlinux-&linux-mips-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
     xpointer="xpointer(id('install-kernel')/para[21])"/>
 
-<screen><userinput>cp System.map /boot/System.map-&linux-raq2-version;</userinput></screen>
+<screen><userinput>cp System.map /boot/System.map-&linux-mips-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
     xpointer="xpointer(id('install-kernel')/para[22])"/>
 
-<screen><userinput>cp .config /boot/config-&linux-raq2-version;</userinput></screen>
+<screen><userinput>cp .config /boot/config-&linux-mips-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
@@ -66,7 +66,7 @@ gzip -9 /boot/vmlinux-&linux-raq2-version;</userinput></screen>
 
     <para>If the kernel source tree is going to retained, run
     <command>chown -R 0:0</command> on the <filename
-    class="directory">linux-&linux-raq2-version;</filename>
+    class="directory">linux-&linux-mips-version;</filename>
     directory to ensure all files are owned by user <systemitem
     class="username">root</systemitem>.</para>
 

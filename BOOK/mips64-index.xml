@@ -5,7 +5,7 @@
 ]>
 <book>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/raq2/bookinfo.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/mips64/bookinfo.xml"/>
 <!--
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/dedication.xml"/>
 -->
@@ -14,21 +14,21 @@
 <part id="part1">
 <title>Introduction</title>
 <?dbhtml filename="part1.html"?>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction/raq2-chapter.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="partitioning/raq2-chapter.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction/mips64-chapter.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="partitioning/mips64-chapter.xml"/>
 </part>
 
 <part id="part2">
 <title>Preparing for the Build</title>
 <?dbhtml filename="part2.html"?>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="materials/raq2-chapter.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="materials/mips64-chapter.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="final-preps/chapter.xml"/>
 </part>
 
 <part id="part3">
 <title>Make the Cross-Compile Tools</title>
 <?dbhtml filename="part3.html"?>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="cross-tools/raq2-chapter.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="cross-tools/mips64-chapter.xml"/>
 </part>
 
 <part id="part4">

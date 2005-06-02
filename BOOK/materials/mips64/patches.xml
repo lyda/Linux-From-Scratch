@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-materials-patches-mips64">
+<title>Needed Patches for MIPS 64 Bit</title>
+<?dbhtml filename="patches-mips64.html"?>
+
+<para>In addition to the packages, several patches are also required.
+These patches correct any mistakes in the packages that should be
+fixed by the maintainer.  The patches also make small modifications to
+make the packages easier to work with. The following patches will be
+needed to build an LFS system:</para>
+
+<variablelist role="materials">
+
+<varlistentry>
+<term>GLIBC Syscall Patch - 11 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;glibc/&glibc-mips_syscall-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Grep Config Update Patch - 48 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;grep/&grep-mips_update-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Linux-libc-headers Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;linux-libc-headers/&linux-libc-headers-mips64-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Linux Patch - 164 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;linux/&linux-mips64-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Procps Signal 11 Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;procps/&procps-mips-patch;"/></para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>In addition to the above required patches, there exist a number of
+optional patches created by the LFS community. These optional patches
+solve minor problems or enable functionality that is not enabled by
+default. Feel free to peruse the patches database located at
+<ulink url="&lfs-root;patches/"/> and acquire any additional
+patches to suit the system needs.</para>
+
+</sect1>
+

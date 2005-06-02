@@ -2,7 +2,7 @@ BASEDIR=~/lfs-book
 CHUNK_QUIET=1
 JAVA_HOME=/opt/jdk/jdk-precompiled-1.5.0
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
-ARCH=x86 x86_64 sparc sparc64 raq2 ppc
+ARCH=x86 x86_64 sparc sparc64 mips mips64 ppc
 
 # HTML Rendering Chunked
 define HTML_RENDER

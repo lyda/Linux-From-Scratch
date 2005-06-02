@@ -54,73 +54,86 @@ echo "Our host is ${LFS_HOST}"</userinput></screen>
 <para>Now we will add these to ~/.bashrc, just in
 case you have to exit and restart building later:</para>
 
-<screen><userinput>echo export LFS_HOST=\""${LFS_HOST}\"" >> ~/.bashrc
-echo export LFS_TARGET=\""${LFS_TARGET}\"" >> ~/.bashrc</userinput></screen>
+<screen><userinput>echo export LFS_HOST=\""${LFS_HOST}\"" &gt;&gt; ~/.bashrc
+echo export LFS_TARGET=\""${LFS_TARGET}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
-<para>List of architectures and target triplets</para>
+<para>List of architectures, target triplets, recommended book</para>
 
 <table><title>Target Triplets</title>
   <tgroup cols="2" align="center">
      <colspec colname="Processor"/>
      <colspec colname="Triplet"/>
+     <colspec colname="Book"/>
      <thead>
         <row>
            <entry>Architecture</entry>
            <entry>Target Triplet</entry>
+           <entry>LFS Book</entry>
         </row>
      </thead>
      <tbody>
         <row>
            <entry>Pentium, K6, 586 Compatibles</entry>
            <entry>i586-pc-linux-gnu</entry>
+	   <entry>Intel/AMD x86</entry>
         </row>
         <row>
            <entry>Pentium II, Pentium III, Pentium 4</entry>
            <entry>i686-pc-linux-gnu</entry>
+	   <entry>Intel/AMD x86</entry>
         </row>
         <row>
            <entry>Athlon, Duron</entry>
            <entry>i686-pc-linux-gnu</entry>
+	   <entry>Intel/AMD x86</entry>
         </row>
         <row>
            <entry>Athlon64</entry>
            <entry>x86_64-pc-linux-gnu</entry>
+	   <entry>x86_64</entry>
         </row>
         <row>
            <entry>PowerPC</entry>
            <entry>powerpc-unknown-linux-gnu</entry>
+	   <entry>PowerPC</entry>
         </row>
         <row>
            <entry>PowerPC64</entry>
            <entry>ppc64-unknown-linux-gnu</entry>
+	   <entry>PowerPC</entry>
         </row>
         <row>
            <entry>MIPS</entry>
            <entry>mips-unknown-linux-gnu</entry>
-        </row>
-        <row>
-           <entry>MIPS 64</entry>
-           <entry>mips64-unknown-linux-gnu</entry>
+	   <entry>MIPS 32 Bit</entry>
         </row>
         <row>
            <entry>MIPS Little Endian</entry>
            <entry>mipsel-unknown-linux-gnu</entry>
+	   <entry>MIPS 32 Bit</entry>
+        </row>
+        <row>
+           <entry>MIPS 64</entry>
+           <entry>mips64-unknown-linux-gnu</entry>
+	   <entry>MIPS 64 Bit</entry>
         </row>
         <row>
            <entry>MIPS 64 Little Endian</entry>
            <entry>mips64el-unknown-linux-gnu</entry>
+	   <entry>MIPS 64 Bit</entry>
         </row>
-        <row> 
+	<row> 
            <entry>Sparc32</entry>
            <entry>sparc-unknown-linux-gnu</entry>
+           <entry>Sparc32</entry>
         </row>
 	<row> 
            <entry>UltraSPARC (Sparc64)</entry>
            <entry>sparc64-unknown-linux-gnu</entry>
+           <entry>Sparc64</entry>
         </row>
      </tbody>
    </tgroup>
 </table>
 
 </sect1>
-

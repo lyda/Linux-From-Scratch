@@ -7,7 +7,7 @@
 ]>
 
 <sect1 id="ch-cross-tools-linux-libc-headers" role="wrap">
-<title>Linux-Libc-Headers-&linux-libc-headers-raq2-version;</title>
+<title>Linux-Libc-Headers-&linux-libc-headers-mips-version;</title>
 <?dbhtml filename="linux-libc-headers.html"?>
 
 <indexterm zone="ch-cross-tools-linux-libc-headers">

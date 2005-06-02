@@ -15,7 +15,7 @@
 
 <para>Your shiny new LFS system is almost complete. One of the last things to
 do is ensure you can boot it. The instructions below apply only to
-Colbalt RaQ2/Cube2 servers. Information on <quote>boot
+Colbalt RaQ/Qube servers. Information on <quote>boot
 loading</quote> for other architectures should be available in the usual
 resource-specific locations for those architectures.</para>
 
@@ -35,8 +35,8 @@ Colo. Here is a simpe default.colo to use.</para>
 #
 # load linux
 #
-lcd 'Booting &linux-raq2-version;...'
-load vmlinux-&linux-raq2-version;.gz
+lcd 'Booting &linux-mips-version;...'
+load vmlinux-&linux-mips-version;.gz
 execute root=/dev/hda2 console=ttyS0,115200 ide1=noprobe
 EOF</userinput></screen>
 

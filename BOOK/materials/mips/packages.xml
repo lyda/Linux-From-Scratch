@@ -3,9 +3,9 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
-<sect1 id="ch-materials-packages-raq2">
-<title>All Packages for RaQ2</title>
-<?dbhtml filename="packages-raq2.html"?>
+<sect1 id="ch-materials-packages-mips">
+<title>All Packages for MIPS</title>
+<?dbhtml filename="packages-mips.html"?>
 
 <para>Download or otherwise obtain the following packages:</para>
 
@@ -19,16 +19,16 @@
 </varlistentry>
 
 <varlistentry>
-<term>Linux (&linux-raq2-version;) - 35 MB:</term>
+<term>Linux (&linux-mips-version;) - 35 MB:</term>
 <listitem>
-<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-raq2-version;.tar.bz2"/></para>
+<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-mips-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Linux-Libc-Headers (&linux-libc-headers-raq2-version;) - 2.6 MB:</term>
+<term>Linux-Libc-Headers (&linux-libc-headers-mips-version;) - 2.6 MB:</term>
 <listitem>
-<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-raq2-version;.tar.bz2"/></para>
+<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-mips-version;.tar.bz2"/></para>
 </listitem>
 </varlistentry>
 
