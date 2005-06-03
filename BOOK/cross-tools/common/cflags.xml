@@ -15,9 +15,9 @@
 
   <para>During the building of the cross-compile tools you will need to
   set a few variables that will be dependent on your particular needs.
-  The first variable will be the of the <envar>HOST</envar> machine. To
-  disable <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar> use the
-  following command:</para>
+  The first variable will be the triplet of the <envar>HOST</envar>
+  machine. To disable <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>
+  use the following command:</para>
 
 <screen><userinput>export CFLAGS=""
 export CXXFLAGS=""</userinput></screen>
