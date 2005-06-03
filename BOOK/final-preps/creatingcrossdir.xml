@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch-final-preps-creatingcrossdir">
-<title>Creating the $HOME/cross-tools Directory</title>
-<?dbhtml filename="creatingcrossdir.html"?>
+  <?dbhtml filename="creatingcrossdir.html"?>
 
-<para>All programs compiled in <xref
-linkend="chapter-cross-tools"/> will be installed under <filename
-class="directory">$HOME/cross-tools</filename> to keep them separate from the
-programs compiled in <xref linkend="chapter-building-system"/>. The
-programs compiled here are cross tools and will not be a part of
-the final LFS system.  By keeping these programs in a separate
-directory, they can easily be discarded later after their use. This
-also prevents these programs from ending up in the host production
-directories (easy to do by accident in <xref
-linkend="chapter-cross-tools"/>).</para>
+  <title>Creating the $HOME/cross-tools Directory</title>
 
-<para>Create the required directory by running the following as
-<emphasis>lfs</emphasis>:</para>
+  <para>All programs compiled in <xref linkend="chapter-cross-tools"/> will
+  be installed under <filename class="directory">$HOME/cross-tools</filename>
+  to keep them separate from the programs compiled in <xref
+  linkend="chapter-building-system"/>. The programs compiled here are cross
+  tools and will not be a part of the final LFS system. By keeping these
+  programs in a separate directory, they can easily be discarded later after
+  their use. This also prevents these programs from ending up in the host
+  production directories (easy to do by accident in <xref
+  linkend="chapter-cross-tools"/>).</para>
+
+  <para>Create the required directory by running the following as
+  <systemitem class="username">lfs</systemitem>:</para>
 
 <screen><userinput>install -d $HOME/cross-tools</userinput></screen>
 
-<para>The next step is to create a <filename class="symlink">/cross-tools</filename> 
-symlink on the host system.  This will point to the newly-created directory in
-your home directory. Since normal users will not have permissions to write
-to the root tree, we need to exit the su and run the symlink command as <emphasis>root</emphasis>:</para>
+  <para>The next step is to create a <filename
+  class="symlink">/cross-tools</filename> symlink on the host system.
+  This will point to the newly-created directory in your home directory.
+  Since normal users will not have permissions to write to the root tree,
+  we need to exit the su and run the symlink command as
+  <systemitem class="username">root</systemitem>:</para>
 
 <screen><userinput>exit
 LFSHOME=`su - lfs -c 'echo $HOME'`
@@ -34,16 +38,16 @@ ln -s $LFSHOME/cross-tools /
 unset LFSHOME
 su - lfs</userinput></screen>
 
-<note><para>The above command is correct. The <command>ln</command>
-command has a few syntactic variations, so be sure to check the info
-and man pages before reporting what you may think is an
-error.</para></note>
+  <note>
+    <para>The above command is correct. The <command>ln</command> command
+    has a few syntactic variations, so be sure to check the info and man
+    pages before reporting what you may think is an error.</para>
+  </note>
 
-<para>The created symlink enables the toolchain to be compiled so that
-it always refers to <filename class="directory">/cross-tools</filename>,
-meaning that the compiler, assembler, and linker will work both in
-this chapter and this host architecture and in the next (when we are
-<quote>chrooted</quote> to the LFS partition).</para>
+  <para>The created symlink enables the toolchain to be compiled so that
+  it always refers to <filename class="directory">/cross-tools</filename>,
+  meaning that the compiler, assembler, and linker will work both in
+  this chapter and this host architecture and in the next (when we are
+  <quote>chrooted</quote> to the LFS partition).</para>
 
 </sect1>
-
