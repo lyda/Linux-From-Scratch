@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
   %patches-entities;
 ]>
-<sect1 id="ch-materials-patches-x86">
-<title>Needed Patches for x86</title>
-<?dbhtml filename="patches-x86.html"?>
 
-<para>In addition to the packages, several patches are also required.
-These patches correct any mistakes in the packages that should be
-fixed by the maintainer.  The patches also make small modifications to
-make the packages easier to work with. The following patches will be
-needed to build an LFS system:</para>
+<sect1 id="ch-materials-patches-x86_64">
+  <?dbhtml filename="patches-x86_64.html"?>
 
-<variablelist role="materials">
+  <title>Aditional Patches for x86_64</title>
 
-<varlistentry>
-<term>Coreutils Uname Patch - 1 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;coreutils/&coreutils-x86_uname-patch;"/></para>
-</listitem>
-</varlistentry>
+  <variablelist role="materials">
 
-</variablelist>
+    <varlistentry>
+      <term>Coreutils Uname Patch - 1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;coreutils/&coreutils-x86_uname-patch;"/></para>
+      </listitem>
+    </varlistentry>
 
-<para>In addition to the above required patches, there exist a number of
-optional patches created by the LFS community. These optional patches
-solve minor problems or enable functionality that is not enabled by
-default. Feel free to peruse the patches database located at
-<ulink url="&lfs-root;patches/"/> and acquire any additional
-patches to suit the system needs.</para>
+  </variablelist>
 
 </sect1>
-

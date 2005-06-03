@@ -5,10 +5,10 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-materials-packages-x86">
-  <?dbhtml filename="packages-x86.html"?>
+<sect1 id="ch-materials-packages-x86_64">
+  <?dbhtml filename="packages-x86_64.html"?>
 
-  <title>Aditional Packages for x86</title>
+  <title>Aditional Packages for x86_64</title>
 
   <variablelist role="materials">
 
