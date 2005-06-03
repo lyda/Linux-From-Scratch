@@ -15,9 +15,9 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/binutils.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/glibc-headers.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/gcc-static.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/glibc-startfiles-linuxthreads.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/glibc-startfiles.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/gcc-shared.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/glibc-linuxthreads.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/glibc.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/gcc-final.xml"/>
 
 </chapter>
