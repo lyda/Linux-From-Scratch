@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch-cross-tools-introduction">
-<title>Introduction</title>
-<?dbhtml filename="introduction.html"?>
+  <?dbhtml filename="introduction.html"?>
 
-<para>This chapter shows you how to create cross platform
-tools.</para>
+  <title>Introduction</title>
 
-<para>If for some reason you have to stop and come back later,
-remember to use the su - lfs command, and it will setup the
-build environment that you left.</para>
+  <para>This chapter shows you how to create cross platform tools.</para>
+
+  <para>If for some reason you have to stop and come back later, remember
+  to use the <command>su - lfs</command> command, and it will setup the
+  build environment that you left.</para>
 
 </sect1>
-
