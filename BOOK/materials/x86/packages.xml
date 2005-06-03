@@ -4,36 +4,40 @@
   %general-entities;
 ]>
 <sect1 id="ch-materials-packages-x86">
-<title>All Packages for x86</title>
-<?dbhtml filename="packages-x86.html"?>
+  <?dbhtml filename="packages-x86.html"?>
 
-<para>Download or otherwise obtain the following packages:</para>
+  <title>Aditional Packages for x86</title>
 
-<variablelist role="materials">
+  <para>Download or otherwise obtain the following packages:</para>
 
-<varlistentry>
-<term>Grub (&grub-version;) - 963 KB:</term>
-<listitem>
-<para><ulink url="&alpha-gnu;grub/grub-&grub-version;.tar.gz"/></para>
-</listitem>
-</varlistentry>
+  <variablelist role="materials">
 
-<varlistentry>
-<term>Linux (&linux-x86-version;) - 35 MB:</term>
-<listitem>
-<para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-x86-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
+    <varlistentry>
+      <term>Grub (&grub-version;) - 963 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&alpha-gnu;grub/grub-&grub-version;.tar.gz"/></para>
+      </listitem>
+    </varlistentry>
 
-<varlistentry>
-<term>Linux-Libc-Headers (&linux-libc-headers-x86-version;) - 2.5 MB:</term>
-<listitem>
-<para><ulink url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-x86-version;.tar.bz2"/></para>
-</listitem>
-</varlistentry>
+    <varlistentry>
+      <term>Linux (&linux-x86-version;) - 35 MB:</term>
+      <listitem>
+        <para><ulink
+        url="&kernel;linux/kernel/v&linux-dl-version;/linux-&linux-x86-version;.tar.bz2"/></para>
+      </listitem>
+    </varlistentry>
 
-</variablelist>
+    <varlistentry>
+      <term>Linux-Libc-Headers (&linux-libc-headers-x86-version;) - 2.5 MB:</term>
+      <listitem>
+        <para><ulink
+        url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-x86-version;.tar.bz2"/></para>
+      </listitem>
+    </varlistentry>
 
-<para>Total size of these packages: about 171 MB</para>
+  </variablelist>
+
+  <para>Total size of these packages: about 171 MB</para>
 
 </sect1>
