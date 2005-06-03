@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch-cross-tools-cflags">
-<title>Build CFLAGS</title>
-<?dbhtml filename="cflags.html"?>
+  <?dbhtml filename="cflags.html"?>
 
-<para>CFLAGS during the building of cross tools must not be set.</para>
+  <title>Build CFLAGS</title>
 
-<para>During the building of the cross-compile tools you will need to set a few variables
-that will be dependent on your particular needs. The first variable will be the of the 
-HOST machine. To disable CFLAGS and CXXFLAGS use the following command:</para>
+  <para><envar>CFLAGS</envar> during the building of cross tools must
+  not be set.</para>
+
+  <para>During the building of the cross-compile tools you will need to
+  set a few variables that will be dependent on your particular needs.
+  The first variable will be the of the <envar>HOST</envar> machine. To
+  disable <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar> use the
+  following command:</para>
 
 <screen><userinput>export CFLAGS=""
 export CXXFLAGS=""</userinput></screen>
 
 </sect1>
-
