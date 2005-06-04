@@ -67,12 +67,13 @@
     href="../x86/gcc-shared.xml"
     xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
-    <para>Now we will need to setup our StartFile Spec to the correct
-    library location:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
-<screen><userinput>echo "
-#undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/rs6000/linux.h</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc-shared.xml"
