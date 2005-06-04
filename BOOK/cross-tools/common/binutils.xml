@@ -14,7 +14,8 @@
 
   <indexterm zone="ch-cross-tools-binutils">
     <primary sortas="a-Binutils">Binutils</primary>
-  <secondary>cross tools</secondary></indexterm>
+    <secondary>cross tools</secondary>
+  </indexterm>
 
   <sect2 role="package">
     <title/>

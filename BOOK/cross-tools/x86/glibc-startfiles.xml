@@ -14,7 +14,8 @@
 
   <indexterm zone="ch-cross-tools-glibc-startfiles">
     <primary sortas="a-Glibc">Glibc</primary>
-  <secondary>cross tools, startfiles</secondary></indexterm>
+    <secondary>cross tools, startfiles</secondary>
+  </indexterm>
 
   <sect2 role="package">
     <title/>

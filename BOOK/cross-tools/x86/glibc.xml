@@ -13,8 +13,9 @@
   <title>Glibc-&glibc-version;</title>
 
   <indexterm zone="ch-cross-tools-glibc">
-  <primary sortas="a-Glibc">Glibc</primary>
-  <secondary>cross tools</secondary></indexterm>
+    <primary sortas="a-Glibc">Glibc</primary>
+    <secondary>cross tools</secondary>
+  </indexterm>
 
   <sect2 role="package">
     <title/>

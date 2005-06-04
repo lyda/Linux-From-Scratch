@@ -14,7 +14,8 @@
 
   <indexterm zone="ch-cross-tools-gcc-shared">
     <primary sortas="a-GCC">GCC</primary>
-  <secondary>cross tools, shared libgcc</secondary></indexterm>
+    <secondary>cross tools, shared libgcc</secondary>
+  </indexterm>
 
   <sect2 role="package">
     <title/>
