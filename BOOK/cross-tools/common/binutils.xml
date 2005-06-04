@@ -48,10 +48,13 @@
 
 <screen><userinput>patch -Np1 -i ../&binutils-posix-patch;</userinput></screen>
 
-    <para>Create a separate build directory again:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/binutils.xml"
+    xpointer="xpointer(id('install-binutils')/para[5])"/>
 
-<screen><userinput>mkdir ../binutils-build
-cd ../binutils-build</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/binutils.xml"
+    xpointer="xpointer(id('install-binutils')/screen[3])"/>
 
     <para>Prepare Binutils for compilation:</para>
 
@@ -60,7 +63,7 @@ cd ../binutils-build</userinput></screen>
    --disable-nls --enable-shared --enable-64-bit-bfd</userinput></screen>
 
     <variablelist>
-      <title>The meaning of the new configure option:</title>
+      <title>The meaning of the configure options:</title>
 
       <varlistentry>
         <term><parameter>--with-lib-path=/tools/lib</parameter></term>
@@ -72,6 +75,14 @@ cd ../binutils-build</userinput></screen>
           library directories on the host.</para>
         </listitem>
       </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-64-bit-bfd</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
     </variablelist>
 
     <para>Compile the package:</para>
