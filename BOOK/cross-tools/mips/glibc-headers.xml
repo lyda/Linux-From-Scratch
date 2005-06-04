@@ -105,6 +105,8 @@ cp bits/stdio_lim.h /tools/include/bits</userinput></screen>
 cp ../glibc-&glibc-version;/linuxthreads/sysdeps/pthread/bits/pthreadtypes.h /tools/include/bits/
 cp ../glibc-&glibc-version;/linuxthreads/sysdeps/pthread/bits/initspin.h /tools/include/bits/</userinput></screen>
 
+    <para/>
+
   </sect2>
 
   <sect2 role="content">
