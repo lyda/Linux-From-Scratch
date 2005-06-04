@@ -143,6 +143,8 @@
 
 <screen><userinput>make install-gcc</userinput></screen>
 
+    <para/>
+
   </sect2>
 
   <sect2 role="content">
