@@ -105,6 +105,8 @@
     href="../../final-system/common/gcc.xml"
     xpointer="xpointer(id('install-gcc')/screen[3])"/>
 
+    <para/>
+
     <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
