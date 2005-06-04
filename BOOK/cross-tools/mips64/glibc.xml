@@ -80,7 +80,7 @@
     xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
     <para>Now we make sure the Glibc goes into <filename
-    class="directory">/tools/lib32<filename>:</para>
+    class="directory">/tools/lib32</filename>:</para>
 
 <screen><userinput>echo "slibdir=/tools/lib32" >> configparms</userinput></screen>
 

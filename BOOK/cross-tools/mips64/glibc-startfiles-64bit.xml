@@ -96,6 +96,8 @@
 <screen><userinput>install -d /tools/lib64
 cp -fp csu/crt[i1n].o /tools/lib64</userinput></screen>
 
+  </sect2>
+
   <sect2 role="content">
     <title/>
 

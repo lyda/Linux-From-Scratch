@@ -75,11 +75,11 @@
 #define STARTFILE_PREFIX_SPEC \"/tools/lib64/\"" >> gcc/config/linux.h</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-static.xml"
+    href="../x86/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/para[4])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-static.xml"
+    href="../x86/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/screen[4])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

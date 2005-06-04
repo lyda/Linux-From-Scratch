@@ -96,6 +96,8 @@
 <screen><userinput>install -d /tools/lib32
 cp -fp csu/crt[i1n].o /tools/lib32</userinput></screen>
 
+  </sect2>
+
   <sect2 role="content">
     <title/>
 
