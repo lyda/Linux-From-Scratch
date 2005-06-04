@@ -12,9 +12,9 @@
   <title>Installing Basic System Software</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/linux-libc-headers.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/glibc.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/adjusting.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/linux-libc-headers.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/glibc.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/adjusting.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/binutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gcc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/zlib.xml"/>
@@ -44,27 +44,27 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/diffutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/kbd.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/e2fsprogs.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/grep.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/grep.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gzip.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/man.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/man-pages.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/make.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/module-init-tools.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/patch.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/procps.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/procps.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/psmisc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/shadow.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/sysklogd.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/sysvinit.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/sysvinit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/tar.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/util-linux.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/udev.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/mktemp.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/hotplug.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/iana-etc.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/colo.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/openssl.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/openssh.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/colo.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/openssl.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/openssh.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/aboutdebug.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/strippingagain.xml"/>
 
