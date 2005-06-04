@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,102 +8,97 @@
 ]>
 
 <sect1 id="ch-cross-tools-gcc-no-threads" role="wrap">
-<title>Cross GCC-&gcc-version; - Static libgcc - No Threads</title>
-<?dbhtml filename="gcc-no-threads.html"?>
+  <?dbhtml filename="gcc-no-threads.html"?>
 
-<indexterm zone="ch-cross-tools-gcc-no-threads">
-<primary sortas="a-GCC">GCC</primary>
-<secondary>cross tools, static libgcc - no threads</secondary></indexterm>
+  <title>Cross GCC-&gcc-version; - Static libgcc - No Threads</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-cross-tools-gcc-no-threads">
+    <primary sortas="a-GCC">GCC</primary>
+    <secondary>cross tools, static libgcc - no threads</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>4.4 SBU</seg><seg>300 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('package-gcc')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of Cross GCC Compiler with Static libgcc</title>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>We will make a couple of essential adjustments to the specs file to point
-to use our build environment:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('package-gcc')/segmentedlist[2])"/>
 
-<screen><userinput>patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
+  </sect2>
 
-<para>To make sure that we use the proper syntax for a couple of tools, we apply
-the following patch:</para>
+  <sect2 role="installation">
+    <title>Installation of Cross GCC Compiler with Static libgcc
+    and no Threads</title>
 
-<screen><userinput>patch -Np1 -i ../&gcc-posix-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1]/range-to(//*[@role='installation']/para[6]))"/>
 
-<para>Now we will need to setup our StartFile Spec to the correct library
-location:</para>
-
-<screen><userinput>echo "
-#undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
-
-<para>Now we will change gcc's search path to look into /tools only:</para>
-
-<screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
-   gcc/Makefile.in</userinput></screen>
-
-<important><para>The above patches and sed's are critical in ensuring a
-successful overall build. Do not forget to apply them.</para></important>
-
-<para>The GCC documentation recommends building GCC outside of the
-source directory in a dedicated build directory:</para>
-
-<screen><userinput>mkdir ../gcc-build
-cd ../gcc-build</userinput></screen>
-
-<para>Prepare GCC for compilation:</para>
+    <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --host=${LFS_HOST} --target=${LFS_TARGET} \
     --with-local-prefix=/tools --disable-nls --disable-shared \
     --disable-threads --enable-languages=c</userinput></screen>
 
-<para>The meaning of the configure options:</para>
+    <variablelist>
+      <title>The meaning of the configure options:</title>
 
-<variablelist>
-<varlistentry>
-<term><parameter>--with-local-prefix=/tools</parameter></term>
-<listitem><para>The purpose of this switch is to remove <filename class="directory">/usr/local/include</filename>
-from <command>gcc</command>'s include search path. This is not absolutely
-essential, however, it helps to minimize the influence of the host
-system.</para>
-</listitem>
-</varlistentry>
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc-static.xml"
+      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry)[1])"/>
 
-<varlistentry>
-<term><parameter>--enable-languages=c</parameter></term>
-<listitem><para>This option ensures that only the C compiler is built.
-This option is only needed when you have downloaded and unpacked the
-full GCC tarball, as opposed to just the gcc-core
-tarball.</para></listitem>
-</varlistentry>
-</variablelist>
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc-static.xml"
+      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry)[2])"/>
 
-<para>Continue with compiling the package:</para>
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc-static.xml"
+      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry)[3])"/>
+
+      <varlistentry>
+        <term><parameter>--disable-threads</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc-static.xml"
+      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry)[5])"/>
+
+    </variablelist>
+
+    <para>Continue with compiling the package:</para>
 
 <screen><userinput>make all-gcc</userinput></screen>
 
-<para>Install the package:</para>
+    <para>Install the package:</para>
 
 <screen><userinput>make install-gcc</userinput></screen>
 
-</sect2>
+  </sect2>
 
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-gcc" role="."/></para>
-</sect2>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-gcc" role="."/></para>
+
+  </sect2>
 
 </sect1>
-
