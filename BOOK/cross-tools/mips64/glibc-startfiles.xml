@@ -95,8 +95,8 @@ kernel has and can optimize itself accordingly.</para></listitem>
 <para>Since we are only creating the glibc startfiles at this time
 we will need to manually copy files over.</para>
 
-<screen><userinput>install -d /tools/lib
-cp -fp csu/crt[i1n].o /tools/lib</userinput></screen>
+<screen><userinput>install -d /tools/lib32
+cp -fp csu/crt[i1n].o /tools/lib32</userinput></screen>
 
 </sect2>
 

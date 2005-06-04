@@ -98,6 +98,10 @@ we will need to manually copy files over.</para>
 <screen><userinput>install -d /tools/lib64
 cp -fp csu/crt[i1n].o /tools/lib64</userinput></screen>
 
+<para>Now we create a symlink so gcc will link to the proper startfiles:</para>
+
+<screen><userinput>ln -s /tools/lib64 /tools/lib</userinput></screen>
+
 </sect2>
 
 </sect1>
