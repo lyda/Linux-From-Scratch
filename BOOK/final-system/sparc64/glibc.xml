@@ -28,7 +28,7 @@
     xpointer="xpointer(id('install-glibc')/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../raq2/glibc.xml"
+    href="../mips/glibc.xml"
     xpointer="xpointer(/sect1/sect2[2]/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -36,11 +36,11 @@
     xpointer="xpointer(id('install-glibc')/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../raq2/glibc.xml"
+    href="../mips/glibc.xml"
     xpointer="xpointer(/sect1/sect2[2]/para[5])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../raq2/glibc.xml"
+    href="../mips/glibc.xml"
     xpointer="xpointer(/sect1/sect2[2]/screen[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

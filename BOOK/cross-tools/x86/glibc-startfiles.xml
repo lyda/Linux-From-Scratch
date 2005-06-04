@@ -49,7 +49,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('package-glibc')/screen[2])"/>
+    xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
     <para>For NPTL enabled systems we will need to add the following
     lines to <filename>config.cache</filename></para>

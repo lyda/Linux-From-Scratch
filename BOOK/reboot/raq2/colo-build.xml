@@ -13,7 +13,7 @@
 <indexterm zone="ch-reboot-colo-build"><primary sortas="a-Colo-Build">Colo</primary></indexterm>
 
 <sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/raq2/colo.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/mips/colo.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
@@ -21,7 +21,7 @@
 <seglistitem><seg>0.2 SBU</seg><seg>10 MB</seg></seglistitem>
 </segmentedlist>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/raq2/colo.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/mips/colo.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
 
 </sect2>
 <sect2 role="installation">
