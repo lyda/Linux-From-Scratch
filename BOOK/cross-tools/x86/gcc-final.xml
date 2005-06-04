@@ -40,8 +40,7 @@
   </sect2>
 
   <sect2 role="installation">
-<title>Installation of GCC Cross Compiler</title>
-    <title>Installation of Cross GCC with Shared libgcc</title>
+    <title>Installation of GCC Cross Compiler</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-shared.xml"
