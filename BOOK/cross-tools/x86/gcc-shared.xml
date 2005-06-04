@@ -116,7 +116,7 @@
     --enable-multilib=no --enable-languages=c</userinput></screen>
 
     <variablelist>
-    <title>The meaning of the new configure option:</title>
+      <title>The meaning of the new configure option:</title>
 
       <varlistentry>
         <term><parameter>--enable-shared</parameter></term>

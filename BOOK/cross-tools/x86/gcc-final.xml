@@ -57,7 +57,7 @@
     --enable-multilib=no</userinput></screen>
 
     <variablelist>
-    <title>The meaning of the new configure options:</title>
+      <title>The meaning of the new configure options:</title>
 
       <varlistentry>
         <term><parameter>--enable-languages=c,c++</parameter></term>

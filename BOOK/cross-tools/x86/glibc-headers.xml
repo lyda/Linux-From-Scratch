@@ -60,7 +60,7 @@
     --with-binutils=/cross-tools/${LFS_TARGET}/bin</userinput></screen>
 
     <variablelist>
-    <title>The meaning of the configure options:</title>
+      <title>The meaning of the configure options:</title>
 
       <varlistentry>
         <term><parameter>--disable-sanity-checks</parameter></term>

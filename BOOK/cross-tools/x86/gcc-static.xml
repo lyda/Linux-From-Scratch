@@ -79,6 +79,8 @@
     href="../../final-system/common/gcc.xml"
     xpointer="xpointer(id('install-gcc')/screen[3])"/>
 
+    <para/>
+
     <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
@@ -87,7 +89,7 @@
     --enable-multilib=no --enable-languages=c</userinput></screen>
 
     <variablelist>
-    <title>The meaning of the configure options:</title>
+      <title>The meaning of the configure options:</title>
 
       <varlistentry>
         <term><parameter>--with-local-prefix=/tools</parameter></term>
