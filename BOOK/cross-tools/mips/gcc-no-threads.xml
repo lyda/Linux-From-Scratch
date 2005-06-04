@@ -60,15 +60,15 @@
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/gcc-static.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry)[1])"/>
+      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[1])"/>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/gcc-static.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry)[2])"/>
+      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[2])"/>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/gcc-static.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry)[3])"/>
+      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[3])"/>
 
       <varlistentry>
         <term><parameter>--disable-threads</parameter></term>
@@ -79,7 +79,7 @@
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/gcc-static.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry)[5])"/>
+      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[5])"/>
 
     </variablelist>
 
