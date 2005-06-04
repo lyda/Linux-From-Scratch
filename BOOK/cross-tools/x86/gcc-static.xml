@@ -70,11 +70,13 @@
       successful overall build. Do not forget to apply them.</para>
     </important>
 
-    <para>The GCC documentation recommends building GCC outside of the
-    source directory in a dedicated build directory:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('install-gcc')/para[4])"/>
 
-<screen><userinput>mkdir ../gcc-build
-cd ../gcc-build</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('install-gcc')/screen[3])"/>
 
     <para>Prepare GCC for compilation:</para>
 
@@ -94,6 +96,27 @@ cd ../gcc-build</userinput></screen>
           <command>gcc</command>'s include search path. This is not
           absolutely essential, however, it helps to minimize the
           influence of the host system.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-nls</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-shared</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-multilib=no</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
         </listitem>
       </varlistentry>
 
