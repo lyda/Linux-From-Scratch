@@ -58,7 +58,7 @@ cd ../glibc-build</userinput></screen>
 <screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD32}" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST} \
+    --host=${LFS_TARGET32} --build=${LFS_HOST} \
     --without-cvs --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>
@@ -95,8 +95,8 @@ kernel has and can optimize itself accordingly.</para></listitem>
 <para>Since we are only creating the glibc startfiles at this time
 we will need to manually copy files over.</para>
 
-<screen><userinput>install -d /tools/lib32
-cp -fp csu/crt[i1n].o /tools/lib32</userinput></screen>
+<screen><userinput>install -d /tools/lib
+cp -fp csu/crt[i1n].o /tools/lib</userinput></screen>
 
 </sect2>
 

@@ -6,12 +6,12 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-cross-tools-glibc" role="wrap">
-<title>Glibc-&glibc-version;</title>
-<?dbhtml filename="glibc.html"?>
+<sect1 id="ch-cross-tools-glibc-n32" role="wrap">
+<title>Glibc-&glibc-version; n32</title>
+<?dbhtml filename="glibc-n32.html"?>
 
-<indexterm zone="ch-cross-tools-glibc">
-<primary sortas="a-Glibc">Glibc</primary>
+<indexterm zone="ch-cross-tools-glibc-n32">
+<primary sortas="a-Glibc n32">Glibc</primary>
 <secondary>cross tools</secondary></indexterm>
 
 <sect2 role="package"><title/>
@@ -68,10 +68,10 @@ cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD32}" AR="${LFS_TARGET}-ar" \
+<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILDN32}" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET32} --build=${LFS_HOST} --libdir=/tools/lib32 \
+    --host=${LFS_TARGET} --build=${LFS_HOST} --libdir=/tools/lib32 \
     --without-cvs --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>

@@ -10,14 +10,21 @@
 <para>We will need to setup target specific flags for the compiler
 and linkers.</para>
 
-<screen><userinput>export BUILD32="-mabi=n32"
+<screen><userinput>export BUILD32="-mabi=32"
+export BUILDN32="-mabi=n32"
 export BUILD64="-mabi=64"</userinput></screen>
+
+<para>You will need to set your host target triplet for o32 bit:</para>
+
+<screen><userinput>export LFS_TARGET32="`echo ${LFS_TARGET}| sed -e 's/64//g'`"</userinput></screen>
 
 <para>Lets add the build flags to ~/.bashrc to prevent issues if
 we stop and come back later.</para>
 
 <screen><userinput>echo export BUILD32=\""${BUILD32}\"" &gt;&gt; ~/.bashrc
-echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc</userinput></screen>
+echo export BUILDN32=\""${BUILDN32}\"" &gt;&gt; ~/.bashrc
+echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc
+echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
 </sect1>
 
