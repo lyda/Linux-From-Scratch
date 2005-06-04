@@ -90,7 +90,7 @@
 
 <screen><userinput>make csu/subdir_lib</userinput></screen>
 
-    <para>Since we are only creating the glibc startfiles at this time
+    <para>Since we are only creating the Glibc startfiles at this time
     we will need to manually copy files over.</para>
 
 <screen><userinput>install -d /tools/lib32
