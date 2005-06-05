@@ -42,71 +42,25 @@
   <sect2 role="installation">
     <title>Installation of Glibc Startfiles</title>
 
-    <para>NPTL is not supported under this architecture, so we are going to
-    remove the nptl directory from the Glibc source:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/glibc.xml"
+    xpointer="xpointer(//*[@role='installation']/para[5])"/>
 
-<screen><userinput>rm -rf nptl*</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/glibc.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
-    <para>The Glibc documentation recommends building Glibc outside of
-    the source directory in a dedicated build directory:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[4])"/>
 
-<screen><userinput>mkdir ../glibc-build
-cd ../glibc-build</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
-    <para>Next, prepare Glibc for compilation:</para>
-
-    <para>To create Linuxthread Startfiles use the following configure
-    line:</para>
-
-<screen><userinput>CC="${LFS_TARGET}-gcc" AR="${LFS_TARGET}-ar" \
-    RANLIB="${LFS_TARGET}-ranlib" \
-    ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST} \
-    --without-cvs --disable-profile --enable-add-ons \
-    --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
-    --with-headers=/tools/include</userinput></screen>
-
-    <variablelist>
-      <title>The meaning of the configure options:</title>
-
-      <varlistentry>
-        <term><parameter>--enable-kernel=2.6.0</parameter></term>
-        <listitem>
-          <para>This tells Glibc to compile the library with support
-          for 2.6.x Linux kernels.</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--with-binutils=/cross-tools/bin</parameter></term>
-        <listitem>
-          <para>While not required, this switch ensures that there are
-          no errors pertaining to which Binutils programs get used during
-          the Glibc build.</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--with-headers=/tools/include</parameter></term>
-        <listitem>
-          <para>This tells Glibc to compile itself against the headers
-          recently installed to the tools directory, so that it knows
-          exactly what features the kernel has and can optimize itself
-          accordingly.</para>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-    <para>Compile the package:</para>
-
-<screen><userinput>make csu/subdir_lib</userinput></screen>
-
-    <para>Since we are only creating the Glibc startfiles at this time
-    we will need to manually copy files over.</para>
-
-<screen><userinput>install -d /tools/lib
-cp -fp csu/crt[i1n].o /tools/lib</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/glibc-startfiles.xml"
+    xpointer="xpointer(//*[@role='installation']/para[5]/range-to(//*[@role='installation']/para[last()]))"/>
 
   </sect2>
 
