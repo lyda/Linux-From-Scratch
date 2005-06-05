@@ -172,7 +172,7 @@ cd ../glibc-build</userinput></screen>
 
   </sect2>
 
-  <sect2 id="i18n-glibc" role="installation">
+  <sect2 id="i18n-glibc" role="configuration">
     <title>Internationalization</title>
 
     <para>The locales that can make the system respond in a different
