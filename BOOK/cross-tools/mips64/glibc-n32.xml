@@ -79,13 +79,10 @@
     href="../../final-system/x86/glibc.xml"
     xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[7])"/>
+    <para>Now we make sure the Glibc goes into <filename
+    class="directory">/tools/lib32</filename>:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+<screen><userinput>echo "slibdir=/tools/lib32" >> configparms</userinput></screen>
 
     <para>Next, prepare Glibc for compilation:</para>
 

@@ -80,16 +80,16 @@
     xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
     <para>Now we make sure the Glibc goes into <filename
-    class="directory">/tools/lib32</filename>:</para>
+    class="directory">/tools/lib</filename>:</para>
 
-<screen><userinput>echo "slibdir=/tools/lib32" >> configparms</userinput></screen>
+<screen><userinput>echo "slibdir=/tools/lib" >> configparms</userinput></screen>
 
     <para>Next, prepare Glibc for compilation:</para>
 
 <screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD32}" AR="${LFS_TARGET}-ar" \
     RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET32} --build=${LFS_HOST} --libdir=/tools/lib32 \
+    --host=${LFS_TARGET32} --build=${LFS_HOST} --libdir=/tools/lib \
     --without-cvs --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>
@@ -98,7 +98,7 @@
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
-        <term><parameter>--libdir=/tools/lib32</parameter></term>
+        <term><parameter>--libdir=/tools/lib</parameter></term>
         <listitem>
           <para>This switch do ... .</para>
         </listitem>

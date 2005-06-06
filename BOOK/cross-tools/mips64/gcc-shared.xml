@@ -72,7 +72,7 @@
 
 <screen><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib64/\"" >> gcc/config/linux.h</userinput></screen>
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc-static.xml"
@@ -89,7 +89,7 @@
     <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
-    --host=${LFS_HOST} --target=${LFS_TARGET} --with-abi=64 \
+    --host=${LFS_HOST} --target=${LFS_TARGET} \
     --with-local-prefix=/tools --disable-nls --enable-shared \
     --enable-languages=c</userinput></screen>
 
