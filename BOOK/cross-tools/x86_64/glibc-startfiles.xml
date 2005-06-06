@@ -41,6 +41,7 @@
   </sect2>
 
   <sect2 role="installation">
+    <title>Installation of Glibc Startfiles</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/x86/glibc.xml"
