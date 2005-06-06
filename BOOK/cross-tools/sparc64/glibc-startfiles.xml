@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-cross-tools-glibc-startfiles-64bit" role="wrap">
+<sect1 id="ch-cross-tools-glibc-startfiles" role="wrap">
   <?dbhtml filename="glibc-startfiles-64bit.html"?>
 
   <title>Glibc-&glibc-version; Startfiles 64 Bit</title>
 
-  <indexterm zone="ch-cross-tools-glibc-startfiles-64bit">
-    <primary sortas="a-Glibc">Glibc 64 Bit</primary>
+  <indexterm zone="ch-cross-tools-glibc-startfiles">
+    <primary sortas="a-Glibc">Glibc</primary>
     <secondary>cross tools, startfiles</secondary>
   </indexterm>
 

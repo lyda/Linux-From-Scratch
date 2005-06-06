@@ -92,7 +92,7 @@ echo "
       xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[2])"/>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/gcc-staticshared.xml"
+      href="../x86/gcc-static.xml"
       xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[3])"/>
 
       <varlistentry>
