@@ -7,7 +7,7 @@
 
 <bookinfo>
   <title>Linux From Scratch</title>
-  <subtitle>Version &version-x86;</subtitle>
+  <subtitle>Version &version-x86_64;</subtitle>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/bookinfo.xml"
