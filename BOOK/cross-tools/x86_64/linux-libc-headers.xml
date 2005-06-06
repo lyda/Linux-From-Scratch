@@ -39,16 +39,9 @@
 
   </sect2>
 
-  <sect2 role="installation">
-    <title>Installation of Linux-Libc-Headers</title>
-
-    <para>Install the header files:</para>
-
-<screen><userinput>install -d /tools/include
-cp -R include/asm-i386 /tools/include/asm
-cp -R include/linux /tools/include</userinput></screen>
-
-  </sect2>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@role='installation'])"/>
 
   <sect2 role="content">
     <title/>
