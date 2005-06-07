@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,89 +8,88 @@
 ]>
 
 <sect1 id="ch-temp-system-ncurses" role="wrap">
-<title>Ncurses-&ncurses-version;</title>
-<?dbhtml filename="ncurses.html"?>
+  <?dbhtml filename="ncurses.html"?>
 
-<indexterm zone="ch-temp-system-ncurses">
-<primary sortas="a-Ncurses">Ncurses</primary>
-<secondary>temporary system</secondary></indexterm>
+  <title>Ncurses-&ncurses-version;</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/ncurses.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-temp-system-ncurses">
+    <primary sortas="a-Ncurses">Ncurses</primary>
+    <secondary>temporary system</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.7 SBU</seg><seg>26 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/ncurses.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/ncurses.xml"
+    xpointer="xpointer(id('package-ncurses')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of Ncurses</title>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>When cross-compiling, Ncurses doesn't always properly create
-the file ncurses/comp_captab.c which results in build failures. Fix
-this issue by updating ncurses with a rollup patch released on 2005/03/19:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/ncurses.xml"
+    xpointer="xpointer(id('package-ncurses')/segmentedlist[2])"/>
 
-<screen><userinput>bzcat ../&ncurses-update-patch; > update.sh
-sh update.sh</userinput></screen>
+  </sect2>
 
-<para>The Ncurses package will use the environment variables CC and CXX in preference
-to variables you may pass to the configure script. To force ncurses to use our build flags
-we temporarily set CC and CXX:</para>
+  <sect2 role="installation">
+    <title>Installation of Ncurses</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/ncurses.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/ncurses.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+
+    <para>The Ncurses package will use the environment variables
+    <envar>CC</envar> and <envar>CXX</envar> in preference to variables
+    you may pass to the configure script. To force Ncurses to use our
+    build flags we temporarily set <envar>CC</envar> and
+    <envar>CXX</envar>:</para>
 
 <screen><userinput>export CC="${LFS_TARGET}-gcc ${BUILD32}"
 export CXX="${LFS_TARGET}-g++ ${BUILD32}"</userinput></screen>
 
-<para>Prepare Ncurses for compilation:</para>
+    <para>Prepare Ncurses for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools --with-shared \
    --host=${LFS_TARGET} --without-debug --without-ada \
    --enable-overwrite --with-build-cc=gcc</userinput></screen>
 
-<para>The meaning of the configure options:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/ncurses.xml"
+    xpointer="xpointer(id('install-gettext')/variablelist[1])"/>
 
-<variablelist>
-<varlistentry>
-<term><parameter>--without-ada</parameter></term>
-<listitem><para>This tells Ncurses not to build its Ada bindings, even
-if an Ada compiler is installed on the host. This needs to be done
-because once we enter the chroot environment, Ada will no longer be
-available.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><parameter>--enable-overwrite</parameter></term>
-<listitem><para>This tells Ncurses to install its header files into
-<filename class="directory">/tools/include</filename>, instead of
-<filename class="directory">/tools/include/ncurses</filename>, to
-ensure that other packages can find the Ncurses headers
-successfully.</para></listitem>
-</varlistentry>
-</variablelist>
-
-
-<para>Compile the package:</para>
+    <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Install the package:</para>
+    <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Now restore your original environment variables:</para>
+    <para>Now restore your original environment variables:</para>
 
 <screen><userinput>source ~/.bash_profile</userinput></screen>
 
-</sect2>
+  </sect2>
 
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-ncurses" role="."/></para>
-</sect2>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-ncurses" role="."/></para>
+
+  </sect2>
 
 </sect1>
-
