@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,33 +8,48 @@
 ]>
 
 <sect1 id="ch-temp-system-gettext" role="wrap">
-<title>Gettext-&gettext-version;</title>
-<?dbhtml filename="gettext.html"?>
+  <?dbhtml filename="gettext.html"?>
 
-<indexterm zone="ch-temp-system-gettext">
-<primary sortas="a-Gettext">Gettext</primary>
-<secondary>temporary system</secondary></indexterm>
+  <title>Gettext-&gettext-version;</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/gettext.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-temp-system-gettext">
+    <primary sortas="a-Gettext">Gettext</primary>
+    <secondary>temporary system</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.5 SBU</seg><seg>55 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/gettext.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gettext.xml"
+    xpointer="xpointer(id('package-gettext')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of Gettext</title>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>Gettext has an issue with cross-compiling where it
-can't find getline. So we fix it here:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gettext.xml"
+    xpointer="xpointer(id('package-gettext')/segmentedlist[2])"/>
 
-<screen><userinput>echo "am_cv_func_working_getline=yes" &gt;&gt; config.cache</userinput></screen>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Gettext</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gettext.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gettext.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
 <para>Prepare Gettext for compilation:</para>
 
@@ -42,39 +58,18 @@ can't find getline. So we fix it here:</para>
    --host=${LFS_TARGET} --disable-libasprintf \
    --without-csharp --cache-file=config.cache</userinput></screen>
 
-<para>The meaning of the configure options:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gettext.xml"
+    xpointer="xpointer(id('install-gettext')/variablelist[1]/range-to(id('install-gettext')/para[last()]))"/>
 
-<variablelist>
-<varlistentry>
-<term><parameter>--disable-libasprintf</parameter></term>
-<listitem><para>This flag tells Gettext not to build the
-<filename class="libraryfile">asprintf</filename> library. Because nothing in this 
-chapter or the next requires this library and Gettext gets rebuilt later,
-exclude it to save time and space.</para></listitem>
-</varlistentry>
+  </sect2>
 
-<varlistentry>
-<term><parameter>--without-csharp</parameter></term>
-<listitem><para>This tells Gettext not to use a C# compiler, even if a
-C# compiler is installed on the host. This needs to be done because
-once we enter the chroot environment, C# will no longer be
-available.</para></listitem>
-</varlistentry>
-</variablelist>
+  <sect2 role="content">
+    <title/>
 
-<para>Compile the package:</para>
+    <para>Details on this package are located in <xref
+    linkend="contents-gettext" role="."/></para>
 
-<screen><userinput>make LDFLAGS="-s"</userinput></screen>
-
-<para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
-
-</sect2>
-
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-gettext" role="."/></para>
-</sect2>
+  </sect2>
 
 </sect1>
-
