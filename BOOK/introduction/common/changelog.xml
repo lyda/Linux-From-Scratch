@@ -194,6 +194,18 @@
 -->
 
     <listitem>
+      <para>June 7, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to Perl 5.8.7.</para>
+          <para>[jim] - Updated to Man-Pages 2.0.3.</para>
+          <para>[jim] - Updated to TCL 8.4.10.</para>
+          <para>[jim] - Updated to Udev 058.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 28, 2005</para>
       <itemizedlist>
         <listitem>

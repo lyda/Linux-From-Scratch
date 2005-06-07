@@ -68,6 +68,17 @@
 -->
 
     <listitem>
+      <para>June 7, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Cross-tools for MIPS64 now working.</para>
+          <para>[jim] - Starting updates to MIPS64 temp-system.</para>
+          <para>[jim] - Updated Openssh to 4.1p1.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 1, 2005</para>
       <itemizedlist>
         <listitem>

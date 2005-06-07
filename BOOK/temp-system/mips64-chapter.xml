@@ -11,6 +11,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/variables.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/binutils.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/libstdc.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/gcc.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/zlib.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/zlib-64bit.xml"/>

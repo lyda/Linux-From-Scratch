@@ -6,11 +6,11 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-temp-system-gcc" role="wrap">
+<sect1 id="ch-temp-system-libstdc" role="wrap">
 <title>GCC-&gcc-version;</title>
-<?dbhtml filename="gcc.html"?>
+<?dbhtml filename="libstdc.html"?>
 
-<indexterm zone="ch-temp-system-gcc">
+<indexterm zone="ch-temp-system-libstdc">
 <primary sortas="a-GCC">GCC</primary>
 <secondary>temporary system</secondary></indexterm>
 
@@ -27,7 +27,7 @@
 </sect2>
 
 <sect2 role="installation">
-<title>Installation of GCC</title>
+<title>Installation of GCC - libstdc++ for o32</title>
 
 <para>We will make a couple essential adjustments to the specs file to point
 to use our build environment:</para>
@@ -43,28 +43,6 @@ the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../&gcc-fix_native-patch;</userinput></screen>
 
-<para>Now we will need to setup our StartFile Spec to the correct library
-location:</para>
-
-<screen><userinput>echo "
-#undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
-
-<para>Now we will change cpp's search path not to look in /usr/include:</para>
-
-<screen><userinput>sed -i '/#define STANDARD_INCLUDE_DIR/s@"/usr/include"@0@g' gcc/cppdefault.c</userinput></screen>
-
-<para>Also, we need to set the directory searched by the fixincludes process for
-system headers, so it won't look at the host's headers:</para>
-
-<screen><userinput>sed -i 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
-   gcc/Makefile.in</userinput></screen>
-
-<para>Use our cross-complier instead of the one gcc builds, named xgcc:</para>
-
-<screen><userinput>sed -i "s@\./xgcc@/cross-tools/bin/${CC}@g" \
-   gcc/mklibgcc.in</userinput></screen>
-
 <important><para>The above patches and sed's are critical in ensuring a
 successful overall build. Do not forget to apply them.</para></important>
 
@@ -78,12 +56,13 @@ variables that override the default optimization flags.</para>
 
 <para>Now prepare GCC for compilation:</para>
 
-<screen><userinput>CC="${CC} ${BUILD64}" \
-    ../gcc-&gcc-version;/configure --prefix=/tools \
-    --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
+<screen><userinput>CC="${CC} ${BUILD32}" CXX="${CXX} ${BUILD32}" \
+    ../gcc-&gcc-version;/libstdc++-v3/configure --prefix=/tools \
+    --host=${LFS_HOST} --build=${LFS_TARGET32} --target=${LFS_TARGET32} \
     --libexecdir=/tools/lib --with-local-prefix=/tools --enable-long-long \
     --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
-    --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
+    --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch \
+    --disable-multilib</userinput></screen>
 
 <para>The meaning of the new configure options:</para>
 
@@ -142,12 +121,7 @@ earlier.</para>
 
 <para>Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
-
-<para>Many packages use the name <command>cc</command> to call the C
-compiler. To satisfy those packages, create a symlink:</para>
-
-<screen><userinput>ln -s gcc /tools/bin/cc</userinput></screen>
+<screen><userinput>make install-target-libstdc++-v3</userinput></screen>
 
 </sect2>
 

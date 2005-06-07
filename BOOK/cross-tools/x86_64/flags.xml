@@ -13,13 +13,13 @@
   <para>We will need to setup target specific flags for the compiler
   and linkers.</para>
 
-<screen><userinput>export BUILD32="-m32"
-export BUILD64="-m64"</userinput></screen>
+<screen><userinput>export BUILD32="-m elf_i386"
+export BUILD64="-m elf_x86_64"</userinput></screen>
 
   <para>Lets add the build flags to <filename>~/.bashrc</filename> to
   prevent issues if we stop and come back later.</para>
 
-<screen><userinput>echo export BUILD32="-m32" >> ~/.bashrc
-echo export BUILD64="-m64" >> ~/.bashrc</userinput></screen>
+<screen><userinput>echo export BUILD32=\""${BUILD32}\"" &gt;&gt; ~/.bashrc
+echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
 </sect1>
