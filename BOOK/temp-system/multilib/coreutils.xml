@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,33 +8,48 @@
 ]>
 
 <sect1 id="ch-temp-system-coreutils" role="wrap">
-<title>Coreutils-&coreutils-version;</title>
-<?dbhtml filename="coreutils.html"?>
+  <?dbhtml filename="coreutils.html"?>
 
-<indexterm zone="ch-temp-system-coreutils">
-<primary sortas="a-Coreutils">Coreutils</primary>
-<secondary>temporary system</secondary></indexterm>
+  <title>Coreutils-&coreutils-version;</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/coreutils.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-temp-system-coreutils">
+    <primary sortas="a-Coreutils">Coreutils</primary>
+    <secondary>temporary system</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.9 SBU</seg><seg>69 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/coreutils.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/coreutils.xml"
+    xpointer="xpointer(id('package-coreutils')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of Coreutils</title>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>Coreutils has in issue where  UTILS_OPEN_MAX does not get\
-defined when cross-compiling. So we define it:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/coreutils.xml"
+    xpointer="xpointer(id('package-coreutils')/segmentedlist[2])"/>
 
-<screen><userinput>echo "utils_cv_sys_open_max=1024" &gt;&gt; config.cache</userinput></screen>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Coreutils</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
 <para>Prepare Coreutils for compilation:</para>
 
@@ -41,20 +57,22 @@ defined when cross-compiling. So we define it:</para>
    ./configure --prefix=/tools --cache-file=config.cache \
    --build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
 
-<para>Compile the package:</para>
+    <para>Compile the package:</para>
 
 <screen><userinput>make LDFLAGS="-s"</userinput></screen>
 
-<para>Install the package:</para>
+    <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+  </sect2>
 
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-coreutils" role="."/></para>
-</sect2>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-bzip2" role="."/></para>
+
+  </sect2>
 
 </sect1>
-
