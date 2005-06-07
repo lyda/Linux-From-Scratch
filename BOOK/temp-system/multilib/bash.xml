@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,75 +8,75 @@
 ]>
 
 <sect1 id="ch-temp-system-bash" role="wrap">
-<title>Bash-&bash-version;</title>
-<?dbhtml filename="bash.html"?>
+  <?dbhtml filename="bash.html"?>
 
-<indexterm zone="ch-temp-system-bash">
-<primary sortas="a-Bash">Bash</primary>
-<secondary>temporary system</secondary></indexterm>
+  <title>Bash-&bash-version;</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/bash.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-temp-system-bash">
+    <primary sortas="a-Bash">Bash</primary>
+    <secondary>temporary system</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>1.2 SBU</seg><seg>27 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/bash.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bash.xml"
+    xpointer="xpointer(id('package-bash')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of Bash</title>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>Fix a minor issue during the build when cross-compling:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bash.xml"
+    xpointer="xpointer(id('package-bash')/segmentedlist[2])"/>
 
-<screen><userinput>cp -p Makefile.in Makefile.in.orig
-sed "s@size \$(Program)@${LFS_TARGET}-&amp;@g"  Makefile.in.orig > Makefile.in</userinput></screen>
+  </sect2>
 
-<para>Bash has a problem when compiled against newer versions of Glibc, causing
-it to hang inappropriately.  This patch fixes the problem:</para>
+  <sect2 role="installation">
+    <title>Installation of Bash</title>
 
-<screen><userinput>patch -Np1 -i ../&bash-avoid_WCONTINUED-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bash.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
-<para>Prepare Bash for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bash.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bash.xml"
+    xpointer="xpointer(id('install-bash')/para[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bash.xml"
+    xpointer="xpointer(id('install-bash')/screen[2])"/>
+
+    <para>Prepare Bash for compilation:</para>
 
 <screen><userinput>CC="${CC} ${BUILD64}" CXX="${CXX} ${BUILD64}"
    ./configure --prefix=/tools --with-curses \
    --without-bash-malloc --host=${LFS_TARGET}</userinput></screen>
 
-<para>The meaning of the configure option:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bash.xml"
+    xpointer="xpointer(id('install-bash')/variablelist[1]/range-to(id('install-bash')/para[last()]))"/>
 
-<variablelist>
-<varlistentry>
-<term><parameter>--without-bash-malloc</parameter></term>
-<listitem><para>This options turns off the use of Bash's memory
-allocation (malloc) function which is known to cause segmentation
-faults. By turning this option off, Bash will use the malloc functions
-from Glibc which are more stable.</para></listitem>
-</varlistentry>
-</variablelist>
+  </sect2>
 
-<para>Compile the package:</para>
+  <sect2 role="content">
+    <title/>
 
-<screen><userinput>make LDFLAGS="-s"</userinput></screen>
+    <para>Details on this package are located in <xref
+    linkend="contents-bash" role="."/></para>
 
-<para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
-
-<para>Make a link for the programs that use <command>sh</command> for
-a shell:</para>
-
-<screen><userinput>ln -s bash /tools/bin/sh</userinput></screen>
-
-</sect2>
-
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref linkend="contents-bash" role="."/></para>
-</sect2>
+  </sect2>
 
 </sect1>
-

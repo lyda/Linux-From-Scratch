@@ -89,6 +89,8 @@ sed "s@size \$(Program)@${LFS_TARGET}-&amp;@g"  Makefile.in.orig > Makefile.in</
 
 <screen><userinput>ln -s bash /tools/bin/sh</userinput></screen>
 
+    <para/>
+
   </sect2>
 
   <sect2 role="content">
