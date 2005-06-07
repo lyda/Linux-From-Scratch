@@ -21,8 +21,8 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/para[1])"/>
+    href="../../final-system/common/patch.xml"
+    xpointer="xpointer(id('package-patch')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -35,8 +35,8 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/segmentedlist[2])"/>
+    href="../../final-system/common/patch.xml"
+    xpointer="xpointer(id('package-patch')/segmentedlist[2])"/>
 
   </sect2>
 
