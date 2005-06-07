@@ -53,7 +53,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/grep.xml"
-    xpointer="xpointer(id('install-grep')/variablelist[1]/range-to(id('install-grep')/para[last()]))"/>
+    xpointer="xpointer(//*[role='installation']/variablelist[1]/range-to(//*[role='installation']/para[last()]))"/>
 
   </sect2>
 

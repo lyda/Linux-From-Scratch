@@ -60,7 +60,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/gettext.xml"
-    xpointer="xpointer(id('install-gettext')/variablelist[1]/range-to(id('install-gettext')/para[last()]))"/>
+    xpointer="xpointer(//*[role='installation']/variablelist[1]/range-to(//*[role='installation']/para[last()]))"/>
 
   </sect2>
 
