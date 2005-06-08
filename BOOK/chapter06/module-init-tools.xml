@@ -29,17 +29,20 @@ Coreutils, Diffutils, Flex, GCC, Glibc, Grep, M4, Make, and Sed</seg></seglistit
 <sect2 role="installation">
 <title>Installation of Module-Init-Tools</title>
 
+<para>Module-Init-Tools attempts to rewrite its
+<filename>modprobe.conf</filename> man page during the build process. This is
+unnecessary and also relies on <command>docbook2man</command> &mdash; which is not
+installed in LFS. Run the following command to avoid this:</para>
+
+<screen><userinput>touch modprobe.conf.5</userinput></screen>
+
 <para>Prepare Module-Init-Tools for compilation:</para>
 
 <screen><userinput>./configure --prefix="" --enable-zlib</userinput></screen>
 
 <para>Compile the package:</para>
 
-<screen><userinput>make DOCBOOKTOMAN=""</userinput></screen>
-
-<!-- Edit me -->
-<para>The <envar>DOCBOOKTOMAN</envar> option allows the compile process to
-complete without regenerating the man pages.</para>
+<screen><userinput>make</userinput></screen>
 
 <para>To test the results, issue:
 <userinput>make check</userinput>.</para>
