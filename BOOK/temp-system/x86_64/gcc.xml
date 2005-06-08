@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,153 +8,121 @@
 ]>
 
 <sect1 id="ch-temp-system-gcc" role="wrap">
-<title>GCC-&gcc-version;</title>
-<?dbhtml filename="gcc.html"?>
+  <?dbhtml filename="gcc.html"?>
 
-<indexterm zone="ch-temp-system-gcc">
-<primary sortas="a-GCC">GCC</primary>
-<secondary>temporary system</secondary></indexterm>
+  <title>GCC-&gcc-version;</title>
 
-<sect2 role="package"><title/>
+  <indexterm zone="ch-temp-system-gcc">
+    <primary sortas="a-GCC">GCC</primary>
+    <secondary>temporary system</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>11.0 SBU</seg><seg>274 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/gcc.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('package-gcc')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of GCC</title>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>We will make a couple essential adjustments to the specs file to point
-to use our build environment:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('package-gcc')/segmentedlist[2])"/>
 
-<screen><userinput>patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
+  </sect2>
 
-<para>To make sure that we use the proper syntax for a couple of tools, we apply
-the following patch:</para>
+  <sect2 role="installation">
+    <title>Installation of GCC</title>
 
-<screen><userinput>patch -Np1 -i ../&gcc-posix-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/x86_64/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
-<para>Fixes configure logic when target triplet = target triplet:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/x86_64/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
-<screen><userinput>patch -Np1 -i ../&gcc-fix_native-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/x86_64/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
-<para>Now we will need to setup our StartFile Spec to the correct library
-location:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/x86_64/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
-<screen><userinput>echo "
-#undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
-<para>Now we will change cpp's search path not to look in /usr/include:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
-<screen><userinput>sed -i '/#define STANDARD_INCLUDE_DIR/s@"/usr/include"@0@g' gcc/cppdefault.c</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/x86_64/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
-<para>Also, we need to set the directory searched by the fixincludes process for
-system headers, so it won't look at the host's headers:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/x86_64/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
-<screen><userinput>sed -i 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
-   gcc/Makefile.in</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/para[5])"/>
 
-<para>Use our cross-complier instead of the one gcc builds, named xgcc:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
 
-<screen><userinput>sed -i "s@\./xgcc@/cross-tools/bin/${LFS_TARGET}-gcc@g" \
-   gcc/mklibgcc.in</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/para[6])"/>
 
-<important><para>The above patches and sed's are critical in ensuring a
-successful overall build. Do not forget to apply them.</para></important>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[6])"/>
 
-<para>Create a separate build directory again:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/para[7])"/>
 
-<screen><userinput>mkdir ../gcc-build
-cd ../gcc-build</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[7])"/>
 
-<para>Before starting to build GCC, remember to unset any environment
-variables that override the default optimization flags.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/x86_64/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/important[1])"/>
 
-<para>Now prepare GCC for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('install-gcc')/para[4])"/>
 
-<screen><userinput>../gcc-&gcc-version;/configure --prefix=/tools \
-    --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
-    --libexecdir=/tools/lib --with-local-prefix=/tools --enable-long-long \
-    --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
-    --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('install-gcc')/screen[3])"/>
 
-<para>The meaning of the new configure options:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/para[9]/range-to(//*[@role='installation']/para[last()]))"/>
 
-<variablelist>
-<varlistentry>
-<term><parameter>--enable-clocale=gnu</parameter></term>
-<listitem><para>This option ensures the correct locale model is
-selected for the C++ libraries under all circumstances. If the
-configure script finds the <emphasis>de_DE</emphasis> locale installed, it will select the
-correct gnu locale model. However, if the <emphasis>de_DE</emphasis> locale is not
-installed, there is the risk of building Application Binary Interface
-(ABI)-incompatible C++ libraries because the incorrect generic locale
-model may be selected.</para></listitem>
-</varlistentry>
+  </sect2>
 
-<varlistentry>
-<term><parameter>--enable-threads=posix</parameter></term>
-<listitem><para>This enables C++ exception handling for multi-threaded
-code.</para></listitem>
-</varlistentry>
+  <sect2 role="content">
+    <title/>
 
-<varlistentry>
-<term><parameter>--enable-__cxa_atexit</parameter></term>
-<listitem><para>This option allows use of
-<emphasis>__cxa_atexit</emphasis>, rather than
-<emphasis>atexit</emphasis>, to register C++ destructors for local
-statics and global objects.  This option is essential for fully
-standards-compliant handling of destructors. It also effects the C++
-ABI, and therefore results in C++ shared libraries and C++ programs
-that are interoperable with other Linux
-distributions.</para></listitem>
-</varlistentry>
+    <para>Details on this package are located in <xref
+    linkend="contents-gcc" role="."/></para>
 
-<varlistentry>
-<term><parameter>--enable-languages=c,c++</parameter></term>
-<listitem><para>This option
-ensures that both the C and C++ compilers are built.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><parameter>--disable-libstdcxx-pch</parameter></term>
-<listitem><para>Do not build the pre-compiled header (PCH) for
-<filename class="libraryfile">libstdc++</filename>. It takes up a lot of space,
-and we have no use for it.</para></listitem>
-</varlistentry>
-</variablelist>
-
-<para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
-
-<para>There is no need to use the <parameter>bootstrap</parameter>
-target now because the compiler being used to compile this GCC was
-built from the exact same version of the GCC sources used
-earlier.</para>
-
-<para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
-
-<para>Many packages use the name <command>cc</command> to call the C
-compiler. To satisfy those packages, create a symlink:</para>
-
-<screen><userinput>ln -s gcc /tools/bin/cc</userinput></screen>
-
-</sect2>
-
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-gcc" role="."/></para>
-</sect2>
+  </sect2>
 
 </sect1>
-
