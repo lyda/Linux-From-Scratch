@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-temp-system-gzip" role="wrap">
-  <?dbhtml filename="gzip.html"?>
+<sect1 id="ch-temp-system-zlib-n32" role="wrap">
+  <?dbhtml filename="zlib-n32.html"?>
 
-  <title>Gzip-&gzip-version;</title>
+  <title>Zlib-&zlib-version; N32</title>
 
-  <indexterm zone="ch-temp-system-gzip">
-    <primary sortas="a-Gzip">Gzip</primary>
+  <indexterm zone="ch-temp-system-zlib-n32">
+    <primary sortas="a-Zlib N32">Zlib N32</primary>
     <secondary>temporary system</secondary>
   </indexterm>
 
@@ -21,8 +21,8 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/gzip.xml"
-    xpointer="xpointer(id('package-gzip')/para[1])"/>
+    href="../../final-system/common/zlib.xml"
+    xpointer="xpointer(id('package-zlib')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -35,29 +35,24 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/gzip.xml"
-    xpointer="xpointer(id('package-gzip')/segmentedlist[2])"/>
+    href="../../final-system/common/zlib.xml"
+    xpointer="xpointer(id('package-zlib')/segmentedlist[2])"/>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Gzip</title>
+    <title>Installation of Zlib</title>
 
-    <para>Setup <command>configure</command> so it can use cross-compiled
-    tools:</para>
+    <para>Prepare Zlib for compilation:</para>
 
-<screen><userinput>sed -i "s@nm conftest@${LFS_TARGET}-&amp;@" configure</userinput></screen>
-
-    <para>Prepare Gzip for compilation:</para>
-
-<screen><userinput>./configure --prefix=/tools \
-   --host=${LFS_TARGET}</userinput></screen>
+<screen><userinput>CC="${CC} ${BUILDN32}" \
+   ./configure --prefix=/tools --shared --libdir=/tools/lib32</userinput></screen>
 
     <para>Compile the package:</para>
 
-<screen><userinput>make LDFLAGS="-s"</userinput></screen>
+<screen><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para>Install the shared library:</para>
 
 <screen><userinput>make install</userinput></screen>
 
@@ -67,7 +62,7 @@
     <title/>
 
     <para>Details on this package are located in <xref
-    linkend="contents-gzip" role="."/></para>
+    linkend="contents-zlib" role="."/></para>
 
   </sect2>
 

@@ -155,9 +155,6 @@
       <para>&tar-sparse_fix-patch;</para>
     </listitem>
     <listitem>
-      <para>&shadow-lastlog-patch;</para>
-    </listitem>
-    <listitem>
       <para>&util-linux-cramfs-patch;</para>
     </listitem>
   </itemizedlist>
@@ -165,6 +162,9 @@
   <itemizedlist>
     <title>Removed:</title>
 
+    <listitem>
+      <para>shadow-4.0.7-fix_lastlog-1.patch</para>
+    </listitem>
     <listitem>
       <para>udev-config-2.permissions</para>
     </listitem>
@@ -192,6 +192,15 @@
     </listitem>
 
 -->
+
+    <listitem>
+      <para>June 8, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to Shadow 4.0.9.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>June 7, 2005</para>

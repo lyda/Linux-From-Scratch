@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-temp-system-ncurses-64bit" role="wrap">
-  <?dbhtml filename="ncurses-64.html"?>
+<sect1 id="ch-temp-system-ncurses-n32" role="wrap">
+  <?dbhtml filename="ncurses-n32.html"?>
 
-  <title>Ncurses-&ncurses-version; 64-Bit</title>
+  <title>Ncurses-&ncurses-version; N32</title>
 
-  <indexterm zone="ch-temp-system-ncurses-64bit">
-    <primary sortas="a-Ncurses-64bit">Ncurses</primary>
+  <indexterm zone="ch-temp-system-ncurses-n32">
+    <primary sortas="a-Ncurses-n32">Ncurses</primary>
     <secondary>temporary system</secondary>
   </indexterm>
 
@@ -57,10 +57,10 @@
 
     <para>Prepare Ncurses for compilation:</para>
 
-<screen><userinput>CC="${CC} ${BUILD64}" CXX="${CXX} ${BUILD64}" \
+<screen><userinput>CC="${CC} ${BUILDN32}" CXX="${CXX} ${BUILDN32}" \
    ./configure --prefix=/tools --with-shared \
    --host=${LFS_TARGET} --without-debug --without-ada \
-   --enable-overwrite --with-build-cc=gcc --libdir=/tools/lib64</userinput></screen>
+   --enable-overwrite --with-build-cc=gcc --libdir=/tools/lib32</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/ncurses.xml"

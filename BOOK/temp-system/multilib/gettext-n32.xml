@@ -7,13 +7,12 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-temp-system-ncurses-64bit" role="wrap">
-  <?dbhtml filename="ncurses-64.html"?>
+<sect1 id="ch-temp-system-gettext-n32" role="wrap">
+  <title>Gettext-&gettext-version; N32</title>
+  <?dbhtml filename="gettext-n32.html"?>
 
-  <title>Ncurses-&ncurses-version; 64-Bit</title>
-
-  <indexterm zone="ch-temp-system-ncurses-64bit">
-    <primary sortas="a-Ncurses-64bit">Ncurses</primary>
+  <indexterm zone="ch-temp-system-gettext-n32">
+    <primary sortas="a-Gettext-n32">Gettext</primary>
     <secondary>temporary system</secondary>
   </indexterm>
 
@@ -21,8 +20,8 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/ncurses.xml"
-    xpointer="xpointer(id('package-ncurses')/para[1])"/>
+    href="../../final-system/common/gettext.xml"
+    xpointer="xpointer(id('package-gettext')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -35,47 +34,43 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/ncurses.xml"
-    xpointer="xpointer(id('package-ncurses')/segmentedlist[2])"/>
+    href="../../final-system/common/gettext.xml"
+    xpointer="xpointer(id('package-gettext')/segmentedlist[2])"/>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Ncurses</title>
+    <title>Installation of Gettext</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="../common/gettext.xml"
     xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="../common/gettext.xml"
     xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="ncurses.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    <para>Prepare Gettext for compilation:</para>
 
-    <para>Prepare Ncurses for compilation:</para>
-
-<screen><userinput>CC="${CC} ${BUILD64}" CXX="${CXX} ${BUILD64}" \
-   ./configure --prefix=/tools --with-shared \
-   --host=${LFS_TARGET} --without-debug --without-ada \
-   --enable-overwrite --with-build-cc=gcc --libdir=/tools/lib64</userinput></screen>
+<screen><userinput>CC="${CC} ${BUILDN32}" CXX="${CXX} ${BUILDN32}" \
+   ./configure --prefix=/tools --libdir=/tools/lib32 \
+   --host=${LFS_TARGET} --disable-libasprintf \
+   --without-csharp --cache-file=config.cache</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="../common/gettext.xml"
     xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="../common/gettext.xml"
     xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="../common/gettext.xml"
     xpointer="xpointer(//*[@role='installation']/para[4])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="../common/gettext.xml"
     xpointer="xpointer(//*[@role='installation']/screen[4])"/>
 
   </sect2>
@@ -84,8 +79,9 @@
     <title/>
 
     <para>Details on this package are located in <xref
-    linkend="contents-ncurses" role="."/></para>
+    linkend="contents-gettext" role="."/></para>
 
   </sect2>
 
 </sect1>
+

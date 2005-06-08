@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-temp-system-bzip2-n32" role="wrap">
+  <?dbhtml filename="bzip2-n32.html"?>
+
+  <title>Bzip2-&bzip2-version; N32</title>
+
+  <indexterm zone="ch-temp-system-bzip2-n32">
+    <primary sortas="a-Bzip2">Bzip2 N32</primary>
+    <secondary>temporary system</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bzip2.xml"
+    xpointer="xpointer(id('package-bzip2')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bzip2.xml"
+    xpointer="xpointer(id('package-bzip2')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Bzip2</title>
+
+    <para>We need to remove the tests to since they won't work on
+    a multi-architecture build, and tell change the default lib path
+    to lib64:</para>
+
+<screen><userinput>sed -i -e 's@^\(all:.*\) test@\1@g' \
+  -e 's@/lib\(/\| \|$\)@/lib32\1@g' Makefile</userinput></screen>
+
+    <para>The Bzip2 package does not contain a <command>configure</command>
+    script. Compile it with:</para>
+
+<screen><userinput>make CC="${CC} ${BUILDN32}" AR="${AR}" \
+RANLIB="${RANLIB}" LDFLAGS="-s"</userinput></screen>
+
+    <para>Remove the 32-bit Bzip2 binaries, as we want to use the
+    64-bit ones:</para>
+
+<screen><userinput>rm -f /tools/bin/bz*</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make PREFIX=/tools install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-bzip2" role="."/></para>
+
+  </sect2>
+
+</sect1>

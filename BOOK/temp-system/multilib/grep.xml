@@ -52,8 +52,20 @@
    --with-included-regex</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/grep.xml"
-    xpointer="xpointer(//*[role='installation']/variablelist[1]/range-to(//*[role='installation']/para[last()]))"/>
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
   </sect2>
 

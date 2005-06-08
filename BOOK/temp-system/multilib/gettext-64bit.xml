@@ -9,7 +9,7 @@
 
 <sect1 id="ch-temp-system-gettext-64bit" role="wrap">
   <title>Gettext-&gettext-version; 64-Bit</title>
-  <?dbhtml filename="gettexti-64.html"?>
+  <?dbhtml filename="gettext-64.html"?>
 
   <indexterm zone="ch-temp-system-gettext-64bit">
     <primary sortas="a-Gettext-64bit">Gettext</primary>
@@ -58,8 +58,20 @@
    --without-csharp --cache-file=config.cache</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/gettext.xml"
-    xpointer="xpointer(//*[role='installation']/variablelist[1]/range-to(//*[role='installation']/para[last()]))"/>
+    href="../common/gettext.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gettext.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gettext.xml"
+    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gettext.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
 
   </sect2>
 

@@ -60,8 +60,6 @@
 
 <screen><userinput>make LDFLAGS="-s"</userinput></screen>
 
-    <para>This package does not come with a test suite.</para>
-
     <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>

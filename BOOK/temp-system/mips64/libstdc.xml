@@ -7,7 +7,7 @@
 ]>
 
 <sect1 id="ch-temp-system-libstdc" role="wrap">
-<title>GCC-&gcc-version;</title>
+<title>GCC-&gcc-version; libstdc++ for o32</title>
 <?dbhtml filename="libstdc.html"?>
 
 <indexterm zone="ch-temp-system-libstdc">
@@ -121,7 +121,7 @@ earlier.</para>
 
 <para>Install the package:</para>
 
-<screen><userinput>make install-target-libstdc++-v3</userinput></screen>
+<screen><userinput>make install</userinput></screen>
 
 </sect2>
 

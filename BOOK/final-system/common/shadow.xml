@@ -46,14 +46,6 @@
   <sect2 id="install-shadow" role="installation">
     <title>Installation of Shadow</title>
 
-    <para>Shadow fails to update the time of last login as noted by
-    <command>lastlog</command> when logging into a regular console. The Port
-    (tty) column does get updated. Remote logins and <command>xterm</command>
-    logins seem to be not be broken, just console. The following patch properly
-    fixes this issue:</para>
-
-<screen><userinput>patch -Np1 -i ../&shadow-lastlog-patch;</userinput></screen>
-
     <para>Prepare Shadow for compilation:</para>
 
 <screen><userinput>./configure --libdir=/usr/lib --enable-shared</userinput></screen>
