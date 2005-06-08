@@ -57,7 +57,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
     <para>Now we will need to setup our StartFile Spec to the correct
     library location:</para>
