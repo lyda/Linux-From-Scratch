@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,51 +8,65 @@
 ]>
 
 <sect1 id="ch-reboot-module-init-tools" role="wrap">
-<title>Module-Init-Tools-&module-init-tools-version;</title>
-<?dbhtml filename="module-init-tools.html"?>
+  <?dbhtml filename="module-init-tools.html"?>
 
-<indexterm zone="ch-reboot-module-init-tools"><primary sortas="a-Module-Init-Tools">Module-Init-Tools</primary>
-<secondary>reboot</secondary></indexterm>
+  <title>Module-Init-Tools-&module-init-tools-version;</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/module-init-tools.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-reboot-module-init-tools">
+    <primary sortas="a-Module-Init-Tools">Module-Init-Tools</primary>
+    <secondary>reboot</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.2 SBU</seg><seg>5.2 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/module-init-tools.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/module-init-tools.xml"
+    xpointer="xpointer(id('package-module-init-tools')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of Module-Init-Tools</title>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>Prepare Module-Init-Tools for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/module-init-tools.xml"
+    xpointer="xpointer(id('package-module-init-tools')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Module-Init-Tools</title>
+
+    <para>Prepare Module-Init-Tools for compilation:</para>
 
 <screen><userinput>./configure --prefix=/ \
    --host=${LFS_TARGET}</userinput></screen>
 
-<para>Compile the package:</para>
+    <para>Compile the package:</para>
 
 <screen><userinput>make DOCBOOKTOMAN="" LDFLAGS="-s"</userinput></screen>
 
-<!-- Edit me -->
-<para>The <command>DOCBOOKTOMAN</command> option allows the compile process to
-complete without regenerating the man pages.</para>
+    <para>The <command>DOCBOOKTOMAN</command> option allows the compile process
+    to complete without regenerating the man pages.</para>
 
-<para>Install the package:</para>
+    <para>Install the package:</para>
 
 <screen><userinput>make DESTDIR="${LFS}" install</userinput></screen>
 
-</sect2>
+  </sect2>
 
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-module-init-tools" role="."/></para>
-</sect2>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-module-init-tools" role="."/></para>
+
+  </sect2>
 
 </sect1>
-
