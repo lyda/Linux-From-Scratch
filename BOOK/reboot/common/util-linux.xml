@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,63 +8,124 @@
 ]>
 
 <sect1 id="ch-reboot-util-linux" role="wrap">
-<title>Util-linux-&util-linux-version;</title>
-<?dbhtml filename="util-linux.html"?>
+  <?dbhtml filename="util-linux.html"?>
 
-<indexterm zone="ch-reboot-util-linux">
-<primary sortas="a-Util-linux">Util-linux</primary>
-<secondary>reboot</secondary></indexterm>
+  <title>Util-linux-&util-linux-version;</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/util-linux.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-reboot-util-linux">
+    <primary sortas="a-Util-linux">Util-linux</primary>
+    <secondary>reboot</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.2 SBU</seg><seg>16 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/util-linux.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(id('package-util-linux')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of Util-linux</title>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>Util-linux does not use the freshly installed headers and
-libraries from the <filename class="directory">/tools</filename>
-directory. This is fixed by altering the configure script:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(id('package-util-linux')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Util-linux</title>
+
+    <para>Util-linux does not use the freshly installed headers and
+    libraries from the <filename class="directory">/tools</filename>
+    directory. This is fixed by altering the configure script:</para>
 
 <screen><userinput>sed -i 's@/usr/include@/tools/include@g' configure</userinput></screen>
 
-<para>Util-linux installs uses -o root, the following sed removes that
-since we don't have users setup yet:</para>
+    <para>Util-linux installs uses <option>-o root</option>, the following
+    <command>sed</command> removes that since we don't have users setup
+    yet:</para>
 
 <screen><userinput>sed -i 's|-o root||' MCONFIG</userinput></screen>
 
-<para>Util-linux has a compilation error against newer versions of the
-linux-libc-headers.  The following patch properly fixes that issue</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(id('install-util-linux')/para[1])"/>
 
-<screen><userinput>patch -Np1 -i ../&util-linux-cramfs-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(id('install-util-linux')/screen[1])"/>
 
-<para>Prepare Util-linux for compilation:</para>
+    <para>Prepare Util-linux for compilation:</para>
 
 <screen><userinput>./configure</userinput></screen>
 
-<para>Compile the package:</para>
+    <para>Compile the package:</para>
 
 <screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no CPUOPT="" ARCH="" CPU=""</userinput></screen>
 
-<para>Install the package as root:</para>
+    <variablelist>
+      <title>The meaning of the make parameters:</title>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../../final-system/common/util-linux.xml"
+      xpointer="xpointer(id('install-util-linux')/variablelist[1]/varlistentry[1])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../../final-system/common/util-linux.xml"
+      xpointer="xpointer(id('install-util-linux')/variablelist[1]/varlistentry[2])"/>
+
+      <varlistentry>
+        <term><parameter>HAVE_SHADOW=no</parameter></term>
+        <listitem>
+          <para>This do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>CPUOPT=""</parameter></term>
+        <listitem>
+          <para>This do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>ARCH=""</parameter></term>
+        <listitem>
+          <para>This do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>CPU=""</parameter></term>
+        <listitem>
+          <para>This do ... .</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Install the package as <systemitem
+    class="username">root</systemitem>:</para>
 
 <screen><userinput>exit
 make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no USE_TTY_GROUP=no CPUOPT="" ARCH="" CPU="" DESTDIR=${LFS} install</userinput></screen>
 
-</sect2>
+  </sect2>
 
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-util-linux" role="."/></para>
-</sect2>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-util-linux" role="."/></para>
+
+  </sect2>
+
 </sect1>
-
