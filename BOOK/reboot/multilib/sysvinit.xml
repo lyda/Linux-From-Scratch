@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,113 +8,82 @@
 ]>
 
 <sect1 id="ch-reboot-sysvinit" role="wrap">
-<title>Sysvinit-&sysvinit-version;</title>
-<?dbhtml filename="sysvinit.html"?>
+  <?dbhtml filename="sysvinit.html"?>
 
-<indexterm zone="ch-reboot-sysvinit"><primary sortas="a-Sysvinit">Sysvinit</primary>
-<secondary>reboot</secondary></indexterm>
+  <title>Sysvinit-&sysvinit-version;</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/sysvinit.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-reboot-sysvinit">
+    <primary sortas="a-Sysvinit">Sysvinit</primary>
+    <secondary>reboot</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.2 SBU</seg><seg>5.2 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/sysvinit.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/sysvinit.xml"
+    xpointer="xpointer(id('package-sysvinit')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<title>Installation of Sysvinit</title>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/sysvinit.xml"
+    xpointer="xpointer(id('package-sysvinit')/segmentedlist[2])"/>
 
-<para>When run-levels are changed (for example, when halting the
-system), <command>init</command> sends termination signals to those
-processes that <command>init</command> itself started and that should
-not be running in the new run-level.  While doing this,
-<command>init</command> outputs messages like <quote>Sending processes
-the TERM signal</quote> which seem to imply that it is sending these
-signals to all currently running processes. To avoid this
-misinterpretation, modify the source so that these messages read like
-<quote>Sending processes started by init the TERM signal</quote>
-instead:</para>
+  </sect2>
 
-<screen><userinput>sed -i 's@Sending processes@&amp; started by init@g' \
-    src/init.c</userinput></screen>
+  <sect2 role="installation">
+    <title>Installation of Sysvinit</title>
 
-<para>Now we do some modifications so we can boot into this during our
-build:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/sysvinit.xml"
+    xpointer="xpointer(id('install-sysvinit')/para[1])"/>
 
-<screen><userinput>cp src/Makefile src/Makefile.orig
-sed -e 's@root@0@g' \
-    -e "s@/dev/initctl@${LFS}&amp;@g" \
-    -e 's@\(mknod \)-m \([0-9]* \)\(.* \)p@\1\3p; chmod \2\3@g' \
-    src/Makefile.orig > src/Makefile</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/sysvinit.xml"
+    xpointer="xpointer(id('install-sysvinit')/screen[1])"/>
 
-<para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+
+    <para>Compile the package:</para>
 
 <screen><userinput>make -C src clobber
 make -C src CC="${CC} ${BUILD64}" LDFLAGS="-s"</userinput></screen>
 
-<para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@role='installation']/para[4])"/>
 
-<screen><userinput>install -d ${LFS}/bin
-install -d ${LFS}/usr/bin
-install -d ${LFS}/usr/include
-install -d ${LFS}/usr/share/man/man{1,5,8}
-install -d ${LFS}/etc
-make -C src install INSTALL="install" ROOT="${LFS}"</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
 
-</sect2>
+  </sect2>
 
-<sect2 id="conf-tools-sysvinit" role="configuration"><title>Configuring Sysvinit</title>
-<indexterm zone="conf-tools-sysvinit">
-<primary sortas="a-Sysvinit">Sysvinit</primary>
-<secondary>reboot, configuring</secondary></indexterm>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/sysvinit.xml"
+  xpointer="xpointer(//*[@role='configuration'])"/>
 
-<indexterm zone="conf-tools-sysvinit"><primary sortas="e-${LFS}/etc/inittab">${LFS}/etc/inittab</primary></indexterm>
+  <sect2 role="content">
+    <title/>
 
-<para>Create a new file <filename>${LFS}/etc/inittab</filename> by running the
-following:</para>
+    <para>Details on this package are located in <xref
+    linkend="contents-sysvinit" role="."/></para>
 
-<screen><userinput>cat &gt; ${LFS}/etc/inittab &lt;&lt; "EOF"
-<literal># Begin /etc/inittab
-
-id:3:initdefault:
-
-si::sysinit:/etc/rc.d/init.d/rc sysinit
-
-l0:0:wait:/etc/rc.d/init.d/rc 0
-l1:S1:wait:/etc/rc.d/init.d/rc 1
-l2:2:wait:/etc/rc.d/init.d/rc 2
-l3:3:wait:/etc/rc.d/init.d/rc 3
-l4:4:wait:/etc/rc.d/init.d/rc 4
-l5:5:wait:/etc/rc.d/init.d/rc 5
-l6:6:wait:/etc/rc.d/init.d/rc 6
-
-ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now
-
-su:S016:once:/sbin/sulogin
-
-1:2345:respawn:/sbin/agetty -I '\033(K' tty1 9600
-2:2345:respawn:/sbin/agetty -I '\033(K' tty2 9600
-3:2345:respawn:/sbin/agetty -I '\033(K' tty3 9600
-4:2345:respawn:/sbin/agetty -I '\033(K' tty4 9600
-5:2345:respawn:/sbin/agetty -I '\033(K' tty5 9600
-6:2345:respawn:/sbin/agetty -I '\033(K' tty6 9600</literal>
-
-<literal># End /etc/inittab</literal>
-EOF</userinput></screen>
-
-</sect2>
-
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-sysvinit" role="."/></para>
-</sect2>
+  </sect2>
 
 </sect1>
-
