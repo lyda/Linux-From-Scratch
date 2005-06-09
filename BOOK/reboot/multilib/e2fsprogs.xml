@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,37 +8,53 @@
 ]>
 
 <sect1 id="ch-reboot-e2fsprogs" role="wrap">
-<title>E2fsprogs-&e2fsprogs-version;</title>
-<?dbhtml filename="e2fsprogs.html"?>
+  <?dbhtml filename="e2fsprogs.html"?>
 
-<indexterm zone="ch-reboot-e2fsprogs"><primary sortas="a-E2fsprogs">E2fsprogs</primary>
-<secondary>reboot</secondary></indexterm>
+  <title>E2fsprogs-&e2fsprogs-version;</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/e2fsprogs.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-reboot-e2fsprogs">
+    <primary sortas="a-E2fsprogs">E2fsprogs</primary>
+    <secondary>reboot</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.2 SBU</seg><seg>5.2 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/e2fsprogs.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/e2fsprogs.xml"
+    xpointer="xpointer(id('package-e2fsprogs')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of E2fsprogs</title>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>Make sure the libraries get installed to /tools/lib64:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/e2fsprogs.xml"
+    xpointer="xpointer(id('package-e2fsprogs')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of E2fsprogs</title>
+
+    <para>Make sure the libraries get installed to
+    <filename class="directory">/tools/lib64</filename>:</para>
 
 <screen><userinput>sed -i "/libdir=.*\/lib/s@/lib@/lib64@g" configure</userinput></screen>
 
-<para>It is recommended that E2fsprogs be built in a subdirectory of the source tree:
-</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/e2fsprogs.xml"
+    xpointer="xpointer(id('install-e2fsprogs')/para[1])"/>
 
-<screen><userinput>mkdir build
-cd build</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/e2fsprogs.xml"
+    xpointer="xpointer(id('install-e2fsprogs')/screen[1])"/>
 
 <para>Prepare E2fsprogs for compilation:</para>
 
@@ -45,64 +62,47 @@ cd build</userinput></screen>
 --enable-elf-shlibs --disable-evms \
 --host=${LFS_TARGET}</userinput></screen>
 
-<para>The meaning of the configure options:</para>
+    <variablelist>
+      <title>The meaning of the configure options:</title>
 
-<variablelist>
-<varlistentry>
-<term><parameter>--with-root-prefix=""</parameter></term>
-<listitem><para>Certain programs (such as the
-<command>e2fsck</command> program) are considered essential programs.
-When, for example, <filename class="directory">/usr</filename> is not
-mounted, these essential programs need to be available. They belong in
-directories like <filename class="directory">/lib</filename> and
-<filename class="directory">/sbin</filename>. If this option is not
-passed to E2fsprogs' configure, the programs are installed into the
-<filename class="directory">/usr</filename> directory, which is not
-where they should be.</para></listitem>
-</varlistentry>
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../../final-system/common/e2fsprogs.xml"
+      xpointer="xpointer(id('install-e2fsprogs')/variablelist[1]/varlistentry[2])"/>
 
-<varlistentry>
-<term><parameter>--enable-elf-shlibs</parameter></term>
-<listitem><para>This creates the shared libraries which some programs
-in this package use.</para></listitem>
-</varlistentry>
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../../final-system/common/e2fsprogs.xml"
+      xpointer="xpointer(id('install-e2fsprogs')/variablelist[1]/varlistentry[3])"/>
 
-<varlistentry>
-<term><parameter>--disable-evms</parameter></term>
-<listitem><para>This disables the building of the Enterprise Volume
-Management System (EVMS) plugin. This plugin is not up-to-date with
-the latest EVMS internal interfaces and EVMS is not installed as part
-of a base LFS system, so the plugin is not required. See the EVMS
-website at <ulink url="http://evms.sourceforge.net/"/> for more
-information regarding EVMS.</para></listitem>
-</varlistentry>
-</variablelist>
+    </variablelist>
 
-<para>Compile the package:</para>
+    <para>Compile the package:</para>
 
 <screen><userinput>make CC="${CC} ${BUILD64}" LDFLAGS="-s"</userinput></screen>
 
-<para>Install most of the package:</para>
+    <para>Install most of the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Install the shared libraries:</para>
+    <para>Install the shared libraries:</para>
 
 <screen><userinput>make install-libs</userinput></screen>
 
-<para>Create needed symlinks for a bootable system:</para>
+    <para>Create needed symlinks for a bootable system:</para>
 
 <screen><userinput>install -d ${LFS}/sbin
 cd ${LFS}/sbin
 ln -sf ../tools/sbin/fsck.ext2 .
 ln -sf ../tools/sbin/fsck.ext3 .
 ln -sf ../tools/sbin/e2fsck .</userinput></screen>
-</sect2>
 
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-e2fsprogs" role="."/></para>
-</sect2>
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-e2fsprogs" role="."/></para>
+
+  </sect2>
 
 </sect1>
-
