@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch-reboot-devices">
-<title>Populating /dev</title>
-<?dbhtml filename="devices.html"?>
+  <?dbhtml filename="devices.html"?>
 
-<indexterm zone="ch-reboot-devices"><primary sortas="e-Devices">/dev/*</primary></indexterm>
+  <title>Populating /dev</title>
 
-<sect2>
-<title>Creating Initial Device Nodes</title>
+  <indexterm zone="ch-reboot-devices">
+    <primary sortas="e-Devices">/dev/*</primary>
+  </indexterm>
 
-<para>When the kernel boots the system, it requires the presence of a few device
-nodes, in particular the <filename class="devicefile">console</filename> and
-<filename class="devicefile">null</filename> devices. Create these by
-running the following commands:</para>
+  <sect2>
+    <title>Creating Initial Device Nodes</title>
+
+    <para>When the kernel boots the system, it requires the presence
+    of a few device nodes, in particular the <filename
+    class="devicefile">console</filename> and <filename
+    class="devicefile">null</filename> devices. Create these by running
+    the following commands:</para>
 
 <screen><userinput>mknod -m 600 ${LFS}/dev/console c 5 1
 mknod -m 666 ${LFS}/dev/null c 1 3</userinput></screen>
-</sect2>
+
+  </sect2>
 
 </sect1>
-
