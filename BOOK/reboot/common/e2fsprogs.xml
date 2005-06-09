@@ -57,31 +57,16 @@
     --enable-elf-shlibs --disable-evms \
     --host=${LFS_TARGET}</userinput></screen>
 
-<screen><userinput>../configure --prefix=/usr --with-root-prefix="" \
-    --enable-elf-shlibs --disable-evms</userinput></screen>
-
     <variablelist>
       <title>The meaning of the configure options:</title>
 
-      <varlistentry>
-        <term><parameter>--enable-elf-shlibs</parameter></term>
-        <listitem>
-          <para>This creates the shared libraries which some programs
-          in this package use.</para>
-        </listitem>
-      </varlistentry>
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../../final-system/common/e2fsprogs.xml"
+      xpointer="xpointer(id('install-e2fsprogs')/variablelist[1]/varlistentry[2])"/>
 
-      <varlistentry>
-        <term><parameter>--disable-evms</parameter></term>
-        <listitem>
-          <para>This disables the building of the Enterprise Volume
-          Management System (EVMS) plugin. This plugin is not up-to-date with
-          the latest EVMS internal interfaces and EVMS is not installed as part
-          of a base LFS system, so the plugin is not required. See the EVMS
-          website at <ulink url="http://evms.sourceforge.net/"/> for more
-          information regarding EVMS.</para>
-        </listitem>
-      </varlistentry>
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../../final-system/common/e2fsprogs.xml"
+      xpointer="xpointer(id('install-e2fsprogs')/variablelist[1]/varlistentry[3])"/>
 
     </variablelist>
 
