@@ -35,14 +35,14 @@
 <title>Building the Basic Tools</title>
 <?dbhtml filename="part4.html"?>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="temp-system/mips64-chapter.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="reboot/raq2-chapter.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="reboot/mips64-chapter.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chroot/raq2-chapter.xml"/>
 </part>
 
 <part id="part5">
 <title>Building the LFS System</title>
 <?dbhtml filename="part5.html"?>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="temp-tools/raq2-chapter.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="temp-tools/mips64-chapter.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="final-system/raq2-chapter.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bootscripts/raq2-chapter.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="bootable/raq2-chapter.xml"/>

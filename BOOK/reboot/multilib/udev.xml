@@ -58,7 +58,7 @@
 
     <para>Install the package:</para>
 
-<screen><userinput>make DESTDIR=${LFS} udevdir=/dev install</userinput></screen>
+<screen><userinput>make udevdir=/dev install</userinput></screen>
 
     <para>Udev's configuration is far from ideal by default, so install
     the configuration files here:</para>

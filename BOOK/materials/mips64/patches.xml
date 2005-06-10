@@ -54,6 +54,13 @@
       </listitem>
     </varlistentry>
 
+    <varlistentry>
+      <term>Util-linux MIPS64 Patch - 1 KB:</term> <listitem>
+        <para><ulink
+        url="&patches-root;util-linux/&util-linux-mips64-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
   </variablelist>
 
 </sect1>

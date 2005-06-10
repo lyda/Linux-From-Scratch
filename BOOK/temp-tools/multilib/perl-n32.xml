@@ -5,12 +5,12 @@
   %general-entities;
   %patches-entities;
 ]>
-<sect1 id="ch-temp-tools-perl-64bit" role="wrap">
-<title>Perl-&perl-version; 64-Bit</title>
-<?dbhtml filename="perl64.html"?>
+<sect1 id="ch-temp-tools-perl-n32" role="wrap">
+<title>Perl-&perl-version; N32</title>
+<?dbhtml filename="perl-n32.html"?>
 
-<indexterm zone="ch-temp-tools-perl-64bit">
-<primary sortas="a-Perl-64bit">Perl 64-Bit</primary>
+<indexterm zone="ch-temp-tools-perl-n32">
+<primary sortas="a-Perl-n32">Perl N32</primary>
 <secondary>temporary system</secondary></indexterm>
 
 <sect2 role="package"><title/>
@@ -34,14 +34,14 @@ the following patch:</para>
 
 <screen><userinput>patch -Np1 -i ../perl-&perl-version;-libc-1.patch</userinput></screen>
 
-<para>Make sure perl looks at /tools/lib64 for shared libraries:</para>
+<para>Make sure perl looks at /tools/lib32 for shared libraries:</para>
 
-<screen><userinput>sed -i 's@\${prefix}/lib@\${prefix}/lib64@g' hints/linux.sh</userinput></screen>
+<screen><userinput>sed -i 's@\${prefix}/lib@\${prefix}/lib32@g' hints/linux.sh</userinput></screen>
 
 <para>Prepare Perl for compilation (make sure to get the 'IO Fcntl POSIX'
 part of the command correct&mdash;they are all letters):</para>
 
-<screen><userinput>CC="gcc ${BUILD64}" ./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX'</userinput></screen>
+<screen><userinput>CC="gcc ${BUILDN32}" ./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX'</userinput></screen>
 
 <para>The meaning of the configure option:</para>
 
@@ -68,8 +68,8 @@ be run in the next chapter if desired.</para>
 <para>Copy these tools and their libraries:</para>
 
 <screen><userinput>cp perl pod/pod2man /tools/bin
-install -d /tools/lib64/perl5/&perl-version;
-cp -R lib/* /tools/lib64/perl5/&perl-version;</userinput></screen>
+install -d /tools/lib32/perl5/&perl-version;
+cp -R lib/* /tools/lib32/perl5/&perl-version;</userinput></screen>
 
 </sect2>
 
