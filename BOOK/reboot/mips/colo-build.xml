@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,43 +8,61 @@
 ]>
 
 <sect1 id="ch-reboot-colo-build" role="wrap">
-<title>Colo-&colo-version;</title>
-<?dbhtml filename="colo-build.html"?>
+  <?dbhtml filename="colo-build.html"?>
 
-<indexterm zone="ch-reboot-colo-build"><primary sortas="a-Colo-Build">Colo</primary></indexterm>
+  <title>Colo-&colo-version;</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/mips/colo.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-reboot-colo-build">
+    <primary sortas="a-Colo-Build">Colo</primary>
+    <secondary>reboot</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.2 SBU</seg><seg>10 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/mips/colo.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/colo.xml"
+    xpointer="xpointer(id('package-colo')/para[1])"/>
 
-</sect2>
-<sect2 role="installation">
-<title>Installation of Colo</title>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<para>Compile the Colo package:</para>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/colo.xml"
+    xpointer="xpointer(id('package-colo')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Colo</title>
+
+    <para>Compile the Colo package:</para>
 
 <screen><userinput>cd tools/elf2rfx
 make CC=gcc
 cd ../..
 make CROSS_COMPILE="${LFS_TARGET}-"</userinput></screen>
 
-<para>Install the package:</para>
+    <para>Install the package:</para>
 
 <screen><userinput>cp binaries/colo-chain.elf ${LFS}/boot/vmlinux
 gzip -9 ${LFS}/boot/vmlinux</userinput></screen>
 
-</sect2>
+  </sect2>
 
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-colo" role="."/></para>
-</sect2>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-colo" role="."/></para>
+
+  </sect2>
 
 </sect1>
