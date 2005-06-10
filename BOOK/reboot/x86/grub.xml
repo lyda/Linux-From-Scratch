@@ -8,7 +8,7 @@
 <sect1 id="ch-reboot-grub">
   <?dbhtml filename="grub.html"?>
 
-  <title>Making the LFS System Bootable</title>
+  <title>Making the Temporary System Bootable</title>
 
   <indexterm zone="ch-reboot-grub">
     <primary sortas="a-Grub">Grub</primary>
