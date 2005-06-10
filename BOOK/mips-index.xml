@@ -36,7 +36,7 @@
 <?dbhtml filename="part4.html"?>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="temp-system/mips-chapter.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="reboot/mips-chapter.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chroot/raq2-chapter.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chroot/mips-chapter.xml"/>
 </part>
 
 <part id="part5">
