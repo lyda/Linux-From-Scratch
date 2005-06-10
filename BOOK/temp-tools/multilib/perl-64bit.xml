@@ -41,7 +41,8 @@ the following patch:</para>
 <para>Prepare Perl for compilation (make sure to get the 'IO Fcntl POSIX'
 part of the command correct&mdash;they are all letters):</para>
 
-<screen><userinput>CC="gcc ${BUILD64}" ./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX'</userinput></screen>
+<screen><userinput>./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX' \
+   -Dcc="gcc ${BUILD64}</userinput></screen>
 
 <para>The meaning of the configure option:</para>
 
