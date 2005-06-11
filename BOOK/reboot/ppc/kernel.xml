@@ -150,7 +150,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/ppc/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/para[25])"/>
+    xpointer="xpointer(//*[@role='installation']/para[24])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86/kernel.xml"
