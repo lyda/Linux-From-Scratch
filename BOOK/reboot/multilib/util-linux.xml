@@ -52,6 +52,14 @@
     xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/util-linux.xml"
     xpointer="xpointer(id('install-util-linux')/para[1])"/>
 
@@ -68,21 +76,25 @@
 
 <screen><userinput>CC="${CC} ${BUILD64}" ./configure</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/para[5])"/>
 
-<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no CPUOPT="" ARCH="" CPU=""</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/util-linux.xml"
     xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
 
-    <para>Install the package as <systemitem
-    class="username">root</systemitem>:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/para[6])"/>
 
-<screen><userinput>exit
-cd ${LFS}/sources/util-linux-&util-linux-version;
-make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no CPUOPT="" ARCH="" CPU="" DESTDIR=${LFS} install
-su - lfs</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[6])"/>
 
   </sect2>
 

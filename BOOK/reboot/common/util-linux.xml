@@ -112,11 +112,9 @@
 
     </variablelist>
 
-    <para>Install the package as <systemitem
-    class="username">root</systemitem>:</para>
+    <para>Install the package:</para>
 
-<screen><userinput>exit
-make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no USE_TTY_GROUP=no CPUOPT="" ARCH="" CPU="" DESTDIR=${LFS} install</userinput></screen>
+<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no USE_TTY_GROUP=no CPUOPT="" ARCH="" CPU="" DESTDIR=${LFS} install</userinput></screen>
 
   </sect2>
 
