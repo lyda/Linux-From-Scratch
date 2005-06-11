@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,14 +8,16 @@
 ]>
 
 <sect1 id="ch-reboot-silo" role="wrap">
-<title>Silo-&silo-version;</title>
-<?dbhtml filename="silo.html"?>
+  <?dbhtml filename="silo.html"?>
 
-<indexterm zone="ch-reboot-silo"><primary sortas="a-Silo">Silo</primary></indexterm>
+  <title>Making the Temporary System Bootable</title>
 
-<sect2 role="package"><title/>
-<para>This is for the configuration of silo, similar to what is in bootscripts.</para>
+  <indexterm zone="ch-reboot-silo">
+    <primary sortas="a-Silo">Silo</primary>
+    <secondary>reboot, configuring</secondary>
+  </indexterm>
 
-</sect2>
+  <para>This is for the configuration of silo, similar to what
+  is in bootscripts.</para>
 
 </sect1>
