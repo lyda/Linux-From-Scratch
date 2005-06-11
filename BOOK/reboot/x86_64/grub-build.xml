@@ -41,7 +41,7 @@
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/grub-bild.xml"
+  href="../x86/grub-build.xml"
     xpointer="xpointer(//*[@role='installation'])"/>
 
   <sect2 role="content">
