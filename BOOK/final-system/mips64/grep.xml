@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-system-grep" role="wrap">
+  <?dbhtml filename="grep.html"?>
+
+  <title>Grep-&grep-version;</title>
+
+  <indexterm zone="ch-system-grep">
+    <primary sortas="a-Grep">Grep</primary>
+  </indexterm>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/grep.xml"
+  xpointer="xpointer(id('package-grep'))"/>
+
+  <sect2 role="installation">
+    <title>Installation of Grep</title>
+
+    <para>This patch updates <filename>config.guess</filename> and
+    <filename>config.sub</filename> for MIPS processors.</para>
+
+<screen><userinput>patch -Np1 -i ../&grep-mips_update-patch;</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(id('install-grep')/para[1]/range-to(id('install-grep')/para[last()]))"/>
+
+</sect2>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/grep.xml"
+  xpointer="xpointer(id('contents-grep'))"/>
+
+</sect1>

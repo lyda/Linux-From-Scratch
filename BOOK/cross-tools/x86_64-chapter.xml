@@ -16,7 +16,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/flags.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/variables.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/linux-libc-headers.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/binutils.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/binutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/glibc-headers.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/gcc-static.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/glibc-startfiles.xml"/>

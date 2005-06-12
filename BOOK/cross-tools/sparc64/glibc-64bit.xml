@@ -79,7 +79,7 @@
 
     <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD64}" \
+<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD64}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools --libdir=/tools/lib64 \
     --host=${LFS_TARGET} --build=${LFS_HOST} \

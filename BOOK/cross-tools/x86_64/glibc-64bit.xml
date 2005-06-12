@@ -69,8 +69,8 @@
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD64}" AR="${LFS_TARGET}-ar" \
-    RANLIB="${LFS_TARGET}-ranlib" \
+<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD64}" \
+    AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
     --without-cvs --disable-profile --enable-add-ons \

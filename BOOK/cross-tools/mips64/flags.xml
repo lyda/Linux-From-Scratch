@@ -13,9 +13,9 @@
   <para>We will need to setup target specific flags for the compiler
   and linkers.</para>
 
-<screen><userinput>export BUILD32="-mabi=32"
-export BUILDN32="-mabi=n32"
-export BUILD64="-mabi=64"</userinput></screen>
+<screen><userinput>export BUILD32="-mabi=32 -mips64"
+export BUILDN32="-mabi=n32 -mips64"
+export BUILD64="-mabi=64 -mips64"</userinput></screen>
 
   <para>You will need to set your host target triplet for o32 bit:</para>
 

@@ -68,7 +68,7 @@
     <para>To create Linuxthread Startfiles use the following
     configure line:</para>
 
-<screen><userinput>CC="${LFS_TARGET}-gcc ${BUILD64}" \
+<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD64}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \

@@ -9,7 +9,16 @@
   <?dbhtml dir="temp-tools"?>
   <?dbhtml filename="chapter.html"?>
 
-  <title>Constructing a Temporary Tools</title>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/flags.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/tcl.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/tcl-64bit.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/expect.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/expect-64bit.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/dejagnu.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl-64bit.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/texinfo.xml"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/flags.xml"/>

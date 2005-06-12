@@ -61,7 +61,7 @@
 
     <para>Continue with compiling the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>make CFLAGS_FOR_TARGET="-mips64" CXXFLAGS_FOR_TARGET="-mips64"</userinput></screen>
 
     <para>Install the package:</para>
 

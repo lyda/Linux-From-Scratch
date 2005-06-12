@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-system-openssh" role="wrap">
+  <?dbhtml filename="openssh.html"?>
+
+  <title>OpenSSH-&openssh-version;</title>
+
+  <indexterm zone="ch-system-openssh">
+    <primary sortas="a-openssh">OpenSSH</primary>
+  </indexterm>
+
+  <sect2 id="package-openssh" role="package">
+    <title/>
+
+    <para> The OpenSSH package contains ssh clients and the sshd daemon.
+    This is useful for encrypting authentication and subsequent traffic
+    over a network.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <segmentedlist>
+      <segtitle>&dependencies;</segtitle>
+
+      <seglistitem>
+        <seg>OpenSSL</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 id="install-openssh" role="installation">
+    <title>Installation of OpenSSH</title>
+
+    <para>Need to create a chroot-jail for OpenSSH:</para>
+
+<screen><userinput>mkdir /var/empty
+chown root:sys /var/empty
+groupadd sshd
+useradd -c 'sshd privsep' -d /var/empty -g sshd -s /bin/false sshd</userinput></screen>
+
+    <para>Prepare OpenSSH for compilation:</para>
+
+<screen><userinput>./configure --prefix=/usr --sysconfdir=/etc/ssh \
+    --libexecdir=/usr/sbin --with-md5-passwords</userinput></screen>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+    <para>Make OpenSSH usable by the
+    <systemitem class="username">root</systemitem> user.</para>
+
+<screen><userinput>echo "PermitRootLogin yes" &gt;&gt; /etc/ssh/sshd_config</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-openssh" role="content">
+    <title>Contents of OpenSSH</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+
+      <seglistitem>
+        <seg>scp, sftp, sftp-server, slogin, ssh, sshd, ssh-add, ssh-agent,
+        ssh-keygen, ssh-keyscan, and ssh-keysign</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="scp">
+        <term><command>scp</command></term>
+        <listitem>
+          <para>A file copy program that acts like <command>rcp</command>
+          except it uses an encrypted protocol</para>
+          <indexterm zone="ch-system-openssh scp">
+            <primary sortas="b-scp">scp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sftp">
+        <term><command>sftp</command></term>
+        <listitem>
+          <para>An FTP-like program that works over SSH1 and SSH2
+          protocols</para>
+          <indexterm zone="ch-system-openssh sftp">
+            <primary sortas="b-sftp">sftp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sftp-server">
+        <term><command>sftp-server</command></term>
+        <listitem>
+          <para>An SFTP server subsystem</para>
+          <indexterm zone="ch-system-openssh sftp-server">
+            <primary sortas="b-sftp-server">sftp-server</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="slogin">
+        <term><command>slogin</command></term>
+        <listitem>
+          <para>Symlink to <command>ssh</command></para>
+          <indexterm zone="ch-system-openssh slogin">
+            <primary sortas="g-slogin">slogin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ssh">
+        <term><command>ssh</command></term>
+        <listitem>
+          <para>An <command>rlogin</command>/<command>rsh</command>-like
+          client program except it uses an encrypted protocol</para>
+          <indexterm zone="ch-system-openssh ssh">
+            <primary sortas="b-ssh">ssh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sshd">
+        <term><command>ssh</command></term>
+        <listitem>
+          <para>The daemon that listens for <command>ssh</command> login
+          requests</para>
+          <indexterm zone="ch-system-openssh sshd">
+            <primary sortas="b-ssh">sshd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ssh-add">
+        <term><command>ssh-add</command></term>
+        <listitem>
+          <para>Tool which adds keys to the <command>ssh-agent</command></para>
+          <indexterm zone="ch-system-openssh ssh-add">
+            <primary sortas="b-ssh-add">ssh-add</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ssh-agent">
+        <term><command>ssh-agent</command></term>
+        <listitem>
+          <para>An authentication agent that can store private keys</para>
+          <indexterm zone="ch-system-openssh ssh-agent">
+            <primary sortas="b-ssh-agent">ssh-agent</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ssh-keygen">
+        <term><command>ssh-keygen</command></term>
+        <listitem>
+          <para>Key generation tool</para>
+          <indexterm zone="ch-system-openssh ssh-keygen">
+            <primary sortas="b-ssh-keygen">ssh-keygen</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ssh-keyscan">
+        <term><command>ssh-keyscan</command></term>
+        <listitem>
+          <para>Utility for gathering public host keys from a number
+          of hosts</para>
+          <indexterm zone="ch-system-openssh ssh-keyscan">
+            <primary sortas="b-ssh-keyscan">ssh-keyscan</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ssh-keysign">
+        <term><command>ssh-keysign</command></term>
+        <listitem>
+          <para>Used by <command>ssh</command> to access the local host
+          keys and generate the digital signature required during hostbased
+          authentication with SSH protocol version 2</para>
+          <indexterm zone="ch-system-openssh ssh-keysign">
+            <primary sortas="b-ssh-keysign">ssh-keysign</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
