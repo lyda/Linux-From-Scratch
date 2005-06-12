@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,91 +8,76 @@
 ]>
 
 <sect1 id="ch-temp-tools-expect-64" role="wrap">
-<title>Expect-&expect-version; 64-Bit</title>
-<?dbhtml filename="expect64.html"?>
+  <?dbhtml filename="expect64.html"?>
 
-<indexterm zone="ch-temp-tools-expect-64"><primary sortas="a-Expect-64">Expect 64-Bit</primary></indexterm>
+  <title>Expect-&expect-version; 64-Bit</title>
 
-<sect2 role="package"><title/>
-<para>The Expect package contains a program for carrying out scripted dialogues
-with other interactive programs.</para>
+  <indexterm zone="ch-temp-tools-expect-64">
+    <primary sortas="a-Expect-64">Expect 64-Bit</primary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.1 SBU</seg><seg>3.9 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<segmentedlist>
-<segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make, Sed, and Tcl</seg></seglistitem>
-</segmentedlist>
-</sect2>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(id('package-expect')/para[1])"/>
 
-<sect2 role="installation">
-<title>Installation of Expect</title>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<para>First, fix a bug that can result in false failures during the GCC test
-suite run:</para>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<screen><userinput>patch -Np1 -i ../&expect-spawn-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(id('package-expect')/segmentedlist[2])"/>
 
-<para>Now prepare Expect for compilation:</para>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Expect</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(id('install-expect')/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(id('install-expect')/screen[1])"/>
+
+    <para>Now prepare Expect for compilation:</para>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/tools \
    --with-tcl=/tools/lib64 --libdir=/tools/lib64 --with-x=no</userinput></screen>
 
-<para>The meaning of the configure options:</para>
-
-<variablelist>
-<varlistentry>
-<term><parameter>--with-tcl=/tools/lib64</parameter></term>
-<listitem><para>This ensures that the configure script finds the Tcl installation in
-the temporary temp-tools location instead of possibly locating an existing
-one on the host system.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><parameter>--with-x=no</parameter></term>
-<listitem><para>This tells the configure script not to search for Tk
-(the Tcl GUI component) or the X Window System libraries, both of
-which may reside on the host system.</para></listitem>
-</varlistentry>
-</variablelist>
-
-<para>Build the package:</para>
+    <para>Build the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>To test the results, issue: <userinput>make test</userinput>.
-Note that the Expect test suite is known to experience failures under
-certain host conditions that are not within our control. Therefore,
-test suite failures here are not surprising and are not considered
-critical.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(id('install-expect')/para[4])"/>
 
-
-<para>Install the package:</para>
+    <para>Install the package:</para>
 
 <screen><userinput>make SCRIPTS="" install</userinput></screen>
 
-<para>The meaning of the make parameter:</para>
+    <para>The source directories of both Tcl and Expect can now
+    be removed.</para>
 
-<variablelist>
-<varlistentry>
-<term><parameter>SCRIPTS=""</parameter></term>
-<listitem><para>This prevents installation of the supplementary expect
-scripts, which are not needed.</para></listitem>
-</varlistentry>
-</variablelist>
+  </sect2>
 
-<para>The source directories of both Tcl and Expect can now be removed.</para>
+  <sect2 role="content">
+    <title/>
 
-</sect2>
+    <para>Details on this package are located in <xref
+    linkend="contents-expect" role="."/></para>
 
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-expect" role="."/></para>
-</sect2>
+  </sect2>
 
 </sect1>
