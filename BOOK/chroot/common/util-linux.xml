@@ -64,8 +64,6 @@ sed 's@/usr/include@/tools/include@g' configure.orig > configure</userinput></sc
 <screen><userinput>make ARCH="" CPU="" -C mount mount umount
 make ARCH="" CPU="" -C text-utils more</userinput></screen>
 
-    <para>This package does not come with a test suite.</para>
-
     <para>Copy these programs to the temporary tools directory:</para>
 
 <screen><userinput>cp mount/{,u}mount text-utils/more /tools/bin</userinput></screen>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   <!ENTITY % patches-entities SYSTEM "../../patches.ent">
   %general-entities;
@@ -7,65 +8,93 @@
 ]>
 
 <sect1 id="ch-chroot-util-linux" role="wrap">
-<title>Util-linux-&util-linux-version;</title>
-<?dbhtml filename="util-linux.html"?>
+  <?dbhtml filename="util-linux.html"?>
 
-<indexterm zone="ch-chroot-util-linux">
-<primary sortas="a-Util-linux">Util-linux</primary>
-<secondary>chroot</secondary></indexterm>
+  <title>Util-linux-&util-linux-version;</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/util-linux.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-chroot-util-linux">
+    <primary sortas="a-Util-linux">Util-linux</primary>
+    <secondary>chroot</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.2 SBU</seg><seg>16 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../../final-system/common/util-linux.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(id('package-util-linux')/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of Util-linux</title>
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>Util-linux does not use the freshly installed headers and
-libraries from the <filename class="directory">/tools</filename>
-directory. This is fixed by altering the configure script:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(id('package-util-linux')/segmentedlist[2])"/>
 
-<screen><userinput>cp -p configure configure.orig
-sed 's@/usr/include@/tools/include@g' configure.orig > configure</userinput></screen>
+  </sect2>
 
-<para>Ensure that util-linux uses the proper flags for our compile:</para>
+  <sect2 role="installation">
+    <title>Installation of Util-linux</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+
+    <para>Ensure that Util-linux uses the proper flags for our compile:</para>
 
 <screen><userinput>export CC="${CC} ${BUILD64}"</userinput></screen>
 
-<para>Prepare Util-linux for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
-<screen><userinput>./configure</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
-<para>Compile some support routines:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
-<screen><userinput>make ARCH="" CPU="" -C lib</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
-<para>Since only a couple of the utilities contained in this package
-are needed, build only those:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/para[4])"/>
 
-<screen><userinput>make ARCH="" CPU="" -C mount mount umount
-make ARCH="" CPU="" -C text-utils more</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
 
-<para>This package does not come with a test suite.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/para[5])"/>
 
-<para>Copy these programs to the temporary tools directory:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
 
-<screen><userinput>cp mount/{,u}mount text-utils/more /tools/bin</userinput></screen>
+  </sect2>
 
-</sect2>
+  <sect2 role="content">
+    <title/>
 
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-util-linux" role="."/></para>
-</sect2>
+    <para>Details on this package are located in <xref
+    linkend="contents-util-linux" role="."/></para>
+
+  </sect2>
+
 </sect1>
-
