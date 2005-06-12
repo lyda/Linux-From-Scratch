@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE bookinfo PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE bookinfo PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "general.ent">
   %general-entities;
 ]>
+
 <bookinfo>
-<title>Linux From Scratch</title>
-<subtitle>Version &version;</subtitle>
+  <title>Linux From Scratch</title>
+  <subtitle>Version &version;</subtitle>
 
-<authorgroup>
-<author><firstname>Gerard</firstname><surname>Beekmans</surname></author>
-</authorgroup>
+  <authorgroup>
+    <author>
+      <firstname>Gerard</firstname>
+      <surname>Beekmans</surname>
+    </author>
+  </authorgroup>
 
-
-<copyright id="copyright">
-	<year>1999&ndash;2005</year>
-	<holder>Gerard Beekmans</holder>
-</copyright>
+  <copyright id="copyright">
+    <year>1999&ndash;2005</year>
+    <holder>Gerard Beekmans</holder>
+  </copyright>
 
 </bookinfo>
-
