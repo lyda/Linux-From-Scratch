@@ -7,12 +7,12 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-reboot-util-linux" role="wrap">
+<sect1 id="ch-chroot-util-linux" role="wrap">
   <?dbhtml filename="util-linux.html"?>
 
   <title>Util-linux-&util-linux-version;</title>
 
-  <indexterm zone="ch-reboot-util-linux">
+  <indexterm zone="ch-chroot-util-linux">
     <primary sortas="a-Util-linux">Util-linux</primary>
     <secondary>chroot</secondary>
   </indexterm>

@@ -10,32 +10,18 @@
 
   <title>Changing Ownership</title>
 
-  <para>Currently, the <filename class="directory">/tools</filename>
-  directory is owned by the user <systemitem class="username">lfs</systemitem>,
-  a user that exists only on the host system. Although the <filename
-  class="directory">/tools</filename> directory can be deleted once the LFS
-  system has been finished, it can be retained to build additional LFS systems.
-  If the <filename class="directory">/tools</filename> directory is kept as is,
-  the files are owned by a user ID without a corresponding account. This is
-  dangerous because a user account created later could get this same user ID
-  and would own the <filename class="directory">/tools</filename> directory
-  and all the files therein, thus exposing these files to possible malicious
-  manipulation.</para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../reboot/common/changingowner.xml"
+  xpointer="xpointer(/sect1/para[1])"/>
 
-  <para>To avoid this issue, add the <systemitem
-  class="username">lfs</systemitem> user to the new LFS system later when
-  creating the <filename>/etc/passwd</filename> file, taking care to assign
-  it the same user and group IDs as on the host system. Alternatively, assign
-  the contents of the <filename class="directory">/tools</filename> directory
-  to user <systemitem class="username">root</systemitem> by running the
-  following command:</para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../reboot/common/changingowner.xml"
+  xpointer="xpointer(/sect1/para[2])"/>
 
 <screen><userinput>chown -R 0:0 /tools</userinput></screen>
 
-  <para>The command uses <parameter>0:0</parameter> instead of
-  <parameter>root:root</parameter>, because <command>chown</command>
-  is unable to resolve the name <quote>root</quote> until the password
-  file has been created. This book assumes you ran this
-  <command>chown</command> command.</para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../reboot/common/changingowner.xml"
+  xpointer="xpointer(/sect1/para[3])"/>
 
 </sect1>
