@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch-temp-tools-introduction">
-<title>Introduction</title>
-<?dbhtml filename="introduction.html"?>
+  <?dbhtml filename="introduction.html"?>
 
-<para>This chapter builds the tools needed to run the tests
-that the packages have. ie make check</para>
+  <title>Introduction</title>
 
-<para>It will also build any specific non cross-compiled
-packages for our system.</para>
+  <para>This chapter builds the tools needed to run the tests
+  that the packages have. I.e., <command>make check</command></para>
+
+  <para>It will also build any specific non cross-compiled
+  packages for our system.</para>
 
 </sect1>
-
