@@ -4,6 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch-chroot-chroot">
   <?dbhtml filename="chroot.html"?>
 
