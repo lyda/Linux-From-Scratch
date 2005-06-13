@@ -9,6 +9,8 @@
   <?dbhtml dir="temp-tools"?>
   <?dbhtml filename="chapter.html"?>
 
+  <title>Constructing a Temporary Tools</title>
+
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/flags.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/tcl.xml"/>
