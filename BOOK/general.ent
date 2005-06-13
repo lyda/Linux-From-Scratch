@@ -55,7 +55,6 @@
 <!ENTITY hotplug-version "2004_09_23">
 <!ENTITY iana-etc-version "1.04">
 <!ENTITY iproute2-version "2.6.11-050330">
-<!ENTITY iproute2-patch-version "2.6.11_050330">
 <!ENTITY inetutils-version "1.4.2">
 <!ENTITY kbd-version "1.12">
 <!ENTITY less-version "382">

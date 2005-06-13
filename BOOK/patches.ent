@@ -46,6 +46,8 @@
 
 <!ENTITY coreutils-x86_uname-patch "coreutils-&coreutils-version;-uname-2.patch">
 
+<!-- Start of x86_64 patches -->
+
 <!-- Start of ppc patches -->
 
 <!ENTITY yaboot-fix-patch "yaboot-&yaboot-version;-fix-1.patch">
