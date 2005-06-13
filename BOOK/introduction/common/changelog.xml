@@ -194,6 +194,15 @@
 -->
 
     <listitem>
+      <para>June 13, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to IPRoute2 ss050607.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 12, 2005</para>
       <itemizedlist>
         <listitem>

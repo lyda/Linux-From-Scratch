@@ -54,7 +54,7 @@
 <!ENTITY gzip-version "1.3.5">
 <!ENTITY hotplug-version "2004_09_23">
 <!ENTITY iana-etc-version "1.04">
-<!ENTITY iproute2-version "2.6.11-050330">
+<!ENTITY iproute2-version "ss050607">
 <!ENTITY inetutils-version "1.4.2">
 <!ENTITY kbd-version "1.12">
 <!ENTITY less-version "382">
