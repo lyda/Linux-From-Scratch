@@ -16,6 +16,7 @@
 <screen><userinput>export CC="${LFS_TARGET}-gcc"
 export CXX="${LFS_TARGET}-g++"
 export AR="${LFS_TARGET}-ar"
+export AS="${LFS_TARGET}-ar"
 export RANLIB="${LFS_TARGET}-ranlib"
 export LD="${LFS_TARGET}-ld"</userinput></screen>
 
@@ -25,6 +26,7 @@ export LD="${LFS_TARGET}-ld"</userinput></screen>
 <screen><userinput>echo export CC=\""${CC}\"" &gt;&gt; ~/.bashrc
 echo export CXX=\""${CXX}\"" &gt;&gt; ~/.bashrc
 echo export AR=\""${AR}\"" &gt;&gt; ~/.bashrc
+echo export AS=\""${AS}\"" &gt;&gt; ~/.bashrc
 echo export RANLIB=\""${RANLIB}\"" &gt;&gt; ~/.bashrc
 echo export LD=\""${LD}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
