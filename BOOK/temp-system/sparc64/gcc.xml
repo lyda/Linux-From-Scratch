@@ -124,7 +124,7 @@
 
     <para>Now prepare GCC for compilation:</para>
 
-<screen><userinput>CC="${CC} ${BUILD64}" \
+<screen><userinput>CC="${CC} ${BUILD64}" CXX="${CXX} ${BUILD64}\
     ../gcc-&gcc-version;/configure --prefix=/tools --libdir=/tools/lib64 \
     --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
     --libexecdir=/tools/lib64 --with-local-prefix=/tools --enable-long-long \
