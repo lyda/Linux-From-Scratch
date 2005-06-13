@@ -16,7 +16,7 @@
     <primary sortas="a-Autoconf">Autoconf</primary>
   </indexterm>
 
-  <sect2 id="package-autoconf" role="package">
+  <sect2 role="package">
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -39,7 +39,7 @@
 
   </sect2>
 
-  <sect2 id="install-autoconf" role="installation">
+  <sect2 role="installation">
     <title>Installation of Autoconf</title>
 
     <para>Prepare Autoconf for compilation:</para>
