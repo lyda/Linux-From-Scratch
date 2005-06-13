@@ -14,13 +14,15 @@
 
   <indexterm zone="ch-temp-tools-texinfo">
     <primary sortas="a-Texinfo">Texinfo</primary>
+    <secondary>temporary tools</secondary>
   </indexterm>
 
   <sect2 role="package">
     <title/>
 
-    <para>The Texinfo package contains programs for reading, writing, and
-    converting Info documents.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/texinfo.xml"
+    xpointer="xpointer(id('package-texinfo')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -32,14 +34,9 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Gettext, Glibc,
-        Grep, Make, Ncurses, and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/texinfo.xml"
+    xpointer="xpointer(id('package-texinfo')/segmentedlist[2])"/>
 
   </sect2>
 
@@ -60,39 +57,6 @@
     <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
-
-    <para>Optionally, install the components belonging in a TeX
-    installation:</para>
-
-<screen><userinput>make TEXMF=/usr/share/texmf install-tex</userinput></screen>
-
-    <variablelist>
-      <title>The meaning of the make parameter:</title>
-
-      <varlistentry>
-        <term><parameter>TEXMF=/usr/share/texmf</parameter></term>
-        <listitem>
-          <para>The <envar>TEXMF</envar> makefile variable holds the location
-          of the root of the TeX tree if, for example, a TeX package will be
-          installed later.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
-
-
-    <para>The Info documentation system uses a plain text file to hold its list
-    of menu entries. The file is located at
-    <filename>/usr/share/info/dir</filename>. Unfortunately, due to occasional
-    problems in the Makefiles of various packages, it can sometimes get out of
-    step with the Info manuals installed on the system. If the
-    <filename>/usr/share/info/dir</filename> file ever needs to be recreated,
-    the following optional commands will accomplish the task:</para>
-
-<screen><userinput>cd /usr/share/info
-rm dir
-for f in *
-do install-info $f dir 2&gt;/dev/null
-done</userinput></screen>
 
   </sect2>
 
