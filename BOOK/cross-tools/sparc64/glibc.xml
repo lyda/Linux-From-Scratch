@@ -71,39 +71,26 @@
     href="../../final-system/x86/glibc.xml"
     xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
+    <para>Now we make sure the Glibc goes into <filename
+    class="directory">/tools/lib</filename>:</para>
+
+<screen><userinput>echo "slibdir=/tools/lib" >> configparms</userinput></screen>
+
     <para>Next, prepare Glibc for compilation:</para>
 
 <screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD32}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host="sparcv9-unknown-linux-gnu" --build=${LFS_HOST} \
+    --host=${LFS_TARGET32} --build=${LFS_HOST} --libdir=/tools/lib \
     --without-cvs --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
-    --with-headers=/tools/include --without-gd \
-    --mandir=/tools/share/man --infodir=/tools/share/info \
-    --libexecdir=/tools/lib/glibc</userinput></screen>
+    --with-headers=/tools/include</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
-        <term><parameter>--without-gd</parameter></term>
-        <listitem>
-          <para>This prevents the build of the <command>memusagestat</command>
-          program, which insists on linking against the host's libraries
-          (libgd, libpng, libz, etc.).</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--mandir=/tools/share/man</parameter></term>
-        <listitem>
-          <para>This switch do ... .</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--infodir=/tools/share/info</parameter></term>
+        <term><parameter>--libdir=/tools/lib</parameter></term>
         <listitem>
           <para>This switch do ... .</para>
         </listitem>

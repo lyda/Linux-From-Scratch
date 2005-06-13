@@ -71,23 +71,32 @@
     href="../../final-system/x86/glibc.xml"
     xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
-    <para>The following command will ensure that Glibc uses
-    <filename class="directory">/tools/lib64</filename> for its
-    shared libraries:</para>
+    <para>Now we make sure the Glibc goes into <filename
+    class="directory">/tools/lib64</filename>:</para>
 
-<screen><userinput>echo "slibdir=/tools/lib64" &gt;&gt; configparms</userinput></screen>
+<screen><userinput>echo "slibdir=/tools/lib64" >> configparms</userinput></screen>
 
     <para>Next, prepare Glibc for compilation:</para>
 
 <screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD64}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
-    ../glibc-&glibc-version;/configure --prefix=/tools --libdir=/tools/lib64 \
-    --host=${LFS_TARGET} --build=${LFS_HOST} \
+    ../glibc-&glibc-version;/configure --prefix=/tools \
+    --host=${LFS_TARGET} --build=${LFS_HOST} --libdir=/tools/lib64 \
     --without-cvs --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
-    --with-headers=/tools/include --without-gd \
-    --mandir=/tools/share/man --infodir=/tools/share/info \
-    --libexecdir=/tools/lib64/glibc</userinput></screen>
+    --with-headers=/tools/include</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--libdir=/tools/lib32</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"

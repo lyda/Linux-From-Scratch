@@ -8,9 +8,9 @@
 ]>
 
 <sect1 id="ch-cross-tools-glibc-startfiles" role="wrap">
-  <?dbhtml filename="glibc-startfiles-64bit.html"?>
+  <?dbhtml filename="glibc-startfiles.html"?>
 
-  <title>Glibc-&glibc-version; Startfiles 64 Bit</title>
+  <title>Glibc-&glibc-version; Startfiles</title>
 
   <indexterm zone="ch-cross-tools-glibc-startfiles">
     <primary sortas="a-Glibc">Glibc</primary>
@@ -47,7 +47,6 @@
     href="../../final-system/mips/glibc.xml"
     xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/mips/glibc.xml"
     xpointer="xpointer(//*[@role='installation']/para[5])"/>
 
@@ -63,12 +62,13 @@
     href="../../final-system/x86/glibc.xml"
     xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
-    <para>Next, prepare Glibc for compilation:</para>
+    <para>To create Linuxthread Startfiles use the following
+    configure line:</para>
 
-<screen><userinput>BUIILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD32}" \
+<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD32}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host="sparcv9-unknown-linux-gnu" --build=${LFS_HOST} \
+    --host=${LFS_TARGET32} --build=${LFS_HOST} \
     --without-cvs --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>
@@ -81,7 +81,7 @@
 
 <screen><userinput>make csu/subdir_lib</userinput></screen>
 
-    <para>Since we are only creating the glibc startfiles at this time
+    <para>Since we are only creating the Glibc startfiles at this time
     we will need to manually copy files over.</para>
 
 <screen><userinput>install -d /tools/lib

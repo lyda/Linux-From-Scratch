@@ -15,10 +15,15 @@
 <screen><userinput>export BUILD32="-m32 -mcpu=ultrasparc"
 export BUILD64="-m64 -mcpu=ultrasparc"</userinput></screen>
 
+  <para>You will need to set your host target triplet for 32 bit:</para>
+
+<screen><userinput>export LFS_TARGET32="`sparcv9-unknown-linux-gnu`"</userinput></screen>
+
   <para>Lets add the build flags to <filename>~/.bashrc</filename> to
   prevent issues if we stop and come back later.</para>
 
 <screen><userinput>echo export BUILD32=\""${BUILD32}\"" &gt;&gt; ~/.bashrc
-echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc</userinput></screen>
+echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc
+echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
 </sect1>
