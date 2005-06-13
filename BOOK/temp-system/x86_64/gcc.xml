@@ -44,19 +44,19 @@
     <title>Installation of GCC</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/x86_64/gcc-static.xml"
+    href="../../cross-tools/mips/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/x86_64/gcc-static.xml"
+    href="../../cross-tools/mips/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/x86_64/gcc-static.xml"
+    href="../../cross-tools/mips/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/x86_64/gcc-static.xml"
+    href="../../cross-tools/mips/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -68,11 +68,11 @@
     xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/x86_64/gcc-static.xml"
+    href="../../cross-tools/mips/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/x86_64/gcc-static.xml"
+    href="../../cross-tools/mips/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -95,12 +95,11 @@
     href="../x86/gcc.xml"
     xpointer="xpointer(//*[@role='installation']/para[7])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[7])"/>
+<screen><userinput>sed -i "s@\./xgcc@/cross-tools/bin/${CC}@g" \
+   gcc/mklibgcc.in</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/x86_64/gcc-static.xml"
+    href="../../cross-tools/mips/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/important[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -113,7 +112,20 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[9]/range-to(//*[@role='installation']/para[last()]))"/>
+    xpointer="xpointer(//*[@role='installation']/para[9])"/>
+
+    <para>Now prepare GCC for compilation:</para>
+
+<screen><userinput>CC="${CC} ${BUILD64}" CXX="${CXX} ${BUILD64}" \
+    ../gcc-&gcc-version;/configure --prefix=/tools \
+    --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
+    --libexecdir=/tools/lib --with-local-prefix=/tools --enable-long-long \
+    --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
+    --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/variablelist[1]/range-to(//*[@role='installation']/para[last()]))"/>
 
   </sect2>
 
