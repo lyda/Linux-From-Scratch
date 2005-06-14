@@ -20,8 +20,8 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('package-autoconf')/para[1])"/>
+    href="../common/gzip.xml"
+    xpointer="xpointer(id('package-gzip')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -34,8 +34,8 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('package-autoconf')/segmentedlist[2])"/>
+    href="../common/gzip.xml"
+    xpointer="xpointer(id('package-gzip')/segmentedlist[2])"/>
 
   </sect2>
 
@@ -43,24 +43,24 @@
     <title>Installation of Gzip</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/para[1])"/>
+    href="../common/gzip.xml"
+    xpointer="xpointer(id('install-gzip')/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/screen[1])"/>
+    href="../common/gzip.xml"
+    xpointer="xpointer(id('install-gzip')/screen[1])"/>
 
     <para>Prepare Gzip for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/para[3])"/>
+    href="../common/gzip.xml"
+    xpointer="xpointer(id('install-gzip')/para[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/screen[3])"/>
+    href="../common/gzip.xml"
+    xpointer="xpointer(id('install-gzip')/screen[3])"/>
 
     <para>Compile the package:</para>
 
@@ -71,17 +71,17 @@
 <screen><userinput>make install</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/para[6])"/>
+    href="../common/gzip.xml"
+    xpointer="xpointer(id('install-gzip')/para[6])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/screen[6])"/>
+    href="../common/gzip.xml"
+    xpointer="xpointer(id('install-gzip')/screen[6])"/>
 
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/autoconf.xml"
-  xpointer="xpointer(id('contents-autoconf'))"/>
+  href="../common/gzip.xml"
+  xpointer="xpointer(id('contents-gzip'))"/>
 
 </sect1>
