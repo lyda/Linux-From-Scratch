@@ -84,6 +84,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>June 14th, 2005 [archaic]: Updated all build sizes. (merged from
+trunk r5916, r5917, r5918, and r5972)</para></listitem>
+
 <listitem><para>June 14th, 2005 [archaic]: Removed --with-included-regex from
 chapter6's grep since it is less reliable than glibc's in non-C locales.
 </para></listitem>
