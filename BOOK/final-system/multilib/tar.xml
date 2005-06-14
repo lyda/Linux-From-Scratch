@@ -16,10 +16,12 @@
     <primary sortas="a-Tar">Tar</primary>
   </indexterm>
 
-  <sect2 id="package-tar" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Tar package contains an archiving program.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/tar.xml"
+    xpointer="xpointer(id('package-tar')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -31,24 +33,22 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Gettext, Glibc,
-        Grep, Make, and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/tar.xml"
+    xpointer="xpointer(id('package-tar')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-tar" role="installation">
+  <sect2 role="installation">
     <title>Installation of Tar</title>
 
-    <para>Tar has a bug when the <option>-S</option> option is used with files
-    larger than 4 GB. The following patch properly fixes this issue:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/tar.xml"
+    xpointer="xpointer(id('install-tar')/para[1])"/>
 
-<screen><userinput>patch -Np1 -i ../&tar-sparse_fix-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/tar.xml"
+    xpointer="xpointer(id('install-tar')/screen[1])"/>
 
     <para>Prepare Tar for compilation:</para>
 
@@ -67,46 +67,8 @@
 
   </sect2>
 
-  <sect2 id="contents-tar" role="content">
-    <title>Contents of Tar</title>
-
-    <segmentedlist>
-      <segtitle>Installed programs</segtitle>
-
-      <seglistitem>
-        <seg>rmt and tar</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="rmt">
-        <term><command>rmt</command></term>
-        <listitem>
-          <para>Remotely manipulates a magnetic
-          tape drive through an interprocess communication connection</para>
-          <indexterm zone="ch-system-tar rmt">
-            <primary sortas="b-rmt">rmt</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="tar">
-        <term><command>tar</command></term>
-        <listitem>
-          <para>Creates and extracts files from archives, also known as
-          tarballs</para>
-          <indexterm zone="ch-system-tar tar">
-            <primary sortas="b-tar">tar</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/tar.xml"
+  xpointer="xpointer(id('contents-tar'))"/>
 
 </sect1>
