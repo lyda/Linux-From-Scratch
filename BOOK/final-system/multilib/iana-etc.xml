@@ -16,11 +16,12 @@
     <primary sortas="a-Iana-Etc">Iana-Etc</primary>
   </indexterm>
 
-  <sect2 id="package-iana-etc" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Iana-Etc package provides data for network services and
-    protocols.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/iana-etc.xml"
+    xpointer="xpointer(id('package-iana-etc')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -32,17 +33,13 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Make</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/iana-etc.xml"
+    xpointer="xpointer(id('package-iana-etc')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-iana-etc" role="installation">
+  <sect2 role="installation">
     <title>Installation of Iana-Etc</title>
 
     <para>Parse the data:</para>
@@ -55,47 +52,8 @@
 
   </sect2>
 
-  <sect2 id="contents-iana-etc" role="content">
-    <title>Contents of Iana-Etc</title>
-
-    <segmentedlist>
-      <segtitle>Installed files</segtitle>
-
-      <seglistitem>
-        <seg>/etc/protocols and /etc/services</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="protocols">
-        <term><filename>/etc/protocols</filename></term>
-        <listitem>
-          <para>Describes the various DARPA Internet protocols that are
-          available from the TCP/IP subsystem</para>
-          <indexterm zone="ch-system-iana-etc">
-            <primary sortas="e-/etc/protocols">/etc/protocols</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="services">
-        <term><filename>/etc/services</filename></term>
-        <listitem>
-          <para>Provides a mapping between friendly textual names for internet
-          services, and their underlying assigned port numbers and protocol
-          types</para>
-          <indexterm zone="ch-system-iana-etc">
-            <primary sortas="e-/etc/services">/etc/services</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/iana-etc.xml"
+  xpointer="xpointer(id('contents-iana-etc'))"/>
 
 </sect1>
