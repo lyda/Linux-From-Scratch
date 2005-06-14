@@ -10,47 +10,41 @@
 
   <title>Stripping Again</title>
 
-  <para>If the intended user is not a programmer and does not plan to do
-  any debugging on the system software, the system size can be decreased
-  by about 200 MB by removing the debugging symbols from binaries and
-  libraries. This causes no inconvenience other than not being able to
-  debug the software fully anymore.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/strippingagain.xml"
+    xpointer="xpointer(/sect1/para[1])"/>
 
-  <para>Most people who use the command mentioned below do not
-  experience any difficulties. However, it is easy to make a typo and
-  render the new system unusable, so before running the
-  <command>strip</command> command, it is a good idea to make a
-  backup of the current situation.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/strippingagain.xml"
+    xpointer="xpointer(/sect1/para[2])"/>
 
-  <para>Before performing the stripping, take special care to ensure that
-  none of the binaries that are about to be stripped are running. If
-  unsure whether the user entered chroot with the command given in
-  <xref linkend="chapter-chroot" role=","/> first exit from
-  chroot:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/strippingagain.xml"
+    xpointer="xpointer(/sect1/para[3])"/>
 
-<screen><userinput>logout</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/strippingagain.xml"
+    xpointer="xpointer(/sect1/screen[1])"/>
 
-    <para>Then reenter it with:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/strippingagain.xml"
+    xpointer="xpointer(/sect1/para[4])"/>
 
-<screen><userinput>chroot $LFS /tools/bin/env -i \
-    HOME=/root TERM=$TERM PS1='\u:\w\$ ' \
-    PATH=/bin:/usr/bin:/sbin:/usr/sbin \
-    /tools/bin/bash --login</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/strippingagain.xml"
+    xpointer="xpointer(/sect1/screen[2])"/>
 
     <para>Now the binaries and libraries can be safely stripped:</para>
 
 <screen><userinput>/tools/bin/find /{,usr/}{bin,lib,sbin} -type f \
    -exec /tools/bin/strip --strip-debug '{}' ';'</userinput></screen>
 
-    <para>A large number of files will be reported as having their file
-    format not recognized. These warnings can be safely ignored. These
-    warnings indicate that those files are scripts instead of
-    binaries.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/strippingagain.xml"
+    xpointer="xpointer(/sect1/para[6])"/>
 
-    <para>If disk space is very tight, the <option>--strip-all</option>
-    option can be used on the binaries in <filename
-    class="directory">/{,usr/}{bin,sbin}</filename> to gain several more
-    megabytes. Do not use this option on libraries&mdash;they will be
-    destroyed.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/strippingagain.xml"
+    xpointer="xpointer(/sect1/para[7])"/>
 
 </sect1>

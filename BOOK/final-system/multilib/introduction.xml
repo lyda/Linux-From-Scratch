@@ -20,10 +20,6 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/introduction.xml"
-    xpointer="xpointer(/sect1/itemizedlist[1])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/introduction.xml"
     xpointer="xpointer(/sect1/para[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
