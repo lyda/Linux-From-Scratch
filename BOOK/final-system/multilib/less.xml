@@ -16,10 +16,12 @@
     <primary sortas="a-Less">Less</primary>
   </indexterm>
 
-  <sect2 id="package-less" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Less package contains a text file viewer.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/less.xml"
+    xpointer="xpointer(id('package-less')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -31,36 +33,22 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-      <seglistitem>
-
-        <seg>Bash, Binutils, Coreutils, Diffutils,
-        GCC, Glibc, Grep, Make, Ncurses, and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/less.xml"
+    xpointer="xpointer(id('package-less')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-less" role="installation">
+  <sect2 role="installation">
     <title>Installation of Less</title>
 
     <para>Prepare Less for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --bindir=/bin --sysconfdir=/etc</userinput></screen>
 
-    <variablelist>
-      <title>The meaning of the configure option:</title>
-
-      <varlistentry>
-        <term><parameter>--sysconfdir=/etc</parameter></term>
-        <listitem>
-          <para>This option tells the programs created by the package to look
-          in <filename class="directory">/etc</filename> for the configuration
-          files.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/less.xml"
+    xpointer="xpointer(id('install-less')/variablelist[1])"/>
 
     <para>Compile the package:</para>
 
@@ -72,57 +60,8 @@
 
   </sect2>
 
-  <sect2 id="contents-less" role="content">
-    <title>Contents of Less</title>
-
-    <segmentedlist>
-      <segtitle>Installed programs</segtitle>
-
-      <seglistitem>
-        <seg>less, lessecho, and lesskey</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="less">
-        <term><command>less</command></term>
-        <listitem>
-          <para>a file viewer or pager; it displays the contents of the given
-          file, letting the user scroll, find strings, and jump to marks</para>
-          <indexterm zone="ch-system-less less">
-            <primary sortas="b-less">less</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="lessecho">
-        <term><command>lessecho</command></term>
-        <listitem>
-          <para>needed to expand meta-characters, such as <emphasis>*</emphasis>
-          and <emphasis>?</emphasis>, in filenames on Unix systems</para>
-          <indexterm zone="ch-system-less lessecho">
-            <primary sortas="b-lessecho">lessecho</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="lesskey">
-        <term><command>lesskey</command></term>
-        <listitem>
-          <para>used to specify the key bindings for
-          <command>less</command></para>
-          <indexterm zone="ch-system-less lesskey">
-            <primary sortas="b-lesskey">lesskey</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/less.xml"
+  xpointer="xpointer(id('contents-less'))"/>
 
 </sect1>
