@@ -16,11 +16,12 @@
     <primary sortas="a-Zlib">Zlib</primary>
   </indexterm>
 
-  <sect2 id="package-zlib" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Zlib package contains compression and un-compression routines
-    used by some programs.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(id('package-zlib')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -32,27 +33,18 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Binutils, Coreutils, GCC, Glibc, Make, and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(id('package-zlib')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-zlib" role="installation">
+  <sect2 role="installation">
     <title>Installation of Zlib</title>
 
-    <note>
-      <para>Zlib is known to build its shared library incorrectly if
-      <envar>CFLAGS</envar> is specified in the environment. If using a
-      specified <envar>CFLAGS</envar> variable, be sure to add the
-      <option>-fPIC</option> directive to the <envar>CFLAGS</envar>
-      variable for the duration of the configure command below, then
-      remove it afterwards.</para>
-    </note>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(id('install-zlib')/note[1])"/>
 
     <para>Prepare Zlib for compilation:</para>
 
@@ -109,35 +101,8 @@ make</userinput></screen>
 
   </sect2>
 
-  <sect2 id="contents-zlib" role="content">
-    <title>Contents of Zlib</title>
-
-    <segmentedlist>
-      <segtitle>Installed libraries</segtitle>
-
-      <seglistitem>
-        <seg>libz[a,so]</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="libz">
-        <term><filename class="libraryfile">libz</filename></term>
-        <listitem>
-          <para>Contains compression and un-compression
-          functions used by some programs</para>
-          <indexterm zone="ch-system-zlib libz">
-            <primary sortas="c-libz">libz</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/zlib.xml"
+  xpointer="xpointer(id('contents-zlib'))"/>
 
 </sect1>
