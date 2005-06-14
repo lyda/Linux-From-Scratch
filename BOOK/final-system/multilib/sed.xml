@@ -16,10 +16,12 @@
     <primary sortas="a-Sed">Sed</primary>
   </indexterm>
 
-  <sect2 id="package-sed" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Sed package contains a stream editor.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sed.xml"
+    xpointer="xpointer(id('package-sed')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -31,18 +33,13 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Gettext, Glibc,
-        Grep, Make, and Texinfo</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sed.xml"
+    xpointer="xpointer(id('package-sed')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-sed" role="installation">
+  <sect2 role="installation">
     <title>Installation of Sed</title>
 
     <para>Prepare Sed for compilation:</para>
@@ -62,34 +59,8 @@
 
   </sect2>
 
-  <sect2 id="contents-sed" role="content">
-    <title>Contents of Sed</title>
-
-    <segmentedlist>
-      <segtitle>Installed program</segtitle>
-
-      <seglistitem>
-        <seg>sed</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="sed">
-        <term><command>sed</command></term>
-        <listitem>
-          <para>Filters and transforms text files in a single pass</para>
-          <indexterm zone="ch-system-sed sed">
-            <primary sortas="b-sed">sed</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/sed.xml"
+  xpointer="xpointer(id('contents-sed'))"/>
 
 </sect1>
