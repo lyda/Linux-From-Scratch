@@ -16,11 +16,12 @@
     <primary sortas="a-Flex">Flex</primary>
   </indexterm>
 
-  <sect2 id="package-flex" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Flex package contains a utility for generating programs that
-    recognize patterns in text.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(id('package-autoconf')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -32,31 +33,30 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Bison, Coreutils, Diffutils,
-        GCC, Gettext, Glibc, Grep, M4, Make, and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(id('package-autoconf')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-flex" role="installation">
+  <sect2 role="installation">
     <title>Installation of Flex</title>
 
-    <para>Flex contains several known bugs. Fix these with the following
-    patch:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(id('install-autoconf')/para[1])"/>
 
-<screen><userinput>patch -Np1 -i ../&flex-fixes-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(id('install-autoconf')/screen[1])"/>
 
-    <para>The GNU autotools detects that the Flex source code has been
-    modified by the previous patch and tries to update the manual page
-    accordingly. This does not work correctly on many systems, and the
-    default page is fine, so make sure it does not get regenerated:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(id('install-autoconf')/para[2])"/>
 
-<screen><userinput>touch doc/flex.1</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(id('install-autoconf')/screen[2])"/>
 
     <para>Prepare Flex for compilation:</para>
 
@@ -80,88 +80,18 @@
 
 <screen><userinput>ln -s libfl.a /usr/lib/libl.a</userinput></screen>
 
-    <para>A few programs do not know about <command>flex</command> yet and
-    try to run its predecessor, <command>lex</command>. To support those
-    programs, create a wrapper script named <filename>lex</filename> that
-    calls <filename>flex</filename> in <command>lex</command> emulation
-    mode:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(id('install-autoconf')/para[8])"/>
 
-<screen><userinput>cat &gt; /usr/bin/lex &lt;&lt; "EOF"
-<literal>#!/bin/sh
-# Begin /usr/bin/lex
-
-exec /usr/bin/flex -l "$@"
-
-# End /usr/bin/lex</literal>
-EOF
-chmod 755 /usr/bin/lex</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(id('install-autoconf')/screen[7])"/>
 
   </sect2>
 
-  <sect2 id="contents-flex" role="content">
-    <title>Contents of Flex</title>
-
-    <segmentedlist>
-      <segtitle>Installed programs</segtitle>
-      <segtitle>Installed library</segtitle>
-
-      <seglistitem>
-        <seg>flex, flex++ (link to flex), and lex</seg>
-        <seg>libfl.a</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="flex">
-        <term><command>flex</command></term>
-        <listitem>
-          <para>A tool for generating programs that recognize patterns in text;
-          it allows for the versatility to specify the rules for pattern-finding,
-          eradicating the need to develop a specialized program</para>
-          <indexterm zone="ch-system-flex flex">
-            <primary sortas="b-flex">flex</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flex-">
-        <term><command>flex++</command></term>
-        <listitem>
-          <para>Invokes a version of <command>flex</command> that is used
-          exclusively for C++ scanners</para>
-          <indexterm zone="ch-system-flex flex-">
-            <primary sortas="b-flex++">flex++</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="lex">
-        <term><command>lex</command></term>
-        <listitem>
-          <para>Script that runs <command>flex</command> in <command>lex</command>
-          emulation mode</para>
-          <indexterm zone="ch-system-flex lex">
-            <primary sortas="b-lex">lex</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="libfl.a">
-        <term><filename class="libraryfile">libfl.a</filename></term>
-        <listitem>
-          <para>The <filename class="libraryfile">flex</filename> library</para>
-          <indexterm zone="ch-system-flex libfl.a">
-            <primary sortas="c-libfl.a">libfl.a</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/autoconf.xml"
+  xpointer="xpointer(id('contents-autoconf'))"/>
 
 </sect1>
