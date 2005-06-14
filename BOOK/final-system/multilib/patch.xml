@@ -16,10 +16,12 @@
     <primary sortas="a-Patch">Patch</primary>
   </indexterm>
 
-  <sect2 id="package-patch" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Patch package contains a program for modifying files.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/patch.xml"
+    xpointer="xpointer(id('package-patch')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -31,18 +33,13 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Glibc,
-        Grep, Make, and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/patch.xml"
+    xpointer="xpointer(id('package-patch')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-patch" role="installation">
+  <sect2 role="installation">
     <title>Installation of Patch</title>
 
     <para>Prepare Patch for compilation:</para>
@@ -61,37 +58,8 @@
 
   </sect2>
 
-  <sect2 id="contents-patch" role="content">
-    <title>Contents of Patch</title>
-
-    <segmentedlist>
-      <segtitle>Installed program</segtitle>
-
-      <seglistitem>
-        <seg>patch</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="patch">
-        <term><command>patch</command></term>
-        <listitem>
-          <para>Modifies files according to a patch file. A patch file is
-          normally a difference listing created with the <command>diff</command>
-          program. By applying these differences to the original files,
-          <command>patch</command> creates the patched versions.</para>
-          <indexterm zone="ch-system-patch patch">
-            <primary sortas="b-patch">patch</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/patch.xml"
+  xpointer="xpointer(id('contents-patch'))"/>
 
 </sect1>
