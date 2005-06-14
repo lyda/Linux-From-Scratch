@@ -58,7 +58,7 @@
       <term>Bzip2 (&bzip2-version;) - 654 KB:</term>
       <listitem>
         <para><ulink
-        url="http://www.bzip.org/&bzip2-version;/bzip22-&bzip2-version;.tar.gz"/></para>
+        url="http://www.bzip.org/&bzip2-version;/bzip2-&bzip2-version;.tar.gz"/></para>
       </listitem>
     </varlistentry>
 
@@ -410,7 +410,7 @@
       <term>Texinfo (&texinfo-version;) - 1.5 MB:</term>
       <listitem>
         <para><ulink
-        url="&gnu;texinfo/textinfo-&texinfo-version;.tar.bz2"/></para>
+        url="&gnu;texinfo/texinfo-&texinfo-version;.tar.bz2"/></para>
       </listitem>
     </varlistentry>
 
