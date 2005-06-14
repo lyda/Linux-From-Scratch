@@ -94,6 +94,8 @@ for f in *
 do install-info $f dir 2&gt;/dev/null
 done</userinput></screen>
 
+    <para/>
+
   </sect2>
 
   <sect2 id="contents-texinfo" role="content">
