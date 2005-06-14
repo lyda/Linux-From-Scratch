@@ -16,10 +16,12 @@
     <primary sortas="a-M4">M4</primary>
   </indexterm>
 
-  <sect2 id="package-m4" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The M4 package contains a macro processor.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/m4.xml"
+    xpointer="xpointer(id('package-m4')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -31,18 +33,13 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Coreutils, Diffutils, GCC,
-        Gettext, Glibc, Grep, Make, Perl, and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/m4.xml"
+    xpointer="xpointer(id('package-m4')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-m4" role="installation">
+  <sect2 role="installation">
     <title>Installation of M4</title>
 
     <para>Prepare M4 for compilation:</para>
@@ -62,41 +59,8 @@
 
   </sect2>
 
-  <sect2 id="contents-m4" role="content">
-    <title>Contents of M4</title>
-
-    <segmentedlist>
-      <segtitle>Installed program</segtitle>
-
-      <seglistitem>
-        <seg>m4</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="m4">
-        <term><command>m4</command></term>
-        <listitem>
-          <para>copies the given files while expanding the macros that they
-          contain. These macros are either built-in or user-defined and can
-          take any number of arguments. Besides performing macro expansion,
-          <command>m4</command> has built-in functions for including named
-          files, running Unix commands, performing integer arithmetic,
-          manipulating text, recursion, etc. The <command>m4</command>
-          program can be used either as a front-end to a compiler or as a
-          macro processor in its own right.</para>
-          <indexterm zone="ch-system-m4 m4">
-            <primary sortas="b-m4">m4</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/m4.xml"
+  xpointer="xpointer(id('contents-m4'))"/>
 
 </sect1>
