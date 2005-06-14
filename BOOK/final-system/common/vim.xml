@@ -104,6 +104,8 @@ echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput><
     in the BLFS book at <ulink
     url="&blfs-root;view/svn/postlfs/editors.html#postlfs-editors-vim"/>.</para>
 
+    <para/>
+
   </sect2>
 
   <sect2 id="conf-vim" role="configuration">
