@@ -44,19 +44,19 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(id('package-bash')/para[1])"/>
+    xpointer="xpointer(id('install-bash')/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(id('package-bash')/screen[1])"/>
+    xpointer="xpointer(id('install-bash')/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(id('package-bash')/para[2])"/>
+    xpointer="xpointer(id('install-bash')/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(id('package-bash')/screen[2])"/>
+    xpointer="xpointer(id('install-bash')/screen[2])"/>
 
     <para>Prepare Bash for compilation:</para>
 
@@ -65,7 +65,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(id('package-bash')/variablelist[1])"/>
+    xpointer="xpointer(id('install-bash')/variablelist[1])"/>
 
     <para>Compile the package:</para>
 
@@ -80,15 +80,15 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(id('package-bash')/para[6])"/>
+    xpointer="xpointer(id('install-bash')/para[6])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(id('package-bash')/screen[6])"/>
+    xpointer="xpointer(id('install-bash')/screen[6])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(id('package-bash')/note[1])"/>
+    xpointer="xpointer(id('install-bash')/note[1])"/>
 
   </sect2>
 

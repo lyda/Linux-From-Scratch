@@ -44,35 +44,35 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/para[1])"/>
+    xpointer="xpointer(id('install-binutils')/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/para[2])"/>
+    xpointer="xpointer(id('install-binutils')/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/screen[1])"/>
+    xpointer="xpointer(id('install-binutils')/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/para[3])"/>
+    xpointer="xpointer(id('install-binutils')/para[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/screen[2])"/>
+    xpointer="xpointer(id('install-binutils')/screen[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/para[4])"/>
+    xpointer="xpointer(id('install-binutils')/para[4])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/para[5])"/>
+    xpointer="xpointer(id('install-binutils')/para[5])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/screen[3])"/>
+    xpointer="xpointer(id('install-binutils')/screen[3])"/>
 
     <para>Prepare Binutils for compilation:</para>
 
@@ -85,11 +85,11 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/para[9])"/>
+    xpointer="xpointer(id('install-binutils')/para[9])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/important[1])"/>
+    xpointer="xpointer(id('install-binutils')/important[1])"/>
 
     <para>Test the results:</para>
 
@@ -101,11 +101,11 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/para[12])"/>
+    xpointer="xpointer(id('install-binutils')/para[12])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(id('package-binutils')/screen[8])"/>
+    xpointer="xpointer(id('install-binutils')/screen[8])"/>
 
   </sect2>
 

@@ -49,7 +49,7 @@ make clean</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bzip2.xml"
-    xpointer="xpointer(id('package-bzip2')/para[2])"/>
+    xpointer="xpointer(id('install-bzip2')/para[2])"/>
 
     <para>Compile the package:</para>
 
@@ -57,7 +57,7 @@ make clean</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bzip2.xml"
-    xpointer="xpointer(id('package-bzip2')/para[4])"/>
+    xpointer="xpointer(id('install-bzip2')/para[4])"/>
 
     <para>Install the programs:</para>
 
@@ -65,7 +65,7 @@ make clean</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bzip2.xml"
-    xpointer="xpointer(id('package-bzip2')/para[6])"/>
+    xpointer="xpointer(id('install-bzip2')/para[6])"/>
 
 <screen><userinput>cp bzip2-shared /bin/bzip2
 cp -a libbz2.so* /lib
