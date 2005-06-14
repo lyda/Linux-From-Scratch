@@ -16,11 +16,12 @@
     <primary sortas="a-File">File</primary>
   </indexterm>
 
-  <sect2 id="package-file" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The File package contains a utility for determining the type of
-    files.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/file.xml"
+    xpointer="xpointer(id('package-file')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -32,18 +33,13 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep,
-        Make, Sed, and Zlib</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/file.xml"
+    xpointer="xpointer(id('package-file')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-file" role="installation">
+  <sect2 role="installation">
     <title>Installation of File</title>
 
     <para>Prepare File for compilation:</para>
@@ -60,49 +56,8 @@
 
   </sect2>
 
-  <sect2 id="contents-file" role="content">
-    <title>Contents of File</title>
-
-    <segmentedlist>
-      <segtitle>Installed programs</segtitle>
-      <segtitle>Installed library</segtitle>
-
-      <seglistitem>
-        <seg>file</seg>
-        <seg>libmagic.[a,so]</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="file">
-        <term><command>file</command></term>
-        <listitem>
-          <para>Tries to classify each given file; it does this by performing
-          several tests&mdash;file system tests, magic number tests, and
-          language tests</para>
-          <indexterm zone="ch-system-file file">
-            <primary sortas="b-file">file</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="libmagic">
-        <term><filename class="libraryfile">libmagic</filename></term>
-        <listitem>
-          <para>Contains routines for magic number recognition, used by the
-          <command>file</command> program</para>
-          <indexterm zone="ch-system-file libmagic">
-            <primary sortas="c-libmagic">libmagic</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/file.xml"
+  xpointer="xpointer(id('contents-file'))"/>
 
 </sect1>
