@@ -16,11 +16,12 @@
     <primary sortas="a-Grep">Grep</primary>
   </indexterm>
 
-  <sect2 id="package-grep" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Grep package contains programs for searching through
-    files.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(id('package-grep')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -32,18 +33,13 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Gettext,
-        Glibc, Make, Sed, and Texinfo</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(id('package-grep')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-grep" role="installation">
+  <sect2 role="installation">
     <title>Installation of Grep</title>
 
     <para>Prepare Grep for compilation:</para>
@@ -65,54 +61,8 @@
 
   </sect2>
 
-  <sect2 id="contents-grep" role="content">
-    <title>Contents of Grep</title>
-
-    <segmentedlist>
-      <segtitle>Installed programs</segtitle>
-
-      <seglistitem>
-        <seg>egrep (link to grep), fgrep (link to grep), and grep</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="egrep">
-        <term><command>egrep</command></term>
-        <listitem>
-          <para>Prints lines matching an extended regular expression</para>
-          <indexterm zone="ch-system-grep egrep">
-            <primary sortas="b-egrep">egrep</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="fgrep">
-        <term><command>fgrep</command></term>
-        <listitem>
-          <para>Prints lines matching a list of fixed strings</para>
-          <indexterm zone="ch-system-grep fgrep">
-            <primary sortas="b-fgrep">fgrep</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="grep">
-        <term><command>grep</command></term>
-        <listitem>
-          <para>Prints lines matching a basic regular expression</para>
-          <indexterm zone="ch-system-grep grep">
-            <primary sortas="b-grep">grep</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/grep.xml"
+  xpointer="xpointer(id('contents-grep'))"/>
 
 </sect1>
