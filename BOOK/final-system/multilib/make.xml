@@ -16,11 +16,12 @@
     <primary sortas="a-Make">Make</primary>
   </indexterm>
 
-  <sect2 id="package-make" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Make package contains a program for compiling large
-    packages.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/make.xml"
+    xpointer="xpointer(id('package-make')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -32,18 +33,13 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Gettext,
-        Glibc, Grep, and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/make.xml"
+    xpointer="xpointer(id('package-make')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-make" role="installation">
+  <sect2 role="installation">
     <title>Installation of Make</title>
 
     <para>Prepare Make for compilation:</para>
@@ -63,35 +59,8 @@
 
   </sect2>
 
-  <sect2 id="contents-make" role="content">
-    <title>Contents of Make</title>
-
-    <segmentedlist>
-      <segtitle>Installed program</segtitle>
-
-      <seglistitem>
-        <seg>make</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="make">
-        <term><command>make</command></term>
-        <listitem>
-          <para>Automatically determines which pieces of a large package need to
-          be recompiled and then issues the relevant commands</para>
-          <indexterm zone="ch-system-make make">
-            <primary sortas="b-make">make</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/make.xml"
+  xpointer="xpointer(id('contents-make'))"/>
 
 </sect1>
