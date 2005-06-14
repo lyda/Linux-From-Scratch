@@ -16,10 +16,12 @@
     <primary sortas="a-Readline">Readline</primary>
   </indexterm>
 
-  <sect2 id="package-readline" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Readline package contains the Readline command-line library.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(id('package-readline')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -31,25 +33,22 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Binutils, Coreutils, Diffutils, Gawk,
-        GCC, Glibc, Grep, Make, Ncurses, and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(id('package-readline')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-readline" role="installation">
+  <sect2 role="installation">
     <title>Installation of Readline</title>
 
-    <para>The following patch fixes various issues including a problem where
-    Readline sometimes will only show 33 characters on a line and then wrap
-    to the next line.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(id('install-readline')/para[1])"/>
 
-<screen><userinput>patch -Np1 -i ../&readline-fixes-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(id('install-readline')/screen[1])"/>
 
     <para>Prepare Readline for compilation:</para>
 
@@ -59,17 +58,9 @@
 
 <screen><userinput>make SHLIB_XLDFLAGS=-lncurses</userinput></screen>
 
-    <variablelist>
-      <title>The meaning of the make option:</title>
-
-      <varlistentry>
-        <term><parameter>SHLIB_XLDFLAGS=-lncurses</parameter></term>
-        <listitem>
-          <para>This option forces Readline to link against the
-          <filename class="libraryfile">libncurses</filename> library.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(id('install-readline')/variablelist[1])"/>
 
     <para>Install the package:</para>
 
@@ -94,47 +85,8 @@ ln -sf ../../lib/libhistory.so.5 /usr/lib/libhistory.so</userinput></screen>
 
   </sect2>
 
-  <sect2 id="contents-readline" role="content">
-    <title>Contents of Readline</title>
-
-    <segmentedlist>
-      <segtitle>Installed libraries</segtitle>
-
-      <seglistitem>
-        <seg>libhistory.[a,so], and libreadline.[a,so]</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="libhistory">
-        <term><filename class="libraryfile">libhistory</filename></term>
-        <listitem>
-          <para>Provides a consistent user interface
-          for recalling lines of history</para>
-          <indexterm zone="ch-system-readline libhistory">
-            <primary sortas="c-libhistory">libhistory</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="libreadline">
-        <term><filename class="libraryfile">libreadline</filename></term>
-        <listitem>
-          <para>Aids in the consistency of user interface
-          across discrete programs that need to provide a command line
-          interface</para>
-          <indexterm zone="ch-system-readline libreadline">
-            <primary sortas="c-libreadline">libreadline</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/readline.xml"
+  xpointer="xpointer(id('contents-readline'))"/>
 
 </sect1>
