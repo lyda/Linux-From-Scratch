@@ -20,8 +20,8 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('package-autoconf')/para[1])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(id('package-flex')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -34,8 +34,8 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('package-autoconf')/segmentedlist[2])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(id('package-flex')/segmentedlist[2])"/>
 
   </sect2>
 
@@ -43,20 +43,20 @@
     <title>Installation of Flex</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/para[1])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(id('install-flex')/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/screen[1])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(id('install-flex')/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/para[2])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(id('install-flex')/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/screen[2])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(id('install-flex')/screen[2])"/>
 
     <para>Prepare Flex for compilation:</para>
 
@@ -81,17 +81,17 @@
 <screen><userinput>ln -s libfl.a /usr/lib/libl.a</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/para[8])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(id('install-flex')/para[8])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/autoconf.xml"
-    xpointer="xpointer(id('install-autoconf')/screen[7])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(id('install-flex')/screen[7])"/>
 
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/autoconf.xml"
-  xpointer="xpointer(id('contents-autoconf'))"/>
+  href="../common/flex.xml"
+  xpointer="xpointer(id('contents-flex'))"/>
 
 </sect1>

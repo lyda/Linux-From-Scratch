@@ -16,11 +16,12 @@
     <primary sortas="a-Gawk">Gawk</primary>
   </indexterm>
 
-  <sect2 id="package-gawk" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Gawk package contains programs for manipulating text
-    files.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gawk.xml"
+    xpointer="xpointer(id('package-gawk')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -32,18 +33,13 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Gettext,
-        Glibc, Grep, Make, and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gawk.xml"
+    xpointer="xpointer(id('package-gawk')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-gawk" role="installation">
+  <sect2 role="installation">
     <title>Installation of Gawk</title>
 
     <para>Prepare Gawk for compilation:</para>
@@ -63,106 +59,8 @@
 
   </sect2>
 
-  <sect2 id="contents-gawk" role="content">
-    <title>Contents of Gawk</title>
-
-    <segmentedlist>
-      <segtitle>Installed programs</segtitle>
-
-      <seglistitem>
-        <seg>awk (link to gawk), gawk, gawk-&gawk-version;, grcat, igawk,
-        pgawk, pgawk-&gawk-version;, and pwcat</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="awk">
-        <term><command>awk</command></term>
-        <listitem>
-          <para>A link to <command>gawk</command></para>
-          <indexterm zone="ch-system-gawk awk">
-            <primary sortas="b-awk">awk</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="gawk">
-        <term><command>gawk</command></term>
-        <listitem>
-          <para>A program for manipulating text files; it is the GNU
-          implementation of <command>awk</command></para>
-          <indexterm zone="ch-system-gawk gawk">
-            <primary sortas="b-gawk">gawk</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="gawk-version">
-        <term><command>gawk-&gawk-version;</command></term>
-          <listitem>
-          <para>A hard link to <command>gawk</command></para>
-          <indexterm zone="ch-system-gawk gawk-version">
-            <primary sortas="b-gawk-&gawk-version;">gawk-&gawk-version;</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="grcat">
-        <term><command>grcat</command></term>
-        <listitem>
-          <para>Dumps the group database <filename>/etc/group</filename></para>
-          <indexterm zone="ch-system-gawk grcat">
-            <primary sortas="b-grcat">grcat</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="igawk">
-        <term><command>igawk</command></term>
-        <listitem>
-          <para>Gives <command>gawk</command> the ability to include files</para>
-          <indexterm zone="ch-system-gawk igawk">
-            <primary sortas="b-igawk">igawk</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="pgawk">
-        <term><command>pgawk</command></term>
-        <listitem>
-          <para>The profiling version of <command>gawk</command></para>
-          <indexterm zone="ch-system-gawk pgawk">
-            <primary sortas="b-pgawk">pgawk</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="pgawk-version">
-        <term><command>pgawk-&gawk-version;</command></term>
-        <listitem>
-          <para>Hard link to <command>pgawk</command></para>
-          <indexterm zone="ch-system-gawk pgawk-version">
-            <primary sortas="b-pgawk-&gawk-version;">pgawk-&gawk-version;</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="pwcat">
-        <term><command>pwcat</command></term>
-        <listitem>
-          <para>Dumps the password database <filename>/etc/passwd</filename></para>
-          <indexterm zone="ch-system-gawk pwcat">
-            <primary sortas="b-pwcat">pwcat</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/gawk.xml"
+  xpointer="xpointer(id('contents-gawk'))"/>
 
 </sect1>
