@@ -84,7 +84,7 @@
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --host=${LFS_HOST} --target=${LFS_TARGET} \
     --with-local-prefix=/tools --disable-nls --enable-shared \
-    --with-cpu=ultrasparc --enable-languages=c</userinput></screen>
+    --enable-languages=c</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc-shared.xml"
@@ -92,7 +92,7 @@
 
     <para>Continue with compiling the package:</para>
 
-<screen><userinput>make all-gcc</userinput></screen>
+<screen><userinput>make CFLAGS_FOR_TARGET="-mcpu=ultrasparc -mtune=ultrasparc" all-gcc</userinput></screen>
 
     <para>Install the package:</para>
 

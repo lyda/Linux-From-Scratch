@@ -12,8 +12,8 @@
   <para>We will need to setup target specific flags for the compiler
   and linkers.</para>
 
-<screen><userinput>export BUILD32="-m32 -mcpu=ultrasparc"
-export BUILD64="-m64 -mcpu=ultrasparc"</userinput></screen>
+<screen><userinput>export BUILD32="-m32 -mcpu=ultrasparc -mtune=ultrasparc"
+export BUILD64="-m64 -mcpu=ultrasparc -mtune=ultrasparc"</userinput></screen>
 
   <para>You will need to set your host target triplet for 32 bit:</para>
 

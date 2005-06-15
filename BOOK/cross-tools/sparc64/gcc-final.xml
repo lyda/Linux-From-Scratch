@@ -85,12 +85,11 @@
     --target=${LFS_TARGET} --host=${LFS_HOST} \
     --with-local-prefix=/tools --disable-nls --enable-shared \
     --enable-languages=c,c++ --enable-__cxa_atexit \
-    --enable-c99 --enable-long-long --enable-threads=posix \
-    --with-cpu=ultrasparc</userinput></screen>
+    --enable-c99 --enable-long-long --enable-threads=posix</userinput></screen>
 
     <para>Continue with compiling the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>make CFLAGS_FOR_TARGET="-mcpu=ultrasparc -mtune=ultrasparc"</userinput></screen>
 
     <para>Install the package:</para>
 
