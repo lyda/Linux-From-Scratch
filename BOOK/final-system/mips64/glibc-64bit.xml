@@ -44,31 +44,31 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[1])"/>
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[2])"/>
+    xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[3])"/>
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+    xpointer="xpointer(//*[@role='installation']/para[4])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[1])"/>
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[5])"/>
+    xpointer="xpointer(//*[@role='installation']/para[5])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
    <para>Now we make sure the Glibc goes into <filename
     class="directory">/lib64</filename>:</para>
@@ -77,11 +77,11 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[6])"/>
+    xpointer="xpointer(//*[@role='installation']/para[6])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[3])"/>
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" CXX="gcc ${BUILD64} \
     ../glibc-&glibc-version;/configure --prefix=/usr \
@@ -108,7 +108,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/important[1])"/>
+    xpointer="xpointer(//*[@role='installation']/important[1])"/>
 
     <para>Test the results:</para>
 
@@ -132,8 +132,12 @@
   href="../mips64/glibc.xml"
   xpointer="xpointer(id('conf-ld'))"/>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('contents-glibc'))"/>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-glibc" role="."/></para>
+
+  </sect2>
 
 </sect1>
