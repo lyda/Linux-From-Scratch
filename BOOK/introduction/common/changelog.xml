@@ -198,6 +198,7 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Updated to IPRoute2 ss050607.</para>
+          <para>[jim] - Changed cflags from export "" to unset.</para>
         </listitem>
       </itemizedlist>
     </listitem>

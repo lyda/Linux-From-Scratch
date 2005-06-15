@@ -19,7 +19,13 @@
   machine. To disable <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>
   use the following command:</para>
 
-<screen><userinput>export CFLAGS=""
-export CXXFLAGS=""</userinput></screen>
+<screen><userinput>unset CFLAGS
+unset CXXFLAGS</userinput></screen>
+
+  <para>Now we will add these to ~/.bashrc, just in
+  case you have to exit and restart building later:</para>
+
+<screen><userinput>unset CFLAGS &gt;&gt; ~/.bashrc
+unset CXXFLAGS &gt;&gt; ~/.bashrc</userinput></screen>
 
 </sect1>
