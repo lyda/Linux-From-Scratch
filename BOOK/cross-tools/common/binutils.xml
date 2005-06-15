@@ -80,7 +80,7 @@
         <term><parameter>--disable-nls</parameter></term>
         <listitem>
           <para>This disables internationalization as i18n is not needed for the
-          temporary tools.</para>
+          cross-compile tools.</para>
         </listitem>
       </varlistentry>
 
