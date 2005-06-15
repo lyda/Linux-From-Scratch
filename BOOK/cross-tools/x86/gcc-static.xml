@@ -105,21 +105,23 @@
       <varlistentry>
         <term><parameter>--disable-nls</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>This disables internationalization as i18n is not needed for the
+          cross-compiled tools.</para>
         </listitem>
       </varlistentry>
 
       <varlistentry>
         <term><parameter>--disable-shared</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>Disables the creating of the shared libraries.</para>
         </listitem>
       </varlistentry>
 
       <varlistentry>
         <term><parameter>--enable-multilib=no</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>This disables multlib support on single ABI based
+	  systems, like a Pentium 2/3/4 based system.</para>
         </listitem>
       </varlistentry>
 

@@ -121,7 +121,7 @@
       <varlistentry>
         <term><parameter>--enable-shared</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>This will allow the creation of shared libraries.</para>
         </listitem>
       </varlistentry>
 

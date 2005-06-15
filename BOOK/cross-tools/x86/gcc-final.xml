@@ -62,35 +62,39 @@
       <varlistentry>
         <term><parameter>--enable-languages=c,c++</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>This option ensures that only the C and C++ compilers is built.</para>
         </listitem>
       </varlistentry>
 
       <varlistentry>
         <term><parameter>--enable-__cxa_atexit</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>This option allows use of __cxa_atexit, rather than atexit,
+          to register C++ destructors for local statics and global objects
+          and is essential for fully standards-compliant handling of destructors.
+          It also affects the C++ ABI and therefore results in C++ shared libraries
+          and C++ programs that are interoperable with other Linux distributions.</para>
         </listitem>
       </varlistentry>
 
       <varlistentry>
         <term><parameter>--enable-c99</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>Enable C99 support for C programs.</para>
         </listitem>
       </varlistentry>
 
       <varlistentry>
         <term><parameter>--enable-long-long</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>Enables long long support in the compiler.</para>
         </listitem>
       </varlistentry>
 
       <varlistentry>
         <term><parameter>--enable-threads=posix</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>This enables C++ exception handling for multi-threaded code.</para>
         </listitem>
       </varlistentry>
 

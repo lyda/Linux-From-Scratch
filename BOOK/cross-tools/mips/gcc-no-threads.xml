@@ -73,7 +73,9 @@
       <varlistentry>
         <term><parameter>--disable-threads</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>Tell gcc not to find the multi-thread include files, since we haven't
+	  created them for this architecture yet. We will be able to find the 
+          multi=thread information after we create the glibc-headers.</para>
         </listitem>
       </varlistentry>
 
