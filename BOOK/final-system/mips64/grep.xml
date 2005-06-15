@@ -44,11 +44,11 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips/grep.xml"
-    xpointer="xpointer(id('install-grep')/para[1])"/>
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips/grep.xml"
-    xpointer="xpointer(id('install-grep')/screen[1])"/>
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/grep.xml"

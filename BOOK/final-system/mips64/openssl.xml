@@ -16,11 +16,12 @@
     <primary sortas="a-Openssl">Openssl</primary>
   </indexterm>
 
-  <sect2 id="package-openssl" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The OpenSSL package contains management tools and libraries
-    relating to cryptography.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/openssl.xml"
+    xpointer="xpointer(id('package-openssl')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -32,17 +33,13 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>FIXME</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/openssl.xml"
+    xpointer="xpointer(id('package-openssl')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-openssl" role="installation">
+  <sect2 role="installation">
     <title>Installation of OpenSSL</title>
 
     <para>Prepare OpenSSL for compilation:</para>
@@ -64,76 +61,8 @@ cp -r certs /etc/ssl</userinput></screen>
 
   </sect2>
 
-  <sect2 id="contents-openssl" role="content">
-    <title>Contents of OpenSSL</title>
-
-    <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-
-      <seglistitem>
-        <seg>c_rehash, openssl, and openssl_fips_fingerprint</seg>
-        <seg>libcrypto.[so,a] and libssl.[so,a]</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="c_rehash">
-        <term><command>c_rehash</command></term>
-        <listitem>
-          <para>A Perl script that scans all files in a directory and adds
-          symbolic links to their hash values.</para>
-          <indexterm zone="ch-system-openssl c_rehash">
-            <primary sortas="b-c_rehash">c_rehash</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="openssl">
-        <term><command>openssl</command></term>
-        <listitem>
-          <para>A command-line tool for using the various cryptography
-          functions of OpenSSL's crypto library from the shell. It can be
-          used for various functions which are documented in
-          <command>man 1 openssl</command></para>
-          <indexterm zone="ch-system-openssl openssl">
-            <primary sortas="b-openssl">openssl</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="libcrypto">
-        <term><filename class='libraryfile'>libcrypto</filename></term>
-        <listitem>
-          <para>Implements a wide range of cryptographic algorithms used in
-          various Internet standards. The services provided by  this library
-          are used by the OpenSSL implementations of SSL, TLS and S/MIME,
-          and they have also been used to implement OpenSSH, OpenPGP, and
-          other cryptographic standards</para>
-          <indexterm zone="ch-system-openssl libcrypto">
-            <primary sortas="c-libcrypto">libcrypto</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="libssl">
-        <term><filename class='libraryfile'>libssl</filename></term>
-        <listitem>
-          <para>Implements the Secure Sockets Layer (SSL v2/v3) and Transport
-          Layer Security (TLS v1) protocols. It provides a rich API, documentation
-          on which can be found by running <command>man 3 ssl</command></para>
-          <indexterm zone="ch-system-openssl libssl">
-            <primary sortas="c-libssl">libssl</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../mips/openssl.xml"
+  xpointer="xpointer(id('contents-openssl'))"/>
 
 </sect1>
