@@ -16,17 +16,39 @@
     <primary sortas="a-Grep">Grep</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/grep.xml"
-  xpointer="xpointer(id('package-grep'))"/>
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(id('package-grep')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(id('package-grep')/segmentedlist[2])"/>
+
+  </sect2>
 
   <sect2 role="installation">
     <title>Installation of Grep</title>
 
-    <para>This patch updates <filename>config.guess</filename> and
-    <filename>config.sub</filename> for MIPS processors.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/grep.xml"
+    xpointer="xpointer(id('install-grep')/para[1])"/>
 
-<screen><userinput>patch -Np1 -i ../&grep-mips_update-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/grep.xml"
+    xpointer="xpointer(id('install-grep')/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/grep.xml"
