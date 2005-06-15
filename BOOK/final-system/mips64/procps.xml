@@ -16,18 +16,39 @@
     <primary sortas="a-Procps">Procps</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/procps.xml"
-  xpointer="xpointer(id('package-procps'))"/>
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/procps.xml"
+    xpointer="xpointer(id('package-procps')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/procps.xml"
+    xpointer="xpointer(id('package-procps')/segmentedlist[2])"/>
+
+  </sect2>
 
   <sect2 role="installation">
     <title>Installation of Procps</title>
 
-    <para>The patch below fixes an issue with Procps. Without this
-    patch when the command <command>ps aux</command> is run you will
-    receive a signal 11.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/procps.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
-<screen><userinput>patch -Np1 -i ../&procps-mips-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/procps.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/procps.xml"
