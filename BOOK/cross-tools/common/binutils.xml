@@ -77,9 +77,17 @@
       </varlistentry>
 
       <varlistentry>
+        <term><parameter>--disable-nls</parameter></term>
+        <listitem>
+          <para>This disables internationalization as i18n is not needed for the
+          temporary tools.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
         <term><parameter>--enable-64-bit-bfd</parameter></term>
         <listitem>
-          <para>This switch do ... .</para>
+          <para>This adds 64 bit support to our toolchain.</para>
         </listitem>
       </varlistentry>
 
