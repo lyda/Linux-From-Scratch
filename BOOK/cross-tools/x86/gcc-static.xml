@@ -113,7 +113,7 @@
       <varlistentry>
         <term><parameter>--disable-shared</parameter></term>
         <listitem>
-          <para>Disables the creating of the shared libraries.</para>
+          <para>Disables the creation of the shared libraries.</para>
         </listitem>
       </varlistentry>
 
