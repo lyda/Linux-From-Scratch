@@ -16,38 +16,59 @@
     <primary sortas="a-Glibc">Glibc N32</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('package-glibc'))"/>
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('package-glibc')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('package-glibc')/segmentedlist[2])"/>
+
+  </sect2>
 
   <sect2 role="installation">
     <title>Installation of Glibc</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="../mips64/glibc.xml"
     xpointer="xpointer(id('install-glibc')/para[1])"/>
 
-    <para>This architecture does not currently support NPTL, so we will
-    have to include Glibc Linuxthreads as a threading library. Building
-    for a Linuxthreads based glibc you will need to unpack the
-    <filename>glibc-linuxthreads-&glibc-version;</filename> tarball from
-    within the <filename class="directory">glibc-&glibc-version;</filename>
-    directory.</para>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="../mips64/glibc.xml"
     xpointer="xpointer(id('install-glibc')/para[2])"/>
 
-    <para>The following patch corrects the building of
-    <filename class="headerfile">syscall.h</filename>:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[3])"/>
 
-<screen><userinput>patch -Np1 -i ../&glibc-mips_syscall-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[4])"/>
 
-    <para>NPTL is not supported under this architecture, so we are going to
-    remove the <filename class="directory">nptl</filename> directory from
-    the Glibc source:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/screen[1])"/>
 
-<screen><userinput>rm -rf nptl*</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[5])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
    <para>Now we make sure the Glibc goes into <filename
     class="directory">/lib32</filename>:</para>
@@ -55,26 +76,62 @@
 <screen><userinput>echo "slibdir=/lib32" >> configparms</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4]/range-to(id('install-glibc')/para[12]))"/>
+    href="../mips64/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[6])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/screen[3])"/>
+
+    <para>Prepare Glibc for compilation:</para>
 
 <screen><userinput>CC="gcc ${BUILDN32}" CXX="gcc ${BUILDN32} \
     ../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
     --libexecdir=/usr/lib32/glibc --libdir=/lib32</userinput></screen>
 
+    <variablelist>
+      <title>The meaning of the new configure option:</title>
+
+      <varlistentry>
+        <term><parameter>--libexecdir=/usr/lib32/glibc</parameter></term>
+        <listitem>
+          <para>This changes the location of the <command>pt_chown</command>
+          program from its default of <filename
+          class="directory">/usr/libexec</filename> to <filename
+          class="directory">/usr/lib32/glibc</filename>.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/important[1])"/>
+
+    <para>Test the results:</para>
+
+<screen><userinput>make check</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
+  href="../mips64/glibc.xml"
   xpointer="xpointer(id('i18n-glibc'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
+  href="../mips64/glibc.xml"
   xpointer="xpointer(id('conf-glibc'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
+  href="../mips64/glibc.xml"
   xpointer="xpointer(id('conf-ld'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
