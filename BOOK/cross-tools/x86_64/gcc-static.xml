@@ -137,7 +137,7 @@
 
     <para>Continue with compiling the package:</para>
 
-<screen><userinput>make all-gcc</userinput></screen>
+<screen><userinput>make CFLAGS_FOR_TARGET="-march=athlon64" all-gcc</userinput></screen>
 
     <para>Install the package:</para>
 

@@ -7,6 +7,113 @@
   %patches-entities;
 ]>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-href="../x86/gcc-final.xml"
-xpointer="xpointer(/sect1)"/>
+<sect1 id="ch-cross-tools-gcc-final" role="wrap">
+  <?dbhtml filename="gcc-final.html"?>
+
+  <title>GCC-&gcc-version; - Cross Compiler Final</title>
+
+  <indexterm zone="ch-cross-tools-gcc-final">
+    <primary sortas="a-GCC">GCC</primary>
+    <secondary>cross tools, final</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('package-gcc')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('package-gcc')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of GCC Cross Compiler</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="gcc-shared.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1]/range-to(//*[@role='installation']/para[9]))"/>
+
+    <para>Prepare GCC for compilation:</para>
+
+<screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
+    --target=${LFS_TARGET} --host=${LFS_HOST} \
+    --with-local-prefix=/tools --disable-nls --enable-shared \
+    --enable-languages=c,c++ --enable-__cxa_atexit \
+    --enable-c99 --enable-long-long --enable-threads=posix \
+    --enable-multilib=no</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the new configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--enable-languages=c,c++</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-__cxa_atexit</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-c99</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-long-long</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-threads=posix</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Continue with compiling the package:</para>
+
+<screen><userinput>make CFLAGS_FOR_TARGET="-march=athlon64"</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+    <para/>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-gcc" role="."/></para>
+
+  </sect2>
+
+</sect1>
