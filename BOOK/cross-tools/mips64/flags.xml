@@ -19,14 +19,17 @@ export BUILD64="-mabi=64 -mips64"</userinput></screen>
 
   <para>You will need to set your host target triplet for o32 bit:</para>
 
+<!-- needed for o32, but removed o32 until gcc 4.x
 <screen><userinput>export LFS_TARGET32="`echo ${LFS_TARGET}| sed -e 's/64//g'`"</userinput></screen>
-
+-->
   <para>Lets add the build flags to <filename>~/.bashrc</filename> to
   prevent issues if we stop and come back later.</para>
 
 <screen><userinput>echo export BUILD32=\""${BUILD32}\"" &gt;&gt; ~/.bashrc
 echo export BUILDN32=\""${BUILDN32}\"" &gt;&gt; ~/.bashrc
-echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc
+echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc</userinput></screen>
+<!-- needed for o32, but removed o32 until gcc 4.x
 echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bashrc</userinput></screen>
+-->
 
 </sect1>
