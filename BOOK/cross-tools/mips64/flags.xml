@@ -28,6 +28,5 @@ export BUILD64="-mabi=64 -mips64"</userinput></screen>
 echo export BUILDN32=\""${BUILDN32}\"" &gt;&gt; ~/.bashrc
 echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc
 echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bashrc</userinput></screen>
--->
 
 </sect1>
