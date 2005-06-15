@@ -20,11 +20,15 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/gcc-no-threads.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/glibc-headers.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/gcc-static.xml"/>
+  <!-- remove o32 builds - gcc 4.x supports tri-arch gcc
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/glibc-startfiles.xml"/>
+  -->
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/glibc-startfiles-n32.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/glibc-startfiles-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/gcc-shared.xml"/>
+  <!-- remove o32 builds - gcc 4.x supports tri-arch gcc
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/glibc.xml"/>
+  -->
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/glibc-n32.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/glibc-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/gcc-final.xml"/>
