@@ -248,7 +248,8 @@
             </li>
           </xsl:if>
           <!--Next-->
-          <xsl:if test="(count($next)&gt;0 and @id!='ch-temp-system-choose')">
+          <xsl:if test="(count($next)&gt;0 and @id!='ch-temp-system-choose')
+                  or generate-id($home) = generate-id(.)">
             <li class="next">
               <xsl:choose>
                 <xsl:when test="$next[@id='chapter-chroot'] or
