@@ -44,8 +44,8 @@
           <xsl:if test="count($prev)&gt;0 and $prev != $home">
             <li class="prev">
               <xsl:choose>
-                <xsl:when test="$prev[@id='ch-chroot-devices'] or $prev[@id='ch-reboot-colo']
-                        or $prev[@id='ch-reboot-grub'] or $prev[@id='ch-reboot-yaboot']">
+                <xsl:when test="$prev[@id='ch-chroot-devices']
+                        or $prev[@id='ch-reboot-whatnext']">
                   <a accesskey="p">
                     <xsl:attribute name="href">
                       <xsl:call-template name="href.target">
@@ -206,8 +206,8 @@
           <xsl:if test="count($prev)&gt;0 and $prev != $home">
             <li class="prev">
               <xsl:choose>
-                <xsl:when test="$prev[@id='ch-chroot-devices'] or $prev[@id='ch-reboot-colo']
-                        or $prev[@id='ch-reboot-grub'] or $prev[@id='ch-reboot-yaboot']">
+                <xsl:when test="$prev[@id='ch-chroot-devices']
+                        or $prev[@id='ch-reboot-whatnext']">
                   <a accesskey="p">
                     <xsl:attribute name="href">
                       <xsl:call-template name="href.target">
