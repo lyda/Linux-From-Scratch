@@ -11,6 +11,7 @@
 
   <title>If You Are Going to Reboot</title>
 
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/e2fsprogs.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/sysvinit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/module-init-tools.xml"/>
