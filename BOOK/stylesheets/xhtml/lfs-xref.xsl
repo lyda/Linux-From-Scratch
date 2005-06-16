@@ -118,7 +118,7 @@
       <xsl:with-param name="role" select="$role"/>
     </xsl:call-template>
   </xsl:template>
-  
+
   <xsl:template name="substitute-markup">
     <xsl:param name="template" select="''"/>
     <xsl:param name="allow-anchors" select="'0'"/>

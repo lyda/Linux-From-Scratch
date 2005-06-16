@@ -19,7 +19,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-  
+
   <xsl:template match="userinput">
     <xsl:choose>
       <xsl:when test="ancestor::screen">
@@ -54,7 +54,7 @@
     </div>
   </xsl:template>
 
-  
+
   <!-- variablelist -->
   <xsl:template match="variablelist">
     <xsl:choose>
@@ -68,7 +68,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-  
+
 
     <!-- Body attributes -->
   <xsl:template name="body.attributes">
@@ -101,7 +101,7 @@
       </i>
     </a>
   </xsl:template>
-  
+
     <!-- The <code> xhtml tag have look issues in some browsers, like Konqueror and.
       isn't semantically correct (a filename isn't a code fragment) We will use <tt> for now. -->
   <xsl:template name="inline.monoseq">
@@ -122,7 +122,7 @@
       <xsl:copy-of select="$content"/>
     </tt>
   </xsl:template>
-  
+
   <xsl:template name="inline.boldmonoseq">
     <xsl:param name="content">
       <xsl:call-template name="anchor"/>
@@ -135,7 +135,7 @@
     <!-- don't put <strong> inside figure, example, or table titles -->
     <!-- or other titles that may already be represented with <strong>'s. -->
     <xsl:choose>
-      <xsl:when test="local-name(..) = 'title' and (local-name(../..) = 'figure' 
+      <xsl:when test="local-name(..) = 'title' and (local-name(../..) = 'figure'
               or local-name(../..) = 'example' or local-name(../..) = 'table' or local-name(../..) = 'formalpara')">
         <tt class="{local-name(.)}">
           <xsl:if test="@dir">
@@ -160,7 +160,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-  
+
   <xsl:template name="inline.italicmonoseq">
     <xsl:param name="content">
       <xsl:call-template name="anchor"/>
@@ -181,6 +181,5 @@
       </tt>
     </em>
   </xsl:template>
-
 
 </xsl:stylesheet>

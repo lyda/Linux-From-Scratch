@@ -5,13 +5,13 @@
                 version="1.0">
 
 
-    <!-- This is a hack and isn't correct semantically. Theoretically, the beginpage 
-      tags should be placed in the XML source only to render the PDF output and 
+    <!-- This is a hack and isn't correct semantically. Theoretically, the beginpage
+      tags should be placed in the XML source only to render the PDF output and
       should be removed after it. But there is no a better way and we need this.-->
   <xsl:template match="beginpage">
     <fo:block break-after="page"/>
   </xsl:template>
-  
+
     <!-- Allow forced line breaks inside paragraphs emulating literallayout. -->
  <xsl:template match="para">
     <xsl:choose>

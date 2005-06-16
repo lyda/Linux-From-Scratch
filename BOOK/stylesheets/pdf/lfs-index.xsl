@@ -4,7 +4,7 @@
 <!ENTITY uppercase "'ABCDEFGHIJKLMNOPQRSTUVWXYZ'">
 <!ENTITY primary   'normalize-space(concat(primary/@sortas, primary[not(@sortas)]))'>
 <!ENTITY scope 'count(ancestor::node()|$scope) = count(ancestor::node())'>
-]> 
+]>
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
@@ -84,7 +84,7 @@
         <xsl:with-param name="scope" select="$scope"/>
       </xsl:call-template>
   </xsl:template>
-  
+
     <!--Bookmarks-->
   <xsl:template name="reference">
     <xsl:param name="scope" select="."/>

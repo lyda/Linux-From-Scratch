@@ -48,7 +48,7 @@
       <xsl:call-template name="process.chunk.footnotes"/>
     </div>
   </xsl:template>
-    
+
     <!-- Sections numbering -->
   <xsl:param name="section.autolabel" select="1"/>
   <xsl:param name="section.label.includes.component.label" select="1"/>

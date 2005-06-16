@@ -9,7 +9,7 @@
 
   <!-- Fix encoding issues with default UTF-8 output of the xhtml stylesheet -->
   <xsl:output method="html" encoding="ISO-8859-1" indent="no" />
-  
+
    <!-- Including our others customized templates -->
   <xsl:include href="xhtml/lfs-admon.xsl"/>
   <xsl:include href="xhtml/lfs-index.xsl"/>

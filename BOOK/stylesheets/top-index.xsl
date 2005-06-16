@@ -8,8 +8,8 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-  <xsl:output method="html" encoding="iso-8859-1"/> 
-  
+  <xsl:output method="html" encoding="iso-8859-1"/>
+
   <xsl:template match="/">
     <html>
       <head>
@@ -93,7 +93,7 @@ hr {
       </body>
     </html>
   </xsl:template>
-  
+
   <xsl:template match="bookinfo">
     <div class="book">
       <div class="titlepage">
@@ -124,29 +124,29 @@ hr {
               <a href="ppc">
                 <xsl:text>PowerPC</xsl:text>
               </a>
-	    </h4>
-	  </li>
+            </h4>
+          </li>
           <li>
             <h4>
               <a href="mips">
                 <xsl:text>MIPS 32 Bit</xsl:text>
               </a>
-	    </h4>
-	  </li>
-	  <li>
+            </h4>
+          </li>
+          <li>
             <h4>
               <a href="mips64">
                 <xsl:text>MIPS 64 Bit</xsl:text>
               </a>
-	    </h4>
-	  </li>
-	  <li>
-	    <h4>
-	     <a href="sparc">
-		<xsl:text>Sparc32</xsl:text>
-	     </a>
-	    </h4>
-	  </li>
+            </h4>
+          </li>
+          <li>
+            <h4>
+              <a href="sparc">
+                <xsl:text>Sparc32</xsl:text>
+              </a>
+            </h4>
+          </li>
           <li>
             <h4>
              <a href="sparc64">
@@ -158,7 +158,7 @@ hr {
       </div>
     </div>
   </xsl:template>
-  
+
   <xsl:template match="title">
     <div>
       <h1 class="title">
@@ -171,7 +171,7 @@ hr {
       </h2>
     </div>
   </xsl:template>
-  
+
   <xsl:template match="authorgroup">
     <div class="authorgroup">
       <h3 class="author">
@@ -181,7 +181,7 @@ hr {
       </h3>
     </div>
   </xsl:template>
-  
+
   <xsl:template match="copyright">
     <div>
       <p class="copyright">
@@ -190,15 +190,15 @@ hr {
       </p>
     </div>
   </xsl:template>
-  
+
   <xsl:template match="year">
     <xsl:value-of select="."/>
   </xsl:template>
-  
+
   <xsl:template match="holder">
     <xsl:value-of select="."/>
   </xsl:template>
-  
+
   <xsl:template match="subtitle|author|firstname|surname|legalnotice"/>
-  
+
 </xsl:stylesheet>

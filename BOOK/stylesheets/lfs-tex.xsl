@@ -45,8 +45,8 @@ version='1.0'>
 \renewcommand{\footrulewidth}{0pt}
 \addtolength{\headheight}{3pt}
 \fancypagestyle{plain}{%
-	\fancyhead{}
-	\renewcommand{\headrulewidth}{0pt}
+  \fancyhead{}
+  \renewcommand{\headrulewidth}{0pt}
 }
 
 
@@ -72,7 +72,5 @@ version='1.0'>
 select="normalize-space(title)"/><xsl:text>}&#10;</xsl:text>
         <xsl:apply-templates/>
 </xsl:template>
-
-
 
 </xsl:stylesheet>

@@ -35,10 +35,10 @@
 
   <xsl:template match="//ulink">
       <!-- Match only local patches links and skip duplicated URLs splitted for PDF output-->
-    <xsl:if test="contains(@url, '.patch') and contains(@url, '&patches-root;') 
+    <xsl:if test="contains(@url, '.patch') and contains(@url, '&patches-root;')
             and not(ancestor-or-self::*/@condition = 'pdf')">
       <xsl:variable name="patch.name" select="substring-after(@url, '&patches-root;')"/>
-      <xsl:variable name="cut" 
+      <xsl:variable name="cut"
               select="translate(substring-after($patch.name, '-'), '0123456789', '0000000000')"/>
       <xsl:variable name="patch.name2">
         <xsl:value-of select="substring-before($patch.name, '-')"/>

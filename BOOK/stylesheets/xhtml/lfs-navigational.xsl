@@ -49,7 +49,7 @@
                   <a accesskey="p">
                     <xsl:attribute name="href">
                       <xsl:call-template name="href.target">
-                        <xsl:with-param name="object" 
+                        <xsl:with-param name="object"
                                 select="//sect1[@id='ch-temp-system-choose']"/>
                       </xsl:call-template>
                     </xsl:attribute>
@@ -89,12 +89,12 @@
           <xsl:if test="count($next)&gt;0 and @id!='ch-temp-system-choose'">
             <li class="next">
               <xsl:choose>
-                <xsl:when test="$next[@id='chapter-chroot'] or 
+                <xsl:when test="$next[@id='chapter-chroot'] or
                         $next[@id='chapter-reboot']">
                   <a accesskey="n">
                     <xsl:attribute name="href">
                       <xsl:call-template name="href.target">
-                        <xsl:with-param name="object" 
+                        <xsl:with-param name="object"
                                 select="//part[@id='part5']"/>
                       </xsl:call-template>
                     </xsl:attribute>
@@ -211,7 +211,7 @@
                   <a accesskey="p">
                     <xsl:attribute name="href">
                       <xsl:call-template name="href.target">
-                        <xsl:with-param name="object" 
+                        <xsl:with-param name="object"
                                 select="//sect1[@id='ch-temp-system-choose']"/>
                       </xsl:call-template>
                     </xsl:attribute>
@@ -248,15 +248,15 @@
             </li>
           </xsl:if>
           <!--Next-->
-          <xsl:if test="count($next)&gt;0 and @id!='ch-temp-system-choose'">
+          <xsl:if test="(count($next)&gt;0 and @id!='ch-temp-system-choose')">
             <li class="next">
               <xsl:choose>
-                <xsl:when test="$next[@id='chapter-chroot'] or 
+                <xsl:when test="$next[@id='chapter-chroot'] or
                         $next[@id='chapter-reboot']">
                   <a accesskey="n">
                     <xsl:attribute name="href">
                       <xsl:call-template name="href.target">
-                        <xsl:with-param name="object" 
+                        <xsl:with-param name="object"
                                 select="//part[@id='part5']"/>
                       </xsl:call-template>
                     </xsl:attribute>
@@ -356,5 +356,3 @@
   </xsl:template>
 
 </xsl:stylesheet>
-
-
