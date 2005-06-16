@@ -194,6 +194,15 @@
 -->
 
     <listitem>
+      <para>June 16, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to Findutils 4.2.22.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 13, 2005</para>
       <itemizedlist>
         <listitem>
