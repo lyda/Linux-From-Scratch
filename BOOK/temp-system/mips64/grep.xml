@@ -43,9 +43,13 @@
   <sect2 role="installation">
     <title>Installation of Grep</title>
 
-    <para>This patch updates config.guess and config.sub for MIPS processors.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/grep.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
-<screen><userinput>patch -Np1 -i ../&grep-mips_update-patch;</userinput></screen
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/grep.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/grep.xml"
