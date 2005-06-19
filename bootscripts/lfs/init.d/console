@@ -7,7 +7,7 @@
 # Authors     : Gerard Beekmans - gerard@linuxfromscratch.org
 #		Alexander E. Patrakov
 #
-# Version     : 00.00
+# Version     : 00.03
 #
 # Notes       :
 #
@@ -17,32 +17,54 @@
 . ${rc_functions}
 
 # Native English speakers probably don't have /etc/sysconfig/console at all
-if [ -f /etc/sysconfig/console ]; then
+if [ -f /etc/sysconfig/console ]
+then
 	. /etc/sysconfig/console
 fi
 
+is_true() {
+	[ "$1" = "1" ] || [ "$1" = "yes" ] || [ "$1" = "true" ]
+}
+
+failed=0
+trap failed=1 ERR
+
 case "${1}" in
 	start)
-		if [ -n "${KEYMAP}" ]; then
-			boot_mesg "Loading keymap: ${KEYMAP}..."
-			loadkeys ${KEYMAP} &>/dev/null
-			evaluate_retval
-		fi
+		boot_mesg "Setting up Linux console..."
+		# There should be no bogus failures below this line!
+		
+		# Figure out if a framebuffer console is used
+		[ -d /sys/class/graphics/fb0 ] && USE_FB=1 || USE_FB=0
+		
+		MODE_COMMAND="echo -en '\033%@\033(K' && kbd_mode -a"
+		
+		# On framebuffer consoles, font has to be set for each vt
+		! is_true "${USE_FB}" || [ -z "${FONT}" ] ||
+			MODE_COMMAND="${MODE_COMMAND} && setfont ${FONT}"
 
-		if [ -n "${KEYMAP_CORRECTIONS}" ]; then
-			boot_mesg "Loading keymap corrections: ${KEYMAP_CORRECTIONS}..."
+		# Apply that command to all consoles mentioned in
+		# /etc/inittab.
+		for TTY in `grep '^[^#].*respawn:/sbin/agetty' /etc/inittab |
+			grep -o '\btty[[:digit:]]*\b'`
+		do
+			openvt -f -w -c ${TTY#tty} -- \
+				/bin/sh -c "${MODE_COMMAND}"
+		done
+
+		# Set the font and the keymap
+		is_true "${USE_FB}" || 	[ -z "${FONT}" ] || setfont $FONT
+		[ -z "${KEYMAP}" ] || loadkeys ${KEYMAP} &>/dev/null
+		[ -z "${KEYMAP_CORRECTIONS}" ] ||
 			loadkeys ${KEYMAP_CORRECTIONS} &>/dev/null
-			evaluate_retval
-		fi
 
-		if [ -n "${FONT}" ]; then
-			boot_mesg "Setting screen font to ${FONT}..."
-			setfont $FONT &>/dev/null
-			evaluate_retval
-		fi
+		# If any of the commands above failed, the trap at the
+		# top would set $failed to 1
+		( exit $failed )
+		evaluate_retval
 		;;
 	*)
-		echo "Usage: ${0} {start}"
+		echo $"Usage:" "${0} {start}"
 		exit 1
 		;;
 esac
