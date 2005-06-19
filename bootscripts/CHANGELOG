@@ -1,7 +1,3 @@
-n/a - June 19, 2005
-	* console script now sets font on each VT if framebuffer is
-	  used (Alexander E. Patrakov)
-
 3.2.2 - May 29, 2005
 	* Tagged as 3.2.2 (Nathan Coulson)
 
