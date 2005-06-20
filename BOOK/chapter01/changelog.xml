@@ -87,7 +87,8 @@ First a summary, then a detailed log.</para>
 <listitem><para>June 20th, 2005 [manuel]: Added a warning about kernel
 headers and Linux-Libc-Headers, plus fixed the list of installed files
 on kernel.xml (bug 1569). Some typos and tags fixes ported from trunk
-(r6048 to r6050 and r6053 to r6056)</para></listitem>
+(r6048 to r6050 and r6053 to r6056.) Fixed top program description
+(bug 1549.)</para></listitem>
 
 <listitem><para>June 19th, 2005 [jhuntwork]: Changed listing of IRC servers to show
 only irc.linuxfromscratch.org.</para></listitem>
