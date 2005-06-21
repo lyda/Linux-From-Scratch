@@ -198,6 +198,7 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Removed --included-regex from all grep builds.</para>
+          <para>[jim] - Updated to Man 1.6.</para>
         </listitem>
       </itemizedlist>
     </listitem>

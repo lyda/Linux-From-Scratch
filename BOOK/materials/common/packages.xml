@@ -282,7 +282,7 @@
       <term>Man (&man-version;) - 229 KB:</term>
       <listitem>
         <para><ulink
-        url="&kernel;linux/utils/man/man-&man-version;.tar.bz2"/></para>
+        url="http://primates.ximian.com/~flucifredi/man/man-&man-version;.tar.gz"/></para>
       </listitem>
     </varlistentry>
 
