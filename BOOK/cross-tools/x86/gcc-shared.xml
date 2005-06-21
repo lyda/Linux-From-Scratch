@@ -121,7 +121,12 @@
       <varlistentry>
         <term><parameter>--enable-shared</parameter></term>
         <listitem>
-          <para>This will allow the creation of shared libraries.</para>
+          <para>This switch allows the building of <filename
+          class="libraryfile">libgcc_s.so.1</filename> and
+          <filename class="libraryfile">libgcc_eh.a</filename>.
+          Having <filename class="libraryfile">libgcc_eh.a</filename>
+          available ensures that the configure script for Glibc (the
+          next package we compile) produces the proper results.</para>
         </listitem>
       </varlistentry>
 
