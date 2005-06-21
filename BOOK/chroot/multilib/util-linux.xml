@@ -53,15 +53,11 @@
 
     <para>Ensure that Util-linux uses the proper flags for our compile:</para>
 
-<screen><userinput>export CC="${CC} ${BUILD64}"</userinput></screen>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/util-linux.xml"
     xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/util-linux.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+<screen><userinput>CC="${CC} ${BUILD64}" ./configure</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/util-linux.xml"
