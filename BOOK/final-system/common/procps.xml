@@ -181,8 +181,8 @@
       <varlistentry id="top">
         <term><command>top</command></term>
         <listitem>
-          <para>Displays the top CPU processes; it provides an ongoing look at
-          processor activity in real time</para>
+          <para>Displays a list of the most CPU intensive processes; it
+          provides an ongoing look at processor activity in real time</para>
           <indexterm zone="ch-system-procps top">
             <primary sortas="b-top">top</primary>
           </indexterm>

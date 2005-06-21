@@ -40,7 +40,7 @@
       <segtitle>&dependencies;</segtitle>
 
       <seglistitem>
-        <seg>Unchecked</seg>
+        <seg>Bash, Coreutils, Find, Gawk, and Make</seg>
       </seglistitem>
     </segmentedlist>
 

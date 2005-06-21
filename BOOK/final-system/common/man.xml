@@ -48,13 +48,13 @@
 
     <para>A few adjustments need to be made to the sources of Man.</para>
 
-    <para>This a sed substitution to add the <option>-R</option> switch to
-    the <envar>PAGER</envar> variable so that escape sequences are properly
-    handled by Less:</para>
+    <para>This a <command>sed</command> substitution to add the
+    <option>-R</option> switch to the <envar>PAGER</envar> variable so
+    that escape sequences are properly handled by Less:</para>
 
 <screen><userinput>sed -i 's@-is@&amp;R@g' configure</userinput></screen>
 
-    <para>This a sed substitution to comment out the
+    <para>This a <command>sed</command> substitution to comment out the
     <quote>MANPATH /usr/man</quote> line in the <filename>man.conf</filename>
     file to prevent redundant results when using programs such as
     <command>whatis</command>:</para>
