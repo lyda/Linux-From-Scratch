@@ -199,6 +199,7 @@
         <listitem>
           <para>[jim] - Updated IRC Servers for resources page.</para>
 	  <para>[jim] - Removed using config.guess from binutils for ${LFS_HOST}.</para>
+          <para>[jim] - Updated to Findutils 4.2.23.</para>
         </listitem>
       </itemizedlist>
     </listitem>
