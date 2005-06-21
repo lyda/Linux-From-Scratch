@@ -10,13 +10,6 @@
 
   <title>Build Variables</title>
 
-  <para>We will need to install <filename>config.guess</filename>
-  from Binutils:</para>
-
-<screen><userinput>install -d /cross-tools/bin
-tar -xjvf binutils-&binutils-version;.tar.bz2 binutils-&binutils-version;/config.guess
-install -m755 binutils-&binutils-version;/config.guess /cross-tools/bin</userinput></screen>
-
   <bridgehead renderas="sect4">Configuration # 1 - Creating different
   architecture tools.</bridgehead>
 
@@ -27,7 +20,7 @@ install -m755 binutils-&binutils-version;/config.guess /cross-tools/bin</userinp
   particular needs. To set this information you can issue the following
   command:</para>
 
-<screen><userinput>export LFS_HOST="`config.guess`"</userinput></screen>
+<screen><userinput>export LFS_HOST="${MACHTYPE}"</userinput></screen>
 
   <para>Now you will need to set the target triplet for the target
   architecure. You can do this by running the same command as above, just
@@ -47,13 +40,13 @@ install -m755 binutils-&binutils-version;/config.guess /cross-tools/bin</userinp
   <para>You will need to set your host target triplet a little differently.
   To set this information you can issue the following commands:</para>
 
-<screen><userinput>export LFS_HOST="`config.guess | sed -e 's/unknown/cross/g' -e 's/pc/cross/g'`"</userinput></screen>
+<screen><userinput>export LFS_HOST="`echo ${MACHTYPE} | sed -e 's/unknown/cross/g' -e 's/pc/cross/g'`"</userinput></screen>
 
   <para>Now you will need to set the target triplet for the target, which
   in this case is very simple. Set the command using the method listed
   below:</para>
 
-<screen><userinput>export LFS_TARGET="`config.guess`"</userinput></screen>
+<screen><userinput>export LFS_TARGET="${MACHTYPE}"</userinput></screen>
 
   <para>Now lets verify all targets are set before we continue on. Use
   the following command to check you host and target variables:</para>
