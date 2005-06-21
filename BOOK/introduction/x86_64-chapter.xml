@@ -17,6 +17,8 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/changelog.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/resources.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/askforhelp.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/bootcd.xml"/>
+  <!-- This page is only for published versions if the LiveCD is included
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86/livecd.xml"/>
+  -->
 
 </chapter>

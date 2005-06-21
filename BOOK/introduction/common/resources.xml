@@ -15,8 +15,8 @@
 
     <para>If during the building of the LFS system you encounter any
     errors, have any questions, or think there is a typo in the book,
-    please start by consulting the Frequently Asked Questions (FAQ) at
-    <ulink url="&faq-root;"/>.</para>
+    please start by consulting the Frequently Asked Questions (FAQ)
+    that is located at <ulink url="&faq-root;"/>.</para>
 
   </sect2>
 
@@ -72,7 +72,7 @@
     <title>References</title>
 
     <para>For additional information on the packages, useful tips are
-    available at <ulink
+    available in the LFS Package Reference page located at <ulink
     url="http://www.linuxfromscratch.org/~matthew/LFS-references.html"/>.</para>
 
   </sect2>
