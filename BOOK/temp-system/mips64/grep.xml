@@ -62,8 +62,7 @@
     <para>Prepare Grep for compilation:</para>
 
 <screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=/tools \
-   --host=${LFS_TARGET} --disable-perl-regexp \
-   --with-included-regex</userinput></screen>
+   --host=${LFS_TARGET} --disable-perl-regexp</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/grep.xml"

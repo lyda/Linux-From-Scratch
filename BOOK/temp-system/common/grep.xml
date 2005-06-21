@@ -46,8 +46,7 @@
     <para>Prepare Grep for compilation:</para>
 
 <screen><userinput>./configure --prefix=/tools \
-   --host=${LFS_TARGET} --disable-perl-regexp \
-   --with-included-regex</userinput></screen>
+   --host=${LFS_TARGET} --disable-perl-regexp</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
@@ -59,15 +58,6 @@
           does not get linked against a Perl Compatible Regular Expression
           (PCRE) library that may be present on the host and would not be
           available once we enter the chroot environment.</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--with-included-regex</parameter></term>
-        <listitem>
-          <para>This ensures that Grep uses its internal regular expression
-          code. Without this switch, Grep will use the code from Glibc,
-          which is known to be buggy.</para>
         </listitem>
       </varlistentry>
 

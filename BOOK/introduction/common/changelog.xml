@@ -194,6 +194,15 @@
 -->
 
     <listitem>
+      <para>June 21, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Removed --included-regex from all grep builds.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 20, 2005</para>
       <itemizedlist>
         <listitem>
