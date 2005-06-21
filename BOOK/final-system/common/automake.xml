@@ -123,7 +123,7 @@
           <filename>Makefile.in</filename> files for a package, run this
           program in the top-level directory. By scanning the
           <filename>configure.in</filename> file, it automatically finds
-          each appropriate <filename>Makefile.am</filename> file and generate
+          each appropriate <filename>Makefile.am</filename> file and generates
           the corresponding <filename>Makefile.in</filename> file</para>
           <indexterm zone="ch-system-automake automake">
             <primary sortas="b-automake">automake</primary>

@@ -48,7 +48,7 @@
   the <parameter>+h</parameter> option to <command>bash</command>.</para>
 
   <para>It is important that all the commands throughout the remainder
-  of this chapter and the following chapters be run from within the
+  of this chapter and the following chapters are run from within the
   chroot environment. If you leave this environment for any reason
   (rebooting for example), remember to first mount the <systemitem
   class="filesystem">proc</systemitem> and <systemitem
@@ -56,8 +56,8 @@
   previous section) and enter chroot again before continuing with the
   installations.</para>
 
-  <para>Note that the <command>bash</command> prompt will say <quote>I have
-  no name!</quote> This is normal because the <filename>/etc/passwd</filename>
-  file has not been created yet.</para>
+  <para>Note that the <command>bash</command> prompt will say
+  <computeroutput>I have no name!</computeroutput> This is normal because the
+  <filename>/etc/passwd</filename> file has not been created yet.</para>
 
 </sect1>
