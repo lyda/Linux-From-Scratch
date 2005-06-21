@@ -472,7 +472,7 @@ EOF</userinput></screen>
         <term><command>mtrace</command></term>
         <listitem>
           <para>Reads and interprets a memory trace file and
-          ouputs a summary in human-readable format</para>
+          displays a summary in human-readable format</para>
           <indexterm zone="ch-system-glibc mtrace">
             <primary sortas="b-mtrace">mtrace</primary>
           </indexterm>
@@ -754,7 +754,7 @@ EOF</userinput></screen>
         <listitem>
           <para>The Name Service Switch libraries, containing functions for
           resolving host names, user names, group names, aliases, services,
-          protocols, etc</para>
+          protocols, etc.</para>
           <indexterm zone="ch-system-glibc libnss">
             <primary sortas="c-libnss">libnss</primary>
           </indexterm>

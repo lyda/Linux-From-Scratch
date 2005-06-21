@@ -97,7 +97,7 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput>make install</userinput></screen>
 
-    <para>Some packages expect the C PreProcessor to be installed in the
+    <para>Some packages expect the C preprocessor to be installed in the
     <filename class="directory">/lib</filename> directory.
     To support those packages, create this symlink:</para>
 

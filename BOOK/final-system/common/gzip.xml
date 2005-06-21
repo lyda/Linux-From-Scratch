@@ -72,8 +72,9 @@
 
 <screen><userinput>make install</userinput></screen>
 
-    <para>Move the programs to the <filename class="directory">/bin</filename>
-    directory:</para>
+    <para>Move the <command>gzip</command> program to the <filename
+    class="directory">/bin</filename> directory and create some commonly
+    used symlinks to it:</para>
 
 <screen><userinput>mv /usr/bin/gzip /bin
 rm /usr/bin/{gunzip,zcat}

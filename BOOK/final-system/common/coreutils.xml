@@ -59,14 +59,13 @@
 
 <screen><userinput>make</userinput></screen>
 
-    <para>The test suite of Coreutils makes several assumptions about the
-    presence of files and users that are not valid this early in the LFS
-    build. Therefore, additional items need to be set up before running
-    the tests. Skip down to <quote>Install the package</quote> if
-    not running the test suite.</para>
+    <para>The test suite of Coreutils makes several invalid assumptions
+    about the presence of system users and groups. Therefore, additional
+    items need to be set up before running the tests. Skip down to
+    <quote>Install the package</quote> if not running the test suite.</para>
 
     <para>Create two <systemitem class="groupname">dummy</systemitem> groups
-    and a <systemitem class="username">dummy</systemitem> user name:</para>
+    and a <systemitem class="username">dummy</systemitem> user:</para>
 
 <screen><userinput>echo "dummy1:x:1000:" &gt;&gt; /etc/group
 echo "dummy2:x:1001:dummy" &gt;&gt; /etc/group
@@ -155,9 +154,7 @@ mv /usr/bin/chroot /usr/sbin</userinput></screen>
       <varlistentry id="chgrp">
         <term><command>chgrp</command></term>
         <listitem>
-          <para>Changes the group ownership of each given file to the given
-          group; the group can either be either given a name or a numeric
-          ID</para>
+          <para>Changes the group ownership of files and directories</para>
           <indexterm zone="ch-system-coreutils chgrp">
             <primary sortas="b-chgrp">chgrp</primary>
           </indexterm>
@@ -179,8 +176,8 @@ mv /usr/bin/chroot /usr/sbin</userinput></screen>
       <varlistentry id="chown">
         <term><command>chown</command></term>
         <listitem>
-          <para>Changes the user and/or group ownership of
-          each given file to the given user/group pair</para>
+          <para>Changes the user and/or group ownership of files and
+          directories</para>
           <indexterm zone="ch-system-coreutils chown">
             <primary sortas="b-chown">chown</primary>
           </indexterm>
@@ -961,8 +958,8 @@ mv /usr/bin/chroot /usr/sbin</userinput></screen>
         <term><command>uniq</command></term>
         <listitem>
           <para>Discards all but one of successive identical lines</para>
-          <indexterm zone="ch-system-coreutils unexpand">
-            <primary sortas="b-unexpand">unexpand</primary>
+          <indexterm zone="ch-system-coreutils uniq">
+            <primary sortas="b-uniq">uniq</primary>
           </indexterm>
         </listitem>
       </varlistentry>
