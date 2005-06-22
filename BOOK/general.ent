@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "TESTING-20050621">
-<!ENTITY releasedate "June 21, 2005">
+<!ENTITY version "TESTING-20050622">
+<!ENTITY releasedate "June 22, 2005">
 <!ENTITY milestone "6.1">
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
@@ -67,7 +67,7 @@
 <!ENTITY psmisc-version "21.6">
 <!ENTITY readline-version "5.0">
 <!ENTITY sed-version "4.1.4">
-<!ENTITY shadow-version "4.0.7">
+<!ENTITY shadow-version "4.0.9">
 <!ENTITY sysklogd-version "1.4.1">
 <!ENTITY sysvinit-version "2.86">
 <!ENTITY tar-version "1.15.1">
