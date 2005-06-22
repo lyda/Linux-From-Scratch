@@ -21,8 +21,8 @@
 
   <para>For more information, see the <command>bash</command> info
   page, section <emphasis>Readline Init File</emphasis>. The
-  <command>readline</command> info page is also a good source of
-  information.</para>
+  <filename class="libraryfile">readline</filename> info page is also
+  a good source of information.</para>
 
   <para>Global values are set in <filename>/etc/inputrc</filename>.
   Personal user values are set in <filename>~/.inputrc</filename>. The
