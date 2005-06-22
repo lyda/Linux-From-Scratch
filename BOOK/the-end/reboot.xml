@@ -22,9 +22,8 @@
   while building packages in another. The GPM package will also allow you
   to perform copy/paste actions in your virtual terminals. Lastly, if you
   are in a situation where static IP configuration does not meet your
-  networking requirements, installing packages such as dhcpcd or ppp at
+  networking requirements, installing packages such as Dhcpcd or PPP at
   this point might also be useful.</para>
-
 
   <para>Now that we have said that, lets move on to booting our shiny
   new LFS installation for the first time! First exit from the chroot
