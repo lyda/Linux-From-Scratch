@@ -194,6 +194,16 @@
 -->
 
     <listitem>
+      <para>June 22, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Text and commands (when applicable) synchronized
+          with trunk up to r6115.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 21, 2005</para>
       <itemizedlist>
         <listitem>
@@ -208,7 +218,8 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Updated IRC Servers for resources page.</para>
-	  <para>[jim] - Removed using config.guess from binutils for ${LFS_HOST}.</para>
+          <para>[jim] - Removed using config.guess from binutils for
+          ${LFS_HOST}.</para>
           <para>[jim] - Updated to Findutils 4.2.23.</para>
         </listitem>
       </itemizedlist>
