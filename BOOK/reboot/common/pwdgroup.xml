@@ -36,7 +36,7 @@
 
   <para>In order for user <systemitem class="username">root</systemitem> to
   be able to login and for the name <quote>root</quote> to be recognized,
-  there need to be relevant entries in the <filename>${LFS}/etc/passwd</filename>
+  there must be relevant entries in the <filename>${LFS}/etc/passwd</filename>
   and <filename>${LFS}/etc/group</filename> files.</para>
 
   <para>Create the <filename>${LFS}/etc/passwd</filename> file by running

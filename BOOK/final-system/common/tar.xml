@@ -97,8 +97,8 @@
       <varlistentry id="tar">
         <term><command>tar</command></term>
         <listitem>
-          <para>Creates and extracts files from archives, also known as
-          tarballs</para>
+          <para>Creates, extracts files from, and lists the contents of
+          archives, also known as tarballs</para>
           <indexterm zone="ch-system-tar tar">
             <primary sortas="b-tar">tar</primary>
           </indexterm>

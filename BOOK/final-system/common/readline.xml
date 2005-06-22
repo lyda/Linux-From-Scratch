@@ -84,7 +84,7 @@
 
 <screen><userinput>mv /lib/lib{readline,history}.a /usr/lib</userinput></screen>
 
-    <para>Now we will remove the old, <filename class="extension">.so</filename>
+    <para>Now we will remove the <filename class="extension">.so</filename>
     files in <filename class="directory">/lib</filename> and relink them into
     <filename class="directory">/usr/lib</filename>.</para>
 

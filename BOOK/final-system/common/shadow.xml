@@ -134,7 +134,7 @@ sed -i -e 's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
     means, see the <filename>doc/HOWTO</filename> file within the unpacked source
     tree. If using Shadow support, keep in mind that programs which need to
     verify passwords (display managers, FTP programs, pop3 daemons, etc.) must
-    be shadow-compliant. That is, they need to be able to work with shadowed
+    be Shadow-compliant. That is, they need to be able to work with shadowed
     passwords.</para>
 
     <para>To enable shadowed passwords, run the following command:</para>
@@ -176,7 +176,7 @@ sed -i -e 's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
         logoutd, mkpasswd, newgrp, newusers, passwd, pwck, pwconv, pwunconv,
         sg (link to newgrp), useradd, userdel, usermod, vigr (link to vipw),
         and vipw</seg>
-        <seg>libshadow[.a,so]</seg>
+        <seg>libshadow.[a,so]</seg>
       </seglistitem>
     </segmentedlist>
 

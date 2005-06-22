@@ -62,8 +62,8 @@ mkdir -p /var/lib/hwclock</userinput></screen>
   <sect2 id="install-util-linux"  role="installation">
     <title>Installation of Util-linux</title>
 
-    <para>Util-linux has a compilation error against newer versions of the
-    Linux-Libc-Headers. The following patch properly fixes that issue</para>
+    <para>Util-linux fails to compile against newer versions of
+    Linux-Libc-Headers. The following patch properly fixes this issue:</para>
 
 <screen><userinput>patch -Np1 -i ../&util-linux-cramfs-patch;</userinput></screen>
 
@@ -98,9 +98,12 @@ mkdir -p /var/lib/hwclock</userinput></screen>
 
     <para>This package does not come with a test suite.</para>
 
-    <para>Install the package:</para>
+    <para>Install the package and move the <command>logger</command> binary to
+    <filename class="directory">/bin</filename> as it is needed by the
+    bootscripts:</para>
 
-<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes install</userinput></screen>
+<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes install
+mv /usr/bin/logger /bin</userinput></screen>
 
   </sect2>
 
