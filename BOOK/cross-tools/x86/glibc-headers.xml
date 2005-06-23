@@ -79,6 +79,20 @@
       </varlistentry>
 
       <varlistentry>
+        <term><parameter>--host=${LFS_TARGET}</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--build=${LFS_HOST}</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
         <term><parameter>--disable-sanity-checks</parameter></term>
         <listitem>
           <para>This switch do ... .</para>

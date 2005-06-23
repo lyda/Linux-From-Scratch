@@ -72,6 +72,34 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
       <title>The meaning of the new configure options:</title>
 
       <varlistentry>
+        <term><parameter>BUILD_CC="gcc"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>CC="${LFS_TARGET}-gcc"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>AR="${LFS_TARGET}-ar"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>RANLIB="${LFS_TARGET}-ranlib"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
         <term><parameter>--disable-profile</parameter></term>
         <listitem>
           <para>This builds the libraries without profiling information.
