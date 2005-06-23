@@ -54,13 +54,29 @@
     <para>Next, prepare Glibc for compilation:</para>
 
 <screen><userinput>CC="${CC-gcc}" ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST} --without-cvs \
+    --host=${LFS_TARGET} --build=${LFS_HOST} \
     --disable-sanity-checks --enable-kernel=2.6.0 \
     --with-headers=/tools/include \
     --with-binutils=/cross-tools/${LFS_TARGET}/bin</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>CC="${CC-gcc}"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--prefix=/tools</parameter></term>
+        <listitem>
+          <para>This tells the configure script to prepare to install the
+          package in the <filename class="directory">/tools</filename>
+          directory.</para>
+        </listitem>
+      </varlistentry>
 
       <varlistentry>
         <term><parameter>--disable-sanity-checks</parameter></term>
@@ -78,19 +94,19 @@
       </varlistentry>
 
       <varlistentry>
-        <term><parameter>--with-binutils=/cross-tools/${LFS_TARGET}/bin</parameter></term>
-        <listitem>
-          <para>This switch do ... .</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
         <term><parameter>--with-headers=/tools/include</parameter></term>
         <listitem>
           <para>This tells Glibc to compile itself against the headers
           recently installed to the tools directory, so that it knows
           exactly what features the kernel has and can optimize itself
           accordingly.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--with-binutils=/cross-tools/${LFS_TARGET}/bin</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
         </listitem>
       </varlistentry>
 

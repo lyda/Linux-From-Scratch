@@ -197,6 +197,19 @@
 -->
 
     <listitem>
+      <para>June 23, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Removed --without-cvs on Glibc cross-tools commands.
+          We aren't using Glibc CVS snapshots.</para>
+        </listitem>
+        <listitem>
+          <para>[manuel] - Started cross-lfs text revision.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 22, 2005</para>
       <itemizedlist>
         <listitem>

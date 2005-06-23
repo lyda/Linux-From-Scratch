@@ -70,7 +70,7 @@
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET32} --build=${LFS_HOST} \
-    --without-cvs --disable-profile --enable-add-ons \
+    --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>
 

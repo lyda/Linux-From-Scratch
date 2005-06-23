@@ -63,20 +63,13 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
-    --without-cvs --disable-profile --enable-add-ons \
+    --disable-profile --enable-add-ons \
     --with-tls --enable-kernel=2.6.0 --with-__thread \
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
 
     <variablelist>
       <title>The meaning of the new configure options:</title>
-
-      <varlistentry>
-        <term><parameter>--without-cvs</parameter></term>
-        <listitem>
-          <para>This switch do ... .</para>
-        </listitem>
-      </varlistentry>
 
       <varlistentry>
         <term><parameter>--disable-profile</parameter></term>
