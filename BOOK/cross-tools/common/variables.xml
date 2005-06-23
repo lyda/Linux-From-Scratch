@@ -11,7 +11,7 @@
   <title>Build Variables</title>
 
   <bridgehead renderas="sect4">Configuration # 1 - Creating different
-  architecture tools.</bridgehead>
+  architecture tools</bridgehead>
 
   <para>During the building of the cross-compile tools you will need to
   set a few variables that will be dependent on your particular needs.
@@ -31,7 +31,7 @@
 <screen><userinput>export LFS_TARGET="{target triplet}"</userinput></screen>
 
   <bridgehead renderas="sect4">Configuration # 2 - Creating same
-  architecture tools.</bridgehead>
+  architecture tools</bridgehead>
 
   <para>You can also create <quote>clean</quote> tools on your current
   distro. This will ensure that you have all the prerequisites for the
@@ -48,23 +48,22 @@
 
 <screen><userinput>export LFS_TARGET="${MACHTYPE}"</userinput></screen>
 
+  <bridgehead renderas="sect4">Common to both</bridgehead>
+
   <para>Now lets verify all targets are set before we continue on. Use
   the following command to check you host and target variables:</para>
 
 <screen><userinput>echo "We are building for ${LFS_TARGET}"
 echo "Our host is ${LFS_HOST}"</userinput></screen>
 
-  <para>Now we will add these to ~/.bashrc, just in
+  <para>Now we will add these to <filename>~/.bashrc</filename>, just in
   case you have to exit and restart building later:</para>
 
 <screen><userinput>echo export LFS_HOST=\""${LFS_HOST}\"" &gt;&gt; ~/.bashrc
 echo export LFS_TARGET=\""${LFS_TARGET}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
-  <bridgehead renderas="sect4">List of architectures, target triplets,
-  and recommended book</bridgehead>
-
   <table>
-    <title>Target Triplets</title>
+    <title>List of architectures, target triplets, and recommended book</title>
     <tgroup cols="2" align="center">
       <colspec colname="Processor"/>
       <colspec colname="Triplet"/>

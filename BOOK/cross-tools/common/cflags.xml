@@ -13,19 +13,16 @@
   <para><envar>CFLAGS</envar> during the building of cross tools must
   not be set.</para>
 
-  <para>During the building of the cross-compile tools you will need to
-  set a few variables that will be dependent on your particular needs.
-  The first variable will be the triplet of the <envar>HOST</envar>
-  machine. To disable <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>
+  <para>To disable <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>
   use the following command:</para>
 
 <screen><userinput>unset CFLAGS
 unset CXXFLAGS</userinput></screen>
 
-  <para>Now we will add these to ~/.bashrc, just in
+  <para>Now we will add these to <filename>~/.bashrc</filename>, just in
   case you have to exit and restart building later:</para>
 
-<screen><userinput>unset CFLAGS &gt;&gt; ~/.bashrc
-unset CXXFLAGS &gt;&gt; ~/.bashrc</userinput></screen>
+<screen><userinput>echo unset CFLAGS &gt;&gt; ~/.bashrc
+echo unset CXXFLAGS &gt;&gt; ~/.bashrc</userinput></screen>
 
 </sect1>

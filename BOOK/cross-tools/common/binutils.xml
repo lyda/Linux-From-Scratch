@@ -66,6 +66,29 @@
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
+        <term><parameter>--prefix=/cross-tools</parameter></term>
+        <listitem>
+          <para>This tells the configure script to prepare to install the
+          package in the <filename class="directory">/cross-tools</filename>
+          directory.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--host=${LFS_HOST}</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--target=${LFS_TARGET}</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
         <term><parameter>--with-lib-path=/tools/lib</parameter></term>
         <listitem>
           <para>This tells the configure script to specify the library
