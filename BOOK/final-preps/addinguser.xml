@@ -12,7 +12,7 @@
 
   <para>When logged in as user <systemitem class="username">root</systemitem>,
   making a single mistake can damage or destroy a system. Therefore, we
-  recommend building the packages in this chapter as an unprivileged user.
+  recommend building the packages as an unprivileged user.
   You could use your own user name, but to make it easier to set up a clean
   work environment, create a new user called <systemitem
   class="username">lfs</systemitem> as a member of a new group (also named
@@ -24,7 +24,7 @@
 useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput></screen>
 
   <variablelist>
-  <title>The meaning of the command line options:</title>
+    <title>The meaning of the command line options:</title>
 
     <varlistentry>
       <term><parameter>-s /bin/bash</parameter></term>

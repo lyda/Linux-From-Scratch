@@ -20,7 +20,7 @@
 
   <para>As an alternative to installing an entire separate distribution
   onto your machine, and if your host machine is x86 based, you may wish to
-  use the Linux From Scratch LiveCD. The CD works well as a host sytem,
+  use the Linux From Scratch LiveCD. The CD works well as a host system,
   providing all the tools you need to successfully follow the instructions
   in this book. Additionally, it contains all the source packages, patches
   and a copy of this book. So once you have the CD, no network connection
@@ -28,7 +28,8 @@
   LFS LiveCD or to download a copy, visit
   <ulink url="http://linuxfromscratch.org/~jhuntwork/livecd/"/></para>
 
-  <!-- The text below need to be rewrited -->
+  <!-- -->
+  <para>THE TEXT BELOW NEED TO BE REWRITTEN</para>
 
   <para><xref linkend="chapter-partitioning"/> of this book describes how
   to create a new Linux native partition and file system, the place
@@ -85,6 +86,7 @@
   LFS experience beyond this book.  After the steps in this book have
   been implemented, the computer will be ready to reboot into the new
   LFS system.</para>
+  <!-- -->
 
   <para>This is the process in a nutshell. Detailed information on each
   step is discussed in the following chapters and package descriptions.

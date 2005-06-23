@@ -68,7 +68,8 @@ EOF</userinput></screen>
   <para>The <envar>LFS</envar> variable should be set to the
   chosen mount point.</para>
 
-  <para>The <envar>LC_ALL</envar> variable controls the localization of
+  <para>TO BE REWRITTEN - The <envar>LC_ALL</envar> variable controls
+  the localization of
   certain programs, making their messages follow the conventions of a
   specified country.  If the host system uses a version of Glibc older
   than 2.2.4, having <envar>LC_ALL</envar> set to something other than

@@ -38,7 +38,8 @@
     pages before reporting what you may think is an error.</para>
   </note>
 
-  <para>The created symlink enables the toolchain to be compiled so that
+  <para>TO BE REWRiTTEN - The created symlink enables the toolchain to be
+  compiled so that
   it always refers to <filename class="directory">/tools</filename>,
   meaning that the compiler, assembler, and linker will work both in
   this chapter (when we are still using some tools from the host) and in

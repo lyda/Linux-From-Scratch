@@ -10,6 +10,8 @@
 
   <title>About the Test Suites</title>
 
+  <para>TO BE REWRITTEN (and maybe moved to final-system chapter)</para>
+
   <para>Most packages provide a test suite. Running the test suite for a
   newly built package is a good idea because it can provide a <quote>sanity
   check</quote> indicating that everything compiled correctly. A test suite
