@@ -227,17 +227,17 @@
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="config">
-        <term><filename>config-&linux-version;</filename></term>
+        <term><filename>config-[linux-version]</filename></term>
         <listitem>
           <para>Contains all the configuration selections for the kernel</para>
           <indexterm zone="ch-bootable-kernel config">
-            <primary sortas="e-/boot/config">/boot/config-&linux-version;</primary>
+            <primary sortas="e-/boot/config">/boot/config-[linux-version]</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="lfskernel">
-        <term><filename>lfskernel-&linux-version;</filename></term>
+        <term><filename>lfskernel-[linux-version]</filename></term>
         <listitem>
           <para>The engine of the Linux system. When turning on the
           computer, the kernel is the first part of the operating system
@@ -247,19 +247,19 @@
           a multitasking machine capable of running scores of programs
           seemingly at the same time.</para>
           <indexterm zone="ch-bootable-kernel lfskernel">
-            <primary sortas="b-lfskernel">lfskernel-&linux-version;</primary>
+            <primary sortas="b-lfskernel">lfskernel-[linux-version]</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="System.map">
-        <term><filename>System.map-&linux-version;</filename></term>
+        <term><filename>System.map-[linux-version]</filename></term>
         <listitem>
           <para>A list of addresses and symbols; it maps the entry points
           and addresses of all the functions and data structures in the
           kernel</para>
           <indexterm zone="ch-bootable-kernel System.map">
-            <primary sortas="e-/boot/System.map">/boot/System.map-&linux-version;</primary>
+            <primary sortas="e-/boot/System.map">/boot/System.map-[linux-version]</primary>
           </indexterm>
         </listitem>
       </varlistentry>
