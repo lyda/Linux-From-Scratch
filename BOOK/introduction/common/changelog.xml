@@ -186,7 +186,10 @@
       <para>Date</para>
       <itemizedlist>
         <listitem>
-          <para>[name] - Changelog.</para>
+          <para>[name] - Changelog entry.</para>
+        </listitem>
+        <listitem>
+          <para>[name] - Another changelog entry.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -208,6 +211,8 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Removed --included-regex from all grep builds.</para>
+        </listitem>
+        <listitem>
           <para>[jim] - Updated to Man 1.6.</para>
         </listitem>
       </itemizedlist>
@@ -218,8 +223,12 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Updated IRC Servers for resources page.</para>
+        </listitem>
+        <listitem>
           <para>[jim] - Removed using config.guess from binutils for
           ${LFS_HOST}.</para>
+        </listitem>
+        <listitem>
           <para>[jim] - Updated to Findutils 4.2.23.</para>
         </listitem>
       </itemizedlist>
@@ -239,6 +248,8 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Updated to IPRoute2 ss050607.</para>
+        </listitem>
+        <listitem>
           <para>[jim] - Changed cflags from export "" to unset.</para>
         </listitem>
       </itemizedlist>
@@ -249,6 +260,8 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Updated to Linux 2.6.11.12.</para>
+        </listitem>
+        <listitem>
           <para>[jim] - Updated to Binutils 2.16.1.</para>
         </listitem>
       </itemizedlist>
@@ -259,6 +272,8 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Updated to Shadow 4.0.9.</para>
+        </listitem>
+        <listitem>
           <para>[jim] - Updated to LFS Bootscripts 3.2.2.</para>
         </listitem>
       </itemizedlist>
@@ -269,8 +284,14 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Updated to Perl 5.8.7.</para>
+        </listitem>
+        <listitem>
           <para>[jim] - Updated to Man-Pages 2.0.3.</para>
+        </listitem>
+        <listitem>
           <para>[jim] - Updated to TCL 8.4.10.</para>
+        </listitem>
+        <listitem>
           <para>[jim] - Updated to Udev 058.</para>
         </listitem>
       </itemizedlist>

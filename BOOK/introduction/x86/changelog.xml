@@ -55,7 +55,10 @@
       <para>Date</para>
       <itemizedlist>
         <listitem>
-          <para>[name] - Changelog.</para>
+          <para>[name] - Changelog entry.</para>
+        </listitem>
+        <listitem>
+          <para>[name] - Another changelog entry.</para>
         </listitem>
       </itemizedlist>
     </listitem>
