@@ -44,12 +44,8 @@
     <title>Installation of Glibc</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[1])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/mips/glibc.xml"
@@ -82,7 +78,7 @@
     <para>Now we make sure the Glibc goes into <filename
     class="directory">/tools/lib32</filename>:</para>
 
-<screen><userinput>echo "slibdir=/tools/lib32" >> configparms</userinput></screen>
+<screen><userinput>echo "slibdir=/tools/lib32" &gt;&gt; configparms</userinput></screen>
 
     <para>Next, prepare Glibc for compilation:</para>
 
@@ -105,18 +101,6 @@
       </varlistentry>
 
     </variablelist>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[6])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/blockquote[1])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[7])"/>
 
     <para>Compile the package:</para>
 

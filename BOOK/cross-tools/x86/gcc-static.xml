@@ -58,7 +58,7 @@
 
 <screen><userinput>echo "
 #undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" >> gcc/config/linux.h</userinput></screen>
+#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" &gt;&gt; gcc/config/linux.h</userinput></screen>
 
     <para>Now we will change <command>gcc</command>'s search path to look
     into <filename class="directory">/tools</filename> only:</para>

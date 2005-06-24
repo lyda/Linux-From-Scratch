@@ -43,11 +43,11 @@
     <title>Installation of Glibc</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[1])"/>
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="../../final-system/mips/glibc.xml"
     xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -68,7 +68,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[7])/ramge-to(//*[@role='installation']/para[last()])"/>
+    xpointer="xpointer(//*[@role='installation']/para[6]/range-to(//*[@role='installation']/para[last()]))"/>
 
   </sect2>
 

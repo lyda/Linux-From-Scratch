@@ -52,10 +52,10 @@
     xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
     <para>For NPTL enabled systems we will need to add the following
-    lines to <filename>config.cache</filename></para>
+    lines to <filename>config.cache</filename>:</para>
 
-<screen><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
-echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
+<screen><userinput>echo "libc_cv_forced_unwind=yes" &gt; config.cache
+echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache</userinput></screen>
 
     <para>To create NPTL Startfiles use the following configure line:</para>
 
@@ -152,7 +152,7 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
 
 <screen><userinput>make csu/subdir_lib</userinput></screen>
 
-    <para>Since we are only creating the glibc startfiles at this time
+    <para>Since we are only creating the Glibc startfiles at this time
     we will need to manually copy files over.</para>
 
 <screen><userinput>install -d /tools/lib
