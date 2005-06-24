@@ -187,8 +187,7 @@
         <listitem>
           <para>This directory contains programs (or symlinks to them) that
           are interested in receiving hotplug events. For example,
-          <application>Udev</application> puts its symlink here during
-          installation</para>
+          Udev puts its symlink here during installation</para>
           <indexterm zone="ch-system-hotplug hotplug-hotplug.d">
             <primary sortas="e-/etc/hotplug.d">/etc/hotplug.d</primary>
           </indexterm>

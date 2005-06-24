@@ -203,6 +203,9 @@
           <para>[manuel] - Added --with-tclinclude=$TCLPATH to
           Expect instructions.</para>
         </listitem>
+        <listitem>
+          <para>[manuel] - Ported text changes from trunk up to r6137.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
