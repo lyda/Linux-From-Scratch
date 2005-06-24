@@ -116,21 +116,25 @@
 
     </variablelist>
 
-    <para>Now, install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
-<screen><userinput>make install-headers</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
-    <para>Next, we will copy the header files we need:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[4])"/>
 
-    <para>First we will copy common files over to <filename
-    class="directory">/tools/include</filename>:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[5])"/>
 
-<screen><userinput>install -d /tools/include/bits
-cp bits/stdio_lim.h /tools/include/bits</userinput></screen>
-
-    <para>Now we will create a blank stub file:</para>
-
-<screen><userinput>touch /tools/include/gnu/stubs.h</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
 
     <para>For Linuxthreads we use the following commands:</para>
 

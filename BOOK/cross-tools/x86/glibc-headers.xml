@@ -111,9 +111,9 @@
         <term><parameter>--with-headers=/tools/include</parameter></term>
         <listitem>
           <para>This tells Glibc to compile itself against the headers
-          recently installed to the tools directory, so that it knows
-          exactly what features the kernel has and can optimize itself
-          accordingly.</para>
+          recently installed to the <filename class="directory">/tools</filename>
+          directory, so that it knows exactly what features the kernel has
+          and can optimize itself accordingly.</para>
         </listitem>
       </varlistentry>
 
@@ -126,13 +126,14 @@
 
     </variablelist>
 
-    <para>Now, install the package:</para>
+    <para>Now, install the headers:</para>
 
 <screen><userinput>make install-headers</userinput></screen>
 
-    <para>Next, we will copy the header files we need:</para>
+    <para>Some files aren't installed by the above command, then
+    we will copy the header files we need:</para>
 
-    <para>First we will copy common files over to <filename
+    <para>First we will copy a common file over to <filename
     class="directory">/tools/include</filename>:</para>
 
 <screen><userinput>install -d /tools/include/bits
@@ -142,11 +143,11 @@ cp bits/stdio_lim.h /tools/include/bits</userinput></screen>
 
 <screen><userinput>touch /tools/include/gnu/stubs.h</userinput></screen>
 
-    <para>For NPTL we use the following commands:</para>
+    <para>For NPTL we use the following command:</para>
 
 <screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/pthread/pthread.h /tools/include/</userinput></screen>
 
-    <para>Now we copy the architecture specific headers over:</para>
+    <para>Now we copy the architecture specific header over:</para>
 
 <screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/i386/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
 
