@@ -93,21 +93,9 @@
     --with-local-prefix=/tools --disable-nls --enable-shared \
     --enable-languages=c</userinput></screen>
 
-    <variablelist>
-      <title>The meaning of the new configure options:</title>
-
-      <varlistentry>
-        <term><parameter>--with-abi=64</parameter></term>
-        <listitem>
-          <para>This switch do ... .</para>
-        </listitem>
-      </varlistentry>
-
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/gcc-shared.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[1])"/>
-
-    </variablelist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-shared.xml"
+    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
 
     <para>Continue with compiling the package:</para>
 

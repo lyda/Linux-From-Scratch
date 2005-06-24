@@ -58,7 +58,6 @@
 
 <screen><userinput>patch -Np1 -i ../&binutils-multilib-patch;</userinput></screen>
 
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/binutils.xml"
     xpointer="xpointer(id('install-binutils')/para[5])"/>

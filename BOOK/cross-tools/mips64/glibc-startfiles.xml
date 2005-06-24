@@ -82,9 +82,48 @@
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/glibc-startfiles.xml"
-    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
+    <variablelist>
+      <title>The meaning of the new configure options:</title>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc-startfiles.xml"
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[1])"/>
+
+      <varlistentry>
+        <term><parameter>CC="${LFS_TARGET}-gcc ${BUILD32}"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc-startfiles.xml"
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[3])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc-startfiles.xml"
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[4])"/>
+
+      <varlistentry>
+        <term><parameter>--host=${LFS_TARGET32}</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc-startfiles.xml"
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[5])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc-startfiles.xml"
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[6])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc-startfiles.xml"
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[9])"/>
+
+    </variablelist>
 
     <para>Compile the package:</para>
 
