@@ -72,7 +72,8 @@ CC="gcc ${BUILD64}" ./configure --prefix=/tools --libdir=/tools/lib64</userinput
     href="../common/tcl.xml"
     xpointer="xpointer(id('install-tcl')/para[6])"/>
 
-<screen><userinput>export TCLPATH=`pwd`</userinput></screen>
+<screen><userinput>cd ..
+export TCLPATH=`pwd`</userinput></screen>
 
     <para>Now make a necessary symbolic link:</para>
 
