@@ -53,8 +53,8 @@
   <para>Now lets verify all targets are set before we continue on. Use
   the following command to check you host and target variables:</para>
 
-<screen><userinput>echo "We are building for ${LFS_TARGET}"
-echo "Our host is ${LFS_HOST}"</userinput></screen>
+<screen><userinput>echo -e "We are building for ${LFS_TARGET} \
+   \nOur host is ${LFS_HOST}"</userinput></screen>
 
   <para>Now we will add these to <filename>~/.bashrc</filename>, just in
   case you have to exit and restart building later:</para>

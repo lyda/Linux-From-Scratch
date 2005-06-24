@@ -203,6 +203,9 @@
           <para>[jhuntwork] - Slight edit to sed in variables page -
           Old one broke on a powerpc triple-target.</para>
         </listitem>
+        <listitem>
+          <para>[jhuntwork] - Changed echo of variables to be one command.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
