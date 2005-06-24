@@ -57,7 +57,7 @@ CC="gcc ${BUILD32}" ./configure --prefix=/tools</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/tcl.xml"
-    xpointer="xpointer(id('install-tcl')/para[1])"/>
+    xpointer="xpointer(id('install-tcl')/para[4])"/>
 
 <para>Install the package:</para>
 

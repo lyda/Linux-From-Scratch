@@ -197,6 +197,16 @@
 -->
 
     <listitem>
+      <para>June 24, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Added --with-tclinclude=$TCLPATH to
+          Expect instructions.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 23, 2005</para>
       <itemizedlist>
         <listitem>

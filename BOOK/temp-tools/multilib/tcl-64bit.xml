@@ -58,7 +58,7 @@ CC="gcc ${BUILD64}" ./configure --prefix=/tools --libdir=/tools/lib64</userinput
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/tcl.xml"
-    xpointer="xpointer(id('install-tcl')/para[1])"/>
+    xpointer="xpointer(id('install-tcl')/para[4])"/>
 
 <para>Install the package:</para>
 
@@ -67,6 +67,12 @@ CC="gcc ${BUILD64}" ./configure --prefix=/tools --libdir=/tools/lib64</userinput
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/tcl.xml"
     xpointer="xpointer(id('install-tcl')/warning[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/tcl.xml"
+    xpointer="xpointer(id('install-tcl')/para[6])"/>
+
+<screen><userinput>export TCLPATH=`pwd`</userinput></screen>
 
     <para>Now make a necessary symbolic link:</para>
 
