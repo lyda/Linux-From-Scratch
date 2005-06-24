@@ -70,6 +70,10 @@
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc-startfiles-64bit.xml"
+    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
+
     <para>Compile the package:</para>
 
 <screen><userinput>make csu/subdir_lib</userinput></screen>

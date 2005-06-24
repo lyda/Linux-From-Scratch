@@ -75,7 +75,7 @@
     --with-headers=/tools/include</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/glibc-startfiles.xml"
+    href="../mips64/glibc-startfiles.xml"
     xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
 
     <para>Compile the package:</para>

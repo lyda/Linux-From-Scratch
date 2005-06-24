@@ -86,17 +86,9 @@
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>
 
-    <variablelist>
-      <title>The meaning of the configure options:</title>
-
-      <varlistentry>
-        <term><parameter>--libdir=/tools/lib</parameter></term>
-        <listitem>
-          <para>This switch do ... .</para>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc.xml"
+    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"

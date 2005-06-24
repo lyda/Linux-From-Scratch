@@ -85,15 +85,11 @@ echo "
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/gcc-static.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[1])"/>
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[1])"/>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/gcc-static.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[2])"/>
-
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/gcc-static.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[3])"/>
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[2])"/>
 
       <varlistentry>
         <term><parameter>--with-cpu=ultrasparc</parameter></term>
@@ -104,7 +100,7 @@ echo "
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/gcc-static.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[5])"/>
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[4])"/>
 
     </variablelist>
 
