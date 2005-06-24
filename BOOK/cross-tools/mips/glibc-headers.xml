@@ -136,6 +136,14 @@
     href="../x86/glibc-headers.xml"
     xpointer="xpointer(//*[@role='installation']/screen[4])"/>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[6])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
+
     <para>For Linuxthreads we use the following commands:</para>
 
 <screen><userinput>cp ../glibc-&glibc-version;/linuxthreads/sysdeps/pthread/pthread.h /tools/include/

@@ -133,6 +133,14 @@
     href="../x86/glibc-headers.xml"
     xpointer="xpointer(//*[@role='installation']/screen[5])"/>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[7])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[6])"/>
+
     <para>Now we copy the architecture specific headers over:</para>
 
 <screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/powerpc/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
