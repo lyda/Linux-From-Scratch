@@ -206,18 +206,15 @@
         <listitem>
           <para>[jhuntwork] - Changed echo of variables to be one command.</para>
         </listitem>
-      </itemizedlist>
-    </listitem>
-
-    <listitem>
-      <para>June 24, 2005</para>
-      <itemizedlist>
         <listitem>
           <para>[manuel] - Added --with-tclinclude=$TCLPATH to
           Expect instructions.</para>
         </listitem>
         <listitem>
           <para>[manuel] - Ported text changes from trunk up to r6137.</para>
+        </listitem>
+        <listitem>
+          <para>[manuel] - Added the compress symlink to gzip.</para>
         </listitem>
       </itemizedlist>
     </listitem>
