@@ -44,7 +44,7 @@
     <title>Installation of GCC Cross Compiler</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/gcc-shared.xml"
+    href="../mips/gcc-shared.xml"
     xpointer="xpointer(//*[@role='installation']/para[1]/range-to(//*[@role='installation']/para[9]))"/>
 
     <para>Prepare GCC for compilation:</para>

@@ -108,6 +108,13 @@
       </varlistentry>
 
       <varlistentry>
+        <term><parameter>--enable-shared</parameter></term>
+        <listitem>
+          <para>Enable the creation of the shared libraries.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
         <term><parameter>--enable-64-bit-bfd</parameter></term>
         <listitem>
           <para>This adds 64 bit support to our toolchain.</para>

@@ -66,23 +66,19 @@
       href="../x86/gcc-static.xml"
       xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[2])"/>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/gcc-static.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[3])"/>
-
       <varlistentry>
         <term><parameter>--disable-threads</parameter></term>
         <listitem>
-          <para>This will prevent gcc from finding the multi-thread
+          <para>This will prevent GCC from finding the multi-thread
           include files, since we haven't created them for this architecture
           yet. We will be able to find the multi=thread information after
-          we create the glibc-headers.</para>
+          we create the Glibc headers.</para>
         </listitem>
       </varlistentry>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/gcc-static.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[5])"/>
+      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[4])"/>
 
     </variablelist>
 

@@ -103,14 +103,6 @@
       </varlistentry>
 
       <varlistentry>
-        <term><parameter>--disable-nls</parameter></term>
-        <listitem>
-          <para>This disables internationalization as i18n is not needed for the
-          cross-compiled tools.</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
         <term><parameter>--disable-shared</parameter></term>
         <listitem>
           <para>Disables the creation of the shared libraries.</para>
@@ -121,17 +113,14 @@
         <term><parameter>--enable-multilib=no</parameter></term>
         <listitem>
           <para>This disables multlib support on single ABI based
-	  systems, like a Pentium 2/3/4 based system.</para>
+          systems, like a Pentium 2/3/4 based system.</para>
         </listitem>
       </varlistentry>
 
       <varlistentry>
         <term><parameter>--enable-languages=c</parameter></term>
         <listitem>
-          <para>This option ensures that only the C compiler is built.
-          This option is only needed when you have downloaded and
-          unpacked the full GCC tarball, as opposed to just the
-          gcc-core tarball.</para>
+          <para>This option ensures that only the C compiler is built.</para>
         </listitem>
       </varlistentry>
 

@@ -87,19 +87,27 @@
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/glibc-startfiles.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[1])"/>
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[1])"/>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/glibc-startfiles.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[2])"/>
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[3])"/>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/glibc-startfiles.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[3])"/>
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[4])"/>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/glibc-startfiles.xml"
-      xpointer="xpointer(//*[@role='installation']/variablelist[1]/varlistentry[6])"/>
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[5])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc-startfiles.xml"
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[6])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc-startfiles.xml"
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[9])"/>
 
     </variablelist>
 
