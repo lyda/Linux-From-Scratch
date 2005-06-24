@@ -40,7 +40,7 @@
   <para>You will need to set your host target triplet a little differently.
   To set this information you can issue the following commands:</para>
 
-<screen><userinput>export LFS_HOST="`echo ${MACHTYPE} | sed -e 's/unknown/cross/g' -e 's/pc/cross/g'`"</userinput></screen>
+<screen><userinput>export LFS_HOST="`echo ${MACHTYPE} | sed -e 's/unknown/cross/g' -e 's/-pc-/-cross-/g'`"</userinput></screen>
 
   <para>Now you will need to set the target triplet for the target, which
   in this case is very simple. Set the command using the method listed

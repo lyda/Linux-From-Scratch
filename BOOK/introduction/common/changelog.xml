@@ -200,6 +200,16 @@
       <para>June 24, 2005</para>
       <itemizedlist>
         <listitem>
+          <para>[jhuntwork] - Slight edit to sed in variables page -
+          Old one broke on a powerpc triple-target.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>June 24, 2005</para>
+      <itemizedlist>
+        <listitem>
           <para>[manuel] - Added --with-tclinclude=$TCLPATH to
           Expect instructions.</para>
         </listitem>
