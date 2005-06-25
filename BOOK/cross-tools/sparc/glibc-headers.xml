@@ -65,7 +65,7 @@
 
 <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="${CC-gcc}" ../glibc-&glibc-version;/configure --prefix=/tools \
+<screen><userinput>CC=gcc ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
     --disable-sanity-checks --enable-kernel=2.6.0 \
     --with-headers=/tools/include \

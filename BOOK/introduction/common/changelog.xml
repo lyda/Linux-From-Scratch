@@ -197,6 +197,15 @@
 -->
 
     <listitem>
+      <para>June 25, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Changed CC="${CC-gcc}" by CC=gcc.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 24, 2005</para>
       <itemizedlist>
         <listitem>
