@@ -48,19 +48,19 @@
     xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+    href="glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+    href="glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc-startfiles.xml"
+    href="glibc-startfiles.xml"
     xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc-startfiles.xml"
+    href="glibc-startfiles.xml"
     xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
     <para>Next, prepare Glibc for compilation:</para>

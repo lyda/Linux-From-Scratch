@@ -43,33 +43,41 @@
   <sect2 role="installation">
     <title>Installation of Cross GCC Compiler with Static libgcc</title>
 
-    <para>We will make a couple of essential adjustments to the specs file
-    to point to use our build environment:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
-<screen><userinput>patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
-    <para>To make sure that we use the proper syntax for a couple of tools,
-    we apply the following patch:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
-<screen><userinput>patch -Np1 -i ../&gcc-posix-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
-    <para>Now we will need to setup our StartFile Spec to the correct library
-    location:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
-<screen><userinput>echo "
-#undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" &gt;&gt; gcc/config/linux.h</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
-    <para>Now we will change <command>gcc</command>'s search path to look
-    into <filename class="directory">/tools</filename> only:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[4])"/>
 
-<screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
-   gcc/Makefile.in</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
 
-    <important>
-      <para>The above patches and sed's are critical in ensuring a
-      successful overall build. Do not forget to apply them.</para>
-    </important>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/important[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/gcc.xml"
@@ -78,8 +86,6 @@
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/gcc.xml"
     xpointer="xpointer(id('install-gcc')/screen[3])"/>
-
-    <para/>
 
     <para>Prepare GCC for compilation:</para>
 
@@ -99,8 +105,6 @@
     <para>Install the package:</para>
 
 <screen><userinput>make install-gcc</userinput></screen>
-
-    <para/>
 
   </sect2>
 
