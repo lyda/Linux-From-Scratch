@@ -78,7 +78,7 @@ echo "
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --host=${LFS_HOST} --target=${LFS_TARGET} \
     --with-local-prefix=/tools --disable-nls --disable-shared \
-    --with-cpu=ultrasparc --enable-languages=c</userinput></screen>
+    --enable-languages=c</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
@@ -92,7 +92,7 @@ echo "
       xpointer="xpointer(//*[@role='installation']//*/varlistentry[2])"/>
 
       <varlistentry>
-        <term><parameter>--with-cpu=ultrasparc</parameter></term>
+        <term><parameter>--libexecdir=/cross-tools/lib</parameter></term>
         <listitem>
           <para>This switch do ... .</para>
         </listitem>
