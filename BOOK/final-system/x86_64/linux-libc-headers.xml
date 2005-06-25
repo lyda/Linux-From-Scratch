@@ -7,6 +7,109 @@
   %patches-entities;
 ]>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/linux-libc-headers.xml"
-  xpointer="xpointer(/sect1)"/>
+<sect1 id="ch-system-linux-libc-headers" role="wrap">
+  <?dbhtml filename="linux-libc-headers.html"?>
+
+  <title>Linux-Libc-Headers-&linux-libc-headers-x86_64-version;</title>
+
+  <indexterm zone="ch-system-linux-libc-headers">
+    <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
+  </indexterm>
+
+  <sect2 id="package-linux-libc-headers" role="package">
+    <title/>
+
+    <para>The Linux-Libc-Headers package contains the
+    <quote>sanitized</quote> kernel headers.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <segmentedlist>
+      <segtitle>&dependencies;</segtitle>
+
+      <seglistitem>
+        <seg>Coreutils</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 id="install-linux-libc-headers" role="installation">
+    <title>Installation of Linux-Libc-Headers</title>
+
+    <para>For years it has been common practice to use <quote>raw</quote>
+    kernel headers (straight from a kernel tarball) in <filename
+    class="directory">/usr/include</filename>, but over the last few
+    years, the kernel developers have taken a strong stance that this
+    should not be done. This gave birth to the Linux-Libc-Headers Project,
+    which was designed to maintain an API stable version of the Linux
+    headers.</para>
+
+    <para>The following patch contains header stubs which link to the
+    proper header from either asm-i386 or asm-x86_64:</para>
+
+<screen><userinput>patch -Np1 -i ../&linux-libc-headers-x86_64_biarch-patch;</userinput></screen>
+
+    <para>Install the header files:</para>
+
+<screen><userinput>install -d /usr/include
+cp -R include/asm-i386 /usr/include/
+cp -R include/asm-x86_64 /usr/include/
+cp -R include/asm-x86_64-biarch /usr/include/asm
+cp -R include/linux /usr/include</userinput></screen>
+
+    <para>Ensure that all the headers are owned by
+    <systemitem class="username">root</systemitem>:</para>
+
+<screen><userinput>chown -R root:root /usr/include/{asm,asm-i386,asm-x86_64,asm-x86_64-biarch,linux}</userinput></screen>
+
+    <para>Make sure the users can read the headers:</para>
+
+<screen><userinput>find /usr/include/{asm,asm-i386,asm-x86_64,asm-x86_64-biarch,linux} -type d -exec chmod 755 {} \;
+find /usr/include/{asm,asm-i386,asm-x86_64,asm-x86_64-biarch,linux} -type f -exec chmod 644 {} \;</userinput></screen>
+
+    <para/>
+
+  </sect2>
+
+  <sect2 id="contents-linux-libc-headers" role="content">
+    <title>Contents of Linux-Libc-Headers</title>
+
+    <segmentedlist>
+      <segtitle>Installed headers</segtitle>
+
+      <seglistitem>
+        <seg>/usr/include/{asm,linux}/*.h</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="linux-libc-headers">
+        <term><filename
+        class="headerfile">/usr/include/{asm,linux}/*.h</filename></term>
+        <listitem>
+          <para>The Linux headers API</para>
+          <indexterm zone="ch-system-linux-libc-headers linux-libc-headers">
+            <primary
+            sortas="e-/usr/include/{asm,linux}/*.h">/usr/include/{asm,linux}/*.h</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

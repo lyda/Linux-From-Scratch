@@ -22,6 +22,14 @@
       </listitem>
     </varlistentry>
 
+    <varlistentry>
+      <term>Linux-libc-headers x86_64 Biarch Patch - 99 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;linux-libc-headers/&linux-libc-headers-x86_64_biarch-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
   </variablelist>
 
 </sect1>

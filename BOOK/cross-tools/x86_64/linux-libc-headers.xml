@@ -43,11 +43,17 @@
   <sect2 role="installation">
     <title>Installation of Linux-Libc-Headers</title>
 
+    <para>The following patch contains header stubs which link to the
+    proper header from either asm-i386 or asm-x86_64:</para>
+
+<screen><userinput>patch -Np1 -i ../&linux-libc-headers-x86_64_biarch-patch;</userinput></screen>
+
     <para>Install the header files:</para>
 
 <screen><userinput>install -d /tools/include
-cp -R include/asm-i386 /tools/include/asm
-cp -R include/asm-x86_64 /tools/include/asm
+cp -R include/asm-i386 /tools/include/
+cp -R include/asm-x86_64 /tools/include/
+cp -R include/asm-x86_64-biarch /tools/include/asm
 cp -R include/linux /tools/include</userinput></screen>
 
   </sect2>

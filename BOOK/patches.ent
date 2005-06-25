@@ -48,6 +48,8 @@
 
 <!-- Start of x86_64 patches -->
 
+<!ENTITY linux-libc-headers-x86_64_biarch-patch "linux-libc-headers-&linux-libc-headers-x86_64-version;-x86_64_biarch-1.patch">
+
 <!-- Start of ppc patches -->
 
 <!ENTITY yaboot-fix-patch "yaboot-&yaboot-version;-fix-1.patch">

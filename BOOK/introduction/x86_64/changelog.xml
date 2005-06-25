@@ -67,6 +67,15 @@
 -->
 
     <listitem>
+      <para>June 25, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added biarch patch for linux-libc headers.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 10, 2005</para>
       <itemizedlist>
         <listitem>
