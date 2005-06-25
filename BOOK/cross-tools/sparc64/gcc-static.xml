@@ -91,13 +91,6 @@ echo "
       href="../x86/gcc-static.xml"
       xpointer="xpointer(//*[@role='installation']//*/varlistentry[2])"/>
 
-      <varlistentry>
-        <term><parameter>--libexecdir=/cross-tools/lib</parameter></term>
-        <listitem>
-          <para>This switch do ... .</para>
-        </listitem>
-      </varlistentry>
-
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../x86/gcc-static.xml"
       xpointer="xpointer(//*[@role='installation']//*/varlistentry[4])"/>
