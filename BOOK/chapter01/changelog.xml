@@ -87,6 +87,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>June 25th, 2005 [jhuntwork]: Added a --with-tclinclude flag to
+Expect build to ensure that it knows where to find the Tcl source directory.</para></listitem>
+
 <listitem><para>June 25th, 2005 [matthew]: Updated to the latest version of the
 mktemp tempfile patch, which supports building outside the source directory</para></listitem>
 
