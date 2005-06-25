@@ -63,21 +63,53 @@
     href="../../final-system/x86/glibc.xml"
     xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    <para>Next, prepare Glibc for compilation:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+<screen><userinput>CC=gcc ../glibc-&glibc-version;/configure --prefix=/tools \
+    --host=${LFS_TARGET} --build=${LFS_HOST} \
+    --disable-sanity-checks --enable-kernel=2.6.0 \
+    --with-headers=/tools/include \
+    --with-binutils=/cross-tools/${LFS_TARGET}/bin</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
     xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[5])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[6])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/para[6]/range-to(//*[@role='installation']/para[last()]))"/>
+    xpointer="xpointer(//*[@role='installation']/para[10])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[8])"/>
 
   </sect2>
 
