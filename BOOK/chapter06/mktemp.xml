@@ -33,7 +33,7 @@ files in shell scripts.</para>
 to <command>mktemp</command>. Patch Mktemp to include a
 <command>tempfile</command> wrapper:</para>
 
-<screen><userinput>patch -Np1 -i ../mktemp-&mktemp-version;-add_tempfile-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../mktemp-&mktemp-version;-add_tempfile-2.patch</userinput></screen>
 
 <para>Prepare Mktemp for compilation:</para>
 
