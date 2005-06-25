@@ -43,28 +43,49 @@
     <title>Installation of Glibc Startfiles</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/mips/glibc.xml"
+    href="glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc-headers.xml"
     xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/mips/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5])"/>
+    href="glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/mips/glibc.xml"
+    href="glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc-headers.xml"
     xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+    <para>To create Linuxthread Startfiles use the following
+    configure line:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc" \
+    AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
+    ../glibc-&glibc-version;/configure --prefix=/tools \
+    --host=${LFS_TARGET} --build=${LFS_HOST} \
+    --disable-profile --enable-add-ons \
+    --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
+    --with-headers=/tools/include</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips/glibc-startfiles.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5]/range-to(//*[@role='installation']/para[last()]))"/>
+    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make csu/subdir_lib</userinput></screen>
+
+    <para>Since we are only creating the Glibc startfiles at this time
+    we will need to manually copy files over.</para>
+
+<screen><userinput>install -d /tools/lib
+cp -fp csu/crt[i1n].o /tools/lib</userinput></screen>
 
   </sect2>
 
