@@ -68,7 +68,42 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4]/range-to(//*[@role='installation']/para[last()]))"/>
+    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/important[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('install-gcc')/para[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('install-gcc')/screen[3])"/>
+
+    <para>Prepare GCC for compilation:</para>
+
+<screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
+    --host=${LFS_HOST} --target=${LFS_TARGET} \
+    --with-local-prefix=/tools --disable-nls --disable-shared \
+    --enable-multilib=no --enable-languages=c</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
+
+    <para>Continue with compiling the package:</para>
+
+<screen><userinput>make all-gcc</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install-gcc</userinput></screen>
 
   </sect2>
 

@@ -53,7 +53,7 @@
 
     <para>On the PPC arch, NPTL requires the following to be set:</para>
 
-<screen><userinput>echo "libc_cv_ppc_machine=yes" > config.cache</userinput></screen>
+<screen><userinput>echo "libc_cv_ppc_machine=yes" &gt; config.cache</userinput></screen>
 
     <para>Next, prepare Glibc for compilation:</para>
 
