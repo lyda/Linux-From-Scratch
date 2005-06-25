@@ -29,12 +29,29 @@
 
     <para>Install the header files:</para>
 
-<screen><userinput>cp -R include/asm-sparc /usr/include/asm
+    <para>The following patch contains header stubs which link to the
+    proper header from either asm-sparc or asm-sparc64:</para>
+
+<screen><userinput>patch -Np1 -i ../&linux-libc-headers-sparc_biarch-patch;</userinput></screen>
+
+    <para>Install the header files:</para>
+
+<screen><userinput>install -d /usr/include
+cp -R include/asm-sparc64 /usr/include/
+cp -R include/asm-sparc /usr/include/
+cp -R include/asm-sparc-biarch /usr/include/asm
 cp -R include/linux /usr/include</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/linux-libc-headers.xml"
-    xpointer="xpointer(id('install-linux-libc-headers')/para[3]/range-to(id('install-linux-libc-headers')/para[last()]))"/>
+    <para>Ensure that all the headers are owned by
+    <systemitem class="username">root</systemitem>:</para>
+
+<screen><userinput>chown -R root:root /usr/include/{asm,asm-sparc,asm-sparc64,asm-sparc-biarch,linux}</userinput></screen>
+
+    <para>Make sure the users can read the headers:</para>
+
+<screen><userinput>find /usr/include/{asm,asm-sparc,asm-sparc64,asm-sparc-biarch,linux} -type d -exec chmod 755 {} \;
+find /usr/include/{asm,asm-sparc,asm-sparc64,asm-sparc-biarch,linux} -type f -exec chmod 644 {} \;</userinput></screen>
+
 
   </sect2>
 
