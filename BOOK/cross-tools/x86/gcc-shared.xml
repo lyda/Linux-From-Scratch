@@ -99,14 +99,12 @@
     xpointer="xpointer(//*[@role='installation']/important[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/para[4])"/>
+    href="gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[5])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/screen[3])"/>
-
-    <para/>
+    href="gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
 
     <para>Prepare GCC for compilation:</para>
 
@@ -139,8 +137,6 @@
     <para>Install the package:</para>
 
 <screen><userinput>make install-gcc</userinput></screen>
-
-    <para/>
 
   </sect2>
 

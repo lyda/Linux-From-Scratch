@@ -44,12 +44,12 @@
     <title>Installation of Glibc Startfiles</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+    href="glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+    href="glibc-headers.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
     <para>For NPTL enabled systems we will need to add the following
     lines to <filename>config.cache</filename>:</para>
@@ -157,8 +157,6 @@ echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache</userinput></screen>
 
 <screen><userinput>install -d /tools/lib
 cp -fp csu/crt[i1n].o /tools/lib</userinput></screen>
-
-    <para/>
 
   </sect2>
 

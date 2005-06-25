@@ -46,7 +46,47 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1]/range-to(//*[@role='installation']/para[6]))"/>
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@role='installation']/important[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('install-gcc')/para[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(id('install-gcc')/screen[3])"/>
 
     <para>Prepare GCC for compilation:</para>
 
