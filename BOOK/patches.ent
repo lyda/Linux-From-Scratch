@@ -20,11 +20,11 @@
 
 <!ENTITY glibc-testfix-patch "glibc-&glibc-version;-fix_test-1.patch">
 
-<!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch"> 
+<!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch">
 
 <!ENTITY inetutils-man_pages-patch "inetutils-&inetutils-version;-no_server_man_pages-1.patch">
 
-<!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-1.patch">
+<!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-2.patch">
 
 <!ENTITY ncurses-update-patch "ncurses-&ncurses-version;-20050319-patch.sh.bz2">
 

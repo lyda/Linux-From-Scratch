@@ -123,7 +123,7 @@
       <para>Zlib &zlib-version;</para>
     </listitem>
     <listitem>
-      <para>udev-config-2.rules</para>
+      <para>udev-config-3.rules</para>
     </listitem>
   </itemizedlist>
 
@@ -201,6 +201,11 @@
       <itemizedlist>
         <listitem>
           <para>[manuel] - Changed CC="${CC-gcc}" by CC=gcc.</para>
+        </listitem>
+        <listitem>
+          <para>[manuel] - Updated to the latest version of the
+          mktemp tempfile patch, which supports building outside
+          the source directory.</para>
         </listitem>
       </itemizedlist>
     </listitem>
