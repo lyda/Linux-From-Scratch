@@ -16,7 +16,7 @@
 <screen><userinput>export CC="${LFS_TARGET}-gcc"
 export CXX="${LFS_TARGET}-g++"
 export AR="${LFS_TARGET}-ar"
-export AS="${LFS_TARGET}-ar"
+export AS="${LFS_TARGET}-as"
 export RANLIB="${LFS_TARGET}-ranlib"
 export LD="${LFS_TARGET}-ld"</userinput></screen>
 
