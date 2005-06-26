@@ -45,7 +45,7 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make CROSS="${LFS_TARGET}-" udevdir=/dev</userinput></screen>
+<screen><userinput>make CC="${CC} ${BUILD64}" CROSS="${LFS_TARGET}-" udevdir=/dev</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/udev.xml"
@@ -53,16 +53,12 @@
 
     <para>Install the package:</para>
 
-<screen><userinput>make CC="${CC} ${BUILD64}" udevdir=/dev install</userinput></screen>
+<screen><userinput>make udevdir=/dev install</userinput></screen>
 
     <para>Udev's configuration is far from ideal by default, so install
     the configuration files here:</para>
 
 <screen><userinput>cp ../udev-config-2.rules ${LFS}/etc/udev/rules.d/25-lfs.rules</userinput></screen>
-
-    <para>Reset <envar>CC</envar> to default environment variable:</para>
-
-<screen><userinput>source ~/.bash_profile</userinput></screen>
 
   </sect2>
 
