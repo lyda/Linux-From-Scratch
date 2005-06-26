@@ -201,7 +201,10 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Removed unnecessary bzip2 builds from temp-system build.
-          this change was only for x86_64, mips64, and sparc64.</para>
+          This change was only for x86_64, mips64, and sparc64.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Updated to Man-pages 2.04.</para>
         </listitem>
       </itemizedlist>
     </listitem>
