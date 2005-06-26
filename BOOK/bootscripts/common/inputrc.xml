@@ -26,10 +26,10 @@
   <filename>.inputrc</filename> file in the user's home directory with
   the modified mappings.</para>
 
-  <para>For more information on how to edit the inputrc file, see
-  <command>info bash</command> under the <emphasis>Readline Init
-  File</emphasis> section. <command>info readline</command> is also a
-  good source of information.</para>
+  <para>For more information on how to edit the <filename>inputrc</filename>
+  file, see <command>info bash</command> under the <emphasis>Readline Init
+  File</emphasis> section. <command>info readline</command> is also a good
+  source of information.</para>
 
   <para>Below is a generic global <filename>inputrc</filename> along
   with comments to explain what the various options do. Note that

@@ -49,8 +49,8 @@
   linkend="chapter-temporary-tools"/>.</para>
 
   <para>Sometimes package test suites will give false failures. Consult
-  the LFS Wiki at <ulink url="&wiki-root;"/> to verify that these
-  failures are expected. This site is valid for all tests throughout this
-  book.</para>
+  the logs located at <ulink url="&test-results;"/> to verify whether or
+  not these failures are expected. This site is valid for all tests
+  throughout this book.</para>
 
 </sect1>
