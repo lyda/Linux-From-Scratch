@@ -217,6 +217,10 @@
           <para>[jim] - Removed export CC in udev during final-system.  
           This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Added missing symlink in createfiles.xml for lib32 and lib64.  
+          This change was only for x86_64, mips64, and sparc64.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
