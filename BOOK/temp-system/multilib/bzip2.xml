@@ -7,7 +7,7 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-temp-system-bzip2 role="wrap">
+<sect1 id="ch-temp-system-bzip2" role="wrap">
   <?dbhtml filename="bzip2.html"?>
 
   <title>Bzip2-&bzip2-version;</title>
