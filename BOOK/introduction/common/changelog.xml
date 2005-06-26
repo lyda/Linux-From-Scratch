@@ -204,7 +204,10 @@
           This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
         <listitem>
-          <para>[jim] - Updated to Man-pages 2.04.</para>
+          <para>[jim] - Updated Man-pages to 2.04.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Updated File to 4.14.</para>
         </listitem>
       </itemizedlist>
     </listitem>
