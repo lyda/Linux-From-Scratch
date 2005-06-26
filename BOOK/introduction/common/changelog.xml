@@ -197,6 +197,16 @@
 -->
 
     <listitem>
+      <para>June 26, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Removed unnecessary bzip2 builds from temp-system build.
+          this change was only for x86_64, mips64, and sparc64.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 25, 2005</para>
       <itemizedlist>
         <listitem>

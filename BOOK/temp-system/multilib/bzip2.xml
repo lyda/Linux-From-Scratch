@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-temp-system-bzip2-64bit" role="wrap">
-  <?dbhtml filename="bzip2-64.html"?>
+<sect1 id="ch-temp-system-bzip2 role="wrap">
+  <?dbhtml filename="bzip2.html"?>
 
-  <title>Bzip2-&bzip2-version; 64-Bit</title>
+  <title>Bzip2-&bzip2-version;</title>
 
-  <indexterm zone="ch-temp-system-bzip2-64bit">
-    <primary sortas="a-Bzip2">Bzip2 64-Bit</primary>
+  <indexterm zone="ch-temp-system-bzip2t">
+    <primary sortas="a-Bzip2">Bzip2</primary>
     <secondary>temporary system</secondary>
   </indexterm>
 
@@ -55,11 +55,6 @@
 
 <screen><userinput>make CC="${CC} ${BUILD64}" AR="${AR}" \
 RANLIB="${RANLIB}" LDFLAGS="-s"</userinput></screen>
-
-    <para>Remove the 32-bit Bzip2 binaries, as we want to use the
-    64-bit ones:</para>
-
-<screen><userinput>rm -f /tools/bin/bz*</userinput></screen>
 
     <para>Install the package:</para>
 
