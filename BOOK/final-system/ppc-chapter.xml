@@ -50,7 +50,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/man-pages.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/make.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/module-init-tools.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/patch.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ppc/patch.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/procps.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/psmisc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/shadow.xml"/>
