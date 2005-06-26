@@ -225,6 +225,10 @@
           <para>[jim] - Added missing directories in creatingdirs.xml for lib32 and lib64.  
           This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Added missing DESTDIR=${LFS} in udev during reboot section build.  
+          This change was only for x86_64, mips64, and sparc64.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
