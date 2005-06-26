@@ -1,3 +1,9 @@
+n/a - June 26, 2005
+	* Removed consolelog script from contrib 
+	* Updated interactive rc script in contrib and added 
+	  README.rc-Interactive, added install target to the
+	  Makefile. (DJ Lucas)
+
 3.2.2 - May 29, 2005
 	* Tagged as 3.2.2 (Nathan Coulson)
 
