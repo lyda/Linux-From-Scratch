@@ -48,7 +48,7 @@
     in build failures. Fix this issue by updating Ncurses with a rollup
     patch released on 2005/03/19:</para>
 
-<screen><userinput>bzcat ../&ncurses-update-patch; > update.sh
+<screen><userinput>bzcat ../&ncurses-update-patch; &gt; update.sh
 sh update.sh</userinput></screen>
 
     <para>Prepare Ncurses for compilation:</para>
@@ -59,6 +59,20 @@ sh update.sh</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--with-shared</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--without-debug</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
       <varlistentry>
         <term><parameter>--without-ada</parameter></term>
@@ -78,6 +92,13 @@ sh update.sh</userinput></screen>
           <filename class="directory">/tools/include/ncurses</filename>, to
           ensure that other packages can find the Ncurses headers
           successfully.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--with-build-cc=gcc</parameter></term>
+        <listitem>
+          <para>This do ...</para>
         </listitem>
       </varlistentry>
 

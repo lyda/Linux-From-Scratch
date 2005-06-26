@@ -54,6 +54,23 @@
    ./configure --prefix=/tools --cache-file=config.cache \
    --build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
 
+    <para>This package has an issue when compiled against versions of
+    Glibc later than 2.3.2. Some of the Coreutils utilities (such as
+    <command>head</command>, <command>tail</command>, and
+    <command>sort</command>) will reject their traditional syntax, a
+    syntax that has been in use for approximately 30 years. This old
+    syntax is so pervasive that compatibility should be preserved until
+    the many places where it is used can be updated. Backwards compatibility
+    is achieved by setting the <envar>DEFAULT_POSIX2_VERSION</envar>
+    environment variable to <quote>199209</quote> in the above command.
+    If you do not want Coreutils to be backwards compatible with the
+    traditional syntax, then omit setting the
+    <envar>DEFAULT_POSIX2_VERSION</envar> environment variable. It is
+    important to remember that doing so will have consequences, including
+    the need to patch the many packages that still use the old syntax.
+    Therefore, it is recommended that the instructions be followed exactly
+    as given above.</para>
+
     <para>Compile the package:</para>
 
 <screen><userinput>make LDFLAGS="-s"</userinput></screen>

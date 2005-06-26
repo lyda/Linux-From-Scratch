@@ -52,6 +52,18 @@
 
 <screen><userinput>make LDFLAGS="-s"</userinput></screen>
 
+    <variablelist>
+      <title>The meaning of the make options:</title>
+
+      <varlistentry>
+        <term><parameter>LDFLAGS="-s"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
     <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>

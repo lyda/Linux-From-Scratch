@@ -47,6 +47,18 @@
 
 <screen><userinput>./configure --prefix=/tools --shared</userinput></screen>
 
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--shared</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
     <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>

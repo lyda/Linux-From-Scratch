@@ -62,7 +62,14 @@ sed "s@size \$(Program)@${LFS_TARGET}-&amp;@g"  Makefile.in.orig > Makefile.in</
    --without-bash-malloc --host=${LFS_TARGET}</userinput></screen>
 
     <variablelist>
-      <title>The meaning of the configure option:</title>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--with-curses</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
       <varlistentry>
         <term><parameter>--without-bash-malloc</parameter></term>
