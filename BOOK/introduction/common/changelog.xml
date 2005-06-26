@@ -213,6 +213,10 @@
           <para>[manuel] - Added errata page and small changes from trunk up
           to r6189.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Removed export CC in udev during final-system.  
+          This change was only for x86_64, mips64, and sparc64.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

@@ -51,14 +51,9 @@
     href="../../final-system/common/udev.xml"
     xpointer="xpointer(id('install-udev')/variablelist[1])"/>
 
-    <para>Ensure that Udev uses our cross-compiler and builds 64-bit
-    binaries:</para>
-
-<screen><userinput>export CC="${LFS_TARGET}-gcc ${BUILD64}"</userinput></screen>
-
     <para>Install the package:</para>
 
-<screen><userinput>make udevdir=/dev install</userinput></screen>
+<screen><userinput>make CC="${CC} ${BUILD64}" udevdir=/dev install</userinput></screen>
 
     <para>Udev's configuration is far from ideal by default, so install
     the configuration files here:</para>
