@@ -178,6 +178,16 @@ minimal: create-dirs create-service-dir
 install-net-agent:
 	install                   -m 755 contrib/hotplug/net.agent   ${EXTDIR}/hotplug
 
+install-interactive:
+	mv ${EXTDIR}/rc.d/init.d/rc ${EXTDIR}/rc.d/init.d/rc-interactive.bak
+	mv ${EXTDIR}/rc.d/init.d/functions ${EXTDIR}/rc.d/init.d/functions-interactive.bak
+	mv ${EXTDIR}/sysconfig/rc ${EXTDIR}/sysconfig/rc-interactive.bak
+	install -d -m ${DIRMODE} /media/boottemp
+	install -m ${MODE} contrib/init.d/rc-Interactive ${EXTDIR}/rc.d/init.d/rc
+	install -m ${CONFMODE} contrib/init.d/functions-Interactive ${EXTDIR}/rc.d/init.d/functions
+	install -m ${CONFMODE} contrib/sysconfig/rc-Interactive ${EXTDIR}/sysconfig/rc
+
 .PHONY: all create-dirs create-service-dir \
-	install install-service-mtu install-livecd
+	install install-service-mtu install-livecd \
+	install-net-agent install-interactive
 
