@@ -48,6 +48,10 @@
 <screen><userinput>CC="${CC} ${BUILD32}" \
    ./configure --prefix=/tools --shared</userinput></screen>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
+
     <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>

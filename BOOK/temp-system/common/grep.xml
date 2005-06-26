@@ -57,7 +57,7 @@
           <para>This makes sure that the <command>grep</command> program
           does not get linked against a Perl Compatible Regular Expression
           (PCRE) library that may be present on the host and would not be
-          available once we enter the chroot environment.</para>
+          available when building the final system.</para>
         </listitem>
       </varlistentry>
 

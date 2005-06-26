@@ -57,21 +57,13 @@
    --host=${LFS_TARGET} --disable-libasprintf \
    --without-csharp --cache-file=config.cache</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gettext.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    <para>Compile the package:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gettext.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+<screen><userinput>make LDFLAGS="-s"</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gettext.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    <para>Install the package:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gettext.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+<screen><userinput>make install</userinput></screen>
 
   </sect2>
 
@@ -84,4 +76,3 @@
   </sect2>
 
 </sect1>
-

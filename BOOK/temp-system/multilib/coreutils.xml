@@ -57,6 +57,10 @@
    ./configure --prefix=/tools --cache-file=config.cache \
    --build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+
     <para>Compile the package:</para>
 
 <screen><userinput>make LDFLAGS="-s"</userinput></screen>

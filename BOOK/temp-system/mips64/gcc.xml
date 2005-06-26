@@ -44,19 +44,19 @@
     <title>Installation of GCC</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/mips/gcc-static.xml"
+    href="../../cross-tools/mips64/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/mips/gcc-static.xml"
+    href="../../cross-tools/mips64/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/mips/gcc-static.xml"
+    href="../../cross-tools/mips64/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/mips/gcc-static.xml"
+    href="../../cross-tools/mips64/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -68,11 +68,11 @@
     xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/mips/gcc-static.xml"
+    href="../../cross-tools/mips64/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/mips/gcc-static.xml"
+    href="../../cross-tools/mips64/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -99,7 +99,7 @@
    gcc/mklibgcc.in</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/mips/gcc-static.xml"
+    href="../../cross-tools/mips64/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/important[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -123,9 +123,41 @@
     --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
     --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/variablelist[1]/range-to(//*[@role='installation']/para[last()]))"/>
+    <variablelist>
+      <title>The meaning of the new configure options:</title>
+
+      <varlistentry>
+        <term><parameter>CXX="${CXX} ${BUILD64}"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--libexecdir=/tools/lib64</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc.xml"
+      xpointer="xpointer(//*[@role='installation']//*/varlistentry[2])"/>
+
+    </variablelist>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+    <para>Many packages use the name <command>cc</command> to call the C
+    compiler. To satisfy those packages, create a symlink:</para>
+
+<screen><userinput>ln -s gcc /tools/bin/cc</userinput></screen>
 
   </sect2>
 

@@ -51,12 +51,6 @@
     href="../common/ncurses.xml"
     xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
-    <para>The Ncurses package will use the environment variables
-    <envar>CC</envar> and <envar>CXX</envar> in preference to variables
-    you may pass to the configure script. To force Ncurses to use our
-    build flags we temporarily set <envar>CC</envar> and
-    <envar>CXX</envar>:</para>
-
     <para>Prepare Ncurses for compilation:</para>
 
 <screen><userinput>CC="${CC} ${BUILD32}" CXX="${CXX} ${BUILD32}" \
@@ -66,21 +60,15 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/ncurses.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+    <para>Compile the package:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+<screen><userinput>make</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+    <para>Install the package:</para>
 
-    <para/>
+<screen><userinput>make install</userinput></screen>
 
   </sect2>
 

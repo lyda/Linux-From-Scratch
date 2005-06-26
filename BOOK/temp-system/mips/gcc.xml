@@ -113,7 +113,32 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[9]/range-to(//*[@role='installation']/para[last()]))"/>
+    xpointer="xpointer(//*[@role='installation']/para[9])"/>
+
+    <para>Now prepare GCC for compilation:</para>
+
+<screen><userinput>../gcc-&gcc-version;/configure --prefix=/tools \
+    --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
+    --libexecdir=/tools/lib --with-local-prefix=/tools --enable-long-long \
+    --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
+    --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+    <para>Many packages use the name <command>cc</command> to call the C
+    compiler. To satisfy those packages, create a symlink:</para>
+
+<screen><userinput>ln -s gcc /tools/bin/cc</userinput></screen>
 
   </sect2>
 

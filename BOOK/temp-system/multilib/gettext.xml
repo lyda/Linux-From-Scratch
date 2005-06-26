@@ -60,19 +60,15 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gettext.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gettext.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+    <para>Compile the package:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gettext.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+<screen><userinput>make LDFLAGS="-s"</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gettext.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
 
   </sect2>
 

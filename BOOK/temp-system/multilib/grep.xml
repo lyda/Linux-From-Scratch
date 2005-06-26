@@ -45,27 +45,20 @@
 
     <para>Prepare Grep for compilation:</para>
 
-<para>Prepare Grep for compilation:</para>
-
 <screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=/tools \
-   --host=${LFS_TARGET} --disable-perl-regexp \
-   --with-included-regex</userinput></screen>
+   --host=${LFS_TARGET} --disable-perl-regexp</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/grep.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/grep.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+    <para>Compile the package:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/grep.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+<screen><userinput>make LDFLAGS="-s" </userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/grep.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
 
   </sect2>
 

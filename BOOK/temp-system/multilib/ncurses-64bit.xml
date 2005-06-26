@@ -51,10 +51,6 @@
     href="../common/ncurses.xml"
     xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="ncurses.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
-
     <para>Prepare Ncurses for compilation:</para>
 
 <screen><userinput>CC="${CC} ${BUILD64}" CXX="${CXX} ${BUILD64}" \
@@ -62,21 +58,13 @@
    --host=${LFS_TARGET} --without-debug --without-ada \
    --enable-overwrite --with-build-cc=gcc --libdir=/tools/lib64</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    <para>Compile the package:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+<screen><userinput>make</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    <para>Install the package:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+<screen><userinput>make install</userinput></screen>
 
   </sect2>
 

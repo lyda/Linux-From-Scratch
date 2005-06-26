@@ -94,14 +94,12 @@
      --disable-nls --enable-shared --enable-64-bit-bfd</userinput></screen>
 
     <variablelist>
-      <title>The meaning of the new configure option:</title>
+      <title>The meaning of the new configure options:</title>
 
       <varlistentry>
-        <term><parameter>--prefix=/tools</parameter></term>
+        <term><parameter>CC="${CC} ${BUILD64}"</parameter></term>
         <listitem>
-          <para>This tells the configure script to prepare to install the
-          Binutils programs in the <filename class="directory">/tools</filename>
-          directory.</para>
+          <para>This do ...</para>
         </listitem>
       </varlistentry>
 
