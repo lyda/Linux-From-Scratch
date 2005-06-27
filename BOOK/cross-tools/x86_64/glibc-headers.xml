@@ -103,9 +103,8 @@
     href="../x86/glibc-headers.xml"
     xpointer="xpointer(//*[@role='installation']/para[8])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[7])"/>
+<screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/x86_64/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
+
 
   </sect2>
 

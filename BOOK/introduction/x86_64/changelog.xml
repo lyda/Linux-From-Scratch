@@ -67,6 +67,17 @@
 -->
 
     <listitem>
+      <para>June 26, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Fixed several flags and variables (removed --enable-multilib=no
+	  from gcc pages, added $LFS_TARGET32 variable to 32-bit glibc builds). Patch provided
+	  by Thomas Pegg.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 25, 2005</para>
       <itemizedlist>
         <listitem>

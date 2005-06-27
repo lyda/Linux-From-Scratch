@@ -116,7 +116,7 @@
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --host=${LFS_HOST} --target=${LFS_TARGET} \
     --with-local-prefix=/tools --disable-nls --enable-shared \
-    --enable-multilib=no --enable-languages=c</userinput></screen>
+    --enable-languages=c</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc-shared.xml"

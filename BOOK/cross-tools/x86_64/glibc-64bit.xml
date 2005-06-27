@@ -63,12 +63,17 @@
     href="glibc-startfiles.xml"
     xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
-<para>Next, prepare Glibc for compilation:</para>
+    <para>Now we make sure the Glibc goes into <filename
+    class="directory">/tools/lib64</filename>:</para>
+
+<screen><userinput>echo "slibdir=/tools/lib64" &gt;&gt; configparms</userinput></screen>
+
+    <para>Next, prepare Glibc for compilation:</para>
 
 <screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD64}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST} \
+    --host=${LFS_TARGET} --build=${LFS_HOST} --libdir=/tools/lib64 \
     --disable-profile --enable-add-ons \
     --with-tls --enable-kernel=2.6.0 --with-__thread \
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
