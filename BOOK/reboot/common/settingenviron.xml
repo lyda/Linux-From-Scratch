@@ -11,12 +11,10 @@
   <title>Setting Up the Environment</title>
 
   <para>The new instance of the shell is a <emphasis>non-login</emphasis>
-  shell, which does not read the <filename>/etc/profile</filename> or
-  <filename>.bash_profile</filename> files, but rather reads the
-  <filename>.bashrc</filename> file instead. Create the
-  <filename>.bashrc</filename> file now:</para>
+  shell, will read <filename>.bash_profile</filename> file. Create the
+  <filename>.bash_profile</filename> file now:</para>
 
-<screen><userinput>cat &gt; ${LFS}/root/.bashrc &lt;&lt; "EOF"
+<screen><userinput>cat &gt; ${LFS}/root/.bash_profile &lt;&lt; "EOF"
 <literal>PS1='\u:\w\$ '
 LC_ALL=POSIX
 PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin:/tools/sbin
