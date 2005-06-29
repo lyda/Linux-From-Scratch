@@ -197,6 +197,15 @@
 -->
 
     <listitem>
+      <para>June 29, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Changed to flex-3 patch.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 28, 2005</para>
       <itemizedlist>
         <listitem>
