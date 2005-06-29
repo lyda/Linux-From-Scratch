@@ -87,6 +87,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>June 29th, 2005 [archaic]: Moved the host requirements page to
+the preface section of the book.</para></listitem>
+
 <listitem><para>June 28th, 2005 [archaic]: Switched from mounting /dev on a
 ramfs to a tmpfs.</para></listitem>
 
