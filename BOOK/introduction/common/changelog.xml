@@ -214,6 +214,9 @@
           <para>[jim] - Added Build Flags to multilib builds in chroot.
 	   This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Fixed linux-libc-headers install in sparc64 and x86_64.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

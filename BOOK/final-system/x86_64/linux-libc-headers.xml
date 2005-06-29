@@ -69,12 +69,12 @@ cp -R include/linux /usr/include</userinput></screen>
     <para>Ensure that all the headers are owned by
     <systemitem class="username">root</systemitem>:</para>
 
-<screen><userinput>chown -R root:root /usr/include/{asm,asm-i386,asm-x86_64,asm-x86_64-biarch,linux}</userinput></screen>
+<screen><userinput>chown -R root:root /usr/include/{asm,asm-i386,asm-x86_64,linux}</userinput></screen>
 
     <para>Make sure the users can read the headers:</para>
 
-<screen><userinput>find /usr/include/{asm,asm-i386,asm-x86_64,asm-x86_64-biarch,linux} -type d -exec chmod 755 {} \;
-find /usr/include/{asm,asm-i386,asm-x86_64,asm-x86_64-biarch,linux} -type f -exec chmod 644 {} \;</userinput></screen>
+<screen><userinput>find /usr/include/{asm,asm-i386,asm-x86_64,linux} -type d -exec chmod 755 {} \;
+find /usr/include/{asm,asm-i386,asm-x86_64,linux} -type f -exec chmod 644 {} \;</userinput></screen>
 
     <para/>
 
