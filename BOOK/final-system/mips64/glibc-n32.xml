@@ -122,18 +122,6 @@
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../mips64/glibc.xml"
-  xpointer="xpointer(id('i18n-glibc'))"/>
-
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../mips64/glibc.xml"
-  xpointer="xpointer(id('conf-glibc'))"/>
-
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../mips64/glibc.xml"
-  xpointer="xpointer(id('conf-ld'))"/>
-
   <sect2 role="content">
     <title/>
 

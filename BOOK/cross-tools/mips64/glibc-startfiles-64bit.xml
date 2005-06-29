@@ -114,4 +114,20 @@ cp -fp csu/crt[i1n].o /tools/lib64</userinput></screen>
 
   </sect2>
 
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-glibc" role="."/></para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-glibc" role="."/></para>
+
+  </sect2>
+
 </sect1>

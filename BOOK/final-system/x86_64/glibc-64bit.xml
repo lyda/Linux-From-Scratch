@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-glibc" role="wrap">
-  <?dbhtml filename="glibc.html"?>
+<sect1 id="ch-system-glibc-64bit" role="wrap">
+  <?dbhtml filename="glibc-64bit.html"?>
 
-  <title>Glibc-&glibc-version;</title>
+  <title>Glibc-&glibc-version; 64-Bit</title>
 
-  <indexterm zone="ch-system-glibc">
-    <primary sortas="a-Glibc">Glibc</primary>
+  <indexterm zone="ch-system-glibc-64bit">
+    <primary sortas="a-Glibc">Glibc 64-Bit</primary>
     <secondary>cross tools</secondary>
   </indexterm>
 
@@ -45,12 +45,20 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[1]/range-to(id('install-glibc')/para[5]))"/>
+    xpointer="xpointer(id('install-glibc')/para[1]/range-to(id('install-glibc')/para[3]))"/>
 
-<screen><userinput>CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}" \
+    <para>Now we make sure the Glibc goes into <filename
+    class="directory">/lib64</filename>:</para>
+
+<screen><userinput>echo "slibdir=/lib64" &gt;&gt; configparms</userinput></screen>
+
+    <para>Next, prepare Glibc for compilation:</para>
+
+<screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \
     ../glibc-&glibc-version;/configure --prefix=/usr \
-    --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
-    --libexecdir=/usr/lib/glibc --host=${LFS_TARGET32}</userinput></screen>
+    --libdir=/tools/lib64 -disable-profile --enable-add-ons \
+    --enable-kernel=2.6.0 --libexecdir=/usr/lib64/glibc
+    </userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
@@ -62,12 +70,20 @@
 
   </sect2>
 
-  <sect2 role="content">
-    <title/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/glibc.xml"
+  xpointer="xpointer(id('i18n-glibc'))"/>
 
-    <para>Details on this package are located in <xref
-    linkend="contents-glibc" role="."/></para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/glibc.xml"
+  xpointer="xpointer(id('conf-glibc'))"/>
 
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/glibc.xml"
+  xpointer="xpointer(id('conf-ld'))"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/glibc.xml"
+  xpointer="xpointer(id('contents-glibc'))"/>
 
 </sect1>

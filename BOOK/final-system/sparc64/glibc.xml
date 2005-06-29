@@ -10,15 +10,34 @@
 <sect1 id="ch-system-glibc" role="wrap">
   <?dbhtml filename="glibc.html"?>
 
-  <title>Glibc-&glibc-version;</title>
+ <title>Glibc-&glibc-version;</title>
 
   <indexterm zone="ch-system-glibc">
     <primary sortas="a-Glibc">Glibc</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('package-glibc'))"/>
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('package-glibc')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('package-glibc')/segmentedlist[2])"/>
+
+  </sect2>
 
   <sect2 role="installation">
     <title>Installation of Glibc</title>
@@ -43,9 +62,16 @@
     href="../mips/glibc.xml"
     xpointer="xpointer(/sect1/sect2[2]/screen[2])"/>
 
+    <para>Prepare Glibc for compilation:</para>
+
+<screen><userinput>CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}" \
+    ../glibc-&glibc-version;/configure --prefix=/usr \
+    --host=${LFS_TARGET32} --disable-profile --enable-add-ons \
+    --enable-kernel=2.6.0 --libexecdir=/usr/lib/glibc</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4]/range-to(id('install-glibc')/para[12]))"/>
+    xpointer="xpointer(id('install-glibc')/variablelist[1]/range-to(id('install-glibc')/para[12]))"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
@@ -53,20 +79,12 @@
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('i18n-glibc'))"/>
+  <sect2 role="content">
+    <title/>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('conf-glibc'))"/>
+    <para>Details on this package are located in <xref
+    linkend="contents-glibc" role="."/></para>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('conf-ld'))"/>
-
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('contents-glibc'))"/>
+  </sect2>
 
 </sect1>

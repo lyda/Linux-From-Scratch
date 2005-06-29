@@ -83,10 +83,10 @@
     href="../mips64/glibc.xml"
     xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
-<screen><userinput>CC="gcc ${BUILD64}" CXX="gcc ${BUILD64} \
+<screen><userinput>CC="gcc ${BUILD64}" CXX="gcc ${BUILD64}" \
     ../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
-    --libexecdir=/usr/lib64/glibc --libdir=/lib64</userinput></screen>
+    --libexecdir=/usr/lib64/glibc --libdir=/usr/lib64</userinput></screen>
 
     <variablelist>
       <title>The meaning of the new configure option:</title>
@@ -120,24 +120,20 @@
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../mips64/glibc.xml"
+ <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/glibc.xml"
   xpointer="xpointer(id('i18n-glibc'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../mips64/glibc.xml"
+  href="../x86/glibc.xml"
   xpointer="xpointer(id('conf-glibc'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../mips64/glibc.xml"
+  href="../x86/glibc.xml"
   xpointer="xpointer(id('conf-ld'))"/>
 
-  <sect2 role="content">
-    <title/>
-
-    <para>Details on this package are located in <xref
-    linkend="contents-glibc" role="."/></para>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/glibc.xml"
+  xpointer="xpointer(id('contents-glibc'))"/>
 
 </sect1>
