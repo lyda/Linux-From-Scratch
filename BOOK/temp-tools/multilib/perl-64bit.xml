@@ -61,7 +61,7 @@
     xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
 <screen><userinput>./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX' \
-   -Dcc="gcc ${BUILD64}</userinput></screen>
+   -Dcc="gcc ${BUILD64}"</userinput></screen>
 
     <para>Compile only the required tools:</para>
 

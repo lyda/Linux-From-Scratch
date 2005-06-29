@@ -207,7 +207,12 @@
         </listitem>
         <listitem>
           <para>[jim] - Updated creatingdirs.xml in chroot to
-	   reflect a multilib environment.</para>
+	   reflect a multilib environment.
+          This change was only for x86_64, mips64, and sparc64.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Added Build Flags to multilib builds in chroot.
+	   This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
       </itemizedlist>
     </listitem>
