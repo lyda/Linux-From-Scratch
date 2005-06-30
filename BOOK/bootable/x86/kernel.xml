@@ -80,11 +80,15 @@
     file for more information.</para>
 
     <note>
-      <para>When configuring the kernel, be sure to enable the
-      <quote>Support for hot-pluggable devices</quote> option under the
-      <quote>General Setup</quote> menu. This enables hotplug events that
-      are used by <command>udev</command> to populate the <filename
-      class="directory">/dev</filename> directory with device nodes.</para>
+      <para>When configuring the kernel, be sure to enable the <quote>Support
+      for hot-pluggable devices</quote> option under the <quote>General
+      Setup</quote> menu. This enables hotplug events that are used by
+      <command>udev</command> to populate the <filename
+      class="directory">/dev</filename> directory with device nodes. Likewise,
+      enable the <quote>Virtual memory file system support</quote> option
+      under the <quote>File systems</quote>/<quote>Pseudo filesystems</quote>
+      menu. This enables the virtual filesystem that the <filename
+      class="directory">/dev</filename> directory will be mounted on.</para>
     </note>
 
     <para>If desired, skip kernel configuration by copying the kernel
@@ -93,11 +97,6 @@
     sources. However, we do not recommend this option. It is often better
     to explore all the configuration menus and create the kernel configuration
     from scratch.</para>
-
-    <para>For POSIX-shared memory support, ensure that the kernel config
-    option <quote>Virtual memory file system support</quote> is enabled.
-    It resides within the <quote>File systems</quote> menu and is normally
-    enabled by default.</para>
 
     <para>LFS Bootscripts make the assumption that both
     <quote>Support for Host-side USB</quote> and <quote>USB device

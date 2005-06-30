@@ -199,6 +199,9 @@
         <listitem>
           <para>[jim] - Changed udev rules to an entity.</para>
         </listitem>
+        <listitem>
+          <para>[manuel] - Text updates from trunk up tp r6251.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

@@ -11,7 +11,7 @@
   <title>Audience</title>
 
   <para>There are many reasons why somebody would want to read this book.
-  The principle reason is to install a Linux system straight from the
+  The principle reason is to install a Linux system from the
   source code. A question many people raise is, <quote>why go through all
   the hassle of manually building a Linux system from scratch when you
   can just download and install an existing one?</quote> That is a good
@@ -33,9 +33,9 @@
   <para>Another benefit of LFS is the ability to create a very compact
   Linux system. When installing a regular distribution, one is often
   forced to include several programs which are probably never used. These
-  programs waste precious disk space, or worse, CPU cycles. It is not
+  programs waste disk space, or worse, CPU cycles. It is not
   difficult to build an LFS system of less than 100 megabytes (MB), which
-  is substantially smaller when compared to the majority of existing
+  is substantially smaller than the majority of existing
   installations.  Does this still sound like a lot of space? A few of us
   have been working on creating a very small embedded LFS system. We
   successfully built a system that was specialized to run the Apache web
