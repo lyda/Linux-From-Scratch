@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-zlib" role="wrap">
-  <?dbhtml filename="zlib.html"?>
+<sect1 id="ch-system-zlib-n32" role="wrap">
+  <?dbhtml filename="zlib-n32.html"?>
 
-  <title>Zlib-&zlib-version;</title>
+  <title>Zlib-&zlib-version; N32</title>
 
-  <indexterm zone="ch-system-zlib">
-    <primary sortas="a-Zlib">Zlib</primary>
+  <indexterm zone="ch-system-zlib-n32">
+    <primary sortas="a-Zlib">Zlib N32</primary>
   </indexterm>
 
   <sect2 role="package">
@@ -48,8 +48,8 @@
 
     <para>Prepare Zlib for compilation:</para>
 
-<screen><userinput>CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}" ./configure --prefix=/usr \
-   --shared</userinput></screen>
+<screen><userinput>CC="gcc ${BUILDN32}" CXX="g++ ${BUILDN32}" ./configure --prefix=/usr \
+   --shared --libdir=/usr/lib32</userinput></screen>
 
     <para>Compile the package:</para>
 
@@ -65,7 +65,7 @@
     <para>Build the static library:</para>
 
 <screen><userinput>make clean
-CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}" ./configure --prefix=/usr
+CC="gcc ${BUILDN32}" CXX="g++ ${BUILDN32}" ./configure --prefix=/usr --libdir=/usr/lib32
 make</userinput></screen>
 
     <para>To test the results again, issue:
@@ -77,28 +77,28 @@ make</userinput></screen>
 
     <para>Fix the permissions on the static library:</para>
 
-<screen><userinput>chmod 644 /usr/lib/libz.a</userinput></screen>
+<screen><userinput>chmod 644 /usr/lib32/libz.a</userinput></screen>
 
     <para>It is good policy and common practice to place important
-    libraries into the <filename class="directory">/lib</filename>
+    libraries into the <filename class="directory">/lib32</filename>
     directory. This is most important in scenarios where <filename
     class="directory">/usr</filename> is on a separate partition.
     Essentially, the run-time components of any libraries that are used by
     programs in <filename class="directory">/bin</filename> or <filename
     class="directory">/sbin</filename> should reside in <filename
-    class="directory">/lib</filename> so that they are on the root
+    class="directory">/lib32</filename> so that they are on the root
     partition and available in the event of <filename
     class="directory">/usr</filename> being inaccessible.</para>
 
     <para>For the above reason, move the run-time components of the shared Zlib
-    into <filename class="directory">/lib</filename>:</para>
+    into <filename class="directory">/lib32</filename>:</para>
 
-<screen><userinput>mv /usr/lib/libz.so.* /lib</userinput></screen>
+<screen><userinput>mv /usr/lib32/libz.so.* /lib32</userinput></screen>
 
-    <para>Fix the <filename class="symlink">/usr/lib/libz.so</filename>
+    <para>Fix the <filename class="symlink">/usr/lib32/libz.so</filename>
     symlink:</para>
 
-<screen><userinput>ln -sf ../../lib/libz.so.1 /usr/lib/libz.so</userinput></screen>
+<screen><userinput>ln -sf ../../lib32/libz.so.1 /usr/lib32/libz.so</userinput></screen>
 
   </sect2>
 

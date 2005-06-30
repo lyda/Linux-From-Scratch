@@ -44,7 +44,7 @@
 
     <para>Prepare Texinfo for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/texinfo.xml"

@@ -20,16 +20,34 @@
   href="../common/sysvinit.xml"
   xpointer="xpointer(id('package-sysvinit'))"/>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/sysvinit.xml"
-  xpointer="xpointer(id('install-sysvinit'))"/>
+  <sect2 role="installation">
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../mips/sysvinit.xml"
-  xpointer="xpointer(id('conf-sysvinit'))"/>
+    <title>Installation of Sysvinit</title>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/sysvinit.xml"
-  xpointer="xpointer(id('contents-sysvinit'))"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../multilib/sysvinit.xml"
+      xpointer="xpointer(//*[@role='installation']/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../multilib/sysvinit.xml"
+      xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../multilib/sysvinit.xml"
+      xpointer="xpointer(//*[@role='installation']/para[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../multilib/sysvinit.xml"
+      xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../mips/sysvinit.xml"
+      xpointer="xpointer(id('conf-sysvinit'))"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/sysvinit.xml"
+      xpointer="xpointer(id('contents-sysvinit'))"/>
+
+  </sect2>
 
 </sect1>

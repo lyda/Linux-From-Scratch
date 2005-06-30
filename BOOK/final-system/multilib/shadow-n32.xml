@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-shadow" role="wrap">
-  <?dbhtml filename="shadow.html"?>
+<sect1 id="ch-system-shadow-n32" role="wrap">
+  <?dbhtml filename="shadow-n32.html"?>
 
-  <title>Shadow-&shadow-version;</title>
+  <title>Shadow-&shadow-version; N32</title>
 
-  <indexterm zone="ch-system-shadow">
-    <primary sortas="a-Shadow">Shadow</primary>
+  <indexterm zone="ch-system-shadow-n32">
+    <primary sortas="a-Shadow">Shadow N32</primary>
   </indexterm>
 
   <sect2 role="package">
@@ -44,7 +44,7 @@
 
     <para>Prepare Shadow for compilation:</para>
 
-<screen><userinput>CC="gcc ${BUILD32}" ./configure --libdir=/lib \
+<screen><userinput>CC="gcc ${BUILDN32}" ./configure --libdir=/lib32 \
    --enable-shared</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -63,16 +63,12 @@
 
 <screen><userinput>make install</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/para[5]/range-to(id('install-shadow')/para[8]))"/>
-
     <para>Move Shadow's dynamic libraries to a more appropriate
     location:</para>
 
-<screen><userinput>mv /lib/libshadow.*a /usr/lib
-rm /lib/libshadow.so
-ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
+<screen><userinput>mv /lib32/libshadow.*a /usr/lib32
+rm /lib32/libshadow.so
+ln -sf ../../lib32/libshadow.so.0 /usr/lib32/libshadow.so</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/shadow.xml"

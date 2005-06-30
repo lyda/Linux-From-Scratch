@@ -47,7 +47,7 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make udevdir=/dev</userinput></screen>
+<screen><userinput>make CC="gcc ${BUILD64}" udevdir=/dev</userinput></screen>
 
     <variablelist>
       <title>The meaning of the make parameter:</title>
@@ -71,7 +71,7 @@
     <para>Udev's configuration is far from ideal by default, so install
     the configuration files here:</para>
 
-<screen><userinput>cp ../udev-config-3.rules /etc/udev/rules.d/25-lfs.rules</userinput></screen>
+<screen><userinput>cp ../udev-config-2.rules /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
     <para>Run the <command>udevstart</command> program to create our full
     compliment of device nodes.</para>

@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-shadow" role="wrap">
-  <?dbhtml filename="shadow.html"?>
+<sect1 id="ch-system-shadow-64bit" role="wrap">
+  <?dbhtml filename="shadow-64bit.html"?>
 
-  <title>Shadow-&shadow-version;</title>
+  <title>Shadow-&shadow-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-shadow">
-    <primary sortas="a-Shadow">Shadow</primary>
+  <indexterm zone="ch-system-shadow-64bit">
+    <primary sortas="a-Shadow">Shadow 64 BIt</primary>
   </indexterm>
 
   <sect2 role="package">
@@ -44,7 +44,7 @@
 
     <para>Prepare Shadow for compilation:</para>
 
-<screen><userinput>CC="gcc ${BUILD32}" ./configure --libdir=/lib \
+<screen><userinput>CC="gcc ${BUILD64}" ./configure --libdir=/lib64 \
    --enable-shared</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -63,16 +63,12 @@
 
 <screen><userinput>make install</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/para[5]/range-to(id('install-shadow')/para[8]))"/>
-
     <para>Move Shadow's dynamic libraries to a more appropriate
     location:</para>
 
-<screen><userinput>mv /lib/libshadow.*a /usr/lib
-rm /lib/libshadow.so
-ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
+<screen><userinput>mv /lib64/libshadow.*a /usr/lib64
+rm /lib64/libshadow.so
+ln -sf ../../lib64/libshadow.so.0 /usr/lib64/libshadow.so</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/shadow.xml"
@@ -84,12 +80,16 @@ ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
 
   </sect2>
 
-  <sect2 role="content">
-    <title/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/shadow.xml"
+  xpointer="xpointer(id('conf-shadow'))"/>
 
-    <para>Details on this package are located in <xref
-    linkend="contents-shadow" role="."/></para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/shadow.xml"
+  xpointer="xpointer(id('root-password'))"/>
 
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/shadow.xml"
+  xpointer="xpointer(id('contents-shadow'))"/>
 
 </sect1>

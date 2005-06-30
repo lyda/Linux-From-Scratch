@@ -50,7 +50,7 @@
     <para>Compile the package:</para>
 
 <screen><userinput>make -C src clobber
-make -C src</userinput></screen>
+make -C src CC="gcc ${BUILD64}"</userinput></screen>
 
     <para>Install the package:</para>
 

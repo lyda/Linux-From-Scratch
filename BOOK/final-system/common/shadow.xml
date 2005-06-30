@@ -48,7 +48,7 @@
 
     <para>Prepare Shadow for compilation:</para>
 
-<screen><userinput>./configure --libdir=/usr/lib --enable-shared</userinput></screen>
+<screen><userinput>./configure --libdir=/lib --enable-shared</userinput></screen>
 
     <para>Remove the installation of the <command>groups</command> program,
     and it's man page:</para>
@@ -104,19 +104,15 @@ sed -i -e 's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
     <para>Move Shadow's dynamic libraries to a more appropriate
     location:</para>
 
-<screen><userinput>mv /usr/lib/libshadow.so.0* /lib</userinput></screen>
-
-    <para>Because some packages expect to find the just-moved libraries in
-    <filename class="directory">/usr/lib</filename>, create the following
-    symlink:</para>
-
-<screen><userinput>ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
+<screen><userinput>mv /lib/libshadow.*a /usr/lib
+rm /lib/libshadow.so
+ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
 
     <para>The <option>-D</option> option of the <command>useradd</command>
     program requires the <filename class="directory">/etc/default</filename>
     directory for it to work properly:</para>
 
-<screen><userinput>mkdir /etc/default</userinput></screen>
+<screen><userinput>install -d /etc/default</userinput></screen>
 
   </sect2>
 

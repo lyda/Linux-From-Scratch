@@ -19,6 +19,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/binutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gcc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/zlib.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/zlib-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/findutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gawk.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/ncurses.xml"/>
@@ -63,6 +64,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/procps-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/psmisc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/shadow.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/shadow-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/sysklogd.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/sysvinit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/tar.xml"/>

@@ -65,7 +65,8 @@ echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput><
 
     <para>Prepare Vim for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --enable-multibyte</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" ./configure --prefix=/usr \
+   --enable-multibyte</userinput></screen>
 
     <para>The optional but highly recommended
     <parameter>--enable-multibyte</parameter> switch includes support for
