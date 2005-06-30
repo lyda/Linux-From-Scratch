@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-ncurses" role="wrap">
-  <?dbhtml filename="ncurses.html"?>
+<sect1 id="ch-system-ncurses-64bit" role="wrap">
+  <?dbhtml filename="ncurses-64bit.html"?>
 
-  <title>Ncurses-&ncurses-version;</title>
+  <title>Ncurses-&ncurses-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-ncurses">
-    <primary sortas="a-Ncurses">Ncurses</primary>
+  <indexterm zone="ch-system-ncurses-64bit">
+    <primary sortas="a-Ncurses">Ncurses 64 Bit</primary>
   </indexterm>
 
   <sect2 role="package">
@@ -42,7 +42,6 @@
   <sect2 role="installation">
     <title>Installation of Ncurses</title>
 
-
     <para>When cross-compiling, Ncurses doesn't always properly create
     the file <filename>ncurses/comp_captab.c</filename> which results
     in build failures. Fix this issue by updating Ncurses with a rollup
@@ -53,8 +52,8 @@ sh update.sh</userinput></screen>
 
     <para>Prepare Ncurses for compilation:</para>
 
-<screen><userinput>CC="gcc ${BUILD32}" CXX="$g++ ${BUILD32}" \
-   ./configure --prefix=/usr --libdir=/lib \
+<screen><userinput>CC="gcc ${BUILD64}" CXX="$g++ ${BUILD64}" \
+   ./configure --prefix=/usr --libdir=/lib64 \
    --with-shared --without-debug</userinput></screen>
 
     <para>Compile the package:</para>
@@ -67,28 +66,24 @@ sh update.sh</userinput></screen>
 
     <para>Move the Ncurses static libraries to the proper locations:</para>
 
-<screen><userinput>mv /lib/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib</userinput></screen>
+<screen><userinput>mv /lib64/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib</userinput></screen>
 
     <para>Create symlinks in <filename class="directory">/usr/lib:</filename></para>
 
-<screen><userinput>rm /lib/lib{ncurses,menu,panel,form}.so
-ln -sf ../../lib/libncurses.so.5 /usr/lib/libncurses.so
-ln -sf ../../lib/libmenu.so.5 /usr/lib/libmenu.so
-ln -sf ../../lib/libpanel.so.5 /usr/lib/libpanel.so
-ln -sf ../../lib/libform.so.5 /usr/lib/libform.so</userinput></screen>
+<screen><userinput>rm /lib64/lib{ncurses,menu,panel,form}.so
+ln -sf ../../lib64/libncurses.so.5 /usr/lib64/libncurses.so
+ln -sf ../../lib64/libmenu.so.5 /usr/lib64/libmenu.so
+ln -sf ../../lib64/libpanel.so.5 /usr/lib64/libpanel.so
+ln -sf ../../lib64/libform.so.5 /usr/lib64/libform.so</userinput></screen>
 
     <para>Give the Ncurses libraries execute permissions:</para>
 
-<screen><userinput>chmod 755 /lib/lib{panel,menu,form,ncurses}.so.&ncurses-version;</userinput></screen>
+<screen><userinput>chmod 755 /lib64/lib{panel,menu,form,ncurses}.so.&ncurses-version;</userinput></screen>
 
   </sect2>
 
-  <sect2 role="content">
-    <title/>
-
-    <para>Details on this package are located in <xref
-    linkend="contents-ncurses" role="."/></para>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/ncurses.xml"
+  xpointer="xpointer(id('contents-ncurses'))"/>
 
 </sect1>

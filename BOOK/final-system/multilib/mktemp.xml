@@ -52,7 +52,7 @@
 
     <para>Prepare Mktemp for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --with-libc</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr --with-libc</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/mktemp.xml"

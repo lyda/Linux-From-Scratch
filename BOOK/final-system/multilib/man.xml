@@ -64,7 +64,7 @@
 
     <para>Prepare Man for compilation:</para>
 
-<screen><userinput>./configure -confdir=/etc</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ./configure -confdir=/etc</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
