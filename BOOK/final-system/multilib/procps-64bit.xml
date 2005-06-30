@@ -7,21 +7,21 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-patch" role="wrap">
-  <?dbhtml filename="patch.html"?>
+<sect1 id="ch-system-procps-64bit" role="wrap">
+  <?dbhtml filename="procps-64bit.html"?>
 
-  <title>Patch-&patch-version;</title>
+  <title>Procps-&procps-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-patch">
-    <primary sortas="a-Patch">Patch</primary>
+  <indexterm zone="ch-system-procps-64bit">
+    <primary sortas="a-Procps">Procps 64 Bit</primary>
   </indexterm>
 
   <sect2 role="package">
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/patch.xml"
-    xpointer="xpointer(id('package-patch')/para[1])"/>
+    href="../common/procps.xml"
+    xpointer="xpointer(id('package-procps')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -34,23 +34,21 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/patch.xml"
-    xpointer="xpointer(id('package-patch')/segmentedlist[2])"/>
+    href="../common/procps.xml"
+    xpointer="xpointer(id('package-procps')/segmentedlist[2])"/>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Patch</title>
+    <title>Installation of Procps</title>
 
-    <para>Prepare Patch for compilation:</para>
+    <para>Make sure procps gets put into /lib64:</para>
 
-<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr</userinput></screen>
+<screen><userinput>sed -i 's@^\(lib64.*:= \).*@\1lib64@g' > Makefile</userinput></screen>
 
     <para>Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
-
-    <para>This package does not come with a test suite.</para>
+<screen><userinput>make CC="gcc ${BUILD64}</userinput></screen>
 
     <para>Install the package:</para>
 
@@ -59,7 +57,7 @@
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/patch.xml"
-  xpointer="xpointer(id('contents-patch'))"/>
+  href="../common/procps.xml"
+  xpointer="xpointer(id('contents-procps'))"/>
 
 </sect1>

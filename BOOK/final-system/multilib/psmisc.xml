@@ -44,7 +44,8 @@
 
     <para>Prepare Psmisc for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --exec-prefix=""</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64} ./configure --prefix=/usr \
+   --exec-prefix=""</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/psmisc.xml"

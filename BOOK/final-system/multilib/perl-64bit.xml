@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-perl" role="wrap">
-  <?dbhtml filename="perl.html"?>
+<sect1 id="ch-system-perl-64bit" role="wrap">
+  <?dbhtml filename="perl-64bit.html"?>
 
-  <title>Perl-&perl-version;</title>
+  <title>Perl-&perl-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-perl">
-    <primary sortas="a-Perl">Perl</primary>
+  <indexterm zone="ch-system-perl-64bit">
+    <primary sortas="a-Perl">Perl 64 Bit</primary>
   </indexterm>
 
   <sect2 role="package">
@@ -42,12 +42,17 @@
   <sect2 role="installation">
     <title>Installation of Perl</title>
 
+    <para>Make sure Perl looks at <filename
+    class="directory">/usr/lib64</filename> for shared libraries:</para>
+
+<screen><userinput>sed -i 's@\${prefix}/lib@\${prefix}/lib64@g' hints/linux.sh</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
     xpointer="xpointer(id('install-perl')/para[1])"/>
 
 <screen><userinput>./configure.gnu --prefix=/usr -Dpager="/bin/less -isR" \
-   -Dcc="gcc ${BUILD32}"</userinput></screen>
+   -Dcc="gcc ${BUILD64}"</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
@@ -75,12 +80,8 @@
 
   </sect2>
 
-  <sect2 role="content">
-    <title/>
-
-    <para>Details on this package are located in <xref
-    linkend="contents-perl" role="."/></para>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/perl.xml"
+  xpointer="xpointer(id('contents-perl'))"/>
 
 </sect1>

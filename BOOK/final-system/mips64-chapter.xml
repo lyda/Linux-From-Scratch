@@ -26,6 +26,8 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/ncurses-n32.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/ncurses-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/readline.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/readline-n32.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/readline-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/vim.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/m4.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bison.xml"/>
@@ -39,6 +41,8 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gettext-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/inetutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl-n32.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/iproute2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/texinfo.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/autoconf.xml"/>
@@ -64,6 +68,8 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/module-init-tools.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/patch.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/procps.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/procps-n32.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/procps-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/psmisc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/shadow.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/sysklogd.xml"/>

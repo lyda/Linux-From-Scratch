@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-procps" role="wrap">
-  <?dbhtml filename="procps.html"?>
+<sect1 id="ch-system-procps-64bit" role="wrap">
+  <?dbhtml filename="procps-64bit.html"?>
 
-  <title>Procps-&procps-version;</title>
+  <title>Procps-&procps-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-procps">
-    <primary sortas="a-Procps">Procps</primary>
+  <indexterm zone="ch-system-procps-64bit">
+    <primary sortas="a-Procps">Procps 64 Bit</primary>
   </indexterm>
 
   <sect2 role="package">
@@ -48,9 +48,13 @@
 
 <screen><userinput>patch -Np1 -i ../&procps-mips-patch;</userinput></screen>
 
+    <para>Make sure procps gets put into /lib64:</para>
+
+<screen><userinput>sed -i 's@^\(lib64.*:= \).*@\1lib64@g' > Makefile</userinput></screen>
+
     <para>Compile the package:</para>
 
-<screen><userinput>make CC="gcc ${BUILD32}</userinput></screen>
+<screen><userinput>make CC="gcc ${BUILD64}</userinput></screen>
 
     <para>Install the package:</para>
 
@@ -58,12 +62,8 @@
 
   </sect2>
 
-  <sect2 role="content">
-    <title/>
-
-    <para>Details on this package are located in <xref
-    linkend="contents-procps" role="."/></para>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/procps.xml"
+  xpointer="xpointer(id('contents-procps'))"/>
 
 </sect1>
