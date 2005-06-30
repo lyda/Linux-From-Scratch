@@ -44,7 +44,7 @@
 
     <para>Prepare Bzip2 for compilation with:</para>
 
-<screen><userinput>make -f Makefile-libbz2_so
+<screen><userinput>make -f Makefile-libbz2_so CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}" 
 make clean</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -53,7 +53,7 @@ make clean</userinput></screen>
 
     <para>Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>make CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}"</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bzip2.xml"
@@ -76,8 +76,12 @@ ln -s bzip2 /bin/bzcat</userinput></screen>
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/bzip2.xml"
-  xpointer="xpointer(id('contents-bzip2'))"/>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-bzip2" role="."/></para>
+
+  </sect2>
 
 </sect1>

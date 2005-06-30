@@ -76,8 +76,8 @@ cd ../binutils-build</userinput></screen>
 
     <para>Prepare Binutils for compilation:</para>
 
-<screen><userinput>../binutils-&binutils-version;/configure --prefix=/usr \
-    --enable-shared</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ../binutils-&binutils-version;/configure --prefix=/usr \
+    --enable-shared --enable-64-bit-bfd</userinput></screen>
 
     <para>Compile the package:</para>
 
