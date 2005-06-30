@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-system-bzip2-64bit" role="wrap">
+  <?dbhtml filename="bzip2-64bit.html"?>
+
+  <title>Bzip2-&bzip2-version; 64 Bit</title>
+
+  <indexterm zone="ch-system-bzip2-64bit">
+    <primary sortas="a-Bzip2">Bzip2 64 Bit</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(id('package-bzip2')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(id('package-bzip2')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Bzip2</title>
+
+    <para>Prepare Bzip2 for compilation with:</para>
+
+    <para>We need to remove the tests to since they won't work on
+    a multi-architecture build, and tell change the default lib path
+    to lib64:</para>
+
+<screen><userinput>sed -i 's@/lib\(/\| \|$\)@/lib32\1@g' Makefile</userinput></screen>
+
+    <para>The Bzip2 package does not contain a <command>configure</command>
+    script. Compile it with:</para>
+
+<screen><userinput>make -f Makefile-libbz2_so CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" 
+make clean</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(id('install-bzip2')/para[2])"/>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}"</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(id('install-bzip2')/para[4])"/>
+
+    <para>Now we remove the 32 bit versions of the programs so we
+    can install the 64 bit versions.</para>
+
+<screen><userinput>rm -f /usr/bin/bz* /bin/bz*</userinput></screen>
+
+    <para>Install the programs:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(id('install-bzip2')/para[6])"/>
+
+<screen><userinput>cp bzip2-shared /bin/bzip2
+cp -a libbz2.so* /lib64
+ln -s ../../lib64/libbz2.so.1.0 /usr/lib64/libbz2.so
+rm /usr/bin/{bunzip2,bzcat,bzip2}
+ln -s bzip2 /bin/bunzip2
+ln -s bzip2 /bin/bzcat</userinput></screen>
+
+  </sect2>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/bzip2.xml"
+  xpointer="xpointer(id('contents-bzip2'))"/>
+
+</sect1>
