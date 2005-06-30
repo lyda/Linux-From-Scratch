@@ -207,6 +207,9 @@
 	  architectures. This allowed the removal of openssh and
 	  openssl on MIPS.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to TCL 8.4.11.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
