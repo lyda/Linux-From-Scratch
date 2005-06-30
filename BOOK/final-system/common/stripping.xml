@@ -5,10 +5,10 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-system-strippingagain">
-  <?dbhtml filename="strippingagain.html"?>
+<sect1 id="ch-system-stripping">
+  <?dbhtml filename="stripping.html"?>
 
-  <title>Stripping Again</title>
+  <title>Stripping</title>
 
   <para>If the intended user is not a programmer and does not plan to do
   any debugging on the system software, the system size can be decreased

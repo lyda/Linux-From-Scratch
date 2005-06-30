@@ -65,6 +65,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ppc/yaboot.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ppc/parted.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/aboutdebug.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/strippingagain.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/stripping.xml"/>
 
 </chapter>
