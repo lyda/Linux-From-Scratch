@@ -11,14 +11,16 @@
   <title>Mounting Virtual Kernel File Systems</title>
 
   <para>From this point on, we will be running all commands as the
-  <systemitem class="username">root</systemitem> user. So begin by exiting
-  from the su as <systemitem class="username">lfs</systemitem>.</para>
+  <systemitem class="username">root</systemitem> user. So begin by
+  exiting from the <command>su</command> as <systemitem
+  class="username">lfs</systemitem>.</para>
 
 <screen><userinput>exit</userinput></screen>
 
-  <para>Various file systems exported by the kernel do not exist on the
-  hard drive, but are used to communicate to and from the kernel
-  itself.</para>
+  <para>Various file systems exported by the kernel are used to communicate
+  to and from the kernel itself. These file systems are virtual in that no
+  disk space is used for them. The contents of the file systems resides in
+  memory.</para>
 
   <para>Begin by creating directories onto which the file systems will
   be mounted:</para>
@@ -38,7 +40,7 @@ mount -t sysfs sysfs $LFS/sys</userinput></screen>
   chroot environment. To keep the host up to date, perform a <quote>fake
   mount</quote> for each of these now:</para>
 
-<screen><userinput>mount -f -t ramfs ramfs $LFS/dev
+<screen><userinput>mount -f -t tmpfs tmpfs $LFS/dev
 mount -f -t tmpfs tmpfs $LFS/dev/shm
 mount -f -t devpts -o gid=4,mode=620 devpts $LFS/dev/pts</userinput></screen>
 

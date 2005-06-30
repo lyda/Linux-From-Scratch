@@ -125,17 +125,11 @@ cd ../glibc-build</userinput></screen>
         host system issues. The exact reasons are not yet clear.</para>
       </listitem>
       <listitem>
-        <para>The <emphasis>atime</emphasis> test sometimes fails when the LFS
-        partition is mounted with the <option>noatime</option> option.</para>
-      </listitem>
-      <listitem>
-        <para>The <emphasis>shm</emphasis> test can fail when the host system
-        is using the <systemitem class="filesystem">devfs</systemitem> file
-        system but does not have the <systemitem
-        class="filesystem">tmpfs</systemitem> file system mounted at
-        <filename class="directory">/dev/shm</filename>. This occurs because of
-        a lack of support for <systemitem class="filesystem">tmpfs</systemitem>
-        in the kernel.</para>
+        <para>If you have mounted the LFS partition with the
+        <parameter>noatime</parameter> option, the <emphasis>atime</emphasis> test
+        will fail. As mentioned in <xref linkend="ch-partitioning-mounting"/>,
+        do not use the <parameter>noatime</parameter> option while building
+        LFS.</para>
       </listitem>
       <listitem>
         <para>When running on older and slower hardware, some tests
@@ -233,10 +227,10 @@ localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
       <primary sortas="e-/etc/localtime">/etc/localtime</primary>
     </indexterm>
 
-    <para>The <filename>/etc/nsswitch.conf</filename> file needs to be
-    created because, although Glibc provides defaults when this file is
-    missing or corrupt, the Glibc defaults do not work well with
-    networking. The time zone also needs to be set up.</para>
+    <para>The <filename>/etc/nsswitch.conf</filename> file needs to be created
+    because, although Glibc provides defaults when this file is missing or
+    corrupt, the Glibc defaults do not work well in a networked environment.
+    The time zone also needs to be configured.</para>
 
     <para>Create a new file <filename>/etc/nsswitch.conf</filename> by running
     the following:</para>
@@ -272,7 +266,7 @@ EOF</userinput></screen>
     /etc/localtime</userinput></screen>
 
     <para>Replace <replaceable>[xxx]</replaceable> with the name of the time zone
-    that the <command>tzselect</command> provided (e.g., Canada/Eastern).</para>
+    that <command>tzselect</command> provided (e.g., Canada/Eastern).</para>
 
     <variablelist>
       <title>The meaning of the cp option:</title>
