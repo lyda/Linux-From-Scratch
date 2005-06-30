@@ -62,6 +62,14 @@
     href="../mips/glibc.xml"
     xpointer="xpointer(/sect1/sect2[2]/screen[2])"/>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+
     <para>Prepare Glibc for compilation:</para>
 
 <screen><userinput>CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}" \
