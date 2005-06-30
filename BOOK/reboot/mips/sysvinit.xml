@@ -78,9 +78,20 @@ ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now
 
 su:S016:once:/sbin/sulogin
 
-c0:12345:respawn:/sbin/agetty 115200 ttyS0 vt100</literal>
+# Remove this section if you System only
+# has a console port
+1:2345:respawn:/sbin/agetty -I '\033(K' tty1 9600
+2:2345:respawn:/sbin/agetty -I '\033(K' tty2 9600
+3:2345:respawn:/sbin/agetty -I '\033(K' tty3 9600
+4:2345:respawn:/sbin/agetty -I '\033(K' tty4 9600
+5:2345:respawn:/sbin/agetty -I '\033(K' tty5 9600
+6:2345:respawn:/sbin/agetty -I '\033(K' tty6 9600
 
-<literal># End /etc/inittab</literal>
+# Uncomment this section if your system has a console
+# port
+#c0:12345:respawn:/sbin/agetty 115200 ttyS0 vt100
+
+# End /etc/inittab</literal>
 EOF</userinput></screen>
 
   </sect2>

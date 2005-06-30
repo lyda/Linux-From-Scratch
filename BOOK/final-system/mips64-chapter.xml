@@ -65,8 +65,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/hotplug.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/iana-etc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/colo.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/openssl.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/openssh.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/aboutdebug.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/strippingagain.xml"/>
 

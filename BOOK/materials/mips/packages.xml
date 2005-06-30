@@ -36,22 +36,6 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry>
-      <term>OpenSSH (&openssh-version;) - 835 KB:</term>
-      <listitem>
-        <para><ulink
-        url="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-&openssh-version;.tar.gz"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>OpenSSL (&openssl-version;) - 3.0 MB:</term>
-      <listitem>
-        <para><ulink
-        url="http://www.openssl.org/source/openssl-&openssl-version;.tar.gz"/></para>
-      </listitem>
-    </varlistentry>
-
   </variablelist>
 
   <para>Total size of these packages: about 171 MB</para>

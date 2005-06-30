@@ -35,12 +35,6 @@
       <para>Colo &colo-version;</para>
     </listitem>
     <listitem>
-      <para>OpenSSL &openssl-version;</para>
-    </listitem>
-    <listitem>
-      <para>OpenSSH &openssh-version;</para>
-    </listitem>
-    <listitem>
       <para>&glibc-mips_syscall-patch;</para>
     </listitem>
     <listitem>
@@ -69,6 +63,15 @@
     </listitem>
 
 -->
+
+    <listitem>
+      <para>June 29, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Removed OpenSSL and OpenSSH.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>May 27, 2005</para>

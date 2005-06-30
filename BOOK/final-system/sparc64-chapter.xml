@@ -56,7 +56,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/psmisc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/shadow.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/sysklogd.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/sysvinit.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/sysvinit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/tar.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/util-linux.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/udev.xml"/>
