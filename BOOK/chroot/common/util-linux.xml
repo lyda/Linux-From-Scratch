@@ -45,7 +45,7 @@
 
     <para>Util-linux does not use the freshly installed headers and
     libraries from the <filename class="directory">/tools</filename>
-    directory. This is fixed by altering the configure script:</para>
+    directory by default. This is fixed by altering the configure script:</para>
 
 <screen><userinput>cp -p configure configure.orig
 sed 's@/usr/include@/tools/include@g' configure.orig > configure</userinput></screen>
@@ -58,8 +58,8 @@ sed 's@/usr/include@/tools/include@g' configure.orig > configure</userinput></sc
 
 <screen><userinput>make ARCH="" CPU="" -C lib</userinput></screen>
 
-    <para>Since only a couple of the utilities contained in this package
-    are needed, build only those:</para>
+    <para>Only a few of the utilities contained in this package need to be
+    built:</para>
 
 <screen><userinput>make ARCH="" CPU="" -C mount mount umount
 make ARCH="" CPU="" -C text-utils more</userinput></screen>

@@ -71,10 +71,9 @@
       <varlistentry>
         <term><parameter>--without-csharp</parameter></term>
         <listitem>
-          <para>This tells Gettext not to use a C# compiler, even if a
-          C# compiler is installed on the host. This needs to be done because
-          once we enter the chroot environment, C# will no longer be
-          available.</para>
+          <para>This ensures that Gettext does not build support for the C#
+          compiler which may be present on the host but will not be available
+          when building the final system.</para>
         </listitem>
       </varlistentry>
 
