@@ -13,7 +13,7 @@
   <title>Master Changelog</title>
 
   <para>This is version &version; of the Linux From Scratch book, dated
-  &releasedate;. If this book is more than two months old, a newer and better
+  &releasedate;. If this book is more than six months old, a newer and better
   version is probably already available. To find out, please check one of the
   mirrors via <ulink url="&lfs-root;"/>.</para>
 
@@ -122,9 +122,6 @@
     <listitem>
       <para>Zlib &zlib-version;</para>
     </listitem>
-    <listitem>
-      <para>udev-config-3.rules</para>
-    </listitem>
   </itemizedlist>
 
   <itemizedlist>
@@ -213,8 +210,8 @@
         </listitem>
         <listitem>
           <para>[jim] - Fixed console access on MIPS and Sparc based
-	  architectures. This allowed the removal of openssh and
-	  openssl on MIPS.</para>
+          architectures. This allowed the removal of openssh and
+          openssl on MIPS.</para>
         </listitem>
         <listitem>
           <para>[jim] - Updated to TCL 8.4.11.</para>
@@ -233,12 +230,12 @@
         </listitem>
         <listitem>
           <para>[jim] - Updated creatingdirs.xml in chroot to
-	   reflect a multilib environment.
+          reflect a multilib environment.
           This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
         <listitem>
           <para>[jim] - Added Build Flags to multilib builds in chroot.
-	   This change was only for x86_64, mips64, and sparc64.</para>
+          This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
         <listitem>
           <para>[jim] - Fixed linux-libc-headers install in sparc64 and x86_64.</para>
@@ -264,19 +261,19 @@
           to r6189.</para>
         </listitem>
         <listitem>
-          <para>[jim] - Removed export CC in udev during final-system.  
+          <para>[jim] - Removed export CC in udev during final-system.
           This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
         <listitem>
-          <para>[jim] - Added missing symlink in createfiles.xml for lib32 and lib64.  
+          <para>[jim] - Added missing symlink in createfiles.xml for lib32 and lib64.
           This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
         <listitem>
-          <para>[jim] - Added missing directories in creatingdirs.xml for lib32 and lib64.  
+          <para>[jim] - Added missing directories in creatingdirs.xml for lib32 and lib64.
           This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
         <listitem>
-          <para>[jim] - Added missing DESTDIR=${LFS} in udev during reboot section build.  
+          <para>[jim] - Added missing DESTDIR=${LFS} in udev during reboot section build.
           This change was only for x86_64, mips64, and sparc64.</para>
         </listitem>
       </itemizedlist>

@@ -18,7 +18,7 @@
   <ulink url="&hints-root;errors.txt"/>.</para>
 
   <para>We also have a wonderful LFS community that is willing to offer
-  assistance through IRC and the mailing lists (see the <xref
+  assistance through the mailing lists and IRC (see the <xref
   linkend="ch-intro-resources"/> section of this book). In order
   to assist with diagnosing and solving the problem, please include
   all relevant information in your request for help.</para>
@@ -116,18 +116,6 @@ make: *** [all-recursive-am] Error 2</computeroutput></screen>
     url="http://catb.org/~esr/faqs/smart-questions.html"/>.  Read and
     follow the hints in this document to increase the likelihood of getting
     the help you need.</para>
-
-  </sect2>
-
-  <sect2>
-    <title>Test Suite Problems</title>
-
-    <para>Many packages provide a test suite which, depending on the
-    importance of the package, should be run. Sometimes packages will
-    generate false or expected failures. If these errors are encountered,
-    check the LFS Wiki page at <ulink url="&wiki-root;"/> to see if we have
-    noted and investigated these issues. If these issues are noted and
-    addressed, there is no need to be concerned.</para>
 
   </sect2>
 

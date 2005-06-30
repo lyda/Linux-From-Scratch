@@ -25,8 +25,7 @@
   in this book. Additionally, it contains all the source packages, patches
   and a copy of this book. So once you have the CD, no network connection
   or additional downloads are necessary. For more information about the
-  LFS LiveCD or to download a copy, visit
-  <ulink url="http://linuxfromscratch.org/~jhuntwork/livecd/"/></para>
+  LFS LiveCD or to download a copy, visit <ulink url="&livecd-root;"/></para>
 
   <!-- -->
   <para>THE TEXT BELOW NEED TO BE REWRITTEN</para>
@@ -37,7 +36,7 @@
   linkend="chapter-getting-materials"/> explains which packages and
   patches need to be downloaded to build an LFS system and how to store
   them on the new file system. <xref linkend="chapter-final-preps"/>
-  discusses the setup for an appropriate work environment. Please read
+  discusses the setup for an appropriate working environment. Please read
   <xref linkend="chapter-final-preps"/> carefully as it explains several
   important issues the developer should be aware of before beginning to
   work through <xref linkend="chapter-temporary-tools"/> and
@@ -62,22 +61,21 @@
   will no longer depend on the host distribution, with the exception of the
   running kernel. </para>
 
-  <para>While this may initially seem like a lot of work to get away
-  from a host distribution, a full technical explanation is provided at
-  the beginning of <xref linkend="chapter-temporary-tools"/>.</para>
+  <para>While this may initially seem like a lot of work to isolate the new
+  syatem from the host distribution, a full technical explanation is provided
+  at the beginning of <xref linkend="chapter-temporary-tools"/>.</para>
 
   <para>In <xref linkend="chapter-building-system"/>, the full LFS system is
-  built. The chroot (change root) program is used to enter a virtual
-  environment and start a new shell whose root directory will be set to
-  the LFS partition. This is very similar to rebooting and instructing
-  the kernel to mount the LFS partition as the root partition. The
-  system does not actually reboot, but instead chroots because creating a
-  bootable system requires additional work which is not necessary just
-  yet. The major advantage is that <quote>chrooting</quote> allows the
-  builder to continue using the host while LFS is being built. While
-  waiting for package compilation to complete, a user can switch to a
-  different virtual console (VC) or X desktop and continue using the
-  computer as normal.</para>
+  built. The <command>chroot</command> (change root) program is used to enter
+  a virtual environment and start a new shell whose root directory will be set
+  to the LFS partition. This is very similar to rebooting and instructing the
+  kernel to mount the LFS partition as the root partition. The system does not
+  actually reboot, but instead <command>chroot</command>'s because creating a
+  bootable system requires additional work which is not necessary just yet.
+  The major advantage is that <quote>chrooting</quote> allows the builder to
+  continue using the host while LFS is being built. While waiting for package
+  compilation to complete, a user can switch to a different virtual console
+  (VC) or X desktop and continue using the computer as normal.</para>
 
   <para>To finish the installation, the bootscripts are set up in <xref
   linkend="chapter-bootscripts"/>, and the kernel and boot loader are set
@@ -91,6 +89,6 @@
   <para>This is the process in a nutshell. Detailed information on each
   step is discussed in the following chapters and package descriptions.
   Items that may seem complicated will be clarified, and everything will
-  fall into place as the developer embarks on the LFS adventure.</para>
+  fall into place as the reader embarks on the LFS adventure.</para>
 
 </sect1>
