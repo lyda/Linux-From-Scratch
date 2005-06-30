@@ -197,6 +197,15 @@
 -->
 
     <listitem>
+      <para>June 30, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Changed udev rules to an entity.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 29, 2005</para>
       <itemizedlist>
         <listitem>

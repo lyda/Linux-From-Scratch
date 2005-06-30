@@ -71,7 +71,7 @@
     <para>Udev's configuration is far from ideal by default, so install
     the configuration files here:</para>
 
-<screen><userinput>cp ../udev-config-3.rules /etc/udev/rules.d/25-lfs.rules</userinput></screen>
+<screen><userinput>cp ../&udev-config-file; /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
     <para>Run the <command>udevstart</command> program to create our full
     compliment of device nodes.</para>
