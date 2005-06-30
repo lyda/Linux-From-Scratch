@@ -44,7 +44,8 @@
 
     <para>Prepare Gettext for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}" \
+   ./configure --prefix=/usr</userinput></screen>
 
     <para>Compile the package:</para>
 

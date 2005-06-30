@@ -44,7 +44,8 @@
 
     <para>Prepare Gawk for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --libexecdir=/usr/lib</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
+   --libexecdir=/usr/lib64</userinput></screen>
 
     <para>Compile the package:</para>
 

@@ -44,7 +44,8 @@
 
     <para>Prepare Grep for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --bindir=/bin --with-included-regex</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
+   --bindir=/bin --with-included-regex</userinput></screen>
 
     <para>Compile the package:</para>
 

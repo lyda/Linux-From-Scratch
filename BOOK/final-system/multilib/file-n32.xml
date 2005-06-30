@@ -10,10 +10,10 @@
 <sect1 id="ch-system-file-n32" role="wrap">
   <?dbhtml filename="file-n32.html"?>
 
-  <title>File-&file-version;</title>
+  <title>File-&file-version; N32</title>
 
   <indexterm zone="ch-system-file-n32">
-    <primary sortas="a-File">File</primary>
+    <primary sortas="a-File">File N32</primary>
   </indexterm>
 
   <sect2 role="package">
