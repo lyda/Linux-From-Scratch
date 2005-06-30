@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "TESTING-20050629">
-<!ENTITY releasedate "June 29, 2005">
+<!ENTITY version "TESTING-20050630">
+<!ENTITY releasedate "June 30, 2005">
 <!ENTITY milestone "6.1">
 <!ENTITY generic-version "testing"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
@@ -11,6 +11,7 @@
 <!ENTITY hints-index "&lfs-root;hints/list.html">
 <!ENTITY patches-root "&lfs-root;patches/lfs/svn/testing/">
 <!ENTITY wiki-root "http://wiki.linuxfromscratch.org/">
+<!ENTITY livecd-root "http://linuxfromscratch.org/~jhuntwork/livecd/">
 <!ENTITY test-results "http://linuxfromscratch.org/~archaic/logs-&generic-version;/">
 <!ENTITY errata "http://www.linuxfromscratch.org/lfs/view/errata-&generic-version;/">
 
