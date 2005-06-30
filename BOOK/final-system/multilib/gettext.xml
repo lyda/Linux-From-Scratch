@@ -60,8 +60,12 @@
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/gettext.xml"
-  xpointer="xpointer(id('contents-gettext'))"/>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-gettext" role="."/></para>
+
+  </sect2>
 
 </sect1>

@@ -33,6 +33,8 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/sed.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/flex.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gettext.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gettext-n32.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gettext-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/inetutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/iproute2.xml"/>
@@ -44,6 +46,8 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/file-n32.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/file-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/libtool.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/libtool-n32.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/libtool-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bzip2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bzip2-n32.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bzip2-64bit.xml"/>
@@ -66,8 +70,8 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/util-linux.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/udev.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/mktemp.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/hotplug.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/iana-etc.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/hotplug.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/iana-etc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/colo.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/aboutdebug.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/strippingagain.xml"/>

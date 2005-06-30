@@ -10,10 +10,10 @@
 <sect1 id="ch-system-iproute2" role="wrap">
   <?dbhtml filename="iproute2.html"?>
 
-  <title>Iproute2-&iproute2-version;</title>
+  <title>IPRoute2-&iproute2-version;</title>
 
   <indexterm zone="ch-system-iproute2">
-    <primary sortas="a-iproute2">Iproute2</primary>
+    <primary sortas="a-iproute2">IPRoute2</primary>
   </indexterm>
 
   <sect2 role="package">
@@ -50,13 +50,13 @@
     href="../common/iproute2.xml"
     xpointer="xpointer(id('install-iproute2')/screen[1])"/>
 
-    <para>Prepare Iproute2 for compilation:</para>
+    <para>Prepare IPRoute2 for compilation:</para>
 
 <screen><userinput>./configure </userinput></screen>
 
     <para>Compile the package:</para>
 
-<screen><userinput>make SBINDIR=/sbin</userinput></screen>
+<screen><userinput>make CC="gcc ${BUILD64}" SBINDIR=/sbin</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/iproute2.xml"
