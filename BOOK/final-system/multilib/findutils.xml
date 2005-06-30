@@ -50,8 +50,8 @@
 
     <para>Prepare Findutils for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --libexecdir=/usr/lib/locate \
-    --localstatedir=/var/lib/locate</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
+    --libexecdir=/usr/lib64/locate --localstatedir=/var/lib64/locate</userinput></screen>
 
     <para>The <parameter>localstatedir</parameter> directive above changes the
     location of the <command>locate</command> database to be in <filename

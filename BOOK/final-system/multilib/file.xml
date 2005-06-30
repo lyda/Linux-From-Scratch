@@ -44,7 +44,7 @@
 
     <para>Prepare File for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr</userinput></screen>
 
     <para>Compile the package:</para>
 
@@ -56,8 +56,12 @@
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/file.xml"
-  xpointer="xpointer(id('contents-file'))"/>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-file" role="."/></para>
+
+  </sect2>
 
 </sect1>
