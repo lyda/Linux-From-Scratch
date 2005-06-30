@@ -202,6 +202,9 @@
         <listitem>
           <para>[manuel] - Text updates from trunk up tp r6251.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Added CPPFLAGS=-D_GNU_SOURCE to patch in temp-system.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
