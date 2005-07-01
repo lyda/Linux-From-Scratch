@@ -44,7 +44,7 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make CC="gcc ${BUILD32}</userinput></screen>
+<screen><userinput>make CC="gcc ${BUILD32}"</userinput></screen>
 
     <para>Install the package:</para>
 
