@@ -79,7 +79,7 @@
     class="directory">/usr/lib</filename>. Create a symlink to account for
     this:</para>
 
-<screen><userinput>ln -s libfl.a /usr/lib/libl.a</userinput></screen>
+<screen><userinput>ln -s libfl.a /usr/lib64/libl.a</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
