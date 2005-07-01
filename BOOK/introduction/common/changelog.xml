@@ -202,6 +202,9 @@
         <listitem>
           <para>[jim] - Upgraded to Udev 059.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Upgraded to Linux 2.6.12.2.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
