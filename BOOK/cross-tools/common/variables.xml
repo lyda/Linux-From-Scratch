@@ -128,11 +128,11 @@ echo export LFS_TARGET=\""${LFS_TARGET}\"" &gt;&gt; ~/.bashrc</userinput></scree
         </row>
         <row>
           <entry>Sparc32</entry>
-          <entry>sparc-unknown-linux-gnu</entry>
+          <entry>sparcv9-unknown-linux-gnu</entry>
           <entry>Sparc32</entry>
         </row>
         <row>
-          <entry>UltraSPARC (Sparc64)</entry>
+          <entry>Sparc64</entry>
           <entry>sparc64-unknown-linux-gnu</entry>
           <entry>Sparc64</entry>
         </row>

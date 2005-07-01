@@ -209,6 +209,9 @@
           <para>[jim] - Changed configure to sh configure in iproute2.
 	  The current release doesn't set permissions correctly on configure.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Corrected sparc32 variable in table.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
