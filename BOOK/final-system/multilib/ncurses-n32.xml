@@ -52,7 +52,7 @@ sh update.sh</userinput></screen>
 
     <para>Prepare Ncurses for compilation:</para>
 
-<screen><userinput>CC="gcc ${BUILDN32}" CXX="$g++ ${BUILDN32}" \
+<screen><userinput>CC="gcc ${BUILDN32}" CXX="g++ ${BUILDN32}" \
    ./configure --prefix=/usr --libdir=/lib32 \
    --with-shared --without-debug</userinput></screen>
 
