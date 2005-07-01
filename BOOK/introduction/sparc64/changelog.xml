@@ -76,6 +76,16 @@
     </listitem>
 
     <listitem>
+      <para>July 1, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Removed -mcpu and -mtune tags. Not all Sparcs are
+	  ultrasparc.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 24, 2005</para>
       <itemizedlist>
         <listitem>
