@@ -208,6 +208,9 @@
         <listitem>
           <para>[jim] - Added testing of adjusting the toolchain to all architectures.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated ld.so.conf to see all multilib directories.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

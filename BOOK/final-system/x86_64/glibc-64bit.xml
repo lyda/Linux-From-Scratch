@@ -17,12 +17,13 @@
     <secondary>cross tools</secondary>
   </indexterm>
 
-  <sect2 role="package">
+  <sect2 id="package-glibc" role="package">
     <title/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(id('package-glibc')/para[1])"/>
+   <para>The Glibc package contains the main C library. This library provides
+    the basic routines for allocating memory, searching directories, opening and
+    closing files, reading and writing files, string handling, pattern matching,
+    arithmetic, and so on.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -34,21 +35,35 @@
       </seglistitem>
     </segmentedlist>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(id('package-glibc')/segmentedlist[2])"/>
+    <segmentedlist>
+      <segtitle>&dependencies;</segtitle>
+
+      <seglistitem>
+        <seg>Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Gettext,
+        Grep, Make, Perl, Sed, and Texinfo</seg>
+      </seglistitem>
+    </segmentedlist>
 
   </sect2>
 
-  <sect2 role="installation">
+  <sect2 id="install-glibc" role="installation">
     <title>Installation of Glibc</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[1]/range-to(id('install-glibc')/para[3]))"/>
+    <para>This package is known to behave badly when you change its default
+    optimization flags (including the <option>-march</option> and
+    <option>-mcpu</option> options). Therefore, if you have defined any
+    environment variables that override default optimizations, such as CFLAGS
+    and CXXFLAGS, we recommend un-setting them when building Glibc.</para>
 
-    <para>Now we make sure the Glibc goes into <filename
-    class="directory">/lib64</filename>:</para>
+    <para>The Glibc build system is self-contained and will install
+    perfectly, even though the compiler specs file and linker are still
+    pointing at <filename class="directory">/tools</filename>. The specs
+    and linker cannot be adjusted before the Glibc install because the
+    Glibc autoconf tests would give false results and defeat the goal
+    of achieving a clean build.</para>
+
+    <para>Now we make sure the Glibc goes into
+    <filename class="directory">/lib64</filename>:</para>
 
 <screen><userinput>echo "slibdir=/lib64" &gt;&gt; configparms</userinput></screen>
 
@@ -59,30 +74,253 @@
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
     --libexecdir=/usr/lib64/glibc --libdir=/usr/lib64</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/variablelist[1]/range-to(id('install-glibc')/para[12]))"/>
+    <variablelist>
+      <title>The meaning of the new configure option:</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[8]/range-to(id('install-glibc')/para[last()]))"/>
+      <varlistentry>
+        <term><parameter>--libexecdir=/usr/lib/glibc</parameter></term>
+        <listitem>
+          <para>This changes the location of the <command>pt_chown</command>
+          program from its default of <filename
+          class="directory">/usr/libexec</filename> to <filename
+          class="directory">/usr/lib/glibc</filename>.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <important>
+      <para>In this section, the test suite for Glibc is considered critical.
+      Do not skip it under any circumstance.</para>
+    </important>
+
+    <para>Test the results:</para>
+
+<screen><userinput>make check</userinput></screen>
+
+    <para>The Glibc test suite is highly dependent on certain functions of
+    the host system, in particular the kernel. In general, the Glibc test
+    suite is always expected to pass. However, in certain circumstances,
+    some failures are unavoidable. This is a list of the most common
+    issues:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>The <emphasis>math</emphasis> tests sometimes fail when running
+        on systems where the CPU is not a relatively new genuine Intel or
+        authentic AMD. Certain optimization settings are also known to be a
+        factor here.</para>
+      </listitem>
+      <listitem>
+        <para>The <emphasis>gettext</emphasis> test sometimes fails due to
+        host system issues. The exact reasons are not yet clear.</para>
+      </listitem>
+      <listitem>
+        <para>If you have mounted the LFS partition with the
+        <parameter>noatime</parameter> option, the <emphasis>atime</emphasis> test
+        will fail. As mentioned in <xref linkend="ch-partitioning-mounting"/>,
+        do not use the <parameter>noatime</parameter> option while building
+        LFS.</para>
+      </listitem>
+      <listitem>
+        <para>When running on older and slower hardware, some tests
+        can fail because of test timeouts being exceeded.</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Though it is a harmless message, the install stage of Glibc will
+    complain about the absence of <filename>/etc/ld.so.conf</filename>.
+    Prevent this warning with:</para>
+
+<screen><userinput>touch /etc/ld.so.conf</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+    <para>Build the linuxthreads man pages, which are a great reference
+    on the threading API (applicable to NPTL as well):</para>
+
+    <para/>
+
+    <para>Unpack the glibc-linuxthreads-&glibc-version; tarball&mdash;it
+    is needed for the next two make commands. You can ignore this if you do
+    want the threading API man pages.</para>
+
+<screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man</userinput></screen>
+
+    <para>Install these pages:</para>
+
+<screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man install</userinput></screen>
+
+    <para/>
+
+  </sect2>
+
+  <sect2 id="i18n-glibc" role="configuration">
+    <title>Internationalization</title>
+
+    <para>The locales that can make the system respond in a different
+    language were not installed by the above command. Install this
+    with:</para>
+
+<screen><userinput>make localedata/install-locales</userinput></screen>
+
+    <para>To save time, an alternative to running the previous command (which
+    generates and installs every locale Glibc is aware of) is to install only
+    those locales that are wanted and needed. This can be achieved by using
+    the <command>localedef</command> command. Information on this command is
+    located in the <filename>INSTALL</filename> file in the Glibc source.
+    However, there are a number of locales that are essential in order for the
+    tests of future packages to pass, in particular, the
+    <emphasis>libstdc++</emphasis> tests from GCC. The following instructions,
+    instead of the <parameter>install-locales</parameter> target used above,
+    will install the minimum set of locales necessary for the tests to run
+    successfully:</para>
+
+<screen><userinput>mkdir -p /usr/lib/locale
+localedef -i de_DE -f ISO-8859-1 de_DE
+localedef -i de_DE@euro -f ISO-8859-15 de_DE@euro
+localedef -i en_HK -f ISO-8859-1 en_HK
+localedef -i en_PH -f ISO-8859-1 en_PH
+localedef -i en_US -f ISO-8859-1 en_US
+localedef -i es_MX -f ISO-8859-1 es_MX
+localedef -i fa_IR -f UTF-8 fa_IR
+localedef -i fr_FR -f ISO-8859-1 fr_FR
+localedef -i fr_FR@euro -f ISO-8859-15 fr_FR@euro
+localedef -i it_IT -f ISO-8859-1 it_IT
+localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
+
+    <para>Some locales installed by the <command>make
+    localedata/install-locales</command> command above are not properly
+    supported by some applications that are in the LFS and BLFS books. Because
+    of the various problems that arise due to application programmers making
+    assumptions that break in such locales, LFS should not be used in locales
+    that utilize multibyte character sets (including UTF-8) or right-to-left
+    writing order.  Numerous unofficial and unstable patches are required to
+    fix these problems, and it has been decided by the LFS developers not to
+    support such complex locales.  This applies to the ja_JP and fa_IR locales
+    as well&mdash;they have been installed only for GCC and Gettext tests to
+    pass, and the <command>watch</command> program (part of the Procps package)
+    does not work properly in them. Various attempts to circumvent these
+    restrictions are documented in internationalization-related hints.</para>
+
+  </sect2>
+
+  <sect2 id="conf-glibc" role="configuration">
+    <title>Configuring Glibc</title>
+
+    <indexterm zone="conf-glibc">
+      <primary sortas="e-/etc/nsswitch.conf">/etc/nsswitch.conf</primary>
+    </indexterm>
+
+    <indexterm zone="conf-glibc">
+      <primary sortas="e-/etc/localtime">/etc/localtime</primary>
+    </indexterm>
+
+    <para>The <filename>/etc/nsswitch.conf</filename> file needs to be created
+    because, although Glibc provides defaults when this file is missing or
+    corrupt, the Glibc defaults do not work well in a networked environment.
+    The time zone also needs to be configured.</para>
+
+    <para>Create a new file <filename>/etc/nsswitch.conf</filename> by running
+    the following:</para>
+
+<screen><userinput>cat &gt; /etc/nsswitch.conf &lt;&lt; "EOF"
+<literal># Begin /etc/nsswitch.conf
+
+passwd: files
+group: files
+shadow: files
+
+hosts: files dns
+networks: files
+
+protocols: files
+services: files
+ethers: files
+rpc: files
+
+# End /etc/nsswitch.conf</literal>
+EOF</userinput></screen>
+
+    <para>To determine the local time zone, run the following script:</para>
+
+<screen><userinput>tzselect</userinput></screen>
+
+    <para>After answering a few questions about the location, the script will
+    output the name of the time zone (e.g., <emphasis>EST5EDT</emphasis> or
+    <emphasis>Canada/Eastern</emphasis>). Then create the
+    <filename>/etc/localtime</filename> file by running:</para>
+
+<screen><userinput>cp --remove-destination /usr/share/zoneinfo/<replaceable>[xxx]</replaceable> \
+    /etc/localtime</userinput></screen>
+
+    <para>Replace <replaceable>[xxx]</replaceable> with the name of the time zone
+    that <command>tzselect</command> provided (e.g., Canada/Eastern).</para>
+
+    <variablelist>
+      <title>The meaning of the cp option:</title>
+
+      <varlistentry>
+        <term><parameter>--remove-destination</parameter></term>
+        <listitem>
+          <para>This is needed to force removal of the already existing symbolic
+          link. The reason for copying the file instead of using a symlink is to
+          cover the situation where <filename class="directory">/usr</filename>
+          is on a separate partition. This could be important when booted into
+          single user mode.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+  </sect2>
+
+  <sect2 id="conf-ld" role="configuration">
+    <title>Configuring Dynamic Loader</title>
+
+    <indexterm zone="conf-ld">
+      <primary sortas="e-/etc/ld.so.conf">/etc/ld.so.conf</primary>
+    </indexterm>
+
+    <para>By default, the dynamic loader (<filename
+    class="libraryfile">/lib/ld-linux.so.2</filename>) searches through
+    <filename class="directory">/lib</filename> and <filename
+    class="directory">/usr/lib</filename> for dynamic libraries that are
+    needed by programs as they are run. However, if there are libraries in
+    directories other than <filename class="directory">/lib</filename> and
+    <filename class="directory">/usr/lib</filename>, these need to be
+    added to the <filename>/etc/ld.so.conf</filename> file in order
+    for the dynamic loader to find them. Two directories that are commonly
+    known to contain additional libraries are
+    <filename class="directory">/usr/local/lib</filename>,
+    <filename class="directory">/usr/local/lib64</filename>,
+    <filename class="directory">/opt/lib</filename>, 
+    and <filename class="directory">/opt/lib64</filename>, 
+    so add those directories to the dynamic loader's search path.</para>
+
+    <para>Create a new file <filename>/etc/ld.so.conf</filename> by running the
+    following:</para>
+
+<screen><userinput>cat &gt; /etc/ld.so.conf &lt;&lt; "EOF"
+<literal># Begin /etc/ld.so.conf
+
+/usr/local/lib
+/usr/local/lib64
+/opt/lib
+/opt/lib64
+
+# End /etc/ld.so.conf</literal>
+EOF</userinput></screen>
 
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/glibc.xml"
-  xpointer="xpointer(id('i18n-glibc'))"/>
-
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('conf-glibc'))"/>
-
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('conf-ld'))"/>
-
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
   xpointer="xpointer(id('contents-glibc'))"/>
+
 
 </sect1>
