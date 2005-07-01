@@ -17,3 +17,37 @@ unlabeled-1.712.2		6284
 
 The following "tags" were removed from the main LFS repository. The revision #
 in which they were removed is listed with them.
+
+6.0 bootscripts-2.2.3		6286
+bootscripts-2.2.4		6286
+bootscripts_1_99_1		6286
+bootscripts_1_99_2		6286
+branch_point_5_1		6286
+branch_point_6_0		6286
+lfs-bootscripts-2.1.2		6286
+lfs-bootscripts-2.2.0		6286
+lfs-bootscripts-2.2.2		6286
+lfs-bootscripts-3.0		6286
+lfs-bootscripts-3.0.1		6286
+oldxml_bp_5_1			6286
+v1_10				6286
+v1_11				6286
+v1_9				6286
+v3_0				6286
+v3_0-pre3			6286
+v3_0-rc1			6286
+v3_1				6286
+v3_2				6286
+v3_2-rc1			6286
+v3_2-rc2			6286
+v3_3				6286
+v4_0				6286
+v4_0rc1				6286
+v4_1				6286
+v5_0				6286
+v5_0-pre1			6286
+v5_0-pre2			6286
+v5_0-pre3			6286
+v5_1-pre2			6286
+v5_1_1				6286
+
