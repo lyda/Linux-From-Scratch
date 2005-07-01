@@ -50,11 +50,11 @@
     href="../common/e2fsprogs.xml"
     xpointer="xpointer(id('install-e2fsprogs')/screen[1])"/>
 
-    <para>Prepare E2fsprogs for compilation:</para>
-
     <para>We change the library directory to lib64</para>
 
 <screen><userinput>sed -i '/libdir=.*\/lib/s@/lib@/lib64@g' configure</userinput></screen>
+
+    <para>Prepare E2fsprogs for compilation:</para>
 
 <screen><userinput>CC="gcc ${BUILD64}" ../configure --prefix=/usr \
     --with-root-prefix="" --enable-elf-shlibs --disable-evms</userinput></screen>
