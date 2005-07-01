@@ -205,6 +205,10 @@
         <listitem>
           <para>[jim] - Upgraded to Linux 2.6.12.2.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Changed configure to sh configure in iproute2.
+	  The current release doesn't set permissions correctly on configure.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
