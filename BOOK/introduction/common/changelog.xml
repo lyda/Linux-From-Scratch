@@ -194,6 +194,18 @@
 -->
 
     <listitem>
+      <para>July 1, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Fixed typos in final-system for multilib.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Upgraded to Udev 059.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 30, 2005</para>
       <itemizedlist>
         <listitem>
