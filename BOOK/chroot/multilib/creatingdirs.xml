@@ -27,12 +27,16 @@ install -d /usr/share/man/man{1,2,3,4,5,6,7,8}
 install -d /usr/local/{bin,etc,include,lib{,64},sbin,share,src}
 ln -s share/{man,doc,info} /usr/local
 install -d /usr/local/share/{doc,info,locale,man}
+ln -s /usr/lib/locale /usr/lib64/locale
 install -d /usr/local/share/{misc,terminfo,zoneinfo}
 install -d /usr/local/share/man/man{1,2,3,4,5,6,7,8}
 install -d /var/{lock,log,mail,run,spool}
 install -d /var/{opt,cache,lib{,64}/{misc,locate},local}
 install -d /opt/{bin,doc,include,info}
 install -d /opt/{lib{,64},man/man{1,2,3,4,5,6,7,8}}</userinput></screen>
+install -d /usr/lib/locale
+install -d /usr/lib{,64}
+ln -s locale /usr/lib64
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/creatingdirs.xml"
