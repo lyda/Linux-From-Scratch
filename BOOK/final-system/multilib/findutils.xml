@@ -55,7 +55,7 @@
 
     <para>The <parameter>localstatedir</parameter> directive above changes the
     location of the <command>locate</command> database to be in <filename
-    class="directory">/var/lib/locate</filename>, which is FHS-compliant.</para>
+    class="directory">/var/lib64/locate</filename>, which is FHS-compliant.</para>
 
     <para>Compile the package:</para>
 
