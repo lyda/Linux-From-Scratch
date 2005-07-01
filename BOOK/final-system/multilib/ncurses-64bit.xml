@@ -66,9 +66,9 @@ sh update.sh</userinput></screen>
 
     <para>Move the Ncurses static libraries to the proper locations:</para>
 
-<screen><userinput>mv /lib64/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib</userinput></screen>
+<screen><userinput>mv /lib64/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib64</userinput></screen>
 
-    <para>Create symlinks in <filename class="directory">/usr/lib:</filename></para>
+    <para>Create symlinks in <filename class="directory">/usr/lib64:</filename></para>
 
 <screen><userinput>rm /lib64/lib{ncurses,menu,panel,form}.so
 ln -sf ../../lib64/libncurses.so.5 /usr/lib64/libncurses.so
