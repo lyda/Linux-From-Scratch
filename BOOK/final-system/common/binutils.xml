@@ -81,6 +81,17 @@ cd ../binutils-build</userinput></screen>
 
     <para>Compile the package:</para>
 
+<screen><userinput>make configure-host</userinput></screen>
+
+    <important>
+      <para>During make configure-host you may receive the following
+      error message. It is safe to ignore.</para>
+      <para>WARNING: `flex' is missing on your system.  You should only need it if
+      you modified a `.l' file.  You may need the `Flex' package
+      in order for those modifications to take effect.  You can get
+      `Flex' from any GNU archive site.</para>
+    </important>
+
 <screen><userinput>make tooldir=/usr</userinput></screen>
 
     <para>Normally, the tooldir (the directory where the executables
