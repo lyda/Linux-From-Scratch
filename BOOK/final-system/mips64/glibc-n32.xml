@@ -79,12 +79,6 @@
     href="../mips64/glibc.xml"
     xpointer="xpointer(//*[@role='installation']/para[6])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips64/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
-
-    <para>Prepare Glibc for compilation:</para>
-
 <screen><userinput>CC="gcc ${BUILDN32}" CXX="gcc ${BUILDN32} \
     ../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \

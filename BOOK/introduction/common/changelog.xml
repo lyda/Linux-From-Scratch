@@ -205,6 +205,9 @@
         <listitem>
           <para>[jim] - Added CPPFLAGS=-D_GNU_SOURCE to patch in temp-system.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Added testing of adjusting the toolchain to all architectures.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

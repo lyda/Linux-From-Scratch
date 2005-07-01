@@ -21,20 +21,27 @@
 
 <para>First we will adjust the 32 bit ABI:</para>
 
-<screen><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
+<screen><userinput>perl -pi -e 's@ /tools/lib/ld.so.1@ /lib/ld.so.1@g;' \
     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' \
         `gcc --print-file specs`</userinput></screen>
 
-<para>Second we will adjust the 64 bit ABI:</para>
+<para>Second we will adjust the N32 ABI:</para>
 
-<screen><userinput>perl -pi -e 's@ /tools/lib64/ld-linux.so.2@ /lib64/ld-linux.so.2@g;' \
+<screen><userinput>perl -pi -e 's@ /tools/lib32/ld.so.1@ /lib32/ld.so.1@g;' \
+    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib32/ @g;' \
+        `gcc --print-file specs`</userinput></screen>
+
+<para>Third we will adjust the 64 bit ABI:</para>
+
+<screen><userinput>perl -pi -e 's@ /tools/lib64/ld.so.1@ /lib64/ld.so.1@g;' \
     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib64/ @g;' \
         `gcc --print-file specs`</userinput></screen>
 
   <para>It is a good idea to visually inspect the specs file to verify the
   intended change was actually made.</para>
 
-  <para>Note that <filename class="directory">/lib</filename> or 
+  <para>Note that <filename class="directory">/lib</filename>,
+  <filename class="directory">/lib32</filename>, or
   <filename class="directory">/lib64</filename> is now the prefix
   of our dynamic linker.</para>
 
@@ -48,13 +55,24 @@ check:</para>
 <screen><userinput>echo 'main(){}' &gt; dummy.c
 cc ${BUILD32} dummy.c
 readelf -l a.out | grep ': /lib'</userinput></screen>
-<para>For 32bit:</para>
 
 <para>If everything is working correctly, there should be no errors,
 and the output of the last command will be (allowing for
 platform-specific differences in dynamic linker name):</para>
 
-<screen><computeroutput>[Requesting program interpreter: /lib/ld-linux.so.2]</computeroutput></screen>
+<screen><computeroutput>[Requesting program interpreter: /lib/ld.so.1]</computeroutput></screen>
+
+<para>For N32 ABI:</para>
+
+<screen><userinput>echo 'main(){}' &gt; dummy.c
+cc ${BUILDN32} dummy.c
+readelf -l a.out | grep ': /lib'</userinput></screen>
+
+<para>If everything is working correctly, there should be no errors,
+and the output of the last command will be (allowing for
+platform-specific differences in dynamic linker name):</para>
+
+<screen><computeroutput>[Requesting program interpreter: /lib32/ld.so.1]</computeroutput></screen>
 
 <para>For 64 bit ABI:</para>
 
@@ -66,9 +84,10 @@ readelf -l a.out | grep ': /lib'</userinput></screen>
 and the output of the last command will be (allowing for
 platform-specific differences in dynamic linker name):</para>
 
-<screen><computeroutput>[Requesting program interpreter: /lib64/ld-linux.so.2]</computeroutput></screen>
+<screen><computeroutput>[Requesting program interpreter: /lib64/ld.so.1]</computeroutput></screen>
 
-<para>Note that <filename class="directory">/lib</filename> or 
+<para>Note that <filename class="directory">/lib</filename>,
+<filename class="directory">/lib32</filename> or 
 <filename class="directory">/lib64</filename> is now the prefix
 of our dynamic linker.</para>
 
