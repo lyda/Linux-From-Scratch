@@ -97,6 +97,15 @@ chapters 1 - 5 (matt).</para></listitem>
 the preface section of the book.</para></listitem>
 
 <listitem><para>June 28th, 2005 [archaic]: Switched from mounting /dev on a
+<listitem><para>June 27th, 2005 [matthew]: Removed mention of test suite
+problems from chapter 1 as more comprehensive information is given in
+chapter 5 (archaic).</para></listitem>
+
+<listitem><para>June 27th, 2005 [matthew]: Reworded description of the glibc
+atime failure case, and removed the description of the shm test failure as we
+already mount a tmpfs (archaic).</para></listitem>
+
+<listitem><para>June 27th, 2005 [archaic]: Switched from mounting /dev on a
 ramfs to a tmpfs.</para></listitem>
 
 <listitem><para>June 27th, 2005 [archaic]: Filled in text for errata page.
