@@ -1,0 +1,19 @@
+The following "branches" were removed from the main LFS repository. The revision
+# in which they were removed is listed with them.
+
+LFS7POC				6284
+b5_0				6284
+b5_1				6284
+bootscripts-2.2.x		6284
+gcc-4.0				6284
+mod_xslt_branch			6284
+oldtestingasof20050219		6284
+oldtrunkasof20050219		6284
+oldxml_b5_1			6284
+unlabeled-1.25.2		6284
+unlabeled-1.645.2		6284
+unlabeled-1.712.2		6284
+
+
+The following "tags" were removed from the main LFS repository. The revision #
+in which they were removed is listed with them.
