@@ -48,7 +48,7 @@
 
     <para>Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen><userinput>make install lib64=lib</userinput></screen>
 
   </sect2>
 
