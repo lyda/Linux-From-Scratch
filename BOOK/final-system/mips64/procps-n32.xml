@@ -48,17 +48,13 @@
 
 <screen><userinput>patch -Np1 -i ../&procps-mips-patch;</userinput></screen>
 
-    <para>Make sure procps gets put into /lib32:</para>
-
-<screen><userinput>sed -i 's@^\(lib64.*:= \).*@\1lib32@g' Makefile</userinput></screen>
-
     <para>Compile the package:</para>
 
 <screen><userinput>make CC="gcc ${BUILDN32}"</userinput></screen>
 
     <para>Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen><userinput>make install lib64=lib32</userinput></screen>
 
   </sect2>
 
