@@ -13,6 +13,14 @@
   <variablelist role="materials">
 
     <varlistentry>
+      <term>ELFtoaout (&elftoaout-version;) - 13 KB:</term>
+      <listitem>
+        <para><ulink
+        url="http://gd.tuwien.ac.at/opsys/linux/Owl/pool/sources/elftoaout/elftoaout-&elftoaout-version;.tgz"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Linux (&linux-sparc-version;) - 35 MB:</term>
       <listitem>
         <para><ulink

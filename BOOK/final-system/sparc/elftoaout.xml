@@ -7,19 +7,19 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-silo" role="wrap">
-  <?dbhtml filename="silo.html"?>
+<sect1 id="ch-system-elftoaout" role="wrap">
+  <?dbhtml filename="elftoaout.html"?>
 
-  <title>Silo-&silo-version;</title>
+  <title>ELFtoaout-&elftoaout-version;</title>
 
-  <indexterm zone="ch-system-silo">
-    <primary sortas="a-Silo">Silo</primary>
+  <indexterm zone="ch-system-elftoaout">
+    <primary sortas="a-ELFtoaout">ELFtoaout</primary>
   </indexterm>
 
-  <sect2 id="package-silo" role="package">
+  <sect2 id="package-elftoaout" role="package">
     <title/>
 
-    <para>The Silo package contains the Sparc Improved boot LOader.</para>
+    <para>The ELFtoaout package contains the Sparc ELF to a.out converter.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -35,17 +35,16 @@
       <segtitle>&dependencies;</segtitle>
 
       <seglistitem>
-      <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep,
-      Make, Ncurses, Sed, ELFtoaout</seg>
+      <seg>Bash, Binutils, Coreutils, GCC, Glibc, Make</seg>
       </seglistitem>
     </segmentedlist>
 
   </sect2>
 
-  <sect2 id="install-silo" role="installation">
-    <title>Installation of Silo</title>
+  <sect2 id="install-elftoaout" role="installation">
+    <title>Installation of ELFtoaout</title>
 
-    <para>Compile the Silo package:</para>
+    <para>Compile the ELFtoaout package:</para>
 
 <screen><userinput>make</userinput></screen>
 
@@ -55,8 +54,8 @@
 
   </sect2>
 
-  <sect2 id="contents-silo" role="content">
-    <title>Contents of Silo</title>
+  <sect2 id="contents-elftoaout" role="content">
+    <title>Contents of ELFtoaout</title>
 
     <segmentedlist>
       <segtitle>Installed programs</segtitle>
@@ -71,12 +70,12 @@
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
-      <varlistentry id="silo">
-        <term><command>silo</command></term>
+      <varlistentry id="elftoaout">
+        <term><command>elftoaout</command></term>
         <listitem>
           <para>Need Description</para>
-          <indexterm zone="ch-system-silo silo">
-            <primary sortas="a-silo">silo</primary>
+          <indexterm zone="ch-system-elftoaout elftoaout">
+            <primary sortas="a-elftoaout">elftoaout</primary>
           </indexterm>
         </listitem>
       </varlistentry>

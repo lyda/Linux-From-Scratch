@@ -37,6 +37,9 @@
     <listitem>
       <para>&kbd-sparc_kbdrate-patch;</para>
     </listitem>
+    <listitem>
+      <para>elftoaout &elftoaout-version;</para>
+    </listitem>
   </itemizedlist>
 
   <itemizedlist>
@@ -71,6 +74,9 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Added a patch for kbd, to fix kbd_rate structure.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Added elftoaout for Silo dependency.</para>
         </listitem>
       </itemizedlist>
     </listitem>
