@@ -85,7 +85,6 @@ make clean</userinput></screen>
 cp -a libbz2.so* /lib64
 ln -s ../../lib64/libbz2.so.1.0 /usr/lib64/libbz2.so
 rm /usr/bin/{bunzip2,bzcat,bzip2}
-ln -s bzip2 /bin/bunzip2
 ln -s bzip2 /bin/bzcat</userinput></screen>
 
   </sect2>
