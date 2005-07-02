@@ -192,7 +192,7 @@ boot_mesg()
 	echo ${ECHOPARM} -e "${2}${BOOTMESGPRN}"
 	
 	# if CUR_LENGTH was set to zero, then end the line
-	if [ "${CUR_LENGTH}" == "0" ]; then
+	if [ "${CUR_LENGTH}" = "0" ]; then
 		echo ""	
 	fi
 }

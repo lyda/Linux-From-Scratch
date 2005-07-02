@@ -1,3 +1,7 @@
+n/a - July 1, 2005
+	* Changed a == to a = in lfs/init.d/functions, in the boot_mesg
+	  function for ash compliancy (Nathan Coulson)
+
 n/a - June 26, 2005
 	* Removed consolelog script from contrib 
 	* Updated interactive rc script in contrib and added 
