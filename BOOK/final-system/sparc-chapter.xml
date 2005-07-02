@@ -42,7 +42,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/libtool.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/bzip2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/diffutils.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/kbd.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/kbd.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/e2fsprogs.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/grep.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gzip.xml"/>

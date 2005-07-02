@@ -51,7 +51,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bzip2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bzip2-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/diffutils.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/kbd.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/kbd.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/e2fsprogs.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/grep.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gzip.xml"/>

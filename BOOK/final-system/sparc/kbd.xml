@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-system-kbd" role="wrap">
+  <?dbhtml filename="kbd.html"?>
+
+  <title>Kbd-&kbd-version;</title>
+
+  <indexterm zone="ch-system-kbd">
+    <primary sortas="a-kbd">Kbd</primary>
+  </indexterm>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/kbd.xml"
+  xpointer="xpointer(id('package-kbd'))"/>
+
+  <sect2 role="installation">
+    <title>Installation of Kbd</title>
+
+    <para>Sparcs haven't updated the structure of kbd_rate yet, so
+    until they do this patch is required:</para>
+
+<screen><userinput>patch -Np1 -i ../&kbd-sparc_kbdrate-patch;</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/kbd.xml"
+    xpointer="xpointer(id('install-kbd')/para[1]/range-to(id('install-kbd')/para[last()]))"/>
+
+</sect2>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/kbd.xml"
+  xpointer="xpointer(id('contents-kbd'))"/>
+
+</sect1>
+
