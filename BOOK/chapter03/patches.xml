@@ -134,14 +134,6 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry>
-<term>Shadow Lastlog Fix Patch - 1 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;shadow-&shadow-version;-fix_lastlog-1.patch"/></para>
-<beginpage/>
-</listitem>
-</varlistentry>
-
-<varlistentry>
 <term>Sysklogd Fixes Patch - 27 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;sysklogd-&sysklogd-version;-fixes-1.patch"/></para>
