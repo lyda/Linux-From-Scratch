@@ -50,7 +50,7 @@
 
     <para>Make sure procps gets put into /lib32:</para>
 
-<screen><userinput>sed -i 's@^\(lib64.*:= \).*@\1lib32@g' > Makefile</userinput></screen>
+<screen><userinput>sed -i 's@^\(lib64.*:= \).*@\1lib32@g' Makefile</userinput></screen>
 
     <para>Compile the package:</para>
 
