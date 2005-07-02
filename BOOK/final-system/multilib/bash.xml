@@ -81,7 +81,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(id('install-bash')/para[6])"/>
+    xpointer="xpointer(id('install-bash')/para[7])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
