@@ -70,14 +70,6 @@
 rm /lib64/libshadow.so
 ln -sf ../../lib64/libshadow.so.0 /usr/lib64/libshadow.so</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/para[10])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/screen[9])"/>
-
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
