@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "TESTING-20050702">
+<!ENTITY version "6.1-pre1">
 <!ENTITY releasedate "July 2, 2005">
 <!ENTITY milestone "6.1">
-<!ENTITY generic-version "testing"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
+<!ENTITY generic-version "6.1-pre1"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
 <!ENTITY blfs-root "&lfs-root;blfs/">
 <!ENTITY faq-root "&lfs-root;faq/">
 <!ENTITY hints-root "&lfs-root;hints/downloads/files/">
 <!ENTITY hints-index "&lfs-root;hints/list.html">
-<!ENTITY patches-root "&lfs-root;patches/lfs/svn/testing/">
+<!ENTITY patches-root "&lfs-root;patches/lfs/&generic-version;/">
 <!ENTITY wiki-root "http://wiki.linuxfromscratch.org/">
 <!ENTITY livecd-root "http://linuxfromscratch.org/~jhuntwork/livecd/">
 <!ENTITY test-results "http://linuxfromscratch.org/~archaic/logs-&generic-version;/">
