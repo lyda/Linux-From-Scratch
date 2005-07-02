@@ -14,10 +14,11 @@
 
   <variablelist role="materials">
 
-    <varlistentry>
-      <term>None</term>
+   <varlistentry>
+      <term>KBD kbdrate Patch - 1 KB:</term>
       <listitem>
-        <para>No aditional patches required at this time.</para>
+        <para><ulink
+        url="&patches-root;grep/&kbd-sparc_kbdrate-patch;"/></para>
       </listitem>
     </varlistentry>
 

@@ -32,10 +32,13 @@
     <title>Added:</title>
 
     <listitem>
-      <para>Arch: Sparc - Silo &silo-version;</para>
+      <para>Silo &silo-version;</para>
     </listitem>
     <listitem>
       <para>&binutils-multilib-patch;</para>
+    </listitem>
+    <listitem>
+      <para>&kbd-sparc_kbdrate-patch;</para>
     </listitem>
   </itemizedlist>
 
@@ -65,6 +68,15 @@
     </listitem>
 
 -->
+
+    <listitem>
+      <para>July 2, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added a patch for kbd, to fix kbd_rate structure.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>June 26, 2005</para>
