@@ -57,8 +57,11 @@
 <!-- Start of sparc/sparc64 patches -->
 
 <!ENTITY linux-libc-headers-sparc_biarch-patch "linux-libc-headers-&linux-libc-headers-sparc64-version;-sparc_biarch-1.patch">
+<!ENTITY linux-libc-headers-sparc_conflicts-patch "linux-libc-headers-&linux-libc-headers-sparc64-version;-sparc_conflicts-1.patch">
 
 <!ENTITY kbd-sparc_kbdrate-patch "kbd-&kbd-version;-sparc_kbdrate-1.patch">
+
+<!ENTITY silo-fixes-patch "silo-&silo-version;-fixes-1.patch">
 
 <!-- Start of mips/mips64 patches -->
 

@@ -18,7 +18,8 @@ export CXX="${LFS_TARGET}-g++"
 export AR="${LFS_TARGET}-ar"
 export AS="${LFS_TARGET}-as"
 export RANLIB="${LFS_TARGET}-ranlib"
-export LD="${LFS_TARGET}-ld"</userinput></screen>
+export LD="${LFS_TARGET}-ld"
+export STRIP="${LFS_TARGET}-strip"</userinput></screen>
 
   <para>Lets add the build variables to <filename>~/.bashrc</filename> to
   prevent issues if we stop and come back later:</para>
@@ -28,6 +29,7 @@ echo export CXX=\""${CXX}\"" &gt;&gt; ~/.bashrc
 echo export AR=\""${AR}\"" &gt;&gt; ~/.bashrc
 echo export AS=\""${AS}\"" &gt;&gt; ~/.bashrc
 echo export RANLIB=\""${RANLIB}\"" &gt;&gt; ~/.bashrc
-echo export LD=\""${LD}\"" &gt;&gt; ~/.bashrc</userinput></screen>
+echo export LD=\""${LD}\"" &gt;&gt; ~/.bashrc
+echo export STRIP=\""${STRIP}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
 </sect1>

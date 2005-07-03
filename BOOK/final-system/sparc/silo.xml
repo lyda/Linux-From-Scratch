@@ -45,6 +45,10 @@
   <sect2 id="install-silo" role="installation">
     <title>Installation of Silo</title>
 
+    <para>The following patch fixes compile issues::</para>
+
+<screen><userinput>patch -Np1 -i ../&silo-fixes-patch;</userinput></screen>
+
     <para>Compile the Silo package:</para>
 
 <screen><userinput>make</userinput></screen>
