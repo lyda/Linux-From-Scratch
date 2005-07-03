@@ -49,7 +49,7 @@
 
     <para>Compile the Silo package:</para>
 
-<screen><userinput>make CC="${CC}" AS=${AS} LD=${LD} NM=${NM} RANLIB=${RANLIB} STRIP=${STRIP}</userinput></screen>
+<screen><userinput>make CC="${CC} -m32" AS=${AS} LD="${LD} -m elf32_sparc"  NM=${NM} RANLIB=${RANLIB} STRIP=${STRIP}</userinput></screen>
 
     <para>Install the package:</para>
 
