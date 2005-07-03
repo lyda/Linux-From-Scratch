@@ -35,6 +35,12 @@
       <para>Silo &silo-version;</para>
     </listitem>
     <listitem>
+      <para>&silo-fixes-patch;</para>
+    </listitem>
+    <listitem>
+      <para>&linux-libc-headers-sparc_conflicts-patch;</para>
+    </listitem>
+    <listitem>
       <para>&kbd-sparc_kbdrate-patch;</para>
     </listitem>
     <listitem>
@@ -68,6 +74,15 @@
     </listitem>
 
 -->
+
+    <listitem>
+      <para>July 3, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added a patch for silo, to allow cross-compile.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>July 2, 2005</para>

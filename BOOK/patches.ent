@@ -61,7 +61,7 @@
 
 <!ENTITY kbd-sparc_kbdrate-patch "kbd-&kbd-version;-sparc_kbdrate-1.patch">
 
-<!ENTITY silo-fixes-patch "silo-&silo-version;-fixes-1.patch">
+<!ENTITY silo-fixes-patch "silo-&silo-version;-fixes-2.patch">
 
 <!-- Start of mips/mips64 patches -->
 
