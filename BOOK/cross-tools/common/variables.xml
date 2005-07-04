@@ -56,6 +56,9 @@
 <screen><userinput>echo -e "We are building for ${LFS_TARGET} \
    \nOur host is ${LFS_HOST}"</userinput></screen>
 
+  <para>If the information listed about is not correct and you used
+  Method 1, you will have to use Method 2 to set it correctly.</para>
+  
   <para>Now we will add these to <filename>~/.bashrc</filename>, just in
   case you have to exit and restart building later:</para>
 
