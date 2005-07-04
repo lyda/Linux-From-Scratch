@@ -43,24 +43,32 @@
     <title>Installation of Glibc</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips64/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[1])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips64/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    href="../mips/glibc.xml"
+    xpointer="xpointer(/sect1/sect2[2]/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips64/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips64/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    href="../mips/glibc.xml"
+    xpointer="xpointer(/sect1/sect2[2]/para[5])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips64/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    href="../mips/glibc.xml"
+    xpointer="xpointer(/sect1/sect2[2]/screen[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
    <para>Now we make sure the Glibc goes into <filename
     class="directory">/lib64</filename>:</para>
@@ -69,7 +77,7 @@
 
   <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="gcc ${BUILD64}" CXX="gcc ${BUILD64}" \
+<screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \
     ../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
     --libexecdir=/usr/lib64/glibc --libdir=/usr/lib64</userinput></screen>
