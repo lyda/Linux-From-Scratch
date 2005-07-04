@@ -87,6 +87,9 @@
         <listitem>
           <para>[jim] - Added a patch for silo, to allow cross-compile.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Added openprom, to fstab.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

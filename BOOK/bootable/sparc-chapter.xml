@@ -12,7 +12,7 @@
   <title>Making the LFS System Bootable</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/fstab.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/fstab.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/kernel.xml"/>
 
 </chapter>

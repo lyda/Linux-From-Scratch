@@ -194,6 +194,15 @@
 -->
 
     <listitem>
+      <para>July 4, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Put in correct Sparc CPU Names into the target-triplet table.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 1, 2005</para>
       <itemizedlist>
         <listitem>
