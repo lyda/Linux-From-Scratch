@@ -45,22 +45,22 @@ if [ "${runlevel}" != "sysinit" -a -f /media/boottemp/.interactive-start ]; then
 	. /media/boottemp/.interactive-start
 fi
 
-if [ "${INTERACTIVE}" == "I" -a "${runlevel}" != "sysinit" -a \
+if [ "${INTERACTIVE}" = "I" -a "${runlevel}" != "sysinit" -a \
 	"${runlevel}" != "0" -a "${runlevel}" != "6" ]; then
 	echo -n -e "Proceed with interactive starup of runlevel "
 	echo -n -e "${INFO}${runlevel}${NORMAL}?" 
 	echo -n -e "(${FAILURE}y${NORMAL})es/(${FAILURE}n${NORMAL})o "
 	read -n 1 go_on
 	echo ""
-	if [ "${go_on}" == "n" ]; then
+	if [ "${go_on}" = "n" ]; then
 		# don't continue	
 		exit 0
 	fi
 fi
 
-if [ "${runlevel}" == "sysinit" -a "${IPROMPT}" == "yes" ]; then
+if [ "${runlevel}" = "sysinit" -a "${IPROMPT}" = "yes" ]; then
 	ls -l /bin/sh | grep bash 2>&1 > /dev/null
-	if [ "${?}" == "0" ]; then
+	if [ "${?}" = "0" ]; then
 		# Okay..we are using bash for the shell
 		# so -t and -n are okay for read
 		echo ""
@@ -75,7 +75,7 @@ if [ "${runlevel}" == "sysinit" -a "${IPROMPT}" == "yes" ]; then
 		echo ""
 		read -t ${ITIME} -n 1 INTERACTIVE 2> /dev/null
 		export INTERACTIVE
-		if [ "${INTERACTIVE}" == "I" ]; then
+		if [ "${INTERACTIVE}" = "I" ]; then
 			echo -n -e "${CURS_UP}"
 		        echo -e "${INFO}Interactive mode selected...${NORMAL}"
 		        echo "INTERACTIVE=${INTERACTIVE}"
@@ -149,7 +149,7 @@ do
 			;;
 		*)
 			# Begin setup for interactive starup
-			if [ "${INTERACTIVE}" == "I" ]; then
+			if [ "${INTERACTIVE}" = "I" ]; then
 				echo -n -e "Start ${INFO}${i}${NORMAL} ? "
 				echo -n -e "(${FAILURE}y${NORMAL})es/"
 				echo -n -e "(${FAILURE}n${NORMAL})o "
@@ -161,7 +161,7 @@ do
 					read -n 1 startit > /dev/null
 				done
 
-				if [ "${startit}" == "y" ]; then
+				if [ "${startit}" = "y" ]; then
 					echo ""
 					${i} start
 					echo ""
@@ -188,7 +188,7 @@ do
 done
 
 # Begin addition #3 for interactive starup
-if [ "${INTERACTIVE}" == "I" ]; then
+if [ "${INTERACTIVE}" = "I" ]; then
 	# Insert check for writeable /tmp here
 	echo "INTERACTIVE='I'" > /media/boottemp/.interactive-start 2> /dev/null
 else 

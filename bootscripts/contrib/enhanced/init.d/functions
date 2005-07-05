@@ -193,7 +193,7 @@ boot_mesg()
 	echo ${ECHOPARM} -e "${2}${BOOTMESGPRN}"
 	
 	# if CUR_LENGTH was set to zero, then end the line
-	if [ "${CUR_LENGTH}" == "0" ]; then
+	if [ "${CUR_LENGTH}" = "0" ]; then
 		echo ""	
 	fi
 }
@@ -221,7 +221,7 @@ boot_mesg_flush()
 boot_log()
 {
 	if [ -f /bin/logger ]; then
-		if [ "${runlevel}" == "sysinit" ]; then
+		if [ "${runlevel}" = "sysinit" ]; then
 			/bin/logger -t bootlog "${@}" -s 2>&1 | \
 				cat >> /media/boottemp/.logcache
 		else
