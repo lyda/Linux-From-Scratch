@@ -178,16 +178,16 @@ minimal: create-dirs create-service-dir
 install-net-agent:
 	install                   -m 755 contrib/hotplug/net.agent   ${EXTDIR}/hotplug
 
-install-interactive:
-	mv ${EXTDIR}/rc.d/init.d/rc ${EXTDIR}/rc.d/init.d/rc-interactive.bak
-	mv ${EXTDIR}/rc.d/init.d/functions ${EXTDIR}/rc.d/init.d/functions-interactive.bak
-	mv ${EXTDIR}/sysconfig/rc ${EXTDIR}/sysconfig/rc-interactive.bak
+install-enhanced:
+	mv ${EXTDIR}/rc.d/init.d/rc ${EXTDIR}/rc.d/init.d/rc-enhanced.bak
+	mv ${EXTDIR}/rc.d/init.d/functions ${EXTDIR}/rc.d/init.d/functions-enhanced.bak
+	mv ${EXTDIR}/sysconfig/rc ${EXTDIR}/sysconfig/rc-enhanced.bak
 	install -d -m ${DIRMODE} /media/boottemp
-	install -m ${MODE} contrib/init.d/rc-Interactive ${EXTDIR}/rc.d/init.d/rc
-	install -m ${CONFMODE} contrib/init.d/functions-Interactive ${EXTDIR}/rc.d/init.d/functions
-	install -m ${CONFMODE} contrib/sysconfig/rc-Interactive ${EXTDIR}/sysconfig/rc
+	install -m ${MODE} contrib/enhanced/init.d/rc ${EXTDIR}/rc.d/init.d/rc
+	install -m ${CONFMODE} contrib/enhanced/init.d/functions ${EXTDIR}/rc.d/init.d/functions
+	install -m ${CONFMODE} contrib/enhanced/sysconfig/rc ${EXTDIR}/sysconfig/rc
 
 .PHONY: all create-dirs create-service-dir \
 	install install-service-mtu install-livecd \
-	install-net-agent install-interactive
+	install-net-agent install-enhanced
 
