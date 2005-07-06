@@ -137,7 +137,7 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>make CFLAGS_FOR_TARGET="${GCCTARGET}" </userinput></screen>
 
     <para>Install the package:</para>
 

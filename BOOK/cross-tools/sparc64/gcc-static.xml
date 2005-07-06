@@ -115,7 +115,7 @@ echo "
 
     <para>Continue with compiling the package:</para>
 
-<screen><userinput>make CFLAGS_FOR_TARGET="-mcpu=ultrasparc -mtune=ultrasparc" all-gcc</userinput></screen>
+<screen><userinput>make CFLAGS_FOR_TARGET="${GCCTARGET}" all-gcc</userinput></screen>
 
     <para>Install the package:</para>
 
