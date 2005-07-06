@@ -70,6 +70,7 @@ First a summary, then a detailed log.</para>
 <listitem><para>tar-1.15.1-sparse_fix-1.patch</para></listitem>
 <listitem><para>util-linux-2.12p-cramfs-1.patch</para></listitem>
 <listitem><para>vim-6.0-security_fix-1.patch</para></listitem>
+<listitem><para>zlib-1.2.2-security_fix-1.patch;</para></listitem>
 </itemizedlist>
 </listitem>
 
@@ -86,6 +87,9 @@ First a summary, then a detailed log.</para>
 <listitem><para>zlib-1.2.1-security-1.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>July  6th, 2005 [archaic]: Added security patch for zlib.
+</para></listitem>
 
 <listitem><para>July  6th, 2005 [matt]: Several typo corrections, as suggested
 by Bernard Leak.</para></listitem>
