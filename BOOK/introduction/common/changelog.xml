@@ -200,6 +200,9 @@
           <para>[jim] - Added missing binutils patch to final-system. Need multlib scripts patch for
           all multiple ABI builds.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Upgraded to Linux-libc-headers 2.6.12.0.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
