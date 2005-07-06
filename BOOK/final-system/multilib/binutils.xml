@@ -68,6 +68,13 @@ Ask your system administrator to create more.</computeroutput></screen>
     <para>This issue needs to be resolved before running the test suites
     for Binutils and GCC.</para>
 
+    <para>The following patch makes binutils search in both the
+    <filename class="directory">lib</filename> and <filename
+    class="directory">lib64</filename> directories in a multilib
+    environment:</para>
+
+<screen><userinput>patch -Np1 -i ../&binutils-multilib-patch;</userinput></screen>
+
     <para>The Binutils documentation recommends building Binutils outside of the
     source directory in a dedicated build directory:</para>
 

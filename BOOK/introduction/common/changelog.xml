@@ -194,6 +194,16 @@
 -->
 
     <listitem>
+      <para>July 6, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added missing binutils patch to final-system. Need multlib scripts patch for
+          all multiple ABI builds.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 4, 2005</para>
       <itemizedlist>
         <listitem>
