@@ -67,6 +67,15 @@
 -->
 
     <listitem>
+      <para>July 6, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to Parted 1.6.23.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 10, 2005</para>
       <itemizedlist>
         <listitem>
