@@ -42,13 +42,11 @@
 
 <!ENTITY binutils-multilib-patch "binutils-&binutils-version;-genscripts_multilib-1.patch">
 
-<!-- Start of x86 patches -->
+<!-- Start of x86/x86_64 patches -->
 
 <!ENTITY coreutils-x86_uname-patch "coreutils-&coreutils-version;-uname-2.patch">
 
-<!-- Start of x86_64 patches -->
-
-<!ENTITY linux-libc-headers-x86_64_biarch-patch "linux-libc-headers-&linux-libc-headers-x86_64-version;-x86_64_biarch-1.patch">
+<!ENTITY linux-libc-headers-x86_64_biarch-patch "linux-libc-headers-&linux-libc-headers-x86_64-version;-x86_64_biarch-2.patch">
 
 <!-- Start of ppc patches -->
 
