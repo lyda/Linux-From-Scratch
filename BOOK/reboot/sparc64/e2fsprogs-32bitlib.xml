@@ -10,10 +10,10 @@
 <sect1 id="ch-reboot-e2fsprogs-32bitlib" role="wrap">
   <?dbhtml filename="e2fsprogs-32bitlib.html"?>
 
-  <title>E2fsprogs-&e2fsprogs-version;</title>
+  <title>E2fsprogs-&e2fsprogs-version; 32 Bit Libraries</title>
 
   <indexterm zone="ch-reboot-e2fsprogs-32bitlib">
-    <primary sortas="a-E2fsprogs">E2fsprogs</primary>
+    <primary sortas="a-E2fsprogs">E2fsprogs 32 Bit Libraries</primary>
     <secondary>reboot</secondary>
   </indexterm>
 

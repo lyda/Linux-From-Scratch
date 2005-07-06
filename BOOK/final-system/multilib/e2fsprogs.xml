@@ -10,10 +10,10 @@
 <sect1 id="ch-system-e2fsprogs" role="wrap">
   <?dbhtml filename="e2fsprogs.html"?>
 
-  <title>E2fsprogs-&e2fsprogs-version;</title>
+  <title>E2fsprogs-&e2fsprogs-version; 32 Bit Libraries</title>
 
   <indexterm zone="ch-system-e2fsprogs">
-    <primary sortas="a-E2fsprogs">E2fsprogs</primary>
+    <primary sortas="a-E2fsprogs">E2fsprogs 32 Bit Libraries</primary>
   </indexterm>
 
   <sect2 role="package">
