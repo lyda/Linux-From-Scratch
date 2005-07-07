@@ -82,6 +82,8 @@ file while copying it to its destination:</para>
 rm /lib/libshadow.so
 ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
 
+<beginpage/>
+
 <para>The <parameter>-D</parameter> option of the
 <command>useradd</command> program requires the <filename
 class="directory">/etc/default</filename> directory for it to work

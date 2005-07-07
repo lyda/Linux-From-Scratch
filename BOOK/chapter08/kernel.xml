@@ -139,6 +139,8 @@ reference:</para>
 
 <screen><userinput>cp .config /boot/config-&linux-version;</userinput></screen>
 
+<beginpage/>
+
 <para>It is important to note that the files in the kernel source
 directory are not owned by <emphasis>root</emphasis>. Whenever a
 package is unpacked as user <emphasis>root</emphasis> (like we did

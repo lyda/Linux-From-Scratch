@@ -90,7 +90,8 @@ First a summary, then a detailed log.</para>
 
 <listitem><para>July  7th, 2005 [manuel]: Revised packages and patches
 sizes. Using the lfs-packages-6.1.tar package and `du -k` to
-meassure it.</para></listitem>
+meassure it. Fixed beginpage tags for PDF output. Removed blank pages
+in PDF output for non-published versions.</para></listitem>
 
 <listitem><para>July  6th, 2005 [archaic]: Added security patch for zlib.
 </para></listitem>
