@@ -150,7 +150,7 @@ hr {
           <li>
             <h4>
              <a href="sparc64">
-                <xsl:text>Sparc64/UltraSPARC [This book is currently broken]</xsl:text>
+                <xsl:text>Sparc64/UltraSPARC</xsl:text>
              </a>
             </h4>
           </li>
