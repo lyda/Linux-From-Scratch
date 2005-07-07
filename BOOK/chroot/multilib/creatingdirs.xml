@@ -35,8 +35,7 @@ install -d /var/{opt,cache,lib{,64}/{misc,locate},local}
 install -d /opt/{bin,doc,include,info}
 install -d /opt/{lib{,64},man/man{1,2,3,4,5,6,7,8}}
 install -d /usr/lib/locale
-install -d /usr/lib{,64}
-ln -s locale /usr/lib64</userinput></screen>
+install -d /usr/lib{,64}</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/creatingdirs.xml"
