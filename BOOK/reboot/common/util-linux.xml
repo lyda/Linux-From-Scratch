@@ -116,6 +116,10 @@
 
 <screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no USE_TTY_GROUP=no CPUOPT="" ARCH="" CPU="" DESTDIR=${LFS} install</userinput></screen>
 
+    <para>Now we will put a copy of mount in /tools/bin.</para>
+
+<screen><userinput>cp ${LFS}/bin/mount /tools/bin</userinput></screen>
+
   </sect2>
 
   <sect2 role="content">
