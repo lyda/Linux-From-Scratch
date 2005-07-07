@@ -67,6 +67,16 @@
 -->
 
     <listitem>
+      <para>July 7, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Made grub 32bit. This is only a temporary fix until 64 bit patches can
+	  be made or located. This will build a working system.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 26, 2005</para>
       <itemizedlist>
         <listitem>
