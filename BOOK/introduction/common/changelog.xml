@@ -194,6 +194,16 @@
 -->
 
     <listitem>
+      <para>July 7, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Removed patch for ncurses in final-system build, only necessary
+	  when cross-compiling.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 6, 2005</para>
       <itemizedlist>
         <listitem>
