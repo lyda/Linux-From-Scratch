@@ -74,13 +74,13 @@ variable. If you use multiple terminal types for one computer it may be better
 to selectively add the <envar>GROFF_NO_SGR</envar> environment variable for the
 terminals that do not support SGR.</para></note>
 
+<beginpage/>
+
 <para>If the character set of the locale uses 8-bit characters, search for the
 line beginning with <quote>NROFF</quote> in <filename>/etc/man.conf</filename>,
 and verify that it matches the following:</para>
 
 <screen>NROFF  /usr/bin/nroff -Tlatin1 -mandoc</screen>
-
-<beginpage/>
 
 <para>Note that <quote>latin1</quote> should be used even if it is not
 the character set of the locale. The reason is that, according to the

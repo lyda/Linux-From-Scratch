@@ -48,7 +48,6 @@ mknod -m 666 /dev/tty c 5 0
 mknod -m 444 /dev/random c 1 8
 mknod -m 444 /dev/urandom c 1 9
 chown root:tty /dev/{console,ptmx,tty}</userinput></screen>
-<!-- -->
 
 <para>There are some symlinks and directories required by LFS that are created
 during system startup by the LFS-Bootscripts package. Since this is a chroot
@@ -68,6 +67,8 @@ newly-created directories:</para>
 
 <screen><userinput>mount -t devpts -o gid=4,mode=620 none /dev/pts
 mount -t tmpfs none /dev/shm</userinput></screen>
+
+<beginpage/>
 
 <para>The <command>mount</command> commands executed above may result
 in the following warning message:</para>

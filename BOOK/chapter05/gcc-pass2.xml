@@ -83,6 +83,8 @@ actual build of GCC. That is, all of the final (and temporary)
 binaries created during the build will link against the new
 Glibc.</para>
 
+<beginpage/>
+
 <important><para>The above patches are critical in ensuring a
 successful overall build. Do not forget to apply
 them.</para></important>
@@ -157,8 +159,6 @@ and we have no use for it.</para></listitem>
 target now because the compiler being used to compile this GCC was
 built from the exact same version of the GCC sources used
 earlier.</para>
-
-<beginpage/>
 
 <para>Compilation is now complete. As previously mentioned, running
 the test suites for the temporary tools compiled in this chapter is

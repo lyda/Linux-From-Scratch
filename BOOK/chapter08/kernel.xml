@@ -131,8 +131,6 @@ kernel. Issue the following command to install the map file:</para>
 
 <screen><userinput>cp System.map /boot/System.map-&linux-version;</userinput></screen>
 
-<beginpage/>
-
 <para>The kernel configuration file <filename>.config</filename>
 produced by the <command>make menuconfig</command> step
 above contains all the configuration selections for the kernel

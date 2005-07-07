@@ -123,6 +123,7 @@ needed to build an LFS system:</para>
 <term>Perl Libc Patch - 1 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;perl-&perl-version;-libc-1.patch"/></para>
+<beginpage/>
 </listitem>
 </varlistentry>
 

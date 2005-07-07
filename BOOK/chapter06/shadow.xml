@@ -76,8 +76,6 @@ file while copying it to its destination:</para>
 
 <screen><userinput>mv /usr/bin/passwd /bin</userinput></screen>
 
-<beginpage/>
-
 <para>Move Shadow's libraries to more appropriate locations:</para>
 
 <screen><userinput>mv /lib/libshadow.*a /usr/lib

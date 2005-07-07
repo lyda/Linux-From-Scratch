@@ -134,8 +134,6 @@ with:</para>
 
 <screen><userinput>make localedata/install-locales</userinput></screen>
 
-<beginpage/>
-
 <para>To save time, an alternative to running the
 previous command (which generates and installs every locale Glibc is
 aware of) is to install only those locales that are wanted and needed.
@@ -185,8 +183,6 @@ on the threading API (applicable to NPTL as well):</para>
 <para>Install these pages:</para>
 
 <screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man install</userinput></screen>
-
-<beginpage/>
 
 </sect2>
 
@@ -249,8 +245,6 @@ could be important when booted into single user
 mode.</para></listitem>
 </varlistentry>
 </variablelist>
-
-<beginpage/>
 
 </sect2>
 

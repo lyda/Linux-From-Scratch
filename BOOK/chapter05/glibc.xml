@@ -77,14 +77,14 @@ library.</para></listitem>
 <varlistentry>
 <term><parameter>--enable-kernel=2.6.0</parameter></term>
 <listitem><para>This tells Glibc to compile the library with support
-for 2.6.x Linux kernels.</para></listitem>
+for 2.6.x Linux kernels.</para><beginpage/></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><parameter>--with-binutils=/tools/bin</parameter></term>
 <listitem><para>While not required, this switch ensures that there are
 no errors pertaining to which Binutils programs get used during the
-Glibc build.</para><beginpage/></listitem>
+Glibc build.</para></listitem>
 </varlistentry>
 
 <varlistentry>
