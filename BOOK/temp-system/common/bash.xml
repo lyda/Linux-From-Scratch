@@ -85,7 +85,7 @@ sed "s@size \$(Program)@${LFS_TARGET}-&amp;@g"  Makefile.in.orig > Makefile.in</
 
     <para>Compile the package:</para>
 
-<screen><userinput>make LDFLAGS="-s"</userinput></screen>
+<screen><userinput>make</userinput></screen>
 
     <para>Install the package:</para>
 

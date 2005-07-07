@@ -51,7 +51,7 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make LDFLAGS="-s"</userinput></screen>
+<screen><userinput>make</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gawk.xml"
