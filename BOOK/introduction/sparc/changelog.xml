@@ -38,9 +38,6 @@
       <para>&silo-fixes-patch;</para>
     </listitem>
     <listitem>
-      <para>&linux-libc-headers-sparc_conflicts-patch;</para>
-    </listitem>
-    <listitem>
       <para>&kbd-sparc_kbdrate-patch;</para>
     </listitem>
     <listitem>
