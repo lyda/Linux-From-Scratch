@@ -53,10 +53,6 @@
 
 <screen><userinput>make</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gawk.xml"
-    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
-
     <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
