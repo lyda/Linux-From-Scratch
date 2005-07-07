@@ -115,7 +115,7 @@ hr {
           <li>
             <h4>
               <a href="x86_64">
-                <xsl:text>x86_64 [This book is currently broken]</xsl:text>
+                <xsl:text>x86_64</xsl:text>
               </a>
             </h4>
           </li>
