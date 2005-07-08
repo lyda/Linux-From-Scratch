@@ -200,6 +200,12 @@
           <para>[jim] - Updated flex build in final-system on 64 bit machines to create
 	  libfl.a for all ABI's.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Added security patch to zlib.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Updated to e2fsprogs 1.38.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
