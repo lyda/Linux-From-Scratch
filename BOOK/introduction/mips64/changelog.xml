@@ -65,6 +65,15 @@
 -->
 
     <listitem>
+      <para>July 8, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added patch to allow the building of util-linux.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 29, 2005</para>
       <itemizedlist>
         <listitem>
