@@ -63,6 +63,10 @@
 
 <screen><userinput>make install</userinput></screen>
 
+    <para>Move a misplaced program to their proper location:</para>
+
+<screen><userinput>mv /usr/bin/passwd /bin</userinput></screen>
+
     <para>Move Shadow's dynamic libraries to a more appropriate
     location:</para>
 
