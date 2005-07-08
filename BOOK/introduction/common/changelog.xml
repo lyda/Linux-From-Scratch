@@ -206,6 +206,9 @@
         <listitem>
           <para>[jim] - Updated to e2fsprogs 1.38.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to udev 062.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
