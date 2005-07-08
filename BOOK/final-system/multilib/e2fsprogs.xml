@@ -42,10 +42,6 @@
   <sect2 role="installation">
     <title>Installation of E2fsprogs</title>
 
-    <para>We change the library directory to lib64</para>
-
-<screen><userinput>sed -i '/libdir=.*\/lib/s@/lib@/lib64@g' configure</userinput></screen>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/e2fsprogs.xml"
     xpointer="xpointer(id('install-e2fsprogs')/para[1])"/>
