@@ -34,6 +34,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/coreutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/sed.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/flex.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/flex-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gettext.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gettext-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/inetutils.xml"/>

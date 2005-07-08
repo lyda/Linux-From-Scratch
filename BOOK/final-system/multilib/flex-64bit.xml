@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-flex" role="wrap">
-  <?dbhtml filename="flex.html"?>
+<sect1 id="ch-system-flex-64bit" role="wrap">
+  <?dbhtml filename="flex-64bit.html"?>
 
-  <title>Flex-&flex-version;</title>
+  <title>Flex-&flex-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-flex">
-    <primary sortas="a-Flex">Flex</primary>
+  <indexterm zone="ch-system-flex-64bit">
+    <primary sortas="a-Flex">Flex 64 Bit</primary>
   </indexterm>
 
   <sect2 role="package">
@@ -60,11 +60,11 @@
 
     <para>Prepare Flex for compilation:</para>
 
-<screen><userinput>CC="gcc ${BUILD32}" ./configure --prefix=/usr</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr --libdir=/usr/lib64</userinput></screen>
 
     <para>Compile the package:</para>
 
-<screen><userinput>make libfl.a</userinput></screen>
+<screen><userinput>make</userinput></screen>
 
     <para>To test the results, issue:
     <userinput>make check</userinput>.</para>
@@ -75,19 +75,23 @@
 
     <para>There are some packages that expect to find the
     <filename class="libraryfile">lex</filename> library in <filename
-    class="directory">/usr/lib</filename>. Create a symlink to account for
+    class="directory">/usr/lib64</filename>. Create a symlink to account for
     this:</para>
 
-<screen><userinput>ln -s libfl.a /usr/lib/libl.a</userinput></screen>
+<screen><userinput>ln -s libfl.a /usr/lib64/libl.a</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(id('install-flex')/para[8])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(id('install-flex')/screen[7])"/>
 
   </sect2>
 
-  <sect2 role="content">
-    <title/>
-
-    <para>Details on this package are located in <xref
-    linkend="contents-flex" role="."/></para>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/flex.xml"
+  xpointer="xpointer(id('contents-flex'))"/>
 
 </sect1>
