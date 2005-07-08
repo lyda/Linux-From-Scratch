@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-e2fsprogs-64bit" role="wrap">
-  <?dbhtml filename="e2fsprogs-64bit.html"?>
+<sect1 id="ch-system-e2fsprogs-n32" role="wrap">
+  <?dbhtml filename="e2fsprogs-n32.html"?>
 
-  <title>E2fsprogs-&e2fsprogs-version; 64 Bit</title>
+  <title>E2fsprogs-&e2fsprogs-version; N32 Libraries</title>
 
-  <indexterm zone="ch-system-e2fsprogs-64bit">
-    <primary sortas="a-E2fsprogs">E2fsprogs 64 Bit</primary>
+  <indexterm zone="ch-system-e2fsprogs-n32">
+    <primary sortas="a-E2fsprogs">E2fsprogs N32 Bit Libraries</primary>
   </indexterm>
 
   <sect2 role="package">
@@ -42,9 +42,9 @@
   <sect2 role="installation">
     <title>Installation of E2fsprogs</title>
 
-    <para>We change the library directory to lib64</para>
+    <para>We change the library directory to lib32</para>
 
-<screen><userinput>sed -i '/libdir=.*\/lib/s@/lib@/lib64@g' configure</userinput></screen>
+<screen><userinput>sed -i '/libdir=.*\/lib/s@/lib@/lib32@g' configure</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/e2fsprogs.xml"
@@ -56,7 +56,7 @@
 
     <para>Prepare E2fsprogs for compilation:</para>
 
-<screen><userinput>CC="gcc ${BUILD64}" ../configure --prefix=/usr \
+<screen><userinput>CC="gcc ${BUILDN32}" ../configure --prefix=/usr \
     --with-root-prefix="" --enable-elf-shlibs --disable-evms</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -65,14 +65,7 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make CC="gcc ${BUILD64}"</userinput></screen>
-
-    <para>To test the results, issue:
-    <userinput>make check</userinput>.</para>
-
-    <para>Install most of the package:</para>
-
-<screen><userinput>make install</userinput></screen>
+<screen><userinput>make CC="gcc ${BUILDN32}" libs</userinput></screen>
 
     <para>Install the shared libraries:</para>
 
@@ -80,8 +73,12 @@
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/e2fsprogs.xml"
-  xpointer="xpointer(id('contents-e2fsprogs'))"/>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-e2fsprogs" role="."/></para>
+
+  </sect2>
 
 </sect1>

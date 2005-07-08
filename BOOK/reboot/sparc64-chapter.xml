@@ -19,7 +19,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/inetutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/util-linux.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/udev.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/elftoaout.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/elftoaout.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/creatingdirs.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/createfiles.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/pwdgroup.xml"/>

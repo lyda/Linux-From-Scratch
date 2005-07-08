@@ -72,7 +72,7 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make CC="${CC} ${BUILD32}" LDFLAGS="-s" libs</userinput></screen>
+<screen><userinput>make CC="${CC} ${BUILD32}" libs</userinput></screen>
 
     <para>Install most of the package:</para>
 
