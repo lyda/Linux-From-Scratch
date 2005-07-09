@@ -88,6 +88,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July  9th, 2005 [matt]: Added information regarding security
+mailing lists and freshmeat to chapter09/whatnow.xml.  Fixes bug 1583.  Thanks
+to Steve Crosby for the report and the suggested text.</para></listitem>
+
 <listitem><para>July  7th, 2005 [manuel]: Revised packages and patches
 sizes. Using the lfs-packages-6.1.tar package and `du -k` to
 meassure it. Fixed beginpage tags for PDF output. Removed blank pages
