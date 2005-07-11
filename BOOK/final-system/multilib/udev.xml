@@ -47,7 +47,7 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make CC="gcc ${BUILD64}" udevdir=/dev</userinput></screen>
+<screen><userinput>make CC="gcc ${BUILD64}" LD="gcc ${BUILD64}" udevdir=/dev</userinput></screen>
 
     <variablelist>
       <title>The meaning of the make parameter:</title>
