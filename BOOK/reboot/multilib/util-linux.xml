@@ -67,11 +67,6 @@
     href="../../final-system/common/util-linux.xml"
     xpointer="xpointer(id('install-util-linux')/screen[1])"/>
 
-    <para>Util-Linux needs the <envar>CC</envar> variable set to include
-    the Build flags:</para>
-
-<screen><userinput>export CC="${LFS_TARGET}-gcc ${BUILD64}"</userinput></screen>
-
     <para>Prepare Util-linux for compilation:</para>
 
 <screen><userinput>CC="${CC} ${BUILD64}" ./configure</userinput></screen>
