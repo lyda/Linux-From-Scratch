@@ -194,6 +194,15 @@
 -->
 
     <listitem>
+      <para>July 11, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to automake 1.9.6.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 8, 2005</para>
       <itemizedlist>
         <listitem>
