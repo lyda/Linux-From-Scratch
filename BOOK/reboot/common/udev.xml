@@ -45,7 +45,7 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make CROSS="${LFS_TARGET}-" udevdir=/dev</userinput></screen>
+<screen><userinput>make CROSS="${LFS_TARGET}-" CC="${CC}" LD="${CC}"  udevdir=/dev</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/udev.xml"
