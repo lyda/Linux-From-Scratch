@@ -44,6 +44,14 @@
       </listitem>
     </varlistentry>
 
+    <varlistentry>
+      <term>Silo Loaders (&silo-version;) - 108 KB:</term>
+      <listitem>
+        <para><ulink
+        url="http://www.sparc-boot.org/pub/silo/silo-loaders-&silo-version;.tar.gz"/></para>
+      </listitem>
+    </varlistentry>
+
   </variablelist>
 
   <para>Total size of these packages: about 171 MB</para>
