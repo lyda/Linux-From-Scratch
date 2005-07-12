@@ -199,6 +199,9 @@
         <listitem>
           <para>[jim] - Updated to automake 1.9.6.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to iana-etc to 1.10.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
