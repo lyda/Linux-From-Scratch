@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-temp-tools-expect-64" role="wrap">
+<sect1 id="ch-temp-tools-expect" role="wrap">
   <?dbhtml filename="expect64.html"?>
 
   <title>Expect-&expect-version; 64-Bit</title>
 
-  <indexterm zone="ch-temp-tools-expect-64">
-    <primary sortas="a-Expect-64">Expect 64-Bit</primary>
+  <indexterm zone="ch-temp-tools-expect">
+    <primary sortas="a-Expect">Expect 64-Bit</primary>
   </indexterm>
 
   <sect2 role="package">

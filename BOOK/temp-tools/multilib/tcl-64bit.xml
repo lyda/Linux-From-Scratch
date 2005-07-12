@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-temp-tools-tcl-64" role="wrap">
-  <?dbhtml filename="tcl64.html"?>
+<sect1 id="ch-temp-tools-tcl" role="wrap">
+  <?dbhtml filename="tcl-64bit.html"?>
 
   <title>Tcl-&tcl-version; 64-Bit</title>
 
-  <indexterm zone="ch-temp-tools-tcl-64">
-    <primary sortas="a-Tcl-64">Tcl 64-Bit</primary>
+  <indexterm zone="ch-temp-tools-tcl">
+    <primary sortas="a-Tcl">Tcl 64-Bit</primary>
   </indexterm>
 
   <sect2 role="package">
