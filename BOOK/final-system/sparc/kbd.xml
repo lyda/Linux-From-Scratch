@@ -30,7 +30,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/kbd.xml"
-    xpointer="xpointer(id('install-kbd')/para[1]/range-to(id('install-kbd')/screen[last()]))"/>
+    xpointer="xpointer(id('install-kbd')/para[1]/range-to(id('install-kbd')/screen[3]))"/>
 
 </sect2>
 
