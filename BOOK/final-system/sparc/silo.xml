@@ -62,7 +62,7 @@
    will give us a functional system. As soon as a fix is released, this section
    will be removed. Here is how you install the precompiled files:</para>
 
-<screen><userinput>tar -xvf silo-loaders-&silo-version;.tar.gz -C ${LFS}</userinput></screen>
+<screen><userinput>tar -xvf silo-loaders-&silo-version;.tar.gz -C /</userinput></screen>
 
   </sect2>
 

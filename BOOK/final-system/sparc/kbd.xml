@@ -20,7 +20,7 @@
   href="../common/kbd.xml"
   xpointer="xpointer(id('package-kbd'))"/>
 
-  <sect2 role="installation">
+  <sect2 id="install-kbd" role="installation">
     <title>Installation of Kbd</title>
 
     <para>Sparcs haven't updated the structure of kbd_rate yet, so
@@ -28,9 +28,17 @@
 
 <screen><userinput>patch -Np1 -i ../&kbd-sparc_kbdrate-patch;</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/kbd.xml"
-    xpointer="xpointer(id('install-kbd')/para[1]/range-to(id('install-kbd')/screen[3]))"/>
+    <para>Prepare Kbd for compilation:</para>
+
+<screen><userinput>./configure</userinput></screen>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
 
 </sect2>
 
