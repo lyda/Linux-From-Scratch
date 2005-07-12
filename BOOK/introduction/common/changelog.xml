@@ -202,6 +202,9 @@
         <listitem>
           <para>[jim] - Updated to iana-etc to 1.10.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Downgraded to udev 058, build issue with non-x86 architectures.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
