@@ -200,6 +200,10 @@
           <para>[jim] - Made temp-tools only make 1 perl, 1 expect, and 1 TCL.
           Only one version is needed for the testsuites and glibc builds.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Reverted to multiple perls. They are needed for the glibc
+          builds for each ABI.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
