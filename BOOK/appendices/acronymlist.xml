@@ -459,7 +459,7 @@
     <varlistentry>
       <term><emphasis role="bold">SBU</emphasis></term>
       <listitem>
-        <para>Static Binutils Unit</para>
+        <para>Standard Build Unit</para>
       </listitem>
     </varlistentry>
 
