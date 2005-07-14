@@ -61,7 +61,7 @@ install -d ${LFS}/opt/{lib,man/man{1,2,3,4,5,6,7,8}}</userinput></screen>
     class="directory">/usr/local/share</filename> subdirectory, so we
     create only the directories that are needed. However, feel free to
     create these directories if you prefer to conform more strictly to
-    the FHS standard.</para>
+    the FHS.</para>
 
   </sect2>
 
