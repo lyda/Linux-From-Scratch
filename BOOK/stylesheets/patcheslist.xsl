@@ -16,8 +16,9 @@
 
   <xsl:template match="/">
     <xsl:text>#! /bin/bash&#x0a;&#x0a;</xsl:text>
+    <xsl:text>  umask 002&#x0a;&#x0a;</xsl:text>
       <!-- Create dest.dir if it don't exist -->
-    <xsl:text>  mkdir -p </xsl:text>
+    <xsl:text>  install -d -m 775 -g lfswww </xsl:text>
     <xsl:value-of select="$dest.dir"/>
     <xsl:text> &amp;&amp;&#x0a;</xsl:text>
     <xsl:text>  cd </xsl:text>
@@ -35,10 +36,10 @@
 
   <xsl:template match="//ulink">
       <!-- Match only local patches links and skip duplicated URLs splitted for PDF output-->
-    <xsl:if test="contains(@url, '.patch') and contains(@url, '&patches-root;')
+    <xsl:if test="contains(@url, '.patch') and contains(@url, '&patches-root;') 
             and not(ancestor-or-self::*/@condition = 'pdf')">
       <xsl:variable name="patch.name" select="substring-after(@url, '&patches-root;')"/>
-      <xsl:variable name="cut"
+      <xsl:variable name="cut" 
               select="translate(substring-after($patch.name, '-'), '0123456789', '0000000000')"/>
       <xsl:variable name="patch.name2">
         <xsl:value-of select="substring-before($patch.name, '-')"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "7.0-cross-lfs-20050712">
+<!ENTITY version "7.0-cross-lfs-20050714">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-x86_64 "&version;-x86_64">
 <!ENTITY version-ppc "&version;-PowerPC">
@@ -8,7 +8,7 @@
 <!ENTITY version-mips "&version;-MIPS">
 <!ENTITY version-mips64 "&version;-MIPS64">
 
-<!ENTITY releasedate "July 12, 2005">
+<!ENTITY releasedate "July 14, 2005">
 <!ENTITY milestone "7.0">
 <!ENTITY generic-version "svn"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
@@ -18,10 +18,9 @@
 <!ENTITY hints-root "&lfs-root;hints/downloads/files/">
 <!ENTITY hints-index "&lfs-root;hints/list.html">
 <!ENTITY patches-root "http://www.linuxfromscratch.org/patches/downloads/">
-<!ENTITY wiki-root "http://wiki.linuxfromscratch.org/">
-<!ENTITY livecd-root "http://linuxfromscratch.org/~jhuntwork/livecd/">
-<!ENTITY test-results "http://linuxfromscratch.org/~archaic/logs-&generic-version;/">
-<!ENTITY errata "http://www.linuxfromscratch.org/lfs/view/errata-&generic-version;/">
+<!ENTITY livecd-root "&lfs-root;livecd/">
+<!ENTITY test-results "&lfs-root;lfs/build-logs/&generic-version;/">
+<!ENTITY errata "&lfs-root;lfs/errata/&generic-version;/">
 
 <!ENTITY gnu "http://ftp.gnu.org/gnu/">
 <!ENTITY alpha-gnu "ftp://alpha.gnu.org/gnu/">
