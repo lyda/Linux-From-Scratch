@@ -23,7 +23,7 @@
       <para>Linux &linux-mips64-version;</para>
     </listitem>
     <listitem>
-      <para>Linux-libc-headers &linux-libc-headers-mips64-version;</para>
+      <para>Linux-libc-headers &linux-libc-headers-mips-version;</para>
     </listitem>
   </itemizedlist>
 
@@ -36,9 +36,6 @@
     </listitem>
     <listitem>
       <para>&glibc-mips_syscall-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&linux-libc-headers-mips64-patch;</para>
     </listitem>
     <listitem>
       <para>&linux-mips64-patch;</para>
@@ -63,6 +60,16 @@
     </listitem>
 
 -->
+
+    <listitem>
+      <para>July 13, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Fixed patches. Removed linux-libc patch.
+          Updates linux-mips_fix patch to current linux-mips.org cvs.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>July 8, 2005</para>

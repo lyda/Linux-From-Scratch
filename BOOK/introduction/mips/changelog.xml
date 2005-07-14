@@ -38,9 +38,6 @@
       <para>&glibc-mips_syscall-patch;</para>
     </listitem>
     <listitem>
-      <para>&linux-libc-headers-mips-patch;</para>
-    </listitem>
-    <listitem>
       <para>&linux-mips-patch;</para>
     </listitem>
   </itemizedlist>
@@ -63,6 +60,16 @@
     </listitem>
 
 -->
+
+    <listitem>
+      <para>July 13, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Fixed patches. Removed linux-libc patch.
+	  Updates linux-mips_fix patch to current linux-mips.org cvs.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>June 29, 2005</para>

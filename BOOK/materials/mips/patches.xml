@@ -31,15 +31,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Linux-libc-headers Patch - 1 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;linux-libc-headers/&linux-libc-headers-mips-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Linux Patch - 164 KB:</term>
+      <term>Linux Patch - 2.2 MB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;linux/&linux-mips-patch;"/></para>
