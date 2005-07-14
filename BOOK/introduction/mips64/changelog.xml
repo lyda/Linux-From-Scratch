@@ -23,7 +23,7 @@
       <para>Linux &linux-mips64-version;</para>
     </listitem>
     <listitem>
-      <para>Linux-libc-headers &linux-libc-headers-mips-version;</para>
+      <para>Linux-libc-headers &linux-libc-headers-mips64-version;</para>
     </listitem>
   </itemizedlist>
 
