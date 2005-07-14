@@ -69,10 +69,10 @@
       <varlistentry>
         <term><parameter>SBINDIR=/sbin</parameter></term>
         <listitem>
-          <para>This makes sure that the IPRoute2 binaries will install into
+          <para>This ensures that the IPRoute2 binaries will install into
           <filename class="directory">/sbin</filename>. This is the correct
           location according to the FHS, because some of the IPRoute2 binaries
-          are used in the bootscripts.</para>
+          are used by the LFS-Bootscripts package.</para>
         </listitem>
       </varlistentry>
     </variablelist>
@@ -126,7 +126,7 @@
         <term><command>ifstat</command></term>
         <listitem>
           <para>Shows the interface statistics, including the amount of
-          transmitted and received packages by interface</para>
+          transmitted and received packets by interface</para>
           <indexterm zone="ch-system-iproute2 ifstat">
             <primary sortas="b-ifstat">ifstat</primary>
           </indexterm>

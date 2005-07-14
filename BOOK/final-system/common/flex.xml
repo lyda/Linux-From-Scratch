@@ -52,7 +52,7 @@
 <screen><userinput>patch -Np1 -i ../&flex-fixes-patch;</userinput></screen>
 
     <para>The GNU autotools detects that the Flex source code has been
-    modified by the previous patch and tries to update the manual page
+    modified by the previous patch and tries to update the man page
     accordingly. This does not work correctly on many systems, and the
     default page is fine, so make sure it does not get regenerated:</para>
 
@@ -142,8 +142,8 @@ chmod 755 /usr/bin/lex</userinput></screen>
       <varlistentry id="lex">
         <term><command>lex</command></term>
         <listitem>
-          <para>Script that runs <command>flex</command> in <command>lex</command>
-          emulation mode</para>
+          <para>A script that runs <command>flex</command> in
+          <command>lex</command> emulation mode</para>
           <indexterm zone="ch-system-flex lex">
             <primary sortas="b-lex">lex</primary>
           </indexterm>

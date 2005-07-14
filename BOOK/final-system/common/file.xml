@@ -20,7 +20,7 @@
     <title/>
 
     <para>The File package contains a utility for determining the type of
-    files.</para>
+    a given file or files.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>

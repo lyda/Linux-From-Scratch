@@ -46,7 +46,7 @@
   <sect2 id="install-coreutils" role="installation">
     <title>Installation of Coreutils</title>
 
-    <para>Prevent Coreutils from installing binaries that will be later be
+    <para>Prevent Coreutils from installing binaries that will be
     installed by other packages:</para>
 
 <screen><userinput>patch -Np1 -i ../&coreutils-suppress-patch;</userinput></screen>
@@ -59,10 +59,11 @@
 
 <screen><userinput>make</userinput></screen>
 
-    <para>The test suite of Coreutils makes several invalid assumptions
-    about the presence of system users and groups. Therefore, additional
-    items need to be set up before running the tests. Skip down to
-    <quote>Install the package</quote> if not running the test suite.</para>
+    <para>The test suite of Coreutils makes several assumptions about the
+    presence of system users and groups that are not valid within the minimal
+    environment that exists at the moment. Therefore, additional items need
+    to be set up before running the tests. Skip down to <quote>Install the
+    package</quote> if not running the test suite.</para>
 
     <para>Create two <systemitem class="groupname">dummy</systemitem> groups
     and a <systemitem class="username">dummy</systemitem> user:</para>

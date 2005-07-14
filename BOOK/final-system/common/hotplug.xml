@@ -53,13 +53,14 @@
 
 <screen><userinput>make install</userinput></screen>
 
-    <para>Remove Hotplug's not-so-clean init script, since we're going to be
-    using the script including with LFS-Bootscripts:</para>
+    <para>Remove the init script that Hotplug installs since we are going
+    to be using the script included in the LFS-Bootscripts package:</para>
 
 <screen><userinput>rm -rf /etc/init.d</userinput></screen>
 
-    <para>Network device hotplugging is not supported by LFS bootscripts yet.
-    For that reason, remove the network hotplug agent:</para>
+    <para>Network device hotplugging is not yet supported by the
+    LFS-Bootscripts package. For that reason, remove the network
+    hotplug agent:</para>
 
 <screen><userinput>rm -f /etc/hotplug/net.agent</userinput></screen>
 
@@ -109,8 +110,8 @@
         <listitem>
           <para>These scripts are used for cold plugging, i.e., detecting and
           acting upon hardware already present during system startup. They are
-          called by the <filename>hotplug</filename> initscript that comes
-          from the LFS-Bootscripts package. The <command>*.rc</command>
+          called by the <filename>hotplug</filename> initscript included in
+          the LFS-Bootscripts package. The <command>*.rc</command>
           scripts try to recover hotplug events that were lost during system
           boot because, for example, the root filesystem was not mounted by
           the kernel</para>

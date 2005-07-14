@@ -53,7 +53,7 @@
 <screen><userinput>./configure --prefix=/usr --libexecdir=/usr/lib/locate \
     --localstatedir=/var/lib/locate</userinput></screen>
 
-    <para>The <parameter>localstatedir</parameter> directive above changes the
+    <para>The <parameter>localstatedir</parameter> option above changes the
     location of the <command>locate</command> database to be in <filename
     class="directory">/var/lib/locate</filename>, which is FHS-compliant.</para>
 

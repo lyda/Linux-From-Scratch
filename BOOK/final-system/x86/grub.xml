@@ -18,7 +18,7 @@
   <sect2 id="package-grub" role="package">
     <title/>
 
-    <para>The Grub package contains the Grand Unified Bootloader.</para>
+    <para>The Grub package contains the GRand Unified Bootloader.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
