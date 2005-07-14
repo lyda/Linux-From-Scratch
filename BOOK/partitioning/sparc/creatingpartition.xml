@@ -18,7 +18,7 @@
   partition is called Whole disk, and must be the 3rd partition on the
   disk.</para>
 
-  <para>The other partitions are virtual slices os this Whole disk partition.
+  <para>The other partitions are virtual slices of this Whole disk partition.
   But there are some limitations on the first partion of hda or sda on the
   system. This partition must be less than 2 gigabytes and this partition must
   be root.</para>
