@@ -45,7 +45,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Coreutils Suppress Uptime, Kill, Su Patch - 16 KB:</term>
+      <term>Coreutils Suppress Uptime, Kill, Su Patch - 15 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;coreutils/&coreutils-suppress-patch;"/></para>
@@ -53,7 +53,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Expect Spawn Patch - 6 KB:</term>
+      <term>Expect Spawn Patch - 7 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;expect/&expect-spawn-patch;"/></para>
@@ -61,7 +61,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Flex Brokenness Patch - 8 KB:</term>
+      <term>Flex Brokenness Patch - 156 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;flex/&flex-fixes-patch;"/></para>
@@ -109,7 +109,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>GLIBC Test Patch - 11 KB:</term>
+      <term>Glibc Test Patch - 11 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;glibc/&glibc-testfix-patch;"/></para>
@@ -181,9 +181,16 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Util-linux Cramfs Patch - 2 KB:</term> <listitem>
+      <term>Util-linux Cramfs Patch - 3 KB:</term> <listitem>
         <para><ulink
         url="&patches-root;util-linux/&util-linux-cramfs-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Zlib Security Patch - 1 KB:</term> <listitem>
+        <para><ulink
+        url="&patches-root;zlib/&zlib-security-patch;"/></para>
       </listitem>
     </varlistentry>
 
