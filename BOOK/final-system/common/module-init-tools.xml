@@ -58,6 +58,19 @@
 
 <screen><userinput>./configure --prefix="" --enable-zlib</userinput></screen>
 
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--enable-zlib</parameter></term>
+        <listitem>
+          <para>This allows the Module-Init-Tools package to handle compressed
+          kernel modules.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
     <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>

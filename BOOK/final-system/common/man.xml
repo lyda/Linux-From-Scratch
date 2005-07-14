@@ -19,7 +19,7 @@
   <sect2 id="package-man" role="package">
     <title/>
 
-    <para>The Man package contains programs for finding and viewing manual
+    <para>The Man package contains programs for finding and viewing man
     pages.</para>
 
     <segmentedlist>
@@ -87,14 +87,20 @@
 <screen><userinput>make install</userinput></screen>
 
     <note>
-      <para>To disable Select Graphic Rendition (SGR) escape sequences, edit
-      the <filename>man.conf</filename> file and add the <option>-c</option>
-      switch to the <envar>NROFF</envar> variable.</para>
+      <para>If you will be working on a terminal that does not support
+      text attributes such as color and bold, you can disable Select
+      Graphic Rendition (SGR) escape sequences by editing the
+      <filename>man.conf</filename> file and adding the <option>-c</option>
+      option to the <envar>NROFF</envar> variable. If you use multiple
+      terminal types for one computer it may be better to selectively add
+      the <envar>GROFF_NO_SGR</envar> environment variable for the terminals
+      that do not support SGR.</para>
     </note>
 
-    <para>If the character set uses 8-bit characters, search for the line
-    beginning with <quote>NROFF</quote> in <filename>/etc/man.conf</filename>,
-    and verify that it looks as follows:</para>
+    <para>If the character set of the locale uses 8-bit characters, search
+    for the line beginning with <quote>NROFF</quote> in
+    <filename>/etc/man.conf</filename>, and verify that it matches the
+    following:</para>
 
 <screen>NROFF  /usr/bin/nroff -Tlatin1 -mandoc</screen>
 
@@ -102,7 +108,7 @@
     the character set of the locale. The reason is that, according to the
     specification, <command>groff</command> has no means of typesetting
     characters outside International Organization for Standards (ISO) 8859-1
-    without some strange escape codes. When formatting manual pages,
+    without some strange escape codes. When formatting man pages,
     <command>groff</command> thinks that they are in the ISO 8859-1 encoding
     and this <parameter>-Tlatin1</parameter> switch tells
     <command>groff</command> to use the same encoding for output. Since
@@ -111,7 +117,7 @@
     it is usable as the input for a pager.</para>
 
     <para>This does not solve the problem of a non-working
-    <command>man2dvi</command> program for localized manual pages in
+    <command>man2dvi</command> program for localized man pages in
     non-ISO 8859-1 locales. Also, it does not work with multibyte
     character sets. The first problem does not currently have a solution.
     The second issue is not of concern because the LFS installation does
@@ -142,8 +148,9 @@
       <varlistentry id="apropos">
         <term><command>apropos</command></term>
         <listitem>
-          <para>Searches the whatis database and displays the short descriptions
-          of system commands that contain a given string</para>
+          <para>Searches the <command>whatis</command> database and
+          displays the short descriptions of system commands that contain
+          a given string</para>
           <indexterm zone="ch-system-man apropos">
             <primary sortas="b-apropos">apropos</primary>
           </indexterm>
@@ -153,9 +160,10 @@
       <varlistentry id="makewhatis">
         <term><command>makewhatis</command></term>
         <listitem>
-          <para>Builds the whatis database; it reads all the manual pages in the
-          manpath and writes the name and a short description in the whatis
-          database for each page</para>
+          <para>Builds the <command>whatis</command> database; it reads all
+          the man pages in the <envar>MANPATH</envar> and writes the name
+          and a short description in the <command>whatis</command> database
+          for each page</para>
           <indexterm zone="ch-system-man makewhatis">
             <primary sortas="b-makewhatis">makewhatis</primary>
           </indexterm>
@@ -165,7 +173,7 @@
       <varlistentry id="man">
         <term><command>man</command></term>
         <listitem>
-          <para>Formats and displays the requested on-line manual page</para>
+          <para>Formats and displays the requested on-line man page</para>
           <indexterm zone="ch-system-man man">
             <primary sortas="b-man">man</primary>
           </indexterm>
@@ -175,7 +183,7 @@
       <varlistentry id="man2dvi">
         <term><command>man2dvi</command></term>
         <listitem>
-          <para>Converts a manual page into dvi format</para>
+          <para>Converts a man page into dvi format</para>
           <indexterm zone="ch-system-man man2dvi">
             <primary sortas="b-man2dvi">man2dvi</primary>
           </indexterm>
@@ -185,7 +193,7 @@
       <varlistentry id="man2html">
         <term><command>man2html</command></term>
         <listitem>
-          <para>Converts a manual page into HTML</para>
+          <para>Converts a man page into HTML</para>
           <indexterm zone="ch-system-man man2html">
             <primary sortas="b-man2html">man2html</primary>
           </indexterm>
@@ -195,9 +203,9 @@
       <varlistentry id="whatis">
         <term><command>whatis</command></term>
         <listitem>
-          <para>Searches the whatis database and displays the short descriptions
-          of system commands that contain the given keyword as a separate
-          word</para>
+          <para>Searches the <command>whatis</command> database and
+          displays the short descriptions of system commands that
+          contain the given keyword as a separate word</para>
           <indexterm zone="ch-system-man whatis">
             <primary sortas="b-whatis">whatis</primary>
           </indexterm>

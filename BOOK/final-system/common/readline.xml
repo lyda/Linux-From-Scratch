@@ -19,7 +19,8 @@
   <sect2 id="package-readline" role="package">
     <title/>
 
-    <para>The Readline package contains the Readline command-line library.</para>
+    <para>The Readline package is a set of libraries that offers command-line
+    editing and history capabilities.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -45,9 +46,10 @@
   <sect2 id="install-readline" role="installation">
     <title>Installation of Readline</title>
 
-    <para>The following patch fixes various issues including a problem where
-    Readline sometimes will only show 33 characters on a line and then wrap
-    to the next line.</para>
+    <para>The following patch includes a fix for a problem where Readline
+    sometimes only shows 33 characters on a line and then wraps to the
+    next line. It also includes other fixes recommended by the Readline
+    author.</para>
 
 <screen><userinput>patch -Np1 -i ../&readline-fixes-patch;</userinput></screen>
 
@@ -80,11 +82,11 @@
 
 <screen><userinput>chmod 755 /lib/lib{readline,history}.so*</userinput></screen>
 
-    <para>Now we move the static libraries to a more appropriate location:</para>
+    <para>Now move the static libraries to a more appropriate location:</para>
 
 <screen><userinput>mv /lib/lib{readline,history}.a /usr/lib</userinput></screen>
 
-    <para>Now we will remove the <filename class="extension">.so</filename>
+    <para>Next, remove the <filename class="extension">.so</filename>
     files in <filename class="directory">/lib</filename> and relink them into
     <filename class="directory">/usr/lib</filename>.</para>
 

@@ -81,9 +81,9 @@ echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput><
 
 
     <para>To test the results, issue: <userinput>make test</userinput>.
-    However, this test suite outputs a lot of chaotic characters to the
+    However, this test suite outputs a lot of binary data to the
     screen, which can cause issues with the settings of the current terminal.
-    Therefore, running the test suite here is optional.</para>
+    This can be resolved by redirecting the output to a log file.</para>
 
     <para>Install the package:</para>
 
@@ -118,11 +118,12 @@ echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput><
     <para>By default, <command>vim</command> runs in vi-incompatible mode.
     This may be new to users who have used other editors in the past. The
     <quote>nocompatible</quote> setting is included below to highlight the
-    fact that a new behavior is being used. It also reminds those who
-    would change to <quote>compatible</quote> mode that it should appear
-    first.  This is necessary because it changes other settings, and
-    overrides must come after this setting. Create a default
-    <command>vim</command> configuration file by running the following:</para>
+    fact that a new behavior is being used. It also reminds those who would
+    change to <quote>compatible</quote> mode that it should be the first
+    setting in the configuration file. This is necessary because it changes
+    other settings, and overrides must come after this setting. Create a
+    default <command>vim</command> configuration file by running the
+    following:</para>
 
 <screen><userinput>cat &gt; /etc/vimrc &lt;&lt; "EOF"
 <literal>" Begin /etc/vimrc
@@ -277,7 +278,7 @@ EOF</userinput></screen>
       <varlistentry id="shtags.pl">
         <term><command>shtags.pl</command></term>
         <listitem>
-          <para>Generates a tag file for Perl scripts</para>
+          <para>Generates a tags file for Perl scripts</para>
           <indexterm zone="ch-system-vim shtags.pl">
             <primary sortas="b-shtags.pl">shtags.pl</primary>
           </indexterm>
@@ -287,7 +288,7 @@ EOF</userinput></screen>
       <varlistentry id="tcltags">
         <term><command>tcltags</command></term>
         <listitem>
-          <para>Generates a tag file for TCL code</para>
+          <para>Generates a tags file for TCL code</para>
           <indexterm zone="ch-system-vim tcltags">
             <primary sortas="b-tcltags">tcltags</primary>
           </indexterm>
@@ -370,10 +371,10 @@ EOF</userinput></screen>
       <varlistentry id="vimspell.sh">
         <term><command>vimspell.sh</command></term>
         <listitem>
-          <para>Spells a file and generates the syntax statements necessary
-          to highlight in <command>vim</command>. This script requires the
-          old Unix <command>spell</command> command, which is provided neither
-          in LFS nor in BLFS</para>
+          <para>Spell checks a file and generates the syntax statements
+          necessary to highlight in <command>vim</command>. This script
+          requires the old Unix <command>spell</command> command, which
+          is provided neither in LFS nor in BLFS</para>
           <indexterm zone="ch-system-vim vimspell.sh">
             <primary sortas="b-vimspell.sh">vimspell.sh</primary>
           </indexterm>

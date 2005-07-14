@@ -100,7 +100,7 @@ mkdir -p /var/lib/hwclock</userinput></screen>
 
     <para>Install the package and move the <command>logger</command> binary to
     <filename class="directory">/bin</filename> as it is needed by the
-    bootscripts:</para>
+    LFS-Bootscripts package:</para>
 
 <screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes install
 mv /usr/bin/logger /bin</userinput></screen>
@@ -756,7 +756,7 @@ mv /usr/bin/logger /bin</userinput></screen>
       <varlistentry id="whereis">
         <term><command>whereis</command></term>
         <listitem>
-          <para>Reports the location of binary, the source, and the manual page
+          <para>Reports the location of the binary, source, and man page
           for the given command</para>
           <indexterm zone="ch-system-util-linux whereis">
             <primary sortas="b-whereis">whereis</primary>

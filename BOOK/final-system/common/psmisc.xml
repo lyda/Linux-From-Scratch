@@ -19,8 +19,8 @@
   <sect2 id="package-psmisc" role="package">
     <title/>
 
-    <para>The Psmisc package contains programs for displaying information on
-    processes.</para>
+    <para>The Psmisc package contains programs for displaying information
+    about running processes.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -56,12 +56,11 @@
       <varlistentry>
         <term><parameter>--exec-prefix=""</parameter></term>
         <listitem>
-          <para>This causes the binaries to be installed in <filename
-          class="directory">/bin</filename> instead of <filename
-          class="directory">/usr/bin</filename>. Because the Psmisc
-          programs are often used in bootscripts, they should be available
-          when the <filename class="directory">/usr</filename> file system
-          is not mounted.</para>
+          <para>This ensures that the Psmisc binaries will install into
+          <filename class="directory">/bin</filename> instead of
+          <filename class="directory">/usr/bin</filename>. This is the
+          correct location according to the FHS, because some of the Psmisc
+          binaries are used by the LFS-Bootscripts package.</para>
         </listitem>
       </varlistentry>
     </variablelist>

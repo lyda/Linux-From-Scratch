@@ -49,11 +49,13 @@
     <para>Prepare Ncurses for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --libdir=/lib \
---with-shared --without-debug</userinput></screen>
+    --with-shared --without-debug</userinput></screen>
 
     <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
+
+    <para>This package does not come with a test suite.</para>
 
     <para>Install the package:</para>
 

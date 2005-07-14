@@ -65,7 +65,8 @@ sed -i '/groups/d' man/Makefile</userinput></screen>
 <screen><userinput>make install</userinput></screen>
 
     <para id="shadow-limits-login_access">Shadow uses two files to configure
-    authentication settings for the system. Install these two config files:</para>
+    authentication settings for the system. Install these two configuration
+    files:</para>
 
     <indexterm zone="shadow-limits-login_access">
       <primary sortas="e-/etc/limits">/etc/limits</primary>
@@ -195,7 +196,7 @@ ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
       <varlistentry id="chfn">
         <term><command>chfn</command></term>
         <listitem>
-          <para>Used to change a user's full name and other info</para>
+          <para>Used to change a user's full name and other information</para>
           <indexterm zone="ch-system-shadow chfn">
             <primary sortas="b-chfn">chfn</primary>
           </indexterm>
