@@ -11,7 +11,7 @@
   <title>Making the Temporary System Bootable</title>
 
   <indexterm zone="ch-reboot-grub">
-    <primary sortas="a-Grub">Grub</primary>
+    <primary sortas="a-GRUB">GRUB</primary>
     <secondary>reboot, configuring</secondary>
   </indexterm>
 

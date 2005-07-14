@@ -11,7 +11,7 @@
   <title>Making the Temporary System Bootable</title>
 
   <indexterm zone="ch-reboot-grub">
-    <primary sortas="a-Grub">Grub</primary>
+    <primary sortas="a-GRUB">GRUB</primary>
     <secondary>reboot, configuring</secondary>
   </indexterm>
 
@@ -66,13 +66,13 @@ dd if=${LFS}/boot/grub/stage2 of=/dev/fd0 bs=512 seek=1</userinput></screen>
     href="../../bootable/x86/grub.xml"
     xpointer="xpointer(/sect1/screen[4])"/>
 
-    <para>If all went well, Grub will have reported finding its files
+    <para>If all went well, GRUB will have reported finding its files
     in <filename class="directory">${LFS}/boot/grub</filename>. That's
     all there is to it. Quit the <command>grub</command> shell:</para>
 
 <screen><userinput>quit</userinput></screen>
 
-    <para>Create a <quote>menu list</quote> file defining Grub's boot
+    <para>Create a <quote>menu list</quote> file defining GRUB's boot
     menu:</para>
 
 <screen><userinput>cat &gt; ${LFS}/boot/grub/menu.lst &lt;&lt; "EOF"

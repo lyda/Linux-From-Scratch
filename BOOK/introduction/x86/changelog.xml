@@ -25,7 +25,7 @@
       <para>Linux-libc-headers &linux-libc-headers-x86-version;</para>
     </listitem>
     <listitem>
-      <para>Grub &grub-version;</para>
+      <para>GRUB &grub-version;</para>
     </listitem>
   </itemizedlist>
 

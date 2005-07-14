@@ -9,7 +9,7 @@
   <title>Making the LFS System Bootable</title>
 
   <indexterm zone="ch-bootable-grub">
-    <primary sortas="a-Grub">Grub</primary>
+    <primary sortas="a-GRUB">GRUB</primary>
   <secondary>configuring</secondary></indexterm>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

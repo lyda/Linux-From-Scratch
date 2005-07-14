@@ -13,7 +13,7 @@
   <variablelist role="materials">
 
     <varlistentry>
-      <term>Grub (&grub-version;) - 963 KB:</term>
+      <term>GRUB (&grub-version;) - 963 KB:</term>
       <listitem>
         <para><ulink
         url="&alpha-gnu;grub/grub-&grub-version;.tar.gz"/></para>

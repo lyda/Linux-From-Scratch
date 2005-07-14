@@ -9,16 +9,16 @@
 <sect1 id="ch-system-grub" role="wrap">
   <?dbhtml filename="grub.html"?>
 
-  <title>Grub-&grub-version;</title>
+  <title>GRUB-&grub-version;</title>
 
   <indexterm zone="ch-system-grub">
-    <primary sortas="a-Grub">Grub</primary>
+    <primary sortas="a-GRUB">GRUB</primary>
   </indexterm>
 
   <sect2 id="package-grub" role="package">
     <title/>
 
-    <para>The Grub package contains the GRand Unified Bootloader.</para>
+    <para>The GRUB package contains the GRand Unified Bootloader.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -42,15 +42,15 @@
   </sect2>
 
   <sect2 id="install-grub" role="installation">
-    <title>Installation of Grub</title>
+    <title>Installation of GRUB</title>
 
     <para>This package is known to have issues when its default optimization
     flags (including the <option>-march</option> and <option>-mcpu</option>
     options) are changed. If any environment variables that override default
     optimizations have been defined, such as <envar>CFLAGS</envar> and
-    <envar>CXXFLAGS</envar>, unset them when building Grub.</para>
+    <envar>CXXFLAGS</envar>, unset them when building GRUB.</para>
 
-    <para>Prepare Grub for compilation:</para>
+    <para>Prepare GRUB for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
 
@@ -87,7 +87,7 @@ cp /usr/lib/grub/i386-pc/stage{1,2} /boot/grub</userinput></screen>
   </sect2>
 
   <sect2 id="contents-grub" role="content">
-    <title>Contents of Grub</title>
+    <title>Contents of GRUB</title>
 
     <segmentedlist>
       <segtitle>Installed programs</segtitle>

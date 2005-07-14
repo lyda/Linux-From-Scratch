@@ -10,10 +10,10 @@
 <sect1 id="ch-system-grub-build" role="wrap">
   <?dbhtml filename="grub-build.html"?>
 
-  <title>Grub-&grub-version;</title>
+  <title>GRUB-&grub-version;</title>
 
   <indexterm zone="ch-system-grub-build">
-    <primary sortas="a-Grub-Build">Grub</primary>
+    <primary sortas="a-GRUB-Build">GRUB</primary>
     <secondary>reboot</secondary>
   </indexterm>
 
@@ -41,13 +41,13 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Grub</title>
+    <title>Installation of GRUB</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/x86/grub.xml"
     xpointer="xpointer(id('install-grub')/para[1])"/>
 
-    <para>Prepare Grub for compilation:</para>
+    <para>Prepare GRUB for compilation:</para>
 
 <screen><userinput>./configure --prefix=${LFS}/usr \
    --host=${LFS_TARGET}</userinput></screen>

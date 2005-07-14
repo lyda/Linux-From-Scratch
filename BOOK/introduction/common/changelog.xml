@@ -639,7 +639,7 @@
           <para>[jim] - Updated linux to 2.6.11.10.</para>
         </listitem>
         <listitem>
-          <para>[jim] - Updated Grub to 097.</para>
+          <para>[jim] - Updated GRUB to 097.</para>
         </listitem>
         <listitem>
           <para>[jim] - Added missing glibc-headers to cross-tools.</para>
