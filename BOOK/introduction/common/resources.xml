@@ -58,16 +58,6 @@
 
   </sect2>
 
-  <sect2 id="ch-intro-wiki">
-    <title>Wiki</title>
-
-    <para>For more information on packages, updated versions, tweaks, and
-    personal experiences, see the LFS Wiki at <ulink url="&wiki-root;"/>.
-    Users can also add information there to help others with their future
-    LFS activities.</para>
-
-  </sect2>
-
   <sect2 id="ch-intro-references">
     <title>References</title>
 
@@ -82,8 +72,8 @@
 
     <para>The LFS project has a number of world-wide mirrors to make
     accessing the website and downloading the required packages more
-    convenient. Please visit the LFS website at <ulink url="&lfs-root;"/>
-    for a list of current mirrors.</para>
+    convenient. Please visit the LFS website at <ulink
+    url="&lfs-root;mirrors.html"/> for a list of current mirrors.</para>
 
   </sect2>
 
