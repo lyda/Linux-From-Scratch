@@ -31,15 +31,16 @@ second pass of Binutils is installed later.</para></note>
 <para>Now that the adjusted linker is installed, the Binutils build and source
 directories should be removed.</para>
 
-<para>The next task is to amend the GCC specs file so that it points
-to the new dynamic linker. A simple sed script will accomplish this:</para>
+<para>The next task is to point GCC to the new dynamic linker.  This is done by
+dumping GCC's <quote>specs</quote> file to a location where GCC will look for it
+by default.  A simple <command>sed</command> substitution then alters the
+dynamic linker that GCC will use:</para>
 
 <!-- Ampersands are needed to allow copy and paste -->
 
-<screen><userinput>SPECFILE=`gcc --print-file specs` &amp;&amp;
-sed 's@ /lib/ld-linux.so.2@ /tools/lib/ld-linux.so.2@g' \
-    $SPECFILE &gt; tempspecfile &amp;&amp;
-mv -f tempspecfile $SPECFILE &amp;&amp;
+<screen><userinput>SPECFILE=`gcc -print-search-dirs | head -n 1 | awk '{ print $2 "specs" }'` &amp;&amp;
+gcc -dumpspecs > $SPECFILE &amp;&amp;
+sed -i -e 's@ /lib/ld-linux.so.2@ /tools&amp;@g' $SPECFILE &amp;&amp;
 unset SPECFILE</userinput></screen>
 
 <para>It is recommended that the above

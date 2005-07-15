@@ -111,6 +111,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July  15th, 2005 [matt]: GCC-4.x no longer installs its
+specs file by default.  Alter the toolchain adjustment stage to first
+dump the specs file where GCC will find it, then alter it.</para></listitem>
+
 <listitem><para>July  15th, 2005 [matt]: Added patches for chapter 5's Glibc to build with gcc-4.0.1</para></listitem>
 
 <listitem><para>July  15th, 2005 [matt]: Updated to gcc-4.0.1.</para></listitem>
