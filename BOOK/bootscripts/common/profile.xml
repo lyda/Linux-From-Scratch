@@ -48,8 +48,9 @@
     </listitem>
     <listitem>
       <para>Correct classification of characters into letters, digits and
-      other classes. This is necessary for Bash to properly accept non-ASCII
-      characters in command lines in non-English locales</para>
+      other classes. This is necessary for <command>bash</command> to
+      properly accept non-ASCII characters in command lines in non-English
+      locales</para>
     </listitem>
     <listitem>
       <para>The correct alphabetical sorting order for the country</para>
@@ -93,7 +94,7 @@
 
 <screen><computeroutput>ISO-8859-1</computeroutput></screen>
 
-  <para>This results in in a final locale setting of
+  <para>This results in a final locale setting of
   <quote>en_GB.ISO-8859-1</quote>.</para>
 
   <para>Once the proper locale settings have been determined, create the

@@ -19,7 +19,8 @@
   <sect2 id="package-bootscripts" role="package">
     <title/>
 
-    <para>The LFS-Bootscripts package contains a set of bootscripts.</para>
+    <para>The LFS-Bootscripts package contains a set of scripts to
+    start/stop the LFS system at bootup/shutdown.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -51,7 +52,7 @@
   </sect2>
 
   <sect2 id="contents-bootscripts" role="content">
-    <title>Contents of LFS-bootscripts</title>
+    <title>Contents of LFS-Bootscripts</title>
 
     <segmentedlist>
       <segtitle>Installed scripts</segtitle>
@@ -71,8 +72,9 @@
       <varlistentry id="checkfs-bootscripts">
         <term><command>checkfs</command></term>
         <listitem>
-          <para>Checks the file systems before they are mounted (with the
-          exception of journal and network based file systems)</para>
+          <para>Checks the integrity of the file systems before they are
+          mounted (with the exception of journal and network based file
+          systems)</para>
           <indexterm zone="ch-scripts-bootscripts checkfs-bootscripts">
             <primary sortas="d-checkfs">checkfs</primary>
           </indexterm>
@@ -97,7 +99,7 @@
       <varlistentry id="console-bootscripts">
         <term><command>console</command></term>
         <listitem>
-          <para>Loads the keymap table specified as proper for the keyboard
+          <para>Loads the correct keymap table for the desired keyboard
           layout; it also sets the screen font</para>
           <indexterm zone="ch-scripts-bootscripts console-bootscripts">
             <primary sortas="d-console">console</primary>
@@ -108,8 +110,8 @@
       <varlistentry id="functions-bootscripts">
         <term><command>functions</command></term>
         <listitem>
-          <para>Contains functions shared among different scripts, such as error
-          and status checking</para>
+          <para>Contains common functions, such as error and status checking,
+          that are used by several bootscripts</para>
           <indexterm zone="ch-scripts-bootscripts functions-bootscripts">
             <primary sortas="d-functions">functions</primary>
           </indexterm>
@@ -129,7 +131,7 @@
       <varlistentry id="hotplug-bootscripts">
         <term><command>hotplug</command></term>
         <listitem>
-          <para>Load modules for system devices</para>
+          <para>Loads modules for system devices</para>
           <indexterm zone="ch-scripts-bootscripts hotplug-bootscripts">
             <primary sortas="d-hotplug">hotplug</primary>
           </indexterm>
@@ -139,7 +141,7 @@
       <varlistentry id="ifdown-bootscripts">
         <term><command>ifdown</command></term>
         <listitem>
-          <para>Assists the network script with network devices</para>
+          <para>Assists the network script with stopping network devices</para>
           <indexterm zone="ch-scripts-bootscripts ifdown-bootscripts">
             <primary sortas="d-ifdown">ifdown</primary>
           </indexterm>
@@ -149,7 +151,7 @@
       <varlistentry id="ifup-bootscripts">
         <term><command>ifup</command></term>
         <listitem>
-          <para>Assists the network script with network devices</para>
+          <para>Assists the network script with starting network devices</para>
           <indexterm zone="ch-scripts-bootscripts ifup-bootscripts">
             <primary sortas="d-ifup">ifup</primary>
           </indexterm>
@@ -180,7 +182,7 @@
       <varlistentry id="mountkernfs-bootscripts">
         <term><command>mountkernfs</command></term>
         <listitem>
-          <para>Is used to mount kernel-provided file systems, such as
+          <para>Mounts virtual kernel file systems, such as
           <systemitem class="filesystem">proc</systemitem></para>
           <indexterm zone="ch-scripts-bootscripts mountkernfs-bootscripts">
             <primary sortas="d-mountkernfs">mountkernfs</primary>
@@ -203,8 +205,8 @@
         <term><command>rc</command></term>
         <listitem>
           <para>The master run-level control script; it is responsible for
-          running all other scripts one-by-one, in a sequence determined by
-          the name of the symbolic links being processed</para>
+          running all the other bootscripts one-by-one, in a sequence
+          determined by the name of the symbolic links being processed</para>
           <indexterm zone="ch-scripts-bootscripts rc-bootscripts">
             <primary sortas="d-rc">rc</primary>
           </indexterm>
@@ -288,8 +290,8 @@
       <varlistentry id="udev-bootscripts">
         <term><command>udev</command></term>
         <listitem>
-          <para>Sets up udev and create the device nodes in <filename
-          class="directory">/dev</filename></para>
+          <para>Prepares the <filename class="directory">/dev</filename>
+          directory and starts Udev</para>
           <indexterm zone="ch-scripts-bootscripts udev-bootscripts">
             <primary sortas="d-udev">udev</primary>
           </indexterm>
