@@ -44,111 +44,93 @@
     <title>Installation of the kernel</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[1])"/>
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='aa'])"/>
 
-    <para>Prepare for compilation by running the following command:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>make mrproper ARCH=sparc64 CROSS_COMPILE=${LFS_TARGET}-</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[3])"/>
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    xpointer="xpointer(//*[@os='ab'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+    xpointer="xpointer(//*[@os='ac'])"/>
 
-    <para>Configure the kernel via a menu-driven interface:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='ad'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='ae'])"/>
 
 <screen><userinput>make ARCH=sparc64 CROSS_COMPILE=${LFS_TARGET}- menuconfig</userinput></screen>
 
-    <para>Alternatively, <command>make ARCH=sparc64 CROSS_COMPILE=${LFS_TARGET}-
-    oldconfig</command> may be more appropriate in some situations. See the
-    <filename>README</filename> file for more information.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/note[1])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[9])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[10])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/note[2])"/>
-
-    <para>Compile the kernel image and modules:</para>
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
 
 <screen><userinput>make ARCH=sparc64 CROSS_COMPILE=${LFS_TARGET}-</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/para[10])"/>
+    xpointer="xpointer(//*[@os='af'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[13])"/>
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='p'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/screen[5])"/>
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='q'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[14])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[15])"/>
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='s'])"/>
 
 <screen><userinput>make INSTALL_MOD_PATH=${LFS} ARCH=sparc64 \
    CROSS_COMPILE=${LFS_TARGET}- modules_install</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[16])"/>
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='u'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/para[15])"/>
-
-    <para>Issue the following command to install the kernel:</para>
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='v'])"/>
 
 <screen><userinput>cp vmlinux ${LFS}/boot/lfskernel-&linux-sparc64-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[19])"/>
+    href="../../bootable/sparc64/kernel.xml"
+    xpointer="xpointer(//*[@os='x'])"/>
 
 <screen><userinput>cp System.map ${LFS}/boot/System.map-&linux-sparc64-version;</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[20])"/>
-
-<screen><userinput>cp .config ${LFS}/boot/config-&linux-sparc64-version;</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[21])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/sparc64/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/para[23])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/warning[1])"/>
 
   </sect2>
 
