@@ -34,6 +34,7 @@
 <!ENTITY sysklogd-fixes-patch "sysklogd-&sysklogd-version;-fixes-1.patch">
 
 <!ENTITY tar-sparse_fix-patch "tar-&tar-version;-sparse_fix-1.patch">
+<!ENTITY tar-gcc4_fix-patch "tar-&tar-version;-gcc4_fix_tests-1.patch">
 
 <!ENTITY util-linux-cramfs-patch "util-linux-&util-linux-version;-cramfs-1.patch">
 
