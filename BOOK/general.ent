@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "SVN-20050715">
+<!ENTITY version "GCC4-20050715">
 <!ENTITY releasedate "July 15, 2005">
 <!ENTITY milestone "6.2">
-<!ENTITY generic-version "svn"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
+<!ENTITY generic-version "gcc4"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
 <!ENTITY blfs-root "&lfs-root;blfs/">
@@ -38,7 +38,7 @@
 <!ENTITY findutils-version "4.2.23">
 <!ENTITY flex-version "2.5.31">
 <!ENTITY gawk-version "3.1.4">
-<!ENTITY gcc-version "3.4.4">
+<!ENTITY gcc-version "4.0.1">
 <!ENTITY gettext-version "0.14.5">
 <!ENTITY glibc-version "2.3.5">
 <!ENTITY grep-version "2.5.1a">
