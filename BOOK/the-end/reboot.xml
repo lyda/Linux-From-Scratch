@@ -31,9 +31,11 @@
 
 <screen><userinput>logout</userinput></screen>
 
-  <para>Then unmount the virtual files systems:</para>
+  <para>Stop the <command>udevd</command> daemon that Udev started earlier,
+  then unmount the virtual files systems:</para>
 
-<screen><userinput>umount $LFS/dev/pts
+<screen><userinput>pkill udevd
+umount $LFS/dev/pts
 umount $LFS/dev/shm
 umount $LFS/dev
 umount $LFS/proc
@@ -58,6 +60,6 @@ umount $LFS</userinput></screen>
   <emphasis>LFS &version;</emphasis> will boot automatically.</para>
 
   <para>When the reboot is complete, the LFS system is ready for use and
-  software can be added.</para>
+  more software may be added to suit your needs.</para>
 
 </sect1>
