@@ -41,57 +41,65 @@
   <sect2 role="installation">
     <title>Installation of the kernel</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[1])"/>
+    <warning os="aa">
+      <para>Here a temporaly cross-compiled kernel will be builded. When
+      configuring it, select the minimal amount of options required to can
+      boot the target machine and build the final system. I.e., not support
+      for sound, printers, etc. will be needed.</para>
+
+      <para>Also, try to avoid the use of modules if possible, and don't
+      use the resulting kernel image for production systems.</para>
+    </warning>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[2])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/screen[2])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[3])"/>
+    xpointer="xpointer(//*[@os='c'])"/>
 
-    <para>Also, ensure that the kernel does not attempt to pass
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
+
+    <para os="ab">If your keyboard isn't an US one, you may whant to build
+    the proper keymap for your keyboard layout inside the kernel. Do it by
+    running the following command:</para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
+
+    <para os="ac">Also, ensure that the kernel does not attempt to pass
     hotplugging events to userspace until userspace specifies that it is
     ready:</para>
 
-<screen><userinput>sed -i 's@/sbin/hotplug@/bin/true@' kernel/kmod.c</userinput></screen>
+<screen os="ad"><userinput>sed -i 's@/sbin/hotplug@/bin/true@' kernel/kmod.c</userinput></screen>
 
-    <para>Configure the kernel via a menu-driven interface:</para>
+    <para os="ae">Configure the kernel via a menu-driven interface:</para>
 
 <screen><userinput>make ARCH=i386 CROSS_COMPILE=${LFS_TARGET}- menuconfig</userinput></screen>
 
-    <para>Alternatively, <command>make ARCH=i386 CROSS_COMPILE=${LFS_TARGET}-
-    oldconfig</command> may be more appropriate in some situations. See the
-    <filename>README</filename> file for more information.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/note[1])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[9])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[10])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/note[2])"/>
-
-    <para>Compile the kernel image and modules:</para>
+    xpointer="xpointer(//*[@os='m'])"/>
 
 <screen><userinput>make ARCH=i386 CROSS_COMPILE=${LFS_TARGET}-</userinput></screen>
 
-    <para>If using kernel modules, an
+    <para os="af">If the use of kernel modules can't be avoided, an
     <filename>${LFS}/etc/modprobe.conf</filename> file may be needed.
     Information pertaining to modules and kernel configuration is
     located in the kernel documentation in the <filename
@@ -101,58 +109,34 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[13])"/>
+    xpointer="xpointer(//*[@os='p'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/screen[5])"/>
+    xpointer="xpointer(//*[@os='q'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[14])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[15])"/>
+    xpointer="xpointer(//*[@os='s'])"/>
 
 <screen><userinput>make ARCH=i386 CROSS_COMPILE=${LFS_TARGET}- \
    INSTALL_MOD_PATH=${LFS} modules_install</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[16])"/>
+    xpointer="xpointer(//*[@os='u'])"/>
 
-    <para>After kernel compilation is complete, additional steps are
-    required to complete the installation. Some files need to be copied to
-    the <filename class="directory">${LFS}/boot</filename> directory.</para>
-
-    <para>Issue the following command to install the kernel:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='v'])"/>
 
 <screen><userinput>cp arch/i386/boot/bzImage ${LFS}/boot/lfskernel-&linux-x86-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[19])"/>
+    xpointer="xpointer(//*[@os='x'])"/>
 
 <screen><userinput>cp System.map ${LFS}/boot/System.map-&linux-x86-version;</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[20])"/>
-
-<screen><userinput>cp .config ${LFS}/boot/config-&linux-x86-version;</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[21])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[22])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/warning[1])"/>
 
   </sect2>
 

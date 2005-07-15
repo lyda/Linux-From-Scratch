@@ -154,6 +154,9 @@
     <listitem>
       <para>&util-linux-cramfs-patch;</para>
     </listitem>
+    <listitem>
+      <para>&zlib-security-patch;</para>
+    </listitem>
   </itemizedlist>
 
   <itemizedlist>
@@ -194,6 +197,18 @@
 -->
 
     <listitem>
+      <para>July 15, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Text updates ported fron trunk up to r6522.</para>
+        </listitem>
+        <listitem>
+          <para>[name] - Another changelog entry.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 12, 2005</para>
       <itemizedlist>
         <listitem>
@@ -227,7 +242,7 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Updated flex build in final-system on 64 bit machines to create
-	  libfl.a for all ABI's.</para>
+          libfl.a for all ABI's.</para>
         </listitem>
         <listitem>
           <para>[jim] - Added security patch to zlib.</para>
@@ -246,7 +261,7 @@
       <itemizedlist>
         <listitem>
           <para>[jhuntwork] - Removed patch for ncurses in final-system build, only necessary
-	  when cross-compiling.</para>
+          when cross-compiling.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -287,7 +302,7 @@
         </listitem>
         <listitem>
           <para>[jim] - Changed configure to sh configure in iproute2.
-	  The current release doesn't set permissions correctly on configure.</para>
+          The current release doesn't set permissions correctly on configure.</para>
         </listitem>
         <listitem>
           <para>[jim] - Corrected sparc32 variable in table.</para>

@@ -12,7 +12,7 @@
   <title>Setting Up System Bootscripts</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="raq2/bootscripts.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/bootscripts.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/usage.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/udev.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/setclock.xml"/>

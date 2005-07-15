@@ -44,120 +44,104 @@
     <title>Installation of the kernel</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[1])"/>
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/mips/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    xpointer="xpointer(//*[@os='ba'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/mips/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@os='bb'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[2])"/>
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/screen[2])"/>
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[3])"/>
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    xpointer="xpointer(//*[@os='ab'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+    xpointer="xpointer(//*[@os='ac'])"/>
 
-    <para>Configure the kernel via a menu-driven interface:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='ad'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='ae'])"/>
 
 <screen><userinput>make ARCH=mips CROSS_COMPILE=${LFS_TARGET}- menuconfig</userinput></screen>
 
-    <para>Alternatively, <command>make ARCH=mips CROSS_COMPILE=${LFS_TARGET}-
-    oldconfig</command> may be more appropriate in some situations. See the
-    <filename>README</filename> file for more information.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[9])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[10])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/note[2])"/>
-
-    <para>Compile the kernel image and modules:</para>
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
 
 <screen><userinput>make ARCH=mips CROSS_COMPILE=${LFS_TARGET}-</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/para[12])"/>
+    xpointer="xpointer(//*[@os='af'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[13])"/>
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='p'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/screen[5])"/>
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='q'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[14])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[15])"/>
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='s'])"/>
 
 <screen><userinput>make ARCH=mips CROSS_COMPILE=${LFS_TARGET)- \
    INSTALL_MOD_PATH=${LFS} modules_install</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[16])"/>
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='u'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/para[15])"/>
-
-    <para>Issue the following command to install the kernel:</para>
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='v'])"/>
 
 <screen><userinput>cp vmlinux ${LFS}/boot/vmlinux-&linux-mips-version;
 gzip -9 ${LFS}/boot/vmlinux-&linux-mips-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[19])"/>
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='x'])"/>
 
 <screen><userinput>cp System.map ${LFS}/boot/System.map-&linux-mips-version;</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[20])"/>
-
-<screen><userinput>cp .config ${LFS}/boot/config-&linux-mips-version;</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/para[21])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/mips/kernel.xml"
-    xpointer="xpointer(//*[@role='installation']/para[24])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/kernel.xml"
-    xpointer="xpointer(id('install-kernel')/warning[1])"/>
 
   </sect2>
 

@@ -10,7 +10,7 @@
 <sect1 id="ch-bootable-kernel" role="wrap">
   <?dbhtml filename="kernel.html"?>
 
-  <title>Linux-&linux-mips-version;</title>
+  <title>Linux-&linux-mips64-version;</title>
 
   <indexterm zone="ch-bootable-kernel">
   <primary sortas="a-Linux">Linux</primary>
@@ -27,10 +27,11 @@
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
-    <para os="ba">The following patch fixes some issues with MIPS based
-    processors and the kernel:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/kernel.xml"
+    xpointer="xpointer(//*[@os='ba'])"/>
 
-<screen os="bb"><userinput>patch -Np1 -i ../&linux-mips-patch;</userinput></screen>
+<screen os="ca"><userinput>patch -Np1 -i ../&linux-mips64-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
@@ -64,10 +65,9 @@
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='i'])"/>
 
-    <para os="bc">Alternatively, <command>make cobalt_defconfig</command> may be
-    more appropriate in some situations. This will build a basic system with
-    no modules and <systemitem class="filesystem">ext2</systemitem> support
-    only. See the <filename>README</filename> file for more information.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/kernel.xml"
+    xpointer="xpointer(//*[@os='bc'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
@@ -117,20 +117,20 @@
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='v'])"/>
 
-<screen><userinput>cp vmlinux /boot/vmlinux-&linux-mips-version;
-gzip -9 /boot/vmlinux-&linux-mips-version;</userinput></screen>
+<screen><userinput>cp vmlinux /boot/vmlinux-&linux-mips64-version;
+gzip -9 /boot/vmlinux-&linux-mips64-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='w'])"/>
 
-<screen><userinput>cp System.map /boot/System.map-&linux-mips-version;</userinput></screen>
+<screen><userinput>cp System.map /boot/System.map-&linux-mips64-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='x'])"/>
 
-<screen><userinput>cp .config /boot/config-&linux-mips-version;</userinput></screen>
+<screen><userinput>cp .config /boot/config-&linux-mips64-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
@@ -138,7 +138,7 @@ gzip -9 /boot/vmlinux-&linux-mips-version;</userinput></screen>
 
     <para>If the kernel source tree is going to retained, run
     <command>chown -R 0:0</command> on the <filename
-    class="directory">linux-&linux-mips-version;</filename>
+    class="directory">linux-&linux-mips64-version;</filename>
     directory to ensure all files are owned by user <systemitem
     class="username">root</systemitem>.</para>
 
