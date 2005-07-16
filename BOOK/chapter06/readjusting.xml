@@ -53,9 +53,10 @@ problem. The above command takes care of this issue.</para>
 <para>Next, amend the GCC specs file so that it points to the new
 dynamic linker. A <command>perl</command> command accomplishes this:</para>
 
-<screen><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
-    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' \
-        `gcc --print-file specs`</userinput></screen>
+<screen><userinput>SPECFILE=`gcc -print-search-dirs | head -n 1 | awk '{ print $2 "specs" }'` &amp;&amp;
+gcc -dumpspecs > $SPECFILE &amp;&amp;
+sed -i -e 's@/tools/lib/ld-linux.so.2@/lib/ld-linux.so.2@g' $SPECFILE &amp;&amp;
+unset SPECFILE</userinput></screen>
 
 <para>It is a good idea to visually inspect the specs file to verify the intended 
 change was actually made.</para>
