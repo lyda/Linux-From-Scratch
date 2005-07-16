@@ -112,6 +112,8 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July  15th, 2005 [jhuntwork]: Updated gcc specs patch to version 2.</para></listitem>
+
 <listitem><para>July  15th, 2005 [matt]: Added a patch to enable tar to build
 with gcc-4.0.1</para></listitem>
 
