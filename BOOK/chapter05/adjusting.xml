@@ -40,7 +40,7 @@ dynamic linker that GCC will use:</para>
 
 <screen><userinput>SPECFILE=`gcc -print-search-dirs | head -n 1 | awk '{ print $2 "specs" }'` &amp;&amp;
 gcc -dumpspecs > $SPECFILE &amp;&amp;
-sed -i -e 's@ /lib/ld-linux.so.2@ /tools&amp;@g' $SPECFILE &amp;&amp;
+sed -i -e 's@/lib/ld-linux.so.2@/tools&amp;@g' $SPECFILE &amp;&amp;
 unset SPECFILE</userinput></screen>
 
 <para>It is recommended that the above

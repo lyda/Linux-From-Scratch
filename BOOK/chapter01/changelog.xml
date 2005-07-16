@@ -112,6 +112,8 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July  16th, 2005 [jhuntwork]: Fixed adjusting toolchain sed.</para></listitem>
+
 <listitem><para>July  16th, 2005 [jhuntwork]: Upgraded diffutils to 2.8.7.</para></listitem>
 
 <listitem><para>July  15th, 2005 [matt]: Added a patch to enable tar to build
