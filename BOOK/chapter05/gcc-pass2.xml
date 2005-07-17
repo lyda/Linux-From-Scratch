@@ -58,6 +58,12 @@ Binutils until this issue is resolved. Please consult the LFS FAQ at <ulink
 url="&lfs-root;/lfs/faq.html#no-ptys"/> for more information on how to get PTYs
 working.</para>
 
+<para>The following command adjusts where the gcc fixincludes search for headers
+so that it fixes only the new headers under /tools, not the ones from your host system.</para>
+
+<screen><userinput>sed -i 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
+      gcc/Makefile.in</userinput></screen>
+
 <para>Make an essential adjustment:</para>
 
 <screen><userinput>patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
