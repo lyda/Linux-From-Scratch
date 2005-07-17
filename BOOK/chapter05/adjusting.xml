@@ -60,6 +60,14 @@ dynamic linker in the above commands. Refer back to <xref
 linkend="ch-tools-toolchaintechnotes" role=","/> if
 necessary.</para></important>
 
+<para>There is a possibility that some include files from the host system have
+found their way into GCC's private include dir. This can happen as a result of
+GCC's <quote>fixincludes</quote> process, which runs as part of the GCC build.
+This is explained in more detail later in this chapter. Run the following
+command to eliminate this possibility:</para>
+
+<screen><userinput>rm -f /tools/lib/gcc/*/*/include/{pthread.h,bits/sigthread.h}</userinput></screen>
+
 <caution><para>At this point, it is imperative to stop and ensure that
 the basic functions (compiling and linking) of the new toolchain are
 working as expected. To perform a sanity check, run the following
