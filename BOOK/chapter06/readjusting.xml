@@ -55,7 +55,7 @@ dynamic linker. A <command>perl</command> command accomplishes this:</para>
 
 <screen><userinput>SPECFILE=`gcc -print-search-dirs | head -n 1 | awk '{ print $2 "specs" }'` &amp;&amp;
 gcc -dumpspecs > $SPECFILE &amp;&amp;
-sed -i -e 's@/tools/lib/ld-linux.so.2@/lib/ld-linux.so.2@g' $SPECFILE &amp;&amp;
+sed -i -e 's@^/tools/lib/ld-linux.so.2@/lib/ld-linux.so.2@g' $SPECFILE &amp;&amp;
 unset SPECFILE</userinput></screen>
 
 <para>It is a good idea to visually inspect the specs file to verify the intended 

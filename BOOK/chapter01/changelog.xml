@@ -112,6 +112,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July 17th, 2005 [matt]: Slightly adjusted the specs file seds,
+to prevent multiple seds from adversely affecting them.</para></listitem>
+
 <listitem><para>July 17th, 2005 [matt]: Removed the fixincludes sed from
 gcc-pass1 as we may need to fix up host's headers.  Also reinstate the
 associated removal of pthread.h and sigthread.h.</para></listitem>
