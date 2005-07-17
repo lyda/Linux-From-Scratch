@@ -112,6 +112,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July  16th, 2005 [jhuntwork]: Removed no_fixincludes and linkonce
+patches for gcc4. Also removed the command to remove the fixed pthread.h.</para></listitem>
+
 <listitem><para>July  16th, 2005 [jhuntwork]: Fixed adjusting toolchain sed for both
 chapters 5 and 6.</para></listitem>
 

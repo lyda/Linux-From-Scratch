@@ -58,25 +58,11 @@ Binutils until this issue is resolved. Please consult the LFS FAQ at <ulink
 url="&lfs-root;/lfs/faq.html#no-ptys"/> for more information on how to get PTYs
 working.</para>
 
-<para>First correct a known problem and make an essential adjustment:</para>
+<para>Make an essential adjustment:</para>
 
-<screen><userinput>patch -Np1 -i ../&gcc-no_fixincludes-patch;
-patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
 
-<para>The first patch disables the GCC <command>fixincludes</command>
-script. This was briefly mentioned earlier, but a more in-depth
-explanation of the fixincludes process is warranted here. Under normal
-circumstances, the GCC <command>fixincludes</command> script scans the
-system for header files that need to be fixed. It might find that some
-Glibc header files on the host system need to be fixed, and will fix
-them and put them in the GCC private include directory. In <xref
-linkend="chapter-building-system"/>, after the newer Glibc has been
-installed, this private include directory will be searched before the
-system include directory.  This may result in GCC finding the fixed
-headers from the host system, which most likely will not match the
-Glibc version used for the LFS system.</para>
-
-<para>The second patch changes GCC's default location of the dynamic
+<para>The above patch changes GCC's default location of the dynamic
 linker (typically <filename class="libraryfile">ld-linux.so.2</filename>). It also removes
 <filename class="directory">/usr/include</filename> from GCC's include
 search path. Patching now rather than adjusting the specs file after
@@ -85,9 +71,9 @@ actual build of GCC. That is, all of the final (and temporary)
 binaries created during the build will link against the new
 Glibc.</para>
 
-<important><para>The above patches are critical in ensuring a
+<important><para>The above patch is critical in ensuring a
 successful overall build. Do not forget to apply
-them.</para></important>
+it.</para></important>
 
 <para>Create a separate build directory again:</para>
 
