@@ -58,23 +58,34 @@ Binutils until this issue is resolved. Please consult the LFS FAQ at <ulink
 url="&lfs-root;/lfs/faq.html#no-ptys"/> for more information on how to get PTYs
 working.</para>
 
-<para>The following command adjusts where the gcc fixincludes search for headers
-so that it fixes only the new headers under /tools, not the ones from your host system.</para>
+<para>Under normal circumstances, the GCC <command>fixincludes</command> script
+scans the system for header files that need to be fixed (they may contain syntax
+errors, for example).  The script might find that some Glibc header files on the
+host system need to be fixed, so fixes them and puts them in the GCC private
+include directory. In <xref linkend="chapter-building-system"/>, after the
+newer Glibc has been installed, this private include directory will be searched
+before the system include directory.  This may result in GCC finding the fixed
+headers from the host system, which most likely will not match the Glibc version
+used for the LFS system.</para>
+
+<para>The following command adjusts where the GCC <command>fixincludes</command>
+script searches for headers, so that it fixes only the new headers under
+<filename class="directory">/tools</filename>, not the ones from your host
+system.</para>
 
 <screen><userinput>sed -i 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
       gcc/Makefile.in</userinput></screen>
 
-<para>Make an essential adjustment:</para>
+<para>Apply the following patch to change the location of GCC's default dynamic
+linker (typically <filename class="libraryfile">ld-linux.so.2</filename>):</para>
 
 <screen><userinput>patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
 
-<para>The above patch changes GCC's default location of the dynamic
-linker (typically <filename class="libraryfile">ld-linux.so.2</filename>). It also removes
-<filename class="directory">/usr/include</filename> from GCC's include
-search path. Patching now rather than adjusting the specs file after
-installation ensures that the new dynamic linker is used during the
-actual build of GCC. That is, all of the final (and temporary)
-binaries created during the build will link against the new
+<para>The above patch also removes
+<filename class="directory">/usr/include</filename> from GCC's include search
+path. Patching now rather than adjusting the specs file after installation
+ensures that the new dynamic linker is used during the actual build of GCC. That
+is, all of the binaries created during the build will link against the new
 Glibc.</para>
 
 <important><para>The above patch is critical in ensuring a
