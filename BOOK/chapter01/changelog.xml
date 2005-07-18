@@ -112,6 +112,8 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July 18th, 2005 [matt]: Remove all host headers brought in via the fixincludes process, not just pthread.h and sigaction.h</para></listitem>
+
 <listitem><para>July 17th, 2005 [matt]: Slightly adjusted the specs file seds,
 to prevent multiple seds from adversely affecting them.</para></listitem>
 
