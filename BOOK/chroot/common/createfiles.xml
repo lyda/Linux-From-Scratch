@@ -11,7 +11,7 @@
   <title>Creating Essential Symlinks</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../../reboot/common/createfiles.xml"
+  href="../../boot/common/createfiles.xml"
   xpointer="xpointer(/sect1/para[1])"/>
 
 <screen><userinput>ln -s /tools/bin/{bash,cat,pwd,stty} /bin

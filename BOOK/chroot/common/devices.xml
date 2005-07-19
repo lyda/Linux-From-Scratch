@@ -18,7 +18,7 @@
     <title>Creating Initial Device Nodes</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../reboot/common/devices.xml"
+    href="../../boot/common/devices.xml"
     xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
 <screen><userinput>mknod -m 600 /dev/console c 5 1

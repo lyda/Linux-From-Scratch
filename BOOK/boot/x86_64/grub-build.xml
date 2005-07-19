@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-boot-grub-build" role="wrap">
+  <?dbhtml filename="grub-build.html"?>
+
+  <title>GRUB-&grub-version;</title>
+
+  <indexterm zone="ch-boot-grub-build">
+    <primary sortas="a-GRUB-Build">GRUB</primary>
+    <secondary>boot</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/grub.xml"
+    xpointer="xpointer(id('package-grub')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/grub.xml"
+    xpointer="xpointer(id('package-grub')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of GRUB</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/grub.xml"
+    xpointer="xpointer(id('install-grub')/para[1])"/>
+
+    <para>Prepare GRUB for compilation:</para>
+
+<screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=${LFS}/usr \
+   --host=${LFS_TARGET32}</userinput></screen>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install
+mkdir ${LFS}/boot/grub
+cp ${LFS}/usr/lib/grub/i386-pc/stage{1,2} ${LFS}/boot/grub</userinput></screen>
+
+    <para>Replace <filename class="directory">i386-pc</filename> with whatever
+    directory is appropriate for the hardware in use.</para>
+
+    <para>The <filename class="directory">i386-pc</filename> directory
+    contains a number of <filename>*stage1_5</filename> files, different
+    ones for different file systems. Review the files available and copy
+    the appropriate ones to the <filename
+    class="directory">${LFS}/boot/grub</filename> directory. Most users will
+    copy the <filename>e2fs_stage1_5</filename> and/or
+    <filename>reiserfs_stage1_5</filename> files.</para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-grub" role="."/></para>
+
+  </sect2>
+
+</sect1>

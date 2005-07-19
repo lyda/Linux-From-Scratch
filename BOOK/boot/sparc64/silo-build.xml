@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-boot-silo-build" role="wrap">
+  <?dbhtml filename="silo-build.html"?>
+
+  <title>Silo-&silo-version;</title>
+
+  <indexterm zone="ch-boot-silo-build">
+    <primary sortas="a-Silo">Silo</primary>
+    <secondary>boot</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/silo.xml"
+    xpointer="xpointer(id('package-silo')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/silo.xml"
+    xpointer="xpointer(id('package-silo')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Silo</title>
+
+    <para>The following patch fixes compile issues::</para>
+
+<screen><userinput>patch -Np1 -i ../&silo-fixes-patch;</userinput></screen>
+
+    <para>Compile the Silo package:</para>
+
+<screen><userinput>make CC="${CC} -m32" AS=${AS} LD=${LD} NM=${NM} RANLIB=${RANLIB} STRIP=${STRIP}</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+   <para>Do to an a compile issue with the current toolchains, we are going
+   to use the precompiled boot files. This is a temporary fix to the book, but
+   will give us a functional system. As soon as a fix is released, this section
+   will be removed. Here is how you install the precompiled files:</para>
+
+<screen><userinput>tar -xvf silo-loaders-&silo-version;.tar.gz -C ${LFS}</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-silo" role="."/></para>
+
+  </sect2>
+
+</sect1>

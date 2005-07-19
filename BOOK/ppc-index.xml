@@ -48,7 +48,7 @@
     <title>Building the Basic Tools</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="temp-system/ppc-chapter.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="reboot/ppc-chapter.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="boot/ppc-chapter.xml"/>
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chroot/ppc-chapter.xml"/>
 
   </part>

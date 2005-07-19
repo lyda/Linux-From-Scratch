@@ -14,7 +14,7 @@
   Introductory text about the diferecies between the boot and chroot method
   and who can use any of them or who can use only one.</para>
 
-  <para>For the reboot method, follow to <xref linkend="chapter-reboot"/>.</para>
+  <para>For the boot method, follow to <xref linkend="chapter-boot"/>.</para>
 
   <para>For the chroot method, follow to <xref linkend="chapter-chroot"/>.</para>
 

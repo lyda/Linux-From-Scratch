@@ -48,7 +48,7 @@
     <title>Building the Basic Tools</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="temp-system/x86_64-chapter.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="reboot/x86_64-chapter.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="boot/x86_64-chapter.xml"/>
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="chroot/x86_64-chapter.xml"/>
 
   </part>

@@ -202,6 +202,10 @@
         <listitem>
           <para>[jim] - Changed link from netboot hint to netboot mini-book.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Changed the name of the reboot section to boot. Updated
+          book directories to reflect the change.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

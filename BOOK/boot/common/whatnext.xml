@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-boot-whatnext">
+  <?dbhtml filename="whatnext.html"?>
+
+  <title>What to do next</title>
+
+  <para>Now your at the point to get your <filename
+  class="directory">${LFS}</filename> directory copied over to your target
+  machine. The easiest method would be to tar and copy the file up.</para>
+
+<screen><userinput>tar -jcvf ${LFS}.tar.bz2 ${LFS}</userinput></screen>
+
+  <para>Some others have came up with other idea's on how to do this.
+  Below is a table with the method and link to where the information
+  is stored.</para>
+
+  <table>
+    <title>Boot Methods</title>
+    <tgroup cols="2" align="center">
+      <colspec colname="Method"/>
+      <colspec colname="Arch"/>
+      <colspec colname="Link"/>
+      <thead>
+        <row>
+          <entry>Boot Method</entry>
+          <entry>For Architectures</entry>
+          <entry>Hyperlink</entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry>nfsroot</entry>
+          <entry>x86, x86_64, RaQ2, PPC</entry>
+          <entry><ulink url="http://documents.jg555.com/netboot"/></entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
+
+</sect1>

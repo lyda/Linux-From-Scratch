@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-boot-grub">
+  <?dbhtml filename="grub.html"?>
+
+  <title>Making the Temporary System Bootable</title>
+
+  <indexterm zone="ch-boot-grub">
+    <primary sortas="a-GRUB">GRUB</primary>
+    <secondary>boot, configuring</secondary>
+  </indexterm>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/para[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/para[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/grub.xml"
+    xpointer="xpointer(/sect1/screen[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/para[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/screen[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/para[5])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/para[6])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/para[7])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/screen[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/warning[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/para[8])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/grub.xml"
+    xpointer="xpointer(/sect1/screen[4])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/grub.xml"
+    xpointer="xpointer(/sect1/para[9])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/grub.xml"
+    xpointer="xpointer(/sect1/screen[5])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/grub.xml"
+    xpointer="xpointer(/sect1/para[10])"/>
+
+<screen><userinput>cat &gt; ${LFS}/boot/grub/menu.lst &lt;&lt; "EOF"
+<literal># Begin /boot/grub/menu.lst
+
+# By default boot the first menu entry.
+default 0
+
+# Allow 30 seconds before booting the default.
+timeout 30
+
+# Use prettier colors.
+color green/black light-green/black
+
+# The first entry is for LFS.
+title LFS &version;
+root (hd0,3)
+kernel /boot/lfskernel-&linux-x86_64-version; root=/dev/hda4</literal>
+EOF</userinput></screen>
+
+  <para>Add an entry for the host distribution if desired. It might look
+  like this:</para>
+
+<screen><userinput>cat &gt;&gt; /boot/grub/menu.lst &lt;&lt; "EOF"
+<literal>title Red Hat
+root (hd0,2)
+kernel /boot/kernel-2.6.5 root=/dev/hda3
+initrd /boot/initrd-2.6.5</literal>
+EOF</userinput></screen>
+
+</sect1>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-boot-kernel" role="wrap">
+  <?dbhtml filename="kernel.html"?>
+
+  <title>Linux-&linux-x86-version;</title>
+
+  <indexterm zone="ch-boot-kernel">
+    <primary sortas="a-Linux">Linux</primary>
+    <secondary>boot</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(id('package-kernel')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(id('package-kernel')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of the kernel</title>
+
+    <warning os="aa">
+      <para>Here a temporaly cross-compiled kernel will be builded. When
+      configuring it, select the minimal amount of options required to can
+      boot the target machine and build the final system. I.e., not support
+      for sound, printers, etc. will be needed.</para>
+
+      <para>Also, try to avoid the use of modules if possible, and don't
+      use the resulting kernel image for production systems.</para>
+    </warning>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
+
+    <para os="ab">If your keyboard isn't an US one, you may whant to build
+    the proper keymap for your keyboard layout inside the kernel. Do it by
+    running the following command:</para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
+
+    <para os="ac">Also, ensure that the kernel does not attempt to pass
+    hotplugging events to userspace until userspace specifies that it is
+    ready:</para>
+
+<screen os="ad"><userinput>sed -i 's@/sbin/hotplug@/bin/true@' kernel/kmod.c</userinput></screen>
+
+    <para os="ae">Configure the kernel via a menu-driven interface:</para>
+
+<screen><userinput>make ARCH=i386 CROSS_COMPILE=${LFS_TARGET}- menuconfig</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
+
+<screen><userinput>make ARCH=i386 CROSS_COMPILE=${LFS_TARGET}-</userinput></screen>
+
+    <para os="af">If the use of kernel modules can't be avoided, an
+    <filename>${LFS}/etc/modprobe.conf</filename> file may be needed.
+    Information pertaining to modules and kernel configuration is
+    located in the kernel documentation in the <filename
+    class="directory">Documentation</filename> directory of the kernel
+    sources tree. The <filename>modprobe.conf</filename> man page may also
+    be of interest.</para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='p'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='q'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='s'])"/>
+
+<screen><userinput>make ARCH=i386 CROSS_COMPILE=${LFS_TARGET}- \
+   INSTALL_MOD_PATH=${LFS} modules_install</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='u'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='v'])"/>
+
+<screen><userinput>cp arch/i386/boot/bzImage ${LFS}/boot/lfskernel-&linux-x86-version;</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@os='x'])"/>
+
+<screen><userinput>cp System.map ${LFS}/boot/System.map-&linux-x86-version;</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-kernel" role="."/></para>
+
+  </sect2>
+
+</sect1>

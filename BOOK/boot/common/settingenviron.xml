@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-boot-settingenviron">
+  <?dbhtml filename="settingenvironment.html"?>
+
+  <title>Setting Up the Environment</title>
+
+  <para>The new instance of the shell is a <emphasis>non-login</emphasis>
+  shell, will read <filename>.bash_profile</filename> file. Create the
+  <filename>.bash_profile</filename> file now:</para>
+
+<screen><userinput>cat &gt; ${LFS}/root/.bash_profile &lt;&lt; "EOF"
+<literal>PS1='\u:\w\$ '
+LC_ALL=POSIX
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin:/tools/sbin
+export LC_ALL PATH PS1</literal>
+EOF</userinput></screen>
+
+  <para>The <envar>LC_ALL</envar> variable controls the localization of
+  certain programs, making their messages follow the conventions of a
+  specified country. If the host system uses a version of Glibc older
+  than 2.2.4, having <envar>LC_ALL</envar> set to something other than
+  <quote>POSIX</quote> or <quote>C</quote> (during this chapter) may cause
+  issues if you exit the chroot environment and wish to return later.
+  Setting <envar>LC_ALL</envar> to <quote>POSIX</quote> or <quote>C</quote>
+  (the two are equivalent) ensures that everything will work as expected
+  in the chroot environment.</para>
+
+  <para>By putting <filename class="directory">/tools/bin</filename> ahead
+  of the standard <envar>PATH</envar>, all the programs installed in
+  <xref linkend="chapter-temporary-tools"/> are picked up by the shell
+  immediately after their installation. This, combined with turning off
+  hashing, limits the risk that old programs from the host are being used
+  when they should not be used any longer.</para>
+
+</sect1>
