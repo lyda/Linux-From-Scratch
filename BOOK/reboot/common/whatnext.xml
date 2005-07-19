@@ -37,7 +37,7 @@
         <row>
           <entry>nfsroot</entry>
           <entry>x86, x86_64, RaQ2, PPC</entry>
-          <entry><ulink url="http://ftp.jg555.com/netboot/netboot.txt"/></entry>
+          <entry><ulink url="http://documents.jg555.com/netboot"/></entry>
         </row>
       </tbody>
     </tgroup>
