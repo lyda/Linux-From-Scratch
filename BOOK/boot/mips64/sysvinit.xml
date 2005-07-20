@@ -58,11 +58,11 @@ make -C src CC="${CC} ${BUILD64}"</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/sysvinit.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/sysvinit.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
 
   </sect2>
 
