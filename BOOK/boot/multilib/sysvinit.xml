@@ -44,14 +44,6 @@
     <title>Installation of Sysvinit</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/sysvinit.xml"
-    xpointer="xpointer(id('install-sysvinit')/para[1])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/sysvinit.xml"
-    xpointer="xpointer(id('install-sysvinit')/screen[1])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/sysvinit.xml"
     xpointer="xpointer(//*[@role='installation']/para[2])"/>
 
