@@ -85,7 +85,7 @@
     <para>Use our cross-complier instead of the one GCC builds, named
     <command>xgcc</command>:</para>
 
-<screen><userinput>sed -i "s@\./xgcc@/cross-tools/bin/${LFS_TARGET}-gcc@g" \
+<screen><userinput>sed -i "s@\./xgcc@/cross-tools/bin/${CC}@g" \
    gcc/mklibgcc.in</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

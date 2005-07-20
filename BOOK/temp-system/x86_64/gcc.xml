@@ -95,6 +95,13 @@
     href="../x86/gcc.xml"
     xpointer="xpointer(//*[@role='installation']/para[7])"/>
 
+    <para>When searching for the multilibs, force the build to use the
+    results of <option>--print-multi-lib</option> from our cross-compiler,
+    not the native compiler <command>gcc</command> builds now.</para>
+
+<screen><userinput>sed -i \
+"/MULTILIBS/s@\$(GCC_FOR_TARGET)@/cross-tools/bin/${CC}@g" gcc/Makefile.in</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/x86_64/gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/important[1])"/>
