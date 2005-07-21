@@ -112,6 +112,8 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July 21st, 2005 [matt]: Add GCC-4 related patches to chapter06 glibc</para></listitem>
+
 <listitem><para>July 21st, 2005 [matt]: Unset the GCC_INCLUDEDIR variable once
 it's no longer needed.</para></listitem>
 
