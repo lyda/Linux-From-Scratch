@@ -60,7 +60,7 @@ toplevel:
 render:
 	@for arch in $(ARCH) ; do \
 	$(HTML_RENDER) ; \
-	done 
+	done
 
 common:
 	@for filename in `find $(BASEDIR) -name "*.html"`; do \
@@ -72,7 +72,7 @@ common:
 	  sed -i -e "s@text/html@application/xhtml+xml@g" $$filename; \
 	done;
 
-nochunk: nochunk_render common
+nochunks: nochunk_render common
 
 nochunk_render:
 
@@ -95,4 +95,4 @@ validate:
 	$(VALIDATE) ; \
 	done
 
-.PHONY: lfs toplevel common render nochunk nochunk_render pdf text validate 
+.PHONY: lfs toplevel common render nochunk nochunk_render pdf text validate
