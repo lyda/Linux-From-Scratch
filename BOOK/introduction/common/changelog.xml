@@ -197,6 +197,15 @@
 -->
 
     <listitem>
+      <para>July 22, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Text updates ported fron trunk up to r6569.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 19, 2005</para>
       <itemizedlist>
         <listitem>

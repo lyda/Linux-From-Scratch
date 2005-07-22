@@ -106,7 +106,7 @@ chmod 755 /usr/bin/lex</userinput></screen>
       <segtitle>Installed library</segtitle>
 
       <seglistitem>
-        <seg>flex, flex++ (link to flex), and lex</seg>
+        <seg>flex and lex</seg>
         <seg>libfl.a</seg>
       </seglistitem>
     </segmentedlist>
@@ -124,17 +124,6 @@ chmod 755 /usr/bin/lex</userinput></screen>
           eradicating the need to develop a specialized program</para>
           <indexterm zone="ch-system-flex flex">
             <primary sortas="b-flex">flex</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flex-">
-        <term><command>flex++</command></term>
-        <listitem>
-          <para>Invokes a version of <command>flex</command> that is used
-          exclusively for C++ scanners</para>
-          <indexterm zone="ch-system-flex flex-">
-            <primary sortas="b-flex++">flex++</primary>
           </indexterm>
         </listitem>
       </varlistentry>

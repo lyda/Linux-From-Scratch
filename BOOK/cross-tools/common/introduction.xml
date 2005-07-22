@@ -19,11 +19,13 @@
   <sect2>
     <title>Common Notes</title>
 
-    <para>Before issuing the build instructions for a package, the package
-    should be unpacked as user <systemitem class="username">lfs</systemitem>,
-    and a <command>cd</command> into the created directory should be
-    performed. The build instructions assume that the <command>bash</command>
-    shell is in use.</para>
+    <important>
+      <para>Before issuing the build instructions for a package, the package
+      should be unpacked as user <systemitem class="username">lfs</systemitem>,
+      and a <command>cd</command> into the created directory should be
+      performed. The build instructions assume that the <command>bash</command>
+      shell is in use.</para>
+    </important>
 
     <para>Several of the packages are patched before compilation, but only
     when the patch is needed to circumvent a problem. A patch is often needed
