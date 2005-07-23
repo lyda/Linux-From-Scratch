@@ -205,6 +205,9 @@
           <para>[jim] - Changed cross-tools to new build method.</para>
         </listitem>
         <listitem>
+          <para>[jim] - Updated to Man-Pages 2.07.</para>
+        </listitem>
+        <listitem>
           <para>[manuel] - Text updates ported fron trunk up to r6569.</para>
         </listitem>
       </itemizedlist>
