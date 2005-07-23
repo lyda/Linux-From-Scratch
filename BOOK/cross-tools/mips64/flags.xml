@@ -15,7 +15,8 @@
 
 <screen><userinput>export BUILD32="-mabi=32 -mips64"
 export BUILDN32="-mabi=n32 -mips64"
-export BUILD64="-mabi=64 -mips64"</userinput></screen>
+export BUILD64="-mabi=64 -mips64"
+export GCCTARGET="-mips64"</userinput></screen>
 
   <para>You will need to set your host target triplet for o32 bit:</para>
 
@@ -27,6 +28,7 @@ export BUILD64="-mabi=64 -mips64"</userinput></screen>
 <screen><userinput>echo export BUILD32=\""${BUILD32}\"" &gt;&gt; ~/.bashrc
 echo export BUILDN32=\""${BUILDN32}\"" &gt;&gt; ~/.bashrc
 echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc
-echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bashrc</userinput></screen>
+echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bashrc
+echo export GCCTARGET=\""$GCCTARGET}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
 </sect1>

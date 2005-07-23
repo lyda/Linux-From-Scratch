@@ -10,11 +10,11 @@
 <sect1 id="ch-cross-tools-gcc-static" role="wrap">
   <?dbhtml filename="gcc-static.html"?>
 
-  <title>Cross GCC-&gcc-version; - Static libgcc</title>
+  <title>Cross GCC-&gcc-version; - Static</title>
 
   <indexterm zone="ch-cross-tools-gcc-static">
     <primary sortas="a-GCC">GCC</primary>
-    <secondary>cross tools, static libgcc</secondary>
+    <secondary>cross tools, static</secondary>
   </indexterm>
 
   <sect2 role="package">
@@ -41,7 +41,8 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Cross GCC Compiler with Static libgcc</title>
+    <title>Installation of Cross GCC Compiler with Static libgcc
+    and no Threads</title>
 
     <para>We will make a couple of essential adjustments to the specs file
     to point to use our build environment:</para>
@@ -53,6 +54,13 @@
 
 <screen><userinput>patch -Np1 -i ../&gcc-posix-patch;</userinput></screen>
 
+    <para>The following patch ensures that <command>gcc</command> does not
+    search the <filename class="directory">/usr</filename> directory for
+    <filename class="libraryfile">libgcc_s.so</filename> when
+    cross-compling:</para>
+
+<screen><userinput>patch -Np1 -i ../&gcc-cross_search-patch;</userinput></screen>
+
     <para>Now we will need to setup our StartFile Spec to the correct library
     location:</para>
 
@@ -63,8 +71,7 @@
     <para>Now we will change <command>gcc</command>'s search path to look
     into <filename class="directory">/tools</filename> only:</para>
 
-<screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
-   gcc/Makefile.in</userinput></screen>
+<screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" gcc/Makefile.in</userinput></screen>
 
     <important>
       <para>The above patches and sed's are critical in ensuring a
@@ -84,12 +91,12 @@
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --host=${LFS_HOST} --target=${LFS_TARGET} \
     --with-local-prefix=/tools --disable-nls --disable-shared \
-    --enable-multilib=no --enable-languages=c</userinput></screen>
+    --disable-threads --enable-languages=c</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
 
-      <varlistentry>
+     <varlistentry>
         <term><parameter>--with-local-prefix=/tools</parameter></term>
         <listitem>
           <para>The purpose of this switch is to remove <filename
@@ -108,10 +115,12 @@
       </varlistentry>
 
       <varlistentry>
-        <term><parameter>--enable-multilib=no</parameter></term>
+        <term><parameter>--disable-threads</parameter></term>
         <listitem>
-          <para>This disables multlib support on single ABI based
-          systems, like a Pentium 2/3/4 based system.</para>
+          <para>This will prevent GCC from finding the multi-thread
+          include files, since we haven't created them for this architecture
+          yet. We will be able to find the multi-thread information after
+          we create the Glibc headers.</para>
         </listitem>
       </varlistentry>
 

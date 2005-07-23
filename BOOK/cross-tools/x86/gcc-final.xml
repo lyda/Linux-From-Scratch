@@ -59,13 +59,12 @@
     href="gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/screen[2])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-shared.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    <para>The following patch ensures that <command>gcc</command> does not
+    search the <filename class="directory">/usr</filename> directory for
+    <filename class="libraryfile">libgcc_s.so</filename> when
+    cross-compling:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-shared.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+<screen><userinput>patch -Np1 -i ../&gcc-cross_search-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
@@ -83,21 +82,13 @@
     href="gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/screen[4])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-shared.xml"
-    xpointer="xpointer(//*[@role='installation']/para[6])"/>
+<screen><userinput>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver \
+   gcc/config/t-libunwind</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-shared.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[6])"/>
+    <para>Finally, disable <option>-B</option> in <filename>Makefile.in</filename>,
+    so it doesn't pick up the host's header files:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-shared.xml"
-    xpointer="xpointer(//*[@role='installation']/para[7])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-shared.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[7])"/>
+<screen><userinput>sed -i '/FLAGS_FOR_TARGET.*\/lib\//s@-B[^ ]*/lib/@@g' configure configure.in</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"

@@ -47,21 +47,26 @@
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@role='installation']/para[1])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    <para>We will disable the linking to libgcc_eh:</para>
+
+<screen><userinput>patch -Np1 -i ../&glibc-libgcc_eh-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/para[4])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc-startfiles.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(id('install-glibc')/screen[2])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc-startfiles.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+    <para>On the PPC arch, NPTL requires the following to be set:</para>
+
+<screen><userinput>echo "libc_cv_ppc_machine=yes" &gt; config.cache</userinput></screen>
+
+    <para> For NPTL enabled systems we will need to add the following lines to config.cache:</para>
+
+<screen><userinput>echo "libc_cv_forced_unwind=yes" &gt;&gt; config.cache
+echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache</userinput></screen>
 
     <para>Next, prepare Glibc for compilation:</para>
 

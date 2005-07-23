@@ -18,6 +18,7 @@
 <!ENTITY gcc-posix-patch "gcc-&gcc-version;-posix-1.patch">
 <!ENTITY gcc-specs-patch "gcc-&gcc-version;-specs-2.patch">
 
+<!ENTITY glibc-libgcc_eh-patch "glibc-&glibc-version;-libgcc_eh-1.patch">
 <!ENTITY glibc-testfix-patch "glibc-&glibc-version;-fix_test-1.patch">
 
 <!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch">

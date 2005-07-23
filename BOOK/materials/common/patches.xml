@@ -77,7 +77,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term> GCC Fix for Native build - 4 KB:</term>
+      <term>GCC Fix for Native build - 4 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;gcc/&gcc-fix_native-patch;"/></para>
@@ -85,7 +85,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term> GCC Linkonce Patch - 12 KB:</term>
+      <term>GCC Linkonce Patch - 12 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;gcc/&gcc-linkonce-patch;"/></para>
@@ -113,6 +113,14 @@
       <listitem>
         <para><ulink
         url="&patches-root;glibc/&glibc-testfix-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc Disable linking with libgcc_eh.a - 1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;glibc/&glibc-libgcc_eh-patch;"/></para>
       </listitem>
     </varlistentry>
 
