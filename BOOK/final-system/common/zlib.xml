@@ -54,11 +54,6 @@
       remove it afterwards.</para>
     </note>
 
-    <para>Zlib has a buffer overflow vulnerability that can lead to a
-    Denial of Service attack. The following patch fixes the problem:</para>
-
-<screen><userinput>patch -Np1 -i ../&zlib-security-patch;</userinput></screen>
-
     <para>Prepare Zlib for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --shared --libdir=/lib</userinput></screen>

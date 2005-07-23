@@ -39,8 +39,6 @@
 
 <!ENTITY util-linux-cramfs-patch "util-linux-&util-linux-version;-cramfs-1.patch">
 
-<!ENTITY zlib-security-patch "zlib-&zlib-version;-security_fix-1.patch">
-
 <!-- Start of multilib patches -->
 
 <!ENTITY binutils-multilib-patch "binutils-&binutils-version;-genscripts_multilib-1.patch">

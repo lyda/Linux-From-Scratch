@@ -46,11 +46,6 @@
     href="../common/zlib.xml"
     xpointer="xpointer(id('install-zlib')/note[1])"/>
 
-    <para>Zlib has a buffer overflow vulnerability that can lead to a
-    Denial of Service attack. The following patch fixes the problem:</para>
-
-<screen><userinput>patch -Np1 -i ../&zlib-security-patch;</userinput></screen>
-
     <para>Prepare Zlib for compilation:</para>
 
 <screen><userinput>CC="gcc ${BUILDN32}" CXX="g++ ${BUILDN32}" ./configure --prefix=/usr \

@@ -157,9 +157,6 @@
     <listitem>
       <para>&util-linux-cramfs-patch;</para>
     </listitem>
-    <listitem>
-      <para>&zlib-security-patch;</para>
-    </listitem>
   </itemizedlist>
 
   <itemizedlist>
@@ -197,6 +194,15 @@
       </itemizedlist>
     </listitem>
 -->
+
+    <listitem>
+      <para>July 23, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Removed security patch to Zlib, not needed with new version.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>July 22, 2005</para>
