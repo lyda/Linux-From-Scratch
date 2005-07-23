@@ -211,6 +211,9 @@
           <para>[jim] - Updated to Shadow 4.0.11.1.</para>
         </listitem>
         <listitem>
+          <para>[jim] - Updated to Zlib 1.2.3.</para>
+        </listitem>
+        <listitem>
           <para>[manuel] - Text updates ported fron trunk up to r6569.</para>
         </listitem>
       </itemizedlist>
