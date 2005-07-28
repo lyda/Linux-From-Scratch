@@ -112,6 +112,8 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>July 28st, 2005 [matt]: Remove the note regarding a known test failure in GRUB.  The test no longer fails under GCC-4</para></listitem>
+
 <listitem><para>July 28st, 2005 [matt]: Add GCC-4 related patch to chapter06 tar</para></listitem>
 
 <listitem><para>July 21st, 2005 [matt]: Add GCC-4 related patches to chapter06 glibc</para></listitem>
