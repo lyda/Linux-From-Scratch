@@ -23,6 +23,8 @@
 
 <!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch"> 
 
+<!ENTITY kbd-gcc4_fixes-patch "kbd-&kbd-version;-gcc4_fixes-1.patch">
+
 <!ENTITY inetutils-gcc4_fixes-patch "inetutils-&inetutils-version;-gcc4_fixes-1.patch">
 <!ENTITY inetutils-man_pages-patch "inetutils-&inetutils-version;-no_server_man_pages-1.patch">
 

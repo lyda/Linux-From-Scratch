@@ -122,6 +122,13 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry>
+<term>Kbd GCC-4.x Fix Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;&kbd-gcc4_fixes-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
 <term>Inetutils GCC-4.x Fix Patch - 2 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;&inetutils-gcc4_fixes-patch;"/></para>
