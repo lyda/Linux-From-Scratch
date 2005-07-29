@@ -56,12 +56,11 @@
 
     <para>First, unpack both <filename>vim-&vim-version;.tar.bz2</filename>
     and (optionally) <filename>vim-&vim-version;-lang.tar.gz</filename>
-    archives into the same directory. Then, change the default locations of
-    the <filename>vimrc</filename> and <filename>gvimrc</filename>
-    configuration files to <filename class="directory">/etc</filename>:</para>
+    archives into the same directory. Then, change the default location of
+    the <filename>vimrc</filename> configuration file to <filename
+    class="directory">/etc</filename>:</para>
 
-<screen><userinput>echo '#define SYS_VIMRC_FILE "/etc/vimrc"' &gt;&gt; src/feature.h
-echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput></screen>
+<screen><userinput>echo '#define SYS_VIMRC_FILE "/etc/vimrc"' &gt;&gt; src/feature.h</userinput></screen>
 
     <para>Prepare Vim for compilation:</para>
 
