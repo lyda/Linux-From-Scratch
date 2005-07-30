@@ -30,7 +30,8 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Tar</title>
 
-<para>Apply a patch to Tar to enable it to compile with GCC-&gcc-version;:</para>
+<para>Apply a patch to fix some issues with the test suite when using 
+GCC-&gcc-version;:</para>
 
 <screen><userinput>patch -Np1 -i ../&tar-gcc4_fix-patch;</userinput></screen>
 

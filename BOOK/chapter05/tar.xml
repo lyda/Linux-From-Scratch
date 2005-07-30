@@ -29,7 +29,8 @@
 <sect2 role="installation">
 <title>Installation of Tar</title>
 
-<para>Apply a patch to Tar to enable it to compile with GCC-&gcc-version;:</para>
+<para>If you wish to run the test suite, apply the following patch to fix
+some issues with GCC-&gcc-version;:</para>
 
 <screen><userinput>patch -Np1 -i ../&tar-gcc4_fix-patch;</userinput></screen>
 
