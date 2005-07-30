@@ -87,7 +87,6 @@ First a summary, then a detailed log.</para>
 
 <listitem><para>Added:</para>
 <itemizedlist>
-<listitem><para>&gcc-no_fixincludes-patch;</para></listitem>
 <listitem><para>&gcc-specs-patch;</para></listitem>
 <listitem><para>&glibc-testfix-patch;</para></listitem>
 <listitem><para>&glibc-gcc4_symbols-patch;</para></listitem>

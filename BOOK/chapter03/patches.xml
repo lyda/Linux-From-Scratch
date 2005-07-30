@@ -60,13 +60,6 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry>
-<term>GCC No-Fixincludes Patch - 1 KB:</term>
-<listitem>
-<para><ulink url="&patches-root;&gcc-no_fixincludes-patch;"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
 <term>GCC Specs Patch - 14 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;&gcc-specs-patch;"/></para>
