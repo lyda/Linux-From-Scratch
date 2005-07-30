@@ -26,6 +26,7 @@
 <!ENTITY autoconf-version "2.59">
 <!ENTITY automake-version "1.9.6">
 <!ENTITY bash-version "3.0">
+<!ENTITY bash-doc-version "3.0">
 <!ENTITY binutils-version "2.16.1">
 <!ENTITY bison-version "2.0">
 <!ENTITY bzip2-version "1.0.3">
@@ -53,13 +54,13 @@
 <!ENTITY less-version "382">
 <!ENTITY lfs-bootscripts-version "3.2.1">
 <!ENTITY libtool-version "1.5.18">
-<!ENTITY linux-version "2.6.12.2">
+<!ENTITY linux-version "2.6.12.3">
 <!ENTITY linux-dl-version "2.6">
 <!ENTITY linux-libc-headers-version "2.6.12.0">
 <!ENTITY m4-version "1.4.3">
 <!ENTITY make-version "3.80">
 <!ENTITY man-version "1.6">
-<!ENTITY man-pages-version "2.05">
+<!ENTITY man-pages-version "2.07">
 <!ENTITY mktemp-version "1.5">
 <!ENTITY module-init-tools-version "3.1">
 <!ENTITY ncurses-version "5.4">
@@ -78,4 +79,4 @@
 <!ENTITY udev-version "063">
 <!ENTITY util-linux-version "2.12q">
 <!ENTITY vim-version "6.3">
-<!ENTITY zlib-version "1.2.2">
+<!ENTITY zlib-version "1.2.3">

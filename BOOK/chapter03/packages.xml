@@ -33,6 +33,13 @@
 </varlistentry>
 
 <varlistentry>
+<term>Bash Documentation (&bash-doc-version;) - 1,994 KB:</term>
+<listitem>
+<para><ulink url="&gnu;bash/"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
 <term>Binutils (&binutils-version;) - 12,272 KB:</term>
 <listitem>
 <para><ulink url="&gnu;binutils/"/></para>
@@ -235,7 +242,7 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Linux (&linux-version;) - 36,626 KB:</term>
+<term>Linux (&linux-version;) - 36,621 KB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/"/></para>
 </listitem>
@@ -270,7 +277,7 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Man-pages (&man-pages-version;) - 1,652 KB:</term>
+<term>Man-pages (&man-pages-version;) - 1,653 KB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/docs/manpages/"/></para>
 </listitem>
@@ -422,7 +429,7 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Zlib (&zlib-version;) - 368 KB:</term>
+<term>Zlib (&zlib-version;) - 415 KB:</term>
 <listitem>
 <para><ulink url="http://www.zlib.net/"/></para>
 </listitem>

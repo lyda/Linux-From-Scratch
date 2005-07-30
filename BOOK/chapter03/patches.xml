@@ -129,7 +129,7 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry>
-<term>Mktemp Tempfile Patch - 3 KB:</term>
+<term>Mktemp Tempfile Patch - 4 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;&mktemp-tempfile-patch;"/></para>
 </listitem>
@@ -179,12 +179,6 @@ needed to build an LFS system:</para>
 <varlistentry>
 <term>Vim Security Patch - 8 KB:</term><listitem>
 <para><ulink url="&patches-root;&vim-security_fix-patch;"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term>Zlib Security Patch - 1 KB:</term><listitem>
-<para><ulink url="&patches-root;&zlib-security_fix-patch;"/></para>
 </listitem>
 </varlistentry>
 
