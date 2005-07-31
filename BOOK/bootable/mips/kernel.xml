@@ -32,6 +32,11 @@
 
 <screen os="bb"><userinput>patch -Np1 -i ../&linux-mips-patch;</userinput></screen>
 
+    <para os="bc">The following patch is only for Cobalt MIPS based servers and is
+    not required for other MIPS builds:</para>
+
+<screen os="bd"><userinput>patch -Np1 -i ../&linux-cobalt-patch;</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='b'])"/>
@@ -63,11 +68,6 @@
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='i'])"/>
-
-    <para os="bc">Alternatively, <command>make cobalt_defconfig</command> may be
-    more appropriate in some situations. This will build a basic system with
-    no modules and <systemitem class="filesystem">ext2</systemitem> support
-    only. See the <filename>README</filename> file for more information.</para>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"

@@ -62,6 +62,15 @@
 -->
 
     <listitem>
+      <para>July 30, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Fixed patches. Added specific patch for Cobalt Servers.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 13, 2005</para>
       <itemizedlist>
         <listitem>

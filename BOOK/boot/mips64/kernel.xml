@@ -53,7 +53,15 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/mips64/kernel.xml"
-    xpointer="xpointer(//*[@os='ca'])"/>
+    xpointer="xpointer(//*[@os='bb'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='bc'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/mips/kernel.xml"
+    xpointer="xpointer(//*[@os='bd'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/mips64/kernel.xml"

@@ -31,7 +31,17 @@
     href="../mips/kernel.xml"
     xpointer="xpointer(//*[@os='ba'])"/>
 
-<screen os="ca"><userinput>patch -Np1 -i ../&linux-mips64-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/kernel.xml"
+    xpointer="xpointer(//*[@os='bb'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/kernel.xml"
+    xpointer="xpointer(//*[@os='bc'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/kernel.xml"
+    xpointer="xpointer(//*[@os='bd'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
@@ -64,10 +74,6 @@
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='i'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/kernel.xml"
-    xpointer="xpointer(//*[@os='bc'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
