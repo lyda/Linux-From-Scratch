@@ -43,39 +43,41 @@
     <title>Installation of Glibc</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[1])"/>
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/glibc.xml"
-    xpointer="xpointer(/sect1/sect2[2]/para[2])"/>
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='ba'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[2])"/>
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/glibc.xml"
-    xpointer="xpointer(/sect1/sect2[2]/para[5])"/>
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='bd'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/glibc.xml"
-    xpointer="xpointer(/sect1/sect2[2]/screen[2])"/>
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='be'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-   <para>Now we make sure the Glibc goes into <filename
+    <para>Now we make sure the Glibc goes into <filename
     class="directory">/lib64</filename>:</para>
 
-<screen><userinput>echo "slibdir=/lib64" >> configparms</userinput></screen>
+<screen><userinput>echo "slibdir=/lib64" &gt;&gt; configparms</userinput></screen>
 
-  <para>Next, prepare Glibc for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \
     ../glibc-&glibc-version;/configure --prefix=/usr \
@@ -96,25 +98,53 @@
       </varlistentry>
     </variablelist>
 
-    <para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips64/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/important[1])"/>
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
-    <para>Test the results:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
 
-<screen><userinput>make check</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='n'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='s'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc64/glibc.xml"
+    xpointer="xpointer(//*[@os='t'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='u'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='w'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='x'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='y'])"/>
 
   </sect2>
 
- <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/glibc.xml"
   xpointer="xpointer(id('i18n-glibc'))"/>
 

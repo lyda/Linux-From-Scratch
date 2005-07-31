@@ -48,38 +48,38 @@
   <sect2 id="install-glibc" role="installation">
     <title>Installation of Glibc</title>
 
-    <para>This package is known to behave badly when you change its default
+    <para os="a">This package is known to behave badly when you change its default
     optimization flags (including the <option>-march</option> and
     <option>-mcpu</option> options). Therefore, if you have defined any
     environment variables that override default optimizations, such as CFLAGS
     and CXXFLAGS, we recommend un-setting them when building Glibc.</para>
 
-    <para>The Glibc build system is self-contained and will install
+    <para os="b">The Glibc build system is self-contained and will install
     perfectly, even though the compiler specs file and linker are still
     pointing at <filename class="directory">/tools</filename>. The specs
     and linker cannot be adjusted before the Glibc install because the
     Glibc autoconf tests would give false results and defeat the goal
     of achieving a clean build.</para>
 
-    <para> Glibc has two tests which fail when the running kernel is 2.6.11 or
+    <para os="c">Glibc has two tests which fail when the running kernel is 2.6.11 or
     later. The problem has been determined to be with the tests themselves, not
     with the C library nor the kernel. This patch fixes the problem:</para>
 
-<screen><userinput>patch -Np1 -i ../&glibc-testfix-patch;</userinput></screen>
+<screen os="d"><userinput>patch -Np1 -i ../&glibc-testfix-patch;</userinput></screen>
 
-    <para>The Glibc documentation recommends building Glibc outside of the
+    <para os="e">The Glibc documentation recommends building Glibc outside of the
     source directory in a dedicated build directory:</para>
 
-<screen><userinput>mkdir ../glibc-build
+<screen os="f"><userinput>mkdir ../glibc-build
 cd ../glibc-build</userinput></screen>
 
-    <para>Prepare Glibc for compilation:</para>
+    <para os="g">Prepare Glibc for compilation:</para>
 
-<screen><userinput>../glibc-&glibc-version;/configure --prefix=/usr \
+<screen os="h"><userinput>../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
     --libexecdir=/usr/lib/glibc</userinput></screen>
 
-    <variablelist>
+    <variablelist os="i">
       <title>The meaning of the new configure option:</title>
 
       <varlistentry>
@@ -93,26 +93,26 @@ cd ../glibc-build</userinput></screen>
       </varlistentry>
     </variablelist>
 
-    <para>Compile the package:</para>
+    <para os="j">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="k"><userinput>make</userinput></screen>
 
-    <important>
+    <important os="l">
       <para>In this section, the test suite for Glibc is considered critical.
       Do not skip it under any circumstance.</para>
     </important>
 
-    <para>Test the results:</para>
+    <para os="m">Test the results:</para>
 
-<screen><userinput>make check</userinput></screen>
+<screen os="n"><userinput>make check</userinput></screen>
 
-    <para>The Glibc test suite is highly dependent on certain functions of
+    <para os="o">The Glibc test suite is highly dependent on certain functions of
     the host system, in particular the kernel. In general, the Glibc test
     suite is always expected to pass. However, in certain circumstances,
     some failures are unavoidable. This is a list of the most common
     issues:</para>
 
-    <itemizedlist>
+    <itemizedlist os="p">
       <listitem>
         <para>The <emphasis>math</emphasis> tests sometimes fail when running
         on systems where the CPU is not a relatively new genuine Intel or
@@ -136,32 +136,28 @@ cd ../glibc-build</userinput></screen>
       </listitem>
     </itemizedlist>
 
-    <para>Though it is a harmless message, the install stage of Glibc will
+    <para os="q">Though it is a harmless message, the install stage of Glibc will
     complain about the absence of <filename>/etc/ld.so.conf</filename>.
     Prevent this warning with:</para>
 
-<screen><userinput>touch /etc/ld.so.conf</userinput></screen>
+<screen os="r"><userinput>touch /etc/ld.so.conf</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="s">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="t"><userinput>make install</userinput></screen>
 
-    <para>Build the linuxthreads man pages, which are a great reference
+    <para os="u">Build the linuxthreads man pages, which are a great reference
     on the threading API (applicable to NPTL as well):</para>
 
-    <para/>
-
-    <para>Unpack the glibc-linuxthreads-&glibc-version; tarball&mdash;it
+    <para os="v">Unpack the glibc-linuxthreads-&glibc-version; tarball&mdash;it
     is needed for the next two make commands. You can ignore this if you do
     want the threading API man pages.</para>
 
-<screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man</userinput></screen>
+<screen os="w"><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man</userinput></screen>
 
-    <para>Install these pages:</para>
+    <para os="x">Install these pages:</para>
 
-<screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man install</userinput></screen>
-
-    <para/>
+<screen os="y"><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man install</userinput></screen>
 
   </sect2>
 
