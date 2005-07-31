@@ -53,6 +53,7 @@
           <xsl:apply-templates select="userinput"/>
           <xsl:text># End root commands</xsl:text>
           <xsl:text>&#xA;</xsl:text>
+	</xsl:when>
         <xsl:otherwise>
           <xsl:apply-templates select="userinput"/>
         </xsl:otherwise>
