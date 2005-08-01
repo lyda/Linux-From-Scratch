@@ -72,7 +72,6 @@ render:
 
 common:
 	@for filename in `find $(BASEDIR) -name "*.html"`; do \
-	  echo "Tidying $$filename.."; \
 	  tidy -config tidy.conf $$filename; \
 	  true; \
 	done;
