@@ -64,7 +64,7 @@
   <xsl:template match="userinput">
     <xsl:text>&#xA;</xsl:text>
     <xsl:if test=".//replaceable">
-      <xsl:text># This block must be edited tu suit your needs.</xsl:text>
+      <xsl:text># This block must be edited to suit your needs.</xsl:text>
     </xsl:if>
     <xsl:text>&#xA;</xsl:text>
     <xsl:apply-templates/>
