@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "7.0-cross-lfs-20050731">
+<!ENTITY version "7.0-cross-lfs-20050806">
 <!ENTITY version-x86 "&version;-x86">
 <!ENTITY version-x86_64 "&version;-x86_64">
 <!ENTITY version-ppc "&version;-PowerPC">
@@ -8,7 +8,7 @@
 <!ENTITY version-mips "&version;-MIPS">
 <!ENTITY version-mips64 "&version;-MIPS64">
 
-<!ENTITY releasedate "July 31, 2005">
+<!ENTITY releasedate "August 6, 2005">
 <!ENTITY milestone "7.0">
 <!ENTITY generic-version "svn"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
@@ -35,6 +35,7 @@
 <!ENTITY autoconf-version "2.59">
 <!ENTITY automake-version "1.9.6">
 <!ENTITY bash-version "3.0">
+<!ENTITY bash-doc-version "3.0">
 <!ENTITY binutils-version "2.16.1">
 <!ENTITY bison-version "2.0">
 <!ENTITY bzip2-version "1.0.3">

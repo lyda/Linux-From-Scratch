@@ -58,6 +58,14 @@
     href="../common/bash.xml"
     xpointer="xpointer(id('install-bash')/screen[2])"/>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bash.xml"
+    xpointer="xpointer(id('install-bash')/para[3])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bash.xml"
+    xpointer="xpointer(id('install-bash')/screen[3])"/>
+
     <para>Prepare Bash for compilation:</para>
 
 <screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \

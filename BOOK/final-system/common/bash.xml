@@ -45,6 +45,13 @@
   <sect2 id="install-bash" role="installation">
     <title>Installation of Bash</title>
 
+    <para>If you downloaded the Bash documentation tarball and wish to
+    install HTML documentation, issue the following commands:</para>
+
+<screen><userinput>tar -zxf ../bash-doc-&bash-doc-version;.tar.gz &amp;&amp;
+sed -i "s|htmldir = @htmldir@|htmldir = /usr/share/doc/bash-&bash-version;|" \
+    Makefile.in</userinput></screen>
+
     <para>The following patch fixes various issues, including a problem where
     Bash will sometimes only show 33 characters on a line, then wrap to the
     next:</para>

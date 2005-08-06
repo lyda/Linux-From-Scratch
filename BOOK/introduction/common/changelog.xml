@@ -128,6 +128,9 @@
     <title>Added:</title>
 
     <listitem>
+      <para>Bash-doc-&bash-doc-version;</para>
+    </listitem>
+    <listitem>
       <para>&binutils-posix-patch;</para>
     </listitem>
     <listitem>
@@ -196,7 +199,19 @@
 -->
 
     <listitem>
-      <para>Date</para>
+      <para>August 6, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Text updates ported fron trunk up to r6612.</para>
+        </listitem>
+        <listitem>
+          <para>[manuel] - Added Bash documentation package.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>July 29, 2005</para>
       <itemizedlist>
         <listitem>
           <para>[manuel] - Text updates ported fron trunk up to r6596.</para>
