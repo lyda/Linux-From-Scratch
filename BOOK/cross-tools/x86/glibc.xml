@@ -43,28 +43,32 @@
   <sect2 role="installation">
     <title>Installation of Glibc</title>
 
-    <para>It should be noted that compiling Glibc in any way other than
+    <para os="da">It should be noted that compiling Glibc in any way other than
     the method suggested in this book puts the stability of the system at
     risk.</para>
 
-    <para>We will disable the linking to libgcc_eh:</para>
+    <para os="db">We will disable the linking to
+    <filename>libgcc_eh</filename>:</para>
 
-<screen><userinput>patch -Np1 -i ../&glibc-libgcc_eh-patch;</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+<screen os="dc"><userinput>patch -Np1 -i ../&glibc-libgcc_eh-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para> For NPTL enabled systems we will need to add the following lines to config.cache:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>echo "libc_cv_forced_unwind=yes" &gt; config.cache
+    <para os="dd"> For NPTL enabled systems we will need to add the following lines to
+    <filename>config.cache</filename>:</para>
+
+<screen os="de"><userinput>echo "libc_cv_forced_unwind=yes" &gt; config.cache
 echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache</userinput></screen>
 
-    <para>Next, prepare Glibc for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
@@ -75,15 +79,15 @@ echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache</userinput></screen>
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
 
-    <para>During this stage the following warning might appear:</para>
+    <para os="df">During this stage the following warning might appear:</para>
 
-<blockquote><screen><computeroutput>configure: WARNING:
+<blockquote os="dg"><screen><computeroutput>configure: WARNING:
 *** These auxiliary programs are missing or
 *** incompatible versions: msgfmt
 *** some features will be disabled.
 *** Check the INSTALL file for required versions.</computeroutput></screen></blockquote>
 
-    <para>The missing or incompatible <command>msgfmt</command> program is
+    <para os="dh">The missing or incompatible <command>msgfmt</command> program is
     generally harmless. This <command>msgfmt</command> program is part of the
     Gettext package which the host distribution should provide.</para>
 

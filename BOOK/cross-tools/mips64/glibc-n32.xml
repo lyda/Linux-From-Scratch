@@ -44,47 +44,53 @@
     <title>Installation of Glibc</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='da'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/mips/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='ba'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/mips/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='bb'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/mips/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
-
-    <para>We will disable the linking to libgcc_eh:</para>
-
-<screen><userinput>patch -Np1 -i ../&glibc-libgcc_eh-patch;</userinput></screen>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='bc'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/mips/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5])"/>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='db'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/mips/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dc'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='bd'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='be'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
     <para>Now we make sure the Glibc goes into <filename
     class="directory">/tools/lib32</filename>:</para>
 
 <screen><userinput>echo "slibdir=/tools/lib32" &gt;&gt; configparms</userinput></screen>
 
-    <para>Next, prepare Glibc for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILDN32}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \

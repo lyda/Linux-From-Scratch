@@ -45,13 +45,15 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Next, prepare Glibc for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>CC=gcc ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
@@ -59,7 +61,7 @@
     --with-headers=/tools/include \
     --with-binutils=/cross-tools/${LFS_TARGET}/bin</userinput></screen>
 
-    <variablelist>
+    <variablelist os="ca">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
@@ -126,28 +128,28 @@
 
     </variablelist>
 
-    <para>Now, install the headers:</para>
+    <para os="cb">Now, install the headers:</para>
 
-<screen><userinput>make install-headers</userinput></screen>
+<screen os="cd"><userinput>make install-headers</userinput></screen>
 
-    <para>Some files aren't installed by the above command, then
+    <para os="ce">Some files aren't installed by the above command, then
     we will copy the header files we need:</para>
 
-    <para>First we will copy a common file over to <filename
+    <para os="cf">First we will copy a common file over to <filename
     class="directory">/tools/include</filename>:</para>
 
-<screen><userinput>install -d /tools/include/bits
+<screen os="cg"><userinput>install -d /tools/include/bits
 cp bits/stdio_lim.h /tools/include/bits</userinput></screen>
 
-    <para>Now we will create a blank stub file:</para>
+    <para os="ch">Now we will create a blank stub file:</para>
 
-<screen><userinput>touch /tools/include/gnu/stubs.h</userinput></screen>
+<screen os="ci"><userinput>touch /tools/include/gnu/stubs.h</userinput></screen>
 
-    <para>For NPTL we use the following command:</para>
+    <para os="cj">For NPTL we use the following command:</para>
 
-<screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/pthread/pthread.h /tools/include/</userinput></screen>
+<screen os="ck"><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/pthread/pthread.h /tools/include/</userinput></screen>
 
-    <para>Now we copy the architecture specific header over:</para>
+    <para os="cl">Now we copy the architecture specific header over:</para>
 
 <screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/i386/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
 

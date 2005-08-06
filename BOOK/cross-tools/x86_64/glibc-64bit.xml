@@ -44,32 +44,41 @@
     <title>Installation of Glibc</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
-
-    <para>We will disable the linking to libgcc_eh:</para>
-
-<screen><userinput>patch -Np1 -i ../&glibc-libgcc_eh-patch;</userinput></screen>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='da'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='db'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dc'])"/>
 
-    <para> For NPTL enabled systems we will need to add the following lines to config.cache:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
-echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dd'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='de'])"/>
 
     <para>Now we make sure the Glibc goes into <filename
     class="directory">/tools/lib64</filename>:</para>
 
 <screen><userinput>echo "slibdir=/tools/lib64" &gt;&gt; configparms</userinput></screen>
 
-    <para>Next, prepare Glibc for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD64}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
@@ -79,10 +88,6 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
     --with-tls --enable-kernel=2.6.0 --with-__thread \
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips64/glibc-64bit.xml"
-    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
 
     <para>Compile the package:</para>
 
