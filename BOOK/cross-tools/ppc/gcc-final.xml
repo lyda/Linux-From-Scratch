@@ -45,65 +45,75 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@os='ab'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    xpointer="xpointer(//*[@os='ac'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+    xpointer="xpointer(//*[@os='ad'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    xpointer="xpointer(//*[@os='ae'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+    xpointer="xpointer(//*[@os='af'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    xpointer="xpointer(//*[@os='ag'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+    xpointer="xpointer(//*[@os='ah'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5])"/>
+    xpointer="xpointer(//*[@os='ai'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
+    xpointer="xpointer(//*[@os='aj'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-final.xml"
+    xpointer="xpointer(//*[@os='ba'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-final.xml"
+    xpointer="xpointer(//*[@os='bc'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-final.xml"
+    xpointer="xpointer(//*[@os='bd'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-final.xml"
+    xpointer="xpointer(//*[@os='be'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/important[1])"/>
+    xpointer="xpointer(//*[@os='ak'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
+    xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/para[4])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/screen[3])"/>
-
-    <para>Prepare GCC for compilation:</para>
+    href="gcc-static.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --target=${LFS_TARGET} --host=${LFS_HOST} \
@@ -111,10 +121,6 @@
     --enable-languages=c,c++ --enable-__cxa_atexit \
     --enable-c99 --enable-long-long --enable-threads=posix \
     --enable-multilib=no</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/gcc-final.xml"
-    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
 
     <para>Continue with compiling the package:</para>
 

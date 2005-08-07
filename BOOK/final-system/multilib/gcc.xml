@@ -44,33 +44,35 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/para[2])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/screen[1])"/>
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/para[3])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/screen[2])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/para[4])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/screen[3])"/>
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Prepare GCC for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \
     ../gcc-&gcc-version;/configure --prefix=/usr --libdir=/usr/lib64 \
@@ -78,35 +80,69 @@
     --enable-__cxa_atexit --enable-c99 --enable-long-long \
     --enable-clocale=gnu --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
 
-    <para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/important[1])"/>
-
-    <para>Test the results, but do not stop at errors:</para>
-
-<screen><userinput>make -k check</userinput></screen>
-
-    <para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
-
-    <para>Some packages expect the C PreProcessor to be installed in the
-    <filename class="directory">/lib</filename> directory.
-    To support those packages, create this symlink:</para>
-
-<screen><userinput>ln -s ../usr/bin/cpp /lib</userinput></screen>
+    xpointer="xpointer(//*[@os='j'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/para[10])"/>
+    xpointer="xpointer(//*[@os='k'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/screen[9])"/>
+    xpointer="xpointer(//*[@os='l'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='n'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='o'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='p'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='q'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='r'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='s'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='t'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='u'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='v'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='w'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gcc.xml"
+    xpointer="xpointer(//*[@os='x'])"/>
 
   </sect2>
 

@@ -46,84 +46,84 @@
   <sect2 id="install-gcc" role="installation">
     <title>Installation of GCC</title>
 
-    <para>This package is known to have issues when its default
+    <para os="a">This package is known to have issues when its default
     optimization flags (including the <option>-march</option> and
     <option>-mcpu</option> options) are changed. If any environment
     variables that override default optimizations have been defined, such
     as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
     unset them when building GCC.</para>
 
-    <para>GCC fails to compile some packages outside of a base Linux From Scratch
+    <para os="b">GCC fails to compile some packages outside of a base Linux From Scratch
     install (e.g., Mozilla and kdegraphics) when used in conjunction with newer
     versions of Binutils. Apply the following patch to fix this issue:</para>
 
-<screen><userinput>patch -Np1 -i ../&gcc-linkonce-patch;</userinput></screen>
+<screen os="c"><userinput>patch -Np1 -i ../&gcc-linkonce-patch;</userinput></screen>
 
-    <para>Apply a <command>sed</command> substitution that will suppress the
+    <para os="d">Apply a <command>sed</command> substitution that will suppress the
     installation of <filename class="libraryfile">libiberty.a</filename>. The
     version of <filename class="libraryfile">libiberty.a</filename> provided by
     Binutils will be used instead:</para>
 
-<screen><userinput>sed -i 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in</userinput></screen>
+<screen os="e"><userinput>sed -i 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in</userinput></screen>
 
-    <para>The GCC documentation recommends building GCC outside of the source
+    <para os="f">The GCC documentation recommends building GCC outside of the source
     directory in a dedicated build directory:</para>
 
-<screen><userinput>mkdir ../gcc-build
+<screen os="g"><userinput>mkdir ../gcc-build
 cd ../gcc-build</userinput></screen>
 
-    <para>Prepare GCC for compilation:</para>
+    <para os="h">Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/usr \
     --libexecdir=/usr/lib --enable-shared --enable-threads=posix \
     --enable-__cxa_atexit --enable-c99 --enable-long-long \
     --enable-clocale=gnu --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="i">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="j"><userinput>make</userinput></screen>
 
-    <important>
+    <important os="k">
       <para>In this section, the test suite for GCC is considered
       critical. Do not skip it under any circumstance.</para>
     </important>
 
-    <para>Test the results, but do not stop at errors:</para>
+    <para os="l">Test the results, but do not stop at errors:</para>
 
-<screen><userinput>make -k check</userinput></screen>
+<screen os="m"><userinput>make -k check</userinput></screen>
 
-    <para>The <parameter>-k</parameter> flag is used to make the test suite
+    <para os="n">The <parameter>-k</parameter> flag is used to make the test suite
     run through to completion and not stop at the first failure. The GCC test
     suite is very comprehensive and is almost guaranteed to generate a few
     failures. To receive a summary of the test suite results, run:</para>
 
-<screen><userinput>../gcc-&gcc-version;/contrib/test_summary</userinput></screen>
+<screen os="o"><userinput>../gcc-&gcc-version;/contrib/test_summary</userinput></screen>
 
-    <para>For only the summaries, pipe the output through
+    <para os="p">For only the summaries, pipe the output through
     <userinput>grep -A7 Summ</userinput>.</para>
 
-    <para>Results can be compared with those located at <ulink
+    <para os="q">Results can be compared with those located at <ulink
     url="&test-results;"/>.</para>
 
-    <para>A few unexpected failures cannot always be avoided. The
+    <para os="r">A few unexpected failures cannot always be avoided. The
     GCC developers are usually aware of these issues, but have not
     resolved them yet. Unless the test results are vastly different from
     those at the above URL, it is safe to continue.</para>
 
-    <para>Install the package:</para>
+    <para os="s">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="t"><userinput>make install</userinput></screen>
 
-    <para>Some packages expect the C preprocessor to be installed in the
+    <para os="u">Some packages expect the C preprocessor to be installed in the
     <filename class="directory">/lib</filename> directory.
     To support those packages, create this symlink:</para>
 
-<screen><userinput>ln -s ../usr/bin/cpp /lib</userinput></screen>
+<screen os="v"><userinput>ln -s ../usr/bin/cpp /lib</userinput></screen>
 
-    <para>Many packages use the name <command>cc</command> to call the C
+    <para os="w">Many packages use the name <command>cc</command> to call the C
     compiler. To satisfy those packages, create a symlink:</para>
 
-<screen><userinput>ln -s gcc /usr/bin/cc</userinput></screen>
+<screen os="x"><userinput>ln -s gcc /usr/bin/cc</userinput></screen>
 
   </sect2>
 

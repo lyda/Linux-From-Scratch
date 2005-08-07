@@ -45,64 +45,71 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@os='ab'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    xpointer="xpointer(//*[@os='ac'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
-
-    <para>The following patch ensures that <command>gcc</command> does not
-    search the <filename class="directory">/usr</filename> directory for
-    <filename class="libraryfile">libgcc_s.so</filename> when
-    cross-compling:</para>
-
-<screen><userinput>patch -Np1 -i ../&gcc-cross_search-patch;</userinput></screen>
+    xpointer="xpointer(//*[@os='ad'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    xpointer="xpointer(//*[@os='ae'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+    xpointer="xpointer(//*[@os='af'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    xpointer="xpointer(//*[@os='ag'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+    xpointer="xpointer(//*[@os='ah'])"/>
 
-<screen><userinput>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver \
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="gcc-static.xml"
+    xpointer="xpointer(//*[@os='ai'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="gcc-static.xml"
+    xpointer="xpointer(//*[@os='aj'])"/>
+
+    <para os="ba">Now we will disable <command>gcc</command>'s linking to
+    <filename class="libraryfile">libc</filename> since it doesn't
+    exist yet:</para>
+
+<screen os="bc"><userinput>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver \
    gcc/config/t-libunwind</userinput></screen>
 
-    <para>Finally, disable <option>-B</option> in <filename>Makefile.in</filename>,
+    <para os="bd">Finally, disable <option>-B</option> in <filename>Makefile.in</filename>,
     so it doesn't pick up the host's header files:</para>
 
-<screen><userinput>sed -i '/FLAGS_FOR_TARGET.*\/lib\//s@-B[^ ]*/lib/@@g' configure configure.in</userinput></screen>
+<screen os="be"><userinput>sed -i '/FLAGS_FOR_TARGET.*\/lib\//s@-B[^ ]*/lib/@@g' configure configure.in</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/important[1])"/>
+    xpointer="xpointer(//*[@os='ak'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Prepare GCC for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="gcc-static.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --target=${LFS_TARGET} --host=${LFS_HOST} \

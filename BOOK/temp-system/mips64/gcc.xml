@@ -45,83 +45,87 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/mips64/gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/mips64/gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@os='ab'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/mips64/gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    xpointer="xpointer(//*[@os='ac'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/mips64/gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+    xpointer="xpointer(//*[@os='ad'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    xpointer="xpointer(//*[@os='ca'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+    xpointer="xpointer(//*[@os='cb'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/mips64/gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    xpointer="xpointer(//*[@os='ae'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/mips64/gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+    xpointer="xpointer(//*[@os='af'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5])"/>
+    xpointer="xpointer(//*[@os='cd'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
+    xpointer="xpointer(//*[@os='ce'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[6])"/>
+    xpointer="xpointer(//*[@os='cf'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[6])"/>
+    xpointer="xpointer(//*[@os='cg'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[7])"/>
+    xpointer="xpointer(//*[@os='ch'])"/>
 
-<screen><userinput>sed -i "s@\./xgcc@/cross-tools/bin/${CC}@g" \
-   gcc/mklibgcc.in</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@os='ci'])"/>
 
-    <para>When searching for the multilibs, force the build to use the
-    results of <option>--print-multi-lib</option> from our cross-compiler,
-    not the native compiler <command>gcc</command> builds now.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86_64/gcc.xml"
+    xpointer="xpointer(//*[@os='da'])"/>
 
-<screen><userinput>sed -i \
-"/MULTILIBS/s@\$(GCC_FOR_TARGET)@/cross-tools/bin/${CC}@g" gcc/Makefile.in</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86_64/gcc.xml"
+    xpointer="xpointer(//*[@os='db'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/mips64/gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/important[1])"/>
+    xpointer="xpointer(//*[@os='ak'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/para[4])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/screen[3])"/>
+    xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[9])"/>
+    xpointer="xpointer(//*[@os='cj'])"/>
 
-    <para>Now prepare GCC for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
 <screen><userinput>CC="${CC} ${BUILD64}" CXX="${CXX} ${BUILD64}" \
     ../gcc-&gcc-version;/configure --prefix=/tools --libdir=/tools/lib64 \
@@ -147,10 +151,6 @@
         </listitem>
       </varlistentry>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/gcc.xml"
-      xpointer="xpointer(//*[@role='installation']//*/varlistentry[2])"/>
-
     </variablelist>
 
     <para>Compile the package:</para>
@@ -161,8 +161,9 @@
 
 <screen><userinput>make install</userinput></screen>
 
-    <para>Many packages use the name <command>cc</command> to call the C
-    compiler. To satisfy those packages, create a symlink:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(//*[@os='w'])"/>
 
 <screen><userinput>ln -s gcc /tools/bin/cc</userinput></screen>
 
