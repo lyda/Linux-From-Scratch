@@ -83,11 +83,6 @@
     href="../../final-system/mips64/glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Now we make sure the Glibc goes into <filename
-    class="directory">/tools/lib</filename>:</para>
-
-<screen><userinput>echo "slibdir=/tools/lib" &gt;&gt; configparms</userinput></screen>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/mips64/glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
@@ -95,7 +90,7 @@
 <screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD32}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET32} --build=${LFS_HOST} --libdir=/tools/lib \
+    --host=${LFS_TARGET32} --build=${LFS_HOST} \
     --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>
@@ -104,7 +99,7 @@
       <title>The meaning of the new configure options:</title>
 
       <varlistentry>
-        <term><parameter>--libdir=/tools/lib</parameter></term>
+        <term><parameter>--option</parameter></term>
         <listitem>
           <para>This switch do ... .</para>
         </listitem>
