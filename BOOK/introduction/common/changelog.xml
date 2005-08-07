@@ -160,6 +160,9 @@
     <listitem>
       <para>&util-linux-cramfs-patch;</para>
     </listitem>
+    <listitem>
+      <para>&vim-security_fix-patch;</para>
+    </listitem>
   </itemizedlist>
 
   <itemizedlist>
@@ -197,6 +200,18 @@
       </itemizedlist>
     </listitem>
 -->
+
+    <listitem>
+      <para>August 7, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Text updates ported fron trunk up to r6620.</para>
+        </listitem>
+        <listitem>
+          <para>[manuel] - Added Vim security fix patch.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>August 6, 2005</para>
