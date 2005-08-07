@@ -14,7 +14,7 @@
 
   <indexterm zone="ch-system-glibc-64bit">
     <primary sortas="a-Glibc">Glibc 64-Bit</primary>
-    <secondary>cross tools</secondary>
+    <secondary>final-system</secondary>
   </indexterm>
 
   <sect2 id="package-glibc" role="package">

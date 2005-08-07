@@ -183,7 +183,7 @@
     <filename class="directory">/opt/lib</filename>,
     <filename class="directory">/opt/lib32</filename>,
     and <filename class="directory">/opt/lib64</filename>,
-    so add those directories to the dynamic loader's search path.</para>
+    so we add those directories to the dynamic loader's search path.</para>
 
     <para>Create a new file <filename>/etc/ld.so.conf</filename> by running the
     following:</para>

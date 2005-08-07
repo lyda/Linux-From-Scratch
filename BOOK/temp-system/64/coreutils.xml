@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-temp-system-coreutils" role="wrap">
+  <?dbhtml filename="coreutils.html"?>
+
+  <title>Coreutils-&coreutils-version;</title>
+
+  <indexterm zone="ch-temp-system-coreutils">
+    <primary sortas="a-Coreutils">Coreutils</primary>
+    <secondary>temporary system</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/coreutils.xml"
+    xpointer="xpointer(id('package-coreutils')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/coreutils.xml"
+    xpointer="xpointer(id('package-coreutils')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Coreutils</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+
+<para>Prepare Coreutils for compilation:</para>
+
+<screen><userinput>DEFAULT_POSIX2_VERSION=199209 CC="${CC} ${BUILD64}" \
+   ./configure --prefix=/tools --cache-file=config.cache \
+   --build=${LFS_HOST} --host=${LFS_TARGET}</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-bzip2" role="."/></para>
+
+  </sect2>
+
+</sect1>

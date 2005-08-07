@@ -102,20 +102,13 @@ hr {
       </div>
       <div class="toc">
         <h3>
-          <xsl:text>Choose the architecture of your target machine</xsl:text>
+          <xsl:text>32 Bit Builds</xsl:text>
         </h3>
         <ul>
           <li>
             <h4>
               <a href="x86">
                 <xsl:text>Intel/AMD x86</xsl:text>
-              </a>
-            </h4>
-          </li>
-          <li>
-            <h4>
-              <a href="x86_64">
-                <xsl:text>x86_64</xsl:text>
               </a>
             </h4>
           </li>
@@ -129,28 +122,66 @@ hr {
           <li>
             <h4>
               <a href="mips">
-                <xsl:text>MIPS 32 Bit</xsl:text>
-              </a>
-            </h4>
-          </li>
-          <li>
-            <h4>
-              <a href="mips64">
-                <xsl:text>MIPS 64 Bit</xsl:text>
+                <xsl:text>MIPS</xsl:text>
               </a>
             </h4>
           </li>
           <li>
             <h4>
               <a href="sparc">
-                <xsl:text>Sparc32</xsl:text>
+                <xsl:text>Sparc</xsl:text>
+              </a>
+            </h4>
+          </li>
+	</ul>
+        <h3>
+          <xsl:text>64 Bit Builds</xsl:text>
+        </h3>
+	<ul>
+          <li>
+            <h4>
+              <a href="x86_64-64">
+                <xsl:text>x86_64</xsl:text>
+              </a>
+            </h4>
+          </li>
+          <li>
+            <h4>
+              <a href="mips64-64">
+                <xsl:text>MIPS</xsl:text>
+              </a>
+            </h4>
+          </li>
+          <li>
+            <h4>
+             <a href="sparc64-64">
+                <xsl:text>Sparc/UltraSPARC</xsl:text>
+             </a>
+            </h4>
+          </li>
+	</ul>
+        <h3>
+          <xsl:text>Multilib Builds</xsl:text>
+        </h3>
+	<ul>
+          <li>
+            <h4>
+              <a href="x86_64">
+                <xsl:text>x86_64</xsl:text>
+              </a>
+            </h4>
+          </li>
+          <li>
+            <h4>
+              <a href="mips64">
+                <xsl:text>MIPS</xsl:text>
               </a>
             </h4>
           </li>
           <li>
             <h4>
              <a href="sparc64">
-                <xsl:text>Sparc64/UltraSPARC</xsl:text>
+                <xsl:text>Sparc/UltraSPARC</xsl:text>
              </a>
             </h4>
           </li>

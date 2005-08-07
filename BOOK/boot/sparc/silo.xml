@@ -28,4 +28,13 @@ image = /boot/lfskernel-&linux-sparc-version;
   label = linux
 # End /etc/silo.conf</literal></userinput></screen>
 
+   <para>If you already have Silo installed on your target system, you do not
+   need to reinstall it. Silo is just a chain loader and has no bearing on the
+   system build.</para>
+
+   <para>After you get the build copied to when you can boot, you will need to
+   issue the following command:</para>
+
+<screen><userinput>silo -f</userinput></screen>
+
 </sect1>

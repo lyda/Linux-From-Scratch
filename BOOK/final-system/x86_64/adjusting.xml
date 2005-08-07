@@ -27,7 +27,7 @@
 
 <para>Second we will adjust the 64 bit ABI:</para>
 
-<screen><userinput>perl -pi -e 's@ /tools/lib64/ld-linux.so.2@ /lib64/ld-linux.so.2@g;' \
+<screen><userinput>perl -pi -e 's@ /tools/lib64/ld-linux-x86-64.so.2@ /lib64/ld-linux-x86-64.so.2@g;' \
     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib64/ @g;' \
         `gcc --print-file specs`</userinput></screen>
 
@@ -66,7 +66,7 @@ readelf -l a.out | grep ': /lib'</userinput></screen>
 and the output of the last command will be (allowing for
 platform-specific differences in dynamic linker name):</para>
 
-<screen><computeroutput>[Requesting program interpreter: /lib64/ld-linux.so.2]</computeroutput></screen>
+<screen><computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput></screen>
 
 <para>Note that <filename class="directory">/lib</filename> or 
 <filename class="directory">/lib64</filename> is now the prefix

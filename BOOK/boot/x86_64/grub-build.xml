@@ -49,8 +49,7 @@
 
     <para>Prepare GRUB for compilation:</para>
 
-<screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=${LFS}/usr \
-   --host=${LFS_TARGET32}</userinput></screen>
+<screen><userinput>CC="${CC} ${BUILD32}" ./configure --prefix=${LFS}/usr</userinput></screen>
 
     <para>Compile the package:</para>
 

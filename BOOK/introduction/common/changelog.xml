@@ -210,6 +210,9 @@
         <listitem>
           <para>[manuel] - Added Vim security fix patch.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to add Pure 64 bit build. Thanx Ryan Oliver and Ken Moffat.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

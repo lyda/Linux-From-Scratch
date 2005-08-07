@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-boot-e2fsprogs-32bitlib" role="wrap">
-  <?dbhtml filename="e2fsprogs-32bitlib.html"?>
+<sect1 id="ch-boot-e2fsprogs" role="wrap">
+  <?dbhtml filename="e2fsprogs.html"?>
 
-  <title>E2fsprogs-&e2fsprogs-version; 32 Bit Libraries</title>
+  <title>E2fsprogs-&e2fsprogs-version;</title>
 
-  <indexterm zone="ch-boot-e2fsprogs-32bitlib">
-    <primary sortas="a-E2fsprogs">E2fsprogs 32 Bit Libraries</primary>
+  <indexterm zone="ch-boot-e2fsprogs">
+    <primary sortas="a-E2fsprogs">E2fsprogs</primary>
     <secondary>boot</secondary>
   </indexterm>
 
@@ -43,6 +43,11 @@
   <sect2 role="installation">
     <title>Installation of E2fsprogs</title>
 
+    <para>Make sure the libraries get installed to
+    <filename class="directory">/tools/lib64</filename>:</para>
+
+<screen><userinput>sed -i "/libdir=.*\/lib/s@/lib@/lib64@g" configure</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/e2fsprogs.xml"
     xpointer="xpointer(id('install-e2fsprogs')/para[1])"/>
@@ -53,9 +58,8 @@
 
 <para>Prepare E2fsprogs for compilation:</para>
 
-<screen><userinput>CC="${CC} ${BUILD32}" ../configure --prefix=/tools \
---enable-elf-shlibs --disable-evms \
---host=${LFS_TARGET}</userinput></screen>
+<screen><userinput>CC="${CC} ${BUILD64}" ../configure --prefix=/tools \
+--enable-elf-shlibs --disable-evms --host=${LFS_TARGET}</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
@@ -72,11 +76,23 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make CC="${CC} ${BUILD32}" libs</userinput></screen>
+<screen><userinput>make CC="${CC} ${BUILD64}" LDFLAGS="-s"</userinput></screen>
 
     <para>Install most of the package:</para>
 
+<screen><userinput>make install</userinput></screen>
+
+    <para>Install the shared libraries:</para>
+
 <screen><userinput>make install-libs</userinput></screen>
+
+    <para>Create needed symlinks for a bootable system:</para>
+
+<screen><userinput>install -d ${LFS}/sbin
+cd ${LFS}/sbin
+ln -sf ../tools/sbin/fsck.ext2 .
+ln -sf ../tools/sbin/fsck.ext3 .
+ln -sf ../tools/sbin/e2fsck .</userinput></screen>
 
   </sect2>
 

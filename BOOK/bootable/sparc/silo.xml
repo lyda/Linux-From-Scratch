@@ -30,4 +30,8 @@ image = /boot/lfskernel-&linux-sparc-version;
   label = linux
 # End /etc/silo.conf</literal></userinput></screen>
 
+   <para>Now to make Silo bootable:</para>
+
+<screen><userinput>silo -f</userinput></screen>
+
 </sect1>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-temp-system-flex" role="wrap">
+  <?dbhtml filename="flex.html"?>
+
+  <title>Flex-&flex-version;</title>
+
+  <indexterm zone="ch-temp-system-flex">
+    <primary sortas="a-Flex">Flex</primary>
+    <secondary>temporary system</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/flex.xml"
+    xpointer="xpointer(id('package-flex')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/flex.xml"
+    xpointer="xpointer(id('package-flex')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Flex</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/flex.xml"
+    xpointer="xpointer(id('install-flex')/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/flex.xml"
+    xpointer="xpointer(id('install-flex')/screen[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/flex.xml"
+    xpointer="xpointer(id('install-flex')/para[2])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/flex.xml"
+    xpointer="xpointer(id('install-flex')/screen[2])"/>
+
+    <para>Now prepare Flex for compilation:</para>
+
+<screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=/tools \
+   --host=${LFS_TARGET} --disable-nls</userinput></screen>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-flex" role="."/></para>
+
+  </sect2>
+
+</sect1>

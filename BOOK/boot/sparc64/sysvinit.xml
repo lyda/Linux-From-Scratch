@@ -54,7 +54,7 @@
     <para>Compile the package:</para>
 
 <screen><userinput>make -C src clobber
-make -C src CC="${CC} ${BUILD64}"</userinput></screen>
+make -C src CC="${CC} ${BUILD64}" LDFLAGS="-s"</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/sysvinit.xml"

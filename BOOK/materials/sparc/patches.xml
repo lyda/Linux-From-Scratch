@@ -22,6 +22,22 @@
       </listitem>
     </varlistentry>
 
+    <varlistentry>
+      <term>Linux-libc-headers Sparc Conflicts Patch - 1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;linux-libc-headers/&linux-libc-headers-sparc_conflicts-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Silo Fixes Patch - 1.9 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;silo/&silo-fixes-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
   </variablelist>
 
 </sect1>

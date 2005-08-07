@@ -43,6 +43,10 @@
   <sect2 role="installation">
     <title>Installation of Linux-Libc-Headers</title>
 
+    <para>The following patch fixes build issues with Silo and other programs:</para>
+
+<screen><userinput>patch -Np1 -i ../&linux-libc-headers-sparc_conflicts-patch;</userinput></screen>
+
     <para>Install the header files:</para>
 
 <screen><userinput>install -d /tools/include
