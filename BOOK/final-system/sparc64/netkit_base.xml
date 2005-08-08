@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-system-netkit_base" role="wrap">
+  <?dbhtml filename="netkit_base.html"?>
+
+  <title>Netkit Base-&netkit_base-version;</title>
+
+  <indexterm zone="ch-system-netkit_base">
+    <primary sortas="a-Netkit Base">Netkit Base</primary>
+  </indexterm>
+
+  <sect2 id="package-netkit_base" role="package">
+    <title/>
+
+    <para>The NetKit Base package contains programs for basic networking.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <segmentedlist>
+      <segtitle>&dependencies;</segtitle>
+
+      <seglistitem>
+        <seg>Bash, Binutils, Coreutils, GCC, Glibc, Make, and Sed</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 id="install-netkit_base" role="installation">
+    <title>Installation of Netkit Base</title>
+
+   <para>Prepare Netkit base for compilation:</para>
+
+<screen><userinput>./configure</userinput></screen>
+
+   <para>We remove the CC and CFLAGS variables so, we don't have any compile issues.</para>
+
+<screen><userinput>sed -i '/CC=/d' MCONFIG
+sed -i '/CFLAGS=/d' MCONFIG</userinput></screen>
+
+    <para>Netkit Base needs patching to be compatable with the current toolchains.
+    This patch will correct that situation:</para>
+
+<screen><userinput>patch -Np1 -i ../&netkit_base-fixes-patch;</userinput></screen>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make CC="gcc ${BUILD64}"</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-netkit_base" role="content">
+    <title>Contents of Netkit base</title>
+
+    <segmentedlist>
+      <segtitle>Installed programs</segtitle>
+
+      <seglistitem>
+        <seg>inetd and ping</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="ping">
+        <term><command>ping</command></term>
+        <listitem>
+          <para>Sends echo-request packets and reports how long the replies
+          take</para>
+          <indexterm zone="ch-system-netkit_base ping">
+            <primary sortas="b-ping">ping</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="inetd">
+        <term><command>inetd</command></term>
+        <listitem>
+          <para>Allows running one daemon to invoke several others,
+           reducing load on the system.</para>
+          <indexterm zone="ch-system-netkit_base inetd">
+            <primary sortas="b-inetd">inetd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

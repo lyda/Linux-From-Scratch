@@ -87,6 +87,7 @@
 <!ENTITY mktemp-version "1.5">
 <!ENTITY module-init-tools-version "3.1">
 <!ENTITY ncurses-version "5.4">
+<!ENTITY netkit_base-version "0.17">
 <!ENTITY patch-version "2.5.9">
 <!ENTITY parted-version "1.6.23">
 <!ENTITY perl-version "5.8.7">

@@ -38,6 +38,22 @@
       </listitem>
     </varlistentry>
 
+    <varlistentry>
+      <term>Netkit Base Fixes Patch - 4.1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;netkit-base/&netkit_base-fixes-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Silo Fixes for Sparc64 Patch - 4.1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;silo/&silo-sparc64_fixes-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
   </variablelist>
 
 </sect1>

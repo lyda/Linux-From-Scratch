@@ -15,7 +15,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="64/e2fsprogs.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/sysvinit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="64/module-init-tools.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="64/inetutils.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/netkit_base.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="64/util-linux.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="64/udev.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc/elftoaout.xml"/>

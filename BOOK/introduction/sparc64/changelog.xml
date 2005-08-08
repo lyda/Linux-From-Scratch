@@ -35,7 +35,7 @@
       <para>Silo &silo-version;</para>
     </listitem>
     <listitem>
-      <para>&silo-fixes-patch;</para>
+      <para>&silo-sparc64_fixes-patch;</para>
     </listitem>
     <listitem>
       <para>&linux-libc-headers-sparc_biarch-patch;</para>
@@ -48,6 +48,12 @@
     </listitem>
     <listitem>
       <para>elftoaout &elftoaout-version;</para>
+    </listitem>
+    <listitem>
+      <para>Netkit Base &netkit_base-version;</para>
+    </listitem>
+    <listitem>
+      <para>&netkit_base-fixes-patch;</para>
     </listitem>
   </itemizedlist>
 
@@ -77,6 +83,18 @@
     </listitem>
 
 -->
+
+    <listitem>
+      <para>August 8, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Inetutils replace with Netkit Base. This is due
+          to a compile issue with the ping command. Every time ping is
+          ran it will give a bus error. Upstream has no idea on how to
+          fix, so this temporary solution is in place.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>July 6, 2005</para>

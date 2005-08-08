@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-boot-netkit_base" role="wrap">
+  <?dbhtml filename="netkit_base.html"?>
+
+  <title>Netkit base-&netkit_base-version;</title>
+
+  <indexterm zone="ch-boot-netkit_base">
+    <primary sortas="a-Netkit base">Netkit base</primary>
+    <secondary>boot</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/netkit_base.xml"
+    xpointer="xpointer(id('package-netkit_base')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/netkit_base.xml"
+    xpointer="xpointer(id('package-netkit_base')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Netkit base</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/netkit_base.xml"
+    xpointer="xpointer(id('install-netkit_base')/para[1])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/netkit_base.xml"
+    xpointer="xpointer(id('install-netkit_base')/screen[1])"/>
+
+<para>Prepare Netkit base for compilation:</para>
+
+<screen><userinput>./configure --prefix=/tools </userinput></screen>
+
+   <para>Now we make the build compatible with our build. We change the user
+   to 0. Remove the -s from the install command. Remove the CC and CFLAGS variable
+   from the makefile. This will allow us to cross-compile with no issues at all.</para>
+
+<screen><userinput>sed -i '/CC=/d' MCONFIG
+sed -i '/CFLAGS=/d' MCONFIG
+sed -i 's/install -s/install/g' inetd/Makefile
+sed -i 's/install -s/install/g' ping/Makefile
+sed -i 's/-o root//g' inetd/Makefile
+sed -i 's/-o root//g' ping/Makefile</userinput></screen>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make CC="${CC} ${BUILD64}"</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-netkit_base" role="."/></para>
+
+  </sect2>
+
+</sect1>
