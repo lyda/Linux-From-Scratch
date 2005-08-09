@@ -93,23 +93,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[7])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[7])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-static.xml"
     xpointer="xpointer(//*[@role='installation']/important[1])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="gcc-static.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
 
     <para>Prepare GCC for compilation:</para>
 
