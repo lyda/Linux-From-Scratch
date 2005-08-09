@@ -20,4 +20,11 @@ export BUILD64="-m64"</userinput></screen>
 
 <screen><userinput>export LFS_TARGET32="i686-pc-linux-gnu"</userinput></screen>
 
+   <para>To prevent errors when you come back to your build, we will export these
+   variables to prevent any build issues in the future:</para>
+
+<screen><userinput>echo export BUILD32=\""${BUILD32}\"" &gt;&gt; ~/.bash_profile
+echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bash_profile
+echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bash_profile</userinput></screen>
+
 </sect1>
