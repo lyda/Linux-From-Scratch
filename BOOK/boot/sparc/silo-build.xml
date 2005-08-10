@@ -55,13 +55,6 @@
 
 <screen><userinput>make install DESTDIR=${LFS}</userinput></screen>
 
-   <para>Do to an a compile issue with the current toolchains, we are going
-   to use the precompiled boot files. This is a temporary fix to the book, but
-   will give us a functional system. As soon as a fix is released, this section
-   will be removed. Here is how you install the precompiled files:</para>
-
-<screen><userinput>tar -xvf silo-loaders-&silo-version;.tar.gz -C ${LFS}</userinput></screen>
-
   </sect2>
 
   <sect2 role="content">

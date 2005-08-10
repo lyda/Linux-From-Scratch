@@ -79,6 +79,16 @@
 -->
 
     <listitem>
+      <para>August 9, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Got Silo to build on 32 bit, without the precompiled
+          boot files.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 8, 2005</para>
       <itemizedlist>
         <listitem>
