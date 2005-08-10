@@ -47,10 +47,10 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Silo Fixes for Sparc64 Patch - 4.1 KB:</term>
+      <term>Silo Fixes Patch - 3.5 KB:</term>
       <listitem>
         <para><ulink
-        url="&patches-root;silo/&silo-sparc64_fixes-patch;"/></para>
+        url="&patches-root;silo/&silo-fixes-patch;"/></para>
       </listitem>
     </varlistentry>
 

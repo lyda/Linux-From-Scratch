@@ -35,7 +35,7 @@
       <para>Silo &silo-version;</para>
     </listitem>
     <listitem>
-      <para>&silo-sparc64_fixes-patch;</para>
+      <para>&silo-fixes-patch;</para>
     </listitem>
     <listitem>
       <para>&linux-libc-headers-sparc_biarch-patch;</para>

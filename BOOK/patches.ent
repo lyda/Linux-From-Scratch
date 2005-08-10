@@ -67,7 +67,6 @@
 <!ENTITY netkit_base-fixes-patch "netkit-base-&netkit_base-version;-fixes-1.patch">
 
 <!ENTITY silo-fixes-patch "silo-&silo-version;-fixes-3.patch">
-<!ENTITY silo-sparc64_fixes-patch "silo-&silo-version;-sparc64_fixes-1.patch">
 
 <!-- Start of mips/mips64 patches -->
 
