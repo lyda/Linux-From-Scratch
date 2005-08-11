@@ -70,6 +70,8 @@
 
 <!-- Start of mips/mips64 patches -->
 
+<!ENTITY gcc-mips_pure64-patch "gcc-&gcc-version;-mips_pure64-1.patch">
+
 <!ENTITY glibc-mips_syscall-patch "glibc-&glibc-version;-mips_syscall-1.patch">
 
 <!ENTITY grep-mips_update-patch "grep-&grep-version;-mips_config_update-1.patch">
@@ -82,4 +84,3 @@
 <!ENTITY procps-mips-patch "procps-&procps-version;-fix_mips-1.patch">
 
 <!ENTITY util-linux-mips64-patch "util-linux-&util-linux-version;-mips64_fix-1.patch">
-
