@@ -81,7 +81,11 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
-    xpointer="xpointer(//*[@os='aj'])"/>
+    xpointer="xpointer(//*[@os='al'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="gcc-static.xml"
+    xpointer="xpointer(//*[@os='am'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc-final.xml"
