@@ -66,9 +66,13 @@
     href="../x86/gcc-static.xml"
     xpointer="xpointer(//*[@os='af'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/gcc-static.xml"
-    xpointer="xpointer(//*[@os='ag'])"/>
+    <para>This will allow us to build a 64 bit ABI compiler instead of the default
+    n32:</para>
+
+<screen><userinput>patch -Np1 -i ../&gcc-mips_pure64-patch;</userinput></screen>
+
+    <para>Now we will need to setup our StartFile Spec to the correct library
+    location:</para>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc-static.xml"
