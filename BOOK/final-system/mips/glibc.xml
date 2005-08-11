@@ -139,9 +139,40 @@
   href="../x86/glibc.xml"
   xpointer="xpointer(id('conf-glibc'))"/>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('conf-ld'))"/>
+  <sect2 id="conf-ld" role="configuration">
+    <title>Configuring Dynamic Loader</title>
+
+    <indexterm zone="conf-ld">
+      <primary sortas="e-/etc/ld.so.conf">/etc/ld.so.conf</primary>
+    </indexterm>
+
+    <para>By default, the dynamic loader (<filename
+    class="libraryfile">/lib/ld.so.1</filename>) searches through
+    <filename class="directory">/lib</filename> and <filename
+    class="directory">/usr/lib</filename> for dynamic libraries that are
+    needed by programs as they are run. However, if there are libraries in
+    directories other than <filename class="directory">/lib</filename> and
+    <filename class="directory">/usr/lib</filename>, these need to be
+    added to the <filename>/etc/ld.so.conf</filename> file in order
+    for the dynamic loader to find them. Two directories that are commonly
+    known to contain additional libraries are
+    <filename class="directory">/usr/local/lib</filename> and
+    <filename class="directory">/opt/lib</filename>
+    so we add those directories to the dynamic loader's search path.</para>
+
+    <para>Create a new file <filename>/etc/ld.so.conf</filename> by running the
+    following:</para>
+
+<screen><userinput>cat &gt; /etc/ld.so.conf &lt;&lt; "EOF"
+<literal># Begin /etc/ld.so.conf
+
+/usr/local/lib
+/opt/lib
+
+# End /etc/ld.so.conf</literal>
+EOF</userinput></screen>
+
+  </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/glibc.xml"
