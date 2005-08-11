@@ -48,7 +48,7 @@
 <screen><userinput>cd tools/elf2rfx
 make CC=gcc
 cd ../..
-make CC="${CC} ${BUILD32}" CROSS_COMPILE="${LFS_TARGET}-"</userinput></screen>
+make CC="${CC} ${BUILD64}" CROSS_COMPILE="${LFS_TARGET}-" tooldirs</userinput></screen>
 
   <para>Install the package:</para>
 
