@@ -45,26 +45,35 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
-
-    <para>We will disable the linking to libgcc_eh:</para>
-
-<screen><userinput>patch -Np1 -i ../&glibc-libgcc_eh-patch;</userinput></screen>
+    xpointer="xpointer(//*[@os='da'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='db'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='dc'])"/>
 
-    <para> For NPTL enabled systems we will need to add the following lines to config.cache:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc-headers.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>echo "libc_cv_forced_unwind=yes" > config.cache
-echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc-headers.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Next, prepare Glibc for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='dd'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='de'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc-headers.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD32}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
@@ -77,15 +86,15 @@ echo "libc_cv_c_cleanup=yes" >> config.cache</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5])"/>
+    xpointer="xpointer(//*[@os='df'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/blockquote[1])"/>
+    xpointer="xpointer(//*[@os='dg'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@role='installation']/para[6])"/>
+    xpointer="xpointer(//*[@os='dh'])"/>
 
     <para>Compile the package:</para>
 

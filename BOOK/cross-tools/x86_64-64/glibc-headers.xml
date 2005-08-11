@@ -44,14 +44,16 @@
     <title>Installation of Glibc Headers</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/para[4])"/>
+    href="../../final-system/x86_64-64/glibc.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
-    xpointer="xpointer(id('install-glibc')/screen[2])"/>
+    href="../../final-system/x86_64-64/glibc.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Next, prepare Glibc for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86_64-64/glibc.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>CC=gcc ../glibc-&glibc-version;/configure --prefix=/tools \
     --host=${LFS_TARGET} --build=${LFS_HOST} \
@@ -61,47 +63,47 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='ca'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    xpointer="xpointer(//*[@os='cb'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+    xpointer="xpointer(//*[@os='cd'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    xpointer="xpointer(//*[@os='ce'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5])"/>
+    xpointer="xpointer(//*[@os='cf'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+    xpointer="xpointer(//*[@os='cg'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/para[6])"/>
+    xpointer="xpointer(//*[@os='ch'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
+    xpointer="xpointer(//*[@os='ci'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/para[7])"/>
+    xpointer="xpointer(//*[@os='cj'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[6])"/>
+    xpointer="xpointer(//*[@os='ck'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc-headers.xml"
-    xpointer="xpointer(//*[@role='installation']/para[8])"/>
+    xpointer="xpointer(//*[@os='cl'])"/>
 
 <screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/x86_64/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
 

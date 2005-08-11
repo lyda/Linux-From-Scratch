@@ -44,52 +44,59 @@
     <title>Installation of Cross GCC Compiler with Static libgcc
     and no Threads</title>
 
-    <para>We will make a couple of essential adjustments to the specs file
-    to point to use our build environment:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@os='aa'])"/>
 
-<screen><userinput>patch -Np1 -i ../&gcc-specs_pure64-patch;</userinput></screen>
+<screen os="ab"><userinput>patch -Np1 -i ../&gcc-specs_pure64-patch;</userinput></screen>
 
-    <para>To make sure that we use the proper syntax for a couple of tools,
-    we apply the following patch:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@os='ac'])"/>
 
-<screen><userinput>patch -Np1 -i ../&gcc-posix-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@os='ad'])"/>
 
-    <para>The following patch ensures that <command>gcc</command> does not
-    search the <filename class="directory">/usr</filename> directory for
-    <filename class="libraryfile">libgcc_s.so</filename> when
-    cross-compling:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@os='ae'])"/>
 
-<screen><userinput>patch -Np1 -i ../&gcc-cross_search-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@os='af'])"/>
 
-    <para>Now we will need to setup our StartFile Spec to the correct library
-    location:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@os='ag'])"/>
 
-<screen><userinput>echo "
-#undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" &gt;&gt; gcc/config/sparc/linux.h
-echo "
-#undef STARTFILE_PREFIX_SPEC
-#define STARTFILE_PREFIX_SPEC \"/tools/lib/\"" &gt;&gt; gcc/config/sparc/linux64.h</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc64/gcc-static.xml"
+    xpointer="xpointer(//*[@os='ah'])"/>
 
-    <para>Now we will change <command>gcc</command>'s search path to look
-    into <filename class="directory">/tools</filename> only:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@os='ai'])"/>
 
-<screen><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" gcc/Makefile.in</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@os='aj'])"/>
 
-    <important>
-      <para>The above patches and sed's are critical in ensuring a
-      successful overall build. Do not forget to apply them.</para>
-    </important>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc-static.xml"
+    xpointer="xpointer(//*[@os='ak'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/para[4])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/gcc.xml"
-    xpointer="xpointer(id('install-gcc')/screen[3])"/>
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Prepare GCC for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gcc.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
     --host=${LFS_HOST} --target=${LFS_TARGET} --disable-multilib \
