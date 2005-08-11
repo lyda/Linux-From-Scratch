@@ -73,7 +73,7 @@
 
     <para>On the PPC arch, NPTL requires the following to be set:</para>
 
-<screen><userinput>echo "libc_cv_ppc_machine=yes" &gt;&gt config.cache</userinput></screen>
+<screen><userinput>echo "libc_cv_ppc_machine=yes" &gt;&gt; config.cache</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/ppc/glibc.xml"
