@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "GCC4-20050730">
-<!ENTITY releasedate "July 30, 2005">
+<!ENTITY version "GCC4-20050812">
+<!ENTITY releasedate "August 12, 2005">
 <!ENTITY milestone "6.2">
 <!ENTITY generic-version "gcc4"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
@@ -35,6 +35,7 @@
 <!ENTITY diffutils-version "2.8.1">
 <!ENTITY e2fsprogs-version "1.38">
 <!ENTITY expect-version "5.43.0">
+<!ENTITY expect-lib-version "5.43">
 <!ENTITY file-version "4.14">
 <!ENTITY findutils-version "4.2.23">
 <!ENTITY flex-version "2.5.31">
