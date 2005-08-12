@@ -85,7 +85,7 @@
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='ae'])"/>
 
-<screen><userinput>make ARCH=x86_64 CROSS_COMPILE=${TARGET}- menuconfig</userinput></screen>
+<screen><userinput>make ARCH=x86_64 CROSS_COMPILE=${LFS_TARGET}- menuconfig</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootable/x86_64/kernel.xml"
@@ -95,7 +95,7 @@
     href="../../bootable/x86_64/kernel.xml"
     xpointer="xpointer(//*[@os='m'])"/>
 
-<screen><userinput>make ARCH=x86_64 CROSS_COMPILE=${TARGET}-</userinput></screen>
+<screen><userinput>make ARCH=x86_64 CROSS_COMPILE=${LFS_TARGET}-</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
