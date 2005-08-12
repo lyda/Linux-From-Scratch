@@ -42,10 +42,12 @@
   <sect2 role="installation">
     <title>Installation of Colo</title>
 
+    <para>Since 64 bit version doesn't work currently we are going to
+    compile the utils as 64 bit and using the precompiled bootloader.</para>
+
     <para>Compile the Colo package:</para>
 
-<screen><userinput>make CC="gcc ${BUILD32}" binary
-make CC="gcc ${BUILD64}" tooldirs</userinput></screen>
+<screen><userinput>make CC="gcc ${BUILD64}" tooldirs</userinput></screen>
 
     <para>Install the package:</para>
 

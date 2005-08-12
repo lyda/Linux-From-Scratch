@@ -43,12 +43,8 @@
   <sect2 role="installation">
     <title>Installation of Colo</title>
 
-  <para>Compile the Colo package:</para>
-
-<screen><userinput>cd tools/elf2rfx
-make CC=gcc
-cd ../..
-make CC="${CC} ${BUILD64}" CROSS_COMPILE="${LFS_TARGET}-" tooldirs</userinput></screen>
+  <para>We install the precompiled binary since 64 bit version is
+  no available currently.</para>
 
   <para>Install the package:</para>
 
