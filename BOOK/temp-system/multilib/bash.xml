@@ -45,21 +45,23 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@os='ab'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/bash.xml"
-    xpointer="xpointer(id('install-bash')/para[2])"/>
+    href="../common/bash.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/bash.xml"
-    xpointer="xpointer(id('install-bash')/screen[2])"/>
+    href="../common/bash.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Prepare Bash for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bash.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>CC="${CC} ${BUILD64}" CXX="${CXX} ${BUILD64}" \
    ./configure --prefix=/tools --with-curses \
@@ -67,23 +69,31 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='ac'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    xpointer="xpointer(//*[@os='i'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[4])"/>
+    xpointer="xpointer(//*[@os='j'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(//*[@role='installation']/para[5])"/>
+    xpointer="xpointer(//*[@os='l'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bash.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[5])"/>
+    xpointer="xpointer(//*[@os='m'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bash.xml"
+    xpointer="xpointer(//*[@os='ad'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bash.xml"
+    xpointer="xpointer(//*[@os='ae'])"/>
 
   </sect2>
 

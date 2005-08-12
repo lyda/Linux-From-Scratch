@@ -54,7 +54,7 @@
 
 <screen><userinput>make</userinput></screen>
 
-    <para>To test the results, issue: <userinput>make check</userinput>.
+    <para os="a">To test the results, issue: <userinput>make check</userinput>.
     This takes a long time, about 5 SBUs.</para>
 
     <para>Install the package:</para>

@@ -45,30 +45,30 @@
   <sect2 id="install-bash" role="installation">
     <title>Installation of Bash</title>
 
-    <para>If you downloaded the Bash documentation tarball and wish to
+    <para os="a">If you downloaded the Bash documentation tarball and wish to
     install HTML documentation, issue the following commands:</para>
 
-<screen><userinput>tar -zxf ../bash-doc-&bash-doc-version;.tar.gz &amp;&amp;
+<screen os="b"><userinput>tar -zxf ../bash-doc-&bash-doc-version;.tar.gz &amp;&amp;
 sed -i "s|htmldir = @htmldir@|htmldir = /usr/share/doc/bash-&bash-version;|" \
     Makefile.in</userinput></screen>
 
-    <para>The following patch fixes various issues, including a problem where
+    <para os="c">The following patch fixes various issues, including a problem where
     Bash will sometimes only show 33 characters on a line, then wrap to the
     next:</para>
 
-<screen><userinput>patch -Np1 -i ../&bash-fixes-patch;</userinput></screen>
+<screen os="d"><userinput>patch -Np1 -i ../&bash-fixes-patch;</userinput></screen>
 
-    <para>Bash also has issues when compiled against newer versions of Glibc.
+    <para os="e">Bash also has issues when compiled against newer versions of Glibc.
     The following patch resolves this problem:</para>
 
-<screen><userinput>patch -Np1 -i ../&bash-avoid_WCONTINUED-patch;</userinput></screen>
+<screen os="f"><userinput>patch -Np1 -i ../&bash-avoid_WCONTINUED-patch;</userinput></screen>
 
-    <para>Prepare Bash for compilation:</para>
+    <para os="g">Prepare Bash for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --bindir=/bin \
     --without-bash-malloc --with-installed-readline</userinput></screen>
 
-    <variablelist>
+    <variablelist os="h">
       <title>The meaning of the configure option:</title>
 
       <varlistentry>
@@ -82,23 +82,23 @@ sed -i "s|htmldir = @htmldir@|htmldir = /usr/share/doc/bash-&bash-version;|" \
       </varlistentry>
     </variablelist>
 
-    <para>Compile the package:</para>
+    <para os="i">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="j"><userinput>make</userinput></screen>
 
-    <para>To test the results, issue:
+    <para os="k">To test the results, issue:
     <userinput>make tests</userinput>.</para>
 
-    <para>Install the package:</para>
+    <para os="l">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="m"><userinput>make install</userinput></screen>
 
-    <para>Run the newly compiled <command>bash</command> program (replacing
+    <para os="n">Run the newly compiled <command>bash</command> program (replacing
     the one that is currently being executed):</para>
 
-<screen><userinput>exec /bin/bash --login +h</userinput></screen>
+<screen os="o"><userinput>exec /bin/bash --login +h</userinput></screen>
 
-    <note>
+    <note os="p">
       <para>The parameters used make the <command>bash</command>
       process an interactive login shell and continue to disable hashing so
       that new programs are found as they become available.</para>

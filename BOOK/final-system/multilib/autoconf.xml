@@ -50,8 +50,9 @@
 
 <screen><userinput>make</userinput></screen>
 
-    <para>To test the results, issue: <userinput>make check</userinput>.
-    This takes a long time, about 2 SBUs.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <para>Install the package:</para>
 

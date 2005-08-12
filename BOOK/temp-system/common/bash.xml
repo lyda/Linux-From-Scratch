@@ -43,25 +43,27 @@
   <sect2 role="installation">
     <title>Installation of Bash</title>
 
-    <para>Fix a minor issue during the build when cross-compling:</para>
+    <para os="aa">Fix a minor issue during the build when cross-compling:</para>
 
-<screen><userinput>cp -p Makefile.in Makefile.in.orig
+<screen os="ab"><userinput>cp -p Makefile.in Makefile.in.orig
 sed "s@size \$(Program)@${LFS_TARGET}-&amp;@g"  Makefile.in.orig > Makefile.in</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/bash.xml"
-    xpointer="xpointer(id('install-bash')/para[2])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/bash.xml"
-    xpointer="xpointer(id('install-bash')/screen[2])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Prepare Bash for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bash.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>./configure --prefix=/tools --with-curses \
    --without-bash-malloc --host=${LFS_TARGET}</userinput></screen>
 
-    <variablelist>
+    <variablelist os="ac">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
@@ -83,20 +85,26 @@ sed "s@size \$(Program)@${LFS_TARGET}-&amp;@g"  Makefile.in.orig > Makefile.in</
 
     </variablelist>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bash.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bash.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bash.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/bash.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
 
-    <para>Make a link for the programs that use <command>sh</command> for
+    <para os="ad">Make a link for the programs that use <command>sh</command> for
     a shell:</para>
 
-<screen><userinput>ln -s bash /tools/bin/sh</userinput></screen>
-
-    <para/>
+<screen os="ae"><userinput>ln -s bash /tools/bin/sh</userinput></screen>
 
   </sect2>
 
