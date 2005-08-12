@@ -155,7 +155,7 @@
       <term>GCC (&gcc-version;) - 26.8 MB:</term>
       <listitem>
         <para><ulink
-        url="&gnu;gcc/gcc-&gcc-version;.tar.bz2"/></para>
+        url="&gnu;gcc/gcc-&gcc-version;/gcc-&gcc-version;.tar.bz2"/></para>
       </listitem>
     </varlistentry>
 
