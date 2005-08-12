@@ -43,7 +43,7 @@
     <title>Installation of Colo</title>
 
     <para>Since 64 bit version doesn't work currently we are going to
-    compile the utils as 64 bit and using the precompiled bootloader.</para>
+    compile the utilities as 64 bit and use the precompiled bootloader.</para>
 
     <para>Compile the Colo package:</para>
 
