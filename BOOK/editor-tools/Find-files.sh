@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# This script will find all XML files in the book that contains
-# the same string in their name.
+# This script will find all XML files in the working repository copy
+# that contains the same string in their name.
 
 # To be executed from the top-level directory.
 
