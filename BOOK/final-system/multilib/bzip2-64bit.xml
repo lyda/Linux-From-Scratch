@@ -53,7 +53,7 @@
     <para>The Bzip2 package does not contain a <command>configure</command>
     script. Compile it with:</para>
 
-<screen><userinput>make -f Makefile-libbz2_so CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" 
+<screen><userinput>make -f Makefile-libbz2_so CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}"
 make clean</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

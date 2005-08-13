@@ -44,7 +44,7 @@
 
     <para>Prepare Bzip2 for compilation with:</para>
 
-<screen><userinput>make -f Makefile-libbz2_so CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}" 
+<screen><userinput>make -f Makefile-libbz2_so CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}"
 make clean</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

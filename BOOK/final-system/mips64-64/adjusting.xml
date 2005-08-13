@@ -64,7 +64,7 @@ platform-specific differences in dynamic linker name):</para>
 <screen><computeroutput>[Requesting program interpreter: /lib/ld.so.1]</computeroutput></screen>
 
 <para>Note that <filename class="directory">/lib</filename>,
-<filename class="directory">/lib32</filename> or 
+<filename class="directory">/lib32</filename> or
 <filename class="directory">/lib64</filename> is now the prefix
 of our dynamic linker.</para>
 

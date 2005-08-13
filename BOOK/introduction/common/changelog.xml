@@ -205,7 +205,7 @@
       <para>August 9, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[jim] - Export build variables in temp-tools to .bash_profile. 
+          <para>[jim] - Export build variables in temp-tools to .bash_profile.
           Change recommended by Christian Schneider.</para>
         </listitem>
       </itemizedlist>

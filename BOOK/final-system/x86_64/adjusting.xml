@@ -34,7 +34,7 @@
   <para>It is a good idea to visually inspect the specs file to verify the
   intended change was actually made.</para>
 
-  <para>Note that <filename class="directory">/lib</filename> or 
+  <para>Note that <filename class="directory">/lib</filename> or
   <filename class="directory">/lib64</filename> is now the prefix
   of our dynamic linker.</para>
 
@@ -68,7 +68,7 @@ platform-specific differences in dynamic linker name):</para>
 
 <screen><computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput></screen>
 
-<para>Note that <filename class="directory">/lib</filename> or 
+<para>Note that <filename class="directory">/lib</filename> or
 <filename class="directory">/lib64</filename> is now the prefix
 of our dynamic linker.</para>
 
