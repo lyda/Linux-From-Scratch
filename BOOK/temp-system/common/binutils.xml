@@ -43,26 +43,26 @@
   <sect2 role="installation">
     <title>Installation of Binutils</title>
 
-    <para>It is important that Binutils be the first package compiled
+    <para os="da">It is important that Binutils be the first package compiled
     because both Glibc and GCC perform various tests on the available
     linker and assembler to determine which of their own features to
     enable.</para>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/common/binutils.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    xpointer="xpointer(//*[@os='ba'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/common/binutils.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@os='bb'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/binutils.xml"
-    xpointer="xpointer(id('install-binutils')/para[5])"/>
+    xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/binutils.xml"
-    xpointer="xpointer(id('install-binutils')/screen[3])"/>
+    xpointer="xpointer(//*[@os='h'])"/>
 
     <!-- To be moved to their proper file (or full removed) when decided
     how to manage SBUs
@@ -78,21 +78,37 @@
 
     -->
 
-    <para>Now prepare Binutils for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/binutils.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
 <screen><userinput>../binutils-&binutils-version;/configure --prefix=/tools \
      --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
      --disable-nls --enable-shared --enable-64-bit-bfd</userinput></screen>
 
-    <para>Continue with compiling the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/common/binutils.xml"
+    xpointer="xpointer(//*[@os='be'])"/>
 
-<screen><userinput>make configure-host
-make headers -C bfd
-make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/common/binutils.xml"
+    xpointer="xpointer(//*[@os='bf'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/common/binutils.xml"
+    xpointer="xpointer(//*[@os='bg'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/common/binutils.xml"
+    xpointer="xpointer(//*[@os='bh'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/common/binutils.xml"
+    xpointer="xpointer(//*[@os='bi'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../cross-tools/common/binutils.xml"
+    xpointer="xpointer(//*[@os='bj'])"/>
 
   </sect2>
 

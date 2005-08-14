@@ -45,31 +45,31 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    xpointer="xpointer(//*[@os='da'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/common/binutils.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='ba'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/common/binutils.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bb'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/mips64/binutils.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    href="../../final-system/multilib/binutils.xml"
+    xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../cross-tools/mips64/binutils.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+    href="../../final-system/multilib/binutils.xml"
+    xpointer="xpointer(//*[@os='ab'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/binutils.xml"
-    xpointer="xpointer(id('install-binutils')/para[5])"/>
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/binutils.xml"
-    xpointer="xpointer(id('install-binutils')/screen[3])"/>
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
     <!-- To be moved to their proper file (or full removed) when decided
     how to manage SBUs
@@ -85,7 +85,9 @@
 
     -->
 
-    <para>Now prepare Binutils for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
 <screen><userinput>CC="${CC} ${BUILD64}" \
      ../binutils-&binutils-version;/configure --prefix=/tools \
@@ -105,20 +107,29 @@
 
     </variablelist>
 
-    <para>Continue with compiling the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='be'])"/>
 
-<screen><userinput>make configure-host
-make headers -C bfd
-make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bf'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bg'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bh'])"/>
 
-    <para>Copy <filename class="headerfile">libiberty.h</filename> file to
-    <filename class="directory">/tools/include</filename> directory:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bi'])"/>
 
-<screen><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /tools/include</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bj'])"/>
 
   </sect2>
 

@@ -43,26 +43,28 @@
   <sect2 role="installation">
     <title>Installation of Cross Binutils</title>
 
-    <para>To make sure that we use the proper syntax for a couple of
-    tools, we apply the following patch:</para>
+    <para os="ba">To make sure that the proper syntax is used for a couple of
+    tools, apply the following patch:</para>
 
-<screen><userinput>patch -Np1 -i ../&binutils-posix-patch;</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/binutils.xml"
-    xpointer="xpointer(id('install-binutils')/para[5])"/>
+<screen os="bb"><userinput>patch -Np1 -i ../&binutils-posix-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/binutils.xml"
-    xpointer="xpointer(id('install-binutils')/screen[3])"/>
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Prepare Binutils for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/binutils.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<screen><userinput>../binutils-&binutils-version;/configure --prefix=/cross-tools \
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/binutils.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
+
+<screen os="bc"><userinput>../binutils-&binutils-version;/configure --prefix=/cross-tools \
    --host=${LFS_HOST} --target=${LFS_TARGET} --with-lib-path=/tools/lib \
    --disable-nls --enable-shared --enable-64-bit-bfd</userinput></screen>
 
-    <variablelist>
+    <variablelist os="bd">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
@@ -123,20 +125,20 @@
 
     </variablelist>
 
-    <para>Compile the package:</para>
+    <para os="be">Compile the package:</para>
 
-<screen><userinput>make configure-host
+<screen os="bf"><userinput>make configure-host
 make headers -C bfd
 make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="bg">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="bh"><userinput>make install</userinput></screen>
 
-    <para>Copy <filename class="headerfile">libiberty.h</filename> file to
+    <para os="bi">Copy <filename class="headerfile">libiberty.h</filename> file to
     <filename class="directory">/tools/include</filename> directory:</para>
 
-<screen><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /tools/include</userinput></screen>
+<screen os="bj"><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /tools/include</userinput></screen>
 
   </sect2>
 

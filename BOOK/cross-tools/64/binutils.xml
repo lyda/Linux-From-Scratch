@@ -43,27 +43,32 @@
   <sect2 role="installation">
     <title>Installation of Cross Binutils</title>
 
-    <para>To make sure that we use the proper syntax for a couple of
-    tools, we apply the following patch:</para>
-
-<screen><userinput>patch -Np1 -i ../&binutils-posix-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='ba'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/binutils.xml"
-    xpointer="xpointer(id('install-binutils')/para[5])"/>
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bb'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/binutils.xml"
-    xpointer="xpointer(id('install-binutils')/screen[3])"/>
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Prepare Binutils for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<screen><userinput>../binutils-&binutils-version;/configure --prefix=/cross-tools \
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
+
+<screen os="ca"><userinput>../binutils-&binutils-version;/configure --prefix=/cross-tools \
    --host=${LFS_HOST} --target=${LFS_TARGET} --with-lib-path=/tools/lib \
    --disable-nls --enable-shared --enable-64-bit-bfd \
    --disable-multilib</userinput></screen>
 
-    <variablelist>
+    <variablelist os="cb">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
@@ -124,20 +129,29 @@
 
     </variablelist>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='be'])"/>
 
-<screen><userinput>make configure-host
-make headers -C bfd
-make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bf'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bg'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bh'])"/>
 
-    <para>Copy <filename class="headerfile">libiberty.h</filename> file to
-    <filename class="directory">/tools/include</filename> directory:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bi'])"/>
 
-<screen><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /tools/include</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bj'])"/>
 
   </sect2>
 

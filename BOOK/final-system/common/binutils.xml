@@ -46,55 +46,56 @@
   <sect2 id="install-binutils" role="installation">
     <title>Installation of Binutils</title>
 
-    <para>This package is known to have issues when its default
+    <para os="a">This package is known to have issues when its default
     optimization flags (including the <option>-march</option> and
     <option>-mcpu</option> options) are changed. If any environment
     variables that override default optimizations have been defined, such
     as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
     unset them when building Binutils.</para>
 
-    <para>Verify that the PTYs are working properly inside the chroot
+    <para os="b">Verify that the PTYs are working properly inside the build
     environment. Check that everything is set up correctly by performing a
     simple test:</para>
 
-<screen><userinput>expect -c "spawn ls"</userinput></screen>
+<screen os="c"><userinput>expect -c "spawn ls"</userinput></screen>
 
-    <para>If the following message shows up, the chroot environment is not
+    <para os="d">If the following message shows up, the environment is not
     set up for proper PTY operation:</para>
 
-<screen><computeroutput>The system has no more ptys.
+<screen os="e"><computeroutput>The system has no more ptys.
 Ask your system administrator to create more.</computeroutput></screen>
 
-    <para>This issue needs to be resolved before running the test suites
+    <para os="f">This issue needs to be resolved before running the test suites
     for Binutils and GCC.</para>
 
-    <para>The Binutils documentation recommends building Binutils outside of the
+    <para os="g">The Binutils documentation recommends building Binutils outside of the
     source directory in a dedicated build directory:</para>
 
-<screen><userinput>mkdir ../binutils-build
+<screen os="h"><userinput>mkdir ../binutils-build
 cd ../binutils-build</userinput></screen>
 
-    <para>Prepare Binutils for compilation:</para>
+    <para os="i">Prepare Binutils for compilation:</para>
 
 <screen><userinput>../binutils-&binutils-version;/configure --prefix=/usr \
     --enable-shared</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="j">Compile the package:</para>
 
-<screen><userinput>make configure-host</userinput></screen>
+<screen os="k"><userinput>make configure-host</userinput></screen>
 
-    <important>
-      <para>During make configure-host you may receive the following
-      error message. It is safe to ignore.</para>
-      <para>WARNING: `flex' is missing on your system.  You should only need it if
-      you modified a `.l' file.  You may need the `Flex' package
-      in order for those modifications to take effect.  You can get
-      `Flex' from any GNU archive site.</para>
+    <important os="l">
+      <para>During <command>make configure-host</command> you may receive the
+      following error message. It is safe to ignore.</para>
+
+<screen><computeroutput>WARNING: `flex' is missing on your system. You should only
+need it if you modified a `.l' file. You may need the `Flex'
+package in order for those modifications to take effect. You
+can get `Flex' from any GNU archive site.</computeroutput></screen>
     </important>
 
-<screen><userinput>make tooldir=/usr</userinput></screen>
+<screen os="m"><userinput>make tooldir=/usr</userinput></screen>
 
-    <para>Normally, the tooldir (the directory where the executables
+    <para os="n">Normally, the tooldir (the directory where the executables
     will ultimately be located) is set to <filename
     class="directory">$(exec_prefix)/$(target_alias)</filename>. For
     example, i686 machines would expand that to <filename
@@ -106,23 +107,23 @@ cd ../binutils-build</userinput></screen>
     compiling a package on an Intel machine that generates code that
     can be executed on PowerPC machines).</para>
 
-    <important>
+    <important os="o">
       <para>The test suite for Binutils in this section is  considered critical.
       Do not skip it under any circumstances.</para>
     </important>
 
-    <para>Test the results:</para>
+    <para os="p">Test the results:</para>
 
-<screen><userinput>make check</userinput></screen>
+<screen os="q"><userinput>make check</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="r">Install the package:</para>
 
-<screen><userinput>make tooldir=/usr install</userinput></screen>
+<screen os="s"><userinput>make tooldir=/usr install</userinput></screen>
 
-    <para>Install the <filename class="headerfile">libiberty</filename> header
+    <para os="t">Install the <filename class="headerfile">libiberty</filename> header
     file that is needed by some packages:</para>
 
-<screen><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /usr/include</userinput></screen>
+<screen os="u"><userinput>cp ../binutils-&binutils-version;/include/libiberty.h /usr/include</userinput></screen>
 
   </sect2>
 
