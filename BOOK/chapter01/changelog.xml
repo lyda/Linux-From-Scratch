@@ -117,6 +117,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 14th, 2005 [matt]: Mention the common libmudflap test
+failures in GCC (fixes bug 1615).</para></listitem>
+
 <listitem><para>August 14th, 2005 [matt]: Add sed to chapter05/gcc-pass2 and chapter06/gcc to ensure they get built with -fomit-frame-pointer so it matches the
 bootstrap build in chapter05/gcc-pass1 (fixes bug 1609).</para></listitem>
 
