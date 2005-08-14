@@ -87,6 +87,7 @@ First a summary, then a detailed log.</para>
 
 <listitem><para>Added:</para>
 <itemizedlist>
+<listitem><para>&bzip2-docs-patch;</para></listitem>
 <listitem><para>&gcc-specs-patch;</para></listitem>
 <listitem><para>&glibc-gcc4_elf-patch;</para></listitem>
 <listitem><para>&glibc-gcc4_iconvdata-patch;</para></listitem>
@@ -120,8 +121,18 @@ First a summary, then a detailed log.</para>
 <listitem><para>August 14th, 2005 [matt]: Mention the common libmudflap test
 failures in GCC (fixes bug 1615).</para></listitem>
 
+<listitem><para>August 14th, 2005 [matt]: Added patch to install documentation
+for bzip2 (fixes bug 1603).</para>
+</listitem>
+
+<listitem><para>August 14th, 2005 [matt]: Upgrade to linux-2.6.12.4.</para>
+</listitem>
+
 <listitem><para>August 14th, 2005 [matt]: Add sed to chapter05/gcc-pass2 and chapter06/gcc to ensure they get built with -fomit-frame-pointer so it matches the
 bootstrap build in chapter05/gcc-pass1 (fixes bug 1609).</para></listitem>
+
+<listitem><para>August 14th, 2005 [matt]: Upgrade to udev-067 including a fix
+for the failing test (bug 1611).</para></listitem>
 
 <listitem><para>August 12th, 2005 [matt]: Explain that libiconv isn't required
 on an LFS system (fixes bug 1614).</para></listitem>
