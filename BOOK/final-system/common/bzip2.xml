@@ -47,37 +47,38 @@
   <sect2 id="install-bzip2" role="installation">
     <title>Installation of Bzip2</title>
 
-    <para>Prepare Bzip2 for compilation with:</para>
+    <para os="a">The Bzip2 package does not contain a <command>configure</command>
+    script. Compile it with:</para>
 
 <screen><userinput>make -f Makefile-libbz2_so
 make clean</userinput></screen>
 
-    <para>The <parameter>-f</parameter> flag will cause Bzip2 to be built
+    <para os="b">The <parameter>-f</parameter> flag will cause Bzip2 to be built
     using a different <filename>Makefile</filename> file, in this case the
     <filename>Makefile-libbz2_so</filename> file, which creates a dynamic
     <filename class="libraryfile">libbz2.so</filename> library and links the
     Bzip2 utilities against it.</para>
 
-    <para>Compile the package:</para>
+    <para os="c">Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-    <para>To test the results, issue:
+    <para os="d">To test the results, issue:
     <userinput>make test</userinput>.</para>
 
-    <para>If reinstalling Bzip2, perform
+    <para os="e">If reinstalling Bzip2, perform
     <userinput>rm -f /usr/bin/bz*</userinput> first, otherwise the
     following <command>make install</command> will fail.</para>
 
-    <para>Install the programs:</para>
+    <para os="f">Install the programs:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="g"><userinput>make install</userinput></screen>
 
-    <para>Install the shared <command>bzip2</command> binary into the
+    <para os="h">Install the shared <command>bzip2</command> binary into the
     <filename class="directory">/bin</filename> directory, make
     some necessary symbolic links, and clean up:</para>
 
-<screen><userinput>cp bzip2-shared /bin/bzip2
+<screen os="i"><userinput>cp bzip2-shared /bin/bzip2
 cp -a libbz2.so* /lib
 ln -s ../../lib/libbz2.so.1.0 /usr/lib/libbz2.so
 rm /usr/bin/{bunzip2,bzcat,bzip2}

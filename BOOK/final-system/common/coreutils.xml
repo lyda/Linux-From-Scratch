@@ -46,65 +46,63 @@
   <sect2 id="install-coreutils" role="installation">
     <title>Installation of Coreutils</title>
 
-    <para>Prevent Coreutils from installing binaries that will be
+    <para os="a">Prevent Coreutils from installing binaries that will be
     installed by other packages:</para>
 
-<screen><userinput>patch -Np1 -i ../&coreutils-suppress-patch;</userinput></screen>
+<screen os="b"><userinput>patch -Np1 -i ../&coreutils-suppress-patch;</userinput></screen>
 
-    <para>Now prepare Coreutils for compilation:</para>
+    <para os="c">Now prepare Coreutils for compilation:</para>
 
-<screen><userinput>DEFAULT_POSIX2_VERSION=199209 ./configure --prefix=/usr</userinput></screen>
+<screen os="d"><userinput>DEFAULT_POSIX2_VERSION=199209 ./configure --prefix=/usr</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="e">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="f"><userinput>make</userinput></screen>
 
-    <para>The test suite of Coreutils makes several assumptions about the
+    <para os="g">The test suite of Coreutils makes several assumptions about the
     presence of system users and groups that are not valid within the minimal
     environment that exists at the moment. Therefore, additional items need
     to be set up before running the tests. Skip down to <quote>Install the
     package</quote> if not running the test suite.</para>
 
-    <para>Create two <systemitem class="groupname">dummy</systemitem> groups
+    <para os="h">Create two <systemitem class="groupname">dummy</systemitem> groups
     and a <systemitem class="username">dummy</systemitem> user:</para>
 
-<screen><userinput>echo "dummy1:x:1000:" &gt;&gt; /etc/group
+<screen os="i"><userinput>echo "dummy1:x:1000:" &gt;&gt; /etc/group
 echo "dummy2:x:1001:dummy" &gt;&gt; /etc/group
 echo "dummy:x:1000:1000:::/bin/bash" &gt;&gt; /etc/passwd</userinput></screen>
 
-    <para>Now the test suite is ready to be run. First, run
+    <para os="j">Now the test suite is ready to be run. First, run
     the tests that are meant to be run as user
     <systemitem class="username">root</systemitem>:</para>
 
-<screen><userinput>make NON_ROOT_USERNAME=dummy check-root</userinput></screen>
+<screen os="k"><userinput>make NON_ROOT_USERNAME=dummy check-root</userinput></screen>
 
-    <para>Then run the remainder of the tests as the
+    <para os="l">Then run the remainder of the tests as the
     <systemitem class="username">dummy</systemitem> user:</para>
 
-<screen><userinput>src/su dummy -c "make RUN_EXPENSIVE_TESTS=yes check"</userinput></screen>
+<screen os="m"><userinput>src/su dummy -c "make RUN_EXPENSIVE_TESTS=yes check"</userinput></screen>
 
-    <para>When testing is complete, remove the
+    <para os="n">When testing is complete, remove the
     <systemitem class="username">dummy</systemitem> user and groups:</para>
 
-<screen><userinput>sed -i '/dummy/d' /etc/passwd /etc/group</userinput></screen>
+<screen os="o"><userinput>sed -i '/dummy/d' /etc/passwd /etc/group</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="p">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="q"><userinput>make install</userinput></screen>
 
-    <para>Move programs to the proper locations:</para>
+    <para os="r">Move programs to the proper locations:</para>
 
-<screen><userinput>mv /usr/bin/{[,basename,cat,chgrp,chmod,chown,cp,dd,df} /bin
+<screen os="s"><userinput>mv /usr/bin/{[,basename,cat,chgrp,chmod,chown,cp,dd,df} /bin
 mv /usr/bin/{date,echo,false,head,hostname,install,ln} /bin
 mv /usr/bin/{ls,mkdir,mknod,mv,pwd,rm,rmdir,sync} /bin
 mv /usr/bin/{sleep,stty,test,touch,true,uname} /bin
 mv /usr/bin/chroot /usr/sbin</userinput></screen>
 
-    <para>Finally, create a symlink to be FHS-compliant:</para>
+    <para os="t">Finally, create a symlink to be FHS-compliant:</para>
 
-<screen><userinput>ln -s ../../bin/install /usr/bin</userinput></screen>
-
-    <para/>
+<screen os="u"><userinput>ln -s ../../bin/install /usr/bin</userinput></screen>
 
   </sect2>
 

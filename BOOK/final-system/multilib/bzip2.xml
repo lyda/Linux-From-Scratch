@@ -42,37 +42,46 @@
   <sect2 role="installation">
     <title>Installation of Bzip2</title>
 
-    <para>Prepare Bzip2 for compilation with:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>make -f Makefile-libbz2_so CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}"
 make clean</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bzip2.xml"
-    xpointer="xpointer(id('install-bzip2')/para[2])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>make CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}"</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bzip2.xml"
-    xpointer="xpointer(id('install-bzip2')/para[4])"/>
-
-    <para>Install the programs:</para>
-
-<screen><userinput>make install</userinput></screen>
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bzip2.xml"
-    xpointer="xpointer(id('install-bzip2')/para[6])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>cp bzip2-shared /bin/bzip2
-cp -a libbz2.so* /lib
-ln -s ../../lib/libbz2.so.1.0 /usr/lib/libbz2.so
-rm /usr/bin/{bunzip2,bzcat,bzip2}
-ln -s bzip2 /bin/bunzip2
-ln -s bzip2 /bin/bzcat</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
   </sect2>
 

@@ -45,13 +45,15 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/coreutils.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    xpointer="xpointer(//*[@os='ba'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/coreutils.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@os='bc'])"/>
 
-<para>Prepare Coreutils for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@os='bd'])"/>
 
 <screen><userinput>DEFAULT_POSIX2_VERSION=199209 CC="${CC} ${BUILD64}" \
    ./configure --prefix=/tools --cache-file=config.cache \
@@ -59,15 +61,23 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/coreutils.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    xpointer="xpointer(//*[@os='be'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@os='bf'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@os='bg'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@os='bh'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/coreutils.xml"
+    xpointer="xpointer(//*[@os='bi'])"/>
 
   </sect2>
 
