@@ -45,6 +45,14 @@ Binutils will be used instead:</para>
 
 <screen><userinput>sed -i 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in</userinput></screen>
 
+<para>The bootstrap build performed in <xref linkend="ch-tools-gcc-pass1"/>
+built GCC with the <option>-fomit-frame-pointer</option> compiler flag.
+Non-bootstrap builds omit this flag by default, so apply the following
+<command>sed</command> to use it in order to ensure consistent compiler builds.
+</para>
+
+<screen><userinput>sed -i 's/^XCFLAGS =/&amp; -fomit-frame-pointer/' gcc/Makefile.in</userinput></screen>
+
 <para>The GCC documentation recommends building GCC outside of the source
 directory in a dedicated build directory:</para>
 
