@@ -48,18 +48,18 @@
   <sect2 id="install-e2fsprogs" role="installation">
     <title>Installation of E2fsprogs</title>
 
-    <para>It is recommended that E2fsprogs be built in a subdirectory of
+    <para os="a">It is recommended that E2fsprogs be built in a subdirectory of
     the source tree:</para>
 
-<screen><userinput>mkdir build
+<screen os="b"><userinput>mkdir build
 cd build</userinput></screen>
 
-    <para>Prepare E2fsprogs for compilation:</para>
+    <para os="c">Prepare E2fsprogs for compilation:</para>
 
 <screen><userinput>../configure --prefix=/usr --with-root-prefix="" \
     --enable-elf-shlibs --disable-evms</userinput></screen>
 
-    <variablelist>
+    <variablelist os="d">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
@@ -76,7 +76,7 @@ cd build</userinput></screen>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="l">
         <term><parameter>--enable-elf-shlibs</parameter></term>
         <listitem>
           <para>This creates the shared libraries which some programs
@@ -84,7 +84,7 @@ cd build</userinput></screen>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="m">
         <term><parameter>--disable-evms</parameter></term>
         <listitem>
           <para>This disables the building of the Enterprise Volume
@@ -97,20 +97,20 @@ cd build</userinput></screen>
       </varlistentry>
     </variablelist>
 
-    <para>Compile the package:</para>
+    <para os="e">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="f"><userinput>make</userinput></screen>
 
-    <para>To test the results, issue:
+    <para os="g">To test the results, issue:
     <userinput>make check</userinput>.</para>
 
-    <para>Install the binaries and documentation:</para>
+    <para os="h">Install the binaries and documentation:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="i"><userinput>make install</userinput></screen>
 
-    <para>Install the shared libraries:</para>
+    <para os="j">Install the shared libraries:</para>
 
-<screen><userinput>make install-libs</userinput></screen>
+<screen os="k"><userinput>make install-libs</userinput></screen>
 
   </sect2>
 

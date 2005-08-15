@@ -45,46 +45,58 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/e2fsprogs.xml"
-    xpointer="xpointer(id('install-e2fsprogs')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/e2fsprogs.xml"
-    xpointer="xpointer(id('install-e2fsprogs')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Prepare E2fsprogs for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/e2fsprogs.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>../configure --prefix=/tools \
     --enable-elf-shlibs --disable-evms \
     --host=${LFS_TARGET}</userinput></screen>
 
-    <variablelist>
+    <variablelist os="aa">
       <title>The meaning of the configure options:</title>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../../final-system/common/e2fsprogs.xml"
-      xpointer="xpointer(id('install-e2fsprogs')/variablelist[1]/varlistentry[2])"/>
+      xpointer="xpointer(//*[@os='l'])"/>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../../final-system/common/e2fsprogs.xml"
-      xpointer="xpointer(id('install-e2fsprogs')/variablelist[1]/varlistentry[3])"/>
+      xpointer="xpointer(//*[@os='m'])"/>
 
     </variablelist>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/e2fsprogs.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
 <screen><userinput>make LDFLAGS="-s"</userinput></screen>
 
-    <para>Install most of the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/e2fsprogs.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/e2fsprogs.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
-    <para>Install the shared libraries:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/e2fsprogs.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
-<screen><userinput>make install-libs</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/e2fsprogs.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
-    <para>Create needed symlinks for a bootable system:</para>
+    <para os="ab">Create needed symlinks for a bootable system:</para>
 
-<screen><userinput>install -d ${LFS}/sbin
+<screen os="ac"><userinput>install -d ${LFS}/sbin
 cd ${LFS}/sbin
 ln -sf ../tools/sbin/fsck.ext2 .
 ln -sf ../tools/sbin/fsck.ext3 .

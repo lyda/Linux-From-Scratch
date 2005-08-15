@@ -44,28 +44,34 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/e2fsprogs.xml"
-    xpointer="xpointer(id('install-e2fsprogs')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/e2fsprogs.xml"
-    xpointer="xpointer(id('install-e2fsprogs')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Prepare E2fsprogs for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/e2fsprogs.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="gcc ${BUILD32}" ../configure --prefix=/usr \
     --with-root-prefix="" --enable-elf-shlibs --disable-evms</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/e2fsprogs.xml"
-    xpointer="xpointer(id('install-e2fsprogs')/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Compile the package:</para>
+    <para>Compile the libraries:</para>
 
 <screen><userinput>make libs</userinput></screen>
 
-    <para>Install the shared libraries:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/e2fsprogs.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
-<screen><userinput>make install-libs</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/e2fsprogs.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
   </sect2>
 
