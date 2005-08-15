@@ -1,3 +1,9 @@
+n/a - August 14, 2005
+	* Added -s flag to pidofproc() for backwards 
+	  compatibility (DJ Lucas)
+	* Fixed erronous values returned by pidofproc() which 
+	  broke the functionality of statusproc (DJ Lucas)
+
 n/a - July 1, 2005
 	* Changed a == to a = in lfs/init.d/functions, in the boot_mesg
 	  function for ash compliancy (Nathan Coulson)

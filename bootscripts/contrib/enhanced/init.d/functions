@@ -409,7 +409,7 @@ statusproc()
 # The below functions are documented in the LSB-generic 2.1.0
 
 #*******************************************************************************
-# Function - pidofproc [-p pidfile] pathname
+# Function - pidofproc [-s] [-p pidfile] pathname
 #
 # Purpose: This function returns one or more pid(s) for a particular daemon
 #
@@ -432,13 +432,21 @@ pidofproc()
 {
 	local pidfile=""
 	local lpids=""
-	local pidlist=""
+	local silent=""
+	pidlist=""
 	while true
 	do
 		case "${1}" in
 			-p)
 				pidfile="${2}"
 				shift 2
+				;;
+
+			-s)
+				# Added for legacy opperation of getpids
+				# eliminates several '> /dev/null'
+				silent="1"
+				shift 1
 				;;
 			-*)
 				log_failure_msg "Unknown Option: ${1}"
@@ -452,7 +460,7 @@ pidofproc()
 
 	if [ "${#}" != "1" ]; then
 		shift 1
-		log_failure_msg "Usage: pidofproc [-p pidfile] pathname"
+		log_failure_msg "Usage: pidofproc [-s] [-p pidfile] pathname"
 		return 2
 	fi
 
@@ -468,13 +476,31 @@ pidofproc()
 				kill -0 "${pid}" > /dev/null &&
 				pidlist="${pidlist} ${pid}"
 			fi
-			echo ${pidlist}
-			test -z "${pidlist}" && return 1 # Program is dead, pidfile exists
+			
+			if [ "${silent}" -ne "1" ]; then
+				echo "${pidlist}"
+			fi
+
+			test -z "${pidlist}" && 
+			# Program is dead, pidfile exists
+			return 1
+			# else
 			return 0
 		done
 
 	else
-		pidof -o $$ -o $PPID -x "${1}"
+		pidlist=`pidof -o $$ -o $PPID -x "$1"`
+		if [ "x${silent}" != "x1" ]; then
+			echo "${pidlist}"
+		fi
+
+		# Get provide correct running status
+		if [ -n "${pidlist}" ]; then
+			return 0
+		else
+			return 3
+		fi
+
 	fi
 
 	if [ "$?" != "0" ]; then
@@ -486,9 +512,9 @@ pidofproc()
 getpids()
 {
 	if [ -z "${PIDFILE}" ]; then
-		pidlist=`pidofproc -p "${PIDFILE}" $@`
+		pidofproc -s -p "${PIDFILE}" $@
 	else
-		pidlist=`pidofproc $@`
+		pidofproc -s $@
 	fi
 	base="${1##*/}"
 }
@@ -560,9 +586,9 @@ loadproc()
 
 	if [ -z "${forcestart}" ]; then
 		if [ -z "${pidfile}" ];	then
-			pidofproc "${1}" > /dev/null
+			pidofproc -s "${1}"
 		else
-			pidofproc -p "${pidfile}" "${1}" > /dev/null
+			pidofproc -s -p "${pidfile}" "${1}"
 		fi
 
 		case "${?}" in
@@ -612,7 +638,7 @@ killproc()
 {
 	local pidfile=""
 	local killsig=""
-	local pidlist=""
+	pidlist=""
 
 # This will ensure compatibility with previous LFS Bootscripts
 	if [ -n "${PIDFILE}" ];	then
@@ -645,9 +671,9 @@ killproc()
 	fi
 
 	if [ -z "${pidfile}" ];	then
-		pidlist=`pidofproc "${1}"`
+		pidofproc -s "${1}"
 	else
-		pidlist=`pidofproc -p "${pidfile}" "${1}"`
+		pidofproc -s -p "${pidfile}" "${1}"
 	fi
 
 	for pid in ${pidlist}
@@ -668,7 +694,7 @@ killproc()
 	done
 
 	if [ -z "${killsig}" ];	then
-		pidofproc "${1}" > /dev/null
+		pidofproc -s "${1}"
 
 		# Program was terminated
 		if [ "$?" != "0" ]; then
@@ -684,14 +710,16 @@ killproc()
 		fi
 	else
 		if [ -z "${pidfile}" ];	then
-			pidofproc "${1}" > /dev/null
+			pidofproc -s "${1}"
 		else
-			pidofproc -p "${pidfile}" "${1}" > /dev/null
+			pidofproc -s -p "${pidfile}" "${1}"
 		fi
 	fi
 
 	evaluate_retval # This is "Probably" not LSB compliant, but required to be compatible with older bootscripts
+
 }
+
 
 #*******************************************************************************
 # Function - log_success_msg "message"
