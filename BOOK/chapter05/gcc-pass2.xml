@@ -82,7 +82,7 @@ Non-bootstrap builds omit this flag by default, so apply the following
 <command>sed</command> to use it in order to ensure consistent compiler builds.
 </para>
 
-<screen><userinput>sed -i 's/^XCFLAGS =/&amp; -fomit-frame-pointer/' gcc/Makefile.in</userinput></screen>
+<screen><userinput>sed -i 's/^XCFLAGS =$/&amp; -fomit-frame-pointer/' gcc/Makefile.in</userinput></screen>
 
 <para>Apply the following patch to change the location of GCC's default dynamic
 linker (typically <filename class="libraryfile">ld-linux.so.2</filename>):</para>

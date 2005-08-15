@@ -118,6 +118,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 15th, 2005 [matt]: Alter the GCC -fomit-frame-pointer sed
+to protect from multiple invocations (Greg Schafer)</para></listitem>
+
 <listitem><para>August 14th, 2005 [matt]: Mention the common libmudflap test
 failures in GCC (fixes bug 1615).</para></listitem>
 

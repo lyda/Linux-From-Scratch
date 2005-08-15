@@ -51,7 +51,7 @@ Non-bootstrap builds omit this flag by default, so apply the following
 <command>sed</command> to use it in order to ensure consistent compiler builds.
 </para>
 
-<screen><userinput>sed -i 's/^XCFLAGS =/&amp; -fomit-frame-pointer/' gcc/Makefile.in</userinput></screen>
+<screen><userinput>sed -i 's/^XCFLAGS =$/&amp; -fomit-frame-pointer/' gcc/Makefile.in</userinput></screen>
 
 <para>The GCC documentation recommends building GCC outside of the source
 directory in a dedicated build directory:</para>
