@@ -131,6 +131,9 @@
       <para>Bash-doc-&bash-doc-version;</para>
     </listitem>
     <listitem>
+      <para>&bzip2-docs-patch;</para>
+    </listitem>
+    <listitem>
       <para>&binutils-posix-patch;</para>
     </listitem>
     <listitem>
@@ -200,6 +203,18 @@
       </itemizedlist>
     </listitem>
 -->
+
+    <listitem>
+      <para>August 16, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Text updates ported from trunk up to r6693.</para>
+        </listitem>
+        <listitem>
+          <para>[manuel] - Added Bzip2 documentation patch.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>August 9, 2005</para>

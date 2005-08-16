@@ -42,7 +42,13 @@
   <sect2 role="installation">
     <title>Installation of Bzip2</title>
 
-    <para>Prepare Bzip2 for compilation with:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bzip2.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
     <para os="ba">We need to remove the tests since they won't work on
     a multi-architecture build, and tell change the default lib path

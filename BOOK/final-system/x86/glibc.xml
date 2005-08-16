@@ -48,6 +48,17 @@
   <sect2 id="install-glibc" role="installation">
     <title>Installation of Glibc</title>
 
+    <note os="z">
+      <para>Some packages outside of LFS suggest installing GNU libiconv in
+      order to translate data from one encoding to another. The project's
+      home page (<ulink url="http://www.gnu.org/software/libiconv/"/>) says
+      <quote>This library provides an <function>iconv()</function>
+      implementation, for use on systems which don't have one, or whose
+      implementation cannot convert from/to Unicode.</quote> Glibc provides
+      an <function>iconv()</function> implementation and can convert from/to
+      Unicode, therefore libiconv is not required on an LFS system.</para>
+    </note>
+
     <para os="a">This package is known to behave badly when you change its default
     optimization flags (including the <option>-march</option> and
     <option>-mcpu</option> options). Therefore, if you have defined any
@@ -63,7 +74,7 @@
 
     <para os="c">Glibc has two tests which fail when the running kernel is 2.6.11 or
     later. The problem has been determined to be with the tests themselves, not
-    with the C library nor the kernel. This patch fixes the problem:</para>
+    with the C library or the kernel. This patch fixes the problem:</para>
 
 <screen os="d"><userinput>patch -Np1 -i ../&glibc-testfix-patch;</userinput></screen>
 

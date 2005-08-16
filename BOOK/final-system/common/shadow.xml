@@ -46,9 +46,31 @@
   <sect2 id="install-shadow" role="installation">
     <title>Installation of Shadow</title>
 
+    <note>
+      <para>If you would like to enforce the use of strong passwords,
+      refer to <ulink url="&blfs-root;view/svn/postlfs/cracklib.html"/>
+      for installing Cracklib prior to building Shadow. Then add
+      <parameter>--with-libcrack</parameter> to the <command>configure</command>
+      command below.</para>
+    </note>
+
     <para>Prepare Shadow for compilation:</para>
 
-<screen><userinput>./configure --libdir=/lib --enable-shared</userinput></screen>
+<screen><userinput>./configure --libdir=/lib --enable-shared --enable-shadowgrp</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the new configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--enable-shadowgrp</parameter></term>
+        <listitem>
+          <para>This version of Shadow defaults to not enabling shadow group
+          functionality, which will cause <command>grpconv</command> to
+          fail.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
     <para>Disable the installation of the <command>groups</command> program
     and it's man page, as Coreutils provides a better version:</para>
@@ -92,9 +114,16 @@ sed -i '/groups/d' man/Makefile</userinput></screen>
       <primary sortas="e-/etc/login.defs">/etc/login.defs</primary>
     </indexterm>
 
-<screen><userinput>cp etc/login.defs.linux /etc/login.defs
-sed -i -e 's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
-    -e 's@/var/spool/mail@/var/mail@' /etc/login.defs</userinput></screen>
+    <note>
+      <para>If you built Shadow with Cracklib support, insert the following into
+      the <command>sed</command> given below:</para>
+
+<screen><literal>-e 's@DICTPATH.*@DICTPATH\t/lib/cracklib/pw_dict@'</literal></screen>
+    </note>
+
+<screen><userinput>sed -e's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
+    -e 's@/var/spool/mail@/var/mail@' \
+    etc/login.defs.linux &gt; /etc/login.defs</userinput></screen>
 
     <para>Move a misplaced program to their proper location:</para>
 
@@ -170,7 +199,7 @@ ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
       <seglistitem>
         <seg>chage, chfn, chpasswd, chsh, expiry, faillog, gpasswd, groupadd,
         groupdel, groupmod, grpck, grpconv, grpunconv, lastlog, login,
-        logoutd, mkpasswd, newgrp, newusers, passwd, pwck, pwconv, pwunconv,
+        logoutd, newgrp, newusers, passwd, pwck, pwconv, pwunconv,
         sg (link to newgrp), useradd, userdel, usermod, vigr (link to vipw),
         and vipw</seg>
         <seg>libshadow.[a,so]</seg>
@@ -349,16 +378,6 @@ ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
           and ports</para>
           <indexterm zone="ch-system-shadow logoutd">
             <primary sortas="b-logoutd">logoutd</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="mkpasswd">
-        <term><command>mkpasswd</command></term>
-        <listitem>
-          <para>Generates random passwords</para>
-          <indexterm zone="ch-system-shadow mkpasswd">
-            <primary sortas="b-mkpasswd">mkpasswd</primary>
           </indexterm>
         </listitem>
       </varlistentry>

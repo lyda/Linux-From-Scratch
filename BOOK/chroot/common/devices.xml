@@ -19,7 +19,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../boot/common/devices.xml"
-    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>mknod -m 600 /dev/console c 5 1
 mknod -m 666 /dev/null c 1 3</userinput></screen>

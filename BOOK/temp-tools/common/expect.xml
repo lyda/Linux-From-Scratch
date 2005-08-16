@@ -134,7 +134,7 @@
 
       <seglistitem>
         <seg>expect</seg>
-        <seg>libexpect-5.42.a</seg>
+        <seg>libexpect-&expect-lib-version;.a</seg>
       </seglistitem>
     </segmentedlist>
 
@@ -155,12 +155,12 @@
       </varlistentry>
 
       <varlistentry id="libexpect">
-        <term><filename class="libraryfile">libexpect-5.42.a</filename></term>
+        <term><filename class="libraryfile">libexpect-&expect-lib-version;.a</filename></term>
         <listitem>
           <para>Contains functions that allow Expect to be used as a Tcl
           extension or to be used directly from C or C++ (without Tcl)</para>
           <indexterm zone="ch-temp-tools-expect libexpect">
-            <primary sortas="c-libexpect-5.42">libexpect-5.42</primary>
+            <primary sortas="c-libexpect-&expect-lib-version;">libexpect-&expect-lib-version;</primary>
           </indexterm>
         </listitem>
       </varlistentry>

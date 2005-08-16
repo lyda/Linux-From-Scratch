@@ -47,6 +47,11 @@
   <sect2 id="install-bzip2" role="installation">
     <title>Installation of Bzip2</title>
 
+    <para os="j">Apply a patch to install the documentation for this
+    package:</para>
+
+<screen os="k"><userinput>patch -Np1 -i ../&bzip2-docs-patch;</userinput></screen>
+
     <para os="a">The Bzip2 package does not contain a <command>configure</command>
     script. Compile it with:</para>
 
