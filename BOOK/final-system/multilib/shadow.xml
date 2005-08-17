@@ -42,45 +42,60 @@
   <sect2 role="installation">
     <title>Installation of Shadow</title>
 
-    <para>Prepare Shadow for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>CC="gcc ${BUILD32}" ./configure --libdir=/lib \
-   --enable-shared</userinput></screen>
+   --enable-shared --enable-shadowgrp</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/para[2])"/>
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/screen[2])"/>
-
-    <para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
-
-    <para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/para[5]/range-to(id('install-shadow')/para[8]))"/>
-
-    <para>Move Shadow's dynamic libraries to a more appropriate
-    location:</para>
-
-<screen><userinput>mv /lib/libshadow.*a /usr/lib
-rm /lib/libshadow.so
-ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/para[10])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/screen[9])"/>
+    xpointer="xpointer(//*[@os='g'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='r'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='s'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='t'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='u'])"/>
 
   </sect2>
 

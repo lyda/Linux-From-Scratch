@@ -46,7 +46,7 @@
   <sect2 id="install-shadow" role="installation">
     <title>Installation of Shadow</title>
 
-    <note>
+    <note os="a">
       <para>If you would like to enforce the use of strong passwords,
       refer to <ulink url="&blfs-root;view/svn/postlfs/cracklib.html"/>
       for installing Cracklib prior to building Shadow. Then add
@@ -54,11 +54,11 @@
       command below.</para>
     </note>
 
-    <para>Prepare Shadow for compilation:</para>
+    <para os="b">Prepare Shadow for compilation:</para>
 
 <screen><userinput>./configure --libdir=/lib --enable-shared --enable-shadowgrp</userinput></screen>
 
-    <variablelist>
+    <variablelist os="c">
       <title>The meaning of the new configure options:</title>
 
       <varlistentry>
@@ -72,35 +72,35 @@
 
     </variablelist>
 
-    <para>Disable the installation of the <command>groups</command> program
+    <para os="d">Disable the installation of the <command>groups</command> program
     and it's man page, as Coreutils provides a better version:</para>
 
-<screen><userinput>sed -i 's/groups$(EXEEXT) //' src/Makefile
+<screen os="e"><userinput>sed -i 's/groups$(EXEEXT) //' src/Makefile
 sed -i '/groups/d' man/Makefile</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="f">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="g"><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="h">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="i"><userinput>make install</userinput></screen>
 
-    <para id="shadow-limits-login_access">Shadow uses two files to configure
+    <para id="shadow-limits-login_access" os="j">Shadow uses two files to configure
     authentication settings for the system. Install these two configuration
     files:</para>
 
-    <indexterm zone="shadow-limits-login_access">
+    <indexterm zone="shadow-limits-login_access" os="k">
       <primary sortas="e-/etc/limits">/etc/limits</primary>
     </indexterm>
 
-    <indexterm zone="shadow-limits-login_access">
+    <indexterm zone="shadow-limits-login_access" os="l">
       <primary sortas="e-/etc/login.access">/etc/login.access</primary>
     </indexterm>
 
-<screen><userinput>cp etc/{limits,login.access} /etc</userinput></screen>
+<screen os="m"><userinput>cp etc/{limits,login.access} /etc</userinput></screen>
 
-    <para id="shadow-login_defs">Instead of using the default
+    <para id="shadow-login_defs" os="n">Instead of using the default
     <emphasis>crypt</emphasis> method, use the more secure
     <emphasis>MD5</emphasis> method of password encryption, which also allows
     passwords longer than 8 characters. It is also necessary to change the
@@ -110,39 +110,37 @@ sed -i '/groups/d' man/Makefile</userinput></screen>
     these can be accomplished by changing the relevant configuration file
     while copying it to its destination:</para>
 
-    <indexterm zone="shadow-login_defs">
+    <indexterm zone="shadow-login_defs" os="o">
       <primary sortas="e-/etc/login.defs">/etc/login.defs</primary>
     </indexterm>
 
-    <note>
+    <note os="p">
       <para>If you built Shadow with Cracklib support, insert the following into
       the <command>sed</command> given below:</para>
 
 <screen><literal>-e 's@DICTPATH.*@DICTPATH\t/lib/cracklib/pw_dict@'</literal></screen>
     </note>
 
-<screen><userinput>sed -e's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
+<screen os="q"><userinput>sed -e's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
     -e 's@/var/spool/mail@/var/mail@' \
     etc/login.defs.linux &gt; /etc/login.defs</userinput></screen>
 
-    <para>Move a misplaced program to their proper location:</para>
+    <para os="r">Move a misplaced program to their proper location:</para>
 
-<screen><userinput>mv /usr/bin/passwd /bin</userinput></screen>
+<screen os="s"><userinput>mv /usr/bin/passwd /bin</userinput></screen>
 
-    <para/>
-
-    <para>Move Shadow's dynamic libraries to a more appropriate
+    <para os="t">Move Shadow's dynamic libraries to a more appropriate
     location:</para>
 
-<screen><userinput>mv /lib/libshadow.*a /usr/lib
+<screen os="u"><userinput>mv /lib/libshadow.*a /usr/lib
 rm /lib/libshadow.so
 ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</userinput></screen>
 
-    <para>The <option>-D</option> option of the <command>useradd</command>
+    <para os="v">The <option>-D</option> option of the <command>useradd</command>
     program requires the <filename class="directory">/etc/default</filename>
     directory for it to work properly:</para>
 
-<screen><userinput>install -d /etc/default</userinput></screen>
+<screen os="w"><userinput>install -d /etc/default</userinput></screen>
 
   </sect2>
 

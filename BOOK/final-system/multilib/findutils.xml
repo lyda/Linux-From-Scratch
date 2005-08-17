@@ -19,10 +19,9 @@
   <sect2 id="package-findutils" role="package">
     <title/>
 
-    <para>The Findutils package contains programs to find files. These programs
-    are provided to recursively search through a directory tree and to
-    create, maintain, and search a database (often faster than the recursive
-    find, but unreliable if the database has not been recently updated).</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/findutils.xml"
+    xpointer="xpointer(id('package-findutils')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -34,39 +33,45 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Gettext, Glibc,
-        Grep, Make and Sed</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/findutils.xml"
+    xpointer="xpointer(id('package-findutils')/segmentedlist[2])"/>
 
   </sect2>
 
   <sect2 id="install-findutils" role="installation">
     <title>Installation of Findutils</title>
 
-    <para>Prepare Findutils for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/findutils.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
     --libexecdir=/usr/lib64/locate --localstatedir=/var/lib64/locate</userinput></screen>
 
-    <para>The <parameter>localstatedir</parameter> directive above changes the
-    location of the <command>locate</command> database to be in <filename
-    class="directory">/var/lib64/locate</filename>, which is FHS-compliant.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/findutils.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/findutils.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/findutils.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>To test the results, issue:
-    <userinput>make check</userinput>.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/findutils.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/findutils.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/findutils.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
   </sect2>
 

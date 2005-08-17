@@ -43,23 +43,33 @@
   <sect2 role="installation">
     <title>Installation of Findutils</title>
 
-    <para>Findutils has an issue with cross-compiling where it
+    <para os="aa">Findutils has an issue with cross-compiling where it
     can't find getline. So we fix it here:</para>
 
-<screen><userinput>echo "am_cv_func_working_getline=yes" &gt;&gt; config.cache</userinput></screen>
+<screen os="ab"><userinput>echo "am_cv_func_working_getline=yes" &gt;&gt; config.cache</userinput></screen>
 
-    <para>Prepare Findutils for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/findutils.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>./configure --prefix=/tools \
    --host=${LFS_TARGET} --cache-file=config.cache</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/findutils.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/findutils.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/findutils.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/findutils.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
   </sect2>
 

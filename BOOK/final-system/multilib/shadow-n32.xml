@@ -42,33 +42,52 @@
   <sect2 role="installation">
     <title>Installation of Shadow</title>
 
-    <para>Prepare Shadow for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>CC="gcc ${BUILDN32}" ./configure --libdir=/lib32 \
    --enable-shared</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/para[2])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/shadow.xml"
-    xpointer="xpointer(id('install-shadow')/screen[2])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
-    <para>Move a misplaced program to their proper location:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='r'])"/>
 
-<screen><userinput>mv /usr/bin/passwd /bin</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='s'])"/>
 
-    <para>Move Shadow's dynamic libraries to a more appropriate
-    location:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/shadow.xml"
+    xpointer="xpointer(//*[@os='t'])"/>
 
 <screen><userinput>mv /lib32/libshadow.*a /usr/lib32
 rm /lib32/libshadow.so
