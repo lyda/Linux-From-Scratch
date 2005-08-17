@@ -111,7 +111,7 @@
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='v'])"/>
 
-<screen><userinput>cp arch/i386/boot/bzImage /boot/lfskernel-&linux-x86_64-version;</userinput></screen>
+<screen><userinput>cp arch/x86_64/boot/bzImage /boot/lfskernel-&linux-x86_64-version;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
