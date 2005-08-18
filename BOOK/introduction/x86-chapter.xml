@@ -12,6 +12,8 @@
   <title>Introduction</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/how.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/whatsnew.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86/whatsnew.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/changelog.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86/changelog.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/resources.xml"/>

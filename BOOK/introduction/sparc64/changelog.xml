@@ -17,55 +17,6 @@
   xpointer="xpointer(/sect1/para[1])"/>
 
   <itemizedlist>
-    <title>Upgraded to:</title>
-
-    <listitem>
-      <para>Linux &linux-sparc64-version;</para>
-    </listitem>
-    <listitem>
-      <para>Linux-libc-headers &linux-libc-headers-sparc64-version;</para>
-    </listitem>
-  </itemizedlist>
-
-
-  <itemizedlist>
-    <title>Added:</title>
-
-    <listitem>
-      <para>Silo &silo-version;</para>
-    </listitem>
-    <listitem>
-      <para>&silo-fixes-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&linux-libc-headers-sparc_biarch-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&binutils-multilib-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&kbd-sparc_kbdrate-patch;</para>
-    </listitem>
-    <listitem>
-      <para>elftoaout &elftoaout-version;</para>
-    </listitem>
-    <listitem>
-      <para>Netkit Base &netkit_base-version;</para>
-    </listitem>
-    <listitem>
-      <para>&netkit_base-fixes-patch;</para>
-    </listitem>
-  </itemizedlist>
-
-  <itemizedlist>
-    <title>Removed:</title>
-
-    <listitem>
-      <para>None</para>
-    </listitem>
-  </itemizedlist>
-
-  <itemizedlist>
     <title>Changelog Entries:</title>
 
 <!-- Changelog template

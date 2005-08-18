@@ -17,32 +17,6 @@
   xpointer="xpointer(/sect1/para[1])"/>
 
   <itemizedlist>
-    <title>Upgraded to:</title>
-
-    <listitem>
-      <para>Linux &linux-mips-version;</para>
-    </listitem>
-    <listitem>
-      <para>Linux-libc-headers &linux-libc-headers-mips-version;</para>
-    </listitem>
-  </itemizedlist>
-
-
-  <itemizedlist>
-    <title>Added:</title>
-
-    <listitem>
-      <para>Colo &colo-version;</para>
-    </listitem>
-    <listitem>
-      <para>&glibc-mips_syscall-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&linux-mips-patch;</para>
-    </listitem>
-  </itemizedlist>
-
-  <itemizedlist>
     <title>Changelog Entries:</title>
 
 <!-- Changelog template

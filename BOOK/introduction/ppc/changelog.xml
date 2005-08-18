@@ -17,37 +17,6 @@
   xpointer="xpointer(/sect1/para[1])"/>
 
   <itemizedlist>
-    <title>Upgraded to:</title>
-
-    <listitem>
-      <para>Linux &linux-ppc-version;</para>
-    </listitem>
-    <listitem>
-      <para>Linux-libc-headers &linux-libc-headers-ppc-version;</para>
-    </listitem>
-  </itemizedlist>
-
-
-  <itemizedlist>
-    <title>Added:</title>
-
-    <listitem>
-      <para>Parted &parted-version;</para>
-    </listitem>
-    <listitem>
-      <para>Yaboot &yaboot-version;</para>
-    </listitem>
-  </itemizedlist>
-
-  <itemizedlist>
-    <title>Removed:</title>
-
-    <listitem>
-      <para>None</para>
-    </listitem>
-  </itemizedlist>
-
-  <itemizedlist>
     <title>Changelog Entries:</title>
 
 <!-- Changelog template

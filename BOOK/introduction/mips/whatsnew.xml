@@ -7,23 +7,23 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-intro-changelog-mips64">
-  <?dbhtml filename="changelog-mips64.html"?>
+<sect1 id="ch-intro-whatsnew-mips">
+  <?dbhtml filename="whatsnew-mips.html"?>
 
-  <title>Changelog for MIPS 64 Bit</title>
+  <title>What's new for MIPS 32 Bit</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/changelog.xml"
+  href="../x86/whatsnew.xml"
   xpointer="xpointer(/sect1/para[1])"/>
 
   <itemizedlist>
     <title>Upgraded to:</title>
 
     <listitem>
-      <para>Linux &linux-mips64-version;</para>
+      <para>Linux &linux-mips-version;</para>
     </listitem>
     <listitem>
-      <para>Linux-libc-headers &linux-libc-headers-mips64-version;</para>
+      <para>Linux-libc-headers &linux-libc-headers-mips-version;</para>
     </listitem>
   </itemizedlist>
 

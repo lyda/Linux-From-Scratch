@@ -7,23 +7,26 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-intro-changelog-mips64">
-  <?dbhtml filename="changelog-mips64.html"?>
+<sect1 id="ch-intro-whatsnew-x86_64">
+  <?dbhtml filename="whatsnew-x86_64.html"?>
 
-  <title>Changelog for MIPS 64 Bit</title>
+  <title>What's New for x86_64</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/changelog.xml"
+  href="../x86/whatsnew.xml"
   xpointer="xpointer(/sect1/para[1])"/>
 
   <itemizedlist>
     <title>Upgraded to:</title>
 
     <listitem>
-      <para>Linux &linux-mips64-version;</para>
+      <para>Linux &linux-x86_64-version;</para>
     </listitem>
     <listitem>
-      <para>Linux-libc-headers &linux-libc-headers-mips64-version;</para>
+      <para>Linux-libc-headers &linux-libc-headers-x86_64-version;</para>
+    </listitem>
+    <listitem>
+      <para>GRUB &grub-version;</para>
     </listitem>
   </itemizedlist>
 
@@ -32,13 +35,15 @@
     <title>Added:</title>
 
     <listitem>
-      <para>Colo &colo-version;</para>
+      <para>None</para>
     </listitem>
+  </itemizedlist>
+
+  <itemizedlist>
+    <title>Removed:</title>
+
     <listitem>
-      <para>&glibc-mips_syscall-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&linux-mips-patch;</para>
+      <para>None</para>
     </listitem>
   </itemizedlist>
 
