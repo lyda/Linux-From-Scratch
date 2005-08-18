@@ -87,6 +87,7 @@ First a summary, then a detailed log.</para>
 
 <listitem><para>Added:</para>
 <itemizedlist>
+<listitem><para>&bzip2-bzgrep-patch;</para></listitem>
 <listitem><para>&bzip2-docs-patch;</para></listitem>
 <listitem><para>&gcc-specs-patch;</para></listitem>
 <listitem><para>&glibc-gcc4_elf-patch;</para></listitem>
@@ -118,8 +119,21 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 18th, 2005 [ken]: Add a patch to sanitise bzgrep's
+handling of filenames.</para></listitem>
+
+<listitem><para>August 16th, 2005 [matt]: Install sed's man page to
+/usr/share/doc/sed-4.1.4 instead of /usr/share/doc (fixes bug 1600).</para>
+</listitem>
+
+<listitem><para>August 16th, 2005 [matt]: Upgraded to linux-2.6.12.5.</para>
+</listitem>
+
 <listitem><para>August 15th, 2005 [matt]: Alter the GCC -fomit-frame-pointer sed
 to protect from multiple invocations (Greg Schafer)</para></listitem>
+
+<listitem><para>August 14th, 2005 [ken]: Upgrade shadow to 4.0.11.1 with
+--enable-shadowgrp as advised by Greg Schafer.</para></listitem>
 
 <listitem><para>August 14th, 2005 [matt]: Mention the common libmudflap test
 failures in GCC (fixes bug 1615).</para></listitem>
