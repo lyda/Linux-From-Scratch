@@ -51,11 +51,6 @@
     href="../common/perl.xml"
     xpointer="xpointer(//*[@role='installation']/screen[1])"/>
 
-    <para>Make sure Perl looks at <filename
-    class="directory">/tools/lib64</filename> for shared libraries:</para>
-
-<screen><userinput>sed -i 's@\${prefix}/lib@\${prefix}/lib64@g' hints/linux.sh</userinput></screen>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
     xpointer="xpointer(//*[@role='installation']/para[2])"/>

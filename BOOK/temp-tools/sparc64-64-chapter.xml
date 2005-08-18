@@ -14,7 +14,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64/flags.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="64/tcl-64bit.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/expect-64bit.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="64/expect-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/dejagnu.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="64/perl-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/texinfo.xml"/>
