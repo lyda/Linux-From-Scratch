@@ -44,33 +44,43 @@
     <title>Installation of Flex</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/flex.xml"
-    xpointer="xpointer(id('install-flex')/para[1])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/flex.xml"
-    xpointer="xpointer(id('install-flex')/screen[1])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/flex.xml"
-    xpointer="xpointer(id('install-flex')/para[2])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/flex.xml"
-    xpointer="xpointer(id('install-flex')/screen[2])"/>
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Now prepare Flex for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
 <screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=/tools \
    --host=${LFS_TARGET} --disable-nls</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
   </sect2>
 

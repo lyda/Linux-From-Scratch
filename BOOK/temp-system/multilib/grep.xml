@@ -43,22 +43,32 @@
   <sect2 role="installation">
     <title>Installation of Grep</title>
 
-    <para>Prepare Grep for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=/tools \
    --host=${LFS_TARGET} --disable-perl-regexp</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/grep.xml"
-    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='ca'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
   </sect2>
 

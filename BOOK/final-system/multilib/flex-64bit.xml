@@ -44,34 +44,46 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/para[2])"/>
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/screen[2])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Prepare Flex for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr --libdir=/usr/lib64</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
+    --libdir=/usr/lib64</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>To test the results, issue:
-    <userinput>make check</userinput>.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
     <para>There are some packages that expect to find the
     <filename class="libraryfile">lex</filename> library in <filename
@@ -82,11 +94,11 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/para[8])"/>
+    xpointer="xpointer(//*[@os='m'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/screen[7])"/>
+    xpointer="xpointer(//*[@os='n'])"/>
 
   </sect2>
 

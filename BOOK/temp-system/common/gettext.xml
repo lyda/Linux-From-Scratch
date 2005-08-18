@@ -43,10 +43,10 @@
   <sect2 role="installation">
     <title>Installation of Gettext</title>
 
-    <para>Gettext has an issue with cross-compiling where it
+    <para os="a">Gettext has an issue with cross-compiling where it
     can't find getline. So we fix it here:</para>
 
-<screen><userinput>echo "am_cv_func_working_getline=yes" &gt;&gt; config.cache</userinput></screen>
+<screen os="b"><userinput>echo "am_cv_func_working_getline=yes" &gt;&gt; config.cache</userinput></screen>
 
     <para>Prepare Gettext for compilation:</para>
 
@@ -54,7 +54,7 @@
    --host=${LFS_TARGET} --disable-libasprintf \
    --without-csharp --cache-file=config.cache</userinput></screen>
 
-    <variablelist>
+    <variablelist os="c">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>

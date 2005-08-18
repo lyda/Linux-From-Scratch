@@ -44,32 +44,44 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/para[2])"/>
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/screen[2])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Prepare Flex for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
-   --libdir=/usr/lib64</userinput></screen>
+<screen><userinput>CC="gcc ${BUILDN32}" ./configure --prefix=/usr \
+   --libdir=/usr/lib32</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
 <screen><userinput>make libfl.a</userinput></screen>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/flex.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
     <para>There are some packages that expect to find the
     <filename class="libraryfile">lex</filename> library in <filename
@@ -77,14 +89,6 @@
     this:</para>
 
 <screen><userinput>ln -s libfl.a /usr/lib32/libl.a</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/para[8])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
-    xpointer="xpointer(id('install-flex')/screen[7])"/>
 
   </sect2>
 

@@ -42,23 +42,32 @@
   <sect2 role="installation">
     <title>Installation of Grep</title>
 
-    <para>Prepare Grep for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
-<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
-   --bindir=/bin --with-included-regex</userinput></screen>
+<screen os="aa"><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
+   --bindir=/bin</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>To test the results, issue:
-    <userinput>make check</userinput>.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make install</userinput></screen>
-
-    <para/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/grep.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
   </sect2>
 
