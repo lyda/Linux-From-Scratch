@@ -15,6 +15,14 @@
   <variablelist role="materials">
 
     <varlistentry>
+      <term>Binutils Multilib Patch - 3 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;binutils/&binutils-multilib-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>GLIBC Syscall Patch - 11 KB:</term>
       <listitem>
         <para><ulink
