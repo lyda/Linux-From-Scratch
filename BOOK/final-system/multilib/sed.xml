@@ -42,6 +42,14 @@
   <sect2 role="installation">
     <title>Installation of Sed</title>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sed.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sed.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
+
     <para>Prepare Sed for compilation:</para>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \

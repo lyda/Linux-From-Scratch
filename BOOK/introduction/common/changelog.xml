@@ -42,7 +42,15 @@
       <para>August 18, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[jim] - Updates to temp-tools section for Pure 64 builds. Thanx to Doug Ronne.</para>
+          <para>[manuel] - Added Bzip2 bzgrep patch.</para>
+        </listitem>
+        <listitem>
+          <para>[manuel] - Fixed the installation directory of Sed
+          documentation.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Updates to temp-tools section for Pure 64 builds.
+          Thanx to Doug Ronne.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -91,7 +99,8 @@
           <para>[manuel] - Added Vim security fix patch.</para>
         </listitem>
         <listitem>
-          <para>[jim] - Updated to add Pure 64 bit build. Thanx Ryan Oliver and Ken Moffat.</para>
+          <para>[jim] - Updated to add Pure 64 bit build. Thanx Ryan Oliver
+          and Ken Moffat.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -121,7 +130,8 @@
       <para>July 23, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[jim] - Removed security patch to Zlib, not needed with new version.</para>
+          <para>[jim] - Removed security patch to Zlib, not needed with
+          new version.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -208,7 +218,8 @@
           <para>[jim] - Updated to iana-etc to 1.10.</para>
         </listitem>
         <listitem>
-          <para>[jim] - Downgraded to udev 058, build issue with non-x86 architectures.</para>
+          <para>[jim] - Downgraded to udev 058, build issue with non-x86
+          architectures.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -217,8 +228,8 @@
       <para>July 8, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[jim] - Updated flex build in final-system on 64 bit machines to create
-          libfl.a for all ABI's.</para>
+          <para>[jim] - Updated flex build in final-system on 64 bit machines
+          to create libfl.a for all ABI's.</para>
         </listitem>
         <listitem>
           <para>[jim] - Added security patch to zlib.</para>
@@ -236,8 +247,8 @@
       <para>July 7, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[jhuntwork] - Removed patch for ncurses in final-system build, only necessary
-          when cross-compiling.</para>
+          <para>[jhuntwork] - Removed patch for ncurses in final-system build,
+          only necessary when cross-compiling.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -246,8 +257,8 @@
       <para>July 6, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[jim] - Added missing binutils patch to final-system. Need multlib scripts patch for
-          all multiple ABI builds.</para>
+          <para>[jim] - Added missing binutils patch to final-system.
+          Need multlib scripts patch for all multiple ABI builds.</para>
         </listitem>
         <listitem>
           <para>[jim] - Upgraded to Linux-libc-headers 2.6.12.0.</para>
@@ -259,7 +270,8 @@
       <para>July 4, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[jim] - Put in correct Sparc CPU Names into the target-triplet table.</para>
+          <para>[jim] - Put in correct Sparc CPU Names into the target-triplet
+          table.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -299,7 +311,8 @@
           <para>[jim] - Added CPPFLAGS=-D_GNU_SOURCE to patch in temp-system.</para>
         </listitem>
         <listitem>
-          <para>[jim] - Added testing of adjusting the toolchain to all architectures.</para>
+          <para>[jim] - Added testing of adjusting the toolchain to all
+          architectures.</para>
         </listitem>
         <listitem>
           <para>[jim] - Updated ld.so.conf to see all multilib directories.</para>

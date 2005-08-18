@@ -52,6 +52,13 @@
 
 <screen os="k"><userinput>patch -Np1 -i ../&bzip2-docs-patch;</userinput></screen>
 
+    <para os="l">The <command>bzgrep</command> command does not escape '|' and
+    '&amp;' in filenames passed to it. This allows arbitrary commands to be
+    executed with the privileges of the user running <command>bzgrep</command>.
+    Apply the following patch to address this:</para>
+
+<screen os="m"><userinput>patch -Np1 -i ../&bzip2-bzgrep-patch;</userinput></screen>
+
     <para os="a">The Bzip2 package does not contain a <command>configure</command>
     script. Compile it with:</para>
 

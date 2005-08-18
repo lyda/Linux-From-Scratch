@@ -5,6 +5,7 @@
 <!ENTITY bash-avoid_WCONTINUED-patch "bash-&bash-version;-avoid_WCONTINUED-1.patch">
 
 <!ENTITY bzip2-docs-patch "bzip2-&bzip2-version;-install_docs-1.patch">
+<!ENTITY bzip2-bzgrep-patch "bzip2-&bzip2-version;-bzgrep_security-1.patch">
 
 <!ENTITY binutils-posix-patch "binutils-&binutils-version;-posix-1.patch">
 
