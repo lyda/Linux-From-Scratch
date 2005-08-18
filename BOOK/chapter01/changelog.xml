@@ -119,6 +119,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 18th, 2005 [matt]: Simplify the method for finding where
+GCC's default specs file and private include directory live.  Additionally,
+don't assume the host's sed supports the -i switch.</para></listitem>
+
 <listitem><para>August 18th, 2005 [ken]: Add a patch to sanitise bzgrep's
 handling of filenames.</para></listitem>
 
