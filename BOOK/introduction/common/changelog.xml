@@ -53,6 +53,9 @@
         <listitem>
           <para>[jim] - Updated to Udev 068.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to IPRoute2 050816.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
