@@ -47,7 +47,7 @@
 <!ENTITY elftoaout-version "2.3">
 <!ENTITY expect-version "5.43.0">
 <!ENTITY expect-lib-version "5.43">
-<!ENTITY file-version "4.14">
+<!ENTITY file-version "4.15">
 <!ENTITY findutils-version "4.2.23">
 <!ENTITY flex-version "2.5.31">
 <!ENTITY gawk-version "3.1.4">
