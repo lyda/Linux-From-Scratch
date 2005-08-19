@@ -131,6 +131,14 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../mips64/glibc.xml"
+    xpointer="xpointer(//*[@os='q'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc.xml"
+    xpointer="xpointer(//*[@os='r'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips64/glibc.xml"
     xpointer="xpointer(//*[@os='s'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
