@@ -90,7 +90,7 @@
 <!ENTITY ncurses-version "5.4">
 <!ENTITY netkit_base-version "0.17">
 <!ENTITY patch-version "2.5.9">
-<!ENTITY parted-version "1.6.23">
+<!ENTITY parted-version "1.6.24">
 <!ENTITY perl-version "5.8.7">
 <!ENTITY procps-version "3.2.5">
 <!ENTITY psmisc-version "21.6">
