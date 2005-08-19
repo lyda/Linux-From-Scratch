@@ -13,6 +13,8 @@
   <bridgehead renderas="sect4">Configuration # 1 - Creating different
   architecture tools</bridgehead>
 
+  <para>This method is recommended for all LiveCD based distro's.</para>
+
   <para>During the building of the cross-compile tools you will need to
   set a few variables that will be dependent on your particular needs.
   The first variable will be the triplet of the <envar>HOST</envar> machine.
@@ -48,16 +50,19 @@
 
 <screen><userinput>export LFS_TARGET="${MACHTYPE}"</userinput></screen>
 
-  <bridgehead renderas="sect4">Common to both</bridgehead>
+  <bridgehead renderas="sect4">Sanity Check</bridgehead>
 
-  <para>Now lets verify all targets are set before we continue on. Use
-  the following command to check you host and target variables:</para>
+  <para>Let's perform a sanity check to prevent build issues. If our LFS_HOST matches our
+  target, we will get some failures during our cross-compile:</para>
 
-<screen><userinput>echo -e "We are building for ${LFS_TARGET} \
-   \nOur host is ${LFS_HOST}"</userinput></screen>
+<screen><userinput>if [ "${LFS_HOST}" = "${LFS_TARGET}" ]; then \
+  echo "Host and Target can't be the same. Use the Other Configuration Method" ; fi</userinput></screen>
+ 
+  <para>If you received an message, "Host and Target can't be the same..."
+  You will need to use the other Configuration Method. This will prevent build
+  issues during the early phases of the build.</para>
 
-  <para>If the information listed about is not correct and you used
-  Method 1, you will have to use Method 2 to set it correctly.</para>
+  <bridgehead renderas="sect4">Copy settings to Environment</bridgehead>
 
   <para>Now we will add these to <filename>~/.bashrc</filename>, just in
   case you have to exit and restart building later:</para>
