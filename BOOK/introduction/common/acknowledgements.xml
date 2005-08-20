@@ -42,6 +42,9 @@ via the LFS-DEV Mailing lists.</para>
       <para>Doug Ronne - Various x86_64 fixes.</para>
     </listitem>
     <listitem>
+      <para>Maxim Osipov - MIPS Testing.</para>
+    </listitem>
+    <listitem>
       <para>Justin Knierim - Typos.</para>
     </listitem>
   </itemizedlist>
