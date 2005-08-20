@@ -46,37 +46,37 @@
   <sect2 id="install-gzip" role="installation">
     <title>Installation of Gzip</title>
 
-    <para>The following patch fixes two security vulnerabilities in Gzip.
+    <para os="a">The following patch fixes two security vulnerabilities in Gzip.
     First, a path traversal bug when using the <option>-N</option> option
     (CAN-2005-1228) Second, a race condition in the file permission restore
     code (CAN-2005-0998)</para>
 
-<screen><userinput>patch -Np1 -i ../&gzip-security_fix-patch;</userinput></screen>
+<screen os="b"><userinput>patch -Np1 -i ../&gzip-security_fix-patch;</userinput></screen>
 
-    <para>Prepare Gzip for compilation:</para>
+    <para os="c">Prepare Gzip for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
 
-    <para>The <command>gzexe</command> script has the location of the
+    <para os="d">The <command>gzexe</command> script has the location of the
     <command>gzip</command> binary hard-wired into it. Because the
     location of the binary is changed later, the following command ensures
     that the new location gets placed into the script:</para>
 
-<screen><userinput>sed -i 's@"BINDIR"@/bin@g' gzexe.in</userinput></screen>
+<screen os="e"><userinput>sed -i 's@"BINDIR"@/bin@g' gzexe.in</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="f">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="g"><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="h">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="i"><userinput>make install</userinput></screen>
 
-    <para>Move the <command>gzip</command> program to the <filename
+    <para os="j">Move the <command>gzip</command> program to the <filename
     class="directory">/bin</filename> directory and create some commonly
     used symlinks to it:</para>
 
-<screen><userinput>mv /usr/bin/gzip /bin
+<screen os="k"><userinput>mv /usr/bin/gzip /bin
 rm /usr/bin/{gunzip,zcat}
 ln -s gzip /bin/gunzip
 ln -s gzip /bin/zcat

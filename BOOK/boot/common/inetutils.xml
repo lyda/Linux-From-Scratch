@@ -45,13 +45,15 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/inetutils.xml"
-    xpointer="xpointer(id('install-inetutils')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/inetutils.xml"
-    xpointer="xpointer(id('install-inetutils')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-<para>Prepare Inetutils for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/inetutils.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>./configure --prefix=/usr --libexecdir=/usr/sbin \
     --host=${LFS_TARGET} --sysconfdir=/etc --disable-logger \
@@ -59,15 +61,19 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/inetutils.xml"
-    xpointer="xpointer(id('install-inetutils')/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/inetutils.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>make LDFLAGS="-s"</userinput></screen>
+<screen os="aa"><userinput>make LDFLAGS="-s"</userinput></screen>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/inetutils.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make DESTDIR="${LFS}" install</userinput></screen>
+<screen os="ab"><userinput>make DESTDIR="${LFS}" install</userinput></screen>
 
   </sect2>
 

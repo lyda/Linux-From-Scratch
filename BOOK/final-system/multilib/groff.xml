@@ -44,28 +44,38 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/groff.xml"
-    xpointer="xpointer(id('install-groff')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
-    <para>Prepare Groff for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/groff.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>PAGE=<replaceable>[paper_size]</replaceable> CC="gcc ${BUILD64}" \
    CXX="g++ ${BUILD64}" ./configure --prefix=/usr --libdir=/usr/lib64</userinput></screen>
 
-    <para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
-
-    <para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/groff.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/groff.xml"
-    xpointer="xpointer(id('install-groff')/para[5])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/groff.xml"
-    xpointer="xpointer(id('install-groff')/screen[4])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/groff.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/groff.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/groff.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
   </sect2>
 

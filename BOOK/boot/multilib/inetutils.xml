@@ -44,14 +44,16 @@
     <title>Installation of Inetutils</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/inetutils.xml"
-    xpointer="xpointer(id('install-inetutils')/para[1])"/>
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/inetutils.xml"
-    xpointer="xpointer(id('install-inetutils')/screen[1])"/>
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-<para>Prepare Inetutils for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="${CC} ${BUILD64}" \
    ./configure --prefix=/usr --libexecdir=/usr/sbin \
@@ -60,16 +62,24 @@
    --disable-whois --disable-servers</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/inetutils.xml"
-    xpointer="xpointer(id('install-inetutils')/variablelist[1])"/>
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>make LDFLAGS="-s"</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='aa'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make DESTDIR="${LFS}" install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='ab'])"/>
 
   </sect2>
 

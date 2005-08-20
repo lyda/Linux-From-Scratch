@@ -45,21 +45,21 @@
   <sect2 id="install-inetutils" role="installation">
     <title>Installation of Inetutils</title>
 
-    <para>All programs that come with Inetutils will not be installed.
+    <para os="a">All programs that come with Inetutils will not be installed.
     However, the Inetutils build system will insist on installing all the
     man pages anyway. The following patch will correct this
     situation:</para>
 
-<screen><userinput>patch -Np1 -i ../&inetutils-man_pages-patch;</userinput></screen>
+<screen os="b"><userinput>patch -Np1 -i ../&inetutils-man_pages-patch;</userinput></screen>
 
-    <para>Prepare Inetutils for compilation:</para>
+    <para os="c">Prepare Inetutils for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --libexecdir=/usr/sbin \
     --sysconfdir=/etc --localstatedir=/var \
     --disable-logger --disable-syslogd \
     --disable-whois --disable-servers</userinput></screen>
 
-    <variablelist>
+    <variablelist os="d">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
@@ -105,18 +105,18 @@
       </varlistentry>
     </variablelist>
 
-    <para>Compile the package:</para>
+    <para os="e">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="f"><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="g">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="h"><userinput>make install</userinput></screen>
 
-    <para>Move the <command>ping</command> program to its FHS-compliant
+    <para os="i">Move the <command>ping</command> program to its FHS-compliant
     place:</para>
 
-<screen><userinput>mv /usr/bin/ping /bin</userinput></screen>
+<screen os="j"><userinput>mv /usr/bin/ping /bin</userinput></screen>
 
   </sect2>
 

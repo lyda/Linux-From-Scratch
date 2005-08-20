@@ -43,23 +43,33 @@
   <sect2 role="installation">
     <title>Installation of Gzip</title>
 
-    <para>Setup <command>configure</command> so it can use cross-compiled
+    <para os="aa">Setup <command>configure</command> so it can use cross-compiled
     tools:</para>
 
-<screen><userinput>sed -i "s@nm conftest@${LFS_TARGET}-&amp;@" configure</userinput></screen>
+<screen os="ab"><userinput>sed -i "s@nm conftest@${LFS_TARGET}-&amp;@" configure</userinput></screen>
 
-    <para>Prepare Gzip for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gzip.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>./configure --prefix=/tools \
    --host=${LFS_TARGET}</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gzip.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gzip.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gzip.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/gzip.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
   </sect2>
 

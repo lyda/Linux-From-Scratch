@@ -44,13 +44,15 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/inetutils.xml"
-    xpointer="xpointer(id('install-inetutils')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/inetutils.xml"
-    xpointer="xpointer(id('install-inetutils')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Prepare Inetutils for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr --libexecdir=/usr/sbin \
     --sysconfdir=/etc --localstatedir=/var \
@@ -59,20 +61,31 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/inetutils.xml"
-    xpointer="xpointer(id('install-inetutils')/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-    <para>Move the <command>ping</command> program to its FHS-compliant
-    place:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
-<screen><userinput>mv /usr/bin/ping /bin</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
   </sect2>
 

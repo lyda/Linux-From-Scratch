@@ -44,39 +44,49 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gzip.xml"
-    xpointer="xpointer(id('install-gzip')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gzip.xml"
-    xpointer="xpointer(id('install-gzip')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Prepare Gzip for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gzip.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gzip.xml"
-    xpointer="xpointer(id('install-gzip')/para[3])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gzip.xml"
-    xpointer="xpointer(id('install-gzip')/screen[3])"/>
-
-    <para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
-
-    <para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gzip.xml"
-    xpointer="xpointer(id('install-gzip')/para[6])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/gzip.xml"
-    xpointer="xpointer(id('install-gzip')/screen[6])"/>
+    xpointer="xpointer(//*[@os='g'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gzip.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gzip.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gzip.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/gzip.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
   </sect2>
 
