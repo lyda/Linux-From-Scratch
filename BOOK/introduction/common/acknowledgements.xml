@@ -33,6 +33,19 @@
     </listitem>
   </itemizedlist>
 
+<para>The editors of the book would also like to acknowlege people who
+have supported, spotted needed corrections, and testing of the cross-lfs book
+via the LFS-DEV Mailing lists.</para>
+
+ <itemizedlist>
+    <listitem>
+      <para>Doug Ronne - Various x86_64 fixes.</para>
+    </listitem>
+    <listitem>
+      <para>Justin Knierim - Typos.</para>
+    </listitem>
+  </itemizedlist>
+
   <para>Thank you all for your support.</para>
 
 </sect1>
