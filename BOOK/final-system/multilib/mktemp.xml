@@ -44,28 +44,37 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/mktemp.xml"
-    xpointer="xpointer(id('install-mktemp')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/mktemp.xml"
-    xpointer="xpointer(id('install-mktemp')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Prepare Mktemp for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/mktemp.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr --with-libc</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/mktemp.xml"
-    xpointer="xpointer(id('install-mktemp')/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/mktemp.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/mktemp.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/mktemp.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make install
-make install-tempfile</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/mktemp.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
   </sect2>
 

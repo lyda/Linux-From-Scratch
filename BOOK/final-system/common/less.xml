@@ -49,7 +49,7 @@
 
 <screen><userinput>./configure --prefix=/usr --bindir=/bin --sysconfdir=/etc</userinput></screen>
 
-    <variablelist>
+    <variablelist os="a">
       <title>The meaning of the configure option:</title>
 
       <varlistentry>

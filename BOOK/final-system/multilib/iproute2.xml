@@ -44,27 +44,37 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/iproute2.xml"
-    xpointer="xpointer(id('install-iproute2')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/iproute2.xml"
-    xpointer="xpointer(id('install-iproute2')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Prepare IPRoute2 for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/iproute2.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>sh configure </userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/iproute2.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/iproute2.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
 <screen><userinput>make CC="gcc ${BUILD64}" SBINDIR=/sbin</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/iproute2.xml"
-    xpointer="xpointer(id('install-iproute2')/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/iproute2.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make SBINDIR=/sbin install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/iproute2.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
   </sect2>
 

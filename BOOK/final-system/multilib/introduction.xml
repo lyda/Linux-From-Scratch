@@ -12,26 +12,26 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/introduction.xml"
-    xpointer="xpointer(/sect1/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/introduction.xml"
-    xpointer="xpointer(/sect1/para[2])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/introduction.xml"
-    xpointer="xpointer(/sect1/para[3])"/>
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/introduction.xml"
-    xpointer="xpointer(/sect1/para[4])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/introduction.xml"
-    xpointer="xpointer(/sect1/para[5])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/introduction.xml"
-    xpointer="xpointer(/sect1/note[1])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
 
 </sect1>

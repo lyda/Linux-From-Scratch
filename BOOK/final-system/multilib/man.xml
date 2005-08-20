@@ -44,63 +44,73 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/para[2])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/screen[1])"/>
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/para[3])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/screen[2])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>Prepare Man for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/man.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure -confdir=/etc</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/variablelist[1])"/>
-
-    <para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
-
-    <para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
+    xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/note[1])"/>
+    xpointer="xpointer(//*[@os='h'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/para[7])"/>
+    xpointer="xpointer(//*[@os='i'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/screen[6])"/>
+    xpointer="xpointer(//*[@os='j'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/para[8])"/>
+    xpointer="xpointer(//*[@os='k'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/para[9])"/>
+    xpointer="xpointer(//*[@os='l'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/man.xml"
-    xpointer="xpointer(id('install-man')/para[10])"/>
+    xpointer="xpointer(//*[@os='m'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/man.xml"
+    xpointer="xpointer(//*[@os='n'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/man.xml"
+    xpointer="xpointer(//*[@os='o'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/man.xml"
+    xpointer="xpointer(//*[@os='p'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/man.xml"
+    xpointer="xpointer(//*[@os='q'])"/>
 
   </sect2>
 

@@ -42,10 +42,13 @@
   <sect2 id="install-kbd" role="installation">
     <title>Installation of Kbd</title>
 
-    <para>Sparcs haven't updated the structure of kbd_rate yet, so
-    until they do this patch is required:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/kbd.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
-<screen><userinput>patch -Np1 -i ../&kbd-sparc_kbdrate-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/kbd.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <para>Prepare Kbd for compilation:</para>
 

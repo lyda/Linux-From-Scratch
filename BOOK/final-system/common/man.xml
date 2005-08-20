@@ -46,26 +46,26 @@
   <sect2 id="install-man" role="installation">
     <title>Installation of Man</title>
 
-    <para>A few adjustments need to be made to the sources of Man.</para>
+    <para os="a">A few adjustments need to be made to the sources of Man.</para>
 
-    <para>This a <command>sed</command> substitution to add the
+    <para os="b">This a <command>sed</command> substitution to add the
     <option>-R</option> switch to the <envar>PAGER</envar> variable so
     that escape sequences are properly handled by Less:</para>
 
-<screen><userinput>sed -i 's@-is@&amp;R@g' configure</userinput></screen>
+<screen os="c"><userinput>sed -i 's@-is@&amp;R@g' configure</userinput></screen>
 
-    <para>This a <command>sed</command> substitution to comment out the
+    <para os="d">This a <command>sed</command> substitution to comment out the
     <quote>MANPATH /usr/man</quote> line in the <filename>man.conf</filename>
     file to prevent redundant results when using programs such as
     <command>whatis</command>:</para>
 
-<screen><userinput>sed -i 's@MANPATH./usr/man@#&amp;@g' src/man.conf.in</userinput></screen>
+<screen os="e"><userinput>sed -i 's@MANPATH./usr/man@#&amp;@g' src/man.conf.in</userinput></screen>
 
-    <para>Prepare Man for compilation:</para>
+    <para os="f">Prepare Man for compilation:</para>
 
 <screen><userinput>./configure -confdir=/etc</userinput></screen>
 
-    <variablelist>
+    <variablelist os="g">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
@@ -78,15 +78,15 @@
       </varlistentry>
     </variablelist>
 
-    <para>Compile the package:</para>
+    <para os="h">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="i"><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="j">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="k"><userinput>make install</userinput></screen>
 
-    <note>
+    <note os="l">
       <para>If you will be working on a terminal that does not support
       text attributes such as color and bold, you can disable Select
       Graphic Rendition (SGR) escape sequences by editing the
@@ -97,14 +97,14 @@
       that do not support SGR.</para>
     </note>
 
-    <para>If the character set of the locale uses 8-bit characters, search
+    <para os="m">If the character set of the locale uses 8-bit characters, search
     for the line beginning with <quote>NROFF</quote> in
     <filename>/etc/man.conf</filename>, and verify that it matches the
     following:</para>
 
-<screen>NROFF  /usr/bin/nroff -Tlatin1 -mandoc</screen>
+<screen os="n">NROFF  /usr/bin/nroff -Tlatin1 -mandoc</screen>
 
-    <para>Note that <quote>latin1</quote> should be used even if it is not
+    <para os="o">Note that <quote>latin1</quote> should be used even if it is not
     the character set of the locale. The reason is that, according to the
     specification, <command>groff</command> has no means of typesetting
     characters outside International Organization for Standards (ISO) 8859-1
@@ -116,14 +116,14 @@
     ormatted result is really in the same encoding as input, and therefore
     it is usable as the input for a pager.</para>
 
-    <para>This does not solve the problem of a non-working
+    <para os="p">This does not solve the problem of a non-working
     <command>man2dvi</command> program for localized man pages in
     non-ISO 8859-1 locales. Also, it does not work with multibyte
     character sets. The first problem does not currently have a solution.
     The second issue is not of concern because the LFS installation does
     not support multibyte character sets.</para>
 
-    <para>Additional information with regards to the compression of
+    <para os="q">Additional information with regards to the compression of
     man and info pages can be found in the BLFS book at
     <ulink url="&blfs-root;view/cvs/postlfs/compressdoc.html"/>.</para>
 

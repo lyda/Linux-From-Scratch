@@ -45,17 +45,17 @@
   <sect2 id="install-mktemp" role="installation">
     <title>Installation of Mktemp</title>
 
-    <para>Many scripts still use the deprecated <command>tempfile</command>
+    <para os="a">Many scripts still use the deprecated <command>tempfile</command>
     program, which has functionality similar to <command>mktemp</command>.
     Patch Mktemp to include a <command>tempfile</command> wrapper:</para>
 
-<screen><userinput>patch -Np1 -i ../&mktemp-tempfile-patch;</userinput></screen>
+<screen os="b"><userinput>patch -Np1 -i ../&mktemp-tempfile-patch;</userinput></screen>
 
-    <para>Prepare Mktemp for compilation:</para>
+    <para os="c">Prepare Mktemp for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --with-libc</userinput></screen>
 
-    <variablelist>
+    <variablelist os="d">
       <title>The meaning of the configure option:</title>
 
       <varlistentry>
@@ -68,13 +68,13 @@
       </varlistentry>
     </variablelist>
 
-    <para>Compile the package:</para>
+    <para os="e">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="f"><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="g">Install the package:</para>
 
-<screen><userinput>make install
+<screen os="h"><userinput>make install
 make install-tempfile</userinput></screen>
 
   </sect2>
