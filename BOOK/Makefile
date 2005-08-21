@@ -1,5 +1,6 @@
 BASEDIR=~/cross-lfs-book
 DUMPDIR=~/cross-lfs-commands
+DLLISTDIR=~/cross-lfs-dllist
 CHUNK_QUIET=1
 JAVA_HOME=/opt/jdk/jdk-precompiled-1.5.0
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
@@ -60,6 +61,13 @@ define DUMP
 	   $(PWD)/stylesheets/dump-commands.xsl $$arch-index.xml
 endef
 
+# Get commands
+define DLLIST
+	echo "Creating download list for $$arch..." ; \
+	xsltproc --xinclude --nonet --output $(DLLISTDIR)/$$arch.dl.list \
+	   $(PWD)/stylesheets/wget.xsl $$arch-index.xml
+endef
+
 lfs: toplevel render common
 
 toplevel:
@@ -107,4 +115,9 @@ dump-commands:
 	$(DUMP) ; \
 	done
 
-.PHONY: lfs toplevel common render nochunk nochunk_render pdf text validate dump-commands
+download-list:
+	@for arch in $(ARCH) ; do \
+	$(DLLIST) ; \
+	done
+
+.PHONY: lfs toplevel common render nochunk nochunk_render pdf text validate dump-commands download-list
