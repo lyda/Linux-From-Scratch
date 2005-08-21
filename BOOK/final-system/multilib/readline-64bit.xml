@@ -44,39 +44,48 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/readline.xml"
-    xpointer="xpointer(id('install-readline')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/readline.xml"
-    xpointer="xpointer(id('install-readline')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Prepare Readline for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \
    ./configure --prefix=/usr --libdir=/lib64</userinput></screen>
 
-    <para>Compile the package:</para>
-
-<screen><userinput>make SHLIB_XLDFLAGS=-lncurses</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/readline.xml"
-    xpointer="xpointer(id('install-readline')/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-    <para>Give Readline's dynamic libraries to a more appropriate
-    permissions:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
 <screen><userinput>chmod 755 /lib64/lib{readline,history}.so*</userinput></screen>
 
-    <para>Now we move the static libraries to a more appropriate location:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/readline.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
 <screen><userinput>mv /lib64/lib{readline,history}.a /usr/lib64</userinput></screen>
 
-    <para>Now we will remove the old, <filename class="extension">.so</filename>
+    <para>Next, remove the <filename class="extension">.so</filename>
     files in <filename class="directory">/lib64</filename> and relink them into
     <filename class="directory">/usr/lib64</filename>.</para>
 

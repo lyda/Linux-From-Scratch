@@ -16,37 +16,56 @@
     <primary sortas="a-Sysvinit">Sysvinit</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/sysvinit.xml"
-  xpointer="xpointer(id('package-sysvinit'))"/>
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(id('package-sysvinit')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(id('package-sysvinit')/segmentedlist[2])"/>
+
+  </sect2>
 
   <sect2 role="installation">
 
     <title>Installation of Sysvinit</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../multilib/sysvinit.xml"
-      xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../multilib/sysvinit.xml"
-      xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../multilib/sysvinit.xml"
-      xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../multilib/sysvinit.xml"
-      xpointer="xpointer(//*[@role='installation']/screen[2])"/>
+    href="../multilib/sysvinit.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../multilib/sysvinit.xml"
-      xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../multilib/sysvinit.xml"
-      xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
   </sect2>
 

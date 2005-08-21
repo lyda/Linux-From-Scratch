@@ -23,15 +23,19 @@
   <sect2 role="installation">
     <title>Installation of Procps</title>
 
-    <para>The patch below fixes an issue with Procps. Without this
+    <para os="a">The patch below fixes an issue with Procps. Without this
     patch when the command <command>ps aux</command> is run you will
     receive a signal 11.</para>
 
-<screen><userinput>patch -Np1 -i ../&procps-mips-patch;</userinput></screen>
+<screen os="b"><userinput>patch -Np1 -i ../&procps-mips-patch;</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/procps.xml"
-    xpointer="xpointer(id('install-procps')/para[1]/range-to(id('install-procps')/para[last()]))"/>
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
 
 </sect2>
 

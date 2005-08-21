@@ -50,21 +50,32 @@
     href="../common/sed.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Prepare Sed for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sed.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
    --bindir=/bin</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sed.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sed.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>To test the results, issue:
-    <userinput>make check</userinput>.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sed.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sed.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sed.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
   </sect2>
 

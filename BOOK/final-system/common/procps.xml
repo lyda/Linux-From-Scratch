@@ -53,8 +53,6 @@
 
 <screen><userinput>make install</userinput></screen>
 
-    <para/>
-
   </sect2>
 
   <sect2 id="contents-procps" role="content">

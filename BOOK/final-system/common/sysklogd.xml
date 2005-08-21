@@ -45,18 +45,18 @@
   <sect2 id="install-sysklogd" role="installation">
     <title>Installation of Sysklogd</title>
 
-    <para>The following patch fixes various issues, including a problem building
-    Sysklogd with Linux 2.6 series kernels</para>
+    <para os="a">The following patch fixes various issues, including a
+    problem building Sysklogd with Linux 2.6 series kernels</para>
 
-<screen><userinput>patch -Np1 -i ../&sysklogd-fixes-patch;</userinput></screen>
+<screen os="b"><userinput>patch -Np1 -i ../&sysklogd-fixes-patch;</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="c">Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="d">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="e"><userinput>make install</userinput></screen>
 
   </sect2>
 

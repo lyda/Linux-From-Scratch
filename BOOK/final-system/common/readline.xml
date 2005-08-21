@@ -46,22 +46,22 @@
   <sect2 id="install-readline" role="installation">
     <title>Installation of Readline</title>
 
-    <para>The following patch includes a fix for a problem where Readline
+    <para os="a">The following patch includes a fix for a problem where Readline
     sometimes only shows 33 characters on a line and then wraps to the
     next line. It also includes other fixes recommended by the Readline
     author.</para>
 
-<screen><userinput>patch -Np1 -i ../&readline-fixes-patch;</userinput></screen>
+<screen os="b"><userinput>patch -Np1 -i ../&readline-fixes-patch;</userinput></screen>
 
-    <para>Prepare Readline for compilation:</para>
+    <para os="c">Prepare Readline for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --libdir=/lib</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="d">Compile the package:</para>
 
-<screen><userinput>make SHLIB_XLDFLAGS=-lncurses</userinput></screen>
+<screen os="e"><userinput>make SHLIB_XLDFLAGS=-lncurses</userinput></screen>
 
-    <variablelist>
+    <variablelist os="f">
       <title>The meaning of the make option:</title>
 
       <varlistentry>
@@ -73,24 +73,24 @@
       </varlistentry>
     </variablelist>
 
-    <para>Install the package:</para>
+    <para os="g">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="h"><userinput>make install</userinput></screen>
 
-    <para>Give Readline's dynamic libraries to a more appropriate
+    <para os="i">Give Readline's dynamic libraries to a more appropriate
     permissions:</para>
 
-<screen><userinput>chmod 755 /lib/lib{readline,history}.so*</userinput></screen>
+<screen os="j"><userinput>chmod 755 /lib/lib{readline,history}.so*</userinput></screen>
 
-    <para>Now move the static libraries to a more appropriate location:</para>
+    <para os="k">Now move the static libraries to a more appropriate location:</para>
 
-<screen><userinput>mv /lib/lib{readline,history}.a /usr/lib</userinput></screen>
+<screen os="l"><userinput>mv /lib/lib{readline,history}.a /usr/lib</userinput></screen>
 
-    <para>Next, remove the <filename class="extension">.so</filename>
+    <para os="m">Next, remove the <filename class="extension">.so</filename>
     files in <filename class="directory">/lib</filename> and relink them into
     <filename class="directory">/usr/lib</filename>.</para>
 
-<screen><userinput>rm /lib/lib{readline,history}.so
+<screen os="n"><userinput>rm /lib/lib{readline,history}.so
 ln -sf ../../lib/libreadline.so.5 /usr/lib/libreadline.so
 ln -sf ../../lib/libhistory.so.5 /usr/lib/libhistory.so</userinput></screen>
 

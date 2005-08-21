@@ -42,38 +42,48 @@
   <sect2 role="installation">
     <title>Installation of Psmisc</title>
 
-    <para>Prepare Psmisc for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/psmisc.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
    --exec-prefix=""</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/psmisc.xml"
-    xpointer="xpointer(id('install-psmisc')/variablelist[1])"/>
-
-    <para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
-
-    <para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/psmisc.xml"
-    xpointer="xpointer(id('install-psmisc')/para[4])"/>
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/psmisc.xml"
-    xpointer="xpointer(id('install-psmisc')/screen[4])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/psmisc.xml"
-    xpointer="xpointer(id('install-psmisc')/para[5])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/psmisc.xml"
-    xpointer="xpointer(id('install-psmisc')/screen[5])"/>
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/psmisc.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/psmisc.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/psmisc.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/psmisc.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
   </sect2>
 

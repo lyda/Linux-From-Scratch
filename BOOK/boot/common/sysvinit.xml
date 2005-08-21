@@ -43,23 +43,27 @@
   <sect2 role="installation">
     <title>Installation of Sysvinit</title>
 
-    <para>Now we do some modifications so we can boot into this
+    <para os="aa">Now we do some modifications so we can boot into this
     during our build:</para>
 
-<screen><userinput>cp src/Makefile src/Makefile.orig
+<screen os="ab"><userinput>cp src/Makefile src/Makefile.orig
 sed -e 's@root@0@g' \
     -e "s@/dev/initctl@${LFS}&amp;@g" \
     -e 's@\(mknod \)-m \([0-9]* \)\(.* \)p@\1\3p; chmod \2\3@g' \
     src/Makefile.orig > src/Makefile</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make -C src clobber
+<screen os="ac"><userinput>make -C src clobber
 make -C src CC="${CC}" LDFLAGS="-s"</userinput></screen>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>install -d ${LFS}/bin
+<screen os="ad"><userinput>install -d ${LFS}/bin
 install -d ${LFS}/usr/bin
 install -d ${LFS}/usr/include
 install -d ${LFS}/usr/share/man/man{1,5,8}

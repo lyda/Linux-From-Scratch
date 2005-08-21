@@ -42,11 +42,13 @@
   <sect2 role="installation">
     <title>Installation of Procps</title>
 
-    <para>The patch below fixes an issue with Procps. Without this
-    patch when the command <command>ps aux</command> is run you will
-    receive a signal 11.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="procps.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
-<screen><userinput>patch -Np1 -i ../&procps-mips-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="procps.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <para>Compile the package:</para>
 

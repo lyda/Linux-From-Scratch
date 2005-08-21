@@ -41,20 +41,26 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/sysvinit.xml"
-    xpointer="xpointer(id('install-sysvinit')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/sysvinit.xml"
-    xpointer="xpointer(id('install-sysvinit')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make -C src clobber
+<screen os="d"><userinput>make -C src clobber
 make -C src CC="gcc ${BUILD64}"</userinput></screen>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>make -C src install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
   </sect2>
 

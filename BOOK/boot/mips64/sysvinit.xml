@@ -45,24 +45,27 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/sysvinit.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/sysvinit.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[2])"/>
-
-    <para>Compile the package:</para>
-
-<screen><userinput>make -C src clobber
-make -C src CC="${CC} ${BUILD64}" LDFLAGS="-s"</userinput></screen>
+    xpointer="xpointer(//*[@os='ab'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/sysvinit.xml"
-    xpointer="xpointer(//*[@role='installation']/para[3])"/>
+    xpointer="xpointer(//*[@os='c'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../multilib/sysvinit.xml"
+    xpointer="xpointer(//*[@os='ac'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/sysvinit.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[3])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/sysvinit.xml"
+    xpointer="xpointer(//*[@os='ad'])"/>
 
   </sect2>
 
