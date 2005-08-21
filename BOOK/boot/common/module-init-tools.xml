@@ -43,21 +43,32 @@
   <sect2 role="installation">
     <title>Installation of Module-Init-Tools</title>
 
-    <para>Prepare Module-Init-Tools for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>./configure --prefix=/ \
    --host=${LFS_TARGET}</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>make DOCBOOKTOMAN="" LDFLAGS="-s"</userinput></screen>
+<screen os="f"><userinput>make LDFLAGS="-s"</userinput></screen>
 
-    <para>The <command>DOCBOOKTOMAN</command> option allows the compile process
-    to complete without regenerating the man pages.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-    <para>Install the package:</para>
-
-<screen><userinput>make DESTDIR="${LFS}" install</userinput></screen>
+<screen os="i"><userinput>make DESTDIR="${LFS}" install</userinput></screen>
 
   </sect2>
 

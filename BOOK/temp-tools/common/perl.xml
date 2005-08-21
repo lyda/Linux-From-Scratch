@@ -43,17 +43,17 @@
   <sect2 role="installation">
     <title>Installation of Perl</title>
 
-    <para>First adapt some hard-wired paths to the C library by applying
+    <para os="aa">First adapt some hard-wired paths to the C library by applying
     the following patch:</para>
 
-<screen><userinput>patch -Np1 -i ../&perl-libc-patch;</userinput></screen>
+<screen os="ab"><userinput>patch -Np1 -i ../&perl-libc-patch;</userinput></screen>
 
-    <para>Prepare Perl for compilation (make sure to get the 'IO Fcntl POSIX'
+    <para os="ac">Prepare Perl for compilation (make sure to get the 'IO Fcntl POSIX'
     part of the command correct&mdash;they are all letters):</para>
 
 <screen><userinput>./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX'</userinput></screen>
 
-    <variablelist>
+    <variablelist os="ad">
       <title>The meaning of the configure option:</title>
 
       <varlistentry>
@@ -67,18 +67,18 @@
 
     </variablelist>
 
-    <para>Only a few of the utilities contained in this package need to be
+    <para os="ae">Only a few of the utilities contained in this package need to be
     built:</para>
 
-<screen><userinput>make perl utilities</userinput></screen>
+<screen os="af"><userinput>make perl utilities</userinput></screen>
 
-    <para>Although Perl comes with a test suite, it is not recommended to
+    <para os="ag">Although Perl comes with a test suite, it is not recommended to
     run it at this point. Only part of Perl was built and running
     <userinput>make test</userinput> now will cause the rest of Perl to be
     built as well, which is unnecessary at this point. The test suite can
     be run in the next chapter if desired.</para>
 
-    <para>Install these tools and their libraries:</para>
+    <para os="ah">Install these tools and their libraries:</para>
 
 <screen><userinput>cp perl pod/pod2man /tools/bin
 install -d /tools/lib/perl5/&perl-version;

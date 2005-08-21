@@ -42,27 +42,43 @@
   <sect2 role="installation">
     <title>Installation of Module-Init-Tools</title>
 
-<para>Module-Init-Tools attempts to rewrite its
-<filename>modprobe.conf</filename> man page during the build process. This is
-unnecessary and also relies on <command>docbook2man</command> &mdash; which is not
-installed in LFS. Run the following command to avoid this:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
-<screen><userinput>touch modprobe.conf.5</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Prepare Module-Init-Tools for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix="" --enable-zlib</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>To test the results, issue:
-    <userinput>make check</userinput>.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
   </sect2>
 

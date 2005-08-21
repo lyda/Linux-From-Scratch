@@ -42,25 +42,41 @@
   <sect2 role="installation">
     <title>Installation of Ncurses</title>
 
-    <para>Prepare Ncurses for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/ncurses.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>CC="gcc ${BUILDN32}" CXX="g++ ${BUILDN32}" \
    ./configure --prefix=/usr --libdir=/lib32 \
    --with-shared --without-debug</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/ncurses.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/ncurses.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/ncurses.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/ncurses.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>Move the Ncurses static libraries to the proper locations:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/ncurses.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>mv /lib32/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/ncurses.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Create symlinks in <filename class="directory">/usr/lib:</filename></para>
+<screen><userinput>mv /lib32/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib32</userinput></screen>
+
+    <para>Create symlinks in <filename class="directory">/usr/lib32:</filename></para>
 
 <screen><userinput>rm /lib32/lib{ncurses,menu,panel,form}.so
 ln -sf ../../lib32/libncurses.so.5 /usr/lib32/libncurses.so
@@ -68,7 +84,9 @@ ln -sf ../../lib32/libmenu.so.5 /usr/lib32/libmenu.so
 ln -sf ../../lib32/libpanel.so.5 /usr/lib32/libpanel.so
 ln -sf ../../lib32/libform.so.5 /usr/lib32/libform.so</userinput></screen>
 
-    <para>Give the Ncurses libraries execute permissions:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/ncurses.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
 <screen><userinput>chmod 755 /lib32/lib{panel,menu,form,ncurses}.so.&ncurses-version;</userinput></screen>
 

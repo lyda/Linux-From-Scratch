@@ -46,36 +46,36 @@
   <sect2 id="install-ncurses" role="installation">
     <title>Installation of Ncurses</title>
 
-    <para>Prepare Ncurses for compilation:</para>
+    <para os="a">Prepare Ncurses for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --libdir=/lib \
     --with-shared --without-debug</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="b">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="c"><userinput>make</userinput></screen>
 
-    <para>This package does not come with a test suite.</para>
+    <para os="d">This package does not come with a test suite.</para>
 
-    <para>Install the package:</para>
+    <para os="e">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="f"><userinput>make install</userinput></screen>
 
-    <para>Move the Ncurses static libraries to the proper locations:</para>
+    <para os="g">Move the Ncurses static libraries to the proper locations:</para>
 
-<screen><userinput>mv /lib/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib</userinput></screen>
+<screen os="h"><userinput>mv /lib/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib</userinput></screen>
 
-    <para>Create symlinks in <filename class="directory">/usr/lib:</filename></para>
+    <para os="i">Create symlinks in <filename class="directory">/usr/lib:</filename></para>
 
-<screen><userinput>rm /lib/lib{ncurses,menu,panel,form}.so
+<screen os="j"><userinput>rm /lib/lib{ncurses,menu,panel,form}.so
 ln -sf ../../lib/libncurses.so.5 /usr/lib/libncurses.so
 ln -sf ../../lib/libmenu.so.5 /usr/lib/libmenu.so
 ln -sf ../../lib/libpanel.so.5 /usr/lib/libpanel.so
 ln -sf ../../lib/libform.so.5 /usr/lib/libform.so</userinput></screen>
 
-    <para>Give the Ncurses libraries execute permissions:</para>
+    <para os="k">Give the Ncurses libraries execute permissions:</para>
 
-<screen><userinput>chmod 755 /lib/lib{panel,menu,form,ncurses}.so.&ncurses-version;</userinput></screen>
+<screen os="l"><userinput>chmod 755 /lib/lib{panel,menu,form,ncurses}.so.&ncurses-version;</userinput></screen>
 
   </sect2>
 

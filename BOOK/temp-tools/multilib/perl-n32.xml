@@ -45,11 +45,11 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@os='ab'])"/>
 
     <para>Make sure Perl looks at <filename
     class="directory">/tools/lib32</filename> for shared libraries:</para>
@@ -58,23 +58,26 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    xpointer="xpointer(//*[@os='ac'])"/>
 
 <screen><userinput>./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX' \
    -Dcc="gcc ${BUILDN32}"</userinput></screen>
 
-    <para>Compile only the required tools:</para>
-
-<screen><userinput>make perl utilities</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/perl.xml"
+    xpointer="xpointer(//*[@os='ae'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    xpointer="xpointer(//*[@os='af'])"/>
 
-    <para>Copy these tools and their libraries:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/perl.xml"
+    xpointer="xpointer(//*[@os='ag'])"/>
 
-<screen><userinput>cp perl pod/pod2man /tools/bin
-install -d /tools/lib32/perl5/&perl-version;
+    <para>Install the libraries:</para>
+
+<screen><userinput>install -d /tools/lib32/perl5/&perl-version;
 cp -R lib/* /tools/lib32/perl5/&perl-version;</userinput></screen>
 
   </sect2>

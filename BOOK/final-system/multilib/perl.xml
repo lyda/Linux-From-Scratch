@@ -44,34 +44,46 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(id('install-perl')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>./configure.gnu --prefix=/usr -Dpager="/bin/less -isR" \
    -Dcc="gcc ${BUILD32}"</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(id('install-perl')/variablelist[1])"/>
-
-    <para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(id('install-perl')/para[3])"/>
+    xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(id('install-perl')/screen[3])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Now run the tests, if desired:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/perl.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>make test</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/perl.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/perl.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/perl.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/perl.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/perl.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
   </sect2>
 

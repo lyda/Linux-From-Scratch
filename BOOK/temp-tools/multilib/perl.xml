@@ -45,32 +45,36 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@os='ab'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(//*[@role='installation']/para[2])"/>
+    xpointer="xpointer(//*[@os='ac'])"/>
 
 <screen><userinput>./configure.gnu --prefix=/tools -Dstatic_ext='IO Fcntl POSIX' \
    -Dcc="gcc ${BUILD32}"</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(//*[@role='installation']/variablelist[1])"/>
-
-    <para>Compile only the required tools:</para>
-
-<screen><userinput>make perl utilities</userinput></screen>
+    xpointer="xpointer(//*[@os='ad'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
-    xpointer="xpointer(//*[@role='installation']/para[4])"/>
+    xpointer="xpointer(//*[@os='ae'])"/>
 
-    <para>Copy these tools and their libraries:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/perl.xml"
+    xpointer="xpointer(//*[@os='af'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/perl.xml"
+    xpointer="xpointer(//*[@os='ag'])"/>
+
+    <para>Intall the libraries:</para>
 
 <screen><userinput>install -d /tools/lib/perl5/&perl-version;
 cp -R lib/* /tools/lib/perl5/&perl-version;</userinput></screen>

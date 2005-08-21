@@ -43,21 +43,23 @@
   <sect2 role="installation">
     <title>Installation of Ncurses</title>
 
-    <para>When cross-compiling, Ncurses doesn't always properly create
+    <para os="aa">When cross-compiling, Ncurses doesn't always properly create
     the file <filename>ncurses/comp_captab.c</filename> which results
     in build failures. Fix this issue by updating Ncurses with a rollup
     patch released on 2005/03/19:</para>
 
-<screen><userinput>bzcat ../&ncurses-update-patch; &gt; update.sh
+<screen os="ab"><userinput>bzcat ../&ncurses-update-patch; &gt; update.sh
 sh update.sh</userinput></screen>
 
-    <para>Prepare Ncurses for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/ncurses.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>./configure --prefix=/tools --with-shared \
    --host=${LFS_TARGET} --without-debug --without-ada \
    --enable-overwrite --with-build-cc=gcc</userinput></screen>
 
-    <variablelist>
+    <variablelist os="ac">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
@@ -103,13 +105,21 @@ sh update.sh</userinput></screen>
 
     </variablelist>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/ncurses.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/ncurses.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/ncurses.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/ncurses.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
   </sect2>
 
