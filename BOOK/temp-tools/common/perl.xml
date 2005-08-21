@@ -80,7 +80,7 @@
 
     <para os="ah">Install these tools and their libraries:</para>
 
-<screen><userinput>cp perl pod/pod2man /tools/bin
+<screen os="ai"><userinput>cp perl pod/pod2man /tools/bin
 install -d /tools/lib/perl5/&perl-version;
 cp -R lib/* /tools/lib/perl5/&perl-version;</userinput></screen>
 
