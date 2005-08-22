@@ -45,16 +45,16 @@
   <sect2 id="install-udev" role="installation">
     <title>Installation of Udev</title>
 
-    <para>Fix an incorrect assumption in the Udev testsuite regarding the
+    <para os="a">Fix an incorrect assumption in the Udev testsuite regarding the
     location of the <command>test</command> binary:</para>
 
-<screen><userinput>sed -i -e 's@/usr/bin/test@/bin/test@' test/udev-test.pl</userinput></screen>
+<screen os="b"><userinput>sed -i -e 's@/usr/bin/test@/bin/test@' test/udev-test.pl</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="c">Compile the package:</para>
 
 <screen><userinput>make udevdir=/dev</userinput></screen>
 
-    <variablelist>
+    <variablelist os="d">
       <title>The meaning of the make parameter:</title>
 
       <varlistentry>
@@ -64,24 +64,25 @@
           devices nodes are to be created.</para>
         </listitem>
       </varlistentry>
+
     </variablelist>
 
-    <para>To test the results, issue:
+    <para os="e">To test the results, issue:
     <userinput>make test</userinput>.</para>
 
-    <para>Install the package:</para>
+    <para os="f">Install the package:</para>
 
-<screen><userinput>make udevdir=/dev install</userinput></screen>
+<screen os="g"><userinput>make udevdir=/dev install</userinput></screen>
 
-    <para>Udev's configuration is far from ideal by default, so install
+    <para os="h">Udev's configuration is far from ideal by default, so install
     the configuration files here:</para>
 
-<screen><userinput>cp ../&udev-config-file; /etc/udev/rules.d/25-lfs.rules</userinput></screen>
+<screen os="i"><userinput>cp ../&udev-config-file; /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
-    <para>Run the <command>udevstart</command> program to create our full
+    <para os="j">Run the <command>udevstart</command> program to create our full
     complement of device nodes.</para>
 
-<screen><userinput>/sbin/udevstart</userinput></screen>
+<screen os="k"><userinput>/sbin/udevstart</userinput></screen>
 
   </sect2>
 

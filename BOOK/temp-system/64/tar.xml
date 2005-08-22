@@ -45,24 +45,34 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/tar.xml"
-    xpointer="xpointer(//*[@role='installation']/para[1])"/>
+    xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/tar.xml"
-    xpointer="xpointer(//*[@role='installation']/screen[1])"/>
+    xpointer="xpointer(//*[@os='ab'])"/>
 
-    <para>Prepare Tar for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/tar.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=/tools \
    --host=${LFS_TARGET} --cache-file=config.cache</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/tar.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/tar.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/tar.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/tar.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
   </sect2>
 

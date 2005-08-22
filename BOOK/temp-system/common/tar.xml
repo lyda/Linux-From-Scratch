@@ -43,23 +43,33 @@
   <sect2 role="installation">
     <title>Installation of Tar</title>
 
-    <para>Tar has an issue with cross-compiling where it
-    can't find getline. So we fix it here:</para>
+    <para os="aa">Tar has an issue with cross-compiling where it
+    can't find <function>getline</function>. So we fix it here:</para>
 
-<screen><userinput>echo "am_cv_func_working_getline=yes" &gt;&gt; config.cache</userinput></screen>
+<screen os="ab"><userinput>echo "am_cv_func_working_getline=yes" &gt;&gt; config.cache</userinput></screen>
 
-    <para>Prepare Tar for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/tar.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>./configure --prefix=/tools \
    --host=${LFS_TARGET} --cache-file=config.cache</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/tar.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/tar.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/tar.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/tar.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
   </sect2>
 

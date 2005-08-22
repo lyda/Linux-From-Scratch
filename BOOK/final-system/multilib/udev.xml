@@ -19,8 +19,9 @@
   <sect2 id="package-udev" role="package">
     <title/>
 
-    <para>The Udev package contains programs for dynamic creation of device
-    nodes.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(id('package-udev')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -32,56 +33,60 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-        <seg>Coreutils and Make</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(id('package-udev')/segmentedlist[2])"/>
 
   </sect2>
 
-  <sect2 id="install-udev" role="installation">
+  <sect2 role="installation">
     <title>Installation of Udev</title>
 
-    <para>Fix an incorrect assumption in the Udev testsuite regarding the
-    location of the <command>test</command> binary:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
-<screen><userinput>sed -i -e 's@/usr/bin/test@/bin/test@' test/udev-test.pl</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>make CC="gcc ${BUILD64}" LD="gcc ${BUILD64}" udevdir=/dev</userinput></screen>
 
-    <variablelist>
-      <title>The meaning of the make parameter:</title>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-      <varlistentry>
-      <term><parameter>udevdir=/dev</parameter></term>
-        <listitem>
-          <para>This tells <command>udev</command> in which directory
-          devices nodes are to be created.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>To test the results, issue:
-    <userinput>make test</userinput>.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make udevdir=/dev install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-    <para>Udev's configuration is far from ideal by default, so install
-    the configuration files here:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
-<screen><userinput>cp ../&udev-config-file; /etc/udev/rules.d/25-lfs.rules</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
-    <para>Run the <command>udevstart</command> program to create our full
-    compliment of device nodes.</para>
-
-<screen><userinput>/sbin/udevstart</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
   </sect2>
 

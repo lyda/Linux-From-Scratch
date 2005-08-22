@@ -43,22 +43,27 @@
   <sect2 role="installation">
     <title>Installation of Udev</title>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/udev.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>make CROSS="${LFS_TARGET}-" CC="${CC}" LD="${CC}"  udevdir=/dev</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/udev.xml"
-    xpointer="xpointer(id('install-udev')/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/udev.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make DESTDIR=${LFS} udevdir=/dev install</userinput></screen>
+<screen os="aa"><userinput>make DESTDIR=${LFS} udevdir=/dev install</userinput></screen>
 
-    <para>Udev's configuration is far from ideal by default, so install
-    the configuration files here:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/udev.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<screen><userinput>cp ../&udev-config-file; ${LFS}/etc/udev/rules.d/25-lfs.rules</userinput></screen>
+<screen os="ab"><userinput>cp ../&udev-config-file; ${LFS}/etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
   </sect2>
 

@@ -46,27 +46,27 @@
   <sect2 id="install-texinfo" role="installation">
     <title>Installation of Texinfo</title>
 
-    <para>Prepare Texinfo for compilation:</para>
+    <para os="a">Prepare Texinfo for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="b">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="c"><userinput>make</userinput></screen>
 
-    <para>To test the results, issue:
+    <para os="d">To test the results, issue:
     <userinput>make check</userinput>.</para>
 
-    <para>Install the package:</para>
+    <para os="e">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="f"><userinput>make install</userinput></screen>
 
-    <para>Optionally, install the components belonging in a TeX
+    <para os="g">Optionally, install the components belonging in a TeX
     installation:</para>
 
-<screen><userinput>make TEXMF=/usr/share/texmf install-tex</userinput></screen>
+<screen os="h"><userinput>make TEXMF=/usr/share/texmf install-tex</userinput></screen>
 
-    <variablelist>
+    <variablelist os="i">
       <title>The meaning of the make parameter:</title>
 
       <varlistentry>
@@ -77,24 +77,22 @@
           installed later.</para>
         </listitem>
       </varlistentry>
+
     </variablelist>
 
-
-    <para>The Info documentation system uses a plain text file to hold its list
-    of menu entries. The file is located at
+    <para os="j">The Info documentation system uses a plain text file to hold
+    its list of menu entries. The file is located at
     <filename>/usr/share/info/dir</filename>. Unfortunately, due to occasional
     problems in the Makefiles of various packages, it can sometimes get out of
     sync with the info pages installed on the system. If the
     <filename>/usr/share/info/dir</filename> file ever needs to be recreated,
     the following optional commands will accomplish the task:</para>
 
-<screen><userinput>cd /usr/share/info
+<screen os="k"><userinput>cd /usr/share/info
 rm dir
 for f in *
 do install-info $f dir 2&gt;/dev/null
 done</userinput></screen>
-
-    <para/>
 
   </sect2>
 
