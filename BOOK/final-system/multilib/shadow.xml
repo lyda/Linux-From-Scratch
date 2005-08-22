@@ -51,7 +51,7 @@
     xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>CC="gcc ${BUILD32}" ./configure --libdir=/lib \
-   --enable-shared --enable-shadowgrp</userinput></screen>
+   --enable-shared</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/shadow.xml"

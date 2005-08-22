@@ -56,17 +56,15 @@
 
     <para os="b">Prepare Shadow for compilation:</para>
 
-<screen><userinput>./configure --libdir=/lib --enable-shared --enable-shadowgrp</userinput></screen>
+<screen><userinput>./configure --libdir=/lib --enable-shared</userinput></screen>
 
     <variablelist os="c">
       <title>The meaning of the new configure options:</title>
 
       <varlistentry>
-        <term><parameter>--enable-shadowgrp</parameter></term>
+        <term><parameter>to be done</parameter></term>
         <listitem>
-          <para>This version of Shadow defaults to not enabling shadow group
-          functionality, which will cause <command>grpconv</command> to
-          fail.</para>
+          <para>to be done</para>
         </listitem>
       </varlistentry>
 
