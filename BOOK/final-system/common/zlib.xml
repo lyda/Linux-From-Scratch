@@ -45,7 +45,7 @@
   <sect2 id="install-zlib" role="installation">
     <title>Installation of Zlib</title>
 
-    <note>
+    <note os="a">
       <para>Zlib is known to build its shared library incorrectly if
       <envar>CFLAGS</envar> is specified in the environment. If using a
       specified <envar>CFLAGS</envar> variable, be sure to add the
@@ -54,45 +54,45 @@
       remove it afterwards.</para>
     </note>
 
-    <para>Prepare Zlib for compilation:</para>
+    <para os="b">Prepare Zlib for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --shared --libdir=/lib</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="c">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="d"><userinput>make</userinput></screen>
 
-    <para>To test the results, issue:
+    <para os="e">To test the results, issue:
     <userinput>make check</userinput>.</para>
 
-    <para>Install the shared library:</para>
+    <para os="f">Install the shared library:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="g"><userinput>make install</userinput></screen>
 
-    <para>The previous command installed a <filename
+    <para os="h">The previous command installed a <filename
     class="extension">.so</filename> file in <filename
     class="directory">/lib</filename>. We will remove it and relink it into
     <filename class="directory">/usr/lib</filename>:</para>
 
-<screen><userinput>rm /lib/libz.so
+<screen os="i"><userinput>rm /lib/libz.so
 ln -sf ../../lib/libz.so.&zlib-version; /usr/lib/libz.so</userinput></screen>
 
-    <para>Build the static library:</para>
+    <para os="j">Build the static library:</para>
 
 <screen><userinput>make clean
 ./configure --prefix=/usr
 make</userinput></screen>
 
-    <para>To test the results again, issue:
+    <para os="k">To test the results again, issue:
     <userinput>make check</userinput>.</para>
 
-    <para>Install the static library:</para>
+    <para os="l">Install the static library:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="m"><userinput>make install</userinput></screen>
 
-    <para>Fix the permissions on the static library:</para>
+    <para os="n">Fix the permissions on the static library:</para>
 
-<screen><userinput>chmod 644 /usr/lib/libz.a</userinput></screen>
+<screen os="o"><userinput>chmod 644 /usr/lib/libz.a</userinput></screen>
 
   </sect2>
 

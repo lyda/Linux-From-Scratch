@@ -62,23 +62,23 @@ mkdir -p /var/lib/hwclock</userinput></screen>
   <sect2 id="install-util-linux"  role="installation">
     <title>Installation of Util-linux</title>
 
-    <para>Util-linux fails to compile against newer versions of
+    <para os="a">Util-linux fails to compile against newer versions of
     Linux-Libc-Headers. The following patch properly fixes this issue:</para>
 
-<screen><userinput>patch -Np1 -i ../&util-linux-cramfs-patch;</userinput></screen>
+<screen os="b"><userinput>patch -Np1 -i ../&util-linux-cramfs-patch;</userinput></screen>
 
-    <para>Prepare Util-linux for compilation:</para>
+    <para os="c">Prepare Util-linux for compilation:</para>
 
 <screen><userinput>./configure</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="d">Compile the package:</para>
 
-<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes</userinput></screen>
+<screen os="e"><userinput>make HAVE_KILL=yes HAVE_SLN=yes</userinput></screen>
 
-    <variablelist>
+    <variablelist os="f">
       <title>The meaning of the make parameters:</title>
 
-      <varlistentry>
+      <varlistentry os="fa">
         <term><parameter>HAVE_KILL=yes</parameter></term>
         <listitem>
           <para>This prevents the <command>kill</command> program (already
@@ -86,7 +86,7 @@ mkdir -p /var/lib/hwclock</userinput></screen>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="fb">
         <term><parameter>HAVE_SLN=yes</parameter></term>
         <listitem>
           <para>This prevents the <command>sln</command> program (a
@@ -94,15 +94,16 @@ mkdir -p /var/lib/hwclock</userinput></screen>
           by Glibc) from being built and installed again.</para>
         </listitem>
       </varlistentry>
+
     </variablelist>
 
-    <para>This package does not come with a test suite.</para>
+    <para os="g">This package does not come with a test suite.</para>
 
-    <para>Install the package and move the <command>logger</command> binary to
-    <filename class="directory">/bin</filename> as it is needed by the
+    <para os="h">Install the package and move the <command>logger</command> binary
+    to <filename class="directory">/bin</filename> as it is needed by the
     LFS-Bootscripts package:</para>
 
-<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes install
+<screen os="i"><userinput>make HAVE_KILL=yes HAVE_SLN=yes install
 mv /usr/bin/logger /bin</userinput></screen>
 
   </sect2>

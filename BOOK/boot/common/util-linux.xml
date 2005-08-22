@@ -43,44 +43,48 @@
   <sect2 role="installation">
     <title>Installation of Util-linux</title>
 
-    <para>Util-linux does not use the freshly installed headers and
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
+
+    <para os="ba">Util-linux does not use the freshly installed headers and
     libraries from the <filename class="directory">/tools</filename>
     directory by default. This is fixed by altering the configure script:</para>
 
-<screen><userinput>sed -i 's@/usr/include@/tools/include@g' configure</userinput></screen>
+<screen os="bb"><userinput>sed -i 's@/usr/include@/tools/include@g' configure</userinput></screen>
 
-    <para>Util-linux installs uses <option>-o root</option>, the following
+    <para os="bc">Util-linux installs uses <option>-o root</option>, the following
     <command>sed</command> removes that since we don't have users setup
     yet:</para>
 
-<screen><userinput>sed -i 's|-o root||' MCONFIG</userinput></screen>
+<screen os="bd"><userinput>sed -i 's|-o root||' MCONFIG</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/util-linux.xml"
-    xpointer="xpointer(id('install-util-linux')/para[1])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/util-linux.xml"
-    xpointer="xpointer(id('install-util-linux')/screen[1])"/>
-
-    <para>Prepare Util-linux for compilation:</para>
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>./configure</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no CPUOPT="" ARCH="" CPU=""</userinput></screen>
+<screen os="be"><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no CPUOPT="" ARCH="" CPU=""</userinput></screen>
 
-    <variablelist>
+    <variablelist os="bf">
       <title>The meaning of the make parameters:</title>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../../final-system/common/util-linux.xml"
-      xpointer="xpointer(id('install-util-linux')/variablelist[1]/varlistentry[1])"/>
+      xpointer="xpointer(//*[@os='fa'])"/>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../../final-system/common/util-linux.xml"
-      xpointer="xpointer(id('install-util-linux')/variablelist[1]/varlistentry[2])"/>
+      xpointer="xpointer(//*[@os='fb'])"/>
 
       <varlistentry>
         <term><parameter>HAVE_SHADOW=no</parameter></term>
@@ -112,13 +116,14 @@
 
     </variablelist>
 
-    <para>Install the package:</para>
+    <para os="bg">Install the package:</para>
 
-<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no USE_TTY_GROUP=no CPUOPT="" ARCH="" CPU="" DESTDIR=${LFS} install</userinput></screen>
+<screen os="bh"><userinput>make HAVE_KILL=yes HAVE_SLN=yes HAVE_SHADOW=no USE_TTY_GROUP=no CPUOPT="" ARCH="" CPU="" DESTDIR=${LFS} install</userinput></screen>
 
-    <para>Now we will put a copy of mount in /tools/bin.</para>
+    <para os="bi">Now we will put a copy of mount in <filename
+    class="directory">/tools/bin</filename>:</para>
 
-<screen><userinput>cp ${LFS}/bin/mount /tools/bin</userinput></screen>
+<screen os="bj"><userinput>cp ${LFS}/bin/mount /tools/bin</userinput></screen>
 
   </sect2>
 

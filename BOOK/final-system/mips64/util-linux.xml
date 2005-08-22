@@ -48,34 +48,45 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/util-linux.xml"
-    xpointer="xpointer(id('install-util-linux')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/util-linux.xml"
-    xpointer="xpointer(id('install-util-linux')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Util-linux has a compilation error when built using 64bit
-     and a MIPS processor. The follow patch addresses this error:</para>
+    <para os="aa">Util-linux has a compilation error when built using 64bit
+    and a MIPS processor. The follow patch addresses this error:</para>
 
-<screen><userinput>patch -Np1 -i ../&util-linux-mips64-patch;</userinput></screen>
+<screen os="ab"><userinput>patch -Np1 -i ../&util-linux-mips64-patch;</userinput></screen>
 
-    <para>Prepare Util-linux for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure</userinput></screen>
 
-    <para>Compile the package:</para>
-
-<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/util-linux.xml"
-    xpointer="xpointer(id('install-util-linux')/variablelist[1])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>This package does not come with a test suite.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/util-linux.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
   </sect2>
 

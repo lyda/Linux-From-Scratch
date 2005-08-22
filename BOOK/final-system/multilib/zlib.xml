@@ -44,61 +44,70 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/zlib.xml"
-    xpointer="xpointer(id('install-zlib')/note[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
-    <para>Prepare Zlib for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}" ./configure --prefix=/usr \
-   --shared</userinput></screen>
+   --shared --libdir=/lib</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>To test the results, issue:
-    <userinput>make check</userinput>.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>Install the shared library:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Build the static library:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
 <screen><userinput>make clean
 CC="gcc ${BUILD32}" CXX="g++ ${BUILD32}" ./configure --prefix=/usr
 make</userinput></screen>
 
-    <para>To test the results again, issue:
-    <userinput>make check</userinput>.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
-    <para>Install the static library:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
 
-    <para>Fix the permissions on the static library:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='n'])"/>
 
-<screen><userinput>chmod 644 /usr/lib/libz.a</userinput></screen>
-
-    <para>It is good policy and common practice to place important
-    libraries into the <filename class="directory">/lib</filename>
-    directory. This is most important in scenarios where <filename
-    class="directory">/usr</filename> is on a separate partition.
-    Essentially, the run-time components of any libraries that are used by
-    programs in <filename class="directory">/bin</filename> or <filename
-    class="directory">/sbin</filename> should reside in <filename
-    class="directory">/lib</filename> so that they are on the root
-    partition and available in the event of <filename
-    class="directory">/usr</filename> being inaccessible.</para>
-
-    <para>For the above reason, move the run-time components of the shared Zlib
-    into <filename class="directory">/lib</filename>:</para>
-
-<screen><userinput>mv /usr/lib/libz.so.* /lib</userinput></screen>
-
-    <para>Fix the <filename class="symlink">/usr/lib/libz.so</filename>
-    symlink:</para>
-
-<screen><userinput>ln -sf ../../lib/libz.so.1 /usr/lib/libz.so</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/zlib.xml"
+    xpointer="xpointer(//*[@os='o'])"/>
 
   </sect2>
 

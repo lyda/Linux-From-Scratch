@@ -43,30 +43,32 @@
   <sect2 role="installation">
     <title>Installation of Util-linux</title>
 
-    <para>Util-linux does not use the freshly installed headers and
-    libraries from the <filename class="directory">/tools</filename>
-    directory by default. This is fixed by altering the configure script:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../boot/common/util-linux.xml"
+    xpointer="xpointer(//*[@os='ba'])"/>
 
-<screen><userinput>cp -p configure configure.orig
-sed 's@/usr/include@/tools/include@g' configure.orig > configure</userinput></screen>
+<screen os="ca"><userinput>cp -p configure configure.orig
+sed 's@/usr/include@/tools/include@g' configure.orig &gt; configure</userinput></screen>
 
-    <para>Prepare Util-linux for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>./configure</userinput></screen>
 
-    <para>Compile some support routines:</para>
+    <para os="cb">Compile some support routines:</para>
 
-<screen><userinput>make ARCH="" CPU="" -C lib</userinput></screen>
+<screen os="cd"><userinput>make ARCH="" CPU="" -C lib</userinput></screen>
 
-    <para>Only a few of the utilities contained in this package need to be
+    <para os="ce">Only a few of the utilities contained in this package need to be
     built:</para>
 
-<screen><userinput>make ARCH="" CPU="" -C mount mount umount
+<screen os="cf"><userinput>make ARCH="" CPU="" -C mount mount umount
 make ARCH="" CPU="" -C text-utils more</userinput></screen>
 
-    <para>Copy these programs to the temporary tools directory:</para>
+    <para os="cg">Copy these programs to the temporary tools directory:</para>
 
-<screen><userinput>cp mount/{,u}mount text-utils/more /tools/bin</userinput></screen>
+<screen os="ch"><userinput>cp mount/{,u}mount text-utils/more /tools/bin</userinput></screen>
 
   </sect2>
 

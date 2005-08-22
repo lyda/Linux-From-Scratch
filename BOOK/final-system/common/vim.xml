@@ -54,24 +54,24 @@
   <sect2 id="install-vim" role="installation">
     <title>Installation of Vim</title>
 
-    <para>First, unpack both <filename>vim-&vim-version;.tar.bz2</filename>
+    <para os="a">First, unpack both <filename>vim-&vim-version;.tar.bz2</filename>
     and (optionally) <filename>vim-&vim-version;-lang.tar.gz</filename>
     archives into the same directory. Then, change the default location of
     the <filename>vimrc</filename> configuration file to <filename
     class="directory">/etc</filename>:</para>
 
-<screen><userinput>echo '#define SYS_VIMRC_FILE "/etc/vimrc"' &gt;&gt; src/feature.h</userinput></screen>
+<screen os="b"><userinput>echo '#define SYS_VIMRC_FILE "/etc/vimrc"' &gt;&gt; src/feature.h</userinput></screen>
 
-    <para>Vim has two known security vulnerabilities that have already been
+    <para os="c">Vim has two known security vulnerabilities that have already been
     addressed upstream. The following patch fixes the problems:</para>
 
-<screen><userinput>patch -Np1 -i ../&vim-security_fix-patch;</userinput></screen>
+<screen os="d"><userinput>patch -Np1 -i ../&vim-security_fix-patch;</userinput></screen>
 
-    <para>Prepare Vim for compilation:</para>
+    <para os="e">Prepare Vim for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --enable-multibyte</userinput></screen>
 
-    <variablelist>
+    <variablelist os="f">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
@@ -88,35 +88,33 @@
 
     </variablelist>
 
-    <para>Compile the package:</para>
+    <para os="g">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="h"><userinput>make</userinput></screen>
 
-    <para>To test the results, issue: <userinput>make test</userinput>.
+    <para os="i">To test the results, issue: <userinput>make test</userinput>.
     However, this test suite outputs a lot of binary data to the
     screen, which can cause issues with the settings of the current terminal.
     This can be resolved by redirecting the output to a log file.</para>
 
-    <para>Install the package:</para>
+    <para os="j">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="k"><userinput>make install</userinput></screen>
 
-    <para>Many users are used to using <command>vi</command> instead of
+    <para os="l">Many users are used to using <command>vi</command> instead of
     <command>vim</command>. To allow execution of <command>vim</command>
     when users habitually enter <command>vi</command>, create a
     symlink:</para>
 
-<screen><userinput>ln -s vim /usr/bin/vi</userinput></screen>
+<screen os="m"><userinput>ln -s vim /usr/bin/vi</userinput></screen>
 
-    <para>If an X Window System is going to be installed on the LFS
+    <para os="n">If an X Window System is going to be installed on the LFS
     system, it may be necessary to recompile Vim after installing X. Vim
     comes with a GUI version of the editor that requires X and some
     additional libraries to be installed. For more information on this
     process, refer to the Vim documentation and the Vim installation page
     in the BLFS book at <ulink
     url="&blfs-root;view/svn/postlfs/editors.html#postlfs-editors-vim"/>.</para>
-
-    <para/>
 
   </sect2>
 

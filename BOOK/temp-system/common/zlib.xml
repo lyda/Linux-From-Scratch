@@ -43,11 +43,17 @@
   <sect2 role="installation">
     <title>Installation of Zlib</title>
 
-    <para>Prepare Zlib for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/zlib.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/zlib.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>./configure --prefix=/tools --shared</userinput></screen>
 
-    <variablelist>
+    <variablelist os="aa">
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
@@ -59,13 +65,21 @@
 
     </variablelist>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/zlib.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/zlib.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Install the shared library:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/zlib.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/zlib.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
   </sect2>
 
