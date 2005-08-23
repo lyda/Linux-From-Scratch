@@ -16,35 +16,59 @@
     <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/linux-libc-headers.xml"
-  xpointer="xpointer(id('package-linux-libc-headers'))"/>
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(id('package-linux-libc-headers')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(id('package-linux-libc-headers')/segmentedlist[2])"/>
+
+  </sect2>
 
   <sect2 role="installation">
     <title>Installation of Linux-Libc-Headers</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/linux-libc-headers.xml"
-    xpointer="xpointer(id('install-linux-libc-headers')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
-    <para>Install the header files:</para>
-
-    <para>Install the header files:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>install -d /usr/include
 cp -R include/asm-sparc64 /usr/include/asm
 cp -R include/linux /usr/include</userinput></screen>
 
-    <para>Ensure that all the headers are owned by
-    <systemitem class="username">root</systemitem>:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>chown -R root:root /usr/include/{asm,linux}</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Make sure the users can read the headers:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>find /usr/include/{asm,linux} -type d -exec chmod 755 {} \;
-find /usr/include/{asm,linux} -type f -exec chmod 644 {} \;</userinput></screen>
-
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
   </sect2>
 

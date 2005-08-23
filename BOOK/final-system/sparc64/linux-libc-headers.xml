@@ -16,25 +16,44 @@
     <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/linux-libc-headers.xml"
-  xpointer="xpointer(id('package-linux-libc-headers'))"/>
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(id('package-linux-libc-headers')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(id('package-linux-libc-headers')/segmentedlist[2])"/>
+
+  </sect2>
 
   <sect2 role="installation">
     <title>Installation of Linux-Libc-Headers</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/linux-libc-headers.xml"
-    xpointer="xpointer(id('install-linux-libc-headers')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
-    <para>Install the header files:</para>
-
-    <para>The following patch contains header stubs which link to the
+    <para os="ba">The following patch contains header stubs which link to the
     proper header from either asm-sparc or asm-sparc64:</para>
 
-<screen><userinput>patch -Np1 -i ../&linux-libc-headers-sparc_biarch-patch;</userinput></screen>
+<screen os="bb"><userinput>patch -Np1 -i ../&linux-libc-headers-sparc_biarch-patch;</userinput></screen>
 
-    <para>Install the header files:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>install -d /usr/include
 cp -R include/asm-sparc64 /usr/include/
@@ -42,16 +61,18 @@ cp -R include/asm-sparc /usr/include/
 cp -R include/asm-sparc-biarch /usr/include/asm
 cp -R include/linux /usr/include</userinput></screen>
 
-    <para>Ensure that all the headers are owned by
-    <systemitem class="username">root</systemitem>:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>chown -R root:root /usr/include/{asm,asm-sparc,asm-sparc64,linux}</userinput></screen>
 
-    <para>Make sure the users can read the headers:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
 <screen><userinput>find /usr/include/{asm,asm-sparc,asm-sparc64,linux} -type d -exec chmod 755 {} \;
 find /usr/include/{asm,asm-sparc,asm-sparc64,linux} -type f -exec chmod 644 {} \;</userinput></screen>
-
 
   </sect2>
 

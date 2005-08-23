@@ -45,7 +45,7 @@
   <sect2 id="install-linux-libc-headers" role="installation">
     <title>Installation of Linux-Libc-Headers</title>
 
-    <para>For years it has been common practice to use <quote>raw</quote>
+    <para os="a">For years it has been common practice to use <quote>raw</quote>
     kernel headers (straight from a kernel tarball) in <filename
     class="directory">/usr/include</filename>, but over the last few
     years, the kernel developers have taken a strong stance that this
@@ -53,22 +53,20 @@
     which was designed to maintain an API stable version of the Linux
     headers.</para>
 
-    <para>Install the header files:</para>
+    <para os="b">Install the header files:</para>
 
 <screen><userinput>cp -R include/asm-i386 /usr/include/asm
 cp -R include/linux /usr/include</userinput></screen>
 
-    <para>Ensure that all the headers are owned by
+    <para os="c">Ensure that all the headers are owned by
     <systemitem class="username">root</systemitem>:</para>
 
-<screen><userinput>chown -R root:root /usr/include/{asm,linux}</userinput></screen>
+<screen os="d"><userinput>chown -R root:root /usr/include/{asm,linux}</userinput></screen>
 
-    <para>Make sure the users can read the headers:</para>
+    <para os="e">Make sure the users can read the headers:</para>
 
-<screen><userinput>find /usr/include/{asm,linux} -type d -exec chmod 755 {} \;
+<screen os="f"><userinput>find /usr/include/{asm,linux} -type d -exec chmod 755 {} \;
 find /usr/include/{asm,linux} -type f -exec chmod 644 {} \;</userinput></screen>
-
-    <para/>
 
   </sect2>
 
