@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "GCC4-20050818">
-<!ENTITY releasedate "August 18, 2005">
+<!ENTITY version "GCC4-20050823">
+<!ENTITY releasedate "August 23, 2005">
 <!ENTITY milestone "6.2">
 <!ENTITY generic-version "gcc4"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
@@ -36,7 +36,7 @@
 <!ENTITY e2fsprogs-version "1.38">
 <!ENTITY expect-version "5.43.0">
 <!ENTITY expect-lib-version "5.43">
-<!ENTITY file-version "4.14">
+<!ENTITY file-version "4.15">
 <!ENTITY findutils-version "4.2.23">
 <!ENTITY flex-version "2.5.31">
 <!ENTITY gawk-version "3.1.4">
@@ -48,7 +48,7 @@
 <!ENTITY grub-version "0.97">
 <!ENTITY gzip-version "1.3.5">
 <!ENTITY hotplug-version "2004_09_23">
-<!ENTITY iana-etc-version "1.10">
+<!ENTITY iana-etc-version "2.00">
 <!ENTITY inetutils-version "1.4.2">
 <!ENTITY iproute2-version "2.6.11-050330">
 <!ENTITY kbd-version "1.12">
@@ -60,7 +60,7 @@
 <!ENTITY linux-libc-headers-version "2.6.12.0">
 <!ENTITY m4-version "1.4.3">
 <!ENTITY make-version "3.80">
-<!ENTITY man-version "1.6">
+<!ENTITY man-version "1.6a">
 <!ENTITY man-pages-version "2.07">
 <!ENTITY mktemp-version "1.5">
 <!ENTITY module-init-tools-version "3.1">
@@ -77,7 +77,7 @@
 <!ENTITY tar-version "1.15.1">
 <!ENTITY tcl-version "8.4.11">
 <!ENTITY texinfo-version "4.8">
-<!ENTITY udev-version "067">
+<!ENTITY udev-version "068">
 <!ENTITY util-linux-version "2.12q">
 <!ENTITY vim-version "6.3">
 <!ENTITY zlib-version "1.2.3">

@@ -96,7 +96,7 @@
 </varlistentry>
 
 <varlistentry>
-<term>File (&file-version;) - 400 KB:</term>
+<term>File (&file-version;) - 397 KB:</term>
 <listitem>
 <para><ulink url="ftp://ftp.gw.com/mirrors/pub/unix/file/"/></para>
 <note><para>File (&file-version;) may no longer be available at the
@@ -193,7 +193,7 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Iana-Etc (&iana-etc-version;) - 168 KB:</term>
+<term>Iana-Etc (&iana-etc-version;) - 174 KB:</term>
 <listitem>
 <para><ulink url="http://www.sethwklein.net/projects/iana-etc/downloads/"/></para>
 </listitem>
@@ -270,7 +270,7 @@ url="ftp://ftp.linuxfromscratch.org/pub/lfs/"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Man (&man-version;) - 208 KB:</term>
+<term>Man (&man-version;) - 202 KB:</term>
 <listitem>
 <para><ulink url="http://primates.ximian.com/~flucifredi/man/"/></para>
 </listitem>

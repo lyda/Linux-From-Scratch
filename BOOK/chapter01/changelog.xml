@@ -119,6 +119,20 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 23rd, 2005 [matt]: Install Udev's documentation relating
+to configuring rules (fixes bug 1622)</para></listitem>
+
+<listitem><para>August 23rd, 2005 [matt]: Upgrade to Man-1.6a</para></listitem>
+
+<listitem><para>August 20th, 2005 [matt]: Stop moving some of coreutils binaries
+to /bin as they aren't required to be there (fixes bug 1620).</para></listitem>
+
+<listitem><para>August 19th, 2005 [matt]: Upgrade to Udev-068</para></listitem>
+
+<listitem><para>August 19th, 2005 [matt]: Upgrade to IANA-etc-2.00</para></listitem>
+
+<listitem><para>August 19th, 2005 [matt]: Upgrade to file-4.15</para></listitem>
+
 <listitem><para>August 18th, 2005 [matt]: Simplify the method for finding where
 GCC's default specs file and private include directory live.  Additionally,
 don't assume the host's sed supports the -i switch.</para></listitem>
