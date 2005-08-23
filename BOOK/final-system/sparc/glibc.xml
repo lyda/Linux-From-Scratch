@@ -16,9 +16,28 @@
     <primary sortas="a-Glibc">Glibc</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('package-glibc'))"/>
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('package-glibc')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(id('package-glibc')/segmentedlist[2])"/>
+
+  </sect2>
 
   <sect2 role="installation">
     <title>Installation of Glibc</title>

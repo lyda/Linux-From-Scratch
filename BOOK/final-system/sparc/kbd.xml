@@ -16,11 +16,30 @@
     <primary sortas="a-kbd">Kbd</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/kbd.xml"
-  xpointer="xpointer(id('package-kbd'))"/>
+  <sect2 role="package">
+    <title/>
 
-  <sect2 id="install-kbd" role="installation">
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/kbd.xml"
+    xpointer="xpointer(id('package-kbd')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/kbd.xml"
+    xpointer="xpointer(id('package-kbd')/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
     <title>Installation of Kbd</title>
 
     <para os="a">Sparcs haven't updated the structure of <command>kbdrate</command>
@@ -40,7 +59,7 @@
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+  </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/kbd.xml"

@@ -16,9 +16,28 @@
     <primary sortas="a-Procps">Procps</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/procps.xml"
-  xpointer="xpointer(id('package-procps'))"/>
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/procps.xml"
+    xpointer="xpointer(id('package-procps')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/procps.xml"
+    xpointer="xpointer(id('package-procps')/segmentedlist[2])"/>
+
+  </sect2>
 
   <sect2 role="installation">
     <title>Installation of Procps</title>
@@ -37,7 +56,7 @@
 
 <screen><userinput>make install</userinput></screen>
 
-</sect2>
+  </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/procps.xml"

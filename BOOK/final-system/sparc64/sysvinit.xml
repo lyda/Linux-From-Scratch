@@ -70,11 +70,11 @@
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../sparc/sysvinit.xml"
-    xpointer="xpointer(id('conf-sysvinit'))"/>
+  href="../sparc/sysvinit.xml"
+  xpointer="xpointer(id('conf-sysvinit'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/sysvinit.xml"
-    xpointer="xpointer(id('contents-sysvinit'))"/>
+  href="../common/sysvinit.xml"
+  xpointer="xpointer(id('contents-sysvinit'))"/>
 
 </sect1>
