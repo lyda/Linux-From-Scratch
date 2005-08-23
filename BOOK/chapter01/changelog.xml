@@ -119,6 +119,11 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 23rd, 2005 [matt]: <command>find</command> may fail due
+to a race condition when deleting files.  Remove the &amp;&amp; construct in
+chapter05/adjusting.xml so that the rest of the commands for removing fixed
+headers will be executed (fixes bug 1621).</para></listitem>
+
 <listitem><para>August 23rd, 2005 [matt]: Install Udev's documentation relating
 to configuring rules (fixes bug 1622)</para></listitem>
 
