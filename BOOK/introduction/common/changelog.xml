@@ -44,6 +44,9 @@
         <listitem>
           <para>[jim] - Updated to Shadow 4.0.12.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to Gawk 3.1.5.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

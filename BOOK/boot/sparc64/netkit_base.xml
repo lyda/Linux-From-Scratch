@@ -47,12 +47,6 @@
     href="../../final-system/sparc/netkit_base.xml"
     xpointer="xpointer(id('install-netkit_base')/para[1])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/sparc/netkit_base.xml"
-    xpointer="xpointer(id('install-netkit_base')/screen[1])"/>
-
-<para>Prepare Netkit base for compilation:</para>
-
 <screen><userinput>./configure --prefix=/tools </userinput></screen>
 
    <para>Now we make the build compatible with our build. We change the user
