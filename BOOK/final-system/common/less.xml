@@ -45,11 +45,11 @@
   <sect2 id="install-less" role="installation">
     <title>Installation of Less</title>
 
-    <para>Prepare Less for compilation:</para>
+    <para os="a">Prepare Less for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --bindir=/bin --sysconfdir=/etc</userinput></screen>
 
-    <variablelist os="a">
+    <variablelist os="b">
       <title>The meaning of the configure option:</title>
 
       <varlistentry>
@@ -62,13 +62,13 @@
       </varlistentry>
     </variablelist>
 
-    <para>Compile the package:</para>
+    <para os="c">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="d"><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="e">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="f"><userinput>make install</userinput></screen>
 
   </sect2>
 

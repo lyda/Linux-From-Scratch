@@ -10,97 +10,102 @@
 
   <title>Adjusting the Toolchain</title>
 
-  <para>Now we amend the GCC specs file so that it points to the new
-  dynamic linker. A <command>perl</command> command accomplishes this:</para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../mips/adjusting.xml"
+  xpointer="xpointer(//*[@os='a'])"/>
 
-  <warning>
-    <para><emphasis>Do not</emphasis> run the following command more than
-    once, it will adversely affect the outcome of software built after
-    this step.</para>
-  </warning>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../mips/adjusting.xml"
+  xpointer="xpointer(//*[@os='b'])"/>
 
-<para>First we will adjust the 32 bit ABI:</para>
+  <para>First we will adjust the 32 bit ABI:</para>
 
-<screen><userinput>perl -pi -e 's@ /tools/lib/ld.so.1@ /lib/ld.so.1@g;' \
-    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' \
-        `gcc --print-file specs`</userinput></screen>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../mips/adjusting.xml"
+  xpointer="xpointer(//*[@os='c'])"/>
 
-<para>Second we will adjust the N32 ABI:</para>
+  <para>Second we will adjust the N32 ABI:</para>
 
 <screen><userinput>perl -pi -e 's@ /tools/lib32/ld.so.1@ /lib32/ld.so.1@g;' \
     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib32/ @g;' \
         `gcc --print-file specs`</userinput></screen>
 
-<para>Third we will adjust the 64 bit ABI:</para>
+  <para>Third we will adjust the 64 bit ABI:</para>
 
 <screen><userinput>perl -pi -e 's@ /tools/lib64/ld.so.1@ /lib64/ld.so.1@g;' \
     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib64/ @g;' \
         `gcc --print-file specs`</userinput></screen>
 
-  <para>It is a good idea to visually inspect the specs file to verify the
-  intended change was actually made.</para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../mips/adjusting.xml"
+  xpointer="xpointer(//*[@os='d'])"/>
 
   <para>Note that <filename class="directory">/lib</filename>,
   <filename class="directory">/lib32</filename>, or
   <filename class="directory">/lib64</filename> is now the prefix
   of our dynamic linker.</para>
 
-<caution><para>It is imperative at this point to stop and ensure that
-the basic functions (compiling and linking) of the adjusted toolchain
-are working as expected. To do this, perform a sanity
-check:</para>
+  <caution>
 
-<para>For 32 bit ABI:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/adjusting.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <para>For 32 bit ABI:</para>
 
 <screen><userinput>echo 'main(){}' &gt; dummy.c
 cc ${BUILD32} dummy.c
 readelf -l a.out | grep ': /lib'</userinput></screen>
 
-<para>If everything is working correctly, there should be no errors,
-and the output of the last command will be (allowing for
-platform-specific differences in dynamic linker name):</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/adjusting.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<screen><computeroutput>[Requesting program interpreter: /lib/ld.so.1]</computeroutput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/adjusting.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
-<para>For N32 ABI:</para>
+    <para>For N32 ABI:</para>
 
 <screen><userinput>echo 'main(){}' &gt; dummy.c
 cc ${BUILDN32} dummy.c
 readelf -l a.out | grep ': /lib'</userinput></screen>
 
-<para>If everything is working correctly, there should be no errors,
-and the output of the last command will be (allowing for
-platform-specific differences in dynamic linker name):</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/adjusting.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
 <screen><computeroutput>[Requesting program interpreter: /lib32/ld.so.1]</computeroutput></screen>
 
-<para>For 64 bit ABI:</para>
+    <para>For 64 bit ABI:</para>
 
 <screen><userinput>echo 'main(){}' &gt; dummy.c
 cc ${BUILD64} dummy.c
 readelf -l a.out | grep ': /lib'</userinput></screen>
 
-<para>If everything is working correctly, there should be no errors,
-and the output of the last command will be (allowing for
-platform-specific differences in dynamic linker name):</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/adjusting.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
 <screen><computeroutput>[Requesting program interpreter: /lib64/ld.so.1]</computeroutput></screen>
 
-<para>Note that <filename class="directory">/lib</filename>,
-<filename class="directory">/lib32</filename> or
-<filename class="directory">/lib64</filename> is now the prefix
-of our dynamic linker.</para>
+    <para>Note that <filename class="directory">/lib</filename>,
+    <filename class="directory">/lib32</filename> or
+    <filename class="directory">/lib64</filename> is now the prefix
+    of our dynamic linker.</para>
 
-<para>If the output does not appear as shown above or is not received
-at all, then something is seriously wrong. Investigate and retrace the
-steps to find out where the problem is and correct it. The most likely
-reason is that something went wrong with the specs file amendment
-above. Any issues will need to be resolved before continuing on with
-the process.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/adjusting.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
-<para>Once everything is working correctly, clean up the test
-files:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/adjusting.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
 
-<screen><userinput>rm dummy.c a.out</userinput></screen></caution>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/adjusting.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
+
+  </caution>
 
 </sect1>

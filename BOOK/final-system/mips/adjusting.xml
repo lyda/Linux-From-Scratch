@@ -12,44 +12,56 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/adjusting.xml"
-  xpointer="xpointer(/sect1/para[1])"/>
+  xpointer="xpointer(//*[@os='a'])"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/adjusting.xml"
-  xpointer="xpointer(/sect1/warning[1])"/>
+  xpointer="xpointer(//*[@os='b'])"/>
 
-<screen><userinput>perl -pi -e 's@ /tools/lib/ld.so.1@ /lib/ld.so.1@g;' \
+<screen os="c"><userinput>perl -pi -e 's@ /tools/lib/ld.so.1@ /lib/ld.so.1@g;' \
     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' \
-    `gcc --print-file specs`</userinput></screen>
+        `gcc --print-file specs`</userinput></screen>
 
-<caution><para>It is imperative at this point to stop and ensure that
-the basic functions (compiling and linking) of the adjusted toolchain
-are working as expected. To do this, perform a sanity
-check:</para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/adjusting.xml"
+  xpointer="xpointer(//*[@os='d'])"/>
 
-<screen><userinput>echo 'main(){}' &gt; dummy.c
-cc dummy.c
-readelf -l a.out | grep ': /lib'</userinput></screen>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/adjusting.xml"
+  xpointer="xpointer(//*[@os='e'])"/>
 
-<para>If everything is working correctly, there should be no errors,
-and the output of the last command will be (allowing for
-platform-specific differences in dynamic linker name):</para>
+  <caution>
 
-<screen><computeroutput>[Requesting program interpreter: /lib/ld.so.1]</computeroutput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<para>Note that <filename class="directory">/lib</filename> is now
-the prefix of our dynamic linker.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<para>If the output does not appear as shown above or is not received
-at all, then something is seriously wrong. Investigate and retrace the
-steps to find out where the problem is and correct it. The most likely
-reason is that something went wrong with the specs file amendment
-above. Any issues will need to be resolved before continuing on with
-the process.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<para>Once everything is working correctly, clean up the test
-files:</para>
+<screen os="i"><computeroutput>[Requesting program interpreter: /lib/ld.so.1]</computeroutput></screen>
 
-<screen><userinput>rm dummy.c a.out</userinput></screen></caution>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
+
+  </caution>
 
 </sect1>

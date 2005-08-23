@@ -5,6 +5,66 @@
   %general-entities;
 ]>
 
+<sect1 id="ch-system-adjusting">
+  <?dbhtml filename="adjusting.html"?>
+
+  <title>Adjusting the Toolchain</title>
+
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/adjusting.xml"
-  xpointer="xpointer(/sect1)"/>
+  xpointer="xpointer(//*[@os='a'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/adjusting.xml"
+  xpointer="xpointer(//*[@os='b'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/adjusting.xml"
+  xpointer="xpointer(//*[@os='c'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/adjusting.xml"
+  xpointer="xpointer(//*[@os='d'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/adjusting.xml"
+  xpointer="xpointer(//*[@os='e'])"/>
+
+  <caution>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/adjusting.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
+
+  </caution>
+
+</sect1>
+

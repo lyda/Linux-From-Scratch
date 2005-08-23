@@ -42,21 +42,31 @@
   <sect2 role="installation">
     <title>Installation of Automake</title>
 
-    <para>Prepare Automake for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/automake.xml"
-  xpointer="xpointer(//*[@os='a'])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
   </sect2>
 

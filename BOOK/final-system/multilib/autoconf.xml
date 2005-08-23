@@ -42,21 +42,31 @@
   <sect2 role="installation">
     <title>Installation of Autoconf</title>
 
-    <para>Prepare Autoconf for compilation:</para>
-
-<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr</userinput></screen>
-
-    <para>Compile the package:</para>
-
-<screen><userinput>make</userinput></screen>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/autoconf.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
-    <para>Install the package:</para>
+<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr</userinput></screen>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/autoconf.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
   </sect2>
 

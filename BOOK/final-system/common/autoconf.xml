@@ -45,20 +45,20 @@
   <sect2 id="install-autoconf" role="installation">
     <title>Installation of Autoconf</title>
 
-    <para>Prepare Autoconf for compilation:</para>
+    <para os="a">Prepare Autoconf for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="b">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="c"><userinput>make</userinput></screen>
 
-    <para os="a">To test the results, issue: <userinput>make check</userinput>.
+    <para os="d">To test the results, issue: <userinput>make check</userinput>.
     This takes a long time, about 2 SBUs.</para>
 
-    <para>Install the package:</para>
+    <para os="e">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="f"><userinput>make install</userinput></screen>
 
   </sect2>
 

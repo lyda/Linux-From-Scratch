@@ -10,53 +10,56 @@
 
   <title>Adjusting the Toolchain</title>
 
-  <para>Now we amend the GCC specs file so that it points to the new
+  <para os="a">Now we amend the GCC specs file so that it points to the new
   dynamic linker. A <command>perl</command> command accomplishes this:</para>
 
-  <warning>
+  <warning os="b">
     <para><emphasis>Do not</emphasis> run the following command more than
     once, it will adversely affect the outcome of software built after
     this step.</para>
   </warning>
 
-<screen><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
+<screen os="c"><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' \
         `gcc --print-file specs`</userinput></screen>
 
-  <para>It is a good idea to visually inspect the specs file to verify the
+  <para os="d">It is a good idea to visually inspect the specs file to verify the
   intended change was actually made.</para>
 
-  <para>Note that <filename class="directory">/lib</filename> is now
+  <para os="e">Note that <filename class="directory">/lib</filename> is now
   the prefix of our dynamic linker.</para>
 
-<caution><para>It is imperative at this point to stop and ensure that
-the basic functions (compiling and linking) of the adjusted toolchain
-are working as expected. To do this, perform a sanity
-check:</para>
+  <caution>
 
-<screen><userinput>echo 'main(){}' &gt; dummy.c
+    <para os="f">It is imperative at this point to stop and ensure that
+    the basic functions (compiling and linking) of the adjusted toolchain
+    are working as expected. To do this, perform a sanity
+    check:</para>
+
+<screen os="g"><userinput>echo 'main(){}' &gt; dummy.c
 cc dummy.c
 readelf -l a.out | grep ': /lib'</userinput></screen>
 
-<para>If everything is working correctly, there should be no errors,
-and the output of the last command will be (allowing for
-platform-specific differences in dynamic linker name):</para>
+    <para os="h">If everything is working correctly, there should be no errors,
+    and the output of the last command will be:</para>
 
-<screen><computeroutput>[Requesting program interpreter: /lib/ld-linux.so.2]</computeroutput></screen>
+<screen os="i"><computeroutput>[Requesting program interpreter: /lib/ld-linux.so.2]</computeroutput></screen>
 
-<para>Note that <filename class="directory">/lib</filename> is now
-the prefix of our dynamic linker.</para>
+    <para os="j">Note that <filename class="directory">/lib</filename> is now
+    the prefix of our dynamic linker.</para>
 
-<para>If the output does not appear as shown above or is not received
-at all, then something is seriously wrong. Investigate and retrace the
-steps to find out where the problem is and correct it. The most likely
-reason is that something went wrong with the specs file amendment
-above. Any issues will need to be resolved before continuing on with
-the process.</para>
+    <para os="k">If the output does not appear as shown above or is not received
+    at all, then something is seriously wrong. Investigate and retrace the
+    steps to find out where the problem is and correct it. The most likely
+    reason is that something went wrong with the specs file amendment
+    above. Any issues will need to be resolved before continuing on with
+    the process.</para>
 
-<para>Once everything is working correctly, clean up the test
-files:</para>
+    <para os="l">Once everything is working correctly, clean up the test
+    files:</para>
 
-<screen><userinput>rm dummy.c a.out</userinput></screen></caution>
+<screen os="m"><userinput>rm dummy.c a.out</userinput></screen>
+
+  </caution>
 
 </sect1>
