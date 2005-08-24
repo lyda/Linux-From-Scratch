@@ -45,24 +45,24 @@
   <sect2 id="install-silo" role="installation">
     <title>Installation of Silo</title>
 
-    <para>The following patch fixes compile issues::</para>
+    <para os="a">The following patch fixes compile issues::</para>
 
-<screen><userinput>patch -Np1 -i ../&silo-fixes-patch;</userinput></screen>
+<screen os="b"><userinput>patch -Np1 -i ../&silo-fixes-patch;</userinput></screen>
 
-    <para>Compile the Silo package:</para>
+    <para os="c">Compile the Silo package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="d">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="e"><userinput>make install</userinput></screen>
 
-   <para>Due to an a compile issue with the current toolchains, we are going
+   <para os="f">Due to a compile issue with the current toolchains, we are going
    to use the precompiled boot files. This is a temporary fix to the book, but
    will give us a functional system. As soon as a fix is released, this section
    will be removed. Here is how you install the precompiled files:</para>
 
-<screen><userinput>tar -xvf silo-loaders-&silo-version;.tar.gz -C ${LFS}</userinput></screen>
+<screen os="g"><userinput>tar -xvf silo-loaders-&silo-version;.tar.gz -C ${LFS}</userinput></screen>
 
   </sect2>
 

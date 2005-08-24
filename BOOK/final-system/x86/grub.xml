@@ -44,40 +44,40 @@
   <sect2 id="install-grub" role="installation">
     <title>Installation of GRUB</title>
 
-    <para>This package is known to have issues when its default optimization
+    <para os="a">This package is known to have issues when its default optimization
     flags (including the <option>-march</option> and <option>-mcpu</option>
     options) are changed. If any environment variables that override default
     optimizations have been defined, such as <envar>CFLAGS</envar> and
     <envar>CXXFLAGS</envar>, unset them when building GRUB.</para>
 
-    <para>Prepare GRUB for compilation:</para>
+    <para os="b">Prepare GRUB for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="c">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="d"><userinput>make</userinput></screen>
 
-    <para>To test the results, issue:
+    <para os="e">To test the results, issue:
     <userinput>sed -i '/ufs2/d' stage2/size_test &amp;&amp;
     make check</userinput>.</para>
 
-    <para>The UFS test is known to fail due to a compiler issue. The failure
+    <para os="f">The UFS test is known to fail due to a compiler issue. The failure
     prevents the rest of the tests from being run, so the <command>sed</command>
     command is used to avoid the failure. The UFS test failure can be ignored
     unless you plan to boot from a UFS partition. The partitions are normally
     only used by Sun workstations.</para>
 
-    <para>Install the package:</para>
+    <para os="g">Install the package:</para>
 
-<screen><userinput>make install
+<screen os="h"><userinput>make install
 mkdir /boot/grub
 cp /usr/lib/grub/i386-pc/stage{1,2} /boot/grub</userinput></screen>
 
-    <para>Replace <filename class="directory">i386-pc</filename> with whatever
+    <para os="i">Replace <filename class="directory">i386-pc</filename> with whatever
     directory is appropriate for the hardware in use.</para>
 
-    <para>The <filename class="directory">i386-pc</filename> directory
+    <para os="j">The <filename class="directory">i386-pc</filename> directory
     contains a number of <filename>*stage1_5</filename> files, different
     ones for different file systems. Review the files available and copy
     the appropriate ones to the <filename

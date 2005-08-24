@@ -45,28 +45,36 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/sparc/netkit_base.xml"
-    xpointer="xpointer(id('install-netkit_base')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>./configure --prefix=/tools </userinput></screen>
 
-   <para>Now we make the build compatible with our build. We change the user
-   to 0. Remove the -s from the install command. Remove the CC and CFLAGS variable
-   from the makefile. This will allow us to cross-compile with no issues at all.</para>
+   <para os="aa">Now we make the build compatible with our build. We change
+   the user to 0. Remove the <option>-s</option> from the installation commands.
+   Remove the <envar>CC</envar> and <envar>CFLAGS</envar> variable from the
+   <filename>Makefile</filename>. This will allow us to cross-compile with no
+   issues at all.</para>
 
-<screen><userinput>sed -i '/CC=/d' MCONFIG
+<screen os="ab"><userinput>sed -i '/CC=/d' MCONFIG
 sed -i '/CFLAGS=/d' MCONFIG
 sed -i 's/install -s/install/g' inetd/Makefile
 sed -i 's/install -s/install/g' ping/Makefile
 sed -i 's/-o root//g' inetd/Makefile
 sed -i 's/-o root//g' ping/Makefile</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/netkit_base.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
 <screen><userinput>make CC="${CC}"</userinput></screen>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/netkit_base.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/netkit_base.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
   </sect2>
 

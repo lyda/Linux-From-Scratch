@@ -43,13 +43,16 @@
   <sect2 role="installation">
     <title>Installation of Colo</title>
 
-  <para>We install the precompiled binary since 64 bit version is
-  not available currently.</para>
+    <para>We install the precompiled binary since 64 bit version is
+    not available currently.</para>
 
-  <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/colo-build.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-<screen><userinput>cp binaries/colo-chain.elf ${LFS}/boot/vmlinux
-gzip -9 ${LFS}/boot/vmlinux</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/colo-build.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
   </sect2>
 

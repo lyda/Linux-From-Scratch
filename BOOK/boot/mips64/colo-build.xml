@@ -43,17 +43,22 @@
   <sect2 role="installation">
     <title>Installation of Colo</title>
 
-  <para>Compile the Colo package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/colo-build.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>cd tools/elf2rfx
 make CC=gcc
 cd ../..
 make CC="${CC} ${BUILD32)" CROSS_COMPILE="${LFS_TARGET}-" binary</userinput></screen>
 
-  <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/colo-build.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-<screen><userinput>cp binaries/colo-chain.elf ${LFS}/boot/vmlinux
-gzip -9 ${LFS}/boot/vmlinux</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/colo-build.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
   </sect2>
 

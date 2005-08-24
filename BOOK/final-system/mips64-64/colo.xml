@@ -45,33 +45,19 @@
     <para>Since 64 bit version doesn't work currently we are going to
     compile the utilities as 64 bit and use the precompiled bootloader.</para>
 
-    <para>Compile the Colo package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/colo.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>make CC="gcc ${BUILD64}" tooldirs</userinput></screen>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/colo.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-<screen><userinput>install -d  /usr/lib/colo/examples
-install binaries/colo-chain.elf /usr/lib/colo
-install binaries/colo-rom-image.bin /usr/lib/colo
-install tools/colo-perm/colo-perm /sbin
-install tools/colo-perm/colo-perm.8 /usr/man/man8
-install tools/elf2rfx/elf2rfx /sbin
-install tools/flash-tool/flash-tool /sbin
-install tools/flash-tool/flash-tool.8 /usr/man/man8
-install tools/lcdtools/e2fsck-lcd/e2fsck-lcd /sbin
-install tools/lcdtools/e2fsck-lcd/e2fsck-lcd.8 /usr/man/man8
-install tools/lcdtools/liblcd/liblcd.a /lib
-install tools/lcdtools/paneld/paneld /sbin
-install tools/lcdtools/paneld/paneld.8 /usr/man/man8
-install tools/lcdtools/putlcd/putlcd /sbin
-install tools/lcdtools/putlcd/putlcd.8 /usr/man/man8
-install tools/md5rom/md5rom /sbin
-install tools/md5rom/md5rom.8 /usr/man/man8
-install examples/menu.colo /usr/lib/colo/examples
-install examples/simple.colo /usr/lib/colo/examples
-cp binaries/colo-chain.elf /boot/vmlinux
-gzip -9 /boot/vmlinux</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/colo.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
   </sect2>
 

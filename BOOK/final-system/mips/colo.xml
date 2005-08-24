@@ -45,13 +45,13 @@
   <sect2 id="install-colo" role="installation">
     <title>Installation of Colo</title>
 
-    <para>Compile the Colo package:</para>
+    <para os="a">Compile the Colo package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="b">Install the package:</para>
 
-<screen><userinput>install -d  /usr/lib/colo/examples
+<screen os="c"><userinput>install -d  /usr/lib/colo/examples
 install binaries/colo-chain.elf /usr/lib/colo
 install binaries/colo-rom-image.bin /usr/lib/colo
 install tools/colo-perm/colo-perm /sbin

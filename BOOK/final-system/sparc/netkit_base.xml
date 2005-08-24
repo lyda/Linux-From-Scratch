@@ -44,27 +44,28 @@
   <sect2 id="install-netkit_base" role="installation">
     <title>Installation of Netkit Base</title>
 
-   <para>Prepare Netkit base for compilation:</para>
+   <para os="a">Prepare Netkit base for compilation:</para>
 
 <screen><userinput>./configure</userinput></screen>
 
-   <para>We remove the CC and CFLAGS variables so, we don't have any compile issues.</para>
+   <para os="b">Remove the <envar>CC</envar> and C<envar>FLAGS</envar> variables
+   to avoid any compile issues.</para>
 
-<screen><userinput>sed -i '/CC=/d' MCONFIG
+<screen os="c"><userinput>sed -i '/CC=/d' MCONFIG
 sed -i '/CFLAGS=/d' MCONFIG</userinput></screen>
 
-    <para>Netkit Base needs patching to be compatable with the current toolchains.
-    This patch will correct that situation:</para>
+    <para os="d">Netkit Base needs patching to be compatable with the
+    current toolchains. This patch will correct that situation:</para>
 
-<screen><userinput>patch -Np1 -i ../&netkit_base-fixes-patch;</userinput></screen>
+<screen os="e"><userinput>patch -Np1 -i ../&netkit_base-fixes-patch;</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="f">Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="g">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="h"><userinput>make install</userinput></screen>
 
   </sect2>
 

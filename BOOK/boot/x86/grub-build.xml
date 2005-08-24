@@ -45,27 +45,36 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/x86/grub.xml"
-    xpointer="xpointer(id('install-grub')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
-    <para>Prepare GRUB for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/grub.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>./configure --prefix=${LFS}/usr \
    --host=${LFS_TARGET}</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/grub.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/grub.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/grub.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>make install
+<screen os="h"><userinput>make install
 mkdir ${LFS}/boot/grub
 cp ${LFS}/usr/lib/grub/i386-pc/stage{1,2} ${LFS}/boot/grub</userinput></screen>
 
-    <para>Replace <filename class="directory">i386-pc</filename> with whatever
-    directory is appropriate for the hardware in use.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/grub.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
-    <para>The <filename class="directory">i386-pc</filename> directory
+    <para os="j">The <filename class="directory">i386-pc</filename> directory
     contains a number of <filename>*stage1_5</filename> files, different
     ones for different file systems. Review the files available and copy
     the appropriate ones to the <filename

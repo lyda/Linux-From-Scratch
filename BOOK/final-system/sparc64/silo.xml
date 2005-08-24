@@ -16,10 +16,12 @@
     <primary sortas="a-Silo">Silo</primary>
   </indexterm>
 
-  <sect2 id="package-silo" role="package">
+  <sect2 role="package">
     <title/>
 
-    <para>The Silo package contains the Sparc Improved boot LOader.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/silo.xml"
+    xpointer="xpointer(id('package-silo')/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -31,69 +33,49 @@
       </seglistitem>
     </segmentedlist>
 
-    <segmentedlist>
-      <segtitle>&dependencies;</segtitle>
-
-      <seglistitem>
-      <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep,
-      Make, Ncurses, Sed, ELFtoaout</seg>
-      </seglistitem>
-    </segmentedlist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/silo.xml"
+    xpointer="xpointer(id('package-silo')/segmentedlist[2])"/>
 
   </sect2>
 
   <sect2 id="install-silo" role="installation">
     <title>Installation of Silo</title>
 
-    <para>The following patch fixes compile issues::</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/silo.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
 
-<screen><userinput>patch -Np1 -i ../&silo-fixes-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/silo.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Compile the Silo package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/silo.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/silo.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/silo.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
-   <para>Due to an a compile issue with the current toolchains, we are going
-   to use the precompiled boot files. This is a temporary fix to the book, but
-   will give us a functional system. As soon as a fix is released, this section
-   will be removed. Here is how you install the precompiled files:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/silo.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>tar -xvf silo-loaders-&silo-version;.tar.gz -C ${LFS}</userinput></screen>
-
-  </sect2>
-
-  <sect2 id="contents-silo" role="content">
-    <title>Contents of Silo</title>
-
-    <segmentedlist>
-      <segtitle>Installed programs</segtitle>
-
-      <seglistitem>
-        <seg>Unchecked</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="silo">
-        <term><command>silo</command></term>
-        <listitem>
-          <para>Need Description</para>
-          <indexterm zone="ch-system-silo silo">
-            <primary sortas="a-silo">silo</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/silo.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
   </sect2>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../sparc/silo.xml"
+  xpointer="xpointer(id('contents-silo'))"/>
 
 </sect1>
