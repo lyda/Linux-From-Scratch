@@ -14,12 +14,11 @@
     <primary sortas="e-${LFS}/etc/fstab">${LFS}/etc/fstab</primary>
   </indexterm>
 
-  <para>The <filename>${LFS}/etc/fstab</filename> file is used by some
-  programs to determine where file systems are to be mounted by default,
-  which must be checked, and in which order. Create a new file systems
-  table like this:</para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/fstab.xml"
+  xpointer="xpointer(//*[@os='a'])"/>
 
-<screen><userinput>cat &gt; /etc/fstab &lt;&lt; "EOF"
+<screen><userinput>cat &gt; ${LFS}/etc/fstab &lt;&lt; "EOF"
 <literal># Begin /etc/fstab
 
 # file system  mount-point  type   options         dump  fsck
@@ -36,15 +35,15 @@ none           /proc/openprom  openpromfs    defaults        0     0
 EOF</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../../bootable/common/fstab.xml"
-  xpointer="xpointer(/sect1/para[2])"/>
+  href="../common/fstab.xml"
+  xpointer="xpointer(//*[@os='b'])"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../../bootable/common/fstab.xml"
-  xpointer="xpointer(/sect1/para[3])"/>
+  href="../common/fstab.xml"
+  xpointer="xpointer(//*[@os='c'])"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../../bootable/common/fstab.xml"
-  xpointer="xpointer(/sect1/para[4])"/>
+  href="../common/fstab.xml"
+  xpointer="xpointer(//*[@os='d'])"/>
 
 </sect1>

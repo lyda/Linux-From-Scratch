@@ -24,7 +24,7 @@ partition = 1         # Boot partition (= root partition)
 root = /dev/sda1      # Root partition
 timeout = 150         # Wait 15 seconds before booting the default section
 
-image = /boot/lfskernel-&linux-sparc-version;
+image = /boot/lfskernel-&linux-sparc64-version;
   label = linux
 # End /etc/silo.conf</literal>
 EOF</userinput></screen>

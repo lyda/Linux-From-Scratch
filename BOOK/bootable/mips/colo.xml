@@ -14,10 +14,12 @@
     <primary sortas="a-Colo">Colo</primary>
   <secondary>configuring</secondary></indexterm>
 
-  <note><para>This bootloader is for the MIPS based cobalt servers RaQ,
-  RaQ2, Qube, or the Qube2.</para></note>
+  <note os="a">
+    <para>This bootloader is for the MIPS based cobalt servers RaQ,
+    RaQ2, Qube, or the Qube2.</para>
+  </note>
 
-  <para>Your shiny new LFS system is almost complete. One of the last
+  <para os="c">Your shiny new LFS system is almost complete. One of the last
   things to do is ensure you can boot it. The instructions below apply
   only to Colbalt mips/Cube2 servers. Information on <quote>boot
   loading</quote> for other architectures should be available in the
@@ -25,9 +27,9 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/grub.xml"
-  xpointer="xpointer(/sect1/para[2])"/>
+  xpointer="xpointer(//*[@os='b'])"/>
 
-  <para>Earlier, we compiled and installed the Cobalt boot loader
+  <para os="d">Earlier, we compiled and installed the Cobalt boot loader
   software in preparation for this step. Now we will configure our system
   to boot using Colo. Here is a simpe <filename>default.colo</filename>
   to use.</para>
@@ -42,14 +44,14 @@ load vmlinux-&linux-mips-version;.gz
 execute root=/dev/hda2 console=ttyS0,115200 ide1=noprobe</literal>
 EOF</userinput></screen>
 
-  <para>Included in <filename class="directory">/usr/lib/colo/examples</filename>
+  <para os="e">Included in <filename class="directory">/usr/lib/colo/examples</filename>
   are more examples of a <filename>default.colo</filename> file.</para>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/grub.xml"
-  xpointer="xpointer(/sect1/para[last()])"/>
+  xpointer="xpointer(//*[@os='v'])"/>
 
-<screen><userinput>mkdir /etc/colo &amp;&amp;
+<screen os="f"><userinput>mkdir /etc/colo &amp;&amp;
 ln -s /boot/colo/default.colo /etc/colo</userinput></screen>
 
 </sect1>

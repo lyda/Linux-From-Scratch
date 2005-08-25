@@ -15,34 +15,34 @@
     <secondary>configuring</secondary>
   </indexterm>
 
-  <para>Your shiny new LFS system is almost complete. One of the last
+  <para os="a">Your shiny new LFS system is almost complete. One of the last
   things to do is to ensure that the system can be properly booted. The
   instructions below apply only to computers of IA-32 architecture,
   meaning mainstream PCs. Information on <quote>boot loading</quote> for
   other architectures should be available in the usual resource-specific
   locations for those architectures.</para>
 
-  <para>Boot loading can be a complex area, so a few cautionary words
+  <para os="b">Boot loading can be a complex area, so a few cautionary words
   are in order. Be familiar with the current boot loader and any other
   operating systems present on the hard drive(s) that need to be bootable.
   Make sure that an emergency boot disk is ready to <quote>rescue</quote>
   the computer if the computer becomes unusable (un-bootable).</para>
 
-  <para>Earlier, we compiled and installed the GRUB boot loader software
+  <para os="c">Earlier, we compiled and installed the GRUB boot loader software
   in preparation for this step. The procedure involves writing some special
   GRUB files to specific locations on the hard drive. We highly recommend
   creating a GRUB boot floppy diskette as a backup. Insert a blank floppy
   diskette and run the following commands:</para>
 
-<screen><userinput>dd if=/boot/grub/stage1 of=/dev/fd0 bs=512 count=1
+<screen os="d"><userinput>dd if=/boot/grub/stage1 of=/dev/fd0 bs=512 count=1
 dd if=/boot/grub/stage2 of=/dev/fd0 bs=512 seek=1</userinput></screen>
 
-  <para>Remove the diskette and store it somewhere safe. Now, run the
+  <para os="e">Remove the diskette and store it somewhere safe. Now, run the
   <command>grub</command> shell:</para>
 
-<screen><userinput>grub</userinput></screen>
+<screen os="f"><userinput>grub</userinput></screen>
 
-  <para>GRUB uses its own naming structure for drives and partitions in
+  <para os="g">GRUB uses its own naming structure for drives and partitions in
   the form of <emphasis>(hdn,m)</emphasis>, where <emphasis>n</emphasis>
   is the hard drive number and <emphasis>m</emphasis> is the partition
   number, both starting from zero. For example, partition <filename
@@ -54,18 +54,18 @@ dd if=/boot/grub/stage2 of=/dev/fd0 bs=512 seek=1</userinput></screen>
   on <filename class="partition">hdc</filename>, that second hard drive
   would still be <emphasis>(hd1)</emphasis>.</para>
 
-  <para>Using the above information, determine the appropriate designator
+  <para os="h">Using the above information, determine the appropriate designator
   for the root partition (or boot partition, if a separate one is used).
   For the following example, it is assumed that the root (or separate boot)
   partition is <filename class="partition">hda4</filename>.</para>
 
-  <para>Tell GRUB where to search for its <filename>stage{1,2}</filename>
+  <para os="i">Tell GRUB where to search for its <filename>stage{1,2}</filename>
   files. The Tab key can be used everywhere to make GRUB show the
   alternatives:</para>
 
-<screen><userinput>root (hd0,3)</userinput></screen>
+<screen os="j"><userinput>root (hd0,3)</userinput></screen>
 
-  <warning>
+  <warning os="k">
     <para>The following command will overwrite the current boot loader.
     Do not run the command if this is not desired, for example, if using
     a third party boot manager to manage the Master Boot Record (MBR).
@@ -74,21 +74,19 @@ dd if=/boot/grub/stage2 of=/dev/fd0 bs=512 seek=1</userinput></screen>
     next command would become <userinput>setup (hd0,3)</userinput>.</para>
   </warning>
 
-  <para>Tell GRUB to install itself into the MBR of
+  <para os="l">Tell GRUB to install itself into the MBR of
   <filename class="partition">hda</filename>:</para>
 
-<screen><userinput>setup (hd0)</userinput></screen>
+<screen os="m"><userinput>setup (hd0)</userinput></screen>
 
-  <para>If all went well, GRUB will have reported finding its files in
+  <para os="n">If all went well, GRUB will have reported finding its files in
   <filename class="directory">/boot/grub</filename>. That's all there is
   to it. Quit the <command>grub</command> shell:</para>
 
-<screen><userinput>quit</userinput></screen>
+<screen os="o"><userinput>quit</userinput></screen>
 
-  <para>Create a <quote>menu list</quote> file defining GRUB's boot
+  <para os="p">Create a <quote>menu list</quote> file defining GRUB's boot
   menu:</para>
-
-  <para/>
 
 <screen><userinput>cat &gt; /boot/grub/menu.lst &lt;&lt; "EOF"
 <literal># Begin /boot/grub/menu.lst
@@ -109,36 +107,34 @@ kernel /boot/lfskernel-&linux-x86-version; root=/dev/hda4</literal>
 EOF</userinput></screen>
 
 
-  <para>Add an entry for the host distribution if desired. It might look
+  <para os="q">Add an entry for the host distribution if desired. It might look
   like this:</para>
 
-<screen><userinput>cat &gt;&gt; /boot/grub/menu.lst &lt;&lt; "EOF"
+<screen os="r"><userinput>cat &gt;&gt; /boot/grub/menu.lst &lt;&lt; "EOF"
 <literal>title Red Hat
 root (hd0,2)
 kernel /boot/kernel-2.6.5 root=/dev/hda3
 initrd /boot/initrd-2.6.5</literal>
 EOF</userinput></screen>
 
-  <para>If dual-booting Windows, the following entry will allow
+  <para os="s">If dual-booting Windows, the following entry will allow
   booting it:</para>
 
-<screen><userinput>cat &gt;&gt; /boot/grub/menu.lst &lt;&lt; "EOF"
+<screen os="t"><userinput>cat &gt;&gt; /boot/grub/menu.lst &lt;&lt; "EOF"
 <literal>title Windows
 rootnoverify (hd0,0)
 chainloader +1</literal>
 EOF</userinput></screen>
 
-  <para>If <command>info grub</command> does not provide all necessary
+  <para os="u">If <command>info grub</command> does not provide all necessary
   material, additional information regarding GRUB is located on its
   website at: <ulink url="http://www.gnu.org/software/grub/"/>.</para>
 
-  <para>The FHS stipulates that Bootloader's configuration file should
+  <para os="v">The FHS stipulates that Bootloader's configuration file should
   be symlinked to <filename class="symlink">/etc/{Bootloader Name}</filename>.
   To satisfy this requirement for GRUB, issue the following command:</para>
 
-<screen><userinput>mkdir /etc/grub &amp;&amp;
+<screen os="w"><userinput>mkdir /etc/grub &amp;&amp;
 ln -s /boot/grub/menu.lst /etc/grub</userinput></screen>
-
-  <para/>
 
 </sect1>

@@ -15,65 +15,64 @@
     <secondary>boot, configuring</secondary>
   </indexterm>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/para[1])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='b'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/para[2])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='c'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/para[3])"/>
-
-<screen><userinput>dd if=${LFS}/boot/grub/stage1 of=/dev/fd0 bs=512 count=1
+<screen os="d"><userinput>dd if=${LFS}/boot/grub/stage1 of=/dev/fd0 bs=512 count=1
 dd if=${LFS}/boot/grub/stage2 of=/dev/fd0 bs=512 seek=1</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/para[4])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='e'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/screen[2])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='f'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/para[5])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='g'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/para[6])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='h'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/para[7])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='i'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/screen[3])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='j'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/warning[1])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='k'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/para[8])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='l'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../bootable/x86/grub.xml"
-    xpointer="xpointer(/sect1/screen[4])"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='m'])"/>
 
-    <para>If all went well, GRUB will have reported finding its files
-    in <filename class="directory">${LFS}/boot/grub</filename>. That's
-    all there is to it. Quit the <command>grub</command> shell:</para>
+  <para os="n">If all went well, GRUB will have reported finding its files
+  in <filename class="directory">${LFS}/boot/grub</filename>. That's
+  all there is to it. Quit the <command>grub</command> shell:</para>
 
-<screen><userinput>quit</userinput></screen>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='o'])"/>
 
-    <para>Create a <quote>menu list</quote> file defining GRUB's boot
-    menu:</para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='p'])"/>
 
 <screen><userinput>cat &gt; ${LFS}/boot/grub/menu.lst &lt;&lt; "EOF"
 <literal># Begin /boot/grub/menu.lst
@@ -93,10 +92,11 @@ root (hd0,3)
 kernel /boot/lfskernel-&linux-x86-version; root=/dev/hda4</literal>
 EOF</userinput></screen>
 
-    <para>Add an entry for the host distribution if desired. It might look
-    like this:</para>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/x86/grub.xml"
+  xpointer="xpointer(//*[@os='q'])"/>
 
-<screen><userinput>cat &gt;&gt; ${LFS}/boot/grub/menu.lst &lt;&lt; "EOF"
+<screen os="r"><userinput>cat &gt;&gt; ${LFS}/boot/grub/menu.lst &lt;&lt; "EOF"
 <literal>title Red Hat
 root (hd0,2)
 kernel /boot/kernel-2.6.5 root=/dev/hda3

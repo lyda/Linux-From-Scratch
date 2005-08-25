@@ -192,7 +192,8 @@
       <segtitle>Installed files</segtitle>
 
       <seglistitem>
-        <seg>kernel, kernel headers, and System.map</seg>
+        <seg>config-[linux-version], lfskernel-[linux-version],
+        and System.map-[linux-version]</seg>
       </seglistitem>
     </segmentedlist>
 

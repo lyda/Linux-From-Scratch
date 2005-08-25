@@ -14,7 +14,67 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/grub.xml"
-  xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[11]))"/>
+  xpointer="xpointer(//*[@os='a'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='b'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='c'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='d'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='e'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='f'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='g'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='h'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='i'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='j'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='k'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='l'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='m'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='n'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='o'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='p'])"/>
 
 <screen><userinput>cat &gt; /boot/grub/menu.lst &lt;&lt; "EOF"
 <literal># Begin /boot/grub/menu.lst
@@ -36,7 +96,30 @@ EOF</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/grub.xml"
-  xpointer="xpointer(/sect1/para[12]/range-to(/sect1/para[last()]))"/>
+  xpointer="xpointer(//*[@os='q'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='r'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='s'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='t'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='u'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='v'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/grub.xml"
+  xpointer="xpointer(//*[@os='w'])"/>
 
 </sect1>
-

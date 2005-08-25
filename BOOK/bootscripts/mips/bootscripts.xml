@@ -16,9 +16,28 @@
     <primary sortas="a-Bootscripts">Bootscripts</primary>
   </indexterm>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/bootscripts.xml"
-  xpointer="xpointer(id('package-bootscripts'))"/>
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bootscripts.xml"
+    xpointer="xpointer(id('package-bootscripts')/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/bootscripts.xml"
+    xpointer="xpointer(id('package-bootscripts')/segmentedlist[2])"/>
+
+  </sect2>
 
   <sect2 role="installation">
     <title>Installation of LFS-Bootscripts</title>

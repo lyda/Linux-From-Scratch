@@ -17,15 +17,15 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../bootable/mips/colo.xml"
-  xpointer="xpointer(/sect1/note[1])"/>
-
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../../bootable/x86/grub.xml"
-  xpointer="xpointer(/sect1/para[2])"/>
+  xpointer="xpointer(//*[@os='a'])"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../bootable/mips/colo.xml"
-  xpointer="xpointer(/sect1/para[3])"/>
+  xpointer="xpointer(//*[@os='b'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../../bootable/mips/colo.xml"
+  xpointer="xpointer(//*[@os='d'])"/>
 
 <screen><userinput>cat &gt; ${LFS}/boot/default.colo &lt;&lt; "EOF"
 #:CoLo:#
