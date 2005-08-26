@@ -39,6 +39,17 @@
 -->
 
     <listitem>
+      <para>August 26, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Stop moving some of coreutils binaries to /bin as they 
+	   aren't required to be there (fixes bug 1620). Copied from Matt's change
+           to the LFS book.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 2, 2005</para>
       <itemizedlist>
         <listitem>

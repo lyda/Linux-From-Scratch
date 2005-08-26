@@ -94,15 +94,16 @@ echo "dummy:x:1000:1000:::/bin/bash" &gt;&gt; /etc/passwd</userinput></screen>
 
     <para os="r">Move programs to the proper locations:</para>
 
-<screen os="s"><userinput>mv /usr/bin/{[,basename,cat,chgrp,chmod,chown,cp,dd,df} /bin
-mv /usr/bin/{date,echo,false,head,hostname,install,ln} /bin
-mv /usr/bin/{ls,mkdir,mknod,mv,pwd,rm,rmdir,sync} /bin
-mv /usr/bin/{sleep,stty,test,touch,true,uname} /bin
+<screen os="s"><userinput>mv /usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} /bin
+mv /usr/bin/{false,hostname,ln,ls,mkdir,mknod,mv,pwd,rm} /bin
+mv /usr/bin/{rmdir,stty,sync,true,uname} /bin
 mv /usr/bin/chroot /usr/sbin</userinput></screen>
 
-    <para os="t">Finally, create a symlink to be FHS-compliant:</para>
+        <para os="t"> Some of the scripts in the LFS-Bootscripts package depend on
+        head and sleep. As /usr may not be available during the early stages of booting,
+        those binaries need to be on the root partition:</para>
 
-<screen os="u"><userinput>ln -s ../../bin/install /usr/bin</userinput></screen>
+<screen os="u"><userinput>mv /usr/bin/{head,sleep} /bin</userinput></screen>
 
   </sect2>
 
