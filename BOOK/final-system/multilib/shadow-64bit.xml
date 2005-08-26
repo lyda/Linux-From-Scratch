@@ -43,38 +43,38 @@
     <title>Installation of Shadow</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --libdir=/lib64 \
    --enable-shared</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='h'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='i'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -110,15 +110,15 @@
     xpointer="xpointer(//*[@os='q'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='r'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='s'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/shadow.xml"
+    href="shadow.xml"
     xpointer="xpointer(//*[@os='t'])"/>
 
 <screen><userinput>mv /lib64/libshadow.*a /usr/lib64

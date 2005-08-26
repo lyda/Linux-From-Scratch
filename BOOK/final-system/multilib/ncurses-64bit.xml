@@ -43,7 +43,7 @@
     <title>Installation of Ncurses</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \
@@ -51,27 +51,27 @@
    --with-shared --without-debug</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>mv /lib64/lib{panel,menu,form,ncurses,ncurses++}.a /usr/lib64</userinput></screen>
@@ -85,7 +85,7 @@ ln -sf ../../lib64/libpanel.so.5 /usr/lib64/libpanel.so
 ln -sf ../../lib64/libform.so.5 /usr/lib64/libform.so</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='k'])"/>
 
 <screen><userinput>chmod 755 /lib64/lib{panel,menu,form,ncurses}.so.&ncurses-version;</userinput></screen>

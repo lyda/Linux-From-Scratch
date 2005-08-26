@@ -43,44 +43,44 @@
     <title>Installation of Flex</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
+    href="flex.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
+    href="flex.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
+    href="flex.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
+    href="flex.xml"
     xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
+    href="flex.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
 <screen><userinput>CC="gcc ${BUILDN32}" ./configure --prefix=/usr \
    --libdir=/usr/lib32</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
+    href="flex.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
 <screen><userinput>make libfl.a</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
+    href="flex.xml"
     xpointer="xpointer(//*[@os='h'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
+    href="flex.xml"
     xpointer="xpointer(//*[@os='i'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
+    href="flex.xml"
     xpointer="xpointer(//*[@os='j'])"/>
 
     <para>There are some packages that expect to find the

@@ -48,34 +48,34 @@
 <screen><userinput>sed -i 's@\${prefix}/lib@\${prefix}/lib64@g' hints/linux.sh</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/perl.xml"
+    href="perl.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>./configure.gnu --prefix=/usr -Dpager="/bin/less -isR" \
    -Dcc="gcc ${BUILD64}"</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/perl.xml"
+    href="perl.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/perl.xml"
+    href="perl.xml"
     xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/perl.xml"
+    href="perl.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/perl.xml"
+    href="perl.xml"
     xpointer="xpointer(//*[@os='h'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/perl.xml"
+    href="perl.xml"
     xpointer="xpointer(//*[@os='i'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/perl.xml"
+    href="perl.xml"
     xpointer="xpointer(//*[@os='j'])"/>
 
   </sect2>

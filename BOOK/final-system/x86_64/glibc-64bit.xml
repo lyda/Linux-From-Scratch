@@ -48,27 +48,27 @@
     xpointer="xpointer(//*[@os='z'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
     <para>Now we make sure the Glibc goes into
@@ -100,31 +100,31 @@
     </variablelist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='j'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='k'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='l'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='m'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='n'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='s'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='t'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

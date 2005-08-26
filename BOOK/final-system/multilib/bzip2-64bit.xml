@@ -51,11 +51,11 @@
     xpointer="xpointer(//*[@os='k'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/bzip2.xml"
+    href="bzip2.xml"
     xpointer="xpointer(//*[@os='l'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/bzip2.xml"
+    href="bzip2.xml"
     xpointer="xpointer(//*[@os='m'])"/>
 
     <para os="ba">We need to remove the tests since they won't work on
@@ -66,14 +66,14 @@
     -e 's@/lib\(/\| \|$\)@/lib64\1@g' Makefile</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/bzip2.xml"
+    href="bzip2.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>make -f Makefile-libbz2_so CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}"
 make clean</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/bzip2.xml"
+    href="bzip2.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>make CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}"</userinput></screen>
@@ -84,15 +84,15 @@ make clean</userinput></screen>
 <screen><userinput>rm -f /usr/bin/bz* /bin/bz*</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/bzip2.xml"
+    href="bzip2.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/bzip2.xml"
+    href="bzip2.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/bzip2.xml"
+    href="bzip2.xml"
     xpointer="xpointer(//*[@os='h'])"/>
 
 <screen><userinput>cp bzip2-shared /bin/bzip2

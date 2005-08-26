@@ -48,22 +48,22 @@
 <screen><userinput>sed -i '/libdir=.*\/lib/s@/lib@/lib32@g' configure</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/e2fsprogs.xml"
+    href="e2fsprogs.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/e2fsprogs.xml"
+    href="e2fsprogs.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/e2fsprogs.xml"
+    href="e2fsprogs.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="gcc ${BUILDN32}" ../configure --prefix=/usr \
     --with-root-prefix="" --enable-elf-shlibs --disable-evms</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/e2fsprogs.xml"
+    href="e2fsprogs.xml"
     xpointer="xpointer(//*[@os='d'])"/>
 
     <para>Compile the libraries:</para>
@@ -71,11 +71,11 @@
 <screen><userinput>make CC="gcc ${BUILDN32}" libs</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/e2fsprogs.xml"
+    href="e2fsprogs.xml"
     xpointer="xpointer(//*[@os='j'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/e2fsprogs.xml"
+    href="e2fsprogs.xml"
     xpointer="xpointer(//*[@os='k'])"/>
 
   </sect2>
