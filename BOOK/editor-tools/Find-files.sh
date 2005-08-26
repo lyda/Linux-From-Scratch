@@ -15,4 +15,4 @@ if [ -z "$1" ]; then
   exit
 fi
 
-find . -name "*$1*.xml"
+find . -name "*$1*.xml" | sort
