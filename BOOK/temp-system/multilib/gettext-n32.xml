@@ -43,11 +43,11 @@
     <title>Installation of Gettext</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gettext.xml"
+    href="gettext.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gettext.xml"
+    href="gettext.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
     <para>Prepare Gettext for compilation:</para>

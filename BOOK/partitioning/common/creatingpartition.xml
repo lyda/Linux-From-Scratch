@@ -10,7 +10,7 @@
 
   <title>Creating a New Partition</title>
 
-  <para>Like most other operating systems, LFS is usually installed on
+  <para os="a">Like most other operating systems, LFS is usually installed on
   a dedicated partition. The recommended approach to building an LFS
   system is to use an available empty partition or, if you have enough
   unpartitioned space, to create one. However, an LFS system (in fact
@@ -21,7 +21,7 @@
   implement this, whereas this book discusses the method of using a fresh
   partition for the installation.</para>
 
-  <para>A minimal system requires a partition of around 1.3 gigabytes (GB).
+  <para os="b">A minimal system requires a partition of around 1.3 gigabytes (GB).
   This is enough to store all the source tarballs and compile the packages.
   However, if the LFS system is intended to be the primary Linux system,
   additional software will probably be installed which will require
@@ -30,14 +30,14 @@
   free temporary storage. Compiling packages can require a lot of disk space
   which will be reclaimed after the package is installed.</para>
 
-  <para>Because there is not always enough Random Access Memory (RAM)
+  <para os="c">Because there is not always enough Random Access Memory (RAM)
   available for compilation processes, it is a good idea to use a small disk
   partition as swap space. This is used by the kernel to store seldom-used
   data and leave more memory available for active processes. The swap
   partition for an LFS system can be the same as the one used by the host
   system, in which case it is not necessary to create another one.</para>
 
-  <para>Start a disk partitioning program such as <command>cfdisk</command>
+  <para os="d">Start a disk partitioning program such as <command>cfdisk</command>
   or <command>fdisk</command> with a command line option naming the hard
   disk on which the new partition will be created&mdash;for example
   <filename class="devicefile">/dev/hda</filename> for the primary
@@ -46,12 +46,10 @@
   <filename>cfdisk(8)</filename> or <filename>fdisk(8)</filename> if you
   do not yet know how to use the programs.</para>
 
-  <para>Remember the designation of the new partition (e.g.,
+  <para os="e">Remember the designation of the new partition (e.g.,
   <filename class="devicefile">hda5</filename>). This book will refer to
   this as the LFS partition. Also remember the designation of the swap
   partition. These names will be needed later for the
   <filename>/etc/fstab</filename> file.</para>
-
-  <para/>
 
 </sect1>

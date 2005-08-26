@@ -11,27 +11,27 @@
   <title>Creating the passwd, group, and log Files</title>
 
   <indexterm zone="ch-chroot-pwdgroup">
-    <primary sortas="e-${LFS}/etc/passwd">${LFS}/etc/passwd</primary>
+    <primary sortas="e-/etc/passwd">/etc/passwd</primary>
   </indexterm>
 
   <indexterm zone="ch-chroot-pwdgroup">
-    <primary sortas="e-${LFS}/etc/group">${LFS}/etc/group</primary>
+    <primary sortas="e-/etc/group">/etc/group</primary>
   </indexterm>
 
   <indexterm zone="ch-chroot-pwdgroup">
-    <primary sortas="e-${LFS}/var/run/utmp">${LFS}/var/run/utmp</primary>
+    <primary sortas="e-/var/run/utmp">/var/run/utmp</primary>
   </indexterm>
 
   <indexterm zone="ch-chroot-pwdgroup">
-    <primary sortas="e-${LFS}/var/log/btmp">${LFS}/var/log/btmp</primary>
+    <primary sortas="e-/var/log/btmp">/var/log/btmp</primary>
   </indexterm>
 
   <indexterm zone="ch-chroot-pwdgroup">
-    <primary sortas="e-${LFS}/var/log/lastlog">${LFS}/var/log/lastlog</primary>
+    <primary sortas="e-/var/log/lastlog">/var/log/lastlog</primary>
   </indexterm>
 
   <indexterm zone="ch-chroot-pwdgroup">
-    <primary sortas="e-${LFS}/var/log/wtmp">${LFS}/var/log/wtmp</primary>
+    <primary sortas="e-/var/log/wtmp">/var/log/wtmp</primary>
   </indexterm>
 
   <para>In order for user <systemitem class="username">root</systemitem> to
@@ -49,7 +49,7 @@ EOF</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../boot/common/pwdgroup.xml"
-  xpointer="xpointer(/sect1/para[3])"/>
+  xpointer="xpointer(//*[@os='a'])"/>
 
   <para>Create the <filename>/etc/group</filename> file by running the
   following command:</para>
@@ -66,7 +66,7 @@ EOF</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../boot/common/pwdgroup.xml"
-  xpointer="xpointer(/sect1/para[5])"/>
+  xpointer="xpointer(//*[@os='b'])"/>
 
   <para>To remove the <quote>I have no name!</quote> prompt, start a
   new shell. Since a full Glibc was installed in <xref
@@ -85,7 +85,7 @@ EOF</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../boot/common/pwdgroup.xml"
-  xpointer="xpointer(/sect1/para[6])"/>
+  xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>touch /var/run/utmp /var/log/{btmp,lastlog,wtmp}
 chgrp utmp /var/run/utmp /var/log/lastlog

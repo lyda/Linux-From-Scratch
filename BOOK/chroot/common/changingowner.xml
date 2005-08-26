@@ -12,16 +12,16 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../boot/common/changingowner.xml"
-  xpointer="xpointer(/sect1/para[1])"/>
+  xpointer="xpointer(//*[@os='a'])"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../boot/common/changingowner.xml"
-  xpointer="xpointer(/sect1/para[2])"/>
+  xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>chown -R 0:0 /tools</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../boot/common/changingowner.xml"
-  xpointer="xpointer(/sect1/para[3])"/>
+  xpointer="xpointer(//*[@os='c'])"/>
 
 </sect1>

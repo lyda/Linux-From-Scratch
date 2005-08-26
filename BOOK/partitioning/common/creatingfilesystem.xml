@@ -10,7 +10,7 @@
 
   <title>Creating a File System on the Partition</title>
 
-  <para>Now that a blank partition has been set up, the file system can be
+  <para os="a">Now that a blank partition has been set up, the file system can be
   created. The most widely-used system in the Linux world is the second
   extended file system (ext2), but with newer high-capacity hard disks,
   journaling file systems are becoming increasingly popular. We will create
@@ -18,16 +18,16 @@
   Build instructions for other file systems can be found at
   <ulink url="&blfs-root;view/svn/postlfs/filesystems.html"/>.</para>
 
-  <para>To create an <systemitem class="filesystem">ext2</systemitem> file
+  <para os="b">To create an <systemitem class="filesystem">ext2</systemitem> file
   system on the LFS partition, run the following:</para>
 
-<screen><userinput>mke2fs /dev/<replaceable>[xxx]</replaceable></userinput></screen>
+<screen os="c"><userinput>mke2fs /dev/<replaceable>[xxx]</replaceable></userinput></screen>
 
-  <para>Replace <replaceable>[xxx]</replaceable> with the name of the LFS
+  <para os="d">Replace <replaceable>[xxx]</replaceable> with the name of the LFS
   partition (<filename class="devicefile">hda5</filename> in our previous
   example).</para>
 
-  <note>
+  <note os="e">
     <para>Some host distributions use custom features in their filesystem
     creation tools (E2fsprogs). This can cause problems when booting into
     your new LFS, as those features will not be supported by the LFS-installed
@@ -36,7 +36,7 @@
     if your host system uses custom enhancements, run the following
     command:</para>
 
-<screen><userinput>debugfs -R feature /dev/<replaceable>[xxx]</replaceable></userinput></screen>
+<screen os="f"><userinput>debugfs -R feature /dev/<replaceable>[xxx]</replaceable></userinput></screen>
 
     <para>If the output contains features other than: dir_index; filetype;
     large_file; resize_inode or sparse_super then your host system may have custom
@@ -44,7 +44,7 @@
     stock E2fsprogs package and use the resulting binaries to re-create the
     filesystem on your LFS partition:</para>
 
-<screen><userinput>cd /tmp
+<screen os="g"><userinput>cd /tmp
 tar xjf /path/to/sources/e2fsprogs-&e2fsprogs-version;.tar.bz2
 cd e2fsprogs-&e2fsprogs-version;
 mkdir build
@@ -57,15 +57,13 @@ rm -rf e2fsprogs-&e2fsprogs-version;</userinput></screen>
 
   </note>
 
-  <para>If a swap partition was created, it will need to be initialized
+  <para os="h">If a swap partition was created, it will need to be initialized
   for use by issuing the command below. If you are using an existing swap
   partition, there is no need to format it.</para>
 
-<screen><userinput>mkswap /dev/<replaceable>[yyy]</replaceable></userinput></screen>
+<screen os="i"><userinput>mkswap /dev/<replaceable>[yyy]</replaceable></userinput></screen>
 
-  <para>Replace <replaceable>[yyy]</replaceable> with the name of the
+  <para os="j">Replace <replaceable>[yyy]</replaceable> with the name of the
   swap partition.</para>
-
-  <para/>
 
 </sect1>

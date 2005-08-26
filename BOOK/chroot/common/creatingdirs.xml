@@ -12,7 +12,7 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../boot/common/creatingdirs.xml"
-  xpointer="xpointer(/sect1/para[1])"/>
+  xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>install -d /{bin,boot,dev,etc/opt,home,lib,mnt}
 install -d /{sbin,srv,usr/local,var,opt,proc,sys}
@@ -36,9 +36,9 @@ install -d /opt/{lib,man/man{1,2,3,4,5,6,7,8}}</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../boot/common/creatingdirs.xml"
-  xpointer="xpointer(/sect1/para[2])"/>
+  xpointer="xpointer(//*[@os='b'])"/>
 
-  <para>The first mode change ensures that not just anybody can enter
+  <para os="c">The first mode change ensures that not just anybody can enter
   the <filename class="directory">/root</filename> directory&mdash;the
   same as a normal user would do with his or her home directory. The
   second mode change makes sure that any user can write to the
@@ -50,6 +50,6 @@ install -d /opt/{lib,man/man{1,2,3,4,5,6,7,8}}</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../../boot/common/creatingdirs.xml"
-  xpointer="xpointer(/sect1/sect2)"/>
+  xpointer="xpointer(//*[@os='d'])"/>
 
 </sect1>

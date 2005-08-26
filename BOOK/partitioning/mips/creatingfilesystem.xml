@@ -12,7 +12,43 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/creatingfilesystem.xml"
-  xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[last()]))"/>
+  xpointer="xpointer(//*[@os='a'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingfilesystem.xml"
+  xpointer="xpointer(//*[@os='b'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingfilesystem.xml"
+  xpointer="xpointer(//*[@os='c'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingfilesystem.xml"
+  xpointer="xpointer(//*[@os='d'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingfilesystem.xml"
+  xpointer="xpointer(//*[@os='e'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingfilesystem.xml"
+  xpointer="xpointer(//*[@os='f'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingfilesystem.xml"
+  xpointer="xpointer(//*[@os='g'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingfilesystem.xml"
+  xpointer="xpointer(//*[@os='h'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingfilesystem.xml"
+  xpointer="xpointer(//*[@os='i'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingfilesystem.xml"
+  xpointer="xpointer(//*[@os='j'])"/>
 
   <para>If you used the partition scheme that was recommended, here are
   the commands you can use to format the necessary drives:</para>

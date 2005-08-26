@@ -10,7 +10,7 @@
 
   <title>Creating Essential Symlinks</title>
 
-  <para>Some programs use hard-wired paths to programs which do not exist
+  <para os="a">Some programs use hard-wired paths to programs which do not exist
   yet. In order to satisfy these programs, create a number of symbolic
   links which will be replaced by real files throughout the course of
   the next chapter after the software has been installed.</para>

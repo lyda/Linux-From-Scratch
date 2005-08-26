@@ -12,7 +12,23 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/creatingpartition.xml"
-  xpointer="xpointer(/sect1/para[1]/range-to(/sect1/para[last()]))"/>
+  xpointer="xpointer(//*[@os='a'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingpartition.xml"
+  xpointer="xpointer(//*[@os='b'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingpartition.xml"
+  xpointer="xpointer(//*[@os='c'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingpartition.xml"
+  xpointer="xpointer(//*[@os='d'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/creatingpartition.xml"
+  xpointer="xpointer(//*[@os='e'])"/>
 
   <para>On a Cobalt RaQ2/Cube2 we use the existing firmware for a boot loader,
   it requires an <systemitem class="filesystem">ext2</systemitem> revision 0

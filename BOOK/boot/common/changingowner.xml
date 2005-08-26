@@ -10,7 +10,7 @@
 
   <title>Changing Ownership</title>
 
-  <para>Currently, the <filename class="directory">/tools</filename>
+  <para os="a">Currently, the <filename class="directory">/tools</filename>
   directory is owned by the user <systemitem class="username">lfs</systemitem>,
   a user that exists only on the host system. Although the <filename
   class="directory">/tools</filename> directory can be deleted once the
@@ -22,7 +22,7 @@
   class="directory">/tools</filename> directory and all the files therein,
   thus exposing these files to possible malicious manipulation.</para>
 
-  <para>To avoid this issue, add the <systemitem
+  <para os="b">To avoid this issue, add the <systemitem
   class="username">lfs</systemitem> user to the new LFS system later when
   creating the <filename>/etc/passwd</filename> file, taking care to assign
   it the same user and group IDs as on the host system. Alternatively,
@@ -33,7 +33,7 @@
 <screen><userinput>chown -R 0:0 /tools
 chown -R 0:0 ${LFS}</userinput></screen>
 
-  <para>The command uses <parameter>0:0</parameter> instead of
+  <para os="c">The command uses <parameter>0:0</parameter> instead of
   <parameter>root:root</parameter>, because <command>chown</command>
   is unable to resolve the name <quote>root</quote> until the password
   file has been created. This book assumes you ran this

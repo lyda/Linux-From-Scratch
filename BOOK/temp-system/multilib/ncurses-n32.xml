@@ -44,15 +44,15 @@
     <title>Installation of Ncurses</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='aa'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='ab'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>CC="${CC} ${BUILDN32}" CXX="${CXX} ${BUILDN32}" \
@@ -61,19 +61,19 @@
    --enable-overwrite --with-build-cc=gcc --libdir=/tools/lib32</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/ncurses.xml"
+    href="ncurses.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
   </sect2>
