@@ -43,8 +43,11 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Stop moving some of coreutils binaries to /bin as they 
-	   aren't required to be there (fixes bug 1620). Copied from Matt's change
+	   aren't required to be there (fixes bug LFS 1620). Copied from Matt's change
            to the LFS book.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Updated to Man 1.6a.</para>
         </listitem>
       </itemizedlist>
     </listitem>
