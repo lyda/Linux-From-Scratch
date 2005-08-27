@@ -42,6 +42,10 @@
       <para>August 27, 2005</para>
       <itemizedlist>
         <listitem>
+          <para>[manuel] - Install Udev's documentation relating to configuring
+          rules (fixes bug LFS 1622).</para>
+        </listitem>
+        <listitem>
           <para>[manuel] - Refrain from using the undocumented --print-file
           switch for GCC's spec file edit. Use -print-file-name=specs instead
           (Greg Schafer).</para>

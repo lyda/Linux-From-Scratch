@@ -45,11 +45,6 @@
   <sect2 role="installation">
     <title>Installation of Udev</title>
 
-    <para os="a">Fix an incorrect assumption in the Udev testsuite regarding the
-    location of the <command>test</command> binary:</para>
-
-<screen os="b"><userinput>sed -i -e 's@/usr/bin/test@/bin/test@' test/udev-test.pl</userinput></screen>
-
     <para os="c">Compile the package:</para>
 
 <screen><userinput>make udevdir=/dev</userinput></screen>
@@ -79,6 +74,11 @@
 
 <screen os="i"><userinput>cp ../&udev-config-file; /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
+    <para os="a">Install the documentation that explains how to create
+    Udev rules:</para>
+
+<screen os="b"><userinput>install -m644 -D docs/writing_udev_rules/index.html /usr/share/doc/udev-&udev-version;/index.html</userinput></screen>
+
     <para os="j">Run the <command>udevstart</command> program to create our full
     complement of device nodes.</para>
 
@@ -94,7 +94,8 @@
       <segtitle>Installed directory</segtitle>
 
       <seglistitem>
-        <seg>udev, udevd, udevsend, udevstart, udevinfo, and udevtest</seg>
+        <seg>udev, udevcontrol, udevd, udevinfo, udevmonitor, udevsend,
+        udevstart and udevtest</seg>
         <seg>/etc/udev</seg>
       </seglistitem>
     </segmentedlist>
@@ -110,10 +111,22 @@
           <para>Creates device nodes in <filename
           class="directory">/dev</filename> or renames network interfaces (not
           in LFS) in response to hotplug events</para>
-            <indexterm zone="ch-system-udev udev">
-          <primary sortas="b-udev">udev</primary>
-        </indexterm>
-      </listitem></varlistentry>
+          <indexterm zone="ch-system-udev udev">
+            <primary sortas="b-udev">udev</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="udevcontrol">
+        <term><command>udevcontrol</command></term>
+        <listitem>
+          <para>Configures a number of options for the running
+          <command>udevd</command> daemon, such as the log level.</para>
+          <indexterm zone="ch-system-udev udevcontrol">
+            <primary sortas="b-udevcontrol">udevcontrol</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
 
       <varlistentry id="udevd">
         <term><command>udevd</command></term>
@@ -121,31 +134,8 @@
           <para>A daemon that reorders hotplug events before submitting them to
           <command>udev</command>,
           thus avoiding various race conditions</para>
-            <indexterm zone="ch-system-udev udevd">
-          <primary sortas="b-udevd">udevd</primary>
-        </indexterm>
-      </listitem></varlistentry>
-
-      <varlistentry id="udevsend">
-        <term><command>udevsend</command></term>
-        <listitem>
-          <para>Delivers hotplug events to <command>udevd</command></para>
-            <indexterm zone="ch-system-udev udevsend">
-          <primary sortas="b-udevsend">udevsend</primary>
-        </indexterm>
-      </listitem></varlistentry>
-
-      <varlistentry id="udevstart">
-        <term><command>udevstart</command></term>
-        <listitem>
-          <para>Creates device nodes in <filename class="directory">/dev</filename>
-          that correspond to drivers compiled directly into the kernel; it
-          performs that task by simulating hotplug events presumably dropped by
-          the kernel before invocation of this program (e.g., because the root
-          filesystem has not been mounted) and submitting such synthetic hotplug
-          events to <command>udev</command></para>
-          <indexterm zone="ch-system-udev udevstart">
-            <primary sortas="b-udevstart">udevstart</primary>
+          <indexterm zone="ch-system-udev udevd">
+            <primary sortas="b-udevd">udevd</primary>
           </indexterm>
         </listitem>
       </varlistentry>
@@ -160,6 +150,42 @@
           rules</para>
           <indexterm zone="ch-system-udev udevinfo">
             <primary sortas="b-udevinfo">udevinfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="udevmonitor">
+        <term><command>udevmonitor</command></term>
+        <listitem>
+          <para>Prints the event received from the kernel and the event which
+          <command>udev</command> sends out after rule processing</para>
+          <indexterm zone="ch-system-udev udevmonitor">
+            <primary sortas="b-udevmonitor">udevmonitor</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="udevsend">
+        <term><command>udevsend</command></term>
+        <listitem>
+          <para>Delivers hotplug events to <command>udevd</command></para>
+          <indexterm zone="ch-system-udev udevsend">
+            <primary sortas="b-udevsend">udevsend</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="udevstart">
+        <term><command>udevstart</command></term>
+        <listitem>
+          <para>Creates device nodes in <filename class="directory">/dev</filename>
+          that correspond to drivers compiled directly into the kernel; it
+          performs that task by simulating hotplug events presumably dropped by
+          the kernel before invocation of this program (e.g., because the root
+          filesystem has not been mounted) and submitting such synthetic hotplug
+          events to <command>udev</command></para>
+          <indexterm zone="ch-system-udev udevstart">
+            <primary sortas="b-udevstart">udevstart</primary>
           </indexterm>
         </listitem>
       </varlistentry>

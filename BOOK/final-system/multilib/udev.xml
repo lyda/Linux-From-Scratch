@@ -44,14 +44,6 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/udev.xml"
-    xpointer="xpointer(//*[@os='a'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/udev.xml"
-    xpointer="xpointer(//*[@os='b'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/udev.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>make CC="gcc ${BUILD64}" LD="gcc ${BUILD64}" udevdir=/dev</userinput></screen>
@@ -79,6 +71,14 @@
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/udev.xml"
     xpointer="xpointer(//*[@os='i'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/udev.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/udev.xml"
