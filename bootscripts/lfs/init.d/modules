@@ -65,7 +65,7 @@ case "${1}" in
 					fi
 				done
 
-				boot_mesg "" ${MORMAL}
+				boot_mesg "" ${NORMAL}
 				# Print a message about successfully loaded
 				# modules on the correct line.
 				echo_ok
