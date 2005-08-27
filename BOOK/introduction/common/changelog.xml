@@ -39,12 +39,23 @@
 -->
 
     <listitem>
+      <para>August 27, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Refrain from using the undocumented --print-file
+          switch for GCC's spec file edit. Use -print-file-name=specs instead
+          (Greg Schafer).</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 26, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[jim] - Stop moving some of coreutils binaries to /bin as they 
-	   aren't required to be there (fixes bug LFS 1620). Copied from Matt's change
-           to the LFS book.</para>
+          <para>[jim] - Stop moving some of coreutils binaries to /bin as
+          they aren't required to be there (fixes bug LFS 1620). Copied
+          from Matt's change to the LFS book.</para>
         </listitem>
         <listitem>
           <para>[jim] - Updated to Man 1.6a.</para>
@@ -53,7 +64,7 @@
     </listitem>
 
     <listitem>
-      <para>August 2, 2005</para>
+      <para>August 22, 2005</para>
       <itemizedlist>
         <listitem>
           <para>[jim] - Updated to Shadow 4.0.12.</para>
