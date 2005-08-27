@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 id="install-groff" role="installation">
+  <sect2 role="installation">
     <title>Installation of Groff</title>
 
     <para os="a">Groff expects the environment variable <envar>PAGE</envar>

@@ -41,7 +41,7 @@
 
   </sect2>
 
-  <sect2 id="install-elftoaout" role="installation">
+  <sect2 role="installation">
     <title>Installation of ELFtoaout</title>
 
     <para>Compile the ELFtoaout package:</para>

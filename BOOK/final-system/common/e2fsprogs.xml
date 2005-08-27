@@ -45,7 +45,7 @@
 
   </sect2>
 
-  <sect2 id="install-e2fsprogs" role="installation">
+  <sect2 role="installation">
     <title>Installation of E2fsprogs</title>
 
     <para os="a">It is recommended that E2fsprogs be built in a subdirectory of

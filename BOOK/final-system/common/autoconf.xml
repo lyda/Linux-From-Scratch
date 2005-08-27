@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-autoconf" role="installation">
+  <sect2 role="installation">
     <title>Installation of Autoconf</title>
 
     <para os="a">Prepare Autoconf for compilation:</para>

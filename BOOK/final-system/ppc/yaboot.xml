@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-yaboot" role="installation">
+  <sect2 role="installation">
     <title>Installation of Yaboot</title>
 
     <para>Yaboot has a compilation error. The following patch properly fixes

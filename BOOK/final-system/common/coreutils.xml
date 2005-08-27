@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 id="install-coreutils" role="installation">
+  <sect2 role="installation">
     <title>Installation of Coreutils</title>
 
     <para os="a">Prevent Coreutils from installing binaries that will be

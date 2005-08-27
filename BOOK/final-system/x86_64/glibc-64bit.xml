@@ -17,7 +17,7 @@
     <secondary>final-system</secondary>
   </indexterm>
 
-  <sect2 id="package-glibc" role="package">
+  <sect2 role="package">
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -40,7 +40,7 @@
 
   </sect2>
 
-  <sect2 id="install-glibc" role="installation">
+  <sect2 role="installation">
     <title>Installation of Glibc</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

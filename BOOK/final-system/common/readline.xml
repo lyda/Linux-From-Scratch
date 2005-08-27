@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 id="install-readline" role="installation">
+  <sect2 role="installation">
     <title>Installation of Readline</title>
 
     <para os="a">The following patch includes a fix for a problem where Readline

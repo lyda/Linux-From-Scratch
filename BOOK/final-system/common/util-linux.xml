@@ -59,7 +59,7 @@ mkdir -p /var/lib/hwclock</userinput></screen>
 
   </sect2>
 
-  <sect2 id="install-util-linux"  role="installation">
+  <sect2 role="installation">
     <title>Installation of Util-linux</title>
 
     <para os="a">Util-linux fails to compile against newer versions of

@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 id="install-shadow" role="installation">
+  <sect2 role="installation">
     <title>Installation of Shadow</title>
 
     <note os="a">

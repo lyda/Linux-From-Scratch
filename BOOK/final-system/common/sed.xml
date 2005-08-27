@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-sed" role="installation">
+  <sect2 role="installation">
     <title>Installation of Sed</title>
 
     <para os="a">By default, Sed installs its man page in

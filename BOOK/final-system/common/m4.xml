@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-m4" role="installation">
+  <sect2 role="installation">
     <title>Installation of M4</title>
 
     <para>Prepare M4 for compilation:</para>

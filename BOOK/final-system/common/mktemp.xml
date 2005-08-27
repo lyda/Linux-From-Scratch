@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-mktemp" role="installation">
+  <sect2 role="installation">
     <title>Installation of Mktemp</title>
 
     <para os="a">Many scripts still use the deprecated <command>tempfile</command>

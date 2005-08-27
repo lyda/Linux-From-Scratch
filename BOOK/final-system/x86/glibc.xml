@@ -45,7 +45,7 @@
 
   </sect2>
 
-  <sect2 id="install-glibc" role="installation">
+  <sect2 role="installation">
     <title>Installation of Glibc</title>
 
     <note os="z">

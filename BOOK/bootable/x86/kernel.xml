@@ -40,7 +40,7 @@
 
   </sect2>
 
-  <sect2 id="install-kernel" role="installation">
+  <sect2 role="installation">
     <title>Installation of the kernel</title>
 
     <para os="a">Building the kernel involves a few steps&mdash;configuration,

@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-less" role="installation">
+  <sect2 role="installation">
     <title>Installation of Less</title>
 
     <para os="a">Prepare Less for compilation:</para>

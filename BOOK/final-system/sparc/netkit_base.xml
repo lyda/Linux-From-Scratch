@@ -41,7 +41,7 @@
 
   </sect2>
 
-  <sect2 id="install-netkit_base" role="installation">
+  <sect2 role="installation">
     <title>Installation of Netkit Base</title>
 
    <para os="a">Prepare Netkit base for compilation:</para>

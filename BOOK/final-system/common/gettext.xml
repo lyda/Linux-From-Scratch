@@ -45,7 +45,7 @@
 
   </sect2>
 
-  <sect2 id="install-gettext" role="installation">
+  <sect2 role="installation">
     <title>Installation of Gettext</title>
 
     <para>Prepare Gettext for compilation:</para>

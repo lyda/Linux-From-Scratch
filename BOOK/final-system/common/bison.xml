@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-bison" role="installation">
+  <sect2 role="installation">
     <title>Installation of Bison</title>
 
     <para>Prepare Bison for compilation:</para>

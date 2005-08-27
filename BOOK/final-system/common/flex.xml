@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 id="install-flex" role="installation">
+  <sect2 role="installation">
     <title>Installation of Flex</title>
 
     <para os="a">Flex contains several known bugs. Fix these with the following

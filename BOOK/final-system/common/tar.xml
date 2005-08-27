@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-tar" role="installation">
+  <sect2 role="installation">
     <title>Installation of Tar</title>
 
     <para os="a">Tar has a bug when the <option>-S</option> option is used with

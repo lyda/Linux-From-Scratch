@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-bootscripts" role="installation">
+  <sect2 role="installation">
     <title>Installation of LFS-Bootscripts</title>
 
     <para>Install the package:</para>

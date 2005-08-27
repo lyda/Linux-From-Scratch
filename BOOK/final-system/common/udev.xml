@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-udev" role="installation">
+  <sect2 role="installation">
     <title>Installation of Udev</title>
 
     <para os="a">Fix an incorrect assumption in the Udev testsuite regarding the

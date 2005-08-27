@@ -42,7 +42,7 @@
 
   </sect2>
 
-  <sect2 id="install-colo" role="installation">
+  <sect2 role="installation">
     <title>Installation of Colo</title>
 
     <para os="a">Compile the Colo package:</para>

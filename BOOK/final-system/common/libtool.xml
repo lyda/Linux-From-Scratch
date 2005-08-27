@@ -44,7 +44,7 @@
 
   </sect2>
 
-  <sect2 id="install-libtool" role="installation">
+  <sect2 role="installation">
     <title>Installation of Libtool</title>
 
     <para os="a">Prepare Libtool for compilation:</para>

@@ -46,7 +46,7 @@
 
   </sect2>
 
-  <sect2 id="install-hotplug" role="installation">
+  <sect2 role="installation">
     <title>Installation of Hotplug</title>
 
     <para>Install the Hotplug package:</para>

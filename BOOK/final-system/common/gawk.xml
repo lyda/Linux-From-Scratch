@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 id="install-gawk" role="installation">
+  <sect2 role="installation">
     <title>Installation of Gawk</title>
 
     <para>Prepare Gawk for compilation:</para>

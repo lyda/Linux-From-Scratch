@@ -41,7 +41,7 @@
 
   </sect2>
 
-  <sect2 id="install-grub" role="installation">
+  <sect2 role="installation">
     <title>Installation of GRUB</title>
 
     <para os="a">This package is known to have issues when its default optimization

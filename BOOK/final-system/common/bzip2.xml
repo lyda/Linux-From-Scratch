@@ -44,7 +44,7 @@
 
   </sect2>
 
-  <sect2 id="install-bzip2" role="installation">
+  <sect2 role="installation">
     <title>Installation of Bzip2</title>
 
     <para os="j">Apply a patch to install the documentation for this

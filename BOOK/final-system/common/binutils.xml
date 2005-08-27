@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 id="install-binutils" role="installation">
+  <sect2 role="installation">
     <title>Installation of Binutils</title>
 
     <para os="a">This package is known to have issues when its default

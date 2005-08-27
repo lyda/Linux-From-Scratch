@@ -43,7 +43,7 @@
 
   </sect2>
 
-  <sect2 id="install-grep" role="installation">
+  <sect2 role="installation">
     <title>Installation of Grep</title>
 
     <para os="a">Prepare Grep for compilation:</para>
