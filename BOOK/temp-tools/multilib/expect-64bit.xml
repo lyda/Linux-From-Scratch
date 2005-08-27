@@ -44,81 +44,64 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/expect.xml"
-    xpointer="xpointer(id('install-expect')/para[1])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/expect.xml"
-    xpointer="xpointer(id('install-expect')/screen[1])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>Now prepare Expect for compilation:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/tools \
    --with-tcl=/tools/lib64 --with-tclinclude=$TCLPATH \
    --libdir=/tools/lib64 --with-x=no</userinput></screen>
 
-    <para>Build the package:</para>
-
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/expect.xml"
-    xpointer="xpointer(id('install-expect')/para[4])"/>
+    xpointer="xpointer(//*[@os='e'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make SCRIPTS="" install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
-    <para>Now remove the <envar>TCLPATH</envar> variable:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
 
-<screen><userinput>unset TCLPATH</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
-    <para>The source directories of both Tcl and Expect can now
-    be removed.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(//*[@os='j'])"/>
 
-  </sect2>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(//*[@os='k'])"/>
 
-  <sect2 id="contents-expect" role="content">
-    <title>Contents of Expect</title>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
 
-    <segmentedlist>
-      <segtitle>Installed program</segtitle>
-      <segtitle>Installed library</segtitle>
-
-      <seglistitem>
-        <seg>expect</seg>
-        <seg>libexpect-5.42.a</seg>
-      </seglistitem>
-    </segmentedlist>
-
-    <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
-      <?dbfo list-presentation="list"?>
-      <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="expect">
-        <term><command>expect</command></term>
-        <listitem>
-          <para>Communicates with other interactive programs according
-          to a script</para>
-          <indexterm zone="ch-temp-tools-expect expect">
-            <primary sortas="b-expect">expect</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="libexpect">
-        <term><filename class="libraryfile">libexpect-5.42.a</filename></term>
-        <listitem>
-          <para>Contains functions that allow Expect to be used as a Tcl
-          extension or to be used directly from C or C++ (without Tcl)</para>
-          <indexterm zone="ch-temp-tools-expect libexpect">
-            <primary sortas="c-libexpect-5.42">libexpect-5.42</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/expect.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
 
   </sect2>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/expect.xml"
+  xpointer="xpointer(id('contents-expect'))"/>
 
 </sect1>
