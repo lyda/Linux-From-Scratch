@@ -16,7 +16,7 @@
     <primary sortas="a-Kbd">Kbd</primary>
   </indexterm>
 
-  <sect2 id="package-kbd" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Kbd package contains key-table files and keyboard

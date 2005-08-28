@@ -16,7 +16,7 @@
     <primary sortas="a-Vim">Vim</primary>
   </indexterm>
 
-  <sect2 id="package-vim" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Vim package contains a powerful text editor.</para>

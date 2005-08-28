@@ -21,7 +21,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/module-init-tools.xml"
-    xpointer="xpointer(id('package-module-init-tools')/para[1])"/>
+    xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -35,7 +35,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/module-init-tools.xml"
-    xpointer="xpointer(id('package-module-init-tools')/segmentedlist[2])"/>
+    xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
 

@@ -16,12 +16,12 @@
     <primary sortas="a-Udev">Udev</primary>
   </indexterm>
 
-  <sect2 id="package-udev" role="package">
+  <sect2 role="package">
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/udev.xml"
-    xpointer="xpointer(id('package-udev')/para[1])"/>
+    xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -35,7 +35,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/udev.xml"
-    xpointer="xpointer(id('package-udev')/segmentedlist[2])"/>
+    xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
 

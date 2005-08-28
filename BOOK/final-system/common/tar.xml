@@ -16,7 +16,7 @@
     <primary sortas="a-Tar">Tar</primary>
   </indexterm>
 
-  <sect2 id="package-tar" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Tar package contains an archiving program.</para>

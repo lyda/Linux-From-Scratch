@@ -16,7 +16,7 @@
     <primary sortas="a-IPRoute2">IPRoute2</primary>
   </indexterm>
 
-  <sect2 id="package-iproute2" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The IPRoute2 package contains programs for basic and advanced

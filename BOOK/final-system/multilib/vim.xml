@@ -21,7 +21,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/vim.xml"
-    xpointer="xpointer(id('package-vim')/para[1])"/>
+    xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -35,11 +35,11 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/vim.xml"
-    xpointer="xpointer(id('package-vim')/segmentedlist[2])"/>
+    xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/vim.xml"
-    xpointer="xpointer(id('package-vim')/tip[1])"/>
+    xpointer="xpointer(//*[@role='package']/tip[1])"/>
 
   </sect2>
 

@@ -16,7 +16,7 @@
     <primary sortas="a-Expect">Expect</primary>
   </indexterm>
 
-  <sect2 id="package-expect" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Expect package contains a program for carrying out scripted

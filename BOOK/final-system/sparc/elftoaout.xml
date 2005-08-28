@@ -16,7 +16,7 @@
     <primary sortas="a-ELFtoaout">ELFtoaout</primary>
   </indexterm>
 
-  <sect2 id="package-elftoaout" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The ELFtoaout package contains the Sparc ELF to a.out converter.</para>

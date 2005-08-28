@@ -21,7 +21,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(id('package-kernel')/para[1])"/>
+    xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -35,7 +35,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
-    xpointer="xpointer(id('package-kernel')/segmentedlist[2])"/>
+    xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
 

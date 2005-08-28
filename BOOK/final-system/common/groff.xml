@@ -16,7 +16,7 @@
     <primary sortas="a-Groff">Groff</primary>
   </indexterm>
 
-  <sect2 id="package-groff" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Groff package contains programs for processing and formatting

@@ -16,7 +16,7 @@
     <primary sortas="a-Bison">Bison</primary>
   </indexterm>
 
-  <sect2 id="package-bison" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Bison package contains a parser generator.</para>

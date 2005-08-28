@@ -16,7 +16,7 @@
     <primary sortas="a-Netkit Base">Netkit Base</primary>
   </indexterm>
 
-  <sect2 id="package-netkit_base" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The NetKit Base package contains programs for basic networking.</para>

@@ -16,7 +16,7 @@
     <primary sortas="a-Colo">Colo</primary>
   </indexterm>
 
-  <sect2 id="package-colo" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Colo package contains the Cobalt Boot Loader.</para>

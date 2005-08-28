@@ -16,7 +16,7 @@
     <primary sortas="a-Patch">Patch</primary>
   </indexterm>
 
-  <sect2 id="package-patch" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Patch package contains a program for modifying or creating

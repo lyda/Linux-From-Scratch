@@ -16,7 +16,7 @@
     <primary sortas="a-Man-pages">Man-pages</primary>
   </indexterm>
 
-  <sect2 id="package-man-pages" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Man-pages package contains over 1,200 man pages.</para>

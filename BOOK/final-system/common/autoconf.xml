@@ -16,7 +16,7 @@
     <primary sortas="a-Autoconf">Autoconf</primary>
   </indexterm>
 
-  <sect2 id="package-autoconf" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Autoconf package contains programs for producing shell scripts that

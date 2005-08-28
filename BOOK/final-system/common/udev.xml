@@ -16,7 +16,7 @@
     <primary sortas="a-Udev">Udev</primary>
   </indexterm>
 
-  <sect2 id="package-udev" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Udev package contains programs for dynamic creation of device

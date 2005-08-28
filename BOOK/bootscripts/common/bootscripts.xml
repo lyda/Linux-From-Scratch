@@ -16,7 +16,7 @@
     <primary sortas="a-Bootscripts">Bootscripts</primary>
   </indexterm>
 
-  <sect2 id="package-bootscripts" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The LFS-Bootscripts package contains a set of scripts to

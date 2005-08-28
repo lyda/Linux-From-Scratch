@@ -16,7 +16,7 @@
     <primary sortas="a-Glibc">Glibc</primary>
   </indexterm>
 
-  <sect2 id="package-glibc" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Glibc package contains the main C library. This library provides

@@ -16,7 +16,7 @@
     <primary sortas="a-Readline">Readline</primary>
   </indexterm>
 
-  <sect2 id="package-readline" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Readline package is a set of libraries that offers command-line

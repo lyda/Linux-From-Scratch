@@ -16,7 +16,7 @@
     <primary sortas="a-Hotplug">Hotplug</primary>
   </indexterm>
 
-  <sect2 id="package-hotplug" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Hotplug package contains scripts that react upon hotplug events

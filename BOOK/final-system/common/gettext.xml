@@ -16,7 +16,7 @@
     <primary sortas="a-Gettext">Gettext</primary>
   </indexterm>
 
-  <sect2 id="package-gettext" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Gettext package contains utilities for internationalization

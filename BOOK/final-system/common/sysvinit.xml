@@ -13,7 +13,7 @@
     <primary sortas="a-Sysvinit">Sysvinit</primary>
   </indexterm>
 
-  <sect2 id="package-sysvinit" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Sysvinit package contains programs for controlling the startup,

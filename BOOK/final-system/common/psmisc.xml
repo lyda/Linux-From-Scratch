@@ -16,7 +16,7 @@
     <primary sortas="a-Psmisc">Psmisc</primary>
   </indexterm>
 
-  <sect2 id="package-psmisc" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Psmisc package contains programs for displaying information

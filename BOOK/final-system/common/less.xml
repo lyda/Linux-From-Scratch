@@ -16,7 +16,7 @@
     <primary sortas="a-Less">Less</primary>
   </indexterm>
 
-  <sect2 id="package-less" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Less package contains a text file viewer.</para>

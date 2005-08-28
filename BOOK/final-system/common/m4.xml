@@ -16,7 +16,7 @@
     <primary sortas="a-M4">M4</primary>
   </indexterm>
 
-  <sect2 id="package-m4" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The M4 package contains a macro processor.</para>

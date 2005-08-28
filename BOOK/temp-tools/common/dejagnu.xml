@@ -16,7 +16,7 @@
     <primary sortas="a-DejaGNU">DejaGNU</primary>
   </indexterm>
 
-  <sect2 id="package-dejagnu" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The DejaGNU package contains a framework for testing other

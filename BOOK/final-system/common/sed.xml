@@ -16,7 +16,7 @@
     <primary sortas="a-Sed">Sed</primary>
   </indexterm>
 
-  <sect2 id="package-sed" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Sed package contains a stream editor.</para>

@@ -16,7 +16,7 @@
     <primary sortas="a-Yaboot">Yaboot</primary>
   </indexterm>
 
-  <sect2 id="package-yaboot" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Yaboot package contains the PowerPC Boot Loader.</para>

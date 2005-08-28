@@ -16,7 +16,7 @@
     <primary sortas="a-Texinfo">Texinfo</primary>
   </indexterm>
 
-  <sect2 id="package-texinfo" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Texinfo package contains programs for reading, writing, and

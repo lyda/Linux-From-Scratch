@@ -16,7 +16,7 @@
     <primary sortas="a-Gzip">Gzip</primary>
   </indexterm>
 
-  <sect2 id="package-gzip" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Gzip package contains programs for compressing and decompressing

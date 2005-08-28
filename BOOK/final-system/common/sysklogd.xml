@@ -16,7 +16,7 @@
     <primary sortas="a-Sysklogd">Sysklogd</primary>
   </indexterm>
 
-  <sect2 id="package-sysklogd" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Sysklogd package contains programs for logging system messages,

@@ -16,7 +16,7 @@
     <primary sortas="a-Iana-Etc">Iana-Etc</primary>
   </indexterm>
 
-  <sect2 id="package-iana-etc" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Iana-Etc package provides data for network services and

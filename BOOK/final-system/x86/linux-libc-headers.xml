@@ -16,7 +16,7 @@
     <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
   </indexterm>
 
-  <sect2 id="package-linux-libc-headers" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Linux-Libc-Headers package contains the

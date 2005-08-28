@@ -16,7 +16,7 @@
     <primary sortas="a-Linux">Linux</primary>
   </indexterm>
 
-  <sect2 id="package-kernel" role="package"><title/>
+  <sect2 role="package"><title/>
     <para>The Linux package contains the Linux kernel.</para>
 
     <segmentedlist>

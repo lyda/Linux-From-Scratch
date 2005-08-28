@@ -16,7 +16,7 @@
     <primary sortas="a-Perl">Perl</primary>
   </indexterm>
 
-  <sect2 id="package-perl" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Perl package contains the Practical Extraction and Report

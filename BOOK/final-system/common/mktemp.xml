@@ -16,7 +16,7 @@
     <primary sortas="a-Mktemp">Mktemp</primary>
   </indexterm>
 
-  <sect2 id="package-mktemp" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Mktemp package contains programs used to create secure

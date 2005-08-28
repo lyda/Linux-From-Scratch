@@ -16,7 +16,7 @@
     <primary sortas="a-Parted">Parted</primary>
   </indexterm>
 
-  <sect2 id="package-parted" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>Parted is a program for creating, copying and modifying partitions,

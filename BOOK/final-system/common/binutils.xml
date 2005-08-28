@@ -16,7 +16,7 @@
     <primary sortas="a-Binutils">Binutils</primary>
   </indexterm>
 
-  <sect2 id="package-binutils" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Binutils package contains a linker, an assembler, and other

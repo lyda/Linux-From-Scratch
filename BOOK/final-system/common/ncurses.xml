@@ -16,7 +16,7 @@
     <primary sortas="a-Ncurses">Ncurses</primary>
   </indexterm>
 
-  <sect2 id="package-ncurses" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Ncurses package contains libraries for terminal-independent

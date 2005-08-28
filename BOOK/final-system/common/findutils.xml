@@ -16,7 +16,7 @@
     <primary sortas="a-Findutils">Findutils</primary>
   </indexterm>
 
-  <sect2 id="package-findutils" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Findutils package contains programs to find files. These programs

@@ -16,7 +16,7 @@
     <primary sortas="a-Flex">Flex</primary>
   </indexterm>
 
-  <sect2 id="package-flex" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Flex package contains a utility for generating programs that

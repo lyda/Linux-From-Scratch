@@ -16,7 +16,7 @@
     <primary sortas="a-Silo">Silo</primary>
   </indexterm>
 
-  <sect2 id="package-silo" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Silo package contains the Sparc Improved boot LOader.</para>

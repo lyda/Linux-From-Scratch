@@ -22,7 +22,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/findutils.xml"
-    xpointer="xpointer(id('package-findutils')/para[1])"/>
+    xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -36,7 +36,7 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/findutils.xml"
-    xpointer="xpointer(id('package-findutils')/segmentedlist[2])"/>
+    xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
 

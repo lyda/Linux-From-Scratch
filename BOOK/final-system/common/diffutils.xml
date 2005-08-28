@@ -16,7 +16,7 @@
     <primary sortas="a-Diffutils">Diffutils</primary>
   </indexterm>
 
-  <sect2 id="package-diffutils" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Diffutils package contains programs that show the differences

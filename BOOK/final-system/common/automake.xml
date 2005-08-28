@@ -16,7 +16,7 @@
     <primary sortas="a-Automake">Automake</primary>
   </indexterm>
 
-  <sect2 id="package-automake" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Automake package contains programs for generating Makefiles

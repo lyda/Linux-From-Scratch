@@ -16,7 +16,7 @@
     <primary sortas="a-Util-linux">Util-linux</primary>
   </indexterm>
 
-  <sect2 id="package-util-linux" role="package">
+  <sect2 role="package">
     <title/>
 
     <para>The Util-linux package contains miscellaneous utility programs.
