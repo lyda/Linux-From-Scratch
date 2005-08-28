@@ -56,7 +56,7 @@
   target, we will get some failures during our cross-compile:</para>
 
 <screen><userinput>if [ "${LFS_HOST}" = "${LFS_TARGET}" ]; then \
-  echo "Host and Target can't be the same." ; fi</userinput></screen>
+  echo "Host and Target can't be the same. Use the Other Configuration Method" ; fi</userinput></screen>
  
   <para>If you received an message, "Host and Target can't be the same."
   You will need to use the other Configuration Method. This will prevent build
@@ -67,8 +67,7 @@
   <para>Now we will add these to <filename>~/.bashrc</filename>, just in
   case you have to exit and restart building later:</para>
 
-<screen><userinput>echo export LFS_HOST=\""${LFS_HOST}\"" &gt;&gt; ~/.bashrc
-echo export LFS_TARGET=\""${LFS_TARGET}\"" &gt;&gt; ~/.bashrc</userinput></screen>
+<screen><userinput>echo export LFS_TARGET=\""${LFS_TARGET}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
   <table>
     <title>List of architectures, target triplets, and recommended book</title>

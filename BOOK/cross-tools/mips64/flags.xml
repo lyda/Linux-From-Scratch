@@ -22,6 +22,14 @@ export GCCTARGET="-mips64"</userinput></screen>
 
 <screen><userinput>export LFS_TARGET32="`echo ${LFS_TARGET}| sed -e 's/64//g'`"</userinput></screen>
 
+<screen><userinput>if [ "${LFS_HOST}" = "${LFS_TARGET32}" ]; then \
+  echo "Host and Target can't be the same." ; fi</userinput></screen>
+
+  <para>If the above test gave you "Host and Target can't be the same", you will need to change your LFS_HOST to a
+  a different target triplet:</para>
+
+<screen><userinput>export LFS_HOST="`echo ${MACHTYPE} | sed -e 's/unknown/cross/g' -e 's/-pc-/-cross-/g'`"</userinput></screen>
+
   <para>Lets add the build flags to <filename>~/.bashrc</filename> to
   prevent issues if we stop and come back later.</para>
 
@@ -29,6 +37,7 @@ export GCCTARGET="-mips64"</userinput></screen>
 echo export BUILDN32=\""${BUILDN32}\"" &gt;&gt; ~/.bashrc
 echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc
 echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bashrc
+echo export LFS_HOST=\""${LFS_HOST}\"" &gt;&gt; ~/.bashrc
 echo export GCCTARGET=\""$GCCTARGET}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
 </sect1>

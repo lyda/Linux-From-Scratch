@@ -39,6 +39,15 @@
 -->
 
     <listitem>
+      <para>August 28, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added another sanity check to prevent error during gcc compile.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 27, 2005</para>
       <itemizedlist>
         <listitem>

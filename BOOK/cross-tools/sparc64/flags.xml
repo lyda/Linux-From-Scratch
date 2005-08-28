@@ -21,13 +21,22 @@ export GCCTARGET=[GCCTARGET entries]"</userinput></screen>
 
 <screen><userinput>export LFS_TARGET32="sparcv9-unknown-linux-gnu"</userinput></screen>
 
+<screen><userinput>if [ "${LFS_HOST}" = "${LFS_TARGET32}" ]; then \
+  echo "Host and Target can't be the same." ; fi</userinput></screen>
+
+  <para>If the above test gave you "Host and Target can't be the same", you will need to change your LFS_HOST to a
+  a different target triplet:</para>
+
+<screen><userinput>export LFS_HOST="`echo ${MACHTYPE} | sed -e 's/unknown/cross/g' -e 's/-pc-/-cross-/g'`"</userinput></screen>
+
   <para>Lets add the build flags to <filename>~/.bashrc</filename> to
   prevent issues if we stop and come back later.</para>
 
 <screen><userinput>echo export BUILD32=\""${BUILD32}\"" &gt;&gt; ~/.bashrc
 echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc
 echo export GCCTARGET=\""${GCCTARGET}\"" &gt;&gt; ~/.bashrc
-echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bashrc</userinput></screen>
+echo export LFS_TARGET32=\""${LFS_TARGET32}\"" &gt;&gt; ~/.bashrc
+echo export LFS_HOST=\""${LFS_HOST}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
   <para>The following table gives the entires for different Sparc 64 capable
   processors. Pick the processor that matches your system.</para>

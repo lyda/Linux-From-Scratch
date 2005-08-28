@@ -13,7 +13,7 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/cflags.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/variables.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/variables-multilib.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/flags.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/linux-libc-headers.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/binutils.xml"/>
