@@ -14,6 +14,7 @@
 
   <indexterm zone="ch-boot-elftoaout">
     <primary sortas="a-ELFtoaout">ELFtoaout</primary>
+    <secondary>boot</secondary>
   </indexterm>
 
   <sect2 role="package">

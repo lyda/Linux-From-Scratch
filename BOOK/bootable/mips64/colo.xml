@@ -12,7 +12,8 @@
 
   <indexterm zone="ch-bootable-colo">
     <primary sortas="a-Colo">Colo</primary>
-  <secondary>configuring</secondary></indexterm>
+    <secondary>configuring</secondary>
+  </indexterm>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../mips/colo.xml"

@@ -11,8 +11,7 @@
   <title>Populating ${LFS}/dev</title>
 
   <indexterm zone="ch-boot-devices">
-    <primary sortas="e-Devices">${LFS}/dev/*</primary>
-    <secondary>boot</secondary>
+    <primary sortas="e-${LFS}/dev/*">${LFS}/dev/*</primary>
   </indexterm>
 
   <sect2>

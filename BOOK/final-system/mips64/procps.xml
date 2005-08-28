@@ -7,13 +7,14 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-procps" role="wrap">
+<sect1 id="ch-system-procps-32" role="wrap">
   <?dbhtml filename="procps.html"?>
 
-  <title>Procps-&procps-version;</title>
+  <title>Procps-&procps-version; 32 Bit Libraries</title>
 
-  <indexterm zone="ch-system-procps">
+  <indexterm zone="ch-system-procps-32">
     <primary sortas="a-Procps">Procps</primary>
+    <secondary>32 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">

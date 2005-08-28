@@ -13,7 +13,7 @@
   <title>Linux-&linux-mips-version;</title>
 
   <indexterm zone="ch-bootable-kernel">
-  <primary sortas="a-Linux">Linux</primary>
+    <primary sortas="a-Linux">Linux</primary>
   </indexterm>
 
   <sect2 role="package">

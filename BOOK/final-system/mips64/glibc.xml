@@ -7,13 +7,14 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-glibc" role="wrap">
+<sect1 id="ch-system-glibc-32" role="wrap">
   <?dbhtml filename="glibc.html"?>
 
-  <title>Glibc-&glibc-version;</title>
+  <title>Glibc-&glibc-version; 32 Bit Libraries</title>
 
-  <indexterm zone="ch-system-glibc">
+  <indexterm zone="ch-system-glibc-32">
     <primary sortas="a-Glibc">Glibc</primary>
+    <secondary>32 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">

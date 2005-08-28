@@ -10,11 +10,11 @@
 <sect1 id="ch-cross-tools-glibc-n32" role="wrap">
   <?dbhtml filename="glibc-n32.html"?>
 
-  <title>Glibc-&glibc-version; n32</title>
+  <title>Glibc-&glibc-version; N32</title>
 
   <indexterm zone="ch-cross-tools-glibc-n32">
-    <primary sortas="a-Glibc n32">Glibc</primary>
-    <secondary>cross tools</secondary>
+    <primary sortas="a-Glibc">Glibc</primary>
+    <secondary>cross tools, N32</secondary>
   </indexterm>
 
   <sect2 role="package">

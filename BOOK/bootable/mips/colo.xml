@@ -12,7 +12,8 @@
 
   <indexterm zone="ch-bootable-colo">
     <primary sortas="a-Colo">Colo</primary>
-  <secondary>configuring</secondary></indexterm>
+    <secondary>configuring</secondary>
+  </indexterm>
 
   <note os="a">
     <para>This bootloader is for the MIPS based cobalt servers RaQ,

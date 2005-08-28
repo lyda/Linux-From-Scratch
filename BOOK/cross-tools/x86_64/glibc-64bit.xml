@@ -13,8 +13,8 @@
   <title>Glibc-&glibc-version; 64-Bit</title>
 
   <indexterm zone="ch-cross-tools-glibc-64">
-    <primary sortas="a-Glibc">Glibc 64-Bit</primary>
-    <secondary>cross tools</secondary>
+    <primary sortas="a-Glibc">Glibc</primary>
+    <secondary>cross tools, 64 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">
