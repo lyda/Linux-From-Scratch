@@ -7,7 +7,7 @@
 
 <book>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/sparc64/bookinfo.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/sparc64-64/bookinfo.xml"/>
   <!--
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/dedication.xml"/>
   -->

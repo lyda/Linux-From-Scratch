@@ -5,7 +5,7 @@
 ]>
 <book>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/mips64/bookinfo.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/mips64-64/bookinfo.xml"/>
 <!--
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="prologue/dedication.xml"/>
 -->

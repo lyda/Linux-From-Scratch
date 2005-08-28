@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!ENTITY version "7.0-cross-lfs-20050828">
 <!ENTITY version-x86 "&version;-x86">
-<!ENTITY version-x86_64 "&version;-x86_64">
+<!ENTITY version-x86_64 "&version;-x86_64-Multilib">
+<!ENTITY version-x86_64-64 "&version;-x86_64">
 <!ENTITY version-ppc "&version;-PowerPC">
 <!ENTITY version-sparc "&version;-Sparc">
-<!ENTITY version-sparc64 "&version;-Sparc64">
+<!ENTITY version-sparc64 "&version;-Sparc64-Multilib">
+<!ENTITY version-sparc64-64 "&version;-Sparc64">
 <!ENTITY version-mips "&version;-MIPS">
-<!ENTITY version-mips64 "&version;-MIPS64">
+<!ENTITY version-mips64 "&version;-MIPS64-Multilib">
+<!ENTITY version-mips64-64 "&version;-MIPS64">
 
 <!ENTITY releasedate "August 28, 2005">
 <!ENTITY milestone "7.0">
