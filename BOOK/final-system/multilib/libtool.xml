@@ -7,13 +7,14 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-libtool" role="wrap">
+<sect1 id="ch-system-libtool-32" role="wrap">
   <?dbhtml filename="libtool.html"?>
 
-  <title>Libtool-&libtool-version;</title>
+  <title>Libtool-&libtool-version; 32 Bit Libraries</title>
 
-  <indexterm zone="ch-system-libtool">
+  <indexterm zone="ch-system-libtool-32">
     <primary sortas="a-Libtool">Libtool</primary>
+    <secondary>32 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">

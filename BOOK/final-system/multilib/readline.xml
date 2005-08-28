@@ -7,13 +7,14 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-readline" role="wrap">
+<sect1 id="ch-system-readline-32" role="wrap">
   <?dbhtml filename="readline.html"?>
 
-  <title>Readline-&readline-version;</title>
+  <title>Readline-&readline-version; 32 Bit Libraries</title>
 
-  <indexterm zone="ch-system-readline">
+  <indexterm zone="ch-system-readline-32">
     <primary sortas="a-Readline">Readline</primary>
+    <secondary>32 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">

@@ -10,10 +10,11 @@
 <sect1 id="ch-system-shadow-n32" role="wrap">
   <?dbhtml filename="shadow-n32.html"?>
 
-  <title>Shadow-&shadow-version; N32</title>
+  <title>Shadow-&shadow-version; N32 Libraries</title>
 
   <indexterm zone="ch-system-shadow-n32">
-    <primary sortas="a-Shadow">Shadow N32</primary>
+    <primary sortas="a-Shadow">Shadow</primary>
+    <secondary>N32</secondary>
   </indexterm>
 
   <sect2 role="package">

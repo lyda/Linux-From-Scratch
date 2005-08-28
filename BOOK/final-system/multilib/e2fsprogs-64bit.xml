@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-e2fsprogs-64bit" role="wrap">
+<sect1 id="ch-system-e2fsprogs" role="wrap">
   <?dbhtml filename="e2fsprogs-64bit.html"?>
 
   <title>E2fsprogs-&e2fsprogs-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-e2fsprogs-64bit">
-    <primary sortas="a-E2fsprogs">E2fsprogs 64 Bit</primary>
+  <indexterm zone="ch-system-e2fsprogs">
+    <primary sortas="a-E2fsprogs">E2fsprogs</primary>
   </indexterm>
 
   <sect2 role="package">

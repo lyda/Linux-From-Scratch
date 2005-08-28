@@ -13,7 +13,7 @@
   <title>Glibc-&glibc-version; Headers</title>
 
   <indexterm zone="ch-cross-tools-glibc-headers">
-    <primary sortas="a-Glibc">Glibc Headers</primary>
+    <primary sortas="a-Glibc">Glibc</primary>
     <secondary>cross tools, headers</secondary>
   </indexterm>
 

@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-file-64bit" role="wrap">
+<sect1 id="ch-system-file" role="wrap">
   <?dbhtml filename="file-64bit.html"?>
 
   <title>File-&file-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-file-64bit">
-    <primary sortas="a-File">File 64 Bit</primary>
+  <indexterm zone="ch-system-file">
+    <primary sortas="a-File">File</primary>
   </indexterm>
 
   <sect2 role="package">

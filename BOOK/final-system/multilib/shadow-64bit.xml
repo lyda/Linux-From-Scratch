@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-shadow-64bit" role="wrap">
+<sect1 id="ch-system-shadow" role="wrap">
   <?dbhtml filename="shadow-64bit.html"?>
 
   <title>Shadow-&shadow-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-shadow-64bit">
-    <primary sortas="a-Shadow">Shadow 64 BIt</primary>
+  <indexterm zone="ch-system-shadow">
+    <primary sortas="a-Shadow">Shadow</primary>
   </indexterm>
 
   <sect2 role="package">

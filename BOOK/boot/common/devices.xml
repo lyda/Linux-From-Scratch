@@ -8,10 +8,11 @@
 <sect1 id="ch-boot-devices">
   <?dbhtml filename="devices.html"?>
 
-  <title>Populating /dev</title>
+  <title>Populating ${LFS}/dev</title>
 
   <indexterm zone="ch-boot-devices">
-    <primary sortas="e-Devices">/dev/*</primary>
+    <primary sortas="e-Devices">${LFS}/dev/*</primary>
+    <secondary>boot</secondary>
   </indexterm>
 
   <sect2>

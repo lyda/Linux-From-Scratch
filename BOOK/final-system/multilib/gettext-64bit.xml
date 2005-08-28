@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-gettext-64bit" role="wrap">
+<sect1 id="ch-system-gettext" role="wrap">
   <?dbhtml filename="gettext-64bit.html"?>
 
   <title>Gettext-&gettext-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-gettext-64bit">
-    <primary sortas="a-Gettext">Gettext 64 Bit</primary>
+  <indexterm zone="ch-system-gettext">
+    <primary sortas="a-Gettext">Gettext</primary>
   </indexterm>
 
   <sect2 role="package">

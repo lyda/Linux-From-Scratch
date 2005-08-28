@@ -10,10 +10,11 @@
 <sect1 id="ch-system-bzip2-n32" role="wrap">
   <?dbhtml filename="bzip2-n32.html"?>
 
-  <title>Bzip2-&bzip2-version; N32</title>
+  <title>Bzip2-&bzip2-version; N32 Libraries</title>
 
   <indexterm zone="ch-system-bzip2-n32">
-    <primary sortas="a-Bzip2">Bzip2 N32</primary>
+    <primary sortas="a-Bzip2">Bzip2</primary>
+    <secondary>N32</secondary>
   </indexterm>
 
   <sect2 role="package">

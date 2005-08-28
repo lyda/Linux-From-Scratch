@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-flex-64bit" role="wrap">
+<sect1 id="ch-system-flex" role="wrap">
   <?dbhtml filename="flex-64bit.html"?>
 
   <title>Flex-&flex-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-flex-64bit">
-    <primary sortas="a-Flex">Flex 64 Bit</primary>
+  <indexterm zone="ch-system-flex">
+    <primary sortas="a-Flex">Flex</primary>
   </indexterm>
 
   <sect2 role="package">

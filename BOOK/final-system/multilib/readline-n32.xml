@@ -10,10 +10,11 @@
 <sect1 id="ch-system-readline-n32" role="wrap">
   <?dbhtml filename="readline-n32.html"?>
 
-  <title>Readline-&readline-version; N32</title>
+  <title>Readline-&readline-version; N32 Libraries</title>
 
   <indexterm zone="ch-system-readline-n32">
-    <primary sortas="a-Readline">Readline N32</primary>
+    <primary sortas="a-Readline">Readline</primary>
+    <secondary>N32</secondary>
   </indexterm>
 
   <sect2 role="package">

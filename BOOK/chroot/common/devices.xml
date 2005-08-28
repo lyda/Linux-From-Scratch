@@ -12,6 +12,7 @@
 
   <indexterm zone="ch-chroot-devices">
     <primary sortas="e-Devices">/dev/*</primary>
+    <secondary>chroot</secondary>
   </indexterm>
 
   <sect2>

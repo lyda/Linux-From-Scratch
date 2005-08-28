@@ -13,7 +13,7 @@
   <title>GRUB-&grub-version;</title>
 
   <indexterm zone="ch-boot-grub-build">
-    <primary sortas="a-GRUB-Build">GRUB</primary>
+    <primary sortas="a-GRUB">GRUB</primary>
     <secondary>boot</secondary>
   </indexterm>
 

@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-zlib-64bit" role="wrap">
+<sect1 id="ch-system-zlib" role="wrap">
   <?dbhtml filename="zlib-64bit.html"?>
 
   <title>Zlib-&zlib-version; 64 Bit</title>
 
-  <indexterm zone="ch-system-zlib-64bit">
-    <primary sortas="a-Zlib">Zlib 64 Bit</primary>
+  <indexterm zone="ch-system-zlib">
+    <primary sortas="a-Zlib">Zlib</primary>
   </indexterm>
 
   <sect2 role="package">

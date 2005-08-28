@@ -10,10 +10,11 @@
 <sect1 id="ch-system-ncurses-n32" role="wrap">
   <?dbhtml filename="ncurses-n32.html"?>
 
-  <title>Ncurses-&ncurses-version; N32</title>
+  <title>Ncurses-&ncurses-version; N32 Libraries</title>
 
   <indexterm zone="ch-system-ncurses-n32">
-    <primary sortas="a-Ncurses">Ncurses N32</primary>
+    <primary sortas="a-Ncurses">Ncurses</primary>
+    <secondary>N32</secondary>
   </indexterm>
 
   <sect2 role="package">
