@@ -13,8 +13,8 @@
   <title>Perl-&perl-version; N32</title>
 
   <indexterm zone="ch-temp-tools-perl-n32">
-    <primary sortas="a-Perl-n32">Perl N32</primary>
-    <secondary>temporary tools</secondary>
+    <primary sortas="a-Perl">Perl</primary>
+    <secondary>temporary tools, N32</secondary>
   </indexterm>
 
   <sect2 role="package">

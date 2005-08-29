@@ -12,8 +12,8 @@
   <?dbhtml filename="gettext-n32.html"?>
 
   <indexterm zone="ch-temp-system-gettext-n32">
-    <primary sortas="a-Gettext-n32">Gettext</primary>
-    <secondary>temporary system</secondary>
+    <primary sortas="a-Gettext">Gettext</primary>
+    <secondary>temporary system, N32</secondary>
   </indexterm>
 
   <sect2 role="package">

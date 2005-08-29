@@ -11,7 +11,7 @@
   <title>Populating /dev</title>
 
   <indexterm zone="ch-chroot-devices">
-    <primary sortas="e-Devices">/dev/*</primary>
+    <primary sortas="e-/dev/*">/dev/*</primary>
   </indexterm>
 
   <sect2>

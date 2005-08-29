@@ -10,11 +10,11 @@
 <sect1 id="ch-temp-system-zlib-64bit" role="wrap">
   <?dbhtml filename="zlib-64.html"?>
 
-  <title>Zlib-&zlib-version; 64-Bit</title>
+  <title>Zlib-&zlib-version; 64 Bit</title>
 
   <indexterm zone="ch-temp-system-zlib-64bit">
-    <primary sortas="a-Zlib 64-Bit">Zlib 64-Bit</primary>
-    <secondary>temporary system</secondary>
+    <primary sortas="a-Zlib">Zlib</primary>
+    <secondary>temporary system, 64 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">

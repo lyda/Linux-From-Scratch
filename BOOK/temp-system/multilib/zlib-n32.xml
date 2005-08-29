@@ -13,8 +13,8 @@
   <title>Zlib-&zlib-version; N32</title>
 
   <indexterm zone="ch-temp-system-zlib-n32">
-    <primary sortas="a-Zlib N32">Zlib N32</primary>
-    <secondary>temporary system</secondary>
+    <primary sortas="a-Zlib">Zlib</primary>
+    <secondary>temporary system, N32</secondary>
   </indexterm>
 
   <sect2 role="package">

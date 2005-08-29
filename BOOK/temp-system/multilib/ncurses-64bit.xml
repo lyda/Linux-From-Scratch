@@ -10,11 +10,11 @@
 <sect1 id="ch-temp-system-ncurses-64bit" role="wrap">
   <?dbhtml filename="ncurses-64.html"?>
 
-  <title>Ncurses-&ncurses-version; 64-Bit</title>
+  <title>Ncurses-&ncurses-version; 64 Bit</title>
 
   <indexterm zone="ch-temp-system-ncurses-64bit">
-    <primary sortas="a-Ncurses-64bit">Ncurses</primary>
-    <secondary>temporary system</secondary>
+    <primary sortas="a-Ncurses">Ncurses</primary>
+    <secondary>temporary system, 64 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">

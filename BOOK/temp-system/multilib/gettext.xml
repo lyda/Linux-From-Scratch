@@ -10,11 +10,11 @@
 <sect1 id="ch-temp-system-gettext" role="wrap">
   <?dbhtml filename="gettext.html"?>
 
-  <title>Gettext-&gettext-version;</title>
+  <title>Gettext-&gettext-version; 32 Bit</title>
 
   <indexterm zone="ch-temp-system-gettext">
     <primary sortas="a-Gettext">Gettext</primary>
-    <secondary>temporary system</secondary>
+    <secondary>temporary system, 32 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">

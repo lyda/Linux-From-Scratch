@@ -10,11 +10,11 @@
 <sect1 id="ch-temp-tools-perl" role="wrap">
   <?dbhtml filename="perl.html"?>
 
-  <title>Perl-&perl-version;</title>
+  <title>Perl-&perl-version; 32 Bit</title>
 
   <indexterm zone="ch-temp-tools-perl">
     <primary sortas="a-Perl">Perl</primary>
-    <secondary>temporary tools</secondary>
+    <secondary>temporary tools, 32 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">

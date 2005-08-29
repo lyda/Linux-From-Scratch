@@ -7,13 +7,13 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-temp-tools-perl-64bit" role="wrap">
+<sect1 id="ch-temp-tools-perl" role="wrap">
   <?dbhtml filename="perl-64bit.html"?>
 
   <title>Perl-&perl-version; 64-Bit</title>
 
-  <indexterm zone="ch-temp-tools-perl-64bit">
-    <primary sortas="a-Perl-64bit">Perl 64-Bit</primary>
+  <indexterm zone="ch-temp-tools-perl">
+    <primary sortas="a-Perl">Perl</primary>
     <secondary>temporary tools</secondary>
   </indexterm>
 

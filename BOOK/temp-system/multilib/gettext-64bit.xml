@@ -8,12 +8,12 @@
 ]>
 
 <sect1 id="ch-temp-system-gettext-64bit" role="wrap">
-  <title>Gettext-&gettext-version; 64-Bit</title>
+  <title>Gettext-&gettext-version; 64 Bit</title>
   <?dbhtml filename="gettext-64.html"?>
 
   <indexterm zone="ch-temp-system-gettext-64bit">
-    <primary sortas="a-Gettext-64bit">Gettext</primary>
-    <secondary>temporary system</secondary>
+    <primary sortas="a-Gettext">Gettext</primary>
+    <secondary>temporary system, 64 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">
