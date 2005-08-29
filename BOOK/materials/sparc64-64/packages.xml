@@ -48,7 +48,7 @@
       <term>Silo (&silo-version;) - 144 KB:</term>
       <listitem>
         <para><ulink
-        url="http://www.sparc-boot.org/pub/silo/silo-&silo-version;.tar.bz2"/></para>
+        url="http://www.ultralinux.nl/silo/download/silo-&silo-version;.tar.bz2"/></para>
       </listitem>
     </varlistentry>
 
@@ -56,7 +56,7 @@
       <term>Silo Loaders (&silo-version;) - 108 KB:</term>
       <listitem>
         <para><ulink
-        url="http://www.sparc-boot.org/pub/silo/silo-loaders-&silo-version;.tar.gz"/></para>
+        url="http://www.ultralinux.nl/silo/download/silo-loaders-&silo-version;.tar.gz"/></para>
       </listitem>
     </varlistentry>
 
