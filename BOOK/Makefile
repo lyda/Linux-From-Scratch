@@ -82,8 +82,7 @@ common:
 	@for filename in `find $(BASEDIR) -name "*.html"`; do \
 	  tidy -config tidy.conf $$filename; \
 	  true; \
-	done;
-	@for filename in `find $(BASEDIR) -name "*.html"`; do \
+	  sh obfuscate.sh $$filename; \
 	  sed -i -e "s@text/html@application/xhtml+xml@g" $$filename; \
 	done;
 
