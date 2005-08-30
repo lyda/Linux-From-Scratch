@@ -73,8 +73,9 @@ script searches for headers, so that it fixes only the new headers under
 <filename class="directory">/tools</filename>, not the ones from your host
 system.</para>
 
-<screen><userinput>sed -i 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
-      gcc/Makefile.in</userinput></screen>
+<screen><userinput>cp gcc/Makefile.in{,.orig} &amp;&amp;
+sed 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
+      gcc/Makefile.in.orig &gt; gcc/Makefile.in</userinput></screen>
 
 <para>The bootstrap build performed in <xref linkend="ch-tools-gcc-pass1"/>
 built GCC with the <option>-fomit-frame-pointer</option> compiler flag.
@@ -82,7 +83,9 @@ Non-bootstrap builds omit this flag by default, so apply the following
 <command>sed</command> to use it in order to ensure consistent compiler builds.
 </para>
 
-<screen><userinput>sed -i 's/^XCFLAGS =$/&amp; -fomit-frame-pointer/' gcc/Makefile.in</userinput></screen>
+<screen><userinput>cp gcc/Makefile.in{,.tmp} &amp;&amp;
+sed 's/^XCFLAGS =$/&amp; -fomit-frame-pointer/' gcc/Makefile.in.tmp \
+	&gt; gcc/Makefile.in</userinput></screen>
 
 <para>Apply the following patch to change the location of GCC's default dynamic
 linker (typically <filename class="libraryfile">ld-linux.so.2</filename>):</para>
