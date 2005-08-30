@@ -88,7 +88,7 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>CC="gcc ${BUILDN32}" CXX="gcc ${BUILDN32} \
+<screen><userinput>CC="gcc ${BUILDN32}" CXX="g++ ${BUILDN32} \
     ../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
     --libexecdir=/usr/lib32/glibc --libdir=/lib32</userinput></screen>

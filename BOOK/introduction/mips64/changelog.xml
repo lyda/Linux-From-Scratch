@@ -42,4 +42,35 @@
     </listitem>
   </itemizedlist>
 
+  <itemizedlist>
+    <title>Changelog Entries:</title>
+
+<!-- Changelog template
+
+    <listitem>
+      <para>Date</para>
+      <itemizedlist>
+        <listitem>
+          <para>[name] - Changelog entry.</para>
+        </listitem>
+        <listitem>
+          <para>[name] - Another changelog entry.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+-->
+
+    <listitem>
+      <para>August 30, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - correct CXX="gcc ..." typo in glibc-n32 and glibc-64bit
+	  (bug 1624).</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+  </itemizedlist>
+
 </sect1>

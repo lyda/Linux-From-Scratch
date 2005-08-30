@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>August 30, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - correct CXX="gcc ..." typo in glibc-64bit (bug 1624).</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 7, 2005</para>
       <itemizedlist>
         <listitem>
