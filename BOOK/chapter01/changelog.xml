@@ -119,6 +119,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>August 30th, 2005 [matt]: Work around a segfault in cfdisk by
+compiling with -O instead of the default -O2 optimization setting (fixes bug
+1604).</para></listitem>
+
 <listitem><para>August 30th, 2005 [matt]: Update the inetutils patch to use the
 upstream fix for GCC-4.x compilation problems (fixes bug 1602).</para></listitem>
 
