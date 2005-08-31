@@ -56,9 +56,9 @@
   target, we will get some failures during our cross-compile:</para>
 
 <screen><userinput>if [ "${LFS_HOST}" = "${LFS_TARGET}" ]; then \
-  echo "Host and Target can't be the same. Use the Other Configuration Method" ; fi</userinput></screen>
+  echo "Host and Target can't be the same." ; fi</userinput></screen>
  
-  <para>If you received an message, "Host and Target can't be the same..."
+  <para>If you received an message, "Host and Target can't be the same."
   You will need to use the other Configuration Method. This will prevent build
   issues during the early phases of the build.</para>
 
@@ -80,74 +80,79 @@ echo export LFS_TARGET=\""${LFS_TARGET}\"" &gt;&gt; ~/.bashrc</userinput></scree
         <row>
           <entry>Architecture</entry>
           <entry>Target Triplet</entry>
-          <entry>LFS Book</entry>
+          <entry>32 Bit, 64 Bit, 32/64 Bit</entry>
         </row>
       </thead>
       <tbody>
         <row>
           <entry>Pentium, K6, 586 Compatibles</entry>
           <entry>i586-pc-linux-gnu</entry>
-          <entry>Intel/AMD x86</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>Pentium II, Pentium III, Pentium 4</entry>
           <entry>i686-pc-linux-gnu</entry>
-          <entry>Intel/AMD x86</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>Athlon, Duron</entry>
           <entry>i686-pc-linux-gnu</entry>
-          <entry>Intel/AMD x86</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>Athlon64</entry>
           <entry>x86_64-pc-linux-gnu</entry>
-          <entry>x86_64</entry>
+          <entry>32/64 Bit</entry>
         </row>
         <row>
           <entry>PowerPC</entry>
           <entry>powerpc-unknown-linux-gnu</entry>
-          <entry>PowerPC</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>PowerPC64</entry>
           <entry>ppc64-unknown-linux-gnu</entry>
-          <entry>PowerPC</entry>
+          <entry>64 Bit</entry>
         </row>
         <row>
           <entry>MIPS</entry>
           <entry>mips-unknown-linux-gnu</entry>
-          <entry>MIPS 32 Bit</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>MIPS Little Endian</entry>
           <entry>mipsel-unknown-linux-gnu</entry>
-          <entry>MIPS 32 Bit</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>MIPS 64</entry>
           <entry>mips64-unknown-linux-gnu</entry>
-          <entry>MIPS 64 Bit</entry>
+          <entry>64 Bit</entry>
         </row>
         <row>
           <entry>MIPS 64 Little Endian</entry>
           <entry>mips64el-unknown-linux-gnu</entry>
-          <entry>MIPS 64 Bit</entry>
+          <entry>64 Bit</entry>
         </row>
         <row>
           <entry>Supersparc and Hypersparc</entry>
           <entry>sparcv8-unknown-linux-gnu</entry>
-          <entry>Sparc32</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>Ultrasparc</entry>
           <entry>sparcv9-unknown-linux-gnu</entry>
-          <entry>Sparc32</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>Ultrasparc</entry>
           <entry>sparc64-unknown-linux-gnu</entry>
-          <entry>Sparc64</entry>
+          <entry>32/64 Bit</entry>
+        </row>
+        <row>
+          <entry>Alpha</entry>
+          <entry>alpha-unknown-linux-gnu</entry>
+          <entry>64 Bit</entry>
         </row>
       </tbody>
     </tgroup>

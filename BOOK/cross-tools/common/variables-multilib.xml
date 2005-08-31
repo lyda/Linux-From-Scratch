@@ -69,6 +69,7 @@
 
 <screen><userinput>echo export LFS_TARGET=\""${LFS_TARGET}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
+
   <table>
     <title>List of architectures, target triplets, and recommended book</title>
     <tgroup cols="2" align="center">
@@ -79,74 +80,79 @@
         <row>
           <entry>Architecture</entry>
           <entry>Target Triplet</entry>
-          <entry>LFS Book</entry>
+          <entry>32 Bit, 64 Bit, 32/64 Bit</entry>
         </row>
       </thead>
       <tbody>
         <row>
           <entry>Pentium, K6, 586 Compatibles</entry>
           <entry>i586-pc-linux-gnu</entry>
-          <entry>Intel/AMD x86</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>Pentium II, Pentium III, Pentium 4</entry>
           <entry>i686-pc-linux-gnu</entry>
-          <entry>Intel/AMD x86</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>Athlon, Duron</entry>
           <entry>i686-pc-linux-gnu</entry>
-          <entry>Intel/AMD x86</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>Athlon64</entry>
           <entry>x86_64-pc-linux-gnu</entry>
-          <entry>x86_64</entry>
+          <entry>32/64 Bit</entry>
         </row>
         <row>
           <entry>PowerPC</entry>
           <entry>powerpc-unknown-linux-gnu</entry>
-          <entry>PowerPC</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>PowerPC64</entry>
           <entry>ppc64-unknown-linux-gnu</entry>
-          <entry>PowerPC</entry>
+          <entry>64 Bit</entry>
         </row>
         <row>
           <entry>MIPS</entry>
           <entry>mips-unknown-linux-gnu</entry>
-          <entry>MIPS 32 Bit</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>MIPS Little Endian</entry>
           <entry>mipsel-unknown-linux-gnu</entry>
-          <entry>MIPS 32 Bit</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>MIPS 64</entry>
           <entry>mips64-unknown-linux-gnu</entry>
-          <entry>MIPS 64 Bit</entry>
+          <entry>64 Bit</entry>
         </row>
         <row>
           <entry>MIPS 64 Little Endian</entry>
           <entry>mips64el-unknown-linux-gnu</entry>
-          <entry>MIPS 64 Bit</entry>
+          <entry>64 Bit</entry>
         </row>
         <row>
           <entry>Supersparc and Hypersparc</entry>
           <entry>sparcv8-unknown-linux-gnu</entry>
-          <entry>Sparc32</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>Ultrasparc</entry>
           <entry>sparcv9-unknown-linux-gnu</entry>
-          <entry>Sparc32</entry>
+          <entry>32 Bit</entry>
         </row>
         <row>
           <entry>Ultrasparc</entry>
           <entry>sparc64-unknown-linux-gnu</entry>
-          <entry>Sparc64</entry>
+          <entry>32/64 Bit</entry>
+        </row>
+        <row>
+          <entry>Alpha</entry>
+          <entry>alpha-unknown-linux-gnu</entry>
+          <entry>64 Bit</entry>
         </row>
       </tbody>
     </tgroup>
