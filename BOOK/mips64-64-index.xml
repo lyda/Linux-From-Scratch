@@ -14,7 +14,7 @@
 <part id="part1">
 <title>Introduction</title>
 <?dbhtml filename="part1.html"?>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction/mips64-chapter.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction/mips64-64-chapter.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="partitioning/mips64-chapter.xml"/>
 </part>
 

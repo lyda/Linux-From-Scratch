@@ -51,6 +51,14 @@
     href="../../final-system/common/util-linux.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(//*[@os='b1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/util-linux.xml"
+    xpointer="xpointer(//*[@os='b2'])"/>
+
     <para os="ba">Util-linux does not use the freshly installed headers and
     libraries from the <filename class="directory">/tools</filename>
     directory by default. This is fixed by altering the configure script:</para>

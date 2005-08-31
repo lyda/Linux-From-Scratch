@@ -42,6 +42,14 @@
   <sect2 role="installation">
     <title>Installation of Kbd</title>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/kbd.xml"
+    xpointer="xpointer(//*[@os='a1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/kbd.xml"
+    xpointer="xpointer(//*[@os='a2'])"/>
+
     <para>Prepare Kbd for compilation:</para>
 
 <screen><userinput>CC="gcc ${BUILD64}" ./configure</userinput></screen>

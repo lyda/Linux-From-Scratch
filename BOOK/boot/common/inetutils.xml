@@ -53,6 +53,14 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/inetutils.xml"
+    xpointer="xpointer(//*[@os='b1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/inetutils.xml"
+    xpointer="xpointer(//*[@os='b2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/inetutils.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>./configure --prefix=/usr --libexecdir=/usr/sbin \
@@ -67,7 +75,7 @@
     href="../../final-system/common/inetutils.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
-<screen os="aa"><userinput>make LDFLAGS="-s"</userinput></screen>
+<screen os="aa"><userinput>make</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/inetutils.xml"

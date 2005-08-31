@@ -53,6 +53,14 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='b1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
+    xpointer="xpointer(//*[@os='b2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/inetutils.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
 <screen><userinput>CC="${CC} ${BUILD64}" \

@@ -52,6 +52,10 @@
 
 <screen os="b"><userinput>patch -Np1 -i ../&inetutils-man_pages-patch;</userinput></screen>
 
+    <para os="b1">The following patches addresses build issues with GCC 4.x:</para>
+
+<screen os="b2"><userinput>patch -Np1 -i ../&inetutils-gcc4_fixes-patch;</userinput></screen>
+
     <para os="c">Prepare Inetutils for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --libexecdir=/usr/sbin \

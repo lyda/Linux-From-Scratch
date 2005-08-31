@@ -46,6 +46,10 @@
   <sect2 role="installation">
     <title>Installation of Kbd</title>
 
+    <para os="a1">The following patch fixes build issues with GCC 4.x:</para>
+
+<screen os="a2"><userinput>patch -Np1 -i ../&kbd-gcc4_fixes-patch;</userinput></screen>
+
     <para>Prepare Kbd for compilation:</para>
 
 <screen><userinput>./configure</userinput></screen>

@@ -52,7 +52,10 @@
 
 <screen><userinput>install -d /usr/include
 cp -R include/asm-sparc64 /usr/include/asm
-cp -R include/linux /usr/include</userinput></screen>
+cp -R include/linux /usr/include
+cp -R include/mtd /usr/include
+cp -R include/sound /usr/include
+cp -R include/scsi /usr/include</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/linux-libc-headers.xml"

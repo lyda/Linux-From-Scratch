@@ -78,6 +78,16 @@
 
 <screen os="d"><userinput>patch -Np1 -i ../&glibc-testfix-patch;</userinput></screen>
 
+    <para os="d1">The following patches fix build issues that are caused by GCC 4.x:</para>
+
+<screen os="d2"><userinput>patch -Np1 -i ../&glibc-gcc4-fix_elf-patch;</userinput></screen>
+
+<screen os="d3"><userinput>patch -Np1 -i ../&glibc-gcc4_fix_iconvdata-patch;</userinput></screen>
+
+<screen os="d4"><userinput>patch -Np1 -i ../&glibc-gcc4_fix_string-patch;</userinput></screen>
+
+<screen os="d5"><userinput>patch -Np1 -i ../&glibc-gcc4_fix_symbols-patch;</userinput></screen>
+
     <para os="e">The Glibc documentation recommends building Glibc outside of the
     source directory in a dedicated build directory:</para>
 

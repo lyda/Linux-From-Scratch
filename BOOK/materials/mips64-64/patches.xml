@@ -15,6 +15,14 @@
   <variablelist role="materials">
 
     <varlistentry>
+      <term>GCC Specs Patch - 14 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;gcc/&gcc-specs_pure64-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>GLIBC Syscall Patch - 11 KB:</term>
       <listitem>
         <para><ulink

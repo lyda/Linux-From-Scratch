@@ -32,6 +32,9 @@
     <title>Added:</title>
 
     <listitem>
+      <para>&gcc-specs-patch;</para>
+    </listitem>
+    <listitem>
       <para>Parted &parted-version;</para>
     </listitem>
     <listitem>

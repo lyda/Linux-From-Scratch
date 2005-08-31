@@ -35,6 +35,9 @@
       <para>Colo &colo-version;</para>
     </listitem>
     <listitem>
+      <para>&gcc-specs-patch;</para>
+    </listitem>
+    <listitem>
       <para>&glibc-mips_syscall-patch;</para>
     </listitem>
     <listitem>

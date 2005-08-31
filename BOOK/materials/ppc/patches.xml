@@ -15,6 +15,14 @@
   <variablelist role="materials">
 
     <varlistentry>
+      <term>GCC Specs Patch - 14 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;gcc/&gcc-specs-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Yaboot (&yaboot-version;) - 1 KB:</term>
       <listitem>
         <para><ulink

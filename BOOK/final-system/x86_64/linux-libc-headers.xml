@@ -59,20 +59,23 @@
 cp -R include/asm-i386 /usr/include/
 cp -R include/asm-x86_64 /usr/include/
 cp -R include/asm-x86_64-biarch /usr/include/asm
-cp -R include/linux /usr/include</userinput></screen>
+cp -R include/linux /usr/include
+cp -R include/mtd /usr/include
+cp -R include/sound /usr/include
+cp -R include/scsi /usr/include</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/linux-libc-headers.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>chown -R root:root /usr/include/{asm,asm-i386,asm-x86_64,linux}</userinput></screen>
+<screen><userinput>chown -R root:root /usr/include/{asm,asm-i386,asm-x86_64,linux,mtd,sound,scsi}</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/linux-libc-headers.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>find /usr/include/{asm,asm-i386,asm-x86_64,linux} -type d -exec chmod 755 {} \;
-find /usr/include/{asm,asm-i386,asm-x86_64,linux} -type f -exec chmod 644 {} \;</userinput></screen>
+<screen><userinput>find /usr/include/{asm,asm-i386,asm-x86_64,linux,mtd,sound,scsi} -type d -exec chmod 755 {} \;
+find /usr/include/{asm,asm-i386,asm-x86_64,linux,mtd,sound,scsi} -type f -exec chmod 644 {} \;</userinput></screen>
 
   </sect2>
 

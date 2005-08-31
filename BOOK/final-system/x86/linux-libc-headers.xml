@@ -56,17 +56,20 @@
     <para os="b">Install the header files:</para>
 
 <screen><userinput>cp -R include/asm-i386 /usr/include/asm
-cp -R include/linux /usr/include</userinput></screen>
+cp -R include/linux /usr/include
+cp -R include/mtd /usr/include
+cp -R include/sound /usr/include
+cp -R include/scsi /usr/include</userinput></screen>
 
     <para os="c">Ensure that all the headers are owned by
     <systemitem class="username">root</systemitem>:</para>
 
-<screen os="d"><userinput>chown -R root:root /usr/include/{asm,linux}</userinput></screen>
+<screen os="d"><userinput>chown -R root:root /usr/include/{asm,linux,mtd,sound,scsi}</userinput></screen>
 
     <para os="e">Make sure the users can read the headers:</para>
 
-<screen os="f"><userinput>find /usr/include/{asm,linux} -type d -exec chmod 755 {} \;
-find /usr/include/{asm,linux} -type f -exec chmod 644 {} \;</userinput></screen>
+<screen os="f"><userinput>find /usr/include/{asm,linux,mtd,sound,scsi} -type d -exec chmod 755 {} \;
+find /usr/include/{asm,linux,mtd,sound,scsi} -type f -exec chmod 644 {} \;</userinput></screen>
 
   </sect2>
 

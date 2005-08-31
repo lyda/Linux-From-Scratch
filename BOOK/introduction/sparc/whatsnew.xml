@@ -31,6 +31,9 @@
     <title>Added:</title>
 
     <listitem>
+      <para>&gcc-specs-patch;</para>
+    </listitem>
+    <listitem>
       <para>Silo &silo-version;</para>
     </listitem>
     <listitem>
@@ -41,12 +44,6 @@
     </listitem>
     <listitem>
       <para>elftoaout &elftoaout-version;</para>
-    </listitem>
-    <listitem>
-      <para>Netkit Base &netkit_base-version;</para>
-    </listitem>
-    <listitem>
-      <para>&netkit_base-fixes-patch;</para>
     </listitem>
   </itemizedlist>
 

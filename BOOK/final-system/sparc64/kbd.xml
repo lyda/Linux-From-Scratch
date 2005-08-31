@@ -43,6 +43,14 @@
     <title>Installation of Kbd</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/kbd.xml"
+    xpointer="xpointer(//*[@os='a1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/kbd.xml"
+    xpointer="xpointer(//*[@os='a2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../sparc/kbd.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 

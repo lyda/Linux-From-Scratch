@@ -37,14 +37,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Netkit Base (&netkit_base-version;) - 56 KB:</term>
-      <listitem>
-        <para><ulink
-        url="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-base-&netkit_base-version;.tar.gz"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Silo (&silo-version;) - 144 KB:</term>
       <listitem>
         <para><ulink

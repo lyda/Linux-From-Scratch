@@ -22,6 +22,14 @@
       </listitem>
     </varlistentry>
 
+    <varlistentry>
+      <term>GCC Specs Patch - 14 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;gcc/&gcc-specs-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
   </variablelist>
 
 </sect1>

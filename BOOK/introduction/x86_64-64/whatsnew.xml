@@ -7,10 +7,10 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-intro-whatsnew-mips">
-  <?dbhtml filename="whatsnew-mips.html"?>
+<sect1 id="ch-intro-whatsnew-x86_64">
+  <?dbhtml filename="whatsnew-x86_64.html"?>
 
-  <title>What's new for MIPS 32 Bit</title>
+  <title>What's New for x86_64</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/whatsnew.xml"
@@ -20,10 +20,13 @@
     <title>Upgraded to:</title>
 
     <listitem>
-      <para>Linux &linux-mips-version;</para>
+      <para>Linux &linux-x86_64-version;</para>
     </listitem>
     <listitem>
-      <para>Linux-libc-headers &linux-libc-headers-mips-version;</para>
+      <para>Linux-libc-headers &linux-libc-headers-x86_64-version;</para>
+    </listitem>
+    <listitem>
+      <para>GRUB &grub-version;</para>
     </listitem>
   </itemizedlist>
 
@@ -32,16 +35,18 @@
     <title>Added:</title>
 
     <listitem>
-      <para>Colo &colo-version;</para>
+      <para>&gcc-pure64-patch;</para>
     </listitem>
     <listitem>
-      <para>&gcc-specs-patch;</para>
+      <para>&gcc-specs_pure64-patch;</para>
     </listitem>
+  </itemizedlist>
+
+  <itemizedlist>
+    <title>Removed:</title>
+
     <listitem>
-      <para>&glibc-mips_syscall-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&linux-mips-patch;</para>
+      <para>None</para>
     </listitem>
   </itemizedlist>
 

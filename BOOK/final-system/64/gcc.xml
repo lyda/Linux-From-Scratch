@@ -46,14 +46,6 @@
     href="../common/gcc.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gcc.xml"
-    xpointer="xpointer(//*[@os='b'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gcc.xml"
-    xpointer="xpointer(//*[@os='c'])"/>
-
     <para>Apply the following patch to so that linking to /lib64 is now set
     to /lib.</para>
 

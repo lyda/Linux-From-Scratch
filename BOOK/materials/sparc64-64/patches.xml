@@ -23,6 +23,22 @@
     </varlistentry>
 
     <varlistentry>
+      <term>GCC Specs Patch - 14 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;gcc/&gcc-specs_pure64-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc GCC 4.x Sparc Fixes Patch - 1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;glibc/&glibc-sparc_gcc4_fixes-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Linux-libc-headers Sparc Conflicts Patch - 1 KB:</term>
       <listitem>
         <para><ulink
@@ -35,14 +51,6 @@
       <listitem>
         <para><ulink
         url="&patches-root;grep/&kbd-sparc_kbdrate-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Netkit Base Fixes Patch - 4.1 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;netkit-base/&netkit_base-fixes-patch;"/></para>
       </listitem>
     </varlistentry>
 

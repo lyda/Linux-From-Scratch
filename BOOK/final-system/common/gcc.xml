@@ -53,12 +53,6 @@
     as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
     unset them when building GCC.</para>
 
-    <para os="b">GCC fails to compile some packages outside of a base Linux From Scratch
-    install (e.g., Mozilla and kdegraphics) when used in conjunction with newer
-    versions of Binutils. Apply the following patch to fix this issue:</para>
-
-<screen os="c"><userinput>patch -Np1 -i ../&gcc-linkonce-patch;</userinput></screen>
-
     <para os="d">Apply a <command>sed</command> substitution that will suppress the
     installation of <filename class="libraryfile">libiberty.a</filename>. The
     version of <filename class="libraryfile">libiberty.a</filename> provided by

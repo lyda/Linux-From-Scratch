@@ -68,6 +68,30 @@
     xpointer="xpointer(//*[@os='be'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(//*[@os='d1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(//*[@os='d2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(//*[@os='d3'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(//*[@os='d4'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86/glibc.xml"
+    xpointer="xpointer(//*[@os='d5'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/glibc.xml"
+    xpointer="xpointer(//*[@os='d6'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 

@@ -23,6 +23,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>GCC Specs Patch - 14 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;gcc/&gcc-specs-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>GLIBC Syscall Patch - 11 KB:</term>
       <listitem>
         <para><ulink

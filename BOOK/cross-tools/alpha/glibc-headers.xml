@@ -105,7 +105,7 @@
     href="../x86/glibc-headers.xml"
     xpointer="xpointer(//*[@os='cl'])"/>
 
-<screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/x86_64/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
+<screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/alpha/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
 
   </sect2>
 

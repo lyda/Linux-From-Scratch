@@ -31,7 +31,10 @@
     <title>Added:</title>
 
     <listitem>
-      <para>&gcc-specs-patch;</para>
+      <para>&gcc-pure64-patch;</para>
+    </listitem>
+     <listitem>
+      <para>&gcc-specs_pure64-patch;</para>
     </listitem>
     <listitem>
       <para>Silo &silo-version;</para>

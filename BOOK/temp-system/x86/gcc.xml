@@ -59,11 +59,6 @@
     href="../../cross-tools/x86/gcc-static.xml"
     xpointer="xpointer(//*[@os='ad'])"/>
 
-    <para os="ca">Fixes configure logic when 'target triplet' =
-    'target triplet':</para>
-
-<screen os="cb"><userinput>patch -Np1 -i ../&gcc-fix_native-patch;</userinput></screen>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/x86/gcc-static.xml"
     xpointer="xpointer(//*[@os='ae'])"/>

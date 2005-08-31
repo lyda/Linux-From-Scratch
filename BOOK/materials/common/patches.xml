@@ -101,15 +101,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>GCC Linkonce Patch - 12 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;gcc/&gcc-linkonce-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>GCC Posix Patch - 11 KB:</term>
+      <term>GCC Posix Patch - 9 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;gcc/&gcc-posix-patch;"/></para>
@@ -125,18 +117,50 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Glibc Test Patch - 11 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;glibc/&glibc-testfix-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Glibc Disable linking with libgcc_eh.a - 1 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;glibc/&glibc-libgcc_eh-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc GCC 4.x Fix ELF Patch - 19 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;glibc/&glibc-gcc4-fix_elf-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc GCC 4.x Fix iconvdata Patch - 2 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;glibc/&glibc-gcc4_fix_iconvdata-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc GCC 4.x Fix String Patch - 3 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;glibc/&glibc-gcc4_fix_string-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc GCC 4.x Fix Symbols Patch - 5 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;glibc/&glibc-gcc4_fix_symbols-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc Test Patch - 11 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;glibc/&glibc-testfix-patch;"/></para>
       </listitem>
     </varlistentry>
 
@@ -153,6 +177,22 @@
       <listitem>
         <para><ulink
         url="&patches-root;inetutils/&inetutils-man_pages-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Inetutils GCC 4.x Fixes Patch - 2 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;inetutils/&inetutils-gcc4_fixes-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>KBD GCC 4.x Fixes Patch - 2 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;kbd/&kbd-gcc4_fixes-patch;"/></para>
       </listitem>
     </varlistentry>
 

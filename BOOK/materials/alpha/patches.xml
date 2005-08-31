@@ -15,10 +15,10 @@
   <variablelist role="materials">
 
     <varlistentry>
-      <term>None:</term>
+      <term>GCC Specs Patch - 14 KB:</term>
       <listitem>
         <para><ulink
-        url=""/></para>
+        url="&patches-root;gcc/&gcc-specs-patch;"/></para>
       </listitem>
     </varlistentry>
 

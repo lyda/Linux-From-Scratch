@@ -31,6 +31,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>GCC Specs Patch - 14 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;gcc/&gcc-specs-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Linux-libc-headers x86_64 Biarch Patch - 99 KB:</term>
       <listitem>
         <para><ulink

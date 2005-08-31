@@ -17,18 +17,24 @@
 
 <!ENTITY gcc-cross_search-patch "gcc-&gcc-version;-cross_search_paths-1.patch">
 <!ENTITY gcc-fix_native-patch  "gcc-&gcc-version;-fix_configure_for_target_native-1.patch">
-<!ENTITY gcc-linkonce-patch "gcc-&gcc-version;-linkonce-1.patch">
 <!ENTITY gcc-posix-patch "gcc-&gcc-version;-posix-1.patch">
 <!ENTITY gcc-specs-patch "gcc-&gcc-version;-specs-2.patch">
-<!ENTITY gcc-specs_pure64-patch "gcc-&gcc-version;-specs_pure64-1.patch">
+<!ENTITY gcc-specs_pure64-patch "gcc-&gcc-version;-pure64_specs-1.patch">
 <!ENTITY gcc-pure64-patch "gcc-&gcc-version;-pure64-1.patch">
 
 <!ENTITY glibc-libgcc_eh-patch "glibc-&glibc-version;-libgcc_eh-1.patch">
 <!ENTITY glibc-testfix-patch "glibc-&glibc-version;-fix_test-1.patch">
+<!ENTITY glibc-gcc4-fix_elf-patch "glibc-&glibc-version;-gcc4_fix_elf-2.patch">
+<!ENTITY glibc-gcc4_fix_iconvdata-patch "glibc-&glibc-version;-gcc4_fix_iconvdata-1.patch">
+<!ENTITY glibc-gcc4_fix_string-patch "glibc-&glibc-version;-gcc4_fix_string-1.patch">
+<!ENTITY glibc-gcc4_fix_symbols-patch "glibc-&glibc-version;-gcc4_fix_symbols-1.patch">
 
 <!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch">
 
 <!ENTITY inetutils-man_pages-patch "inetutils-&inetutils-version;-no_server_man_pages-1.patch">
+<!ENTITY inetutils-gcc4_fixes-patch "inetutils-&inetutils-version;-gcc4_fixes-3.patch">
+
+<!ENTITY kbd-gcc4_fixes-patch "kbd-&kbd-version;-gcc4_fixes-1.patch">
 
 <!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-2.patch">
 
@@ -43,6 +49,7 @@
 <!ENTITY tar-sparse_fix-patch "tar-&tar-version;-sparse_fix-1.patch">
 
 <!ENTITY util-linux-cramfs-patch "util-linux-&util-linux-version;-cramfs-1.patch">
+<!ENTITY util-linux-gcc4_fixes-patch "util-linux-&util-linux-version;-gcc4_fixes-1.patch">
 
 <!ENTITY vim-security_fix-patch "vim-&vim-version;-security_fix-2.patch">
 
@@ -62,12 +69,12 @@
 
 <!-- Start of sparc/sparc64 patches -->
 
+<!ENTITY glibc-sparc_gcc4_fixes-patch "glibc-&glibc-version;-sparc_gcc4_fixes-1.patch">
+
 <!ENTITY linux-libc-headers-sparc_biarch-patch "linux-libc-headers-&linux-libc-headers-sparc64-version;-sparc_biarch-1.patch">
 <!ENTITY linux-libc-headers-sparc_conflicts-patch "linux-libc-headers-&linux-libc-headers-sparc-version;-sparc_conflicts-1.patch">
 
 <!ENTITY kbd-sparc_kbdrate-patch "kbd-&kbd-version;-sparc_kbdrate-1.patch">
-
-<!ENTITY netkit_base-fixes-patch "netkit-base-&netkit_base-version;-fixes-1.patch">
 
 <!ENTITY silo-fixes-patch "silo-&silo-version;-fixes-3.patch">
 
