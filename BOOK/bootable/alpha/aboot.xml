@@ -11,7 +11,7 @@
   <title>Making the LFS System Bootable</title>
 
   <indexterm zone="ch-bootable-aboot">
-    <primary sortas="a-aboot">Aboot</primary>
+    <primary sortas="a-Aboot">Aboot</primary>
     <secondary>configuring</secondary>
   </indexterm>
 
