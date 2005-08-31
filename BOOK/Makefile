@@ -4,7 +4,7 @@ DLLISTDIR=~/cross-lfs-dllist
 CHUNK_QUIET=1
 JAVA_HOME=/opt/jdk/jdk-precompiled-1.5.0
 XSLROOTDIR=/usr/share/xml/docbook/xsl-stylesheets-current
-ARCH=x86 x86_64 x86_64-64 sparc sparc64 sparc64-64 mips mips64 mips64-64 ppc
+ARCH=x86 x86_64 x86_64-64 sparc sparc64 sparc64-64 mips mips64 mips64-64 ppc alpha
 
 # HTML Rendering Chunked
 define HTML_RENDER

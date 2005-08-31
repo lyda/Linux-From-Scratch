@@ -33,7 +33,7 @@
     </listitem>
   </itemizedlist>
 
-<para>The editors of the book would also like to acknowlege people who
+<para>The editors of the book would also like to acknowledge people who
 have supported, spotted needed corrections, and testing of the cross-lfs book
 via the LFS-DEV Mailing lists.</para>
 
@@ -46,6 +46,9 @@ via the LFS-DEV Mailing lists.</para>
     </listitem>
     <listitem>
       <para>Justin Knierim - Typos.</para>
+    </listitem>
+    <listitem>
+      <para>Joe Ciccone - Alpha Development and Testing.</para>
     </listitem>
   </itemizedlist>
 

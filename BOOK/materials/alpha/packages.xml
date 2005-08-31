@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-materials-packages-alpha">
+  <?dbhtml filename="packages-alpha.html"?>
+
+  <title>Additional Packages for Alpha</title>
+
+  <variablelist role="materials">
+
+    <varlistentry>
+      <term>Linux-Libc-Headers (&linux-libc-headers-alpha-version;) - 2.6 MB:</term>
+      <listitem>
+        <para><ulink
+        url="http://ep09.pld-linux.org/~mmazur/linux-libc-headers/linux-libc-headers-&linux-libc-headers-alpha-version;.tar.bz2"/></para>
+      </listitem>
+    </varlistentry>
+
+  </variablelist>
+
+  <para>Total size of these packages: about 38 MB</para>
+
+</sect1>

@@ -10,8 +10,9 @@
 <!ENTITY version-mips "&version;-MIPS">
 <!ENTITY version-mips64 "&version;-MIPS64-Multilib">
 <!ENTITY version-mips64-64 "&version;-MIPS64">
+<!ENTITY version-alpha "&version;-ALPHA">
 
-<!ENTITY releasedate "August 29, 2005">
+<!ENTITY releasedate "August 30, 2005">
 <!ENTITY milestone "7.0">
 <!ENTITY generic-version "svn"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
@@ -35,6 +36,7 @@
 <!ENTITY diskspace "Required disk space">
 <!ENTITY dependencies "Installation depends on">
 
+<!ENTITY aboot-version "0.9b">
 <!ENTITY autoconf-version "2.59">
 <!ENTITY automake-version "1.9.6">
 <!ENTITY bash-version "3.0">
@@ -77,6 +79,7 @@
 <!ENTITY linux-mips64-version "2.6.12.5">
 <!ENTITY linux-sparc-version "2.6.12.5">
 <!ENTITY linux-sparc64-version "2.6.12.5">
+<!ENTITY linux-alpha-version "2.6.12.5">
 <!ENTITY linux-libc-headers-x86-version "2.6.12.0">
 <!ENTITY linux-libc-headers-x86_64-version "2.6.12.0">
 <!ENTITY linux-libc-headers-ppc-version "2.6.12.0">
@@ -84,6 +87,7 @@
 <!ENTITY linux-libc-headers-mips64-version "2.6.12.0">
 <!ENTITY linux-libc-headers-sparc-version "2.6.12.0">
 <!ENTITY linux-libc-headers-sparc64-version "2.6.12.0">
+<!ENTITY linux-libc-headers-alpha-version "2.6.12.0">
 <!ENTITY m4-version "1.4.3">
 <!ENTITY make-version "3.80">
 <!ENTITY man-version "1.6a">

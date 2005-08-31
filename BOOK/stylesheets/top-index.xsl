@@ -165,6 +165,20 @@ hr {
              </a>
             </h4>
           </li>
+          <li>
+            <h4>
+             <a href="alpha">
+                <xsl:text>Alpha</xsl:text>
+             </a>
+            </h4>
+          </li>
+          <li>
+            <h4>
+             <a href="alpha">
+                <xsl:text>Alpha</xsl:text>
+             </a>
+            </h4>
+          </li>
 	</ul>
         <h3>
           <xsl:text>Multilib Builds</xsl:text>

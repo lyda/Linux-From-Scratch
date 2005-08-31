@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-boot-kernel" role="wrap">
+  <?dbhtml filename="kernel.html"?>
+
+  <title>Linux-&linux-alpha-version;</title>
+
+  <indexterm zone="ch-boot-kernel">
+    <primary sortas="a-Linux">Linux</primary>
+    <secondary>boot</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@role='package']/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>Not checked yet</seg>
+        <seg>Not checked yet</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/x86/kernel.xml"
+    xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+<title>Installation of the kernel</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='aa'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='ab'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='ac'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='ad'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='ae'])"/>
+
+<screen><userinput>make ARCH=alpha CROSS_COMPILE=${LFS_TARGET}- menuconfig</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='l'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='m'])"/>
+
+<screen><userinput>make ARCH=alpha CROSS_COMPILE=${LFS_TARGET}-</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/kernel.xml"
+    xpointer="xpointer(//*[@os='af'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='p'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='q'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='s'])"/>
+
+<screen><userinput>make ARCH=alpha CROSS_COMPILE=${LFS_TARGET}- \
+   INSTALL_MOD_PATH=${LFS} modules_install</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='u'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='v'])"/>
+
+<screen><userinput>cp vmlinux ${LFS}/boot/lfskernel-&linux-alpha-version;</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootable/alpha/kernel.xml"
+    xpointer="xpointer(//*[@os='x'])"/>
+
+<screen><userinput>cp System.map ${LFS}/boot/System.map-&linux-alpha-version;</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-kernel" role="."/></para>
+
+  </sect2>
+
+</sect1>

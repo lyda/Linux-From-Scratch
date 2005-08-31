@@ -56,9 +56,9 @@
   target, we will get some failures during our cross-compile:</para>
 
 <screen><userinput>if [ "${LFS_HOST}" = "${LFS_TARGET}" ]; then \
-  echo "Host and Target can't be the same." ; fi</userinput></screen>
+  echo "Host and Target can't be the same. Use the Other Configuration Method" ; fi</userinput></screen>
  
-  <para>If you received an message, "Host and Target can't be the same."
+  <para>If you received an message, "Host and Target can't be the same..."
   You will need to use the other Configuration Method. This will prevent build
   issues during the early phases of the build.</para>
 
