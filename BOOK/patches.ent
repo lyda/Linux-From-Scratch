@@ -27,6 +27,7 @@
 <!ENTITY glibc-gcc4_fix_iconvdata-patch "glibc-&glibc-version;-gcc4_fix_iconvdata-1.patch">
 <!ENTITY glibc-gcc4_fix_string-patch "glibc-&glibc-version;-gcc4_fix_string-1.patch">
 <!ENTITY glibc-gcc4_fix_symbols-patch "glibc-&glibc-version;-gcc4_fix_symbols-1.patch">
+<!ENTITY glibc-gcc4_64bit_fixes-patch "glibc-&glibc-version;-gcc4_64bit_fixes-1.patch">
 
 <!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch">
 

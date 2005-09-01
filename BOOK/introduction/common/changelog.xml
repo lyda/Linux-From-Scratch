@@ -50,6 +50,9 @@
         <listitem>
           <para>[jim] - Updated to Ncurses patch to 20050827.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Added missing patch for 64 bit architectures for glibc.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

@@ -79,6 +79,8 @@
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='d5'])"/>
 
+<screen os="d6"><userinput>patch -Np1 -i ../&glibc-gcc4_64bit_fixes-patch;</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>

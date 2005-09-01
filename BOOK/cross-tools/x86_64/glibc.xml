@@ -76,6 +76,10 @@
     xpointer="xpointer(//*[@os='d5'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/x86_64/glibc.xml"
+    xpointer="xpointer(//*[@os='d6'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc-headers.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 

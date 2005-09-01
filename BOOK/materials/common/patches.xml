@@ -93,14 +93,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>GCC Fix for Native build - 4 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;gcc/&gcc-fix_native-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>GCC Posix Patch - 9 KB:</term>
       <listitem>
         <para><ulink

@@ -84,8 +84,12 @@
     xpointer="xpointer(//*[@os='d5'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../sparc/glibc.xml"
+    href="../x86_64/glibc.xml"
     xpointer="xpointer(//*[@os='d6'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/glibc.xml"
+    xpointer="xpointer(//*[@os='d7'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
