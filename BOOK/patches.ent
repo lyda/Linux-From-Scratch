@@ -16,7 +16,6 @@
 <!ENTITY flex-fixes-patch "flex-&flex-version;-debian_fixes-3.patch">
 
 <!ENTITY gcc-cross_search-patch "gcc-&gcc-version;-cross_search_paths-1.patch">
-<!ENTITY gcc-fix_native-patch  "gcc-&gcc-version;-fix_configure_for_target_native-1.patch">
 <!ENTITY gcc-posix-patch "gcc-&gcc-version;-posix-1.patch">
 <!ENTITY gcc-specs-patch "gcc-&gcc-version;-specs-1.patch">
 <!ENTITY gcc-specs_pure64-patch "gcc-&gcc-version;-pure64_specs-1.patch">
