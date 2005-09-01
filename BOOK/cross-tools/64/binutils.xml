@@ -71,59 +71,38 @@
     <variablelist os="cb">
       <title>The meaning of the configure options:</title>
 
-      <varlistentry>
-        <term><parameter>--prefix=/cross-tools</parameter></term>
-        <listitem>
-          <para>This tells the configure script to prepare to install the
-          package in the <filename class="directory">/cross-tools</filename>
-          directory.</para>
-        </listitem>
-      </varlistentry>
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/binutils.xml"
+      xpointer="xpointer(//*[@os='bd1'])"/>
 
-      <varlistentry>
-        <term><parameter>--host=${LFS_HOST}</parameter></term>
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/binutils.xml"
+      xpointer="xpointer(//*[@os='bd2'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/binutils.xml"
+      xpointer="xpointer(//*[@os='bd3'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/binutils.xml"
+      xpointer="xpointer(//*[@os='bd4'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/binutils.xml"
+      xpointer="xpointer(//*[@os='bd5'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/binutils.xml"
+      xpointer="xpointer(//*[@os='bd6'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/binutils.xml"
+      xpointer="xpointer(//*[@os='bd7'])"/>
+
+      <varlistentry os="cb1">
+        <term><parameter>--disable-multilib</parameter></term>
         <listitem>
           <para>This do ...</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--target=${LFS_TARGET}</parameter></term>
-        <listitem>
-          <para>This do ...</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--with-lib-path=/tools/lib</parameter></term>
-        <listitem>
-          <para>This tells the configure script to specify the library
-          search path during the compilation of Binutils, resulting in
-          <filename class="directory">/tools/lib</filename> being passed
-          to the linker. This prevents the linker from searching through
-          library directories on the host.</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--disable-nls</parameter></term>
-        <listitem>
-          <para>This disables internationalization as i18n is not needed for the
-          cross-compile tools.</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--enable-shared</parameter></term>
-        <listitem>
-          <para>Enable the creation of the shared libraries.</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--enable-64-bit-bfd</parameter></term>
-        <listitem>
-          <para>This adds 64 bit support to our toolchain.</para>
         </listitem>
       </varlistentry>
 
@@ -136,6 +115,10 @@
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
     xpointer="xpointer(//*[@os='bf'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='bf1'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"

@@ -71,7 +71,7 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="ca1">
         <term><parameter>--prefix=/tools</parameter></term>
         <listitem>
           <para>This tells the configure script to prepare to install the
@@ -80,14 +80,14 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="ca2">
         <term><parameter>--host=${LFS_TARGET}</parameter></term>
         <listitem>
           <para>This do ...</para>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="ca3">
         <term><parameter>--build=${LFS_HOST}</parameter></term>
         <listitem>
           <para>This do ...</para>
@@ -101,7 +101,7 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="ca4">
         <term><parameter>--enable-kernel=2.6.0</parameter></term>
         <listitem>
           <para>This tells Glibc to compile the library with support
@@ -109,7 +109,7 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="ca5">
         <term><parameter>--with-headers=/tools/include</parameter></term>
         <listitem>
           <para>This tells Glibc to compile itself against the headers

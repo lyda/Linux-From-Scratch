@@ -108,6 +108,54 @@
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
 
+    <variablelist>
+      <title>The meaning of the new configure options:</title>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc.xml"
+      xpointer="xpointer(//*[@os='di1'])"/>
+
+      <varlistentry os="ea1">
+        <term><parameter>CC="${LFS_TARGET}-gcc ${BUILD32}"</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc.xml"
+      xpointer="xpointer(//*[@os='di3'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc.xml"
+      xpointer="xpointer(//*[@os='di4'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc.xml"
+      xpointer="xpointer(//*[@os='di5'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc.xml"
+      xpointer="xpointer(//*[@os='di6'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc.xml"
+      xpointer="xpointer(//*[@os='di7'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc.xml"
+      xpointer="xpointer(//*[@os='di8'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc.xml"
+      xpointer="xpointer(//*[@os='di9'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/glibc.xml"
+      xpointer="xpointer(//*[@os='di10'])"/>
+
+    </variablelist>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='df'])"/>
@@ -120,13 +168,21 @@
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='dh'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='dj'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='dk'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='dl'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='dm'])"/>
 
   </sect2>
 

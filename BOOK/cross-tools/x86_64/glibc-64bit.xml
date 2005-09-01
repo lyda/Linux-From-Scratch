@@ -113,13 +113,40 @@
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
 
-    <para>Compile the package:</para>
+    <variablelist os="fa">
+      <title>The meaning of the new configure options:</title>
 
-<screen><userinput>make</userinput></screen>
+      <varlistentry os="fa1">
+        <term><parameter>CC="${LFS_TARGET}-gcc ${BUILD64}"</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
 
-    <para>Install the package:</para>
+      <varlistentry>
+        <term><parameter>--libdir=/tools/lib64</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
 
-<screen><userinput>make install</userinput></screen>
+    </variablelist>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dj'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dk'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dl'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dm'])"/>
 
   </sect2>
 

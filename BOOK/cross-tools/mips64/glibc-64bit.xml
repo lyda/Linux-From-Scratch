@@ -124,25 +124,25 @@
     --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
     --with-headers=/tools/include</userinput></screen>
 
-    <variablelist>
-      <title>The meaning of the new configure options:</title>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86_64/glibc-64bit.xml"
+    xpointer="xpointer(//*[@os='fa'])"/>
 
-      <varlistentry>
-        <term><parameter>--libdir=/tools/lib64</parameter></term>
-        <listitem>
-          <para>This switch do ... .</para>
-        </listitem>
-      </varlistentry>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dj'])"/>
 
-    </variablelist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dk'])"/>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dl'])"/>
 
-<screen><userinput>make</userinput></screen>
-
-    <para>Install the package:</para>
-
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dm'])"/>
 
   </sect2>
 

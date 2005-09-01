@@ -128,6 +128,13 @@
       <title>The meaning of the new configure options:</title>
 
       <varlistentry>
+        <term><parameter>CC="${LFS_TARGET}-gcc ${BUILDN32}"</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
         <term><parameter>--libdir=/tools/lib32</parameter></term>
         <listitem>
           <para>This switch do ... .</para>
@@ -136,13 +143,21 @@
 
     </variablelist>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dj'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dk'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dl'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dm'])"/>
 
   </sect2>
 

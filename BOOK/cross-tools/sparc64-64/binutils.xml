@@ -81,6 +81,10 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../64/binutils.xml"
+    xpointer="xpointer(//*[@os='bf1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../64/binutils.xml"
     xpointer="xpointer(//*[@os='bg'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

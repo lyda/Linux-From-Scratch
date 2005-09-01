@@ -67,7 +67,7 @@
     <variablelist os="bd">
       <title>The meaning of the configure options:</title>
 
-      <varlistentry>
+      <varlistentry os="bd1">
         <term><parameter>--prefix=/cross-tools</parameter></term>
         <listitem>
           <para>This tells the configure script to prepare to install the
@@ -76,21 +76,21 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="bd2">
         <term><parameter>--host=${LFS_HOST}</parameter></term>
         <listitem>
           <para>This do ...</para>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="bd3">
         <term><parameter>--target=${LFS_TARGET}</parameter></term>
         <listitem>
           <para>This do ...</para>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="bd4">
         <term><parameter>--with-lib-path=/tools/lib</parameter></term>
         <listitem>
           <para>This tells the configure script to specify the library
@@ -101,7 +101,7 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="bd5">
         <term><parameter>--disable-nls</parameter></term>
         <listitem>
           <para>This disables internationalization as i18n is not needed for the
@@ -109,14 +109,14 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="bd6">
         <term><parameter>--enable-shared</parameter></term>
         <listitem>
           <para>Enable the creation of the shared libraries.</para>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="bd7">
         <term><parameter>--enable-64-bit-bfd</parameter></term>
         <listitem>
           <para>This adds 64 bit support to our toolchain.</para>
@@ -130,6 +130,25 @@
 <screen os="bf"><userinput>make configure-host
 make headers -C bfd
 make</userinput></screen>
+
+    <variablelist os="bf1">
+      <title>The meaning of the make options:</title>
+
+      <varlistentry>
+        <term><parameter>configure-host</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>headers -C bfd</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
     <para os="bg">Install the package:</para>
 

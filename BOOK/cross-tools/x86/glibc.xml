@@ -99,6 +99,81 @@ echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache</userinput></screen>
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
 
+    <variablelist os="di">
+      <title>The meaning of the new configure options:</title>
+
+      <varlistentry os="di1">
+        <term><parameter>BUILD_CC="gcc"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry os="di2">
+        <term><parameter>CC="${LFS_TARGET}-gcc"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry os="di3">
+        <term><parameter>AR="${LFS_TARGET}-ar"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry os="di4">
+        <term><parameter>RANLIB="${LFS_TARGET}-ranlib"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry os="di5">
+        <term><parameter>--disable-profile</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry os="di6">
+        <term><parameter>--enable-add-ons</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry os="di7">
+        <term><parameter>--with-tls</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry os="di8">
+        <term><parameter>--with-__thread</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry os="di9">
+        <term><parameter>--with-binutils=/cross-tools/bin</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry os="di10">
+        <term><parameter>--cache-file=config.cache</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
     <para os="df">During this stage the following warning might appear:</para>
 
 <blockquote os="dg"><screen><computeroutput>configure: WARNING:
@@ -111,13 +186,13 @@ echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache</userinput></screen>
     generally harmless. This <command>msgfmt</command> program is part of the
     Gettext package which the host distribution should provide.</para>
 
-    <para>Compile the package:</para>
+    <para os="dj">Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="dk"><userinput>make</userinput></screen>
 
-    <para>Install the package:</para>
+    <para os="dl">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="dm"><userinput>make install</userinput></screen>
 
   </sect2>
 
