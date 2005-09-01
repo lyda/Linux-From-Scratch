@@ -37,7 +37,7 @@
 
 <!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-2.patch">
 
-<!ENTITY ncurses-update-patch "ncurses-&ncurses-version;-20050319-patch.sh.bz2">
+<!ENTITY ncurses-update-patch "ncurses-&ncurses-version;-20050827-patch.sh.bz2">
 
 <!ENTITY perl-libc-patch "perl-&perl-version;-libc-1.patch">
 
