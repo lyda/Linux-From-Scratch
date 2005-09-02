@@ -58,7 +58,7 @@ with GCC's <option>-O2</option> optimization setting.  The following
 <command>sed</command> works around the problem by using the less aggressive
 <option>-O</option> optimization level instead:</para>
 
-<screen><userinput>sed -i 's/-O2/-O/' MCONFIG</userinput></screen> 
+<screen><userinput>sed -i 's/-O2/-O/' configure</userinput></screen> 
 
 <para>Prepare Util-linux for compilation:</para>
 

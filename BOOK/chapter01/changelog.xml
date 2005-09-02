@@ -119,6 +119,11 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>September 2, 2005 [matt]: The optimization flag for util-linux
+comes from <filename>configure</filename> rather than
+<filename>MCONFIG</filename>, so adjust the <command>sed</command> in order for
+the sefgault fix to actually work.</para></listitem>
+
 <listitem><para>September 2, 2005 [matt]: Avoid the potential race condition
 when invoking <command>find</command> to remove GCC's fixed headers.</para>
 </listitem>
