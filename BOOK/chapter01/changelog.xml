@@ -119,6 +119,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>September 2, 2005 [matt]: Avoid the potential race condition
+when invoking <command>find</command> to remove GCC's fixed headers.</para>
+</listitem>
+
 <listitem><para>August 30th, 2005 [matt]: Work around a segfault in cfdisk by
 compiling with -O instead of the default -O2 optimization setting (fixes bug
 1604).</para></listitem>
