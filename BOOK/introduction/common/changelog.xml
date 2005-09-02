@@ -39,6 +39,16 @@
 -->
 
    <listitem>
+      <para>September 2, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Specs adjustment works on GCC 4. Same expression for all Architectures, expect
+          for Alpha.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 1, 2005</para>
       <itemizedlist>
         <listitem>

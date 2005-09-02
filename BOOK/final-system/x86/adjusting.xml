@@ -19,9 +19,10 @@
     this step.</para>
   </warning>
 
-<screen os="c"><userinput>perl -pi -e 's@ /tools/lib/ld-linux.so.2@ /lib/ld-linux.so.2@g;' \
-    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' \
-        `gcc --print-file-name=specs`</userinput></screen>
+<screen os="c"><userinput>gcc -dumpspecs | \
+perl -pi -e 's!-dynamic-linker /tools!-dynamic-linker !g;' \
+     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' > \
+     `dirname $(gcc --print-libgcc-file-name)`/specs</userinput></screen>
 
   <para os="d">It is a good idea to visually inspect the specs file to verify the
   intended change was actually made.</para>

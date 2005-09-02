@@ -18,17 +18,9 @@
   href="../sparc/adjusting.xml"
   xpointer="xpointer(//*[@os='b'])"/>
 
-  <para>First we will adjust the 32 bit ABI:</para>
-
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../sparc/adjusting.xml"
   xpointer="xpointer(//*[@os='c'])"/>
-
-  <para>Second we will adjust the 64 bit ABI:</para>
-
-<screen><userinput>perl -pi -e 's@ /tools/lib64/ld-linux-sparc-64.so.2@ /lib64/ld-linux-sparc-64.so.2@g;' \
-    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib64/ @g;' \
-        `gcc --print-file-name=specs`</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../sparc/adjusting.xml"

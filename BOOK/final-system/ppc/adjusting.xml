@@ -17,9 +17,9 @@
   href="../x86/adjusting.xml"
   xpointer="xpointer(//*[@os='b'])"/>
 
-<screen><userinput>perl -pi -e 's@ /tools/lib/ld.so.1@ /lib/ld.so.1@g;' \
-    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' \
-    `gcc --print-file-name=specs`</userinput></screen>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/adjusting.xml"
+  xpointer="xpointer(//*[@os='c'])"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../x86/adjusting.xml"

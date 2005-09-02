@@ -18,23 +18,9 @@
   href="../mips/adjusting.xml"
   xpointer="xpointer(//*[@os='b'])"/>
 
-  <para>First we will adjust the 64 bit ABI:</para>
-
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../mips/adjusting.xml"
   xpointer="xpointer(//*[@os='c'])"/>
-
-  <para>Second we will adjust the 32 ABI:</para>
-
-<screen><userinput>perl -pi -e 's@ /tools/lib32/ld.so.1@ /lib32/ld.so.1@g;' \
-    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib32/ @g;' \
-        `gcc --print-file-name=specs`</userinput></screen>
-
-  <para>Third we will adjust the N32 bit ABI:</para>
-
-<screen><userinput>perl -pi -e 's@ /tools/lib64/ld.so.1@ /lib64/ld.so.1@g;' \
-    -e 's@\*startfile_prefix_spec:\n@$_/usr/lib64/ @g;' \
-        `gcc --print-file-name=specs`</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../mips/adjusting.xml"
