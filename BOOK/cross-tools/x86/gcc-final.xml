@@ -112,23 +112,22 @@
     xpointer="xpointer(//*[@os='h'])"/>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/cross-tools \
-    --target=${LFS_TARGET} --host=${LFS_HOST} \
+    --target=${LFS_TARGET} --host=${LFS_HOST} --disable-multilib \
     --with-local-prefix=/tools --disable-nls --enable-shared \
     --enable-languages=c,c++ --enable-__cxa_atexit \
-    --enable-c99 --enable-long-long --enable-threads=posix \
-    --enable-multilib=no</userinput></screen>
+    --enable-c99 --enable-long-long --enable-threads=posix</userinput></screen>
 
-    <variablelist>
+    <variablelist os="bf">
       <title>The meaning of the new configure options:</title>
 
-      <varlistentry>
+      <varlistentry os="bf1">
         <term><parameter>--enable-languages=c,c++</parameter></term>
         <listitem>
           <para>This option ensures that only the C and C++ compilers is built.</para>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="bf2">
         <term><parameter>--enable-__cxa_atexit</parameter></term>
         <listitem>
           <para>This option allows use of __cxa_atexit, rather than atexit,
@@ -139,21 +138,21 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="bf3">
         <term><parameter>--enable-c99</parameter></term>
         <listitem>
           <para>Enable C99 support for C programs.</para>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="bf4">
         <term><parameter>--enable-long-long</parameter></term>
         <listitem>
           <para>Enables long long support in the compiler.</para>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="bf5">
         <term><parameter>--enable-threads=posix</parameter></term>
         <listitem>
           <para>This enables C++ exception handling for multi-threaded code.</para>

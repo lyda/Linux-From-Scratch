@@ -129,6 +129,38 @@
     --enable-languages=c,c++ --enable-__cxa_atexit --disable-multilib \
     --enable-c99 --enable-long-long --enable-threads=posix</userinput></screen>
 
+    <variablelist>
+      <title>The meaning of the new configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--with-abi=64</parameter></term>
+        <listitem>
+          <para>This option do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc-final.xml"
+      xpointer="xpointer(//*[@os='bf1'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc-final.xml"
+      xpointer="xpointer(//*[@os='bf2'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc-final.xml"
+      xpointer="xpointer(//*[@os='bf3'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc-final.xml"
+      xpointer="xpointer(//*[@os='bf4'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc-final.xml"
+      xpointer="xpointer(//*[@os='bf5'])"/>
+
+    </variablelist>
+
     <para>Continue with compiling the package:</para>
 
 <screen><userinput>make CFLAGS_FOR_TARGET="${GCCTARGET}" CXXFLAGS_FOR_TARGET="${GCCTARGET}"</userinput></screen>

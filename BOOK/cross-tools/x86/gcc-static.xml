@@ -95,7 +95,7 @@
     --with-local-prefix=/tools --disable-nls --disable-shared \
     --disable-threads --enable-languages=c</userinput></screen>
 
-    <variablelist>
+    <variablelist os="al">
       <title>The meaning of the configure options:</title>
 
      <varlistentry>
