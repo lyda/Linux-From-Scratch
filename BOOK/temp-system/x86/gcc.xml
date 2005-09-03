@@ -109,17 +109,17 @@
     --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
     --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
 
-    <variablelist>
+    <variablelist os="ck">
       <title>The meaning of the new configure options:</title>
 
-      <varlistentry>
+      <varlistentry os="ck1">
         <term><parameter>--libexecdir=/tools/lib</parameter></term>
         <listitem>
           <para>This do ...</para>
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="ck2">
         <term><parameter>--disable-libstdcxx-pch</parameter></term>
         <listitem>
           <para>Do not build the pre-compiled header (PCH) for

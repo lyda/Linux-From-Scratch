@@ -117,6 +117,10 @@
     --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
     --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/gcc.xml"
+    xpointer="xpointer(//*[@os='ck'])"/>
+
     <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>

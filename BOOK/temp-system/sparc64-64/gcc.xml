@@ -122,9 +122,26 @@
 <screen><userinput>CC="${CC} ${BUILD64}" CXX="${CXX} ${BUILD64}" \
     ../gcc-&gcc-version;/configure --prefix=/tools --disable-multilib  \
     --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
-    --with-local-prefix=/tools --enable-long-long \
+    --libexecdir=/tools/lib --with-local-prefix=/tools --enable-long-long \
     --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
     --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the new configure options:</title>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86_64/gcc.xml"
+      xpointer="xpointer(//*[@os='dc1'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc.xml"
+      xpointer="xpointer(//*[@os='ck1'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc.xml"
+      xpointer="xpointer(//*[@os='ck2'])"/>
+
+    </variablelist>
 
     <para>Compile the package:</para>
 

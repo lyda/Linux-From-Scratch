@@ -87,17 +87,9 @@
      --disable-nls --enable-shared --enable-64-bit-bfd \
      --disable-multilib</userinput></screen>
 
-    <variablelist>
-      <title>The meaning of the new configure options:</title>
-
-      <varlistentry>
-        <term><parameter>CC="${CC} ${BUILD64}"</parameter></term>
-        <listitem>
-          <para>This do ...</para>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../multilib/binutils.xml"
+    xpointer="xpointer(//*[@os='ea'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"

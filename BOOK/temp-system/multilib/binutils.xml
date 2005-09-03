@@ -95,7 +95,7 @@
      --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
      --disable-nls --enable-shared --enable-64-bit-bfd</userinput></screen>
 
-    <variablelist>
+    <variablelist os="ea">
       <title>The meaning of the new configure options:</title>
 
       <varlistentry>

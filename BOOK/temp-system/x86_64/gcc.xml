@@ -125,6 +125,29 @@
     --enable-c99 --enable-shared --enable-threads=posix --enable-__cxa_atexit \
     --disable-nls --enable-languages=c,c++ --disable-libstdcxx-pch</userinput></screen>
 
+    <variablelist os="dc">
+      <title>The meaning of the new configure options:</title>
+
+      <varlistentry os="dc1">
+        <term><parameter>CXX="${CXX} ${BUILD64}"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry os="dc2">
+        <term><parameter>--libexecdir=/tools/lib64</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../x86/gcc.xml"
+      xpointer="xpointer(//*[@os='ck2'])"/>
+
+    </variablelist>
+
     <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
