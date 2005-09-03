@@ -47,6 +47,9 @@
         <listitem>
           <para>[jim] - Updated to Findutils 4.2.25.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to Libtool 1.5.20.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

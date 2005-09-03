@@ -70,7 +70,7 @@
 <!ENTITY kbd-version "1.12">
 <!ENTITY less-version "382">
 <!ENTITY lfs-bootscripts-version "3.2.2">
-<!ENTITY libtool-version "1.5.18">
+<!ENTITY libtool-version "1.5.20">
 <!ENTITY linux-dl-version "2.6">
 <!ENTITY linux-x86-version "2.6.12.6">
 <!ENTITY linux-x86_64-version "2.6.12.6">
