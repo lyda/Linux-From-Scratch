@@ -42,7 +42,16 @@
       <para>September 2, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[jim] - Specs adjustment works on GCC 4. Same expression for all Architectures, expect
+          <para>[jim] - Added: Reiser_Crash patch to util-linux build. Thank you Jürg Billeter.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
+      <para>September 2, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Specs adjustment works on GCC 4. Same expression for all Architectures, except
           for Alpha.</para>
         </listitem>
       </itemizedlist>

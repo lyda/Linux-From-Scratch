@@ -67,9 +67,13 @@ mkdir -p /var/lib/hwclock</userinput></screen>
 
 <screen os="b"><userinput>patch -Np1 -i ../&util-linux-cramfs-patch;</userinput></screen>
 
-    <para os="b1">The following patches fixes build issues with GCC 4.x:</para>
+    <para os="b1">The following patch fixes build issues with GCC 4.x:</para>
 
 <screen os="b2"><userinput>patch -Np1 -i ../&util-linux-gcc4_fixes-patch;</userinput></screen>
+
+    <para os="b3">The following patch fixes a segfault in cfdisk:</para>
+
+<screen os="b4"><userinput>patch -Np1 -i ../&util-linux-reiser_crash-patch;</userinput></screen>
 
     <para os="c">Prepare Util-linux for compilation:</para>
 
