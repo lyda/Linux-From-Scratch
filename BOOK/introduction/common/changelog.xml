@@ -44,6 +44,9 @@
         <listitem>
           <para>[jim] - Added: Reiser_Crash patch to util-linux build. Thank you Jürg Billeter.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to Findutils 4.2.25.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
