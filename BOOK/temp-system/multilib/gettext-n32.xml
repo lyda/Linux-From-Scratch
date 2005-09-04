@@ -57,6 +57,18 @@
    --host=${LFS_TARGET} --disable-libasprintf \
    --without-csharp --cache-file=config.cache</userinput></screen>
 
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>CXX="${CXX} ${BUILDN32}"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
     <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>

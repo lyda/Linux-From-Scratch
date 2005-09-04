@@ -45,7 +45,20 @@
 
     <para>Prepare Patch for compilation:</para>
 
-<screen><userinput>./configure --prefix=/tools --host=${LFS_TARGET}</userinput></screen>
+<screen><userinput>CPPFLAGS=-D_GNU_SOURCE ./configure --prefix=/tools \
+   --host=${LFS_TARGET}</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>CPPFLAGS=-D_GNU_SOURCE</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
     <para>Compile the package:</para>
 

@@ -54,6 +54,18 @@
 <screen><userinput>CC="${CC} ${BUILDN32}" \
    ./configure --prefix=/tools --shared --libdir=/tools/lib32</userinput></screen>
 
+    <variablelist>
+      <title>The meaning of the new configure options:</title>
+
+      <varlistentry>
+        <term><parameter>CC="${CC} ${BUILDN32}"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="zlib.xml"
     xpointer="xpointer(//*[@os='c'])"/>

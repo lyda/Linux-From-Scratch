@@ -58,9 +58,25 @@
    --host=${LFS_TARGET} --disable-libasprintf \
    --without-csharp --cache-file=config.cache</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/gettext.xml"
-    xpointer="xpointer(//*[@os='c'])"/>
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>CXX="${CXX} ${BUILD32}"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/gettext.xml"
+      xpointer="xpointer(//*[@os='c1'])"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/gettext.xml"
+      xpointer="xpointer(//*[@os='c2'])"/>
+
+    </variablelist>
 
     <para>Compile the package:</para>
 

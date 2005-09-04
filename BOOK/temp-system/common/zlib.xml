@@ -56,7 +56,7 @@
     <variablelist os="aa">
       <title>The meaning of the configure options:</title>
 
-      <varlistentry>
+      <varlistentry os="aa1">
         <term><parameter>--shared</parameter></term>
         <listitem>
           <para>This do ...</para>

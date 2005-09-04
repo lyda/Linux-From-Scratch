@@ -54,9 +54,21 @@
 <screen><userinput>CC="${CC} ${BUILD32}" \
    ./configure --prefix=/tools --shared</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/zlib.xml"
-    xpointer="xpointer(//*[@os='aa'])"/>
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>CC="${CC} ${BUILD32}"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
+
+      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+      href="../common/zlib.xml"
+      xpointer="xpointer(//*[@os='aa1'])"/>
+
+    </variablelist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/zlib.xml"

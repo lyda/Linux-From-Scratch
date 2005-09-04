@@ -57,7 +57,7 @@
     <variablelist os="c">
       <title>The meaning of the configure options:</title>
 
-      <varlistentry>
+      <varlistentry os="c1">
         <term><parameter>--disable-libasprintf</parameter></term>
         <listitem>
           <para>This flag tells Gettext not to build the <filename
@@ -68,7 +68,7 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry os="c2">
         <term><parameter>--without-csharp</parameter></term>
         <listitem>
           <para>This ensures that Gettext does not build support for the C#
