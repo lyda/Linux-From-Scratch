@@ -176,6 +176,9 @@
       <para>&util-linux-cramfs-patch;</para>
     </listitem>
     <listitem>
+      <para>&util-linux-reiser_crash-patch;</para>
+    </listitem>
+    <listitem>
       <para>&vim-security_fix-patch;</para>
     </listitem>
   </itemizedlist>
