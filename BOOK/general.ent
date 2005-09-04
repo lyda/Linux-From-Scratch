@@ -1,5 +1,5 @@
-<!ENTITY version "GCC4-20050902">
-<!ENTITY releasedate "September 2, 2005">
+<!ENTITY version "GCC4-20050904">
+<!ENTITY releasedate "September 4, 2005">
 <!ENTITY milestone "6.2">
 <!ENTITY generic-version "gcc4"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
@@ -36,7 +36,7 @@
 <!ENTITY expect-version "5.43.0">
 <!ENTITY expect-lib-version "5.43">
 <!ENTITY file-version "4.15">
-<!ENTITY findutils-version "4.2.23">
+<!ENTITY findutils-version "4.2.25">
 <!ENTITY flex-version "2.5.31">
 <!ENTITY gawk-version "3.1.4">
 <!ENTITY gcc-version "4.0.1">
@@ -53,7 +53,7 @@
 <!ENTITY kbd-version "1.12">
 <!ENTITY less-version "382">
 <!ENTITY lfs-bootscripts-version "3.2.1">
-<!ENTITY libtool-version "1.5.18">
+<!ENTITY libtool-version "1.5.20">
 <!ENTITY linux-version "2.6.12.5">
 <!ENTITY linux-dl-version "2.6">
 <!ENTITY linux-libc-headers-version "2.6.12.0">
@@ -70,7 +70,7 @@
 <!ENTITY psmisc-version "21.6">
 <!ENTITY readline-version "5.0">
 <!ENTITY sed-version "4.1.4">
-<!ENTITY shadow-version "4.0.11.1">
+<!ENTITY shadow-version "4.0.12">
 <!ENTITY sysklogd-version "1.4.1">
 <!ENTITY sysvinit-version "2.86">
 <!ENTITY tar-version "1.15.1">
