@@ -20,7 +20,7 @@
   </warning>
 
 <screen os="c"><userinput>gcc -dumpspecs | \
-perl -pi -e 's!-dynamic-linker /tools!-dynamic-linker !g;' \
+perl -pi -e 's@/tools/lib/ld@/lib/ld@g;' \
      -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' > \
      `dirname $(gcc --print-libgcc-file-name)`/specs</userinput></screen>
 

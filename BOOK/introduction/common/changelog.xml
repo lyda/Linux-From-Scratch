@@ -42,6 +42,15 @@
       <para>September 2, 2005</para>
       <itemizedlist>
         <listitem>
+          <para>[jim] - Updated Specs file adjustment.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
+      <para>September 2, 2005</para>
+      <itemizedlist>
+        <listitem>
           <para>[jim] - Added: Reiser_Crash patch to util-linux build. Thank you Jürg Billeter.</para>
         </listitem>
         <listitem>
