@@ -92,6 +92,7 @@ First a summary, then a detailed log.</para>
 <listitem><para>&gcc-specs-patch;</para></listitem>
 <listitem><para>&glibc-gcc4_elf-patch;</para></listitem>
 <listitem><para>&glibc-gcc4_iconvdata-patch;</para></listitem>
+<listitem><para>&glibc-gcc4_mathtest-patch;</para></listitem>
 <listitem><para>&glibc-gcc4_string-patch;</para></listitem>
 <listitem><para>&glibc-gcc4_symbols-patch;</para></listitem>
 <listitem><para>&glibc-testfix-patch;</para></listitem>
@@ -119,6 +120,9 @@ First a summary, then a detailed log.</para>
 <listitem><para>zlib-1.2.2-security_fix-1.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>September 5, 2005 [ken]: Add patch to fix some of the math
+tests in glibc.</para></listitem>
 
 <listitem><para>September 4, 2005 [matt]: Add patch to stop
 <command>cfdisk</command> segfaulting when invoked on devices with partitions

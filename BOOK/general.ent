@@ -1,5 +1,5 @@
-<!ENTITY version "GCC4-20050904">
-<!ENTITY releasedate "September 4, 2005">
+<!ENTITY version "GCC4-20050905">
+<!ENTITY releasedate "September 5, 2005">
 <!ENTITY milestone "6.2">
 <!ENTITY generic-version "gcc4"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
