@@ -120,9 +120,10 @@ make -k check &gt;glibc-check-log 2&gt;&amp;1 ; grep Error glibc-check-log
 </userinput></screen>
 
 <para>On at least i686 you can expect to see failures in the <emphasis>test-double
-</emphasis> and <emphasis>test-idouble</emphasis> math tests with gcc4, as well as
-an expected (ignored) failure in <emphasis>posix/annexc</emphasis>.  These two
-failures in the math tests appear to be harmless.</para>
+</emphasis> and <emphasis>test-idouble</emphasis> math tests with 
+gcc-&gcc-version;, as well as an expected (ignored) failure in <emphasis>
+posix/annexc</emphasis>.  These two failures in the math tests appear to be
+harmless.</para>
 
 <para>The Glibc test suite is highly dependent on certain functions of
 the host system, in particular the kernel. In certain circumstances,
