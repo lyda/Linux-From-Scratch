@@ -121,6 +121,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>September 6, 2005 [ken]: Reworded the glibc text to expect
+test failures.</para></listitem>
+ 
 <listitem><para>September 5, 2005 [ken]: Add patch to fix some of the math
 tests in glibc.</para></listitem>
 
