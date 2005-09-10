@@ -150,6 +150,14 @@
     href="../x86_64/glibc.xml"
     xpointer="xpointer(//*[@os='r'])"/>
 
+    <para>The install will finish by checking that everything is correctly installed.
+    Unfortunately, it will test for a multilib installation. On x86_64 this means
+    it will try to test the non-existent 32-bit loader which has a different name
+    from the 64-bit loader (unlike on other 64-bit architectures).  We fool it by
+    creating a symlink to the real loader.</para>
+
+    <screen><userinput>ln -s ld-2.3.5.so /lib/ld-linux.so.2</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86_64/glibc.xml"
     xpointer="xpointer(//*[@os='s'])"/>
@@ -157,6 +165,22 @@
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86_64/glibc.xml"
     xpointer="xpointer(//*[@os='t'])"/>
+
+    <para>Now we can remove this symlink.  We also need to correct the <command>
+    /usr/bin/ldd</command> script - if you look at this, you will see it references
+    not only the 32-bit linker, but also /lib64 where it thinks the 64-bit linker
+    is. The following <command>sed</command> will correct this.</para>
+
+    <screen><userinput>
+    rm /lib/ld-linux.so.2
+    cp /usr/bin/ldd{,.bak}
+    sed '/RTLDLIST/s%/ld-linux.so.2 /lib64%%' /usr/bin/ldd.bak >/usr/bin/ldd
+    </userinput></screen>
+
+    <para>Check the script to make sure the sed worked correctly, then delete
+    the backup.</para>
+
+    <screen><userinput>rm /usr/bin/ldd.bak</userinput></screen> 
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"

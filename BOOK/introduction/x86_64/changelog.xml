@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>September 10, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - fix 64-bit gettext testsuite.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 30, 2005</para>
       <itemizedlist>
         <listitem>
