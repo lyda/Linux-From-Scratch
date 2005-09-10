@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>September 10, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - Updates to glibc check instructions and linkages.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 2, 2005</para>
       <itemizedlist>
         <listitem>

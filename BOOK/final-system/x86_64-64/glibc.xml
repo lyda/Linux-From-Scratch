@@ -137,8 +137,9 @@
     href="../x86_64/glibc.xml"
     xpointer="xpointer(//*[@os='m'])"/>
 
+    <!-- test comments from 64bit which is clean -->
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
+    href="../x86_64/glibc-64bit.xml"
     xpointer="xpointer(//*[@os='n'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

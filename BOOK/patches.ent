@@ -61,6 +61,7 @@
 <!-- Start of x86/x86_64 patches -->
 
 <!ENTITY coreutils-x86_uname-patch "coreutils-&coreutils-version;-uname-2.patch">
+<!ENTITY glibc-mathtests-patch "glibc-&glibc-version;-gcc4_fix_math_tests-1.patch">
 
 <!ENTITY linux-libc-headers-x86_64_biarch-patch "linux-libc-headers-&linux-libc-headers-x86_64-version;-x86_64_biarch-1.patch">
 

@@ -35,6 +35,16 @@
 -->
 
     <listitem>
+      <para>September 10, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - Patch for glibc to fix some test failures, updated instructions
+	  to reflect the expected failures with gcc&gcc-version;.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 10, 2005</para>
       <itemizedlist>
         <listitem>

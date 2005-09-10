@@ -88,6 +88,12 @@
 
 <screen os="d5"><userinput>patch -Np1 -i ../&glibc-gcc4_fix_symbols-patch;</userinput></screen>
 
+<para os="d6">The following patch corrects the expected results for some of the math
+tests on x86 processors when compiled with GCC-&gcc-version;:</para>
+
+<screen os="d7"><userinput>patch -Np1 -i ../&glibc-mathtests-patch;</userinput>
+</screen>
+ 
     <para os="e">The Glibc documentation recommends building Glibc outside of the
     source directory in a dedicated build directory:</para>
 
@@ -125,7 +131,11 @@ cd ../glibc-build</userinput></screen>
 
     <para os="m">Test the results:</para>
 
-<screen os="n"><userinput>make check</userinput></screen>
+<!-- items n,o,p no longer the master, use x86_64 which has no failures -->
+
+<screen os="n"><userinput>
+make -k check &gt;glibc-check-log 2&gt;&amp;1 ; grep Error glibc-check-log
+</userinput></screen>
 
     <para os="o">The Glibc test suite is highly dependent on certain functions of
     the host system, in particular the kernel. In general, the Glibc test
@@ -135,7 +145,12 @@ cd ../glibc-build</userinput></screen>
 
     <itemizedlist os="p">
       <listitem>
-        <para>The <emphasis>math</emphasis> tests sometimes fail when running
+        <para>The <emphasis>math</emphasis> tests, at least on i686, fail in
+	the <emphasis>test-double</emphasis> and <emphasis>test-idouble</emphasis>
+	tests with gcc-&gcc-version;, the <command>grep</command> command will
+	also report an expected (ignored) failure in <emphasis>posix/annexc
+	</emphasis>. These two failures in the math tests appear to be harmless.
+	The math tests may also fail    
         on systems where the CPU is not a relatively new genuine Intel or
         authentic AMD. Certain optimization settings are also known to be a
         factor here.</para>

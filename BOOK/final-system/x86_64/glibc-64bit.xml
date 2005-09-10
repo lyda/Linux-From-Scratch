@@ -138,9 +138,39 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='m'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='n'])"/>
+<!-- items n,o,p here are now the master, not x86, because 
+ the tests are known to all pass on x86_64 -->
+
+<screen os="n"><userinput>make check</userinput></screen>
+
+    <para os="o">The Glibc test suite is highly dependent on certain functions of
+    the host system, in particular the kernel. In general, the Glibc test
+    suite is always expected to pass. However, in certain circumstances,
+    some failures are unavoidable. This is a list of the most common
+    issues:</para>
+
+    <itemizedlist os="p">
+      <listitem>
+        <para>The <emphasis>math</emphasis> tests sometimes fail.
+        Certain optimization settings are known to be a
+        factor here.</para>
+      </listitem>
+      <listitem>
+        <para>The <emphasis>gettext</emphasis> test sometimes fails due to
+        host system issues. The exact reasons are not yet clear.</para>
+      </listitem>
+      <listitem>
+        <para>If you have mounted the LFS partition with the
+        <parameter>noatime</parameter> option, the <emphasis>atime</emphasis> test
+        will fail. As mentioned in <xref linkend="ch-partitioning-mounting"/>,
+        do not use the <parameter>noatime</parameter> option while building
+        LFS.</para>
+      </listitem>
+      <listitem>
+        <para>When running on older and slower hardware, some tests
+        can fail because of test timeouts being exceeded.</para>
+      </listitem>
+    </itemizedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
