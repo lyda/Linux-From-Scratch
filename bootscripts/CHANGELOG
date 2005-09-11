@@ -1,3 +1,10 @@
+n/a - September 10, 2005
+	* Changed killproc to use warning if not running
+	* Changed 'print_status warning' to use old style output
+	* Fixed display error with LSB init-functions script
+	* Made above killproc/print_status changes in enhanced
+	  bootscripts. (DJ Lucas)
+
 n/a - August 14, 2005
 	* Added -s flag to pidofproc() for backwards 
 	  compatibility (DJ Lucas)

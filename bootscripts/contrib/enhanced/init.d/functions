@@ -312,9 +312,6 @@ print_status()
 		return 1
 	fi
 
-	boot_mesg_flush
-	echo_warning
-
 	case "${1}" in
 
 		success)
@@ -326,14 +323,20 @@ print_status()
 			# may call it this way.
 			case "${2}" in
 				running)
+					echo -e -n "${CURS_UP}"
+					echo -e -n "\\033[${CUR_LENGTH}G   "
 					boot_mesg "Already running." ${WARNING}
 					echo_warning
 					;;
 				not_running)
+					echo -e -n "${CURS_UP}"
+					echo -e -n "\\033[${CUR_LENGTH}G   "
 					boot_mesg "Not running." ${WARNING}
 					echo_warning
 					;;
 				not_available)
+					echo -e -n "${CURS_UP}"
+					echo -e -n "\\033[${CUR_LENGTH}G   "
 					boot_mesg "Not available." ${WARNING}
 					echo_warning
 					;;
@@ -676,6 +679,7 @@ killproc()
 		pidofproc -s -p "${pidfile}" "${1}"
 	fi
 
+    if [ -n "${pidlist}" ]; then
 	for pid in ${pidlist}
 	do
 		kill -${killsig:-TERM} ${pid} 2>/dev/null
@@ -716,8 +720,11 @@ killproc()
 		fi
 	fi
 
-	evaluate_retval # This is "Probably" not LSB compliant, but required to be compatible with older bootscripts
+	evaluate_retval 
 
+    else
+	print_status warning not_running
+    fi
 }
 
 
