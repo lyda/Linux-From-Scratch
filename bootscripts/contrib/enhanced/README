@@ -11,9 +11,10 @@ tmpfs is mounted at /media/boottemp/ as soon as rc is called for the first
 time.  It is unmounted as soon as we leave sysinit, and the temporary log 
 file is appended to the existing boot.log file.  To use this feature requires
 a couple of changes.  By default, the bootlog uses the local2 facility.
-Additionally, to meet FHS guidelines, the logger binary must be moved to
-/bin.  This is hardcoded into the scripts, and a proper check is made, in fact
-returning logger to /usr/bin is the easiest way to disable bootlogging.
+This is configurable in the /etc/sysconfig/rc file.  Additionally, to meet 
+FHS guidelines, the logger binary must be moved to /bin.  This is hardcoded 
+into the scripts, and a proper check is made, in fact returning logger to 
+/usr/bin is the easiest way to disable bootlogging.
 
 The tmpfs is availible for any script durring the entire time of rc's 
 execution and is unmounted when rc exits a numbered runlevel.  Durring 
@@ -22,9 +23,8 @@ file, and once in a numbered runlevel, will return to the old behavior
 allowing your syslog daemon to capture and deliver the boot messages to 
 the log file.  The temporary filesystem can be used for other purposes 
 as well but is currently used only for the interactive lock file and the 
-initial bootlog cache.  The adjusted scripts should really have a name 
-change, but it works in the interim.  The scripts are current as of 
-lfs-bootscripts-3.2.2 and can be installed by running 
+initial bootlog cache.  The scripts are current as of 
+lfs-bootscripts-3.2.3-pre-1 and can be installed by running 
 'make install-enhanced' from the toplevel directory.
 
 Finally, the boot_mesg function contains very complicated line wrapping code,
