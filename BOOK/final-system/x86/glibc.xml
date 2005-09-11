@@ -72,28 +72,6 @@
     Glibc autoconf tests would give false results and defeat the goal
     of achieving a clean build.</para>
 
-    <para os="c">Glibc has two tests which fail when the running kernel is 2.6.11 or
-    later. The problem has been determined to be with the tests themselves, not
-    with the C library or the kernel. This patch fixes the problem:</para>
-
-<screen os="d"><userinput>patch -Np1 -i ../&glibc-testfix-patch;</userinput></screen>
-
-    <para os="d1">The following patches fix build issues that are caused by GCC 4.x:</para>
-
-<screen os="d2"><userinput>patch -Np1 -i ../&glibc-gcc4-fix_elf-patch;</userinput></screen>
-
-<screen os="d3"><userinput>patch -Np1 -i ../&glibc-gcc4_fix_iconvdata-patch;</userinput></screen>
-
-<screen os="d4"><userinput>patch -Np1 -i ../&glibc-gcc4_fix_string-patch;</userinput></screen>
-
-<screen os="d5"><userinput>patch -Np1 -i ../&glibc-gcc4_fix_symbols-patch;</userinput></screen>
-
-<para os="d6">The following patch corrects the expected results for some of the math
-tests on x86 processors when compiled with GCC-&gcc-version;:</para>
-
-<screen os="d7"><userinput>patch -Np1 -i ../&glibc-mathtests-patch;</userinput>
-</screen>
- 
     <para os="e">The Glibc documentation recommends building Glibc outside of the
     source directory in a dedicated build directory:</para>
 
@@ -185,10 +163,11 @@ make -k check &gt;glibc-check-log 2&gt;&amp;1 ; grep Error glibc-check-log
     <para os="u">Build the linuxthreads man pages, which are a great reference
     on the threading API (applicable to NPTL as well):</para>
 
+<!--Release only - not on snapshot
     <para os="v">Unpack the glibc-linuxthreads-&glibc-version; tarball&mdash;it
     is needed for the next two make commands. You can ignore this if you do
     want the threading API man pages.</para>
-
+-->
 <screen os="w"><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man</userinput></screen>
 
     <para os="x">Install these pages:</para>

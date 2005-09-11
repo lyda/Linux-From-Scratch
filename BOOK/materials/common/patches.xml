@@ -117,46 +117,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Glibc GCC 4.x Fix ELF Patch - 19 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;glibc/&glibc-gcc4-fix_elf-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Glibc GCC 4.x Fix iconvdata Patch - 2 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;glibc/&glibc-gcc4_fix_iconvdata-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Glibc GCC 4.x Fix String Patch - 3 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;glibc/&glibc-gcc4_fix_string-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Glibc GCC 4.x Fix Symbols Patch - 5 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;glibc/&glibc-gcc4_fix_symbols-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Glibc Test Patch - 11 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;glibc/&glibc-testfix-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Gzip Security Fix Patch - 2 KB:</term>
       <listitem>
         <para><ulink

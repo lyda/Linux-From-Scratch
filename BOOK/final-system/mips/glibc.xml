@@ -61,36 +61,11 @@
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
-    <para os="bb">The following patch corrects the building of
-    <filename class="headerfile">syscall.h</filename>:</para>
-
-<screen os="bc"><userinput>patch -Np1 -i ../&glibc-mips_syscall-patch;</userinput></screen>
-
     <para os="bd">NPTL is not supported under this architecture, so we are going to
     remove the <filename class="directory">nptl</filename> directory from
     the Glibc source:</para>
 
 <screen os="be"><userinput>rm -rf nptl*</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='d1'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='d2'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='d3'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='d4'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='d5'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"

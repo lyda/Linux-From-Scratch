@@ -30,14 +30,6 @@
       </listitem>
     </varlistentry>
 
-  <varlistentry>
-    <term>Glibc Mathtests Patch - 9 KB:</term>
-    <listitem>
-      <para><ulink
-	url="&patches-root;glibc/&glibc-mathtests-patch;"/></para>
-    </listitem>
-  </varlistentry> 
-	
   </variablelist>
 
 </sect1>

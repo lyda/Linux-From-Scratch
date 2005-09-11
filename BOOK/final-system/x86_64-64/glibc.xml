@@ -56,38 +56,6 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86_64/glibc.xml"
-    xpointer="xpointer(//*[@os='c'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
-    xpointer="xpointer(//*[@os='d'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
-    xpointer="xpointer(//*[@os='d1'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
-    xpointer="xpointer(//*[@os='d2'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
-    xpointer="xpointer(//*[@os='d3'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
-    xpointer="xpointer(//*[@os='d4'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
-    xpointer="xpointer(//*[@os='d5'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
-    xpointer="xpointer(//*[@os='d6'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64/glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -186,10 +154,11 @@
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='u'])"/>
 
+<!--Only needed for Release
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='v'])"/>
-
+-->
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='w'])"/>

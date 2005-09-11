@@ -39,6 +39,17 @@
 -->
 
    <listitem>
+      <para>September 11, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to Glibc 20050905 snapshot. Fixes many cross-compile build
+	  issues with GCC 4 based cross-lfs. For details read 
+          <ulink url="http://archives.linuxfromscratch.org/mail-archives/lfs-dev/2005-September/053261.html"/>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 10, 2005</para>
       <itemizedlist>
         <listitem>

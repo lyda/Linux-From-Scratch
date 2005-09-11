@@ -168,6 +168,15 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Glibc (&glibc-version;) - 14 MB:</term>
+      <listitem>
+        <para><ulink
+        url="ftp://ftp.linuxfromscratch.org/pub/lfs/conglomeration/glibc/glibc-&glibc-version;.tar.bz2"/></para>
+      </listitem>
+    </varlistentry>
+
+<!-- Glibc Release
+    <varlistentry>
       <term>Glibc (&glibc-version;) - 13.2 MB:</term>
       <listitem>
         <para><ulink
@@ -190,7 +199,7 @@
         url="&gnu;glibc/glibc-linuxthreads-&glibc-version;.tar.bz2"/></para>
       </listitem>
     </varlistentry>
-
+-->
     <varlistentry>
       <term>Grep (&grep-version;) - 520 KB:</term>
       <listitem>

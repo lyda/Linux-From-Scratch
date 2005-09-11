@@ -140,22 +140,7 @@
       <para>&gcc-posix-patch;</para>
     </listitem>
     <listitem>
-      <para>&glibc-testfix-patch;</para>
-    </listitem>
-    <listitem>
       <para>&glibc-libgcc_eh-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&glibc-gcc4-fix_elf-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&glibc-gcc4_fix_iconvdata-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&glibc-gcc4_fix_string-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&glibc-gcc4_fix_symbols-patch;</para>
     </listitem>
     <listitem>
       <para>&gzip-security_fix-patch;</para>

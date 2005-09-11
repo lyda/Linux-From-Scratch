@@ -23,14 +23,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>GLIBC Syscall Patch - 11 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;glibc/&glibc-mips_syscall-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Grep Config Update Patch - 48 KB:</term>
       <listitem>
         <para><ulink

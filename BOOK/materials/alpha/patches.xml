@@ -22,14 +22,6 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry>
-      <term>Glibc GCC 4.x 64-Bit Fixes Patch - 1 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;glibc/&glibc-gcc4_64bit_fixes-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
   </variablelist>
 
 </sect1>
