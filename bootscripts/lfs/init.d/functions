@@ -24,7 +24,7 @@ RELOADSIG="HUP"
 # Number of seconds between STOPSIG and FALLBACK when stopping processes
 KILLDELAY="3"
 
-## Screen Dimentions
+## Screen Dimensions
 # Find current screen size
 if [ -z "${COLUMNS}" ]; then
 	COLUMNS=$(stty size)
@@ -40,7 +40,7 @@ fi
 COL=$((${COLUMNS} - 8))
 WCOL=$((${COL} - 2))
 
-## Set Cursur Position Commands, used via echo -e
+## Set Cursor Position Commands, used via echo -e
 SET_COL="\\033[${COL}G"      # at the $COL char
 SET_WCOL="\\033[${WCOL}G"    # at the $WCOL char
 CURS_UP="\\033[1A\\033[0G"   # Up one line, at the 0'th char
@@ -49,7 +49,7 @@ CURS_UP="\\033[1A\\033[0G"   # Up one line, at the 0'th char
 # Please consult `man console_codes for more information
 # under the "ECMA-48 Set Graphics Rendition" section
 #
-# Warning, when switching from a 8bit to a 9bit font,
+# Warning: when switching from a 8bit to a 9bit font,
 # the linux console will reinterpret the bold (1;) to
 # the top 256 glyphs of the 9bit font.  This does
 # not affect framebuffer consoles
@@ -148,7 +148,7 @@ print_error_msg()
 	boot_log "\n\n${i} failed and exited with a return value of ${error_value}."
 	boot_mesg_flush
 	boot_mesg -n "FAILURE:\n\nYou should not be reading this error message.\n\n" ${FAILURE}
-	boot_mesg -n " It means that an unforseen error took"
+	boot_mesg -n " It means that an unforeseen error took"
 	boot_mesg -n " place in ${i}, which exited with a return value of"
 	boot_mesg " ${error_value}.\n"
 	boot_mesg_flush
@@ -210,7 +210,7 @@ print_status()
 			;;
 
 		warning)
-			# Leave this extra case in becasue old scripts
+			# Leave this extra case in because old scripts
 			# may call it this way.
 			case "${2}" in
 				running)
@@ -312,7 +312,8 @@ statusproc()
 #
 # Outputs: return 0 - Success, pid's in stdout
 #          return 1 - Program is dead, pidfile exists
-#          return 2 - Invalid of excessive arguments, warning in stdout
+#          return 2 - Invalid or excessive number of arguments, 
+#                     warning in stdout
 #          return 3 - Program is not running
 #
 # Dependencies: pidof, echo, head
@@ -425,14 +426,15 @@ getpids()
 #         args, arguments to pass to specified program
 #
 # Outputs: return 0 - Success
-#          return 2 - Invalid of excessive arguments, warning in stdout
+#          return 2 - Invalid of excessive number of arguments, 
+#                     warning in stdout
 #          return 4 - Program or service status is unknown
 #
 # Dependencies: nice
 #
 # Todo: LSB says this should be called start_daemon
 #       LSB does not say that it should call evaluate_retval
-#       It checks for PIDFILE, which is depreciated.
+#       It checks for PIDFILE, which is deprecated.
 #         Will be removed after BLFS 6.0
 #       loadproc returns 0 if program is already running, not LSB compliant
 #
@@ -518,13 +520,14 @@ loadproc()
 #         signal, send this signal to pathname
 #
 # Outputs: return 0 - Success
-#          return 2 - Invalid of excessive arguments, warning in stdout
+#          return 2 - Invalid of excessive number of arguments, 
+#                     warning in stdout
 #          return 4 - Unknown Status
 #
 # Dependencies: kill
 #
 # Todo: LSB does not say that it should call evaluate_retval
-#       It checks for PIDFILE, which is depreciated.
+#       It checks for PIDFILE, which is deprecated.
 #         Will be removed after BLFS 6.0
 #
 #*******************************************************************************
