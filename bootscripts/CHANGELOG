@@ -1,8 +1,11 @@
-n/a - September 10, 2005
+n/a - September 11, 2005
+	* Removed text wraping and boot logging.
 	* Changed killproc to use warning if not running
 	* Changed 'print_status warning' to use old style output
 	* Fixed display error with LSB init-functions script
 	* Made above killproc/print_status changes in enhanced
+	  bootscripts.
+	* Made logger service configurable in enhanced 
 	  bootscripts. (DJ Lucas)
 
 n/a - August 14, 2005

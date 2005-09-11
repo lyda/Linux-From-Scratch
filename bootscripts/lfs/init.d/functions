@@ -60,15 +60,7 @@ FAILURE="\\033[1;31m"        # Failures are red
 INFO="\\033[1;36m"           # Information is light cyan
 BRACKET="\\033[1;34m"        # Brackets are blue
 
-## Set screen and bootlog message values to zero
-BOOTMESG=""        # text meant for the logfile
-BOOTMESGPRN=""     # text meant for the console
-CUR_LENGTH="0"      # the current line length
-CHARS_LEFT="${WCOL}"      # avilible space on the current line
 STRING_LENGTH="0"   # the length of the current message
-BMSEP=""           # contains neline separated bootmessage
-BMSEPCT=""         # used for character counts of each word in BMSEP
-BMWORD=""          # last printed word before a newline when wrapping text
 
 #*******************************************************************************
 # Function - boot_mesg()
@@ -81,21 +73,13 @@ BMWORD=""          # last printed word before a newline when wrapping text
 # Outputs:      Standard Output
 #
 # Dependencies: - sed for parsing strings.
-#	              - grep, for counting \n's in a variable.
+#	        - grep for counting string length.
 #               
-# Todo:         - This function was created for the purpose of storing
-#               information to be passed to a bootup log and for better
-#               formatting of text sent to the screen.  The logging support
-#               now pushes messages to the local2 service which is now
-#               configured by LFS default in syslog.conf.  This also 
-#               requires that /usr/bin/logger be moved to /bin.
-#               Support for parallel bootscripts is not added *yet*...
+# Todo:         
 #*******************************************************************************
 boot_mesg()
 {
 	local ECHOPARM=""
-	##### NOTE!!!! A single message cannot span two complete lines
-	##### (longer than WCOL) or exceed 100 words.
 
 	while true
 	do
@@ -114,116 +98,26 @@ boot_mesg()
 		esac
 	done
 
-	## Figure out the length of what is to be printed. 
-	# This is effectivly eqivelent to wc -m.
-	STRING_LENGTH="$(( `echo "${1}" | sed \
-		-e 's,.,.,g' -e 'l 1' | grep -c \$` - 2 ))"
+	## Figure out the length of what is to be printed to be used
+        ## for warning messges. 
+	STRING_LENGTH="`echo "${1}" | sed \
+		-e 's,.,.,g' -e 'l 1' | grep -c \$`"
 
-	# Append to BOOTMESG for logging
-	BOOTMESG="${BOOTMESG} ${1}"
-
-	# Find out how much room is left to work with
-	CHARS_LEFT="$(( ${WCOL} - ${CUR_LENGTH} ))"
-
-	# If the message doesn't exceed the remaining columns 
-	# of the current line, just print it...
-	if [ "${STRING_LENGTH}" -le "${CHARS_LEFT}" ]; then
-		CUR_LENGTH="$(( ${CUR_LENGTH} + ${STRING_LENGTH} ))"
-		BOOTMESGPRN="${1}"
-
-		# Avoid a null value being passed to sed
-		if [ "${STRING_LENGTH}" -eq "${CHARS_LEFT}" ]; then
-			# set CUR_LENGTH to zero
-			CUR_LENGTH="0"
-		fi
-
-	else
-				
-		## Do some adjustments to the output because it
-		## it is too long to fit on one line
-
-		# BMSEP is the boot message with each word 
-		# on one line of it's own
-		BMSEP=`echo "${1}" | sed 's/ /\\\n/g'`
-
-		# To work proerly with unicode, each character 
-		# is replaced with a single dot (.) for counting.
-		### Note that this is still broken for Chinese, 
-		### Japanese, and Korean because of characters 
-		### that actually use two columns when printed 
-		### to the screen.
-		BMSEPCT=`echo -e "${BMSEP}" | sed 's/././g'`
-		
-		# keep adding the character count of each line
-		# untill the count exceeds the value of CHARS_LEFT
-		# There is a ceiling of 100 words!
-		n="1"
-		while [ "${n}" -lt "100" ]; do
-			char_count="$(( `echo -e "${BMSEPCT}" |	\
-				sed -n "${n}"'~0p' | sed 'l 1' | \
-				grep -c \$` - 2 ))"
-			if [ "$(( ${CUR_LENGTH} + ${char_count} ))" \
-				-lt "${WCOL}" ]; then
-				let n++
-				CUR_LENGTH="$(( ${CUR_LENGTH} + ${char_count} + 1 ))"
-			else
-				let n--
-				break;
-			fi
-		done
-
-		# The number of words that will fit is now
-		# represented by 'n'.  Find the nth word.
-		BMWORD="$( echo -e "${BMSEP}" | sed -n "${n}"'~0p' )"
-
-		# Get rid of the extra space
-		BMWORD="${BMWORD} "
-
-		# And format the message as needed.
-		BOOTMESGPRN=`echo "${1}" | \
-			sed "s/${BMWORD}/${BMWORD}\\\n/"`
-
-		# Now, determine the length of the second line
-		CUR_LENGTH=$(( `echo -e "${BOOTMESGPRN}" | sed -n '2~0p' | \
-			sed -e 's,.,.,g' -e 'l 1' | grep -c \$` - 2 ))
-	fi
-
-	# Print the results to the screen
-	echo ${ECHOPARM} -e "${2}${BOOTMESGPRN}"
+	# Print the message to the screen
+	echo ${ECHOPARM} -e "${2}${1}"
 	
-	# if CUR_LENGTH was set to zero, then end the line
-	if [ "${CUR_LENGTH}" = "0" ]; then
-		echo ""	
-	fi
 }
 
 boot_mesg_flush()
 {
-	# Do not log null messages
-	if [ -z "${BOOTMESG}" ]; then
-		return 0
-	else
-		boot_log "${BOOTMESG}${@}"
-	fi
-	
-	# Reset boot message buffers to keep from bleeding over again
-	BOOTMESG=""
-	BOOTMESGPRN=""
-	CUR_LENGTH="0"
-	CHARS_LEFT="${WCOL}"
+	# Reset STRING_LENGTH for next message
 	STRING_LENGTH="0"
-	BMSEP=""
-	BMSEPCT=""	
-	BMWORD=""
 }
 
 boot_log()
 {
-	if [ -f /bin/logger ]; then
-		/bin/logger -p local2.info -t bootlog "${@}"
-	else
-		return 0
-	fi
+	# Left in for backwards compatibility
+	echo -n ""
 }
 
 echo_ok()
@@ -306,6 +200,9 @@ print_status()
 		return 1
 	fi
 
+#	boot_mesg_flush
+#	echo_warning
+
 	case "${1}" in
 
 		success)
@@ -318,19 +215,19 @@ print_status()
 			case "${2}" in
 				running)
 					echo -e -n "${CURS_UP}"
-					echo -e -n "\\033[${CUR_LENGTH}G   "
+					echo -e -n "\\033[${STRING_LENGTH}G   "
 					boot_mesg "Already running." ${WARNING}
 					echo_warning
 					;;
 				not_running)
 					echo -e -n "${CURS_UP}"
-					echo -e -n "\\033[${CUR_LENGTH}G   "
+					echo -e -n "\\033[${STRING_LENGTH}G   "
 					boot_mesg "Not running." ${WARNING}
 					echo_warning
 					;;
 				not_available)
 					echo -e -n "${CURS_UP}"
-					echo -e -n "\\033[${CUR_LENGTH}G   "
+					echo -e -n "\\033[${STRING_LENGTH}G   "
 					boot_mesg "Not available." ${WARNING}
 					echo_warning
 					;;
@@ -673,6 +570,7 @@ killproc()
 		pidofproc -s -p "${pidfile}" "${1}"
 	fi
 
+    # Change....
     if [ -n "${pidlist}" ]; then
 	for pid in ${pidlist}
 	do
@@ -714,7 +612,7 @@ killproc()
 		fi
 	fi
 
-	evaluate_retval 
+	evaluate_retval # This is "Probably" not LSB compliant, but required to be compatible with older bootscripts
 
     else
 	print_status warning not_running

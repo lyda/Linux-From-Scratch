@@ -25,4 +25,7 @@ ILEN="38"
 IPROMPT="yes"
 # End setup for interactive
 
+# Set service for bootlogging
+BLSERVICE="local2"
+
 # End /etc/sysconfig/rc

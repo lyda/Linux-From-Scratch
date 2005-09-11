@@ -225,7 +225,7 @@ boot_log()
 			/bin/logger -t bootlog "${@}" -s 2>&1 | \
 				cat >> /media/boottemp/.logcache
 		else
-			/bin/logger -p local2.info -t bootlog "${@}"
+			/bin/logger -p "${BLSERVICE}".info -t bootlog "${@}"
 		fi
 	else
 		return 0
