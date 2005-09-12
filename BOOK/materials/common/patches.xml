@@ -189,6 +189,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Tar GCC-4.x Fix Patch - 1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;tar/&tar-gcc4_fix-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Tar Sparse Fix Patch - 1 KB:</term>
       <listitem>
         <para><ulink

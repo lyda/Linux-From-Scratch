@@ -45,10 +45,15 @@
   <sect2 role="installation">
     <title>Installation of Tar</title>
 
-    <para os="a">Tar has a bug when the <option>-S</option> option is used with
+<para os="a">Apply a patch to fix some issues with the test suite when using 
+GCC-&gcc-version;:</para>
+
+<screen os="a1"><userinput>patch -Np1 -i ../&tar-gcc4_fix-patch;</userinput></screen>
+
+    <para os="b">Tar has a bug when the <option>-S</option> option is used with
     files larger than 4 GB. The following patch properly fixes this issue:</para>
 
-<screen os="b"><userinput>patch -Np1 -i ../&tar-sparse_fix-patch;</userinput></screen>
+<screen os="b1"><userinput>patch -Np1 -i ../&tar-sparse_fix-patch;</userinput></screen>
 
     <para os="c">Prepare Tar for compilation:</para>
 

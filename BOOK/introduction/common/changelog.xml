@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>September 12, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - Add patch to fix tar testsuite for gcc4.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 11, 2005</para>
       <itemizedlist>
         <listitem>
