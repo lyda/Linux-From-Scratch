@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>September 13, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Binutils no changed targets for sparc. Now it's sparc-unknown-linux-gnu.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 12, 2005</para>
       <itemizedlist>
         <listitem>

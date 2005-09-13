@@ -135,13 +135,8 @@ echo export LFS_TARGET=\""${LFS_TARGET}\"" &gt;&gt; ~/.bashrc</userinput></scree
           <entry>64 Bit</entry>
         </row>
         <row>
-          <entry>Supersparc and Hypersparc</entry>
-          <entry>sparcv8-unknown-linux-gnu</entry>
-          <entry>32 Bit</entry>
-        </row>
-        <row>
-          <entry>Ultrasparc</entry>
-          <entry>sparcv9-unknown-linux-gnu</entry>
+          <entry>Supersparc, Hypersparc, and Ultrasparc</entry>
+          <entry>sparc-unknown-linux-gnu</entry>
           <entry>32 Bit</entry>
         </row>
         <row>
