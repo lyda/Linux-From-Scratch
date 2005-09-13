@@ -66,6 +66,11 @@
     href="../x86/gcc-static.xml"
     xpointer="xpointer(//*[@os='af'])"/>
 
+    <para os="al">This will allow us to build a 64 bit ABI compiler instead of the default
+    n32:</para>
+
+<screen os="am"><userinput>patch -Np1 -i ../&gcc-mips_pure64-patch;</userinput></screen>
+
     <para os="ag">Now we will need to setup our StartFile Spec to the correct library
     location:</para>
 
