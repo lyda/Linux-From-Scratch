@@ -83,6 +83,8 @@
 <!ENTITY linux-mips-patch "linux-&linux-mips-version;-mips_fix-1.patch">
 <!ENTITY linux-cobalt-patch "linux-&linux-mips-version;-cobalt_fix-1.patch">
 
+<!ENTITY linux-libc-headers-mips_tls-patch "linux-libc-headers-&linux-libc-headers-x86_64-version;-x86_64_biarch-1.patch">
+
 <!ENTITY procps-mips-patch "procps-&procps-version;-fix_mips-1.patch">
 
 <!ENTITY util-linux-mips64-patch "util-linux-&util-linux-version;-mips64_fix-1.patch">
