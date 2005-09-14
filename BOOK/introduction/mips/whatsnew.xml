@@ -38,6 +38,12 @@
       <para>&gcc-specs-patch;</para>
     </listitem>
     <listitem>
+      <para>&gcc-mips_tls-patch;</para>
+    </listitem>
+    <listitem>
+      <para>&linux-libc-headers-mips_tls-patch;</para>
+    </listitem>
+    <listitem>
       <para>&linux-mips-patch;</para>
     </listitem>
   </itemizedlist>
