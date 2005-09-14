@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>September 13, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Sparc 32 Bit NPTL now working.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 9, 2005</para>
       <itemizedlist>
         <listitem>

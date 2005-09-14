@@ -56,11 +56,11 @@
     xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/glibc.xml"
+    href="../mips64/glibc.xml"
     xpointer="xpointer(//*[@os='bd'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/glibc.xml"
+    href="../mips64/glibc.xml"
     xpointer="xpointer(//*[@os='be'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
