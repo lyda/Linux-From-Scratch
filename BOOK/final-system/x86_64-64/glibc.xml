@@ -124,7 +124,7 @@
     from the 64-bit loader (unlike on other 64-bit architectures).  We fool it by
     creating a symlink to the real loader.</para>
 
-    <screen><userinput>ln -s ld-2.3.5.so /lib/ld-linux.so.2</userinput></screen>
+    <screen><userinput>ln -s ld-2.3.90.so /lib/ld-linux.so.2</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86_64/glibc.xml"

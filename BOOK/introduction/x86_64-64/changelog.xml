@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>September 14, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - change the spoof ld-linux.so.2 symlink to link to ld-2.3.90.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 10, 2005</para>
       <itemizedlist>
         <listitem>
