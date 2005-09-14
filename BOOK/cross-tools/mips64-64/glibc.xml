@@ -60,7 +60,7 @@
     xpointer="xpointer(//*[@os='dc'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/mips64/glibc.xml"
+    href="../../final-system/mips64-64/glibc.xml"
     xpointer="xpointer(//*[@os='bd'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

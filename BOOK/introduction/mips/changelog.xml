@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>September 13, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added NPTL support for 32-bit MIPS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 30, 2005</para>
       <itemizedlist>
         <listitem>

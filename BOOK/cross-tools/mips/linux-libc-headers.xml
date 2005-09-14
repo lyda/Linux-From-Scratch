@@ -43,6 +43,10 @@
   <sect2 role="installation">
     <title>Installation of Linux-Libc-Headers</title>
 
+    <para os="ma">The following patch adds NPTL support:</para>
+
+<screen os="mb"><userinput>patch -Np1 -i ../&linux-libc-headers-mips_tls-patch;</userinput></screen>
+
     <para>Install the header files:</para>
 
 <screen><userinput>install -d /tools/include

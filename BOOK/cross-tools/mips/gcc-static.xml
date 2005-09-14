@@ -68,6 +68,10 @@
     href="../x86/gcc-static.xml"
     xpointer="xpointer(//*[@os='af'])"/>
 
+    <para os="ma">The following patch ensures that TLS is utilized by gcc for MIPS:</para>
+
+<screen os="mb"><userinput>patch -Np1 -i ../&gcc-mips_tls-patch;</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/gcc-static.xml"
     xpointer="xpointer(//*[@os='ag'])"/>
