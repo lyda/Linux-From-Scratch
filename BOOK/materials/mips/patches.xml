@@ -23,6 +23,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>GCC MIPS TLS Patch - 16 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;gcc/&gcc-mips_tls-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Grep Config Update Patch - 48 KB:</term>
       <listitem>
         <para><ulink
@@ -43,6 +51,14 @@
       <listitem>
         <para><ulink
         url="&patches-root;linux/&linux-cobalt-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Linux Headers TLS Patch - 3.2 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;linux-libc-headers/&linux-libc-headers-mips_tls-patch;"/></para>
       </listitem>
     </varlistentry>
 
