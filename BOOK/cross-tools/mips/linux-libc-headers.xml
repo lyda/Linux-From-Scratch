@@ -43,9 +43,13 @@
   <sect2 role="installation">
     <title>Installation of Linux-Libc-Headers</title>
 
-    <para os="ma">The following patch adds NPTL support:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='ma'])"/>
 
-<screen os="mb"><userinput>patch -Np1 -i ../&linux-libc-headers-mips_tls-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='mb'])"/>
 
     <para>Install the header files:</para>
 

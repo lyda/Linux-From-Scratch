@@ -59,11 +59,13 @@
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='dc'])"/>
 
-    <para os="bd">NPTL is not supported under this architecture, so we are going to
-    remove the <filename class="directory">nptl</filename> directory from
-    the Glibc source:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips64/glibc.xml"
+    xpointer="xpointer(//*[@os='bd'])"/>
 
-<screen os="be"><userinput>rm -rf nptl*</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips64/glibc.xml"
+    xpointer="xpointer(//*[@os='be'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/mips64/glibc.xml"
