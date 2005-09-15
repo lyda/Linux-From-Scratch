@@ -50,13 +50,6 @@
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
-    <para os="ba">This architecture does not currently support NPTL, so we will
-    have to include Glibc Linuxthreads as a threading library. Building
-    for a Linuxthreads based glibc you will need to unpack the
-    <filename>glibc-linuxthreads-&glibc-version;</filename> tarball from
-    within the <filename class="directory">glibc-&glibc-version;</filename>
-    directory.</para>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='b'])"/>
