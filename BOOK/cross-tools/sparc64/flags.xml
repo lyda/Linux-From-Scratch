@@ -19,7 +19,7 @@ export GCCTARGET=[GCCTARGET entries]"</userinput></screen>
 
   <para>You will need to set your host target triplet for 32 bit:</para>
 
-<screen><userinput>export LFS_TARGET32="sparcv9-unknown-linux-gnu"</userinput></screen>
+<screen><userinput>export LFS_TARGET32="sparc-unknown-linux-gnu"</userinput></screen>
 
 <screen><userinput>if [ "${LFS_HOST}" = "${LFS_TARGET32}" ]; then \
   echo "Host and Target can't be the same." ; fi</userinput></screen>
