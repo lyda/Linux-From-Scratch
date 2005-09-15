@@ -52,19 +52,11 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
-    xpointer="xpointer(//*[@os='ba'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='bd'])"/>
+    <para>This patch will add TLS support to Sparc64, this will allow us to use NPTL:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='be'])"/>
+<screen><userinput>patch -Np1 -i ../&glibc-sparc64_tls-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"

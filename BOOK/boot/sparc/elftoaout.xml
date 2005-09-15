@@ -49,7 +49,7 @@
 
     <para>Install the package:</para>
 
-<screen><userinput>install -m 0755 -s elftoaout /tools/bin/elftoaout</userinput></screen>
+<screen><userinput>install -m 0755 -s elftoaout /cross-tools/bin/elftoaout</userinput></screen>
 
   </sect2>
 

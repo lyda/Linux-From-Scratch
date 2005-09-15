@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>September 14, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added patches to support NPTL.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 8, 2005</para>
       <itemizedlist>
         <listitem>

@@ -23,10 +23,26 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Binutils TLS Patch - 153 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;binutils/&binutils-sparc64_tls-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>GCC Specs Patch - 14 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;gcc/&gcc-specs-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc TLS Patch - 4 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;glibc/&glibc-sparc64_tls-patch;"/></para>
       </listitem>
     </varlistentry>
 

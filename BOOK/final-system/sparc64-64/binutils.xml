@@ -7,21 +7,20 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-cross-tools-binutils" role="wrap">
+<sect1 id="ch-system-binutils" role="wrap">
   <?dbhtml filename="binutils.html"?>
 
-  <title>Cross Binutils-&binutils-version;</title>
+  <title>Binutils-&binutils-version;</title>
 
-  <indexterm zone="ch-cross-tools-binutils">
+  <indexterm zone="ch-system-binutils">
     <primary sortas="a-Binutils">Binutils</primary>
-    <secondary>cross tools</secondary>
   </indexterm>
 
   <sect2 role="package">
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/binutils.xml"
+    href="../common/binutils.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -35,33 +34,41 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/common/binutils.xml"
+    href="../common/binutils.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Cross Binutils</title>
+    <title>Installation of Binutils</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='ba'])"/>
+    xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bb'])"/>
+    xpointer="xpointer(//*[@os='b'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
     <para>This patch will add TLS support to Sparc64, this will allow us to use NPTL:</para>
 
 <screen><userinput>patch -Np1 -i ../&binutils-sparc64_tls-patch;</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/multilib/binutils.xml"
-    xpointer="xpointer(//*[@os='aa'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/multilib/binutils.xml"
-    xpointer="xpointer(//*[@os='ab'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
@@ -75,50 +82,61 @@
     href="../common/binutils.xml"
     xpointer="xpointer(//*[@os='i'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bc'])"/>
+<screen><userinput>../binutils-&binutils-version;/configure --prefix=/usr \
+    --enable-shared --disable-multilib</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bd'])"/>
+    xpointer="xpointer(//*[@os='j'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='be'])"/>
+    xpointer="xpointer(//*[@os='k'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bf'])"/>
+    xpointer="xpointer(//*[@os='l'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bf1'])"/>
+    xpointer="xpointer(//*[@os='m'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bg'])"/>
+    xpointer="xpointer(//*[@os='n'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bh'])"/>
+    xpointer="xpointer(//*[@os='o'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bi'])"/>
+    xpointer="xpointer(//*[@os='p'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bj'])"/>
+    xpointer="xpointer(//*[@os='q'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='r'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='s'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='t'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/binutils.xml"
+    xpointer="xpointer(//*[@os='u'])"/>
 
   </sect2>
 
-  <sect2 role="content">
-    <title/>
-
-    <para>Details on this package are located in <xref
-    linkend="contents-binutils" role="."/></para>
-
-  </sect2>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../common/binutils.xml"
+  xpointer="xpointer(id('contents-binutils'))"/>
 
 </sect1>
