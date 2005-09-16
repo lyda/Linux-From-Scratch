@@ -39,6 +39,16 @@
 -->
 
    <listitem>
+      <para>September 14, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Reverted the September 13th Change. Glibc NPTL will not build with out sparcv9 in the
+          target triplet.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 13, 2005</para>
       <itemizedlist>
         <listitem>
