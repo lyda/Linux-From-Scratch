@@ -39,6 +39,16 @@
 -->
 
    <listitem>
+      <para>September 16, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated gcc builds. GCC 4.x requires AS_FOR_TARGET and LD_FOR_TARGET. With this change the
+          __thread that has been seen has been elminated. Thanx Ryan Oliver.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 14, 2005</para>
       <itemizedlist>
         <listitem>

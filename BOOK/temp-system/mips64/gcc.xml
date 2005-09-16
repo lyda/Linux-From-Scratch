@@ -132,7 +132,8 @@
 
     <para>Compile the package:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>make AS_FOR_TARGET="/cross-tools/bin/${LFS_TARGET}-as" \
+LD_FOR_TARGET="/cross-tools/bin/${LFS_TARGET}-ld"</userinput></screen>
 
     <para>Install the package:</para>
 
