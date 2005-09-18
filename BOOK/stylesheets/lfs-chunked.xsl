@@ -5,8 +5,8 @@
                 version="1.0">
 
   <xsl:import href="lfs-chunked2.xsl"/>
-  <xsl:import href="http://docbook.sourceforge.net/release/xsl/1.67.2/xhtml/chunk-common.xsl"/>
-  <xsl:include href="http://docbook.sourceforge.net/release/xsl/1.67.2/xhtml/manifest.xsl"/>
+  <xsl:import href="http://docbook.sourceforge.net/release/xsl/1.69.1/xhtml/chunk-common.xsl"/>
+  <xsl:include href="http://docbook.sourceforge.net/release/xsl/1.69.1/xhtml/manifest.xsl"/>
 
     <!--  From the original chunk.xsl file:
 

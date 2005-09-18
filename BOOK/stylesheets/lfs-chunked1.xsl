@@ -5,19 +5,19 @@
                 exclude-result-prefixes="exsl"
                 version="1.0">
 
-  <xsl:import href="http://docbook.sourceforge.net/release/xsl/1.67.2/xhtml/profile-chunk-code.xsl"/> 
+  <xsl:import href="http://docbook.sourceforge.net/release/xsl/1.69.1/xhtml/profile-chunk-code.xsl"/>
 
   <xsl:key name="id" match="*" use="@xml:id"/>
-  
+
 
   <xsl:template match="/">
     <xslo:variable xmlns:xslo="http://www.w3.org/1999/XSL/Transform" name="profiled-content">
       <xslo:apply-templates select="." mode="profile"/>
     </xslo:variable>
-    <xslo:variable xmlns:xslo="http://www.w3.org/1999/XSL/Transform" name="profiled-nodes" 
+    <xslo:variable xmlns:xslo="http://www.w3.org/1999/XSL/Transform" name="profiled-nodes"
             select="exsl:node-set($profiled-content)"/>
     <xsl:choose>
-      <xsl:when test="namespace-uri(*[1]) = 'http://docbook.org/docbook-ng'">
+      <xsl:when test="namespace-uri(*[1]) = 'http://docbook.org/ns/docbook'">
         <xsl:variable name="nons">
           <xsl:apply-templates select="$profiled-nodes" mode="stripNS"/>
         </xsl:variable>
@@ -73,7 +73,7 @@
 
   <xsl:template match="*" mode="stripNS">
     <xsl:choose>
-       <xsl:when test="namespace-uri(.) = 'http://docbook.org/docbook-ng'">
+       <xsl:when test="namespace-uri(.) = 'http://docbook.org/ns/docbook'">
          <xsl:element name="{local-name(.)}">
            <xsl:copy-of select="@*"/>
            <xsl:apply-templates mode="stripNS"/>

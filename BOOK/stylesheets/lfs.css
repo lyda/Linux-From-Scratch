@@ -25,12 +25,12 @@ h3, h4, h5, h6 {
   color: #222;
 }
 
-h1 { font-size: 173%; text-align: center; }
-h2 { font-size: 144%; padding-top: 0.2em; margin-top: 0.3em; }
-h2.subtitle { text-align: center; }
-h3 { font-size: 120%; }
-h4 { font-size: 110%;}
-h5, h6 { font-size: 110%; font-style: italic; }
+h1 { font-size: 173%; text-align: center; line-height: 1.2em; }
+h2 { font-size: 144%; padding-top: 0.2em; margin-top: 0.3em; line-height: 1.2em; }
+h2.subtitle { text-align: center; line-height: 1.2em; }
+h3 { font-size: 120%; line-height: 1.2em; }
+h4 { font-size: 110%; line-height: 1.2em; }
+h5, h6 { font-size: 110%; font-style: italic; line-height: 1.2em; }
 
 /* Navigation */
 div.headertitles h4 {
@@ -185,13 +185,26 @@ dt {
   padding: 0;
 }
 
-div.content dt {
-  list-style: none;
-}
-
 dd  {
   margin: 0 0 1em 3em;
   padding: 0;
+}
+
+table {
+  width: auto;
+  margin-left: 1em;
+}
+
+td {
+  vertical-align: top;
+}
+
+td span, td p {
+  margin: 0.3em;
+}
+
+span.term {
+  display: block;
 }
 
 div.variablelist dd {
@@ -202,16 +215,38 @@ div.variablelist dd p {
   margin-top: 0px;
 }
 
-dl.materials dd {
+div.materials dd {
   margin-left: 0px;
 }
 
-div.segmentedlist {
-  margin-top: 1em;
+div.package div.seg {
+  margin-bottom: 0em;
+  margin-top: 0em;
+  clear: left;
 }
 
-div.segmentedlist p {
-  margin: 0px auto;
+div.package span.segtitle {
+  float: left;
+}
+
+div.package span.seg {
+  display: block;
+  padding-left: 14em;
+}
+
+div.content div.seg {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  clear: left;
+}
+
+div.content span.segtitle {
+  float: left;
+}
+
+div.content span.seg {
+  display: block;
+  padding-left: 12em;
 }
 
 /* itemizedlist */
