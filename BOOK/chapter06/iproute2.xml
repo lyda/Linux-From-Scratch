@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xml:id="ch-system-iproute2" xreflabel="IProute2" role="wrap">
 <title>Iproute2-&iproute2-version;</title>

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng" xml:id="pre-organization">
+<section xmlns="http://docbook.org/ns/docbook" xml:id="pre-organization">
 <title>Structure</title>
 <?dbhtml filename="organization.html"?>
 

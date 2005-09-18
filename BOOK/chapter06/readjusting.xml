@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-system-readjusting">
 <title>Re-adjusting the toolchain</title>
 <?dbhtml filename="readjusting.html"?>

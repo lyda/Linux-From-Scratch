@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-system-groff" xreflabel="Groff" role="wrap">
 <title>Groff-&groff-version;</title>
 <?dbhtml filename="groff.html"?>

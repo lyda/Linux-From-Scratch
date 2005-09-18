@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-tools-binutils-pass2" role="wrap">
 <title>Binutils-&binutils-version; - Pass 2</title>
 <?dbhtml filename="binutils-pass2.html"?>

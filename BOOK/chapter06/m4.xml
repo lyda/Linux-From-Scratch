@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-system-m4" xreflabel="M4" role="wrap">
 <title>M4-&m4-version;</title>
 <?dbhtml filename="m4.html"?>

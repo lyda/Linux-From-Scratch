@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng" xml:id="ch-scatter-how">
+<section xmlns="http://docbook.org/ns/docbook" xml:id="ch-scatter-how">
 <title>How things are going to be done</title>
 <?dbhtml filename="how.html"?>
 

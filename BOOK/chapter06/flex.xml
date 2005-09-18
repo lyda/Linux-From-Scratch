@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-system-flex" xreflabel="Flex" role="wrap">
 <title>Flex-&flex-version;</title>
 <?dbhtml filename="flex.html"?>

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<chapter xmlns="http://docbook.org/docbook-ng"
+<chapter xmlns="http://docbook.org/ns/docbook"
          xmlns:xi="http://www.w3.org/2003/XInclude"
          xml:id="chapter-bootable" xreflabel="Chapter 8">
 <?dbhtml dir="chapter08"?>

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-system-gzip" xreflabel="Gzip" role="wrap">
 <title>Gzip-&gzip-version;</title>
 <?dbhtml filename="gzip.html"?>

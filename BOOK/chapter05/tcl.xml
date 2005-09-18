@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-tools-tcl" xreflabel="Tcl" role="wrap">
 <title>Tcl-&tcl-version;</title>
 <?dbhtml filename="tcl.html"?>

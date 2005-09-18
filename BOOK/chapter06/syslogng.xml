@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-system-syslogng" xreflabel="Syslog-ng" role="wrap">
 <title>Syslog-ng-&syslogng-version;</title>
 <?dbhtml filename="syslogng.html"?>

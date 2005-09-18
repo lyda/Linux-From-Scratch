@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-system-libol" xreflabel="Libol" role="wrap">
 <title>Libol-&libol-version;</title>
 <?dbhtml filename="libol.html"?>

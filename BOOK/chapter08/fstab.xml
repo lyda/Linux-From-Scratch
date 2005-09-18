@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-bootable-fstab">
 <title>Creating the /etc/fstab file</title>
 <?dbhtml filename="fstab.html"?>

@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-tools-linux-libc-headers" role="wrap">
 <title>Linux-Libc-Headers-&linux-libc-headers-version;</title>
 <?dbhtml filename="linux-libc-headers.html"?>

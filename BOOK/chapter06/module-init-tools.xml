@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-system-module-init-tools"
          xreflabel="Module-Init-Tools" role="wrap">
 <title>Module-Init-Tools-&module-init-tools-version;</title>

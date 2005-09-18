@@ -3,7 +3,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
-<section xmlns="http://docbook.org/docbook-ng"
+<section xmlns="http://docbook.org/ns/docbook"
          xml:id="ch-system-gawk" xreflabel="Gawk" role="wrap">
 <title>Gawk-&gawk-version;</title>
 <?dbhtml filename="gawk.html"?>
