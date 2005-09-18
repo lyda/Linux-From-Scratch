@@ -31,6 +31,9 @@
     <title>Added:</title>
 
     <listitem>
+      <para>&linux-gcc4_sparc_fix-patch;</para>
+    </listitem>
+    <listitem>
       <para>&gcc-specs-patch;</para>
     </listitem>
     <listitem>

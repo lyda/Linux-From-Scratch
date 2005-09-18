@@ -47,6 +47,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Linux GCC 4.x Patch - 1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;linux/&linux-gcc4_sparc_fix-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Linux-libc-headers Sparc Conflicts Patch - 1 KB:</term>
       <listitem>
         <para><ulink

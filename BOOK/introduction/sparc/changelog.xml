@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>September 17, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added patch to build the Kernel with GCC 4.x.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 13, 2005</para>
       <itemizedlist>
         <listitem>

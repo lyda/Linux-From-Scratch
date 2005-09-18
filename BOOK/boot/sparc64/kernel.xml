@@ -44,6 +44,14 @@
     <title>Installation of the kernel</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/kernel.xml"
+    xpointer="xpointer(//*[@os='sp1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/kernel.xml"
+    xpointer="xpointer(//*[@os='sp2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='aa'])"/>
 
