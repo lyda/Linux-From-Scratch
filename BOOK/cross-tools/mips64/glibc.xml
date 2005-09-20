@@ -53,8 +53,8 @@
 
 <screen os="bb"><userinput>tar -jxf ../glibc-ports-&glibc-version;.tar.bz2 /linuxthreads/ /linuxthreads_db/
 cd glibc-ports-&glibc-version;
-mv linuxthreads ../glibc-ports-&glibc-version;
-mv linuxthreads_db ../glibc-ports-&glibc-version;
+mv linuxthreads ../glibc-&glibc-version;
+mv linuxthreads_db ../glibc-&glibc-version;
 cd ..
 rm -rf glibc-ports-&glibc-version;</userinput></screen>
 

@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>September 20, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Corrected type in glibc-ports installation in cross-tools.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 19, 2005</para>
       <itemizedlist>
         <listitem>
