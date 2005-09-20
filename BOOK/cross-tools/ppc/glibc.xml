@@ -56,20 +56,20 @@
     xpointer="xpointer(//*[@os='dc'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/ppc/glibc.xml"
-    xpointer="xpointer(//*[@os='e'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/ppc/glibc.xml"
-    xpointer="xpointer(//*[@os='f'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='dd'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='de'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/ppc/glibc.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/ppc/glibc.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
     <para>On the PPC arch, NPTL requires the following to be set:</para>
 

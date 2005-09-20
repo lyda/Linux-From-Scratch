@@ -36,6 +36,16 @@
 -->
 
     <listitem>
+      <para>September 19, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to use glibc-ports for linuxthreads. Linuxthreads is
+	  depreicated and now is in the glibc-ports package.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 30, 2005</para>
       <itemizedlist>
         <listitem>

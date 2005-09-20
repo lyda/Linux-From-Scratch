@@ -36,6 +36,16 @@
 -->
 
     <listitem>
+      <para>September 19, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Reverted September 13th change. 32 Bit Sparcs do not support NPTL. Moved back
+	  to linuxthreads for the glibc threading library. Thanx Jeremy Huntwork.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 17, 2005</para>
       <itemizedlist>
         <listitem>

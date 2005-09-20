@@ -51,6 +51,13 @@
     href="../../final-system/mips64/glibc.xml"
     xpointer="xpointer(//*[@os='ba'])"/>
 
+<screen os="bb"><userinput>tar -jxf ../glibc-ports-&glibc-version;.tar.bz2 /linuxthreads/ /linuxthreads_db/
+cd glibc-ports-&glibc-version;
+mv linuxthreads ../glibc-ports-&glibc-version;
+mv linuxthreads_db ../glibc-ports-&glibc-version;
+cd ..
+rm -rf glibc-ports-&glibc-version;</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='db'])"/>

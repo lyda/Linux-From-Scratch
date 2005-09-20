@@ -171,7 +171,7 @@
       <term>Glibc (&glibc-version;) - 14 MB:</term>
       <listitem>
         <para><ulink
-        url="ftp://ftp.linuxfromscratch.org/pub/lfs/conglomeration/glibc/glibc-&glibc-version;.tar.bz2"/></para>
+        url="ftp://sources.redhat.com/pub/glibc/snapshots/glibc-&glibc-version;.tar.bz2"/></para>
       </listitem>
     </varlistentry>
 
@@ -324,7 +324,7 @@
       <term>Mktemp (&mktemp-version;) - 68 KB:</term>
       <listitem>
         <para><ulink
-        url="ftp://ftp.mktemp.org/pub/mktemp/mktemp-&mktemp-version;.tar.gz"/></para>
+        url="ftp://ftp.cs.colorado.edu/pub/mktemp/mktemp-&mktemp-version;.tar.gz"/></para>
       </listitem>
     </varlistentry>
 

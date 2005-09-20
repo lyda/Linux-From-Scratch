@@ -5,7 +5,7 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-introduction-flags">
+<sect1 id="ch-introduction-buildinfo">
   <?dbhtml filename="build-info.html"?>
 
   <title>Recommendend Build Information</title>

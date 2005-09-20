@@ -67,6 +67,14 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='dd'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc.xml"
+    xpointer="xpointer(//*[@os='de'])"/>
+
     <para>Now we make sure the Glibc goes into <filename
     class="directory">/tools/lib64</filename>:</para>
 
