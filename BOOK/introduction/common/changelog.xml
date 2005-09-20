@@ -44,6 +44,9 @@
         <listitem>
           <para>[jim] - Removed LDFLAGS="-s" from sysvinit builds.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Patches typo fixes. Thank you Justin Knierim.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

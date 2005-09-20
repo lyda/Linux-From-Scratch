@@ -26,7 +26,7 @@
       <term>KBD kbdrate Patch - 1 KB:</term>
       <listitem>
         <para><ulink
-        url="&patches-root;grep/&kbd-sparc_kbdrate-patch;"/></para>
+        url="&patches-root;kbd/&kbd-sparc_kbdrate-patch;"/></para>
       </listitem>
     </varlistentry>
 

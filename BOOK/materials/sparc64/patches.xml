@@ -46,6 +46,14 @@
       </listitem>
     </varlistentry>
 
+   <varlistentry>
+      <term>KBD kbdrate Patch - 1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;kbd/&kbd-sparc_kbdrate-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
     <varlistentry>
       <term>Linux GCC 4.x Patch - 1 KB:</term>
       <listitem>
@@ -67,14 +75,6 @@
       <listitem>
         <para><ulink
         url="&patches-root;linux-libc-headers/&linux-libc-headers-sparc_conflicts-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-   <varlistentry>
-      <term>KBD kbdrate Patch - 1 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;grep/&kbd-sparc_kbdrate-patch;"/></para>
       </listitem>
     </varlistentry>
 
