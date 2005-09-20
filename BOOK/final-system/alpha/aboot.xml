@@ -45,7 +45,17 @@
   <sect2 id="install-aboot" role="installation">
     <title>Installation of aboot</title>
 
-    <para os="a">This section is to be written</para>
+    <para os="aa">The following patches addresses build issues with GCC 4.x:</para>
+
+<screen os="ab"><userinput>patch -Np1 -i ../&aboot-alpha-patch;</userinput></screen>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make install</userinput></screen>
 
   </sect2>
 

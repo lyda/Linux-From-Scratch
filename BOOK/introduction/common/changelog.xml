@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>September 19, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Removed LDFLAGS="-s" from sysvinit builds.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 17, 2005</para>
       <itemizedlist>
         <listitem>

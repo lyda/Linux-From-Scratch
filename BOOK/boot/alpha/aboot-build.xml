@@ -43,7 +43,17 @@
   <sect2 role="installation">
     <title>Installation of Aboot</title>
 
-    <para>This section is be written.</para>
+    <para os="aa">The following patches addresses build issues with GCC 4.x:</para>
+
+<screen os="ab"><userinput>patch -Np1 -i ../&aboot-alpha-patch;</userinput></screen>
+
+    <para>Compile the package:</para>
+
+<screen><userinput>make CC="${CC}"</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput>make root="${LFS}" install</userinput></screen>
 
   </sect2>
 

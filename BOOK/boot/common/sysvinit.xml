@@ -57,7 +57,7 @@ sed -e 's@root@0@g' \
     xpointer="xpointer(//*[@os='c'])"/>
 
 <screen os="ac"><userinput>make -C src clobber
-make -C src CC="${CC}" LDFLAGS="-s"</userinput></screen>
+make -C src CC="${CC}"</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/sysvinit.xml"

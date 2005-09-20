@@ -31,6 +31,9 @@
     <title>Added:</title>
 
     <listitem>
+      <para>&aboot-alpha-patch;</para>
+    </listitem>
+    <listitem>
       <para>&gcc-specs-patch;</para>
     </listitem>
   </itemizedlist>

@@ -95,3 +95,8 @@
 <!ENTITY procps-mips-patch "procps-&procps-version;-fix_mips-1.patch">
 
 <!ENTITY util-linux-mips64-patch "util-linux-&util-linux-version;-mips64_fix-1.patch">
+
+<!-- Start of Alpha patches -->
+
+<!ENTITY aboot-alpha-patch "aboot-&aboot-version;-kernel26_gcc4_fixes-1.patch">
+
