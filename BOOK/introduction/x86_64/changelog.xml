@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>September 21, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Fixed Grub typo. Change i386 to x86_64. Thank you Matt Darcy.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 10, 2005</para>
       <itemizedlist>
         <listitem>
