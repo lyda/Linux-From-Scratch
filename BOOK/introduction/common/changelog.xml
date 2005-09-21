@@ -47,6 +47,9 @@
         <listitem>
           <para>[jim] - Updated to Bison 2.1.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to Glibc Snapshot 20050919.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
