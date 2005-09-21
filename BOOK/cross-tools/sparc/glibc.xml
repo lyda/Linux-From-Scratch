@@ -62,6 +62,10 @@
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='dc'])"/>
 
+    <para>We also need to fix an issue with memusage, with this patch:</para>
+
+<screen><userinput>patch -Np1 -i ../&glibc-memusage_fix-patch;</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/sparc/glibc.xml"
     xpointer="xpointer(//*[@os='bd'])"/>

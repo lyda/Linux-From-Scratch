@@ -22,6 +22,7 @@
 <!ENTITY gcc-pure64-patch "gcc-&gcc-version;-pure64-1.patch">
 
 <!ENTITY glibc-libgcc_eh-patch "glibc-&glibc-version;-libgcc_eh-1.patch">
+<!ENTITY glibc-memusage_fix-patch "glibc-&glibc-version;-memusage_fix-1.patch">
 
 <!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch">
 

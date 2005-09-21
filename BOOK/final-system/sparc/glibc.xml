@@ -70,6 +70,10 @@
     href="../mips64/glibc.xml"
     xpointer="xpointer(//*[@os='be'])"/>
 
+  <para>We also need to fix an issue with memusage, with this patch:</para>
+
+<screen><userinput>patch -Np1 -i ../&glibc-memusage_fix-patch;</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>

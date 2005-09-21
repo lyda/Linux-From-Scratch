@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>September 21, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added a patch the will allow glibc to be built with linuxthreads.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 19, 2005</para>
       <itemizedlist>
         <listitem>
