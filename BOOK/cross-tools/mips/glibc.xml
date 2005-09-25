@@ -55,6 +55,10 @@
     href="../x86/glibc.xml"
     xpointer="xpointer(//*[@os='dc'])"/>
 
+    <para>This patch will add NPTL support to MIPS, this will allow us to use NPTL:</para>
+
+<screen><userinput>patch -Np1 -i ../&glibc-mips_nptl-patch;</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/mips/glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>

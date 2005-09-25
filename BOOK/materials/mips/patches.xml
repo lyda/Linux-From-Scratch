@@ -31,6 +31,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Glibc MIPS NPTL Patch - 34 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;glibc/&glibc-mips_nptl-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Grep Config Update Patch - 48 KB:</term>
       <listitem>
         <para><ulink

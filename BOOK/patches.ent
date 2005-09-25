@@ -84,6 +84,8 @@
 <!ENTITY gcc-mips_pure64-patch "gcc-&gcc-version;-mips_pure64-1.patch">
 <!ENTITY gcc-mips_tls-patch "gcc-&gcc-version;-mips_tls-1.patch">
 
+<!ENTITY glibc-mips_nptl-patch "glibc-&glibc-version;-mips_nptl-1.patch">
+
 <!ENTITY grep-mips_update-patch "grep-&grep-version;-mips_config_update-1.patch">
 
 <!ENTITY lfs-bootscripts-raq2-patch "lfs-bootscripts-raq2-8.patch">
