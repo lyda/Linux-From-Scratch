@@ -60,7 +60,7 @@
 <!ENTITY gettext-version "0.14.5">
 <!ENTITY glibc-version "20050919">
 <!ENTITY grep-version "2.5.1a">
-<!ENTITY groff-version "1.19.1">
+<!ENTITY groff-version "1.19.2">
 <!ENTITY grub-version "0.97">
 <!ENTITY gzip-version "1.3.5">
 <!ENTITY hotplug-version "2004_09_23">

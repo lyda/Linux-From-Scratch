@@ -44,6 +44,9 @@
         <listitem>
           <para>[jim] - Updated to Util-Linux 2.12r.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to Groff 1.19.2.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
