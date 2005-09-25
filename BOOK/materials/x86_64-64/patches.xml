@@ -31,6 +31,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>GCC Pure 64 Patch - 7 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;gcc/&gcc-pure64-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>GCC Specs Patch - 14 KB:</term>
       <listitem>
         <para><ulink
