@@ -161,9 +161,6 @@
       <para>&util-linux-cramfs-patch;</para>
     </listitem>
     <listitem>
-      <para>&util-linux-reiser_crash-patch;</para>
-    </listitem>
-    <listitem>
       <para>&vim-security_fix-patch;</para>
     </listitem>
   </itemizedlist>
@@ -171,6 +168,9 @@
   <itemizedlist>
     <title>Removed:</title>
 
+    <listitem>
+      <para>util-linux-2.12q-reiser_crash-2.patch</para>
+    </listitem>
     <listitem>
       <para>shadow-4.0.7-fix_lastlog-1.patch</para>
     </listitem>

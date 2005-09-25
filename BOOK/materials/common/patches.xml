@@ -219,13 +219,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Util-linux Reiser Crash Patch - 1  KB:</term> <listitem>
-        <para><ulink
-        url="&patches-root;util-linux/&util-linux-reiser_crash-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Vim Security Patch - 9 KB:</term><listitem>
         <para><ulink url="&patches-root;vim/&vim-security_fix-patch;"/></para>
       </listitem>

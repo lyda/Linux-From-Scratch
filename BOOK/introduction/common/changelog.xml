@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>September 25, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to Util-Linux 2.12r.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 21, 2005</para>
       <itemizedlist>
         <listitem>
