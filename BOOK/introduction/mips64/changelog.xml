@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>September 26, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Started to update NPTL into MIPS64 builds.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 19, 2005</para>
       <itemizedlist>
         <listitem>
