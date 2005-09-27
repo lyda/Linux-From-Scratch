@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>September 27, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Downgraded to Linux 2.6.12.6, to get ready for stable release of the book.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 25, 2005</para>
       <itemizedlist>
         <listitem>
