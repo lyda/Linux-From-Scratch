@@ -39,14 +39,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Linux Cobalt Servers Patch - 14 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;linux/&linux-cobalt-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Linux Headers TLS Patch - 3.2 KB:</term>
       <listitem>
         <para><ulink
