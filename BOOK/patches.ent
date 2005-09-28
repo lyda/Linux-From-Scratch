@@ -89,7 +89,7 @@
 
 <!ENTITY lfs-bootscripts-raq2-patch "lfs-bootscripts-raq2-8.patch">
 
-<!ENTITY linux-mips-patch "linux-&linux-mips-version;-mips_fix-1.patch">
+<!ENTITY linux-mips-patch "linux-&linux-mips-version;-mips_fix-2.patch">
 
 <!ENTITY linux-libc-headers-mips_tls-patch "linux-libc-headers-&linux-libc-headers-mips-version;-mips_tls-1.patch">
 
