@@ -20,7 +20,7 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -34,17 +34,13 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
 
   <sect2 role="installation">
     <title>Installation of Glibc</title>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='z'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
@@ -68,7 +64,7 @@
 <screen><userinput>echo "slibdir=/lib64" &gt;&gt; configparms</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \
@@ -106,8 +102,8 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='m'])"/>
 
-<!-- items n,o,p here are now the master, not x86, because 
- the tests are known to all pass on x86_64 -->
+<!-- items n,o,p here are now the master, not multilib, because 
+ the tests are known to all pass on multilib_64 -->
 
 <screen os="n"><userinput>make check</userinput></screen>
 
@@ -148,35 +144,14 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='t'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='u'])"/>
-
-<!--Only needed for Release
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='v'])"/>
--->
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='w'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='x'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='y'])"/>
-
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
+  href="../common/glibc.xml"
   xpointer="xpointer(id('i18n-glibc'))"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
+  href="../common/glibc.xml"
   xpointer="xpointer(id('conf-glibc'))"/>
 
   <sect2 id="conf-ld" role="configuration">
@@ -218,9 +193,13 @@ EOF</userinput></screen>
 
   </sect2>
 
+  <sect2 role="content">
+    <title/>
+
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
+  href="../common/glibc.xml"
   xpointer="xpointer(id('contents-glibc'))"/>
 
+  </sect2>
 
 </sect1>

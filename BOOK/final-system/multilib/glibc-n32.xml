@@ -7,12 +7,12 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-glibc" role="wrap">
-  <?dbhtml filename="glibc-64bit.html"?>
+<sect1 id="ch-system-glibc-n32" role="wrap">
+  <?dbhtml filename="glibc-n32.html"?>
 
-  <title>Glibc-&glibc-version; 64 Bit</title>
+  <title>Glibc-&glibc-version; N32</title>
 
-  <indexterm zone="ch-system-glibc">
+  <indexterm zone="ch-system-glibc-n32">
     <primary sortas="a-Glibc">Glibc</primary>
   </indexterm>
 
@@ -20,7 +20,7 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -34,7 +34,7 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
@@ -43,7 +43,7 @@
     <title>Installation of Glibc</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='z'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -54,10 +54,6 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
-    <para>This patch will add TLS support to Sparc64, this will allow us to use NPTL:</para>
-
-<screen><userinput>patch -Np1 -i ../&glibc-sparc64_tls-patch;</userinput></screen>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>
@@ -66,10 +62,10 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>Now we make sure the Glibc goes into <filename
-    class="directory">/lib64</filename>:</para>
+    <para>Now we make sure the Glibc goes into
+    <filename class="directory">/lib32</filename>:</para>
 
-<screen><userinput>echo "slibdir=/lib64" &gt;&gt; configparms</userinput></screen>
+<screen><userinput>echo "slibdir=/lib32" &gt;&gt; configparms</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
@@ -78,7 +74,7 @@
 <screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \
     ../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
-    --libexecdir=/usr/lib64/glibc --libdir=/usr/lib64</userinput></screen>
+    --libexecdir=/usr/lib32/glibc --libdir=/usr/lib32</userinput></screen>
 
     <variablelist>
       <title>The meaning of the new configure option:</title>
@@ -110,9 +106,39 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='m'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='n'])"/>
+<!-- items n,o,p here are now the master, not multilib, because 
+ the tests are known to all pass on multilib_64 -->
+
+<screen os="n"><userinput>make check</userinput></screen>
+
+    <para os="o">The Glibc test suite is highly dependent on certain functions of
+    the host system, in particular the kernel. In general, the Glibc test
+    suite is always expected to pass. However, in certain circumstances,
+    some failures are unavoidable. This is a list of the most common
+    issues:</para>
+
+    <itemizedlist os="p">
+      <listitem>
+        <para>The <emphasis>math</emphasis> tests sometimes fail.
+        Certain optimization settings are known to be a
+        factor here.</para>
+      </listitem>
+      <listitem>
+        <para>The <emphasis>gettext</emphasis> test sometimes fails due to
+        host system issues. The exact reasons are not yet clear.</para>
+      </listitem>
+      <listitem>
+        <para>If you have mounted the LFS partition with the
+        <parameter>noatime</parameter> option, the <emphasis>atime</emphasis> test
+        will fail. As mentioned in <xref linkend="ch-partitioning-mounting"/>,
+        do not use the <parameter>noatime</parameter> option while building
+        LFS.</para>
+      </listitem>
+      <listitem>
+        <para>When running on older and slower hardware, some tests
+        can fail because of test timeouts being exceeded.</para>
+      </listitem>
+    </itemizedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
@@ -123,72 +149,29 @@
     xpointer="xpointer(//*[@os='t'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='u'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='w'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='x'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@os='y'])"/>
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('i18n-glibc'))"/>
+  <sect2 role="content">
+    <title/>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('conf-glibc'))"/>
-
-  <sect2 id="conf-ld" role="configuration">
-    <title>Configuring Dynamic Loader</title>
-
-    <indexterm zone="conf-ld">
-      <primary sortas="e-/etc/ld.so.conf">/etc/ld.so.conf</primary>
-    </indexterm>
-
-    <para>By default, the dynamic loader (<filename
-    class="libraryfile">/lib/ld-linux.so.2</filename>) searches through
-    <filename class="directory">/lib</filename> and <filename
-    class="directory">/usr/lib</filename> for dynamic libraries that are
-    needed by programs as they are run. However, if there are libraries in
-    directories other than <filename class="directory">/lib</filename> and
-    <filename class="directory">/usr/lib</filename>, these need to be
-    added to the <filename>/etc/ld.so.conf</filename> file in order
-    for the dynamic loader to find them. Two directories that are commonly
-    known to contain additional libraries are
-    <filename class="directory">/usr/local/lib</filename>,
-    <filename class="directory">/usr/local/lib64</filename>,
-    <filename class="directory">/opt/lib</filename>,
-    and <filename class="directory">/opt/lib64</filename>,
-    so add those directories to the dynamic loader's search path.</para>
-
-    <para>Create a new file <filename>/etc/ld.so.conf</filename> by running the
-    following:</para>
-
-<screen><userinput>cat &gt; /etc/ld.so.conf &lt;&lt; "EOF"
-<literal># Begin /etc/ld.so.conf
-
-/usr/local/lib
-/usr/local/lib64
-/opt/lib
-/opt/lib64
-
-# End /etc/ld.so.conf</literal>
-EOF</userinput></screen>
+    <para>Details on this package are located in <xref
+    linkend="contents-glibc" role="."/></para>
 
   </sect2>
-
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/glibc.xml"
-  xpointer="xpointer(id('contents-glibc'))"/>
 
 </sect1>

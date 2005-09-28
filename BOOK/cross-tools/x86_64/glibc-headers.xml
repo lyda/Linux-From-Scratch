@@ -21,7 +21,7 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -35,7 +35,7 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
@@ -44,15 +44,15 @@
     <title>Installation of Glibc Headers</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86_64/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86_64/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86_64/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>CC=gcc ../glibc-&glibc-version;/configure --prefix=/tools \
@@ -105,7 +105,7 @@
     href="../x86/glibc-headers.xml"
     xpointer="xpointer(//*[@os='cl'])"/>
 
-<screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/x86_64/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
+<screen><userinput>cp ../glibc-&glibc-version;/nptl/sysdeps/unix/sysv/linux/common/bits/pthreadtypes.h /tools/include/bits/</userinput></screen>
 
   </sect2>
 

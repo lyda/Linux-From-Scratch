@@ -21,7 +21,7 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -35,7 +35,7 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
@@ -53,11 +53,11 @@
 <screen os="dc"><userinput>patch -Np1 -i ../&glibc-libgcc_eh-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
     <para os="dd"> For NPTL enabled systems we will need to add the following lines to
@@ -67,7 +67,7 @@
 echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc" \

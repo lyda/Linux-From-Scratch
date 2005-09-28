@@ -21,7 +21,7 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -35,7 +35,7 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
@@ -49,14 +49,6 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
-    xpointer="xpointer(//*[@os='ba'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='bb'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
     xpointer="xpointer(//*[@os='db'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -65,19 +57,23 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
-    xpointer="xpointer(//*[@os='bd'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='be'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>
+
+   <para>This patch will add NPTL support to MIPS, this will allow us to use NPTL:</para>
+
+<screen><userinput>patch -Np1 -i ../&glibc-mips_nptl-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='dd'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='de'])"/>
 
     <para>Now we make sure the Glibc goes into <filename
     class="directory">/tools/lib32</filename>:</para>
@@ -88,26 +84,27 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILDN32}" \
+<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD64}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST} --libdir=/tools/lib32 \
+    --host=${LFS_TARGET} --build=${LFS_HOST} --libdir=/tools/lib64 \
     --disable-profile --enable-add-ons \
-    --enable-kernel=2.6.0 --with-binutils=/cross-tools/bin \
-    --with-headers=/tools/include</userinput></screen>
+    --with-tls --enable-kernel=2.6.0 --with-__thread \
+    --with-binutils=/cross-tools/bin --with-headers=/tools/include \
+    --cache-file=config.cache</userinput></screen>
 
-    <variablelist>
+    <variablelist os="fa">
       <title>The meaning of the new configure options:</title>
 
-      <varlistentry>
-        <term><parameter>CC="${LFS_TARGET}-gcc ${BUILDN32}"</parameter></term>
+      <varlistentry os="fa1">
+        <term><parameter>CC="${LFS_TARGET}-gcc ${BUILD64}"</parameter></term>
         <listitem>
           <para>This switch do ... .</para>
         </listitem>
       </varlistentry>
 
       <varlistentry>
-        <term><parameter>--libdir=/tools/lib32</parameter></term>
+        <term><parameter>--libdir=/tools/lib64</parameter></term>
         <listitem>
           <para>This switch do ... .</para>
         </listitem>

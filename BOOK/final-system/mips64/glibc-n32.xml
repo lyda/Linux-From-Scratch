@@ -10,18 +10,17 @@
 <sect1 id="ch-system-glibc-n32" role="wrap">
   <?dbhtml filename="glibc-n32.html"?>
 
-  <title>Glibc-&glibc-version; N32 Libraries</title>
+  <title>Glibc-&glibc-version; N32</title>
 
   <indexterm zone="ch-system-glibc-n32">
     <primary sortas="a-Glibc">Glibc</primary>
-    <secondary>N32</secondary>
   </indexterm>
 
   <sect2 role="package">
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -35,7 +34,7 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
+    href="glibc.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
@@ -53,30 +52,18 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
-    xpointer="xpointer(//*[@os='ba'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='bb'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='bd'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='be'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>
+
+   <para>This patch will add NPTL support to MIPS, this will allow us to use NPTL:</para>
+
+<screen><userinput>patch -Np1 -i ../&glibc-mips_nptl-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
-   <para>Now we make sure the Glibc goes into <filename
-    class="directory">/lib32</filename>:</para>
+    <para>Now we make sure the Glibc goes into
+    <filename class="directory">/lib32</filename>:</para>
 
 <screen><userinput>echo "slibdir=/lib32" &gt;&gt; configparms</userinput></screen>
 
@@ -84,21 +71,21 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>CC="gcc ${BUILDN32}" CXX="g++ ${BUILDN32} \
+<screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \
     ../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
-    --libexecdir=/usr/lib32/glibc --libdir=/lib32</userinput></screen>
+    --libexecdir=/usr/lib32/glibc --libdir=/usr/lib32</userinput></screen>
 
     <variablelist>
       <title>The meaning of the new configure option:</title>
 
       <varlistentry>
-        <term><parameter>--libexecdir=/usr/lib32/glibc</parameter></term>
+        <term><parameter>--libexecdir=/usr/lib64/glibc</parameter></term>
         <listitem>
           <para>This changes the location of the <command>pt_chown</command>
           program from its default of <filename
           class="directory">/usr/libexec</filename> to <filename
-          class="directory">/usr/lib32/glibc</filename>.</para>
+          class="directory">/usr/lib64/glibc</filename>.</para>
         </listitem>
       </varlistentry>
     </variablelist>
@@ -119,9 +106,39 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='m'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='n'])"/>
+<!-- items n,o,p here are now the master, not multilib, because 
+ the tests are known to all pass on multilib_64 -->
+
+<screen os="n"><userinput>make check</userinput></screen>
+
+    <para os="o">The Glibc test suite is highly dependent on certain functions of
+    the host system, in particular the kernel. In general, the Glibc test
+    suite is always expected to pass. However, in certain circumstances,
+    some failures are unavoidable. This is a list of the most common
+    issues:</para>
+
+    <itemizedlist os="p">
+      <listitem>
+        <para>The <emphasis>math</emphasis> tests sometimes fail.
+        Certain optimization settings are known to be a
+        factor here.</para>
+      </listitem>
+      <listitem>
+        <para>The <emphasis>gettext</emphasis> test sometimes fails due to
+        host system issues. The exact reasons are not yet clear.</para>
+      </listitem>
+      <listitem>
+        <para>If you have mounted the LFS partition with the
+        <parameter>noatime</parameter> option, the <emphasis>atime</emphasis> test
+        will fail. As mentioned in <xref linkend="ch-partitioning-mounting"/>,
+        do not use the <parameter>noatime</parameter> option while building
+        LFS.</para>
+      </listitem>
+      <listitem>
+        <para>When running on older and slower hardware, some tests
+        can fail because of test timeouts being exceeded.</para>
+      </listitem>
+    </itemizedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"

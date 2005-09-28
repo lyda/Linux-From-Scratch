@@ -13,7 +13,7 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/introduction.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64-64/linux-libc-headers.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64-64/glibc.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="64/glibc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64-64/adjusting.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sparc64-64/binutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="64/gcc.xml"/>

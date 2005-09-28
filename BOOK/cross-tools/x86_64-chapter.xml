@@ -19,8 +19,8 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/binutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/glibc-headers.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/gcc-static.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/glibc.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/glibc-64bit.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/glibc.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/glibc-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/gcc-final.xml"/>
 
 </chapter>

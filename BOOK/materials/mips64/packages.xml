@@ -21,14 +21,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Glibc Ports (&glibc-version;) - 429 KB:</term>
-      <listitem>
-        <para><ulink
-        url="ftp://sources.redhat.com/pub/glibc/snapshots/glibc-ports-&glibc-version;.tar.bz2"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Linux (&linux-mips64-version;) - 35 MB:</term>
       <listitem>
         <para><ulink

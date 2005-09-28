@@ -111,9 +111,7 @@ cd ../glibc-build</userinput></screen>
 
 <!-- items n,o,p no longer the master, use x86_64 which has no failures -->
 
-<screen os="n"><userinput>
-make -k check &gt;glibc-check-log 2&gt;&amp;1 ; grep Error glibc-check-log
-</userinput></screen>
+<screen os="n"><userinput>make -k check &gt;glibc-check-log 2&gt;&amp;1 ; grep Error glibc-check-log</userinput></screen>
 
     <para os="o">The Glibc test suite is highly dependent on certain functions of
     the host system, in particular the kernel. In general, the Glibc test
@@ -159,20 +157,6 @@ make -k check &gt;glibc-check-log 2&gt;&amp;1 ; grep Error glibc-check-log
     <para os="s">Install the package:</para>
 
 <screen os="t"><userinput>make install</userinput></screen>
-
-    <para os="u">Build the linuxthreads man pages, which are a great reference
-    on the threading API (applicable to NPTL as well):</para>
-
-<!--Release only - not on snapshot
-    <para os="v">Unpack the glibc-linuxthreads-&glibc-version; tarball&mdash;it
-    is needed for the next two make commands. You can ignore this if you do
-    want the threading API man pages.</para>
--->
-<screen os="w"><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man</userinput></screen>
-
-    <para os="x">Install these pages:</para>
-
-<screen os="y"><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man install</userinput></screen>
 
   </sect2>
 

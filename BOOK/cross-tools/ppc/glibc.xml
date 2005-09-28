@@ -21,7 +21,7 @@
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -35,7 +35,7 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/x86/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
@@ -43,40 +43,32 @@
   <sect2 role="installation">
     <title>Installation of Glibc</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='da'])"/>
+    <para os="da">It should be noted that compiling Glibc in any way other than
+    the method suggested in this book puts the stability of the system at
+    risk.</para>
+
+    <para os="db">We will disable the linking to
+    <filename>libgcc_eh</filename>:</para>
+
+<screen os="dc"><userinput>patch -Np1 -i ../&glibc-libgcc_eh-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='db'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='dc'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='dd'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='de'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/ppc/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/ppc/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
-    <para>On the PPC arch, NPTL requires the following to be set:</para>
+    <para os="dd"> For NPTL enabled systems we will need to add the following lines to
+    <filename>config.cache</filename>:</para>
 
-<screen><userinput>echo "libc_cv_ppc_machine=yes" &gt;&gt; config.cache</userinput></screen>
+<screen os="de"><userinput>echo "libc_cv_forced_unwind=yes" &gt; config.cache
+echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache
+echo "libc_cv_ppc_machine=yes" &gt;&gt; config.cache</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/ppc/glibc.xml"
+    href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
 <screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc" \
@@ -88,98 +80,100 @@
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
     --cache-file=config.cache</userinput></screen>
 
-    <variablelist>
-      <title>The meaning of the configure options:</title>
+    <variablelist os="di">
+      <title>The meaning of the new configure options:</title>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc.xml"
-      xpointer="xpointer(//*[@os='di1'])"/>
+      <varlistentry os="di1">
+        <term><parameter>BUILD_CC="gcc"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc.xml"
-      xpointer="xpointer(//*[@os='di2'])"/>
+      <varlistentry os="di2">
+        <term><parameter>CC="${LFS_TARGET}-gcc"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc.xml"
-      xpointer="xpointer(//*[@os='di3'])"/>
+      <varlistentry os="di3">
+        <term><parameter>AR="${LFS_TARGET}-ar"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc.xml"
-      xpointer="xpointer(//*[@os='di4'])"/>
+      <varlistentry os="di4">
+        <term><parameter>RANLIB="${LFS_TARGET}-ranlib"</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc-headers.xml"
-      xpointer="xpointer(//*[@os='ca1'])"/>
+      <varlistentry os="di5">
+        <term><parameter>--disable-profile</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc-headers.xml"
-      xpointer="xpointer(//*[@os='ca2'])"/>
+      <varlistentry os="di6">
+        <term><parameter>--enable-add-ons</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc-headers.xml"
-      xpointer="xpointer(//*[@os='ca3'])"/>
+      <varlistentry os="di7">
+        <term><parameter>--with-tls</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc.xml"
-      xpointer="xpointer(//*[@os='di5'])"/>
+      <varlistentry os="di8">
+        <term><parameter>--with-__thread</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc.xml"
-      xpointer="xpointer(//*[@os='di6'])"/>
+      <varlistentry os="di9">
+        <term><parameter>--with-binutils=/cross-tools/bin</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc.xml"
-      xpointer="xpointer(//*[@os='di7'])"/>
-
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc-headers.xml"
-      xpointer="xpointer(//*[@os='ca4'])"/>
-
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc.xml"
-      xpointer="xpointer(//*[@os='di8'])"/>
-
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc.xml"
-      xpointer="xpointer(//*[@os='di9'])"/>
-
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc-headers.xml"
-      xpointer="xpointer(//*[@os='ca5'])"/>
-
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../x86/glibc.xml"
-      xpointer="xpointer(//*[@os='di10'])"/>
+      <varlistentry os="di10">
+        <term><parameter>--cache-file=config.cache</parameter></term>
+        <listitem>
+          <para>This do ...</para>
+        </listitem>
+      </varlistentry>
 
     </variablelist>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='df'])"/>
+    <para os="df">During this stage the following warning might appear:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='dg'])"/>
+<blockquote os="dg"><screen><computeroutput>configure: WARNING:
+*** These auxiliary programs are missing or
+*** incompatible versions: msgfmt
+*** some features will be disabled.
+*** Check the INSTALL file for required versions.</computeroutput></screen></blockquote>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='dh'])"/>
+    <para os="dh">The missing or incompatible <command>msgfmt</command> program is
+    generally harmless. This <command>msgfmt</command> program is part of the
+    Gettext package which the host distribution should provide.</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='dj'])"/>
+    <para os="dj">Compile the package:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='dk'])"/>
+<screen os="dk"><userinput>make</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='dl'])"/>
+    <para os="dl">Install the package:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/glibc.xml"
-    xpointer="xpointer(//*[@os='dm'])"/>
+<screen os="dm"><userinput>make install</userinput></screen>
 
   </sect2>
 
