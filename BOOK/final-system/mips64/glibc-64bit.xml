@@ -50,13 +50,13 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='e'])"/>
-
    <para>This patch will add NPTL support to MIPS, this will allow us to use NPTL:</para>
 
 <screen><userinput>patch -Np1 -i ../&glibc-mips_nptl-patch;</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="glibc.xml"
+    xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="glibc.xml"
@@ -176,8 +176,10 @@
     for the dynamic loader to find them. Two directories that are commonly
     known to contain additional libraries are
     <filename class="directory">/usr/local/lib</filename>,
+    <filename class="directory">/usr/local/lib32</filename>,
     <filename class="directory">/usr/local/lib64</filename>,
     <filename class="directory">/opt/lib</filename>,
+    <filename class="directory">/opt/lib32</filename>,
     and <filename class="directory">/opt/lib64</filename>,
     so add those directories to the dynamic loader's search path.</para>
 
@@ -188,8 +190,10 @@
 <literal># Begin /etc/ld.so.conf
 
 /usr/local/lib
+/usr/local/lib32
 /usr/local/lib64
 /opt/lib
+/opt/lib32
 /opt/lib64
 
 # End /etc/ld.so.conf</literal>
