@@ -13,6 +13,14 @@
   <variablelist role="materials">
 
     <varlistentry>
+      <term>Aboot (&aboot-version;) - 2.6 MB:</term>
+      <listitem>
+        <para><ulink
+        url="&sourceforge;aboot/aboot-&aboot-version;.tar.bz2?download"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Linux-Libc-Headers (&linux-libc-headers-alpha-version;) - 2.6 MB:</term>
       <listitem>
         <para><ulink
