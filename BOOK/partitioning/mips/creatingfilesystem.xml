@@ -32,14 +32,6 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/creatingfilesystem.xml"
-  xpointer="xpointer(//*[@os='f'])"/>
-
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/creatingfilesystem.xml"
-  xpointer="xpointer(//*[@os='g'])"/>
-
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/creatingfilesystem.xml"
   xpointer="xpointer(//*[@os='h'])"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -50,8 +42,9 @@
   href="../common/creatingfilesystem.xml"
   xpointer="xpointer(//*[@os='j'])"/>
 
-  <para>If you used the partition scheme that was recommended, here are
-  the commands you can use to format the necessary drives:</para>
+  <para>The commands listed below are specific to the Cobalt MIPS systems,
+  they have a special requirement to have a ext2 Revision 0 for the boot
+  partition. To make sure you satify this requirement, use the commands listed:</para>
 
 <screen><userinput>mke2fs -r 0 /dev/hda1
 mke2fs /dev/hda2
