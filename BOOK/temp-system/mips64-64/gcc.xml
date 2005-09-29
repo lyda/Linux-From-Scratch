@@ -160,13 +160,12 @@ AS_FOR_TARGET="/cross-tools/bin/${LFS_TARGET}-as" LD_FOR_TARGET="/cross-tools/bi
 
 <screen><userinput>make install</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64-64/gcc.xml"
-    xpointer="xpointer(//*[@os='ea'])"/>
+   <para>Now we copy the files that are placed in <filename class="directory">/tools/lib64
+   </filename> to <filename class="directory">/tools/lib</filename>.
+    We also delete the /tools/lib64 directory:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86_64-64/gcc.xml"
-    xpointer="xpointer(//*[@os='eb'])"/>
+<screen><userinput>cp -ar /tools/lib64/* /tools/lib
+rm -rf /tools/lib64</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/gcc.xml"

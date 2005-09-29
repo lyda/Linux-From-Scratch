@@ -39,6 +39,18 @@
 -->
 
    <listitem>
+      <para>September 28, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to GCC 4.0.2.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Updated to Glibc 20050926.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 27, 2005</para>
       <itemizedlist>
         <listitem>
