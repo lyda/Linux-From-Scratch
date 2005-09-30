@@ -33,10 +33,10 @@
   <para>On a Alpha system a bsd disklabel is required. To create this disklabel
   use the following commands:</para>
 
-<screen><userinput>fdisk /dev/[yyy]<userinput></screen>
+<screen><userinput>fdisk /dev/[yyy]</userinput></screen>
   
  <para>Then use option b to create the bsd disklabel. Before you exit use
- the w option to write the partition table.<para>
+ the w option to write the partition table.</para>
  
 
 </sect1>
