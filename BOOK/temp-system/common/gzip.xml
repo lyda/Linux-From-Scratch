@@ -46,7 +46,8 @@
     <para os="aa">Setup <command>configure</command> so it can use cross-compiled
     tools:</para>
 
-<screen os="ab"><userinput>sed -i "s@nm conftest@${LFS_TARGET}-&amp;@" configure</userinput></screen>
+<screen os="ab"><userinput>cp configure{,.bak}
+sed "s@nm conftest@${LFS_TARGET}-&amp;@" configure.bak > configure</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/gzip.xml"

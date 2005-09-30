@@ -70,19 +70,23 @@
     <para os="cd">Now we will change <command>cpp</command>'s search path not to look in
     <filename class="directory">/usr/include</filename>:</para>
 
-<screen os="ce"><userinput>sed -i '/#define STANDARD_INCLUDE_DIR/s@"/usr/include"@0@g' gcc/cppdefault.c</userinput></screen>
+<screen os="ce"><userinput>cp gcc/cppdefault.c{,.bak}
+sed '/#define STANDARD_INCLUDE_DIR/s@"/usr/include"@0@g' \
+   gcc/cppdefault.c.bak > gcc/cppdefault.c</userinput></screen>
 
     <para os="cf">Also, we need to set the directory searched by the fixincludes
     process for system headers, so it won't look at the host's headers:</para>
 
-<screen os="cg"><userinput>sed -i 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
-   gcc/Makefile.in</userinput></screen>
+<screen os="cg"><userinput>cp gcc/Makefile.in{,.bak}
+sed 's@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g' \
+   gcc/Makefile.in.bak > gcc/Makefile.in</userinput></screen>
 
     <para os="ch">Use our cross-complier instead of the one GCC builds, named
     <command>xgcc</command>:</para>
 
-<screen os="ci"><userinput>sed -i "s@\./xgcc@/cross-tools/bin/${CC}@g" \
-   gcc/mklibgcc.in</userinput></screen>
+<screen os="ci"><userinput>cp gcc/mklibgcc.in{,.bak}
+sed "s@\./xgcc@/cross-tools/bin/${CC}@g" \
+   gcc/mklibgcc.in.bak > gcc/mklibgcc.in</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/x86/gcc-static.xml"

@@ -95,8 +95,9 @@
     results of <option>--print-multi-lib</option> from our cross-compiler,
     not the native compiler <command>gcc</command> builds now.</para>
 
-<screen os="db"><userinput>sed -i \
-"/MULTILIBS/s@\$(GCC_FOR_TARGET)@/cross-tools/bin/${CC}@g" gcc/Makefile.in</userinput></screen>
+<screen os="db"><userinput>cp gcc/Makefile.in{,.bk2}
+sed "/MULTILIBS/s@\$(GCC_FOR_TARGET)@/cross-tools/bin/${CC}@g" \
+   gcc/Makefile.in.bk2 > gcc/Makefile.in</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/x86_64/gcc-static.xml"
