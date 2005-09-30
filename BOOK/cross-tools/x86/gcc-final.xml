@@ -89,7 +89,7 @@
 
 <screen os="bc"><userinput>cp gcc/config/t-slibgcc-elf-ver{,.orig}
 sed '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver.orig \
- > gcc/config/t-slibgcc-elf-ver \
+ > gcc/config/t-slibgcc-elf-ver
 cp gcc/config/t-libunwind{,.orig}
 sed '/^SHLIB_LC = /s@-lc@@' gcc/config/t-libunwind.orig \
  > gcc/config/t-libunwind</userinput></screen>
