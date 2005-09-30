@@ -85,7 +85,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term> GCC Cross Search Paths Patch - 2 KB:</term>
+      <term>GCC Cross Search Paths Patch - 2 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;gcc/&gcc-cross_search-patch;"/></para>
@@ -113,6 +113,14 @@
       <listitem>
         <para><ulink
         url="&patches-root;glibc/&glibc-libgcc_eh-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc Localedef Segfault - 2 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;glibc/&glibc-localedef_segfault-patch;"/></para>
       </listitem>
     </varlistentry>
 
