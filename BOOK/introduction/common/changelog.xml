@@ -44,6 +44,9 @@
         <listitem>
           <para>[ken] - Remove sed -i from parts III and IV where we use the host's sed.</para>
         </listitem>
+        <listitem>
+          <para>[ken] - Move iana-etc in final-system to similar position as in regular LFS, so that it is there for perl's testsuite.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

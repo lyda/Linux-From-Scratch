@@ -18,6 +18,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/binutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gcc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/zlib.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/iana-etc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/findutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gawk.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/ncurses.xml"/>
@@ -61,7 +62,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/udev.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/mktemp.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/hotplug.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/iana-etc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ppc/yaboot.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ppc/parted.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/aboutdebug.xml"/>
