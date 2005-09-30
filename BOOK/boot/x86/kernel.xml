@@ -83,7 +83,8 @@
     hotplugging events to userspace until userspace specifies that it is
     ready:</para>
 
-<screen os="ad"><userinput>sed -i 's@/sbin/hotplug@/bin/true@' kernel/kmod.c</userinput></screen>
+<screen os="ad"><userinput>cp kernel/kmod.c{,.bak}
+sed 's@/sbin/hotplug@/bin/true@' kernel/kmod.c.bak > kernel/kmod.c</userinput></screen>
 
     <para os="ae">Configure the kernel via a menu-driven interface:</para>
 

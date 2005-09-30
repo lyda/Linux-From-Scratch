@@ -46,7 +46,8 @@
     <para>Make sure the libraries get installed to
     <filename class="directory">/tools/lib64</filename>:</para>
 
-<screen><userinput>sed -i "/libdir=.*\/lib/s@/lib@/lib64@g" configure</userinput></screen>
+<screen><userinput>cp configure{,.bak}
+sed "/libdir=.*\/lib/s@/lib@/lib64@g" configure.bak > configure</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/e2fsprogs.xml"

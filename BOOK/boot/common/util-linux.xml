@@ -63,13 +63,15 @@
     libraries from the <filename class="directory">/tools</filename>
     directory by default. This is fixed by altering the configure script:</para>
 
-<screen os="bb"><userinput>sed -i 's@/usr/include@/tools/include@g' configure</userinput></screen>
+<screen os="bb"><userinput>cp configure{,.bak}
+sed 's@/usr/include@/tools/include@g' configure.bak > configure</userinput></screen>
 
     <para os="bc">Util-linux installs uses <option>-o root</option>, the following
     <command>sed</command> removes that since we don't have users setup
     yet:</para>
 
-<screen os="bd"><userinput>sed -i 's|-o root||' MCONFIG</userinput></screen>
+<screen os="bd"><userinput>cp MCONFIG{,.bak}
+sed 's|-o root||' MCONFIG.bak > MCONFIG</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/util-linux.xml"

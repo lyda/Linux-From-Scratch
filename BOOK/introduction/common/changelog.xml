@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>September 30, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - Remove sed -i from parts III and IV where we use the host's sed.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 28, 2005</para>
       <itemizedlist>
         <listitem>
