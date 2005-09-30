@@ -30,7 +30,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/groff.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/coreutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/sed.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/flex.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/flex.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gettext.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/inetutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/perl.xml"/>

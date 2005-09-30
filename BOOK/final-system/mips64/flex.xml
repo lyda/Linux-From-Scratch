@@ -10,19 +10,17 @@
 <sect1 id="ch-system-flex-32" role="wrap">
   <?dbhtml filename="flex.html"?>
 
-  <title>Flex-&flex-version; 32 Bit Libraries</title>
+  <title>Flex-&flex-version;</title>
 
   <indexterm zone="ch-system-flex-32">
     <primary sortas="a-Flex">Flex</primary>
-    <secondary>32 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">
     <title/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
-    xpointer="xpointer(//*[@role='package']/para[1])"/>
+    <para>The Flex package contains a utility for generating programs that
+    recognize patterns in text.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -34,64 +32,73 @@
       </seglistitem>
     </segmentedlist>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
-    xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
+    <segmentedlist>
+      <segtitle>&dependencies;</segtitle>
+
+      <seglistitem>
+        <seg>Bash, Binutils, Bison, Coreutils, Diffutils,
+        GCC, Gettext, Glibc, Grep, M4, Make, and Sed</seg>
+      </seglistitem>
+    </segmentedlist>
 
   </sect2>
 
   <sect2 role="installation">
     <title>Installation of Flex</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/flex.xml"
+    xpointer="xpointer(//*[@os='ba'])"/>
+
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/flex.xml"
+    xpointer="xpointer(//*[@os='bb'])"/>
+
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
     xpointer="xpointer(//*[@os='d'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
-<screen os="m1"><userinput>CC="gcc ${BUILD32}" ./configure --prefix=/usr</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
-<screen os="m2"><userinput>make libfl.a</userinput></screen>
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../multilib/flex.xml"
+    xpointer="xpointer(//*[@os='m1'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
-    xpointer="xpointer(//*[@os='h'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
     xpointer="xpointer(//*[@os='i'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/flex.xml"
-    xpointer="xpointer(//*[@os='j'])"/>
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../multilib/flex.xml"
+    xpointer="xpointer(//*[@os='m2'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
     xpointer="xpointer(//*[@os='k'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/flex.xml"
     xpointer="xpointer(//*[@os='l'])"/>
 
-  </sect2>
+</sect2>
 
   <sect2 role="content">
     <title/>

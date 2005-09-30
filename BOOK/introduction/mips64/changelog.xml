@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>September 30, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added Flex patch to update config.sub and config.guess.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 26, 2005</para>
       <itemizedlist>
         <listitem>
