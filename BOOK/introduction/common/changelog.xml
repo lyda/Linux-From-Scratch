@@ -47,6 +47,10 @@
         <listitem>
           <para>[ken] - Move iana-etc in final-system to similar position as in regular LFS, so that it is there for perl's testsuite.</para>
         </listitem>
+      <listitem>
+          <para>[jim] - Various Glibc Updates. Added localedef segfault patch.
+          Fixed MIPS64 and Sparc NPTL builds.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
