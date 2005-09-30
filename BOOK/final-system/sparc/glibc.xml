@@ -58,9 +58,9 @@
     href="../common/glibc.xml"
     xpointer="xpointer(//*[@os='d'])"/>
 
-   <para os="m1">This patch will add NPTL support to MIPS, this will allow us to use NPTL:</para>
+   <para os="s1">This patch will add NPTL support to Sparc, this will allow us to use NPTL:</para>
 
-<screen os="m2"><userinput>patch -Np1 -i ../&glibc-mips_nptl-patch;</userinput></screen>
+<screen os="s2"><userinput>patch -Np1 -i ../&glibc-sparc_tls-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/glibc.xml"

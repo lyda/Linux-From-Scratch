@@ -72,6 +72,11 @@
     Glibc autoconf tests would give false results and defeat the goal
     of achieving a clean build.</para>
 
+    <para os="c">The following patch removed the potential of localdef
+    segfaulting:</para>
+
+<screen os="d"><userinput>patch -Np1 -i ../&glibc-localedef_segfault-patch;</userinput></screen>
+ 
     <para os="e">The Glibc documentation recommends building Glibc outside of the
     source directory in a dedicated build directory:</para>
 

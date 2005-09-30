@@ -10,11 +10,11 @@
 <sect1 id="ch-cross-tools-glibc" role="wrap">
   <?dbhtml filename="glibc.html"?>
 
-  <title>Glibc-&glibc-version;</title>
+  <title>Glibc-&glibc-version; 32 Bit</title>
 
   <indexterm zone="ch-cross-tools-glibc">
     <primary sortas="a-Glibc">Glibc</primary>
-    <secondary>cross tools</secondary>
+    <secondary>cross tools, 32 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">
@@ -56,6 +56,14 @@
     xpointer="xpointer(//*[@os='dc'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/glibc.xml"
+    xpointer="xpointer(//*[@os='s1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../sparc/glibc.xml"
+    xpointer="xpointer(//*[@os='s2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/glibc.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
@@ -83,10 +91,10 @@
     href="../common/glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD64}" \
+<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD32}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST} \
+    --host=${LFS_TARGET32} --build=${LFS_HOST} \
     --disable-profile --enable-add-ons \
     --with-tls --enable-kernel=2.6.0 --with-__thread \
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
@@ -99,9 +107,12 @@
       href="../common/glibc.xml"
       xpointer="xpointer(//*[@os='di1'])"/>
 
-      <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-      href="../multilib/glibc-64bit.xml"
-      xpointer="xpointer(//*[@os='fa1'])"/>
+      <varlistentry os="ea1">
+        <term><parameter>CC="${LFS_TARGET}-gcc ${BUILD32}"</parameter></term>
+        <listitem>
+          <para>This switch do ... .</para>
+        </listitem>
+      </varlistentry>
 
       <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
       href="../common/glibc.xml"

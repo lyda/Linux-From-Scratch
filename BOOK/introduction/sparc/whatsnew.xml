@@ -37,7 +37,7 @@
       <para>&gcc-specs-patch;</para>
     </listitem>
     <listitem>
-      <para>&glibc-memusage_fix-patch;</para>
+      <para>&glibc-sparc_tls-patch;</para>
     </listitem>
     <listitem>
       <para>Silo &silo-version;</para>

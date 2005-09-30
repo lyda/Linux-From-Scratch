@@ -56,6 +56,14 @@
     xpointer="xpointer(//*[@os='dc'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/glibc.xml"
+    xpointer="xpointer(//*[@os='s1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/glibc.xml"
+    xpointer="xpointer(//*[@os='s2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/glibc.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
@@ -71,13 +79,11 @@
     href="../common/glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/glibc.xml"
-    xpointer="xpointer(//*[@os='dd'])"/>
+    <para os="dd"> For NPTL enabled systems we will need to add the following lines to
+    <filename>config.cache</filename>:</para>
 
-<screen><userinput>echo "libc_cv_forced_unwind=yes" &gt; config.cache
-echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache
-echo "libc_cv_ppc_machine=yes" &gt;&gt; config.cache</userinput></screen>
+<screen os="de"><userinput>echo "libc_cv_forced_unwind=yes" &gt; config.cache
+echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/glibc.xml"

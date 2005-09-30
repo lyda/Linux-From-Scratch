@@ -37,6 +37,9 @@
       <para>&gcc-specs-patch;</para>
     </listitem>
     <listitem>
+      <para>&glibc-sparc_tls-patch;</para>
+    </listitem>
+    <listitem>
       <para>Silo &silo-version;</para>
     </listitem>
     <listitem>
@@ -52,7 +55,7 @@
       <para>&binutils-sparc64_tls-patch;</para>
     </listitem>
     <listitem>
-      <para>&glibc-sparc64_tls-patch;</para>
+      <para>&glibc-sparc_tls-patch;</para>
     </listitem>
     <listitem>
       <para>&kbd-sparc_kbdrate-patch;</para>

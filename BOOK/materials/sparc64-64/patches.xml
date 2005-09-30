@@ -42,7 +42,7 @@
       <term>Glibc TLS Patch - 4 KB:</term>
       <listitem>
         <para><ulink
-        url="&patches-root;glibc/&glibc-sparc64_tls-patch;"/></para>
+        url="&patches-root;glibc/&glibc-sparc_tls-patch;"/></para>
       </listitem>
     </varlistentry>
 

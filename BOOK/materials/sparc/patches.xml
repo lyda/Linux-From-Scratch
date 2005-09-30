@@ -23,10 +23,10 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Glibc Memusage Patch - 15 KB:</term>
+      <term>Glibc Sparc TLS Patch - 4 KB:</term>
       <listitem>
         <para><ulink
-        url="&patches-root;glibc/&glibc-memusage_fix-patch;"/></para>
+        url="&patches-root;glibc/&glibc-sparc_tls-patch;"/></para>
       </listitem>
     </varlistentry>
 

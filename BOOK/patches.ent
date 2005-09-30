@@ -22,7 +22,7 @@
 <!ENTITY gcc-pure64-patch "gcc-&gcc-version;-pure64-1.patch">
 
 <!ENTITY glibc-libgcc_eh-patch "glibc-&glibc-version;-libgcc_eh-1.patch">
-<!ENTITY glibc-memusage_fix-patch "glibc-&glibc-version;-memusage_fix-1.patch">
+<!ENTITY glibc-localedef_segfault-patch "glibc-&glibc-version;-localedef_segfault-1.patch">
 
 <!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch">
 
@@ -67,7 +67,7 @@
 
 <!ENTITY binutils-sparc64_tls-patch "binutils-&binutils-version;-sparc64_tls-1.patch">
 
-<!ENTITY glibc-sparc64_tls-patch "glibc-&glibc-version;-sparc64_tls-1.patch">
+<!ENTITY glibc-sparc_tls-patch "glibc-&glibc-version;-sparc_tls-1.patch">
 
 <!ENTITY linux-gcc4_sparc_fix-patch "linux-&linux-sparc-version;-gcc4_sparc_fix-1.patch">
 
