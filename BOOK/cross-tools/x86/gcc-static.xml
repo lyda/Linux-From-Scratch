@@ -71,7 +71,9 @@
     <para os="ai">Now we will change <command>gcc</command>'s search path to look
     into <filename class="directory">/tools</filename> only:</para>
 
-<screen os="aj"><userinput>sed -i "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" gcc/Makefile.in</userinput></screen>
+<screen os="aj"><userinput>cp gcc/Makefile.in{,.orig}
+sed "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
+ gcc/Makefile.in.orig > gcc/Makefile.in</userinput></screen>
 
     <important os="ak">
       <para>The above patches and sed's are critical in ensuring a

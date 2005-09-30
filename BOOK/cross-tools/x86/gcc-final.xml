@@ -87,13 +87,18 @@
     <filename class="libraryfile">libc</filename> since it doesn't
     exist yet:</para>
 
-<screen os="bc"><userinput>sed -i '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver \
-   gcc/config/t-libunwind</userinput></screen>
+<screen os="bc"><userinput>cp gcc/config/t-slibgcc-elf-ver{,.orig}
+sed '/^SHLIB_LC = /s@-lc@@' gcc/config/t-slibgcc-elf-ver.orig \
+ > gcc/config/t-slibgcc-elf-ver \
+cp gcc/config/t-libunwind{,.orig}
+sed '/^SHLIB_LC = /s@-lc@@' gcc/config/t-libunwind.orig \
+ > gcc/config/t-libunwind</userinput></screen>
 
-    <para os="bd">Finally, disable <option>-B</option> in <filename>Makefile.in</filename>,
+    <para os="bd">Finally, disable <option>-B</option> in <filename>configure</filename>,
     so it doesn't pick up the host's header files:</para>
 
-<screen os="be"><userinput>sed -i '/FLAGS_FOR_TARGET.*\/lib\//s@-B[^ ]*/lib/@@g' configure configure.in</userinput></screen>
+<screen os="be"><userinput>cp configure{,.orig}
+sed '/FLAGS_FOR_TARGET.*\/lib\//s@-B[^ ]*/lib/@@g' configure.orig >configure</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="gcc-static.xml"
