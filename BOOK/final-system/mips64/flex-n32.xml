@@ -8,9 +8,9 @@
 ]>
 
 <sect1 id="ch-system-flex-n32" role="wrap">
-  <?dbhtml filename="flex=n32.html"?>
+  <?dbhtml filename="flex-n32.html"?>
 
-  <title>Flex-&flex-version; N32</title>
+  <title>Flex-&flex-version; N32 Libraries</title>
 
   <indexterm zone="ch-system-flex-n32">
     <primary sortas="a-Flex">Flex</primary>
