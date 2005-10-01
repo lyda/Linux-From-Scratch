@@ -79,6 +79,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Mktemp Config Update Patch - 56 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;mktemp/&mktemp-mips_update-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Module-init-tools Config Update Patch - 33 KB:</term>
       <listitem>
         <para><ulink

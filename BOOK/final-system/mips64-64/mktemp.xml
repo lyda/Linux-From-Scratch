@@ -51,10 +51,20 @@
     xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/mktemp.xml"
+    xpointer="xpointer(//*[@os='m1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/mktemp.xml"
+    xpointer="xpointer(//*[@os='m2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/mktemp.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
-<screen os="c1"><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr --with-libc</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/mktemp.xml"
+    xpointer="xpointer(//*[@os='c1'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/mktemp.xml"

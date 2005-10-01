@@ -58,6 +58,9 @@
     <listitem>
       <para>&linux-libc-headers-mips_atomic_fix-patch;</para>
     </listitem>
+    <listitem>
+      <para>&mktemp-mips_update-patch;</para>
+    </listitem>
    </itemizedlist>
 
 </sect1>

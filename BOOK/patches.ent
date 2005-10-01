@@ -93,6 +93,8 @@
 
 <!ENTITY make-mips_update-patch "make-&make-version;-mips_config_update-1.patch">
 
+<!ENTITY mktemp-mips_update-patch "mktemp-&mktemp-version;-mips_config_update-1.patch">
+
 <!ENTITY module-init-tools-mips_update-patch "module-init-tools-&module-init-tools-version;-mips_config_update-1.patch">
 
 <!ENTITY lfs-bootscripts-raq2-patch "lfs-bootscripts-raq2-8.patch">

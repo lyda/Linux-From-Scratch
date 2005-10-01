@@ -61,6 +61,9 @@
     <listitem>
       <para>&module-init-tools-mips_update-patch;</para>
     </listitem>
+    <listitem>
+      <para>&mktemp-mips_update-patch;</para>
+    </listitem>
   </itemizedlist>
 
 </sect1>

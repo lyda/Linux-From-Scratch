@@ -53,7 +53,7 @@
 
     <para os="c">Prepare Mktemp for compilation:</para>
 
-<screen><userinput>./configure --prefix=/usr --with-libc</userinput></screen>
+<screen os="c1"><userinput>./configure --prefix=/usr --with-libc</userinput></screen>
 
     <variablelist os="d">
       <title>The meaning of the configure option:</title>

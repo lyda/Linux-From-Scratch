@@ -50,11 +50,18 @@
     href="../common/mktemp.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
+    <para os="m1">This patch updates <filename>config.guess</filename> and
+    <filename>config.sub</filename> for MIPS processors.</para>
+
+<screen os="m2"><userinput>patch -Np1 -i ../&mktemp-mips_update-patch;</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/mktemp.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
-<screen os="c1"><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr --with-libc</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/mktemp.xml"
+    xpointer="xpointer(//*[@os='c1'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/mktemp.xml"

@@ -50,7 +50,10 @@
         <listitem>
           <para>[jim] - Added Linux-libc-headers patch to fix atomic64_t variable type.</para>
         </listitem>
-        </itemizedlist>
+        <listitem>
+          <para>[jim] - Added Mktemp patch to update config.sub and config.guess.</para>
+        </listitem>
+      </itemizedlist>
     </listitem>
 
     <listitem>
