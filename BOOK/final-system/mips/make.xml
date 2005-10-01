@@ -19,9 +19,7 @@
   <sect2 role="package">
     <title/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/make.xml"
-    xpointer="xpointer(//*[@role='package']/para[1])"/>
+    <para>The Make package contains a program for compiling packages.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -33,20 +31,32 @@
       </seglistitem>
     </segmentedlist>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/make.xml"
-    xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
+    <segmentedlist>
+      <segtitle>&dependencies;</segtitle>
+
+      <seglistitem>
+        <seg>Bash, Binutils, Coreutils, Diffutils, GCC, Gettext,
+        Glibc, Grep, and Sed</seg>
+      </seglistitem>
+    </segmentedlist>
 
   </sect2>
 
   <sect2 role="installation">
     <title>Installation of Make</title>
 
+    <para os="m1">This patch updates <filename>config.guess</filename> and
+    <filename>config.sub</filename> for MIPS processors.</para>
+
+<screen os="m2"><userinput>patch -Np1 -i ../&make-mips_update-patch;</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/make.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
-<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/make.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/make.xml"

@@ -46,6 +46,9 @@
     <listitem>
       <para>&file-mips_update-patch;</para>
     </listitem>
-  </itemizedlist>
+    <listitem>
+      <para>&make-mips_update-patch;</para>
+    </listitem>
+   </itemizedlist>
 
 </sect1>

@@ -7,20 +7,21 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-make" role="wrap">
+<sect1 id="ch-temp-system-make" role="wrap">
   <?dbhtml filename="make.html"?>
 
   <title>Make-&make-version;</title>
 
-  <indexterm zone="ch-system-make">
+  <indexterm zone="ch-temp-system-make">
     <primary sortas="a-Make">Make</primary>
+    <secondary>temporary system</secondary>
   </indexterm>
 
   <sect2 role="package">
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/make.xml"
+    href="../../final-system/common/make.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -34,7 +35,7 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/make.xml"
+    href="../../final-system/common/make.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
@@ -43,35 +44,46 @@
     <title>Installation of Make</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/make.xml"
-    xpointer="xpointer(//*[@os='a'])"/>
-
-<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr</userinput></screen>
+    href="../../final-system/mips/make.xml"
+    xpointer="xpointer(//*[@os='m1'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/make.xml"
+    href="../../final-system/mips/make.xml"
+    xpointer="xpointer(//*[@os='m2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/make.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+    <para>Prepare Make for compilation:</para>
+
+<screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=/tools \
+   --host=${LFS_TARGET}</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/make.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/make.xml"
+    href="../../final-system/common/make.xml"
     xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/make.xml"
-    xpointer="xpointer(//*[@os='e'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/make.xml"
+    href="../../final-system/common/make.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/make.xml"
+    href="../../final-system/common/make.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/make.xml"
-  xpointer="xpointer(id('contents-make'))"/>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-make" role="."/></para>
+
+  </sect2>
 
 </sect1>

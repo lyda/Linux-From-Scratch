@@ -27,7 +27,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/bison.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/flex.xml"/>
   -->
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/make.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/make.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips/grep.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/sed.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gettext.xml"/>

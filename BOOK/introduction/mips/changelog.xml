@@ -41,6 +41,9 @@
         <listitem>
           <para>[jim] - Added File patch to update config.sub and config.guess.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Added Make patch to update config.sub and config.guess.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

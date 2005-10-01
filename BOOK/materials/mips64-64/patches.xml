@@ -63,6 +63,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Make Config Update Patch - 33 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;make/&make-mips_update-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Procps Signal 11 Patch - 1 KB:</term>
       <listitem>
         <para><ulink

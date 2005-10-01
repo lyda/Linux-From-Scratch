@@ -43,6 +43,14 @@
     <title>Installation of Make</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/make.xml"
+    xpointer="xpointer(//*[@os='m1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/make.xml"
+    xpointer="xpointer(//*[@os='m2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/make.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 

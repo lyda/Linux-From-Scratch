@@ -71,7 +71,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gzip.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/man.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/man-pages.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/make.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/make.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/module-init-tools.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/patch.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/procps.xml"/>

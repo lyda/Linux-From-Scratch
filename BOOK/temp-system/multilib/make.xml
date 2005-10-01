@@ -43,18 +43,30 @@
   <sect2 role="installation">
     <title>Installation of Make</title>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/make.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
     <para>Prepare Make for compilation:</para>
 
 <screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=/tools \
    --host=${LFS_TARGET}</userinput></screen>
 
-    <para>Compile the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/make.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/make.xml"
+    xpointer="xpointer(//*[@os='d'])"/>
 
-    <para>Install the package:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/make.xml"
+    xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><userinput>make install</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/common/make.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
 
   </sect2>
 
