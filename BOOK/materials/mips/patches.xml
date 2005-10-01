@@ -15,6 +15,29 @@
   <variablelist role="materials">
 
     <varlistentry>
+      <term>Flex Config Update Patch - 33 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;flex/&flex-mips_update-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>File Config Update Patch - 35 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;file/&file-mips_update-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Grep Config Update Patch - 48 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;grep/&grep-mips_update-patch;"/></para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
       <term>GCC Specs Patch - 14 KB:</term>
       <listitem>
         <para><ulink

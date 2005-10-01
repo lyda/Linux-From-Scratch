@@ -53,9 +53,9 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/autoconf.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/automake.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bash.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/file.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/file-n32.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/file-64bit.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/file.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/file-n32.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/file-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/libtool.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/libtool-n32.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/libtool-64bit.xml"/>

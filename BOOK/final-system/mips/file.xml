@@ -8,9 +8,9 @@
 ]>
 
 <sect1 id="ch-system-file" role="wrap">
-  <?dbhtml filename="file-64bit.html"?>
+  <?dbhtml filename="file.html"?>
 
-  <title>File-&file-version; 64 Bit</title>
+  <title>File-&file-version;</title>
 
   <indexterm zone="ch-system-file">
     <primary sortas="a-File">File</primary>
@@ -40,36 +40,38 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of File</title>
+    <title>Installation of file</title>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="file.xml"
+    <para os="m1">This patch updates <filename>config.guess</filename> and
+    <filename>config.sub</filename> for MIPS processors.</para>
+
+<screen os="m2"><userinput>patch -Np1 -i ../&file-mips_update-patch;</userinput></screen>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/file.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
-<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
-   --libdir=/usr/lib64</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/file.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="file.xml"
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/file.xml"
     xpointer="xpointer(//*[@os='c'])"/>
-    <para>Prepare File for compilation:</para>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="file.xml"
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/file.xml"
     xpointer="xpointer(//*[@os='d'])"/>
-    <para>Prepare File for compilation:</para>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="file.xml"
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/file.xml"
     xpointer="xpointer(//*[@os='e'])"/>
-    <para>Prepare File for compilation:</para>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="file.xml"
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/file.xml"
     xpointer="xpointer(//*[@os='f'])"/>
-    <para>Prepare File for compilation:</para>
 
-  </sect2>
+</sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/file.xml"

@@ -43,6 +43,12 @@
     <listitem>
       <para>&linux-mips-patch;</para>
     </listitem>
+    <listitem>
+      <para>&flex-mips_update-patch;</para>
+    </listitem>
+    <listitem>
+      <para>&file-mips_update-patch;</para>
+    </listitem>
   </itemizedlist>
 
 </sect1>

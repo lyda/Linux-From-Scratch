@@ -7,13 +7,14 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-file" role="wrap">
-  <?dbhtml filename="file-64bit.html"?>
+<sect1 id="ch-system-file-32" role="wrap">
+  <?dbhtml filename="file.html"?>
 
-  <title>File-&file-version; 64 Bit</title>
+  <title>File-&file-version; 32 Bit Libraries</title>
 
-  <indexterm zone="ch-system-file">
+  <indexterm zone="ch-system-file-32">
     <primary sortas="a-File">File</primary>
+    <secondary>32 Bit</secondary>
   </indexterm>
 
   <sect2 role="package">
@@ -43,36 +44,43 @@
     <title>Installation of File</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="file.xml"
+    href="../mips/file.xml"
+    xpointer="xpointer(//*[@os='m1'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/file.xml"
+    xpointer="xpointer(//*[@os='m2'])"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/file.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
-<screen><userinput>CC="gcc ${BUILD64}" ./configure --prefix=/usr \
-   --libdir=/usr/lib64</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD32}" ./configure --prefix=/usr</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="file.xml"
+    href="../common/file.xml"
     xpointer="xpointer(//*[@os='c'])"/>
-    <para>Prepare File for compilation:</para>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="file.xml"
+    href="../common/file.xml"
     xpointer="xpointer(//*[@os='d'])"/>
-    <para>Prepare File for compilation:</para>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="file.xml"
+    href="../common/file.xml"
     xpointer="xpointer(//*[@os='e'])"/>
-    <para>Prepare File for compilation:</para>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="file.xml"
+    href="../common/file.xml"
     xpointer="xpointer(//*[@os='f'])"/>
-    <para>Prepare File for compilation:</para>
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/file.xml"
-  xpointer="xpointer(id('contents-file'))"/>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-file" role="."/></para>
+
+  </sect2>
 
 </sect1>

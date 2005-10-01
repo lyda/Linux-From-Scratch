@@ -82,6 +82,8 @@
 
 <!ENTITY flex-mips_update-patch "flex-&flex-version;-mips_config_update-1.patch">
 
+<!ENTITY file-mips_update-patch "file-&file-version;-mips_config_update-1.patch">
+
 <!ENTITY gcc-mips_pure64-patch "gcc-&gcc-version;-mips_pure64-1.patch">
 <!ENTITY gcc-mips_tls-patch "gcc-&gcc-version;-mips_tls-1.patch">
 

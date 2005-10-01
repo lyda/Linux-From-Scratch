@@ -39,7 +39,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/autoconf.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/automake.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/bash.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/file.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64-64/file.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/libtool.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/bzip2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/diffutils.xml"/>
