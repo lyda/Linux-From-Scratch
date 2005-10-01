@@ -52,7 +52,7 @@
       <para>&binutils-multilib-patch;</para>
     </listitem>
     <listitem>
-      <para>&binutils-sparc64_tls-patch;</para>
+      <para>&binutils-sparc_tls-patch;</para>
     </listitem>
     <listitem>
       <para>&glibc-sparc_tls-patch;</para>

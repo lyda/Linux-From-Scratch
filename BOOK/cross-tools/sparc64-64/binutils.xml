@@ -51,9 +51,13 @@
     href="../64/binutils.xml"
     xpointer="xpointer(//*[@os='bb'])"/>
 
-    <para>This patch will add TLS support to Sparc64, this will allow us to use NPTL:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/binutils.xml"
+    xpointer="xpointer(//*[@os='s1'])"/>
 
-<screen><userinput>patch -Np1 -i ../&binutils-sparc64_tls-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/sparc/binutils.xml"
+    xpointer="xpointer(//*[@os='s2'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../64/binutils.xml"

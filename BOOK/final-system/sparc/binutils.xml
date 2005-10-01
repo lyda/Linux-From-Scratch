@@ -66,13 +66,9 @@
     href="../common/binutils.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../sparc/binutils.xml"
-    xpointer="xpointer(//*[@os='s1'])"/>
+    <para os="s1">This patch will add TLS support to Sparc, this will allow us to use NPTL:</para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../sparc/binutils.xml"
-    xpointer="xpointer(//*[@os='s2'])"/>
+<screen os="s2"><userinput>patch -Np1 -i ../&binutils-sparc_tls-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"
@@ -86,8 +82,8 @@
     href="../common/binutils.xml"
     xpointer="xpointer(//*[@os='i'])"/>
 
-<screen><userinput>../binutils-&binutils-version;/configure --prefix=/usr \
-    --enable-shared --disable-multilib</userinput></screen>
+<screen><userinput>CC="gcc ${BUILD64}" ../binutils-&binutils-version;/configure --prefix=/usr \
+    --enable-shared --enable-64-bit-bfd --libdir=/usr/lib64</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/binutils.xml"

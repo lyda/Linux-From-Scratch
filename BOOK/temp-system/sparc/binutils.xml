@@ -7,14 +7,14 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-cross-tools-binutils" role="wrap">
+<sect1 id="ch-temp-system-binutils" role="wrap">
   <?dbhtml filename="binutils.html"?>
 
-  <title>Cross Binutils-&binutils-version;</title>
+  <title>Binutils-&binutils-version;</title>
 
-  <indexterm zone="ch-cross-tools-binutils">
+  <indexterm zone="ch-temp-system-binutils">
     <primary sortas="a-Binutils">Binutils</primary>
-    <secondary>cross tools</secondary>
+    <secondary>temporary system</secondary>
   </indexterm>
 
   <sect2 role="package">
@@ -41,14 +41,19 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Cross Binutils</title>
+    <title>Installation of Binutils</title>
+
+    <para os="da">It is important that Binutils be the first package compiled
+    because both Glibc and GCC perform various tests on the available
+    linker and assembler to determine which of their own features to
+    enable.</para>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../cross-tools/common/binutils.xml"
     xpointer="xpointer(//*[@os='ba'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../cross-tools/common/binutils.xml"
     xpointer="xpointer(//*[@os='bb'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -60,59 +65,57 @@
     xpointer="xpointer(//*[@os='s2'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/multilib/binutils.xml"
-    xpointer="xpointer(//*[@os='aa'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../../final-system/multilib/binutils.xml"
-    xpointer="xpointer(//*[@os='ab'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../final-system/common/binutils.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../final-system/common/binutils.xml"
     xpointer="xpointer(//*[@os='h'])"/>
 
+    <!-- To be moved to their proper file (or full removed) when decided
+    how to manage SBUs
+
+    <note>
+      <para>In order for the SBU values listed in the rest of the book
+      to be of any use, measure the time it takes to build this package from
+      the configuration, up to and including the first install. To achieve
+      this easily, wrap the four commands in a <command>time</command>
+      command like this: <userinput>time { ./configure ... &amp;&amp; ...
+      &amp;&amp; ... &amp;&amp; make install; }</userinput>.</para>
+    </note>
+
+    -->
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../final-system/common/binutils.xml"
     xpointer="xpointer(//*[@os='i'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bc'])"/>
+<screen><userinput>../binutils-&binutils-version;/configure --prefix=/tools \
+     --build=${LFS_HOST} --host=${LFS_TARGET} --target=${LFS_TARGET} \
+     --disable-nls --enable-shared --enable-64-bit-bfd</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bd'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../cross-tools/common/binutils.xml"
     xpointer="xpointer(//*[@os='be'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../cross-tools/common/binutils.xml"
     xpointer="xpointer(//*[@os='bf'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bf1'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../cross-tools/common/binutils.xml"
     xpointer="xpointer(//*[@os='bg'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../cross-tools/common/binutils.xml"
     xpointer="xpointer(//*[@os='bh'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../cross-tools/common/binutils.xml"
     xpointer="xpointer(//*[@os='bi'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
+    href="../../cross-tools/common/binutils.xml"
     xpointer="xpointer(//*[@os='bj'])"/>
 
   </sect2>

@@ -65,7 +65,7 @@
 
 <!-- Start of sparc/sparc64 patches -->
 
-<!ENTITY binutils-sparc64_tls-patch "binutils-&binutils-version;-sparc64_tls-1.patch">
+<!ENTITY binutils-sparc_tls-patch "binutils-&binutils-version;-sparc_tls-1.patch">
 
 <!ENTITY glibc-sparc_tls-patch "glibc-&glibc-version;-sparc_tls-1.patch">
 

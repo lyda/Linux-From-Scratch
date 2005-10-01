@@ -26,7 +26,7 @@
       <term>Binutils TLS Patch - 153 KB:</term>
       <listitem>
         <para><ulink
-        url="&patches-root;binutils/&binutils-sparc64_tls-patch;"/></para>
+        url="&patches-root;binutils/&binutils-sparc_tls-patch;"/></para>
       </listitem>
     </varlistentry>
 

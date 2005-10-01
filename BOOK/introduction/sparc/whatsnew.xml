@@ -51,6 +51,9 @@
     <listitem>
       <para>elftoaout &elftoaout-version;</para>
     </listitem>
+    <listitem>
+      <para>&binutils-sparc_tls-patch;</para>
+    </listitem>
   </itemizedlist>
 
   <itemizedlist>
