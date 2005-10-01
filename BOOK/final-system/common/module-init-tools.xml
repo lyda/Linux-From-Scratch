@@ -56,7 +56,7 @@
 
     <para os="c">Prepare Module-Init-Tools for compilation:</para>
 
-<screen><userinput>./configure --prefix="" --enable-zlib</userinput></screen>
+<screen os="c1"><userinput>./configure --prefix="" --enable-zlib</userinput></screen>
 
     <variablelist os="d">
       <title>The meaning of the configure options:</title>

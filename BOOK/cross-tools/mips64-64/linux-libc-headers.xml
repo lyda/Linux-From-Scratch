@@ -43,7 +43,7 @@
   <sect2 role="installation">
     <title>Installation of Linux-Libc-Headers</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/mips/linux-libc-headers.xml"
     xpointer="xpointer(//*[@os='ma'])"/>
 
@@ -51,7 +51,17 @@
     href="../../final-system/mips/linux-libc-headers.xml"
     xpointer="xpointer(//*[@os='mb'])"/>
 
-    <para>Install the header files:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='mc'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='md'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='b'])"/>
 
 <screen><userinput>install -d /tools/include
 cp -R include/asm-mips /tools/include/asm

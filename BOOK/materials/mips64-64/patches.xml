@@ -55,6 +55,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Linux Headers Atomic Fix Patch - 1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;linux-libc-headers/&linux-libc-headers-mips_atomic_fix-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Linux Headers TLS Patch - 3.2 KB:</term>
       <listitem>
         <para><ulink
@@ -67,6 +75,14 @@
       <listitem>
         <para><ulink
         url="&patches-root;make/&make-mips_update-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Module-init-tools Config Update Patch - 33 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;module-init-tools/&module-init-tools-mips_update-patch;"/></para>
       </listitem>
     </varlistentry>
 

@@ -50,15 +50,25 @@
     href="../x86/linux-libc-headers.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
-    <para os="ma">The following patch adds NPTL support:</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='ma'])"/>
 
-<screen os="mb"><userinput>patch -Np1 -i ../&linux-libc-headers-mips_tls-patch;</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='mb'])"/>
 
-<screen><userinput>cp -R include/asm-mips /usr/include/asm
-cp -R include/linux /usr/include
-cp -R include/mtd /usr/include
-cp -R include/sound /usr/include
-cp -R include/scsi /usr/include</userinput></screen>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='mc'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='md'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/linux-libc-headers.xml"
+    xpointer="xpointer(//*[@os='me'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/linux-libc-headers.xml"

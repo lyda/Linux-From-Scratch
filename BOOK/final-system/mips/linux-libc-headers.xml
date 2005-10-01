@@ -54,7 +54,11 @@
 
 <screen os="mb"><userinput>patch -Np1 -i ../&linux-libc-headers-mips_tls-patch;</userinput></screen>
 
-<screen><userinput>cp -R include/asm-mips /usr/include/asm
+    <para os="mc">The following patch fixes a compile issue with sysklogd:</para>
+
+<screen os="md"><userinput>patch -Np1 -i ../&linux-libc-headers-mips_atomic_fix-patch;</userinput></screen>
+
+<screen os="me"><userinput>cp -R include/asm-mips /usr/include/asm
 cp -R include/linux /usr/include
 cp -R include/mtd /usr/include
 cp -R include/sound /usr/include

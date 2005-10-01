@@ -7,20 +7,21 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-module-init-tools" role="wrap">
+<sect1 id="ch-boot-module-init-tools" role="wrap">
   <?dbhtml filename="module-init-tools.html"?>
 
   <title>Module-Init-Tools-&module-init-tools-version;</title>
 
-  <indexterm zone="ch-system-module-init-tools">
+  <indexterm zone="ch-boot-module-init-tools">
     <primary sortas="a-Module-Init-Tools">Module-Init-Tools</primary>
+    <secondary>boot</secondary>
   </indexterm>
 
   <sect2 role="package">
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/module-init-tools.xml"
+    href="../../final-system/common/module-init-tools.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -34,13 +35,21 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/module-init-tools.xml"
+    href="../../final-system/common/module-init-tools.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
 
   <sect2 role="installation">
     <title>Installation of Module-Init-Tools</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='m1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../mips/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='m2'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/module-init-tools.xml"
@@ -54,11 +63,8 @@
     href="../common/module-init-tools.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
-<screen os="c1"><userinput>CC="gcc ${BUILD64}" ./configure --prefix="" --enable-zlib</userinput></screen>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/module-init-tools.xml"
-    xpointer="xpointer(//*[@os='d'])"/>
+<screen><userinput>CC="${CC} ${BUILD64}" ./configure --prefix=/ \
+   --host=${LFS_TARGET}</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/module-init-tools.xml"
@@ -70,10 +76,6 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/module-init-tools.xml"
-    xpointer="xpointer(//*[@os='g'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/module-init-tools.xml"
     xpointer="xpointer(//*[@os='h'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
@@ -82,8 +84,12 @@
 
   </sect2>
 
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../common/module-init-tools.xml"
-  xpointer="xpointer(id('contents-module-init-tools'))"/>
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref
+    linkend="contents-module-init-tools" role="."/></para>
+
+  </sect2>
 
 </sect1>

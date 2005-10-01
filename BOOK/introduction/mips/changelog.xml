@@ -44,6 +44,12 @@
         <listitem>
           <para>[jim] - Added Make patch to update config.sub and config.guess.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Added Module-init-tools patch to update config.sub and config.guess.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Added Linux-libc-headers patch to fix atomic64_t variable type.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

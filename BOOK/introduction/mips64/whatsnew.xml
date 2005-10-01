@@ -49,6 +49,15 @@
     <listitem>
       <para>&make-mips_update-patch;</para>
     </listitem>
+   <listitem>
+      <para>&module-init-tools-mips_update-patch;</para>
+    </listitem>
+    <listitem>
+      <para>&linux-libc-headers-mips_tls-patch;</para>
+    </listitem>
+    <listitem>
+      <para>&linux-libc-headers-mips_atomic_fix-patch;</para>
+    </listitem>
    </itemizedlist>
 
 </sect1>

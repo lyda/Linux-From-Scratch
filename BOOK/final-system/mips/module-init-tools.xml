@@ -7,20 +7,20 @@
   %patches-entities;
 ]>
 
-<sect1 id="ch-system-linux-libc-headers" role="wrap">
-  <?dbhtml filename="linux-libc-headers.html"?>
+<sect1 id="ch-system-module-init-tools" role="wrap">
+  <?dbhtml filename="module-init-tools.html"?>
 
-  <title>Linux-Libc-Headers-&linux-libc-headers-ppc-version;</title>
+  <title>Module-Init-Tools-&module-init-tools-version;</title>
 
-  <indexterm zone="ch-system-linux-libc-headers">
-    <primary sortas="a-Linux-Libc-Headers">Linux-Libc-Headers</primary>
+  <indexterm zone="ch-system-module-init-tools">
+    <primary sortas="a-Module-Init-Tools">Module-Init-Tools</primary>
   </indexterm>
 
   <sect2 role="package">
     <title/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/linux-libc-headers.xml"
+    href="../common/module-init-tools.xml"
     xpointer="xpointer(//*[@role='package']/para[1])"/>
 
     <segmentedlist>
@@ -34,62 +34,63 @@
     </segmentedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/linux-libc-headers.xml"
+    href="../common/module-init-tools.xml"
     xpointer="xpointer(//*[@role='package']/segmentedlist[2])"/>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Linux-Libc-Headers</title>
+    <title>Installation of Module-Init-Tools</title>
+
+    <para os="m1">This patch updates <filename>config.guess</filename> and
+    <filename>config.sub</filename> for MIPS processors.</para>
+
+<screen os="m2"><userinput>patch -Np1 -i ../&module-init-tools-mips_update-patch;</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/linux-libc-headers.xml"
+    href="../common/module-init-tools.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/linux-libc-headers.xml"
+    href="../common/module-init-tools.xml"
     xpointer="xpointer(//*[@os='b'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/linux-libc-headers.xml"
-    xpointer="xpointer(//*[@os='ma'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/linux-libc-headers.xml"
-    xpointer="xpointer(//*[@os='mb'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/linux-libc-headers.xml"
-    xpointer="xpointer(//*[@os='mc'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/linux-libc-headers.xml"
-    xpointer="xpointer(//*[@os='md'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../mips/linux-libc-headers.xml"
-    xpointer="xpointer(//*[@os='me'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/linux-libc-headers.xml"
+    href="../common/module-init-tools.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/linux-libc-headers.xml"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='c1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
     xpointer="xpointer(//*[@os='d'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/linux-libc-headers.xml"
+    href="../common/module-init-tools.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../x86/linux-libc-headers.xml"
+    href="../common/module-init-tools.xml"
     xpointer="xpointer(//*[@os='f'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='g'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='h'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../common/module-init-tools.xml"
+    xpointer="xpointer(//*[@os='i'])"/>
 
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-  href="../x86/linux-libc-headers.xml"
-  xpointer="xpointer(id('contents-linux-libc-headers'))"/>
+  href="../common/module-init-tools.xml"
+  xpointer="xpointer(id('contents-module-init-tools'))"/>
 
 </sect1>
