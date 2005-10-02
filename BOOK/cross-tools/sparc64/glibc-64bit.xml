@@ -83,9 +83,9 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='dd'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="glibc.xml"
-    xpointer="xpointer(//*[@os='de'])"/>
+<screen><userinput>echo "libc_cv_forced_unwind=yes" &gt; config.cache
+echo "libc_cv_c_cleanup=yes" &gt;&gt; config.cache
+echo "libc_cv_sparc64_tls=yes" &gt;&gt; config.cache</userinput></screen>
 
     <para>Now we make sure the Glibc goes into <filename
     class="directory">/tools/lib64</filename>:</para>
