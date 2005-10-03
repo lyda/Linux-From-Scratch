@@ -32,7 +32,7 @@
       <term>Parted (&parted-version;) - 1.4 MB:</term>
       <listitem>
         <para><ulink
-        url="&gnu;/parted-&parted-version;.tar.gz"/></para>
+        url="&gnu;/parted/parted-&parted-version;.tar.gz"/></para>
       </listitem>
     </varlistentry>
 
