@@ -46,6 +46,9 @@
 	   compatibility and to recognise "\xhh" syntax as required by the testsuite
            in udev-069 and later. From LFS - Matthew Burgess</para>
         </listitem>
+       <listitem>
+          <para>[jim] - Added Gawk Segfault patch. From LFS - Matthew Burgess</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
@@ -58,7 +61,7 @@
         <listitem>
           <para>[ken] - Move iana-etc in final-system to similar position as in regular LFS, so that it is there for perl's testsuite.</para>
         </listitem>
-      <listitem>
+        <listitem>
           <para>[jim] - Various Glibc Updates. Added localedef segfault patch.
           Fixed MIPS64 and Sparc NPTL builds.</para>
         </listitem>

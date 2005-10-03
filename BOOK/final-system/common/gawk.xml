@@ -46,20 +46,25 @@
   <sect2 role="installation">
     <title>Installation of Gawk</title>
 
-    <para>Prepare Gawk for compilation:</para>
+    <para os="a">Patch Gawk to fix a bug which causes it to
+    segfault when invoked on a non-existent file:</para>
 
-<screen><userinput>./configure --prefix=/usr --libexecdir=/usr/lib</userinput></screen>
+<screen os="b"><userinput>patch -Np1 -i ../&gawk-segfault-patch;</userinput></screen>
 
-    <para>Compile the package:</para>
+    <para os="c">Prepare Gawk for compilation:</para>
 
-<screen><userinput>make</userinput></screen>
+<screen os="d"><userinput>./configure --prefix=/usr --libexecdir=/usr/lib</userinput></screen>
 
-    <para>To test the results, issue:
+    <para os="e">Compile the package:</para>
+
+<screen os="f"><userinput>make</userinput></screen>
+
+    <para os="g">To test the results, issue:
     <userinput>make check</userinput>.</para>
 
-    <para>Install the package:</para>
+    <para os="h">Install the package:</para>
 
-<screen><userinput>make install</userinput></screen>
+<screen os="i"><userinput>make install</userinput></screen>
 
   </sect2>
 

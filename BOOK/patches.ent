@@ -16,6 +16,8 @@
 
 <!ENTITY flex-fixes-patch "flex-&flex-version;-debian_fixes-3.patch">
 
+<!ENTITY gawk-segfault-patch "gawk-&gawk-version;-segfault_fix-1.patch">
+
 <!ENTITY gcc-cross_search-patch "gcc-&gcc-version;-cross_search_paths-1.patch">
 <!ENTITY gcc-posix-patch "gcc-&gcc-version;-posix-1.patch">
 <!ENTITY gcc-specs-patch "gcc-&gcc-version;-specs-1.patch">

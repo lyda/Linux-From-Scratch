@@ -93,6 +93,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Gawk Segfault Patch - 2 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;gawk/&gawk-segfault-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>GCC Cross Search Paths Patch - 2 KB:</term>
       <listitem>
         <para><ulink
