@@ -32,8 +32,12 @@ install -d ${LFS}/usr/local/share/man/man{1,2,3,4,5,6,7,8}
 install -d ${LFS}/var/{lock,log,mail,run,spool}
 install -d ${LFS}/var/{opt,cache,lib/{misc,locate},local}
 install -d ${LFS}/opt/{bin,doc,include,info}
-install -d ${LFS}/opt/{lib,man/man{1,2,3,4,5,6,7,8}}
-cd /${LFS}/boot 
+install -d ${LFS}/opt/{lib,man/man{1,2,3,4,5,6,7,8}}</userinput></screen>
+
+   <para>These entries are needed for the RaQ2 bootloader. Only use these
+   if you are utilizing the Colo bootloader:</para>
+
+<screen><userinput>cd /${LFS}/boot 
 ln -sf . ${LFS}/boot</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

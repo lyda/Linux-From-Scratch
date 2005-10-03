@@ -32,9 +32,13 @@ install -d /usr/local/share/man/man{1,2,3,4,5,6,7,8}
 install -d /var/{lock,log,mail,run,spool}
 install -d /var/{opt,cache,lib/{misc,locate},local}
 install -d /opt/{bin,doc,include,info}
-install -d /opt/{lib,man/man{1,2,3,4,5,6,7,8}}
-cd /boot
-ln -s . boot</userinput></screen>
+install -d /opt/{lib,man/man{1,2,3,4,5,6,7,8}}</userinput></screen>
+
+   <para>These entries are needed for the RaQ2 bootloader. Only use these
+   if you are utilizing the Colo bootloader:</para>
+
+<screen><userinput>cd /boot
+ln -sf . boot</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/creatingdirs.xml"

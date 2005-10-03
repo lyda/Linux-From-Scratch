@@ -35,9 +35,13 @@ install -d /opt/{bin,doc,include,info}
 install -d /opt/{lib{,32,64},man/man{1,2,3,4,5,6,7,8}}
 install -d /usr/lib/locale
 ln -s ../lib/locale /usr/lib32
-ln -s ../lib/locale /usr/lib64
-cd /boot
-ln -s . boot</userinput></screen>
+ln -s ../lib/locale /usr/lib64</userinput></screen>
+
+   <para>These entries are needed for the RaQ2 bootloader. Only use these
+   if you are utilizing the Colo bootloader:</para>
+
+<screen><userinput>cd /boot
+ln -sf . boot</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/creatingdirs.xml"
