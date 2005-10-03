@@ -39,6 +39,17 @@
 -->
 
    <listitem>
+      <para>October 03, 2005</para>
+      <itemizedlist>
+      <listitem>
+          <para>[jim] - Added patch for coreutils to improve echo's POSIX and bash
+	   compatibility and to recognise "\xhh" syntax as required by the testsuite
+           in udev-069 and later. From LFS - Matthew Burgess</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>September 30, 2005</para>
       <itemizedlist>
         <listitem>

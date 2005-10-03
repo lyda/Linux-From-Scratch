@@ -51,6 +51,10 @@
 
 <screen os="b"><userinput>patch -Np1 -i ../&coreutils-suppress-patch;</userinput></screen>
 
+    <para os="p1">Apply a patch to improve the POSIX and bash compatibility of echo:</para>
+
+<screen os="p2"><userinput>patch -Np1 -i ../&coreutils-echo_posix-patch;</userinput></screen>
+
     <para os="c">Now prepare Coreutils for compilation:</para>
 
 <screen os="d"><userinput>DEFAULT_POSIX2_VERSION=199209 ./configure --prefix=/usr</userinput></screen>
