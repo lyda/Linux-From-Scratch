@@ -173,7 +173,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Mktemp Tempfile Patch - 3 KB:</term>
+      <term>Mktemp Tempfile Patch - 4 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;mktemp/&mktemp-tempfile-patch;"/></para>

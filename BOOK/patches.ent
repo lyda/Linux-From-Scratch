@@ -34,7 +34,7 @@
 
 <!ENTITY kbd-gcc4_fixes-patch "kbd-&kbd-version;-gcc4_fixes-1.patch">
 
-<!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-2.patch">
+<!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-3.patch">
 
 <!ENTITY ncurses-update-patch "ncurses-&ncurses-version;-20050827-patch.sh.bz2">
 
