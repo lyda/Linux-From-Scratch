@@ -66,6 +66,14 @@
     href="../x86/gcc-static.xml"
     xpointer="xpointer(//*[@os='af'])"/>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/gcc.xml"
+    xpointer="xpointer(//*[@os='ma'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/gcc.xml"
+    xpointer="xpointer(//*[@os='mb'])"/>
+
     <para os="al">This will allow us to build a 64 bit ABI compiler instead of the default
     n32:</para>
 

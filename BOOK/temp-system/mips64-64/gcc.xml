@@ -68,6 +68,14 @@
     xpointer="xpointer(//*[@os='af'])"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/gcc.xml"
+    xpointer="xpointer(//*[@os='ma'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../final-system/mips/gcc.xml"
+    xpointer="xpointer(//*[@os='mb'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../cross-tools/mips64-64/gcc-static.xml"
     xpointer="xpointer(//*[@os='al'])"/>
 
