@@ -13,13 +13,11 @@
   <para>We will need to setup target specific flags for the compiler
   and linkers.</para>
 
-<screen><userinput>export BUILD64="-m64"
-export GCCTARGET="-march=athlon64"</userinput></screen>
+<screen><userinput>export BUILD64="-m64"</userinput></screen>
 
   <para>Lets add the build flags to <filename>~/.bashrc</filename> to
   prevent issues if we stop and come back later.</para>
 
-<screen><userinput>echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc
-echo export GCCTARGET=\""${GCCTARGET}\"" &gt;&gt; ~/.bashrc</userinput></screen>
+<screen><userinput>echo export BUILD64=\""${BUILD64}\"" &gt;&gt; ~/.bashrc</userinput></screen>
 
 </sect1>

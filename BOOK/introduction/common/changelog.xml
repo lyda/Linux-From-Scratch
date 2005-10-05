@@ -39,6 +39,16 @@
 -->
 
    <listitem>
+      <para>October 05, 2005</para>
+      <itemizedlist>
+       <listitem>
+          <para>[jim] - Removed all GCC_TARGET_FLAGS. Tried to make the build
+          to use generic commands.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>October 03, 2005</para>
       <itemizedlist>
       <listitem>

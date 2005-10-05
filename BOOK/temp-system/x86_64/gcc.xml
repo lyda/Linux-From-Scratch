@@ -151,8 +151,8 @@ sed "/MULTILIBS/s@\$(GCC_FOR_TARGET)@/cross-tools/bin/${CC}@g" \
 
     <para>Compile the package:</para>
 
-<screen><userinput>make CFLAGS_FOR_TARGET="${GCCTARGET}" CXXFLAGS_FOR_TARGET="${GCCTARGET}" \
-AS_FOR_TARGET="/cross-tools/bin/${LFS_TARGET}-as" LD_FOR_TARGET="/cross-tools/bin/${LFS_TARGET}-ld"</userinput></screen>
+<screen><userinput>make AS_FOR_TARGET="/cross-tools/bin/${LFS_TARGET}-as" \
+    LD_FOR_TARGET="/cross-tools/bin/${LFS_TARGET}-ld"</userinput></screen>
 
     <para>Install the package:</para>
 
