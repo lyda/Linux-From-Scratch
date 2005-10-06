@@ -62,7 +62,7 @@
     --with-binutils=/cross-tools/${LFS_TARGET}/bin</userinput></screen>
 
    <warning os="e1">
-      <para><emphasis>Any</emphasis>error message you see at this point can safely ignored.</para>
+      <para><emphasis>Any</emphasis>error message you see at this point can safely be ignored.</para>
    </warning>
 
     <variablelist os="ca">
