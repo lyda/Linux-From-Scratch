@@ -47,6 +47,9 @@
 	  complete all three parts, and removes the reference to /tools/bin/sort
 	  from the updatedb script installed in the final system.</para>
         </listitem>
+	<listitem>
+           <para>[jim] - Added note to ignore error during glibc-headers build.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
