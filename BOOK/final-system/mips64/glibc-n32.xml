@@ -83,7 +83,7 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" \
+<screen><userinput>CC="gcc ${BUILDN32}" CXX="g++ ${BUILDN32}" \
     ../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons --enable-kernel=2.6.0 \
     --libexecdir=/usr/lib32/glibc --libdir=/usr/lib32</userinput></screen>
@@ -92,12 +92,12 @@
       <title>The meaning of the new configure option:</title>
 
       <varlistentry>
-        <term><parameter>--libexecdir=/usr/lib64/glibc</parameter></term>
+        <term><parameter>--libexecdir=/usr/lib32/glibc</parameter></term>
         <listitem>
           <para>This changes the location of the <command>pt_chown</command>
           program from its default of <filename
           class="directory">/usr/libexec</filename> to <filename
-          class="directory">/usr/lib64/glibc</filename>.</para>
+          class="directory">/usr/lib32/glibc</filename>.</para>
         </listitem>
       </varlistentry>
     </variablelist>

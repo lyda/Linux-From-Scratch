@@ -80,10 +80,10 @@
     href="glibc.xml"
     xpointer="xpointer(//*[@os='g'])"/>
 
-<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILD64}" \
+<screen><userinput>BUILD_CC="gcc" CC="${LFS_TARGET}-gcc ${BUILDN32}" \
     AR="${LFS_TARGET}-ar" RANLIB="${LFS_TARGET}-ranlib" \
     ../glibc-&glibc-version;/configure --prefix=/tools \
-    --host=${LFS_TARGET} --build=${LFS_HOST} --libdir=/tools/lib64 \
+    --host=${LFS_TARGET} --build=${LFS_HOST} --libdir=/tools/lib32 \
     --disable-profile --enable-add-ons \
     --with-tls --enable-kernel=2.6.0 --with-__thread \
     --with-binutils=/cross-tools/bin --with-headers=/tools/include \
@@ -93,14 +93,14 @@
       <title>The meaning of the new configure options:</title>
 
       <varlistentry os="fa1">
-        <term><parameter>CC="${LFS_TARGET}-gcc ${BUILD64}"</parameter></term>
+        <term><parameter>CC="${LFS_TARGET}-gcc ${BUILDN32}"</parameter></term>
         <listitem>
           <para>This switch do ... .</para>
         </listitem>
       </varlistentry>
 
       <varlistentry>
-        <term><parameter>--libdir=/tools/lib64</parameter></term>
+        <term><parameter>--libdir=/tools/lib32</parameter></term>
         <listitem>
           <para>This switch do ... .</para>
         </listitem>
