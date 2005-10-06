@@ -39,6 +39,18 @@
 -->
 
    <listitem>
+      <para>October 06, 2005</para>
+      <itemizedlist>
+       <listitem>
+          <para>[ken] - Reordered final-system so that coreutils is built before
+	  findutils (sequence as in LFS).  This allows the findutils testsuite to
+	  complete all three parts, and removes the reference to /tools/bin/sort
+	  from the updatedb script installed in the final system.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>October 05, 2005</para>
       <itemizedlist>
        <listitem>

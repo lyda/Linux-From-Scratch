@@ -17,6 +17,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86/adjusting.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/binutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gcc.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86/coreutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/zlib.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/iana-etc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/findutils.xml"/>
@@ -28,7 +29,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/bison.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/less.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/groff.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86/coreutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/sed.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/flex.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/gettext.xml"/>

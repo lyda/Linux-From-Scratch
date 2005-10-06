@@ -18,6 +18,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/adjusting.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/binutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gcc.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/coreutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/zlib.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/zlib-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/iana-etc.xml"/>
@@ -32,7 +33,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/bison.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/less.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/groff.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="x86_64/coreutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/sed.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/flex.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/flex-64bit.xml"/>
