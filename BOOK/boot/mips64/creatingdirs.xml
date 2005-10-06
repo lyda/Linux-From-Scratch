@@ -41,7 +41,7 @@ ln -s ../lib/locale ${LFS}/usr/lib64</userinput></screen>
    if you are utilizing the Colo bootloader:</para>
 
 <screen><userinput>cd /${LFS}/boot
-ln -sf . ${LFS}/boot</userinput></screen>
+ln -sf . boot</userinput></screen>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
   href="../common/creatingdirs.xml"
