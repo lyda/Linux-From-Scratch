@@ -81,8 +81,7 @@
     xpointer="xpointer(//*[@os='ai'])"/>
 
 <screen os="aj"><userinput>cp gcc/Makefile.in{,.orig}
-sed -e "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
-  -e "s@\(^NATIVE_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
+sed "s@\(^CROSS_SYSTEM_HEADER_DIR =\).*@\1 /tools/include@g" \
  gcc/Makefile.in.orig > gcc/Makefile.in</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"

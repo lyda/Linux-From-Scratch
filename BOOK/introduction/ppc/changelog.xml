@@ -40,6 +40,8 @@
       <itemizedlist>
         <listitem>
           <para>[ken] - Corrections and contents for Yaboot.</para>
+	  <para>[ken] - Remove bogus NATIVE_SYSTEM_HEADER_DIR from
+	  the sed in cross-tools/gcc-static.</para>
         </listitem>
       </itemizedlist>
     </listitem>
