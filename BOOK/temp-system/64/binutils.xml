@@ -107,14 +107,6 @@
     href="../common/binutils.xml"
     xpointer="xpointer(//*[@os='bh'])"/>
 
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bi'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/binutils.xml"
-    xpointer="xpointer(//*[@os='bj'])"/>
-
   </sect2>
 
   <sect2 role="content">

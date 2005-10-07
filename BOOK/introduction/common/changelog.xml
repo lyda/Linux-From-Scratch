@@ -39,6 +39,16 @@
 -->
 
    <listitem>
+      <para>October 07, 2005</para>
+      <itemizedlist>
+       <listitem>
+          <para>[ken] - Removed the copy of libiberty.h at the end of binutils
+	  in the temporary system</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>October 06, 2005</para>
       <itemizedlist>
        <listitem>
