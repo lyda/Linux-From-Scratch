@@ -19,7 +19,8 @@
   <sect2 role="package">
     <title/>
 
-    <para>The Yaboot package contains the PowerPC Boot Loader.</para>
+    <para>The Yaboot package contains a PowerPC Boot Loader for machines using
+    OpenFirmware such as NewWorld Macintoshes.</para>
 
     <segmentedlist>
       <segtitle>&buildtime;</segtitle>
@@ -58,14 +59,6 @@
 
 <screen><userinput>make PREFIX=/usr install</userinput></screen>
 
-    <para>Move the files need in <filename
-    class="directory">/boot</filename></para>
-
-<screen><userinput>install ofboot.b /boot
-install /usr/lib/yaboot/yaboot /boot
-install yaboot.conf /boot
-install boot.msg /boot</userinput></screen>
-
   </sect2>
 
   <sect2 id="contents-yaboot" role="content">
@@ -73,9 +66,12 @@ install boot.msg /boot</userinput></screen>
 
     <segmentedlist>
       <segtitle>Installed programs</segtitle>
+      <segtitle>Installed files</segtitle>
 
       <seglistitem>
-        <seg>Unchecked</seg>
+        <seg>addnote, mkofboot (link to ybin), ofboot, ofpath, yaboot,
+        yabootconfig, ybin</seg>
+        <seg>yaboot.conf</seg>
       </seglistitem>
     </segmentedlist>
 
@@ -84,12 +80,46 @@ install boot.msg /boot</userinput></screen>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
-      <varlistentry id="ofboot.b">
-        <term><command>ofboot.b</command></term>
+      <varlistentry id="addnote">
+        <term><command>addnote</command></term>
+	<listitem>
+	  <para>For IBM CHRP machines, add a PT_NOTE program header
+	  entry to an elf file so that it can be booted.</para>
+	  <indexterm zone="ch-system-yaboot addnote">
+	    <primary sortas="b-addnote">addnote</primary>
+	  </indexterm>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry id="mkofboot">
+        <term><command>mkofboot</command></term>
         <listitem>
-          <para>Need Description</para>
-          <indexterm zone="ch-system-yaboot ofboot.b">
-            <primary sortas="e-ofboot.b">ofboot.b</primary>
+          <para>Format the bootstrap partition and install the yaboot
+          boot loader.</para>
+          <indexterm zone="ch-system-yaboot mkofboot">
+            <primary sortas="b-mkofboot">mkofboot</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ofboot">
+        <term><command>ofboot</command></term>
+        <listitem>
+          <para>Script to format the boot menu using yaboot.conf and
+	  write the resulting OpenFirmware code to the bootstrap.</para>
+          <indexterm zone="ch-system-yaboot ofboot">
+            <primary sortas="b-ofboot">ofboot</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ofpath">
+        <term><command>ofpath</command></term>
+        <listitem>
+          <para>Determine OpenFirmware path corresponding to a device
+	  node.</para>
+          <indexterm zone="ch-system-yaboot ofpath">
+            <primary sortas="b-ofpath">ofpath</primary>
           </indexterm>
         </listitem>
       </varlistentry>
@@ -97,29 +127,41 @@ install boot.msg /boot</userinput></screen>
       <varlistentry id="yaboot">
         <term><command>yaboot</command></term>
         <listitem>
-          <para>Need Description</para>
+          <para>OpenFirmware boot loader.</para>
           <indexterm zone="ch-system-yaboot yaboot">
             <primary sortas="b-yaboot">yaboot</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
-      <varlistentry id="yaboot.conf">
-        <term><command>yaboot.conf</command></term>
+      <varlistentry id="yabootconfig">
+        <term><command>yabootconfig</command></term>
         <listitem>
-          <para>Need Description</para>
-          <indexterm zone="ch-system-yaboot yaboot.conf">
-            <primary sortas="e-yaboot.conf">yaboot.conf</primary>
+          <para>Generate and install a simple yaboot.conf.</para>
+          <indexterm zone="ch-system-yaboot yabootconfig">
+            <primary sortas="b-yabootconfig">yabootconfig</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
-      <varlistentry id="boot.msg">
-        <term><command>boot.msg</command></term>
+      <varlistentry id="ybin">
+        <term><command>ybin</command></term>
         <listitem>
-          <para>Need Description</para>
-          <indexterm zone="ch-system-yaboot boot.msg">
-            <primary sortas="e-boot.msg">yaboot-boot.msg</primary>
+          <para>Shell script to update or install the boot loader
+	  on a bootstrap partition.</para>
+          <indexterm zone="ch-system-yaboot ybin">
+            <primary sortas="b-ybin">ybin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="yaboot.conf">
+        <term><filename>yaboot.conf</filename></term>
+        <listitem>
+          <para>Configuration file used by <command>ybin</command> to determine
+	  how to install <command>yaboot</command> on the bootstrap partition.</para>
+          <indexterm zone="ch-system-yaboot yaboot.conf">
+            <primary sortas="e-yaboot.conf">yaboot.conf</primary>
           </indexterm>
         </listitem>
       </varlistentry>
