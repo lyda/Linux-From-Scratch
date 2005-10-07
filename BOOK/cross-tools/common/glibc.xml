@@ -68,7 +68,7 @@
     href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
-    <para os="dd"> For NPTL enabled systems we will need to add the following lines to
+    <para os="dd">For NPTL enabled systems we will need to add the following lines to
     <filename>config.cache</filename>:</para>
 
 <screen os="de"><userinput>echo "libc_cv_forced_unwind=yes" &gt; config.cache
