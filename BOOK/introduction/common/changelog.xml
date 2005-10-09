@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>October 09, 2005</para>
+      <itemizedlist>
+       <listitem>
+          <para>[ken] - Remove 'sed -i' from multilib temp-system bzip2.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>October 08, 2005</para>
       <itemizedlist>
        <listitem>
