@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>October 11, 2005</para>
+      <itemizedlist>
+       <listitem>
+          <para>[ken] - Tidy the text in multilib file-64bit.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>October 09, 2005</para>
       <itemizedlist>
        <listitem>

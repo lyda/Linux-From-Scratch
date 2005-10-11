@@ -52,22 +52,18 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="file.xml"
     xpointer="xpointer(//*[@os='c'])"/>
-    <para>Prepare File for compilation:</para>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="file.xml"
     xpointer="xpointer(//*[@os='d'])"/>
-    <para>Prepare File for compilation:</para>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="file.xml"
     xpointer="xpointer(//*[@os='e'])"/>
-    <para>Prepare File for compilation:</para>
 
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="file.xml"
     xpointer="xpointer(//*[@os='f'])"/>
-    <para>Prepare File for compilation:</para>
 
   </sect2>
 
