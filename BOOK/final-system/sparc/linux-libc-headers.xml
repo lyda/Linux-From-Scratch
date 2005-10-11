@@ -42,6 +42,10 @@
   <sect2 role="installation">
     <title>Installation of Linux-Libc-Headers</title>
 
+    <para os="s1">The following patch fixes build issues with Silo and other programs:</para>
+
+<screen os="s2"><userinput>patch -Np1 -i ../&linux-libc-headers-sparc_conflicts-patch;</userinput></screen>
+
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/linux-libc-headers.xml"
     xpointer="xpointer(//*[@os='a'])"/>
