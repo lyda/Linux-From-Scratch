@@ -39,6 +39,16 @@
 -->
 
    <listitem>
+      <para>October 12, 2005</para>
+      <itemizedlist>
+       <listitem>
+          <para>[jim] - Updated users/groups for better functional udev system. Working
+          on removing hotplug from build.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>October 11, 2005</para>
       <itemizedlist>
        <listitem>
