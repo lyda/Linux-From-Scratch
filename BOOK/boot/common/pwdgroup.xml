@@ -112,7 +112,8 @@ EOF</userinput></screen>
   proper permissions:</para>
 
 <screen><userinput>touch ${LFS}/var/run/utmp ${LFS}/var/log/{btmp,lastlog,wtmp}
-chmod 664 ${LFS}/var/run/utmp ${LFS}/var/log/lastlog</userinput></screen>
+chmod 664 ${LFS}/var/run/utmp ${LFS}/var/log/lastlog
+chmod 600 ${LFS}/var/log/btmp</userinput></screen>
 
   <para>The <filename>${LFS}/var/run/utmp</filename> file records the users
   that are currently logged in. The <filename>${LFS}/var/log/wtmp</filename>

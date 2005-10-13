@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>October 13, 2005</para>
+      <itemizedlist>
+       <listitem>
+          <para>[jim] - Changed permissions on btmp to current standards.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>October 12, 2005</para>
       <itemizedlist>
        <listitem>
