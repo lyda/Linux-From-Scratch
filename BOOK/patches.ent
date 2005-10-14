@@ -74,8 +74,6 @@
 
 <!ENTITY glibc-sparc_tls-patch "glibc-&glibc-version;-sparc_tls-1.patch">
 
-<!ENTITY linux-gcc4_sparc_fix-patch "linux-&linux-sparc-version;-gcc4_sparc_fix-1.patch">
-
 <!ENTITY linux-libc-headers-sparc_biarch-patch "linux-libc-headers-&linux-libc-headers-sparc64-version;-sparc_biarch-1.patch">
 <!ENTITY linux-libc-headers-sparc_conflicts-patch "linux-libc-headers-&linux-libc-headers-sparc-version;-sparc_conflicts-1.patch">
 

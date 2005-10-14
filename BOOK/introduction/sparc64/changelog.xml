@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>October 14, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Removed linux sparc GCC4 patch. Bug Report from Frans Verstegen.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 17, 2005</para>
       <itemizedlist>
         <listitem>

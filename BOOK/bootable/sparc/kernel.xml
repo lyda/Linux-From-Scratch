@@ -42,10 +42,6 @@
   <sect2 role="installation">
     <title>Installation of the kernel</title>
 
-    <para os="sp1">The following patch fixes compile issues::</para>
-
-<screen os="sp2"><userinput>patch -Np1 -i ../&linux-gcc4_sparc_fix-patch;</userinput></screen>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../x86/kernel.xml"
     xpointer="xpointer(//*[@os='a'])"/>
