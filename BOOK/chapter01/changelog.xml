@@ -42,7 +42,7 @@ First a summary, then a detailed log.</para>
 <listitem><para>Man 1.5p</para></listitem>
 <listitem><para>Man-pages 2.01</para></listitem>
 <listitem><para>Module-init-tools 3.1</para></listitem>
-<listitem><para>Perl 5.8.6</para></listitem>
+<listitem><para>Perl 5.8.7</para></listitem>
 <listitem><para>Procps 3.2.5</para></listitem>
 <listitem><para>Psmisc 21.6</para></listitem>
 <listitem><para>Sed 4.1.4</para></listitem>
@@ -89,7 +89,7 @@ First a summary, then a detailed log.</para>
 </listitem>
 
 <listitem><para>October 13th, 2005 [ken]: Fix known errors in lists of
-installed files.</para></listitem> 	
+installed files and bump the perl version.</para></listitem> 	
 
 <listitem><para>July  9th, 2005 [archaic]: Rewrote kernel notes.
 </para></listitem>
