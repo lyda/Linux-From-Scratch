@@ -88,6 +88,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>October 13th, 2005 [ken]: Fix known errors in lists of
+installed files.</para></listitem> 	
+
 <listitem><para>July  9th, 2005 [archaic]: Rewrote kernel notes.
 </para></listitem>
 
