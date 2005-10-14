@@ -35,6 +35,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>October 14th, 2005 [jhuntwork]: Added the tempfile patch
+for texinfo.</para></listitem> 	
+
 <listitem><para>October 14th, 2005 [ken]: Update packages and patches in
 the changelog to only reflect changes since 6.1.  Update zlib.</para></listitem> 	
 
