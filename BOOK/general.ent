@@ -80,3 +80,6 @@
 <!ENTITY util-linux-version "2.12q">
 <!ENTITY vim-version "6.3">
 <!ENTITY zlib-version "1.2.3">
+
+<!ENTITY % patches-entities SYSTEM "patches.ent">
+%patches-entities;
