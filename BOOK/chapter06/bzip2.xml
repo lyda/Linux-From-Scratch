@@ -32,14 +32,14 @@ GCC, Glibc, and Make</seg></seglistitem>
 
 <para>Apply a patch to install the documentation for this package:</para>
 
-<screen><userinput>patch -Np1 -i ../&bzip2-docs-patch;</userinput></screen>
+<screen><userinput>patch -Np1 -i ../bzip2-&bzip2-version;-install_docs-1.patch</userinput></screen>
 
 <para>The <command>bzgrep</command> command does not escape '|' and '&amp;' in
 filenames passed to it. This allows arbitrary commands to be executed with the
 privileges of the user running <command>bzgrep</command>. Apply the following to
 address this:</para>
 
-<screen><userinput>patch -Np1 -i ../&bzip2-bzgrep-patch;</userinput></screen>
+<screen><userinput>patch -Np1 -i ../bzip2-&bzip2-version;-bzgrep_security-1.patch</userinput></screen>
 
 <para>Prepare Bzip2 for compilation with:</para>
 
