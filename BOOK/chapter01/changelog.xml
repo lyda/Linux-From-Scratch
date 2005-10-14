@@ -24,10 +24,11 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
-<!-- <listitem><para>Added:</para>
+<listitem><para>Added:</para>
 <itemizedlist>
+<listitem><para>texinfo-4.8-tempfile_fix-1.patch</para></listitem>
 </itemizedlist>
-</listitem> -->
+</listitem>
 
 <listitem><para>Removed:</para>
 <itemizedlist>
