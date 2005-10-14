@@ -30,6 +30,13 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry>
+<term>Binutils Build From Host Running Gcc4 Patch - 2 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;&binutils-gcc4-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
 <term>Bzip2 Documentation Patch - 1 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;&bzip2-docs-patch;"/></para>
@@ -89,6 +96,13 @@ needed to build an LFS system:</para>
 <term>GCC Specs Patch - 14 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;&gcc-specs-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Glibc Rtld Search Dirs Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;&glibc-rtld-patch;"/></para>
 </listitem>
 </varlistentry>
 

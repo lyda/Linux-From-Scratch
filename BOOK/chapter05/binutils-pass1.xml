@@ -17,7 +17,7 @@
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
 <segtitle>&diskspace;</segtitle>
-<seglistitem><seg>1.0 SBU</seg><seg>170 MB</seg></seglistitem>
+<seglistitem><seg>1.0 SBU</seg><seg>179 MB</seg></seglistitem>
 </segmentedlist>
 
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
@@ -38,6 +38,13 @@ optimization flags (including the <parameter>-march</parameter> and
 variables that override default optimizations have been defined, such
 as <envar>CFLAGS</envar> and <envar>CXXFLAGS</envar>,
 unset them when building Binutils.</para>
+
+<para>If you are building from a host running Gcc-4 or later, it is necessary
+to patch the first build of this version of Binutils so that it can be
+compiled by the host system.</para>
+
+<screen><userinput>patch -Np1 -i ../binutils-&binutils-version;-gcc4-1.patch
+</userinput></screen>
 
 <para>The Binutils documentation recommends building Binutils outside of the
 source directory in a dedicated build directory:</para>

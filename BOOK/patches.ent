@@ -4,6 +4,7 @@
 <!ENTITY bash-fixes-patch "bash-&bash-version;-fixes-3.patch">
 <!ENTITY bash-avoid_WCONTINUED-patch "bash-&bash-version;-avoid_WCONTINUED-1.patch">
 
+<!ENTITY binutils-gcc4-patch "binutils-&binutils-version;-gcc4-1.patch">
 <!ENTITY bzip2-docs-patch "bzip2-&bzip2-version;-install_docs-1.patch">
 <!ENTITY bzip2-bzgrep-patch "bzip2-&bzip2-version;-bzgrep_security-1.patch">
 
@@ -18,6 +19,7 @@
 <!ENTITY gcc-no_fixincludes-patch "gcc-&gcc-version;-no_fixincludes-1.patch">
 <!ENTITY gcc-specs-patch "gcc-&gcc-version;-specs-2.patch">
 
+<!ENTITY glibc-rtld-patch "glibc-&glibc-version;-rtld_search_dirs-1.patch">
 <!ENTITY glibc-testfix-patch "glibc-&glibc-version;-fix_test-1.patch">
 
 <!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch">
