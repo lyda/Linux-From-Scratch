@@ -30,6 +30,20 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry>
+<term>Bzip2 Documentation Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;&bzip2-docs-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Bzip2 Bzgrep Security Fixes Patch - 1 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;&bzip2-bzgrep-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
 <term>Coreutils Suppress Uptime, Kill, Su Patch - 15 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch"/></para>
