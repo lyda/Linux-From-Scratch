@@ -33,7 +33,7 @@ GCC, Glibc, Grep, Make, Ncurses, and Sed</seg></seglistitem>
 only shows 33 characters on a line and then wraps to the next line. It also
 includes other fixes recommended by the Readline author.</para>
 
-<screen><userinput>patch -Np1 -i ../readline-&readline-version;-fixes-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&readline-fixes-patch;</userinput></screen>
 
 <para>Prepare Readline for compilation:</para>
 

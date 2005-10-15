@@ -58,8 +58,8 @@ working.</para>
 
 <para>First correct a known problem and make an essential adjustment:</para>
 
-<screen><userinput>patch -Np1 -i ../gcc-&gcc-version;-no_fixincludes-1.patch
-patch -Np1 -i ../gcc-&gcc-version;-specs-2.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&gcc-no_fixincludes-patch;
+patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
 
 <para>The first patch disables the GCC <command>fixincludes</command>
 script. This was briefly mentioned earlier, but a more in-depth

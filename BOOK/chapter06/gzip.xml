@@ -32,7 +32,7 @@ GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
 <para>Gzip has 2 known security vulnerabilities.  The following patch
 addresses both of them:</para>
 
-<screen><userinput>patch -Np1 -i ../gzip-&gzip-version;-security_fixes-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&gzip-security_fix-patch;</userinput></screen>
 
 <para>Prepare Gzip for compilation:</para>
 

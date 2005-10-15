@@ -32,7 +32,7 @@ GCC, Glibc, Grep, Make, Sed, and Tcl</seg></seglistitem>
 <para>First, fix a bug that can result in false failures during the GCC test
 suite run:</para>
 
-<screen><userinput>patch -Np1 -i ../expect-&expect-version;-spawn-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&expect-spawn-patch;</userinput></screen>
 
 <para>Now prepare Expect for compilation:</para>
 

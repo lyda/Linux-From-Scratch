@@ -26,13 +26,13 @@ First a summary, then a detailed log.</para>
 
 <listitem><para>Added:</para>
 <itemizedlist>
-<listitem><para>binutils-&binutils-version;-gcc4-1.patch</para></listitem>
-<listitem><para>bzip2-&bzip2-version;-install_docs-1.patch</para></listitem>
-<listitem><para>bzip2-&bzip2-version;-bzgrep_security-1.patch</para></listitem>
-<listitem><para>glibc-&glibc-version;-rtld_search_dirs-1.patch</para></listitem>
-<listitem><para>texinfo-&texinfo-version;-tempfile_fix-1.patch</para></listitem>
-<listitem><para>util-linux-&util-linux-version;-umount_fix-1.patch</para></listitem>
-<listitem><para>vim-&vim-version;-security_fix-2.patch</para></listitem>
+<listitem><para>&binutils-gcc4-patch;</para></listitem>
+<listitem><para>&bzip2-docs-patch;</para></listitem>
+<listitem><para>&bzip2-bzgrep-patch;</para></listitem>
+<listitem><para>&glibc-rtld-patch;</para></listitem>
+<listitem><para>&texinfo-tempfile_fix-patch;</para></listitem>
+<listitem><para>&util-linux-umount-patch;</para></listitem>
+<listitem><para>&vim-security_fix-patch;</para></listitem>
 </itemizedlist>
 </listitem>
 
@@ -53,16 +53,16 @@ vulnerability in util-linux.</para></listitem>
 </para></listitem>
 
 <listitem><para>October 14th, 2005 [jhuntwork]: Added the bzip2 security
-and install docs patches.</para></listitem> 	
+and install docs patches.</para></listitem>
 
 <listitem><para>October 14th, 2005 [jhuntwork]: Added the tempfile patch
-for texinfo.</para></listitem> 	
+for texinfo.</para></listitem>
 
 <listitem><para>October 14th, 2005 [ken]: Update packages and patches in
-the changelog to only reflect changes since 6.1.  Update zlib.</para></listitem> 	
+the changelog to only reflect changes since 6.1.  Update zlib.</para></listitem>
 
 <listitem><para>October 13th, 2005 [ken]: Fix known errors in lists of
-installed files and bump the perl version.</para></listitem> 	
+installed files and bump the perl version.</para></listitem>
 
 </itemizedlist>
 

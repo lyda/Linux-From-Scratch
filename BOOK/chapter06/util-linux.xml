@@ -49,12 +49,12 @@ mkdir -p /var/lib/hwclock</userinput></screen>
 <para>Util-linux fails to compile against newer versions of Linux-Libc-Headers.
 The following patch properly fixes this issue:</para>
 
-<screen><userinput>patch -Np1 -i ../util-linux-&util-linux-version;-cramfs-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&util-linux-cramfs-patch;</userinput></screen>
 
 <para>Util-linux has a security vulnerability that could allow a user to remount
 a volume without the nosuid option. The following patch fixes this issue:</para>
 
-<screen><userinput>patch -Np1 -i ../util-linux-&util-linux-version;-umount_fix-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&util-linux-umount-patch;</userinput></screen>
 
 <para>Prepare Util-linux for compilation:</para>
 

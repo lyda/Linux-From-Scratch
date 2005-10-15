@@ -31,7 +31,7 @@ Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
 <para>Tar has a bug when the <parameter>-S</parameter> option is used
 with files larger than 4 GB. The following patch properly fixes this issue:</para>
 
-<screen><userinput>patch -Np1 -i ../tar-&tar-version;-sparse_fix-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&tar-sparse_fix-patch;</userinput></screen>
 
 <para>Prepare Tar for compilation:</para>
 

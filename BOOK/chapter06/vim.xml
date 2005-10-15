@@ -49,7 +49,7 @@ echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' &gt;&gt; src/feature.h</userinput><
 <para>Vim has a security vulnerability already addressed upstream.  The
 following patch fixes the problem:</para>
 
-<screen><userinput>patch -Np1 -i ../vim-&vim-version;-security_fix-2.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&vim-security_fix-patch;</userinput></screen>
 
 <para>Now prepare Vim for compilation:</para>
 

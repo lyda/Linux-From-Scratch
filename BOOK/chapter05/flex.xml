@@ -30,7 +30,7 @@
 <para>Flex contains several known bugs. These can be fixed with the
 following patch:</para>
 
-<screen><userinput>patch -Np1 -i ../flex-&flex-version;-debian_fixes-3.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&flex-fixes-patch;</userinput></screen>
 
 <para>The GNU autotools will detect that the Flex source code has been
 modified by the previous patch and tries to update the man page

@@ -31,7 +31,7 @@ as those given by the kernel when unusual things happen.</para>
 <para>The following patch fixes various issues, including a problem building
 Sysklogd with Linux 2.6 series kernels</para>
 
-<screen><userinput>patch -Np1 -i ../sysklogd-&sysklogd-version;-fixes-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&sysklogd-fixes-patch;</userinput></screen>
 
 <para>Compile the package:</para>
 
