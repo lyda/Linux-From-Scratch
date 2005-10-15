@@ -46,7 +46,7 @@ First a summary, then a detailed log.</para>
 Udev rules file</para></listitem>
 
 <listitem><para>October 14th, 2005 [ken]: Added a patch to allow binutils
-to be built from a host running gcc-4, updateid gcc instructions for the rtld
+to be built from a host running gcc-4, updated glibc instructions for the rtld
 patch, updated space/time for perl and zlib.</para></listitem> 	
 
 <listitem><para>October 14th, 2005 [matt]: Added a patch to fix a security
