@@ -14,7 +14,7 @@
   and linkers.</para>
 
 <screen><userinput>export BUILD32="-m32"
-export BUILD64="-m=64"</userinput></screen>
+export BUILD64="-m64"</userinput></screen>
 
   <para>You will need to set your host target triplet for 32 bit:</para>
 
