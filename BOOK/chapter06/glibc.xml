@@ -152,7 +152,7 @@ instructions, instead of the <parameter>install-locales</parameter>
 target used above, will install the minimum set of locales necessary
 for the tests to run successfully:</para>
 
-<screen><userinput>mkdir -p /usr/lib/locale
+<screen role="nodump"><userinput>mkdir -p /usr/lib/locale
 localedef -i de_DE -f ISO-8859-1 de_DE
 localedef -i de_DE@euro -f ISO-8859-15 de_DE@euro
 localedef -i en_HK -f ISO-8859-1 en_HK
@@ -223,7 +223,7 @@ EOF</userinput></screen>
 
 <para>To determine the local time zone, run the following script:</para>
 
-<screen><userinput>tzselect</userinput></screen>
+<screen role="nodump"><userinput>tzselect</userinput></screen>
 
 <para>After answering a few questions about the location, the script
 will output the name of the time zone (e.g.,

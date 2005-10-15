@@ -67,7 +67,7 @@ linkend="chapter-temporary-tools"/> and the
 files have been created, user name and group name resolution will now
 work.</para>
 
-<screen><userinput>exec /tools/bin/bash --login +h</userinput></screen>
+<screen role="nodump"><userinput>exec /tools/bin/bash --login +h</userinput></screen>
 
 <para>Note the use of the <parameter>+h</parameter> directive. This tells
 <command>bash</command> not to use its internal path hashing. Without this

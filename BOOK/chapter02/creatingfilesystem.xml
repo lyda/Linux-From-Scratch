@@ -18,7 +18,7 @@ condition="pdf">&blfs-root;view/svn/ postlfs/filesystems.html</phrase></ulink>.<
 
 <para>To create an ext2 file system on the LFS partition, run the following:</para>
 
-<screen><userinput>mke2fs /dev/<replaceable>[xxx]</replaceable></userinput></screen>
+<screen role="nodump"><userinput>mke2fs /dev/<replaceable>[xxx]</replaceable></userinput></screen>
 
 <para>Replace <replaceable>[xxx]</replaceable> with the name of the LFS
 partition (<filename class="devicefile">hda5</filename> in our previous example).</para>
@@ -30,7 +30,7 @@ e2fsprogs; you will get an error similar to <quote>unsupported filesystem
 features, upgrade your e2fsprogs</quote>.  To check if your host system
 uses custom enhancements, run the following command:</para>
 
-<screen><userinput>debugfs -R feature /dev/<replaceable>[xxx]</replaceable></userinput></screen>
+<screen role="nodump"><userinput>debugfs -R feature /dev/<replaceable>[xxx]</replaceable></userinput></screen>
 
 <para>If the output contains features other than: dir_index; filetype;
 large_file; resize_inode or sparse_super then your host system may have custom
@@ -38,7 +38,7 @@ enhancements.  In that case, to avoid later problems, you should compile the
 stock e2fsprogs package and use the resulting binaries to re-create the
 filesystem on your LFS partition:</para>
 
-<screen><userinput>cd /tmp
+<screen role="nodump"><userinput>cd /tmp
 tar xjf /path/to/sources/e2fsprogs-&e2fsprogs-version;.tar.bz2
 cd e2fsprogs-&e2fsprogs-version;
 mkdir build
@@ -54,7 +54,7 @@ rm -rf e2fsprogs-&e2fsprogs-version;</userinput></screen>
 issuing the command below. If you are using an existing swap partition, there is
 no need to format it.</para>
 
-<screen><userinput>mkswap /dev/<replaceable>[yyy]</replaceable></userinput></screen>
+<screen role="nodump"><userinput>mkswap /dev/<replaceable>[yyy]</replaceable></userinput></screen>
 
 <para>Replace <replaceable>[yyy]</replaceable> with the name of the swap
 partition.</para>
