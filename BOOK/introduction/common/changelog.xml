@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>October 16, 2005</para>
+      <itemizedlist>
+       <listitem>
+          <para>[ken] - Apply Justin's patch to tidy up the order of the patches.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>October 13, 2005</para>
       <itemizedlist>
        <listitem>

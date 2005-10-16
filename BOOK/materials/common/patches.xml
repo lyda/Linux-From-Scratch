@@ -21,6 +21,14 @@
   <variablelist role="materials">
 
     <varlistentry>
+      <term>Bash Avoid Wcontinued Patch - 1 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;bash/&bash-avoid_WCONTINUED-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Bash Various Fixes - 23 KB:</term>
       <listitem>
         <para><ulink
@@ -29,10 +37,10 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Bash Avoid Wcontinued Patch - 1 KB:</term>
+      <term>Binutils Posix Patch - 1 KB:</term>
       <listitem>
         <para><ulink
-        url="&patches-root;bash/&bash-avoid_WCONTINUED-patch;"/></para>
+        url="&patches-root;binutils/&binutils-posix-patch;"/></para>
       </listitem>
     </varlistentry>
 
@@ -49,14 +57,6 @@
       <listitem>
         <para><ulink
         url="&patches-root;bzip2/&bzip2-docs-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Binutils Posix Patch - 1 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;binutils/&binutils-posix-patch;"/></para>
       </listitem>
     </varlistentry>
 
@@ -141,18 +141,18 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Inetutils No-Server-Man-Pages Patch - 4 KB:</term>
-      <listitem>
-        <para><ulink
-        url="&patches-root;inetutils/&inetutils-man_pages-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Inetutils GCC 4.x Fixes Patch - 2 KB:</term>
       <listitem>
         <para><ulink
         url="&patches-root;inetutils/&inetutils-gcc4_fixes-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Inetutils No-Server-Man-Pages Patch - 4 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;inetutils/&inetutils-man_pages-patch;"/></para>
       </listitem>
     </varlistentry>
 
