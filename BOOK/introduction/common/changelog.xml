@@ -39,10 +39,10 @@
 -->
 
    <listitem>
-      <para>October 16, 2005</para>
+      <para>October 15, 2005</para>
       <itemizedlist>
        <listitem>
-          <para>[ken] - Apply Justin's patch to tidy up the order of the patches.</para>
+          <para>[jim] - Updated to Ncurses 5.5.</para>
         </listitem>
        <listitem>
           <para>[jim] - Updated to Man Pages 2.09.</para>
