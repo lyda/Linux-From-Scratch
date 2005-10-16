@@ -88,7 +88,7 @@ done</userinput></screen>
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
 <seglistitem><seg>info, infokey, install-info,
-makeinfo, texi2dvi, and texindex</seg></seglistitem>
+makeinfo, texi2dvi, texi2pdf, and texindex</seg></seglistitem>
 </segmentedlist>
 
 <variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
