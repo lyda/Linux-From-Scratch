@@ -233,12 +233,6 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry>
-      <term>Vim Security Patch - 9 KB:</term><listitem>
-        <para><ulink url="&patches-root;vim/&vim-security_fix-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
   </variablelist>
 
   <para>In addition to the above required patches, there exist a number of

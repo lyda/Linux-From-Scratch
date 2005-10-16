@@ -62,11 +62,6 @@
 
 <screen os="b"><userinput>echo '#define SYS_VIMRC_FILE "/etc/vimrc"' &gt;&gt; src/feature.h</userinput></screen>
 
-    <para os="c">Vim has two known security vulnerabilities that have already been
-    addressed upstream. The following patch fixes the problems:</para>
-
-<screen os="d"><userinput>patch -Np1 -i ../&vim-security_fix-patch;</userinput></screen>
-
     <para os="e">Prepare Vim for compilation:</para>
 
 <screen><userinput>./configure --prefix=/usr --enable-multibyte</userinput></screen>

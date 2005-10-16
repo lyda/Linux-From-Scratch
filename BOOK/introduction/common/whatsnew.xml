@@ -114,6 +114,9 @@
       <para>Util-linux &util-linux-version;</para>
     </listitem>
     <listitem>
+      <para>Vim &vim-version;</para>
+    </listitem>
+    <listitem>
       <para>Zlib &zlib-version;</para>
     </listitem>
   </itemizedlist>
@@ -156,9 +159,6 @@
     </listitem>
     <listitem>
       <para>&util-linux-cramfs-patch;</para>
-    </listitem>
-    <listitem>
-      <para>&vim-security_fix-patch;</para>
     </listitem>
   </itemizedlist>
 

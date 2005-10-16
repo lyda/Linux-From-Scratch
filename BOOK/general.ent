@@ -113,5 +113,5 @@
 <!ENTITY udev-version "070">
 <!ENTITY udev-config-file "udev-config-2.rules">
 <!ENTITY yaboot-version "1.3.13">
-<!ENTITY vim-version "6.3">
+<!ENTITY vim-version "6.4">
 <!ENTITY zlib-version "1.2.3">

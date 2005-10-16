@@ -56,14 +56,6 @@
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/vim.xml"
-    xpointer="xpointer(//*[@os='c'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/vim.xml"
-    xpointer="xpointer(//*[@os='d'])"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
-    href="../common/vim.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
 <screen><userinput>CC="gcc ${BUILD64}" CXX="g++ ${BUILD64}" ./configure --prefix=/usr \
