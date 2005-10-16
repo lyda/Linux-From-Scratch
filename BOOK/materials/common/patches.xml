@@ -173,14 +173,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Ncurses Fixes Patch - 321 KB:</term>
-      <listitem>
-        <para><ulink
-        url="ftp://invisible-island.net/ncurses/&ncurses-version;/&ncurses-update-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Perl Libc Patch - 1 KB:</term>
       <listitem>
         <para><ulink

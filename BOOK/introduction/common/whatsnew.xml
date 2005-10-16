@@ -152,9 +152,6 @@
       <para>&kbd-gcc4_fixes-patch;</para>
     </listitem>
     <listitem>
-      <para>&ncurses-update-patch; (Patch)</para>
-    </listitem>
-    <listitem>
       <para>&tar-sparse_fix-patch;</para>
     </listitem>
     <listitem>

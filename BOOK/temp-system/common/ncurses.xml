@@ -43,14 +43,6 @@
   <sect2 role="installation">
     <title>Installation of Ncurses</title>
 
-    <para os="aa">When cross-compiling, Ncurses doesn't always properly create
-    the file <filename>ncurses/comp_captab.c</filename> which results
-    in build failures. Fix this issue by updating Ncurses with a rollup
-    patch released on 2005/03/19:</para>
-
-<screen os="ab"><userinput>bzcat ../&ncurses-update-patch; &gt; update.sh
-sh update.sh</userinput></screen>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/ncurses.xml"
     xpointer="xpointer(//*[@os='a'])"/>

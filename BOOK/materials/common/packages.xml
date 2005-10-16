@@ -337,7 +337,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Ncurses (&ncurses-version;) - 1.5 MB:</term>
+      <term>Ncurses (&ncurses-version;) - 2.3 MB:</term>
       <listitem>
         <para><ulink
         url="ftp://invisible-island.net/ncurses/ncurses-&ncurses-version;.tar.gz"/></para>
