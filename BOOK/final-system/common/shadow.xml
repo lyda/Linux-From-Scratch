@@ -54,6 +54,11 @@
       command below.</para>
     </note>
 
+    <para os="p1">Shadow has selinux, pam, and auditing defaulted to on. The
+     following patch properly fixes this issue:</para>
+
+<screen os="p2"><userinput>patch -Np1 -i ../&shadow-configure_fix-patch;</userinput></screen>
+
     <para os="b">Prepare Shadow for compilation:</para>
 
 <screen><userinput>./configure --libdir=/lib --enable-shared</userinput></screen>

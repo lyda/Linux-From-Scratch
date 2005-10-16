@@ -189,6 +189,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Shadow Configure Fixes Patch - 2 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;shadow/&shadow-configure_fix-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Sysklogd Fixes Patch - 27 KB:</term>
       <listitem>
         <para><ulink
