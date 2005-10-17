@@ -47,9 +47,9 @@
     href="../../final-system/multilib/bzip2-64bit.xml"
     xpointer="xpointer(//*[@os='ba'])"/>
 
-<screen os="bb"><userinput>cp Makefile{,.bak}
-sed 's@^\(all:.*\) test@\1@g' \
-    -e 's@/lib\(/\| \|$\)@/lib64\1@g' Makefile.bak > Makefile</userinput></screen>
+<screen os="bb"><userinput>cp Makefile{,.orig}
+sed -e 's@^\(all:.*\) test@\1@g' \
+    -e 's@/lib\(/\| \|$\)@/lib64\1@g' Makefile.orig > Makefile</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/bzip2.xml"

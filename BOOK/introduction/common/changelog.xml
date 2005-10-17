@@ -57,6 +57,10 @@
           <para>[jim] - Added a sed to remove the glibc dependency on
 	  a certain version of gcc. Thanx for the IRC bug report from andre.</para>
         </listitem>
+       <listitem>
+          <para>[jim] - Made all the cross-tools, chroot, boot, and temp-system seds
+          follow the same format.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

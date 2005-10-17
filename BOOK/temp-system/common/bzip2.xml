@@ -46,8 +46,8 @@
     <para os="ca">We need to remove the tests to since they won't work on
     a multi-architecture build:</para>
 
-<screen os="cb"><userinput>cp Makefile{,.bak}
-sed 's@^\(all:.*\) test@\1@g' Makefile.bak > Makefile</userinput></screen>
+<screen os="cb"><userinput>cp Makefile{,.orig}
+sed -e 's@^\(all:.*\) test@\1@g' Makefile.orig > Makefile</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/bzip2.xml"

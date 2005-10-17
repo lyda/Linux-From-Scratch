@@ -76,7 +76,7 @@
     href="../../final-system/common/e2fsprogs.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 
-<screen><userinput>make LDFLAGS="-s"</userinput></screen>
+<screen><userinput>make</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/e2fsprogs.xml"

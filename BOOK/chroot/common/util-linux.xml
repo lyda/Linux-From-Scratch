@@ -55,8 +55,8 @@
     href="../../boot/common/util-linux.xml"
     xpointer="xpointer(//*[@os='ba'])"/>
 
-<screen os="ca"><userinput>cp -p configure configure.orig
-sed 's@/usr/include@/tools/include@g' configure.orig &gt; configure</userinput></screen>
+<screen os="ca"><userinput>cp configure configure.orig
+sed -e 's@/usr/include@/tools/include@g' configure.orig &gt; configure</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/util-linux.xml"
