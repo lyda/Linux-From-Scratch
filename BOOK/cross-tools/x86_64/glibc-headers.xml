@@ -44,6 +44,14 @@
     <title>Installation of Glibc Headers</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@os='s1'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../x86/glibc-headers.xml"
+    xpointer="xpointer(//*[@os='s2'])"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../final-system/common/glibc.xml"
     xpointer="xpointer(//*[@os='e'])"/>
 

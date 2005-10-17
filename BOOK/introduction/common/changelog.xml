@@ -53,6 +53,10 @@
        <listitem>
           <para>[jim] - Updated to Shadow 4.0.13.</para>
         </listitem>
+       <listitem>
+          <para>[jim] - Added a sed to remove the glibc dependency on
+	  a certain version of gcc. Thanx for the IRC bug report from andre.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
