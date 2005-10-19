@@ -144,7 +144,8 @@ device-independent file that can be printed</para>
 <varlistentry id="texi2pdf">
 <term><command>texi2pdf</command></term>
 <listitem>
-<para>Create a PDF file from a Texinfo file.</para>
+<para>Used to format the given Texinfo document into a
+Portable Document Format (PDF) file</para>
 <indexterm zone="ch-system-texinfo texi2pdf"><primary sortas="b-texi2pdf">texi2pdf</primary></indexterm>
 </listitem>
 </varlistentry>

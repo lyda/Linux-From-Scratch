@@ -85,7 +85,7 @@ chmod -v 755 /usr/bin/lex</userinput></screen>
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
 <segtitle>Installed library</segtitle>
-<seglistitem><seg>flex, lex</seg>
+<seglistitem><seg>flex and lex</seg>
 <seg>libfl.a</seg></seglistitem>
 </segmentedlist>
 

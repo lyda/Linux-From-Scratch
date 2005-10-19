@@ -40,8 +40,9 @@ prepare Perl for compilation with:</para>
 <variablelist>
 <varlistentry>
 <term><parameter>-Dpager="/bin/less -isR"</parameter></term>
-<listitem><para>This corrects an error in the way that the <command>perldoc</command>
-command invokes the <command>less</command> program.</para></listitem>
+<listitem><para>This corrects an error in the way that
+<command>perldoc</command> invokes the <command>less</command> program.</para>
+</listitem>
 </varlistentry>
 </variablelist>
 
