@@ -42,6 +42,12 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>October 19, 2005 [manuel]: Updated the acknowledgements
+to current trunk version.</para></listitem>
+
+<listitem><para>October 19, 2005 [manuel]: Updated the stylesheets, Makefile
+and related files to current trunk versions.</para></listitem>
+
 <listitem><para>October 15, 2005 [matt]: Use an updated version of the Udev
 rules file (fixes bug 1639).</para></listitem>
 
