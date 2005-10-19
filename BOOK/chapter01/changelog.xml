@@ -43,7 +43,8 @@ First a summary, then a detailed log.</para>
 </listitem>
 
 <listitem><para>October 19, 2005 [manuel]: Updated the acknowledgements
-to current trunk version.</para></listitem>
+to current trunk version. Ported also some redaction changes in preface
+and chapter01 pages.</para></listitem>
 
 <listitem><para>October 19, 2005 [manuel]: Updated the stylesheets, Makefile
 and related files to current trunk versions.</para></listitem>
