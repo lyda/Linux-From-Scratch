@@ -91,7 +91,7 @@ them.</para></important>
 
 <para>Create a separate build directory again:</para>
 
-<screen><userinput>mkdir ../gcc-build
+<screen><userinput>mkdir -v ../gcc-build
 cd ../gcc-build</userinput></screen>
 
 <para>Before starting to build GCC, remember to unset any environment

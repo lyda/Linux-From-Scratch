@@ -47,7 +47,7 @@ nor the kernel. If you plan to run the testsuite apply this patch:</para>
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
 
-<screen><userinput>mkdir ../glibc-build
+<screen><userinput>mkdir -v ../glibc-build
 cd ../glibc-build</userinput></screen>
 
 <para>Next, prepare Glibc for compilation:</para>
@@ -161,7 +161,7 @@ output so that the log file can be examined for failures later.</para>
 end about the absence of <filename>/tools/etc/ld.so.conf</filename>. 
 Prevent this warning with:</para>
 
-<screen><userinput>mkdir /tools/etc
+<screen><userinput>mkdir -v /tools/etc
 touch /tools/etc/ld.so.conf</userinput></screen>
 
 <para>Install the package:</para>
@@ -197,7 +197,7 @@ instructions, instead of the <parameter>install-locales</parameter>
 target used above, will install the minimum set of locales necessary
 for the tests to run successfully:</para>
 
-<screen><userinput>mkdir -p /tools/lib/locale
+<screen><userinput>mkdir -pv /tools/lib/locale
 localedef -i de_DE -f ISO-8859-1 de_DE
 localedef -i de_DE@euro -f ISO-8859-15 de_DE@euro
 localedef -i en_HK -f ISO-8859-1 en_HK

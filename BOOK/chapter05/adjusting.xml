@@ -66,7 +66,7 @@ of the GCC build. This is explained in more detail later in this
 chapter. Run the following command to eliminate this
 possibility:</para>
 
-<screen><userinput>rm -f /tools/lib/gcc/*/*/include/{pthread.h,bits/sigthread.h}</userinput></screen>
+<screen><userinput>rm -vf /tools/lib/gcc/*/*/include/{pthread.h,bits/sigthread.h}</userinput></screen>
 
 <beginpage/>
 
@@ -107,7 +107,7 @@ commands</phrase>.</para>
 
 <para>Once all is well, clean up the test files:</para>
 
-<screen><userinput>rm dummy.c a.out</userinput></screen>
+<screen><userinput>rm -v dummy.c a.out</userinput></screen>
 </caution>
 
 </sect1>

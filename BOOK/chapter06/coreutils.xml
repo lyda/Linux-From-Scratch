@@ -82,15 +82,15 @@ groups:</para>
 
 <para>Move programs to the proper locations:</para>
 
-<screen><userinput>mv /usr/bin/{[,basename,cat,chgrp,chmod,chown,cp,dd,df} /bin
-mv /usr/bin/{date,echo,false,head,hostname,install,ln} /bin
-mv /usr/bin/{ls,mkdir,mknod,mv,pwd,rm,rmdir,sync} /bin
-mv /usr/bin/{sleep,stty,test,touch,true,uname} /bin
-mv /usr/bin/chroot /usr/sbin</userinput></screen>
+<screen><userinput>mv -v /usr/bin/{[,basename,cat,chgrp,chmod,chown,cp,dd,df} /bin
+mv -v /usr/bin/{date,echo,false,head,hostname,install,ln} /bin
+mv -v /usr/bin/{ls,mkdir,mknod,mv,pwd,rm,rmdir,sync} /bin
+mv -v /usr/bin/{sleep,stty,test,touch,true,uname} /bin
+mv -v /usr/bin/chroot /usr/sbin</userinput></screen>
 
 <para>Finally, create a symlink to be FHS-compliant:</para>
 
-<screen><userinput>ln -s ../../bin/install /usr/bin</userinput></screen>
+<screen><userinput>ln -sv ../../bin/install /usr/bin</userinput></screen>
 
 </sect2>
 
