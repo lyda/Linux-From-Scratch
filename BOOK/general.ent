@@ -68,7 +68,7 @@
 <!ENTITY iproute2-version "050816">
 <!ENTITY inetutils-version "1.4.2">
 <!ENTITY kbd-version "1.12">
-<!ENTITY less-version "382">
+<!ENTITY less-version "385">
 <!ENTITY lfs-bootscripts-version "3.2.2">
 <!ENTITY libtool-version "1.5.20">
 <!ENTITY linux-dl-version "2.6">
