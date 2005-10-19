@@ -223,7 +223,7 @@
     <varlistentry>
        <term>Texinfo Tempfile Fix Patch - 2 KB:</term>
        <listitem>
-          <para><ulink url="&patches-root;&texinfo-tempfile_fix-patch;"/></para>
+          <para><ulink url="&patches-root;texinfo/&texinfo-tempfile_fix-patch;"/></para>
        </listitem>
     </varlistentry>
 
