@@ -78,7 +78,7 @@
 
     <para>Create symlinks in <filename class="directory">/usr/lib64:</filename></para>
 
-<screen><userinput>rm /lib64/lib{ncurses,menu,panel,form}.so
+<screen><userinput>rm /lib64/lib{ncurses,menu,panel,form,curses}.so
 ln -sf ../../lib64/libncurses.so.5 /usr/lib64/libncurses.so
 ln -sf ../../lib64/libmenu.so.5 /usr/lib64/libmenu.so
 ln -sf ../../lib64/libpanel.so.5 /usr/lib64/libpanel.so
