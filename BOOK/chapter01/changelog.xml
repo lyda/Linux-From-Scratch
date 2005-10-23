@@ -43,7 +43,8 @@ First a summary, then a detailed log.</para>
 </listitem>
 
 <listitem><para>October 23, 2005 [manuel]: Added Bash documentation
-installation.</para></listitem>
+installation. Added notes about libiconv and Cracklib. Fixed the installation
+of Sed documentation.</para></listitem>
 
 <listitem><para>October 19, 2005 [manuel]: Updated the acknowledgements to 
 current trunk version. Ported some redaction changes in preface and chapter01 

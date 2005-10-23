@@ -31,6 +31,15 @@ Gawk, GCC, Gettext, Grep, Make, Perl, Sed, and Texinfo</seg></seglistitem>
 <sect2 role="installation">
 <title>Installation of Glibc</title>
 
+<note><para>Some packages outside of LFS suggest installing GNU libiconv in
+order to translate data from one encoding to another.  The project's home page
+(<ulink url="http://www.gnu.org/software/libiconv/"/>) says <quote>This library
+provides an <function>iconv()</function> implementation, for use on systems
+which don't have one, or whose implementation cannot convert from/to Unicode.
+</quote>  Glibc provides an <function>iconv()</function> implementation and can
+convert from/to Unicode, therefore libiconv is not required on an LFS
+system.</para></note>
+
 <para>This package is known to have issues when its default
 optimization flags (including the <parameter>-march</parameter> and
 <parameter>-mcpu</parameter> options) are changed. If any environment
@@ -98,7 +107,8 @@ circumstance.</para></important>
 
 <para>Test the results:</para>
 
-<screen><userinput>make check</userinput></screen>
+<screen><userinput>make -k check &gt;glibc-check-log 2&gt;&amp;1
+grep Error glibc-check-log</userinput></screen>
 
 <para>The Glibc test suite is highly dependent on certain functions of
 the host system, in particular the kernel. In general, the Glibc test
