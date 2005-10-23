@@ -43,12 +43,6 @@
   <sect2 role="installation">
     <title>Installation of E2fsprogs</title>
 
-    <para>Make sure the libraries get installed to
-    <filename class="directory">/tools/lib64</filename>:</para>
-
-<screen><userinput>cp configure{,.bak}
-sed "/libdir=.*\/lib/s@/lib@/lib64@g" configure.bak > configure</userinput></screen>
-
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/e2fsprogs.xml"
     xpointer="xpointer(//*[@os='a'])"/>
