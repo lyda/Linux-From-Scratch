@@ -42,10 +42,13 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>October 23, 2005 [manuel]: Added Bash documentation
+installation.</para></listitem>
+
 <listitem><para>October 19, 2005 [manuel]: Updated the acknowledgements to 
 current trunk version. Ported some redaction changes in preface and chapter01 
 pages. Moved chapter02 to part II. Added -v switches. Ported several typos 
-and redaction fixes from trunk</para></listitem>
+and redaction fixes from trunk.</para></listitem>
 
 <listitem><para>October 19, 2005 [manuel]: Updated the stylesheets, Makefile
 and related files to current trunk versions.</para></listitem>
