@@ -58,6 +58,29 @@ sed 's@mount -f /sys || failed=1@mount -f /sys | udevstart || failed=1@' \
    ${LFS}/etc/rc.d/init.d/mountfs.bak \
    > ${LFS}/etc/rc.d/init.d/mountfs</userinput></screen>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootscripts/common/setclock.xml"
+    xpointer="xpointer(//*[@os='a'])"/>
+
+  <para>If you do not know whether or not the hardware clock is set
+  to UTC, you can find out after you have booted the new machine by running
+  the  <userinput>hwclock --localtime  --show</userinput> command, and if
+  necessary editing the /etc/sysconfig/clock script.  The worst that will
+  happen if you make a wrong guess here is that the time displayed will be
+  wrong.</para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../../bootscripts/common/setclock.xml"
+    xpointer="xpointer(//*[@os='c'])"/>
+
+<screen><userinput>cat &gt; ${LFS}/etc/sysconfig/clock &lt;&lt; "EOF"
+<literal># Begin /etc/sysconfig/clock
+
+UTC=1
+
+# End /etc/sysconfig/clock</literal>
+EOF</userinput></screen>
+
   </sect2>
 
   <sect2 role="content">

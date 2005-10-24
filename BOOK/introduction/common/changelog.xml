@@ -39,7 +39,17 @@
 -->
 
    <listitem>
-      <para>October 13, 2005</para>
+      <para>October 24, 2005</para>
+      <itemizedlist>
+       <listitem>
+          <para>[ken] - add ${LFS} when creating passwd, group in chapter 7, and add
+	    ${LFS}/etc/sysconfig/clock.  Thanks to Duncan Webb.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
+      <para>October 18, 2005</para>
       <itemizedlist>
        <listitem>
           <para>[jim] - Updated to File 4.16.</para>
