@@ -42,6 +42,6 @@ mount -t sysfs sysfs $LFS/sys</userinput></screen>
 
 <screen><userinput>mount -f -t tmpfs tmpfs $LFS/dev
 mount -f -t tmpfs tmpfs $LFS/dev/shm
-mount -f -t devpts -o gid=4,mode=620 devpts $LFS/dev/pts</userinput></screen>
+mount -f -t devpts -o gid=10,mode=620 devpts $LFS/dev/pts</userinput></screen>
 
 </sect1>
