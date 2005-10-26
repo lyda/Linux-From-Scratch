@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>October 26, 2005</para>
+      <itemizedlist>
+       <listitem>
+          <para>[jim] - Fixed login.defs.linux to login.defs - renamed under 4.0.13.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>October 24, 2005</para>
       <itemizedlist>
        <listitem>

@@ -126,7 +126,7 @@ sed -i '/groups/d' man/Makefile</userinput></screen>
 
 <screen os="q"><userinput>sed -e's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
     -e 's@/var/spool/mail@/var/mail@' \
-    etc/login.defs.linux &gt; /etc/login.defs</userinput></screen>
+    etc/login.defs &gt; /etc/login.defs</userinput></screen>
 
     <para os="r">Move a misplaced program to their proper location:</para>
 
