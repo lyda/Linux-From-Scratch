@@ -44,6 +44,9 @@
         <listitem>
           <para>[jim] - Updated to Coreutils 5.92.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Updated to Glibc Snapshot 20051024. Fixes stability on MIPS/Sparc Platforms</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
