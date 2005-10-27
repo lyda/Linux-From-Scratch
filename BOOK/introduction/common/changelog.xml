@@ -39,6 +39,15 @@
 -->
 
    <listitem>
+      <para>October 27, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Updated to Coreutils 5.92.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+   <listitem>
       <para>October 26, 2005</para>
       <itemizedlist>
        <listitem>
