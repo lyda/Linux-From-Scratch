@@ -48,6 +48,9 @@
           <para>[jim] - Updated udev to make the firmware helper. Necessary for devices
            that depend on firmware to be loaded.</para>
         </listitem>
+       <listitem>
+          <para>[jim] - Updated udev to 071.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
