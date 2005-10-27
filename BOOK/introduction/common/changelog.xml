@@ -44,6 +44,10 @@
        <listitem>
           <para>[jim] - Fixed login.defs.linux to login.defs - renamed under 4.0.13.</para>
         </listitem>
+       <listitem>
+          <para>[jim] - Updated udev to make the firmware helper. Necessary for devices
+           that depend on firmware to be loaded.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
