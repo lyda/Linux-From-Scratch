@@ -46,7 +46,8 @@
     href="../common/udev.xml"
     xpointer="xpointer(//*[@os='c'])"/>
 
-<screen><userinput>make CC="gcc ${BUILD64}" LD="gcc ${BUILD64}" EXTRAS=extras/firmware udevdir=/dev</userinput></screen>
+<screen><userinput>make CC="gcc ${BUILD64}" LD="gcc ${BUILD64}" \
+    EXTRAS="extras/firmware extras/run_directory" udevdir=/dev</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/udev.xml"
