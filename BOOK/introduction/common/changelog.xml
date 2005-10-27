@@ -51,6 +51,10 @@
        <listitem>
           <para>[jim] - Updated udev to 071.</para>
         </listitem>
+       <listitem>
+          <para>[jim] - Updated udev installation update based on information from
+	  Alex Patrakov.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

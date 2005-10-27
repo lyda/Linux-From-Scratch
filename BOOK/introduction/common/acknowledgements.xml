@@ -53,6 +53,9 @@ via the LFS-DEV Mailing lists.</para>
     <listitem>
       <para>Matt Darcy - x86_64 Testing.</para>
     </listitem>
+    <listitem>
+      <para>Alexander E. Patrakov - Udev/Hotplug Integration</para>
+    </listitem>
   </itemizedlist>
 
   <para>Thank you all for your support.</para>

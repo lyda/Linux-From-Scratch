@@ -47,7 +47,7 @@
 
     <para os="c">Compile the package:</para>
 
-<screen><userinput>make EXTRAS=extras/firmware udevdir=/dev</userinput></screen>
+<screen><userinput>make EXTRAS="extras/firmware extras/run_directory" udevdir=/dev</userinput></screen>
 
     <variablelist os="d">
       <title>The meaning of the make parameter:</title>
@@ -67,7 +67,7 @@
 
     <para os="f">Install the package:</para>
 
-<screen os="g"><userinput>make EXTRAS=extras/firmware udevdir=/dev install</userinput></screen>
+<screen os="g"><userinput>make EXTRAS="extras/firmware extras/run_directory" udevdir=/dev install</userinput></screen>
 
     <para os="h">Udev's configuration is far from ideal by default, so install
     the configuration files here:</para>
