@@ -71,6 +71,22 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Perl Configure Multilib Patch - 1.4 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;perl/&perl-multilib-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Perl Libc lib64 Patch - 0.9 KB:</term>
+      <listitem>
+        <para><ulink
+        url="&patches-root;perl/&perl-lib64-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Silo Fixes Patch - 4 KB:</term>
       <listitem>
         <para><ulink

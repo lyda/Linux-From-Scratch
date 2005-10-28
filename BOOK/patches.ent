@@ -39,6 +39,8 @@
 <!ENTITY ncurses-update-patch "ncurses-&ncurses-version;-20050827-patch.sh.bz2">
 
 <!ENTITY perl-libc-patch "perl-&perl-version;-libc-1.patch">
+<!ENTITY perl-multilib-patch "perl-&perl-version;-Configure_multilib-1.patch">
+<!ENTITY perl-lib64-patch "perl-&perl-version;-libc_lib64-1.patch">
 
 <!ENTITY readline-fixes-patch "readline-&readline-version;-fixes-1.patch">
 

@@ -36,6 +36,15 @@
 -->
 
     <listitem>
+      <para>October 28, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - Added Perl patches to install into lib64.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 21, 2005</para>
       <itemizedlist>
         <listitem>
