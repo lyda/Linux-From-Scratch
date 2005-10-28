@@ -45,8 +45,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gettext-n32.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/gettext-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/inetutils.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl-n32.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/perl-64bit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/iproute2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="multilib/texinfo.xml"/>

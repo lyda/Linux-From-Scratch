@@ -39,7 +39,8 @@
       <para>October 28, 2005</para>
       <itemizedlist>
         <listitem>
-          <para>[ken] - Added Perl patches to install into lib64.</para>
+          <para>[ken] - Added Perl patches to install into lib64, removed
+	  32-bit perl from final system.</para>
         </listitem>
       </itemizedlist>
     </listitem>
