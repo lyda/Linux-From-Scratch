@@ -10,7 +10,7 @@
 <sect1 id="ch-system-perl" role="wrap">
   <?dbhtml filename="perl-64bit.html"?>
 
-  <title>Perl-&perl-version; 64 Bit</title>
+  <title>Perl-&perl-version;</title>
 
   <indexterm zone="ch-system-perl">
     <primary sortas="a-Perl">Perl</primary>
@@ -42,17 +42,50 @@
   <sect2 role="installation">
     <title>Installation of Perl</title>
 
-    <para>Make sure Perl looks at <filename
-    class="directory">/usr/lib64</filename> for shared libraries:</para>
+    <para>In multilib builds we install compilers and libraries for each available
+    architecture.  The description below says that perl installs several hundred
+    libraries, but they are used by invoking <command>perl</command>, not by linking
+    to them with <command>ld</command>.  Although it is possible to install perl for
+    32 bits, move it to a different name, and then install the 64-bit version, it is
+    almost always invoked as just <command>perl</command>. That means only the
+    libraries and modules for the last version installed will be accessible. We
+    therefore only install one version.</para> 
 
-<screen><userinput>sed -i 's@\${prefix}/lib@\${prefix}/lib64@g' hints/linux.sh</userinput></screen>
+    <para>Perl does not, by default, know about library directories with names other
+    than lib, such as lib64.  The following patch will allow it to install to lib64.</para>
+
+<screen><userinput>patch -Np1 -i ../&perl-multilib-patch;</userinput></screen>
+
+    <para>There is a further (possibly cosmetic) anomaly - if we install perl and
+    then run <command>perl -V</command> it will claim that libc is in /lib.  The
+    following patch fixes this, but only takes effect when <command>make install
+    </command> is run.</para>
+
+<screen><userinput>patch -Np1 -i ../&perl-lib64-patch;</userinput></screen>
+
+    <para>We still need to tell perl to actually use lib64</para>
+
+<screen><userinput>echo 'installstyle="lib64/perl5"' >>hints/linux.sh</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
 <screen><userinput>./configure.gnu --prefix=/usr -Dpager="/bin/less -isR" \
+   -Dlibpth="/usr/local/lib64 /lib64 /usr/lib64" \
    -Dcc="gcc ${BUILD64}"</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the new configure option:</title>
+
+      <varlistentry>
+        <term><parameter>-Dlibpth="/usr/local/lib64 /lib64 /usr/lib64"</parameter></term>
+        <listitem>
+          <para>This tells Perl to link against the 64-bit libraries.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../common/perl.xml"
