@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % patches-entities SYSTEM "../../patches.ent">
+  %general-entities;
+  %patches-entities;
+]>
+
+<sect1 id="ch-intro-changelog-sparc64">
+  <?dbhtml filename="changelog-sparc64.html"?>
+
+  <title>Changelog for Sparc64-64</title>
+
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+  href="../x86/changelog.xml"
+  xpointer="xpointer(/sect1/para[1])"/>
+
+  <itemizedlist>
+    <title>Changelog Entries:</title>
+
+<!-- Changelog template
+
+    <listitem>
+      <para>Date</para>
+      <itemizedlist>
+        <listitem>
+          <para>[name] - Changelog entry.</para>
+        </listitem>
+        <listitem>
+          <para>[name] - Another changelog entry.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+-->
+
+    <listitem>
+      <para>October 14, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Removed linux sparc GCC4 patch. Bug Report from Frans Verstegen.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>September 17, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added patch to build the Kernel with GCC 4.x.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>September 14, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added patches to support NPTL.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>August 8, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Inetutils replace with Netkit Base. This is due
+          to a compile issue with the ping command. Every time ping is
+          ran it will give a bus error. Upstream has no idea on how to
+          fix, so this temporary solution is in place.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>July 6, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added a partitioning information.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>July 3, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added a patch for silo, to allow cross-compile.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Added openprom, to fstab.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>July 2, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Added a patch for kbd, to fix kbd_rate structure.</para>
+        </listitem>
+        <listitem>
+          <para>[jim] - Added elftoaout for Silo dependency.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>July 1, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - Removed -mcpu and -mtune tags. Not all Sparcs are
+	  ultrasparc.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>June 24, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Removed unecessary backtics in flags page.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>May 22, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Changed the way we enter chroot.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Changed binutils install in temp-system to
+          copy libiberty.h to /tools/include.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>May 10, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jim] - This BOOK is an update of the cross-lfs book into a new
+          format style.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+  </itemizedlist>
+
+</sect1>

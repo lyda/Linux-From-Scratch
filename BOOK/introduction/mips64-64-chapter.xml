@@ -17,7 +17,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/whatsnew.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64-64/whatsnew.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/changelog.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64/changelog.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mips64-64/changelog.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/resources.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="common/askforhelp.xml"/>
 
