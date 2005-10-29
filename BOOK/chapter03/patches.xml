@@ -123,6 +123,7 @@ needed to build an LFS system:</para>
 <term>Inetutils Kernel Headers Patch - 1 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;&inetutils-kernel_headers-patch;"/></para>
+<beginpage/>
 </listitem>
 </varlistentry>
 
@@ -144,7 +145,6 @@ needed to build an LFS system:</para>
 <term>Perl Libc Patch - 1 KB:</term>
 <listitem>
 <para><ulink url="&patches-root;&perl-libc-patch;"/></para>
-<beginpage/>
 </listitem>
 </varlistentry>
 

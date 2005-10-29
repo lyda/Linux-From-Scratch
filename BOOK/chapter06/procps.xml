@@ -149,7 +149,7 @@ ongoing look at processor activity in real time</para>
 <para>Reports how long the system has been running, how many users are
 logged on, and the system load averages</para>
 <indexterm zone="ch-system-procps uptime"><primary sortas="b-uptime">uptime</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="vmstat">

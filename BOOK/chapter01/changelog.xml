@@ -42,6 +42,8 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>October 29, 2005 [manuel]: PDF fixes.</para></listitem>
+
 <listitem><para>October 23, 2005 [manuel]: Added Bash documentation
 installation. Added notes about libiconv and Cracklib. Fixed the installation
 of Sed documentation. Replaced a patch for IPRoute2 by a sed 

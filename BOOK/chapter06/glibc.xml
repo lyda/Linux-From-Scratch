@@ -95,8 +95,6 @@ class="directory">/usr/lib/glibc</filename>.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<beginpage/>
-
 <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
@@ -199,6 +197,8 @@ on the threading API (applicable to NPTL as well):</para>
 
 <screen><userinput>make -C ../glibc-&glibc-version;/linuxthreads/man install</userinput></screen>
 
+<beginpage/>
+
 </sect2>
 
 <sect2 id="conf-glibc" role="configuration"><title>Configuring Glibc</title>
@@ -261,6 +261,8 @@ mode.</para></listitem>
 </varlistentry>
 </variablelist>
 
+<beginpage/>
+
 </sect2>
 
 <sect2 id="conf-ld" role="configuration">
@@ -312,8 +314,6 @@ libnss_hesiod.so, libnss_nis.so, libnss_nisplus.so, libpcprofile.so,
 libpthread.[a,so], libresolv.[a,so], librpcsvc.a, librt.[a,so],
 libthread_db.so, and libutil.[a,so]</seg></seglistitem>
 </segmentedlist>
-
-<beginpage/>
 
 <variablelist><bridgehead renderas="sect3">Short Descriptions</bridgehead>
 <?dbfo list-presentation="list"?>

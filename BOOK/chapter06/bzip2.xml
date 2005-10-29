@@ -78,8 +78,9 @@ rm -v /usr/bin/{bunzip2,bzcat,bzip2}
 ln -sv bzip2 /bin/bunzip2
 ln -sv bzip2 /bin/bzcat</userinput></screen>
 
-</sect2>
+<beginpage/>
 
+</sect2>
 
 <sect2 id="contents-bzip2" role="content"><title>Contents of Bzip2</title>
 

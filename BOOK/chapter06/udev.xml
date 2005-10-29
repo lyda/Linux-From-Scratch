@@ -96,7 +96,7 @@ thus avoiding various race conditions</para>
 <listitem>
 <para>Delivers hotplug events to <command>udevd</command></para>
 <indexterm zone="ch-system-udev udevsend"><primary sortas="b-udevsend">udevsend</primary></indexterm>
-</listitem></varlistentry>
+<beginpage/></listitem></varlistentry>
 
 <varlistentry id="udevstart">
 <term><command>udevstart</command></term>

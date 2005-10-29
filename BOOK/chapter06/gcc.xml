@@ -71,6 +71,8 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput>make</userinput></screen>
 
+<beginpage/>
+
 <important><para>In this section, the test suite for GCC is considered
 critical. Do not skip it under any circumstance.</para></important>
 
@@ -168,7 +170,7 @@ gcov</seg>
 <listitem>
 <para>A shell script used to help create useful bug reports</para>
 <indexterm zone="ch-system-gcc gccbug"><primary sortas="b-gccbug">gccbug</primary></indexterm>
-</listitem>
+<beginpage/></listitem>
 </varlistentry>
 
 <varlistentry id="gcov">

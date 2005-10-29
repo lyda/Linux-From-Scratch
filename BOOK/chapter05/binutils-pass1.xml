@@ -78,6 +78,8 @@ temporary tools.</para></listitem>
 </varlistentry>
 </variablelist>
 
+<beginpage/>
+
 <para>Continue with compiling the package:</para>
 
 <screen><userinput>make</userinput></screen>
