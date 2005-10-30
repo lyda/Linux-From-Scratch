@@ -46,7 +46,7 @@
     <para>Make sure the libraries get installed to
     <filename class="directory">/tools/lib64</filename>:</para>
 
-<screen><userinput>chmod 0755
+<screen><userinput>chmod 0755 configure
 cp configure{,.orig}
 sed -e "/libdir=.*\/lib/s@/lib@/lib64@g" configure.orig > configure</userinput></screen>
 
