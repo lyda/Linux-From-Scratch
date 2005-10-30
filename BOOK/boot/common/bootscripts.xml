@@ -49,7 +49,7 @@
 
     <para>Make bootscripts usable at boot:</para>
 
-<screen><userinput> cp ${LFS}/etc/rc.d/init.d/functions{,.bak}
+<screen><userinput>cp ${LFS}/etc/rc.d/init.d/functions{,.bak}
 sed 's|/bin:/usr/bin:/sbin:/usr/sbin|/tools/bin:/tools/sbin:/bin:/sbin|g' \
    ${LFS}/etc/rc.d/init.d/functions.bak \
    > ${LFS}/etc/rc.d/init.d/functions
@@ -62,12 +62,12 @@ sed 's@mount -f /sys || failed=1@mount -f /sys | udevstart || failed=1@' \
     href="../../bootscripts/common/setclock.xml"
     xpointer="xpointer(//*[@os='a'])"/>
 
-  <para>If you do not know whether or not the hardware clock is set
-  to UTC, you can find out after you have booted the new machine by running
-  the  <userinput>hwclock --localtime  --show</userinput> command, and if
-  necessary editing the /etc/sysconfig/clock script.  The worst that will
-  happen if you make a wrong guess here is that the time displayed will be
-  wrong.</para>
+    <para>If you do not know whether or not the hardware clock is set to UTC,
+    you can find out after you have booted the new machine by running the
+    <userinput>hwclock --localtime  --show</userinput> command, and if
+    necessary editing the <filename>/etc/sysconfig/clock</filename> script.
+    The worst that will happen if you make a wrong guess here is that the
+    time displayed will be wrong.</para>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="../../bootscripts/common/setclock.xml"
