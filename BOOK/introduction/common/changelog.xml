@@ -44,6 +44,10 @@
         <listitem>
           <para>[manuel] - Text updates ported from trunk up to r7102.</para>
         </listitem>
+        <listitem>
+          <para>[jim] - Numerous bug reports on e2fsprogs multilib, that configure
+          wouldn't work, could not validate, but added the fix in. Thanx for the reports.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
