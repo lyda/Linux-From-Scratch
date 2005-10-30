@@ -38,6 +38,15 @@
     </listitem>
 -->
 
+    <listitem>
+      <para>October 30, 2005</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Text updates ported from trunk up to r7102.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
    <listitem>
       <para>October 27, 2005</para>
       <itemizedlist>
@@ -65,7 +74,7 @@
         </listitem>
        <listitem>
           <para>[jim] - Updated udev installation update based on information from
-	  Alex Patrakov.</para>
+          Alex Patrakov.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -75,7 +84,7 @@
       <itemizedlist>
        <listitem>
           <para>[ken] - add ${LFS} when creating passwd, group in chapter 7, and add
-	    ${LFS}/etc/sysconfig/clock.  Thanks to Duncan Webb.</para>
+          ${LFS}/etc/sysconfig/clock.  Thanks to Duncan Webb.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -109,7 +118,7 @@
         </listitem>
        <listitem>
           <para>[jim] - Added a sed to remove the glibc dependency on
-	  a certain version of gcc. Thanx for the IRC bug report from andre.</para>
+          a certain version of gcc. Thanx for the IRC bug report from andre.</para>
         </listitem>
        <listitem>
           <para>[jim] - Made all the cross-tools, chroot, boot, and temp-system seds
@@ -170,7 +179,7 @@
       <itemizedlist>
        <listitem>
           <para>[ken] - Removed the copy of libiberty.h at the end of binutils
-	  in the temporary system</para>
+          in the temporary system</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -180,11 +189,11 @@
       <itemizedlist>
        <listitem>
           <para>[ken] - Reordered final-system so that coreutils is built before
-	  findutils (sequence as in LFS).  This allows the findutils testsuite to
-	  complete all three parts, and removes the reference to /tools/bin/sort
-	  from the updatedb script installed in the final system.</para>
+          findutils (sequence as in LFS).  This allows the findutils testsuite to
+          complete all three parts, and removes the reference to /tools/bin/sort
+          from the updatedb script installed in the final system.</para>
         </listitem>
-	<listitem>
+        <listitem>
            <para>[jim] - Added note to ignore error during glibc-headers build.</para>
         </listitem>
       </itemizedlist>
@@ -205,8 +214,8 @@
       <itemizedlist>
       <listitem>
           <para>[jim] - Added patch for coreutils to improve echo's POSIX and bash
-	   compatibility and to recognise "\xhh" syntax as required by the testsuite
-           in udev-069 and later. From LFS - Matthew Burgess</para>
+          compatibility and to recognise "\xhh" syntax as required by the testsuite
+          in udev-069 and later. From LFS - Matthew Burgess</para>
         </listitem>
        <listitem>
           <para>[jim] - Added Gawk Segfault patch. From LFS - Matthew Burgess</para>
@@ -360,7 +369,7 @@
       <itemizedlist>
         <listitem>
           <para>[jim] - Updated to Glibc 20050905 snapshot. Fixes many cross-compile build
-	  issues with GCC 4 based cross-lfs. For details read 
+          issues with GCC 4 based cross-lfs. For details read
           <ulink url="http://archives.linuxfromscratch.org/mail-archives/lfs-dev/2005-September/053261.html"/>.</para>
         </listitem>
       </itemizedlist>
