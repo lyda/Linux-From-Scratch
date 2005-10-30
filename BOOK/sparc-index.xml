@@ -19,7 +19,6 @@
     <title>Introduction</title>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction/sparc-chapter.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="partitioning/sparc-chapter.xml"/>
 
   </part>
 
@@ -28,6 +27,7 @@
 
     <title>Preparing for the Build</title>
 
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="partitioning/sparc-chapter.xml"/>
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="materials/sparc-chapter.xml"/>
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="final-preps/chapter.xml"/>
 
@@ -79,4 +79,3 @@
   <index/>
 
 </book>
-
