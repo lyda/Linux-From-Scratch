@@ -42,6 +42,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>November 4, 2005 [matt]: Correct the instructions for running
+Module-Init-Tools' testsuite (fixes bug 1597).  Thanks to Greg Schafer, Tushar
+Teredesai and to Randy McMurchy for providing the patch.</para></listitem>
+
 <listitem><para>October 29, 2005 [manuel]: PDF fixes.</para></listitem>
 
 <listitem><para>October 23, 2005 [manuel]: Added Bash documentation
