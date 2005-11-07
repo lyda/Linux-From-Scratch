@@ -42,6 +42,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>November 7, 2005 [matt]: Stop Udev from killing udevd processes
+on the host system (fixes bug 1651).  Thanks to Alexander Patrakov for the
+report and the fix.</para></listitem>
+
 <listitem><para>November 5, 2005 [matt]: Add a note to the toolchain sanity
 check in chapter 5 to explain that if TCL fails to build, it's an indication of
 a broken toolchain (bug 1581).</para></listitem>

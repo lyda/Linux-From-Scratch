@@ -45,7 +45,22 @@ devices nodes are to be created.</para></listitem>
 
 <para>Install the package:</para>
 
-<screen><userinput>make udevdir=/dev install</userinput></screen>
+<screen><userinput>make DESTDIR=/ udevdir=/dev install</userinput></screen>
+
+<para>The meaning of the make option:</para>
+
+<variablelist>
+  <varlistentry>
+    <term><parameter>DESTDIR=/</parameter>
+    </term>
+    <listitem>
+      <para>This prevents the Udev build process from killing any
+        <command>udevd</command> processes that may be running on the host
+        system.
+      </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
 
 <para>Udev's configuration is far from ideal by default, so install
 the configuration files here:</para>
