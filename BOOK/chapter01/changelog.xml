@@ -114,6 +114,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>November 10, 2005 [jhuntwork]: Initial re-ordering of packages.
+Thanks to Chris Staub (bug 684).</para></listitem>
+
 <listitem><para>November 7, 2005 [matt]: Install the binaries from Less to
 /usr/bin instead of /bin (fixes bug 1643).</para></listitem>
 
