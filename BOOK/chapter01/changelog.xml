@@ -42,6 +42,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>November 12, 2005 [matt]: Omit running Bzip2's testsuite as a
+separate step, as <command>make</command> runs it automatically (bug 1652).
+</para></listitem>
+
 <listitem><para>November 7, 2005 [matt]: Stop Udev from killing udevd processes
 on the host system (fixes bug 1651).  Thanks to Alexander Patrakov for the
 report and the fix.</para></listitem>
