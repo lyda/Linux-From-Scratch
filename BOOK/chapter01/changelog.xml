@@ -114,6 +114,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>November 12, 2005 [jhuntwork]: Move sed to earlier in the
+build.</para></listitem>
+
 <listitem><para>November 12, 2005 [jhuntwork]: Move m4 to earlier in the
 build. Thanks Chris Staub.</para></listitem>
 
