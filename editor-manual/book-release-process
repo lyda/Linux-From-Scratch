@@ -1,0 +1,101 @@
+# Checklist for LFS Book releases.
+
+# x.y refers to the version you are about to release
+# a.b refers to the next *minor* version after the release
+#  (ex: 6.2 is the minor next version after 6.1)
+
+1.  Ensure that all needed commits have been made by all editors.
+
+2,  Create a tag. All the following steps will be done on that tag (not on the
+    branch)
+
+3.  Change "version" entity to x.y
+
+4.  Change "releasedate" entity if necessary
+
+5.  Change "milestone" entity to x.y (shouldn't be needed)
+
+6.  Change "generic-version" entity to x.y
+
+8.  Commit all changes
+
+## WARNING ##
+#
+# From here on it is assumed that all scripts are run from your home directory
+# on belgarath. This is required to ease the automation of the release process.
+
+9.  Download release-script.sh from the editor-manual directory.
+    ENSURE THAT YOU CHECK THE "version" AND "stable" VARIABLES! Then run the
+    script. The script will pull the tagged repo and from that it will create
+    all the downloadable book types and will extract a copy of each into
+    ~/public_html/test. The next 4 items in this list are for testing those
+    extracted versions.
+
+10. Visually inspect the NOCHUNKS and the HTML in your browser.
+
+11. Visually inspect the PDF with a PDF viewer.
+
+12. Look at the XML directory and make sure it is named correctly and that
+    index.xml and all the chapter directories exist in the *top-level*
+    directory (e.g. LFS-BOOK-$version-XML/index.xml).
+
+13. Compare the TXT version with the original in ~/RELEASE-$version. Use both
+    diff and a visual inspection to ensure that "all" and "only" the references
+    at the bottom were removed.
+
+14. Once all inspections have been made, run the copy-book.sh and
+    copy-lfs-patches.sh scripts to move the books and patches into their final
+    location. This time, visually inspect that the HTML was untarred properly in
+    /lfs/view and that www.lfs.org and archive.lfs.org both have all the
+    different book formats. Also ensure that "all" book files and directories
+    "must" be group writable and owned by the lfswww group.
+
+# Website changes (you may wish to coordinate with a website maintainer)
+
+15. Pull the www2 repository with the following command (minus the quotes):
+    "svn co svn+ssh://svn.linuxfromscratch.org/www2/html/trunk www2"
+    If not already present, create the www2/lfs/errata/$version directory and if
+    it is a final release (i.e. not a pre-release), recreate the "stable"
+    symlink to it. You will need to cp the files from the previous release's
+    errata directory and modify the index.html for the latest release version.
+    The only listed errata item should be "No known errata at this time." Once
+    everything is ready, svn add all needed files/dirs and commit the
+    changes.
+
+16. Create the /home/httpd/www.linuxfromscratch.org/lfs/build-logs/$version
+    directory and if it is a final release (i.e. not a pre-release), recreate
+    the "stable" symlink to it. The build logs will be added by whoever is
+    currently maintaining them. As of this writing it is Archaic. The maintainer
+    of the build logs may have already created this dir in preparation for the
+    release, but the "stable" symlink will not be made until release so ensure
+    that is exists and points to the latest release.
+
+17. Add the release announcement to www2/lfs/news.html and commit the changes.
+
+18. Send an announcement email to the lfs-dev, lfs-support, lfs-announce,
+    lfs-security, blfs-dev, blfs-support and website mailing lists.
+
+# Cleanup stage
+
+19. If this is a final release (i.e. not a pre-release), remove the "testing"
+    branch description from www2/lfs/read.html and commit the changes.
+
+20. If this is a final release (i.e. not a pre-release), remove the "testing"
+    branch repository and comment out its line in /usr/bin/render-lfs-book.sh.
+
+21. If this is a final release (i.e. not a pre-release), remove any pre-release
+    material (books, tarballs, patches) from /home/httpd/www.linuxfromscratch.org
+    "NOTE": nothing in /patches/lfs, /lfs/view, or /lfs/downloads is handled by
+    the www2 repository and therefore must be done by hand. At this time, leave
+    the build logs until an official policy is adopted as to what to do with
+    them.
+
+22. If this is a final release (i.e. not a pre-release), remove any pre-release
+    material (books, tarballs, patches, errata) from the www2 repository and
+    commit the changes.
+
+23. Congratulations! Didn't know there was this much involved in a release, did
+    ya? :) The last step should be to verify all the links on the website to
+    ensure everything works properly. Of biggest concern is to check that links
+    work for both the specific $version and the stable symlinks to it (like the
+    read, download, build-logs, and errata links).
