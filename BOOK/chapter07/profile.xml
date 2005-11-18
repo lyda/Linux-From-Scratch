@@ -140,6 +140,8 @@ EOF</userinput></screen>
 (the recommended one for United States English users) locales are
 different.</para></note>
 
+<beginpage/>
+
 <para>Setting the keyboard layout, screen font, and
 locale-related environment variables are the only internationalization
 steps needed to support locales that use ordinary single-byte

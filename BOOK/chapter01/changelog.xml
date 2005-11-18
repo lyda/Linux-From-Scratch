@@ -42,6 +42,8 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>November 18, 2005 [manuel]: PDF fixes.</para></listitem>
+
 <listitem><para>November 12, 2005 [matt]: Improve the heuristic for determining
 a locale that is supported by both Glibc and packages outside LFS (bug 1642).
 Many thanks to Alexander Patrakov for highlighting the numerous issues and for
