@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "TESTING-20051124">
+<!ENTITY version "6.1.1-pre2">
 <!ENTITY releasedate "November 24, 2005">
 <!ENTITY milestone "6.1.1">
-<!ENTITY generic-version "testing"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
+<!ENTITY generic-version "6.1.1-pre2"> <!-- Use "svn", "testing", or "x.y[-pre{x}]" -->
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
 <!ENTITY blfs-root "&lfs-root;blfs/">
