@@ -22,6 +22,7 @@
 
 <!ENTITY glibc-rtld-patch "glibc-&glibc-version;-rtld_search_dirs-1.patch">
 <!ENTITY glibc-testfix-patch "glibc-&glibc-version;-fix_test-1.patch">
+<!ENTITY glibc-tls_assert-patch "glibc-&glibc-version;-tls_assert-1.patch">
 
 <!ENTITY gzip-security_fix-patch "gzip-&gzip-version;-security_fixes-1.patch">
 

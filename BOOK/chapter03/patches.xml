@@ -114,6 +114,13 @@ needed to build an LFS system:</para>
 </varlistentry>
 
 <varlistentry>
+<term>Glibc TLS Assertion Patch - 6 KB:</term>
+<listitem>
+<para><ulink url="&patches-root;&glibc-tls_assert-patch;"/></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
 <term>Gzip Security Patch - 2 KB:</term><listitem>
 <para><ulink url="&patches-root;&gzip-security_fix-patch;"/></para>
 </listitem>

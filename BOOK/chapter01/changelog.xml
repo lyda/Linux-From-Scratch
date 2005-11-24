@@ -30,6 +30,7 @@ First a summary, then a detailed log.</para>
 <listitem><para>&bzip2-docs-patch;</para></listitem>
 <listitem><para>&bzip2-bzgrep-patch;</para></listitem>
 <listitem><para>&glibc-rtld-patch;</para></listitem>
+<listitem><para>&glibc-tls_assert-patch;</para></listitem>
 <listitem><para>&texinfo-tempfile_fix-patch;</para></listitem>
 <listitem><para>&util-linux-umount-patch;</para></listitem>
 <listitem><para>&vim-security_fix-patch;</para></listitem>
@@ -41,6 +42,9 @@ First a summary, then a detailed log.</para>
 <listitem><para>zlib-1.2.2-security_fix-1.patch;</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>November 24, 2005 [matt]: Fix an issue with Glibc that prevents
+some programs (including OpenOffice.org) from running.</para></listitem>
 
 <listitem><para>November 23, 2005 [gerard]: Corrected reference to 'man page' to
 'HTML documentation' in chapter 6/sec</para></listitem>

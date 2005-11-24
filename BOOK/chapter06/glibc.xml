@@ -71,6 +71,11 @@ nor the kernel. This patch fixes the problem:</para>
 
 <screen><userinput>patch -Np1 -i ../&glibc-testfix-patch;</userinput></screen>
 
+<para>Apply the following patch to fix a bug in Glibc that can prevent some
+programs (including OpenOffice.org) from running:</para>
+
+<screen><userinput>patch -Np1 -i ../&glibc-tls_assert-patch;</userinput></screen>
+
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
 
