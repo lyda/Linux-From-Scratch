@@ -43,6 +43,8 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>November 26, 2005 [manuel]: PDF fix.</para></listitem>
+
 <listitem><para>November 26, 2005 [manuel]: Chaged --strip-path to
 --strip-components in the unpack of module-init-tools-testsuite
 package.</para></listitem>
