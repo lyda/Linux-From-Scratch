@@ -43,6 +43,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>November 26, 2005 [matt]: Remove the incorrect note about not
+having to dump/check a journalled filesystem (fixes bug 1662).</para>
+</listitem>
+
 <listitem><para>November 26, 2005 [manuel]: PDF fix.</para></listitem>
 
 <listitem><para>November 26, 2005 [manuel]: Chaged --strip-path to
