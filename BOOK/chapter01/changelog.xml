@@ -43,6 +43,13 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>November 26, 2005 [manuel]: Chaged --strip-path to
+--strip-components in the unpack of module-init-tools-testsuite
+package.</para></listitem>
+
+<listitem><para>November 24, 2005 [matt]: LFS-6.1.1-pre2
+release.</para></listitem>
+
 <listitem><para>November 24, 2005 [matt]: Fix an issue with Glibc that prevents
 some programs (including OpenOffice.org) from running.</para></listitem>
 
