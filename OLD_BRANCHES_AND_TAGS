@@ -13,6 +13,9 @@ oldxml_b5_1			6284
 unlabeled-1.25.2		6284
 unlabeled-1.645.2		6284
 unlabeled-1.712.2		6284
+6.1.1				7200
+6.1				7201
+gcc4				7202
 
 
 The following "tags" were removed from the main LFS repository. The revision #
