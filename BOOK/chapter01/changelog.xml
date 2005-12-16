@@ -27,7 +27,7 @@ First a summary, then a detailed log.</para>
 <itemizedlist>
 <!-- <listitem><para>Autoconf &autoconf-version;</para></listitem> -->
 <listitem><para>Automake &automake-version;</para></listitem>
-<!-- <listitem><para>Bash &bash-version;</para></listitem> -->
+<listitem><para>Bash &bash-version;</para></listitem>
 <listitem><para>Binutils &binutils-version;</para></listitem>
 <listitem><para>Bison &bison-version;</para></listitem>
 <!-- <listitem><para>Bzip2 &bzip2-version;</para></listitem> -->
@@ -52,7 +52,7 @@ First a summary, then a detailed log.</para>
 <!-- <listitem><para>Inetutils &inetutils-version;</para></listitem> -->
 <!-- <listitem><para>IPRoute2 &iproute2-version;</para></listitem> -->
 <!-- <listitem><para>Kbd &kbd-version;</para></listitem> -->
-<!-- <listitem><para>Less &less-version;</para></listitem> -->
+<listitem><para>Less &less-version;</para></listitem>
 <!-- <listitem><para>LFS-Bootscripts &lfs-bootscripts-version;</para></listitem> -->
 <listitem><para>Libtool &libtool-version;</para></listitem>
 <listitem><para>Linux &linux-version;</para></listitem>
@@ -68,7 +68,7 @@ First a summary, then a detailed log.</para>
 <listitem><para>Perl &perl-version;</para></listitem>
 <listitem><para>Procps &procps-version;</para></listitem>
 <listitem><para>Psmisc &psmisc-version;</para></listitem>
-<!-- <listitem><para>Readline &readline-version;</para></listitem> -->
+<listitem><para>Readline &readline-version;</para></listitem>
 <!-- <listitem><para>Sed &sed-version;</para></listitem> -->
 <listitem><para>Shadow &shadow-version;</para></listitem>
 <!-- <listitem><para>Sysklogd &sysklogd-version;</para></listitem> -->
@@ -113,6 +113,78 @@ First a summary, then a detailed log.</para>
 <listitem><para>zlib-1.2.2-security_fix-1.patch</para></listitem>
 </itemizedlist>
 </listitem>
+
+<listitem><para>December 13, 2005 [jhuntwork]: Install Tcl's internal headers to /tools/include,
+allowing us to drop its source directory right away. Origin is Greg Schafer, and thanks to
+Dan Nicholson for the report (fixes bug 1670).</para>
+</listitem>
+
+<listitem><para>December 12, 2005 [jhuntwork]: Updated texinfo patch. Fixes segfault issues with
+texindex. Thanks to Randy McMurchy for the report and Bruce Dubbs and Joe Ciccone for the fix.</para>
+</listitem>
+
+<listitem><para>December 11, 2005 [jhuntwork]: Upgrade to tcl-8.4.12</para>
+</listitem>
+
+<listitem><para>December 11, 2005 [jhuntwork]: Upgrade to less-394.</para>
+</listitem>
+
+<listitem><para>December 11, 2005 [jhuntwork]: Upgrade to readline-5.1. Also removed bash-3.0
+and readline-5.0 specific patches.</para>
+</listitem>
+  
+<listitem><para>December 11, 2005 [jhuntwork]: Upgrade to bash-3.1. Also fixed Tcl to
+work with the new bash version. Thanks to Alexander Patrakov and ultimately, Greg Schafer
+for the fix.</para>
+</listitem>
+
+<listitem><para>December 11, 2005 [jhuntwork]: Changed variable used in readline for linking
+in ncurses. Thanks to Alexander Patrakov for the fix.</para>
+</listitem>
+
+<listitem><para>December 9, 2005 [matt]: Upgrade to man-pages-2.16</para>
+</listitem>
+
+<listitem><para>December 9, 2005 [matt]: Upgrade to module-init-tools-3.2.2
+</para></listitem>
+
+<listitem><para>December 9, 2005 [matt]: Upgrade to findutils-4.2.27</para>
+</listitem>
+
+<listitem><para>December 7, 2005 [matt]: Mention the testsuites (or lack of
+them) for all packages (fixes bug 1664).  Thanks to Chris Staub for the
+report and analysis of affected packages.</para></listitem>
+
+<listitem><para>November 26, 2005 [matt]: Don't install the Linuxthreads man
+pages, the POSIX threading API is documented in the man3p section provided by
+the man-pages package (fixes bug 1660).</para></listitem>
+
+<listitem><para>November 26, 2005 [matt]: Remove the incorrect note about not
+having to dump/check a journalled filesystem (fixes bug 1662).</para>
+</listitem>
+
+<listitem><para>November 26, 2005 [matt]: Upgrade to module-init-tools 3.2.1.
+</para></listitem>
+
+<listitem><para>November 26, 2005 [matt]: Prevent installing the
+internationalized man pages for Shadow's <command>groups</command> binary
+(thanks to Randy McMurchy for the report).</para></listitem>
+
+<listitem><para>November 26, 2005 [matt]: Upgrade to man-pages 2.14.</para>
+</listitem>
+
+<listitem><para>November 26, 2005 [matt]: Upgrade to findutils-4.2.26</para>
+</listitem>
+
+<listitem><para>November 26, 2005 [manuel]: Changed --strip-path to
+--strip-components in the unpack of module-init-tools-testsuite
+package.</para></listitem>
+
+<listitem><para>November 23, 2005 [gerard]: Corrected reference to 'man page' to
+'HTML documentation' in chapter 6/sec</para></listitem>
+
+<listitem><para>November 18, 2005 [manuel]: Fixed the unpack of the
+module-init-tools-testsuite package.</para></listitem>
 
 <listitem><para>November 16, 2005 [jhuntwork]: Textual correction concerning
 gettext in chapter 5 and the use of --disable-shared</para></listitem>

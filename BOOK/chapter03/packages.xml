@@ -109,7 +109,7 @@ url="http://www.linuxfromscratch.org/lfs/download.html#ftp"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Findutils (&findutils-version;) - 836 KB:</term>
+<term>Findutils (&findutils-version;) - 887 KB:</term>
 <listitem>
 <para><ulink url="&gnu;findutils/"/></para>
 </listitem>
@@ -145,13 +145,6 @@ url="http://www.linuxfromscratch.org/lfs/download.html#ftp"/>.</para></note>
 
 <varlistentry>
 <term>Glibc (&glibc-version;) - 13,687 KB:</term>
-<listitem>
-<para><ulink url="&gnu;glibc/"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term>Glibc-Linuxthreads (&glibc-version;) - 236 KB: </term>
 <listitem>
 <para><ulink url="&gnu;glibc/"/></para>
 </listitem>
@@ -223,7 +216,8 @@ url="http://www.linuxfromscratch.org/lfs/download.html#ftp"/>.</para></note>
 <varlistentry>
 <term>Less (&less-version;) - 216 KB:</term>
 <listitem>
-<para><ulink url="&gnu;less/"/></para>
+<!-- <para><ulink url="&gnu;less/"/></para> -->
+<para><ulink url="http://www.greenwoodsoftware.com/less/"/></para>
 </listitem>
 </varlistentry>
 
@@ -277,7 +271,7 @@ url="http://www.linuxfromscratch.org/lfs/download.html#ftp"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Man-pages (&man-pages-version;) - 1,671 KB:</term>
+<term>Man-pages (&man-pages-version;) - 1,682 KB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/docs/manpages/"/></para>
 </listitem>
@@ -291,14 +285,7 @@ url="http://www.linuxfromscratch.org/lfs/download.html#ftp"/>.</para></note>
 </varlistentry>
 
 <varlistentry>
-<term>Module-Init-Tools (&module-init-tools-version;) - 128 KB:</term>
-<listitem>
-<para><ulink url="&kernel;linux/utils/kernel/module-init-tools/"/></para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term>Module-Init-Tools-Testsuite (&module-init-tools-version;) - 34 KB:</term>
+<term>Module-Init-Tools (&module-init-tools-version;) - 165 KB:</term>
 <listitem>
 <para><ulink url="&kernel;linux/utils/kernel/module-init-tools/"/></para>
 </listitem>
