@@ -26,6 +26,7 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="iana-etc.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="m4.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="ncurses.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="procps.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="perl.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="readline.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sed.xml"/>
@@ -57,7 +58,6 @@
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="mktemp.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="module-init-tools.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="patch.xml"/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="procps.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="psmisc.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="shadow.xml"/>
 <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="sysklogd.xml"/>

@@ -114,6 +114,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>December 16, 2005 [jhuntwork]: Move Procps to before Perl in chapter 6.
+Perl's testsuite uses 'ps'.</para>
+</listitem>
+
 <listitem><para>December 13, 2005 [jhuntwork]: Install Tcl's internal headers to /tools/include,
 allowing us to drop its source directory right away. Origin is Greg Schafer, and thanks to
 Dan Nicholson for the report (fixes bug 1670).</para>
