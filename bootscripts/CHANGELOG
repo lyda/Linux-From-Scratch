@@ -1,3 +1,6 @@
+n/a - December 24, 2005
+	* Added UTF-8 support to console script. (Alexander E. Patrakov)
+
 n/a - September 11, 2005
 	* Removed text wraping and boot logging.
 	* Changed killproc to use warning if not running
