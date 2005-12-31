@@ -51,7 +51,7 @@ case "${1}" in
 			boot_mesg -n "\n\nPress enter to continue..." ${INFO}
 			boot_mesg "" ${NORMAL}
 			read ENTER
-			/etc/rc.d/init.d/halt stop
+			${rc_base}/init.d/halt stop
 		fi
 
 		if [ -f /forcefsck ]; then
@@ -110,7 +110,7 @@ case "${1}" in
 			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
 			boot_mesg "" ${NORMAL}
 			read ENTER
-			/etc/rc.d/init.d/halt stop
+		  ${rc_base}/halt stop
 		fi
 
 		if [ "${error_value}" -ge 16 ]; then

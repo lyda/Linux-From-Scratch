@@ -1,3 +1,6 @@
+n/a - December 31, 2005
+ * Replaced /etc/rc.d with ${rc_base} in checkfs. (Vincent Fretin)
+
 n/a - December 24, 2005
 	* Added UTF-8 support to console script. (Alexander E. Patrakov)
 
