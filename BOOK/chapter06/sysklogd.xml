@@ -21,7 +21,7 @@ as those given by the kernel when unusual things happen.</para>
 
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Binutils, Coreutils, GCC, Glibc, Make</seg></seglistitem>
+<seglistitem><seg>Binutils, Coreutils, GCC, Glibc, Make, and Patch</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

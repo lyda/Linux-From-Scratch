@@ -23,7 +23,7 @@
 
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Coreutils</seg></seglistitem>
+<seglistitem><seg>Coreutils and Findutils</seg></seglistitem>
 </segmentedlist>
 
 </sect2>

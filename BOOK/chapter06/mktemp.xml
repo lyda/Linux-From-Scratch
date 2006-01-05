@@ -21,7 +21,7 @@ files in shell scripts.</para>
 
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Coreutils, Make, and Patch</seg></seglistitem>
+<seglistitem><seg>Coreutils, Make, Patch, and Zlib</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

@@ -21,8 +21,9 @@ the C and C++ compilers.</para>
 
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Bash, Binutils, Coreutils, Diffutils, Findutils,
-Gawk, Gettext, Glibc, Grep, Make, Perl, Sed, and Texinfo</seg></seglistitem>
+<seglistitem><seg>Bash, Binutils, Coreutils, DejaGNU, Diffutils, Findutils,
+Expect, Gawk, Gettext, Glibc, Grep, Make, Patch, Perl, Sed, Tcl, and
+Texinfo</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

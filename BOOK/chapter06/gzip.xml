@@ -22,7 +22,7 @@ files.</para>
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
+GCC, Glibc, Grep, Make, Patch, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

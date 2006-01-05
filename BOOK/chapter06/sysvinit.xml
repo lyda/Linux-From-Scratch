@@ -21,7 +21,7 @@ running, and shutdown of the system.</para>
 
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Binutils, Coreutils, GCC, Glibc, and Make</seg></seglistitem>
+<seglistitem><seg>Binutils, Coreutils, GCC, Glibc, Make, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

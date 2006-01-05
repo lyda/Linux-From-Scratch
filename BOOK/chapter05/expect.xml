@@ -22,7 +22,7 @@ with other interactive programs.</para>
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, Grep, Make, Sed, and Tcl</seg></seglistitem>
+GCC, Glibc, Grep, Make, Patch, Sed, and Tcl</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

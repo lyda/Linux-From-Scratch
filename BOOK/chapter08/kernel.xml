@@ -22,7 +22,7 @@
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Findutils,
-GCC, Glibc, Grep, Gzip, Make, Modutils, Perl, and Sed</seg></seglistitem>
+GCC, Glibc, Grep, Gzip, Kbd, Make, Module-Init-Tools, Perl, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

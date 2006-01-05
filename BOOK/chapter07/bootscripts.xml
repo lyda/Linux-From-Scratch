@@ -21,7 +21,7 @@ LFS system at bootup/shutdown.</para>
 
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Bash and Coreutils</seg></seglistitem>
+<seglistitem><seg>Bash, Coreutils, and Make</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

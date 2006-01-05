@@ -23,7 +23,7 @@ compression percentage than with the traditional <command>gzip</command>.</para>
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-GCC, Glibc, and Make</seg></seglistitem>
+GCC, Glibc, Patch, and Make</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

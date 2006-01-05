@@ -114,6 +114,9 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>January 5, 2006 [jhuntwork]: Update dependency information. Thanks Chris Staub.</para>
+</listitem>
+
 <listitem><para>December 16, 2005 [jhuntwork]: Move Procps to before Perl in chapter 6.
 Perl's testsuite uses 'ps'.</para>
 </listitem>

@@ -25,7 +25,7 @@ running kernel.</para>
 
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Bash, Coreutils, Find, Gawk, and Make</seg></seglistitem>
+<seglistitem><seg>Bash, Coreutils, Findutils, Gawk, and Make</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

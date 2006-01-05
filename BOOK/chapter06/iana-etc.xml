@@ -20,7 +20,7 @@
 
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Make</seg></seglistitem>
+<seglistitem><seg>Coreutils, Gawk, and Make</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

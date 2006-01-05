@@ -22,8 +22,8 @@ messages.</para>
 
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Bash, Binutils, Coreutils,
-Diffutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, and Zlib</seg></seglistitem>
+<seglistitem><seg>Bash, Binutils, Coreutils, Diffutils, GCC, Gettext,
+Glibc, Grep, Make, Ncurses, Patch, Sed, and Zlib</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

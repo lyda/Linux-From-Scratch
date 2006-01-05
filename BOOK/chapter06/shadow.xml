@@ -22,7 +22,7 @@ way.</para>
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
 <seglistitem><seg>Bash, Binutils, Bison, Coreutils,
-Diffutils, GCC, Gettext, Glibc, Grep, Make, and Sed</seg></seglistitem>
+Diffutils, GCC, Gettext, Glibc, Grep, Make, Patch, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

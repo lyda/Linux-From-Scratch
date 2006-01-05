@@ -21,8 +21,8 @@ handling object files.</para>
 
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
-<seglistitem><seg>Bash, Coreutils, Diffutils, GCC, Gettext,
-Glibc, Grep, M4, Make, Perl, Sed, and Texinfo</seg></seglistitem>
+<seglistitem><seg>Bash, Coreutils, Diffutils, Expect, GCC, Gettext,
+Glibc, Grep, Make, Perl, Sed, Tcl, and Texinfo</seg></seglistitem>
 </segmentedlist>
 </sect2>
 

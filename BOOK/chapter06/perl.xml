@@ -21,7 +21,7 @@
 <segmentedlist>
 <segtitle>&dependencies;</segtitle>
 <seglistitem><seg>Bash, Binutils, Coreutils, Diffutils,
-Gawk, GCC, Glibc, Grep, Make, and Sed</seg></seglistitem>
+Gawk, GCC, Glibc, Grep, Iana-Etc, Make, Patch, and Sed</seg></seglistitem>
 </segmentedlist>
 </sect2>
 
