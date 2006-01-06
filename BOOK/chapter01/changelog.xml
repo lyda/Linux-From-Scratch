@@ -114,6 +114,10 @@ First a summary, then a detailed log.</para>
 </itemizedlist>
 </listitem>
 
+<listitem><para>January 5, 2006 [jhuntwork]: Readjust some package order based on findings by
+Dan Nicholson. Flex and bison circular dependencies, perl needs sed and groff, e2fsprogs wants gettext.</para>
+</listitem>
+
 <listitem><para>January 5, 2006 [jhuntwork]: Update dependency information. Thanks Chris Staub.</para>
 </listitem>
 
