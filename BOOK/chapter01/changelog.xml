@@ -200,7 +200,7 @@ texindex. Thanks to Randy McMurchy for the report and Bruce Dubbs and Joe Ciccon
 <listitem><para>December 11, 2005 [jhuntwork]: Upgrade to readline-5.1. Also removed bash-3.0
 and readline-5.0 specific patches.</para>
 </listitem>
-  
+
 <listitem><para>December 11, 2005 [jhuntwork]: Upgrade to bash-3.1. Also fixed Tcl to
 work with the new bash version. Thanks to Alexander Patrakov and ultimately, Greg Schafer
 for the fix.</para>
@@ -248,11 +248,17 @@ internationalized man pages for Shadow's <command>groups</command> binary
 --strip-components in the unpack of module-init-tools-testsuite
 package.</para></listitem>
 
+<listitem><para>November 24, 2005 [matt]: LFS-6.1.1-pre2
+release.</para></listitem>
+
 <listitem><para>November 23, 2005 [gerard]: Corrected reference to 'man page' to
 'HTML documentation' in chapter 6/sec</para></listitem>
 
 <listitem><para>November 18, 2005 [manuel]: Fixed the unpack of the
 module-init-tools-testsuite package.</para></listitem>
+
+<listitem><para>November 17, 2005 [matt]: LFS-6.1.1-pre1
+release.</para></listitem>
 
 <listitem><para>November 16, 2005 [jhuntwork]: Textual correction concerning
 gettext in chapter 5 and the use of --disable-shared</para></listitem>
@@ -271,6 +277,15 @@ build.</para></listitem>
 
 <listitem><para>November 12, 2005 [jhuntwork]: Move m4 to earlier in the
 build. Thanks Chris Staub.</para></listitem>
+
+<listitem><para>November 12, 2005 [matt]: Improve the heuristic for determining
+a locale that is supported by both Glibc and packages outside LFS (bug 1642).
+Many thanks to Alexander Patrakov for highlighting the numerous issues and for
+reviewing the various suggested fixes.</para></listitem>
+
+<listitem><para>November 11, 2005 [matt]: Omit running Bzip2's testsuite as a
+separate step, as <command>make</command> runs it automatically (bug 1652).
+</para></listitem>
 
 <listitem><para>November 10, 2005 [jhuntwork]: Initial re-ordering of packages.
 Thanks to Chris Staub (bug 684).</para></listitem>
@@ -379,7 +394,7 @@ creation in Texinfo-4.8 that can lead to a symlink attack.</para></listitem>
 <command>fixincludes</command> script in chapter5 pass2 and chapter 6 (fixes bug
 1636).  Thanks to Tushar and Greg for their contributions on this issue.</para>
 </listitem>
- 
+
 <listitem><para>September 29, 2005 [matt]: Add more explicit reader
 prerequisites (fixes bug 1629).</para></listitem>
 
@@ -416,7 +431,7 @@ prevent a umount vulnerability.</para></listitem>
 
 <listitem><para>September 6, 2005 [ken]: Reworded the glibc text to expect
 test failures.</para></listitem>
- 
+
 <listitem><para>September 5, 2005 [ken]: Add patch to fix some of the math
 tests in glibc.</para></listitem>
 
