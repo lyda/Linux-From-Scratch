@@ -12,7 +12,7 @@
 
   <indexterm zone="ch-tools-bzip2">
     <primary sortas="a-Bzip2">Bzip2</primary>
-    <secondary>herramientas</secondary>
+    <secondary>tools</secondary>
   </indexterm>
 
   <sect2 role="package">
@@ -39,14 +39,14 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Instalación de Bzip2</title>
+    <title>Installation of Bzip2</title>
 
-    <para>El paquete Bzip2 no tiene un guión <command>configure</command>.
-    Compílalo y comprueba los resultados con:</para>
+    <para>The Bzip2 package does not contain a <command>configure</command>
+    script. Compile and test it with:</para>
 
 <screen><userinput>make</userinput></screen>
 
-    <para>Instala el paquete:</para>
+    <para>Install the package:</para>
 
 <screen><userinput>make PREFIX=/tools install</userinput></screen>
 
@@ -55,8 +55,8 @@
   <sect2 role="content">
     <title/>
 
-    <para>Los detalles sobre este paquete se encuentran en la
-    <xref linkend="contents-bzip2"/>.</para>
+    <para>Details on this package are located in
+    <xref linkend="contents-bzip2" role="."/></para>
 
   </sect2>
 

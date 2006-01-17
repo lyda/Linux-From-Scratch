@@ -5,14 +5,14 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-tools-binutils-pass2">
+<sect1 id="ch-tools-binutils-pass2" role="wrap">
   <?dbhtml filename="binutils-pass2.html"?>
 
-  <title>Binutils-&binutils-version; - Fase 2</title>
+  <title>Binutils-&binutils-version; - Pass 2</title>
 
   <indexterm zone="ch-tools-binutils-pass2">
     <primary sortas="a-Binutils">Binutils</primary>
-    <secondary>herramientas, fase 2</secondary>
+    <secondary>tools, pass 2</secondary>
   </indexterm>
 
   <sect2 role="package">
@@ -39,60 +39,59 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Reinstalación de Binutils</title>
+    <title>Re-installation of Binutils</title>
 
-    <para>Vuelve a crear un directorio dedicado para la construcción:</para>
+    <para>Create a separate build directory again:</para>
 
 <screen><userinput>mkdir -v ../binutils-build
 cd ../binutils-build</userinput></screen>
 
-    <para>Prepara Binutils para su compilación:</para>
+    <para>Prepare Binutils for compilation:</para>
 
 <screen><userinput>../binutils-&binutils-version;/configure --prefix=/tools \
     --disable-nls --enable-shared --with-lib-path=/tools/lib</userinput></screen>
 
     <variablelist>
-      <title>Significado de la nueva opción de configure:</title>
+      <title>The meaning of the new configure options:</title>
 
       <varlistentry>
         <term><parameter>--with-lib-path=/tools/lib</parameter></term>
         <listitem>
-          <para>Esto le indica al guión configure que especifique la ruta
-          de búsqueda de librerías por defecto durante la compilación de
-          Binutils, resultando en que se le pase <filename
-          class="directory">/tools/lib</filename> al enlazador. Esto evita
-          que el enlazador busque en los directorios de librerías del
-          anfitrión.</para>
+          <para>This tells the configure script to specify the library
+          search path during the compilation of Binutils, resulting in
+          <filename class="directory">/tools/lib</filename> being passed
+          to the linker. This prevents the linker from searching through
+          library directories on the host.</para>
         </listitem>
       </varlistentry>
 
     </variablelist>
 
-    <para>Compila el paquete:</para>
+    <para>Compile the package:</para>
 
 <screen><userinput>make</userinput></screen>
 
-    <para>La compilación está completa. Como se explicó antes, no recomendamos
-    ejecutar los bancos de pruebas de las herramientas temporales en este
-    capítulo. Si de todas formas deseas ejecutar el banco de pruebas de Binutils,
-    hazlo con el siguiente comando:</para>
+    <para>Compilation is now complete. As discussed earlier, running the
+    test suite is not mandatory for the temporary tools here in this
+    chapter. To run the Binutils test suite anyway, issue the following
+    command:</para>
 
 <screen><userinput>make check</userinput></screen>
 
-    <para>Instala el paquete:</para>
+    <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-    <para>Prepara el enlazador para la fase de <quote>Reajuste</quote> del
-    próximo capítulo:</para>
+    <para>Now prepare the linker for the <quote>Re-adjusting</quote> phase in
+    the next chapter:</para>
 
 <screen><userinput>make -C ld clean
 make -C ld LIB_PATH=/usr/lib:/lib</userinput></screen>
 
     <warning>
-      <para><emphasis>No borres</emphasis> todavía los directorios de
-      fuentes y de construcción de Binutils. Se necesitarán durante el
-      siguiente capítulo en el estado en que se encuentran ahora.</para>
+      <para><emphasis>Do not</emphasis> remove the Binutils source and build
+      directories yet. These directories will be needed again in the next
+      chapter in their current state.</para>
     </warning>
 
   </sect2>
@@ -100,8 +99,8 @@ make -C ld LIB_PATH=/usr/lib:/lib</userinput></screen>
   <sect2 role="content">
     <title/>
 
-    <para>Los detalles sobre este paquete se encuentran en la
-    <xref linkend="contents-binutils"/>.</para>
+    <para>Details on this package are located in
+    <xref linkend="contents-binutils" role="."/></para>
 
   </sect2>
 
