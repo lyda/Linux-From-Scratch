@@ -1,78 +1,82 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch-tools-adjusting">
-<title>Adjusting the Toolchain</title>
-<?dbhtml filename="adjusting.html"?>
+  <?dbhtml filename="adjusting.html"?>
 
-<para>Now that the temporary C libraries have been installed, all
-tools compiled in the rest of this chapter should be linked against
-these libraries. In order to accomplish this, the linker and the
-compiler's specs file need to be adjusted.</para>
+  <title>Ajustar las herramientas</title>
 
-<para>The linker, adjusted at the end of the first pass of Binutils,
-is installed by running the following command from within the
-<filename class="directory">binutils-build</filename> directory:</para>
+  <para>Ahora que se han instalado las librerías de C temporales, todas las
+  herramientas que compilemos en el resto de este capítulo deberían enlazarse
+  contra ellas. Para conseguirlo, deben ajustarse el enlazador y el fichero
+  specs del compilador.</para>
+
+  <para>El enlazador, que se ajustó al final del primer paso de Binutils,
+  se instala ejecutando el siguiente comando desde el directorio
+  <filename class="directory">binutils-build</filename>:</para>
 
 <screen><userinput>make -C ld install</userinput></screen>
 
-<para>From this point onwards, everything will link only
-against the libraries in <filename class="directory">/tools/lib</filename>.</para>
+  <para>Desde ahora todo se enlazará solamente contra las librerías que hay en
+  <filename class="directory">/tools/lib</filename>.</para>
 
-<note><para>If the earlier warning to retain the Binutils source and
-build directories from the first pass was missed, ignore the above
-command. This results in a small chance that the subsequent testing
-programs will link against libraries on the host. This is not ideal,
-but it is not a major problem. The situation is corrected when the
-second pass of Binutils is installed later.</para></note>
+  <note>
+    <para>Si por alguna razón olvidaste el aviso sobre conservar los directorios
+    de las fuentes y de construcción del primer paso de Binutils, ignora el
+    comando anterior. El resultado es la pequeña pega de que los siguientes
+    programas de pruebas se enlazarán contra las librerías del anfitrión. Esto
+    no es lo ideal, pero no es un gran problema. La situación se corregirá
+    cuando instalemos un poco más adelante la segunda fase de Binutils.</para>
+  </note>
 
-<para>Now that the adjusted linker is installed, the Binutils build and source
-directories should be removed.</para>
+  <para>Ahora que se ha instalado el enlazador ajustado, debes eliminar los
+  directorios de las fuentes y de construcción de Binutils.</para>
 
-<para>The next task is to point GCC to the new dynamic linker.  This is done by
-dumping GCC's <quote>specs</quote> file to a location where GCC will look for it
-by default.  A simple <command>sed</command> substitution then alters the
-dynamic linker that GCC will use:</para>
+  <para>Lo siguiente esapuntar GCC al nuevo enlazador dinámico. Esto se hace
+  volcando el fichero <quote>specs</quote>de GCC a un lugar en el que GCC lo
+  busque por defecto. Entonces una simple sustitución <command>sed</command>
+  altera el enlazdor inámic que GCC usará:</para>
 
-<!-- Ampersands are needed to allow copy and paste -->
-
+<!-- Ampersands are needed to allow cut and paste -->
 <screen><userinput>SPECFILE=`dirname $(gcc -print-libgcc-file-name)`/specs &amp;&amp;
 gcc -dumpspecs > $SPECFILE &amp;&amp;
 sed 's@^/lib/ld-linux.so.2@/tools&amp;@g' $SPECFILE &gt; tempspecfile &amp;&amp;
 mv -vf tempspecfile $SPECFILE &amp;&amp;
 unset SPECFILE</userinput></screen>
 
-<para>It is recommended that the above
-command be copy-and-pasted in order to ensure accuracy.
-Alternatively, the specs file can be edited by hand. This is done by
-replacing every occurrence of <quote>/lib/ld-linux.so.2</quote> with
-<quote>/tools/lib/ld-linux.so.2</quote></para>
+  <para><phrase condition="html">Recomendamos que copies y pegues lo anterior
+  para asegurar que no hay errores.</phrase> Alternativamente, puedes editar el
+  fichero specs a mano si quieres. Esto se hace reemplazando cada aparición de
+  <quote>/lib/ld-linux.so.2</quote> con <quote>/tools/lib/ld-linux.so.2</quote>.</para>
 
-<para>Be sure to visually inspect the specs file in order to verify the
-intended changes have been made.</para>
+  <para>Asegúrate de revisar visualmente el fichero specs para
+  verificar que se han hecho los cambios deseados.</para>
 
-<important><para>If working on a platform where the name of the
-dynamic linker is something other than
-<filename class="libraryfile">ld-linux.so.2</filename>, replace
-<quote>ld-linux.so.2</quote> with the name of the platform's
-dynamic linker in the above commands. Refer back to <xref
-linkend="ch-tools-toolchaintechnotes" role=","/> if
-necessary.</para></important>
+  <important>
+    <para>Si estás trabajando sobre una plataforma en la que el nombre del
+    enlazador dinámico no es <filename class="libraryfile">ld-linux.so.2</filename>,
+    en el anterior comando debes sustituir <filename>ld-linux.so.2</filename> con
+    el nombre del enlazador dinámico de tu plataforma. En caso necesario consulta
+    la <xref linkend="ch-tools-toolchaintechnotes"/>.</para>
+  </important>
 
-<para>During the build process, GCC runs a script
-(<command>fixincludes</command>) that scans the system for header files that may
-need to be fixed (they might contain syntax errors, for example), and installs
-the fixed versions in a private include directory.  There is a possibility that,
-as a result of this process, some header files from the host system have found
-their way into GCC's private include directory. As the rest of this chapter only
-requires the headers from GCC and Glibc, which have both been installed at this
-point, any &quot;fixed&quot; headers can safely be removed.  This helps to avoid
-any host headers polluting the build environment.  Run the following commands to
-remove the header files in GCC's private include directory (you may find it
-easier to copy and paste these commands, rather than typing them by hand, due to
-their length):</para>
+  <para>Durante el proceso de construcción, GCC ejecuta un guión
+  (<command>fixincludes</command>) que explora el sistema buscando ficheros de
+  cabecera que puedan necesitar ser corregidos (que pueden contener errores de
+  sintaxis, por ejemplo), e instala las versiones corregidas en un directorio
+  privado. Existe la posibilidad de que, como resultado de este proceso, algunos
+  ficheros de cabecera del sistema anfitrión se hayan colado dentro de dicho
+  directorio privado de cabeceras de GCC. Como el resto de este capítulo sólo
+  necesita las cabeceras de GCC y Glibc, que ya han sido instaladas, cualquier
+  cabecera <quote>fijada</quote> puede borrarse sin problemas. Esto ayuda a
+  evitar que cualquier cabecera del anfitrión contamine el entorno de
+  construcción. Ejecuta los siguientes comandos para eliminr dichos ficheros de
+  cabecera (puede que encuentres más facil copiar y pegar estos comandos en vez
+  de teclearlos, debido a su longitud):</para>
 
 <!-- && used to ease copy and pasting -->
 <screen><userinput>GCC_INCLUDEDIR=`dirname $(gcc -print-libgcc-file-name)`/include &amp;&amp;
@@ -80,50 +84,53 @@ find ${GCC_INCLUDEDIR}/* -maxdepth 0 -xtype d -exec rm -rvf '{}' \; &amp;&amp;
 rm -vf `grep -l "DO NOT EDIT THIS FILE" ${GCC_INCLUDEDIR}/*` &amp;&amp;
 unset GCC_INCLUDEDIR</userinput></screen>
 
-<caution><para>At this point, it is imperative to stop and ensure that
-the basic functions (compiling and linking) of the new toolchain are
-working as expected. To perform a sanity check, run the following
-commands:</para>
+  <caution>
+    <para>En este punto es obligatorio parar y asegurarse de que las operaciones
+    básicas (compilación y enlazado) de las nuevas herramientas funcionan como
+    se espera. Para esto vamos a hacer una simple comprobación:</para>
 
 <screen><userinput>echo 'main(){}' &gt; dummy.c
 cc dummy.c
 readelf -l a.out | grep ': /tools'</userinput></screen>
 
-<para>If everything is working correctly, there should be no errors,
-and the output of the last command will be of the form:</para>
+    <para>Si todo funciona correctamente, no debe haber errores y la salida del
+    último comando debe ser:</para>
 
-<screen><computeroutput>[Requesting program interpreter: 
+<screen><computeroutput>[Requesting program interpreter:
+    /tools/lib/ld-linux.so.2]
+
+[Intérprete de programa solicitado:
     /tools/lib/ld-linux.so.2]</computeroutput></screen>
 
-<para>Note that <filename class="directory">/tools/lib</filename>
-appears as the prefix of the dynamic linker.</para>
+    <para>Confirma que <filename class="directory">/tools/lib</filename>
+    aparezca como el prefijo de tu enlazador dinámico.</para>
 
-<para>If the output is not shown as above or there was no output at
-all, then something is wrong. Investigate and retrace the steps to
-find out where the problem is and correct it. This issue must be
-resolved before continuing on. First, perform the sanity check again,
-using <command>gcc</command> instead of <command>cc</command>. If this
-works, then the <filename class="symlink">/tools/bin/cc</filename> symlink is missing.
-Revisit <xref linkend="ch-tools-gcc-pass1" role=","/> and install the symlink.
-Next, ensure that the <envar>PATH</envar> is correct. This can be checked by running
-<command>echo $PATH</command> and verifying that <filename
-class="directory">/tools/bin</filename> is at the head of the list. If
-the <envar>PATH</envar> is wrong it could mean that you are not logged in as user
-<emphasis>lfs</emphasis> or that something went wrong back in <xref
-linkend="ch-tools-settingenviron" role="."/> Another option is that something
-may have gone wrong with the specs file amendment above. In this case,
-redo the specs file amendment, being careful to copy-and-paste the
-commands.</para>
+    <para>Si no recibes una salida como la mostrada arriba, o no hay salida
+    alguna, algo está seriamente mal. Investiga y revisa tus pasos para
+    encontrar el problema y corregirlo. El problema debe resolverse antes de
+    continuar. Primero, repite la comprobación de sanidad usando
+    <command>gcc</command> en vez de <command>cc</command>. Si esto funciona
+    significa que falta el enlace simbólico <filename
+    class="symlink">/tools/bin/cc</filename>. Vuelve a la <xref
+    linkend="ch-tools-gcc-pass1"/> e instala el enlace simbólico. Seguidamente,
+    asegúrate de que tu <envar>PATH</envar> es correcto. Puedes comprobarlo
+    ejecutando <command>echo $PATH</command> y verificando que <filename
+    class="directory">/tools/bin</filename> está en cabeza de la lista. Si
+    el <envar>PATH</envar> está mal puede significar que no has ingresado
+    como usuario <systemitem class="username">lfs</systemitem> o que algo
+    salió mal en la <xref linkend="ch-tools-settingenviron"/>. Otra opción es
+    que algo pudo ir mal en el anterior arreglo del fichero specs. En este caso,
+    repite el arreglo del fichero<phrase condition="html"> asegurándote de
+    copiar y pegar los comandos como se recomendó</phrase>.</para>
 
-<para>Once all is well, clean up the test files:</para>
+    <para>Cuando todo esté bien, borra los ficheros de prueba:</para>
 
 <screen><userinput>rm -v dummy.c a.out</userinput></screen>
 
-<para>Building TCL in the next section will serve as an additional check that
-the toolchain has been built properly.  If TCL fails to build, it is an
-indication that something has gone wrong with the Binutils, GCC, or Glibc
-installation, but not with TCL itself.</para>
-
-</caution>
+    <para>La construcción de TCL en la siguiente sección servirá como comprobación
+    adicional de que las herramientas se han construido correctamente. Si la
+    construcción de TCL falla, esto es una indicación de que algo fué mal durante
+    la instalación de Binutils, GCC o Glibc, pero no con el propio TCL.</para>
+  </caution>
 
 </sect1>

@@ -1,122 +1,153 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
+
 <sect1 id="ch-tools-binutils-pass1" role="wrap">
-<title>Binutils-&binutils-version; - Pass 1</title>
-<?dbhtml filename="binutils-pass1.html"?>
+  <?dbhtml filename="binutils-pass1.html"?>
 
-<indexterm zone="ch-tools-binutils-pass1">
-<primary sortas="a-Binutils">Binutils</primary>
-<secondary>tools, pass 1</secondary></indexterm>
+  <title>Binutils-&binutils-version; - Fase 1</title>
 
-<sect2 role="package"><title/>
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+  <indexterm zone="ch-tools-binutils-pass1">
+    <primary sortas="a-Binutils">Binutils</primary>
+    <secondary>herramientas, fase 1</secondary>
+  </indexterm>
 
-<segmentedlist>
-<segtitle>&buildtime;</segtitle>
-<segtitle>&diskspace;</segtitle>
-<seglistitem><seg>1.0 SBU</seg><seg>170 MB</seg></seglistitem>
-</segmentedlist>
+  <sect2 role="package">
+    <title/>
 
-<xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="../chapter06/binutils.xml" xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../chapter06/binutils.xml"
+    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
 
-</sect2>
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
 
-<sect2 role="installation">
-<title>Installation of Binutils</title>
+      <seglistitem>
+        <seg>1.0 SBU</seg>
+        <seg>170 MB</seg>
+      </seglistitem>
+    </segmentedlist>
 
-<para>It is important that Binutils be the first package compiled
-because both Glibc and GCC perform various tests on the available
-linker and assembler to determine which of their own features to
-enable.</para>
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../chapter06/binutils.xml"
+    xpointer="xpointer(/sect1/sect2[1]/segmentedlist[2])"/>
 
-<para>The Binutils documentation recommends building Binutils outside of the
-source directory in a dedicated build directory:</para>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Instalación de Binutils</title>
+
+    <para>Es importante que Binutils sea el primer paquete que compiles, pues
+    tanto Glibc como GCC llevan a cabo varias comprobaciones sobre el enlazador y
+    el ensamblador disponibles para determinar qué características activar.</para>
+
+    <para>La documentación de Binutils recomienda construirlo en un directorio
+    dedicado, fuera del árbol de las fuentes:</para>
 
 <screen><userinput>mkdir -v ../binutils-build
 cd ../binutils-build</userinput></screen>
 
-<note><para>In order for the SBU values listed in the rest of the book
-to be of any use, measure the time it takes to build this package from
-the configuration, up to and including the first install. To achieve
-this easily, wrap the three commands in a <command>time</command>
-command like this: <userinput>time { ./configure ... &amp;&amp; make 
-&amp;&amp; make install; }</userinput>.</para></note>
+    <note>
+      <para>Si quieres que los valores de los SBUs mostrados en el resto del
+      libro sean de utilidad, mide el tiempo que se tarda en construir este
+      paquete desde la compilación hasta la primera instalación. Para ello,
+      envuelve los comandos dentro de un comando <command>time</command> de
+      esta forma: <userinput>time { ./configure ... &amp;&amp; make &amp;&amp;
+      make install; }</userinput>.</para>
+    </note>
 
-<para>Now prepare Binutils for compilation:</para>
+    <para>Prepara Binutils para su compilación:</para>
 
 <screen><userinput>../binutils-&binutils-version;/configure --prefix=/tools --disable-nls</userinput></screen>
 
-<para>The meaning of the configure options:</para>
+    <variablelist>
+      <title>Significado de las opciones de configure:</title>
 
-<variablelist>
-<varlistentry>
-<term><parameter>--prefix=/tools</parameter></term>
-<listitem><para>This tells the configure script to prepare to install the Binutils
-programs in the <filename class="directory">/tools</filename> directory.</para></listitem>
-</varlistentry>
+      <varlistentry>
+        <term><parameter>--prefix=/tools</parameter></term>
+        <listitem>
+          <para>Esto le indica al guión configure que los programas de
+          Binutils se instalarán en el directorio <filename
+          class="directory">/tools</filename>.</para>
+        </listitem>
+      </varlistentry>
 
-<varlistentry>
-<term><parameter>--disable-nls</parameter></term>
-<listitem><para>This disables internationalization as i18n is not needed for the
-temporary tools.</para></listitem>
-</varlistentry>
-</variablelist>
+      <varlistentry>
+        <term><parameter>--disable-nls</parameter></term>
+        <listitem>
+          <para>Esta opción desactiva la internacionalización, pues i18n no es
+          necesario en las herramientas temporales.</para>
+        </listitem>
+      </varlistentry>
 
-<para>Continue with compiling the package:</para>
+    </variablelist>
+
+    <para>Compila el paquete:</para>
 
 <screen><userinput>make</userinput></screen>
 
-<para>Compilation is now complete. Ordinarily we would now run the
-test suite, but at this early stage the test suite framework (Tcl,
-Expect, and DejaGNU) is not yet in place. The benefits of running the
-tests at this point are minimal since the programs from this
-first pass will soon be replaced by those from the second.</para>
+    <para>La compilación se ha completado. Normalmente deberíamos ejecutar
+    ahora el banco de pruebas, pero en esta temprana fase el entorno de
+    trabajo para los bancos de pruebas (Tcl, Expect y DejaGnu) todavía no
+    está en su sitio. Los beneficios de ejecutar las pruebas ahora son mínimos,
+    pues los programas de esta primera fase pronto serán sustituidos por los
+    de la segunda.</para>
 
-<para>Install the package:</para>
+    <para>Instala el paquete:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-<para>Next, prepare the linker for the <quote>Adjusting</quote> phase
-later on:</para>
+    <para>Prepara el enlazador para la posterior fase de
+    <quote>ajuste</quote>:</para>
 
 <screen><userinput>make -C ld clean
 make -C ld LIB_PATH=/tools/lib</userinput></screen>
 
-<para>The meaning of the make parameters:</para>
+    <variablelist>
+      <title>Significado de los parámetros de make:</title>
 
-<variablelist>
-<varlistentry>
-<term><parameter>-C ld clean</parameter></term>
-<listitem><para>This tells the make program to remove all compiled
-files in the <filename class="directory">ld</filename>
-subdirectory.</para></listitem>
-</varlistentry>
+      <varlistentry>
+        <term><parameter>-C ld clean</parameter></term>
+        <listitem>
+          <para>Esto le indica al programa make que elimine todos los ficheros
+          compilados que haya en el subdirectorio
+          <filename class="directory">ld</filename>.</para>
+        </listitem>
+      </varlistentry>
 
-<varlistentry>
-<term><parameter>-C ld LIB_PATH=/tools/lib</parameter></term>
-<listitem><para>This option rebuilds everything in the
-<filename class="directory">ld</filename> subdirectory. Specifying 
-the <envar>LIB_PATH</envar> Makefile variable on the command 
-line allows us to override the default value
-and point it to the temporary tools location. The value of this variable
-specifies the linker's default library search path. This preparation
-is used later in the chapter.</para></listitem>
-</varlistentry>
-</variablelist>
+      <varlistentry>
+        <term><parameter>-C ld LIB_PATH=/tools/lib</parameter></term>
+        <listitem>
+          <para>Esta opción vuelve a construir todo dentro del subdirectorio
+          <filename class="directory">ld</filename>. Especificar la variable
+          <envar>LIB_PATH</envar> del Makefile en la línea de comandos nos
+          permite obviar su valor por defecto y apuntar a nuestro directorio
+          de herramientas temporales. El valor de esta variable especifica
+          la ruta de búsqueda de librerías por defecto del enlazador. Estos
+          preparativos se utilizan más tarde en este capítulo.</para>
+        </listitem>
+      </varlistentry>
 
-<warning><para><emphasis>Do not</emphasis> remove the Binutils
-build and source directories yet. These will be needed again in their
-current state later in this chapter.</para></warning>
+    </variablelist>
 
-</sect2>
+    <warning>
+      <para><emphasis>No borres</emphasis> los directorios de fuentes y de
+      construcción de Binutils. Los necesitarás un poco más adelante en este
+      capítulo en el estado en que se encuentran ahora.</para>
+    </warning>
 
-<sect2 role="content"><title/>
-<para>Details on this package are located in <xref
-linkend="contents-binutils" role="."/></para>
-</sect2>
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Los detalles sobre este paquete se encuentran en la
+    <xref linkend="contents-binutils"/>.</para>
+
+  </sect2>
 
 </sect1>
-
