@@ -37,6 +37,27 @@
 -->
 
     <listitem>
+      <para>January 20, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Added a patch to fix the sprintf security
+          vulnerability in Perl. Thanks to Tim van der Molen for pointing
+          it out.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 17, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Fixed locale generation for French UTF-8. Thanks
+          to Dan McGhee for the report and Alexander Patrakov for the fix.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 10, 2006</para>
       <itemizedlist>
         <listitem>
