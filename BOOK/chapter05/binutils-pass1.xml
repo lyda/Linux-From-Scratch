@@ -105,7 +105,8 @@ cd ../binutils-build</userinput></screen>
     later on:</para>
 
 <screen><userinput>make -C ld clean
-make -C ld LIB_PATH=/tools/lib</userinput></screen>
+make -C ld LIB_PATH=/tools/lib
+cp -v ld/ld-new /tools/bin</userinput></screen>
 
     <variablelist>
       <title>The meaning of the make parameters:</title>
@@ -133,12 +134,6 @@ make -C ld LIB_PATH=/tools/lib</userinput></screen>
       </varlistentry>
 
     </variablelist>
-
-    <warning>
-      <para><emphasis>Do not</emphasis> remove the Binutils build and source
-      directories yet. These will be needed again in their current state later
-      in this chapter.</para>
-    </warning>
 
   </sect2>
 
