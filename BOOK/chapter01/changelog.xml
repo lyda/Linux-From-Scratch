@@ -40,6 +40,12 @@
       <para>February 2, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[matthew] - Upgrade to Udev-084 and build all its extras to
+          enable custom rules to be written more easily.  Also, change the
+          rules file to handle kernel module loading and patch the udev
+          bootscript to work with this version of udev.</para>
+        </listitem>
+        <listitem>
           <para>[matthew] - Remove the hotplug package and related bootscript
           Udev will now handle device creation and module loading.</para>
         </listitem>

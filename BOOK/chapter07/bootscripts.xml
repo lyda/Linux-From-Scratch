@@ -48,6 +48,11 @@
 
 <screen><userinput>sed -i '/hotplug/d' Makefile</userinput></screen>
 
+    <para>Apply the following patch to allow the Udev bootscript to work with
+    recent versions of Udev:</para>
+
+<screen><userinput>patch -Np1 -i ../&lfs-bootscripts-recent_udev-patch;</userinput></screen>
+
     <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>

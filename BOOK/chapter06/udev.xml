@@ -28,21 +28,28 @@
 <sect2 role="installation">
 <title>Installation of Udev</title>
 
+<para>Create some devices that Udev cannot handle due to them being required
+very early in the boot process:</para>
+
+<screen><userinput>ln -sv /proc/self/fd /lib/udev/devices/fd 
+ln -sv /proc/self/fd/0 /lib/udev/devices/stdin
+ln -sv /proc/self/fd/1 /lib/udev/devices/stdout
+ln -sv /proc/self/fd/2 /lib/udev/devices/stderr
+ln -sv /proc/kcore /lib/udev/devices/core</userinput></screen>
+
 <para>Compile the package:</para>
 
-<screen><userinput>make EXTRAS=extras/run_directory</userinput></screen>
+<screen><userinput>make \
+EXTRAS="extras/ata_id extras/cdrom_id extras/edd_id extras/firmware extras/floppy extras/scsi_id extras/usb_id extras/volume_id"</userinput></screen>
 
 <para>The meaning of the make option:</para>
 
 <variablelist>
   <varlistentry>
-    <term><parameter>EXTRAS=extras/run_directory</parameter>
-    </term>
+    <term><parameter>EXTRAS=...</parameter></term>
     <listitem>
-      <para>This builds the <command>udev_run_devd</command> and
-        <command>udev_run_hotplugd</command> binaries, which are required for
-        correct handling of hotpluggable devices.
-      </para>
+      <para>This builds several helper binaries that can aid in writing custom
+      Udev rules.</para>
     </listitem>
   </varlistentry>
 </variablelist>
@@ -52,7 +59,9 @@
 
 <para>Install the package:</para>
 
-<screen><userinput>make DESTDIR=/ EXTRAS=extras/run_directory install</userinput></screen>
+<screen><userinput>make DESTDIR=/ \
+EXTRAS="extras/ata_id extras/cdrom_id extras/edd_id extras/firmware extras/floppy extras/scsi_id extras/usb_id extras/volume_id" \
+install</userinput></screen>
 
 <para>The meaning of the make option:</para>
 
@@ -74,12 +83,25 @@ the configuration files here:</para>
 
 <screen><userinput>cp -v ../&udev-config-file; /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
+<para>Alter Udev's configuration file so that Udev can automatically load kernel
+modules.</para>
+
+<screen><userinput>sed -i 147,150d /etc/udev/rules.d/25-lfs.rules
+cat &gt;&gt; /etc/udev/rules.d/25-lfs.rules &lt;&lt; EOF
+# Rules to allow hotplugging of devices with modular drivers
+ACTION=="add", SUBSYSTEM=="usb", MODALIAS=="*", \
+   RUN+="/sbin/modprobe $modalias"
+ACTION=="add", SUBSYSTEM=="scsi", SYSFS{type}=="[07]", \
+   RUN+="/sbin/modprobe sd_mod"
+EOF</userinput></screen> 
+
 <para>Install the documentation that explains how to create Udev rules:</para>
 
 <screen><userinput>install -m644 -D -v docs/writing_udev_rules/index.html /usr/share/doc/udev-&udev-version;/index.html</userinput></screen>
 
 <!-- Not for the LiveCD -->
 <!-- Edit Me -->
+
 <para>Run the <command>udevstart</command> program to create our full
 complement of device nodes.</para>
 
@@ -92,8 +114,7 @@ complement of device nodes.</para>
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
 <segtitle>Installed directory</segtitle>
-<seglistitem><seg>udev, udev_run_devd, udev_run_hotplugd, udevcontrol, udevd,
-udevinfo, udevmonitor, udevsend, udevstart, and udevtest</seg>
+<seglistitem><seg>udevcontrol, udevd, udevinfo, udevmonitor, and udevtest</seg>
 <seg>/etc/udev</seg></seglistitem>
 </segmentedlist>
 
@@ -101,41 +122,6 @@ udevinfo, udevmonitor, udevsend, udevstart, and udevtest</seg>
 <?dbfo list-presentation="list"?>
 <?dbhtml list-presentation="table"?>
                                                                                 
-<varlistentry id="udev">
-<term><command>udev</command></term>
-<listitem>
-<para>Creates device nodes in <filename
-class="directory">/dev</filename> or renames network interfaces (not
-in LFS) in response to hotplug events</para>
-<indexterm zone="ch-system-udev udev"><primary sortas="b-udev">udev</primary></indexterm>
-</listitem></varlistentry>
-
-<varlistentry id="udev_run_devd">
-  <term><command>udev_run_devd</command></term>
-  <listitem>
-    <para>Executes programs and scripts in the
-      <filename class="directory">/etc/dev.d/</filename> directory in response
-      to hotplug events
-    </para>
-    <indexterm zone="ch-system-udev udev_run_devd">
-      <primary sortas="b-udev_run_devd">udev_run_devd</primary>
-    </indexterm>
-  </listitem>
-</varlistentry>
-
-<varlistentry id="udev_run_hotplugd">
-  <term><command>udev_run_hotplugd</command></term>
-  <listitem>
-    <para>Executes programs and scripts in the
-      <filename class="directory">/etc/hotplug.d/</filename> directory in
-      response to hotplug events
-    </para>
-    <indexterm zone="ch-system-udev udev_run_hotplugd">
-      <primary sortas="b-udev_run_hotplugd">udev_run_hotplugd</primary>
-    </indexterm>
-  </listitem>
-</varlistentry>
-
 <varlistentry id="udevcontrol">
 <term><command>udevcontrol</command></term>
 <listitem>
@@ -173,26 +159,6 @@ rules</para>
 <indexterm zone="ch-system-udev udevmonitor"><primary sortas="b-udevmonitor">udevmonitor</primary>
 </indexterm>
 </listitem></varlistentry>
-
-<varlistentry id="udevsend">
-<term><command>udevsend</command></term>
-<listitem>
-<para>Delivers hotplug events to <command>udevd</command></para>
-<indexterm zone="ch-system-udev udevsend"><primary sortas="b-udevsend">udevsend</primary></indexterm>
-</listitem></varlistentry>
-
-<varlistentry id="udevstart">
-<term><command>udevstart</command></term>
-<listitem>
-<para>Creates device nodes in <filename
-class="directory">/dev</filename> that correspond to drivers compiled directly
-into the kernel; it performs that task by simulating hotplug events presumably
-dropped by the kernel before invocation of this program (e.g., because the root
-filesystem has not been mounted) and submitting such synthetic hotplug events
-to <command>udev</command></para>
-<indexterm zone="ch-system-udev udevstart"><primary sortas="b-udevstart">udevstart</primary></indexterm>
-</listitem>
-</varlistentry>
 
 <varlistentry id="udevtest">
 <term><command>udevtest</command></term>
