@@ -40,6 +40,10 @@
       <para>February 2, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[matthew] - Remove the hotplug package and related bootscript
+          Udev will now handle device creation and module loading.</para>
+        </listitem>
+        <listitem>
           <para>[matthew] - Upgrade to Linux-2.6.15.2.</para>
         </listitem>
       </itemizedlist>

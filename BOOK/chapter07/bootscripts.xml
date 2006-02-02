@@ -43,6 +43,11 @@
   <sect2 role="installation">
     <title>Installation of LFS-Bootscripts</title>
 
+    <para>Prevent the hotplug bootscript from being installed, as the hotplug
+      package is no longer installed.</para>
+
+<screen><userinput>sed -i '/hotplug/d' Makefile</userinput></screen>
+
     <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
