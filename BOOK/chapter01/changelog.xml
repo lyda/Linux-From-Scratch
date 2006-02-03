@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>February 3, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - Add udev bootscript patch to list of patches to
+          download.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>February 2, 2006</para>
       <itemizedlist>
         <listitem>
