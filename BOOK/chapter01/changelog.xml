@@ -40,6 +40,9 @@
       <para>February 3, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[matthew] - Add descriptions of Udev's helper binaries.</para>
+        </listitem>
+        <listitem>
           <para>[manuel] - Add udev bootscript patch to whatsnew. Removed
           hotplug from list of packages to download.</para>
         </listitem>

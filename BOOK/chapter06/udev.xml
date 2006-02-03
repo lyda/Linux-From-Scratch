@@ -15,7 +15,7 @@
 <segmentedlist>
 <segtitle>&buildtime;</segtitle>
 <segtitle>&diskspace;</segtitle>
-<seglistitem><seg>0.1 SBU</seg><seg>3.8 MB</seg></seglistitem>
+<seglistitem><seg>0.1 SBU</seg><seg>3.1 MB</seg></seglistitem>
 </segmentedlist>
 
 <segmentedlist>
@@ -114,7 +114,9 @@ complement of device nodes.</para>
 <segmentedlist>
 <segtitle>Installed programs</segtitle>
 <segtitle>Installed directory</segtitle>
-<seglistitem><seg>udevcontrol, udevd, udevinfo, udevmonitor, and udevtest</seg>
+<seglistitem><seg>ata_id, cdrom_id, create_floppy_devices, edd_id,
+firmware_helper, scsi_id, udevcontrol, udevd, udevinfo, udevmonitor, udevtest,
+usb_id and vol_id</seg>
 <seg>/etc/udev</seg></seglistitem>
 </segmentedlist>
 
@@ -122,6 +124,83 @@ complement of device nodes.</para>
 <?dbfo list-presentation="list"?>
 <?dbhtml list-presentation="table"?>
                                                                                 
+<varlistentry id="ata_id">
+  <term>
+    <command>ata_id</command>
+  </term>
+  <listitem>
+    <para>Provides <command>udev</command> with a unique string and additional
+    information (uuid, label) for an ATA drive</para>
+    <indexterm zone="ch-system-udev ata_id">
+      <primary sortas="b-ata_id">ata_id</primary>
+    </indexterm>
+  </listitem>
+</varlistentry>
+
+<varlistentry id="cdrom_id">
+  <term>
+    <command>cdrom_id</command>
+  </term>
+  <listitem>
+    <para>Provides <command>udev</command> with the capabilities of a CD-ROM or
+    DVD-ROM drive</para>
+    <indexterm zone="ch-system-udev cdrom_id">
+      <primary sortas="b-cdrom_id">cdrom_id</primary>
+    </indexterm>
+  </listitem>
+</varlistentry>
+
+<varlistentry id="create_floppy_devices">
+  <term>
+    <command>create_floppy_devices</command>
+  </term>
+  <listitem>
+    <para>Creates all possible floppy devices based on the CMOS type</para>
+    <indexterm zone="ch-system-udev create_floppy_devices">
+      <primary sortas="b-create_floppy_devices">create_floppy_devices</primary>
+    </indexterm>
+  </listitem>
+</varlistentry>
+
+<varlistentry id="edd_id">
+  <term>
+    <command>edd_id</command>
+  </term>
+  <listitem>
+    <para>Provides <command>udev</command> with the EDD ID for a BIOS disk
+    drive</para>
+    <indexterm zone="ch-system-udev edd_id">
+      <primary sortas="b-edd_id">edd_id</primary>
+    </indexterm>
+  </listitem>
+</varlistentry>
+
+<varlistentry id="firmware_helper">
+  <term>
+    <command>firmware_helper</command>
+  </term>
+  <listitem>
+    <para>Enables <command>udev</command> to upload firmware to devices</para>
+    <indexterm zone="ch-system-udev firmware_helper">
+      <primary sortas="b-firmware_helper">firmware_helper</primary>
+    </indexterm>
+  </listitem>
+</varlistentry>
+
+<varlistentry id="scsi_id">
+  <term>
+    <command>scsi_id</command>
+  </term>
+  <listitem>
+    <para>Provides <command>udev</command> with a unique SCSI identifier based
+    on the data returned from sending a SCSI INQUIRY command to the specified
+    device</para>
+    <indexterm zone="ch-system-udev scsi_id">
+      <primary sortas="b-scsi_id">scsi_id</primary>
+    </indexterm>
+  </listitem>
+</varlistentry>
+
 <varlistentry id="udevcontrol">
 <term><command>udevcontrol</command></term>
 <listitem>
@@ -168,6 +247,32 @@ and prints out the name of the node the real <command>udev</command> would
 have created or (not in LFS) the name of the renamed network interface</para>
 <indexterm zone="ch-system-udev udevtest"><primary sortas="b-udevtest">udevtest</primary></indexterm>
 </listitem></varlistentry>
+
+<varlistentry id="usb_id">
+  <term>
+    <command>usb_id</command>
+  </term>
+  <listitem>
+    <para>Provides <command>udev</command> with information about USB devices
+    </para>
+    <indexterm zone="ch-system-udev usb_id">
+      <primary sortas="b-usb_id">usb_id</primary>
+    </indexterm>
+  </listitem>
+</varlistentry>
+
+<varlistentry id="vol_id">
+  <term>
+    <command>vol_id</command>
+  </term>
+  <listitem>
+    <para>Provides <command>udev</command> with the label and uuid of a
+    filesystem</para>
+    <indexterm zone="ch-system-udev vol_id">
+      <primary sortas="b-vol_id">vol_id</primary>
+    </indexterm>
+  </listitem>
+</varlistentry>
 
 <varlistentry id="etc-udev">
 <term><filename class="directory">/etc/udev</filename></term>
