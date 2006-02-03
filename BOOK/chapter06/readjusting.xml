@@ -9,7 +9,7 @@
 
 <para>Now that the final C libraries have been installed, it is time to adjust
 the toolchain again. The toolchain will be adjusted so that it will link any
-newly compiled program against these new libraries. This is the same process
+newly compiled program against these new libraries. This is a similar process
 used in the <quote>Adjusting</quote> phase in the beginning of <xref
 linkend="chapter-temporary-tools"/>, but with the adjustments reversed. In <xref
 linkend="chapter-temporary-tools"/>, the chain was guided from the host's
@@ -19,44 +19,24 @@ be guided from that same <filename class="directory">/tools/lib</filename>
 directory to the LFS <filename class="directory">/{,usr/}lib</filename>
 directories.</para>
 
-<para>Start by adjusting the linker. The source and build directories from the
-second pass of Binutils were retained for this purpose. Install the adjusted
-linker by running the following command from within the <filename
-class="directory">binutils-build</filename> directory:</para>
+<para>First, backup the <filename class="directory">/tools</filename> linker, and
+replace it with the adjusted linker we made in chapter 5. We'll also create a 
+link to its counterpart in <filename class="directory">/tools/$(gcc -dumpmachine)/bin</filename>.</para>
 
-<screen><userinput>make -C ld INSTALL=/tools/bin/install install</userinput></screen>
-
-<note><para>If the earlier warning to retain the Binutils source and
-build directories from the second pass in <xref
-linkend="chapter-temporary-tools"/> was missed, or if they were
-accidentally deleted or are inaccessible, ignore the above command.
-The result will be that the next package, Binutils, will link against
-the C libraries in <filename class="directory">/tools</filename>
-rather than in <filename class="directory">/{,usr/}lib</filename>.
-This is not ideal, however, testing has shown that the resulting
-Binutils program binaries should be identical.</para></note>
-
-<para>From now on, every compiled program will link only against the
-libraries in <filename class="directory">/usr/lib</filename> and
-<filename class="directory">/lib</filename>. The extra
-<parameter>INSTALL=/tools/bin/install</parameter> option is needed
-because the <filename>Makefile</filename> file created during the
-second pass still contains the reference to
-<command>/usr/bin/install</command>, which has not been installed yet.
-Some host distributions contain a <filename
-class="symlink">ginstall</filename> symbolic link which takes
-precedence in the <filename>Makefile</filename> file and can cause a
-problem. The above command takes care of this issue.</para>
-
-<para>Remove the Binutils source and build directories now.</para>
+<screen><userinput>mv -v /tools/bin/{ld,ld-old}
+mv -v /tools/$(gcc -dumpmachine)/bin/{ld,ld-old}
+mv -v /tools/bin/{ld-new,ld}
+ln -sv /tools/bin/ld /tools/$(gcc -dumpmachine)/bin/ld</userinput></screen>
 
 <para>Next, amend the GCC specs file so that it points to the new
-dynamic linker. A <command>sed</command> command accomplishes this:</para>
+dynamic linker, and so that GCC knows where to find its start files.
+A <command>perl</command> command accomplishes this:</para>
 
-<screen><userinput>SPECFILE=`dirname $(gcc -print-libgcc-file-name)`/specs &amp;&amp;
-gcc -dumpspecs > $SPECFILE &amp;&amp;
-sed -i 's@^/tools/lib/ld-linux.so.2@/lib/ld-linux.so.2@g' $SPECFILE &amp;&amp;
-unset SPECFILE</userinput></screen>
+<screen><userinput>gcc -dumpspecs | \
+perl -p -e 's@/tools/lib/ld-linux.so.2@/lib/ld-linux.so.2@g;' \
+     -e 's@\*startfile_prefix_spec:\n@$_/usr/lib/ @g;' &gt; \
+     `dirname $(gcc --print-libgcc-file-name)`/specs
+</userinput></screen>
 
 <para>It is a good idea to visually inspect the specs file to verify the intended 
 change was actually made.</para>
@@ -75,7 +55,7 @@ are working as expected. To do this, perform a sanity
 check:</para>
 
 <screen><userinput>echo 'main(){}' &gt; dummy.c
-cc dummy.c
+cc dummy.c -Wl,--verbose &amp;&gt; dummy.log
 readelf -l a.out | grep ': /lib'</userinput></screen>
 
 <para>If everything is working correctly, there should be no errors,
@@ -87,6 +67,36 @@ platform-specific differences in dynamic linker name):</para>
 <para>Note that <filename class="directory">/lib</filename> is now
 the prefix of our dynamic linker.</para>
 
+<para>Now make sure that we're setup to use the correct start files:</para>
+
+<screen><userinput>grep "/usr/lib/crt.* " dummy.log</userinput></screen>
+
+<para>If everything is working correctly, there should be no errors,
+and the output of the last command will be:</para>
+
+<screen><computeroutput>attempt to open /usr/lib/crt1.o succeeded
+attempt to open /usr/lib/crti.o succeeded
+attempt to open /usr/lib/crtn.o succeeded</computeroutput></screen>
+
+<para>Next make sure that we're using the correct libc:</para>
+
+<screen><userinput>grep "/lib/libc.so.6 " dummy.log</userinput></screen>
+
+<para>If everything is working correctly, there should be no errors,
+and the output of the last command will be:</para>
+
+<screen><computeroutput>attempt to open /lib/libc.so.6 succeeded</computeroutput></screen>
+
+<para>Lastly, make sure GCC is using the correct dynamic linker:</para>
+
+<screen><userinput>grep found dummy.log</userinput></screen>
+
+<para>If everything is working correctly, there should be no errors,
+and the output of the last command will be (allowing for
+platform-specific differences in dynamic linker name):</para>
+
+<screen><computeroutput>found ld-linux.so.2 at /lib/ld-linux.so.2</computeroutput></screen>
+
 <para>If the output does not appear as shown above or is not received
 at all, then something is seriously wrong. Investigate and retrace the
 steps to find out where the problem is and correct it. The most likely
@@ -97,7 +107,7 @@ the process.</para>
 <para>Once everything is working correctly, clean up the test
 files:</para>
 
-<screen><userinput>rm -v dummy.c a.out</userinput></screen></caution>
+<screen><userinput>rm -v dummy.c a.out dummy.log</userinput></screen></caution>
 
 </sect1>
 

@@ -291,7 +291,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Man-pages (&man-pages-version;) - 1,688 KB:</term>
+      <term>Man-pages (&man-pages-version;) - 1,705 KB:</term>
       <listitem>
         <para><ulink url="&kernel;linux/docs/manpages/"/></para>
       </listitem>
@@ -356,7 +356,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Psmisc (&psmisc-version;) - 193 KB:</term>
+      <term>Psmisc (&psmisc-version;) - 194 KB:</term>
       <listitem>
         <para><ulink url="&sourceforge;psmisc/"/></para>
       </listitem>
@@ -377,7 +377,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Shadow (&shadow-version;) - 1,057 KB:</term>
+      <term>Shadow (&shadow-version;) - 1,218 KB:</term>
       <listitem>
         <para><ulink url="ftp://ftp.pld.org.pl/software/shadow/"/></para>
 

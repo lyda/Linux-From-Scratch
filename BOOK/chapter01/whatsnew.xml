@@ -232,10 +232,10 @@
       <para>&mktemp-tempfile-patch;</para>
     </listitem>
     <listitem>
-      <para>&perl-libc-patch;</para>
+      <para>&perl-db_file-patch;</para>
     </listitem>
     <listitem>
-      <para>&shadow-configure-patch;</para>
+      <para>&perl-libc-patch;</para>
     </listitem>
     <listitem>
       <para>&tar-gcc4_fix-patch;</para>

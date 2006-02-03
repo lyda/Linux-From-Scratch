@@ -55,7 +55,7 @@ not this add-on.
 Unpack the tarball from within the Glibc source
 directory:</para>
 
-<screen><userinput>tar jxf ../glibc-libidn-&glibc-version;.tar.bz2</userinput></screen>
+<screen><userinput>tar -xf ../glibc-libidn-&glibc-version;.tar.bz2</userinput></screen>
 
 <para>In the vi_VN.TCVN locale, <command>bash</command> enters an infinite loop
 at startup. It is unknown whether this is a <command>bash</command> bug or a
@@ -63,6 +63,17 @@ Glibc problem. Disable installation of this locale in order to avoid the
 problem:</para>
 
 <screen><userinput>sed -i '/vi_VN.TCVN/d' localedata/SUPPORTED</userinput></screen>
+
+<para>When running <command>make install</command>, a script called
+<filename>test-installation.pl</filename> performs a small sanity test
+on our newly installed Glibc. However, because our toolchain still points to the
+<filename class="directory">/tools</filename> directory, the sanity test would
+be carried out against the wrong Glibc. We can force the script to check the
+Glibc we have just installed with the following:</para>
+
+<screen><userinput>sed -i \
+'s|libs -o|libs -L/usr/lib -Wl,-dynamic-linker=/lib/ld-linux.so.2 -o|' \
+        scripts/test-installation.pl</userinput></screen>
 
 <para>The Glibc documentation recommends building Glibc outside of the source
 directory in a dedicated build directory:</para>
@@ -138,21 +149,7 @@ Prevent this warning with:</para>
 
 <para>Install the package:</para>
 
-<screen><userinput>make install_root=/ install</userinput></screen>
-
-<para>The meaning of the make option:</para>
-
-<variablelist>
-<varlistentry>
-<term><parameter>install_root=/</parameter></term>
-<listitem><para>This causes the Glibc Makefile not to run the
-<filename>scripts/test-installation.pl</filename> script at the end
-of Glibc installation. Since the toolchain has not been adjusted yet for
-the new Glibc, this script would test Glibc installed in
-<filename class="directory">/tools</filename> and fail because the
-libidn add-on has not been installed there.</para></listitem>
-</varlistentry>
-</variablelist>
+<screen><userinput>make install</userinput></screen>
 
 <para>The locales that can make the system respond in a different
 language were not installed by the above command. None of the
@@ -175,6 +172,7 @@ localedef -i de_DE@euro -f ISO-8859-15 de_DE@euro
 localedef -i en_HK -f ISO-8859-1 en_HK
 localedef -i en_PH -f ISO-8859-1 en_PH
 localedef -i en_US -f ISO-8859-1 en_US
+localedef -i en_US -f UTF-8 en_US.UTF-8
 localedef -i es_MX -f ISO-8859-1 es_MX
 localedef -i fa_IR -f UTF-8 fa_IR
 localedef -i fr_FR -f ISO-8859-1 fr_FR
@@ -266,7 +264,7 @@ mode.</para></listitem>
 
 
 <sect2 id="conf-ld" role="configuration">
-<title>Configuring Dynamic Loader</title>
+<title>Configuring the Dynamic Loader</title>
 <indexterm zone="conf-ld"><primary sortas="e-/etc/ld.so.conf">/etc/ld.so.conf</primary></indexterm>
 
 <para>By default, the dynamic loader (<filename

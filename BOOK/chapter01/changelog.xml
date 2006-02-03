@@ -37,6 +37,125 @@
 -->
 
     <listitem>
+      <para>January 30, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Adjust binutils-pass1 so we don't need to hang
+          on to its source directories. Also use 'gcc -dumpmachine' instead
+          of the MACHTYPE var.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Various textual corrections. Thanks Chris
+          Staub.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Remove unnecessary LDFLAGS variables in binutils
+          pass 1 and 2. Thanks Dan Nicholson.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 29, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Restore the use of *startfile_prefix_spec.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Remove a spurious -i from the perl command when
+          readjusting the toolchain. Thanks Dan Nicholson.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 26, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Modify chapter 6 Glibc's make install command to
+          allow test-installation.pl to run.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Adjust chapter 5 binutils to build a static ld-new
+          for use in the chapter 6 readjusting section. Also add some extended
+          sanity checks. These fixes are adapted from DIY-Linux and Greg Schafer.
+          Thanks to Dan Nicholson for the report, as well.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Added 'nodump' to commands in the Package Management
+          section.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 25, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Remove ppc specific instructions from chapter 6
+          patch. Cross-LFS can handle non-x86 arch specifics at this point.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Fix chapter 6 Glibc's test-installation.pl to test
+          the correct Glibc. Fixes bug 1675. Thanks to Dan Nicholson for the report
+          and Greg Schafer for the fix.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Fixed the re-adjusting of the toolchain in chapter
+          6 so that chapter 6 GCC and Binutils links against the proper Glibc and
+          so that we don't have to keep the binutils directories from chapter 5.
+          Also moved a note about saving the /tools directory to the beginning of
+          chapter 6. Fixes bug 1677. Thanks to Chris Staub, Alexander Patrakov,
+          Greg Schafer and Tushar Teredesai for reporting and resolving this
+          issue.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade coreutils i18n patch to version 2 to fix
+          <command>sort -n</command> and add the en_US.UTF-8 locale to improve
+          coreutils' test coverage.  Fixes bugs 1688 and 1689.  Thanks to
+          Alexander Patrakov.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Add information about package management.  Thanks to
+          the BLFS project for the text.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 24, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Upgrade to Groff-1.18.1.1-11.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 23, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Upgrade to Man-pages 2.21.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Psmisc 22.1.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Shadow 4.0.14.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Install documentation for the Linux kernel.  Thanks
+          to Tushar for the report.  Fixes bug 1683.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Added a patch to enable Perl's DB_File module to
+          compile with the latest version of Berkeley DB.  Thanks to Alexander
+          Patrakov for the patch.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 20, 2006</para>
       <itemizedlist>
         <listitem>
