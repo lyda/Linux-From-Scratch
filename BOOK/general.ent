@@ -52,7 +52,6 @@
 <!ENTITY groff-patchlevel "11">
 <!ENTITY grub-version "0.97">
 <!ENTITY gzip-version "1.3.5">
-<!ENTITY hotplug-version "2004_09_23">
 <!ENTITY iana-etc-version "2.00">
 <!ENTITY inetutils-version "1.4.2">
 <!ENTITY iproute2-version "051007">
