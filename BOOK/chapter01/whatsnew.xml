@@ -223,6 +223,9 @@
       <para>&kbd-gcc4_fixes-patch;</para>
     </listitem>
     <listitem>
+      <para>&lfs-bootscripts-recent_udev-patch;</para>
+    </listitem>
+    <listitem>
       <para>MAN-DB-&man-db-version;</para>
     </listitem>
     <listitem>

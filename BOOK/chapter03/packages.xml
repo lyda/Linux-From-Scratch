@@ -199,13 +199,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Hotplug (&hotplug-version;) - 40 KB:</term>
-      <listitem>
-        <para><ulink url="&kernel;linux/utils/kernel/hotplug/"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Iana-Etc (&iana-etc-version;) - 174 KB:</term>
       <listitem>
         <para><ulink url="http://www.sethwklein.net/projects/iana-etc/downloads/"/></para>

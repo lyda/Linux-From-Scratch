@@ -40,6 +40,10 @@
       <para>February 3, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[manuel] - Add udev bootscript patch to whatsnew. Removed
+          hotplug from list of packages to download.</para>
+        </listitem>
+        <listitem>
           <para>[ken] - Add udev bootscript patch to list of patches to
           download.</para>
         </listitem>
