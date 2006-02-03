@@ -43,6 +43,9 @@
           <para>[ken] - Add udev bootscript patch to list of patches to
           download.</para>
         </listitem>
+        <listitem>
+          <para>[ken] - Correct the size of the udev tarball.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
