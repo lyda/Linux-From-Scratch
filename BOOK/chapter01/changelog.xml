@@ -40,6 +40,12 @@
       <para>February 3, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[matthew] - Create the
+          <filename class="directory">/lib/firmware</filename> directory that
+          can be used by Udev's <command>firmware_helper</command> utility.
+          </para>
+        </listitem>
+        <listitem>
           <para>[matthew] - Add descriptions of Udev's helper binaries.</para>
         </listitem>
         <listitem>
