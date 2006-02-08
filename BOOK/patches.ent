@@ -32,7 +32,7 @@
 
 <!ENTITY lfs-bootscripts-recent_udev-patch "lfs-bootscripts-&lfs-bootscripts-version;-recent_udev-1.patch">
 
-<!ENTITY linux-utf8-patch "linux-&linux-version;-utf8_input-2.patch">
+<!ENTITY linux-utf8-patch "linux-&linux-version;-utf8_input-1.patch">
 
 <!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-3.patch">
 
