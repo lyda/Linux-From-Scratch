@@ -37,6 +37,17 @@
 -->
 
     <listitem>
+      <para>February 8, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Rewrite the majority of chapter07/udev.xml to
+          reflect the new configuration for handling dynamic device naming and
+          module loading.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>February 3, 2006</para>
       <itemizedlist>
         <listitem>
