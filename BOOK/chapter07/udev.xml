@@ -181,7 +181,7 @@
     <para>There are a few known problems when it comes to automatically creating
     device nodes:</para>
 
-    <para>1) A kernel driver may not export its data to <systemitem
+    <para>1) A kernel driver might not export its data to <systemitem
     class="filesystem">sysfs</systemitem>.</para>
 
     <para>This is most common with third party drivers from outside the kernel
