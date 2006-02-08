@@ -62,7 +62,7 @@
     as the 2.6 series of stable kernels, a new virtual filesystem called
     <systemitem class="filesystem">sysfs</systemitem> came to be. The job of
     <systemitem class="filesystem">sysfs</systemitem> is to export a view of
-    the system's hardrware configuration to userspace processes. With this
+    the system's hardware configuration to userspace processes. With this
     userspace-visible representation, the possibility of seeing a userspace
     replacement for <systemitem class="filesystem">devfs</systemitem> became
     much more realistic.</para>
