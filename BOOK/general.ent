@@ -33,8 +33,8 @@
 <!ENTITY binutils-version "2.16.1">
 <!ENTITY bison-version "2.1">
 <!ENTITY bzip2-version "1.0.3">
-<!ENTITY coreutils-version "5.93">
-<!ENTITY db-version "4.4.16">
+<!ENTITY coreutils-version "5.94">
+<!ENTITY db-version "4.4.20">
 <!ENTITY dejagnu-version "1.4.4">
 <!ENTITY diffutils-version "2.8.1">
 <!ENTITY e2fsprogs-version "1.38">
@@ -65,17 +65,17 @@
 <!ENTITY m4-version "1.4.4">
 <!ENTITY make-version "3.80">
 <!ENTITY man-db-version "2.4.3">
-<!ENTITY man-pages-version "2.21">
+<!ENTITY man-pages-version "2.23">
 <!ENTITY mktemp-version "1.5">
 <!ENTITY module-init-tools-version "3.2.2">
 <!ENTITY ncurses-version "5.5">
 <!-- <!ENTITY ncurses-date "20050319"> -->
 <!ENTITY patch-version "2.5.4">
-<!ENTITY perl-version "5.8.7">
+<!ENTITY perl-version "5.8.8">
 <!ENTITY procps-version "3.2.6">
 <!ENTITY psmisc-version "22.1">
 <!ENTITY readline-version "5.1">
-<!ENTITY sed-version "4.1.4">
+<!ENTITY sed-version "4.1.5">
 <!ENTITY shadow-version "4.0.14">
 <!ENTITY sysklogd-version "1.4.1">
 <!ENTITY sysvinit-version "2.86">
