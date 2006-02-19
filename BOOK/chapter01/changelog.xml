@@ -40,6 +40,10 @@
       <para>February 19, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[matthew] - Expand the Udev module handling rule to run for
+          every subsystem, not just USB.</para>
+        </listitem>
+        <listitem>
           <para>[matthew] - Upgrade to Linux 2.6.15.4.</para>
         </listitem>
         <listitem>

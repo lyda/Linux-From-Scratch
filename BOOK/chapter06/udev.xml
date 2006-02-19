@@ -105,7 +105,7 @@ install</userinput></screen>
 <screen><userinput>sed -i 147,150d /etc/udev/rules.d/25-lfs.rules
 cat &gt;&gt; /etc/udev/rules.d/25-lfs.rules &lt;&lt; EOF
 # Rules to allow hotplugging of devices with modular drivers
-ACTION=="add", SUBSYSTEM=="usb", MODALIAS=="*", \
+ACTION=="add", SUBSYSTEM=="?*", MODALIAS=="?*", \
   RUN+="/sbin/modprobe $modalias"
 ACTION=="add", SUBSYSTEM=="scsi", SYSFS{type}=="[07]", \
   RUN+="/sbin/modprobe sd_mod"
