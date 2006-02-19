@@ -37,6 +37,19 @@
 -->
 
     <listitem>
+      <para>February 19, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Create udev specific directories in udev's
+          instructions instead of the more generic creatingdirs.xml.  Add
+          &quot;pts&quot; and &quot;shm&quot; directories to
+          <filename class="directory">/lib/udev/devices</filename> so that they
+          can be mounted successfully at boot time.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>Febraury 10, 2006</para>
       <itemizedlist>
         <listitem>
