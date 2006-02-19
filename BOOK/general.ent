@@ -82,7 +82,7 @@
 <!ENTITY tar-version "1.15.1">
 <!ENTITY tcl-version "8.4.12">
 <!ENTITY texinfo-version "4.8">
-<!ENTITY udev-version "084">
+<!ENTITY udev-version "085">
 <!ENTITY udev-config-file "udev-config-5.rules">
 <!ENTITY util-linux-version "2.12r">
 <!ENTITY vim-version "6.4">

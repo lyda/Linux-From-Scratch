@@ -40,6 +40,9 @@
       <para>February 19, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[matthew] - Upgrade to Udev 085.</para>
+        </listitem>
+        <listitem>
           <para>[matthew] - Install Sed's HTML documentation by using
           --enable-html instead of editing the Makefile.  Thanks to Greg Schafer
           for the report and the fix.</para>
