@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "udev_update-20060219">
-<!ENTITY releasedate "February 19, 2006">
+<!ENTITY version "udev_update-20060221">
+<!ENTITY releasedate "February 21, 2006">
 <!ENTITY milestone "6.2">
 <!ENTITY generic-version "udev_update"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
 
@@ -65,7 +65,7 @@
 <!ENTITY m4-version "1.4.4">
 <!ENTITY make-version "3.80">
 <!ENTITY man-db-version "2.4.3">
-<!ENTITY man-pages-version "2.23">
+<!ENTITY man-pages-version "2.24">
 <!ENTITY mktemp-version "1.5">
 <!ENTITY module-init-tools-version "3.2.2">
 <!ENTITY ncurses-version "5.5">
