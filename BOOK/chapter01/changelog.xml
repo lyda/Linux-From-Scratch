@@ -40,6 +40,11 @@
       <para>Febraury 20, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[matthew] - Use non-deprecated format for accessing MODALIAS
+          keys in the Udev rules file, and prevent the &quot;$&quot; from being
+          expanded by the shell.</para>
+        </listitem>
+        <listitem>
           <para>[matthew] - Add patches 009 and 010 from Bash upstream.</para>
         </listitem>
         <listitem>
