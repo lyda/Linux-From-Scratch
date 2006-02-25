@@ -37,6 +37,59 @@
 -->
 
     <listitem>
+      <para>Febraury 20, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Add patches 009 and 010 from Bash upstream.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Man-pages 2.24.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>Febraury 19, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Upgrade Perl libc patch to prevent Perl from trying
+          to find headers on the host system. Fixes bug 1695.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Install Sed's HTML documentation by using
+          --enable-html instead of editing the Makefile.  Thanks to Greg Schafer
+          for the report and the fix.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Add upstream fixes 001-002 for Readline.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Add upstream fixes 001-008 for Bash.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Sed 4.1.5.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Man-pages 2.23.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Coreutils-5.94.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to DB-4.4.20.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Perl-5.8.8, removing the now unneeded
+          vulnerability and DB module patches.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Add the verbose parameter to a couple of commands in
+          Linux-Libc-Headers and DB.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>Febraury 10, 2006</para>
       <itemizedlist>
         <listitem>

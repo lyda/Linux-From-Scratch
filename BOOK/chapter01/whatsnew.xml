@@ -157,9 +157,9 @@
     <listitem>
       <para>Readline &readline-version;</para>
     </listitem>
-    <!--<listitem>
+    <listitem>
       <para>Sed &sed-version;</para>
-    </listitem>-->
+    </listitem>
     <listitem>
       <para>Shadow &shadow-version;</para>
     </listitem>
@@ -205,6 +205,9 @@
     <title>Added:</title>
 
     <listitem>
+      <para>&bash-fixes-patch;</para>
+    </listitem>
+    <listitem>
       <para>&bzip2-bzgrep-patch;</para>
     </listitem>
     <listitem>
@@ -232,10 +235,10 @@
       <para>&mktemp-tempfile-patch;</para>
     </listitem>
     <listitem>
-      <para>&perl-db_file-patch;</para>
+      <para>&perl-libc-patch;</para>
     </listitem>
     <listitem>
-      <para>&perl-libc-patch;</para>
+      <para>&readline-fixes-patch;</para>
     </listitem>
     <listitem>
       <para>&tar-gcc4_fix-patch;</para>

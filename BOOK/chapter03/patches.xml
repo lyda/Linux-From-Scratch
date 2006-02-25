@@ -19,6 +19,13 @@
   <variablelist role="materials">
 
     <varlistentry>
+      <term>Bash Upstream Fixes Patch - 120 KB:</term>
+      <listitem>
+        <para><ulink url="&patches-root;&bash-fixes-patch;"/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Bzip2 Bzgrep Security Fixes Patch - 1 KB:</term>
       <listitem>
         <para><ulink url="&patches-root;&bzip2-bzgrep-patch;"/></para>
@@ -168,13 +175,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Perl DB_File Module Update patch - 6 KB:</term>
-      <listitem>
-        <para><ulink url="&patches-root;&perl-db_file-patch;"/></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Perl Libc Patch - 1 KB:</term>
       <listitem>
         <para><ulink url="&patches-root;&perl-libc-patch;"/></para>
@@ -182,9 +182,9 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Perl Sprintf Vulnerability Patch - 9 KB:</term>
+      <term>Readline Upstream Fixes Patch - 2 KB:</term>
       <listitem>
-        <para><ulink url="&patches-root;&perl-sprintf-patch;"/></para>
+        <para><ulink url="&patches-root;&readline-fixes-patch;"/></para>
       </listitem>
     </varlistentry>
 

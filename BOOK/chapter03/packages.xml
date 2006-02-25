@@ -43,7 +43,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Berkeley DB (&db-version;) - 7,925 KB:</term>
+      <term>Berkeley DB (&db-version;) - 6,578 KB:</term>
       <listitem>
         <para><ulink url="http://dev.sleepycat.com/"/></para>
       </listitem>
@@ -71,7 +71,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Coreutils (&coreutils-version;) - 4,782 KB:</term>
+      <term>Coreutils (&coreutils-version;) - 4,929 KB:</term>
       <listitem>
         <para><ulink url="&gnu;coreutils/"/></para>
       </listitem>
@@ -291,7 +291,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Man-pages (&man-pages-version;) - 1,705 KB:</term>
+      <term>Man-pages (&man-pages-version;) - 1,713 KB:</term>
       <listitem>
         <para><ulink url="&kernel;linux/docs/manpages/"/></para>
       </listitem>
@@ -342,7 +342,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Perl (&perl-version;) - 9,628 KB:</term>
+      <term>Perl (&perl-version;) - 9,886 KB:</term>
       <listitem>
         <para><ulink url="http://ftp.funet.fi/pub/CPAN/src/"/></para>
       </listitem>
@@ -370,7 +370,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Sed (&sed-version;) - 632 KB:</term>
+      <term>Sed (&sed-version;) - 631 KB:</term>
       <listitem>
         <para><ulink url="&gnu;sed/"/></para>
       </listitem>
