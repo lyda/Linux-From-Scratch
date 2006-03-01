@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>March 1, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Added a description of perl configure flags that
+	  help perl deal with a lack of groff. Thanks Dan Nicholson.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>Febraury 27, 2006</para>
       <itemizedlist>
         <listitem>
