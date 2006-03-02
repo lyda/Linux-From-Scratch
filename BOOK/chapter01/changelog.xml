@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>March 1, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[archaic] - Create the Udev directories before creating the
+          symlinks.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>Febraury 20, 2006</para>
       <itemizedlist>
         <listitem>

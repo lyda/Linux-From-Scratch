@@ -46,12 +46,12 @@
     <para>Create some devices and directories that Udev cannot handle due to
     them being required very early in the boot process:</para>
 
-<screen><userinput>ln -sv /proc/self/fd /lib/udev/devices/fd
+<screen><userinput>install -dv /lib/{firmware,udev/devices/{pts,shm}}
+ln -sv /proc/self/fd /lib/udev/devices/fd
 ln -sv /proc/self/fd/0 /lib/udev/devices/stdin
 ln -sv /proc/self/fd/1 /lib/udev/devices/stdout
 ln -sv /proc/self/fd/2 /lib/udev/devices/stderr
-ln -sv /proc/kcore /lib/udev/devices/core
-install -dv /lib/{firmware,udev/devices/{pts,shm}}</userinput></screen>
+ln -sv /proc/kcore /lib/udev/devices/core</userinput></screen>
 
     <para>Compile the package:</para>
 
