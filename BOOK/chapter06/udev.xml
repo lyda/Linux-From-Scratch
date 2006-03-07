@@ -99,16 +99,12 @@ install</userinput></screen>
 
 <screen><userinput>cp -v ../&udev-config-file; /etc/udev/rules.d/25-lfs.rules</userinput></screen>
 
-    <para>Alter Udev's configuration file so that Udev can automatically
-    load kernel modules.</para>
+    <para>Create some rules that work around broken sysfs attribute creation
+    timing in linux-2.6.15:</para>
 
-<screen><userinput>sed -i 147,150d /etc/udev/rules.d/25-lfs.rules
-cat &gt;&gt; /etc/udev/rules.d/25-lfs.rules &lt;&lt; "EOF"
-# Rules to allow hotplugging of devices with modular drivers
-ACTION=="add", SUBSYSTEM=="?*", ENV{MODALIAS}=="?*", \
-  RUN+="/sbin/modprobe $env{MODALIAS}"
-ACTION=="add", SUBSYSTEM=="scsi", SYSFS{type}=="[07]", \
-  RUN+="/sbin/modprobe sd_mod"
+<screen><userinput>cat &gt;&gt; /etc/udev/rules.d/10-wait_for_sysfs.rules &lt;&lt; "EOF"
+ACTION=="add", DEVPATH=="/devices/*", ENV{PHYSDEVBUS}=="?*", WAIT_FOR_SYSFS="bus"
+ACTION=="add", SUBSYSTEM=="net", WAIT_FOR_SYSFS="address"
 EOF</userinput></screen>
 
     <para>Install the documentation that explains how to create Udev rules:</para>

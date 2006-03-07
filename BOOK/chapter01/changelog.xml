@@ -40,6 +40,11 @@
       <para>March 7, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[matthew] - Update Udev rules file to load SCSI modules and
+          upload firmware to devices that need it.  Improve explanations of
+          device and module handling.  Thanks to Alexander Patrakov.</para>
+        </listitem>
+        <listitem>
           <para>[archaic] - Replaced the debian-specific groff patch with an
           LFS-style patch.</para>
         </listitem>

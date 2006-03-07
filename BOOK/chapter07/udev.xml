@@ -86,7 +86,7 @@
       class="filesystem">sysfs</systemitem> filesystem is mounted (on <filename
       class="directory">/sys</filename>), data which the built-in drivers
       registered with <systemitem class="filesystem">sysfs</systemitem> are
-      available to userspace processes and to <command>udev</command> for device
+      available to userspace processes and to <command>udevd</command> for device
       node creation.</para>
     </sect3>
 
@@ -97,14 +97,15 @@
       device nodes when Linux is booted. The script starts by unsetting the
       hotplug event handler from the default of <command>/sbin/hotplug</command>
       This is done because, instead of the kernel calling out to an external
-      binary, <command>udev</command> will listen on a netlink socket for
+      binary, <command>udevd</command> will listen on a netlink socket for
       hotplug events that the kernel raises. The bootscript copies any static
       device nodes that exist in <filename
       class="directory">/lib/udev/devices</filename> to <filename
-      class="directory">/dev</filename>. This is necessary because some devices
-      are needed before the dynamic device handling processes are available
-      during the early stages of booting a system.  Creating static device nodes
-      in <filename class="directory">/lib/udev/devices</filename> also provides
+      class="directory">/dev</filename>. This is necessary because some devices,
+      directories and symlinks are needed before the dynamic device handling
+      processes are available during the early stages of booting a system.
+      Creating static device nodes in
+      <filename class="directory">/lib/udev/devices</filename> also provides
       an easy workaround for devices that are not supported by the dynamic
       device handling infrastructure.  The bootscript then starts the Udev
       daemon, <command>udevd</command>, which will act on any hotplug events it
@@ -138,10 +139,33 @@
     <sect3>
       <title>Module Loading</title>
 
-      <para>If a device driver has been compiled as a module, the rules that
-      LFS installs will cause <command>udevd</command> to call out to
-      <command>/sbin/modprobe</command> with the name of the corresponding
-      module, thereby loading the driver.</para>
+      <para>Device drivers compiled as modules may have aliases built into them.
+      Aliases are visible in the output of the <command>modinfo</command>
+      program and are usually related to the bus-specific identifiers of devices
+      supported by a module. For example, the <emphasis>snd-fm801</emphasis>
+      driver supports PCI devices with vendor ID 0x1319 and device ID 0x0801,
+      and has an alias of <quote>pci:v00001319d00000801sv*sd*bc04sc01i*</quote>.
+      For most devices, the bus driver exports the alias of the driver that
+      would handle the device via <systemitem
+      class="filesystem">sysfs</systemitem>. E.g., the
+      <filename>/sys/bus/pci/devices/0000:00:0d.0/modalias</filename> file
+      might contain the string
+      <quote>pci:v00001319d00000801sv00001319sd00001319bc04sc01i00</quote>.
+      The rules that LFS installs will cause <command>udevd</command> to call
+      out to <command>/sbin/modprobe</command> with the contents of the
+      <envar>MODALIAS</envar> uevent environment variable (that should be the
+      same as the contents of the <filename>modalias</filename> file in sysfs),
+      thus loading all modules whose aliases match this string after wildcard
+      expansion.</para>
+
+      <para>In this example, this means that, in addition to
+      <emphasis>snd-fm801</emphasis>, the obsolete (and unwanted)
+      <emphasis>forte</emphasis> driver will be loaded if it is
+      available. See below for ways in which the loading of unwanted drivers can
+      be prevented.</para>
+
+      <para>The kernel itself is also able to load modules for network
+      protocols, filesystems and NLS support on demand.</para>
     </sect3>
 
     <sect3>
@@ -153,77 +177,145 @@
       <command>udevd</command> as described above.</para>
     </sect3>
 
-    <!-- FIXME: These are questions Matt thought of while rewriting this page
-         to reflect the hotplug-less setup but didn't have time to investigate
-         straight away.
-    <sect3>
-      <title>Questions?</title>
-
-      <para>7.4.2.3: Are default ownership/permissions still 0660 root:root?  I
-      thought they'd changed, but can't be sure. Running without a config file
-      will prove this pretty quickly.</para>
-
-      <para>7.4.2.4: How does <command>udevd</command> know which driver to
-      load, i.e. the correct module name?  Is it in the hotplug event?  I don't
-      think it can be in /sys as that won't be populated yet (it's the driver
-      itself that populates /sys, after all).</para>
-
-      <para>Is the S05modules script still required?  If so, what are the use
-      cases for it?</para>
-
-    </sect3> -->
-
   </sect2>
 
   <sect2>
-    <title>Problems with Creating Devices</title>
+    <title>Problems with Loading Modules and Creating Devices</title>
 
-    <para>There are a few known problems when it comes to automatically creating
-    device nodes:</para>
+    <para>There are a few possible problems when it comes to automatically
+    creating device nodes.</para>
 
-    <para>1) A kernel driver might not export its data to <systemitem
-    class="filesystem">sysfs</systemitem>.</para>
+    <sect3>
+      <title>A kernel module is not loaded automatically</title>
+      <para>Udev will only load a module if it has a bus-specific alias and the
+      bus driver properly exports the necessary aliases to <systemitem
+      class="filesystem">sysfs</systemitem>. In other cases, one should
+      arrange module loading by other means. With Linux-&linux-version;, Udev is
+      known to load properly-written drivers for PCI, USB, SCSI, SERIO and
+      FireWire devices.</para>
 
-    <para>This is most common with third party drivers from outside the kernel
-    tree. Udev will be unable to automatically create device nodes for such
-    drivers. Create a static device node in
-    <filename>/lib/udev/devices</filename> with the appropriate major/minor
-    numbers (see the file <filename>devices.txt</filename> inside the kernel
-    documentation or the documentation provided by the third party driver
-    vendor). The static device node will be copied to
-    <filename class="directory">/dev</filename> by the
-    <command>S10udev</command> bootscript.</para>
+      <!-- After linux-2.6.16, add INPUT and IDE to the list above -->
 
-    <para>2) A non-hardware device is required.  This is most common with
-    the Advanced Linux Sound Architecture (ALSA) project's Open Sound
-    System (OSS) compatibility module.  These types of devices can be
-    handled in one of two ways:</para>
+      <para>To determine if the device driver you require has the necessary
+      support for Udev, run <command>modinfo</command> with the module name as
+      the argument.  Now try locating the device directory under
+      <filename class="directory">/sys/bus</filename> and check whether there is
+      a <filename>modalias</filename> file there.</para>
+      
+      <para>If the <filename>modalias</filename> file exists, and its contents
+      match the module alias, but the module is still not loaded, it is a kernel
+      bug - the kernel forgets to export the alias to the uevent environment.
+      This is the case, for example, with the input subsystem in
+      Linux-&linux-version;, and is anticipated to be fixed in later kernel
+      versions.  As a workaround...</para>
 
-    <itemizedlist>
+      <!-- After Linux-2.6.16, find a different example for the para above -->
+      
+      <para>If the <filename>modalias</filename> file exists in <systemitem
+      class="filesystem">sysfs</systemitem>, the driver supports the device and
+      can talk to it directly, but doesn't have the alias, it is a bug in the
+      driver. Load the driver without the help from Udev and expect the issue
+      to be fixed later.</para>
 
-      <listitem>
-        <para>Adding the module names to
-        <filename>/etc/sysconfig/modules</filename></para>
-      </listitem>
+      <para>If there is no <filename>modalias</filename> file in the relevant
+      directory under <filename class="directory">/sys/bus</filename>, this
+      means that the kernel developers have not yet added modalias support to
+      this bus type. With Linux-&linux-version;, this is the case with ISA and
+      IDE busses. Expect this issue to be fixed in later kernel versions.</para>
+      
+      <!-- Remove IDE from the list above after Linux-2.6.16 -->
 
-      <listitem>
-        <para>Using an <quote>install</quote> line in
-        <filename>/etc/modprobe.conf</filename>. This tells the
-        <command>modprobe</command> command <quote>when loading this module,
-        also load this other module, at the same time.</quote>
-        For example:</para>
+      <para>Udev is not intended to load <quote>wrapper</quote> drivers such as
+      <emphasis>snd-pcm-oss</emphasis> and non-hardware drivers such as
+      <emphasis>loop</emphasis> at all.</para>
+    </sect3>
 
-<screen role="nodump"><userinput>install snd-pcm modprobe -i snd-pcm ; modprobe \
-    snd-pcm-oss ; true</userinput></screen>
+    <sect3>
+      <title>A kernel module is not loaded automatically, and Udev is not
+      intended to load it</title>
 
-        <para>This will cause the system to load both the
-        <emphasis>snd-pcm</emphasis> and <emphasis>snd-pcm-oss</emphasis>
-        modules when any request is made to load the driver
-        <emphasis>snd-pcm</emphasis>.</para>
-      </listitem>
+      <para>If the <quote>wrapper</quote> module only enhances the functionality
+      provided by some other module (e.g., <emphasis>snd-pcm-oss</emphasis>
+      enhances the functionality of <emphasis>snd-pcm</emphasis> by making the
+      sound cards available to OSS applications), configure
+      <command>modprobe</command> to load the wrapper after Udev loads the
+      wrapped module. To do this, add an <quote>install</quote> line in
+      <filename>/etc/modprobe.conf</filename>. For example:</para>
+<screen role="nodump">install snd-pcm modprobe -i snd-pcm ; modprobe \
+    snd-pcm-oss ; true</screen>
+    
+      <para>If the module in question is not a wrapper and is useful by itself,
+      configure the <command>S05modules</command> bootscript to load this
+      module on system boot. To do this, add the module name to the
+      <filename>/etc/sysconfig/modules</filename> file on a separate line.
+      This works for wrapper modules too, but is suboptimal in that case.</para>
+    </sect3>
 
-    </itemizedlist>
+    <sect3>
+      <title>Udev loads some unwanted module</title>
 
+      <para>Either don't build the module, or blacklist it in
+      <filename>/etc/modprobe.conf</filename> file as done with the
+      <emphasis>forte</emphasis> module in the example below:</para>
+<screen role="nodump">blacklist forte</screen>
+
+      <para>Blacklisted modules can still be loaded manually with the
+      explicit <command>modprobe</command> command.</para>
+    </sect3>
+
+    <sect3>
+      <title>Udev creates a device incorrectly, or makes a wrong symlink</title>
+
+      <para>This usually happens if a rule unexpectedly matches a device. For
+      example, a poorly-writen rule can match by both a SCSI disk (as desired)
+      and the corresponding SCSI generic device (incorrectly) by vendor.
+      Increase the logging verbosity of Udev, find the offending rule by
+      examining the logs and make it more specific.</para>
+    </sect3>
+
+    <sect3>
+      <title>Udev rule works unreliably</title>
+      <para>This may be another manifestation of the previous problem. If not,
+      and your rule uses <systemitem class="filesystem">sysfs</systemitem>
+      attributes, it may be a kernel timing issue, to be fixed in later kernels.
+      For now, you can work around it by creating a rule that waits for the used
+      <systemitem class="filesystem">sysfs</systemitem> attribute and appending
+      it to the <filename>/etc/udev/rules.d/10-wait_for_sysfs.rules</filename>
+      file. Please notify the LFS Development list if you do so and it helps.
+      </para>
+    </sect3>
+    
+    <sect3>
+      <title>Udev does not create a device</title>
+      <para>Further text assumes that the driver is built statically into the
+      kernel or already loaded as a module, and that you have already checked
+      that Udev doesn't create a misnamed device.</para>
+      
+      <para>Udev has no information needed to create a device node if a kernel
+      driver does not export its data to <systemitem
+      class="filesystem">sysfs</systemitem>.
+      This is most common with third party drivers from outside the kernel
+      tree. Create a static device node in
+      <filename>/lib/udev/devices</filename> with the appropriate major/minor
+      numbers (see the file <filename>devices.txt</filename> inside the kernel
+      documentation or the documentation provided by the third party driver
+      vendor). The static device node will be copied to
+      <filename class="directory">/dev</filename> by the
+      <command>S10udev</command> bootscript.</para>
+    </sect3>
+    
+    <sect3>
+      <title>Device naming order changes randomly after rebooting</title>
+      <para>This is due to the fact that Udev, by design, handles uevents and
+      loads modules in parallel, and thus in an unpredictable order. This will
+      never be <quote>fixed</quote>. You should not rely upon the kernel device
+      names being stable. Instead, create your own rules that make symlinks with
+      stable names based on some stable attributes of the device, such as a
+      serial number or the output of various *_id utilities installed by Udev.
+      See also the network interface renaming example in
+      <xref linkend="ch-scripts-network"/>.</para>
+    </sect3>
+    
   </sect2>
 
   <sect2>
