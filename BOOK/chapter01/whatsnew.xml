@@ -193,7 +193,7 @@
     <title>Downgraded to:</title>
 
     <listitem>
-      <para>Groff &groff-version;-&groff-patchlevel;</para>
+      <para>Groff &groff-version;</para>
     </listitem>
 
   </itemizedlist>
@@ -215,6 +215,9 @@
     </listitem>
     <listitem>
       <para>&gcc-specs-patch;</para>
+    </listitem>
+    <listitem>
+      <para>&groff-debian-patch;</para>
     </listitem>
     <listitem>
       <para>Berkeley DB-&db-version;</para>
