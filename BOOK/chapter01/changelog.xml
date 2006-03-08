@@ -40,6 +40,11 @@
       <para>March 8, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[matthew] - Remove an example of poor Udev support as it
+          does not apply to the kernel used in the book. Thanks to Alexander
+          Patrakov.</para>
+        </listitem>
+        <listitem>
           <para>[matthew] - Upgrade to Linux 2.6.15.6.</para>
         </listitem>
         <listitem>

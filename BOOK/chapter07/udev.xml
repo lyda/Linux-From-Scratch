@@ -202,15 +202,6 @@
       <filename class="directory">/sys/bus</filename> and check whether there is
       a <filename>modalias</filename> file there.</para>
       
-      <para>If the <filename>modalias</filename> file exists, and its contents
-      match the module alias, but the module is still not loaded, it is a kernel
-      bug - the kernel forgets to export the alias to the uevent environment.
-      This is the case, for example, with the input subsystem in
-      Linux-&linux-version;, and is anticipated to be fixed in later kernel
-      versions.  As a workaround...</para>
-
-      <!-- After Linux-2.6.16, find a different example for the para above -->
-      
       <para>If the <filename>modalias</filename> file exists in <systemitem
       class="filesystem">sysfs</systemitem>, the driver supports the device and
       can talk to it directly, but doesn't have the alias, it is a bug in the
