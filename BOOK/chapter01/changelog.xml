@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>March 8, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Udev's run_program rules require a null device to be
+          present at an early stage, so create one in /lib/udev/devices.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 7, 2006</para>
       <itemizedlist>
         <listitem>
