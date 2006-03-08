@@ -40,6 +40,9 @@
       <para>March 8, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[matthew] - Upgrade to Linux 2.6.15.6.</para>
+        </listitem>
+        <listitem>
           <para>[matthew] - Upgrade to udev-087.</para>
         </listitem>
         <listitem>
