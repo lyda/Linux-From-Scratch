@@ -1,3 +1,6 @@
+n/a - March 8. 2006
+ * Correct a typo in checkfs (fixes ticket #1729)
+
 n/a - December 31, 2005
  * Replaced /etc/rc.d with ${rc_base} in checkfs. (Vincent Fretin)
 

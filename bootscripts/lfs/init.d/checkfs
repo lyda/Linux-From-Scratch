@@ -110,7 +110,7 @@ case "${1}" in
 			boot_mesg -n "\n\nPress Enter to continue..." ${INFO}
 			boot_mesg "" ${NORMAL}
 			read ENTER
-		  ${rc_base}/halt stop
+		  ${rc_base}/init.d/halt stop
 		fi
 
 		if [ "${error_value}" -ge 16 ]; then
