@@ -421,7 +421,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Udev (&udev-version;) - 187 KB:</term>
+      <term>Udev (&udev-version;) - 186 KB:</term>
       <listitem>
         <para><ulink url="&kernel;linux/utils/kernel/hotplug/"/></para>
       </listitem>
