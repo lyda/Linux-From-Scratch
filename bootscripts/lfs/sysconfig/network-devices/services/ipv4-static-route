@@ -71,6 +71,10 @@ if [ -n "${need_gateway}" ]; then
 	args="${args} via ${GATEWAY}"
 fi
 
+if [ -n "${SOURCE}" ]; then
+        args="${args} src ${SOURCE}"
+fi
+
 case "${2}" in
 	up)
 		boot_mesg "Adding '${desc}' route to the ${1} interface..."

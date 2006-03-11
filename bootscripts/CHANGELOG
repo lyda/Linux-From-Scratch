@@ -1,8 +1,12 @@
+n/a - March 10, 2006
+	* Moved src argument to ipv4-static-route service script and 
+          removed from ipv4-static service script. (DJ Lucas)
+
 n/a - March 8. 2006
- * Correct a typo in checkfs (fixes ticket #1729)
+	* Correct sourced path in checkfs script. (Matthew Burgess)
 
 n/a - December 31, 2005
- * Replaced /etc/rc.d with ${rc_base} in checkfs. (Vincent Fretin)
+	* Replaced /etc/rc.d with ${rc_base} in checkfs. (Vincent Fretin)
 
 n/a - December 24, 2005
 	* Added UTF-8 support to console script. (Alexander E. Patrakov)
