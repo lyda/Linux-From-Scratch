@@ -37,6 +37,24 @@
 -->
 
     <listitem>
+      <para>March 11, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Upgrade to GCC 4.0.3.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>March 8, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Upgrade to Man-pages 2.25.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 7, 2006</para>
       <itemizedlist>
         <listitem>
@@ -282,6 +300,11 @@
     <listitem>
       <para>January 10, 2006</para>
       <itemizedlist>
+        <listitem>
+          <para>[ken]: Define YYENABLE_NLS in bison, to resolve a code
+          difference shown up by Iterative Comparison Analysis. Thanks
+          to Greg Schafer.</para>
+        </listitem>
         <listitem>
           <para>[ken]: Added a sed to correct gccbug.</para>
         </listitem>
