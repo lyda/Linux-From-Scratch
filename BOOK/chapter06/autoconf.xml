@@ -55,7 +55,7 @@
     <userinput>make check</userinput>.
     This takes a long time, about 2 SBUs.  In addition, 2 test are skipped
     that use Automake.  For full test coverage, Autoconf can be re-tested
-    after that package is installed.</para>
+    after Automake has been installed.</para>
 
     <para>Install the package:</para>
 
