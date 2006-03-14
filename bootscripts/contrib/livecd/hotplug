@@ -1,0 +1,48 @@
+#!/bin/sh
+########################################################################
+# Begin $rc_base/init.d/hotplug
+#
+# Description : Load modules for system devices
+#
+# Authors     : Zack Winkles, Jeremy Huntwork
+#
+# Version     : 00.00
+#
+# Notes       : Adjusted this script for use with the lfs-livecd,
+#		adding support for 'expert' cmdline option
+#
+########################################################################
+
+. /etc/sysconfig/rc
+. ${rc_functions}
+
+case "${1}" in
+	start|restart)
+		if ! cat /proc/cmdline | grep -q "expert" ; then
+			boot_mesg "Loading modules for system devices..."
+			for rc in /etc/hotplug/*.rc
+			do
+				${rc} ${1}
+			done
+		else
+			boot_mesg "Expert Mode: Skipping module loading..."
+		fi
+		echo_ok
+		;;
+	stop)
+		# Remove hotplug as the default manager of hotplug events
+		echo /bin/true > /proc/sys/kernel/hotplug
+		;;
+	status)
+		for rc in /etc/hotplug/*.rc
+		do
+			${rc} status
+		done
+		;;
+	*)
+		echo "Usage: ${0} {start|stop|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/hotplug

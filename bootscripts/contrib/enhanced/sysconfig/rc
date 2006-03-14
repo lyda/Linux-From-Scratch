@@ -1,0 +1,31 @@
+########################################################################
+# Begin /etc/sysconfig/rc
+#
+# Description : rc script configuration
+#
+# Authors     :
+#
+# Version     : 00.00
+#
+# Notes       : Updated for use with interactive rc script
+#
+########################################################################
+
+rc_base=/etc/rc.d
+rc_functions=${rc_base}/init.d/functions
+network_devices=/etc/sysconfig/network-devices
+
+# Setup for interactive startup
+DISTRO="Linux From Scratch"
+ITIME="2"
+# DLEN is the length of the string 'DISTRO' (Default 29)
+# ILEN is the length of the interactive prompt (Default 38)
+DLEN="29"
+ILEN="38"
+IPROMPT="yes"
+# End setup for interactive
+
+# Set service for bootlogging
+BLSERVICE="local2"
+
+# End /etc/sysconfig/rc

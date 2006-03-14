@@ -1,0 +1,35 @@
+The enhanced rc script adds features previously found in earlier 
+versions of the lfs-bootscripts.  It also adds the ability to 
+'interactively' step through the init scripts at boot time.  The 
+/etc/sysconfig/rc file contains new variables that set the time for 
+prompt, and allow you to change the name that is displayed in the prompt.
+
+Additionally, the script completes the bootloging setup 
+(lfs-bootscripts 3.2.{1,2})by providing a temporary location to capture 
+the log messages that are generated before your syslog daemon is started.  
+tmpfs is mounted at /media/boottemp/ as soon as rc is called for the first 
+time.  It is unmounted as soon as we leave sysinit, and the temporary log 
+file is appended to the existing boot.log file.  To use this feature requires
+a couple of changes.  By default, the bootlog uses the local2 facility.
+This is configurable in the /etc/sysconfig/rc file.  Additionally, to meet 
+FHS guidelines, the logger binary must be moved to /bin.  This is hardcoded 
+into the scripts, and a proper check is made, in fact returning logger to 
+/usr/bin is the easiest way to disable bootlogging.
+
+The tmpfs is availible for any script durring the entire time of rc's 
+execution and is unmounted when rc exits a numbered runlevel.  Durring 
+sysinit, the functions script has been modified to log to the temporary 
+file, and once in a numbered runlevel, will return to the old behavior 
+allowing your syslog daemon to capture and deliver the boot messages to 
+the log file.  The temporary filesystem can be used for other purposes 
+as well but is currently used only for the interactive lock file and the 
+initial bootlog cache.  The scripts are current as of 
+lfs-bootscripts-3.2.3-pre-1 and can be installed by running 
+'make install-enhanced' from the toplevel directory.
+
+Finally, the boot_mesg function contains very complicated line wrapping code,
+that was seldom used, and hence removed from the bootscripts.  It has been
+made availible again here, however, it is known not to work with some 
+locales.  The syntax is the same as the current boot_mesg function.
+
+
