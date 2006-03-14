@@ -15,16 +15,36 @@
 . /etc/sysconfig/rc
 . ${rc_functions}
 
-# Create some things that sysfs does not, and should not export for us.  Feel
-# free to add devices to this list.
-make_extra_nodes() {
-	ln -s /proc/self/fd /dev/fd
-	ln -s /proc/self/fd/0 /dev/stdin
-	ln -s /proc/self/fd/1 /dev/stdout
-	ln -s /proc/self/fd/2 /dev/stderr
-	ln -s /proc/kcore /dev/core
-	mkdir /dev/pts
-	mkdir /dev/shm
+walk_sysfs() {
+	# generate events with the sysfs trigger
+	list=$(echo /sys/bus/*/devices/*/uevent)
+	list="$list $(echo /sys/class/*/*/uevent)"
+	list="$list $(echo /sys/block/*/uevent /sys/block/*/*/uevent)"
+	for i in $list; do
+	    case "$i" in
+		*/device/uevent|*\**)
+		    # skip followed device symlinks
+		    continue
+		    ;;
+
+		*/class/mem/*|*/class/tty/*)
+		    first="$first $i"
+		    ;;
+
+		*/block/md*)
+		    last="$last $i"
+		    ;;
+
+		*/*)
+		    default="$default $i"
+		    ;;
+	    esac
+	done
+
+	# trigger the sorted events
+	for i in $first $default $last; do
+	    echo "add" > "$i"
+	done
 }
 
 case "${1}" in
@@ -61,20 +81,23 @@ case "${1}" in
 			/etc/rc.d/init.d/halt stop
 		fi
 
-		# Assign udevsend to get hotplug events. udevsend can manage the whole
-		# hotplug handling by taking over the kernel spawned event process
-		echo /sbin/udevsend > /proc/sys/kernel/hotplug
+		# Udev handles hotplug events itself, so we don't need to have
+		# the kernel call out to any binary in response to hotplug
+		# events
+		> /proc/sys/kernel/hotplug
 
-		# Populate /dev with all the devices that are already available,
-		# and save it's status so we can report failures.
-		udevstart || failed=1
+		# Copy static device nodes to /dev
+		cp -ar /lib/udev/devices/* /dev
 
-		# Now, create some required files/directories/devices that sysfs
-		# doesn't export for us.
-		make_extra_nodes
+		# Start the udev daemon to continually watch for, and act on,
+		# hotplug events
+		/sbin/udevd --daemon
+		evaluate_retval
 
-		# When reporting the status, base it on the success or failure
-		# of the `udevstart' command, since that's the most important.
+		# Now traverse /sys in order to "coldplug" devices that have
+		# already been discovered
+		walk_sysfs
+
 		(exit ${failed})
 		evaluate_retval
 		;;
