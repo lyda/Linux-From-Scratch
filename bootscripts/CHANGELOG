@@ -1,3 +1,7 @@
+n/a - March 15, 2006
+	* Wait for uevents to be processed in the udev script.  See ticket #1720
+	  for details
+
 n/a - March 10, 2006
 	* Moved src argument to ipv4-static-route service script and 
           removed from ipv4-static service script. (DJ Lucas)

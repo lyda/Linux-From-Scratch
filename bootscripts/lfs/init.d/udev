@@ -15,6 +15,33 @@
 . /etc/sysconfig/rc
 . ${rc_functions}
 
+wait_for_uevents() {
+	# until we know how to do better, just wait for _all_ events to finish
+	loop=300
+	confirm=0
+	while true ; do
+		sleep 0.1
+		test -d /dev/.udev/queue && confirm=0 || \
+		confirm=$(( $confirm + 1 ))
+		loop=$(( $loop - 1 ))
+		test $loop -gt 0 || break
+		test $confirm -lt 60 || break
+	done
+	test "$loop" -gt 0
+	evaluate_retval
+	sleep 6
+	if test -s /dev/bug; then
+		mv /dev/bug /dev/bugreport
+		boot_mesg "Please paste the /dev/bugreport file to" ${WARNING}
+		boot_mesg "http://wiki.linuxfromscratch.org/lfs/ticket/1720"
+		boot_mesg "Otherwise, the next version of LFS may be unbootable on your system!"
+		echo_failure
+		sleep 10
+	else
+		rm -f /dev/bug
+	fi 
+}
+
 walk_sysfs() {
 	# generate events with the sysfs trigger
 	list=$(echo /sys/bus/*/devices/*/uevent)
@@ -96,7 +123,12 @@ case "${1}" in
 
 		# Now traverse /sys in order to "coldplug" devices that have
 		# already been discovered
+		mkdir -p /dev/.udev/queue
 		walk_sysfs
+
+		# More uevents may have been triggered during the walk of sysfs,
+		# so wait until they've been processed.
+		wait_for_uevents
 
 		(exit ${failed})
 		evaluate_retval
