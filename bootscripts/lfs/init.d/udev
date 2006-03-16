@@ -27,6 +27,7 @@ wait_for_uevents() {
 		test $loop -gt 0 || break
 		test $confirm -lt 60 || break
 	done
+	>/dev/bug
 	test "$loop" -gt 0
 	evaluate_retval
 	sleep 6
