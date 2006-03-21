@@ -37,6 +37,18 @@
 -->
 
     <listitem>
+      <para>March 21, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[archaic] - Updated the bootscripts. Removed references to
+          hotplug and the bootscripts udev patch. Removed reference to
+          udevstart. Added text and commands for generating Udev bug reports.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 11, 2006</para>
       <itemizedlist>
         <listitem>

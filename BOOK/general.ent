@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "udev_update-20060311">
-<!ENTITY releasedate "March 11, 2006">
+<!ENTITY version "udev_update-20060321">
+<!ENTITY releasedate "March 21, 2006">
 <!ENTITY milestone "6.2">
 <!ENTITY generic-version "udev_update"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
 
@@ -56,7 +56,7 @@
 <!ENTITY iproute2-version "051007">
 <!ENTITY kbd-version "1.12">
 <!ENTITY less-version "394">
-<!ENTITY lfs-bootscripts-version "20051223">
+<!ENTITY lfs-bootscripts-version "udev_update-20060315">
 <!ENTITY libtool-version "1.5.22">
 <!ENTITY linux-version "2.6.15.6">
 <!ENTITY linux-dl-version "2.6">

@@ -43,16 +43,6 @@
   <sect2 role="installation">
     <title>Installation of LFS-Bootscripts</title>
 
-    <para>Prevent the hotplug bootscript from being installed, as the hotplug
-      package is no longer installed.</para>
-
-<screen><userinput>sed -i '/hotplug/d' Makefile</userinput></screen>
-
-    <para>Apply the following patch to allow the Udev bootscript to work with
-    recent versions of Udev:</para>
-
-<screen><userinput>patch -Np1 -i ../&lfs-bootscripts-recent_udev-patch;</userinput></screen>
-
     <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
@@ -66,7 +56,7 @@
       <segtitle>Installed scripts</segtitle>
 
       <seglistitem>
-        <seg>checkfs, cleanfs, console, functions, halt, hotplug, ifdown, ifup,
+        <seg>checkfs, cleanfs, console, functions, halt, ifdown, ifup,
         localnet, mountfs, mountkernfs, network, rc, reboot, sendsignals,
         setclock, static, swap, sysklogd, template, and udev</seg>
       </seglistitem>
@@ -131,16 +121,6 @@
           <para>Halts the system</para>
           <indexterm zone="ch-scripts-bootscripts halt-bootscripts">
             <primary sortas="d-halt">halt</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="hotplug-bootscripts">
-        <term><command>hotplug</command></term>
-        <listitem>
-          <para>Loads modules for system devices</para>
-            <indexterm zone="ch-scripts-bootscripts hotplug-bootscripts">
-          <primary sortas="d-hotplug">hotplug</primary>
           </indexterm>
         </listitem>
       </varlistentry>

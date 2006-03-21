@@ -131,13 +131,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>LFS Bootscripts Recent Udev Patch - 4 KB;</term>
-      <listitem>
-        <para><ulink url="&patches-root;&lfs-bootscripts-recent_udev-patch;"/></para>
-      </listitem>   
-    </varlistentry>
-
-    <varlistentry>
       <term>Inetutils GCC-4.x Fix Patch - 2 KB:</term>
       <listitem>
         <para><ulink url="&patches-root;&inetutils-gcc4_fixes-patch;"/></para>
