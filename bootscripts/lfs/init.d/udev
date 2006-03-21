@@ -112,7 +112,7 @@ case "${1}" in
 		# Udev handles hotplug events itself, so we don't need to have
 		# the kernel call out to any binary in response to hotplug
 		# events
-		> /proc/sys/kernel/hotplug
+		echo > /proc/sys/kernel/hotplug
 
 		# Copy static device nodes to /dev
 		cp -ar /lib/udev/devices/* /dev
