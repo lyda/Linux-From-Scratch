@@ -1,3 +1,6 @@
+n/a - March 21, 2006
+	* Removed old references to boot_log function and arguments passed
+	  to boot_mesg_flush in echo_* functions.
 n/a - March 10, 2006
 	* Moved src argument to ipv4-static-route service script and 
           removed from ipv4-static service script. (DJ Lucas)
