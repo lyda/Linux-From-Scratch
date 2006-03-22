@@ -124,29 +124,27 @@ echo_ok()
 {
 	echo -n -e "${CURS_UP}${SET_COL}${BRACKET}[${SUCCESS}  OK  ${BRACKET}]"
 	echo -e "${NORMAL}"
-	boot_mesg_flush "[  OK  ]"
+        boot_mesg_flush
 }
 
 echo_failure()
 {
 	echo -n -e "${CURS_UP}${SET_COL}${BRACKET}[${FAILURE} FAIL ${BRACKET}]"
 	echo -e "${NORMAL}"
-	boot_mesg_flush "[ FAIL ]"
+        boot_mesg_flush
 }
 
 echo_warning()
 {
 	echo -n -e "${CURS_UP}${SET_COL}${BRACKET}[${WARNING} WARN ${BRACKET}]"
 	echo -e "${NORMAL}"
-	boot_mesg_flush "[ WARN ]"
+        boot_mesg_flush
 }
 
 print_error_msg()
 {
 	echo_failure
 	# $i is inherited by the rc script
-	boot_log "\n\n${i} failed and exited with a return value of ${error_value}."
-	boot_mesg_flush
 	boot_mesg -n "FAILURE:\n\nYou should not be reading this error message.\n\n" ${FAILURE}
 	boot_mesg -n " It means that an unforeseen error took"
 	boot_mesg -n " place in ${i}, which exited with a return value of"
@@ -199,9 +197,6 @@ print_status()
 		echo "Usage: ${0} {success|warning|failure}"
 		return 1
 	fi
-
-#	boot_mesg_flush
-#	echo_warning
 
 	case "${1}" in
 

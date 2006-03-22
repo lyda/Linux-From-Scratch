@@ -1,6 +1,10 @@
+n/a - March 21, 2006
+        * Removed old references to boot_log function and arguments passed
+          to boot_mesg_flush in echo_* functions. (DJ Lucas)
+
 n/a - March 15, 2006
 	* Wait for uevents to be processed in the udev script.  See ticket #1720
-	  for details
+	  for details. (Matthew Burgess)
 
 n/a - March 10, 2006
 	* Moved src argument to ipv4-static-route service script and 
