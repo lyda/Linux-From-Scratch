@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "udev_update-20060321">
-<!ENTITY releasedate "March 21, 2006">
+<!ENTITY version "udev_update-20060322">
+<!ENTITY releasedate "March 22, 2006">
 <!ENTITY milestone "6.2">
 <!ENTITY generic-version "udev_update"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
 
