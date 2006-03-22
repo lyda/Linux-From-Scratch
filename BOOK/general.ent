@@ -56,7 +56,7 @@
 <!ENTITY iproute2-version "051007">
 <!ENTITY kbd-version "1.12">
 <!ENTITY less-version "394">
-<!ENTITY lfs-bootscripts-version "udev_update-20060315">
+<!ENTITY lfs-bootscripts-version "udev_update-20060321">
 <!ENTITY libtool-version "1.5.22">
 <!ENTITY linux-version "2.6.15.6">
 <!ENTITY linux-dl-version "2.6">
