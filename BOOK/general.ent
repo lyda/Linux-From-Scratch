@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "udev_update-20060322">
-<!ENTITY releasedate "March 22, 2006">
+<!ENTITY version "udev_update-20060325">
+<!ENTITY releasedate "March 25, 2006">
 <!ENTITY milestone "6.2">
 <!ENTITY generic-version "udev_update"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
 
@@ -40,9 +40,9 @@
 <!ENTITY e2fsprogs-version "1.38">
 <!ENTITY expect-version "5.43.0">
 <!ENTITY expect-lib-version "5.43">
-<!ENTITY file-version "4.16">
+<!ENTITY file-version "4.17">
 <!ENTITY findutils-version "4.2.27">
-<!ENTITY flex-version "2.5.31">
+<!ENTITY flex-version "2.5.33">
 <!ENTITY gawk-version "3.1.5">
 <!ENTITY gcc-version "4.0.3">
 <!ENTITY gettext-version "0.14.5">
@@ -72,7 +72,7 @@
 <!ENTITY patch-version "2.5.4">
 <!ENTITY perl-version "5.8.8">
 <!ENTITY procps-version "3.2.6">
-<!ENTITY psmisc-version "22.1">
+<!ENTITY psmisc-version "22.2">
 <!ENTITY readline-version "5.1">
 <!ENTITY sed-version "4.1.5">
 <!ENTITY shadow-version "4.0.14">
