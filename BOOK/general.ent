@@ -2,7 +2,7 @@
 <!ENTITY version "ALPHABETICAL-20060325">
 <!ENTITY releasedate "March 25, 2006">
 <!ENTITY milestone "6.2">
-<!ENTITY generic-version "development"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
+<!ENTITY generic-version "alphabetical"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
 <!ENTITY blfs-root "&lfs-root;blfs/">
