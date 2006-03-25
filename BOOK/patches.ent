@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Start of Common Patches -->
-<!ENTITY bash-fixes-patch "bash-&bash-version;-fixes-5.patch">
+<!ENTITY bash-fixes-patch "bash-&bash-version;-fixes-6.patch">
 
 <!ENTITY bzip2-bzgrep-patch "bzip2-&bzip2-version;-bzgrep_security-1.patch">
 <!ENTITY bzip2-docs-patch "bzip2-&bzip2-version;-install_docs-1.patch">
 
 <!ENTITY coreutils-i18n-patch "coreutils-&coreutils-version;-i18n-1.patch">
-<!ENTITY coreutils-suppress-patch "coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch">
+<!ENTITY coreutils-suppress-patch "coreutils-&coreutils-version;-suppress_uptime_kill_su-2.patch">
 <!ENTITY coreutils-uname-patch "coreutils-&coreutils-version;-uname-1.patch">
 
 <!ENTITY diffutils-i18n-patch "diffutils-&diffutils-version;-i18n-1.patch">
 
 <!ENTITY expect-spawn-patch "expect-&expect-version;-spawn-1.patch">
-
-<!ENTITY flex-fixes-patch "flex-&flex-version;-debian_fixes-3.patch">
 
 <!ENTITY gawk-segfault-patch "gawk-&gawk-version;-segfault_fix-1.patch">
 
@@ -41,7 +39,7 @@
 
 <!ENTITY perl-libc-patch "perl-&perl-version;-libc-2.patch">
 
-<!ENTITY readline-fixes-patch "readline-&readline-version;-fixes-2.patch">
+<!ENTITY readline-fixes-patch "readline-&readline-version;-fixes-3.patch">
 
 <!ENTITY sysklogd-8bit-patch "sysklogd-&sysklogd-version;-8bit-1.patch">
 <!ENTITY sysklogd-fixes-patch "sysklogd-&sysklogd-version;-fixes-1.patch">
