@@ -56,8 +56,9 @@ ln -sv /proc/kcore /lib/udev/devices/core</userinput></screen>
 
     <para>Compile the package:</para>
 
-<screen><userinput>make \
-EXTRAS="extras/ata_id extras/cdrom_id extras/edd_id extras/firmware extras/floppy extras/scsi_id extras/usb_id extras/volume_id"</userinput></screen>
+<screen><userinput>make EXTRAS="extras/ata_id extras/cdrom_id extras/edd_id \
+            extras/firmware extras/floppy extras/scsi_id \
+            extras/usb_id extras/volume_id"</userinput></screen>
 
     <variablelist>
       <title>The meaning of the make option:</title>
@@ -77,9 +78,10 @@ EXTRAS="extras/ata_id extras/cdrom_id extras/edd_id extras/firmware extras/flopp
 
     <para>Install the package:</para>
 
-<screen><userinput>make DESTDIR=/ \
-EXTRAS="extras/ata_id extras/cdrom_id extras/edd_id extras/firmware extras/floppy extras/scsi_id extras/usb_id extras/volume_id" \
-install</userinput></screen>
+<screen><userinput>make DESTDIR=/
+    EXTRAS="extras/ata_id extras/cdrom_id extras/edd_id \
+            extras/firmware extras/floppy extras/scsi_id \
+            extras/usb_id extras/volume_id" install</userinput></screen>
 
     <variablelist>
       <title>The meaning of the make parameter:</title>
@@ -130,7 +132,7 @@ EOF</userinput></screen>
       <para>First, create a simple C file:</para>
 
 <screen><userinput>cat &gt; bug.c &lt;&lt; EOF
-/* Simple event recorder */
+<literal>/* Simple event recorder */
 #define _GNU_SOURCE
 #include &lt;sys/types.h&gt;
 #include &lt;sys/stat.h&gt;
@@ -154,7 +156,7 @@ int main(int argc, char * argv[])
   close(bug);
   free(envz);
   return 0;
-}
+}</literal>
 EOF</userinput></screen>
 
       <para>Now compile it:</para>
@@ -164,7 +166,7 @@ EOF</userinput></screen>
       <para>The next step adds a simple logging rule to run this program.</para>
 
 <screen><userinput>cat &gt; /etc/udev/rules.d/90-bug.rules &lt;&lt; "EOF"
-ACTION=="add", RUN+="bug"
+<literal>ACTION=="add", RUN+="bug"</literal>
 EOF</userinput></screen>
 
       <para>When booting the new LFS system, if any events are missed, a warning
@@ -198,7 +200,7 @@ EOF</userinput></screen>
       <varlistentry id="ata_id">
         <term><command>ata_id</command></term>
         <listitem>
-          <para>Provides <command>udev</command> with a unique string and
+          <para>Provides Udev with a unique string and
           additional information (uuid, label) for an ATA drive</para>
           <indexterm zone="ch-system-udev ata_id">
             <primary sortas="b-ata_id">ata_id</primary>
@@ -209,7 +211,7 @@ EOF</userinput></screen>
       <varlistentry id="cdrom_id">
         <term><command>cdrom_id</command></term>
         <listitem>
-          <para>Provides <command>udev</command> with the capabilities of a
+          <para>Provides Udev with the capabilities of a
           CD-ROM or DVD-ROM drive</para>
           <indexterm zone="ch-system-udev cdrom_id">
             <primary sortas="b-cdrom_id">cdrom_id</primary>
@@ -230,8 +232,7 @@ EOF</userinput></screen>
       <varlistentry id="edd_id">
         <term><command>edd_id</command></term>
         <listitem>
-          <para>Provides <command>udev</command> with the EDD ID for a BIOS disk
-          drive</para>
+          <para>Provides Udev with the EDD ID for a BIOS disk drive</para>
           <indexterm zone="ch-system-udev edd_id">
             <primary sortas="b-edd_id">edd_id</primary>
           </indexterm>
@@ -241,8 +242,7 @@ EOF</userinput></screen>
       <varlistentry id="firmware_helper">
         <term><command>firmware_helper</command></term>
         <listitem>
-          <para>Enables <command>udev</command> to upload firmware to
-          devices</para>
+          <para>Uploads firmware to devices</para>
           <indexterm zone="ch-system-udev firmware_helper">
             <primary sortas="b-firmware_helper">firmware_helper</primary>
           </indexterm>
@@ -252,7 +252,7 @@ EOF</userinput></screen>
       <varlistentry id="scsi_id">
         <term><command>scsi_id</command></term>
         <listitem>
-          <para>Provides <command>udev</command> with a unique SCSI identifier
+          <para>Provides Udev with a unique SCSI identifier
           based on the data returned from sending a SCSI INQUIRY command to
           the specified device</para>
           <indexterm zone="ch-system-udev scsi_id">
@@ -275,8 +275,9 @@ EOF</userinput></screen>
       <varlistentry id="udevd">
         <term><command>udevd</command></term>
         <listitem>
-          <para>A daemon that reorders hotplug events before submitting them to
-          <command>udev</command>, thus avoiding various race conditions</para>
+          <para>A daemon that listens for uevents on the netlink socket,
+          creates devices and runs the configured external programs in
+          response to these uevents</para>
           <indexterm zone="ch-system-udev udevd">
             <primary sortas="b-udevd">udevd</primary>
           </indexterm>
@@ -286,7 +287,7 @@ EOF</userinput></screen>
       <varlistentry id="udevinfo">
         <term><command>udevinfo</command></term>
         <listitem>
-          <para>Allows users to query the <command>udev</command> database for
+          <para>Allows users to query the Udev database for
           information on any device currently present on the system; it also
           provides a way to query any device in the <systemitem
           class="filesystem">sysfs</systemitem> tree to help create udev
@@ -300,8 +301,8 @@ EOF</userinput></screen>
       <varlistentry id="udevmonitor">
         <term><command>udevmonitor</command></term>
         <listitem>
-          <para>Prints the event received from the kernel and the event which
-          <command>udev</command> sends out after rule processing</para>
+          <para>Prints the event received from the kernel and the environment
+          which Udev sends out after rule processing</para>
           <indexterm zone="ch-system-udev udevmonitor">
             <primary sortas="b-udevmonitor">udevmonitor</primary>
           </indexterm>
@@ -311,10 +312,9 @@ EOF</userinput></screen>
       <varlistentry id="udevtest">
         <term><command>udevtest</command></term>
         <listitem>
-          <para>Simulates a <command>udev</command> run for the given device,
-          and prints out the name of the node the real <command>udev</command>
-          would have created or (not in LFS) the name of the renamed network
-          interface</para>
+          <para>Simulates a uevent for the given device, and prints out the
+          name of the node the real <command>udevd</command> would have created,
+          or the name of the renamed network interface</para>
           <indexterm zone="ch-system-udev udevtest">
             <primary sortas="b-udevtest">udevtest</primary>
           </indexterm>
@@ -324,7 +324,7 @@ EOF</userinput></screen>
       <varlistentry id="usb_id">
         <term><command>usb_id</command></term>
         <listitem>
-          <para>Provides <command>udev</command> with information about USB
+          <para>Provides Udev with information about USB
           devices</para>
           <indexterm zone="ch-system-udev usb_id">
             <primary sortas="b-usb_id">usb_id</primary>
@@ -335,7 +335,7 @@ EOF</userinput></screen>
       <varlistentry id="vol_id">
         <term><command>vol_id</command></term>
         <listitem>
-          <para>Provides <command>udev</command> with the label and uuid of a
+          <para>Provides Udev with the label and uuid of a
           filesystem</para>
           <indexterm zone="ch-system-udev vol_id">
             <primary sortas="b-vol_id">vol_id</primary>
@@ -346,7 +346,7 @@ EOF</userinput></screen>
       <varlistentry id="etc-udev">
         <term><filename class="directory">/etc/udev</filename></term>
         <listitem>
-          <para>Contains <command>udev</command> configuation files,
+          <para>Contains Udev configuation files,
           device permissions, and rules for device naming</para>
           <indexterm zone="ch-system-udev etc-udev">
             <primary sortas="e-/etc/udev">/etc/udev</primary>
