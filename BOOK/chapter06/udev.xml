@@ -78,7 +78,7 @@ ln -sv /proc/kcore /lib/udev/devices/core</userinput></screen>
 
     <para>Install the package:</para>
 
-<screen><userinput>make DESTDIR=/
+<screen><userinput>make DESTDIR=/ \
     EXTRAS="extras/ata_id extras/cdrom_id extras/edd_id \
             extras/firmware extras/floppy extras/scsi_id \
             extras/usb_id extras/volume_id" install</userinput></screen>
