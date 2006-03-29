@@ -117,7 +117,6 @@ case "${1}" in
 		# Start the udev daemon to continually watch for, and act on,
 		# uevents
 		/sbin/udevd --daemon
-		evaluate_retval
 
 		# Now traverse /sys in order to "coldplug" devices that have
 		# already been discovered

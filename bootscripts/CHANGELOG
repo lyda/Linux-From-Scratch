@@ -1,3 +1,6 @@
+n/a - March 28, 2006
+	* Removed extra evaluate_retval in udev bootscript. (Ken Moffat)
+
 n/a - March 21, 2006
         * Removed old references to boot_log function and arguments passed
           to boot_mesg_flush in echo_* functions. (DJ Lucas)
