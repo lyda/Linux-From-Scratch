@@ -138,7 +138,7 @@ do
 done
 </literal>
 EOF
-	install -m755 convert-mans  /usr/bin</userinput></screen>
+install -m755 convert-mans  /usr/bin</userinput></screen>
 
     <para>Additional information regarding the compression of
     man and info pages can be found in the BLFS book at
