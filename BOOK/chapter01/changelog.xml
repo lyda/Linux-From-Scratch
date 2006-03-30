@@ -44,7 +44,8 @@
 	  Man-DB.  Thanks to Alexander for explaining it.</para>
         </listitem>
         <listitem>
-	  <para>[ken] - upgraded to Linux-2.6.16.1.</para>
+	  <para>[ken] - upgraded to Linux-2.6.16.1 and Iproute2-2.6.16-060323.
+	  </para>
         </listitem>
       </itemizedlist>
     </listitem>
