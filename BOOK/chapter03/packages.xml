@@ -249,7 +249,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Linux (&linux-version;) - 38,912 KB:</term>
+      <term>Linux (&linux-version;) - 39,884 KB:</term>
       <listitem>
         <para><ulink url="&kernel;linux/kernel/v&linux-dl-version;/"/></para>
       </listitem>

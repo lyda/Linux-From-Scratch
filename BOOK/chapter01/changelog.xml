@@ -43,6 +43,9 @@
           <para>[ken] - Correct my erroneous comment about UTF-8 locales in
 	  Man-DB.  Thanks to Alexander for explaining it.</para>
         </listitem>
+        <listitem>
+	  <para>[ken] - upgraded to Linux-2.6.16.1.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

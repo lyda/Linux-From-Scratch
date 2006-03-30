@@ -58,7 +58,7 @@
 <!ENTITY less-version "394">
 <!ENTITY lfs-bootscripts-version "udev_update-20060321">
 <!ENTITY libtool-version "1.5.22">
-<!ENTITY linux-version "2.6.15.6">
+<!ENTITY linux-version "2.6.16.1">
 <!ENTITY linux-dl-version "2.6">
 <!ENTITY linux-libc-headers-version "2.6.12.0">
 <!ENTITY m4-version "1.4.4">
