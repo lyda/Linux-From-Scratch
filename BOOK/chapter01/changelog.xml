@@ -37,6 +37,21 @@
 -->
 
     <listitem>
+      <para>April 2, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[archaic] - Moved the chowning of /tools to the end of chapter 5
+          and rewrote note about backing up or re-using /tools. Moved the
+          mounting of kernel filesystems before pkgmgt page and rewrote the page
+          to mount --bind /dev and mount all other kernel filesystems while
+          outside chroot. Rewrote note about re-entering chroot and remounting
+          kernel filesystems. Removed /dev from the list of dirs created in
+          chroot and added it before chroot.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 30, 2006</para>
       <itemizedlist>
         <listitem>
