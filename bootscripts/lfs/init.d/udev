@@ -15,66 +15,6 @@
 . /etc/sysconfig/rc
 . ${rc_functions}
 
-wait_for_uevents() {
-	# until we know how to do better, just wait for _all_ events to finish
-	loop=300
-	confirm=0
-	while true ; do
-		sleep 0.1
-		test -d /dev/.udev/queue && confirm=0 || \
-		confirm=$(( $confirm + 1 ))
-		loop=$(( $loop - 1 ))
-		test $loop -gt 0 || break
-		test $confirm -lt 60 || break
-	done
-	>/dev/bug
-	test "$loop" -gt 0
-	evaluate_retval
-	sleep 6
-	if test -s /dev/bug; then
-		mv /dev/bug /dev/bugreport
-		boot_mesg "Please paste the /dev/bugreport file to" ${WARNING}
-		boot_mesg "http://wiki.linuxfromscratch.org/lfs/ticket/1720"
-		boot_mesg "Otherwise, the next version of LFS may be unbootable on your system!"
-		echo_failure
-		sleep 10
-	else
-		rm -f /dev/bug
-	fi 
-}
-
-walk_sysfs() {
-	# generate events with the sysfs trigger
-	list=$(echo /sys/bus/*/devices/*/uevent)
-	list="$list $(echo /sys/class/*/*/uevent)"
-	list="$list $(echo /sys/block/*/uevent /sys/block/*/*/uevent)"
-	for i in $list; do
-	    case "$i" in
-		*/device/uevent|*\**)
-		    # skip followed device symlinks
-		    continue
-		    ;;
-
-		*/class/mem/*|*/class/tty/*)
-		    first="$first $i"
-		    ;;
-
-		*/block/md*)
-		    last="$last $i"
-		    ;;
-
-		*/*)
-		    default="$default $i"
-		    ;;
-	    esac
-	done
-
-	# trigger the sorted events
-	for i in $first $default $last; do
-	    echo "add" > "$i"
-	done
-}
-
 case "${1}" in
 	start)
 		boot_mesg "Populating /dev with device nodes..."
@@ -107,28 +47,57 @@ case "${1}" in
 			/etc/rc.d/init.d/halt stop
 		fi
 
-		# Udev handles uevents itself, so we don't need to have
-		# the kernel call out to any binary in response to them
+		# Udev handles hotplug events itself, so we don't need to have
+		# the kernel call out to any binary in response to hotplug
+		# events
 		echo > /proc/sys/kernel/hotplug
 
 		# Copy static device nodes to /dev
 		cp -ar /lib/udev/devices/* /dev
 
 		# Start the udev daemon to continually watch for, and act on,
-		# uevents
+		# hotplug events
 		/sbin/udevd --daemon
 
 		# Now traverse /sys in order to "coldplug" devices that have
 		# already been discovered
 		mkdir -p /dev/.udev/queue
-		walk_sysfs
+		/sbin/udevtrigger
 
-		# More uevents may have been triggered during the walk of sysfs,
-		# so wait until they've been processed.
-		wait_for_uevents
-
-		(exit ${failed})
+		# until we know how to do better, just wait for _all_ events 
+		#to finish
+		loop=300
+		confirm=0
+		while true ; do
+			sleep 0.1
+			test -d /dev/.udev/queue && confirm=0 || \
+			confirm=$(( $confirm + 1 ))
+			loop=$(( $loop - 1 ))
+			test $loop -gt 0 || break
+			test $confirm -lt 60 || break
+		done
+		> /dev/bug
+		test "$loop" -gt 0
+		failed="${?}"
+		sleep 6
+        	if test -s /dev/bug; then
+                	mv /dev/bug /dev/bugreport
+			failed="2"
+		else
+                	rm -f /dev/bug
+        	fi
+		(exit "${failed}")
 		evaluate_retval
+
+		if [ "${failed}" -eq "2" ]; then
+			boot_mesg "Please paste the /dev/bugreport file to" ${FAILURE}
+			boot_mesg "http://wiki.linuxfromscratch.org/lfs/ticket/1720"
+			boot_mesg "Otherwise, the next version of LFS may be unbootable on your system!"
+			echo_failure
+			sleep 10
+			return 1
+		fi
+
 		;;
 
 	*)
