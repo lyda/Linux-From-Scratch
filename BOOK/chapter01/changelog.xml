@@ -37,16 +37,6 @@
 -->
 
     <listitem>
-      <para>March 31, 2006</para>
-      <itemizedlist>
-        <listitem>
-          <para>[ken] - Add Alexander's command to sufficiently populate  
-	  /dev now that udevstart has gone.</para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-
-    <listitem>
       <para>March 30, 2006</para>
       <itemizedlist>
         <listitem>

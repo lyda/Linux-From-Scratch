@@ -22,15 +22,6 @@
   other architectures should be available in the usual resource-specific
   locations for those architectures.</para>
 
-  <para>Normally, we can rely on Udev to create all the necessary devices,
-  but in chroot that is not true.  Grub will need to access the disk
-  devices, the following command will create them.</para>
-
-<screen><userinput>for DEVICE in /sys/block/*/dev /sys/block/*/*/dev ; do
-     IFS=: read MAJOR MINOR &lt;$DEVICE
-     mknod /dev/`basename ${DEVICE%/dev}` b $MAJOR $MINOR
-done</userinput></screen>
-
   <para>Boot loading can be a complex area, so a few cautionary
   words are in order. Be familiar with the current boot loader and any other
   operating systems present on the hard drive(s) that need to be
