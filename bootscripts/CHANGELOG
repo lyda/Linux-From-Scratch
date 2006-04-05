@@ -1,3 +1,7 @@
+n/a - April 4, 2006
+	* Replaced a return with an exit and reversed comment changes in 
+          udev bootscript. (Dan Nicholson)
+
 n/a - April 2, 2006
 	* Replaced walk_sysfs function in udev bootscript with new udevtrigger
           program and move wait_for_uevents function inline. (DJ Lucas)

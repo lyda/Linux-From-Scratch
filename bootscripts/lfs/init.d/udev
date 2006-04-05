@@ -47,16 +47,15 @@ case "${1}" in
 			/etc/rc.d/init.d/halt stop
 		fi
 
-		# Udev handles hotplug events itself, so we don't need to have
-		# the kernel call out to any binary in response to hotplug
-		# events
+		# Udev handles uevents itself, so we don't need to have
+		# the kernel call out to any binary in response to them
 		echo > /proc/sys/kernel/hotplug
 
 		# Copy static device nodes to /dev
 		cp -ar /lib/udev/devices/* /dev
 
 		# Start the udev daemon to continually watch for, and act on,
-		# hotplug events
+		# uevents
 		/sbin/udevd --daemon
 
 		# Now traverse /sys in order to "coldplug" devices that have
@@ -95,7 +94,7 @@ case "${1}" in
 			boot_mesg "Otherwise, the next version of LFS may be unbootable on your system!"
 			echo_failure
 			sleep 10
-			return 1
+			exit 1
 		fi
 
 		;;
