@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>April 6, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Placed home page (when available) and full download
+          links for all packages in chapter03/packages.xml.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 2, 2006</para>
       <itemizedlist>
         <listitem>
