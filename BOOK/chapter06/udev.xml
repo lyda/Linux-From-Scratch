@@ -126,7 +126,7 @@ EOF</userinput></screen>
       next bootscript to run may require a device to exist before it has been
       created. To avoid such missed events, and to avoid hardcoding an overly
       long wait time, It is recommended that you run the following commands to
-      aide the LFS development team in debugging these missed events and finding
+      aid the LFS development team in debugging these missed events and finding
       an acceptable solution more quickly.</para>
 
       <para>First, create a simple C file:</para>
