@@ -37,6 +37,19 @@
 -->
 
     <listitem>
+      <para>April 8, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Added a command to create an empty /etc/mtab file early
+	  in chapter 6. This avoids testsuite failures in e2fsprogs and possibly other
+	  programs that expect /etc/mtab to be present. Explanation from Dan Nicholson,
+	  slightly modified. Also merged the 'Creating Essential Symlinks' section with
+	  'Creating passwd, group and log Files'.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 6, 2006</para>
       <itemizedlist>
         <listitem>
