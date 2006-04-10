@@ -9,14 +9,47 @@
   <?dbhtml filename="enternewbug.html"?>
 
   <para>You found a bug, or somebody else found a bug and you decided to add
-    it to Bugzilla.
+    it to Trac.  Or, you want to log a request for a feature that somebody has
+    asked for, or a task of some other type.
   </para>
 
   <itemizedlist>
 
   <listitem>
-    <para>Go to <ulink url="http://bugs.linuxfromscratch.org/enter_bug.cgi"/>
+    <para>Go to <ulink url="http://wiki.linuxfromscratch.org/lfs/newticket"/>
     </para>
+  </listitem>
+
+  <listitem><para>Select the ticket type (defect for bugs, or enhancement,
+    or task). </para>
+  </listitem>
+
+  <listitem><para>The <emphasis>Short summary</emphasis> and <emphasis>
+    Full Description</emphasis> are mandatory.</para>
+  </listitem>
+
+  <listitem><para>Select the <emphasis>Priority</emphasis>. Use your
+    own judgement on how important fixing this bug is. If you're not sure just
+    leave the default. Priorities are periodically re-evaluated and changed
+    anyway.</para>
+  </listitem>
+
+  <listitem><para>Select the <emphasis>Component</emphasis> - the only
+    options are Book or Bootscripts.</para>
+  </listitem>
+
+  <listitem><para>Select the <emphasis>Severity</emphasis> as appropriate,
+    anything from trivial to critical or blocker.</para>
+  </listitem>
+
+  <listitem><para>If you don't want to assign yourself to it right away, leave
+    the <emphasis>Assign To</emphasis> field blank. It'll be assigned to
+    <email>lfs-book@linuxfromscratch.org</email> then, until a real editor
+    changes that to himself.</para>
+  </listitem>
+
+  <listitem><para>If you wish, select a <emphasis>Milestone</emphasis>, either
+    the next version, or future.</para>
   </listitem>
 
   <listitem><para>Select the proper <emphasis>Version</emphasis>. You most
@@ -27,35 +60,16 @@
     want to report a bug against the book version they have.</para>
   </listitem>
 
-  <listitem><para>Don't worry about <emphasis>Component, Platform, OS and
-    Severity</emphasis> Those aren't used at the moment.</para>
+  <listitem><para>Fill in the <emphasis>Keywords</emphasis> and <emphasis>Cc:
+    </emphasis> fields if you wish.</para>
   </listitem>
 
-  <listitem><para>Select the <emphasis>Resolution Priority</emphasis>. Use your
-    own judgement on how important fixing this bug is. If you're not sure just
-    leave the default. Priorities are periodically re-evaluated and changed
-    anyway (what may be P5 a month ago may be changed to a P1 now because it's
-    finally time to fix it).</para>
+  <listitem><para>Particularly if you are using any formatting in the Full 
+    description field, you may wish to click on the <emphasis>Preview</emphasis>
+   button.</para>
   </listitem>
 
-  <listitem><para>Select the <emphasis>Initial state</emphasis>. Only select
-    <emphasis>UNCONFIRMED</emphasis> if you haven't checked the matter out yet
-    and are only suspecting a bug. Otherwise, leave it as
-    <emphasis>NEW</emphasis></para>
-  </listitem>
-
-  <listitem><para>If you don't want to assign yourself to it right away, leave
-    the <emphasis>Assigned To</emphasis> field blank. It'll be assigned to
-    <email>lfs-book@linuxfromscratch.org</email> then, until a real editor
-    changes that to himself.</para>
-  </listitem>
-
-  <listitem><para>Fill in the other fields as appropriate,
-    <emphasis>Summary</emphasis> and <emphasis>Description</emphasis> are
-    mandatory.</para>
-  </listitem>
-
-  <listitem><para>As the last step, click on the <emphasis>Commit</emphasis>
+  <listitem><para>As the last step, click on the <emphasis>Submit ticket</emphasis>
     button to commit your changes to the database. A log of this will be sent to
     the <email>lfs-book@linuxfromscratch.org</email> mailinglist.</para>
   </listitem>

@@ -28,6 +28,18 @@ first a summary, then a detailed log.</para>
 
  <listitem><para>Changelog Entries:</para>
   <itemizedlist>
+   <listitem><para>April 10, 2006 [ken]</para>
+     <itemizedlist>
+       <listitem><para>chapter02/svnssh.xml: Explain how to check out the whole tree</para></listitem>
+       <listitem><para>chapter03/merge.xml: Added</para></listitem>
+       <listitem><para>chapter04/introduction.xml: Spell out a little more policy.</para></listitem>
+       <listitem><para>chapter06/updatebook.xml: Remove requirement to upload package source,
+	mention that we prefer the maintainer's native format instead of .bz2, and move
+	'commit your changes' to renderchecklinks.xml.</para></listitem>
+       <listitem><para>General: Replace references to bugzilla by trac</para></listitem>
+       <listitem><para>General: Thanks to Manuel for pointing out some things I had missed.</para></listitem>
+     </itemizedlist>
+   </listitem>
    <listitem><para>May 12, 2005 [matthew]</para>
      <itemizedlist>
        <listitem><para>General: Correctly tag mailing list addresses</para></listitem>

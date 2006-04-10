@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch03-merge">
+  <title>svn merge</title>
+  <?dbhtml filename="merge.html"?>
+
+  <para><userinput>svn merge</userinput>. This is useful to selectively apply changes
+    from one branch to other branches, or to trunk, or vice versa.  This section is
+    only for people with write access to the LFS subversion server.  It also assumes
+    you have a copy of the whole LFS repository.
+  </para>
+
+  <para>The syntax of the merge command is similar to the syntax of the diff
+    command, and additionally it supports a <emphasis>--dry-run</emphasis> flag to
+    show which will be updated.  But, if a merge creates a conflict (e.g. a change
+    includes a date for the branch in general.ent which cannot be applied because the
+    branch name is different) you will get markers in the conflicted file, and a number
+    of versions of the files, but the only indication of the conflict is that
+    <userinput>svn st</userinput> will show some files not under version control.
+  </para>
+
+  <para>For example, revision 7476 corrected an incorrect comment in the text for
+    Man-DB and updated this in the changelog.  I applied it to a branch by changing
+    to the root directory of the branch (that is, above BOOK/) and specifying
+    revision numbers of 7475:7476 in a command similar to this: (NB you will not
+    need your passphrase for this if you have an up to date local copy of the whole
+    repository.) 
+  </para>
+
+  <para><screen><userinput>svn merge --dry-run -r revision1:revision2 svn://svn.linuxfromscratch.org/LFS/trunk</userinput></screen></para>
+
+  <para>After I was sure this was going to update the correct files I ran it for
+    real. The merge command is not clever enough to notice that a change has already
+    been applied, so you must keep a note of which changes need to be applied.  When
+    you commit merges, it is important to state which revisions are being merged in
+    the message.
+  </para> 
+</sect1>

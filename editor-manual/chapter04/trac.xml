@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch04-trac">
+  <title>Update trac</title>
+  <?dbhtml filename="trac.html"?>
+
+  <para>The final part of updating the book is to update the ticket. This is
+    usually as easy as going to the wiki (<ulink
+    url="http://wiki.linuxfromscratch.org/lfs"/>), going to the ticket and choosing
+    resolve, changing resolution to fixed.
+  </para>
+
+</sect1>
+

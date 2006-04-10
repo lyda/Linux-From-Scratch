@@ -13,11 +13,7 @@
 
   <itemizedlist>
 
-    <listitem><para>Assign yourself to the bug for this new package.</para>
-    </listitem>
-
-    <listitem><para>Download the package to belgarath in your home directory.
-      If it's not bzip2'ed, then make it so.</para>
+    <listitem><para>Assign yourself to the ticket for this new package.</para>
     </listitem>
 
     <listitem><para>Test build an LFS system to make sure this package compiles
@@ -48,13 +44,14 @@
       <command>diff</command>ing the output.</para>
     </listitem>
 
-    <listitem><para>Run <userinput>ls -l package-version.tar.bz2</userinput> on
-      the file you have in your home directory on belgarath. Divide the
-      filesize by <emphasis>1024</emphasis> to get the number of Kilobytes.
-      Round off to the nearest Kilobyte and update the
+    <listitem><para>We now prefer to use the package's native format (so that md5sums
+      or signatures can be checked) instead of creating a .tar.bz2 if the package is
+      supplied only in .tar.gz.  The maintenance of package versions on the LFS mirrors
+      is handled separately, and there is no longer a need to copy new versions of
+      packages to your home directory.  Run <userinput>ls -l package-version.tar.{bz2,gz}
+      </userinput> on the source tarball. Divide the filesize by <emphasis>1024</emphasis>
+      to get the number of Kilobytes. Round off to the nearest Kilobyte and update the
       <emphasis>package-size</emphasis> entity.</para>
     </listitem>
-
-    <listitem><para>Commit your changes to the SVN repository.</para></listitem>
   </itemizedlist>
 </sect1>

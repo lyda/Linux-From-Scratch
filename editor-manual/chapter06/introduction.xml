@@ -12,12 +12,12 @@
 
   <itemizedlist>
 
-    <listitem><para>Updating bugzilla to announce the availability of a new
+    <listitem><para>Updating trac to announce the availability of a new
       version of a package.</para>
     </listitem>
 
-    <listitem><para>Updating the book to reflect the new version of the package
-      and lfs-packages tarballs.</para>
+    <listitem><para>Updating the book to reflect the new version of the package.
+      </para>
     </listitem>
   </itemizedlist>
 </sect1>

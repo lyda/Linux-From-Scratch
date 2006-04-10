@@ -23,6 +23,20 @@
     <listitem><para>Check the validity of the XML.</para></listitem>
     <listitem><para>Check that the book renders properly.</para></listitem>
     <listitem><para>Commit it.</para></listitem>
-    <listitem><para>Update bugzilla to reflect the changes.</para></listitem>
+    <listitem><para>Update trac to reflect the changes.</para></listitem>
   </itemizedlist>
+
+  <para>You should normally restrict a revision to one set of changes, so if
+    you are updating the versions of three packages you will usually do that in
+    three separate revisions.  Also, general updates are normally made to the
+    trunk and then merged to branches.  Clearly, what forms a "set" is a matter
+    for your judgement, but at least consider any likely impact on other
+    current branches who may want to merge some or all of your change.
+  </para>
+
+  <para>
+    The editors of the LFS book prefer that changes to the date in
+    general.ent are made as part of a <emphasis>real</emphasis> change, even
+    though this adds to what has to be done in a merge.
+  </para>
 </sect1>

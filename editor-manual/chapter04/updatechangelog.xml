@@ -14,13 +14,29 @@
   </para>
 
   <para>Changelog updates need to be in the following format:
-    <screen>&lt;listitem&gt;&lt;para&gt;Month Day, Year [username]: Chapter -
-      Section: What you changed.&lt;/para&gt;&lt;/listitem&gt;</screen>
-  </para>
+    <screen>&lt;listitem&gt;
+  &lt;para&gt;Month Day, Year&lt;/para&gt;
+  &lt;itemizedlist&gt;
+    &lt;listitem&gt;
+      &lt;para&gt;[username] - What you changed.&lt;/para&gt;
+    &lt;/listitem&gt;
+    &lt;listitem&gt;
+      &lt;para&gt;[username] - Previous changelog entry from the same day,
+      by you or another editor.&lt;/para&gt;
+    &lt;/listitem&gt;
+  &lt;itemizedlist&gt;
+&lt;/listitem&gt;</screen>
+</para>
 
-  <para>Example: <screen>&lt;listitem&gt;&lt;para&gt;May 27th, 2002 [gerard]:
-    Chapter 06 - Ncurses: upgraded to ncurses-5.2-2.patch which is smaller than
-    the previous one.&lt;/para&gt;&lt;/listitem&gt;</screen>
+  <para>Example: <screen>&lt;listitem&gt;
+  &lt;para&gt;March 3, 2006&lt;/para&gt;
+  &lt;itemizedlist&gt;
+    &lt;listitem&gt;
+      &lt;para&gt;[gerard] - Remove -D_GNU_SOURCE from chapter 5 - Patch. Thanks
+      to Dan Nicholson for the patch.&lt;/para&gt;
+    &lt;/listitem&gt;
+  &lt;/itemizedlist&gt;
+&lt;/listitem&gt;</screen>
   </para>
 
   <para>Changelog entries are always on top of the previously added changelog

@@ -4,9 +4,9 @@
   %general-entities;
 ]>
 
-<chapter id="chapter05" xreflabel="Using Bugzilla">
+<chapter id="chapter05" xreflabel="Using Trac">
  <?dbhtml filename="chapter05.html"?>
-  <title>Using Bugzilla</title>
+  <title>Using Trac</title>
  <?dbhtml dir="chapter05"?>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="introduction.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2003/XInclude" href="addingcomments.xml"/>

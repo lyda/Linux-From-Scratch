@@ -20,7 +20,9 @@ them in .ssh (as <filename>id_dsa</filename> and
 <filename>id_dsa.pub</filename>) unless you already have ssh keys there.
 When prompted for a passphrase just press enter (unless you want to have
 to give the phrase <emphasis>every</emphasis> time you perform a subversion
-operation.  Having generated your keys, upload
+operation.  But, since the same passphrase will be used when you log in to
+<emphasis>belgarath</emphasis> over ssh, it may be advisable to have some
+security in place.   Having generated your keys, upload
 <filename>~/.ssh/id_dsa.pub</filename> to belgarath and move it to
 <filename>~/.ssh/authorized_keys2</filename> <emphasis>on
 belgarath</emphasis>.  (Your local copy of <filename>id_dsa</filename>
@@ -41,9 +43,20 @@ local working copy.  You will also have write access so from now on be extra
 careful, but note that <emphasis>no</emphasis> changes will be made until you
 issue a <userinput>svn commit</userinput> command.</para>
 
+<para>The above is fine for working in trunk, and you can checkout an individual
+branch in a similar manner.  But, merging changes between branches is much
+easier if you check out the whole tree by running:</para>
+
+<screen><userinput>svn checkout svn+ssh://svn.linuxfromscratch.org/LFS LFS
+</userinput></screen>
+
+<para>The drawback to checking out the whole tree is that you will currently
+get about 102M of data instead of 5M.</para>
+
 <para>As with anonymous access, you can update your local copy by simply
 <command>cd</command>'ing into the LFS directory and running:</para>
 
 <para><screen><userinput>svn update</userinput></screen></para>
+
 
 </sect1>

@@ -9,22 +9,22 @@
   <?dbhtml filename="fixbug.html"?>
 
   <para>Once you have fixed a bug and have committed the relevant changes into
-        the Subversion repository, you need to mark the bug fixed in Bugzilla.
+        the Subversion repository, you need to mark the bug fixed in Trac.
   </para>
 
   <itemizedlist>
-    <listitem><para>Go to the bug you fixed and is assigned to you.</para>
+    <listitem><para>Go to the bug you fixed and which is assigned to you.</para>
     </listitem>
 
     <listitem><para>Select the <emphasis>Resolve bug, changing resolution to
       </emphasis> radio button. Then select the proper resolution. Usually
-      you'll select <emphasis>FIXED</emphasis> here, but there are times when
+      you'll select <emphasis>fixed</emphasis> here, but there are times when
       you select other ones like cases where a reported bug is invalid
-      (<emphasis>INVALID</emphasis>), or we know about it but won't fix it
-      (<emphasis>WONTFIX</emphasis>) and so on.</para>
+      (<emphasis>invalid</emphasis>), or we know about it but won't fix it
+      (<emphasis>wontfix</emphasis>) and so on.</para>
     </listitem>
 
-    <listitem><para>Click on the <emphasis>Commit</emphasis> button to commit
+    <listitem><para>Click on the <emphasis>Submit changes</emphasis> button to commit
       the changes to the database.</para>
     </listitem>
   </itemizedlist>

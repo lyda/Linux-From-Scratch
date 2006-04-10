@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch06-updatetrac">
+  <title>Updating Trac</title>
+  <?dbhtml filename="updatetrac.html"?>
+
+  <para>When a new package is released by its maintainers, we mark this in
+    Trac. You don't need to update the book right after a package is
+    released, but at least announce it.
+  </para>
+
+  <itemizedlist>
+
+  <listitem><para>Go to Trac's query page at <ulink
+    url="http://wiki.linuxfromscratch.org/lfs/report"/></para>  </listitem>
+
+  <listitem><para>Choose Active Tickets and look for the name of the package.</para>
+  </listitem>
+
+  <listitem><para>Create a new ticket for the new version (as previously
+    discussed under entering a new bug). Make it as an enhancement.  Add any
+    interesting information, e.g. from the release notes.  When you have put
+    in all the information you wish to record, click on <emphasis>Submit ticket
+    </emphasis> in the normal way.</para>
+  </listitem>
+
+  <listitem><para>If there is an existing open ticket for a prior version of the
+   package, resolve that as <emphasis>wontfix</emphasis> with a note that it has
+   been superceded by the new ticket.</para>
+  </listitem>
+
+  </itemizedlist>
+</sect1>

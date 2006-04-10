@@ -10,13 +10,13 @@
 
   <itemizedlist>
 
-    <listitem><para>Go to the bug you want add comments to</para></listitem>
+    <listitem><para>Go to the ticket you want to add comments to</para></listitem>
 
     <listitem><para>Add your additional information in the
-      <emphasis>Additional Comments</emphasis> text field.</para>
+      <emphasis>Comment</emphasis> box.</para>
     </listitem>
 
-    <listitem><para>As the last step, click on the <emphasis>Commit</emphasis>
+    <listitem><para>As the last step, click on the <emphasis>Submit changes</emphasis>
       button to commit your changes to the database. A log of this will be sent
       to the lfs-book mailinglist.</para>
     </listitem>
