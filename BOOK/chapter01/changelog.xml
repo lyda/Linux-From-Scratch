@@ -40,6 +40,10 @@
       <para>April 12, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[jhuntwork] - Rewrote section explaining IP Addresses.
+          Thanks Bryan Kadzban and Bruce Dubbs. Resolves Ticket 1663.</para>
+        </listitem>
+        <listitem>
           <para>[jhuntwork] - Added a pointer to GDBM in Berkeley DB page.
           Also added explanatory text concerning why LFS chose Debian's
           convention for storing man pages. Thanks to Tushar Teredesai and
