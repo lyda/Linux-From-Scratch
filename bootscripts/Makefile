@@ -27,7 +27,6 @@ install: create-dirs create-service-dir
 	install -m ${CONFMODE} lfs/init.d/functions ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/halt          ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/console       ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/hotplug       ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/localnet      ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/modules       ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/mountfs       ${EXTDIR}/rc.d/init.d/
@@ -44,7 +43,6 @@ install: create-dirs create-service-dir
 	install -m ${MODE} lfs/init.d/udev          ${EXTDIR}/rc.d/init.d/
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc0.d/K80network
 	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc0.d/K90sysklogd
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S60sendsignals
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rc0.d/S70mountfs
 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rc0.d/S80swap
@@ -62,7 +60,6 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc5.d/S20network
 	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc6.d/K80network
 	ln -sf ../init.d/sysklogd   ${EXTDIR}/rc.d/rc6.d/K90sysklogd
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc6.d/S60sendsignals
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rc6.d/S70mountfs
 	ln -sf ../init.d/swap        ${EXTDIR}/rc.d/rc6.d/S80swap
@@ -75,7 +72,6 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/checkfs     ${EXTDIR}/rc.d/rcsysinit.d/S30checkfs
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc.d/rcsysinit.d/S40mountfs
 	ln -sf ../init.d/cleanfs     ${EXTDIR}/rc.d/rcsysinit.d/S50cleanfs
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet

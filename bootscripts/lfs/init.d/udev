@@ -15,18 +15,6 @@
 . /etc/sysconfig/rc
 . ${rc_functions}
 
-# Create some things that sysfs does not, and should not export for us.  Feel
-# free to add devices to this list.
-make_extra_nodes() {
-	ln -s /proc/self/fd /dev/fd
-	ln -s /proc/self/fd/0 /dev/stdin
-	ln -s /proc/self/fd/1 /dev/stdout
-	ln -s /proc/self/fd/2 /dev/stderr
-	ln -s /proc/kcore /dev/core
-	mkdir /dev/pts
-	mkdir /dev/shm
-}
-
 case "${1}" in
 	start)
 		boot_mesg "Populating /dev with device nodes..."
@@ -59,22 +47,56 @@ case "${1}" in
 			/etc/rc.d/init.d/halt stop
 		fi
 
-		# Assign udevsend to get hotplug events. udevsend can manage the whole
-		# hotplug handling by taking over the kernel spawned event process
-		echo /sbin/udevsend > /proc/sys/kernel/hotplug
+		# Udev handles uevents itself, so we don't need to have
+		# the kernel call out to any binary in response to them
+		echo > /proc/sys/kernel/hotplug
 
-		# Populate /dev with all the devices that are already available,
-		# and save it's status so we can report failures.
-		udevstart || failed=1
+		# Copy static device nodes to /dev
+		cp -ar /lib/udev/devices/* /dev
 
-		# Now, create some required files/directories/devices that sysfs
-		# doesn't export for us.
-		make_extra_nodes
+		# Start the udev daemon to continually watch for, and act on,
+		# uevents
+		/sbin/udevd --daemon
 
-		# When reporting the status, base it on the success or failure
-		# of the `udevstart' command, since that's the most important.
-		(exit ${failed})
+		# Now traverse /sys in order to "coldplug" devices that have
+		# already been discovered
+		mkdir -p /dev/.udev/queue
+		/sbin/udevtrigger
+
+		# until we know how to do better, just wait for _all_ events 
+		#to finish
+		loop=300
+		confirm=0
+		while true ; do
+			sleep 0.1
+			test -d /dev/.udev/queue && confirm=0 || \
+			confirm=$(( $confirm + 1 ))
+			loop=$(( $loop - 1 ))
+			test $loop -gt 0 || break
+			test $confirm -lt 60 || break
+		done
+		> /dev/bug
+		test "$loop" -gt 0
+		failed="${?}"
+		sleep 6
+        	if test -s /dev/bug; then
+                	mv /dev/bug /dev/bugreport
+			failed="2"
+		else
+                	rm -f /dev/bug
+        	fi
+		(exit "${failed}")
 		evaluate_retval
+
+		if [ "${failed}" -eq "2" ]; then
+			boot_mesg "Please paste the /dev/bugreport file to" ${FAILURE}
+			boot_mesg "http://wiki.linuxfromscratch.org/lfs/ticket/1720"
+			boot_mesg "Otherwise, the next version of LFS may be unbootable on your system!"
+			echo_failure
+			sleep 10
+			exit 1
+		fi
+
 		;;
 
 	*)
