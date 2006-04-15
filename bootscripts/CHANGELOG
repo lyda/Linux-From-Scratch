@@ -1,3 +1,8 @@
+n/a - April 15, 2006
+	* Cleaned up contrib directory.  Removed: contrib/init.d, 
+          contrib/enhanced, contrib/livecd, contrib/hotplug, and raq2 
+	  patch. (DJ Lucas)
+
 n/a - April 14, 2006
         * Merged changes from udev_update branch (DJ Lucas)
 	* Replaced a return with an exit and reversed comment changes in 
