@@ -96,50 +96,6 @@ install-lsb-compliant:
 install-service-mtu: create-service-dir
 	install -m ${MODE} contrib/sysconfig/network-devices/services/mtu ${EXTDIR}/sysconfig/network-devices/services
 
-install-livecd: create-dirs create-service-dir
-	install -m ${CONFMODE} lfs/init.d/functions ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/halt          ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/console       ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} contrib/livecd/hotplug   ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/localnet      ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/rc            ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/reboot        ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/sendsignals   ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/setclock      ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/sysctl        ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} lfs/init.d/sysklogd	    ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} contrib/livecd/startup   ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} contrib/livecd/mountsqfs ${EXTDIR}/rc.d/init.d/
-	install -m ${MODE} contrib/livecd/network   ${EXTDIR}/rc.d/init.d/
-	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc0.d/K80network
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc0.d/S50hotplug
-	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc0.d/S60sendsignals
-	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc0.d/S90localnet
-	ln -sf ../init.d/halt        ${EXTDIR}/rc.d/rc0.d/S99halt
-	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc1.d/K80network
-	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc2.d/K80network
-	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc3.d/S20network
-	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc4.d/S20network
-	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc5.d/S20network
-	ln -sf ../init.d/network     ${EXTDIR}/rc.d/rc6.d/K80network
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rc6.d/S50hotplug
-	ln -sf ../init.d/sendsignals ${EXTDIR}/rc.d/rc6.d/S60sendsignals
-	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rc6.d/S90localnet
-	ln -sf ../init.d/reboot      ${EXTDIR}/rc.d/rc6.d/S99reboot
-	ln -sf ../init.d/startup     ${EXTDIR}/rc.d/rcsysinit.d/S00startup
-	ln -sf ../init.d/mountsqfs   ${EXTDIR}/rc.d/rcsysinit.d/S05mountsqfs
-	ln -sf ../init.d/hotplug     ${EXTDIR}/rc.d/rcsysinit.d/S55hotplug
-	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
-	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console
-	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
-	ln -sf ../init.d/sysctl      ${EXTDIR}/rc.d/rcsysinit.d/S90sysctl
-	if [ ! -f ${EXTDIR}/sysconfig/rc          ]; then install -m ${CONFMODE} lfs/sysconfig/rc          ${EXTDIR}/sysconfig/; fi
-	if [ ! -f ${EXTDIR}/sysconfig/createfiles ]; then install -m ${CONFMODE} lfs/sysconfig/createfiles ${EXTDIR}/sysconfig/; fi
-	install                   -m ${MODE} lfs/sysconfig/network-devices/ifup   ${EXTDIR}/sysconfig/network-devices/
-	install                   -m ${MODE} lfs/sysconfig/network-devices/ifdown ${EXTDIR}/sysconfig/network-devices/
-	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static       ${EXTDIR}/sysconfig/network-devices/services/
-	install                   -m ${MODE} lfs/sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services/
-
 minimal: create-dirs create-service-dir
 	install -m ${MODE} lfs/init.d/checkfs       ${EXTDIR}/rc.d/init.d/
 	install -m ${MODE} lfs/init.d/cleanfs       ${EXTDIR}/rc.d/init.d/
@@ -171,19 +127,6 @@ minimal: create-dirs create-service-dir
 	ln -sf ../init.d/setclock    ${EXTDIR}/rc.d/rcsysinit.d/S60setclock
 	if [ ! -f ${EXTDIR}/sysconfig/rc          ]; then install -m ${CONFMODE} lfs/sysconfig/rc          ${EXTDIR}/sysconfig/; fi
 
-install-net-agent:
-	install                   -m 755 contrib/hotplug/net.agent   ${EXTDIR}/hotplug
-
-install-enhanced:
-	mv ${EXTDIR}/rc.d/init.d/rc ${EXTDIR}/rc.d/init.d/rc-enhanced.bak
-	mv ${EXTDIR}/rc.d/init.d/functions ${EXTDIR}/rc.d/init.d/functions-enhanced.bak
-	mv ${EXTDIR}/sysconfig/rc ${EXTDIR}/sysconfig/rc-enhanced.bak
-	install -d -m ${DIRMODE} /media/boottemp
-	install -m ${MODE} contrib/enhanced/init.d/rc ${EXTDIR}/rc.d/init.d/rc
-	install -m ${CONFMODE} contrib/enhanced/init.d/functions ${EXTDIR}/rc.d/init.d/functions
-	install -m ${CONFMODE} contrib/enhanced/sysconfig/rc ${EXTDIR}/sysconfig/rc
-
 .PHONY: all create-dirs create-service-dir \
-	install install-service-mtu install-livecd \
-	install-net-agent install-enhanced
+	install install-service-mtu
 
