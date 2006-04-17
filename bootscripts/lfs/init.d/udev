@@ -4,9 +4,9 @@
 #
 # Description : Udev cold-plugging script
 #
-# Authors     : Zack Winkles
+# Authors     : Zack Winkles, Alexander E. Patrakov
 #
-# Version     : 00.01
+# Version     : 00.02
 #
 # Notes       :
 #
@@ -52,7 +52,7 @@ case "${1}" in
 		echo > /proc/sys/kernel/hotplug
 
 		# Copy static device nodes to /dev
-		cp -ar /lib/udev/devices/* /dev
+		cp -a /lib/udev/devices/* /dev
 
 		# Start the udev daemon to continually watch for, and act on,
 		# uevents
@@ -60,24 +60,12 @@ case "${1}" in
 
 		# Now traverse /sys in order to "coldplug" devices that have
 		# already been discovered
-		mkdir -p /dev/.udev/queue
 		/sbin/udevtrigger
 
-		# until we know how to do better, just wait for _all_ events 
-		#to finish
-		loop=300
-		confirm=0
-		while true ; do
-			sleep 0.1
-			test -d /dev/.udev/queue && confirm=0 || \
-			confirm=$(( $confirm + 1 ))
-			loop=$(( $loop - 1 ))
-			test $loop -gt 0 || break
-			test $confirm -lt 60 || break
-		done
-		> /dev/bug
-		test "$loop" -gt 0
+		# Now wait for udevd to process the uevents we triggered
+		/sbin/udevsettle
 		failed="${?}"
+		> /dev/bug
 		sleep 6
         	if test -s /dev/bug; then
                 	mv /dev/bug /dev/bugreport
@@ -89,9 +77,9 @@ case "${1}" in
 		evaluate_retval
 
 		if [ "${failed}" -eq "2" ]; then
-			boot_mesg "Please paste the /dev/bugreport file to" ${FAILURE}
-			boot_mesg "http://wiki.linuxfromscratch.org/lfs/ticket/1720"
-			boot_mesg "Otherwise, the next version of LFS may be unbootable on your system!"
+			boot_mesg "Some uevents escaped from the \"udevsettle\" program" ${FAILURE}
+			boot_mesg "This is a bug either in the kernel or in the program itself."
+			boot_mesg "Please mail the /dev/bugreport file to lfs-dev@linuxfromscratch.org."
 			echo_failure
 			sleep 10
 			exit 1

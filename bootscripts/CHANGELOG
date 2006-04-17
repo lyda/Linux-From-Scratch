@@ -1,3 +1,8 @@
+n/a - April 17, 2006
+	* Updated udev script to use the new udevsettle program.
+	* Added udev_retry script for systems that have /usr on a different
+	  partition or for some other reason fail the initial replay.
+
 n/a - April 15, 2006
 	* Cleaned up contrib directory.  Removed: contrib/init.d, 
           contrib/enhanced, contrib/livecd, contrib/hotplug, and raq2 
