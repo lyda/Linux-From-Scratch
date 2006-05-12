@@ -1,0 +1,1 @@
+ACTION=="add", RUN+="bug"
