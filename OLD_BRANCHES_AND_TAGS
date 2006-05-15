@@ -16,6 +16,11 @@ unlabeled-1.712.2		6284
 6.1.1				7200
 6.1				7201
 gcc4				7202
+LFS-RNG				7619
+alphabetical			7619
+cross-lfs			7619
+multi-arch			7619
+udev_update			7619
 
 
 The following "tags" were removed from the main LFS repository. The revision #
