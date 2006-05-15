@@ -28,6 +28,11 @@ first a summary, then a detailed log.</para>
 
  <listitem><para>Changelog Entries:</para>
   <itemizedlist>
+   <listitem><para>May 15, 2006 [ken]</para>
+     <itemizedlist>
+       <listitem><para>chapter04/commenting.xml: Added, to document the use of FIXME:.</para></listitem>
+     </itemizedlist>
+   </listitem>
    <listitem><para>April 10, 2006 [ken]</para>
      <itemizedlist>
        <listitem><para>chapter02/svnssh.xml: Explain how to check out the whole tree</para></listitem>

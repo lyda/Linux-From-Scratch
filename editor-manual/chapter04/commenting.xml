@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch04-commenting">
+<title>Commenting something out</title>
+<?dbhtml filename="commenting.html"?>
+
+<para>Sometimes, a change will make something no longer appropriate, but you
+think that it might be needed in the future.  If you comment it out in the
+normal way, and start the comment with a <literal>FIXME:</literal> marker, that
+will be highlighted whenever the file is edited, at least if you use vim.</para>
+
+<para>If you encounter a <emphasis>FIXME:</emphasis> in a comment, do not
+automatically assume that it can be deleted because the following instructions
+have now been commented out.</para>
+
+<para>Note that there is no example here - the rendering of html strips out
+comments, and an empty box looks silly.  As always, render your local copy after
+you comment something out, so that you can see the result!</para>
+
+</sect1>
