@@ -1,0 +1,8 @@
+n/a - May 15, 2006
+	* Part one of 25-lfs.rules rewrite
+	* Some minor tweaking of the layout
+
+n/a - May 12, 2006
+	* Initial import of the udev-config directory.
+	* Reorganized and modularized the rules files.
+	* Added explanatory comments
