@@ -78,7 +78,6 @@ install: create-dirs create-service-dir
 	ln -sf ../init.d/console     ${EXTDIR}/rc.d/rcsysinit.d/S70console
 	ln -sf ../init.d/localnet    ${EXTDIR}/rc.d/rcsysinit.d/S80localnet
 	ln -sf ../init.d/sysctl      ${EXTDIR}/rc.d/rcsysinit.d/S90sysctl
-	if [ ! -f ${EXTDIR}/sysconfig/console     ]; then install -m ${CONFMODE} lfs/sysconfig/console     ${EXTDIR}/sysconfig/; fi
 	if [ ! -f ${EXTDIR}/sysconfig/createfiles ]; then install -m ${CONFMODE} lfs/sysconfig/createfiles ${EXTDIR}/sysconfig/; fi
 	if [ ! -f ${EXTDIR}/sysconfig/modules     ]; then install -m ${CONFMODE} lfs/sysconfig/modules     ${EXTDIR}/sysconfig/; fi
 	if [ ! -f ${EXTDIR}/sysconfig/rc          ]; then install -m ${CONFMODE} lfs/sysconfig/rc          ${EXTDIR}/sysconfig/; fi
@@ -90,7 +89,6 @@ install: create-dirs create-service-dir
 install-consolelog: create-dirs
 	install -m ${MODE} contrib/init.d/consolelog   ${EXTDIR}/rc.d/init.d
 	ln -sf ../init.d/consolelog  ${EXTDIR}/rc.d/rcsysinit.d/S00consolelog
-	install --backup=numbered -m ${CONFMODE} contrib/sysconfig/consolelog  ${EXTDIR}/sysconfig/
 
 install-lsb-compliant:
 	make -C contrib/lsb

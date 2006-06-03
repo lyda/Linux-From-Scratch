@@ -1,7 +1,11 @@
+n/a - June 2, 2006
+	* Removed console config file and makefile targets.
+	* Removed references to /dev/bug and bugreport in udevand 
+          udev_retry bootscripts. (DJ Lucas)
 n/a - April 17, 2006
 	* Updated udev script to use the new udevsettle program.
 	* Added udev_retry script for systems that have /usr on a different
-	  partition or for some other reason fail the initial replay.
+	  partition or for some other reason fail the initial replay. (Archaic)
 
 n/a - April 15, 2006
 	* Cleaned up contrib directory.  Removed: contrib/init.d, 

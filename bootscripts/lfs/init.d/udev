@@ -64,26 +64,7 @@ case "${1}" in
 
 		# Now wait for udevd to process the uevents we triggered
 		/sbin/udevsettle
-		failed="${?}"
-		> /dev/bug
-		sleep 6
-        	if test -s /dev/bug; then
-                	mv /dev/bug /dev/bugreport
-			failed="2"
-		else
-                	rm -f /dev/bug
-        	fi
-		(exit "${failed}")
 		evaluate_retval
-
-		if [ "${failed}" -eq "2" ]; then
-			boot_mesg "Some uevents escaped from the \"udevsettle\" program" ${FAILURE}
-			boot_mesg "This is a bug either in the kernel or in the program itself."
-			boot_mesg "Please mail the /dev/bugreport file to lfs-dev@linuxfromscratch.org."
-			echo_failure
-			sleep 10
-			exit 1
-		fi
 
 		;;
 
