@@ -20,6 +20,8 @@
 if [ -f /etc/sysconfig/console ]
 then
 	. /etc/sysconfig/console
+else
+        exit 0
 fi
 
 is_true() {
