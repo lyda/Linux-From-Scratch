@@ -121,7 +121,8 @@ KERNEL=="md[0-9]*",             GROUP="disk"
 # dmsetup and lvm2 related programs create devicemapper devices so we prevent
 # udev from creating them
 
-KERNEL=="dm-*", NAME=""
+KERNEL=="dm-*",             OPTIONS+="ignore_device"
+KERNEL=="device-mapper",    OPTIONS+="ignore_device"
 
 KERNEL=="ht[0-9]*",     GROUP="tape"
 KERNEL=="nht[0-9]*",    GROUP="tape"

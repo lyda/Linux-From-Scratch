@@ -1,3 +1,9 @@
+n/a - Jul 12, 2006
+	* Added options so temporary nodes are not created with device-mapper
+	* Adapted cdrom rules to identify CD-ROM drives correctly by adding
+	  SUBSYSTEM=="block" test.
+	* Added simple 81-cdrom.rules file to set cdrom group ownership
+
 n/a - Jun 07, 2006
 	* Removed nvidia rules
 	* Removed bug reporting rule

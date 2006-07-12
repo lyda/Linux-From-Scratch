@@ -68,7 +68,7 @@ write_rule() {
   fi
 
   [ "$comment" ] && echo "# $comment"
-  echo "ACTION==\"add\", $match, ENV{ID_CDROM}==\"1\", SYMLINK+=\"$link\", ENV{GENERATED}=\"1\""
+  echo "ACTION==\"add\", SUBSYSTEM==\"block\", $match, ENV{ID_CDROM}==\"1\", SYMLINK+=\"$link\", ENV{GENERATED}=\"1\""
   } >> $RULES_FILE
   SYMLINKS="$SYMLINKS $link"
 }
