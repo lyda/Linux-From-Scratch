@@ -1,3 +1,9 @@
+n/a - Jun 07, 2006
+	* Removed nvidia rules
+	* Removed bug reporting rule
+	* Moved Debian-based persistent CD-ROM rules to contrib
+	* Adapted firmware rule to udev-093
+
 n/a - May 15, 2006
 	* Part one of 25-lfs.rules rewrite
 	* Some minor tweaking of the layout

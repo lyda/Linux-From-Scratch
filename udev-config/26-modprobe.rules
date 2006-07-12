@@ -1,3 +1,5 @@
+# /etc/udev/rules.d/26-modprobe.rules: Rules that require modprobe.
+
 # Generic rule to allow loading modular drivers for existing hardware
 
 ACTION=="add", ENV{MODALIAS}=="?*", RUN+="/sbin/modprobe $env{MODALIAS}"
@@ -10,7 +12,7 @@ ACTION=="add", ENV{MODALIAS}=="?*", RUN+="/sbin/modprobe $env{MODALIAS}"
 # st/osst           1 (TYPE_TAPE)
 # sr                4 (TYPE_WORM), 5 (TYPE_ROM)
 
-SUBSYSTEM=="scsi_device", ACTION=="add",                        RUN+="/sbin/modprobe sg"
 SUBSYSTEM=="scsi_device", ACTION=="add", SYSFS{type}=="0|7|14", RUN+="/sbin/modprobe sd_mod"
 SUBSYSTEM=="scsi_device", ACTION=="add", SYSFS{type}=="1",      RUN+="/sbin/modprobe st"
 SUBSYSTEM=="scsi_device", ACTION=="add", SYSFS{type}=="[45]",   RUN+="/sbin/modprobe sr_mod"
+SUBSYSTEM=="scsi_device", ACTION=="add",                        RUN+="/sbin/modprobe sg"
