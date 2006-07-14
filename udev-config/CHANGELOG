@@ -1,3 +1,7 @@
+dnicholson - Jul 14, 2006
+	* Fixed usbdev PROGRAM so that it works with the BusyBox sh. Thanks
+	  to Anthony Wright.
+
 n/a - Jul 12, 2006
 	* Added options so temporary nodes are not created with device-mapper
 	* Adapted cdrom rules to identify CD-ROM drives correctly by adding
