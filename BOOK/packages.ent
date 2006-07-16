@@ -280,7 +280,7 @@
 
 <!ENTITY lfs-bootscripts-version "6.2-pre1">
 <!ENTITY lfs-bootscripts-size "24 KB">
-<!ENTITY lfs-bootscripts-url "http://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-&lfs-bootscripts-version;.tar.bz2">
+<!ENTITY lfs-bootscripts-url "http://www.linuxfromscratch.org/lfs/downloads/6.2/lfs-bootscripts-&lfs-bootscripts-version;.tar.bz2">
 <!ENTITY lfs-bootscripts-md5 "e9442898309d8890f923c39c0cbc6fef">
 <!ENTITY lfs-bootscripts-home " ">
 <!ENTITY lfs-bootscripts-ch7-du "0.4 MB">
@@ -492,7 +492,7 @@
 
 <!ENTITY udev-config "udev-config-6.2-pre1">
 <!ENTITY udev-config-size "4 KB">
-<!ENTITY udev-config-url "http://www.linuxfromscratch.org/lfs/downloads/development/&udev-config;.tar.bz2">
+<!ENTITY udev-config-url "http://www.linuxfromscratch.org/lfs/downloads/6.2/&udev-config;.tar.bz2">
 <!ENTITY udev-config-md5 "c259a09f77e014d2e90eabe0e69558f2">
 <!-- <!ENTITY udev-config-md5 "TBD-udev-config-md5"> -->
 <!ENTITY udev-config-home " ">

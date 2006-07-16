@@ -2,7 +2,7 @@
 <!ENTITY version "6.2-pre1">
 <!ENTITY releasedate "July 16, 2006">
 <!ENTITY milestone "6.2">
-<!ENTITY generic-version "6.2-pre1"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
+<!ENTITY generic-version "6.2"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
 <!ENTITY blfs-root "&lfs-root;blfs/">
