@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!ENTITY version "6.2-pre1">
+<!ENTITY releasedate "July 16, 2006">
+<!ENTITY milestone "6.2">
+<!ENTITY generic-version "6.2-pre1"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
+
+<!ENTITY lfs-root "http://www.linuxfromscratch.org/">
+<!ENTITY blfs-root "&lfs-root;blfs/">
+<!ENTITY faq-root "&lfs-root;faq/">
+<!ENTITY hints-root "&lfs-root;hints/downloads/files/">
+<!ENTITY hints-index "&lfs-root;hints/list.html">
+<!ENTITY patches-root "&lfs-root;patches/lfs/&generic-version;/">
+<!ENTITY livecd-root "&lfs-root;livecd/">
+<!ENTITY test-results "&lfs-root;lfs/build-logs/&generic-version;/">
+<!ENTITY errata "&lfs-root;lfs/errata/&generic-version;/">
+
+<!ENTITY buildtime "Approximate build time">
+<!ENTITY diskspace "Required disk space">
+<!ENTITY dependencies "Installation depends on">
+<!ENTITY testsuites "Test suite depends on">
+<!ENTITY before "Must be installed before">
+
+<!ENTITY gnu "http://ftp.gnu.org/gnu/">
+<!ENTITY gnu-software "http://www.gnu.org/software/">
+<!ENTITY alpha-gnu "ftp://alpha.gnu.org/gnu/">
+<!ENTITY kernel "http://www.kernel.org/pub/">
+<!ENTITY sourceforge "http://prdownloads.sourceforge.net/">
+
+<!ENTITY % packages-entities SYSTEM "packages.ent">
+%packages-entities;
+
+<!ENTITY % patches-entities SYSTEM "patches.ent">
+%patches-entities;

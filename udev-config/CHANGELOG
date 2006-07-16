@@ -1,0 +1,24 @@
+dnicholson - Jul 14, 2006
+	* Fixed usbdev PROGRAM so that it works with the BusyBox sh. Thanks
+	  to Anthony Wright.
+
+n/a - Jul 12, 2006
+	* Added options so temporary nodes are not created with device-mapper
+	* Adapted cdrom rules to identify CD-ROM drives correctly by adding
+	  SUBSYSTEM=="block" test.
+	* Added simple 81-cdrom.rules file to set cdrom group ownership
+
+n/a - Jun 07, 2006
+	* Removed nvidia rules
+	* Removed bug reporting rule
+	* Moved Debian-based persistent CD-ROM rules to contrib
+	* Adapted firmware rule to udev-093
+
+n/a - May 15, 2006
+	* Part one of 25-lfs.rules rewrite
+	* Some minor tweaking of the layout
+
+n/a - May 12, 2006
+	* Initial import of the udev-config directory.
+	* Reorganized and modularized the rules files.
+	* Added explanatory comments

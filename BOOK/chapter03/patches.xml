@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="materials-patches">
+  <?dbhtml filename="patches.html"?>
+
+  <title>Needed Patches</title>
+
+  <para>In addition to the packages, several patches are also required.
+  These patches correct any mistakes in the packages that should be
+  fixed by the maintainer.  The patches also make small modifications to
+  make the packages easier to work with. The following patches will be
+  needed to build an LFS system:</para>
+
+  <variablelist role="materials">
+
+    <varlistentry>
+      <term>Bash Upstream Fixes Patch - <token>&bash-fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&bash-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&bash-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Bzip2 Bzgrep Security Fixes Patch - <token>&bzip2-bzgrep-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&bzip2-bzgrep-patch;"/></para>
+        <para>MD5 sum: <literal>&bzip2-bzgrep-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Bzip2 Documentation Patch - <token>&bzip2-docs-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&bzip2-docs-patch;"/></para>
+        <para>MD5 sum: <literal>&bzip2-docs-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Coreutils Internationalization Fixes Patch - <token>&coreutils-i18n-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&coreutils-i18n-patch;"/></para>
+        <para>MD5 sum: <literal>&coreutils-i18n-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Coreutils Suppress Uptime, Kill, Su Patch - <token>&coreutils-suppress-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&coreutils-suppress-patch;"/></para>
+        <para>MD5 sum: <literal>&coreutils-suppress-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Coreutils Uname Patch - <token>&coreutils-uname-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&coreutils-uname-patch;"/></para>
+        <para>MD5 sum: <literal>&coreutils-uname-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Diffutils Internationalization Fixes Patch - <token>&diffutils-i18n-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&diffutils-i18n-patch;"/></para>
+        <para>MD5 sum: <literal>&diffutils-i18n-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Expect Spawn Patch - <token>&expect-spawn-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&expect-spawn-patch;"/></para>
+        <para>MD5 sum: <literal>&expect-spawn-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Gawk Segfault Patch - <token>&gawk-segfault-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&gawk-segfault-patch;"/></para>
+        <para>MD5 sum: <literal>&gawk-segfault-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>GCC Specs Patch - <token>&gcc-specs-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&gcc-specs-patch;"/></para>
+        <para>MD5 sum: <literal>&gcc-specs-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc Linux Types Patch - <token>&glibc-linux_types-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&glibc-linux_types-patch;"/></para>
+        <para>MD5 sum: <literal>&glibc-linux_types-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Grep RedHat Fixes Patch - <token>&grep-fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&grep-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&grep-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Groff Debian Patch - <token>&groff-debian-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&groff-debian-patch;"/></para>
+        <para>MD5 sum: <literal>&groff-debian-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Gzip Security Patch - <token>&gzip-security_fix-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&gzip-security_fix-patch;"/></para>
+        <para>MD5 sum: <literal>&gzip-security_fix-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Inetutils GCC-4.x Fix Patch - <token>&inetutils-gcc4_fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&inetutils-gcc4_fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&inetutils-gcc4_fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Inetutils No-Server-Man-Pages Patch - <token>&inetutils-man_pages-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&inetutils-man_pages-patch;"/></para>
+        <para>MD5 sum: <literal>&inetutils-man_pages-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Kbd Backspace/Delete Fix Patch - <token>&kbd-backspace-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&kbd-backspace-patch;"/></para>
+        <para>MD5 sum: <literal>&kbd-backspace-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Kbd GCC-4.x Fix Patch - <token>&kbd-gcc4_fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&kbd-gcc4_fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&kbd-gcc4_fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Linux kernel UTF-8 Composing Patch - <token>&linux-utf8-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&linux-utf8-patch;"/></para>
+        <para>MD5 sum: <literal>&linux-utf8-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Mktemp Tempfile Patch - <token>&mktemp-tempfile-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&mktemp-tempfile-patch;"/></para>
+        <para>MD5 sum: <literal>&mktemp-tempfile-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Module-init-tools Patch - <token>&module-init-modprobe-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&module-init-modprobe-patch;"/></para>
+        <para>MD5 sum: <literal>&module-init-modprobe-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Ncurses Fixes Patch - <token>&ncurses-fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&ncurses-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&ncurses-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Perl Libc Patch - <token>&perl-libc-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&perl-libc-patch;"/></para>
+        <para>MD5 sum: <literal>&perl-libc-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Readline Upstream Fixes Patch - <token>&readline-fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&readline-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&readline-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Sysklogd 8-Bit Cleanness Patch - <token>&sysklogd-8bit-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&sysklogd-8bit-patch;"/></para>
+        <para>MD5 sum: <literal>&sysklogd-8bit-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Sysklogd Fixes Patch - <token>&sysklogd-fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&sysklogd-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&sysklogd-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Tar GCC-4.x Fix Patch - <token>&tar-gcc4_fix-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&tar-gcc4_fix-patch;"/></para>
+        <para>MD5 sum: <literal>&tar-gcc4_fix-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Tar Security Fixes Patch - <token>&tar-security_fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&tar-security_fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&tar-security_fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Tar Sparse Fix Patch - <token>&tar-sparse_fix-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&tar-sparse_fix-patch;"/></para>
+        <para>MD5 sum: <literal>&tar-sparse_fix-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Texinfo Multibyte Fixes Patch - <token>&texinfo-multibyte-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&texinfo-multibyte-patch;"/></para>
+        <para>MD5 sum: <literal>&texinfo-multibyte-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+
+    <varlistentry>
+      <term>Texinfo Tempfile Fix Patch - <token>&texinfo-tempfile_fix-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&texinfo-tempfile_fix-patch;"/></para>
+        <para>MD5 sum: <literal>&texinfo-tempfile_fix-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Util-linux Cramfs Patch - <token>&util-linux-cramfs-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&util-linux-cramfs-patch;"/></para>
+        <para>MD5 sum: <literal>&util-linux-cramfs-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Vim Upstream Fixes Patch - <token>&vim-fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&vim-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&vim-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Vim Man Directories Patch - <token>&vim-mandir-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&vim-mandir-patch;"/></para>
+        <para>MD5 sum: <literal>&vim-mandir-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+  </variablelist>
+
+  <para>Total size of these patches: about <returnvalue/></para>
+
+  <para>In addition to the above required patches, there exist a number of
+  optional patches created by the LFS community. These optional patches
+  solve minor problems or enable functionality that is not enabled by
+  default. Feel free to peruse the patches database located at
+  <ulink url="&lfs-root;patches/"/> and acquire any additional
+  patches to suit the system needs.</para>
+
+</sect1>
