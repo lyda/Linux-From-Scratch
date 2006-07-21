@@ -37,7 +37,18 @@
 -->
     
     <listitem>
-      <para>Date</para>
+      <para>July 21, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[dnicholson] - Added a reminder to check that the virtual
+          kernel file systems are mounted after the description of the
+          revised chroot command.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>July 18, 2006</para>
       <itemizedlist>
         <listitem>
           <para>[bdubbs] - Several textual corrections.  Thanks to 
