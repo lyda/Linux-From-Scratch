@@ -40,6 +40,13 @@
       <para>July 21, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[bdubbs] - Added the existing bash patch to Chapter 5
+          to avoid potential custom scripting problems.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Added grub-0.97-disk_geometry-1.patch.</para>
+        </listitem>
+        <listitem>
           <para>[bdubbs] - Updated to linux-2.6.16.27.  Added a note to use the
           latest kernel version available in the 2.6.16 series.</para>
         </listitem>
