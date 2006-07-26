@@ -238,6 +238,9 @@
       <para>&mktemp-tempfile-patch;</para>
     </listitem>
     <listitem>
+      <para>&module-init-modprobe-patch;</para>
+    </listitem>
+    <listitem>
       <para>&perl-libc-patch;</para>
     </listitem>
     <listitem>
