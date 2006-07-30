@@ -49,10 +49,10 @@ EOF</userinput></screen>
 
     <para>The SUBSYSTEM==&quot;block&quot; key is needed in order to avoid
     matching SCSI generic devices. Without it, in the case with SCSI
-    CD-ROMs, the symlinks will sometimes point to the correct 
+    CD-ROMs, the symlinks will sometimes point to the correct
     <filename>/dev/srX</filename> devices, and sometimes to
     <filename>/dev/sgX</filename>, which is wrong.</para>
- 
+
     <para>The second approach yields:</para>
 
 <screen role="nodump"><userinput>cat &gt;/etc/udev/rules.d/82-cdrom.rules &lt;&lt;"EOF"
