@@ -90,12 +90,11 @@ EOF</userinput></screen>
     the bus position as a key.</para>
 
     <para>The second known non-working case is with wireless cards using the
-    MadWifi or HostAP drivers, because they create at least two interfaces
-    with the same MAC address and bus position. For example, the Madwifi driver
+    MadWifi or HostAP drivers, because they create at least two interfaces with
+    the same MAC address and bus position. For example, the Madwifi driver
     creates both an athX and a wifiX interface where X is a digit.  To
-    disambiguate these cases, add SYSFS{type}=="zzz" after SUBSYSTEM=="net" for
-    each interface that is handled by that driver, where zzz is the output of
-    <userinput>cat /sys/class/net/&lt;interface_name&gt;/type</userinput>.</para>
+    differentiate these interfaces, add an appropriate KERNEL parameter such as
+    KERNEL=="ath*" after SUBSYSTEM=="net".</para>
 
     <para>There may be other cases where the rules above don't work. Currently,
     bugs on this topic are still being reported to Linux distributions, and no
