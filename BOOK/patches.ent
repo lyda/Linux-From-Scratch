@@ -99,8 +99,8 @@
 <!ENTITY linux-utf8-patch-size "11 KB">
 
 <!ENTITY linux-inotify-patch "linux-libc-headers-2.6.12.0-inotify-2.patch">
-<!ENTITY linux-inotify-patch-md5 "afcddf95ba1790fd3c912318a92b78ef">
-<!ENTITY linux-inotify-patch-size "4.7 KB">
+<!ENTITY linux-inotify-patch-md5 "e6976f61b7d74b7f714830ee0ac47bcd">
+<!ENTITY linux-inotify-patch-size "5.7 KB">
 
 
 <!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-3.patch">
