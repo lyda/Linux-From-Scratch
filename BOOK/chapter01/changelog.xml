@@ -35,6 +35,16 @@
       </itemizedlist>
     </listitem>
 -->
+
+    <listitem>
+      <para>July 29, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Added a patch to Berkeley DB to
+          avoid potential program traps.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
     
     <listitem>
       <para>July 21, 2006</para>
