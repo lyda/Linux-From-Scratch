@@ -5,7 +5,7 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-intro-whatsnew">
+<sect1 id="ch-intro-whatsnew" condition="html">
   <?dbhtml filename="whatsnew.html"?>
 
   <title>What's new since the last release</title>

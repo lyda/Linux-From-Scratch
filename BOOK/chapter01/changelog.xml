@@ -5,7 +5,7 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-scatter-changelog">
+<sect1 id="ch-scatter-changelog" condition="html">
   <?dbhtml filename="changelog.html"?>
 
   <title>Changelog</title>
@@ -49,7 +49,7 @@
         </listitem>
       </itemizedlist>
     </listitem>
-    
+
     <listitem>
       <para>July 21, 2006</para>
       <itemizedlist>
@@ -88,12 +88,12 @@
       <para>July 18, 2006</para>
       <itemizedlist>
         <listitem>
-          <para>[bdubbs] - Several textual corrections.  Thanks to 
+          <para>[bdubbs] - Several textual corrections.  Thanks to
           Chris Staub.</para>
         </listitem>
       </itemizedlist>
     </listitem>
-    
+
     <listitem>
       <para>July 15, 2006</para>
       <itemizedlist>
@@ -111,7 +111,7 @@
           program in updatedb after moving find to /bin.</para>
         </listitem>
         <listitem>
-          <para>[bdubbs] - Updated text concerning test failures in 
+          <para>[bdubbs] - Updated text concerning test failures in
           glibc to describe the most recent results.</para>
         </listitem>
       </itemizedlist>
@@ -123,12 +123,12 @@
         <listitem>
           <para>[bdubbs] - Moved the executables: nice, find, kbd_mode,
           openvt, and setfont to /bin to support boot scripts.
-          Added --datadir=/lib/kbd to kbd's configure so that keyboard 
+          Added --datadir=/lib/kbd to kbd's configure so that keyboard
           data will always be on the root partition.
           </para>
         </listitem>
         <listitem>
-          <para>[bdubbs] - Updated text in section 7.9 (The Bash 
+          <para>[bdubbs] - Updated text in section 7.9 (The Bash
           Shell Startup Files) to better explain the Xlib example.
           </para>
         </listitem>
@@ -180,11 +180,11 @@
       <para>July 11, 2006</para>
       <itemizedlist>
         <listitem>
-          <para>[bdubbs] - Changed url for the SBU pages to a generic 
+          <para>[bdubbs] - Changed url for the SBU pages to a generic
           location.</para>
         </listitem>
         <listitem>
-          <para>[bdubbs] - Added clarifying text to section 7.9 concerning 
+          <para>[bdubbs] - Added clarifying text to section 7.9 concerning
           charmap specifications.  Thanks to Dan Nicholson.
           Closes ticket #1813.</para>
         </listitem>
