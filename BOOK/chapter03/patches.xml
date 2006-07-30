@@ -187,6 +187,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Linux Libc Headers Inotify Patch - <token>&linux-inotify-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&linux-inotify-patch;"/></para>
+        <para>MD5 sum: <literal>&linux-inotify-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Mktemp Tempfile Patch - <token>&mktemp-tempfile-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&mktemp-tempfile-patch;"/></para>

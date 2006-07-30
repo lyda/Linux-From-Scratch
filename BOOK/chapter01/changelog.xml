@@ -40,6 +40,10 @@
       <para>July 29, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[bdubbs] - Added a patch to the linux-libc-headers to
+          add the inotify header.</para>
+        </listitem>
+        <listitem>
           <para>[bdubbs] - Added a patch to Berkeley DB to
           avoid potential program traps.</para>
         </listitem>
