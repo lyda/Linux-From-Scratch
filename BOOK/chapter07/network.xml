@@ -48,9 +48,11 @@
     invent a descriptive name, such as <quote>realtek</quote>, and create
     Udev rules similar to the following:</para>
 
-<screen role="nodump"><userinput>cat &gt; /etc/udev/rules.d/26-network.rules &lt;&lt; "EOF"
-<literal>ACTION=="add", SUBSYSTEM=="net", SYSFS{address}=="<replaceable>00:e0:4c:12:34:56</replaceable>", NAME="<replaceable>realtek</replaceable>"
-ACTION=="add", SUBSYSTEM=="net", SYSFS{address}=="<replaceable>00:a0:c9:78:9a:bc</replaceable>", NAME="<replaceable>intel</replaceable>"</literal>
+<screen role="nodump"><userinput>cat &gt; /etc/udev/rules.d/26-network.rules &lt;&lt; EOF
+<literal>ACTION=="add", SUBSYSTEM=="net", SYSFS{address}=="<replaceable>00:e0:4c:12:34:56</replaceable>", \
+    NAME="<replaceable>realtek</replaceable>"
+ACTION=="add", SUBSYSTEM=="net", SYSFS{address}=="<replaceable>00:a0:c9:78:9a:bc</replaceable>", \
+    NAME="<replaceable>intel</replaceable>"</literal>
 EOF</userinput></screen>
 
 <!-- Yes, I know that VLANs are beyond BLFS. This is not the reason to get them
@@ -59,9 +61,11 @@ EOF</userinput></screen>
     <para>If you are going to use the bus position as a key, create
     Udev rules similar to the following:</para>
 
-<screen role="nodump"><userinput>cat &gt; /etc/udev/rules.d/26-network.rules &lt;&lt; "EOF"
-<literal>ACTION=="add", SUBSYSTEM=="net", BUS=="<replaceable>pci</replaceable>", ID=="<replaceable>0000:00:0c.0</replaceable>", NAME="<replaceable>realtek</replaceable>"
-ACTION=="add", SUBSYSTEM=="net", BUS=="<replaceable>pci</replaceable>", ID=="<replaceable>0000:00:0d.0</replaceable>", NAME="<replaceable>intel</replaceable>"</literal>
+<screen role="nodump"><userinput>cat &gt; /etc/udev/rules.d/26-network.rules &lt;&lt; EOF
+<literal>ACTION=="add", SUBSYSTEM=="net", BUS=="<replaceable>pci</replaceable>", ID=="<replaceable>0000:00:0c.0</replaceable>", \
+    NAME="<replaceable>realtek</replaceable>"
+ACTION=="add", SUBSYSTEM=="net", BUS=="<replaceable>pci</replaceable>", ID=="<replaceable>0000:00:0d.0</replaceable>", \
+    NAME="<replaceable>intel</replaceable>"</literal>
 EOF</userinput></screen>
 
     <para>These rules will always rename the network cards to
