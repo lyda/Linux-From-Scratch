@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>July 30, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Expanded the note in vim to better explain
+          spell files.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 29, 2006</para>
       <itemizedlist>
         <listitem>
