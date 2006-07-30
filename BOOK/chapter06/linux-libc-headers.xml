@@ -43,7 +43,8 @@
     which was designed to maintain an API stable version of the Linux
     headers.</para>
 
-    <para>Add a header that is needed by some applications:</para>
+    <para>Add a header that can be used by some applications to add additional
+    functionality:</para>
 
 <screen><userinput>patch -Np1 -i ../&linux-inotify-patch;</userinput></screen>
 
