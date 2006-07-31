@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>July 31, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Added a patch vim to fix a spellfile download 
+          problem.  Thanks to Alexander Patrakov.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 30, 2006</para>
       <itemizedlist>
         <listitem>

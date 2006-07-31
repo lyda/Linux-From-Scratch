@@ -167,3 +167,8 @@
 <!ENTITY vim-mandir-patch "vim-&vim-version;-mandir-1.patch">
 <!ENTITY vim-mandir-patch-md5 "b6426eb4192faba1e867ddd502323f5b">
 <!ENTITY vim-mandir-patch-size "4.2 KB">
+
+<!ENTITY vim-spellfile-patch "vim-&vim-version;-spellfile-1.patch">
+<!ENTITY vim-spellfile-patch-md5 "98e59e34cb6e16a8d4671247cebd64ee">
+<!ENTITY vim-spellfile-patch-size "1.2 KB">
+
