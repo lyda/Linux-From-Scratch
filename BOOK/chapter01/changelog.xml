@@ -40,6 +40,10 @@
       <para>July 30, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[bdubbs] - Added notes that udev does not recognize
+          a backslash for line continuation.</para>
+        </listitem>
+        <listitem>
           <para>[bdubbs] - Expanded the note in vim to better explain
           spell files.</para>
         </listitem>

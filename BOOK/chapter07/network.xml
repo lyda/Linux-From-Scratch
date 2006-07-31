@@ -58,6 +58,13 @@ EOF</userinput></screen>
 <!-- Yes, I know that VLANs are beyond BLFS. This is not the reason to get them
      incorrect by default when every distro does this right. -->
 
+    <note>
+      <para>Although the examples in this book work properly, be aware that
+      <application>udev</application> does not recognize the backslash for line
+      continuation.  If modifying <application>udev</application> rules with an
+      editor, be sure to leave each rule on one physical line.</para>
+    </note>
+
     <para>If you are going to use the bus position as a key, create
     Udev rules similar to the following:</para>
 
