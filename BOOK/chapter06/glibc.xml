@@ -88,11 +88,11 @@
     test would be carried out against the wrong Glibc. We can force the script
     to check the Glibc we have just installed with the following:</para>
 
+    <beginpage/>
+
 <screen><userinput>sed -i \
 's|libs -o|libs -L/usr/lib -Wl,-dynamic-linker=/lib/ld-linux.so.2 -o|' \
         scripts/test-installation.pl</userinput></screen>
-
-    <beginpage/>
 
     <para>The Glibc documentation recommends building Glibc outside of the source
     directory in a dedicated build directory:</para>
@@ -164,6 +164,8 @@ grep Error glibc-check-log</userinput></screen>
       </listitem>
     </itemizedlist>
 
+    <beginpage/>
+
     <para>Though it is a harmless message, the install stage of Glibc will
     complain about the absence of <filename>/etc/ld.so.conf</filename>.
     Prevent this warning with:</para>
@@ -227,6 +229,8 @@ localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
     <!-- The Live CD patches the localedata/SUPPORTED file instead of
     running localedef, the results are equivalent -->
 
+    <beginpage/>
+
   </sect2>
 
   <sect2 id="conf-glibc" role="configuration">
@@ -244,8 +248,6 @@ localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
     because, although Glibc provides defaults when this file is missing or corrupt,
     the Glibc defaults do not work well in a networked environment. The time zone
     also needs to be configured.</para>
-
-    <beginpage/>
 
     <para>Create a new file <filename>/etc/nsswitch.conf</filename> by running the
     following:</para>
@@ -306,6 +308,8 @@ EOF</userinput></screen>
 
     </variablelist>
 
+    <beginpage/>
+
   </sect2>
 
   <sect2 id="conf-ld" role="configuration">
@@ -328,8 +332,6 @@ EOF</userinput></screen>
     class="directory">/usr/local/lib</filename> and <filename
     class="directory">/opt/lib</filename>, so add those directories to the
     dynamic loader's search path.</para>
-
-    <beginpage/>
 
     <para>Create a new file <filename>/etc/ld.so.conf</filename> by running the
     following:</para>
@@ -526,7 +528,6 @@ EOF</userinput></screen>
           <indexterm zone="ch-system-glibc pcprofiledump">
             <primary sortas="b-pcprofiledump">pcprofiledump</primary>
           </indexterm>
-          <beginpage/>
         </listitem>
       </varlistentry>
 

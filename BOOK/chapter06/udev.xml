@@ -83,6 +83,8 @@ ln -sv /proc/kcore /lib/udev/devices/core</userinput></screen>
             extras/firmware extras/floppy extras/path_id \
             extras/scsi_id extras/usb_id extras/volume_id" install</userinput></screen>
 
+    <beginpage/>
+
     <variablelist>
       <title>The meaning of the make parameter:</title>
 
