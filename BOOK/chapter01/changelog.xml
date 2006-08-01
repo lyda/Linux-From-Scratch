@@ -40,6 +40,15 @@
       <para>August 1, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[dnicholson] - Added text describing a potential failure
+          in the E2fsprogs testsuite when there is not enough memory
+          available and suggest enabling swap space to address this. Also
+          added an explicit <command>swapon</command> to the Chapter 2
+          mounting instructions to ensure that the user has enabled their
+          swap space if desired. Thanks to Nathan Coulson and Alexander
+          Patrakov.</para>
+        </listitem>
+        <listitem>
           <para>[dnicholson] - Added text warning that the Udev testsuite
           will produce messages in the host's logs. Fixes #1846. Thanks to
           Archaic.</para>
