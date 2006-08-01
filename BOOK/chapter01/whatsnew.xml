@@ -205,10 +205,16 @@
       <para>&bash-fixes-patch;</para>
     </listitem>
     <listitem>
+      <para>Berkeley DB-&db-version;</para>
+    </listitem>
+    <listitem>
       <para>&bzip2-bzgrep-patch;</para>
     </listitem>
     <listitem>
       <para>&bzip2-docs-patch;</para>
+    </listitem>
+    <listitem>
+      <para>&db-trap-patch;</para>
     </listitem>
     <listitem>
       <para>&gawk-segfault-patch;</para>
@@ -217,19 +223,22 @@
       <para>&gcc-specs-patch;</para>
     </listitem>
     <listitem>
+      <para>&glibc-inotify-patch;</para>
+    </listitem>
+    <listitem>
       <para>&glibc-linux_types-patch;</para>
     </listitem>
     <listitem>
       <para>&groff-debian-patch;</para>
     </listitem>
     <listitem>
-      <para>Berkeley DB-&db-version;</para>
-    </listitem>
-    <listitem>
       <para>&inetutils-gcc4_fixes-patch;</para>
     </listitem>
     <listitem>
       <para>&kbd-gcc4_fixes-patch;</para>
+    </listitem>
+    <listitem>
+      <para>&linux-inotify-patch;</para>
     </listitem>
     <listitem>
       <para>MAN-DB-&man-db-version;</para>
@@ -260,6 +269,9 @@
     </listitem>
     <listitem>
       <para>&vim-mandir-patch;</para>
+    </listitem>
+    <listitem>
+      <para>&vim-spellfile-patch;</para>
     </listitem>
   </itemizedlist>
 
