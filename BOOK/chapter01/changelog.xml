@@ -40,6 +40,11 @@
       <para>August 1, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[dnicholson] - Added text warning that the Udev testsuite
+          will produce messages in the host's logs. Fixes #1846. Thanks to
+          Archaic.</para>
+        </listitem>
+        <listitem>
           <para>[dnicholson] - Finished adding system inotify support.
           Split the patch so that the syscall functions are part of the
           Glibc installation. Thanks to Alexander Patrakov for supplying
