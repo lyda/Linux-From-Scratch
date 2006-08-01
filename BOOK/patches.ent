@@ -56,6 +56,10 @@
 <!ENTITY glibc-linux_types-patch-md5 "30ea59ae747478aa9315455543b5bb43">
 <!ENTITY glibc-linux_types-patch-size "1.1 KB">
 
+<!ENTITY glibc-inotify-patch "glibc-&glibc-version;-inotify-1.patch">
+<!ENTITY glibc-inotify-patch-md5 "7f2d849d28c413033dd2a1e739e9ae3c">
+<!ENTITY glibc-inotify-patch-size "1.4 KB">
+
 
 <!ENTITY grep-fixes-patch "grep-&grep-version;-redhat_fixes-2.patch">
 <!ENTITY grep-fixes-patch-md5 "2c67910be2d0a54714f63ce350e6d8a6">
@@ -98,9 +102,9 @@
 <!ENTITY linux-utf8-patch-md5 "d67b53e1e99c782bd28d879e11ee16c3">
 <!ENTITY linux-utf8-patch-size "11 KB">
 
-<!ENTITY linux-inotify-patch "linux-libc-headers-2.6.12.0-inotify-2.patch">
-<!ENTITY linux-inotify-patch-md5 "e6976f61b7d74b7f714830ee0ac47bcd">
-<!ENTITY linux-inotify-patch-size "5.7 KB">
+<!ENTITY linux-inotify-patch "linux-libc-headers-&linux-libc-headers-version;-inotify-3.patch">
+<!ENTITY linux-inotify-patch-md5 "8fd71a4bd3344380bd16caf2c430fa9b">
+<!ENTITY linux-inotify-patch-size "4.7 KB">
 
 
 <!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-3.patch">

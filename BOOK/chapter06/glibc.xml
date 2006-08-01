@@ -69,6 +69,11 @@
 
 <screen><userinput>patch -Np1 -i ../&glibc-linux_types-patch;</userinput></screen>
 
+    <para>Add a header to define syscall functions for the inotify feature
+    available in newer Linux kernels:</para>
+
+<screen><userinput>patch -Np1 -i ../&glibc-inotify-patch;</userinput></screen>
+
     <para>In the vi_VN.TCVN locale, <command>bash</command> enters an infinite loop
     at startup. It is unknown whether this is a <command>bash</command> bug or a
     Glibc problem. Disable installation of this locale in order to avoid the
@@ -169,9 +174,14 @@ grep Error glibc-check-log</userinput></screen>
 
 <screen><userinput>make install</userinput></screen>
 
+   <para>Install the inotify header to the system header location:</para>
+
+<screen><userinput>cp -v ../glibc-&glibc-version;/sysdeps/unix/sysv/linux/inotify.h \
+    /usr/include/sys</userinput></screen>
+
     <para>The locales that can make the system respond in a different language
     were not installed by the above command. None of the locales are required,
-    but, if some of them are misssing, testuites of the future packages would
+    but if some of them are missing, testsuites of the future packages would
     skip important testcases.</para>
 
     <para>Individual locales can be installed using the

@@ -43,8 +43,8 @@
     which was designed to maintain an API stable version of the Linux
     headers.</para>
 
-    <para>Add a header that can be used by some applications to add additional
-    functionality:</para>
+    <para>Add a userspace header and syscall support for the inotify feature
+    available in newer Linux kernels:</para>
 
 <screen><userinput>patch -Np1 -i ../&linux-inotify-patch;</userinput></screen>
 

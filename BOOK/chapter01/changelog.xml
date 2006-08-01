@@ -37,6 +37,18 @@
 -->
 
     <listitem>
+      <para>August 1, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[dnicholson] - Finished adding system inotify support.
+          Split the patch so that the syscall functions are part of the
+          Glibc installation. Thanks to Alexander Patrakov for supplying
+          the proper syscall bits.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 31, 2006</para>
       <itemizedlist>
         <listitem>
