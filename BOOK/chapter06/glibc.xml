@@ -57,8 +57,8 @@
 
     <para>The glibc-libidn tarball adds support for internationalized domain
     names (IDN) to Glibc. Many programs that support IDN require the full
-    <filename class="libraryfile">libidn</filename> library (see
-    <ulink url="&blfs-root;view/svn/general/libidn.html"/>), not this add-on.
+    <filename class="libraryfile">libidn</filename> library, not this add-on (see
+    <ulink url="&blfs-root;view/svn/general/libidn.html"/>).
     Unpack the tarball from within the Glibc source directory:</para>
 
 <screen><userinput>tar -xf ../glibc-libidn-&glibc-version;.tar.bz2</userinput></screen>
@@ -86,6 +86,8 @@
 <screen><userinput>sed -i \
 's|libs -o|libs -L/usr/lib -Wl,-dynamic-linker=/lib/ld-linux.so.2 -o|' \
         scripts/test-installation.pl</userinput></screen>
+
+    <beginpage/>
 
     <para>The Glibc documentation recommends building Glibc outside of the source
     directory in a dedicated build directory:</para>
@@ -233,6 +235,8 @@ localedef -i ja_JP -f EUC-JP ja_JP</userinput></screen>
     the Glibc defaults do not work well in a networked environment. The time zone
     also needs to be configured.</para>
 
+    <beginpage/>
+
     <para>Create a new file <filename>/etc/nsswitch.conf</filename> by running the
     following:</para>
 
@@ -314,6 +318,8 @@ EOF</userinput></screen>
     class="directory">/usr/local/lib</filename> and <filename
     class="directory">/opt/lib</filename>, so add those directories to the
     dynamic loader's search path.</para>
+
+    <beginpage/>
 
     <para>Create a new file <filename>/etc/ld.so.conf</filename> by running the
     following:</para>
@@ -510,6 +516,7 @@ EOF</userinput></screen>
           <indexterm zone="ch-system-glibc pcprofiledump">
             <primary sortas="b-pcprofiledump">pcprofiledump</primary>
           </indexterm>
+          <beginpage/>
         </listitem>
       </varlistentry>
 

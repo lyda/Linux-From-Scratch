@@ -84,6 +84,8 @@ make</userinput></screen>
 
 <screen><userinput>chmod -v 644 /usr/lib/libz.a</userinput></screen>
 
+    <beginpage/>
+
   </sect2>
 
   <sect2 id="contents-zlib" role="content">

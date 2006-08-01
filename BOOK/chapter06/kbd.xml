@@ -83,6 +83,8 @@
       such languages have to download working keymaps separately.</para>
     </note>
 
+    <beginpage/>
+
     <para>Some of the scripts in the LFS-Bootscripts package depend on
     <command>kbd_mode</command>, <command>openvt</command>, and
     <command>setfont</command>.  As <filename class="directory">/usr</filename>
@@ -90,9 +92,6 @@
     need to be on the root partition:</para>
 
 <screen><userinput>mv -v /usr/bin/{kbd_mode,openvt,setfont} /bin</userinput></screen>
-
-
-
 
   </sect2>
 

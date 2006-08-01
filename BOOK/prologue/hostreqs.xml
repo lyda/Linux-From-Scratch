@@ -110,6 +110,8 @@
 
   </itemizedlist>
 
+  <beginpage/>
+
   <para>To see whether your host system has all the appropriate versions, run the following:</para>
 
 <screen role="nodump"><userinput>cat &gt; version-check.sh &lt;&lt; "EOF"

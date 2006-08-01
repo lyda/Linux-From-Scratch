@@ -91,6 +91,8 @@
 
 <screen><userinput>make modules_install</userinput></screen>
 
+    <beginpage/>
+
     <para>After kernel compilation is complete, additional steps are
     required to complete the installation. Some files need to be copied to
     the <filename class="directory">/boot</filename> directory.</para>
@@ -152,8 +154,9 @@ cp -r Documentation/* /usr/share/doc/linux-&linux-version;</userinput></screen>
       <emphasis>never</emphasis> be replaced by the kernel headers.</para>
     </warning>
 
-  </sect2>
+    <beginpage/>
 
+  </sect2>
 
   <sect2 id="contents-kernel" role="content">
     <title>Contents of Linux</title>

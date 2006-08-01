@@ -92,6 +92,7 @@
         <para>Home page: <ulink url="&coreutils-home;"/></para>
         <para>Download: <ulink url="&coreutils-url;"/></para>
         <para>MD5 sum: <literal>&coreutils-md5;</literal></para>
+        <beginpage/>
       </listitem>
     </varlistentry>
 
@@ -173,6 +174,7 @@
         <para>Home page: <ulink url="&gawk-home;"/></para>
         <para>Download: <ulink url="&gawk-url;"/></para>
         <para>MD5 sum: <literal>&gawk-md5;</literal></para>
+        <beginpage/>
       </listitem>
     </varlistentry>
 
@@ -263,6 +265,7 @@
         <para>Home page: <ulink url="&inetutils-home;"/></para>
         <para>Download: <ulink url="&inetutils-url;"/></para>
         <para>MD5 sum: <literal>&inetutils-md5;</literal></para>
+        <beginpage/>
       </listitem>
     </varlistentry>
 
@@ -351,6 +354,7 @@
         <para>Home page: <ulink url="&make-home;"/></para>
         <para>Download: <ulink url="&make-url;"/></para>
         <para>MD5 sum: <literal>&make-md5;</literal></para>
+        <beginpage/>
       </listitem>
     </varlistentry>
 
@@ -457,6 +461,7 @@
         <para>Home page: <ulink url="&readline-home;"/></para>
         <para>Download: <ulink url="&readline-url;"/></para>
         <para>MD5 sum: <literal>&readline-md5;</literal></para>
+        <beginpage/>
       </listitem>
     </varlistentry>
 
@@ -547,6 +552,7 @@
         <para>Home page: <ulink url="&udev-config-home;"/></para>
         <para>Download: <ulink url="&udev-config-url;"/></para>
         <para>MD5 sum: <literal>&udev-config-md5;</literal></para>
+        <beginpage/>
       </listitem>
     </varlistentry>
 

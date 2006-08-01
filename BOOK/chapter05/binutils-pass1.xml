@@ -97,6 +97,8 @@ cd ../binutils-build</userinput></screen>
 
 <screen><userinput>make install</userinput></screen>
 
+    <beginpage/>
+
     <para>Next, prepare the linker for the <quote>Adjusting</quote> phase
     later on:</para>
 

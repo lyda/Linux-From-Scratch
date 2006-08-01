@@ -93,6 +93,8 @@ mkdir -p /var/lib/hwclock</userinput></screen>
 
 <screen><userinput>make HAVE_KILL=yes HAVE_SLN=yes install</userinput></screen>
 
+    <beginpage/>
+
   </sect2>
 
   <sect2 id="contents-utillinux" role="content">

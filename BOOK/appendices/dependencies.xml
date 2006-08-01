@@ -143,6 +143,8 @@
         </seglistitem>
       </segmentedlist>
 
+      <beginpage/>
+
 <!-- Begin Binutils dependency info -->
   <bridgehead renderas="sect2" id="binutils-dep">Binutils</bridgehead>
 
@@ -309,6 +311,8 @@
           <seg>None</seg>
         </seglistitem>
       </segmentedlist>
+
+      <beginpage/>
 
 <!-- Begin Expect dependency info -->
   <bridgehead renderas="sect2" id="expect-dep">Expect</bridgehead>
@@ -478,6 +482,8 @@
         </seglistitem>
       </segmentedlist>
 
+      <beginpage/>
+
 <!-- Begin Gcc dependency info -->
   <bridgehead renderas="sect2" id="gcc-dep">Gcc</bridgehead>
 
@@ -646,6 +652,8 @@
         </seglistitem>
       </segmentedlist>
 
+      <beginpage/>
+
 <!-- Begin Gzip dependency info -->
   <bridgehead renderas="sect2" id="gzip-dep">Gzip</bridgehead>
 
@@ -813,6 +821,8 @@
         </seglistitem>
       </segmentedlist>
 
+      <beginpage/>
+
 <!-- Begin Libtool dependency info -->
   <bridgehead renderas="sect2" id="libtool-dep">Libtool</bridgehead>
 
@@ -978,6 +988,8 @@
           <seg>None</seg>
         </seglistitem>
       </segmentedlist>
+
+      <beginpage/>
 
 <!-- Begin Module-Init-Tools dependency info -->
   <bridgehead renderas="sect2" id="module-init-tools-dep">Module-Init-Tools</bridgehead>
@@ -1146,6 +1158,8 @@
         </seglistitem>
       </segmentedlist>
 
+      <beginpage/>
+
 <!-- Begin Readline dependency info -->
   <bridgehead renderas="sect2" id="readline-dep">Readline</bridgehead>
 
@@ -1311,6 +1325,8 @@
           <seg>None</seg>
         </seglistitem>
       </segmentedlist>
+
+      <beginpage/>
 
 <!-- Begin Tcl dependency info -->
   <bridgehead renderas="sect2" id="tcl-dep">Tcl</bridgehead>

@@ -41,8 +41,8 @@ sed 's@^/lib/ld-linux.so.2@/tools&amp;@g' $SPECFILE &gt; tempspecfile &amp;&amp;
 mv -vf tempspecfile $SPECFILE &amp;&amp;
 unset SPECFILE</userinput></screen>
 
-  <para>It is recommended that the above command be copy-and-pasted in order to
-  ensure accuracy. Alternatively, the specs file can be edited by hand. This is
+  <para><phrase condition="html">It is recommended that the above command be copy-and-pasted in order to
+  ensure accuracy. </phrase>Alternatively, the specs file can be edited by hand. This is
   done by replacing every occurrence of <quote>/lib/ld-linux.so.2</quote> with
   <quote>/tools/lib/ld-linux.so.2</quote></para>
 
@@ -67,9 +67,9 @@ unset SPECFILE</userinput></screen>
   which have both been installed at this point, any <quote>fixed</quote>
   headers can safely be removed. This helps to avoid any host headers
   polluting the build environment. Run the following commands to remove the
-  header files in GCC's private include directory (you may find it easier to
+  header files in GCC's private include directory<phrase condition="html"> (you may find it easier to
   copy and paste these commands, rather than typing them by hand, due to
-  their length):</para>
+  their length)</phrase>:</para>
 
 <!-- && used to ease copy and pasting -->
 <screen><userinput>GCC_INCLUDEDIR=`dirname $(gcc -print-libgcc-file-name)`/include &amp;&amp;

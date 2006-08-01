@@ -52,7 +52,7 @@ EOF</userinput></screen>
   <para><replaceable>&lt;REPLACED TEXT&gt;</replaceable></para>
 
   <para>This format is used to encapsulate text that is not to be typed
-  as seen or for copy-and-paste operations.</para>
+  as seen<phrase condition="html"> or for copy-and-paste operations</phrase>.</para>
 
   <para><replaceable>[OPTIONAL TEXT]</replaceable></para>
 

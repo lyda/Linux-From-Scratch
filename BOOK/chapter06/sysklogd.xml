@@ -87,6 +87,8 @@ user.* -/var/log/user.log
 # End /etc/syslog.conf</literal>
 EOF</userinput></screen>
 
+    <beginpage/>
+
   </sect2>
 
   <sect2 id="contents-sysklogd" role="content">

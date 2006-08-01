@@ -159,6 +159,7 @@
           <indexterm zone="ch-system-automake config.sub">
             <primary sortas="b-config.sub">config.sub</primary>
           </indexterm>
+          <beginpage/>
         </listitem>
       </varlistentry>
 

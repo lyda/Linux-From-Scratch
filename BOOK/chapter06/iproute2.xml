@@ -139,6 +139,8 @@
           <para><command>ip link <replaceable>&lt;device&gt;</replaceable></command>
           allows users to look at the state of devices and to make changes</para>
 
+          <beginpage/>
+
           <para><command>ip addr</command> allows users to look at addresses and
           their properties, add new addresses, and delete old ones</para>
 

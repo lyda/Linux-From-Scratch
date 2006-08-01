@@ -86,6 +86,7 @@ EOF</userinput></screen>
           <para>This tells the <command>man</command> program to use the
           <quote>ascii8</quote> and <quote>nippon</quote> Groff devices for
           formatting non-ISO-8859-1 manual pages.</para>
+          <beginpage/>
         </listitem>
       </varlistentry>
 

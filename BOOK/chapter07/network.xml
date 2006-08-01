@@ -75,6 +75,8 @@ ACTION=="add", SUBSYSTEM=="net", BUS=="<replaceable>pci</replaceable>", ID=="<re
     NAME="<replaceable>intel</replaceable>"</literal>
 EOF</userinput></screen>
 
+    <beginpage/>
+
     <para>These rules will always rename the network cards to
     <quote>realtek</quote> and <quote>intel</quote>, independently
     of the original numbering provided by the kernel (i.e.: the original
@@ -149,6 +151,8 @@ EOF</userinput></screen>
     directory allows other IP assignment methods. This is commonly used for
     Dynamic Host Configuration Protocol (DHCP), which is addressed in the
     BLFS book.</para>
+
+    <beginpage/>
 
     <para>The <envar>GATEWAY</envar> variable should contain the default
     gateway IP address, if one is present. If not, then comment out the

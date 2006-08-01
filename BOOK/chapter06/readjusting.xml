@@ -73,6 +73,8 @@ readelf -l a.out | grep ': /lib'</userinput></screen>
 
 <screen role="nodump" os="e"><userinput>grep -o '/usr/lib.*/crt[1in].* .*' dummy.log</userinput></screen>
 
+  <beginpage/>
+
   <para os="f">If everything is working correctly, there should be no errors,
     and the output of the last command will be:</para>
 

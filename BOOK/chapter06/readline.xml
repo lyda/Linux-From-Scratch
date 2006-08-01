@@ -84,6 +84,8 @@ sed -i '/{OLDSUFF}/c:' support/shlib-install</userinput></screen>
 
 <screen><userinput>mv -v /lib/lib{readline,history}.a /usr/lib</userinput></screen>
 
+    <beginpage/>
+
     <para>Next, remove the <filename class="extension">.so</filename> files in
     <filename class="directory">/lib</filename> and relink them into <filename
     class="directory">/usr/lib</filename>:</para>

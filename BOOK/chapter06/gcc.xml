@@ -83,6 +83,8 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput>make</userinput></screen>
 
+    <beginpage/>
+
     <important>
       <para>In this section, the test suite for GCC is considered
       critical. Do not skip it under any circumstance.</para>
@@ -148,6 +150,8 @@ cd ../gcc-build</userinput></screen>
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="readjusting.xml"
     xpointer="xpointer(//*[@os='e'])"/>
+
+    <beginpage/>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="readjusting.xml"
@@ -217,6 +221,8 @@ SEARCH_DIR("/usr/lib");</computeroutput></screen>
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="readjusting.xml"
     xpointer="xpointer(//*[@os='t'])"/>
+
+    <beginpage/>
 
   </sect2>
 

@@ -87,6 +87,8 @@
     making a decision on a package manager, do some research on the various
     techniques, particularly the drawbacks of the particular scheme.</para>
 
+    <beginpage/>
+
     <sect3>
       <title>It is All in My Head!</title>
 
@@ -160,6 +162,8 @@ make DESTDIR=/usr/pkg/libfoo/1.1 install</userinput></screen>
       For the non-compliant packages, you may either need to manually install the
       package, or you may find that it is easier to install some problematic
       packages into <filename class='directory'>/opt</filename>.</para>
+
+      <beginpage/>
 
     </sect3>
 

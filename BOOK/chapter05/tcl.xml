@@ -74,6 +74,8 @@
 
 <screen><userinput>ln -sv tclsh8.4 /tools/bin/tclsh</userinput></screen>
 
+    <beginpage/>
+
   </sect2>
 
   <sect2 id="contents-tcl" role="content">

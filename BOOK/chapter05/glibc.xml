@@ -102,6 +102,7 @@ cd ../glibc-build</userinput></screen>
           <para>This tells Glibc to compile itself against the headers recently
           installed to the tools directory, so that it knows exactly what
           features the kernel has and can optimize itself accordingly.</para>
+          <beginpage/>
         </listitem>
       </varlistentry>
 

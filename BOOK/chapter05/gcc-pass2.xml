@@ -90,6 +90,8 @@ sed 's/^XCFLAGS =$/&amp; -fomit-frame-pointer/' gcc/Makefile.in.tmp \
 
 <screen><userinput>patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
 
+    <beginpage/>
+
     <para>The above patch also removes <filename
     class="directory">/usr/include</filename> from GCC's include search path.
     Patching now rather than adjusting the specs file after installation
