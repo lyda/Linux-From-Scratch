@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>August 2, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[dnicholson] - Added to the list of acceptable features in
+          ext3 file systems. Thanks to George Gowers.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 1, 2006</para>
       <itemizedlist>
         <listitem>

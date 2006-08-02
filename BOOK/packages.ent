@@ -281,7 +281,7 @@
 <!ENTITY lfs-bootscripts-version "6.2">
 <!ENTITY lfs-bootscripts-size "24 KB">
 <!ENTITY lfs-bootscripts-url "http://www.linuxfromscratch.org/lfs/downloads/6.2/lfs-bootscripts-&lfs-bootscripts-version;.tar.bz2">
-<!ENTITY lfs-bootscripts-md5 "ec19017a585e858abb1fc1c2a27ab458">
+<!ENTITY lfs-bootscripts-md5 "45f9efc6b75c26751ddb74d1ad0276c1">
 <!ENTITY lfs-bootscripts-home " ">
 <!ENTITY lfs-bootscripts-ch7-du "0.4 MB">
 <!ENTITY lfs-bootscripts-ch7-sbu "less than 0.1 SBU">
