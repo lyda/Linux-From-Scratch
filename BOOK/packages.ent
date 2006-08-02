@@ -493,7 +493,7 @@
 <!ENTITY udev-config "udev-config-6.2">
 <!ENTITY udev-config-size "4 KB">
 <!ENTITY udev-config-url "http://www.linuxfromscratch.org/lfs/downloads/6.2/&udev-config;.tar.bz2">
-<!ENTITY udev-config-md5 "280b330c3ced75465a0431c9687faebb">
+<!ENTITY udev-config-md5 "9ff2667ab0f7bfe8182966ef690078a0">
 <!-- <!ENTITY udev-config-md5 "TBD-udev-config-md5"> -->
 <!ENTITY udev-config-home " ">
 
