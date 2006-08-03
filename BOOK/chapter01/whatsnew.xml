@@ -214,7 +214,7 @@
       <para>&bzip2-docs-patch;</para>
     </listitem>
     <listitem>
-      <para>&db-trap-patch;</para>
+      <para>&db-fixes-patch;</para>
     </listitem>
     <listitem>
       <para>&gawk-segfault-patch;</para>

@@ -37,6 +37,17 @@
 -->
 
     <listitem>
+      <para>August 3, 2006</para>
+      <itemizedlist>
+        <listitem>
+          <para>[dnicholson] - Updated Berkeley DB patch to contain all
+          available upstream fixes. Fixed md5sum for glibc inotify
+          patch.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 2, 2006</para>
       <itemizedlist>
         <listitem>

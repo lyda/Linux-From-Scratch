@@ -28,9 +28,9 @@
 <!ENTITY coreutils-uname-patch-size "4.6 KB">
 
 
-<!ENTITY db-trap-patch "db-&db-version;-trap-2.patch">
-<!ENTITY db-trap-patch-md5 "32c6fd0e8a534f8de376e00758509dfa">
-<!ENTITY db-trap-patch-size "1.9 KB">
+<!ENTITY db-fixes-patch "db-&db-version;-fixes-1.patch">
+<!ENTITY db-fixes-patch-md5 "32b28d1d1108dfcd837fe10c4eb0fbad">
+<!ENTITY db-fixes-patch-size "3.8 KB">
 
 <!ENTITY diffutils-i18n-patch "diffutils-&diffutils-version;-i18n-1.patch">
 <!ENTITY diffutils-i18n-patch-md5 "c8d481223db274a33b121fb8c25af9f7">
@@ -57,7 +57,7 @@
 <!ENTITY glibc-linux_types-patch-size "1.1 KB">
 
 <!ENTITY glibc-inotify-patch "glibc-&glibc-version;-inotify-1.patch">
-<!ENTITY glibc-inotify-patch-md5 "7f2d849d28c413033dd2a1e739e9ae3c">
+<!ENTITY glibc-inotify-patch-md5 "94f6d26ae50a0fe6285530fdbae90bbf">
 <!ENTITY glibc-inotify-patch-size "1.4 KB">
 
 
