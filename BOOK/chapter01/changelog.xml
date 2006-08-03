@@ -40,6 +40,10 @@
       <para>August 3, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[dnicholson] - Fixed typo in list of acceptable ext3
+          features. Thanks to Randy McMurchy.</para>
+        </listitem>
+        <listitem>
           <para>[dnicholson] - Updated Berkeley DB patch to contain all
           available upstream fixes. Fixed md5sum for glibc inotify
           patch.</para>
