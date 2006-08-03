@@ -57,7 +57,7 @@
 
     <para>Patch the package to eliminate potential trap events:</para>
 
-<screen><userinput>patch -Np0 -i ../&db-trap-patch;</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&db-trap-patch;</userinput></screen>
 
     <para>Prepare Berkeley DB for compilation:</para>
 
