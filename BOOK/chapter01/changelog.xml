@@ -40,6 +40,10 @@
       <para>August 2, 2006</para>
       <itemizedlist>
         <listitem>
+          <para>[dnicholson] - Fixed Berkeley DB patch to conform to
+          LFS style.</para>
+        </listitem>
+        <listitem>
           <para>[dnicholson] - Added to the list of acceptable features in
           ext3 file systems. Thanks to George Gowers.</para>
         </listitem>

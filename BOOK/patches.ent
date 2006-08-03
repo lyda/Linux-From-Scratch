@@ -28,9 +28,9 @@
 <!ENTITY coreutils-uname-patch-size "4.6 KB">
 
 
-<!ENTITY db-trap-patch "db-&db-version;-trap-1.patch">
-<!ENTITY db-trap-patch-md5 "fb8cd6be418eac24b1916c53080ce1f3">
-<!ENTITY db-trap-patch-size "1.7 KB">
+<!ENTITY db-trap-patch "db-&db-version;-trap-2.patch">
+<!ENTITY db-trap-patch-md5 "32c6fd0e8a534f8de376e00758509dfa">
+<!ENTITY db-trap-patch-size "1.9 KB">
 
 <!ENTITY diffutils-i18n-patch "diffutils-&diffutils-version;-i18n-1.patch">
 <!ENTITY diffutils-i18n-patch-md5 "c8d481223db274a33b121fb8c25af9f7">
