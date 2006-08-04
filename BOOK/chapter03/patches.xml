@@ -67,10 +67,10 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Database (Berkeley) Trap Patch - <token>&db-trap-patch-size;</token>:</term>
+      <term>Database (Berkeley) Upstream Fixes Patch - <token>&db-fixes-patch-size;</token>:</term>
       <listitem>
-        <para>Download: <ulink url="&patches-root;&db-trap-patch;"/></para>
-        <para>MD5 sum: <literal>&db-trap-patch-md5;</literal></para>
+        <para>Download: <ulink url="&patches-root;&db-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&db-fixes-patch-md5;</literal></para>
       </listitem>
     </varlistentry>
 
