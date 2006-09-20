@@ -72,7 +72,7 @@ KERNEL=="irlpt[0-9]*",      GROUP="lp"
 
 # Input devices go in their own subdirectory
 
-KERNEL=="mice",     MODE="0644",    NAME="input/%k"	SYMLINK="mouse"
+KERNEL=="mice",     MODE="0644",    NAME="input/%k",	SYMLINK+="mouse"
 KERNEL=="mouse*",   MODE="0644",    NAME="input/%k"
 KERNEL=="event*",   MODE="0644",    NAME="input/%k"
 KERNEL=="js*",      MODE="0644",    NAME="input/%k"
@@ -89,7 +89,7 @@ KERNEL=="hiddev*",          NAME="usb/%k"
 KERNEL=="auer*",            NAME="usb/%k"
 KERNEL=="legousbtower*",    NAME="usb/%k"
 KERNEL=="dabusb*",          NAME="usb/%k"
-BUS=="usb", KERNEL=="lp[0-9]*", GROUP="lp", NAME="usb/%k"
+SUBSYSTEMS=="usb", KERNEL=="lp[0-9]*", GROUP="lp", NAME="usb/%k"
 
 # DRI devices are managed by the X server, so prevent udev from creating them
 

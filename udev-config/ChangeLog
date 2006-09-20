@@ -1,3 +1,16 @@
+2006-09-20	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* Adapted rules to the new matches used in udev-098 and above (e.g.,
+	  SYSFS becomes ATTRS).  Prevents warnings, and support for the old
+	  matches will be removed eventually.  These rules will not work with
+	  udev-097 and before!
+	* Fixed several bugs in the rules left over from previous udev
+	  versions (missing commas, overwriting user symlinks using ="..."
+	  instead of +="...", and matching against "*" instead of "?*").
+
+	* Renamed CHANGELOG to ChangeLog, started using pseudo-GNU-format
+	  entries.  (See standards.info; search it for "changelog" to get
+	  the general gist.)
+
 dnicholson - Jul 14, 2006
 	* Fixed usbdev PROGRAM so that it works with the BusyBox sh. Thanks
 	  to Anthony Wright.
