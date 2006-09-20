@@ -1,4 +1,9 @@
 2006-09-20	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 05-early.rules: Missed a rule in the last change.  ENV{PHYSDEVBUS}
+	  in the rule that waits for the "bus" symlink should be replaced by
+	  SUBSYSTEMS.
+
+2006-09-20	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* Adapted rules to the new matches used in udev-098 and above (e.g.,
 	  SYSFS becomes ATTRS).  Prevents warnings, and support for the old
 	  matches will be removed eventually.  These rules will not work with
