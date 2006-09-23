@@ -1,4 +1,10 @@
 2006-09-23	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* doc: New subdirectory to contain documentation of rules
+	* doc/README: New file, top-level documentation
+	* doc/*.txt: New documentation files, one for each rules file.  Only
+	  05-udev-early.txt has anything in it.
+
+2006-09-23	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* 25-lfs.rules: Add "ignore_device" to OPTIONS for DRI devices, instead
 	  of setting NAME to an empty string.  This matches the way we ignore
 	  devmapper / LVM devices.
