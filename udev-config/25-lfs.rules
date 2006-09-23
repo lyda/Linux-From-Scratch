@@ -93,7 +93,7 @@ SUBSYSTEMS=="usb", KERNEL=="lp[0-9]*", GROUP="lp", NAME="usb/%k"
 
 # DRI devices are managed by the X server, so prevent udev from creating them
 
-KERNEL=="card*",    NAME=""
+KERNEL=="card*",    OPTIONS+="ignore_device"
 
 # Video devices
 
