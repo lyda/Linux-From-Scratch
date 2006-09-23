@@ -1,3 +1,12 @@
+2006-09-22	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 60-persistent-input.rules, 95-udev-late.rules: Import from udev-100.
+	  60-persistent-input.rules creates persistent symlinks for input
+	  devices, and 95-udev-late.rules enables udevmonitor.
+
+	* 60-persistent-storage.rules: Replace ATTRS{../removable} with just
+	  ATTRS{removable} on partition devices. Replace ATTRS{removable}
+	  with ATTR{removable} on whole-disk devices.
+
 2006-09-20	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* 05-early.rules: Missed a rule in the last change.  ENV{PHYSDEVBUS}
 	  in the rule that waits for the "bus" symlink should be replaced by

@@ -1,0 +1,3 @@
+# Send all events to this Unix-domain socket, to be caught by udevmonitor
+RUN+="socket:/org/kernel/udev/monitor"
+
