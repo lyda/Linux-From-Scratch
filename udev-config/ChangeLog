@@ -1,4 +1,11 @@
 2006-09-24	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* doc/05-udev-early.txt: Rewrap to fit 80 columns.
+
+	* doc/26-modprobe.txt: Explain 26-modprobe.rules, and modaliases.
+
+	* doc/27-firmware.txt: Explain 27-firmware.rules.
+
+2006-09-24	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* doc/25-lfs.txt: Explain 25-lfs.rules.
 
 	* 25-lfs.rules: Use SYMLINK+= for isdn/capi20 also.

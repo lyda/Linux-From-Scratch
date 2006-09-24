@@ -1,0 +1,15 @@
+Purpose of rules file:
+
+This rules file allows Udev to load firmware for any device that requires it at
+runtime.
+
+
+Description of rules:
+
+There is only one rule in this file.  It matches a SUBSYSTEM of "firmware",
+which any device that requires firmware will use.  The rule runs the
+/lib/udev/firmware.sh script.  This script will load the appropriate firmware
+image onto the device, based on the environment variable FIRMWARE (which was
+sent by the kernel).  It searches for firmware images in /lib/firmware and
+/usr/local/lib/firmware.
+
