@@ -1,3 +1,7 @@
+2006-09-26	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* doc/60-persistent-input.txt: Explain (in probably too much detail)
+	  60-persistent-input.rules.
+
 2006-09-24	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* doc/05-udev-early.txt: Rewrap to fit 80 columns.
 
