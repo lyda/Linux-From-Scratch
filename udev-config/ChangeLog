@@ -1,3 +1,13 @@
+2006-09-28	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* doc/60-persistent-storage.txt: Explain persistent storage rules, or
+	  at least the parts I understand.  (I don't use DASD or netblock or
+	  several other supported configurations.)
+
+	* doc/81-cdrom.txt: Explain 81-cdrom.rules.
+
+	* doc/95-udev-late.txt: Explain 95-udev-late.rules.  Documentation is
+	  now finished.
+
 2006-09-26	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* doc/60-persistent-input.txt: Explain (in probably too much detail)
 	  60-persistent-input.rules.
