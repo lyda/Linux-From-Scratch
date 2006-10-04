@@ -1,3 +1,9 @@
+2006-10-04	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 05-udev-early.rules: Remove WAIT_FOR_SYSFS="bus" rule.  With kernel
+	  2.6.18, this rule is no longer required.
+
+	* doc/05-udev-early.txt: Update to match.
+
 2006-09-28	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* doc/60-persistent-storage.txt: Explain persistent storage rules, or
 	  at least the parts I understand.  (I don't use DASD or netblock or
