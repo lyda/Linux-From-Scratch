@@ -1,3 +1,10 @@
+2006-10-09	Bryan Kadzban	<bryan@linuxfromscrtach.org>
+	* 25-lfs.rules: Fix fb[0-9]* device permissions (should use the default
+	  0660).
+
+	* doc/25-lfs.txt: Fix typo: /dev/ptmx is given mode 0666, not 0660.
+	  Also tweak the comment about other TTY devices.
+
 2006-10-04	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* 05-udev-early.rules: Remove WAIT_FOR_SYSFS="bus" rule.  With kernel
 	  2.6.18, this rule is no longer required.

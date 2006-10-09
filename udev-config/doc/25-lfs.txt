@@ -19,10 +19,10 @@ the MODE value:
 
 KERNEL=="ptmx", MODE="0666"
 
-We also assign a different GID to /dev/ptmx (and all other TTY devices), by
+We also assign a different GID to /dev/ptmx (also all other TTY devices), by
 assigning to the GROUP value:
 
-KERNEL=="ptmx", MODE="0660", "GROUP="tty"
+KERNEL=="ptmx", MODE="0666", "GROUP="tty"
 
 
 There are also devices that should not be in /dev, because historically they

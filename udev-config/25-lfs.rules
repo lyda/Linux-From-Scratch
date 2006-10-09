@@ -97,7 +97,7 @@ KERNEL=="card*",    OPTIONS+="ignore_device"
 
 # Video devices
 
-KERNEL=="fb[0-9]*",     MODE="0620",    GROUP="video"
+KERNEL=="fb[0-9]*",     GROUP="video"
 KERNEL=="agpgart",      GROUP="video"
 KERNEL=="video[0-9]*",  GROUP="video"
 KERNEL=="radio[0-9]*",  GROUP="video"
