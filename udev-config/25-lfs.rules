@@ -17,8 +17,6 @@ KERNEL=="rtc",      MODE="0666"
 
 # Comms devices
 
-KERNEL=="ttyS[0-9]*",                   GROUP="dialout"
-KERNEL=="ttyUSB[0-9]*",                 GROUP="dialout"
 KERNEL=="rfcomm[0-9]*",                 GROUP="dialout"
 KERNEL=="tty[BCDEFHILMPRSTUVWX][0-9]*", GROUP="dialout"
 KERNEL=="ttyS[ACIR][0-9]*",             GROUP="dialout"
@@ -41,12 +39,12 @@ KERNEL=="console",      MODE="0622",    GROUP="tty"
 
 # ALSA devices go in their own subdirectory
 
-KERNEL=="controlC[0-9]*",   GROUP="audio",  NAME="snd/%k"
-KERNEL=="hw[CD0-9]*",       GROUP="audio",  NAME="snd/%k"
-KERNEL=="pcm[CD0-9cp]*",    GROUP="audio",  NAME="snd/%k"
-KERNEL=="midiC[D0-9]*",     GROUP="audio",  NAME="snd/%k"
-KERNEL=="timer",            GROUP="audio",  NAME="snd/%k"
-KERNEL=="seq",              GROUP="audio",  NAME="snd/%k"
+KERNEL=="controlC[0-9]*",        GROUP="audio",  NAME="snd/%k"
+KERNEL=="hwC[0-9]*D[0-9]*",      GROUP="audio",  NAME="snd/%k"
+KERNEL=="pcmC[0-9]*D[0-9]*[cp]", GROUP="audio",  NAME="snd/%k"
+KERNEL=="midiC[0-9]*D[0-9]*",    GROUP="audio",  NAME="snd/%k"
+KERNEL=="timer",                 GROUP="audio",  NAME="snd/%k"
+KERNEL=="seq",                   GROUP="audio",  NAME="snd/%k"
 
 # Sound devices
 

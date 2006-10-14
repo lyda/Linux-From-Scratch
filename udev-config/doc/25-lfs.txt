@@ -53,7 +53,11 @@ If we needed to add multiple symlinks, they would be space-separated inside the
 double quotes.
 
 Of course, symlinks, permissions, and device names can all be combined in a
-rule if needed.
+rule if needed.  But note that if you combine permissions and symlinks, or if
+you combine GROUP and symlinks, the permissions of the symlink will not be
+modified, only those of the target device.  (This is because the kernel does
+not pay any attention to the permissions on symlinks, only the permissions on
+their targets, and there's no reason to change something that won't be used.)
 
 
 Finally, we have this rule:

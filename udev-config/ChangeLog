@@ -1,3 +1,23 @@
+2006-10-14	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 05-udev-early.rules, 60-persistent-storage.rules: Sync up with
+	  upstream sample rules files (from udev-102), except for one rule
+	  which is more specific in our tarball and should probably be changed
+	  upstream. 
+	* doc/60-persistent-storage.txt: Modify to match the changes.  Also
+	  fix a couple typos.
+
+	* 25-lfs.rules: Remove duplicate rules (ttyS[0-9]* is also matched by
+	  tty[BC...S...][0-9]*, and ttyUSB[0-9]* is in there twice).
+
+	* 25-lfs.rules: Fix Alsa device KERNEL rules.  Udev uses shell-style
+	  glob matching, not regular expressions, so the old rules would match
+	  nonsense device names like hw0asdf and pcmDzxcv.  As long as the first
+	  character after the "fixed" portion was in the list, the rule would
+	  match; it wouldn't apply the same character range to later characters.
+
+	* doc/25-lfs.txt: Add a note on interaction between permissions and
+	  symlinks.
+
 2006-10-09	Bryan Kadzban	<bryan@linuxfromscrtach.org>
 	* 25-lfs.rules: Fix fb[0-9]* device permissions (should use the default
 	  0660).
