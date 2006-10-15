@@ -19,11 +19,7 @@ case "${1}" in
 	start)
 		boot_mesg "Retrying failed uevents, if any..."
 		# Re-trigger the failed uevents in hope they will succeed now
-		# If there are none, the "No such file or directory" error
-		# goes to /dev/null
-		for file in /dev/.udev/failed/*/uevent ; do
-			echo "add" >"${file}"
-		done 2>/dev/null
+		/sbin/udevtrigger --retry-failed
 		
 		# Now wait for udevd to process the uevents we triggered
 		/sbin/udevsettle

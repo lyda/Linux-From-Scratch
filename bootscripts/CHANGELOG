@@ -1,3 +1,6 @@
+n/a - October 15, 2006
+	* Make udev_retry script work with udev >= 099. (Bryan)
+
 n/a - June 2, 2006
 	* Removed console config file and makefile targets.
 	* Removed references to /dev/bug and bugreport in udevand 
