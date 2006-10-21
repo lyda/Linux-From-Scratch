@@ -1,3 +1,15 @@
+2006-10-21	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 05-udev-early.rules, 60-persistent-input.rules,
+	  60-persistent-storage.rules, 95-udev-late.rules: Remove.  The book
+	  will install these files from udev's etc/udev/rules.d directory
+	  instead.
+	* Makefile: Don't install these rules files after all.  Also, only
+	  install corresponding docs if requested.
+
+2006-10-20	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* Makefile: Added; contains targets to install rules and doc files.
+	  From Dan Nicholson.
+
 2006-10-14	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* 05-udev-early.rules, 60-persistent-storage.rules: Sync up with
 	  upstream sample rules files (from udev-102), except for one rule
