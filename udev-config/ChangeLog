@@ -1,4 +1,6 @@
 2006-10-21	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* Makefile: Add a missing backslash in install-extra-doc.
+
 	* 05-udev-early.rules, 60-persistent-input.rules,
 	  60-persistent-storage.rules, 95-udev-late.rules: Remove.  The book
 	  will install these files from udev's etc/udev/rules.d directory

@@ -45,7 +45,7 @@ install-doc:
 install-extra-doc:
 	@if [ -z "$(UDEV_VERSION)" ]; then \
 		echo "Error: Can't get udev version from udevinfo" >&2; \
-		exit 1;
+		exit 1; \
 	fi
 	$(INSTALL) -d $(DESTDIR)$(DOC_DIR)
 	for doc in $(EXTRA_DOC_FILES); do \
