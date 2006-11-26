@@ -1,3 +1,9 @@
+n/a - November 25, 2006
+	* Copy Debian's "copy generated rules" initscript code, to clean up
+	  when the rule_generator scripts run before / is writable.  (Since
+	  the rule_generator code is from Debian, I assume their cleanup code
+	  is appropriate.) (Bryan)
+
 n/a - October 15, 2006
 	* Make udev_retry script work with udev >= 099. (Bryan)
 
