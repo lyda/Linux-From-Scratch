@@ -132,3 +132,10 @@ KERNEL=="nst[0-9]*",    GROUP="tape"
 # Network devices
 
 KERNEL=="tun",  NAME="net/%k"
+
+# x86 CPU devices:  CPUID instruction, model-specific registers, and
+# microcode access/updates
+
+KERNEL=="cpu[0-9]*",    NAME="cpu/%n/cpu"
+KERNEL=="msr[0-9]*",    NAME="cpu/%n/msr"
+KERNEL=="microcode",	NAME="cpu/microcode"

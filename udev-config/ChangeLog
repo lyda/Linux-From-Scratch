@@ -1,3 +1,7 @@
+2007-01-02	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 25-lfs.rules: Change CPU devices (cpu, msr, microcode) to be in
+	  /dev/cpu/ and /dev/cpu/N/, to match Documentation/devices.txt.
+
 2006-10-21	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* Makefile: Add a missing backslash in install-extra-doc.
 
