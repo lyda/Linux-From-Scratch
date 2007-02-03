@@ -1,14 +1,16 @@
-n/a - February 3, 2007
-	* Move setclock before checkfs.  Fixes #1948. (Bryan)
+2007-02-03	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* ChangeLog: Rename from CHANGELOG, start using GNU style entries.
 
-n/a - November 25, 2006
-	* Copy Debian's "copy generated rules" initscript code, to clean up
-	  when the rule_generator scripts run before / is writable.  (Since
-	  the rule_generator code is from Debian, I assume their cleanup code
-	  is appropriate.) (Bryan)
+	* Makefile: Move setclock before checkfs.  Fixes #1948.
 
-n/a - October 15, 2006
-	* Make udev_retry script work with udev >= 099. (Bryan)
+2006-11-25	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* lfs/init.d/udev_retry: Copy Debian's "copy generated rules" initscript
+	  code, to clean up when the rule_generator scripts run before / is
+	  writable.  (Since the rule_generator code is from Debian, I assume their
+	  cleanup code is appropriate.)
+
+2006-10-15	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* lfs/init.d/udev_retry: Fix to work with udev >= 099.
 
 n/a - June 2, 2006
 	* Removed console config file and makefile targets.
