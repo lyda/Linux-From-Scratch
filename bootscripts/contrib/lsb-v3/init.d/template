@@ -1,0 +1,68 @@
+#!/bin/sh
+# Begin /etc/init.d/template
+
+### BEGIN INIT INFO
+# Provides:            template (the name of the script unless LSB defined)
+# Required-Start:      $local_fs $time $syslog (itmes that must be started)
+# Should-Start:        $portmap $remote_fs $named (optional items started)
+# Required-Stop:       $network sendsignals (items that must be stopped)
+# Should-Stop:         $time (items that are optional but should be stopped)
+# Default-Start:       2 3 4 5
+# Default-Stop:        0 1 6
+# Short-Description:   Provides a template.
+# Description:         Provides a detailed template to create your own 
+#                      startup scripts.
+# X-LFS-Default-Start: S50
+# X-LFS-Default-Stop:  K25 (this can be an S value if run after K scripts)
+# X-LFS-Provided-By:   BOOK or Project (just an informative text field)
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+# These are optional, but required for chk_stat.  They will be used in 
+# the rest of the functions if defined, else you must provide a program
+# name to control, and a message ('Starting Proper Program name...' 
+# or 'Stopping Name...') to evauate_retval.  See the documntaion.
+MESSAGE="Some Proper Service"
+BIN_FILE="/some/path/to/binary"
+CONFIGFILE="/some/config/file (or nothing)"
+
+chk_stat
+
+case "${1}" in
+    start)
+        start_daemon
+        evaluate_retval start
+        ;;
+
+    stop)
+        killproc
+        evaluate_retval stop
+        ;;
+
+    force-reload)
+        reloadproc -force
+        evaluate_retval force-reload
+        ;;
+
+    restart)
+        $0 stop
+        $0 start
+        ;;
+
+    status)
+        statusproc
+        ;;
+
+#    reload)
+#        reloadproc
+#        ;;
+#    try-restart)
+#        ;;
+    *)
+        echo "Usage: ${0} {start|stop|force-reload|restart|status}"
+        exit 1
+        ;;
+esac
+
+# End /etc/init.d/template
