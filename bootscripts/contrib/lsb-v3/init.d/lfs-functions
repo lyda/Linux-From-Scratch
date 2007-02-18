@@ -6,7 +6,7 @@
 # to execute, and if set, a config file that may be needed for the program    #
 # to run successfully.  The calling script will exit with a return value of 5 #
 # if the binary does not exist, and a value of 6 if the needed config file is #
-# unavailible as per LSB requirements.  This function accepts zero, one, or   #
+# unavailable as per LSB requirements.  This function accepts zero, one, or   #
 # two string arguments.  If arguments are passed, the first must be a bin     #
 # file.  If a second argument is passed, it is interpreted as the config      #
 # file.  Optionally, zero arguments can be passed if BIN_FILE, and optinally  #
@@ -37,6 +37,24 @@ chk_stat()
             exit 6
         fi
     fi
+}
+
+################################ loadproc() ###################################
+# loadproc is just a wraper to start_daemon for simple scripts, which will    #
+# require no arguments if $BIN_FILE is set.                                   #
+###############################################################################
+loadproc()
+{
+    start_daemon "${BIN_FILE}" "${@}"
+}
+
+################################ endproc() ####################################
+# endproc, like loadproc, is just a wraper to killproc for simplicity and is  #
+# dependent on $BIN_FILE being set.                                           #
+###############################################################################
+endproc()
+{
+    killproc "${BIN_FILE}" "${@}"
 }
 
 ############################### statusproc() ##################################
@@ -126,7 +144,7 @@ evaluate_retval()
             return "${error_value}"
           ;;
           5)
-            log_failure_msg "Starting ${MESSAGE} Error: Not availible!"
+            log_failure_msg "Starting ${MESSAGE} Error: Not available!"
             return "${error_value}"
           ;;
           *)
@@ -147,7 +165,7 @@ evaluate_retval()
             return "${error_value}"
             ;;
           5)
-            log_failure_msg "Stopping ${MESSAGE} Error: Not availible!"
+            log_failure_msg "Stopping ${MESSAGE} Error: Not available!"
             return "${error_value}"
             ;;
           7)
