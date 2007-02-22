@@ -70,10 +70,10 @@ case "${1}" in
 			setfont $FONT ||
 			failed=1
 		[ -z "${KEYMAP}" ] ||
-			loadkeys ${KEYMAP} &>/dev/null ||
+			loadkeys ${KEYMAP} >/dev/null 2>&1 ||
 			failed=1
 		[ -z "${KEYMAP_CORRECTIONS}" ] ||
-			loadkeys ${KEYMAP_CORRECTIONS} &>/dev/null ||
+			loadkeys ${KEYMAP_CORRECTIONS} >/dev/null 2>&1 ||
 			failed=1
 
 		# Linux kernel generates wrong bytes when composing
@@ -86,13 +86,13 @@ case "${1}" in
 
 		[ -n "$BROKEN_COMPOSE" ] || BROKEN_COMPOSE="$UNICODE"
 		! is_true "$BROKEN_COMPOSE" ||
-			echo "" | loadkeys -c &>/dev/null ||
+			echo "" | loadkeys -c >/dev/null 2>&1 ||
 			failed=1
 		
 		# Convert the keymap from $LEGACY_CHARSET to UTF-8
 		[ -z "$LEGACY_CHARSET" ] ||
 			dumpkeys -c "$LEGACY_CHARSET" |
-			loadkeys -u &>/dev/null ||
+			loadkeys -u >/dev/null 2>&1 ||
 			failed=1
 
 		# If any of the commands above failed, the trap at the

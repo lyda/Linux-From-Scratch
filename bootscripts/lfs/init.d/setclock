@@ -32,13 +32,13 @@ esac
 case ${1} in
 	start)
 		boot_mesg "Setting system clock..."
-		hwclock --hctosys ${CLOCKPARAMS} &>/dev/null
+		hwclock --hctosys ${CLOCKPARAMS} >/dev/null 2>&1
 		evaluate_retval
 		;;
 
 	stop)
 		boot_mesg "Setting hardware clock..."
-		hwclock --systohc ${CLOCKPARAMS} &>/dev/null
+		hwclock --systohc ${CLOCKPARAMS} >/dev/null 2>&1
 		evaluate_retval
 		;;
 
