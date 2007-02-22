@@ -110,9 +110,8 @@ boot_mesg()
 	done
 
 	## Figure out the length of what is to be printed to be used
-        ## for warning messges. 
-	STRING_LENGTH="`echo "${1}" | sed \
-		-e 's,.,.,g' -e 'l 1' | grep -c \$`"
+	## for warning messages. 
+	STRING_LENGTH=$((${#1} + 1))
 
 	# Print the message to the screen
 	${ECHO} ${ECHOPARM} -e "${2}${1}"

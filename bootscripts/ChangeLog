@@ -1,4 +1,9 @@
 2007-02-22	Dan Nicholson	<dnicholson@linuxfromscratch.org>
+	* lfs/init.d/functions: Use arithmetic expansion and string length,
+	  which are both mandated by POSIX, rather than spawning two processes
+	  every time boot_mesg() is called.
+
+2007-02-22	Dan Nicholson	<dnicholson@linuxfromscratch.org>
 	* lfs/init.d/functions: In order to provide an `echo' which provides
 	  handles the -e and -n options for all POSIX shells, a feature test
 	  is added which stores its result in $ECHO. /bin/echo will be used
