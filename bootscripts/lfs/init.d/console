@@ -42,8 +42,8 @@ case "${1}" in
 		# Figure out the command to set the console into the
 		# desired mode
 		is_true "${UNICODE}" &&
-			MODE_COMMAND="echo -en '\033%G' && kbd_mode -u" ||
-			MODE_COMMAND="echo -en '\033%@\033(K' && kbd_mode -a"
+			MODE_COMMAND="${ECHO} -en '\033%G' && kbd_mode -u" ||
+			MODE_COMMAND="${ECHO} -en '\033%@\033(K' && kbd_mode -a"
 		
 		# On framebuffer consoles, font has to be set for each vt in
 		# UTF-8 mode. This doesn't hurt in non-UTF-8 mode also.

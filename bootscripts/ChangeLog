@@ -1,3 +1,11 @@
+2007-02-22	Dan Nicholson	<dnicholson@linuxfromscratch.org>
+	* lfs/init.d/functions: In order to provide an `echo' which provides
+	  handles the -e and -n options for all POSIX shells, a feature test
+	  is added which stores its result in $ECHO. /bin/echo will be used
+	  if the default echo is not capable. Changed the existing functions
+	  to reference $ECHO when needed.
+	* lfs/init.d/console: Use $ECHO when -en is needed.
+
 2007-02-03	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* ChangeLog: Rename from CHANGELOG, start using GNU style entries.
 

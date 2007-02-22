@@ -40,12 +40,23 @@ fi
 COL=$((${COLUMNS} - 8))
 WCOL=$((${COL} - 2))
 
-## Set Cursor Position Commands, used via echo -e
+## Provide an echo that supports -e and -n
+# If formatting is needed, $ECHO should be used
+case "`echo -e -n test`" in
+	-[en]*)
+		ECHO=/bin/echo
+		;;
+	*)
+		ECHO=echo
+		;;
+esac
+
+## Set Cursor Position Commands, used via $ECHO
 SET_COL="\\033[${COL}G"      # at the $COL char
 SET_WCOL="\\033[${WCOL}G"    # at the $WCOL char
 CURS_UP="\\033[1A\\033[0G"   # Up one line, at the 0'th char
 
-## Set color commands, used via echo -e
+## Set color commands, used via $ECHO
 # Please consult `man console_codes for more information
 # under the "ECMA-48 Set Graphics Rendition" section
 #
@@ -104,7 +115,7 @@ boot_mesg()
 		-e 's,.,.,g' -e 'l 1' | grep -c \$`"
 
 	# Print the message to the screen
-	echo ${ECHOPARM} -e "${2}${1}"
+	${ECHO} ${ECHOPARM} -e "${2}${1}"
 	
 }
 
@@ -117,27 +128,27 @@ boot_mesg_flush()
 boot_log()
 {
 	# Left in for backwards compatibility
-	echo -n ""
+	:
 }
 
 echo_ok()
 {
-	echo -n -e "${CURS_UP}${SET_COL}${BRACKET}[${SUCCESS}  OK  ${BRACKET}]"
-	echo -e "${NORMAL}"
+	${ECHO} -n -e "${CURS_UP}${SET_COL}${BRACKET}[${SUCCESS}  OK  ${BRACKET}]"
+	${ECHO} -e "${NORMAL}"
         boot_mesg_flush
 }
 
 echo_failure()
 {
-	echo -n -e "${CURS_UP}${SET_COL}${BRACKET}[${FAILURE} FAIL ${BRACKET}]"
-	echo -e "${NORMAL}"
+	${ECHO} -n -e "${CURS_UP}${SET_COL}${BRACKET}[${FAILURE} FAIL ${BRACKET}]"
+	${ECHO} -e "${NORMAL}"
         boot_mesg_flush
 }
 
 echo_warning()
 {
-	echo -n -e "${CURS_UP}${SET_COL}${BRACKET}[${WARNING} WARN ${BRACKET}]"
-	echo -e "${NORMAL}"
+	${ECHO} -n -e "${CURS_UP}${SET_COL}${BRACKET}[${WARNING} WARN ${BRACKET}]"
+	${ECHO} -e "${NORMAL}"
         boot_mesg_flush
 }
 
@@ -209,20 +220,20 @@ print_status()
 			# may call it this way.
 			case "${2}" in
 				running)
-					echo -e -n "${CURS_UP}"
-					echo -e -n "\\033[${STRING_LENGTH}G   "
+					${ECHO} -e -n "${CURS_UP}"
+					${ECHO} -e -n "\\033[${STRING_LENGTH}G   "
 					boot_mesg "Already running." ${WARNING}
 					echo_warning
 					;;
 				not_running)
-					echo -e -n "${CURS_UP}"
-					echo -e -n "\\033[${STRING_LENGTH}G   "
+					${ECHO} -e -n "${CURS_UP}"
+					${ECHO} -e -n "\\033[${STRING_LENGTH}G   "
 					boot_mesg "Not running." ${WARNING}
 					echo_warning
 					;;
 				not_available)
-					echo -e -n "${CURS_UP}"
-					echo -e -n "\\033[${STRING_LENGTH}G   "
+					${ECHO} -e -n "${CURS_UP}"
+					${ECHO} -e -n "\\033[${STRING_LENGTH}G   "
 					boot_mesg "Not available." ${WARNING}
 					echo_warning
 					;;
@@ -278,18 +289,18 @@ statusproc()
 	getpids "${1}"
 
 	if [ -n "${pidlist}" ];	then
-		echo -e "${INFO}${base} is running with Process"\
+		${ECHO} -e "${INFO}${base} is running with Process"\
 			"ID(s) ${pidlist}.${NORMAL}"
 	else
 		if [ -n "${base}" -a -e "/var/run/${base}.pid" ]; then
-			echo -e "${WARNING}${1} is not running but"\
+			${ECHO} -e "${WARNING}${1} is not running but"\
 				"/var/run/${base}.pid exists.${NORMAL}"
 		else
 			if [ -n "${PIDFILE}" -a -e "${PIDFILE}" ]; then
-				echo -e "${WARNING}${1} is not running"\
+				${ECHO} -e "${WARNING}${1} is not running"\
 					"but ${PIDFILE} exists.${NORMAL}"
 			else
-				echo -e "${INFO}${1} is not running.${NORMAL}"
+				${ECHO} -e "${INFO}${1} is not running.${NORMAL}"
 			fi
 		fi
 	fi
@@ -634,8 +645,8 @@ killproc()
 #*******************************************************************************
 log_success_msg()
 {
-	echo -n -e "${BOOTMESG_PREFIX}${@}"
-	echo -e "${SET_COL}""${BRACKET}""[""${SUCCESS}""  OK  ""${BRACKET}""]""${NORMAL}"
+	${ECHO} -n -e "${BOOTMESG_PREFIX}${@}"
+	${ECHO} -e "${SET_COL}""${BRACKET}""[""${SUCCESS}""  OK  ""${BRACKET}""]""${NORMAL}"
 	return 0
 }
 
@@ -654,8 +665,8 @@ log_success_msg()
 #
 #*******************************************************************************
 log_failure_msg() {
-	echo -n -e "${BOOTMESG_PREFIX}${@}"
-	echo -e "${SET_COL}""${BRACKET}""[""${FAILURE}"" FAIL ""${BRACKET}""]""${NORMAL}"
+	${ECHO} -n -e "${BOOTMESG_PREFIX}${@}"
+	${ECHO} -e "${SET_COL}""${BRACKET}""[""${FAILURE}"" FAIL ""${BRACKET}""]""${NORMAL}"
 	return 0
 }
 
@@ -674,8 +685,8 @@ log_failure_msg() {
 #
 #*******************************************************************************
 log_warning_msg() {
-	echo -n -e "${BOOTMESG_PREFIX}${@}"
-	echo -e "${SET_COL}""${BRACKET}""[""${WARNING}"" WARN ""${BRACKET}""]""${NORMAL}"
+	${ECHO} -n -e "${BOOTMESG_PREFIX}${@}"
+	${ECHO} -e "${SET_COL}""${BRACKET}""[""${WARNING}"" WARN ""${BRACKET}""]""${NORMAL}"
 	return 0
 }
 
