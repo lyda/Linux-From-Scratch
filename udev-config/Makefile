@@ -18,8 +18,7 @@ EXTRA_DOC_FILES = \
 	95-udev-late.txt
 
 # Figure out where to install the docs
-UDEVINFO = udevinfo
-UDEV_VERSION = $(shell $(UDEVINFO) -V 2>/dev/null | awk '{print $$NF}')
+UDEV_VERSION = $(shell udevd --version)
 DOC_DIR = $(PREFIX)/share/doc/udev-$(UDEV_VERSION)
 
 all:
