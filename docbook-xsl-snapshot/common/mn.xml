@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?><l:l10n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0" language="mn" english-language-name="Mongolian">
+
+<!-- * This file is generated automatically. -->
+<!-- * To submit changes to this file upstream (to the DocBook Project) -->
+<!-- * do not submit an edited version of this file. Instead, submit an -->
+<!-- * edited version of the source file at the following location: -->
+<!-- * -->
+<!-- *  https://svn.sourceforge.net/svnroot/docbook/trunk/gentext/locale/mn.xml -->
+<!-- * -->
+<!-- * E-mail the edited mn.xml source file to: -->
+<!-- * -->
+<!-- *  docbook-developers@lists.sourceforge.net -->
+
+<!-- ******************************************************************** -->
+
+<!-- This file is part of the XSL DocBook Stylesheet distribution. -->
+<!-- See ../README or http://docbook.sf.net/release/xsl/current/ for -->
+<!-- copyright and other information. -->
+
+<!-- ******************************************************************** -->
+
+<l:gentext key="Abstract" text="Товч агуулга"/>
+<l:gentext key="abstract" text="товч агуулга"/>
+<l:gentext key="Answer" text="Х:"/>
+<l:gentext key="answer" text="Х:"/>
+<l:gentext key="Appendix" text="Хавсралт"/>
+<l:gentext key="appendix" text="хавсралт"/>
+<l:gentext key="Article" text="Өгүүлэл"/>
+<l:gentext key="article" text="өгүүлэл"/>
+<l:gentext key="Author" text="Зохиогч"/>
+<l:gentext key="Bibliography" text="Ном зүй"/>
+<l:gentext key="bibliography" text="ном зүй"/>
+<l:gentext key="Book" text="Ном"/>
+<l:gentext key="book" text="ном"/>
+<l:gentext key="CAUTION" text="АНХААРУУЛГА"/>
+<l:gentext key="Caution" text="Анхааруулга"/>
+<l:gentext key="caution" text="анхааруулга"/>
+<l:gentext key="Chapter" text="Бүлэг"/>
+<l:gentext key="chapter" text="бүлэг"/>
+<l:gentext key="Colophon" text="Түлхүүр үг"/>
+<l:gentext key="colophon" text="Түлхүүр үг"/>
+<l:gentext key="Copyright" text="Зохиогчийн эрх"/>
+<l:gentext key="copyright" text="зохиогчийн эрх"/>
+<l:gentext key="Dedication" text="Зохиогчийн үг"/>
+<l:gentext key="dedication" text="зохиогчийн үг"/>
+<l:gentext key="Edition" text="Хэвлэл"/>
+<l:gentext key="edition" text="хэвлэл"/>
+<l:gentext key="Editor" text="Editor" lang="en"/>
+<l:gentext key="Equation" text="Тэгшитгэл"/>
+<l:gentext key="equation" text="тэгшитгэл"/>
+<l:gentext key="Example" text="Жишээ"/>
+<l:gentext key="example" text="жишээ"/>
+<l:gentext key="Figure" text="Зураг"/>
+<l:gentext key="figure" text="зураг"/>
+<l:gentext key="Glossary" text="Тайлбар үгс"/>
+<l:gentext key="glossary" text="тайлбар үгс"/>
+<l:gentext key="GlossSee" text="Харна уу"/>
+<l:gentext key="glosssee" text="харна уу"/>
+<l:gentext key="GlossSeeAlso" text="Бас харна уу"/>
+<l:gentext key="glossseealso" text="бас харна уу"/>
+<l:gentext key="IMPORTANT" text="ЧУХАЛ"/>
+<l:gentext key="important" text="чухал"/>
+<l:gentext key="Important" text="Чухал"/>
+<l:gentext key="Index" text="Толгойлсон үгс"/>
+<l:gentext key="index" text="толгойлсон үгс"/>
+<l:gentext key="ISBN" text="ISBN"/>
+<l:gentext key="isbn" text="ISBN"/>
+<l:gentext key="LegalNotice" text="Хуулийн заалт"/>
+<l:gentext key="legalnotice" text="хуулийн заалт"/>
+<l:gentext key="MsgAud" text="Зориулсан"/>
+<l:gentext key="msgaud" text="зориулсан"/>
+<l:gentext key="MsgLevel" text="Яаралтай байдал"/>
+<l:gentext key="msglevel" text="яаралтай байдал"/>
+<l:gentext key="MsgOrig" text="Үүсэл"/>
+<l:gentext key="msgorig" text="үүсэл"/>
+<l:gentext key="NOTE" text="ТЭМДЭГЛЭЛ"/>
+<l:gentext key="Note" text="Тэмдэглэл"/>
+<l:gentext key="note" text="тэмдэглэл"/>
+<l:gentext key="Part" text="хэсэг"/>
+<l:gentext key="part" text="Хэсэг"/>
+<l:gentext key="Preface" text="Өмнөх үг"/>
+<l:gentext key="preface" text="өмнөх үг"/>
+<l:gentext key="Procedure" text="Процедур"/>
+<l:gentext key="procedure" text="процедур"/>
+<l:gentext key="ProductionSet" text="Бүтээгдэхүүн"/>
+<l:gentext key="PubDate" text="Хэвлэгдсэн огноо"/>
+<l:gentext key="pubdate" text="хэвлэгдсэн огноо"/>
+<l:gentext key="Published" text="Хэвлэгдсэн"/>
+<l:gentext key="published" text="хэвлэгдсэн"/>
+<l:gentext key="Publisher" text="Publisher" lang="en"/>
+<l:gentext key="Qandadiv" text="А &amp; Х"/>
+<l:gentext key="qandadiv" text="А &amp; Х"/>
+<l:gentext key="QandASet" text="Frequently Asked Questions" lang="en"/>
+<l:gentext key="Question" text="А:"/>
+<l:gentext key="question" text="А:"/>
+<l:gentext key="RefEntry" text=""/>
+<l:gentext key="refentry" text=""/>
+<l:gentext key="Reference" text="Ашигласан ном"/>
+<l:gentext key="reference" text="ашигласан ном"/>
+<l:gentext key="References" text="References" lang="en"/>
+<l:gentext key="RefName" text="Нэр"/>
+<l:gentext key="refname" text="нэр"/>
+<l:gentext key="RefSection" text="Хэсэг"/>
+<l:gentext key="refsection" text="Хэсэг"/>
+<l:gentext key="RefSynopsisDiv" text="Тойм"/>
+<l:gentext key="refsynopsisdiv" text="тойм"/>
+<l:gentext key="RevHistory" text="Хувилбарын түүх"/>
+<l:gentext key="revhistory" text="хувилбарын түүх"/>
+<l:gentext key="revision" text="хувилбар"/>
+<l:gentext key="Revision" text="Хувилбар"/>
+<l:gentext key="sect1" text="Хэсэг"/>
+<l:gentext key="sect2" text="Хэсэг"/>
+<l:gentext key="sect3" text="Хэсэг"/>
+<l:gentext key="sect4" text="Хэсэг"/>
+<l:gentext key="sect5" text="Хэсэг"/>
+<l:gentext key="section" text="хэсэг"/>
+<l:gentext key="Section" text="Хэсэг"/>
+<l:gentext key="see" text="Харна уу"/>
+<l:gentext key="See" text="харна уу"/>
+<l:gentext key="seealso" text="бас харна уу"/>
+<l:gentext key="Seealso" text="Бас харна уу"/>
+<l:gentext key="SeeAlso" text="Бас харна уу"/>
+<l:gentext key="set" text="толгой үгс"/>
+<l:gentext key="Set" text="Толгой үгс"/>
+<l:gentext key="setindex" text="толгой үгсийн жагсаалт"/>
+<l:gentext key="SetIndex" text="Толгой үгсийн жагсаалт"/>
+<l:gentext key="Sidebar" text="Захын тэмдэглэл"/>
+<l:gentext key="sidebar" text="захын тэмдэглэл"/>
+<l:gentext key="step" text="алхам"/>
+<l:gentext key="Step" text="Алхам"/>
+<l:gentext key="table" text="хүснэгт"/>
+<l:gentext key="Table" text="Хүснэгт"/>
+<l:gentext key="task" text="Task" lang="en"/>
+<l:gentext key="Task" text="Task" lang="en"/>
+<l:gentext key="tip" text="зөвөлгөө"/>
+<l:gentext key="TIP" text="ЗӨВӨЛГӨӨ"/>
+<l:gentext key="Tip" text="Зөвөлгөө"/>
+<l:gentext key="Warning" text="Сануулга"/>
+<l:gentext key="warning" text="сануулга"/>
+<l:gentext key="WARNING" text="САНУУЛГА"/>
+<l:gentext key="and" text="ба"/>
+<l:gentext key="by" text="-аар"/>
+<l:gentext key="Edited" text="Хэвлэгдсэн"/>
+<l:gentext key="edited" text="хэвлэгдсэн"/>
+<l:gentext key="Editedby" text="Эрхэлсэн"/>
+<l:gentext key="editedby" text="Эрхэлсэн"/>
+<l:gentext key="in" text="дотор"/>
+<l:gentext key="lastlistcomma" text=""/>
+<l:gentext key="listcomma" text=","/>
+<l:gentext key="nonexistantelement" text="байхгүй элемент"/>
+<l:gentext key="notes" text="хөлийн тайлбар"/>
+<l:gentext key="Notes" text="Хөлийн тайлбар"/>
+<l:gentext key="Pgs" text="Хуудас"/>
+<l:gentext key="pgs" text="хуудас"/>
+<l:gentext key="Revisedby" text="Өөрчилсөн: "/>
+<l:gentext key="revisedby" text="Өөрчилсөн: "/>
+<l:gentext key="TableNotes" text="Ажиглалт"/>
+<l:gentext key="tablenotes" text="Ажиглалт"/>
+<l:gentext key="TableofContents" text="Гарчиг"/>
+<l:gentext key="tableofcontents" text="Гарчиг"/>
+<l:gentext key="unexpectedelementname" text="Санамсаргүй элемент"/>
+<l:gentext key="unsupported" text="дэмжигдээгүй"/>
+<l:gentext key="xrefto" text="xref руу"/>
+<l:gentext key="Authors" text="Authors" lang="en"/>
+<l:gentext key="copyeditor" text="Copy Editor" lang="en"/>
+<l:gentext key="graphicdesigner" text="Graphic Designer" lang="en"/>
+<l:gentext key="productioneditor" text="Production Editor" lang="en"/>
+<l:gentext key="technicaleditor" text="Technical Editor" lang="en"/>
+<l:gentext key="translator" text="Translator" lang="en"/>
+<l:gentext key="listofequations" text="тэгшитгэл"/>
+<l:gentext key="ListofEquations" text="Тэгшитгэл"/>
+<l:gentext key="ListofExamples" text="Жишээ"/>
+<l:gentext key="listofexamples" text="жишээ"/>
+<l:gentext key="ListofFigures" text="Зургийн лавлах"/>
+<l:gentext key="listoffigures" text="зургийн лавлах"/>
+<l:gentext key="ListofProcedures" text="List of Procedures" lang="en"/>
+<l:gentext key="listofprocedures" text="List of Procedures" lang="en"/>
+<l:gentext key="listoftables" text="хүснэгтүүдийн лавлах"/>
+<l:gentext key="ListofTables" text="Хүснэгтүүдийн лавлах"/>
+<l:gentext key="ListofUnknown" text="???-Лавлах"/>
+<l:gentext key="listofunknown" text="???-Лавлах"/>
+<l:gentext key="nav-home" text="Эхлэл рүү"/>
+<l:gentext key="nav-next" text="Дараах"/>
+<l:gentext key="nav-next-sibling" text="Түргэн дараах"/>
+<l:gentext key="nav-prev" text="Өмнөх"/>
+<l:gentext key="nav-prev-sibling" text="Түргэн өмнөх"/>
+<l:gentext key="nav-up" text="Дээш"/>
+<l:gentext key="nav-toc" text="Лруу"/>
+<l:gentext key="Draft" text="Ноорог"/>
+<l:gentext key="above" text="дээр"/>
+<l:gentext key="below" text="доор"/>
+<l:gentext key="sectioncalled" text="Хэсгүүдийн нэрс"/>
+<l:gentext key="index symbols" text="Символ"/>
+<l:gentext key="lowercase.alpha" text="абвгдеёжзийклмноөпрстуүфхцчшщъыьэюя"/>
+<l:gentext key="uppercase.alpha" text="АБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФХЦЧШЩЪЫЬЭЮЯ"/>
+<l:dingbat key="startquote" text="«"/>
+<l:dingbat key="endquote" text="»"/>
+<l:dingbat key="nestedstartquote" text="„"/>
+<l:dingbat key="nestedendquote" text="“"/>
+<l:dingbat key="singlestartquote" text="‚"/>
+<l:dingbat key="singleendquote" text="‘"/>
+<l:dingbat key="bullet" text="•"/>
+<l:gentext key="hyphenation-character" text="-"/>
+<l:gentext key="hyphenation-push-character-count" text="2"/>
+<l:gentext key="hyphenation-remain-character-count" text="3"/>
+<l:context name="styles"><l:template name="person-name" text="first-last"/>
+</l:context>
+<l:context name="title"><l:template name="abstract" text="%t"/>
+<l:template name="answer" text="%t"/>
+<l:template name="appendix" text="Хавсралт %n. %t"/>
+<l:template name="article" text="%t"/>
+<l:template name="authorblurb" text="%t"/>
+<l:template name="bibliodiv" text="%t"/>
+<l:template name="biblioentry" text="%t"/>
+<l:template name="bibliography" text="%t"/>
+<l:template name="bibliolist" text="%t" lang="en"/>
+<l:template name="bibliomixed" text="%t"/>
+<l:template name="bibliomset" text="%t"/>
+<l:template name="biblioset" text="%t"/>
+<l:template name="blockquote" text="%t"/>
+<l:template name="book" text="%t"/>
+<l:template name="calloutlist" text="%t"/>
+<l:template name="caution" text="%t"/>
+<l:template name="chapter" text="Бүлэг %n. %t"/>
+<l:template name="colophon" text="%t"/>
+<l:template name="dedication" text="%t"/>
+<l:template name="equation" text="Тэгшитгэл %n. %t"/>
+<l:template name="example" text="Жишээ %n. %t"/>
+<l:template name="figure" text="Зураг %n. %t"/>
+<l:template name="foil" text="%t" lang="en"/>
+<l:template name="foilgroup" text="%t" lang="en"/>
+<l:template name="formalpara" text="%t"/>
+<l:template name="glossary" text="%t"/>
+<l:template name="glossdiv" text="%t"/>
+<l:template name="glosslist" text="%t" lang="en"/>
+<l:template name="glossentry" text="%t"/>
+<l:template name="important" text="%t"/>
+<l:template name="index" text="%t"/>
+<l:template name="indexdiv" text="%t"/>
+<l:template name="itemizedlist" text="%t"/>
+<l:template name="legalnotice" text="%t"/>
+<l:template name="listitem" text=""/>
+<l:template name="lot" text="%t"/>
+<l:template name="msg" text="%t"/>
+<l:template name="msgexplan" text="%t"/>
+<l:template name="msgmain" text="%t"/>
+<l:template name="msgrel" text="%t"/>
+<l:template name="msgset" text="%t"/>
+<l:template name="msgsub" text="%t"/>
+<l:template name="note" text="%t"/>
+<l:template name="orderedlist" text="%t"/>
+<l:template name="part" text="хэсэг %n. %t"/>
+<l:template name="partintro" text="%t"/>
+<l:template name="preface" text="%t"/>
+<l:template name="procedure" text="%t"/>
+<l:template name="procedure.formal" text="Процедур %n. %t"/>
+<l:template name="productionset" text="%t"/>
+<l:template name="productionset.formal" text="Бүтээгдэхүүн %n"/>
+<l:template name="qandadiv" text="%t"/>
+<l:template name="qandaentry" text="%t"/>
+<l:template name="qandaset" text="%t"/>
+<l:template name="question" text="А: %n"/>
+<l:template name="refentry" text="%t"/>
+<l:template name="reference" text="%t"/>
+<l:template name="refsection" text="%t"/>
+<l:template name="refsect1" text="%t"/>
+<l:template name="refsect2" text="%t"/>
+<l:template name="refsect3" text="%t"/>
+<l:template name="refsynopsisdiv" text="%t"/>
+<l:template name="refsynopsisdivinfo" text="%t"/>
+<l:template name="segmentedlist" text="%t"/>
+<l:template name="set" text="%t"/>
+<l:template name="setindex" text="%t"/>
+<l:template name="sidebar" text="%t"/>
+<l:template name="step" text="%t"/>
+<l:template name="table" text="Хүснэгт %n. %t"/>
+<l:template name="task" text="%t"/>
+<l:template name="tasksummary" text="%t" lang="en"/>
+<l:template name="taskprerequisites" text="%t" lang="en"/>
+<l:template name="taskrelated" text="%t" lang="en"/>
+<l:template name="tip" text="%t"/>
+<l:template name="toc" text="%t"/>
+<l:template name="variablelist" text="%t"/>
+<l:template name="varlistentry" text="" lang="en"/>
+<l:template name="warning" text="%t"/>
+</l:context>
+<l:context name="title-unnumbered"><l:template name="appendix" text="%t"/>
+<l:template name="article/appendix" text="%t"/>
+<l:template name="bridgehead" text="%t"/>
+<l:template name="chapter" text="%t"/>
+<l:template name="sect1" text="%t"/>
+<l:template name="sect2" text="%t"/>
+<l:template name="sect3" text="%t"/>
+<l:template name="sect4" text="%t"/>
+<l:template name="sect5" text="%t"/>
+<l:template name="section" text="%t"/>
+<l:template name="simplesect" text="%t"/>
+<l:template name="part" text="%t" lang="en"/>
+</l:context>
+<l:context name="title-numbered"><l:template name="appendix" text="Хавсралт %n. %t"/>
+<l:template name="article/appendix" text="%n. %t"/>
+<l:template name="bridgehead" text="%n. %t"/>
+<l:template name="chapter" text="Бүлэг %n. %t"/>
+<l:template name="part" text="хэсэг %n. %t"/>
+<l:template name="sect1" text="%n. %t"/>
+<l:template name="sect2" text="%n. %t"/>
+<l:template name="sect3" text="%n. %t"/>
+<l:template name="sect4" text="%n. %t"/>
+<l:template name="sect5" text="%n. %t"/>
+<l:template name="section" text="%n. %t"/>
+<l:template name="simplesect" text="%n. %t"/>
+</l:context>
+<l:context name="subtitle"><l:template name="appendix" text="%s"/>
+<l:template name="article" text="%s"/>
+<l:template name="bibliodiv" text="%s"/>
+<l:template name="biblioentry" text="%s"/>
+<l:template name="bibliography" text="%s"/>
+<l:template name="bibliomixed" text="%s"/>
+<l:template name="bibliomset" text="%s"/>
+<l:template name="biblioset" text="%s"/>
+<l:template name="book" text="%s"/>
+<l:template name="chapter" text="%s"/>
+<l:template name="colophon" text="%s"/>
+<l:template name="dedication" text="%s"/>
+<l:template name="glossary" text="%s"/>
+<l:template name="glossdiv" text="%s"/>
+<l:template name="index" text="%s"/>
+<l:template name="indexdiv" text="%s"/>
+<l:template name="lot" text="%s"/>
+<l:template name="part" text="%s"/>
+<l:template name="partintro" text="%s"/>
+<l:template name="preface" text="%s"/>
+<l:template name="refentry" text="%s"/>
+<l:template name="reference" text="%s"/>
+<l:template name="refsection" text="%s"/>
+<l:template name="refsect1" text="%s"/>
+<l:template name="refsect2" text="%s"/>
+<l:template name="refsect3" text="%s"/>
+<l:template name="refsynopsisdiv" text="%s"/>
+<l:template name="sect1" text="%s"/>
+<l:template name="sect2" text="%s"/>
+<l:template name="sect3" text="%s"/>
+<l:template name="sect4" text="%s"/>
+<l:template name="sect5" text="%s"/>
+<l:template name="section" text="%s"/>
+<l:template name="set" text="%s"/>
+<l:template name="setindex" text="%s"/>
+<l:template name="sidebar" text="%s"/>
+<l:template name="simplesect" text="%s"/>
+<l:template name="toc" text="%s"/>
+</l:context>
+<l:context name="xref"><l:template name="abstract" text="%t"/>
+<l:template name="answer" text="Х: %n"/>
+<l:template name="appendix" text="%t"/>
+<l:template name="article" text="%t"/>
+<l:template name="authorblurb" text="%t"/>
+<l:template name="bibliodiv" text="%t"/>
+<l:template name="bibliography" text="%t"/>
+<l:template name="bibliomset" text="%t"/>
+<l:template name="biblioset" text="%t"/>
+<l:template name="blockquote" text="%t"/>
+<l:template name="book" text="%t"/>
+<l:template name="calloutlist" text="%t"/>
+<l:template name="caution" text="%t"/>
+<l:template name="chapter" text="%t"/>
+<l:template name="colophon" text="%t"/>
+<l:template name="constraintdef" text="%t"/>
+<l:template name="dedication" text="%t"/>
+<l:template name="equation" text="%t"/>
+<l:template name="example" text="%t"/>
+<l:template name="figure" text="%t"/>
+<l:template name="foil" text="%t" lang="en"/>
+<l:template name="foilgroup" text="%t" lang="en"/>
+<l:template name="formalpara" text="%t"/>
+<l:template name="glossary" text="%t"/>
+<l:template name="glossdiv" text="%t"/>
+<l:template name="important" text="%t"/>
+<l:template name="index" text="%t"/>
+<l:template name="indexdiv" text="%t"/>
+<l:template name="itemizedlist" text="%t"/>
+<l:template name="legalnotice" text="%t"/>
+<l:template name="listitem" text="%n"/>
+<l:template name="lot" text="%t"/>
+<l:template name="msg" text="%t"/>
+<l:template name="msgexplan" text="%t"/>
+<l:template name="msgmain" text="%t"/>
+<l:template name="msgrel" text="%t"/>
+<l:template name="msgset" text="%t"/>
+<l:template name="msgsub" text="%t"/>
+<l:template name="note" text="%t"/>
+<l:template name="orderedlist" text="%t"/>
+<l:template name="part" text="%t"/>
+<l:template name="partintro" text="%t"/>
+<l:template name="preface" text="%t"/>
+<l:template name="procedure" text="%t"/>
+<l:template name="productionset" text="%t"/>
+<l:template name="qandadiv" text="%t"/>
+<l:template name="qandaentry" text="А: %n"/>
+<l:template name="qandaset" text="%t"/>
+<l:template name="question" text="А: %n"/>
+<l:template name="reference" text="%t"/>
+<l:template name="refsynopsisdiv" text="%t"/>
+<l:template name="segmentedlist" text="%t"/>
+<l:template name="set" text="%t"/>
+<l:template name="setindex" text="%t"/>
+<l:template name="sidebar" text="%t"/>
+<l:template name="table" text="%t"/>
+<l:template name="task" text="%t" lang="en"/>
+<l:template name="tip" text="%t"/>
+<l:template name="toc" text="%t"/>
+<l:template name="variablelist" text="%t"/>
+<l:template name="varlistentry" text="%n"/>
+<l:template name="warning" text="%t"/>
+<l:template name="olink.document.citation" text=" in %o" lang="en"/>
+<l:template name="olink.page.citation" text=" (page %p)" lang="en"/>
+<l:template name="page.citation" text=" [%p]"/>
+<l:template name="page" text="(Seite %p)"/>
+<l:template name="docname" text=" in %o" lang="en"/>
+<l:template name="docnamelong" text=" in the document titled %o" lang="en"/>
+<l:template name="pageabbrev" text="(S. %p)"/>
+<l:template name="Page" text="Seite %p"/>
+<l:template name="bridgehead" text="«%t»"/>
+<l:template name="refsection" text="«%t»"/>
+<l:template name="refsect1" text="«%t»"/>
+<l:template name="refsect2" text="«%t»"/>
+<l:template name="refsect3" text="«%t»"/>
+<l:template name="sect1" text="«%t»"/>
+<l:template name="sect2" text="«%t»"/>
+<l:template name="sect3" text="«%t»"/>
+<l:template name="sect4" text="«%t»"/>
+<l:template name="sect5" text="«%t»"/>
+<l:template name="section" text="«%t»"/>
+<l:template name="simplesect" text="«%t»"/>
+</l:context>
+<l:context name="xref-number"><l:template name="answer" text="Х: %n"/>
+<l:template name="appendix" text="Хавсралт %n"/>
+<l:template name="bridgehead" text="Хэсэг %n"/>
+<l:template name="chapter" text="Бүлэг %n"/>
+<l:template name="equation" text="Тэгшитгэл %n"/>
+<l:template name="example" text="Жишээ %n"/>
+<l:template name="figure" text="Зураг %n"/>
+<l:template name="part" text="хэсэг %n"/>
+<l:template name="procedure" text="Процедур %n"/>
+<l:template name="productionset" text="Бүтээгдэхүүн %n"/>
+<l:template name="qandadiv" text="А &amp; Х %n"/>
+<l:template name="qandaentry" text="А: %n"/>
+<l:template name="question" text="А: %n"/>
+<l:template name="sect1" text="Хэсэг %n"/>
+<l:template name="sect2" text="Хэсэг %n"/>
+<l:template name="sect3" text="Хэсэг %n"/>
+<l:template name="sect4" text="Хэсэг %n"/>
+<l:template name="sect5" text="Хэсэг %n"/>
+<l:template name="section" text="Хэсэг %n"/>
+<l:template name="table" text="Хүснэгт %n"/>
+</l:context>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="Хавсралт %n, %t"/>
+<l:template name="bridgehead" text="Хэсэг %n, «%t»"/>
+<l:template name="chapter" text="Бүлэг %n, %t"/>
+<l:template name="equation" text="Тэгшитгэл %n, «%t»"/>
+<l:template name="example" text="Жишээ %n, «%t»"/>
+<l:template name="figure" text="Зураг %n, «%t»"/>
+<l:template name="part" text="хэсэг %n, «%t»"/>
+<l:template name="procedure" text="Процедур %n, «%t»"/>
+<l:template name="productionset" text="Бүтээгдэхүүн %n, «%t»"/>
+<l:template name="qandadiv" text="А &amp; Х %n, «%t»"/>
+<l:template name="refsect1" text="Хэсгүүдийн нэрс «%t»"/>
+<l:template name="refsect2" text="Хэсгүүдийн нэрс «%t»"/>
+<l:template name="refsect3" text="Хэсгүүдийн нэрс «%t»"/>
+<l:template name="refsection" text="Хэсгүүдийн нэрс «%t»"/>
+<l:template name="sect1" text="Хэсэг %n, «%t»"/>
+<l:template name="sect2" text="Хэсэг %n, «%t»"/>
+<l:template name="sect3" text="Хэсэг %n, «%t»"/>
+<l:template name="sect4" text="Хэсэг %n, «%t»"/>
+<l:template name="sect5" text="Хэсэг %n, «%t»"/>
+<l:template name="section" text="Хэсэг %n, «%t»"/>
+<l:template name="simplesect" text="Хэсгүүдийн нэрс «%t»"/>
+<l:template name="table" text="Хүснэгт %n, «%t»"/>
+</l:context>
+<l:context name="authorgroup"><l:template name="sep" text=", "/>
+<l:template name="sep2" text=" ба "/>
+<l:template name="seplast" text=" ба "/>
+</l:context>
+<l:context name="glossary"><l:template name="see" text="Харна уу %t"/>
+<l:template name="seealso" text="Бас харна уу %t"/>
+</l:context>
+<l:context name="msgset"><l:template name="MsgAud" text="Зориулсан: "/>
+<l:template name="MsgLevel" text="Яаралтай байдал: "/>
+<l:template name="MsgOrig" text="Үүсэл: "/>
+</l:context>
+<l:context name="datetime"><l:template name="format" text="d.m.Y"/>
+</l:context>
+<l:context name="termdef"><l:template name="prefix" text="[Definition: " lang="en"/>
+<l:template name="suffix" text="]" lang="en"/>
+</l:context>
+<l:context name="datetime-full"><l:template name="January" text="Хулгана"/>
+<l:template name="February" text="Үхэр"/>
+<l:template name="March" text="Бар"/>
+<l:template name="April" text="Туулай"/>
+<l:template name="May" text="Луу"/>
+<l:template name="June" text="Могой"/>
+<l:template name="July" text="Морь"/>
+<l:template name="August" text="Хонь"/>
+<l:template name="September" text="Бич"/>
+<l:template name="October" text="Тахиа"/>
+<l:template name="November" text="Нохой"/>
+<l:template name="December" text="Гахай"/>
+<l:template name="Monday" text="Даваа"/>
+<l:template name="Tuesday" text="Мягмар"/>
+<l:template name="Wednesday" text="Лхагва"/>
+<l:template name="Thursday" text="Пүрэв"/>
+<l:template name="Friday" text="Баасан"/>
+<l:template name="Saturday" text="Бямба"/>
+<l:template name="Sunday" text="Ням"/>
+</l:context>
+<l:context name="datetime-abbrev"><l:template name="Jan" text="Хул"/>
+<l:template name="Feb" text="Үхэ"/>
+<l:template name="Mar" text="Бар"/>
+<l:template name="Apr" text="Туу"/>
+<l:template name="May" text="Луу"/>
+<l:template name="Jun" text="Мог"/>
+<l:template name="Jul" text="Мор"/>
+<l:template name="Aug" text="Хон"/>
+<l:template name="Sep" text="Бич"/>
+<l:template name="Oct" text="Тах"/>
+<l:template name="Nov" text="Нох"/>
+<l:template name="Dec" text="Гах"/>
+<l:template name="Mon" text="Да"/>
+<l:template name="Tue" text="Мя"/>
+<l:template name="Wed" text="Лх"/>
+<l:template name="Thu" text="Пү"/>
+<l:template name="Fri" text="Ба"/>
+<l:template name="Sat" text="Бя"/>
+<l:template name="Sun" text="Ня"/>
+</l:context>
+<l:context name="htmlhelp"><l:template name="langcode" text="0x0450 Mongolian (MONGOLIA)"/>
+</l:context>
+<l:context name="index"><l:template name="term-separator" text=", " lang="en"/>
+<l:template name="number-separator" text=", " lang="en"/>
+<l:template name="range-separator" text="-" lang="en"/>
+</l:context>
+<l:context name="iso690"><l:template name="lastfirst.sep" text=", " lang="en"/>
+<l:template name="alt.person.two.sep" text=" – " lang="en"/>
+<l:template name="alt.person.last.sep" text=" – " lang="en"/>
+<l:template name="alt.person.more.sep" text=" – " lang="en"/>
+<l:template name="primary.editor" text=" (ed.)" lang="en"/>
+<l:template name="primary.many" text=", et al." lang="en"/>
+<l:template name="primary.sep" text=". " lang="en"/>
+<l:template name="submaintitle.sep" text=": " lang="en"/>
+<l:template name="title.sep" text=". " lang="en"/>
+<l:template name="othertitle.sep" text=", " lang="en"/>
+<l:template name="medium1" text=" [" lang="en"/>
+<l:template name="medium2" text="]" lang="en"/>
+<l:template name="secondary.person.sep" text="; " lang="en"/>
+<l:template name="secondary.sep" text=". " lang="en"/>
+<l:template name="respons.sep" text=". " lang="en"/>
+<l:template name="edition.sep" text=". " lang="en"/>
+<l:template name="edition.serial.sep" text=", " lang="en"/>
+<l:template name="issuing.range" text="-" lang="en"/>
+<l:template name="issuing.div" text=", " lang="en"/>
+<l:template name="issuing.sep" text=". " lang="en"/>
+<l:template name="partnr.sep" text=". " lang="en"/>
+<l:template name="placepubl.sep" text=": " lang="en"/>
+<l:template name="publyear.sep" text=", " lang="en"/>
+<l:template name="pubinfo.sep" text=". " lang="en"/>
+<l:template name="spec.pubinfo.sep" text=", " lang="en"/>
+<l:template name="upd.sep" text=", " lang="en"/>
+<l:template name="datecit1" text=" [cited " lang="en"/>
+<l:template name="datecit2" text="]" lang="en"/>
+<l:template name="extent.sep" text=". " lang="en"/>
+<l:template name="locs.sep" text=", " lang="en"/>
+<l:template name="location.sep" text=". " lang="en"/>
+<l:template name="serie.sep" text=". " lang="en"/>
+<l:template name="notice.sep" text=". " lang="en"/>
+<l:template name="access" text="Available " lang="en"/>
+<l:template name="acctoo" text="Also available " lang="en"/>
+<l:template name="onwww" text="from World Wide Web" lang="en"/>
+<l:template name="oninet" text="from Internet" lang="en"/>
+<l:template name="access.end" text=": " lang="en"/>
+<l:template name="link1" text="&lt;" lang="en"/>
+<l:template name="link2" text="&gt;" lang="en"/>
+<l:template name="access.sep" text=". " lang="en"/>
+<l:template name="isbn" text="ISBN " lang="en"/>
+<l:template name="issn" text="ISSN " lang="en"/>
+<l:template name="stdnum.sep" text=". " lang="en"/>
+<l:template name="patcountry.sep" text=". " lang="en"/>
+<l:template name="pattype.sep" text=", " lang="en"/>
+<l:template name="patnum.sep" text=". " lang="en"/>
+<l:template name="patdate.sep" text=". " lang="en"/>
+</l:context><l:letters><l:l i="-1"/>
+<l:l i="0">Symbole</l:l>
+<l:l i="1">А</l:l>
+<l:l i="1">а</l:l>
+<l:l i="2">Б</l:l>
+<l:l i="2">б</l:l>
+<l:l i="3">В</l:l>
+<l:l i="3">в</l:l>
+<l:l i="4">Г</l:l>
+<l:l i="4">г</l:l>
+<l:l i="5">Д</l:l>
+<l:l i="5">д</l:l>
+<l:l i="6">Е</l:l>
+<l:l i="6">е</l:l>
+<l:l i="7">Ё</l:l>
+<l:l i="7">ё</l:l>
+<l:l i="8">Ж</l:l>
+<l:l i="8">ж</l:l>
+<l:l i="9">З</l:l>
+<l:l i="9">з</l:l>
+<l:l i="10">И</l:l>
+<l:l i="10">и</l:l>
+<l:l i="11">Й</l:l>
+<l:l i="11">й</l:l>
+<l:l i="12">К</l:l>
+<l:l i="12">к</l:l>
+<l:l i="13">Л</l:l>
+<l:l i="13">л</l:l>
+<l:l i="14">М</l:l>
+<l:l i="14">м</l:l>
+<l:l i="15">Н</l:l>
+<l:l i="15">н</l:l>
+<l:l i="16">О</l:l>
+<l:l i="16">о</l:l>
+<l:l i="17">Ө</l:l>
+<l:l i="17">ө</l:l>
+<l:l i="18">П</l:l>
+<l:l i="18">п</l:l>
+<l:l i="19">Р</l:l>
+<l:l i="19">р</l:l>
+<l:l i="20">С</l:l>
+<l:l i="20">с</l:l>
+<l:l i="21">Т</l:l>
+<l:l i="21">т</l:l>
+<l:l i="22">У</l:l>
+<l:l i="22">у</l:l>
+<l:l i="23">Ү</l:l>
+<l:l i="23">ү</l:l>
+<l:l i="24">Ф</l:l>
+<l:l i="24">ф</l:l>
+<l:l i="25">Х</l:l>
+<l:l i="25">х</l:l>
+<l:l i="26">Ц</l:l>
+<l:l i="26">ц</l:l>
+<l:l i="27">Ч</l:l>
+<l:l i="27">ч</l:l>
+<l:l i="28">Ш</l:l>
+<l:l i="28">ш</l:l>
+<l:l i="29">Щ</l:l>
+<l:l i="29">щ</l:l>
+<l:l i="30">Ъ</l:l>
+<l:l i="30">ъ</l:l>
+<l:l i="31">Ы</l:l>
+<l:l i="31">ы</l:l>
+<l:l i="32">Ь</l:l>
+<l:l i="32">ь</l:l>
+<l:l i="33">Э</l:l>
+<l:l i="33">э</l:l>
+<l:l i="34">Ю</l:l>
+<l:l i="34">ю</l:l>
+<l:l i="35">Я</l:l>
+<l:l i="35">я</l:l>
+</l:letters>
+</l:l10n>
