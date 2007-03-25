@@ -4,11 +4,14 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-    <!-- We use XHTML -->
-  <xsl:import href="docbook-xsl-snapshot/docbook.xsl"/>
+   <!-- REVISED -->
+
+    <!-- Upstream XHTML presentation templates -->
+  <xsl:import href="docbook-xsl-snapshot/xhtml/docbook.xsl"/>
+    <!-- Use ISO-8859-1 for output instead of default UTF-8 -->
   <xsl:param name="chunker.output.encoding" select="'ISO-8859-1'"/>
 
-    <!-- Including our others customized elements templates -->
+    <!-- Including our customized elements templates -->
   <xsl:include href="xhtml/lfs-admon.xsl"/>
   <xsl:include href="xhtml/lfs-sections.xsl"/>
   <xsl:include href="xhtml/lfs-mixed.xsl"/>
