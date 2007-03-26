@@ -4,12 +4,25 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-    <!-- Use graphics in admonitions -->
+   <!-- REVISED -->
+
+  <!-- This stylesheet controls how admonitions are displayed -->
+
+    <!-- Use graphics in admonitions? 1 = yes, 0 = no -->
   <xsl:param name="admon.graphics" select="1"/>
+
+    <!-- Relative path to images directory. We set here relative path
+    from sub-dirs HTML files. The path from top-level HTML files (index.html,
+    partX.html, etc) MUST be fixed via a sed in the Makefile. -->
   <xsl:param name="admon.graphics.path">../images/</xsl:param>
+
+    <!-- The images files extension -->
   <xsl:param name="admon.graphics.extension" select="'.png'"/>
 
-    <!-- Changing the output tagging -->
+    <!-- Changing the output tagging:
+           Removed $admon.style support
+           Hardcoded $admon.textlabel feature
+           Changed the output format from table to nested divs -->
   <xsl:template name="graphical.admonition">
     <xsl:variable name="admon.type">
       <xsl:choose>
