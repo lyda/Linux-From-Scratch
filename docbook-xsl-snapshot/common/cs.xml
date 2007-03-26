@@ -193,6 +193,8 @@
 <l:gentext key="index symbols" text="Symboly"/>
 <l:gentext key="lowercase.alpha" text="aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž"/>
 <l:gentext key="uppercase.alpha" text="AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ"/>
+<l:gentext key="normalize.sort.input" text="aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž"/>
+<l:gentext key="normalize.sort.output" text="AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ"/>
 <l:dingbat key="startquote" text="„"/>
 <l:dingbat key="endquote" text="“"/>
 <l:dingbat key="nestedstartquote" text="‚"/>
