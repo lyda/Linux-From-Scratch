@@ -10,14 +10,22 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-    <!--Filename-->
+  <!-- This stylesheet controls how the Index is generated -->
+
+    <!-- Should the Index be generated? 1 = yes, 0 = no -->
+  <xsl:param name="generate.index" select="1"></xsl:param>
+
+    <!-- The indexing method used. Only 'basic' is supported by xsltproc -->
+  <xsl:param name="index.method" select="'basic'"></xsl:param>
+
+    <!--The file name of the Index page -->
   <xsl:template match="index" mode="recursive-chunk-filename">
     <xsl:text>longindex.html</xsl:text>
   </xsl:template>
 
     <!--Title-->
   <xsl:param name="index-title">Index</xsl:param>
-  
+
   <xsl:template match="index" mode="title.markup">
     <xsl:call-template name="gentext">
       <xsl:with-param name="key" select="$index-title"/>
@@ -117,11 +125,11 @@
       </xsl:for-each>
       <xsl:if test="$refs/secondary">
         <ul>
-          <xsl:apply-templates select="$refs[secondary and count(.|key('secondary', 
+          <xsl:apply-templates select="$refs[secondary and count(.|key('secondary',
                   concat($key, &#34; &#34;, normalize-space(concat(secondary/@sortas,
                   secondary[not(@sortas)]))))[&scope;][1]) = 1]" mode="index-secondary">
             <xsl:with-param name="scope" select="$scope"/>
-            <xsl:sort select="translate(normalize-space(concat(secondary/@sortas, 
+            <xsl:sort select="translate(normalize-space(concat(secondary/@sortas,
                     secondary[not(@sortas)])), &lowercase;, &uppercase;)"/>
           </xsl:apply-templates>
          </ul>
@@ -195,7 +203,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-  
+
     <!-- Dropping unneeded anchors -->
   <xsl:template match="indexterm"/>
 
