@@ -6,6 +6,10 @@
 
    <!-- REVISED -->
 
+   <!-- Top-level chunked output template.
+        Include customized chunks templates.
+        Replaces {docbook-xsl}/xhtml/profile-chunk.xsl -->
+
     <!-- Our master non-chunking presentation templates -->
   <xsl:import href="lfs-chunked2.xsl"/>
 

@@ -23,6 +23,7 @@
            Removed $admon.style support
            Hardcoded $admon.textlabel feature
            Changed the output format from table to nested divs -->
+    <!-- The original template is in {docbook-xsl}/xhtml/admon.xsl -->
   <xsl:template name="graphical.admonition">
     <xsl:variable name="admon.type">
       <xsl:choose>

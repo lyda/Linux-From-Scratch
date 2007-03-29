@@ -6,8 +6,12 @@
 
    <!-- REVISED -->
 
+   <!-- Second level chunked output template.
+        Sets global params and include customized elements templates-->
+
     <!-- Upstream XHTML presentation templates -->
   <xsl:import href="docbook-xsl-snapshot/xhtml/docbook.xsl"/>
+
     <!-- Use ISO-8859-1 for output instead of default UTF-8 -->
   <xsl:param name="chunker.output.encoding" select="'ISO-8859-1'"/>
 
@@ -22,8 +26,13 @@
     <!-- This file contains our localization strings (for internationalization) -->
   <xsl:param name="local.l10n.xml" select="document('lfs-l10n.xml')"/>
 
-    <!-- The CSS Stylesheet -->
+    <!-- The CSS Stylesheets. We set here relative path from sub-dirs HTML files.
+    The path from top-level HTML files (index.html, partX.html, etc) MUST be
+    fixed via a sed in the Makefile-->
+    <!-- Master CSS Stylesheet -->
   <xsl:param name="html.stylesheet" select="'../stylesheets/lfs.css'"/>
+    <!-- Print CSS Stylesheet -->
+    <!-- The original template is in {docbook-xsl}/xhtml/docbook.xsl -->
   <xsl:template name='user.head.content'>
      <link rel="stylesheet" href="../stylesheets/lfs-print.css" type="text/css" media="print"/>
   </xsl:template>
