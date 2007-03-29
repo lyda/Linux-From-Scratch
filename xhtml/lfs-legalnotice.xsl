@@ -4,10 +4,21 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-    <!-- Generating the page -->
+   <!-- REVISED -->
+
+  <!-- This stylesheet controls how legalnotice page is created -->
+
+    <!-- Generating the legalnotice page:
+           We are forcing separate legalnotice page generation and placing it
+           into the prologue/ subdirectory.
+           Removed the default link to legalnotice page. We want it in Copyright.
+           Added footer navigational link to Home.  -->
+    <!-- The original template is in {docbook-xsl}/xhtml/titlepage.xsl -->
   <xsl:template match="legalnotice" mode="titlepage.mode">
-    <xsl:variable name="id"><xsl:call-template name="object.id"/></xsl:variable>
-      <xsl:variable name="filename" select="concat($base.dir, 'prologue/legalnotice.html')"/>
+    <xsl:variable name="id">
+      <xsl:call-template name="object.id"/>
+    </xsl:variable>
+    <xsl:variable name="filename" select="concat($base.dir, 'prologue/legalnotice.html')"/>
     <xsl:variable name="title">
       <xsl:apply-templates select="." mode="title.markup"/>
     </xsl:variable>
@@ -51,7 +62,9 @@
     </xsl:call-template>
   </xsl:template>
 
-    <!-- Making the link-->
+    <!-- Making the legalnotice link:
+         We make the "Copyright" word a link to legalnotice page. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/titlepage.xsl -->
   <xsl:template match="copyright" mode="titlepage.mode">
     <p class="{name(.)}">
       <a>
