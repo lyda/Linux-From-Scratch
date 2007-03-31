@@ -4,6 +4,28 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
+    <!-- External URLs in italic font -->
+  <xsl:template match="ulink" name="ulink">
+    <a>
+      <xsl:if test="@id">
+        <xsl:attribute name="id">
+          <xsl:value-of select="@id"/>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute>
+       <i>
+        <xsl:choose>
+          <xsl:when test="count(child::node())=0">
+            <xsl:value-of select="@url"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </i>
+    </a>
+  </xsl:template>
+
      <!-- Making a proper punctuation in xref (only for English language).-->
   <xsl:template match="xref" name="xref">
     <xsl:variable name="targets" select="key('id',@linkend)"/>
@@ -118,7 +140,7 @@
       <xsl:with-param name="role" select="$role"/>
     </xsl:call-template>
   </xsl:template>
-  
+
   <xsl:template name="substitute-markup">
     <xsl:param name="template" select="''"/>
     <xsl:param name="allow-anchors" select="'0'"/>

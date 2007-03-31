@@ -4,7 +4,17 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-    <!-- para -->
+   <!-- REVISED -->
+
+  <!-- This stylesheet contains misc templates for output formating.
+       This file is for that templates that don't fit in other files
+       and that not afect the chunk algorithm. -->
+
+  <!-- Individual elements templates -->
+
+    <!-- para:
+           Added a choose to skip empty "Home page" in packages.xml -->
+    <!-- The original template is in {docbook-xsl}/xhtml/block.xsl -->
   <xsl:template match="para">
     <xsl:choose>
       <xsl:when test="child::ulink[@url=' ']"/>
@@ -29,7 +39,12 @@
     </xsl:choose>
   </xsl:template>
 
-    <!-- screen -->
+    <!-- screen:
+           Changed class attribute asignament to fit our look needs.
+           Removed unused line numbering support. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/verbatim.xsl
+         It match also programlisting and synopsis. The code for that tags
+         is unchanged. -->
   <xsl:template match="screen">
     <xsl:choose>
       <xsl:when test="child::* = userinput">
@@ -45,6 +60,10 @@
     </xsl:choose>
   </xsl:template>
 
+    <!-- userinput:
+           Using a customized output when inside screen.
+           In other cases, use the original template. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/inline.xsl -->
   <xsl:template match="userinput">
     <xsl:choose>
       <xsl:when test="ancestor::screen">
@@ -58,7 +77,9 @@
     </xsl:choose>
   </xsl:template>
 
-    <!-- segementedlist -->
+    <!-- seg in segementedlist:
+           Added a span around seg text to can match it with CSS code. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/lists.xsl -->
   <xsl:template match="seg">
     <xsl:variable name="segnum" select="count(preceding-sibling::seg)+1"/>
     <xsl:variable name="seglist" select="ancestor::segmentedlist"/>
@@ -66,7 +87,7 @@
       <!-- Note: segtitle is only going to be the right thing in a well formed
       SegmentedList.  If there are too many Segs or too few SegTitles,
       you'll get something odd...maybe an error -->
-      <div class="seg">
+    <div class="seg">
       <strong>
         <span class="segtitle">
           <xsl:apply-templates select="$segtitles[$segnum=position()]" mode="segtitle-in-seg"/>
@@ -79,8 +100,11 @@
     </div>
   </xsl:template>
 
-
-  <!-- variablelist -->
+    <!-- variablelist:
+           If it have a role attribute, wrap the default output into a div with
+           a class attribute matching that role attribute.
+           Apply the original template in all cases. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/lists.xsl -->
   <xsl:template match="variablelist">
     <xsl:choose>
       <xsl:when test="@role">
@@ -95,7 +119,12 @@
   </xsl:template>
 
 
-    <!-- Body attributes -->
+  <!-- Named formating templates -->
+
+    <!-- Body attributes:
+           Add to the body XHTML output tag an id attribute with the book type
+           and a class atribute with the book version. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/docbook.xsl -->
   <xsl:template name="body.attributes">
     <xsl:attribute name="id">
       <xsl:text>lfs</xsl:text>
@@ -105,30 +134,10 @@
     </xsl:attribute>
   </xsl:template>
 
-    <!-- External URLs in italic font -->
-  <xsl:template match="ulink" name="ulink">
-    <a>
-      <xsl:if test="@id">
-        <xsl:attribute name="id">
-          <xsl:value-of select="@id"/>
-        </xsl:attribute>
-      </xsl:if>
-      <xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute>
-       <i>
-        <xsl:choose>
-          <xsl:when test="count(child::node())=0">
-            <xsl:value-of select="@url"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:apply-templates/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </i>
-    </a>
-  </xsl:template>
-
-    <!-- The <code> xhtml tag have look issues in some browsers, like Konqueror and.
-      isn't semantically correct (a filename isn't a code fragment) We will use <tt> for now. -->
+    <!-- inline.monoseq:
+           The code xhtml tag have look issues in some browsers.
+           We will use tt instead. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/inline.xsl -->
   <xsl:template name="inline.monoseq">
     <xsl:param name="content">
       <xsl:call-template name="anchor"/>
@@ -138,16 +147,19 @@
         </xsl:with-param>
       </xsl:call-template>
     </xsl:param>
-    <tt class="{local-name(.)}">
-      <xsl:if test="@dir">
-        <xsl:attribute name="dir">
-          <xsl:value-of select="@dir"/>
-        </xsl:attribute>
-      </xsl:if>
+    <tt>
+      <xsl:apply-templates select="." mode="class.attribute"/>
+      <xsl:call-template name="dir"/>
+      <xsl:call-template name="generate.html.title"/>
       <xsl:copy-of select="$content"/>
+      <xsl:call-template name="apply-annotations"/>
     </tt>
   </xsl:template>
 
+    <!-- inline.boldmonoseq:
+           The code xhtml tag have look issues in some browsers.
+           We will use tt instead. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/inline.xsl -->
   <xsl:template name="inline.boldmonoseq">
     <xsl:param name="content">
       <xsl:call-template name="anchor"/>
@@ -157,28 +169,26 @@
         </xsl:with-param>
       </xsl:call-template>
     </xsl:param>
-    <!-- don't put <strong> inside figure, example, or table titles -->
-    <!-- or other titles that may already be represented with <strong>'s. -->
+    <!-- don't put <strong> inside figure, example, or table titles
+         or other titles that may already be represented with <strong>'s. -->
     <xsl:choose>
       <xsl:when test="local-name(..) = 'title' and (local-name(../..) = 'figure'
-              or local-name(../..) = 'example' or local-name(../..) = 'table' or local-name(../..) = 'formalpara')">
-        <tt class="{local-name(.)}">
-          <xsl:if test="@dir">
-            <xsl:attribute name="dir">
-              <xsl:value-of select="@dir"/>
-            </xsl:attribute>
-          </xsl:if>
+                      or local-name(../..) = 'example' or local-name(../..) = 'table'
+                      or local-name(../..) = 'formalpara')">
+        <tt>
+          <xsl:apply-templates select="." mode="class.attribute"/>
+          <xsl:call-template name="generate.html.title"/>
+          <xsl:call-template name="dir"/>
           <xsl:copy-of select="$content"/>
+          <xsl:call-template name="apply-annotations"/>
         </tt>
       </xsl:when>
       <xsl:otherwise>
-        <strong class="{local-name(.)}">
+        <strong>
+          <xsl:apply-templates select="." mode="class.attribute"/>
           <tt>
-            <xsl:if test="@dir">
-              <xsl:attribute name="dir">
-                <xsl:value-of select="@dir"/>
-              </xsl:attribute>
-            </xsl:if>
+            <xsl:call-template name="generate.html.title"/>
+            <xsl:call-template name="dir"/>
             <xsl:copy-of select="$content"/>
           </tt>
         </strong>
@@ -186,6 +196,10 @@
     </xsl:choose>
   </xsl:template>
 
+    <!-- inline.italicmonoseq:
+           The code xhtml tag have look issues in some browsers.
+           We will use tt instead. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/inline.xsl -->
   <xsl:template name="inline.italicmonoseq">
     <xsl:param name="content">
       <xsl:call-template name="anchor"/>
@@ -195,25 +209,38 @@
         </xsl:with-param>
       </xsl:call-template>
     </xsl:param>
-    <em class="{local-name(.)}">
+    <em>
+      <xsl:apply-templates select="." mode="class.attribute"/>
       <tt>
-        <xsl:if test="@dir">
-          <xsl:attribute name="dir">
-            <xsl:value-of select="@dir"/>
-          </xsl:attribute>
-        </xsl:if>
+        <xsl:call-template name="generate.html.title"/>
+        <xsl:call-template name="dir"/>
         <xsl:copy-of select="$content"/>
+        <xsl:call-template name="apply-annotations"/>
       </tt>
     </em>
   </xsl:template>
 
-    <!-- Total packages size calculation -->
+
+  <!-- Total packages size calculation -->
+
+    <!-- returnvalue:
+            If the tag is not empty, apply the orininal template.
+            Otherwise apply the calculation template. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/inline.xsl -->
   <xsl:template match="returnvalue">
-    <xsl:call-template name="calculation">
-     <xsl:with-param name="scope" select="../../variablelist"/>
-    </xsl:call-template>
+    <xsl:choose>
+      <xsl:when test="count(*)&gt;0">
+        <xsl:apply-imports/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="calculation">
+        <xsl:with-param name="scope" select="../../variablelist"/>
+        </xsl:call-template>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
+    <!-- Self-made calculation template. -->
   <xsl:template name="calculation">
     <xsl:param name="scope"/>
     <xsl:param name="total">0</xsl:param>
