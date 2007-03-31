@@ -4,30 +4,34 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-    <!-- General settings -->
+  <!-- This stylesheet controls how the TOC are generated -->
+
+    <!-- Control generation of ToCs and LoTs -->
   <xsl:param name="generate.toc">
-    appendix  nop
     book      toc,title
-    chapter   nop
+    preface   toc
     part      toc
-    preface   nop
-    qandadiv  nop
-    qandaset  nop
-    reference nop
+    chapter   toc
+    appendix  nop
     sect1     nop
     sect2     nop
     sect3     nop
     sect4     nop
     sect5     nop
     section   nop
-    set       nop
   </xsl:param>
 
+    <!-- How deep should recursive sections appear in the TOC? -->
   <xsl:param name="toc.section.depth">1</xsl:param>
 
+    <!-- How maximaly deep should be each TOC? -->
   <xsl:param name="toc.max.depth">3</xsl:param>
 
-    <!-- Making the TOC -->
+    <!-- make.toc:
+           Using h3 for TOC title.
+           Using ul for TOC list style.
+           Removed code for $manual.toc and $qanda.in.toc -->
+    <!-- The original template is in {docbook-xsl}/xhtml/autotoc.xsl -->
   <xsl:template name="make.toc">
     <xsl:param name="toc-context" select="."/>
     <xsl:param name="nodes" select="/NOT-AN-ELEMENT"/>
@@ -47,7 +51,11 @@
     </xsl:if>
   </xsl:template>
 
-    <!-- Making the subtocs -->
+    <!-- subtoc:
+           Using ul for TOC list style.
+           Removed code for $qanda.in.toc
+           Removed code for sect* others than sect1 -->
+    <!-- The original template is in {docbook-xsl}/xhtml/autotoc.xsl -->
   <xsl:template name="subtoc">
     <xsl:param name="toc-context" select="."/>
     <xsl:param name="nodes" select="NOT-AN-ELEMENT"/>
@@ -65,24 +73,28 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:variable name="depth.from.context"
-            select="count(ancestor::*)-count($toc-context/ancestor::*)"/>
+                  select="count(ancestor::*)-count($toc-context/ancestor::*)"/>
     <li class="{name(.)}">
       <xsl:call-template name="toc.line">
         <xsl:with-param name="toc-context" select="$toc-context"/>
       </xsl:call-template>
       <xsl:if test="$toc.section.depth &gt; $depth and count($nodes)&gt;0
-              and $toc.max.depth &gt; $depth.from.context">
+                    and $toc.max.depth &gt; $depth.from.context">
         <xsl:copy-of select="$subtoc"/>
       </xsl:if>
     </li>
   </xsl:template>
 
-    <!--Adding the h* tags and dropping redundats links-->
+    <!-- toc.line:
+           Adding the h* tags and dropping redundats links.
+           This template is a full re-made version of the original one. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/autotoc.xsl -->
   <xsl:template name="toc.line">
     <xsl:param name="toc-context" select="."/>
     <xsl:param name="depth" select="1"/>
     <xsl:param name="depth.from.context" select="8"/>
     <xsl:choose>
+        <!-- For sect1 targets, create a link -->
       <xsl:when test="local-name(.) = 'sect1'">
         <a>
           <xsl:attribute name="href">
@@ -93,6 +105,7 @@
           <xsl:apply-templates select="." mode="titleabbrev.markup"/>
         </a>
       </xsl:when>
+        <!-- For appendix target, create a link and add the label -->
       <xsl:when test="local-name(.) = 'appendix'">
         <a>
           <xsl:attribute name="href">
@@ -110,6 +123,7 @@
           <xsl:apply-templates select="." mode="titleabbrev.markup"/>
         </a>
       </xsl:when>
+        <!-- For chapter and preface, use h4 and add the label -->
       <xsl:when test="local-name(.) = 'chapter' or local-name(.) = 'preface'">
         <h4>
           <xsl:variable name="label">
@@ -122,6 +136,7 @@
           <xsl:apply-templates select="." mode="titleabbrev.markup"/>
         </h4>
       </xsl:when>
+        <!-- for part, use h3 and add the label -->
       <xsl:when test="local-name(.) = 'part'">
         <h3>
           <xsl:variable name="label">
@@ -134,6 +149,7 @@
           <xsl:apply-templates select="." mode="titleabbrev.markup"/>
         </h3>
       </xsl:when>
+        <!-- For other targets like Index, create a link inside h3 plus label it -->
       <xsl:otherwise>
         <h3>
             <a>

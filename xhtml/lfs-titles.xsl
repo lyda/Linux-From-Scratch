@@ -60,12 +60,14 @@
   </xsl:template>
 
     <!-- sect1.titlepage:
-           Uses h1 except for the first section, and removed a lot of unneeded code. -->
+           Select the proper template depending on if chapters TOC are
+           generated or not. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
+    <!-- Version for when there is no chapters TOC:
+           Uses h1 except for the first section, and removed a lot of unneeded code. -->
+  <!--
   <xsl:template name="sect1.titlepage">
     <xsl:choose>
-        <!-- I should find a better test, but if chapter TOC is readded
-             h1 will be used always, thus no need to worry for now. -->
       <xsl:when test="position() = 4">
         <div class="titlepage">
           <xsl:if test="@id">
@@ -88,6 +90,18 @@
         </div>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+  -->
+    <!-- Version for when chapters TOC are generated:
+           Uses h1 and removed a lot of unneeded code. -->
+  <xsl:template name="sect1.titlepage">
+    <div class="titlepage">
+      <h1 class="{name(.)}">
+        <xsl:apply-templates select="." mode="label.markup"/>
+        <xsl:text>. </xsl:text>
+        <xsl:value-of select="title"/>
+      </h1>
+    </div>
   </xsl:template>
 
     <!-- sect2.titlepage:

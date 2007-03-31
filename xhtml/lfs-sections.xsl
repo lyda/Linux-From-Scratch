@@ -8,6 +8,11 @@
 
   <!-- This stylesheet controls how sections are handled -->
 
+    <!-- Chunk the first top-level section? 1 = yes, 0 = no
+         If chapters TOC are generated, this must be 1.
+         See also sect1.titlepage template in lfs-titles.xsl -->
+  <xsl:param name="chunk.first.sections" select="1"></xsl:param>
+
     <!-- sect1:
            When there is a role attibute, use it as the class value.
            Removed unused code. -->
