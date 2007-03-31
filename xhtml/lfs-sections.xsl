@@ -4,8 +4,14 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
+   <!-- REVISED -->
 
-   <!-- Sect1 attributes -->
+  <!-- This stylesheet controls how sections are handled -->
+
+    <!-- sect1:
+           When there is a role attibute, use it as the class value.
+           Removed unused code. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/sections.xsl -->
   <xsl:template match="sect1">
     <div>
       <xsl:choose>
@@ -15,9 +21,7 @@
           </xsl:attribute>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:attribute name="class">
-            <xsl:value-of select="name(.)"/>
-          </xsl:attribute>
+          <xsl:apply-templates select="." mode="class.attribute"/>
         </xsl:otherwise>
       </xsl:choose>
       <xsl:call-template name="language.attribute"/>
@@ -27,7 +31,10 @@
     </div>
   </xsl:template>
 
-    <!-- Sect2 attributes -->
+    <!-- sect2:
+           When there is a role attibute, use it as the class value.
+           Removed unused code. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/sections.xsl -->
   <xsl:template match="sect2">
     <div>
       <xsl:choose>
@@ -49,11 +56,15 @@
     </div>
   </xsl:template>
 
-    <!-- Sections numbering -->
+    <!-- Are sections enumerated? 1 = yes, 0 = no -->
   <xsl:param name="section.autolabel" select="1"/>
+
+    <!-- Do section labels include the component label? 1 = yes, 0 = no -->
   <xsl:param name="section.label.includes.component.label" select="1"/>
 
-    <!-- Use lowercase roman numbers for sect1 in preface -->
+    <!-- sect1 label.markup:
+           Use lowercase roman numbers for sect1 in preface. -->
+    <!-- The original template is in {docbook-xsl}/common/labels.xsl -->
   <xsl:template match="sect1" mode="label.markup">
     <!-- if the parent is a component, maybe label that too -->
     <xsl:variable name="parent.is.component">
@@ -91,16 +102,21 @@
     </xsl:choose>
   </xsl:template>
 
-    <!-- Skip numeration for sect2 with empty title -->
-  <xsl:template match="sect2|sect3|sect4|sect5" mode="label.markup">
+    <!-- sect2 label.markup:
+           Skip numeration for sect2 with empty title -->
+    <!-- The original template is in {docbook-xsl}/common/labels.xsl
+         It match also sect3, sect4, and sect5, that are unchanged. -->
+  <xsl:template match="sect2" mode="label.markup">
     <xsl:if test="string-length(title) > 0">
       <!-- label the parent -->
-      <xsl:variable name="parent.label">
-        <xsl:apply-templates select=".." mode="label.markup"/>
+      <xsl:variable name="parent.section.label">
+        <xsl:call-template name="label.this.section">
+          <xsl:with-param name="section" select=".."/>
+        </xsl:call-template>
       </xsl:variable>
-      <xsl:if test="$parent.label != ''">
+      <xsl:if test="$parent.section.label != '0'">
         <xsl:apply-templates select=".." mode="label.markup"/>
-      <xsl:apply-templates select=".." mode="intralabel.punctuation"/>
+        <xsl:apply-templates select=".." mode="intralabel.punctuation"/>
       </xsl:if>
       <xsl:choose>
         <xsl:when test="@label">
@@ -108,34 +124,21 @@
         </xsl:when>
         <xsl:when test="$section.autolabel != 0">
           <xsl:choose>
-            <xsl:when test="local-name(.) = 'sect2'">
-              <xsl:choose>
-                <!-- If the first sect2 isn't numbered, renumber the remainig sections -->
-                <xsl:when test="string-length(../sect2[1]/title) = 0">
-                  <xsl:variable name="totalsect2">
-                    <xsl:number count="sect2"/>
-                  </xsl:variable>
-                  <xsl:number value="$totalsect2 - 1"/>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:number count="sect2"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:when>
-            <xsl:when test="local-name(.) = 'sect3'">
-              <xsl:number count="sect3"/>
-            </xsl:when>
-            <xsl:when test="local-name(.) = 'sect4'">
-              <xsl:number count="sect4"/>
-            </xsl:when>
-            <xsl:when test="local-name(.) = 'sect5'">
-              <xsl:number count="sect5"/>
+            <!-- If the first sect2 isn't numbered, renumber the remainig sections -->
+            <xsl:when test="string-length(../sect2[1]/title) = 0">
+              <xsl:variable name="totalsect2">
+                <xsl:number count="sect2"/>
+              </xsl:variable>
+              <xsl:number value="$totalsect2 - 1"/>
             </xsl:when>
             <xsl:otherwise>
-              <xsl:message>label.markup: this can't happen!</xsl:message>
+              <xsl:number count="sect2"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:when>
+        <xsl:otherwise>
+          <xsl:message>label.markup: this can't happen!</xsl:message>
+        </xsl:otherwise>
       </xsl:choose>
     </xsl:if>
   </xsl:template>
