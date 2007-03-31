@@ -22,7 +22,7 @@
 
     <!-- header.navigation:
            Self-made template that full replaces the original one -->
-    <!-- The original template is in {docbook-xsl}/xhtml/chink-common.xsl -->
+    <!-- The original template is in {docbook-xsl}/xhtml/chunk-common.xsl -->
   <xsl:template name="header.navigation">
     <xsl:param name="prev" select="/foo"/>
     <xsl:param name="next" select="/foo"/>
@@ -61,7 +61,7 @@
 
     <!-- footer.navigation:
            Self-made template that full replaces the original one -->
-    <!-- The original template is in {docbook-xsl}/xhtml/chink-common.xsl -->
+    <!-- The original template is in {docbook-xsl}/xhtml/chunk-common.xsl -->
   <xsl:template name="footer.navigation">
     <xsl:param name="prev" select="/foo"/>
     <xsl:param name="next" select="/foo"/>

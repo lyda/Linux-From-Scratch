@@ -224,7 +224,7 @@
   <!-- Total packages size calculation -->
 
     <!-- returnvalue:
-            If the tag is not empty, apply the orininal template.
+            If the tag is not empty, apply the original template.
             Otherwise apply the calculation template. -->
     <!-- The original template is in {docbook-xsl}/xhtml/inline.xsl -->
   <xsl:template match="returnvalue">
@@ -286,6 +286,5 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
 
 </xsl:stylesheet>
