@@ -15,6 +15,9 @@ a:visited { color: #7e4988; }
 a:hover, a:focus { color: #d30e08; }
 a:active { color: #6b77b1;}
 
+/* External links in italic font */
+a.ulink { font-style: italic; }
+
 /* Headers */
 h1, h2, b, strong {
   color: #000;
