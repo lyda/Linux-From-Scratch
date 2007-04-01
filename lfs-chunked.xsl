@@ -16,7 +16,7 @@
     <!-- Upstream chunk code named templates -->
   <xsl:import href="docbook-xsl-snapshot/xhtml/chunk-common.xsl"/>
 
-    <!-- Upstream chunk code match templates -->
+    <!-- Upstream profiled chunk code match templates -->
   <xsl:include href="docbook-xsl-snapshot/xhtml/profile-chunk-code.xsl"/>
 
     <!-- Including our customized chunks templates -->

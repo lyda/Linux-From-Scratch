@@ -4,8 +4,13 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-    <!-- We use XHTML -->
-  <xsl:import href="docbook-xsl-snapshot/profile-docbook.xsl"/>
+   <!-- REVISED -->
+
+   <!-- Stylesheet for non-chunked XHTML output
+        Replaces {docbook-xsl}/xhtml/profile-docbook.xsl -->
+
+    <!-- Upstream XHTML profiled templates -->
+  <xsl:import href="docbook-xsl-snapshot/xhtml/profile-docbook.xsl"/>
 
     <!-- Fix encoding issues with default UTF-8 output of the xhtml stylesheet -->
   <xsl:output method="html" encoding="ISO-8859-1" indent="no" />
@@ -17,6 +22,27 @@
   <xsl:include href="xhtml/lfs-toc.xsl"/>
   <xsl:include href="xhtml/lfs-xref.xsl"/>
 
+    <!-- Control generation of ToCs and LoTs -->
+  <xsl:param name="generate.toc">
+    book      toc,title
+    preface   nop
+    part      nop
+    chapter   nop
+    appendix  nop
+    sect1     nop
+    sect2     nop
+    sect3     nop
+    sect4     nop
+    sect5     nop
+    section   nop
+  </xsl:param>
+
+    <!-- How deep should recursive sections appear in the TOC? -->
+  <xsl:param name="toc.section.depth">1</xsl:param>
+
+    <!-- How maximaly deep should be each TOC? -->
+  <xsl:param name="toc.max.depth">3</xsl:param>
+
     <!-- This file contains our localization strings (for internationalization) -->
   <xsl:param name="local.l10n.xml" select="document('lfs-l10n.xml')"/>
 
@@ -27,7 +53,10 @@
     <!-- Don't use graphics in admonitions -->
   <xsl:param name="admon.graphics" select="0"/>
 
-    <!-- Changing the admonitions output tagging -->
+    <!-- Changing the admonitions output tagging:
+           Removed $admon.style support
+           Hardcoded $admon.textlabel feature -->
+    <!-- The original template is in {docbook-xsl}/xhtml/admon.xsl -->
   <xsl:template name="nongraphical.admonition">
     <div class="{name(.)}">
       <div class ="admonhead">
@@ -41,7 +70,11 @@
     </div>
   </xsl:template>
 
-    <!-- To drop the remainig dot when title is empty (from lfs-titles.xsl)-->
+    <!-- sect2.titlepage:
+           Removed a lot of unneeded code.
+           Skip empty titles.
+           No label in preface. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="sect2.titlepage">
     <xsl:choose>
       <xsl:when test="string-length(title) = 0"/>
@@ -51,8 +84,10 @@
             <a id="{@id}" name="{@id}"/>
           </xsl:if>
           <h3 class="{name(.)}">
-            <xsl:apply-templates select="." mode="label.markup"/>
-            <xsl:text>. </xsl:text>
+            <xsl:if test="not(ancestor::preface)">
+              <xsl:apply-templates select="." mode="label.markup"/>
+              <xsl:text>. </xsl:text>
+            </xsl:if>
             <xsl:value-of select="title"/>
           </h3>
         </div>
@@ -60,25 +95,10 @@
     </xsl:choose>
   </xsl:template>
 
-    <!-- Added the role param for proper punctuation in xref calls
-            (from lfs-titles.xsl). -->
-  <xsl:template match="*" mode="insert.title.markup">
-    <xsl:param name="purpose"/>
-    <xsl:param name="xrefstyle"/>
-    <xsl:param name="title"/>
-    <xsl:param name="role"/>
-    <xsl:choose>
-      <xsl:when test="$purpose = 'xref' and titleabbrev">
-        <xsl:apply-templates select="." mode="titleabbrev.markup"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:copy-of select="$title"/>
-        <xsl:value-of select="$role"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-    <!-- The CSS Stylesheet -->
+    <!-- The CSS Stylesheet:
+           Note: there is a few diferences with lfs.css code releated
+                 to h* values-->
+    <!-- The original template is in {docbook-xsl}/xhtml/docbook.xsl -->
   <xsl:template name='user.head.content'>
     <style type="text/css">
       <xsl:text>
@@ -99,6 +119,9 @@ a:visited { color: #7e4988; }
 a:hover, a:focus { color: #d30e08; }
 a:active { color: #6b77b1;}
 
+/* External links in italic font */
+a.ulink { font-style: italic; }
+
 /* Headers */
 h1, h2, b, strong {
   color: #000;
@@ -109,12 +132,12 @@ h3, h4, h5, h6 {
   color: #222;
 }
 
-h1 { font-size: 173%; text-align: center; }
-h2 { font-size: 144%; }
-h2.subtitle { text-align: center; }
-h3 { font-size: 120%; padding-top: 0.2em; margin-top: 0.3em; }
-h4 { font-size: 110%;}
-h5, h6 { font-size: 110%; font-style: italic; }
+h1 { font-size: 173%; text-align: center; line-height: 1.2em; }
+h2 { font-size: 144%; line-height: 1.2em; }
+h2.subtitle { text-align: center; line-height: 1.2em; }
+h3 { font-size: 120%; padding-top: 0.2em; margin-top: 0.3em; line-height: 1.2em; }
+h4 { font-size: 110%; line-height: 1.2em;}
+h5, h6 { font-size: 110%; font-style: italic; line-height: 1.2em; }
 
 /* TOC and Index*/
 
@@ -126,7 +149,7 @@ div.toc, div.dedication {
   padding-left: 1em;
 }
 
-li.preface {
+li.preface, li.appendix {
   margin-left: 1em;
 }
 
@@ -135,13 +158,13 @@ div.toc ul li h3, div.toc ul li h4 {
 }
 
 .item {
-    width: 15em;
+    width: 17em;
     float: left;
 }
 
 .secitem {
     font-weight: normal;
-    width: 14em;
+    width: 16em;
     float: left;
 }
 
@@ -184,6 +207,10 @@ div.important tt, div.warning tt, div.caution tt {
   font-weight: bold;
 }
 
+div.important tt.literal, div.warning tt.literal, div.caution tt.literal {
+  font-weight: normal;
+}
+
 /* variablelist and segmentedlist */
 dl {
   margin: 0;
@@ -197,13 +224,26 @@ dt {
   padding: 0;
 }
 
-div.content dt {
-  list-style: none;
-}
-
 dd  {
   margin: 0 0 1em 3em;
   padding: 0;
+}
+
+table {
+  width: auto;
+  margin-left: 1em;
+}
+
+td {
+  vertical-align: top;
+}
+
+td span, td p {
+  margin: 0.3em;
+}
+
+span.term {
+  display: block;
 }
 
 div.variablelist dd {
@@ -212,24 +252,89 @@ div.variablelist dd {
 
 div.variablelist dd p {
   margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 dl.materials dd {
   margin-left: 0px;
 }
 
-div.segmentedlist {
-  margin-top: 1em;
+div.package div.seg {
+  margin-bottom: 0em;
+  margin-top: 0em;
+  clear: left;
 }
 
-div.segmentedlist p {
-  margin: 0px auto;
+div.package span.segtitle, div.appendix span.segtitle {
+  float: left;
+}
+
+div.package span.seg, div.appendix span.seg {
+  display: block;
+  padding-left: 14em;
+}
+
+div.appendix div.segmentedlist {
+  padding-left: 1em;
+}
+
+div.appendix h3 {
+  font-size: 133%;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+
+div.content div.seg {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  clear: left;
+}
+
+div.content span.segtitle {
+  float: left;
+}
+
+div.content span.seg {
+  display: block;
+  padding-left: 12em;
 }
 
 /* itemizedlist */
 
 div.itemizedlist {
   margin-left: 1em;
+}
+
+ul[compact="compact"] {
+  list-style: none;
+}
+
+ul[compact="compact"] li {
+  margin: 0em;
+  padding: 0em;
+}
+
+ul[compact="compact"] li p {
+  padding: 0.3em;
+  margin: 0em;
+}
+
+/*table */
+
+div.table {
+  text-align: center;
+}
+
+div.table table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+div.table table th, div.table table td {
+  padding: 0.2em 2em 0.2em 2em;
 }
 
 /* Indented blocks */
@@ -242,6 +347,10 @@ tt, code, kbd, pre, .command {
   font-family: monospace;
 }
 
+tt.systemitem {
+  font-style: italic;
+}
+
 pre.userinput {
   color: #101310;
   background-color: #e5e5e5;
@@ -251,7 +360,12 @@ pre.userinput {
   font-weight: bold;
 }
 
+.literal {
+  font-weight: normal;
+}
+
 pre.screen {
+  color: #000;
   background-color: #e9e9e9;
   border: 1px solid #050505;
   padding: .5em 1em;
@@ -259,6 +373,12 @@ pre.screen {
 }
 
 /* Sections */
+div.wrap h2 {
+  background: #f5f6f7;
+  padding: 1em 0 0.5em 0;
+  margin: 0px auto;
+}
+
 div.package {
   background: #f5f6f7;
   border-bottom: 0.2em solid #dbddec;
@@ -291,11 +411,11 @@ div.installation h3.title, div.content h3.title {
   margin: 0;
 }
 
-div.book, div.preface, div.part, div.chapter, div.sect1, div.index {
+div.book, div.preface, div.part, div.chapter, div.sect1, div.appendix, div.index {
   padding-bottom: 0.5em;
 }
 
-div.preface h2, div.part h1, div.chapter h2.title, div.sect1 h2.title, div.index h1 {
+div.preface h2, div.part h1, div.chapter h2, div.sect1 h2, div.appendix h2, div.index h1 {
   background: #f5f6f7;
   border-bottom: .2em solid #dbddec;
   border-top: .2em solid #dbddec;

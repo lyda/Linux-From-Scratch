@@ -44,4 +44,25 @@
     <!-- No XML declaration -->
   <xsl:param name="chunker.output.omit-xml-declaration" select="'yes'"/>
 
+    <!-- Control generation of ToCs and LoTs -->
+  <xsl:param name="generate.toc">
+    book      toc,title
+    preface   toc
+    part      toc
+    chapter   toc
+    appendix  nop
+    sect1     nop
+    sect2     nop
+    sect3     nop
+    sect4     nop
+    sect5     nop
+    section   nop
+  </xsl:param>
+
+    <!-- How deep should recursive sections appear in the TOC? -->
+  <xsl:param name="toc.section.depth">1</xsl:param>
+
+    <!-- How maximaly deep should be each TOC? -->
+  <xsl:param name="toc.max.depth">3</xsl:param>
+
 </xsl:stylesheet>
