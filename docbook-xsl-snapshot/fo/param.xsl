@@ -569,6 +569,8 @@ set       toc,title
 <xsl:param name="profile.vendor" select="''"/>
 <xsl:param name="punct.honorific" select="'.'"/>
 <xsl:param name="qanda.defaultlabel">number</xsl:param>
+<xsl:param name="qanda.in.toc" select="0"/>
+<xsl:param name="qanda.nested.in.toc" select="0"/>
 <xsl:param name="qanda.inherit.numeration" select="1"/>
 <xsl:param name="qandadiv.autolabel" select="1"/>
 <xsl:attribute-set name="qanda.title.level1.properties">
