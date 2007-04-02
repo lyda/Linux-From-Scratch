@@ -44,7 +44,7 @@
   <xsl:param name="hyphenate">false</xsl:param>
 
     <!-- Specify the default text alignment -->
-  <xsl:param name="">justify</xsl:param>
+  <xsl:param name="alignment">justify</xsl:param>
 
     <!-- Specifies the default point size for body text.
          Used for titles size calculation. -->
