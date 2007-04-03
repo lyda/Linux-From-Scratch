@@ -29,7 +29,7 @@
   <xsl:attribute-set name="index.div.title.properties">
     <xsl:attribute name="margin-left">0pt</xsl:attribute>
     <xsl:attribute name="font-size">14.4pt</xsl:attribute>
-    <xsl:attribute name="font-family"><xsl:value-of select="$title.fontset"></xsl:value-of></xsl:attribute>
+    <xsl:attribute name="font-family"><xsl:value-of select="$title.fontset"/></xsl:attribute>
     <xsl:attribute name="font-weight">bold</xsl:attribute>
     <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
     <xsl:attribute name="space-before.optimum"><xsl:value-of select="concat($body.font.master,'pt')"/></xsl:attribute>

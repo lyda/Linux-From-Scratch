@@ -14,6 +14,7 @@
 
     <!-- Global admonitions properties -->
   <xsl:attribute-set name="graphical.admonition.properties">
+    <xsl:attribute name="keep-together.within-column">always</xsl:attribute>
     <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
     <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
     <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
