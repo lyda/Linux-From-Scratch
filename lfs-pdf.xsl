@@ -72,4 +72,15 @@
          Set to 0 tp prevent duplicate e-mails in the Acknowledgments pages -->
   <xsl:param name="ulink.show" select="0"/>
 
+    <!-- Processing instruction for hard page breaks.
+         FOP-0.93 supports now @keep-together.* attributes, that solves
+         some page break issues. It also supports the soft page breack
+         procesing instruction included in the DocBook stylesheets.
+         But some times we may need hard page breaks. -->
+    <!-- To know how to use all that page break features, see
+         http://www.sagehill.net/docbookxsl/PageBreaking.html -->
+  <xsl:template match="processing-instruction('hard-pagebreak')">
+    <fo:block break-before='page'/>
+  </xsl:template>
+
 </xsl:stylesheet>
