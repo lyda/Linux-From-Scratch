@@ -19,6 +19,9 @@
     <xsl:attribute name="space-after.optimum">0.6em</xsl:attribute>
     <xsl:attribute name="space-after.minimum">0.4em</xsl:attribute>
     <xsl:attribute name="space-after.maximum">0.8em</xsl:attribute>
+    <xsl:attribute name="padding-start">5pt</xsl:attribute>
+    <xsl:attribute name="padding-top">5pt</xsl:attribute>
+    <xsl:attribute name="padding-bottom">5pt</xsl:attribute>
     <xsl:attribute name="border-style">solid</xsl:attribute>
     <xsl:attribute name="border-width">1pt</xsl:attribute>
     <xsl:attribute name="background-color">#FFFFE6</xsl:attribute>
@@ -47,7 +50,7 @@
 
     <!-- Properties for admonitions text -->
   <xsl:attribute-set name="admonition.properties">
-    <xsl:attribute name="margin-right">6pt</xsl:attribute>
+    <xsl:attribute name="margin-right">5pt</xsl:attribute>
   </xsl:attribute-set>
 
     <!-- admon.graphic.width:
