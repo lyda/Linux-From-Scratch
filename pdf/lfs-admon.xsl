@@ -4,6 +4,7 @@
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 version="1.0">
 
+   <!-- REVISED -->
 
     <!-- Use graphics in admonitions? 1 = yes, 0 = no -->
   <xsl:param name="admon.graphics" select="1"/>
