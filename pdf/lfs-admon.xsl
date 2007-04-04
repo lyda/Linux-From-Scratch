@@ -6,6 +6,8 @@
 
    <!-- REVISED -->
 
+  <!-- This stylesheet controls how admonitions are displayed -->
+
     <!-- Use graphics in admonitions? 1 = yes, 0 = no -->
   <xsl:param name="admon.graphics" select="1"/>
 

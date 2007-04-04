@@ -5,17 +5,61 @@
                 version="1.0">
 
 
-    <!-- Allow forced line breaks inside paragraphs emulating literallayout
-    and to remove vertical space in pachages and patches pages. -->
+  <!-- This stylesheet contains misc params, attribute sets and templates
+       for output formating.
+       This file is for that templates that don't fit in other files. -->
+
+    <!-- What space do you want between normal paragraphs. -->
+  <xsl:attribute-set name="normal.para.spacing">
+    <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
+    <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
+    <xsl:attribute name="orphans">2</xsl:attribute>
+    <xsl:attribute name="widows">2</xsl:attribute>
+  </xsl:attribute-set>
+
+    <!-- Properties associated with verbatim text. -->
+  <xsl:attribute-set name="verbatim.properties">
+    <xsl:attribute name="keep-together.within-column">always</xsl:attribute>
+    <xsl:attribute name="keep-with-previous.within-column">always</xsl:attribute>
+    <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
+    <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
+    <xsl:attribute name="space-after.optimum">0.6em</xsl:attribute>
+    <xsl:attribute name="space-after.minimum">0.4em</xsl:attribute>
+    <xsl:attribute name="space-after.maximum">0.8em</xsl:attribute>
+    <xsl:attribute name="hyphenate">false</xsl:attribute>
+    <xsl:attribute name="wrap-option">no-wrap</xsl:attribute>
+    <xsl:attribute name="white-space-collapse">false</xsl:attribute>
+    <xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="text-align">start</xsl:attribute>
+  </xsl:attribute-set>
+
+    <!-- Should verbatim environments be shaded? 1 =yes, 0 = no -->
+  <xsl:param name="shade.verbatim" select="1"/>
+
+    <!-- Properties that specify the style of shaded verbatim listings -->
+  <xsl:attribute-set name="shade.verbatim.style">
+    <xsl:attribute name="background-color">#E9E9E9</xsl:attribute>
+    <xsl:attribute name="border-style">solid</xsl:attribute>
+    <xsl:attribute name="border-width">1pt</xsl:attribute>
+    <xsl:attribute name="border-color">#050505</xsl:attribute>
+    <xsl:attribute name="padding-start">5pt</xsl:attribute>
+    <xsl:attribute name="padding-top">2pt</xsl:attribute>
+    <xsl:attribute name="padding-bottom">2pt</xsl:attribute>
+  </xsl:attribute-set>
+
+    <!-- para:
+           Skip empty "Home page" in packages.xml.
+           Allow forced line breaks inside paragraphs emulating literallayout.
+           Removed vertical space in pakages and patches pages. -->
+    <!-- The original template is in {docbook-xsl}/fo/block.xsl -->
  <xsl:template match="para">
     <xsl:choose>
       <xsl:when test="child::ulink[@url=' ']"/>
       <xsl:when test="./@remap='verbatim'">
-        <fo:block wrap-option="no-wrap"
-                    white-space-collapse="false"
-                    white-space-treatment="preserve"
-                    text-align="start"
-                    linefeed-treatment="preserve">
+        <fo:block xsl:use-attribute-sets="verbatim.properties">
           <xsl:call-template name="anchor"/>
           <xsl:apply-templates/>
         </fo:block>
@@ -30,9 +74,21 @@
         </fo:block>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:apply-imports/>
+        <fo:block xsl:use-attribute-sets="normal.para.spacing">
+          <xsl:call-template name="anchor"/>
+          <xsl:apply-templates/>
+        </fo:block>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+    <!-- literal:
+           Be sure that literal will use allways normal font weight. -->
+    <!-- The original template is in {docbook-xsl}/fo/inline.xsl -->
+  <xsl:template match="literal">
+    <fo:inline  font-weight="normal">
+      <xsl:call-template name="inline.monoseq"/>
+    </fo:inline>
   </xsl:template>
 
     <!-- Show URLs in italic font -->
@@ -90,54 +146,6 @@
     </xsl:if>
   </xsl:template>
 
-    <!-- Split URLs (obsolete, keeped as reference) -->
-  <!--<xsl:template name="hyphenate-url">
-    <xsl:param name="url" select="''"/>
-    <xsl:choose>
-      <xsl:when test="ancestor::varlistentry">
-        <xsl:choose>
-          <xsl:when test="string-length($url) > 90">
-            <xsl:value-of select="substring($url, 1, 50)"/>
-            <xsl:param name="rest" select="substring($url, 51)"/>
-            <xsl:value-of select="substring-before($rest, '/')"/>
-            <xsl:text> /</xsl:text>
-            <xsl:value-of select="substring-after($rest, '/')"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="$url"/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$url"/>-->
-      <!--  <xsl:value-of select="substring-before($url, '//')"/>
-        <xsl:text>// </xsl:text>
-        <xsl:call-template name="split-url">
-          <xsl:with-param name="url2" select="substring-after($url, '//')"/>
-        </xsl:call-template>-->
-     <!-- </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>-->
-
-  <!--<xsl:template name="split-url">
-    <xsl:choose>
-      <xsl:when test="contains($url2, '/')">
-      <xsl:param name="url2" select="''"/>
-      <xsl:value-of select="substring-before($url2, '/')"/>
-      <xsl:text> /</xsl:text>
-      <xsl:call-template name="split-url">
-        <xsl:with-param name="url2" select="substring-after($url2, '/')"/>
-      </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$url2"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>-->
-
-    <!-- Shade screen -->
-  <xsl:param name="shade.verbatim" select="1"/>
-
     <!-- How is rendered by default a variablelist -->
   <xsl:param name="variablelist.as.blocks" select="1"/>
   <xsl:param name="variablelist.max.termlength">32</xsl:param>
@@ -171,13 +179,6 @@
         </fo:block>
       <!--</xsl:otherwise>
     </xsl:choose>-->
-  </xsl:template>
-
-    <!-- Presentation of literal tag -->
-  <xsl:template match="literal">
-    <fo:inline  font-weight="normal">
-      <xsl:call-template name="inline.monoseq"/>
-    </fo:inline>
   </xsl:template>
 
     <!-- Left alingnament for itemizedlist -->
@@ -248,11 +249,24 @@
     </xsl:choose>
   </xsl:template>
 
-    <!-- Total packages size calculation -->
+
+  <!-- Total packages size calculation -->
+
+    <!-- returnvalue:
+            If the tag is not empty, apply the original template.
+            Otherwise apply the calculation template. -->
+    <!-- The original template is in {docbook-xsl}/fo/inline.xsl -->
   <xsl:template match="returnvalue">
-    <xsl:call-template name="calculation">
-     <xsl:with-param name="scope" select="../../variablelist"/>
-    </xsl:call-template>
+    <xsl:choose>
+      <xsl:when test="count(*)&gt;0">
+        <xsl:apply-imports/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="calculation">
+          <xsl:with-param name="scope" select="../../variablelist"/>
+        </xsl:call-template>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template name="calculation">

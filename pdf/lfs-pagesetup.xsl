@@ -78,11 +78,6 @@
   <xsl:param name="page.margin.outer">0.375in</xsl:param>
   <xsl:param name="body.start.indent" select="'0.7pc'"/>
   <xsl:param name="title.margin.left">-0.7pc</xsl:param>
-  <xsl:attribute-set name="normal.para.spacing">
-    <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
-    <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
-    <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
-  </xsl:attribute-set>
   <xsl:attribute-set name="list.block.spacing">
     <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
     <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
@@ -95,14 +90,6 @@
     <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
     <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
     <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="verbatim.properties">
-    <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
-    <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
-    <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
-    <xsl:attribute name="space-after.optimum">0.6em</xsl:attribute>
-    <xsl:attribute name="space-after.minimum">0.4em</xsl:attribute>
-    <xsl:attribute name="space-after.maximum">0.8em</xsl:attribute>
   </xsl:attribute-set>
 
     <!-- Others-->
