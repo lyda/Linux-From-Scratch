@@ -74,8 +74,10 @@
   </xsl:template>
 
     <!-- Margins -->
-  <xsl:param name="page.margin.inner">0.5in</xsl:param>
-  <xsl:param name="page.margin.outer">0.375in</xsl:param>
+  <xsl:param name="page.margin.inner" select="'0.5in'"/>
+  <xsl:param name="page.margin.outer" select="'0.375in'"/>
+  <xsl:param name="page.margin.bottom" select="'0.375in'"/>
+  <xsl:param name="page.margin.top" select="'0.375in'"/>
   <xsl:param name="body.start.indent" select="'0.7pc'"/>
   <xsl:param name="title.margin.left">-0.7pc</xsl:param>
   <xsl:attribute-set name="list.block.spacing">

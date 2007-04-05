@@ -29,21 +29,37 @@
   <xsl:attribute-set name="index.div.title.properties">
     <xsl:attribute name="margin-left">0pt</xsl:attribute>
     <xsl:attribute name="font-size">14.4pt</xsl:attribute>
-    <xsl:attribute name="font-family"><xsl:value-of select="$title.fontset"/></xsl:attribute>
+    <xsl:attribute name="font-family">
+      <xsl:value-of select="$title.fontset"/>
+    </xsl:attribute>
     <xsl:attribute name="font-weight">bold</xsl:attribute>
     <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
-    <xsl:attribute name="space-before.optimum"><xsl:value-of select="concat($body.font.master,'pt')"/></xsl:attribute>
-    <xsl:attribute name="space-before.minimum"><xsl:value-of select="concat($body.font.master,'pt * 0.8')"/></xsl:attribute>
-    <xsl:attribute name="space-before.optimum"><xsl:value-of select="concat($body.font.master,'pt * 1.2')"/></xsl:attribute>
-    <xsl:attribute name="space-after.optimum"><xsl:value-of select="concat($body.font.master,'pt')"/></xsl:attribute>
-    <xsl:attribute name="space-after.minimum"><xsl:value-of select="concat($body.font.master,'pt * 0.8')"/></xsl:attribute>
-    <xsl:attribute name="space-after.optimum"><xsl:value-of select="concat($body.font.master,'pt * 1.2')"/></xsl:attribute>
+    <xsl:attribute name="space-before.optimum">
+      <xsl:value-of select="concat($body.font.master,'pt')"/>
+    </xsl:attribute>
+    <xsl:attribute name="space-before.minimum">
+      <xsl:value-of select="concat($body.font.master,'pt * 0.8')"/>
+    </xsl:attribute>
+    <xsl:attribute name="space-before.optimum">
+      <xsl:value-of select="concat($body.font.master,'pt * 1.2')"/>
+    </xsl:attribute>
+    <xsl:attribute name="space-after.optimum">
+      <xsl:value-of select="concat($body.font.master,'pt')"/>
+    </xsl:attribute>
+    <xsl:attribute name="space-after.minimum">
+      <xsl:value-of select="concat($body.font.master,'pt * 0.8')"/>
+    </xsl:attribute>
+    <xsl:attribute name="space-after.optimum">
+      <xsl:value-of select="concat($body.font.master,'pt * 1.2')"/>
+    </xsl:attribute>
     <xsl:attribute name="start-indent">0pt</xsl:attribute>
   </xsl:attribute-set>
 
     <!-- The Index title.
            This template is not actually needed but placed here
-           to allow to change the title, if wanted. -->
+           to allow to change the title, if wanted.
+           Note: To change the title involves creating the appropiate
+           entries in lfs-l10n.xml -->
     <!-- The original template is in {docbook-xsl}/common/titles.xsl -->
   <xsl:template match="index" mode="title.markup">
     <xsl:param name="allow-anchors" select="0"/>

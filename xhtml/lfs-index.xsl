@@ -35,9 +35,12 @@
     <xsl:text>longindex.html</xsl:text>
   </xsl:template>
 
-    <!--The Index title. We create this param to can have gettext support in
-        both the Index page title and links that point to the Index page.
-        It also allow us to change the title, if wanted.-->
+    <!-- The Index title:
+           We create this param to can have gettext support in both
+           the Index page title and links that point to the Index page.
+           It also allow us to change the title, if wanted.
+           Note: To change the title involves creating the appropiate
+           entries in lfs-l10n.xml-->
   <xsl:param name="index-title">Index</xsl:param>
 
     <!-- The Index title in links that points to it. -->

@@ -91,60 +91,15 @@
     </fo:inline>
   </xsl:template>
 
-    <!-- Show URLs in italic font -->
-  <xsl:template match="ulink" name="ulink">
-    <fo:inline font-style="italic">
-      <fo:basic-link xsl:use-attribute-sets="xref.properties">
-        <xsl:attribute name="external-destination">
-          <xsl:call-template name="fo-external-image">
-            <xsl:with-param name="filename" select="@url"/>
-          </xsl:call-template>
-        </xsl:attribute>
-        <xsl:choose>
-          <xsl:when test="count(child::node())=0">
-            <xsl:call-template name="hyphenate-url">
-              <xsl:with-param name="url" select="@url"/>
-            </xsl:call-template>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:apply-templates/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </fo:basic-link>
-    </fo:inline>
-    <xsl:if test="count(child::node()) != 0
-                  and string(.) != @url
-                  and $ulink.show != 0">
-      <!-- yes, show the URI -->
+    <!-- Show external URLs in italic font -->
+  <xsl:attribute-set name="xref.properties">
+    <xsl:attribute name="font-style">
       <xsl:choose>
-        <xsl:when test="$ulink.footnotes != 0 and not(ancestor::footnote)">
-          <xsl:text>&#xA0;</xsl:text>
-          <fo:footnote>
-            <xsl:call-template name="ulink.footnote.number"/>
-            <fo:footnote-body font-family="{$body.fontset}"
-                              font-size="{$footnote.font.size}">
-              <fo:block>
-                <xsl:call-template name="ulink.footnote.number"/>
-                <xsl:text> </xsl:text>
-                <fo:inline>
-                  <xsl:value-of select="@url"/>
-                </fo:inline>
-              </fo:block>
-            </fo:footnote-body>
-          </fo:footnote>
-        </xsl:when>
-        <xsl:otherwise>
-          <fo:inline hyphenate="false">
-            <xsl:text> [</xsl:text>
-            <xsl:call-template name="hyphenate-url">
-              <xsl:with-param name="url" select="@url"/>
-            </xsl:call-template>
-            <xsl:text>]</xsl:text>
-          </fo:inline>
-        </xsl:otherwise>
+        <xsl:when test="self::ulink">italic</xsl:when>
+        <xsl:otherwise>inherit</xsl:otherwise>
       </xsl:choose>
-    </xsl:if>
-  </xsl:template>
+    </xsl:attribute>
+  </xsl:attribute-set>
 
     <!-- How is rendered by default a variablelist -->
   <xsl:param name="variablelist.as.blocks" select="1"/>
