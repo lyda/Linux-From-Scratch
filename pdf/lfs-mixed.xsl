@@ -172,13 +172,32 @@
   </xsl:template>
 
     <!-- segmentedlist:
-           Making it an actual FO list to can indent items. -->
+           Making it an actual FO list to can indent items.
+           Adjust vertical space. -->
     <!-- The original template is in {docbook-xsl}/fo/list.xsl -->
   <xsl:template match="segmentedlist">
     <fo:list-block provisional-distance-between-starts="12em"
                    provisional-label-separation="1em"
-                   xsl:use-attribute-sets="list.block.spacing"
                    keep-together.within-column="always">
+      <xsl:choose>
+        <xsl:when test="ancestor::appendix[@id='appendixc']">
+          <xsl:attribute name="space-before.optimum">0.2em</xsl:attribute>
+          <xsl:attribute name="space-before.minimum">0em</xsl:attribute>
+          <xsl:attribute name="space-before.maximum">0.4em</xsl:attribute>
+          <xsl:attribute name="space-after.optimum">0.2em</xsl:attribute>
+          <xsl:attribute name="space-after.minimum">0em</xsl:attribute>
+          <xsl:attribute name="space-after.maximum">0.4em</xsl:attribute>
+          <xsl:attribute name="keep-with-previous.within-column">always</xsl:attribute>
+        </xsl:when>
+          <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
+          <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
+          <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
+          <xsl:attribute name="space-after.optimum">0.6em</xsl:attribute>
+          <xsl:attribute name="space-after.minimum">0.4em</xsl:attribute>
+          <xsl:attribute name="space-after.maximum">0.8em</xsl:attribute>
+        <xsl:otherwise>
+        </xsl:otherwise>
+      </xsl:choose>
       <xsl:apply-templates select="seglistitem/seg"/>
     </fo:list-block>
   </xsl:template>
