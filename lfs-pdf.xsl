@@ -10,6 +10,13 @@
          xsltproc, thus pofiling must be done in two steps (see Makefile) -->
   <xsl:import href="docbook-xsl-snapshot/fo/docbook.xsl"/>
 
+    <!-- Uncomment the next for debugging the raw FO code.
+         Note that FOP will complaints about a lot of paragraph overflows
+         due that verbatim output is also indented.
+         Remember to comment the "rm $(BASEDIR)/lfs-pdf.fo" in
+         the Makefile. -->
+  <!--<xsl:output  encoding="UTF-8" indent="yes" />-->
+
     <!-- Including our others customized templates -->
   <xsl:include href="pdf/lfs-admon.xsl"/>
   <xsl:include href="pdf/lfs-index.xsl"/>

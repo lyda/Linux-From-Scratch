@@ -260,7 +260,8 @@
     </xsl:choose>
   </xsl:template>
 
-    <!-- Dropping unneeded anchors -->
+    <!-- indexterm:
+           Dropping unneeded anchors -->
     <!-- The original template is in {docbook-xsl}/xhtml/index.xsl -->
   <xsl:template match="indexterm"/>
 

@@ -80,29 +80,11 @@
   <xsl:param name="page.margin.top" select="'0.375in'"/>
   <xsl:param name="body.start.indent" select="'0.7pc'"/>
   <xsl:param name="title.margin.left">-0.7pc</xsl:param>
-  <xsl:attribute-set name="list.block.spacing">
-    <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
-    <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
-    <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
-    <xsl:attribute name="space-after.optimum">0.6em</xsl:attribute>
-    <xsl:attribute name="space-after.minimum">0.4em</xsl:attribute>
-    <xsl:attribute name="space-after.maximum">0.8em</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="list.item.spacing">
-    <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
-    <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
-    <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
-  </xsl:attribute-set>
 
     <!-- Others-->
   <xsl:param name="header.rule" select="0"></xsl:param>
   <xsl:param name="footer.rule" select="0"></xsl:param>
   <xsl:param name="marker.section.level" select="-1"></xsl:param>
-  <xsl:attribute-set name="compact.list.item.spacing">
-    <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
-    <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
-    <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
-  </xsl:attribute-set>
 
     <!-- Dropping a blank page -->
   <xsl:template name="book.titlepage.separator"/>

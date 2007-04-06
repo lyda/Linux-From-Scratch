@@ -131,4 +131,9 @@
     </xsl:if>
   </xsl:template>
 
+    <!-- indexterm:
+           Dropping unneeded fo:wrapper -->
+    <!-- The original template is in {docbook-xsl}/fo/index.xsl -->
+  <xsl:template match="indexterm"/>
+
 </xsl:stylesheet>
