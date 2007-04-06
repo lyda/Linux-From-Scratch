@@ -78,6 +78,8 @@
   <xsl:param name="page.margin.outer" select="'0.375in'"/>
   <xsl:param name="page.margin.bottom" select="'0.375in'"/>
   <xsl:param name="page.margin.top" select="'0.375in'"/>
+  <xsl:param name="region.before.extent" select="'0.2in'"/>
+  <xsl:param name="region.after.extent" select="'0.2in'"/>
   <xsl:param name="body.start.indent" select="'0.7pc'"/>
   <xsl:param name="title.margin.left">-0.7pc</xsl:param>
 
