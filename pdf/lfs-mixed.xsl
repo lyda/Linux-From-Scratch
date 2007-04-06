@@ -177,7 +177,8 @@
   <xsl:template match="segmentedlist">
     <fo:list-block provisional-distance-between-starts="12em"
                    provisional-label-separation="1em"
-                   xsl:use-attribute-sets="list.block.spacing">
+                   xsl:use-attribute-sets="list.block.spacing"
+                   keep-together.within-column="always">
       <xsl:apply-templates select="seglistitem/seg"/>
     </fo:list-block>
   </xsl:template>
