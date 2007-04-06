@@ -16,9 +16,9 @@
 
      <!-- Force sect1 onto a new page -->
   <xsl:attribute-set name="section.level1.properties">
-    <xsl:attribute name="break-after">
+    <xsl:attribute name="break-before">
       <xsl:choose>
-        <xsl:when test="not(position()=last())">
+        <xsl:when test="not(. = //*/sect1[1])">
           <xsl:text>page</xsl:text>
         </xsl:when>
         <xsl:otherwise>
