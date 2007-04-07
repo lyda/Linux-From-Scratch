@@ -4,8 +4,6 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-   <!-- REVISED -->
-
    <!-- Stylesheet for non-chunked XHTML output
         Replaces {docbook-xsl}/xhtml/profile-docbook.xsl -->
 

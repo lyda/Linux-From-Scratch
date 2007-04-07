@@ -6,8 +6,6 @@
                 exclude-result-prefixes="xlink"
                 version="1.0">
 
-   <!-- REVISED -->
-
   <!-- This stylesheet fixes English punctuation in xref links
        (as was requested by the publisher) via adding @role propagation
        in xref tags.

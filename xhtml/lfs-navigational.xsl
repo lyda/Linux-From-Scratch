@@ -4,8 +4,6 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-   <!-- REVISED -->
-
   <!-- This stylesheet controls how page header and navigational links
        are generated. -->
 

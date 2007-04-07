@@ -4,8 +4,6 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-   <!-- REVISED -->
-
    <!-- Second level chunked output template.
         Sets global params and include customized elements templates-->
 

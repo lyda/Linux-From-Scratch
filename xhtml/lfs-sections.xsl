@@ -4,8 +4,6 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-   <!-- REVISED -->
-
   <!-- This stylesheet controls how sections are handled -->
 
     <!-- Chunk the first top-level section? 1 = yes, 0 = no

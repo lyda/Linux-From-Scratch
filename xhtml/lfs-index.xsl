@@ -14,8 +14,6 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-   <!-- REVISED -->
-
   <!-- This stylesheet controls how the Index is generated.
        Due how they are created, the original XHTML stylesheets don't make
        use of the entities from {docbook-xsl}/common/entities.ent.

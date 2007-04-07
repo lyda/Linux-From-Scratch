@@ -4,8 +4,6 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-   <!-- REVISED -->
-
   <!-- This stylesheet controls the h* xhtml tags used for several titles -->
 
     <!-- preface.titlepage:

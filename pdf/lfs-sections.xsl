@@ -4,8 +4,6 @@
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 version="1.0">
 
-   <!-- REVISED -->
-
   <!-- This stylesheet controls how sections are handled -->
 
     <!-- Are sections enumerated? 1 = yes, 0 = no -->

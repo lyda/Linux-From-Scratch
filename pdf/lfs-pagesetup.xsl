@@ -4,8 +4,6 @@
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 version="1.0">
 
-   <!-- REVISED -->
-
   <!-- This stylesheet controls page margins, header content and titles size. -->
 
     <!-- The inner page margin. -->

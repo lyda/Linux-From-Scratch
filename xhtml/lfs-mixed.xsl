@@ -4,8 +4,6 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-   <!-- REVISED -->
-
   <!-- This stylesheet contains misc templates for output formating.
        This file is for that templates that don't fit in other files
        and that not afect the chunk algorithm. -->
