@@ -61,7 +61,7 @@
 
     <!-- Control generation of ToCs and LoTs -->
   <xsl:param name="generate.toc">
-    book      toc
+    book      toc,title
     part      nop
   </xsl:param>
 
