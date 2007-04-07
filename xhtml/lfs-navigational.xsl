@@ -9,7 +9,7 @@
 
     <!-- html.head:
            Drop all navigational links from inside head xhtml output. -->
-    <!-- The original template is in {docbook-xsl}/xhtml/chink-common.xsl -->
+    <!-- The original template is in {docbook-xsl}/xhtml/chunk-common.xsl -->
   <xsl:template name="html.head">
     <head>
       <xsl:call-template name="system.head.content"/>

@@ -14,15 +14,13 @@
   <xsl:param name="chunker.output.encoding" select="'ISO-8859-1'"/>
 
     <!-- Including our customized elements templates -->
+  <xsl:include href="lfs-common.xsl"/>
   <xsl:include href="xhtml/lfs-admon.xsl"/>
-  <xsl:include href="xhtml/lfs-sections.xsl"/>
   <xsl:include href="xhtml/lfs-mixed.xsl"/>
+  <xsl:include href="xhtml/lfs-sections.xsl"/>
   <xsl:include href="xhtml/lfs-titles.xsl"/>
   <xsl:include href="xhtml/lfs-toc.xsl"/>
   <xsl:include href="xhtml/lfs-xref.xsl"/>
-
-    <!-- This file contains our localization strings (for internationalization) -->
-  <xsl:param name="local.l10n.xml" select="document('lfs-l10n.xml')"/>
 
     <!-- The CSS Stylesheets. We set here relative path from sub-dirs HTML files.
     The path from top-level HTML files (index.html, partX.html, etc) MUST be

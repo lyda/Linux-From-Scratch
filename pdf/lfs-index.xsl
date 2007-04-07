@@ -13,12 +13,6 @@
   <!-- This stylesheet controls how the Index is generated.
        Entities comes from {docbook-xsl}/common/entities.ent -->
 
-    <!-- Should the Index be generated? 1 = yes, 0 = no -->
-  <xsl:param name="generate.index" select="1"></xsl:param>
-
-    <!-- The indexing method used. Only 'basic' is supported by xsltproc -->
-  <xsl:param name="index.method" select="'basic'"></xsl:param>
-
     <!-- Override for punctuation separating an index term from its list
          of page references. -->
   <xsl:param name="index.term.separator" select="': '"></xsl:param>
@@ -52,19 +46,6 @@
     </xsl:attribute>
     <xsl:attribute name="start-indent">0pt</xsl:attribute>
   </xsl:attribute-set>
-
-    <!-- The Index title.
-           This template is not actually needed but placed here
-           to allow to change the title, if wanted.
-           Note: To change the title involves creating the appropiate
-           entries in lfs-l10n.xml -->
-    <!-- The original template is in {docbook-xsl}/common/titles.xsl -->
-  <xsl:template match="index" mode="title.markup">
-    <xsl:param name="allow-anchors" select="0"/>
-    <xsl:call-template name="gentext">
-      <xsl:with-param name="key">Index</xsl:with-param>
-    </xsl:call-template>
-  </xsl:template>
 
     <!-- Divisions:
           Translate alphabetical divisons titles to by-type titles. -->
@@ -128,10 +109,5 @@
       </fo:block>
     </xsl:if>
   </xsl:template>
-
-    <!-- indexterm:
-           Dropping unneeded fo:wrapper -->
-    <!-- The original template is in {docbook-xsl}/fo/index.xsl -->
-  <xsl:template match="indexterm"/>
 
 </xsl:stylesheet>

@@ -19,34 +19,12 @@
        use of the entities from {docbook-xsl}/common/entities.ent.
        We add the relevant ones in the DOCTYPE to have more readable templates. -->
 
-    <!-- Should the Index be generated? 1 = yes, 0 = no -->
-  <xsl:param name="generate.index" select="1"></xsl:param>
-
-    <!-- The indexing method used. Only 'basic' is supported by xsltproc -->
-  <xsl:param name="index.method" select="'basic'"></xsl:param>
-
     <!-- The file name of the Index page.
          There is no upstream template with match="index", only a global
          match="*", thus the next template is enought to force the Index
          filename. -->
   <xsl:template match="index" mode="recursive-chunk-filename">
     <xsl:text>longindex.html</xsl:text>
-  </xsl:template>
-
-    <!-- The Index title:
-           We create this param to can have gettext support in both
-           the Index page title and links that point to the Index page.
-           It also allow us to change the title, if wanted.
-           Note: To change the title involves creating the appropiate
-           entries in lfs-l10n.xml-->
-  <xsl:param name="index-title">Index</xsl:param>
-
-    <!-- The Index title in links that points to it. -->
-    <!-- The original template is in {docbook-xsl}/common/titles.xsl -->
-  <xsl:template match="index" mode="title.markup">
-    <xsl:call-template name="gentext">
-      <xsl:with-param name="key" select="$index-title"/>
-    </xsl:call-template>
   </xsl:template>
 
     <!-- The Index title in the longindex.html page:
@@ -257,10 +235,5 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
-    <!-- indexterm:
-           Dropping unneeded anchors -->
-    <!-- The original template is in {docbook-xsl}/xhtml/index.xsl -->
-  <xsl:template match="indexterm"/>
 
 </xsl:stylesheet>

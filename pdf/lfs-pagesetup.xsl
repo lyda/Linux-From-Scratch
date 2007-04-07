@@ -46,9 +46,6 @@
          Be sure that no uneeded fo:marker are generated. -->
   <xsl:param name="marker.section.level" select="-1"></xsl:param>
 
-    <!-- Dropping a blank page after book title. -->
-  <xsl:template name="book.titlepage.separator"/>
-
     <!-- book title:
           Centered the title and removed unused code. -->
     <!-- The original template is in {docbook-xsl}/fo/titlepage.templates.xsl -->

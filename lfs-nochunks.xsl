@@ -14,6 +14,7 @@
   <xsl:output method="html" encoding="ISO-8859-1" indent="no" />
 
    <!-- Including our others customized templates -->
+  <xsl:include href="lfs-common.xsl"/>
   <xsl:include href="xhtml/lfs-index.xsl"/>
   <xsl:include href="xhtml/lfs-mixed.xsl"/>
   <xsl:include href="xhtml/lfs-sections.xsl"/>
@@ -40,9 +41,6 @@
 
     <!-- How maximaly deep should be each TOC? -->
   <xsl:param name="toc.max.depth">3</xsl:param>
-
-    <!-- This file contains our localization strings (for internationalization) -->
-  <xsl:param name="local.l10n.xml" select="document('lfs-l10n.xml')"/>
 
     <!-- Dropping some unwanted style attributes -->
   <xsl:param name="ulink.target" select="''"></xsl:param>

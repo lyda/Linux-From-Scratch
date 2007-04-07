@@ -6,12 +6,6 @@
 
   <!-- This stylesheet controls how sections are handled -->
 
-    <!-- Are sections enumerated? 1 = yes, 0 = no -->
-  <xsl:param name="section.autolabel" select="1"/>
-
-    <!-- Do section labels include the component label? 1 = yes, 0 = no -->
-  <xsl:param name="section.label.includes.component.label" select="1"/>
-
      <!-- Force sect1 onto a new page -->
   <xsl:attribute-set name="section.level1.properties">
     <xsl:attribute name="break-before">
@@ -43,47 +37,6 @@
       </xsl:if>
       <xsl:apply-templates/>
     </fo:block>
-  </xsl:template>
-
-    <!-- sect2 label.markup:
-           Skip numeration for sect2 with empty title -->
-    <!-- The original template is in {docbook-xsl}/common/labels.xsl
-         It match also sect3, sect4, and sect5, that are unchanged. -->
-  <xsl:template match="sect2" mode="label.markup">
-    <xsl:if test="string-length(title) > 0">
-      <!-- label the parent -->
-      <xsl:variable name="parent.section.label">
-        <xsl:call-template name="label.this.section">
-          <xsl:with-param name="section" select=".."/>
-        </xsl:call-template>
-      </xsl:variable>
-      <xsl:if test="$parent.section.label != '0'">
-        <xsl:apply-templates select=".." mode="label.markup"/>
-        <xsl:apply-templates select=".." mode="intralabel.punctuation"/>
-      </xsl:if>
-      <xsl:choose>
-        <xsl:when test="@label">
-          <xsl:value-of select="@label"/>
-        </xsl:when>
-        <xsl:when test="$section.autolabel != 0">
-          <xsl:choose>
-            <!-- If the first sect2 isn't numbered, renumber the remainig sections -->
-            <xsl:when test="string-length(../sect2[1]/title) = 0">
-              <xsl:variable name="totalsect2">
-                <xsl:number count="sect2"/>
-              </xsl:variable>
-              <xsl:number value="$totalsect2 - 1"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:number count="sect2"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:message>label.markup: this can't happen!</xsl:message>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>

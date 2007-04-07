@@ -18,8 +18,8 @@
   <xsl:include href="docbook-xsl-snapshot/xhtml/profile-chunk-code.xsl"/>
 
     <!-- Including our customized chunks templates -->
-  <xsl:include href="xhtml/lfs-legalnotice.xsl"/>
   <xsl:include href="xhtml/lfs-index.xsl"/>
+  <xsl:include href="xhtml/lfs-legalnotice.xsl"/>
   <xsl:include href="xhtml/lfs-navigational.xsl"/>
 
 </xsl:stylesheet>

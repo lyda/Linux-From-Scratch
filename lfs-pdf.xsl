@@ -19,6 +19,7 @@
   <!--<xsl:output  encoding="UTF-8" indent="yes" />-->
 
     <!-- Including our others customized templates. -->
+  <xsl:include href="lfs-common.xsl"/>
   <xsl:include href="pdf/lfs-admon.xsl"/>
   <xsl:include href="pdf/lfs-index.xsl"/>
   <xsl:include href="pdf/lfs-mixed.xsl"/>
@@ -28,9 +29,6 @@
 
     <!-- Activating FOP-1 extensions. We use FOP-0.93 as the FO procesor. -->
   <xsl:param name="fop1.extensions" select="1"/>
-
-    <!-- This file contains our localization strings (for internationalization) -->
-  <xsl:param name="local.l10n.xml" select="document('lfs-l10n.xml')"/>
 
     <!-- Desactivate draft mode at all. -->
   <xsl:param name="draft.mode" select="'no'"/>
