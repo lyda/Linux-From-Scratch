@@ -48,6 +48,11 @@
     <!-- Hyphenate? -->
   <xsl:param name="hyphenate">false</xsl:param>
 
+    <!-- Allow URLs to be automatically hyphenated -->
+  <xsl:param name="ulink.hyphenate" select="'&#x200B;'"></xsl:param>
+
+ <xsl:param name="ulink.hyphenate.chars" select="'/._-'"></xsl:param>
+
     <!-- Specify the default text alignment. -->
   <xsl:param name="alignment">justify</xsl:param>
 

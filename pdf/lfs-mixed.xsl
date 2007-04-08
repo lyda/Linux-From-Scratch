@@ -90,6 +90,66 @@
     </fo:inline>
   </xsl:template>
 
+    <!-- inline.monoseq:
+           Added hyphenate-url support to classname, exceptionname, interfacename,
+           methodname, computeroutput, constant, envar, filename, function, code,
+           literal, option, promt, systemitem, varname, sgmltag, tag, and uri -->
+    <!-- The original template is in {docbook-xsl}/fo/inline.xsl -->
+  <xsl:template name="inline.monoseq">
+    <xsl:param name="content">
+      <xsl:call-template name="simple.xlink">
+        <xsl:with-param name="content">
+          <xsl:call-template name="hyphenate-url">
+            <xsl:with-param name="url">
+              <xsl:apply-templates/>
+            </xsl:with-param>
+          </xsl:call-template>
+        </xsl:with-param>
+      </xsl:call-template>
+    </xsl:param>
+    <fo:inline xsl:use-attribute-sets="monospace.properties">
+      <xsl:if test="@dir">
+        <xsl:attribute name="direction">
+          <xsl:choose>
+            <xsl:when test="@dir = 'ltr' or @dir = 'lro'">ltr</xsl:when>
+            <xsl:otherwise>rtl</xsl:otherwise>
+          </xsl:choose>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:copy-of select="$content"/>
+    </fo:inline>
+  </xsl:template>
+
+    <!-- inline.italicmonoseq:
+           Added hyphenate-url support to parameter, replaceable, structfield,
+           function/parameter, and function/replaceable -->
+    <!-- The original template is in {docbook-xsl}/fo/inline.xsl -->
+  <xsl:template name="inline.italicmonoseq">
+    <xsl:param name="content">
+      <xsl:call-template name="simple.xlink">
+        <xsl:with-param name="content">
+          <xsl:call-template name="hyphenate-url">
+            <xsl:with-param name="url">
+              <xsl:apply-templates/>
+            </xsl:with-param>
+          </xsl:call-template>
+        </xsl:with-param>
+      </xsl:call-template>
+    </xsl:param>
+    <fo:inline font-style="italic" xsl:use-attribute-sets="monospace.properties">
+      <xsl:call-template name="anchor"/>
+      <xsl:if test="@dir">
+        <xsl:attribute name="direction">
+          <xsl:choose>
+            <xsl:when test="@dir = 'ltr' or @dir = 'lro'">ltr</xsl:when>
+            <xsl:otherwise>rtl</xsl:otherwise>
+          </xsl:choose>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:copy-of select="$content"/>
+    </fo:inline>
+  </xsl:template>
+
     <!-- Show external URLs in italic font -->
   <xsl:attribute-set name="xref.properties">
     <xsl:attribute name="font-style">
