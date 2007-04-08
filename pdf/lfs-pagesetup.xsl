@@ -4,7 +4,8 @@
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 version="1.0">
 
-  <!-- This stylesheet controls page margins, header content and titles size. -->
+  <!-- This stylesheet controls page margins, sections page break,
+       header content and titles size. -->
 
     <!-- The inner page margin. -->
   <xsl:param name="page.margin.inner" select="'0.5in'"/>
@@ -45,6 +46,22 @@
     <!-- Control depth of sections shown in running headers or footers.
          Be sure that no uneeded fo:marker are generated. -->
   <xsl:param name="marker.section.level" select="-1"></xsl:param>
+
+     <!-- Force sect1 onto a new page -->
+  <xsl:attribute-set name="section.level1.properties">
+    <xsl:attribute name="break-before">
+      <xsl:choose>
+        <!--<xsl:when test="not(. = //*/sect1[1])">
+          <xsl:text>page</xsl:text>
+        </xsl:when>-->
+        <xsl:when test="preceding-sibling::sect1[position()=1]/sect2/@role='package'
+                        or self::sect1/sect2/@role='package'">page</xsl:when>
+        <xsl:otherwise>
+          <xsl:text>auto</xsl:text>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:attribute>
+  </xsl:attribute-set>
 
     <!-- book title:
           Centered the title and removed unused code. -->
@@ -94,6 +111,25 @@
       <xsl:call-template name="component.title">
         <xsl:with-param name="node" select="ancestor-or-self::chapter[1]"/>
       </xsl:call-template>
+    </fo:block>
+  </xsl:template>
+
+    <!-- sect2 title:
+           Skip sect2.titlepage run when title is empty.
+           Removed unused code. -->
+    <!-- The original template is in {docbook-xsl}/fo/sections.xsl -->
+  <xsl:template match="sect2">
+    <xsl:variable name="id">
+      <xsl:call-template name="object.id"/>
+    </xsl:variable>
+    <fo:block xsl:use-attribute-sets="section.level2.properties">
+      <xsl:attribute name="id">
+        <xsl:value-of select="$id"/>
+      </xsl:attribute>
+      <xsl:if test="not(string-length(title)=0)">
+        <xsl:call-template name="sect2.titlepage"/>
+      </xsl:if>
+      <xsl:apply-templates/>
     </fo:block>
   </xsl:template>
 

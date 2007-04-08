@@ -91,7 +91,7 @@
   </xsl:template>
 
     <!-- sect2 label.markup:
-           Skip numeration for sect2 with empty title -->
+           Skip numeration for sect2 with empty title. -->
     <!-- The original template is in {docbook-xsl}/common/labels.xsl
          It match also sect3, sect4, and sect5, that are unchanged. -->
   <xsl:template match="sect2" mode="label.markup">
