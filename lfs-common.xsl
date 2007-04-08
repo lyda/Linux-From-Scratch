@@ -91,18 +91,18 @@
   </xsl:template>
 
     <!-- sect2 label.markup:
-           Skip numeration for sect2 with empty title. -->
+           Skip numeration for sect2 with empty title.
+           Skip parent label in preface. -->
     <!-- The original template is in {docbook-xsl}/common/labels.xsl
          It match also sect3, sect4, and sect5, that are unchanged. -->
   <xsl:template match="sect2" mode="label.markup">
-    <xsl:if test="string-length(title) > 0">
       <!-- label the parent -->
       <xsl:variable name="parent.section.label">
         <xsl:call-template name="label.this.section">
           <xsl:with-param name="section" select=".."/>
         </xsl:call-template>
       </xsl:variable>
-      <xsl:if test="$parent.section.label != '0'">
+      <xsl:if test="$parent.section.label != '0' and not(ancestor::preface)">
         <xsl:apply-templates select=".." mode="label.markup"/>
         <xsl:apply-templates select=".." mode="intralabel.punctuation"/>
       </xsl:if>
@@ -128,7 +128,34 @@
           <xsl:message>label.markup: this can't happen!</xsl:message>
         </xsl:otherwise>
       </xsl:choose>
-    </xsl:if>
+  </xsl:template>
+
+    <!-- object.title.template:
+           Skip numeration for sectX > sect1 in preface. -->
+    <!-- The original template is in {docbook-xsl}/common/gentext.xsl. -->
+  <xsl:template match="section|sect1|sect2|sect3|sect4|sect5|simplesect|bridgehead"
+                mode="object.title.template">
+    <xsl:variable name="is.numbered">
+      <xsl:call-template name="label.this.section"/>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="$is.numbered != 0 and not(ancestor::preface/sect1)">
+        <xsl:call-template name="gentext.template">
+          <xsl:with-param name="context" select="'title-numbered'"/>
+          <xsl:with-param name="name">
+            <xsl:call-template name="xpath.location"/>
+          </xsl:with-param>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="gentext.template">
+          <xsl:with-param name="context" select="'title-unnumbered'"/>
+          <xsl:with-param name="name">
+            <xsl:call-template name="xpath.location"/>
+          </xsl:with-param>
+        </xsl:call-template>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
 <!-- -->
