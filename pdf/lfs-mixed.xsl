@@ -13,8 +13,8 @@
     <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
     <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
     <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
-    <xsl:attribute name="orphans">2</xsl:attribute>
-    <xsl:attribute name="widows">2</xsl:attribute>
+    <xsl:attribute name="orphans">3</xsl:attribute>
+    <xsl:attribute name="widows">3</xsl:attribute>
   </xsl:attribute-set>
 
     <!-- Properties associated with verbatim text. -->
