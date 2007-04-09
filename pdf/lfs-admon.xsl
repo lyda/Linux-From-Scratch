@@ -25,7 +25,7 @@
     <xsl:attribute name="padding-top">5pt</xsl:attribute>
     <xsl:attribute name="padding-bottom">5pt</xsl:attribute>
     <xsl:attribute name="border-style">solid</xsl:attribute>
-    <xsl:attribute name="border-width">1pt</xsl:attribute>
+    <xsl:attribute name="border-width">0.5pt</xsl:attribute>
     <xsl:attribute name="background-color">#FFFFE6</xsl:attribute>
     <xsl:attribute name="border-color">
       <xsl:choose>
