@@ -48,10 +48,15 @@
     <!-- Hyphenate? -->
   <xsl:param name="hyphenate">false</xsl:param>
 
-    <!-- Allow URLs to be automatically hyphenated -->
-  <xsl:param name="ulink.hyphenate" select="'&#x200B;'"></xsl:param>
+    <!-- Allow URLs to be automatically hyphenated.
+         We have expanded the support to several inline tags.
+         See pdf/lfs-mixed.xsl -->
+  <xsl:param name="ulink.hyphenate" select="'&#x200B;'"/>
 
- <xsl:param name="ulink.hyphenate.chars" select="'/._-'"></xsl:param>
+    <!-- List of characters to allow ulink URLs, and supported inline tags,
+         to be automatically hyphenated on.
+         Note: the / character is in the list but FOP-0.93 ignores it. -->
+  <xsl:param name="ulink.hyphenate.chars" select="'/._-'"/>
 
     <!-- Specify the default text alignment. -->
   <xsl:param name="alignment">justify</xsl:param>
@@ -73,7 +78,7 @@
   <xsl:param name="toc.section.depth">1</xsl:param>
 
     <!-- Amount of indentation for TOC entries. -->
-  <xsl:param name="toc.indent.width" select="18"></xsl:param>
+  <xsl:param name="toc.indent.width" select="18"/>
 
     <!-- Turns page numbers in xrefs on and off. -->
   <xsl:param name="insert.xref.page.number">no</xsl:param>
