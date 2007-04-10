@@ -262,13 +262,13 @@
           <xsl:attribute name="space-after.maximum">0.4em</xsl:attribute>
           <xsl:attribute name="keep-with-previous.within-column">always</xsl:attribute>
         </xsl:when>
-          <xsl:attribute name="space-before.optimum">0.6em</xsl:attribute>
-          <xsl:attribute name="space-before.minimum">0.4em</xsl:attribute>
-          <xsl:attribute name="space-before.maximum">0.8em</xsl:attribute>
-          <xsl:attribute name="space-after.optimum">0.6em</xsl:attribute>
-          <xsl:attribute name="space-after.minimum">0.4em</xsl:attribute>
-          <xsl:attribute name="space-after.maximum">0.8em</xsl:attribute>
         <xsl:otherwise>
+          <xsl:attribute name="space-before.optimum">0.4em</xsl:attribute>
+          <xsl:attribute name="space-before.minimum">0.2em</xsl:attribute>
+          <xsl:attribute name="space-before.maximum">0.6em</xsl:attribute>
+          <xsl:attribute name="space-after.optimum">0.4em</xsl:attribute>
+          <xsl:attribute name="space-after.minimum">0.2em</xsl:attribute>
+          <xsl:attribute name="space-after.maximum">0.6em</xsl:attribute>
         </xsl:otherwise>
       </xsl:choose>
       <xsl:apply-templates select="seglistitem/seg"/>
