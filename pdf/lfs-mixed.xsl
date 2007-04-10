@@ -43,7 +43,7 @@
     <xsl:attribute name="background-color">#E9E9E9</xsl:attribute>
     <xsl:attribute name="border-style">solid</xsl:attribute>
     <xsl:attribute name="border-width">0.5pt</xsl:attribute>
-    <xsl:attribute name="border-color">#050505</xsl:attribute>
+    <xsl:attribute name="border-color">#888</xsl:attribute>
     <xsl:attribute name="padding-start">5pt</xsl:attribute>
     <xsl:attribute name="padding-top">2pt</xsl:attribute>
     <xsl:attribute name="padding-bottom">2pt</xsl:attribute>

@@ -30,7 +30,7 @@
     <xsl:attribute name="border-color">
       <xsl:choose>
         <xsl:when test="self::note | self::tip">#E0E0E0</xsl:when>
-        <xsl:otherwise>#500</xsl:otherwise>
+        <xsl:otherwise>#DCC</xsl:otherwise>
       </xsl:choose>
     </xsl:attribute>
   </xsl:attribute-set>
