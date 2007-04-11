@@ -123,11 +123,18 @@
     <xsl:param name="content">
       <xsl:call-template name="simple.xlink">
         <xsl:with-param name="content">
-          <xsl:call-template name="hyphenate-url">
-            <xsl:with-param name="url">
+          <xsl:choose>
+            <xsl:when test="ancestor::para and not(descendant::ulink)">
+              <xsl:call-template name="hyphenate-url">
+                <xsl:with-param name="url">
+                  <xsl:apply-templates/>
+                </xsl:with-param>
+              </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
               <xsl:apply-templates/>
-            </xsl:with-param>
-          </xsl:call-template>
+            </xsl:otherwise>
+          </xsl:choose>
         </xsl:with-param>
       </xsl:call-template>
     </xsl:param>
@@ -152,11 +159,18 @@
     <xsl:param name="content">
       <xsl:call-template name="simple.xlink">
         <xsl:with-param name="content">
-          <xsl:call-template name="hyphenate-url">
-            <xsl:with-param name="url">
+          <xsl:choose>
+            <xsl:when test="ancestor::para and not(descendant::ulink)">
+              <xsl:call-template name="hyphenate-url">
+                <xsl:with-param name="url">
+                  <xsl:apply-templates/>
+                </xsl:with-param>
+              </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
               <xsl:apply-templates/>
-            </xsl:with-param>
-          </xsl:call-template>
+            </xsl:otherwise>
+          </xsl:choose>
         </xsl:with-param>
       </xsl:call-template>
     </xsl:param>
