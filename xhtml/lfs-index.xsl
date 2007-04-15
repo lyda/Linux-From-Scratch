@@ -60,30 +60,67 @@
           <h2>
             <xsl:choose>
               <xsl:when test="$divtitle = 'A'">
+                <a id="package-index" name="package-index"/>
                 <xsl:call-template name="gentext">
                   <xsl:with-param name="key">Packages</xsl:with-param>
                 </xsl:call-template>
              </xsl:when>
              <xsl:when test="$divtitle = 'B'">
+                <a id="program-index" name="program-index"/>
                 <xsl:call-template name="gentext">
                   <xsl:with-param name="key">Programs</xsl:with-param>
                 </xsl:call-template>
              </xsl:when>
              <xsl:when test="$divtitle = 'C'">
+                <a id="library-index" name="library-index"/>
                 <xsl:call-template name="gentext">
                   <xsl:with-param name="key">Libraries</xsl:with-param>
                 </xsl:call-template>
              </xsl:when>
              <xsl:when test="$divtitle = 'D'">
-                <xsl:call-template name="gentext">
-                  <xsl:with-param name="key">Scripts</xsl:with-param>
-                </xsl:call-template>
+                <xsl:choose>
+                  <xsl:when test="$book-type = 'blfs'">
+                    <a id="kernel-config-index" name="kernel-config-index"/>
+                    <xsl:call-template name="gentext">
+                      <xsl:with-param name="key">Kernel Configuration</xsl:with-param>
+                    </xsl:call-template>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <a id="scripts-index" name="scripts-index"/>
+                    <xsl:call-template name="gentext">
+                      <xsl:with-param name="key">Scripts</xsl:with-param>
+                    </xsl:call-template>
+                  </xsl:otherwise>
+                </xsl:choose>
              </xsl:when>
               <xsl:when test="$divtitle = 'E'">
+                <xsl:choose>
+                  <xsl:when test="$book-type = 'blfs'">
+                    <a id="config-file-index" name="config-file-index"/>
+                    <xsl:call-template name="gentext">
+                      <xsl:with-param name="key">Configuration Files</xsl:with-param>
+                    </xsl:call-template>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <a id="other-index" name="other-index"/>
+                    <xsl:call-template name="gentext">
+                      <xsl:with-param name="key">Others</xsl:with-param>
+                    </xsl:call-template>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:when>
+             <xsl:when test="$divtitle = 'F'">
+                <a id="bootscript-index" name="bootscript-index"/>
+                <xsl:call-template name="gentext">
+                  <xsl:with-param name="key">Bootscripts</xsl:with-param>
+                </xsl:call-template>
+             </xsl:when>
+             <xsl:when test="$divtitle = 'G'">
+                <a id="other-index" name="other-index"/>
                 <xsl:call-template name="gentext">
                   <xsl:with-param name="key">Others</xsl:with-param>
                 </xsl:call-template>
-              </xsl:when>
+             </xsl:when>
              <xsl:otherwise>
               <xsl:value-of select="$divtitle"/>
             </xsl:otherwise>
@@ -121,6 +158,7 @@
     <!-- Primary items:
            Changed the output format from dl to ul.
            Placed the term and separator into strong tags.
+           Placed the target links into a div.
            Removed code for unused see and sealso childs. -->
     <!-- The original template is in {docbook-xsl}/xhtml/autoidx.xsl -->
   <xsl:template match="indexterm" mode="index-primary">
@@ -134,13 +172,15 @@
         <xsl:value-of select="primary"/>
         <xsl:text>: </xsl:text>
       </strong>
-      <xsl:for-each select="$refs[generate-id() = generate-id(key('primary-section',concat($key, &sep;, &section.id;))[&scope;][1])]">
-        <xsl:apply-templates select="." mode="reference">
-          <xsl:with-param name="scope" select="$scope"/>
-          <xsl:with-param name="role" select="$role"/>
-          <xsl:with-param name="type" select="$type"/>
-        </xsl:apply-templates>
-      </xsl:for-each>
+      <div class='indexref'>
+        <xsl:for-each select="$refs[generate-id() = generate-id(key('primary-section',concat($key, &sep;, &section.id;))[&scope;][1])]">
+          <xsl:apply-templates select="." mode="reference">
+            <xsl:with-param name="scope" select="$scope"/>
+            <xsl:with-param name="role" select="$role"/>
+            <xsl:with-param name="type" select="$type"/>
+          </xsl:apply-templates>
+        </xsl:for-each>
+      </div>
       <xsl:if test="$refs/secondary">
         <ul>
           <xsl:apply-templates select="$refs[secondary and count(.|key('secondary', concat($key, &sep;, &secondary;))[&scope;][1]) = 1]"
@@ -158,6 +198,7 @@
     <!-- Secondary items:
            Changed the output format from dl to ul.
            Placed the term and separator into strong tags.
+           Placed the target links into a div.
            Removed code for unused tertiary, see, and sealso childs. -->
     <!-- The original template is in {docbook-xsl}/xhtml/autoidx.xsl -->
   <xsl:template match="indexterm" mode="index-secondary">
@@ -171,13 +212,15 @@
         <xsl:value-of select="secondary"/>
         <xsl:text>: </xsl:text>
       </strong>
-      <xsl:for-each select="$refs[generate-id() = generate-id(key('secondary-section', concat($key, &sep;, &section.id;))[&scope;][1])]">
-        <xsl:apply-templates select="." mode="reference">
-          <xsl:with-param name="scope" select="$scope"/>
-          <xsl:with-param name="role" select="$role"/>
-          <xsl:with-param name="type" select="$type"/>
-        </xsl:apply-templates>
-      </xsl:for-each>
+      <div class='indexref'>
+        <xsl:for-each select="$refs[generate-id() = generate-id(key('secondary-section', concat($key, &sep;, &section.id;))[&scope;][1])]">
+          <xsl:apply-templates select="." mode="reference">
+            <xsl:with-param name="scope" select="$scope"/>
+            <xsl:with-param name="role" select="$role"/>
+            <xsl:with-param name="type" select="$type"/>
+          </xsl:apply-templates>
+        </xsl:for-each>
+      </div>
     </li>
   </xsl:template>
 
@@ -185,7 +228,7 @@
            Changed links separator.
            On the cecond @zone link, we use a fixed string for the text
            with gettext support.
-           Assume that there is no more than 2 @zone in a indexentry. -->
+           Assume that there is no more than 2 @zone in a indexenterm. -->
     <!-- The original template is in {docbook-xsl}/xhtml/autoidx.xsl -->
   <xsl:template name="reference">
     <xsl:param name="scope" select="."/>
@@ -219,6 +262,7 @@
             <xsl:with-param name="key">description</xsl:with-param>
           </xsl:call-template>
         </a>
+        <br/>
       </xsl:when>
       <xsl:otherwise>
         <xsl:variable name="zone" select="$zones"/>
