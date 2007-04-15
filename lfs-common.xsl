@@ -124,9 +124,6 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:when>
-        <xsl:otherwise>
-          <xsl:message>label.markup: this can't happen!</xsl:message>
-        </xsl:otherwise>
       </xsl:choose>
   </xsl:template>
 
