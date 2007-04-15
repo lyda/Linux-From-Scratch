@@ -7,6 +7,9 @@
           language="xx" english-language-name="xxxxx">
 
     <l:gentext key="description" text=""/>
+    <l:gentext key="Bootscripts" text=""/>
+    <l:gentext key="Configuration Files" text=""/>
+    <l:gentext key="Kernel Configuration" text=""/>
     <l:gentext key="Libraries" text=""/>
     <l:gentext key="Others" text=""/>
     <l:gentext key="Packages" text=""/>
@@ -21,6 +24,9 @@
           language="en" english-language-name="English">
 
     <l:gentext key="description" text="description"/>
+    <l:gentext key="Bootscripts" text="Bootscripts"/>
+    <l:gentext key="Configuration Files" text="Configuration Files"/>
+    <l:gentext key="Kernel Configuration" text="Kernel Configuration"/>
     <l:gentext key="Libraries" text="Libraries"/>
     <l:gentext key="Others" text="Others"/>
     <l:gentext key="Packages" text="Packages"/>
@@ -34,6 +40,9 @@
           language="it" english-language-name="Italian">
 
     <l:gentext key="description" text="descrizione"/>
+    <l:gentext key="Bootscripts" text="Script di avvio"/>
+    <l:gentext key="Configuration Files" text="File di configurazione"/>
+    <l:gentext key="Kernel Configuration" text="Configurazione del kernel"/>
     <l:gentext key="Libraries" text="Librerie"/>
     <l:gentext key="Others" text="Altri"/>
     <l:gentext key="Packages" text="Pacchetti"/>
@@ -47,6 +56,9 @@
           language="es" english-language-name="Spanish">
 
     <l:gentext key="description" text="descripci&#243;n"/>
+    <l:gentext key="Bootscripts" text="Guiones de arranque"/>
+    <l:gentext key="Configuration Files" text="Ficheros de configuraci&#243;n"/>
+    <l:gentext key="Kernel Configuration" text="Configuraci&#243;n del n&#250;cleo"/>
     <l:gentext key="Libraries" text="Librer&#237;as"/>
     <l:gentext key="Others" text="Otros"/>
     <l:gentext key="Packages" text="Paquetes"/>
