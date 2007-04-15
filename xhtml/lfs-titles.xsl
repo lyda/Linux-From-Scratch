@@ -19,84 +19,66 @@
   </xsl:template>
 
     <!-- part.titlepage:
-           Uses h1 and removed a lot of unneeded code. -->
+           Uses h1 and removed a lot of unneeded code.
+           When sections are not labeled, we want the part label in TOC
+           but not in titlepage. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="part.titlepage">
     <div class="titlepage">
       <h1 class="{name(.)}">
-        <xsl:apply-templates select="." mode="label.markup"/>
-        <xsl:text>. </xsl:text>
+        <xsl:if test="$section.autolabel != 0">
+          <xsl:apply-templates select="." mode="label.markup"/>
+          <xsl:text>. </xsl:text>
+        </xsl:if>
         <xsl:value-of select="title"/>
       </h1>
     </div>
   </xsl:template>
 
     <!-- appendix.titlepage:
-           Uses h1 and removed a lot of unneeded code. -->
+           Uses h1 and removed a lot of unneeded code.
+           When sections are not labeled, we want the appendix label in TOC
+           but not in titlepage. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="appendix.titlepage">
     <div class="titlepage">
       <h1 class="{name(.)}">
-        <xsl:apply-templates select="." mode="label.markup"/>
-        <xsl:text>. </xsl:text>
+        <xsl:if test="$section.autolabel != 0">
+          <xsl:apply-templates select="." mode="label.markup"/>
+          <xsl:text>. </xsl:text>
+        </xsl:if>
         <xsl:value-of select="title"/>
       </h1>
     </div>
   </xsl:template>
 
     <!-- chapter.titlepage:
-           Uses h1 and removed a lot of unneeded code. -->
+           Uses h1 and removed a lot of unneeded code.
+           When sections are not labeled, we want the chapter label in TOC
+           but not in titlepage. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="chapter.titlepage">
     <div class="titlepage">
       <h1 class="{name(.)}">
-        <xsl:apply-templates select="." mode="label.markup"/>
-        <xsl:text>. </xsl:text>
+        <xsl:if test="$section.autolabel != 0">
+          <xsl:apply-templates select="." mode="label.markup"/>
+          <xsl:text>. </xsl:text>
+        </xsl:if>
         <xsl:value-of select="title"/>
       </h1>
     </div>
   </xsl:template>
 
     <!-- sect1.titlepage:
-           Select the proper template depending on if chapters TOC are
-           generated or not. -->
-    <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
-    <!-- Version for when there is no chapters TOC:
-           Uses h1 except for the first section, and removed a lot of unneeded code. -->
-  <!--
-  <xsl:template name="sect1.titlepage">
-    <xsl:choose>
-      <xsl:when test="position() = 4">
-        <div class="titlepage">
-          <xsl:if test="@id">
-            <a id="{@id}" name="{@id}"/>
-          </xsl:if>
-          <h2 class="{name(.)}">
-            <xsl:apply-templates select="." mode="label.markup"/>
-            <xsl:text>. </xsl:text>
-            <xsl:value-of select="title"/>
-          </h2>
-        </div>
-      </xsl:when>
-      <xsl:otherwise>
-        <div class="titlepage">
-          <h1 class="{name(.)}">
-            <xsl:apply-templates select="." mode="label.markup"/>
-            <xsl:text>. </xsl:text>
-            <xsl:value-of select="title"/>
-          </h1>
-        </div>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-  -->
-    <!-- Version for when chapters TOC are generated:
            Uses h1 and removed a lot of unneeded code. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="sect1.titlepage">
     <div class="titlepage">
       <h1 class="{name(.)}">
-        <xsl:apply-templates select="." mode="label.markup"/>
-        <xsl:text>. </xsl:text>
+        <xsl:if test="$section.autolabel != 0">
+          <xsl:apply-templates select="." mode="label.markup"/>
+          <xsl:text>. </xsl:text>
+        </xsl:if>
         <xsl:value-of select="title"/>
       </h1>
     </div>
@@ -116,7 +98,7 @@
             <a id="{@id}" name="{@id}"/>
           </xsl:if>
           <h2 class="{name(.)}">
-            <xsl:if test="not(ancestor::preface)">
+            <xsl:if test="not(ancestor::preface) and $section.autolabel != 0">
               <xsl:apply-templates select="." mode="label.markup"/>
               <xsl:text>. </xsl:text>
             </xsl:if>
