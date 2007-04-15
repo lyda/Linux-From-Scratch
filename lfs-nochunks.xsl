@@ -21,6 +21,9 @@
   <xsl:include href="xhtml/lfs-toc.xsl"/>
   <xsl:include href="xhtml/lfs-xref.xsl"/>
 
+    <!-- The LFS book type to be processed (lfs, blfs, clfs, or hlfs) -->
+  <xsl:param name="book-type">lfs</xsl:param>
+
     <!-- Control generation of ToCs and LoTs -->
   <xsl:param name="generate.toc">
     book      toc,title

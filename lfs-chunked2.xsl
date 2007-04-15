@@ -22,6 +22,9 @@
   <xsl:include href="xhtml/lfs-toc.xsl"/>
   <xsl:include href="xhtml/lfs-xref.xsl"/>
 
+    <!-- The LFS book type to be processed (lfs, blfs, clfs, or hlfs) -->
+  <xsl:param name="book-type">lfs</xsl:param>
+
     <!-- The CSS Stylesheets. We set here relative path from sub-dirs HTML files.
     The path from top-level HTML files (index.html, partX.html, etc) MUST be
     fixed via a sed in the Makefile-->
@@ -34,8 +37,8 @@
   </xsl:template>
 
     <!-- Dropping some unwanted style attributes -->
-  <xsl:param name="ulink.target" select="''"></xsl:param>
-  <xsl:param name="css.decoration" select="0"></xsl:param>
+  <xsl:param name="ulink.target" select="''"/>
+  <xsl:param name="css.decoration" select="0"/>
 
     <!-- No XML declaration -->
   <xsl:param name="chunker.output.omit-xml-declaration" select="'yes'"/>

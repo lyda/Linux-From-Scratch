@@ -120,14 +120,16 @@
   <!-- Named formating templates -->
 
     <!-- Body attributes:
-           Add to the body XHTML output tag an id attribute with the book type
-           and a class atribute with the book version. -->
+           Add to the body XHTML output tag a class attribute with the book type
+           and a id atribute with the book ty and version. -->
     <!-- The original template is in {docbook-xsl}/xhtml/docbook.xsl -->
   <xsl:template name="body.attributes">
-    <xsl:attribute name="id">
-      <xsl:text>lfs</xsl:text>
-    </xsl:attribute>
     <xsl:attribute name="class">
+      <xsl:value-of select="$book-type"/>
+    </xsl:attribute>
+    <xsl:attribute name="id">
+      <xsl:value-of select="$book-type"/>
+      <xsl:text>-</xsl:text>
       <xsl:value-of select="substring-after(/book/bookinfo/subtitle, ' ')"/>
     </xsl:attribute>
   </xsl:template>
