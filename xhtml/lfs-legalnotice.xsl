@@ -7,8 +7,7 @@
   <!-- This stylesheet controls how legalnotice page is created -->
 
     <!-- Generating the legalnotice page:
-           We are forcing separate legalnotice page generation and placing it
-           into the prologue/ subdirectory.
+           We are forcing separate legalnotice page generation.
            Removed the default link to legalnotice page. We want it in Copyright.
            Added footer navigational link to Home.  -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.xsl -->
@@ -16,7 +15,7 @@
     <xsl:variable name="id">
       <xsl:call-template name="object.id"/>
     </xsl:variable>
-    <xsl:variable name="filename" select="concat($base.dir, 'prologue/legalnotice.html')"/>
+    <xsl:variable name="filename" select="concat($base.dir, 'legalnotice.html')"/>
     <xsl:variable name="title">
       <xsl:apply-templates select="." mode="title.markup"/>
     </xsl:variable>
@@ -40,7 +39,7 @@
                 <li class="home">
                   <a accesskey="h">
                     <xsl:attribute name="href">
-                      <xsl:text>../index.html</xsl:text>
+                      <xsl:text>index.html</xsl:text>
                     </xsl:attribute>
                     <xsl:attribute name="title">
                       <xsl:value-of select="/book/bookinfo/title"/>
@@ -67,7 +66,7 @@
     <p class="{name(.)}">
       <a>
         <xsl:attribute name="href">
-          <xsl:value-of select="'prologue/legalnotice.html'"/>
+          <xsl:value-of select="'legalnotice.html'"/>
         </xsl:attribute>
         <xsl:call-template name="gentext">
           <xsl:with-param name="key" select="'Copyright'"/>
