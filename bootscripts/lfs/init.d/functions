@@ -539,10 +539,10 @@ loadproc()
 killproc()
 {
 	local pidfile=""
-	local killsig=""
+	local killsig=TERM # default signal is SIGTERM
 	pidlist=""
 
-# This will ensure compatibility with previous LFS Bootscripts
+	# This will ensure compatibility with previous LFS Bootscripts
 	if [ -n "${PIDFILE}" ];	then
 		pidfile="${PIDFILE}"
 	fi
@@ -557,7 +557,7 @@ killproc()
 			-*)
 				log_failure_msg "Unknown Option: ${1}"
 				return 2
-			;;
+				;;
 			*)
  				break
 				;;
@@ -572,19 +572,22 @@ killproc()
 		return 2
 	fi
 
+	# Is the process running?
 	if [ -z "${pidfile}" ];	then
 		pidofproc -s "${1}"
 	else
 		pidofproc -s -p "${pidfile}" "${1}"
 	fi
 
-    # Change....
+    # If running, send the signal
     if [ -n "${pidlist}" ]; then
 	for pid in ${pidlist}
 	do
-		kill -${killsig:-TERM} ${pid} 2>/dev/null
-		if [ -z "${killsig}" ]; then
-			# Wait up to 3 seconds, for ${pid} to terminate
+		kill -${killsig} ${pid} 2>/dev/null
+
+		# Wait up to 3 seconds, for ${pid} to terminate
+		case "${killsig}" in
+		TERM|SIGTERM|KILL|SIGKILL)
 			local dtime=${KILLDELAY}
 			while [ "${dtime}" != "0" ]
 			do
@@ -594,15 +597,22 @@ killproc()
 			done
 			# If ${pid} is still running, kill it
 			kill -0 ${pid} 2>/dev/null && kill -KILL ${pid} 2>/dev/null
-		fi
+			;;
+		esac
 	done
 
-	if [ -z "${killsig}" ];	then
-		pidofproc -s "${1}"
+	# Check if the process is still running if we tried to stop it
+	case "${killsig}" in
+	TERM|SIGTERM|KILL|SIGKILL)
+		if [ -z "${pidfile}" ];	then
+			pidofproc -s "${1}"
+		else
+			pidofproc -s -p "${pidfile}" "${1}"
+		fi
 
 		# Program was terminated
 		if [ "$?" != "0" ]; then
-			# Pidfile Exists
+			# Remove the pidfile if necessary
 			if [ -f "${pidfile}" ];	then
 				rm -f "${pidfile}"
 			fi
@@ -612,17 +622,13 @@ killproc()
 			echo_failure
 			return 4 # Unknown Status
 		fi
-	else
-		if [ -z "${pidfile}" ];	then
-			pidofproc -s "${1}"
-		else
-			pidofproc -s -p "${pidfile}" "${1}"
-		fi
-	fi
-
-	evaluate_retval # This is "Probably" not LSB compliant, but required to be compatible with older bootscripts
-
-    else
+		;;
+	*)
+		# Just see if the kill returned successfully
+		evaluate_retval
+		;;
+	esac
+    else # process not running
 	print_status warning not_running
     fi
 }
