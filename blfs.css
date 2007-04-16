@@ -20,6 +20,11 @@ a:visited { color: #7e4988; }
 a:hover, a:focus { color: #d30e08; }
 a:active { color: #6b77b1;}
 
+.ulink {
+  color: #55f;  /* Light Blue */
+  font-weight: bold;
+}
+
 /* Headers */
 h1, h2, b, strong {
   color: #000;
@@ -28,11 +33,6 @@ h1, h2, b, strong {
 
 h3, h4, h5, h6 {
   color: #222;
-}
-
-.url {
-  color: #55f;  /* Light Blue */
-  font-weight: bold;
 }
 
 h1 { font-size: 173%; text-align: center; line-height: 1.2em; }
