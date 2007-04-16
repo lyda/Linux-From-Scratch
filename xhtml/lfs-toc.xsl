@@ -65,90 +65,125 @@
   </xsl:template>
 
     <!-- toc.line:
-           Adding the h* tags and dropping redundats links.
+           Adding the h* tags and dropping unneded links.
            This template is a full re-made version of the original one. -->
     <!-- The original template is in {docbook-xsl}/xhtml/autotoc.xsl -->
   <xsl:template name="toc.line">
     <xsl:param name="toc-context" select="."/>
-    <xsl:param name="depth" select="1"/>
-    <xsl:param name="depth.from.context" select="8"/>
     <xsl:choose>
-        <!-- For sect1 targets, create a link -->
+        <!-- For non dummy sect1 targets, create a link. -->
       <xsl:when test="local-name(.) = 'sect1'">
-        <a>
-          <xsl:attribute name="href">
-            <xsl:call-template name="href.target">
-              <xsl:with-param name="context" select="$toc-context"/>
-            </xsl:call-template>
-          </xsl:attribute>
-          <xsl:apply-templates select="." mode="titleabbrev.markup"/>
-        </a>
-      </xsl:when>
-        <!-- For appendix target, create a link and add the label -->
-      <xsl:when test="local-name(.) = 'appendix'">
-        <a>
-          <xsl:attribute name="href">
-            <xsl:call-template name="href.target">
-              <xsl:with-param name="context" select="$toc-context"/>
-            </xsl:call-template>
-          </xsl:attribute>
-          <xsl:variable name="label">
-            <xsl:apply-templates select="." mode="label.markup"/>
-          </xsl:variable>
-          <xsl:copy-of select="$label"/>
-          <xsl:if test="$label != ''">
-            <xsl:value-of select="$autotoc.label.separator"/>
-          </xsl:if>
-          <xsl:apply-templates select="." mode="titleabbrev.markup"/>
-        </a>
-      </xsl:when>
-        <!-- For chapter and preface, use h4 and add the label -->
-      <xsl:when test="local-name(.) = 'chapter' or local-name(.) = 'preface'">
-        <h4>
-          <xsl:variable name="label">
-            <xsl:apply-templates select="." mode="label.markup"/>
-          </xsl:variable>
-          <xsl:copy-of select="$label"/>
-          <xsl:if test="$label != ''">
-            <xsl:value-of select="$autotoc.label.separator"/>
-          </xsl:if>
-          <xsl:apply-templates select="." mode="titleabbrev.markup"/>
-        </h4>
-      </xsl:when>
-        <!-- for part, use h3 and add the label -->
-      <xsl:when test="local-name(.) = 'part'">
-        <h3>
-          <xsl:variable name="label">
-            <xsl:apply-templates select="." mode="label.markup"/>
-          </xsl:variable>
-          <xsl:copy-of select="$label"/>
-          <xsl:if test="$label != ''">
-            <xsl:value-of select="$autotoc.label.separator"/>
-          </xsl:if>
-          <xsl:apply-templates select="." mode="titleabbrev.markup"/>
-        </h3>
-      </xsl:when>
-        <!-- For other targets like Index, create a link inside h3 plus label it -->
-      <xsl:otherwise>
-        <h3>
+        <xsl:choose>
+          <xsl:when test="@role='dummy'">
+            <span class="dummy">
+              <xsl:apply-templates select="." mode="titleabbrev.markup"/>
+            </span>
+          </xsl:when>
+          <xsl:otherwise>
             <a>
-            <xsl:attribute name="href">
-              <xsl:call-template name="href.target">
-                <xsl:with-param name="context" select="$toc-context"/>
-              </xsl:call-template>
-            </xsl:attribute>
-            <xsl:variable name="label">
-              <xsl:apply-templates select="." mode="label.markup"/>
-            </xsl:variable>
-            <xsl:copy-of select="$label"/>
-            <xsl:if test="$label != ''">
-              <xsl:value-of select="$autotoc.label.separator"/>
-            </xsl:if>
-            <xsl:apply-templates select="." mode="titleabbrev.markup"/>
-          </a>
-        </h3>
+              <xsl:attribute name="href">
+                <xsl:call-template name="href.target">
+                  <xsl:with-param name="context" select="$toc-context"/>
+                </xsl:call-template>
+              </xsl:attribute>
+              <xsl:apply-templates select="." mode="titleabbrev.markup"/>
+            </a>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+        <!-- For part, preface, and chapter, use hX and add the label.
+             For BLFS, make it a link. -->
+      <xsl:when test="local-name(.) = 'part' or local-name(.) = 'preface'
+                      or local-name(.) = 'chapter'">
+        <xsl:choose>
+          <xsl:when test="$book-type = 'blfs'">
+            <xsl:apply-templates select="." mode="add.hX">
+              <xsl:with-param name="toc-context" select="$toc-context"/>
+              <xsl:with-param name="with-link" select="1"/>
+            </xsl:apply-templates>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="." mode="add.hX">
+              <xsl:with-param name="toc-context" select="$toc-context"/>
+              <xsl:with-param name="with-link" select="0"/>
+            </xsl:apply-templates>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+        <!-- For appendix , create a link and add the label.
+             For BLFS, use hX. -->
+      <xsl:when test="local-name(.) = 'appendix'">
+        <xsl:choose>
+          <xsl:when test="$book-type = 'blfs'">
+            <xsl:apply-templates select="." mode="add.hX">
+              <xsl:with-param name="toc-context" select="$toc-context"/>
+              <xsl:with-param name="with-link" select="1"/>
+            </xsl:apply-templates>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="." mode="add.link">
+              <xsl:with-param name="toc-context" select="$toc-context"/>
+            </xsl:apply-templates>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+        <!-- For other targets like Index, use hX, create a link, and label it. -->
+      <xsl:otherwise>
+        <xsl:apply-templates select="." mode="add.hX">
+          <xsl:with-param name="toc-context" select="$toc-context"/>
+          <xsl:with-param name="with-link" select="1"/>
+        </xsl:apply-templates>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+    <!-- Self-made template to add hX tags to toc lines. -->
+  <xsl:template match="*" mode="add.hX">
+    <xsl:param name="toc-context" select="."/>
+    <xsl:param name="with-link" select="0"/>
+    <xsl:param name="hlevel">
+      <xsl:choose>
+        <xsl:when test="local-name(.)='chapter' or local-name(.)='preface'">4</xsl:when>
+        <xsl:otherwise>3</xsl:otherwise>
+      </xsl:choose>
+    </xsl:param>
+    <xsl:element name="h{$hlevel}" namespace="http://www.w3.org/1999/xhtml">
+      <xsl:choose>
+        <xsl:when test="$with-link != 0">
+          <xsl:apply-templates select="." mode="add.link">
+            <xsl:with-param name="toc-context" select="$toc-context"/>
+          </xsl:apply-templates>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates select="." mode="label.and.title"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:element>
+  </xsl:template>
+
+    <!-- Self-made template to made toc line a link. -->
+  <xsl:template match="*" mode="add.link">
+    <xsl:param name="toc-context" select="."/>
+    <a>
+      <xsl:attribute name="href">
+        <xsl:call-template name="href.target">
+          <xsl:with-param name="context" select="$toc-context"/>
+        </xsl:call-template>
+      </xsl:attribute>
+      <xsl:apply-templates select="." mode="label.and.title"/>
+    </a>
+  </xsl:template>
+
+    <!-- Self-made template to write the target title and label it. -->
+  <xsl:template match="*" mode="label.and.title">
+    <xsl:variable name="label">
+      <xsl:apply-templates select="." mode="label.markup"/>
+    </xsl:variable>
+    <xsl:copy-of select="$label"/>
+    <xsl:if test="$label != ''">
+      <xsl:value-of select="$autotoc.label.separator"/>
+    </xsl:if>
+    <xsl:apply-templates select="." mode="titleabbrev.markup"/>
   </xsl:template>
 
 </xsl:stylesheet>
