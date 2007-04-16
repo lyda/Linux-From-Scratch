@@ -9,6 +9,11 @@
 	* lfs/init.d/functions: statusproc() has been changed to use pidofproc()
 	  instead of the deprecated getpids(). Additionally, it now accepts
 	  the -p argument to specify a pidfile.
+	* lfs/init.d/functions: Currently, statusproc() always returns
+	  successfully, and the only way to know if the process is running
+	  is to parse the output. This changes statusproc() to return the
+	  status of pidofproc(), which will return unsuccessfully if the
+	  requested process is not running.
 
 2007-03-13	Dan Nicholson	<dnicholson@linuxfromscratch.org>
 	* lfs/init.d/functions: If pidofproc() is passed the -p argument

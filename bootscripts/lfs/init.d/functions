@@ -281,6 +281,7 @@ statusproc()
 {
 	local pidfile=""
 	local base=""
+	local ret=""
 
 	while true
 	do
@@ -320,6 +321,9 @@ statusproc()
 		pidofproc -s -p "${pidfile}" "${1}"
 	fi
 
+	# Store the return status
+	ret=$?
+
 	if [ -n "${pidlist}" ];	then
 		${ECHO} -e "${INFO}${base} is running with Process"\
 			"ID(s) ${pidlist}.${NORMAL}"
@@ -336,6 +340,9 @@ statusproc()
 			fi
 		fi
 	fi
+
+	# Return the status from pidofproc
+	return $ret
 }
 
 # The below functions are documented in the LSB-generic 2.1.0
