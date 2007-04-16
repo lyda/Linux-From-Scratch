@@ -6,6 +6,9 @@
 	  used was causing issues with the handling of pidfiles. This has been
 	  fixes, and now killproc() will recheck the process if the signal
 	  was TERM (the default) or KILL.
+	* lfs/init.d/functions: statusproc() has been changed to use pidofproc()
+	  instead of the deprecated getpids(). Additionally, it now accepts
+	  the -p argument to specify a pidfile.
 
 2007-03-13	Dan Nicholson	<dnicholson@linuxfromscratch.org>
 	* lfs/init.d/functions: If pidofproc() is passed the -p argument

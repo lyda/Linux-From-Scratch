@@ -279,13 +279,46 @@ reloadproc()
 
 statusproc()
 {
-	if [ "${#}" = "0" ]
-	then
-		echo "Usage: statusproc {program}"
-		exit 1
+	local pidfile=""
+	local base=""
+
+	while true
+	do
+		case "${1}" in
+			-p)
+				pidfile="${2}"
+				shift 2
+				;;
+			-*)
+				log_failure_msg "Unknown Option: ${1}"
+				return 2
+				;;
+			*)
+				break
+				;;
+		esac
+	done
+
+	if [ "${#}" != "1" ]; then
+		shift 1
+		log_failure_msg "Usage: statusproc [-p pidfile] pathname"
+		return 2
 	fi
 
-	getpids "${1}"
+	# Get the process basename
+	base="${1##*/}"
+
+	# This will ensure compatibility with previous LFS Bootscripts
+	if [ -n "${PIDFILE}" ];	then
+		pidfile="${PIDFILE}"
+	fi
+
+	# Is the process running?
+	if [ -z "${pidfile}" ];	then
+		pidofproc -s "${1}"
+	else
+		pidofproc -s -p "${pidfile}" "${1}"
+	fi
 
 	if [ -n "${pidlist}" ];	then
 		${ECHO} -e "${INFO}${base} is running with Process"\
@@ -295,9 +328,9 @@ statusproc()
 			${ECHO} -e "${WARNING}${1} is not running but"\
 				"/var/run/${base}.pid exists.${NORMAL}"
 		else
-			if [ -n "${PIDFILE}" -a -e "${PIDFILE}" ]; then
+			if [ -n "${pidfile}" -a -e "${pidfile}" ]; then
 				${ECHO} -e "${WARNING}${1} is not running"\
-					"but ${PIDFILE} exists.${NORMAL}"
+					"but ${pidfile} exists.${NORMAL}"
 			else
 				${ECHO} -e "${INFO}${1} is not running.${NORMAL}"
 			fi
