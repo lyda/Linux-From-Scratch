@@ -254,15 +254,44 @@ print_status()
 
 reloadproc()
 {
-	if [ "${#}" = "0" ]; then
-		echo "Usage: reloadproc [{program}]"
-		exit 1
+	local pidfile=""
+	local failure=0
+
+	while true
+	do
+		case "${1}" in
+			-p)
+				pidfile="${2}"
+				shift 2
+				;;
+			-*)
+				log_failure_msg "Unknown Option: ${1}"
+				return 2
+				;;
+			*)
+				break
+				;;
+		esac
+	done
+
+	if [ "${#}" -lt "1" ]; then
+		log_failure_msg "Usage: reloadproc [-p pidfile] pathname"
+		return 2
 	fi
 
-	getpids "${1}"
+	# This will ensure compatibility with previous LFS Bootscripts
+	if [ -n "${PIDFILE}" ];	then
+		pidfile="${PIDFILE}"
+	fi
+
+	# Is the process running?
+	if [ -z "${pidfile}" ];	then
+		pidofproc -s "${1}"
+	else
+		pidofproc -s -p "${pidfile}" "${1}"
+	fi
 
 	if [ -n "${pidlist}" ];	then
-		failure="0"
 		for pid in ${pidlist}
 		do
 			kill -"${RELOADSIG}" "${pid}" || failure="1"

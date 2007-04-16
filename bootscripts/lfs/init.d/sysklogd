@@ -34,7 +34,7 @@ case "${1}" in
 
 	reload)
 		boot_mesg "Reloading system log daemon config file..."
-		reloadproc syslogd 1
+		reloadproc syslogd
 		;;
 
 	restart)

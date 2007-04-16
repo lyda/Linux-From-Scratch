@@ -14,6 +14,9 @@
 	  is to parse the output. This changes statusproc() to return the
 	  status of pidofproc(), which will return unsuccessfully if the
 	  requested process is not running.
+	* lfs/init.d/functions: Changed reloadproc() to use pidofproc() and
+	  respect the -p argument for pidfiles.
+	* lfs/init.d/sysklogd: Remove a useless argument to reloadproc().
 
 2007-03-13	Dan Nicholson	<dnicholson@linuxfromscratch.org>
 	* lfs/init.d/functions: If pidofproc() is passed the -p argument
