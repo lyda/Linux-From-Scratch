@@ -45,9 +45,14 @@
          is unchanged. -->
   <xsl:template match="screen">
     <xsl:choose>
+      <xsl:when test="@role = 'root'">
+        <pre class="root">
+          <xsl:apply-templates/>
+        </pre>
+      </xsl:when>
       <xsl:when test="child::* = userinput">
         <pre class="userinput">
-            <xsl:apply-templates/>
+          <xsl:apply-templates/>
         </pre>
       </xsl:when>
       <xsl:otherwise>
@@ -88,7 +93,8 @@
     <div class="seg">
       <strong>
         <span class="segtitle">
-          <xsl:apply-templates select="$segtitles[$segnum=position()]" mode="segtitle-in-seg"/>
+          <xsl:apply-templates select="$segtitles[$segnum=position()]"
+                               mode="segtitle-in-seg"/>
           <xsl:text>: </xsl:text>
         </span>
       </strong>
@@ -172,9 +178,9 @@
     <!-- don't put <strong> inside figure, example, or table titles
          or other titles that may already be represented with <strong>'s. -->
     <xsl:choose>
-      <xsl:when test="local-name(..) = 'title' and (local-name(../..) = 'figure'
-                      or local-name(../..) = 'example' or local-name(../..) = 'table'
-                      or local-name(../..) = 'formalpara')">
+      <xsl:when test="local-name(..)='title' and (local-name(../..)='figure'
+                      or local-name(../..)='example' or local-name(../..)='table'
+                      or local-name(../..)='formalpara')">
         <tt>
           <xsl:apply-templates select="." mode="class.attribute"/>
           <xsl:call-template name="generate.html.title"/>
@@ -218,6 +224,90 @@
         <xsl:call-template name="apply-annotations"/>
       </tt>
     </em>
+  </xsl:template>
+
+  <!-- Revision History -->
+
+    <!-- revhistory mode titlepage.mode:
+           Removed hardcoded style attributes.
+           Removed support for separate revhistory file. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/titlepage.xsl -->
+  <xsl:template match="revhistory" mode="titlepage.mode">
+    <xsl:variable name="numcols">
+      <xsl:choose>
+        <xsl:when test="//authorinitials">4</xsl:when>
+        <xsl:otherwise>3</xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="id"><xsl:call-template name="object.id"/></xsl:variable>
+    <xsl:variable name="title">
+      <xsl:call-template name="gentext">
+        <xsl:with-param name="key">RevHistory</xsl:with-param>
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:variable name="contents">
+      <div class="{name(.)}">
+        <table summary="Revision history">
+          <tr>
+            <th colspan="{$numcols}">
+              <b>
+                <xsl:call-template name="gentext">
+                  <xsl:with-param name="key" select="'RevHistory'"/>
+                </xsl:call-template>
+              </b>
+            </th>
+          </tr>
+          <xsl:apply-templates mode="titlepage.mode">
+            <xsl:with-param name="numcols" select="$numcols"/>
+          </xsl:apply-templates>
+        </table>
+      </div>
+    </xsl:variable>
+    <xsl:copy-of select="$contents"/>
+  </xsl:template>
+
+    <!-- revhistory/revision mode titlepage.mode:
+           Removed hardcoded style attributes. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/titlepage.xsl -->
+  <xsl:template match="revhistory/revision" mode="titlepage.mode">
+    <xsl:param name="numcols" select="'3'"/>
+    <xsl:variable name="revnumber" select="revnumber"/>
+    <xsl:variable name="revdate" select="date"/>
+    <xsl:variable name="revauthor" select="authorinitials|author"/>
+    <xsl:variable name="revremark" select="revremark|revdescription"/>
+    <tr>
+      <td>
+        <xsl:if test="$revnumber">
+          <xsl:call-template name="gentext">
+            <xsl:with-param name="key" select="'Revision'"/>
+          </xsl:call-template>
+          <xsl:call-template name="gentext.space"/>
+          <xsl:apply-templates select="$revnumber[1]" mode="titlepage.mode"/>
+        </xsl:if>
+      </td>
+      <td>
+        <xsl:apply-templates select="$revdate[1]" mode="titlepage.mode"/>
+      </td>
+      <xsl:choose>
+        <xsl:when test="$revauthor">
+          <td>
+            <xsl:for-each select="$revauthor">
+              <xsl:apply-templates select="." mode="titlepage.mode"/>
+              <xsl:if test="position() != last()">
+                <xsl:text>, </xsl:text>
+              </xsl:if>
+            </xsl:for-each>
+          </td>
+        </xsl:when>
+        <xsl:when test="$numcols &gt; 3">
+          <td>&#160;</td>
+        </xsl:when>
+        <xsl:otherwise/>
+      </xsl:choose>
+      <td>
+        <xsl:apply-templates select="$revremark[1]" mode="titlepage.mode"/>
+      </td>
+    </tr>
   </xsl:template>
 
 </xsl:stylesheet>
