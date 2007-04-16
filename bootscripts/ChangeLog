@@ -1,3 +1,7 @@
+2007-04-16	Dan Nicholson	<dnicholson@linuxfromscratch.org>
+	* lfs/init.d/functions: Redirect stderr when using kill to suppress
+	  output.
+
 2007-03-13	Dan Nicholson	<dnicholson@linuxfromscratch.org>
 	* lfs/init.d/functions: If pidofproc() is passed the -p argument
 	  it can bomb testing a null variable with an integer expression.
