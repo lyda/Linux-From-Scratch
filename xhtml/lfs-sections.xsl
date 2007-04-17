@@ -11,7 +11,7 @@
   <xsl:param name="chunk.first.sections" select="1"/>
 
     <!-- preface:
-           Process the child elemements before generating the TOC -->
+           Process the child elements before generating the TOC -->
     <!-- The original template is in {docbook-xsl}/xhtml/components.xsl -->
   <xsl:template match="preface">
     <xsl:call-template name="id.warning"/>
@@ -45,7 +45,7 @@
   </xsl:template>
 
     <!-- chapter:
-           Process the child elemements before generating the TOC -->
+           Process the child elements before generating the TOC -->
     <!-- The original template is in {docbook-xsl}/xhtml/components.xsl -->
   <xsl:template match="chapter">
     <xsl:call-template name="id.warning"/>

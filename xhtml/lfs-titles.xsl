@@ -41,6 +41,22 @@
     </div>
   </xsl:template>
 
+    <!-- partintro.titlepage:
+           Uses h2 and removed a lot of unneeded code. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
+  <xsl:template name="partintro.titlepage">
+    <xsl:if test="title">
+      <div class="partintrotitle">
+        <xsl:if test="@id">
+          <a id="{@id}" name="{@id}"/>
+        </xsl:if>
+        <h2 class="{name(.)}">
+          <xsl:value-of select="title"/>
+        </h2>
+      </div>
+    </xsl:if>
+  </xsl:template>
+
     <!-- appendix.titlepage:
            Uses h1 and removed a lot of unneeded code.
            When sections are not labeled, we want the appendix label in TOC
