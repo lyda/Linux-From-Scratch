@@ -137,7 +137,8 @@
 
     <!-- bridgehead:
            When use always renderas attributes and want the output h* level
-           matching the defined sect* level. -->
+           matching the defined sect* level.
+           Create the anchor only if there is an @id. -->
     <!-- The original template is in {docbook-xsl}/xhtml/sections.xsl -->
   <xsl:template match="bridgehead">
     <xsl:variable name="hlevel">
@@ -150,9 +151,9 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:element name="h{$hlevel}" namespace="http://www.w3.org/1999/xhtml">
-      <xsl:call-template name="anchor">
-        <xsl:with-param name="conditional" select="0"/>
-      </xsl:call-template>
+      <xsl:if test="@id">
+        <a id="{@id}" name="{@id}"/>
+      </xsl:if>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
