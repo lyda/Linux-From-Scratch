@@ -1,9 +1,9 @@
 /* Global settings */
 body {
-  font-family: sans-serif;
+  font-family: verdana, tahoma, helvetica, arial, sans-serif;
   text-align: left;
   background: #fff;
-  color: #333;
+  color: #222;
   margin: 1em;
   padding: 0;
   font-size: 1em;
@@ -11,15 +11,13 @@ body {
 }
 
 a:link { color: #22b; }
+a.ulink:link { font-weight: bold; color: #55f; }
 a:visited { color: #7e4988; }
 a:hover, a:focus { color: #d30e08; }
 a:active { color: #6b77b1;}
 
-/* External links in italic font */
-a.ulink { font-style: italic; }
-
 /* Headers */
-h1, h2, b, strong {
+h1, h2, b, .strong {
   color: #000;
   font-weight: bold;
 }
@@ -28,39 +26,44 @@ h3, h4, h5, h6 {
   color: #222;
 }
 
-h1 { font-size: 173%; text-align: center; line-height: 1.2em; }
-h2 { font-size: 144%; padding-top: 0.2em; margin-top: 0.3em; line-height: 1.2em; }
-h2.subtitle { text-align: center; line-height: 1.2em; }
-h3 { font-size: 120%; line-height: 1.2em; }
-h4 { font-size: 110%; line-height: 1.2em; }
-h5, h6 { font-size: 110%; font-style: italic; line-height: 1.2em; }
+h1 { font-size: 173%; text-align: center; line-height: 1em; }
+h1.title sup { font-size: small; }
+h2 { font-size: 144%; line-height: 1em; }
+h2.subtitle { text-align: center; line-height: 1em; }
+h3 { font-size: 120%; line-height: 1em; }
+h4 { font-size: 110%; line-height: 1em; }
+div.package h4, h5, h6 { font-size: 100%; font-style: italic; }
 
 /* Navigation */
-div.headertitles h4 {
-  margin-bottom: 2px;
-  text-align: center;
-}
-
-div.headertitles h3 {
-  margin-top: 2px;
-  text-align: center;
-}
-
 div.navheader, div.navfooter {
   background: #ecedef;
-  padding: 0.1em 1em;
+  margin: 0;
+  padding: 0.1em .5em;
+}
+
+div.navheader {
   border-bottom: 1px solid #dbddec;
 }
 
 div.navfooter {
-  border-bottom: 0;
   border-top: 1px solid #dbddec;
+}
+
+div.headertitles h4 {
+  margin-top: .4em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+div.headertitles h3 {
+  margin-top: .2em;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 div.navheader ul, div.navfooter ul {
   padding: .2em .5em .5em 0;
-  margin-left: 0px;
-  margin-right: 2px;
+  margin: .5em 0;
   position: relative;
   background: #dbddec;
 }
@@ -117,19 +120,39 @@ li.preface, li.appendix {
   margin-left: 1em;
 }
 
-div.toc ul li h3, div.toc ul li h4 {
-  margin: .4em;
+div.toc ul li h3 {
+  margin: 1em 0 .3em 0;
+}
+
+div.toc ul li h4 {
+  margin: .6em 0 .2em 0;
+}
+
+.dummy {
+  font-weight: bold;
+  font-size: 110%;
+  margin: .6em 0 .2em 0;
 }
 
 .item {
-    width: 17em;
     float: left;
 }
 
 .secitem {
     font-weight: normal;
-    width: 16em;
     float: left;
+}
+
+.lfs .item + .indexref {
+    margin-left: 18em;
+}
+
+.lfs .secitem + .indexref {
+    margin-left: 17em;
+}
+
+.blfs .indexref {
+    margin-left: 26em;
 }
 
 /* Admonitions */
@@ -144,9 +167,8 @@ div.important, div.warning, div.caution {
   background-color: #fffff6;
   border: medium solid #400;
   width: 90%;
-  margin: 1.5em auto;
+  margin: .5em auto;
   color: #600;
-  font-size: larger;
 }
 
 div.important h3, div.warning h3, div.caution h3 {
@@ -171,18 +193,63 @@ div.important em, div.warning em, div.caution em {
   font-weight: bold;
 }
 
-div.important tt, div.warning tt, div.caution tt {
-  font-weight: bold;
+/* table and variablelist as table */
+
+.variablelist table {
+  width: auto;
+  margin: 0 1em 0 1em;
 }
 
-div.important tt.literal, div.warning tt.literal, div.caution tt.literal {
-  font-weight: normal;
+.variablelist td {
+  vertical-align: top;
 }
 
-/* variablelist & segmentedlist */
+.variablelist td span, td p {
+  margin: 0.25em;
+}
+/* ---- Revised up to here (first round) ------ */
+div.table {
+  text-align: center;
+}
+
+div.table table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+div.table table th, div.table table td {
+  padding: 0.2em 2em 0.2em 2em;
+}
+
+div.table table {
+  border-collapse: collapse;
+  }
+
+div.table td, div.table th {
+  padding: 0.3em;
+  text-align: right;
+  vertical-align: baseline;
+}
+
+div.table tr > td:first-child, div.table tr > th:first-child {
+  text-align: left;
+}
+
+div.revhistory th {
+  text-align: left;
+  line-height: 2em;
+}
+
+div.revhistory td {
+  padding-right: 1em;
+}
+
+/* variablelist as list and segmentedlist */
 dl {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 dt {
@@ -195,23 +262,6 @@ dt {
 dd  {
   margin: 0 0 1em 3em;
   padding: 0;
-}
-
-table {
-  width: auto;
-  margin-left: 1em;
-}
-
-td {
-  vertical-align: top;
-}
-
-td span, td p {
-  margin: 0.3em;
-}
-
-span.term {
-  display: block;
 }
 
 div.variablelist dd {
@@ -287,22 +337,6 @@ ul[compact="compact"] li {
 ul[compact="compact"] li p {
   padding: 0.3em;
   margin: 0em;
-}
-
-/*table */
-
-div.table {
-  text-align: center;
-}
-
-div.table table {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-div.table table th, div.table table td {
-  padding: 0.2em 2em 0.2em 2em;
 }
 
 /* Indented blocks */
