@@ -4,7 +4,7 @@ $Date$
 */
 
 /* Global settings */
-body {
+/*body {
   font-family: verdana, tahoma, helvetica, arial, sans-serif;
   text-align: left;
   background: #fff;
@@ -21,12 +21,12 @@ a:hover, a:focus { color: #d30e08; }
 a:active { color: #6b77b1;}
 
 .ulink {
-  color: #55f;  /* Light Blue */
-  font-weight: bold;
-}
+  color: #55f;*/  /* Light Blue */
+  /*font-weight: bold;
+}*/
 
 /* Headers */
-h1, h2, b, strong {
+/*h1, h2, b, strong {
   color: #000;
   font-weight: bold;
 }
@@ -41,10 +41,10 @@ h2 { font-size: 144%; padding-top: 0.2em; margin-top: 0.3em; line-height: 1.2em;
 h2.subtitle { text-align: center; line-height: 1.2em; }
 h3 { font-size: 120%; line-height: 1.2em; }
 h4 { font-size: 120%; line-height: 1.2em;}
-div.package h4, h5, h6 { font-size: 100%; font-style: italic; }
+div.package h4, h5, h6 { font-size: 100%; font-style: italic; }*/
 
 /* Navigation */
-div.headertitles h4 {
+/*div.headertitles h4 {
   margin-bottom: 2px;
   text-align: center;
 }
@@ -109,11 +109,11 @@ div.navfooter ul li.home, div.navfooter ul li.up {
   margin: 0px auto;
   display: block;
   color: #dbddec;
-}
+}*/
 
 /* TOC & Index*/
 
-div.toc ul, div.index ul, div.navheader ul, div.navfooter ul {
+/*div.toc ul, div.index ul, div.navheader ul, div.navfooter ul {
   list-style: none;
 }
 
@@ -133,8 +133,6 @@ div.toc ul li h3, div.toc ul li h4 {
   font-weight: bold;
   font-size: 110%;
   line-height: 1.8em;
-/* Removed per Bruce
-  margin-left: -1.5em; */
 }
 
 .item {
@@ -150,7 +148,7 @@ div.toc ul li h3, div.toc ul li h4 {
     font-weight: normal;
     width: 16em;
     float: left;
-}
+}*/
 
 /* Admonitions */
 div.note, div.tip {
