@@ -242,12 +242,12 @@
     <xsl:choose>
       <xsl:when test="ancestor::variablelist/@role = 'materials'">
         <fo:block id="{$id}" xsl:use-attribute-sets="list.item.spacing"
-                  keep-together.within-column="always"
+                  keep-together.within-column="always" font-weight="bold"
                   keep-with-next.within-column="always" text-align="left">
           <xsl:text>&#x2022;   </xsl:text>
           <xsl:apply-templates select="term"/>
         </fo:block>
-        <fo:block margin-left="1.4pc" text-align="left"
+        <fo:block text-align="left"
                   keep-together.within-column="always"
                   keep-with-previous.within-column="always">
           <xsl:apply-templates select="listitem"/>
@@ -256,10 +256,10 @@
       <xsl:otherwise>
         <fo:block id="{$id}" xsl:use-attribute-sets="list.item.spacing"
                   keep-together.within-column="always"
-                  keep-with-next.within-column="always">
+                  keep-with-next.within-column="always" margin-left="1em">
           <xsl:apply-templates select="term"/>
         </fo:block>
-        <fo:block margin-left="0.25in">
+        <fo:block margin-left="2em">
           <xsl:apply-templates select="listitem"/>
         </fo:block>
       </xsl:otherwise>

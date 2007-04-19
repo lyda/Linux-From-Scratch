@@ -106,7 +106,7 @@ div.navfooter ul li.home, div.navfooter ul li.up {
   color: #dbddec;
 }
 
-/* TOC & Index*/
+/* TOC */
 
 div.toc ul, div.index ul, div.navheader ul, div.navfooter ul {
   list-style: none;
@@ -133,6 +133,8 @@ div.toc ul li h4 {
   font-size: 110%;
   margin: .6em 0 .2em 0;
 }
+
+/* Index */
 
 .item {
     float: left;
@@ -193,7 +195,33 @@ div.important em, div.warning em, div.caution em {
   font-weight: bold;
 }
 
-/* table and variablelist as table */
+/* table */
+
+.table p.title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: .3em;
+}
+
+.table table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table table th, .table table td {
+  padding: 0.2em 2em 0.2em 2em;
+  text-align: left;
+}
+
+div.revhistory th {
+  line-height: 2em;
+}
+
+div.revhistory td {
+  padding-right: 1em;
+}
+
+/* variablelist as table */
 
 .variablelist table {
   width: auto;
@@ -207,77 +235,36 @@ div.important em, div.warning em, div.caution em {
 .variablelist td span, td p {
   margin: 0.25em;
 }
-/* ---- Revised up to here (first round) ------ */
-div.table {
-  text-align: center;
-}
 
-div.table table {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-div.table table th, div.table table td {
-  padding: 0.2em 2em 0.2em 2em;
-}
-
-div.table table {
-  border-collapse: collapse;
-  }
-
-div.table td, div.table th {
-  padding: 0.3em;
-  text-align: right;
-  vertical-align: baseline;
-}
-
-div.table tr > td:first-child, div.table tr > th:first-child {
-  text-align: left;
-}
-
-div.revhistory th {
-  text-align: left;
-  line-height: 2em;
-}
-
-div.revhistory td {
-  padding-right: 1em;
-}
-
-/* variablelist as list and segmentedlist */
-dl {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+/* variablelist as list */
 
 dt {
-  display: list-item;
   font-weight: bold;
-  margin: .33em 0 0 1em;
-  padding: 0;
+  margin-left: 1em;
 }
 
-dd  {
-  margin: 0 0 1em 3em;
-  padding: 0;
+dd {
+  margin-bottom: .6em;
+  margin-left: 1em;
 }
 
-div.variablelist dd {
-  margin-bottom: 1em;
+dd p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-div.variablelist dd p {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+div.materials dt {
+  display: list-item;
 }
 
 div.materials dd {
-  margin-left: 0px;
+  margin-left: 0;
 }
+/* --- Revised up to here (first round, checking LFS look only) --- */
+
+/* segmentedlist */
 
 div.package div.seg {
   margin-bottom: 0em;
