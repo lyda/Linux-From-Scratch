@@ -98,7 +98,7 @@
           <xsl:text>: </xsl:text>
         </span>
       </strong>
-      <span class="seg">
+      <span class="segbody">
         <xsl:apply-templates/>
       </span>
     </div>
@@ -127,7 +127,7 @@
 
     <!-- Body attributes:
            Add to the body XHTML output tag a class attribute with the book type
-           and a id atribute with the book ty and version. -->
+           and a id atribute with the book type and version. -->
     <!-- The original template is in {docbook-xsl}/xhtml/docbook.xsl -->
   <xsl:template name="body.attributes">
     <xsl:attribute name="class">
@@ -138,92 +138,6 @@
       <xsl:text>-</xsl:text>
       <xsl:value-of select="substring-after(/book/bookinfo/subtitle, ' ')"/>
     </xsl:attribute>
-  </xsl:template>
-
-    <!-- inline.monoseq:
-           The code xhtml tag have look issues in some browsers.
-           We will use tt instead. -->
-    <!-- The original template is in {docbook-xsl}/xhtml/inline.xsl -->
-  <xsl:template name="inline.monoseq">
-    <xsl:param name="content">
-      <xsl:call-template name="anchor"/>
-      <xsl:call-template name="simple.xlink">
-        <xsl:with-param name="content">
-          <xsl:apply-templates/>
-        </xsl:with-param>
-      </xsl:call-template>
-    </xsl:param>
-    <tt>
-      <xsl:apply-templates select="." mode="class.attribute"/>
-      <xsl:call-template name="dir"/>
-      <xsl:call-template name="generate.html.title"/>
-      <xsl:copy-of select="$content"/>
-      <xsl:call-template name="apply-annotations"/>
-    </tt>
-  </xsl:template>
-
-    <!-- inline.boldmonoseq:
-           The code xhtml tag have look issues in some browsers.
-           We will use tt instead. -->
-    <!-- The original template is in {docbook-xsl}/xhtml/inline.xsl -->
-  <xsl:template name="inline.boldmonoseq">
-    <xsl:param name="content">
-      <xsl:call-template name="anchor"/>
-      <xsl:call-template name="simple.xlink">
-        <xsl:with-param name="content">
-          <xsl:apply-templates/>
-        </xsl:with-param>
-      </xsl:call-template>
-    </xsl:param>
-    <!-- don't put <strong> inside figure, example, or table titles
-         or other titles that may already be represented with <strong>'s. -->
-    <xsl:choose>
-      <xsl:when test="local-name(..)='title' and (local-name(../..)='figure'
-                      or local-name(../..)='example' or local-name(../..)='table'
-                      or local-name(../..)='formalpara')">
-        <tt>
-          <xsl:apply-templates select="." mode="class.attribute"/>
-          <xsl:call-template name="generate.html.title"/>
-          <xsl:call-template name="dir"/>
-          <xsl:copy-of select="$content"/>
-          <xsl:call-template name="apply-annotations"/>
-        </tt>
-      </xsl:when>
-      <xsl:otherwise>
-        <strong>
-          <xsl:apply-templates select="." mode="class.attribute"/>
-          <tt>
-            <xsl:call-template name="generate.html.title"/>
-            <xsl:call-template name="dir"/>
-            <xsl:copy-of select="$content"/>
-          </tt>
-        </strong>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-    <!-- inline.italicmonoseq:
-           The code xhtml tag have look issues in some browsers.
-           We will use tt instead. -->
-    <!-- The original template is in {docbook-xsl}/xhtml/inline.xsl -->
-  <xsl:template name="inline.italicmonoseq">
-    <xsl:param name="content">
-      <xsl:call-template name="anchor"/>
-      <xsl:call-template name="simple.xlink">
-        <xsl:with-param name="content">
-          <xsl:apply-templates/>
-        </xsl:with-param>
-      </xsl:call-template>
-    </xsl:param>
-    <em>
-      <xsl:apply-templates select="." mode="class.attribute"/>
-      <tt>
-        <xsl:call-template name="generate.html.title"/>
-        <xsl:call-template name="dir"/>
-        <xsl:copy-of select="$content"/>
-        <xsl:call-template name="apply-annotations"/>
-      </tt>
-    </em>
   </xsl:template>
 
   <!-- Revision History -->

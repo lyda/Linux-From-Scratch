@@ -12,9 +12,9 @@ body {
 
 a:link { color: #22b; }
 a.ulink:link { font-weight: bold; color: #55f; }
-a:visited { color: #7e4988; }
-a:hover, a:focus { color: #d30e08; }
-a:active { color: #6b77b1;}
+a:visited { color: #7e4988 ! important; }
+a:hover, a:focus { color: #d30e08 ! important; }
+a:active { color: #6b77b1 ! important;}
 
 /* Headers */
 h1, h2, b, .strong {
@@ -30,9 +30,10 @@ h1 { font-size: 173%; text-align: center; line-height: 1em; }
 h1.title sup { font-size: small; }
 h2 { font-size: 144%; line-height: 1em; }
 h2.subtitle { text-align: center; line-height: 1em; }
+.appendix h2 { font-size: 133%; margin-top: .8em; margin-bottom: 0.2em; }
 h3 { font-size: 120%; line-height: 1em; }
 h4 { font-size: 110%; line-height: 1em; }
-div.package h4, h5, h6 { font-size: 100%; font-style: italic; }
+.package h4, h5, h6 { font-size: 100%; font-style: italic; }
 
 /* Navigation */
 div.navheader, div.navfooter {
@@ -237,6 +238,9 @@ div.revhistory td {
 }
 
 /* variablelist as list */
+dl {
+  padding-left: 1em
+}
 
 dt {
   font-weight: bold;
@@ -261,59 +265,68 @@ div.materials dt {
 
 div.materials dd {
   margin-left: 0;
+  padding-left: 0;
 }
-/* --- Revised up to here (first round, checking LFS look only) --- */
 
 /* segmentedlist */
+.appendix .segmentedlist {
+  padding-left: 1em;
+}
 
-div.package div.seg {
+.package .seg {
   margin-bottom: 0em;
   margin-top: 0em;
   clear: left;
 }
 
-div.package span.segtitle, div.appendix span.segtitle {
-  float: left;
-}
-
-div.package span.seg, div.appendix span.seg {
-  display: block;
-  padding-left: 14em;
-}
-
-div.appendix div.segmentedlist {
-  padding-left: 1em;
-}
-
-div.appendix h2 {
-  font-size: 133%;
-  margin-top: 1em;
-  margin-bottom: 0.2em;
-}
-
-div.content div.seg {
+.content .seg {
   margin-bottom: 1em;
   margin-top: 1em;
   clear: left;
 }
 
-div.content span.segtitle {
+.segtitle {
   float: left;
 }
 
-div.content span.seg {
+.package .segbody, .appendix .segbody {
+  display: block;
+  padding-left: 14em;
+}
+
+.content .segbody {
   display: block;
   padding-left: 12em;
 }
 
 /* itemizedlist */
+ul {
+  padding-left: 1em
+}
 
-div.itemizedlist {
-  margin-left: 1em;
+.itemizedlist ul {
+  margin-left: 1em
+}
+
+li ul {
+  margin-bottom: 1.2em;
+}
+
+li ul li p {
+  margin-top: .2em;
+  margin-bottom: .2em;
+}
+
+li ul li:first-child p {
+  margin-top: -.6em;
 }
 
 ul[compact="compact"] {
   list-style: none;
+}
+
+.blfs ul[compact="compact"] {
+  list-style: disc;
 }
 
 ul[compact="compact"] li {
@@ -326,8 +339,13 @@ ul[compact="compact"] li p {
   margin: 0em;
 }
 
+.blfs ul[compact="compact"] li p {
+  background-color: #f0fff0;
+}
+/* --- Revised up to here (first round, checking LFS look only) --- */
+
 /* Indented blocks */
-p, ul, dl, code, blockquote {
+p, blockquote {
   padding-left: 1em;
 }
 
