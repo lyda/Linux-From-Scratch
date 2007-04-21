@@ -10,11 +10,56 @@ body {
   line-height: 1.2em
 }
 
+
+/* Links */
 a:link { color: #22b; }
 a.ulink:link { font-weight: bold; color: #55f; }
 a:visited { color: #7e4988 ! important; }
 a:hover, a:focus { color: #d30e08 ! important; }
 a:active { color: #6b77b1 ! important;}
+
+
+/* Book titlepage */
+.book .titlepage {
+  background: #f5f6f7;
+  margin: 0px auto;
+  padding: 0 1em;
+}
+
+.book hr {
+  background: #dbddec;
+  height: .3em;
+  border: 0px;
+  margin: 0 -1em;
+  padding: 0;
+}
+
+
+/* Sections */
+.package, .kernel, .installation, .commands, .testing, .configuration, .content {
+  padding: 0 .5em .3em .5em;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.lfs .package {
+  background: #f5f6f7;
+  border-bottom: 0.2em solid #dbddec;
+  padding-top: .1em;
+  margin-top: 0;
+}
+
+div.configuration {
+  background:   #fefefe;
+  border-top: 0.2em solid #dbddec;
+}
+
+.lfs .content {
+  background: #f5f6f7;
+  border-top: 0.2em solid #dbddec;
+  padding-bottom: .1em;
+  margin-bottom: 0;
+}
+
 
 /* Headers */
 h1, h2, b, .strong {
@@ -22,18 +67,67 @@ h1, h2, b, .strong {
   font-weight: bold;
 }
 
-h3, h4, h5, h6 {
-  color: #222;
+h1 {
+  font-size: 173%;
+  text-align: center;
+  line-height: 1em;
 }
 
-h1 { font-size: 173%; text-align: center; line-height: 1em; }
-h1.title sup { font-size: small; }
-h2 { font-size: 144%; line-height: 1em; }
-h2.subtitle { text-align: center; line-height: 1em; }
-.appendix h2 { font-size: 133%; margin-top: .8em; margin-bottom: 0.2em; }
-h3 { font-size: 120%; line-height: 1em; }
-h4 { font-size: 110%; line-height: 1em; }
-.package h4, h5, h6 { font-size: 100%; font-style: italic; }
+.book h1 {
+  margin: 0;
+  padding: 0.4em;
+}
+
+.preface h1, .part h1, .chapter h1, .appendix h1, .index h1, .sect1 h1 {
+  background: #f5f6f7;
+  border-bottom: .1em solid #dbddec;
+  margin: 0 0 1em 0;
+  padding: .4em;
+}
+
+.wrap h1 {
+  background: #f5f6f7;
+  margin: 0;
+  padding: .4em;
+}
+
+h1.title sup {
+  font-size: small;
+}
+
+h2 {
+  font-size: 144%;
+  line-height: 1em;
+}
+
+.book h2.subtitle {
+  text-align: center;
+  background: #dbddec;
+  margin: 0;
+  padding: 0.2em;
+}
+
+.appendix h2 {
+  font-size: 133%;
+  margin-top: .8em;
+  margin-bottom: 0.2em;
+}
+
+h3 {
+  font-size: 120%;
+  line-height: 1em;
+}
+
+h4 {
+font-size: 110%;
+line-height: 1em;
+}
+
+.package h4, h5, h6 {
+  font-size: 100%;
+  font-style: italic;
+}
+
 
 /* Navigation */
 div.navheader, div.navfooter {
@@ -107,8 +201,8 @@ div.navfooter ul li.home, div.navfooter ul li.up {
   color: #dbddec;
 }
 
-/* TOC */
 
+/* TOC */
 div.toc ul, div.index ul, div.navheader ul, div.navfooter ul {
   list-style: none;
 }
@@ -135,8 +229,8 @@ div.toc ul li h4 {
   margin: .6em 0 .2em 0;
 }
 
-/* Index */
 
+/* Index */
 .item {
     float: left;
 }
@@ -157,6 +251,7 @@ div.toc ul li h4 {
 .blfs .indexref {
     margin-left: 26em;
 }
+
 
 /* Admonitions */
 div.note, div.tip {
@@ -196,8 +291,8 @@ div.important em, div.warning em, div.caution em {
   font-weight: bold;
 }
 
-/* table */
 
+/* table */
 .table p.title {
   text-align: center;
   margin-top: 0;
@@ -222,8 +317,8 @@ div.revhistory td {
   padding-right: 1em;
 }
 
-/* variablelist as table */
 
+/* variablelist as table */
 .variablelist table {
   width: auto;
   margin: 0 1em 0 1em;
@@ -236,6 +331,7 @@ div.revhistory td {
 .variablelist td span, td p {
   margin: 0.25em;
 }
+
 
 /* variablelist as list */
 dl {
@@ -268,6 +364,7 @@ div.materials dd {
   padding-left: 0;
 }
 
+
 /* segmentedlist */
 .appendix .segmentedlist {
   padding-left: 1em;
@@ -298,6 +395,7 @@ div.materials dd {
   display: block;
   padding-left: 12em;
 }
+
 
 /* itemizedlist */
 ul {
@@ -342,19 +440,20 @@ ul[compact="compact"] li p {
 .blfs ul[compact="compact"] li p {
   background-color: #f0fff0;
 }
-/* --- Revised up to here (first round, checking LFS look only) --- */
+
 
 /* Indented blocks */
 p, blockquote {
   padding-left: 1em;
 }
 
+
 /* Monospaced elements */
 tt, code, kbd, pre, .command {
   font-family: monospace;
 }
 
-tt.systemitem {
+.systemitem {
   font-style: italic;
 }
 
@@ -363,12 +462,17 @@ pre.userinput {
   background-color: #e5e5e5;
   border: 1px solid #050505;
   padding: .5em 1em;
-  margin: 0 2em;
+  margin: 0 2em .5em 2em;
   font-weight: bold;
 }
 
-.literal {
-  font-weight: normal;
+pre.root {
+  color: #101310;
+  background-color: #e5e5e5;
+  border: 1px solid #11a;
+  padding: .5em 1em;
+  margin: 0 2em;
+  font-weight: bold;
 }
 
 pre.screen {
@@ -379,76 +483,31 @@ pre.screen {
   margin: 0 2em;
 }
 
-/* Sections */
-div.wrap h1 {
-  background: #f5f6f7;
-  padding: 1em 0 0.5em 0;
-  margin: 0px auto;
+.literal, .prompt {
+  font-weight: normal;
 }
 
-div.package {
-  background: #f5f6f7;
-  border-bottom: 0.2em solid #dbddec;
-  padding: 0.5em 0.5em 0.3em 0.5em;
-  margin: 0px auto;
+
+/* Mixed tags */
+p.usernotes {
+  margin-left: -1em;
+  font-size: small;
+  font-weight: bold;
+  font-style: italic;
 }
 
-div.installation {
-  padding: 0 0.5em 0.3em 0.5em;
-  margin: 0.5em 0 0.5em 0;
+.simplelist {
+  background-color: #f0fff0;
 }
 
-div.configuration {
-  background:   #fefefe;
-  border-top: 0.2em solid #dbddec;
-  padding: 0.5em;
-  margin: 0.5em 0 .5em 0;
+.underlined {
+  text-decoration: underline;
 }
 
-div.content {
-  background: #f5f6f7;
-  border-top: 0.2em solid #dbddec;
-  padding: 0.5em 0.5em 1em 0.5em;
-  margin: 0.5em 0 .5em 0;
-}
 
-div.installation h2, div.content h2 {
-  padding-top: 0.3em;
-  margin: 0;
-}
-
-div.book, div.preface, div.part, div.chapter, div.sect1, div.appendix, div.index {
-  padding-bottom: 0.5em;
-}
-
-div.preface h1, div.part h1, div.chapter h1, div.sect1 h1, div.appendix h1, div.index h1 {
-  background: #f5f6f7;
-  border-bottom: .1em solid #dbddec;
-  margin: 0px auto;
-  padding: .5em;
-}
-
-div.book h1 {
-  background: #f5f6f7;
-  margin: 0px auto;
-  padding: 0.5em;
-}
-
-div.book h2.subtitle {
-  background: #dbddec;
-  margin: 0px auto;
-  padding: 0.2em;
-}
-div.authorgroup, div p.copyright, div.abstract {
-  background: #f5f6f7;
-  margin: 0px auto;
-  padding:  1em 0.5em;
-}
-
-hr {
-  background: #dbddec;
-  height: .3em;
-  border: 0px;
-  margin: 0px auto;
-  padding: 0;
+/* Last edited info */
+p.updated {
+  font-size: small;
+  font-weight: bold;
+  font-style: italic;
 }
