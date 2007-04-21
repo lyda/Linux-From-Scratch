@@ -64,20 +64,20 @@
                 <xsl:call-template name="gentext">
                   <xsl:with-param name="key">Packages</xsl:with-param>
                 </xsl:call-template>
-             </xsl:when>
-             <xsl:when test="$divtitle = 'B'">
+              </xsl:when>
+              <xsl:when test="$divtitle = 'B'">
                 <a id="program-index" name="program-index"/>
                 <xsl:call-template name="gentext">
                   <xsl:with-param name="key">Programs</xsl:with-param>
                 </xsl:call-template>
-             </xsl:when>
-             <xsl:when test="$divtitle = 'C'">
+              </xsl:when>
+              <xsl:when test="$divtitle = 'C'">
                 <a id="library-index" name="library-index"/>
                 <xsl:call-template name="gentext">
                   <xsl:with-param name="key">Libraries</xsl:with-param>
                 </xsl:call-template>
-             </xsl:when>
-             <xsl:when test="$divtitle = 'D'">
+              </xsl:when>
+              <xsl:when test="$divtitle = 'D'">
                 <xsl:choose>
                   <xsl:when test="$book-type = 'blfs'">
                     <a id="kernel-config-index" name="kernel-config-index"/>
@@ -92,7 +92,7 @@
                     </xsl:call-template>
                   </xsl:otherwise>
                 </xsl:choose>
-             </xsl:when>
+              </xsl:when>
               <xsl:when test="$divtitle = 'E'">
                 <xsl:choose>
                   <xsl:when test="$book-type = 'blfs'">
@@ -109,22 +109,22 @@
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:when>
-             <xsl:when test="$divtitle = 'F'">
-                <a id="bootscript-index" name="bootscript-index"/>
-                <xsl:call-template name="gentext">
-                  <xsl:with-param name="key">Bootscripts</xsl:with-param>
-                </xsl:call-template>
-             </xsl:when>
-             <xsl:when test="$divtitle = 'G'">
+              <xsl:when test="$divtitle = 'F'">
+                  <a id="bootscript-index" name="bootscript-index"/>
+                  <xsl:call-template name="gentext">
+                    <xsl:with-param name="key">Bootscripts</xsl:with-param>
+                  </xsl:call-template>
+              </xsl:when>
+              <xsl:when test="$divtitle = 'G'">
                 <a id="other-index" name="other-index"/>
                 <xsl:call-template name="gentext">
                   <xsl:with-param name="key">Others</xsl:with-param>
                 </xsl:call-template>
-             </xsl:when>
-             <xsl:otherwise>
-              <xsl:value-of select="$divtitle"/>
-            </xsl:otherwise>
-           </xsl:choose>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="$divtitle"/>
+              </xsl:otherwise>
+            </xsl:choose>
           </h2>
         </xsl:if>
         <ul>
