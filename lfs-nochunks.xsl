@@ -72,7 +72,7 @@
     <!-- sect2.titlepage:
            Removed a lot of unneeded code.
            Skip empty titles.
-           No label in preface. -->
+           No label in preface (actualy, skip the hardcoded dot). -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="sect2.titlepage">
     <xsl:choose>
@@ -83,7 +83,7 @@
             <a id="{@id}" name="{@id}"/>
           </xsl:if>
           <h3 class="{name(.)}">
-            <xsl:if test="not(ancestor::preface)">
+            <xsl:if test="not(ancestor::preface) and $section.autolabel != 0">
               <xsl:apply-templates select="." mode="label.markup"/>
               <xsl:text>. </xsl:text>
             </xsl:if>
@@ -96,76 +96,226 @@
 
     <!-- The CSS Stylesheet:
            Note: there is a few diferences with lfs.css code releated
-                 to h* values-->
+                 to h* values. -->
     <!-- The original template is in {docbook-xsl}/xhtml/docbook.xsl -->
   <xsl:template name='user.head.content'>
     <style type="text/css">
       <xsl:text>
 /* Global settings */
 body {
-  font-family: sans-serif;
+  font-family: verdana, tahoma, helvetica, arial, sans-serif;
   text-align: left;
   background: #fff;
-  color: #333;
+  color: #222;
   margin: 1em;
   padding: 0;
   font-size: 1em;
   line-height: 1.2em
 }
 
-a:link { color: #22b; }
-a:visited { color: #7e4988; }
-a:hover, a:focus { color: #d30e08; }
-a:active { color: #6b77b1;}
 
-/* External links in italic font */
-a.ulink { font-style: italic; }
+/* Links */
+a:link { color: #22b; }
+a.ulink:link { font-weight: bold; color: #55f; }
+a:visited { color: #7e4988 ! important; }
+a:hover, a:focus { color: #d30e08 ! important; }
+a:active { color: #6b77b1 ! important;}
+
+
+/* Book titlepage */
+.book {
+  margin: 0px auto;
+  padding: 0 1em;
+}
+
+.book h1, .book .authorgroup, .book .copyright, .book .legalnotice .revhistory {
+  background: #f5f6f7;
+  margin: 0px auto;
+  padding: .1em 1em;
+}
+
+.book hr {
+  background: #dbddec;
+  height: .3em;
+  border: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+div.dedication .titlepage {
+  background: #fff;
+}
+
+div.dedication p {
+  padding-left: 2em;
+}
+
+
+/* Sections */
+div.sect1, div.appendix {
+  padding-left: .3em;
+}
+
+.package, .kernel, .installation, .commands, .testing, .configuration, .content {
+  padding: 0 .5em .2em 0;
+  margin: 0;
+}
+
+.lfs .package {
+  background: #f5f6f7;
+  border-bottom: 0.2em solid #dbddec;
+  padding-top: .1em;
+  margin-top: 0;
+}
+
+.lfs .configuration {
+  background:   #fefefe;
+  border-top: 0.2em solid #dbddec;
+}
+
+.lfs .content {
+  background: #f5f6f7;
+  border-top: 0.2em solid #dbddec;
+  border-bottom: 0.2em solid #dbddec;
+  padding-bottom: .1em;
+  margin-bottom: 0;
+}
+
 
 /* Headers */
-h1, h2, b, strong {
+h1, h2, h3, h4, h5, h6, b, .strong {
   color: #000;
   font-weight: bold;
+  line-height: 1em;
 }
 
-h3, h4, h5, h6 {
-  color: #222;
+h1 {
+  font-size: 173%;
+  text-align: center;
 }
 
-h1 { font-size: 173%; text-align: center; line-height: 1.2em; }
-h2 { font-size: 144%; line-height: 1.2em; }
-h2.subtitle { text-align: center; line-height: 1.2em; }
-h3 { font-size: 120%; padding-top: 0.2em; margin-top: 0.3em; line-height: 1.2em; }
-h4 { font-size: 110%; line-height: 1.2em;}
-h5, h6 { font-size: 110%; font-style: italic; line-height: 1.2em; }
+.book h1 {
+  margin: 0;
+  padding: 0.4em;
+}
 
-/* TOC and Index*/
+h1.title sup {
+  font-size: small;
+}
 
+h2 {
+  font-size: 144%;
+}
+
+.preface h2, .part h1, .chapter h2, .appendix h2, .index h1, .sect1 h2 {
+  background: #f5f6f7;
+  border-top: .2em solid #dbddec;
+  border-bottom: .2em solid #dbddec;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding: .4em;
+  text-align: center;
+}
+
+.sect1 h2, .appendix h2 {
+  margin-left: -.2em;
+}
+
+.wrap h2 {
+  background: #f5f6f7;
+  border-bottom: 0;
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding-top: .4em;
+}
+
+.book h2.subtitle {
+  text-align: center;
+  background: #dbddec;
+  margin: 0;
+  padding: 0.2em;
+}
+
+h3 {
+  font-size: 120%;
+}
+
+.appendix h3 {
+  font-size: 133%;
+  margin-top: .8em;
+  margin-bottom: 0.2em;
+}
+
+h4 {
+  font-size: 110%;
+}
+
+.package h4, h5, h6 {
+  font-size: 100%;
+  font-style: italic;
+}
+
+
+/* TOC */
 div.toc ul, div.index ul, div.navheader ul, div.navfooter ul {
   list-style: none;
 }
 
-div.toc, div.dedication {
+div.toc {
   padding-left: 1em;
 }
 
-li.preface, li.appendix {
+li.preface, .part li.appendix {
   margin-left: 1em;
 }
 
-div.toc ul li h3, div.toc ul li h4 {
-  margin: .4em;
+div.toc h3 {
+  margin: 1em 0 .3em 0;
 }
 
+li.appendix h3, li.glossary h3, li.index h3 {
+  margin: .5em
+}
+
+div.toc h4 {
+  margin: .6em 0 .2em 0;
+}
+
+li.chapter h4 a {
+  display: block;
+  margin-bottom: .4em
+}
+
+.dummy {
+  display: block;
+  font-weight: bold;
+  font-size: 110%;
+  margin: .6em 0 .2em 0;
+}
+
+
+/* Index */
 .item {
-    width: 17em;
     float: left;
 }
 
 .secitem {
     font-weight: normal;
-    width: 16em;
     float: left;
 }
+
+.lfs .item + .indexref {
+    margin-left: 18em;
+}
+
+.lfs .secitem + .indexref {
+    margin-left: 17em;
+}
+
+.blfs .indexref {
+    margin-left: 26em;
+}
+
 
 /* Admonitions */
 div.note, div.tip {
@@ -179,16 +329,15 @@ div.important, div.warning, div.caution {
   background-color: #fffff6;
   border: medium solid #400;
   width: 90%;
-  margin: 1.5em auto;
+  margin: .5em auto;
   color: #600;
-  font-size: larger;
 }
 
 div.important h3, div.warning h3, div.caution h3 {
   color: #900;
 }
 
-h3.admontitle {
+div.admonhead h3 {
   padding-left: 2.5em;
   padding-top: 1em;
 }
@@ -202,112 +351,149 @@ div.important em, div.warning em, div.caution em {
   font-weight: bold;
 }
 
-div.important tt, div.warning tt, div.caution tt {
-  font-weight: bold;
+
+/* table */
+.table p.title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: .3em;
 }
 
-div.important tt.literal, div.warning tt.literal, div.caution tt.literal {
-  font-weight: normal;
+.table table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* variablelist and segmentedlist */
-dl {
-  margin: 0;
-  padding: 0;
+.table table th, .table table td {
+  padding: 0.2em 2em 0.2em 2em;
+  text-align: left;
 }
 
-dt {
-  display: list-item;
-  font-weight: bold;
-  margin: .33em 0 0 1em;
-  padding: 0;
+div.revhistory {
+  padding-left: 1em;
 }
 
-dd  {
-  margin: 0 0 1em 3em;
-  padding: 0;
+div.revhistory th {
+  line-height: 2em;
+  text-align: left;
 }
 
-table {
+div.revhistory td {
+  padding-right: 1em;
+}
+
+
+/* variablelist as table */
+.variablelist table {
   width: auto;
-  margin-left: 1em;
+  margin: 0 1em 0 1em;
 }
 
-td {
+.variablelist td {
   vertical-align: top;
 }
 
-td span, td p {
-  margin: 0.3em;
+.variablelist td span, td p {
+  margin: 0.25em;
 }
 
-span.term {
-  display: block;
+.variablelist td p {
+  margin-top: 0;
 }
 
-div.variablelist dd {
-  margin-bottom: 1em;
+
+/* variablelist as list */
+dl {
+  padding-left: 1em
 }
 
-div.variablelist dd p {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+dt {
+  font-weight: bold;
+  margin-left: 1em;
 }
 
-dl.materials dd {
-  margin-left: 0px;
+dd {
+  margin-bottom: .6em;
+  margin-left: 1em;
 }
 
-div.package div.seg {
+dd p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+div.materials dt {
+  display: list-item;
+}
+
+div.materials dd {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+
+/* segmentedlist */
+.appendix .segmentedlist {
+  padding-left: 1em;
+}
+
+.package .seg {
   margin-bottom: 0em;
   margin-top: 0em;
   clear: left;
 }
 
-div.package span.segtitle, div.appendix span.segtitle {
+.content .seg {
+  margin-bottom: .4em;
+  margin-top: .4em;
+  clear: left;
+}
+
+.segtitle {
   float: left;
 }
 
-div.package span.seg, div.appendix span.seg {
+.package .segbody, .appendix .segbody {
   display: block;
   padding-left: 14em;
 }
 
-div.appendix div.segmentedlist {
-  padding-left: 1em;
-}
-
-div.appendix h3 {
-  font-size: 133%;
-  margin-top: 1em;
-  margin-bottom: 0.2em;
-}
-
-div.content div.seg {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  clear: left;
-}
-
-div.content span.segtitle {
-  float: left;
-}
-
-div.content span.seg {
+.content .segbody {
   display: block;
   padding-left: 12em;
 }
 
-/* itemizedlist */
 
-div.itemizedlist {
-  margin-left: 1em;
+/* itemizedlist */
+ul {
+  padding-left: 1em
+}
+
+.itemizedlist ul {
+  margin-left: 1em
+}
+
+.itemizedlist li ul {
+  margin-bottom: 1.2em;
+}
+
+.itemizedlist li ul li p {
+  margin-top: .2em;
+  margin-bottom: .2em;
+}
+
+.itemizedlist li ul li:first-child p:first-child {
+  margin-top: -.6em;
 }
 
 ul[compact="compact"] {
   list-style: none;
+}
+
+.blfs ul[compact="compact"] {
+  list-style: disc;
 }
 
 ul[compact="compact"] li {
@@ -320,33 +506,24 @@ ul[compact="compact"] li p {
   margin: 0em;
 }
 
-/*table */
-
-div.table {
-  text-align: center;
+.blfs ul[compact="compact"] li p {
+  background-color: #f0fff0;
 }
 
-div.table table {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-div.table table th, div.table table td {
-  padding: 0.2em 2em 0.2em 2em;
-}
 
 /* Indented blocks */
-p, ul, dl, code, blockquote {
+p, blockquote {
   padding-left: 1em;
+  padding-right: 1em;
 }
+
 
 /* Monospaced elements */
 tt, code, kbd, pre, .command {
   font-family: monospace;
 }
 
-tt.systemitem {
+.systemitem {
   font-style: italic;
 }
 
@@ -355,12 +532,17 @@ pre.userinput {
   background-color: #e5e5e5;
   border: 1px solid #050505;
   padding: .5em 1em;
-  margin: 0 2em;
+  margin: 0 2em .5em 2em;
   font-weight: bold;
 }
 
-.literal {
-  font-weight: normal;
+pre.root {
+  color: #101310;
+  background-color: #e5e5e5;
+  border: 1px solid #11a;
+  padding: .5em 1em;
+  margin: 0 2em;
+  font-weight: bold;
 }
 
 pre.screen {
@@ -371,81 +553,33 @@ pre.screen {
   margin: 0 2em;
 }
 
-/* Sections */
-div.wrap h2 {
-  background: #f5f6f7;
-  padding: 1em 0 0.5em 0;
-  margin: 0px auto;
+.literal, .prompt {
+  font-weight: normal;
 }
 
-div.package {
-  background: #f5f6f7;
-  border-bottom: 0.2em solid #dbddec;
-  padding: 0.5em 0.5em 0.3em 0.5em;
-  margin: 0px auto;
+
+/* Mixed tags */
+p.usernotes {
+  margin-left: -1em;
+  font-size: small;
+  font-weight: bold;
+  font-style: italic;
 }
 
-div.installation {
-  padding: 0 0.5em 0.3em 0.5em;
-  margin: 0.5em 0 0.5em 0;
+.simplelist {
+  background-color: #f0fff0;
 }
 
-div.configuration {
-  background:   #fefefe;
-  border-top: 0.2em solid #dbddec;
-  padding: 0.5em;
-  margin: 0.5em 0 .5em 0;
+.underlined {
+  text-decoration: underline;
 }
 
-div.content {
-  background: #f5f6f7;
-  border-top: 0.2em solid #dbddec;
-  border-bottom: 0.2em solid #dbddec;
-  padding: 0.5em 0.5em 1em 0.5em;
-  margin: 0.5em 0 .5em 0;
-}
 
-div.installation h3.title, div.content h3.title {
-  padding-top: 0.3em;
-  margin: 0;
-}
-
-div.book, div.preface, div.part, div.chapter, div.sect1, div.appendix, div.index {
-  padding-bottom: 0.5em;
-}
-
-div.preface h2, div.part h1, div.chapter h2, div.sect1 h2, div.appendix h2, div.index h1 {
-  background: #f5f6f7;
-  border-bottom: .2em solid #dbddec;
-  border-top: .2em solid #dbddec;
-  margin-top 1em;
-  padding: .5em;
-  text-align: center;
-}
-
-div.book h1 {
-  background: #f5f6f7;
-  margin: 0px auto;
-  padding: 0.5em;
-}
-
-div.book h2.subtitle {
-  background: #dbddec;
-  margin: 0px auto;
-  padding: 0.2em;
-}
-div.authorgroup, div p.copyright, div.abstract {
-  background: #f5f6f7;
-  margin: 0px auto;
-  padding:  1em 0.5em;
-}
-
-hr {
-  background: #dbddec;
-  height: .3em;
-  border: 0px;
-  margin: 0px auto;
-  padding: 0;
+/* Last edited info */
+p.updated {
+  font-size: small;
+  font-weight: bold;
+  font-style: italic;
 }
       </xsl:text>
     </style>
