@@ -36,6 +36,10 @@ a:active { color: #6b77b1 ! important;}
 
 
 /* Sections */
+div.sect1, .appendix {
+  padding-left: .3em;
+}
+
 .package, .kernel, .installation, .commands, .testing, .configuration, .content {
   padding: 0 .5em .3em .5em;
   margin: 0.5em 0 0.5em 0;
@@ -81,8 +85,13 @@ h1 {
 .preface h1, .part h1, .chapter h1, .appendix h1, .index h1, .sect1 h1 {
   background: #f5f6f7;
   border-bottom: .1em solid #dbddec;
-  margin: 0 0 1em 0;
+  margin-bottom: 1em;
+  margin-top: 0;
   padding: .4em;
+}
+
+.sect1 h1, .appendix h1 {
+  margin-left: -.2em;
 }
 
 .wrap h1 {
@@ -332,6 +341,10 @@ div.revhistory td {
   margin: 0.25em;
 }
 
+.variablelist td p {
+  margin-top: 0;
+}
+
 
 /* variablelist as list */
 dl {
@@ -406,16 +419,16 @@ ul {
   margin-left: 1em
 }
 
-li ul {
+.itemizedlist li ul {
   margin-bottom: 1.2em;
 }
 
-li ul li p {
+.itemizedlist li ul li p {
   margin-top: .2em;
   margin-bottom: .2em;
 }
 
-li ul li:first-child p {
+.itemizedlist li ul li:first-child p:first-child {
   margin-top: -.6em;
 }
 
@@ -445,6 +458,7 @@ ul[compact="compact"] li p {
 /* Indented blocks */
 p, blockquote {
   padding-left: 1em;
+  padding-right: 1em;
 }
 
 
