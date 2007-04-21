@@ -34,15 +34,23 @@ a:active { color: #6b77b1 ! important;}
   padding: 0;
 }
 
+div.dedication .titlepage {
+  background: #fff;
+}
+
+div.dedication p {
+  padding-left: 2em;
+}
+
 
 /* Sections */
-div.sect1, .appendix {
+div.sect1, div.appendix {
   padding-left: .3em;
 }
 
 .package, .kernel, .installation, .commands, .testing, .configuration, .content {
-  padding: 0 .5em .3em .5em;
-  margin: 0.5em 0 0.5em 0;
+  padding: 0 .5em .2em 0;
+  margin: 0;
 }
 
 .lfs .package {
@@ -52,7 +60,7 @@ div.sect1, .appendix {
   margin-top: 0;
 }
 
-div.configuration {
+.lfs .configuration {
   background:   #fefefe;
   border-top: 0.2em solid #dbddec;
 }
@@ -66,15 +74,15 @@ div.configuration {
 
 
 /* Headers */
-h1, h2, b, .strong {
+h1, h2, h3, h4, h5, h6, b, .strong {
   color: #000;
   font-weight: bold;
+  line-height: 1em;
 }
 
 h1 {
   font-size: 173%;
   text-align: center;
-  line-height: 1em;
 }
 
 .book h1 {
@@ -106,7 +114,6 @@ h1.title sup {
 
 h2 {
   font-size: 144%;
-  line-height: 1em;
 }
 
 .book h2.subtitle {
@@ -124,12 +131,10 @@ h2 {
 
 h3 {
   font-size: 120%;
-  line-height: 1em;
 }
 
 h4 {
-font-size: 110%;
-line-height: 1em;
+  font-size: 110%;
 }
 
 .package h4, h5, h6 {
@@ -216,23 +221,33 @@ div.toc ul, div.index ul, div.navheader ul, div.navfooter ul {
   list-style: none;
 }
 
-div.toc, div.dedication {
+div.toc {
   padding-left: 1em;
 }
 
-li.preface, li.appendix {
+li.preface, .part li.appendix {
   margin-left: 1em;
 }
 
-div.toc ul li h3 {
+div.toc h3 {
   margin: 1em 0 .3em 0;
 }
 
-div.toc ul li h4 {
+li.appendix h3, li.glossary h3, li.index h3 {
+  margin: .5em
+}
+
+div.toc h4 {
   margin: .6em 0 .2em 0;
 }
 
+li.chapter h4 a {
+  display: block;
+  margin-bottom: .4em
+}
+
 .dummy {
+  display: block;
   font-weight: bold;
   font-size: 110%;
   margin: .6em 0 .2em 0;
@@ -318,8 +333,13 @@ div.important em, div.warning em, div.caution em {
   text-align: left;
 }
 
+div.revhistory {
+  padding-left: 1em;
+}
+
 div.revhistory th {
   line-height: 2em;
+  text-align: left;
 }
 
 div.revhistory td {
@@ -390,8 +410,8 @@ div.materials dd {
 }
 
 .content .seg {
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin-bottom: .4em;
+  margin-top: .4em;
   clear: left;
 }
 
