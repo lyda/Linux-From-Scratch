@@ -26,6 +26,9 @@
   <xsl:include href="pdf/lfs-pagesetup.xsl"/>
   <xsl:include href="pdf/lfs-xref.xsl"/>
 
+    <!-- The LFS book type to be processed (lfs, blfs, clfs, or hlfs) -->
+  <xsl:param name="book-type">lfs</xsl:param>
+
     <!-- Activating FOP-1 extensions. We use FOP-0.93 as the FO procesor. -->
   <xsl:param name="fop1.extensions" select="1"/>
 

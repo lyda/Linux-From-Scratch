@@ -125,7 +125,8 @@
       <xsl:call-template name="simple.xlink">
         <xsl:with-param name="content">
           <xsl:choose>
-            <xsl:when test="ancestor::para and not(descendant::ulink)">
+            <xsl:when test="ancestor::para and not(ancestor::screen)
+                            and not(descendant::ulink)">
               <xsl:call-template name="hyphenate-url">
                 <xsl:with-param name="url">
                   <xsl:apply-templates/>
@@ -161,7 +162,8 @@
       <xsl:call-template name="simple.xlink">
         <xsl:with-param name="content">
           <xsl:choose>
-            <xsl:when test="ancestor::para and not(descendant::ulink)">
+            <xsl:when test="ancestor::para and not(ancestor::screen)
+                            and not(descendant::ulink)">
               <xsl:call-template name="hyphenate-url">
                 <xsl:with-param name="url">
                   <xsl:apply-templates/>
