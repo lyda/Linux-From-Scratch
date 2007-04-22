@@ -125,6 +125,27 @@
     </xsl:choose>
   </xsl:template>
 
+    <!-- para/simplelist:
+           Self-made template. Add a line break and process the childs.
+           If @type is specified, the original templates should be used,
+           but not tested. -->
+  <xsl:template match="para/simplelist">
+    <br/>
+    <xsl:apply-templates mode="condensed"/>
+  </xsl:template>
+
+    <!-- member:
+           Self-made template to process it and add a line break. -->
+  <xsl:template match="member" mode="condensed">
+    <xsl:call-template name="anchor"/>
+    <xsl:call-template name="simple.xlink">
+      <xsl:with-param name="content">
+        <xsl:apply-templates/>
+      </xsl:with-param>
+    </xsl:call-template>
+    <br/>
+  </xsl:template>
+
 
   <!-- Named formating templates -->
 

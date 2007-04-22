@@ -332,4 +332,36 @@
     </fo:list-item>
   </xsl:template>
 
+    <!-- simplelist:
+           Self-made template. Wrap it into a fo:block and process member childs.
+           If @type is specified, the original templates will be used.
+           NOTE: when using type='horiz' or type='vert', FOP-0.93 will complaints
+             about not supported table-layout="auto" -->
+  <xsl:template match="simplelist">
+    <fo:block xsl:use-attribute-sets="simplelist.properties">
+      <xsl:apply-templates mode="condensed"/>
+    </fo:block>
+  </xsl:template>
+
+    <!-- member:
+           Self-made template to wrap it into a fo:block using customized
+           properties. -->
+  <xsl:template match="member" mode="condensed">
+    <fo:block xsl:use-attribute-sets="simplelist.properties">
+      <xsl:call-template name="simple.xlink">
+        <xsl:with-param name="content">
+          <xsl:apply-templates/>
+        </xsl:with-param>
+      </xsl:call-template>
+    </fo:block>
+  </xsl:template>
+
+    <!-- Properties associated with our simplelist format. -->
+  <xsl:attribute-set name="simplelist.properties">
+    <xsl:attribute name="keep-with-previous.within-column">always</xsl:attribute>
+    <xsl:attribute name="space-before.optimum">0em</xsl:attribute>
+    <xsl:attribute name="space-before.minimum">0em</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">0.2em</xsl:attribute>
+  </xsl:attribute-set>
+
 </xsl:stylesheet>

@@ -566,10 +566,6 @@ p.usernotes {
   font-style: italic;
 }
 
-.simplelist {
-  background-color: #f0fff0;
-}
-
 .underlined {
   text-decoration: underline;
 }
