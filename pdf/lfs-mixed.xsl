@@ -234,7 +234,7 @@
 
     <!-- Specifies the longest term in variablelists.
          Used when list-presentation = list -->
-  <xsl:param name="variablelist.max.termlength">32</xsl:param>
+  <xsl:param name="variablelist.max.termlength">35</xsl:param>
 
     <!-- varlistentry mode block:
            Addibg a bullet, left alignament, and @kepp-*.* attributes
