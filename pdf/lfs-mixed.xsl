@@ -98,6 +98,7 @@
           <xsl:when test="$keep.together != ''">
             <xsl:value-of select="$keep.together"/>
           </xsl:when>
+          <xsl:when test="$book-type = 'blfs'">auto</xsl:when>
           <xsl:otherwise>always</xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
@@ -271,7 +272,10 @@
            Adjust vertical space. -->
     <!-- The original template is in {docbook-xsl}/fo/list.xsl -->
   <xsl:template match="segmentedlist">
-    <fo:list-block provisional-distance-between-starts="12em"
+    <xsl:variable name="id">
+      <xsl:call-template name="object.id"/>
+    </xsl:variable>
+    <fo:list-block id="{$id}" provisional-distance-between-starts="12em"
                    provisional-label-separation="1em"
                    keep-together.within-column="always">
       <xsl:choose>
@@ -302,6 +306,9 @@
            found in {docbook-xsl}/fo/list.xsl
            Making segmentedlist an actual FO list to can indent items. -->
   <xsl:template match="seglistitem/seg">
+    <xsl:variable name="id">
+      <xsl:call-template name="object.id"/>
+    </xsl:variable>
     <xsl:variable name="segnum" select="count(preceding-sibling::seg)+1"/>
     <xsl:variable name="seglist" select="ancestor::segmentedlist"/>
     <xsl:variable name="segtitles" select="$seglist/segtitle"/>
@@ -316,7 +323,7 @@
         </fo:block>
       </fo:list-item-label>
       <fo:list-item-body start-indent="body-start()">
-        <fo:block>
+        <fo:block id="{$id}">
           <xsl:apply-templates/>
         </fo:block>
       </fo:list-item-body>

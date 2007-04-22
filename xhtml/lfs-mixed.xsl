@@ -99,6 +99,9 @@
         </span>
       </strong>
       <span class="segbody">
+        <xsl:if test="@id">
+          <a id="{@id}" name="{@id}"/>
+        </xsl:if>
         <xsl:apply-templates/>
       </span>
     </div>

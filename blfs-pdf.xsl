@@ -9,7 +9,7 @@ $Date$
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 version="1.0">
 
-    <!-- LFS top-level chunk templates. -->
+    <!-- LFS top-level pdf templates. -->
   <xsl:import href="lfs-pdf.xsl"/>
 
     <!-- The LFS book type to be processed (lfs, blfs, clfs, or hlfs) -->
