@@ -8,16 +8,16 @@
        header content and titles size. -->
 
     <!-- The inner page margin. -->
-  <xsl:param name="page.margin.inner" select="'0.5in'"/>
+  <xsl:param name="page.margin.inner" select="'0.32in'"/>
 
     <!-- The outer page margin. -->
-  <xsl:param name="page.margin.outer" select="'0.375in'"/>
+  <xsl:param name="page.margin.outer" select="'0.32in'"/>
 
     <!-- The bottom margin of the page. -->
-  <xsl:param name="page.margin.bottom" select="'0.375in'"/>
+  <xsl:param name="page.margin.bottom" select="'0.35in'"/>
 
     <!-- The top margin of the page. -->
-  <xsl:param name="page.margin.top" select="'0.375in'"/>
+  <xsl:param name="page.margin.top" select="'0.35in'"/>
 
     <!-- The bottom margin of the body text. -->
   <xsl:param name="body.margin.bottom" select="'0.4in'"/>
