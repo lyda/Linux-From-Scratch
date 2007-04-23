@@ -96,9 +96,12 @@
 <xsl:param name="body.end.indent" select="'0pt'"/>
 <xsl:param name="bridgehead.in.toc" select="0"/>
 <xsl:param name="callout.defaultcolumn" select="'60'"/>
-<xsl:param name="callout.graphics.extension" select="'.png'"/>
+
+<xsl:param name="callout.graphics.extension" select="'.svg'"/>
 <xsl:param name="callout.graphics" select="'1'"/>
-<xsl:param name="callout.graphics.number.limit" select="'15'"/>
+<xsl:param name="callout.icon.size">7pt</xsl:param>
+
+<xsl:param name="callout.graphics.number.limit" select="'30'"/>
 <xsl:param name="callout.graphics.path" select="'images/callouts/'"/>
 <xsl:param name="callout.unicode.font" select="'ZapfDingbats'"/>
 <xsl:param name="callout.unicode" select="0"/>
@@ -553,6 +556,7 @@ set       toc,title
 <xsl:param name="process.empty.source.toc" select="0"/>
 <xsl:param name="process.source.toc" select="0"/>
 <xsl:param name="profile.arch" select="''"/>
+<xsl:param name="profile.audience" select="''"/>
 <xsl:param name="profile.attribute" select="''"/>
 <xsl:param name="profile.condition" select="''"/>
 <xsl:param name="profile.conformance" select="''"/>
@@ -567,6 +571,7 @@ set       toc,title
 <xsl:param name="profile.userlevel" select="''"/>
 <xsl:param name="profile.value" select="''"/>
 <xsl:param name="profile.vendor" select="''"/>
+<xsl:param name="profile.wordsize" select="''"/>
 <xsl:param name="punct.honorific" select="'.'"/>
 <xsl:param name="qanda.defaultlabel">number</xsl:param>
 <xsl:param name="qanda.in.toc" select="0"/>
