@@ -95,8 +95,8 @@
   </xsl:template>
 
     <!-- The CSS Stylesheet:
-           Note: there is a few diferences with lfs.css code releated
-                 to h* values. -->
+           Note: there is some diferences with lfs.css code releated
+                 to h* values, admonitions and no navigational code. -->
     <!-- The original template is in {docbook-xsl}/xhtml/docbook.xsl -->
   <xsl:template name='user.head.content'>
     <style type="text/css">
@@ -488,26 +488,49 @@ ul {
   margin-top: -.6em;
 }
 
-ul[compact="compact"] {
+ul.compact {
   list-style: none;
 }
 
-.blfs ul[compact="compact"] {
+.blfs ul.compact {
   list-style: disc;
 }
 
-ul[compact="compact"] li {
+ul.compact li {
   margin: 0em;
   padding: 0em;
 }
 
-ul[compact="compact"] li p {
+ul.compact li p {
   padding: 0.3em;
   margin: 0em;
 }
 
-.blfs ul[compact="compact"] li p {
+.blfs ul.compact li p {
   background-color: #f0fff0;
+}
+
+/* orderedlist */
+ol {
+  list-style: decimal;
+}
+
+ol ol {
+  list-style: lower-alpha;
+}
+
+ol ol ol {
+  list-style: lower-roman;
+}
+
+ol.compact li {
+  margin: 0em;
+  padding: 0em;
+}
+
+ol.compact li p {
+  padding: 0.3em;
+  margin: 0em;
 }
 
 

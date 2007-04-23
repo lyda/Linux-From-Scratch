@@ -80,6 +80,61 @@
     </xsl:choose>
   </xsl:template>
 
+    <!-- itemizadlist:
+           @compact is not allowed in XHTML 1.0 Strict DTD. Changing it
+           to @class. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/lists.xsl -->
+  <xsl:template match="itemizedlist">
+    <div>
+      <xsl:apply-templates select="." mode="class.attribute"/>
+      <xsl:call-template name="anchor"/>
+      <xsl:if test="title">
+        <xsl:call-template name="formal.object.heading"/>
+      </xsl:if>
+      <xsl:apply-templates select="*[not(self::listitem or self::title
+                              or self::titleabbrev)]
+                              |comment()[not(preceding-sibling::listitem)]
+                              |processing-instruction()[not(preceding-sibling::listitem)]"/>
+      <ul>
+        <xsl:if test="@spacing='compact'">
+          <xsl:attribute name="class">
+            <xsl:value-of select="@spacing"/>
+          </xsl:attribute>
+        </xsl:if>
+        <xsl:apply-templates select="listitem |comment()[preceding-sibling::listitem]
+                                |processing-instruction()[preceding-sibling::listitem]"/>
+      </ul>
+    </div>
+  </xsl:template>
+
+    <!-- orderedlist:
+           @start, @type, and @compact sre not allowed in XHTML 1.0 Strict DTD.
+           @start and @type can be replaced by CSS code.
+           Changing @compact to @class. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/lists.xsl -->
+  <xsl:template match="orderedlist">
+    <div>
+      <xsl:apply-templates select="." mode="class.attribute"/>
+      <xsl:call-template name="anchor"/>
+      <xsl:if test="title">
+        <xsl:call-template name="formal.object.heading"/>
+      </xsl:if>
+      <xsl:apply-templates select="*[not(self::listitem or self::title
+                              or self::titleabbrev)]
+                              |comment()[not(preceding-sibling::listitem)]
+                              |processing-instruction()[not(preceding-sibling::listitem)]"/>
+       <ol>
+        <xsl:if test="@spacing='compact'">
+          <xsl:attribute name="class">
+            <xsl:value-of select="@spacing"/>
+          </xsl:attribute>
+        </xsl:if>
+        <xsl:apply-templates select="listitem |comment()[preceding-sibling::listitem]
+                                |processing-instruction()[preceding-sibling::listitem]"/>
+      </ol>
+    </div>
+  </xsl:template>
+
     <!-- seg in segementedlist:
            Added a span around seg text to can match it with CSS code. -->
     <!-- The original template is in {docbook-xsl}/xhtml/lists.xsl -->
