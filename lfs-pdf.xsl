@@ -22,6 +22,7 @@
   <xsl:include href="lfs-common.xsl"/>
   <xsl:include href="pdf/lfs-admon.xsl"/>
   <xsl:include href="pdf/lfs-index.xsl"/>
+  <xsl:include href="pdf/lfs-lists.xsl"/>
   <xsl:include href="pdf/lfs-mixed.xsl"/>
   <xsl:include href="pdf/lfs-pagesetup.xsl"/>
   <xsl:include href="pdf/lfs-xref.xsl"/>
