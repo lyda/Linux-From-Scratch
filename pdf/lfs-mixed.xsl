@@ -384,12 +384,12 @@
   </xsl:attribute-set>
 
     <!-- revhistory/revision mode titlepage.mode:
-           Removed authorinitials and author. -->
+           Removed authorinitials | author support placing
+           revremark | revdescription instead on that table-cell. -->
     <!-- The original template is in {docbook-xsl}/fo/titlepage.xsl -->
   <xsl:template match="revhistory/revision" mode="titlepage.mode">
     <xsl:variable name="revnumber" select="revnumber"/>
     <xsl:variable name="revdate"   select="date"/>
-    <xsl:variable name="revauthor" select="authorinitials|author"/>
     <xsl:variable name="revremark" select="revremark|revdescription"/>
     <fo:table-row>
       <fo:table-cell xsl:use-attribute-sets="revhistory.table.cell.properties">
