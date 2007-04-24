@@ -1,3 +1,11 @@
+2007-04-24	Dan Nicholson	<dnicholson@linuxfromscratch.org>
+	* lfs/init.d/functions: When killproc is executed, it checks that
+	  the process is still running, sleeps if it is, then checks again.
+	  The sleep is 1 second in between checks. By sleeping for 0.1 seconds
+	  in between checks, killproc is much faster as it's wasting much
+	  less time sleeping in the normal case that the process has died
+	  after a short delay.
+
 2007-04-16	Dan Nicholson	<dnicholson@linuxfromscratch.org>
 	* lfs/init.d/functions: Redirect stderr when using kill to suppress
 	  output.
