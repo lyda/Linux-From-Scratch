@@ -364,4 +364,56 @@
     <xsl:attribute name="space-before.maximum">0.2em</xsl:attribute>
   </xsl:attribute-set>
 
+
+  <!-- Revision History -->
+
+    <!-- revhistory titlepage:
+           Self-made template to add missing support on bookinfo. -->
+  <xsl:template match="revhistory" mode="book.titlepage.verso.auto.mode">
+    <fo:block space-before.optimum="2em"
+              space-before.minimum="1.5em"
+              space-before.maximum="2.5em">
+      <xsl:apply-templates select="." mode="book.titlepage.verso.mode"/>
+    </fo:block>
+  </xsl:template>
+
+    <!-- revhitory title properties -->
+  <xsl:attribute-set name="revhistory.title.properties">
+    <xsl:attribute name="text-align">center</xsl:attribute>
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
+  </xsl:attribute-set>
+
+    <!-- revhistory/revision mode titlepage.mode:
+           Removed authorinitials and author. -->
+    <!-- The original template is in {docbook-xsl}/fo/titlepage.xsl -->
+  <xsl:template match="revhistory/revision" mode="titlepage.mode">
+    <xsl:variable name="revnumber" select="revnumber"/>
+    <xsl:variable name="revdate"   select="date"/>
+    <xsl:variable name="revauthor" select="authorinitials|author"/>
+    <xsl:variable name="revremark" select="revremark|revdescription"/>
+    <fo:table-row>
+      <fo:table-cell xsl:use-attribute-sets="revhistory.table.cell.properties">
+        <fo:block>
+          <xsl:if test="$revnumber">
+            <xsl:call-template name="gentext">
+              <xsl:with-param name="key" select="'Revision'"/>
+            </xsl:call-template>
+            <xsl:call-template name="gentext.space"/>
+            <xsl:apply-templates select="$revnumber[1]" mode="titlepage.mode"/>
+          </xsl:if>
+        </fo:block>
+      </fo:table-cell>
+      <fo:table-cell xsl:use-attribute-sets="revhistory.table.cell.properties">
+        <fo:block>
+          <xsl:apply-templates select="$revdate[1]"/>
+        </fo:block>
+      </fo:table-cell>
+      <fo:table-cell xsl:use-attribute-sets="revhistory.table.cell.properties">
+        <fo:block>
+          <xsl:apply-templates select="$revremark[1]"/>
+        </fo:block>
+      </fo:table-cell>
+    </fo:table-row>
+  </xsl:template>
+
 </xsl:stylesheet>

@@ -37,6 +37,11 @@
     <!-- Adjust the left margin for titles. -->
   <xsl:param name="title.margin.left">-0.8pc</xsl:param>
 
+    <!-- Default table width on tables that do not specify an alternate
+         width using the dbfo processing instruction.
+         This value is used also on bookinfo/revhistory table. -->
+  <xsl:param name="default.table.width" select="'70%'"/>
+
     <!-- Properties for component titles -->
   <xsl:attribute-set name="component.title.properties">
     <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
@@ -75,7 +80,7 @@
          Be sure that no uneeded fo:marker are generated. -->
   <xsl:param name="marker.section.level" select="-1"></xsl:param>
 
-     <!-- Force sect1 onto a new page -->
+     <!-- Force package's sect1 onto a new page -->
   <xsl:attribute-set name="section.level1.properties">
     <xsl:attribute name="break-before">
       <xsl:choose>
@@ -92,7 +97,8 @@
   </xsl:attribute-set>
 
     <!-- book title:
-          Centered the title and removed unused code. -->
+          Centered the title and removed unused code.
+          Added missing revhistory support. -->
     <!-- The original template is in {docbook-xsl}/fo/titlepage.templates.xsl -->
   <xsl:template name="book.titlepage">
     <fo:block margin-top="3in">
@@ -103,12 +109,14 @@
       <fo:block>
         <xsl:call-template name="book.titlepage.before.verso"/>
         <xsl:call-template name="book.titlepage.verso"/>
+        <xsl:apply-templates mode="book.titlepage.verso.auto.mode"
+                             select="bookinfo/revhistory"/>
       </fo:block>
       <xsl:call-template name="book.titlepage.separator"/>
     </fo:block>
   </xsl:template>
 
-    <!-- book title:
+    <!-- book title separator:
            Drop a blank page after book title. -->
     <!-- The original template is in {docbook-xsl}/fo/titlepage.templates.xsl -->
   <xsl:template name="book.titlepage.separator"/>
