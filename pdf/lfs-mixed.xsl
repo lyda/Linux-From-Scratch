@@ -98,7 +98,6 @@
           <xsl:when test="$keep.together != ''">
             <xsl:value-of select="$keep.together"/>
           </xsl:when>
-          <xsl:when test="$book-type = 'blfs'">auto</xsl:when>
           <xsl:otherwise>always</xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
