@@ -17,7 +17,7 @@
          of page references. -->
   <xsl:param name="index.term.separator" select="': '"></xsl:param>
 
-  <!-- Divisions title properties. -->
+    <!-- Divisions title properties. -->
   <xsl:attribute-set name="index.div.title.properties">
     <xsl:attribute name="margin-left">0pt</xsl:attribute>
     <xsl:attribute name="font-size">14.4pt</xsl:attribute>
@@ -26,25 +26,18 @@
     </xsl:attribute>
     <xsl:attribute name="font-weight">bold</xsl:attribute>
     <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
-    <xsl:attribute name="space-before.optimum">
-      <xsl:value-of select="concat($body.font.master,'pt')"/>
-    </xsl:attribute>
-    <xsl:attribute name="space-before.minimum">
-      <xsl:value-of select="concat($body.font.master,'pt * 0.8')"/>
-    </xsl:attribute>
-    <xsl:attribute name="space-before.optimum">
-      <xsl:value-of select="concat($body.font.master,'pt * 1.2')"/>
-    </xsl:attribute>
-    <xsl:attribute name="space-after.optimum">
-      <xsl:value-of select="concat($body.font.master,'pt')"/>
-    </xsl:attribute>
-    <xsl:attribute name="space-after.minimum">
-      <xsl:value-of select="concat($body.font.master,'pt * 0.8')"/>
-    </xsl:attribute>
-    <xsl:attribute name="space-after.optimum">
-      <xsl:value-of select="concat($body.font.master,'pt * 1.2')"/>
-    </xsl:attribute>
+    <xsl:attribute name="space-before.optimum">1em</xsl:attribute>
+    <xsl:attribute name="space-before.minimum">0.8em</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">1.2em</xsl:attribute>
+    <xsl:attribute name="space-after.optimum">0.5em</xsl:attribute>
+    <xsl:attribute name="space-after.minimum">0.3em</xsl:attribute>
+    <xsl:attribute name="space-after.maximum">0.7em</xsl:attribute>
     <xsl:attribute name="start-indent">0pt</xsl:attribute>
+  </xsl:attribute-set>
+
+    <!-- Properties applied to the block containing entries in an Index. -->
+  <xsl:attribute-set name="index.entry.properties">
+    <xsl:attribute name="start-indent">0.5pc</xsl:attribute>
   </xsl:attribute-set>
 
     <!-- Divisions:

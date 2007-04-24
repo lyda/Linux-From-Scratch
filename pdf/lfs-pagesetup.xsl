@@ -37,6 +37,34 @@
     <!-- Adjust the left margin for titles. -->
   <xsl:param name="title.margin.left">-0.8pc</xsl:param>
 
+    <!-- Properties for component titles -->
+  <xsl:attribute-set name="component.title.properties">
+    <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
+    <xsl:attribute name="space-before.optimum">
+      <xsl:value-of select="concat($body.font.master, 'pt')"/>
+    </xsl:attribute>
+    <xsl:attribute name="space-before.minimum">
+      <xsl:value-of select="concat($body.font.master, 'pt * 0.8')"/>
+    </xsl:attribute>
+    <xsl:attribute name="space-before.maximum">
+      <xsl:value-of select="concat($body.font.master, 'pt * 1.2')"/>
+    </xsl:attribute>
+    <xsl:attribute name="hyphenate">false</xsl:attribute>
+    <xsl:attribute name="text-align">
+      <xsl:choose>
+        <xsl:when test="((parent::article | parent::articleinfo |
+                          parent::info/parent::article)
+                          and not(ancestor::book) and not(self::bibliography))
+                        or (parent::slides | parent::slidesinfo)
+                        or self::index">center</xsl:when>
+        <xsl:otherwise>left</xsl:otherwise>
+      </xsl:choose>
+    </xsl:attribute>
+    <xsl:attribute name="start-indent">
+      <xsl:value-of select="$title.margin.left"/>
+    </xsl:attribute>
+  </xsl:attribute-set>
+
     <!-- Rule under headers? 1 =yes, 0 = no -->
   <xsl:param name="header.rule" select="0"/>
 
