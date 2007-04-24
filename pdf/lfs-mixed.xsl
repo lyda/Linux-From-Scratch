@@ -416,4 +416,73 @@
     </fo:table-row>
   </xsl:template>
 
+
+  <!-- Dummy sect1 -->
+
+    <!-- sect1:
+           Self-made template to skip dummy sect1 pages generation. -->
+  <xsl:template match="sect1">
+    <xsl:choose>
+      <xsl:when test="@role = 'dummy'"/>
+      <xsl:otherwise>
+        <xsl:apply-imports/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+    <!-- sect1 mode fop1.outline:
+           Self-made template to skip dummy sect1 bookmarks generation. -->
+  <xsl:template match="sect1" mode="fop1.outline">
+    <xsl:choose>
+      <xsl:when test="@role = 'dummy'"/>
+      <xsl:otherwise>
+        <xsl:apply-imports/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+    <!-- toc.line:
+           For dummy sect1 output only the title. -->
+    <!-- The original template is in {docbook-xsl}/fo/autotoc.xsl -->
+  <xsl:template name="toc.line">
+    <xsl:param name="toc-context" select="NOTANODE"/>
+    <xsl:variable name="id">
+      <xsl:call-template name="object.id"/>
+    </xsl:variable>
+    <xsl:variable name="label">
+      <xsl:apply-templates select="." mode="label.markup"/>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="@role = 'dummy'">
+        <fo:block text-align="left">
+          <xsl:apply-templates select="." mode="titleabbrev.markup"/>
+        </fo:block>
+      </xsl:when>
+      <xsl:otherwise>
+        <fo:block xsl:use-attribute-sets="toc.line.properties">
+          <fo:inline keep-with-next.within-line="always">
+            <fo:basic-link internal-destination="{$id}">
+              <xsl:if test="$label != ''">
+                <xsl:copy-of select="$label"/>
+                <xsl:value-of select="$autotoc.label.separator"/>
+              </xsl:if>
+              <xsl:apply-templates select="." mode="titleabbrev.markup"/>
+            </fo:basic-link>
+          </fo:inline>
+          <fo:inline keep-together.within-line="always">
+            <xsl:text> </xsl:text>
+            <fo:leader leader-pattern="dots"
+                       leader-pattern-width="3pt"
+                       leader-alignment="reference-area"
+                       keep-with-next.within-line="always"/>
+            <xsl:text> </xsl:text>
+            <fo:basic-link internal-destination="{$id}">
+              <fo:page-number-citation ref-id="{$id}"/>
+            </fo:basic-link>
+          </fo:inline>
+        </fo:block>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
 </xsl:stylesheet>
