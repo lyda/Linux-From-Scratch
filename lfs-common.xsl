@@ -91,8 +91,7 @@
   </xsl:template>
 
     <!-- sect2 label.markup:
-           Skip numeration for sect2 with empty title.
-           Skip parent label in preface. -->
+           Skip numeration for sect2 with empty title. -->
     <!-- The original template is in {docbook-xsl}/common/labels.xsl
          It match also sect3, sect4, and sect5, that are unchanged. -->
   <xsl:template match="sect2" mode="label.markup">
@@ -102,7 +101,7 @@
           <xsl:with-param name="section" select=".."/>
         </xsl:call-template>
       </xsl:variable>
-      <xsl:if test="$parent.section.label != '0' and not(ancestor::preface)">
+      <xsl:if test="$parent.section.label != '0'">
         <xsl:apply-templates select=".." mode="label.markup"/>
         <xsl:apply-templates select=".." mode="intralabel.punctuation"/>
       </xsl:if>

@@ -118,7 +118,7 @@
     <!-- sect2.titlepage:
            Uses h2 and removed a lot of unneeded code.
            Skip empty titles.
-           No label in preface (actualy, skip the hardcoded dot). -->
+           No label in preface. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="sect2.titlepage">
     <xsl:choose>

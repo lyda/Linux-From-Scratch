@@ -4,7 +4,7 @@
 <!ENTITY uppercase "'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDDDDDDDDDDEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEFFFFFFGGGGGGGGGGGGGGGGGGGGHHHHHHHHHHHHHHHHHHHHIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIJJJJJJKKKKKKKKKKKKKKLLLLLLLLLLLLLLLLLLLLLLLLLLMMMMMMMMMNNNNNNNNNNNNNNNNNNNNNNNNNNNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOPPPPPPPPQQQRRRRRRRRRRRRRRRRRRRRRRRSSSSSSSSSSSSSSSSSSSSSSSTTTTTTTTTTTTTTTTTTTTTTTTTUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUVVVVVVVVWWWWWWWWWWWWWWWXXXXXXYYYYYYYYYYYYYYYYYYYYYYYZZZZZZZZZZZZZZZZZZZZZ'">
 <!ENTITY primary   'normalize-space(concat(primary/@sortas, primary[not(@sortas) or @sortas = ""]))'>
 <!ENTITY secondary 'normalize-space(concat(secondary/@sortas, secondary[not(@sortas) or @sortas = ""]))'>
-<!ENTITY scope     "count(ancestor::node()|$scope) = count(ancestor::node()) and ($role = @role or $type = @type or (string-length($role) = 0 and string-length($type) = 0))">
+<!ENTITY scope     "count(ancestor::node()|$scope) = count(ancestor::node())">
 <!ENTITY section   "(ancestor-or-self::set |ancestor-or-self::book |ancestor-or-self::part |ancestor-or-self::reference |ancestor-or-self::partintro |ancestor-or-self::chapter |ancestor-or-self::appendix |ancestor-or-self::preface |ancestor-or-self::article |ancestor-or-self::section |ancestor-or-self::sect1 |ancestor-or-self::sect2 |ancestor-or-self::sect3 |ancestor-or-self::sect4 |ancestor-or-self::sect5 |ancestor-or-self::refentry |ancestor-or-self::refsect1 |ancestor-or-self::refsect2 |ancestor-or-self::refsect3 |ancestor-or-self::simplesect |ancestor-or-self::bibliography |ancestor-or-self::glossary |ancestor-or-self::index |ancestor-or-self::webpage)[last()]">
 <!ENTITY section.id "generate-id(&section;)">
 <!ENTITY sep '" "'>
@@ -17,7 +17,9 @@
   <!-- This stylesheet controls how the Index is generated.
        Due how they are created, the original XHTML stylesheets don't make
        use of the entities from {docbook-xsl}/common/entities.ent.
-       We add the relevant ones in the DOCTYPE to have more readable templates. -->
+       We add the relevant ones in the DOCTYPE to have more readable templates.
+       Also, we remove support for @role and @type based Index due that it is
+       broken when used with @zone based cross-references. -->
 
     <!-- The file name of the Index page.
          There is no upstream template with match="index", only a global
@@ -43,14 +45,12 @@
 
     <!--Divisions:
           Translate alphabetical divisons titles to by-type titles.
-          Added gettext support to divisions titles.
+          Added gentext support to divisions titles.
           Using h2 for divisions titles.
           Changed output from dl format to ul format. -->
     <!-- The original template is in {docbook-xsl}/xhtml/autoidx.xsl -->
   <xsl:template match="indexterm" mode="index-div-basic">
     <xsl:param name="scope" select="."/>
-    <xsl:param name="role" select="''"/>
-    <xsl:param name="type" select="''"/>
     <xsl:variable name="key" select="translate(substring(&primary;, 1, 1),&lowercase;,&uppercase;)"/>
     <xsl:variable name="divtitle" select="translate($key, &lowercase;, &uppercase;)"/>
       <!-- Make sure that we don't generate a div if there are no terms in scope -->
@@ -145,13 +145,9 @@
     <!-- The original template is in {docbook-xsl}/xhtml/autoidx.xsl -->
   <xsl:template match="indexterm" mode="reference">
     <xsl:param name="scope" select="."/>
-    <xsl:param name="role" select="''"/>
-    <xsl:param name="type" select="''"/>
     <xsl:call-template name="reference">
       <xsl:with-param name="zones" select="normalize-space(@zone)"/>
       <xsl:with-param name="scope" select="$scope"/>
-      <xsl:with-param name="role" select="$role"/>
-      <xsl:with-param name="type" select="$type"/>
     </xsl:call-template>
   </xsl:template>
 
@@ -163,8 +159,6 @@
     <!-- The original template is in {docbook-xsl}/xhtml/autoidx.xsl -->
   <xsl:template match="indexterm" mode="index-primary">
     <xsl:param name="scope" select="."/>
-    <xsl:param name="role" select="''"/>
-    <xsl:param name="type" select="''"/>
     <xsl:variable name="key" select="&primary;"/>
     <xsl:variable name="refs" select="key('primary', $key)[&scope;]"/>
     <li>
@@ -176,8 +170,6 @@
         <xsl:for-each select="$refs[generate-id() = generate-id(key('primary-section',concat($key, &sep;, &section.id;))[&scope;][1])]">
           <xsl:apply-templates select="." mode="reference">
             <xsl:with-param name="scope" select="$scope"/>
-            <xsl:with-param name="role" select="$role"/>
-            <xsl:with-param name="type" select="$type"/>
           </xsl:apply-templates>
         </xsl:for-each>
       </div>
@@ -186,8 +178,6 @@
           <xsl:apply-templates select="$refs[secondary and count(.|key('secondary', concat($key, &sep;, &secondary;))[&scope;][1]) = 1]"
                                mode="index-secondary">
             <xsl:with-param name="scope" select="$scope"/>
-            <xsl:with-param name="role" select="$role"/>
-            <xsl:with-param name="type" select="$type"/>
             <xsl:sort select="translate(&secondary;, &lowercase;, &uppercase;)"/>
           </xsl:apply-templates>
          </ul>
@@ -203,8 +193,6 @@
     <!-- The original template is in {docbook-xsl}/xhtml/autoidx.xsl -->
   <xsl:template match="indexterm" mode="index-secondary">
     <xsl:param name="scope" select="."/>
-    <xsl:param name="role" select="''"/>
-    <xsl:param name="type" select="''"/>
     <xsl:variable name="key" select="concat(&primary;, &sep;, &secondary;)"/>
     <xsl:variable name="refs" select="key('secondary', $key)[&scope;]"/>
     <li>
@@ -216,8 +204,6 @@
         <xsl:for-each select="$refs[generate-id() = generate-id(key('secondary-section', concat($key, &sep;, &section.id;))[&scope;][1])]">
           <xsl:apply-templates select="." mode="reference">
             <xsl:with-param name="scope" select="$scope"/>
-            <xsl:with-param name="role" select="$role"/>
-            <xsl:with-param name="type" select="$type"/>
           </xsl:apply-templates>
         </xsl:for-each>
       </div>
@@ -227,13 +213,13 @@
     <!-- The target links:
            Changed links separator.
            On the cecond @zone link, we use a fixed string for the text
-           with gettext support.
-           Assume that there is no more than 2 @zone in a indexenterm. -->
+           with gentext support.
+           Assume that there is no more than 2 @zone in a indexterm.
+           Use href.target.uri named template to resolve the links. It is faster
+           than the default href.target named template. -->
     <!-- The original template is in {docbook-xsl}/xhtml/autoidx.xsl -->
   <xsl:template name="reference">
     <xsl:param name="scope" select="."/>
-    <xsl:param name="role" select="''"/>
-    <xsl:param name="type" select="''"/>
     <xsl:param name="zones"/>
     <xsl:choose>
       <xsl:when test="contains($zones, ' ')">
@@ -243,9 +229,8 @@
         <xsl:variable name="target2" select="key('sections', $zone2)[&scope;]"/>
         <a>
           <xsl:attribute name="href">
-            <xsl:call-template name="href.target">
+            <xsl:call-template name="href.target.uri">
               <xsl:with-param name="object" select="$target[1]"/>
-              <xsl:with-param name="context" select="//index[&scope;][1]"/>
             </xsl:call-template>
           </xsl:attribute>
           <xsl:apply-templates select="$target[1]" mode="index-title-content"/>
@@ -253,9 +238,8 @@
         <xsl:text> -- </xsl:text>
         <a>
           <xsl:attribute name="href">
-            <xsl:call-template name="href.target">
+            <xsl:call-template name="href.target.uri">
               <xsl:with-param name="object" select="$target2[1]"/>
-              <xsl:with-param name="context" select="//index[&scope;][1]"/>
             </xsl:call-template>
           </xsl:attribute>
           <xsl:call-template name="gentext">
@@ -269,9 +253,8 @@
         <xsl:variable name="target" select="key('sections', $zone)[&scope;]"/>
         <a>
           <xsl:attribute name="href">
-            <xsl:call-template name="href.target">
+            <xsl:call-template name="href.target.uri">
               <xsl:with-param name="object" select="$target[1]"/>
-              <xsl:with-param name="context" select="//index[&scope;][1]"/>
             </xsl:call-template>
           </xsl:attribute>
           <xsl:apply-templates select="$target[1]" mode="index-title-content"/>
