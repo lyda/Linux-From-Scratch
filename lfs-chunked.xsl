@@ -2,44 +2,65 @@
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns="http://www.w3.org/1999/xhtml"
-                version="1.0">
+                xmlns:exsl="http://exslt.org/common"
+                xmlns:cf="http://docbook.sourceforge.net/xmlns/chunkfast/1.0"
+                version="1.0"
+                exclude-result-prefixes="cf exsl">
 
-   <!-- Top-level chunked output template.
-        Include customized chunks templates.
-        Replaces {docbook-xsl}/xhtml/profile-chunk.xsl -->
+   <!-- Top-level chunked templates.
+        Import customized chunks templates.
+        Replaces {docbook-xsl}/xhtml/chunkfast.xsl -->
 
-    <!-- Our master non-chunking presentation templates -->
-  <xsl:import href="lfs-chunked2.xsl"/>
+    <!-- Our master chunking templates -->
+  <xsl:import href="lfs-chunked1.xsl"/>
 
-    <!-- Upstream chunk code named templates -->
-  <xsl:import href="docbook-xsl-snapshot/xhtml/chunk-common.xsl"/>
+    <!-- Use chunk.fast code? 1 = yes, 0 = no -->
+  <xsl:param name="chunk.fast" select="1"/>
 
-    <!-- Upstream profiled chunk code match templates -->
-  <xsl:include href="docbook-xsl-snapshot/xhtml/profile-chunk-code.xsl"/>
+  <!-- The code below was copied as-is from {docbook-xsl}/xhtml/chunkfast.xsl -->
 
-    <!-- Including our customized chunks templates -->
-  <xsl:include href="xhtml/lfs-index.xsl"/>
-  <xsl:include href="xhtml/lfs-legalnotice.xsl"/>
-  <xsl:include href="xhtml/lfs-navigational.xsl"/>
+  <xsl:variable name="chunks" select="exsl:node-set($chunk.hierarchy)//cf:div"/>
 
-    <!-- sect1:
-           Prevent creation of dummy sect1 files used to emulate sub-chapters. -->
-    <!-- The original template is in {docbook-xsl}/xhtml/profile-chunk-code.xsl
-         It match also others sect* tags. The code for that tags is unchanged. -->
-  <xsl:template match="sect1">
-    <xsl:variable name="ischunk">
-      <xsl:call-template name="chunk"/>
-    </xsl:variable>
+  <xsl:template name="process-chunk-element">
     <xsl:choose>
-      <xsl:when test="@role = 'dummy'"/>
-      <xsl:when test="not(parent::*)">
-        <xsl:call-template name="process-chunk-element"/>
-      </xsl:when>
-      <xsl:when test="$ischunk = 0">
-        <xsl:apply-imports/>
+      <xsl:when test="$chunk.fast != 0 and function-available('exsl:node-set')">
+        <xsl:variable name="genid" select="generate-id()"/>
+
+        <xsl:variable name="div" select="$chunks[@id=$genid or @xml:id=$genid]"/>
+
+        <xsl:variable name="prevdiv" select="($div/preceding-sibling::cf:div|$div/preceding::cf:div|$div/parent::cf:div)[last()]"/>
+        <xsl:variable name="prev" select="key('genid', ($prevdiv/@id|$prevdiv/@xml:id)[1])"/>
+
+        <xsl:variable name="nextdiv" select="($div/following-sibling::cf:div|$div/following::cf:div|$div/cf:div)[1]"/>
+        <xsl:variable name="next" select="key('genid', ($nextdiv/@id|$nextdiv/@xml:id)[1])"/>
+
+        <xsl:choose>
+          <xsl:when test="$onechunk != 0 and parent::*">
+            <xsl:apply-imports/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="process-chunk">
+              <xsl:with-param name="prev" select="$prev"/>
+              <xsl:with-param name="next" select="$next"/>
+            </xsl:call-template>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:call-template name="process-chunk-element"/>
+        <xsl:choose>
+          <xsl:when test="$onechunk != 0 and not(parent::*)">
+            <xsl:call-template name="chunk-all-sections"/>
+          </xsl:when>
+          <xsl:when test="$onechunk != 0">
+            <xsl:apply-imports/>
+          </xsl:when>
+          <xsl:when test="$chunk.first.sections = 0">
+            <xsl:call-template name="chunk-first-section-with-parent"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="chunk-all-sections"/>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
