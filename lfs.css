@@ -264,16 +264,12 @@ li.chapter h4 a {
     float: left;
 }
 
-.lfs .item + .indexref {
-    margin-left: 18em;
+.item + .indexref {
+    margin-left: 31em;
 }
 
-.lfs .secitem + .indexref {
-    margin-left: 17em;
-}
-
-.blfs .indexref {
-    margin-left: 26em;
+.secitem + .indexref {
+    margin-left: 30em;
 }
 
 
