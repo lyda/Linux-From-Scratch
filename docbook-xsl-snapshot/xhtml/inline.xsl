@@ -1221,7 +1221,15 @@
           </xsl:call-template>
         </xsl:attribute>
 
-        <xsl:call-template name="inline.charseq"/>
+	<xsl:choose>
+	  <xsl:when test="$bibliography.numbered != 0">
+	    <xsl:apply-templates select="$target" mode="citation"/>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:call-template name="inline.charseq"/>
+	  </xsl:otherwise>
+	</xsl:choose>
+
       </a>
       <xsl:text>]</xsl:text>
     </xsl:when>
@@ -1231,6 +1239,10 @@
       <xsl:text>]</xsl:text>
     </xsl:otherwise>
   </xsl:choose>
+</xsl:template>
+
+<xsl:template match="biblioentry|bibliomixed" mode="citation">
+  <xsl:number from="bibliography" count="biblioentry|bibliomixed" level="any" format="1"/>
 </xsl:template>
 
 <!-- ==================================================================== -->

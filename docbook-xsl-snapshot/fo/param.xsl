@@ -330,7 +330,7 @@ set       toc,title
   <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
   <xsl:attribute name="space-before.optimum"><xsl:value-of select="concat($body.font.master,'pt')"/></xsl:attribute>
   <xsl:attribute name="space-before.minimum"><xsl:value-of select="concat($body.font.master,'pt * 0.8')"/></xsl:attribute>
-  <xsl:attribute name="space-before.optimum"><xsl:value-of select="concat($body.font.master,'pt * 1.2')"/></xsl:attribute>
+  <xsl:attribute name="space-before.maximum"><xsl:value-of select="concat($body.font.master,'pt * 1.2')"/></xsl:attribute>
   <xsl:attribute name="start-indent">0pt</xsl:attribute>
 </xsl:attribute-set>
 <xsl:attribute-set name="index.entry.properties">

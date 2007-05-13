@@ -37,40 +37,40 @@
 <l:gentext key="caution" text="анхааруулга"/>
 <l:gentext key="Chapter" text="Бүлэг"/>
 <l:gentext key="chapter" text="бүлэг"/>
-<l:gentext key="Colophon" text="Түлхүүр үг"/>
-<l:gentext key="colophon" text="Түлхүүр үг"/>
+<l:gentext key="Colophon" text="Сүүл тайлбар"/>
+<l:gentext key="colophon" text="сүүл тайлбар"/>
 <l:gentext key="Copyright" text="Зохиогчийн эрх"/>
 <l:gentext key="copyright" text="зохиогчийн эрх"/>
 <l:gentext key="Dedication" text="Зохиогчийн үг"/>
 <l:gentext key="dedication" text="зохиогчийн үг"/>
 <l:gentext key="Edition" text="Хэвлэл"/>
 <l:gentext key="edition" text="хэвлэл"/>
-<l:gentext key="Editor" text="Editor" lang="en"/>
+<l:gentext key="Editor" text="Хянан тохиолдуулагч"/>
 <l:gentext key="Equation" text="Тэгшитгэл"/>
 <l:gentext key="equation" text="тэгшитгэл"/>
 <l:gentext key="Example" text="Жишээ"/>
 <l:gentext key="example" text="жишээ"/>
 <l:gentext key="Figure" text="Зураг"/>
 <l:gentext key="figure" text="зураг"/>
-<l:gentext key="Glossary" text="Тайлбар үгс"/>
-<l:gentext key="glossary" text="тайлбар үгс"/>
-<l:gentext key="GlossSee" text="Харна уу"/>
+<l:gentext key="Glossary" text="Нэр томъёо"/>
+<l:gentext key="glossary" text="нэр томъёо"/>
+<l:gentext key="GlossSee" text="харна уу"/>
 <l:gentext key="glosssee" text="харна уу"/>
 <l:gentext key="GlossSeeAlso" text="Бас харна уу"/>
 <l:gentext key="glossseealso" text="бас харна уу"/>
 <l:gentext key="IMPORTANT" text="ЧУХАЛ"/>
 <l:gentext key="important" text="чухал"/>
 <l:gentext key="Important" text="Чухал"/>
-<l:gentext key="Index" text="Толгойлсон үгс"/>
-<l:gentext key="index" text="толгойлсон үгс"/>
+<l:gentext key="Index" text="Үгийн жагсаалт"/>
+<l:gentext key="index" text="үгийн жагсаалт"/>
 <l:gentext key="ISBN" text="ISBN"/>
 <l:gentext key="isbn" text="ISBN"/>
 <l:gentext key="LegalNotice" text="Хуулийн заалт"/>
 <l:gentext key="legalnotice" text="хуулийн заалт"/>
-<l:gentext key="MsgAud" text="Зориулсан"/>
-<l:gentext key="msgaud" text="зориулсан"/>
-<l:gentext key="MsgLevel" text="Яаралтай байдал"/>
-<l:gentext key="msglevel" text="яаралтай байдал"/>
+<l:gentext key="MsgAud" text="Зориулалт"/>
+<l:gentext key="msgaud" text="зориулалт"/>
+<l:gentext key="MsgLevel" text="Түвшин"/>
+<l:gentext key="msglevel" text="түвшин"/>
 <l:gentext key="MsgOrig" text="Үүсэл"/>
 <l:gentext key="msgorig" text="үүсэл"/>
 <l:gentext key="NOTE" text="ТЭМДЭГЛЭЛ"/>
@@ -80,117 +80,117 @@
 <l:gentext key="part" text="Хэсэг"/>
 <l:gentext key="Preface" text="Өмнөх үг"/>
 <l:gentext key="preface" text="өмнөх үг"/>
-<l:gentext key="Procedure" text="Процедур"/>
-<l:gentext key="procedure" text="процедур"/>
+<l:gentext key="Procedure" text="Гүйцэтгэл"/>
+<l:gentext key="procedure" text="гүйцэтгэл"/>
 <l:gentext key="ProductionSet" text="Бүтээгдэхүүн"/>
 <l:gentext key="PubDate" text="Хэвлэгдсэн огноо"/>
 <l:gentext key="pubdate" text="хэвлэгдсэн огноо"/>
 <l:gentext key="Published" text="Хэвлэгдсэн"/>
 <l:gentext key="published" text="хэвлэгдсэн"/>
-<l:gentext key="Publisher" text="Publisher" lang="en"/>
-<l:gentext key="Qandadiv" text="А &amp; Х"/>
-<l:gentext key="qandadiv" text="А &amp; Х"/>
-<l:gentext key="QandASet" text="Frequently Asked Questions" lang="en"/>
+<l:gentext key="Publisher" text="Хэвлэсэн компани"/>
+<l:gentext key="Qandadiv" text="А ба Х"/>
+<l:gentext key="qandadiv" text="А ба Х"/>
+<l:gentext key="QandASet" text="Түгээмэл тавигддаг асуултууд"/>
 <l:gentext key="Question" text="А:"/>
 <l:gentext key="question" text="А:"/>
 <l:gentext key="RefEntry" text=""/>
 <l:gentext key="refentry" text=""/>
 <l:gentext key="Reference" text="Ашигласан ном"/>
 <l:gentext key="reference" text="ашигласан ном"/>
-<l:gentext key="References" text="References" lang="en"/>
+<l:gentext key="References" text="Ашигласан номнууд"/>
 <l:gentext key="RefName" text="Нэр"/>
 <l:gentext key="refname" text="нэр"/>
-<l:gentext key="RefSection" text="Хэсэг"/>
-<l:gentext key="refsection" text="Хэсэг"/>
-<l:gentext key="RefSynopsisDiv" text="Тойм"/>
-<l:gentext key="refsynopsisdiv" text="тойм"/>
-<l:gentext key="RevHistory" text="Хувилбарын түүх"/>
-<l:gentext key="revhistory" text="хувилбарын түүх"/>
-<l:gentext key="revision" text="хувилбар"/>
-<l:gentext key="Revision" text="Хувилбар"/>
+<l:gentext key="RefSection" text=""/>
+<l:gentext key="refsection" text=""/>
+<l:gentext key="RefSynopsisDiv" text="Ерөнхий агуулга"/>
+<l:gentext key="refsynopsisdiv" text="ерөнхий агуулга"/>
+<l:gentext key="RevHistory" text="Залруулалтын түүх"/>
+<l:gentext key="revhistory" text="залруулалтын түүх"/>
+<l:gentext key="revision" text="залруулалт"/>
+<l:gentext key="Revision" text="Залруулалт"/>
 <l:gentext key="sect1" text="Хэсэг"/>
 <l:gentext key="sect2" text="Хэсэг"/>
 <l:gentext key="sect3" text="Хэсэг"/>
 <l:gentext key="sect4" text="Хэсэг"/>
 <l:gentext key="sect5" text="Хэсэг"/>
-<l:gentext key="section" text="хэсэг"/>
+<l:gentext key="section" text="Хэсэг"/>
 <l:gentext key="Section" text="Хэсэг"/>
 <l:gentext key="see" text="Харна уу"/>
 <l:gentext key="See" text="харна уу"/>
 <l:gentext key="seealso" text="бас харна уу"/>
 <l:gentext key="Seealso" text="Бас харна уу"/>
 <l:gentext key="SeeAlso" text="Бас харна уу"/>
-<l:gentext key="set" text="толгой үгс"/>
-<l:gentext key="Set" text="Толгой үгс"/>
-<l:gentext key="setindex" text="толгой үгсийн жагсаалт"/>
-<l:gentext key="SetIndex" text="Толгой үгсийн жагсаалт"/>
-<l:gentext key="Sidebar" text="Захын тэмдэглэл"/>
-<l:gentext key="sidebar" text="захын тэмдэглэл"/>
+<l:gentext key="set" text="цуглуулга"/>
+<l:gentext key="Set" text="Цуглуулга"/>
+<l:gentext key="setindex" text="цуглуулгын жагсаалт"/>
+<l:gentext key="SetIndex" text="Цуглуулгын жагсаалт"/>
+<l:gentext key="Sidebar" text="Хажуу самбар"/>
+<l:gentext key="sidebar" text="хажуу самбар"/>
 <l:gentext key="step" text="алхам"/>
 <l:gentext key="Step" text="Алхам"/>
 <l:gentext key="table" text="хүснэгт"/>
 <l:gentext key="Table" text="Хүснэгт"/>
-<l:gentext key="task" text="Task" lang="en"/>
-<l:gentext key="Task" text="Task" lang="en"/>
-<l:gentext key="tip" text="зөвөлгөө"/>
-<l:gentext key="TIP" text="ЗӨВӨЛГӨӨ"/>
-<l:gentext key="Tip" text="Зөвөлгөө"/>
+<l:gentext key="task" text="даалгавар"/>
+<l:gentext key="Task" text="Даалгавар"/>
+<l:gentext key="tip" text="зөвлөгөө"/>
+<l:gentext key="TIP" text="ЗӨВЛӨГӨӨ"/>
+<l:gentext key="Tip" text="Зөвлөгөө"/>
 <l:gentext key="Warning" text="Сануулга"/>
 <l:gentext key="warning" text="сануулга"/>
 <l:gentext key="WARNING" text="САНУУЛГА"/>
 <l:gentext key="and" text="ба"/>
-<l:gentext key="by" text="-аар"/>
-<l:gentext key="Edited" text="Хэвлэгдсэн"/>
-<l:gentext key="edited" text="хэвлэгдсэн"/>
-<l:gentext key="Editedby" text="Эрхэлсэн"/>
-<l:gentext key="editedby" text="Эрхэлсэн"/>
+<l:gentext key="by" text=""/>
+<l:gentext key="Edited" text="Хянасан"/>
+<l:gentext key="edited" text="хянасан"/>
+<l:gentext key="Editedby" text="Хянан тохиолдуулсан"/>
+<l:gentext key="editedby" text="хянан тохиолдуулсан"/>
 <l:gentext key="in" text="дотор"/>
-<l:gentext key="lastlistcomma" text=""/>
+<l:gentext key="lastlistcomma" text=","/>
 <l:gentext key="listcomma" text=","/>
 <l:gentext key="nonexistantelement" text="байхгүй элемент"/>
-<l:gentext key="notes" text="хөлийн тайлбар"/>
-<l:gentext key="Notes" text="Хөлийн тайлбар"/>
+<l:gentext key="notes" text="тайлбар"/>
+<l:gentext key="Notes" text="Тайлбар"/>
 <l:gentext key="Pgs" text="Хуудас"/>
 <l:gentext key="pgs" text="хуудас"/>
-<l:gentext key="Revisedby" text="Өөрчилсөн: "/>
-<l:gentext key="revisedby" text="Өөрчилсөн: "/>
-<l:gentext key="TableNotes" text="Ажиглалт"/>
-<l:gentext key="tablenotes" text="Ажиглалт"/>
+<l:gentext key="Revisedby" text="Залруулсан: "/>
+<l:gentext key="revisedby" text="залруулсан: "/>
+<l:gentext key="TableNotes" text="Тайлбар"/>
+<l:gentext key="tablenotes" text="тайлбар"/>
 <l:gentext key="TableofContents" text="Гарчиг"/>
-<l:gentext key="tableofcontents" text="Гарчиг"/>
+<l:gentext key="tableofcontents" text="гарчиг"/>
 <l:gentext key="unexpectedelementname" text="Санамсаргүй элемент"/>
 <l:gentext key="unsupported" text="дэмжигдээгүй"/>
 <l:gentext key="xrefto" text="xref руу"/>
-<l:gentext key="Authors" text="Authors" lang="en"/>
-<l:gentext key="copyeditor" text="Copy Editor" lang="en"/>
-<l:gentext key="graphicdesigner" text="Graphic Designer" lang="en"/>
-<l:gentext key="productioneditor" text="Production Editor" lang="en"/>
-<l:gentext key="technicaleditor" text="Technical Editor" lang="en"/>
-<l:gentext key="translator" text="Translator" lang="en"/>
-<l:gentext key="listofequations" text="тэгшитгэл"/>
-<l:gentext key="ListofEquations" text="Тэгшитгэл"/>
-<l:gentext key="ListofExamples" text="Жишээ"/>
-<l:gentext key="listofexamples" text="жишээ"/>
-<l:gentext key="ListofFigures" text="Зургийн лавлах"/>
-<l:gentext key="listoffigures" text="зургийн лавлах"/>
-<l:gentext key="ListofProcedures" text="List of Procedures" lang="en"/>
-<l:gentext key="listofprocedures" text="List of Procedures" lang="en"/>
-<l:gentext key="listoftables" text="хүснэгтүүдийн лавлах"/>
-<l:gentext key="ListofTables" text="Хүснэгтүүдийн лавлах"/>
-<l:gentext key="ListofUnknown" text="???-Лавлах"/>
-<l:gentext key="listofunknown" text="???-Лавлах"/>
-<l:gentext key="nav-home" text="Эхлэл рүү"/>
+<l:gentext key="Authors" text="Зохиогчид"/>
+<l:gentext key="copyeditor" text="Хуулбар хянан тохиолдуулагч"/>
+<l:gentext key="graphicdesigner" text="График дизайнч"/>
+<l:gentext key="productioneditor" text="Бүтээгдэхүүн хянан тохиолдуулагч"/>
+<l:gentext key="technicaleditor" text="Техникийн хянан тохиолдуулагч"/>
+<l:gentext key="translator" text="Орчуулагч"/>
+<l:gentext key="listofequations" text="тэгшитгэлийн жагсаалт"/>
+<l:gentext key="ListofEquations" text="Тэгшитгэлийн жагсаалт"/>
+<l:gentext key="ListofExamples" text="Жишээний жагсаалт"/>
+<l:gentext key="listofexamples" text="жишээний жагсаалт"/>
+<l:gentext key="ListofFigures" text="Зургийн жагсаалт"/>
+<l:gentext key="listoffigures" text="зургийн жагсаалт"/>
+<l:gentext key="ListofProcedures" text="Гүйцэтгэлийн жагсаалт"/>
+<l:gentext key="listofprocedures" text="гүйцэтгэлийн жагсаалт"/>
+<l:gentext key="listoftables" text="хүснэгтийн жагсаалт"/>
+<l:gentext key="ListofTables" text="Хүснэгтийн жагсаалт"/>
+<l:gentext key="ListofUnknown" text="Тодорхойгүй жагсаалт"/>
+<l:gentext key="listofunknown" text="тодорхойгүй жагсаалт"/>
+<l:gentext key="nav-home" text="Эхлэл"/>
 <l:gentext key="nav-next" text="Дараах"/>
-<l:gentext key="nav-next-sibling" text="Түргэн дараах"/>
+<l:gentext key="nav-next-sibling" text="Дараах"/>
 <l:gentext key="nav-prev" text="Өмнөх"/>
-<l:gentext key="nav-prev-sibling" text="Түргэн өмнөх"/>
+<l:gentext key="nav-prev-sibling" text="Өмнөх"/>
 <l:gentext key="nav-up" text="Дээш"/>
-<l:gentext key="nav-toc" text="Лруу"/>
+<l:gentext key="nav-toc" text="Гарчиг"/>
 <l:gentext key="Draft" text="Ноорог"/>
 <l:gentext key="above" text="дээр"/>
 <l:gentext key="below" text="доор"/>
-<l:gentext key="sectioncalled" text="Хэсгүүдийн нэрс"/>
-<l:gentext key="index symbols" text="Символ"/>
+<l:gentext key="sectioncalled" text="Хэсгийн нэр"/>
+<l:gentext key="index symbols" text="тэмдэгтүүд"/>
 <l:gentext key="lowercase.alpha" text="абвгдеёжзийклмноөпрстуүфхцчшщъыьэюя"/>
 <l:gentext key="uppercase.alpha" text="АБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФХЦЧШЩЪЫЬЭЮЯ"/>
 <l:gentext key="normalize.sort.input" text="AaÀàÁáÂâÃãÄäÅåĀāĂăĄąǍǎǞǟǠǡǺǻȀȁȂȃȦȧḀḁẚẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặBbƀƁɓƂƃḂḃḄḅḆḇCcÇçĆćĈĉĊċČčƇƈɕḈḉDdĎďĐđƊɗƋƌǅǲȡɖḊḋḌḍḎḏḐḑḒḓEeÈèÉéÊêËëĒēĔĕĖėĘęĚěȄȅȆȇȨȩḔḕḖḗḘḙḚḛḜḝẸẹẺẻẼẽẾếỀềỂểỄễỆệFfƑƒḞḟGgĜĝĞğĠġĢģƓɠǤǥǦǧǴǵḠḡHhĤĥĦħȞȟɦḢḣḤḥḦḧḨḩḪḫẖIiÌìÍíÎîÏïĨĩĪīĬĭĮįİƗɨǏǐȈȉȊȋḬḭḮḯỈỉỊịJjĴĵǰʝKkĶķƘƙǨǩḰḱḲḳḴḵLlĹĺĻļĽľĿŀŁłƚǈȴɫɬɭḶḷḸḹḺḻḼḽMmɱḾḿṀṁṂṃNnÑñŃńŅņŇňƝɲƞȠǋǸǹȵɳṄṅṆṇṈṉṊṋOoÒòÓóÔôÕõÖöØøŌōŎŏŐőƟƠơǑǒǪǫǬǭǾǿȌȍȎȏȪȫȬȭȮȯȰȱṌṍṎṏṐṑṒṓỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợPpƤƥṔṕṖṗQqʠRrŔŕŖŗŘřȐȑȒȓɼɽɾṘṙṚṛṜṝṞṟSsŚśŜŝŞşŠšȘșʂṠṡṢṣṤṥṦṧṨṩTtŢţŤťŦŧƫƬƭƮʈȚțȶṪṫṬṭṮṯṰṱẗUuÙùÚúÛûÜüŨũŪūŬŭŮůŰűŲųƯưǓǔǕǖǗǘǙǚǛǜȔȕȖȗṲṳṴṵṶṷṸṹṺṻỤụỦủỨứỪừỬửỮữỰựVvƲʋṼṽṾṿWwŴŵẀẁẂẃẄẅẆẇẈẉẘXxẊẋẌẍYyÝýÿŸŶŷƳƴȲȳẎẏẙỲỳỴỵỶỷỸỹZzŹźŻżŽžƵƶȤȥʐʑẐẑẒẓẔẕẕ" lang="en"/>
@@ -205,7 +205,7 @@
 <l:gentext key="hyphenation-character" text="-"/>
 <l:gentext key="hyphenation-push-character-count" text="2"/>
 <l:gentext key="hyphenation-remain-character-count" text="3"/>
-<l:context name="styles"><l:template name="person-name" text="first-last"/>
+<l:context name="styles"><l:template name="person-name" text="овог-нэр"/>
 </l:context>
 <l:context name="title"><l:template name="abstract" text="%t"/>
 <l:template name="answer" text="%t"/>
@@ -215,7 +215,7 @@
 <l:template name="bibliodiv" text="%t"/>
 <l:template name="biblioentry" text="%t"/>
 <l:template name="bibliography" text="%t"/>
-<l:template name="bibliolist" text="%t" lang="en"/>
+<l:template name="bibliolist" text="%t"/>
 <l:template name="bibliomixed" text="%t"/>
 <l:template name="bibliomset" text="%t"/>
 <l:template name="biblioset" text="%t"/>
@@ -229,12 +229,12 @@
 <l:template name="equation" text="Тэгшитгэл %n. %t"/>
 <l:template name="example" text="Жишээ %n. %t"/>
 <l:template name="figure" text="Зураг %n. %t"/>
-<l:template name="foil" text="%t" lang="en"/>
-<l:template name="foilgroup" text="%t" lang="en"/>
+<l:template name="foil" text="%t"/>
+<l:template name="foilgroup" text="%t"/>
 <l:template name="formalpara" text="%t"/>
 <l:template name="glossary" text="%t"/>
 <l:template name="glossdiv" text="%t"/>
-<l:template name="glosslist" text="%t" lang="en"/>
+<l:template name="glosslist" text="%t"/>
 <l:template name="glossentry" text="%t"/>
 <l:template name="important" text="%t"/>
 <l:template name="index" text="%t"/>
@@ -255,7 +255,7 @@
 <l:template name="partintro" text="%t"/>
 <l:template name="preface" text="%t"/>
 <l:template name="procedure" text="%t"/>
-<l:template name="procedure.formal" text="Процедур %n. %t"/>
+<l:template name="procedure.formal" text="Гүйцэтгэл %n. %t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="productionset.formal" text="Бүтээгдэхүүн %n"/>
 <l:template name="qandadiv" text="%t"/>
@@ -277,9 +277,9 @@
 <l:template name="step" text="%t"/>
 <l:template name="table" text="Хүснэгт %n. %t"/>
 <l:template name="task" text="%t"/>
-<l:template name="tasksummary" text="%t" lang="en"/>
-<l:template name="taskprerequisites" text="%t" lang="en"/>
-<l:template name="taskrelated" text="%t" lang="en"/>
+<l:template name="tasksummary" text="%t"/>
+<l:template name="taskprerequisites" text="%t"/>
+<l:template name="taskrelated" text="%t"/>
 <l:template name="tip" text="%t"/>
 <l:template name="toc" text="%t"/>
 <l:template name="variablelist" text="%t"/>
@@ -297,7 +297,7 @@
 <l:template name="sect5" text="%t"/>
 <l:template name="section" text="%t"/>
 <l:template name="simplesect" text="%t"/>
-<l:template name="part" text="%t" lang="en"/>
+<l:template name="part" text="%t"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="Хавсралт %n. %t"/>
 <l:template name="article/appendix" text="%n. %t"/>
@@ -371,8 +371,8 @@
 <l:template name="equation" text="%t"/>
 <l:template name="example" text="%t"/>
 <l:template name="figure" text="%t"/>
-<l:template name="foil" text="%t" lang="en"/>
-<l:template name="foilgroup" text="%t" lang="en"/>
+<l:template name="foil" text="%t"/>
+<l:template name="foilgroup" text="%t"/>
 <l:template name="formalpara" text="%t"/>
 <l:template name="glossary" text="%t"/>
 <l:template name="glossdiv" text="%t"/>
@@ -407,20 +407,20 @@
 <l:template name="setindex" text="%t"/>
 <l:template name="sidebar" text="%t"/>
 <l:template name="table" text="%t"/>
-<l:template name="task" text="%t" lang="en"/>
+<l:template name="task" text="%t"/>
 <l:template name="tip" text="%t"/>
 <l:template name="toc" text="%t"/>
 <l:template name="variablelist" text="%t"/>
 <l:template name="varlistentry" text="%n"/>
 <l:template name="warning" text="%t"/>
-<l:template name="olink.document.citation" text=" in %o" lang="en"/>
-<l:template name="olink.page.citation" text=" (page %p)" lang="en"/>
+<l:template name="olink.document.citation" text=" %o "/>
+<l:template name="olink.page.citation" text=" (хуудас %p)"/>
 <l:template name="page.citation" text=" [%p]"/>
-<l:template name="page" text="(Seite %p)"/>
-<l:template name="docname" text=" in %o" lang="en"/>
-<l:template name="docnamelong" text=" in the document titled %o" lang="en"/>
-<l:template name="pageabbrev" text="(S. %p)"/>
-<l:template name="Page" text="Seite %p"/>
+<l:template name="page" text="(Хуудас %p)"/>
+<l:template name="docname" text=" %o "/>
+<l:template name="docnamelong" text=" %o гарчигтай баримтад"/>
+<l:template name="pageabbrev" text="(Х. %p)"/>
+<l:template name="Page" text="Хуудас %p"/>
 <l:template name="bridgehead" text="«%t»"/>
 <l:template name="refsection" text="«%t»"/>
 <l:template name="refsect1" text="«%t»"/>
@@ -442,9 +442,9 @@
 <l:template name="example" text="Жишээ %n"/>
 <l:template name="figure" text="Зураг %n"/>
 <l:template name="part" text="хэсэг %n"/>
-<l:template name="procedure" text="Процедур %n"/>
+<l:template name="procedure" text="Гүйцэтгэл %n"/>
 <l:template name="productionset" text="Бүтээгдэхүүн %n"/>
-<l:template name="qandadiv" text="А &amp; Х %n"/>
+<l:template name="qandadiv" text="А ба Х %n"/>
 <l:template name="qandaentry" text="А: %n"/>
 <l:template name="question" text="А: %n"/>
 <l:template name="sect1" text="Хэсэг %n"/>
@@ -462,50 +462,50 @@
 <l:template name="example" text="Жишээ %n, «%t»"/>
 <l:template name="figure" text="Зураг %n, «%t»"/>
 <l:template name="part" text="хэсэг %n, «%t»"/>
-<l:template name="procedure" text="Процедур %n, «%t»"/>
+<l:template name="procedure" text="Гүйцэтгэл %n, «%t»"/>
 <l:template name="productionset" text="Бүтээгдэхүүн %n, «%t»"/>
-<l:template name="qandadiv" text="А &amp; Х %n, «%t»"/>
-<l:template name="refsect1" text="Хэсгүүдийн нэрс «%t»"/>
-<l:template name="refsect2" text="Хэсгүүдийн нэрс «%t»"/>
-<l:template name="refsect3" text="Хэсгүүдийн нэрс «%t»"/>
-<l:template name="refsection" text="Хэсгүүдийн нэрс «%t»"/>
+<l:template name="qandadiv" text="А ба Х %n, «%t»"/>
+<l:template name="refsect1" text="Хэсгийн нэр «%t»"/>
+<l:template name="refsect2" text="Хэсгийн нэр «%t»"/>
+<l:template name="refsect3" text="Хэсгийн нэр «%t»"/>
+<l:template name="refsection" text="Хэсгийн нэр «%t»"/>
 <l:template name="sect1" text="Хэсэг %n, «%t»"/>
 <l:template name="sect2" text="Хэсэг %n, «%t»"/>
 <l:template name="sect3" text="Хэсэг %n, «%t»"/>
 <l:template name="sect4" text="Хэсэг %n, «%t»"/>
 <l:template name="sect5" text="Хэсэг %n, «%t»"/>
 <l:template name="section" text="Хэсэг %n, «%t»"/>
-<l:template name="simplesect" text="Хэсгүүдийн нэрс «%t»"/>
+<l:template name="simplesect" text="Хэсгийн нэр «%t»"/>
 <l:template name="table" text="Хүснэгт %n, «%t»"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=", "/>
 <l:template name="sep2" text=" ба "/>
-<l:template name="seplast" text=" ба "/>
+<l:template name="seplast" text=", ба "/>
 </l:context>
-<l:context name="glossary"><l:template name="see" text="Харна уу %t"/>
+<l:context name="glossary"><l:template name="see" text="харна уу %t"/>
 <l:template name="seealso" text="Бас харна уу %t"/>
 </l:context>
-<l:context name="msgset"><l:template name="MsgAud" text="Зориулсан: "/>
-<l:template name="MsgLevel" text="Яаралтай байдал: "/>
+<l:context name="msgset"><l:template name="MsgAud" text="Зориулалт: "/>
+<l:template name="MsgLevel" text="Түвшин: "/>
 <l:template name="MsgOrig" text="Үүсэл: "/>
 </l:context>
-<l:context name="datetime"><l:template name="format" text="d.m.Y"/>
+<l:context name="datetime"><l:template name="format" text="Y/m/d"/>
 </l:context>
-<l:context name="termdef"><l:template name="prefix" text="[Definition: " lang="en"/>
-<l:template name="suffix" text="]" lang="en"/>
+<l:context name="termdef"><l:template name="prefix" text="[Тодорхойлолт: "/>
+<l:template name="suffix" text="]"/>
 </l:context>
-<l:context name="datetime-full"><l:template name="January" text="Хулгана"/>
-<l:template name="February" text="Үхэр"/>
-<l:template name="March" text="Бар"/>
-<l:template name="April" text="Туулай"/>
-<l:template name="May" text="Луу"/>
-<l:template name="June" text="Могой"/>
-<l:template name="July" text="Морь"/>
-<l:template name="August" text="Хонь"/>
-<l:template name="September" text="Бич"/>
-<l:template name="October" text="Тахиа"/>
-<l:template name="November" text="Нохой"/>
-<l:template name="December" text="Гахай"/>
+<l:context name="datetime-full"><l:template name="January" text="Хулгана сарын"/>
+<l:template name="February" text="Үхэр сарын"/>
+<l:template name="March" text="Бар сарын"/>
+<l:template name="April" text="Туулай сарын"/>
+<l:template name="May" text="Луу сарын"/>
+<l:template name="June" text="Могой сарын"/>
+<l:template name="July" text="Морь сарын"/>
+<l:template name="August" text="Хонь сарын"/>
+<l:template name="September" text="Бич сарын"/>
+<l:template name="October" text="Тахиа сарын"/>
+<l:template name="November" text="Нохой сарын"/>
+<l:template name="December" text="Гахай сарын"/>
 <l:template name="Monday" text="Даваа"/>
 <l:template name="Tuesday" text="Мягмар"/>
 <l:template name="Wednesday" text="Лхагва"/>
@@ -536,9 +536,9 @@
 </l:context>
 <l:context name="htmlhelp"><l:template name="langcode" text="0x0450 Mongolian (MONGOLIA)"/>
 </l:context>
-<l:context name="index"><l:template name="term-separator" text=", " lang="en"/>
-<l:template name="number-separator" text=", " lang="en"/>
-<l:template name="range-separator" text="-" lang="en"/>
+<l:context name="index"><l:template name="term-separator" text=", "/>
+<l:template name="number-separator" text=", "/>
+<l:template name="range-separator" text="-"/>
 </l:context>
 <l:context name="iso690"><l:template name="lastfirst.sep" text=", " lang="en"/>
 <l:template name="alt.person.two.sep" text=" – " lang="en"/>
@@ -589,76 +589,128 @@
 <l:template name="patnum.sep" text=". " lang="en"/>
 <l:template name="patdate.sep" text=". " lang="en"/>
 </l:context><l:letters><l:l i="-1"/>
-<l:l i="0">Symbole</l:l>
-<l:l i="1">А</l:l>
-<l:l i="1">а</l:l>
-<l:l i="2">Б</l:l>
-<l:l i="2">б</l:l>
-<l:l i="3">В</l:l>
-<l:l i="3">в</l:l>
-<l:l i="4">Г</l:l>
-<l:l i="4">г</l:l>
-<l:l i="5">Д</l:l>
-<l:l i="5">д</l:l>
-<l:l i="6">Е</l:l>
-<l:l i="6">е</l:l>
-<l:l i="7">Ё</l:l>
-<l:l i="7">ё</l:l>
-<l:l i="8">Ж</l:l>
-<l:l i="8">ж</l:l>
-<l:l i="9">З</l:l>
-<l:l i="9">з</l:l>
-<l:l i="10">И</l:l>
-<l:l i="10">и</l:l>
-<l:l i="11">Й</l:l>
-<l:l i="11">й</l:l>
-<l:l i="12">К</l:l>
-<l:l i="12">к</l:l>
-<l:l i="13">Л</l:l>
-<l:l i="13">л</l:l>
-<l:l i="14">М</l:l>
-<l:l i="14">м</l:l>
-<l:l i="15">Н</l:l>
-<l:l i="15">н</l:l>
-<l:l i="16">О</l:l>
-<l:l i="16">о</l:l>
-<l:l i="17">Ө</l:l>
-<l:l i="17">ө</l:l>
-<l:l i="18">П</l:l>
-<l:l i="18">п</l:l>
-<l:l i="19">Р</l:l>
-<l:l i="19">р</l:l>
-<l:l i="20">С</l:l>
-<l:l i="20">с</l:l>
-<l:l i="21">Т</l:l>
-<l:l i="21">т</l:l>
-<l:l i="22">У</l:l>
-<l:l i="22">у</l:l>
-<l:l i="23">Ү</l:l>
-<l:l i="23">ү</l:l>
-<l:l i="24">Ф</l:l>
-<l:l i="24">ф</l:l>
-<l:l i="25">Х</l:l>
-<l:l i="25">х</l:l>
-<l:l i="26">Ц</l:l>
-<l:l i="26">ц</l:l>
-<l:l i="27">Ч</l:l>
-<l:l i="27">ч</l:l>
-<l:l i="28">Ш</l:l>
-<l:l i="28">ш</l:l>
-<l:l i="29">Щ</l:l>
-<l:l i="29">щ</l:l>
-<l:l i="30">Ъ</l:l>
-<l:l i="30">ъ</l:l>
-<l:l i="31">Ы</l:l>
-<l:l i="31">ы</l:l>
-<l:l i="32">Ь</l:l>
-<l:l i="32">ь</l:l>
-<l:l i="33">Э</l:l>
-<l:l i="33">э</l:l>
-<l:l i="34">Ю</l:l>
-<l:l i="34">ю</l:l>
-<l:l i="35">Я</l:l>
-<l:l i="35">я</l:l>
+<l:l i="0">Тэмдэгтүүд</l:l>
+<l:l i="10">A</l:l>
+<l:l i="10">a</l:l>
+<l:l i="20">B</l:l>
+<l:l i="20">b</l:l>
+<l:l i="30">C</l:l>
+<l:l i="30">c</l:l>
+<l:l i="40">D</l:l>
+<l:l i="40">d</l:l>
+<l:l i="50">E</l:l>
+<l:l i="50">e</l:l>
+<l:l i="60">F</l:l>
+<l:l i="60">f</l:l>
+<l:l i="70">G</l:l>
+<l:l i="70">g</l:l>
+<l:l i="80">H</l:l>
+<l:l i="80">h</l:l>
+<l:l i="90">I</l:l>
+<l:l i="90">i</l:l>
+<l:l i="100">J</l:l>
+<l:l i="100">j</l:l>
+<l:l i="110">K</l:l>
+<l:l i="110">k</l:l>
+<l:l i="120">L</l:l>
+<l:l i="120">l</l:l>
+<l:l i="130">M</l:l>
+<l:l i="130">m</l:l>
+<l:l i="140">N</l:l>
+<l:l i="140">n</l:l>
+<l:l i="150">O</l:l>
+<l:l i="150">o</l:l>
+<l:l i="160">P</l:l>
+<l:l i="160">p</l:l>
+<l:l i="170">Q</l:l>
+<l:l i="170">q</l:l>
+<l:l i="180">R</l:l>
+<l:l i="180">r</l:l>
+<l:l i="190">S</l:l>
+<l:l i="190">s</l:l>
+<l:l i="200">T</l:l>
+<l:l i="200">t</l:l>
+<l:l i="210">U</l:l>
+<l:l i="210">u</l:l>
+<l:l i="220">V</l:l>
+<l:l i="220">v</l:l>
+<l:l i="230">W</l:l>
+<l:l i="230">w</l:l>
+<l:l i="240">X</l:l>
+<l:l i="240">x</l:l>
+<l:l i="250">Y</l:l>
+<l:l i="250">y</l:l>
+<l:l i="260">Z</l:l>
+<l:l i="260">z</l:l>
+<l:l i="270">А</l:l>
+<l:l i="270">а</l:l>
+<l:l i="280">Б</l:l>
+<l:l i="280">б</l:l>
+<l:l i="290">В</l:l>
+<l:l i="290">в</l:l>
+<l:l i="300">Г</l:l>
+<l:l i="300">г</l:l>
+<l:l i="310">Д</l:l>
+<l:l i="310">д</l:l>
+<l:l i="320">Е</l:l>
+<l:l i="320">е</l:l>
+<l:l i="330">Ё</l:l>
+<l:l i="330">ё</l:l>
+<l:l i="340">Ж</l:l>
+<l:l i="340">ж</l:l>
+<l:l i="350">З</l:l>
+<l:l i="350">з</l:l>
+<l:l i="360">И</l:l>
+<l:l i="360">и</l:l>
+<l:l i="370">Й</l:l>
+<l:l i="370">й</l:l>
+<l:l i="380">К</l:l>
+<l:l i="380">к</l:l>
+<l:l i="390">Л</l:l>
+<l:l i="390">л</l:l>
+<l:l i="400">М</l:l>
+<l:l i="400">м</l:l>
+<l:l i="410">Н</l:l>
+<l:l i="410">н</l:l>
+<l:l i="420">О</l:l>
+<l:l i="420">о</l:l>
+<l:l i="430">Ө</l:l>
+<l:l i="430">ө</l:l>
+<l:l i="440">П</l:l>
+<l:l i="440">п</l:l>
+<l:l i="450">Р</l:l>
+<l:l i="450">р</l:l>
+<l:l i="460">С</l:l>
+<l:l i="460">с</l:l>
+<l:l i="470">Т</l:l>
+<l:l i="470">т</l:l>
+<l:l i="480">У</l:l>
+<l:l i="480">у</l:l>
+<l:l i="490">Ү</l:l>
+<l:l i="490">ү</l:l>
+<l:l i="500">Ф</l:l>
+<l:l i="500">ф</l:l>
+<l:l i="510">Х</l:l>
+<l:l i="510">х</l:l>
+<l:l i="520">Ц</l:l>
+<l:l i="520">ц</l:l>
+<l:l i="530">Ч</l:l>
+<l:l i="530">ч</l:l>
+<l:l i="540">Ш</l:l>
+<l:l i="540">ш</l:l>
+<l:l i="550">Щ</l:l>
+<l:l i="550">щ</l:l>
+<l:l i="560">Ъ</l:l>
+<l:l i="560">ъ</l:l>
+<l:l i="570">Ы</l:l>
+<l:l i="570">ы</l:l>
+<l:l i="580">Ь</l:l>
+<l:l i="580">ь</l:l>
+<l:l i="590">Э</l:l>
+<l:l i="590">э</l:l>
+<l:l i="600">Ю</l:l>
+<l:l i="600">ю</l:l>
+<l:l i="610">Я</l:l>
+<l:l i="610">я</l:l>
 </l:letters>
 </l:l10n>
