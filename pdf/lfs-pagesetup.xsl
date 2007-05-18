@@ -96,9 +96,28 @@
     </xsl:attribute>
   </xsl:attribute-set>
 
+    <!-- part/partintro:
+           Be sure that partintro is on a new page. -->
+    <!-- The original template is in {docbook-xsl}/fo/divisions.xsl -->
+  <xsl:template match="part/partintro">
+    <xsl:apply-templates select=".." mode="part.titlepage.mode">
+      <xsl:with-param name="additional.content">
+        <fo:block break-before="page"/>
+        <xsl:if test="title">
+          <xsl:call-template name="partintro.titlepage"/>
+        </xsl:if>
+        <xsl:apply-templates/>
+      </xsl:with-param>
+    </xsl:apply-templates>
+    <xsl:call-template name="generate.part.toc">
+      <xsl:with-param name="part" select=".."/>
+    </xsl:call-template>
+  </xsl:template>
+
     <!-- book title:
           Centered the title and removed unused code.
-          Added missing revhistory support. -->
+          Added missing revhistory support.
+          Removed book.titlepage.separator. -->
     <!-- The original template is in {docbook-xsl}/fo/titlepage.templates.xsl -->
   <xsl:template name="book.titlepage">
     <fo:block margin-top="3in">
@@ -112,14 +131,8 @@
         <xsl:apply-templates mode="book.titlepage.verso.auto.mode"
                              select="bookinfo/revhistory"/>
       </fo:block>
-      <xsl:call-template name="book.titlepage.separator"/>
     </fo:block>
   </xsl:template>
-
-    <!-- book title separator:
-           Drop a blank page after book title. -->
-    <!-- The original template is in {docbook-xsl}/fo/titlepage.templates.xsl -->
-  <xsl:template name="book.titlepage.separator"/>
 
     <!-- part title:
           Centered the title and removed unused code. -->
@@ -171,7 +184,7 @@
 
    <!-- header.table:
           Re-made template to not generate a fo:table in the header,
-          allowing a more simple header.content custonization. -->
+          allowing a more simple header.content customization. -->
     <!-- The original template is in {docbook-xsl}/fo/pagesetup.xsl -->
   <xsl:template name="header.table">
     <xsl:param name="sequence" select="''"/>
