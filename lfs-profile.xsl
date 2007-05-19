@@ -22,7 +22,8 @@
               doctype-system="http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"/>
 
   <!-- Profiling parameters:
-         profile.separator changed from ; to , to let in work in command line. -->
+         profile.separator changed from ";" to "," to let it work
+         at command line. -->
   <xsl:param name="profile.arch" select="''"/>
   <xsl:param name="profile.audience" select="''"/>
   <xsl:param name="profile.condition" select="''"/>

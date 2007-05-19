@@ -510,8 +510,7 @@ tt, code, kbd, pre, .command {
   font-style: italic;
 }
 
-pre.userinput {
-  color: #101310;
+pre {
   background-color: #e5e5e5;
   border: 1px solid #050505;
   padding: .5em 1em;
@@ -519,21 +518,19 @@ pre.userinput {
   font-weight: bold;
 }
 
+pre.userinput {
+  color: #101310;
+}
+
 pre.root {
   color: #101310;
-  background-color: #e5e5e5;
   border: 1px solid #11a;
-  padding: .5em 1em;
-  margin: 0 2em;
-  font-weight: bold;
 }
 
 pre.screen {
   color: #000;
   background-color: #e9e9e9;
-  border: 1px solid #050505;
-  padding: .5em 1em;
-  margin: 0 2em;
+  font-weight: normal;
 }
 
 .literal, .prompt {
@@ -559,4 +556,41 @@ p.updated {
   font-size: small;
   font-weight: bold;
   font-style: italic;
+}
+
+
+/* Special colored blocks */
+  /* OrangeRed4 */
+.feature-ssp {
+  color: #8B2500;
+}
+
+  /* RoyalBlue3 */
+.feature-aslr {
+  color: #3A5FCD;
+}
+
+  /* NavyBlue */
+.feature-pax {
+  color: #000080;
+}
+
+  /* VioletRed */
+.feature-hardened_tmp {
+  color: #d02090;
+}
+
+  /* PaleTurquoise4 */
+.feature-warnings {
+  color: #668b8b;
+}
+
+  /* RosyBrown */
+.feature-misc {
+  color: #bc8f8f;
+}
+
+  /* Sienna*/
+.feature-blowfish {
+  color: #8E6B23
 }

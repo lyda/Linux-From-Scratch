@@ -11,7 +11,8 @@
   <!-- Individual elements templates -->
 
     <!-- para:
-           Added a choose to skip empty "Home page" in packages.xml -->
+           Added a choose to skip empty "Home page" in packages.xml.
+           Added an if for HLFS features. -->
     <!-- The original template is in {docbook-xsl}/xhtml/block.xsl -->
   <xsl:template match="para">
     <xsl:choose>
@@ -19,7 +20,12 @@
       <xsl:otherwise>
         <xsl:call-template name="paragraph">
           <xsl:with-param name="class">
-            <xsl:if test="@role and $para.propagates.style != 0">
+            <xsl:if test="@role">
+              <xsl:if test="$book-type = 'hlfs'">
+                <xsl:if test="contains($hlfs-features,concat(',',@role,','))">
+                  <xsl:text>feature-</xsl:text>
+                </xsl:if>
+              </xsl:if>
               <xsl:value-of select="@role"/>
             </xsl:if>
           </xsl:with-param>
@@ -44,23 +50,25 @@
          It match also programlisting and synopsis. The code for that tags
          is unchanged. -->
   <xsl:template match="screen">
-    <xsl:choose>
-      <xsl:when test="@role = 'root'">
-        <pre class="root">
-          <xsl:apply-templates/>
-        </pre>
-      </xsl:when>
-      <xsl:when test="child::* = userinput">
-        <pre class="userinput">
-          <xsl:apply-templates/>
-        </pre>
-      </xsl:when>
-      <xsl:otherwise>
-        <pre class="{name(.)}">
-          <xsl:apply-templates/>
-        </pre>
-      </xsl:otherwise>
-    </xsl:choose>
+    <pre>
+      <xsl:attribute name="class">
+        <xsl:choose>
+          <xsl:when test="@role and not(@role = 'nodump')">
+            <xsl:if test="$book-type = 'hlfs'">
+              <xsl:if test="contains($hlfs-features,concat(',',@role,','))">
+                <xsl:text>feature-</xsl:text>
+              </xsl:if>
+            </xsl:if>
+            <xsl:value-of select="@role"/>
+          </xsl:when>
+          <xsl:when test="child::* = userinput">userinput</xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="name(.)"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </pre>
   </xsl:template>
 
     <!-- userinput:

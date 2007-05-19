@@ -78,6 +78,17 @@
         </xsl:call-template>
       </div>
     </xsl:if>
+    <xsl:if test="$book-type = 'hlfs'">
+      <script type="text/javascript">
+        <xsl:attribute name="src">
+          <xsl:choose>
+            <xsl:when test="local-name(.)='book' or local-name(.)='part' or
+                            local-name(.)='index'">../features.js</xsl:when>
+            <xsl:otherwise>../../features.js</xsl:otherwise>
+          </xsl:choose>
+        </xsl:attribute>
+      </script>
+    </xsl:if>
   </xsl:template>
 
     <!-- navigational.links:
