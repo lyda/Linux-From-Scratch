@@ -212,7 +212,7 @@
 
     <!-- The target links:
            Changed links separator.
-           On the cecond @zone link, we use a fixed string for the text
+           On the second @zone link, we use a fixed string for the text
            with gentext support.
            Assume that there is no more than 2 @zone in a indexterm.
            Use href.target.uri named template to resolve the links. It is faster

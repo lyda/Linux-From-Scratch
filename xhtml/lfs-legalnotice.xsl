@@ -16,19 +16,12 @@
       <xsl:call-template name="object.id"/>
     </xsl:variable>
     <xsl:variable name="filename" select="concat($base.dir, 'legalnotice.html')"/>
-    <xsl:variable name="title">
-      <xsl:apply-templates select="." mode="title.markup"/>
-    </xsl:variable>
     <xsl:call-template name="write.chunk">
       <xsl:with-param name="filename" select="$filename"/>
       <xsl:with-param name="quiet" select="$chunk.quietly"/>
       <xsl:with-param name="content">
         <html>
-          <head>
-            <xsl:call-template name="system.head.content"/>
-            <xsl:call-template name="head.content"/>
-            <xsl:call-template name="user.head.content"/>
-          </head>
+          <xsl:call-template name="html.head"/>
           <body>
             <xsl:call-template name="body.attributes"/>
             <div class="{local-name(.)}">
@@ -37,10 +30,7 @@
             <div class="navfooter">
               <ul class="footerlinks">
                 <li class="home">
-                  <a accesskey="h">
-                    <xsl:attribute name="href">
-                      <xsl:text>index.html</xsl:text>
-                    </xsl:attribute>
+                  <a accesskey="h" href="index.html">
                     <xsl:attribute name="title">
                       <xsl:value-of select="/book/bookinfo/title"/>
                       <xsl:text> - </xsl:text>
@@ -64,10 +54,7 @@
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.xsl -->
   <xsl:template match="copyright" mode="titlepage.mode">
     <p class="{name(.)}">
-      <a>
-        <xsl:attribute name="href">
-          <xsl:value-of select="'legalnotice.html'"/>
-        </xsl:attribute>
+      <a href="legalnotice.html">
         <xsl:call-template name="gentext">
           <xsl:with-param name="key" select="'Copyright'"/>
         </xsl:call-template>

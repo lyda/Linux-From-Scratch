@@ -170,7 +170,7 @@
   </xsl:template>
 
     <!-- bridgehead:
-           When use always renderas attributes and want the output h* level
+           We use always renderas attributes and want the output h* level
            matching the defined sect* level.
            Create the anchor only if there is an @id. -->
     <!-- The original template is in {docbook-xsl}/xhtml/sections.xsl -->

@@ -154,12 +154,10 @@
       SegmentedList.  If there are too many Segs or too few SegTitles,
       you'll get something odd...maybe an error -->
     <div class="seg">
-      <strong>
-        <span class="segtitle">
-          <xsl:apply-templates select="$segtitles[$segnum=position()]"
-                               mode="segtitle-in-seg"/>
-          <xsl:text>: </xsl:text>
-        </span>
+      <strong class="segtitle">
+        <xsl:apply-templates select="$segtitles[$segnum=position()]"
+                              mode="segtitle-in-seg"/>
+        <xsl:text>: </xsl:text>
       </strong>
       <span class="segbody">
         <xsl:if test="@id">
@@ -240,7 +238,6 @@
         <xsl:otherwise>3</xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="id"><xsl:call-template name="object.id"/></xsl:variable>
     <xsl:variable name="title">
       <xsl:call-template name="gentext">
         <xsl:with-param name="key">RevHistory</xsl:with-param>
@@ -248,13 +245,11 @@
     </xsl:variable>
     <xsl:variable name="contents">
       <div class="{name(.)}">
-        <table summary="Revision history">
+        <table summary="{$title}">
           <tr>
             <th colspan="{$numcols}">
               <b>
-                <xsl:call-template name="gentext">
-                  <xsl:with-param name="key" select="'RevHistory'"/>
-                </xsl:call-template>
+                <xsl:value-of select="$title"/>
               </b>
             </th>
           </tr>

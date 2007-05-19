@@ -11,7 +11,7 @@
   <xsl:param name="chunk.first.sections" select="1"/>
 
     <!-- preface:
-           Process the child elements before generating the TOC -->
+           Output non sect1 child elements before the TOC -->
     <!-- The original template is in {docbook-xsl}/xhtml/components.xsl -->
   <xsl:template match="preface">
     <xsl:call-template name="id.warning"/>
@@ -28,12 +28,12 @@
       </xsl:if>
       <xsl:call-template name="component.separator"/>
       <xsl:call-template name="preface.titlepage"/>
+      <xsl:apply-templates/>
       <xsl:variable name="toc.params">
         <xsl:call-template name="find.path.params">
           <xsl:with-param name="table" select="normalize-space($generate.toc)"/>
         </xsl:call-template>
       </xsl:variable>
-      <xsl:apply-templates/>
       <xsl:if test="contains($toc.params, 'toc')">
         <xsl:call-template name="component.toc">
           <xsl:with-param name="toc.title.p" select="contains($toc.params, 'title')"/>
@@ -45,7 +45,7 @@
   </xsl:template>
 
     <!-- chapter:
-           Process the child elements before generating the TOC -->
+           Output non sect1 child elements before the TOC -->
     <!-- The original template is in {docbook-xsl}/xhtml/components.xsl -->
   <xsl:template match="chapter">
     <xsl:call-template name="id.warning"/>
@@ -62,12 +62,12 @@
       </xsl:if>
       <xsl:call-template name="component.separator"/>
       <xsl:call-template name="chapter.titlepage"/>
+      <xsl:apply-templates/>
       <xsl:variable name="toc.params">
         <xsl:call-template name="find.path.params">
           <xsl:with-param name="table" select="normalize-space($generate.toc)"/>
         </xsl:call-template>
       </xsl:variable>
-      <xsl:apply-templates/>
       <xsl:if test="contains($toc.params, 'toc')">
         <xsl:call-template name="component.toc">
           <xsl:with-param name="toc.title.p" select="contains($toc.params, 'title')"/>

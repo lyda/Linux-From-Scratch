@@ -26,10 +26,8 @@
     <xsl:param name="next" select="/foo"/>
     <xsl:variable name="up" select="parent::*"/>
     <xsl:variable name="home" select="/*[1]"/>
-    <xsl:variable name="row" select="count($prev) &gt; 0 or (count($up) &gt; 0
-            and generate-id($up) != generate-id($home)) or count($next) &gt; 0"/>
       <!-- Don't generate the header in index.html -->
-    <xsl:if test="$row and $home != .">
+    <xsl:if test="$home != .">
       <div class="navheader">
           <!-- Add common titles -->
         <div class="headertitles">
@@ -65,19 +63,16 @@
     <xsl:param name="next" select="/foo"/>
     <xsl:variable name="up" select="parent::*"/>
     <xsl:variable name="home" select="/*[1]"/>
-    <xsl:variable name="row" select="count($prev) &gt; 0 or count($up) &gt; 0
-            or count($next) &gt; 0 or generate-id($home) != generate-id(.)"/>
-    <xsl:if test="$row">
-      <div class="navfooter">
-          <!-- Create footer navigational links -->
-        <xsl:call-template name="navigational.links">
-          <xsl:with-param name="prev" select="$prev"/>
-          <xsl:with-param name="next" select="$next"/>
-          <xsl:with-param name="up" select="$up"/>
-          <xsl:with-param name="home" select="$home"/>
-        </xsl:call-template>
-      </div>
-    </xsl:if>
+      <!-- Create footer navigational links -->
+    <div class="navfooter">
+      <xsl:call-template name="navigational.links">
+        <xsl:with-param name="prev" select="$prev"/>
+        <xsl:with-param name="next" select="$next"/>
+        <xsl:with-param name="up" select="$up"/>
+        <xsl:with-param name="home" select="$home"/>
+      </xsl:call-template>
+    </div>
+      <!-- In HLFS, add the features.js call -->
     <xsl:if test="$book-type = 'hlfs'">
       <script type="text/javascript">
         <xsl:attribute name="src">
@@ -109,9 +104,12 @@
     <xsl:param name="up"/>
     <xsl:param name="home"/>
     <ul>
+        <!-- No prev link when prev is home -->
       <xsl:if test="count($prev)&gt;0 and $prev != $home">
         <li class="prev">
           <xsl:choose>
+              <!-- If prev is a dummy sect1 that is the first one in a chapter,
+                   links to the parent chapter.-->
             <xsl:when test="$prev[@role='dummy'] and
                             count(preceding-sibling::sect1)=1">
               <a accesskey="p">
@@ -131,6 +129,8 @@
                 <xsl:value-of select="../title"/>
               </p>
             </xsl:when>
+              <!-- If prev is a dummy sect1 that is not the first one in a chapter,
+                   links to the previous sect1.-->
             <xsl:when test="$prev[@role='dummy'] and
                             count(preceding-sibling::sect1)&gt;1">
               <a accesskey="p">
@@ -150,6 +150,7 @@
                 <xsl:value-of select="preceding-sibling::sect1[position()=2]/title"/>
               </p>
             </xsl:when>
+              <!-- Normal prev links -->
             <xsl:otherwise>
               <a accesskey="p">
                 <xsl:attribute name="href">
@@ -171,9 +172,11 @@
           </xsl:choose>
         </li>
       </xsl:if>
+        <!-- Next link except in the last page -->
       <xsl:if test="count($next)&gt;0">
         <li class="next">
           <xsl:choose>
+              <!-- Current page is sect1 a next is a dummy sect1, link to the next one -->
             <xsl:when test="$next[@role='dummy'] and local-name(.) = 'sect1'">
               <a accesskey="n">
                 <xsl:attribute name="href">
@@ -192,6 +195,7 @@
                 <xsl:value-of select="following-sibling::sect1[position()=2]/title"/>
               </p>
             </xsl:when>
+              <!-- Current page is chapter a next is a dummy sect1, link to the next one -->
             <xsl:when test="$next[@role='dummy'] and local-name(.) = 'chapter'">
               <a accesskey="n">
                 <xsl:attribute name="href">
@@ -210,6 +214,7 @@
                 <xsl:value-of select="descendant::sect1[position()=2]/title"/>
               </p>
             </xsl:when>
+              <!-- Normal next links. Take care of Index gentext support. -->
             <xsl:otherwise>
               <a accesskey="n">
                 <xsl:attribute name="href">
@@ -251,6 +256,7 @@
       </xsl:if>
       <li class="up">
         <xsl:choose>
+            <!-- Up link except if up is home -->
           <xsl:when test="count($up)&gt;0 and $up != $home">
             <a accesskey="u">
               <xsl:attribute name="href">
@@ -274,6 +280,7 @@
       </li>
       <li class="home">
         <xsl:choose>
+            <!-- No home link in home page -->
           <xsl:when test="$home != .">
             <a accesskey="h">
               <xsl:attribute name="href">

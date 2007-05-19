@@ -23,7 +23,7 @@
            the Index page title and links that point to the Index page.
            It also allow us to change the title, if wanted.
            Note: To change the title involves creating the appropiate
-           entries in lfs-l10n.xml-->
+           entries in lfs-l10n.xml -->
   <xsl:param name="index-title">Index</xsl:param>
 
     <!-- Index title generation. -->
