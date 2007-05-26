@@ -200,6 +200,36 @@
     </xsl:attribute>
   </xsl:attribute-set>
 
+   <!-- Center formal objects title, like in table. -->
+  <xsl:attribute-set name="formal.title.properties">
+    <xsl:attribute name="text-align">center</xsl:attribute>
+  </xsl:attribute-set>
+
+    <!-- table.layout:
+           We want all tables centered. Based on a hack posted
+           by Ellen Juhlin on docbook-apps mailing list. -->
+    <!-- The original template is in {docbook-xsl}/fo/table.xsl -->
+  <xsl:template name="table.layout">
+    <xsl:param name="table.content" select="NOTANODE"/>
+    <fo:table table-layout="fixed" width="100%">
+      <fo:table-column column-width ="proportional-column-width(1)"/>
+      <fo:table-column>
+        <!-- Set center column width equal to table width -->
+        <xsl:attribute name="column-width">
+          <xsl:call-template name="table.width"/>
+        </xsl:attribute>
+      </fo:table-column>
+      <fo:table-column column-width ="proportional-column-width(1)"/>
+      <fo:table-body>
+        <fo:table-row>
+          <fo:table-cell column-number="2">
+            <xsl:copy-of select="$table.content"/>
+          </fo:table-cell>
+        </fo:table-row>
+      </fo:table-body>
+    </fo:table>
+  </xsl:template>
+
 
   <!-- Revision History -->
 
