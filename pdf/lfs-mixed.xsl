@@ -200,9 +200,14 @@
     </xsl:attribute>
   </xsl:attribute-set>
 
-   <!-- Center formal objects title, like in table. -->
+   <!-- Center table title. -->
   <xsl:attribute-set name="formal.title.properties">
-    <xsl:attribute name="text-align">center</xsl:attribute>
+    <xsl:attribute name="text-align">
+      <xsl:choose>
+        <xsl:when test="local-name(.) = 'table'">center</xsl:when>
+        <xsl:otherwise>left</xsl:otherwise>
+      </xsl:choose>
+    </xsl:attribute>
   </xsl:attribute-set>
 
     <!-- table.layout:
