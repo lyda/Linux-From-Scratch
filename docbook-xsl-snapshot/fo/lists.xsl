@@ -516,8 +516,10 @@
 </xsl:template>
 
 <xsl:template match="varlistentry" mode="vl.as.list">
-  <xsl:variable name="id"><xsl:call-template name="object.id"/></xsl:variable>
-  <fo:list-item id="{$id}" xsl:use-attribute-sets="list.item.spacing">
+  <xsl:variable name="id">
+    <xsl:call-template name="object.id"/>
+  </xsl:variable>
+  <xsl:variable name="item.contents">
     <fo:list-item-label end-indent="label-end()" text-align="start">
       <fo:block>
         <xsl:apply-templates select="term"/>
@@ -528,8 +530,23 @@
         <xsl:apply-templates select="listitem"/>
       </fo:block>
     </fo:list-item-body>
-  </fo:list-item>
+  </xsl:variable>
+
+  <xsl:choose>
+    <xsl:when test="parent::*/@spacing = 'compact'">
+      <fo:list-item id="{$id}"
+          xsl:use-attribute-sets="compact.list.item.spacing">
+        <xsl:copy-of select="$item.contents"/>
+      </fo:list-item>
+    </xsl:when>
+    <xsl:otherwise>
+      <fo:list-item id="{$id}" xsl:use-attribute-sets="list.item.spacing">
+        <xsl:copy-of select="$item.contents"/>
+      </fo:list-item>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
+
 
 <xsl:template match="variablelist" mode="vl.as.blocks">
   <xsl:variable name="id">
