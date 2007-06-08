@@ -1,3 +1,8 @@
+2007-06-08	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 25-lfs.rules: Add rules for DVB devices (create nodes in /dev/dvb/)
+	  and floppies (create extra nodes based on CMOS type), copied from
+	  the SuSE rules file.  Thanks to Alexander Patrakov for the bugreport.
+
 2007-03-04      Matthew Burgess <matthew@linuxfromscratch.org>
         * Makefile: Use `udevd --version' to work out what version of Udev is
 	  installed (requires Udev >= 106)
