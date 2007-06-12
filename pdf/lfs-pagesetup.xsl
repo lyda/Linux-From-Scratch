@@ -77,7 +77,7 @@
   <xsl:param name="footer.rule" select="0"></xsl:param>
 
     <!-- Control depth of sections shown in running headers or footers.
-         Be sure that no uneeded fo:marker are generated. -->
+         Be sure that no unneeded fo:marker are generated. -->
   <xsl:param name="marker.section.level" select="-1"></xsl:param>
 
      <!-- Force package's sect1 onto a new page -->
@@ -116,7 +116,6 @@
 
     <!-- book title:
           Centered the title and removed unused code.
-          Added missing revhistory support.
           Removed book.titlepage.separator. -->
     <!-- The original template is in {docbook-xsl}/fo/titlepage.templates.xsl -->
   <xsl:template name="book.titlepage">
@@ -128,14 +127,39 @@
       <fo:block>
         <xsl:call-template name="book.titlepage.before.verso"/>
         <xsl:call-template name="book.titlepage.verso"/>
-        <xsl:apply-templates mode="book.titlepage.verso.auto.mode"
-                             select="bookinfo/revhistory"/>
       </fo:block>
     </fo:block>
   </xsl:template>
 
+    <!-- book titlepage verso:
+           Added missing bibliosource and revhistory support.
+           Removed unused code. -->
+    <!-- The original template is in {docbook-xsl}/fo/titlepage.templates.xsl -->
+  <xsl:template name="book.titlepage.verso">
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/title"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/corpauthor"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/authorgroup"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/author"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/othercredit"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/releaseinfo"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/pubdate"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/copyright"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/bibliosource"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/abstract"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/revhistory"/>
+    <xsl:apply-templates mode="book.titlepage.verso.auto.mode" select="bookinfo/legalnotice"/>
+  </xsl:template>
+
+    <!-- bibliosource:
+           Self-made template to handle bibliosource when inside bookinfo. -->
+  <xsl:template match="bibliosource" mode="book.titlepage.verso.auto.mode">
+    <fo:block font-size="8pt">
+      <xsl:apply-templates/>
+    </fo:block>
+  </xsl:template>
+
     <!-- part title:
-          Centered the title and removed unused code. -->
+           Centered the title and removed unused code. -->
     <!-- The original template is in {docbook-xsl}/fo/titlepage.templates.xsl -->
   <xsl:template name="part.titlepage">
     <fo:block>
@@ -152,7 +176,7 @@
   </xsl:template>
 
     <!-- chapter title:
-          Small font size and left alignament. -->
+           Small font size and left alignament. -->
     <!-- The original template is in {docbook-xsl}/fo/titlepage.templates.xsl -->
   <xsl:template match="title" mode="chapter.titlepage.recto.auto.mode">
     <fo:block xsl:use-attribute-sets="chapter.titlepage.recto.style"

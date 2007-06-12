@@ -108,6 +108,7 @@
       <xsl:if test="count($prev)&gt;0 and $prev != $home">
         <li class="prev">
           <xsl:choose>
+
               <!-- If prev is a dummy sect1 that is the first one in a chapter,
                    links to the parent chapter.-->
             <xsl:when test="$prev[@role='dummy'] and
@@ -129,6 +130,7 @@
                 <xsl:value-of select="../title"/>
               </p>
             </xsl:when>
+
               <!-- If prev is a dummy sect1 that is not the first one in a chapter,
                    links to the previous sect1.-->
             <xsl:when test="$prev[@role='dummy'] and
@@ -150,6 +152,27 @@
                 <xsl:value-of select="preceding-sibling::sect1[position()=2]/title"/>
               </p>
             </xsl:when>
+
+              <!-- Code for the "To Boot or To Chroot" CLFS links jumps. -->
+            <xsl:when test="$prev[@id='ch-chroot-devices'] or $prev[@id='ch-boot-whatnext']">
+              <a accesskey="p">
+                <xsl:attribute name="href">
+                  <xsl:call-template name="href.target">
+                    <xsl:with-param name="object" select="//sect1[@id='ch-temp-system-choose']"/>
+                  </xsl:call-template>
+                </xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:value-of select="//sect1[@id='ch-temp-system-choose']/title"/>
+                </xsl:attribute>
+                <xsl:call-template name="navig.content">
+                  <xsl:with-param name="direction" select="'prev'"/>
+                </xsl:call-template>
+              </a>
+              <p>
+                <xsl:value-of select="//sect1[@id='ch-temp-system-choose']/title"/>
+              </p>
+            </xsl:when>
+
               <!-- Normal prev links -->
             <xsl:otherwise>
               <a accesskey="p">
@@ -172,10 +195,13 @@
           </xsl:choose>
         </li>
       </xsl:if>
-        <!-- Next link except in the last page -->
-      <xsl:if test="count($next)&gt;0">
+
+
+        <!-- Next link except in the last page and in the CLFS "choose" page -->
+      <xsl:if test="count($next)&gt;0 and (not(@id) or @id!='ch-temp-system-choose')">
         <li class="next">
           <xsl:choose>
+
               <!-- Current page is sect1 a next is a dummy sect1, link to the next one -->
             <xsl:when test="$next[@role='dummy'] and local-name(.) = 'sect1'">
               <a accesskey="n">
@@ -195,7 +221,8 @@
                 <xsl:value-of select="following-sibling::sect1[position()=2]/title"/>
               </p>
             </xsl:when>
-              <!-- Current page is chapter a next is a dummy sect1, link to the next one -->
+
+              <!-- Current page is chapter and next is a dummy sect1, link to the next one -->
             <xsl:when test="$next[@role='dummy'] and local-name(.) = 'chapter'">
               <a accesskey="n">
                 <xsl:attribute name="href">
@@ -214,6 +241,27 @@
                 <xsl:value-of select="descendant::sect1[position()=2]/title"/>
               </p>
             </xsl:when>
+
+              <!-- Code for the "To Boot or To Chroot" CLFS links jumps. -->
+            <xsl:when test="$next[@id='chapter-chroot'] or $next[@id='chapter-boot']">
+              <a accesskey="n">
+                <xsl:attribute name="href">
+                  <xsl:call-template name="href.target">
+                    <xsl:with-param name="object" select="//part[@id='part5']"/>
+                  </xsl:call-template>
+                </xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:value-of select="//part[@id='part5']/title"/>
+                </xsl:attribute>
+                <xsl:call-template name="navig.content">
+                  <xsl:with-param name="direction" select="'next'"/>
+                </xsl:call-template>
+              </a>
+              <p>
+                <xsl:value-of select="//part[@id='part5']/title"/>
+              </p>
+            </xsl:when>
+
               <!-- Normal next links. Take care of Index gentext support. -->
             <xsl:otherwise>
               <a accesskey="n">
@@ -254,6 +302,8 @@
           </xsl:choose>
         </li>
       </xsl:if>
+
+
       <li class="up">
         <xsl:choose>
             <!-- Up link except if up is home -->
@@ -278,6 +328,8 @@
           </xsl:otherwise>
         </xsl:choose>
       </li>
+
+
       <li class="home">
         <xsl:choose>
             <!-- No home link in home page -->

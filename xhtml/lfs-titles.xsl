@@ -192,4 +192,19 @@
     </xsl:element>
   </xsl:template>
 
+    <!-- book.titlepage.verso:
+           Process bookinfo/bibliosource from here. -->
+    <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
+  <xsl:template name="book.titlepage.verso">
+    <xsl:apply-templates select="bookinfo/bibliosource"/>
+  </xsl:template>
+
+    <!-- bookinfo/bibliosource:
+           Self-made template to handle bibliosource when inside bookinfo. -->
+  <xsl:template match="bookinfo/bibliosource">
+    <p class="copyright">
+      <xsl:apply-templates/>
+    </p>
+  </xsl:template>
+
 </xsl:stylesheet>
