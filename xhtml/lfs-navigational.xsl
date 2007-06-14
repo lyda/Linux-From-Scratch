@@ -29,21 +29,18 @@
       <!-- Don't generate the header in index.html -->
     <xsl:if test="$home != .">
       <div class="navheader">
-          <!-- Add common titles -->
-        <div class="headertitles">
-           <!-- Book title and version -->
-          <h4>
-            <xsl:apply-templates select="$home" mode="object.title.markup"/>
-            <xsl:text> - </xsl:text>
-            <xsl:apply-templates select="$home" mode="object.subtitle.markup"/>
-          </h4>
-            <!-- Except for preface, part, and index, add the title of the parent -->
-          <xsl:if test="$up != $home">
-            <h3>
-              <xsl:apply-templates select="$up" mode="object.title.markup"/>
-            </h3>
-          </xsl:if>
-        </div>
+          <!-- Book title and version -->
+        <h4>
+          <xsl:apply-templates select="$home" mode="object.title.markup"/>
+          <xsl:text> - </xsl:text>
+          <xsl:apply-templates select="$home" mode="object.subtitle.markup"/>
+        </h4>
+          <!-- Except for preface, part, and index, add the title of the parent -->
+        <xsl:if test="$up != $home">
+          <h3>
+            <xsl:apply-templates select="$up" mode="object.title.markup"/>
+          </h3>
+        </xsl:if>
           <!-- Create header navigational links -->
         <xsl:call-template name="navigational.links">
           <xsl:with-param name="prev" select="$prev"/>

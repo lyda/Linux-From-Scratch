@@ -11,14 +11,12 @@
            No label in preface. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="preface.titlepage">
-    <div class="titlepage">
+    <h1 class="{name(.)}">
       <xsl:if test="@id">
         <a id="{@id}" name="{@id}"/>
       </xsl:if>
-      <h1 class="{name(.)}">
-        <xsl:value-of select="title"/>
-      </h1>
-    </div>
+      <xsl:value-of select="title"/>
+    </h1>
   </xsl:template>
 
     <!-- part.titlepage:
@@ -27,18 +25,16 @@
            but not in titlepage. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="part.titlepage">
-    <div class="titlepage">
+    <h1 class="{name(.)}">
       <xsl:if test="@id">
         <a id="{@id}" name="{@id}"/>
       </xsl:if>
-      <h1 class="{name(.)}">
-        <xsl:if test="$section.autolabel != 0">
-          <xsl:apply-templates select="." mode="label.markup"/>
-          <xsl:text>. </xsl:text>
-        </xsl:if>
-        <xsl:value-of select="title"/>
-      </h1>
-    </div>
+      <xsl:if test="$section.autolabel != 0">
+        <xsl:apply-templates select="." mode="label.markup"/>
+        <xsl:text>. </xsl:text>
+      </xsl:if>
+      <xsl:value-of select="title"/>
+    </h1>
   </xsl:template>
 
     <!-- partintro.titlepage:
@@ -46,14 +42,12 @@
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="partintro.titlepage">
     <xsl:if test="title">
-      <div class="partintrotitle">
+      <h2 class="{name(.)}">
         <xsl:if test="@id">
           <a id="{@id}" name="{@id}"/>
         </xsl:if>
-        <h2 class="{name(.)}">
-          <xsl:value-of select="title"/>
-        </h2>
-      </div>
+        <xsl:value-of select="title"/>
+      </h2>
     </xsl:if>
   </xsl:template>
 
@@ -63,18 +57,16 @@
            but not in titlepage. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="appendix.titlepage">
-    <div class="titlepage">
+    <h1 class="{name(.)}">
       <xsl:if test="@id">
         <a id="{@id}" name="{@id}"/>
       </xsl:if>
-      <h1 class="{name(.)}">
-        <xsl:if test="$section.autolabel != 0">
-          <xsl:apply-templates select="." mode="label.markup"/>
-          <xsl:text>. </xsl:text>
-        </xsl:if>
-        <xsl:value-of select="title"/>
-      </h1>
-    </div>
+      <xsl:if test="$section.autolabel != 0">
+        <xsl:apply-templates select="." mode="label.markup"/>
+        <xsl:text>. </xsl:text>
+      </xsl:if>
+      <xsl:value-of select="title"/>
+    </h1>
   </xsl:template>
 
     <!-- chapter.titlepage:
@@ -83,36 +75,32 @@
            but not in titlepage. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="chapter.titlepage">
-    <div class="titlepage">
+    <h1 class="{name(.)}">
       <xsl:if test="@id">
         <a id="{@id}" name="{@id}"/>
       </xsl:if>
-      <h1 class="{name(.)}">
-        <xsl:if test="$section.autolabel != 0">
-          <xsl:apply-templates select="." mode="label.markup"/>
-          <xsl:text>. </xsl:text>
-        </xsl:if>
-        <xsl:value-of select="title"/>
-      </h1>
-    </div>
+      <xsl:if test="$section.autolabel != 0">
+        <xsl:apply-templates select="." mode="label.markup"/>
+        <xsl:text>. </xsl:text>
+      </xsl:if>
+      <xsl:value-of select="title"/>
+    </h1>
   </xsl:template>
 
     <!-- sect1.titlepage:
            Uses h1 and removed a lot of unneeded code. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="sect1.titlepage">
-    <div class="titlepage">
+    <h1 class="{name(.)}">
       <xsl:if test="@id">
         <a id="{@id}" name="{@id}"/>
       </xsl:if>
-      <h1 class="{name(.)}">
-        <xsl:if test="$section.autolabel != 0">
-          <xsl:apply-templates select="." mode="label.markup"/>
-          <xsl:text>. </xsl:text>
-        </xsl:if>
-        <xsl:value-of select="title"/>
-      </h1>
-    </div>
+      <xsl:if test="$section.autolabel != 0">
+        <xsl:apply-templates select="." mode="label.markup"/>
+        <xsl:text>. </xsl:text>
+      </xsl:if>
+      <xsl:value-of select="title"/>
+    </h1>
   </xsl:template>
 
     <!-- sect2.titlepage:
@@ -124,18 +112,16 @@
     <xsl:choose>
       <xsl:when test="string-length(title) = 0"/>
       <xsl:otherwise>
-        <div class="titlepage">
+        <h2 class="{name(.)}">
           <xsl:if test="@id">
             <a id="{@id}" name="{@id}"/>
           </xsl:if>
-          <h2 class="{name(.)}">
-            <xsl:if test="not(ancestor::preface) and $section.autolabel != 0">
-              <xsl:apply-templates select="." mode="label.markup"/>
-              <xsl:text>. </xsl:text>
-            </xsl:if>
-            <xsl:value-of select="title"/>
-          </h2>
-        </div>
+          <xsl:if test="not(ancestor::preface) and $section.autolabel != 0">
+            <xsl:apply-templates select="." mode="label.markup"/>
+            <xsl:text>. </xsl:text>
+          </xsl:if>
+          <xsl:value-of select="title"/>
+        </h2>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -144,29 +130,25 @@
            Uses h3 and removed a lot of unneeded code. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="sect3.titlepage">
-    <div class="titlepage">
+    <h3 class="{name(.)}">
       <xsl:if test="@id">
         <a id="{@id}" name="{@id}"/>
       </xsl:if>
-      <h3 class="{name(.)}">
-        <xsl:if test="$section.autolabel != 0">
-          <xsl:apply-templates select="." mode="label.markup"/>
-          <xsl:text>. </xsl:text>
-        </xsl:if>
-        <xsl:value-of select="title"/>
-      </h3>
-    </div>
+      <xsl:if test="$section.autolabel != 0">
+        <xsl:apply-templates select="." mode="label.markup"/>
+        <xsl:text>. </xsl:text>
+      </xsl:if>
+      <xsl:value-of select="title"/>
+    </h3>
   </xsl:template>
 
     <!-- dedication.titlepage:
            Uses h2 and removed a lot of unneeded code. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="dedication.titlepage">
-    <div class="titlepage">
-      <h2 class="{name(.)}">
-        <xsl:value-of select="title"/>
-      </h2>
-    </div>
+    <h2>
+      <xsl:value-of select="title"/>
+    </h2>
   </xsl:template>
 
     <!-- bridgehead:

@@ -34,12 +34,8 @@ a:active { color: #6b77b1 ! important;}
   padding: 0;
 }
 
-div.dedication .titlepage {
-  background: #fff;
-}
-
-div.dedication p {
-  padding-left: 2em;
+div.dedication {
+  padding-left: 1em;
 }
 
 
@@ -158,13 +154,13 @@ div.navfooter {
   border-top: 1px solid #dbddec;
 }
 
-div.headertitles h4 {
+div.navheader h4 {
   margin-top: .4em;
   margin-bottom: 0;
   text-align: center;
 }
 
-div.headertitles h3 {
+div.navheader h3 {
   margin-top: .2em;
   margin-bottom: 0;
   text-align: center;
@@ -264,6 +260,10 @@ li.chapter h4 a {
     float: left;
 }
 
+.indexref {
+    display: block;
+}
+
 .item + .indexref {
     margin-left: 31em;
 }
@@ -274,6 +274,23 @@ li.chapter h4 a {
 
 
 /* Admonitions */
+div.admon img {
+  padding: .3em;
+}
+
+div.admon h3 {
+  display: inline;
+  margin-left: 2em;
+}
+
+div.admon p {
+  margin-left: .5em;
+}
+
+div.admon pre {
+  margin: 0.5em 3em;
+}
+
 div.note, div.tip {
   background-color: #fffff6;
   border: 2px solid #dbddec;
@@ -291,19 +308,6 @@ div.important, div.warning, div.caution {
 
 div.important h3, div.warning h3, div.caution h3 {
   color: #900;
-}
-
-div.admonhead img {
-  padding: .3em;
-}
-
-div.admonhead h3 {
-  display: inline;
-  margin-left: 1.5em;
-}
-
-div.admonbody {
-  margin: .5em;
 }
 
 div.important em, div.warning em, div.caution em {
@@ -329,16 +333,16 @@ div.important em, div.warning em, div.caution em {
   text-align: left;
 }
 
-div.revhistory {
+.revhistory {
   padding-left: 1em;
 }
 
-div.revhistory th {
+.revhistory th {
   line-height: 2em;
   text-align: left;
 }
 
-div.revhistory td {
+.revhistory td {
   padding-right: 1em;
 }
 

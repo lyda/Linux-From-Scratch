@@ -244,20 +244,18 @@
       </xsl:call-template>
     </xsl:variable>
     <xsl:variable name="contents">
-      <div class="{name(.)}">
-        <table summary="{$title}">
-          <tr>
-            <th colspan="{$numcols}">
-              <b>
-                <xsl:value-of select="$title"/>
-              </b>
-            </th>
-          </tr>
-          <xsl:apply-templates mode="titlepage.mode">
-            <xsl:with-param name="numcols" select="$numcols"/>
-          </xsl:apply-templates>
-        </table>
-      </div>
+      <table summary="{$title}" class="{name(.)}">
+        <tr>
+          <th colspan="{$numcols}">
+            <b>
+              <xsl:value-of select="$title"/>
+            </b>
+          </th>
+        </tr>
+        <xsl:apply-templates mode="titlepage.mode">
+          <xsl:with-param name="numcols" select="$numcols"/>
+        </xsl:apply-templates>
+      </table>
     </xsl:variable>
     <xsl:copy-of select="$contents"/>
   </xsl:template>

@@ -38,20 +38,16 @@
         <xsl:with-param name="key" select="$admon.type"/>
       </xsl:call-template>
     </xsl:variable>
-    <div class="{name(.)}">
-      <div class ="admonhead">
-        <img alt="[{$alt}]">
-          <xsl:attribute name="src">
-            <xsl:call-template name="admon.graphic"/>
-          </xsl:attribute>
-        </img>
-        <h3 class="admontitle">
-          <xsl:apply-templates select="." mode="object.title.markup"/>
-        </h3>
-      </div>
-      <div class="admonbody">
-        <xsl:apply-templates/>
-      </div>
+    <div class="admon {name(.)}">
+      <img alt="[{$alt}]">
+        <xsl:attribute name="src">
+          <xsl:call-template name="admon.graphic"/>
+        </xsl:attribute>
+      </img>
+      <h3>
+        <xsl:apply-templates select="." mode="object.title.markup"/>
+      </h3>
+      <xsl:apply-templates/>
     </div>
   </xsl:template>
 

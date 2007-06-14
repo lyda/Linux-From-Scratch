@@ -34,13 +34,11 @@
            Forced h1 title size. -->
     <!-- The original template is in {docbook-xsl}/xhtml/titlepage.templates.xsl -->
   <xsl:template name="index.titlepage">
-    <div class="titlepage">
-      <h1 class="index">
-        <xsl:call-template name="gentext">
-          <xsl:with-param name="key" select="$index-title"/>
-        </xsl:call-template>
-      </h1>
-    </div>
+    <h1 class="index">
+      <xsl:call-template name="gentext">
+        <xsl:with-param name="key" select="$index-title"/>
+      </xsl:call-template>
+    </h1>
   </xsl:template>
 
     <!--Divisions:
@@ -55,86 +53,84 @@
     <xsl:variable name="divtitle" select="translate($key, &lowercase;, &uppercase;)"/>
       <!-- Make sure that we don't generate a div if there are no terms in scope -->
     <xsl:if test="key('letter', $key)[&scope;] [count(.|key('primary', &primary;)[&scope;][1]) = 1]">
-      <div class="indexdiv">
-        <xsl:if test="contains(concat(&lowercase;, &uppercase;), $key)">
-          <h2>
-            <xsl:choose>
-              <xsl:when test="$divtitle = 'A'">
-                <a id="package-index" name="package-index"/>
-                <xsl:call-template name="gentext">
-                  <xsl:with-param name="key">Packages</xsl:with-param>
-                </xsl:call-template>
-              </xsl:when>
-              <xsl:when test="$divtitle = 'B'">
-                <a id="program-index" name="program-index"/>
-                <xsl:call-template name="gentext">
-                  <xsl:with-param name="key">Programs</xsl:with-param>
-                </xsl:call-template>
-              </xsl:when>
-              <xsl:when test="$divtitle = 'C'">
-                <a id="library-index" name="library-index"/>
-                <xsl:call-template name="gentext">
-                  <xsl:with-param name="key">Libraries</xsl:with-param>
-                </xsl:call-template>
-              </xsl:when>
-              <xsl:when test="$divtitle = 'D'">
-                <xsl:choose>
-                  <xsl:when test="$book-type = 'blfs'">
-                    <a id="kernel-config-index" name="kernel-config-index"/>
-                    <xsl:call-template name="gentext">
-                      <xsl:with-param name="key">Kernel Configuration</xsl:with-param>
-                    </xsl:call-template>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <a id="scripts-index" name="scripts-index"/>
-                    <xsl:call-template name="gentext">
-                      <xsl:with-param name="key">Scripts</xsl:with-param>
-                    </xsl:call-template>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </xsl:when>
-              <xsl:when test="$divtitle = 'E'">
-                <xsl:choose>
-                  <xsl:when test="$book-type = 'blfs'">
-                    <a id="config-file-index" name="config-file-index"/>
-                    <xsl:call-template name="gentext">
-                      <xsl:with-param name="key">Configuration Files</xsl:with-param>
-                    </xsl:call-template>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <a id="other-index" name="other-index"/>
-                    <xsl:call-template name="gentext">
-                      <xsl:with-param name="key">Others</xsl:with-param>
-                    </xsl:call-template>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </xsl:when>
-              <xsl:when test="$divtitle = 'F'">
-                  <a id="bootscript-index" name="bootscript-index"/>
+      <xsl:if test="contains(concat(&lowercase;, &uppercase;), $key)">
+        <h2>
+          <xsl:choose>
+            <xsl:when test="$divtitle = 'A'">
+              <a id="package-index" name="package-index"/>
+              <xsl:call-template name="gentext">
+                <xsl:with-param name="key">Packages</xsl:with-param>
+              </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="$divtitle = 'B'">
+              <a id="program-index" name="program-index"/>
+              <xsl:call-template name="gentext">
+                <xsl:with-param name="key">Programs</xsl:with-param>
+              </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="$divtitle = 'C'">
+              <a id="library-index" name="library-index"/>
+              <xsl:call-template name="gentext">
+                <xsl:with-param name="key">Libraries</xsl:with-param>
+              </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="$divtitle = 'D'">
+              <xsl:choose>
+                <xsl:when test="$book-type = 'blfs'">
+                  <a id="kernel-config-index" name="kernel-config-index"/>
                   <xsl:call-template name="gentext">
-                    <xsl:with-param name="key">Bootscripts</xsl:with-param>
+                    <xsl:with-param name="key">Kernel Configuration</xsl:with-param>
                   </xsl:call-template>
-              </xsl:when>
-              <xsl:when test="$divtitle = 'G'">
-                <a id="other-index" name="other-index"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <a id="scripts-index" name="scripts-index"/>
+                  <xsl:call-template name="gentext">
+                    <xsl:with-param name="key">Scripts</xsl:with-param>
+                  </xsl:call-template>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:when>
+            <xsl:when test="$divtitle = 'E'">
+              <xsl:choose>
+                <xsl:when test="$book-type = 'blfs'">
+                  <a id="config-file-index" name="config-file-index"/>
+                  <xsl:call-template name="gentext">
+                    <xsl:with-param name="key">Configuration Files</xsl:with-param>
+                  </xsl:call-template>
+                </xsl:when>
+                <xsl:otherwise>
+                  <a id="other-index" name="other-index"/>
+                  <xsl:call-template name="gentext">
+                    <xsl:with-param name="key">Others</xsl:with-param>
+                  </xsl:call-template>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:when>
+            <xsl:when test="$divtitle = 'F'">
+                <a id="bootscript-index" name="bootscript-index"/>
                 <xsl:call-template name="gentext">
-                  <xsl:with-param name="key">Others</xsl:with-param>
+                  <xsl:with-param name="key">Bootscripts</xsl:with-param>
                 </xsl:call-template>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="$divtitle"/>
-              </xsl:otherwise>
-            </xsl:choose>
-          </h2>
-        </xsl:if>
-        <ul>
-          <xsl:apply-templates select="key('letter', $key)[&scope;] [count(.|key('primary', &primary;)[&scope;][1])=1]"
-                               mode="index-primary">
-            <xsl:with-param name="scope" select="$scope"/>
-            <xsl:sort select="translate(&primary;, &lowercase;, &uppercase;)"/>
-          </xsl:apply-templates>
-        </ul>
-      </div>
+            </xsl:when>
+            <xsl:when test="$divtitle = 'G'">
+              <a id="other-index" name="other-index"/>
+              <xsl:call-template name="gentext">
+                <xsl:with-param name="key">Others</xsl:with-param>
+              </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="$divtitle"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </h2>
+      </xsl:if>
+      <ul>
+        <xsl:apply-templates select="key('letter', $key)[&scope;] [count(.|key('primary', &primary;)[&scope;][1])=1]"
+                              mode="index-primary">
+          <xsl:with-param name="scope" select="$scope"/>
+          <xsl:sort select="translate(&primary;, &lowercase;, &uppercase;)"/>
+        </xsl:apply-templates>
+      </ul>
     </xsl:if>
   </xsl:template>
 
@@ -166,13 +162,13 @@
         <xsl:value-of select="primary"/>
         <xsl:text>: </xsl:text>
       </strong>
-      <div class='indexref'>
+      <span class='indexref'>
         <xsl:for-each select="$refs[generate-id() = generate-id(key('primary-section',concat($key, &sep;, &section.id;))[&scope;][1])]">
           <xsl:apply-templates select="." mode="reference">
             <xsl:with-param name="scope" select="$scope"/>
           </xsl:apply-templates>
         </xsl:for-each>
-      </div>
+      </span>
       <xsl:if test="$refs/secondary">
         <ul>
           <xsl:apply-templates select="$refs[secondary and count(.|key('secondary', concat($key, &sep;, &secondary;))[&scope;][1]) = 1]"
@@ -200,13 +196,13 @@
         <xsl:value-of select="secondary"/>
         <xsl:text>: </xsl:text>
       </strong>
-      <div class='indexref'>
+      <span class='indexref'>
         <xsl:for-each select="$refs[generate-id() = generate-id(key('secondary-section', concat($key, &sep;, &section.id;))[&scope;][1])]">
           <xsl:apply-templates select="." mode="reference">
             <xsl:with-param name="scope" select="$scope"/>
           </xsl:apply-templates>
         </xsl:for-each>
-      </div>
+      </span>
     </li>
   </xsl:template>
 
