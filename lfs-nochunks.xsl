@@ -57,15 +57,11 @@
            Hardcoded $admon.textlabel feature -->
     <!-- The original template is in {docbook-xsl}/xhtml/admon.xsl -->
   <xsl:template name="nongraphical.admonition">
-    <div class="{name(.)}">
-      <div class ="admonhead">
-        <h3 class="admontitle">
-          <xsl:apply-templates select="." mode="object.title.markup"/>
-        </h3>
-      </div>
-      <div class="admonbody">
-        <xsl:apply-templates/>
-      </div>
+    <div class="admon {name(.)}">
+      <h3>
+        <xsl:apply-templates select="." mode="object.title.markup"/>
+      </h3>
+      <xsl:apply-templates/>
     </div>
   </xsl:template>
 
@@ -78,18 +74,16 @@
     <xsl:choose>
       <xsl:when test="string-length(title) = 0"/>
       <xsl:otherwise>
-        <div class="titlepage">
+        <h3 class="{name(.)}">
           <xsl:if test="@id">
             <a id="{@id}" name="{@id}"/>
           </xsl:if>
-          <h3 class="{name(.)}">
-            <xsl:if test="not(ancestor::preface) and $section.autolabel != 0">
-              <xsl:apply-templates select="." mode="label.markup"/>
-              <xsl:text>. </xsl:text>
-            </xsl:if>
-            <xsl:value-of select="title"/>
-          </h3>
-        </div>
+          <xsl:if test="not(ancestor::preface) and $section.autolabel != 0">
+            <xsl:apply-templates select="." mode="label.markup"/>
+            <xsl:text>. </xsl:text>
+          </xsl:if>
+          <xsl:value-of select="title"/>
+        </h3>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -142,12 +136,8 @@ a:active { color: #6b77b1 ! important;}
   padding: 0;
 }
 
-div.dedication .titlepage {
-  background: #fff;
-}
-
-div.dedication p {
-  padding-left: 2em;
+div.dedication {
+  padding-left: 1em;
 }
 
 
@@ -304,20 +294,33 @@ li.chapter h4 a {
     float: left;
 }
 
-.lfs .item + .indexref {
-    margin-left: 18em;
+.indexref {
+    display: block;
 }
 
-.lfs .secitem + .indexref {
-    margin-left: 17em;
+.item + .indexref {
+    margin-left: 30em;
 }
 
-.blfs .indexref {
-    margin-left: 26em;
+.secitem + .indexref {
+    margin-left: 31em;
 }
 
 
 /* Admonitions */
+div.admon h3 {
+  padding-left: 2.5em;
+  padding-top: 1em;
+}
+
+div.admon p {
+  margin-left: .5em;
+}
+
+div.admon pre {
+  margin: 0.5em 3em;
+}
+
 div.note, div.tip {
   background-color: #fffff6;
   border: 2px solid #dbddec;
@@ -335,15 +338,6 @@ div.important, div.warning, div.caution {
 
 div.important h3, div.warning h3, div.caution h3 {
   color: #900;
-}
-
-div.admonhead h3 {
-  padding-left: 2.5em;
-  padding-top: 1em;
-}
-
-div.admonbody {
-  margin: .5em;
 }
 
 div.important em, div.warning em, div.caution em {
@@ -369,16 +363,16 @@ div.important em, div.warning em, div.caution em {
   text-align: left;
 }
 
-div.revhistory {
+.revhistory {
   padding-left: 1em;
 }
 
-div.revhistory th {
+.revhistory th {
   line-height: 2em;
   text-align: left;
 }
 
-div.revhistory td {
+.revhistory td {
   padding-right: 1em;
 }
 
