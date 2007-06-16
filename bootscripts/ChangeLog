@@ -1,3 +1,9 @@
+2007-06-16	Dan Nicholson	<dnicholson@linuxfromscratch.org>
+	* lfs/init.d/mountfs, lfs/init.d/mountkernfs, lfs/init.d/setclock,
+	  lfs/init.d/modules, lfs/sysconfig/network-devices/if{up,down}:
+	  Don't suppress stderr during bootscripts unless necessary. This
+	  would prevent potentially critical messages from reaching the screen.
+
 2007-04-24	Dan Nicholson	<dnicholson@linuxfromscratch.org>
 	* lfs/init.d/functions: When killproc is executed, it checks that
 	  the process is still running, sleeps if it is, then checks again.
