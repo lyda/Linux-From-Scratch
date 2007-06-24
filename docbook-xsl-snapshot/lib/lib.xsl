@@ -310,17 +310,32 @@
     </xsl:otherwise>
   </xsl:choose>
 </xsl:template>
-  <xsl:template name="prepend-pad">    
-  <!-- recursive template to right justify and prepend-->
-  <!-- the value with whatever padChar is passed in   -->
+  <xsl:template name="pad-string">    
+    <!-- * recursive template to right/left pad the value with -->
+    <!-- * whatever padChar is passed in -->
     <xsl:param name="padChar" select="' '"/>
+    <xsl:param name="leftRight">left</xsl:param>
     <xsl:param name="padVar"/>
     <xsl:param name="length"/>
     <xsl:choose>
       <xsl:when test="string-length($padVar) &lt; $length">
-        <xsl:call-template name="prepend-pad">
+        <xsl:call-template name="pad-string">
           <xsl:with-param name="padChar" select="$padChar"/>
-          <xsl:with-param name="padVar" select="concat($padChar,$padVar)"/>
+          <xsl:with-param name="leftRight" select="$leftRight"/>
+          <xsl:with-param name="padVar">
+            <xsl:choose>
+              <!-- * determine whether string should be -->
+              <!-- * right- or left-padded -->
+              <xsl:when test="$leftRight = 'left'">
+              <!-- * pad it to left -->
+                <xsl:value-of select="concat($padChar,$padVar)"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <!-- * otherwise, right-pad the string -->
+                <xsl:value-of select="concat($padVar,$padChar)"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:with-param>
           <xsl:with-param name="length" select="$length"/>
         </xsl:call-template>
       </xsl:when>
@@ -528,7 +543,7 @@ does not support it.
   <xsl:template name="trim-left">
     <xsl:param name="contents"/>
     <xsl:choose>
-      <xsl:when test="starts-with($contents,'&#xA;') or                       starts-with($contents,'&#xA;') or                       starts-with($contents,' ') or                       starts-with($contents,'&#x9;')">
+      <xsl:when test="starts-with($contents,'&#xA;') or                       starts-with($contents,'&#xD;') or                       starts-with($contents,' ') or                       starts-with($contents,'&#x9;')">
         <xsl:call-template name="trim-left">
           <xsl:with-param name="contents" select="substring($contents, 2)"/>
         </xsl:call-template>
