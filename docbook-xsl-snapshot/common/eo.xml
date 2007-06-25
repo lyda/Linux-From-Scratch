@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><l:l10n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0" language="eo" english-language-name="Esperanto">
+<?xml version="1.0" encoding="utf-8"?>
+<l:l10n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0" language="eo" english-language-name="Esperanto">
 
 <!-- * This file is generated automatically. -->
 <!-- * To submit changes to this file upstream (to the DocBook Project) -->
@@ -223,7 +224,7 @@
 <l:template name="book" text="%t"/>
 <l:template name="calloutlist" text="%t"/>
 <l:template name="caution" text="%t"/>
-<l:template name="chapter" text="Ĉapitro %n. %t&#34;"/>
+<l:template name="chapter" text="Ĉapitro %n. %t&quot;"/>
 <l:template name="colophon" text="%t"/>
 <l:template name="dedication" text="%t"/>
 <l:template name="equation" text="Ekvacio %n. %t"/>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><l:l10n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0" language="fa" english-language-name="Farsi">
+<?xml version="1.0" encoding="utf-8"?>
+<l:l10n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0" language="fa" english-language-name="Farsi">
 
 <!-- * This file is generated automatically. -->
 <!-- * To submit changes to this file upstream (to the DocBook Project) -->
@@ -209,7 +210,7 @@
 </l:context>
 <l:context name="title"><l:template name="abstract" text="%t"/>
 <l:template name="answer" text="%t"/>
-<l:template name="appendix" text="&#xA;      پيوست %n. %t"/>
+<l:template name="appendix" text="&#10;      پيوست %n. %t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
 <l:template name="bibliodiv" text="%t"/>
@@ -223,12 +224,12 @@
 <l:template name="book" text="%t"/>
 <l:template name="calloutlist" text="%t"/>
 <l:template name="caution" text="%t"/>
-<l:template name="chapter" text="&#xA;      فصل %n. %t"/>
+<l:template name="chapter" text="&#10;      فصل %n. %t"/>
 <l:template name="colophon" text="%t"/>
 <l:template name="dedication" text="%t"/>
-<l:template name="equation" text="&#xA;      معادله %n. %t"/>
-<l:template name="example" text="&#xA;      مثال %n. %t"/>
-<l:template name="figure" text="&#xA;      شكل %n. %t"/>
+<l:template name="equation" text="&#10;      معادله %n. %t"/>
+<l:template name="example" text="&#10;      مثال %n. %t"/>
+<l:template name="figure" text="&#10;      شكل %n. %t"/>
 <l:template name="foil" text="%t"/>
 <l:template name="foilgroup" text="%t"/>
 <l:template name="formalpara" text="%t"/>
@@ -251,13 +252,13 @@
 <l:template name="msgsub" text="%t"/>
 <l:template name="note" text="%t"/>
 <l:template name="orderedlist" text="%t"/>
-<l:template name="part" text="&#xA;      بخش %n. %t"/>
+<l:template name="part" text="&#10;      بخش %n. %t"/>
 <l:template name="partintro" text="%t"/>
 <l:template name="preface" text="%t"/>
 <l:template name="procedure" text="%t"/>
-<l:template name="procedure.formal" text="&#xA;      رويه %n. %t"/>
+<l:template name="procedure.formal" text="&#10;      رويه %n. %t"/>
 <l:template name="productionset" text="%t"/>
-<l:template name="productionset.formal" text="&#xA;      توليد %n"/>
+<l:template name="productionset.formal" text="&#10;      توليد %n"/>
 <l:template name="qandadiv" text="%t"/>
 <l:template name="qandaentry" text="%t"/>
 <l:template name="qandaset" text="%t"/>
@@ -275,7 +276,7 @@
 <l:template name="setindex" text="%t"/>
 <l:template name="sidebar" text="%t"/>
 <l:template name="step" text="%t"/>
-<l:template name="table" text="&#xA;      جدول %n. %t"/>
+<l:template name="table" text="&#10;      جدول %n. %t"/>
 <l:template name="task" text="%t"/>
 <l:template name="tasksummary" text="%t" lang="en"/>
 <l:template name="taskprerequisites" text="%t" lang="en"/>
@@ -299,11 +300,11 @@
 <l:template name="simplesect" text="%t"/>
 <l:template name="part" text="%t" lang="en"/>
 </l:context>
-<l:context name="title-numbered"><l:template name="appendix" text="&#xA;      پيوست %n. %t"/>
+<l:context name="title-numbered"><l:template name="appendix" text="&#10;      پيوست %n. %t"/>
 <l:template name="article/appendix" text="%n. %t"/>
 <l:template name="bridgehead" text="%n. %t"/>
-<l:template name="chapter" text="&#xA;      فصل %n. %t"/>
-<l:template name="part" text="&#xA;      بخش %n. %t"/>
+<l:template name="chapter" text="&#10;      فصل %n. %t"/>
+<l:template name="part" text="&#10;      بخش %n. %t"/>
 <l:template name="sect1" text="%n. %t"/>
 <l:template name="sect2" text="%n. %t"/>
 <l:template name="sect3" text="%n. %t"/>
@@ -352,7 +353,7 @@
 <l:template name="toc" text="%s"/>
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
-<l:template name="answer" text="&#xA;      ج: %n"/>
+<l:template name="answer" text="&#10;      ج: %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -397,9 +398,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="&#xA;      :پرسش %n"/>
+<l:template name="qandaentry" text="&#10;      :پرسش %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="&#xA;      :پرسش %n"/>
+<l:template name="question" text="&#10;      :پرسش %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="segmentedlist" text="%t"/>
@@ -421,73 +422,73 @@
 <l:template name="docnamelong" text="%o در مستندی بنام "/>
 <l:template name="pageabbrev" text="(%p ص)"/>
 <l:template name="Page" text="%p صفحه‌ی"/>
-<l:template name="bridgehead" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="refsection" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="refsect1" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="refsect2" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="refsect3" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="sect1" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="sect2" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="sect3" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="sect4" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="sect5" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="section" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="simplesect" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
+<l:template name="bridgehead" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="refsection" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="refsect1" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="refsect2" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="refsect3" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="sect1" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="sect2" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="sect3" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="sect4" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="sect5" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="section" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="simplesect" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="&#xA;      ج: %n"/>
-<l:template name="appendix" text="&#xA;      پيوست %n"/>
-<l:template name="bridgehead" text="&#xA;      قسمت %n"/>
-<l:template name="chapter" text="&#xA;      فصل %n"/>
-<l:template name="equation" text="&#xA;      معادله %n"/>
-<l:template name="example" text="&#xA;      مثال %n"/>
-<l:template name="figure" text="&#xA;      شكل %n"/>
-<l:template name="part" text="&#xA;      بخش %n"/>
-<l:template name="procedure" text="&#xA;      رويه %n"/>
-<l:template name="productionset" text="&#xA;      توليد %n"/>
-<l:template name="qandadiv" text="&#xA;      پرسش و‌ پاسخ %n"/>
-<l:template name="qandaentry" text="&#xA;      :پرسش %n"/>
-<l:template name="question" text="&#xA;      :پرسش %n"/>
-<l:template name="sect1" text="&#xA;      قسمت %n"/>
-<l:template name="sect2" text="&#xA;      قسمت %n"/>
-<l:template name="sect3" text="&#xA;      قسمت %n"/>
-<l:template name="sect4" text="&#xA;      قسمت %n"/>
-<l:template name="sect5" text="&#xA;      قسمت %n"/>
-<l:template name="section" text="&#xA;      قسمت %n"/>
-<l:template name="table" text="&#xA;      جدول %n"/>
+<l:context name="xref-number"><l:template name="answer" text="&#10;      ج: %n"/>
+<l:template name="appendix" text="&#10;      پيوست %n"/>
+<l:template name="bridgehead" text="&#10;      قسمت %n"/>
+<l:template name="chapter" text="&#10;      فصل %n"/>
+<l:template name="equation" text="&#10;      معادله %n"/>
+<l:template name="example" text="&#10;      مثال %n"/>
+<l:template name="figure" text="&#10;      شكل %n"/>
+<l:template name="part" text="&#10;      بخش %n"/>
+<l:template name="procedure" text="&#10;      رويه %n"/>
+<l:template name="productionset" text="&#10;      توليد %n"/>
+<l:template name="qandadiv" text="&#10;      پرسش و‌ پاسخ %n"/>
+<l:template name="qandaentry" text="&#10;      :پرسش %n"/>
+<l:template name="question" text="&#10;      :پرسش %n"/>
+<l:template name="sect1" text="&#10;      قسمت %n"/>
+<l:template name="sect2" text="&#10;      قسمت %n"/>
+<l:template name="sect3" text="&#10;      قسمت %n"/>
+<l:template name="sect4" text="&#10;      قسمت %n"/>
+<l:template name="sect5" text="&#10;      قسمت %n"/>
+<l:template name="section" text="&#10;      قسمت %n"/>
+<l:template name="table" text="&#10;      جدول %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="&#xA;      پيوست %n, %t"/>
-<l:template name="bridgehead" text="&#xA;      قسمت %n, “%t”&#xA;    "/>
-<l:template name="chapter" text="&#xA;      فصل %n, %t"/>
-<l:template name="equation" text="&#xA;      معادله %n, “%t”&#xA;    "/>
-<l:template name="example" text="&#xA;      مثال %n, “%t”&#xA;    "/>
-<l:template name="figure" text="&#xA;      شكل %n, “%t”&#xA;    "/>
-<l:template name="part" text="&#xA;      بخش %n, “%t”&#xA;    "/>
-<l:template name="procedure" text="&#xA;      رويه %n, “%t”&#xA;    "/>
-<l:template name="productionset" text="&#xA;      توليد %n, “%t”&#xA;    "/>
-<l:template name="qandadiv" text="&#xA;      پرسش و‌ پاسخ %n, “%t”&#xA;    "/>
-<l:template name="refsect1" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="refsect2" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="refsect3" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="refsection" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="sect1" text="&#xA;      قسمت %n, “%t”&#xA;    "/>
-<l:template name="sect2" text="&#xA;      قسمت %n, “%t”&#xA;    "/>
-<l:template name="sect3" text="&#xA;      قسمت %n, “%t”&#xA;    "/>
-<l:template name="sect4" text="&#xA;      قسمت %n, “%t”&#xA;    "/>
-<l:template name="sect5" text="&#xA;      قسمت %n, “%t”&#xA;    "/>
-<l:template name="section" text="&#xA;      قسمت %n, “%t”&#xA;    "/>
-<l:template name="simplesect" text="&#xA;      بخشی بنام&#xA;      “%t”&#xA;    "/>
-<l:template name="table" text="&#xA;      جدول %n, “%t”&#xA;    "/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="&#10;      پيوست %n, %t"/>
+<l:template name="bridgehead" text="&#10;      قسمت %n, “%t”&#10;    "/>
+<l:template name="chapter" text="&#10;      فصل %n, %t"/>
+<l:template name="equation" text="&#10;      معادله %n, “%t”&#10;    "/>
+<l:template name="example" text="&#10;      مثال %n, “%t”&#10;    "/>
+<l:template name="figure" text="&#10;      شكل %n, “%t”&#10;    "/>
+<l:template name="part" text="&#10;      بخش %n, “%t”&#10;    "/>
+<l:template name="procedure" text="&#10;      رويه %n, “%t”&#10;    "/>
+<l:template name="productionset" text="&#10;      توليد %n, “%t”&#10;    "/>
+<l:template name="qandadiv" text="&#10;      پرسش و‌ پاسخ %n, “%t”&#10;    "/>
+<l:template name="refsect1" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="refsect2" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="refsect3" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="refsection" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="sect1" text="&#10;      قسمت %n, “%t”&#10;    "/>
+<l:template name="sect2" text="&#10;      قسمت %n, “%t”&#10;    "/>
+<l:template name="sect3" text="&#10;      قسمت %n, “%t”&#10;    "/>
+<l:template name="sect4" text="&#10;      قسمت %n, “%t”&#10;    "/>
+<l:template name="sect5" text="&#10;      قسمت %n, “%t”&#10;    "/>
+<l:template name="section" text="&#10;      قسمت %n, “%t”&#10;    "/>
+<l:template name="simplesect" text="&#10;      بخشی بنام&#10;      “%t”&#10;    "/>
+<l:template name="table" text="&#10;      جدول %n, “%t”&#10;    "/>
 </l:context>
-<l:context name="authorgroup"><l:template name="sep" text="&#xA;      ،&#xA;    "/>
-<l:template name="sep2" text="&#xA;      و&#xA;    "/>
-<l:template name="seplast" text="&#xA;      ،&#xA;      و&#xA;    "/>
+<l:context name="authorgroup"><l:template name="sep" text="&#10;      ،&#10;    "/>
+<l:template name="sep2" text="&#10;      و&#10;    "/>
+<l:template name="seplast" text="&#10;      ،&#10;      و&#10;    "/>
 </l:context>
 <l:context name="glossary"><l:template name="see" text=" %t ببیند"/>
 <l:template name="seealso" text="%t همچنین ببیند"/>
 </l:context>
-<l:context name="msgset"><l:template name="MsgAud" text="&#xA;      شنودگان: "/>
-<l:template name="MsgLevel" text="&#xA;      سطح پیام: "/>
-<l:template name="MsgOrig" text="&#xA;      اصل: "/>
+<l:context name="msgset"><l:template name="MsgAud" text="&#10;      شنودگان: "/>
+<l:template name="MsgLevel" text="&#10;      سطح پیام: "/>
+<l:template name="MsgOrig" text="&#10;      اصل: "/>
 </l:context>
 <l:context name="datetime"><l:template name="format" text="m/d/Y"/>
 </l:context>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
+
 <!-- ********************************************************************
      $Id$
      ********************************************************************
@@ -11,7 +12,8 @@
 
      ******************************************************************** -->
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:src="http://nwalsh.com/xmlns/litprog/fragment" xmlns:dyn="http://exslt.org/dynamic" xmlns:saxon="http://icl.com/saxon" exclude-result-prefixes="src" version="1.0">
+
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:saxon="http://icl.com/saxon" xmlns:dyn="http://exslt.org/dynamic" xmlns:src="http://nwalsh.com/xmlns/litprog/fragment" exclude-result-prefixes="src" version="1.0">
 
 <xsl:template name="dot.count">
   <!-- Returns the number of "." characters in a string -->
@@ -310,40 +312,6 @@
     </xsl:otherwise>
   </xsl:choose>
 </xsl:template>
-  <xsl:template name="pad-string">    
-    <!-- * recursive template to right/left pad the value with -->
-    <!-- * whatever padChar is passed in -->
-    <xsl:param name="padChar" select="' '"/>
-    <xsl:param name="leftRight">left</xsl:param>
-    <xsl:param name="padVar"/>
-    <xsl:param name="length"/>
-    <xsl:choose>
-      <xsl:when test="string-length($padVar) &lt; $length">
-        <xsl:call-template name="pad-string">
-          <xsl:with-param name="padChar" select="$padChar"/>
-          <xsl:with-param name="leftRight" select="$leftRight"/>
-          <xsl:with-param name="padVar">
-            <xsl:choose>
-              <!-- * determine whether string should be -->
-              <!-- * right- or left-padded -->
-              <xsl:when test="$leftRight = 'left'">
-              <!-- * pad it to left -->
-                <xsl:value-of select="concat($padChar,$padVar)"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <!-- * otherwise, right-pad the string -->
-                <xsl:value-of select="concat($padVar,$padChar)"/>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:with-param>
-          <xsl:with-param name="length" select="$length"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="substring($padVar,string-length($padVar) - $length + 1)"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
 
   <xsl:template name="str.tokenize.keep.delimiters">
     <xsl:param name="string" select="''"/>
@@ -543,7 +511,7 @@ does not support it.
   <xsl:template name="trim-left">
     <xsl:param name="contents"/>
     <xsl:choose>
-      <xsl:when test="starts-with($contents,'&#xA;') or                       starts-with($contents,'&#xD;') or                       starts-with($contents,' ') or                       starts-with($contents,'&#x9;')">
+      <xsl:when test="starts-with($contents,'&#10;') or                       starts-with($contents,'&#13;') or                       starts-with($contents,' ') or                       starts-with($contents,'&#9;')">
         <xsl:call-template name="trim-left">
           <xsl:with-param name="contents" select="substring($contents, 2)"/>
         </xsl:call-template>
@@ -560,7 +528,7 @@ does not support it.
       <xsl:value-of select="substring($contents, string-length($contents), 1)"/>
     </xsl:variable>
     <xsl:choose>
-      <xsl:when test="($last-char = '&#xA;') or                       ($last-char = '&#xD;') or                       ($last-char = ' ') or                       ($last-char = '&#x9;')">
+      <xsl:when test="($last-char = '&#10;') or                       ($last-char = '&#13;') or                       ($last-char = ' ') or                       ($last-char = '&#9;')">
         <xsl:call-template name="trim-right">
           <xsl:with-param name="contents" select="substring($contents, 1, string-length($contents) - 1)"/>
         </xsl:call-template>
