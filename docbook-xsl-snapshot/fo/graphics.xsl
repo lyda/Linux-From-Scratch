@@ -18,8 +18,8 @@
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
-     See ../README or http://nwalsh.com/docbook/xsl/ for copyright
-     and other information.
+     See ../README or http://docbook.sf.net/release/xsl/current/ for
+     copyright and other information.
 
      Contributors:
      Colin Paul Adams, <colin@colina.demon.co.uk>
@@ -612,8 +612,8 @@
 <xsl:template match="@fileref">
   <!-- need a check for absolute urls -->
   <xsl:choose>
-    <xsl:when test="contains(., ':')">
-      <!-- it has a uri scheme so it is an absolute uri -->
+    <xsl:when test="contains(., ':') or starts-with(.,'/')">
+      <!-- it has a uri scheme or starts with '/', so it is an absolute uri -->
       <xsl:value-of select="."/>
     </xsl:when>
     <xsl:when test="$keep.relative.image.uris != 0">

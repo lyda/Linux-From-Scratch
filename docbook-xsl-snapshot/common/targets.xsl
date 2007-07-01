@@ -9,8 +9,8 @@
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
-     See ../README or http://nwalsh.com/docbook/xsl/ for copyright
-     and other information.
+     See ../README or http://docbook.sf.net/release/xsl/current/ for
+     copyright and other information.
 
      ******************************************************************** -->
 
@@ -20,7 +20,7 @@
 
 <doc:mode mode="collect.targets" xmlns="">
 <refpurpose>Collects information for potential cross reference targets</refpurpose>
-<refdescription>
+<refdescription id="collect.targets-desc">
 <para>Processing the root element in the
 <literal role="mode">collect.targets</literal> mode produces 
 a set of target database elements that can be used by

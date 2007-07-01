@@ -8,8 +8,8 @@
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
-     See ../README or http://nwalsh.com/docbook/xsl/ for copyright
-     and other information.
+     See ../README or http://docbook.sf.net/release/xsl/current/ for
+     copyright and other information.
 
      ******************************************************************** -->
 
@@ -118,11 +118,13 @@
   <div>
     <xsl:apply-templates select="." mode="class.attribute"/>
     <xsl:call-template name="anchor"/>
-    <xsl:call-template name="formal.object.heading">
-      <xsl:with-param name="title">
-        <xsl:apply-templates select="." mode="title.markup"/>
-      </xsl:with-param>
-    </xsl:call-template>
+    <xsl:if test="not ($abstract.notitle.enabled = 0)">
+      <xsl:call-template name="formal.object.heading">
+        <xsl:with-param name="title">
+          <xsl:apply-templates select="." mode="title.markup"/>
+        </xsl:with-param>
+      </xsl:call-template>
+    </xsl:if>
     <xsl:apply-templates mode="titlepage.mode"/>
   </div>
 </xsl:template>
@@ -193,7 +195,14 @@
     </xsl:if>
     <h3>
       <xsl:apply-templates select="." mode="class.attribute"/>
-      <xsl:call-template name="person.name"/>
+      <xsl:choose>
+        <xsl:when test="orgname">
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:call-template name="person.name"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </h3>
     <xsl:if test="not($contrib.inline.enabled = 0)">
       <xsl:apply-templates mode="titlepage.mode" select="contrib"/>

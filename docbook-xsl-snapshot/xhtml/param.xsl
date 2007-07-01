@@ -9,8 +9,8 @@
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
-     See ../README or http://nwalsh.com/docbook/xsl/ for copyright
-     and other information.
+     See ../README or http://docbook.sf.net/release/xsl/current/ for
+     copyright and other information.
 
      ******************************************************************** -->
 
@@ -305,6 +305,7 @@ set       toc,title
 <xsl:param name="olink.pubid" select="'pubid='"/>
 <xsl:param name="olink.resolver" select="'/cgi-bin/olink'"/>
 <xsl:param name="olink.sysid" select="'sysid='"/>
+<xsl:param name="abstract.notitle.enabled">0</xsl:param>
 <xsl:param name="othercredit.like.author.enabled">0</xsl:param>
 <xsl:param name="para.propagates.style" select="1"/>
 <xsl:param name="part.autolabel" select="'I'"/>

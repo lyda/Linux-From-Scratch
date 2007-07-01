@@ -9,8 +9,8 @@
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
-     See ../README or http://nwalsh.com/docbook/xsl/ for copyright
-     and other information.
+     See ../README or http://docbook.sf.net/release/xsl/current/ for
+     copyright and other information.
 
      ******************************************************************** -->
 
@@ -20,7 +20,7 @@
 
 <doc:mode mode="title.markup" xmlns="">
 <refpurpose>Provides access to element titles</refpurpose>
-<refdescription>
+<refdescription id="title.markup-desc">
 <para>Processing an element in the
 <literal role="mode">title.markup</literal> mode produces the
 title of the element. This does not include the label.

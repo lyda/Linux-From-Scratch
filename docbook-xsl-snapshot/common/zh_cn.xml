@@ -46,7 +46,7 @@
 <l:gentext key="dedication" text="题词"/>
 <l:gentext key="Edition" text="版"/>
 <l:gentext key="edition" text="版"/>
-<l:gentext key="Editor" text="Editor" lang="en"/>
+<l:gentext key="Editor" text="编者"/>
 <l:gentext key="Equation" text="公式"/>
 <l:gentext key="equation" text="公式"/>
 <l:gentext key="Example" text="例"/>
@@ -83,22 +83,22 @@
 <l:gentext key="preface" text="前言"/>
 <l:gentext key="Procedure" text="过程"/>
 <l:gentext key="procedure" text="过程"/>
-<l:gentext key="ProductionSet" text="Production"/>
+<l:gentext key="ProductionSet" text="产品"/>
 <l:gentext key="PubDate" text="出版日期"/>
 <l:gentext key="pubdate" text="出版日期"/>
 <l:gentext key="Published" text="出版方"/>
 <l:gentext key="published" text="出版方"/>
-<l:gentext key="Publisher" text="Publisher" lang="en"/>
+<l:gentext key="Publisher" text="出版者"/>
 <l:gentext key="Qandadiv" text="质保"/>
 <l:gentext key="qandadiv" text="质保"/>
-<l:gentext key="QandASet" text="Frequently Asked Questions" lang="en"/>
+<l:gentext key="QandASet" text="常见问题"/>
 <l:gentext key="Question" text="问："/>
 <l:gentext key="question" text="问："/>
 <l:gentext key="RefEntry" text=""/>
 <l:gentext key="refentry" text=""/>
 <l:gentext key="Reference" text="参考"/>
 <l:gentext key="reference" text="参考"/>
-<l:gentext key="References" text="References" lang="en"/>
+<l:gentext key="References" text="参考"/>
 <l:gentext key="RefName" text="名称"/>
 <l:gentext key="refname" text="名称"/>
 <l:gentext key="RefSection" text=""/>
@@ -131,8 +131,8 @@
 <l:gentext key="Step" text="步骤"/>
 <l:gentext key="table" text="表"/>
 <l:gentext key="Table" text="表"/>
-<l:gentext key="task" text="Task" lang="en"/>
-<l:gentext key="Task" text="Task" lang="en"/>
+<l:gentext key="task" text="任务"/>
+<l:gentext key="Task" text="任务"/>
 <l:gentext key="tip" text="提示"/>
 <l:gentext key="TIP" text="提示"/>
 <l:gentext key="Tip" text="提示"/>
@@ -162,12 +162,12 @@
 <l:gentext key="unexpectedelementname" text="未预期的名称"/>
 <l:gentext key="unsupported" text="不支持"/>
 <l:gentext key="xrefto" text="xref to"/>
-<l:gentext key="Authors" text="Authors" lang="en"/>
-<l:gentext key="copyeditor" text="Copy Editor" lang="en"/>
-<l:gentext key="graphicdesigner" text="Graphic Designer" lang="en"/>
-<l:gentext key="productioneditor" text="Production Editor" lang="en"/>
-<l:gentext key="technicaleditor" text="Technical Editor" lang="en"/>
-<l:gentext key="translator" text="Translator" lang="en"/>
+<l:gentext key="Authors" text="作者"/>
+<l:gentext key="copyeditor" text="版权编辑"/>
+<l:gentext key="graphicdesigner" text="美术编辑"/>
+<l:gentext key="productioneditor" text="产品编辑"/>
+<l:gentext key="technicaleditor" text="技术编辑"/>
+<l:gentext key="translator" text="译者"/>
 <l:gentext key="listofequations" text="公式清单"/>
 <l:gentext key="ListofEquations" text="公式清单"/>
 <l:gentext key="ListofExamples" text="范例清单"/>
@@ -188,8 +188,8 @@
 <l:gentext key="nav-up" text="上一级"/>
 <l:gentext key="nav-toc" text="目录"/>
 <l:gentext key="Draft" text="草稿"/>
-<l:gentext key="above" text="above"/>
-<l:gentext key="below" text="below"/>
+<l:gentext key="above" text="以上"/>
+<l:gentext key="below" text="以下"/>
 <l:gentext key="sectioncalled" text="一节"/>
 <l:gentext key="index symbols" text="符号"/>
 <l:gentext key="lowercase.alpha" text="abcdefghijklmnopqrstuvwxyz"/>
@@ -258,7 +258,7 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="procedure.formal" text="过程 %n. %t"/>
 <l:template name="productionset" text="%t"/>
-<l:template name="productionset.formal" text="Production %n"/>
+<l:template name="productionset.formal" text="产品 %n"/>
 <l:template name="qandadiv" text="%t"/>
 <l:template name="qandaentry" text="%t"/>
 <l:template name="qandaset" text="%t"/>
@@ -444,7 +444,7 @@
 <l:template name="figure" text="图 %n"/>
 <l:template name="part" text="第 %n 部分"/>
 <l:template name="procedure" text="过程 %n"/>
-<l:template name="productionset" text="Production %n"/>
+<l:template name="productionset" text="产品 %n"/>
 <l:template name="qandadiv" text="质保 %n"/>
 <l:template name="qandaentry" text="问： %n"/>
 <l:template name="question" text="问： %n"/>
@@ -464,7 +464,7 @@
 <l:template name="figure" text="图 %n “%t”"/>
 <l:template name="part" text="第 %n 部分 “%t”"/>
 <l:template name="procedure" text="过程 %n, “%t”"/>
-<l:template name="productionset" text="Production %n, “%t”"/>
+<l:template name="productionset" text="产品 %n, “%t”"/>
 <l:template name="qandadiv" text="质保 %n, “%t”"/>
 <l:template name="refsect1" text="“%t”一节"/>
 <l:template name="refsect2" text="“%t”一节"/>

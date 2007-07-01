@@ -17,8 +17,8 @@
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
-     See ../README or http://nwalsh.com/docbook/xsl/ for copyright
-     and other information.
+     See ../README or http://docbook.sf.net/release/xsl/current/ for
+     copyright and other information.
 
      ******************************************************************** -->
 
@@ -38,17 +38,14 @@ $Id$
 <partintro id="partintro">
 <title>Introduction</title>
 
-<para>This is technical reference documentation for the DocBook XSL
-Stylesheets; it documents (some of) the parameters, templates, and
-other elements of the stylesheets.</para>
+<para>This is technical reference documentation for the FO
+table-processing templates in the DocBook XSL Stylesheets.</para>
 
 <para>This is not intended to be <quote>user</quote> documentation.
 It is provided for developers writing customization layers for the
 stylesheets, and for anyone who's interested in <quote>how it
 works</quote>.</para>
 
-<para>Although I am trying to be thorough, this documentation is known
-to be incomplete. Don't forget to read the source, too :-)</para>
 </partintro>
 </doc:reference>
 

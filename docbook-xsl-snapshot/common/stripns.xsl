@@ -13,14 +13,14 @@
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
-     See ../README or http://nwalsh.com/docbook/xsl/ for copyright
-     and other information.
+     See ../README or http://docbook.sf.net/release/xsl/current/ for
+     copyright and other information.
 
      This file contains general templates common to both the HTML and FO
      versions of the DocBook stylesheets.
      ******************************************************************** -->
 
-<xsl:import href="../common/common.xsl"/>
+<xsl:import href="utility.xsl"/>
 
 <!-- * Get a title for current doc so that we let the user -->
 <!-- * know what document we are processing at this point. -->
