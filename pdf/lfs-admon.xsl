@@ -16,11 +16,7 @@
   <xsl:attribute-set name="graphical.admonition.properties">
     <xsl:attribute name="keep-together.within-column">
       <xsl:variable name="keep.together">
-        <xsl:call-template name="dbfo-attribute">
-          <xsl:with-param name="pis"
-                          select="processing-instruction('dbfo')"/>
-          <xsl:with-param name="attribute" select="'keep-together'"/>
-        </xsl:call-template>
+        <xsl:call-template name="pi.dbfo_keep-together"/>
       </xsl:variable>
       <xsl:choose>
         <xsl:when test="$keep.together != ''">

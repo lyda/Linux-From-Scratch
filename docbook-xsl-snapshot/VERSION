@@ -18,7 +18,7 @@
 <fm:project>
   <fm:Project>DocBook</fm:Project>
   <fm:Branch>XSL Stylesheets</fm:Branch>
-  <fm:Version>snapshot_6925</fm:Version>
+  <fm:Version>snapshot_6933</fm:Version>
 <!--
   <fm:License>MIT/X Consortium License</fm:License>
 -->
