@@ -152,8 +152,9 @@ killproc()
     local pidlist
     local retval
     local pid
-    local delay="3"
+    local delay="30"
     local piddead
+    local dtime
 
     # Process arguments
     while true
@@ -256,7 +257,8 @@ killproc()
                     continue
                 else
                     kill "${signal}" "${pid}" 2> /dev/null
-                    # Wait up to "${delay}" seconds to for "${pid}" to terminate
+                    # Wait up to ${delay}/10 seconds to for "${pid}" to 
+                    # terminate in 10ths of a second
                     while [ "${delay}" != "0" ]
                     do
                         kill -0 "${pid}" 2> /dev/null || piddead="1"
@@ -264,7 +266,7 @@ killproc()
                         then
                             break
                         fi
-                        sleep 1
+                        sleep 0.1
                         delay="$(( ${delay} - 1 ))"
                     done
                     # If a fallback is set, and program is still running, then

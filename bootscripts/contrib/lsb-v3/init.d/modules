@@ -57,7 +57,7 @@ case "${1}" in
 
                     # Attempt to load the module, making
                     # sure to pass any arguments provided.
-                    modprobe ${module} ${args} 2>&1 > /dev/null
+                    modprobe ${module} ${args} > /dev/null
 
                     # Print the module name if successful,
                     # otherwise take note.

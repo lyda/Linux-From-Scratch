@@ -10,7 +10,9 @@
 . /etc/sysconfig/rc.site
 
 # This sets default terminal options.
-stty sane
+# stty sane - this has been removed as nobody recalls
+# the reason for it in the first place - if no problems arize,
+# then it will be removed completely at a later date.
 
 # Setup default values for the environment
 umask 022

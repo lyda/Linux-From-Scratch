@@ -1,0 +1,7 @@
+20070705 - [dj] * Synced with LFS-bootscripts
+                * Removed 'stty' from the environment setup as it breaks 
+                  custom key configs when run from the CLI.
+
+20070218 - [dj] * Synced with LFS-bootscripts.
+
+20070206 - [dj] * Initial commit

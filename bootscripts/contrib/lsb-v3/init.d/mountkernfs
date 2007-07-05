@@ -22,12 +22,12 @@ case "${1}" in
     start)
         message="Mounting kernel-based file systems:"
 
-        if ! mountpoint /proc &> /dev/null; then
+        if ! mountpoint /proc > /dev/null; then
             message="${message}${INFO} /proc${NORMAL}"
             mount -n /proc || failed=1
         fi
 
-        if ! mountpoint /sys &> /dev/null; then
+        if ! mountpoint /sys > /dev/null; then
             message="${message}${INFO} /sys${NORMAL}"
             mount -n /sys || failed=1
         fi

@@ -42,13 +42,13 @@ esac
 case ${1} in
     start)
         message="Setting system clock..."
-        ${BIN_FILE} --hctosys ${CLOCKPARAMS} &>/dev/null
+        ${BIN_FILE} --hctosys ${CLOCKPARAMS} >/dev/null
         evaluate_retval standard
         ;;
 
     stop)
         message="Setting hardware clock..."
-        ${BIN_FILE} --systohc ${CLOCKPARAMS} &>/dev/null
+        ${BIN_FILE} --systohc ${CLOCKPARAMS} >/dev/null
         evaluate_retval standard
         ;;
 

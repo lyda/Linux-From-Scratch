@@ -86,16 +86,16 @@ watching the boot messages fly by.  Again, the prefixes are configurable (or
 completely removable) in the /etc/sysconfig/rc.site file.
 
 Complete Rewrite - Yep.  That doesn't mean that code wasn't reused when
-possible, so Nathan, Alexander, Jim, Matthew, Bryan, Gerard, Mathias, and
-countless other contributors (whose names I've forgotten and will promptly
-be reminded of (please)) are owed credit for these as well.  That said,
-at very least, this is a complete reorganisation that I've tested to the
-best of my ability, but there probably are some hidden bugs that will come
-to lite when used more frequently.  Please give me a shout *when* you find
-them.
+possible, so Alexander, Bryan, Dan, Gerard, Jeremy, Jim, Mathias, Matthew,
+Nathan, and countless other contributors (whose names I've forgotten and will
+promptly be reminded of (please)) are owed credit for these as well.  That
+said, at very least, this is a complete reorganisation that I've tested to
+the best of my ability, but there probably are some hidden bugs that will
+come to lite when used more frequently.  Please give me a shout _when_ you
+find them.
 
 Thanks.
 
 -- DJ Lucas
-dj AT linuxfromscratch DOT org
+dj@linuxfromscratch.org
 
