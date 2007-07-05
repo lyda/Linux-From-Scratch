@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='ISO-8859-1'?>
 
+<!--
+$LastChangedBy$
+$Date$
+-->
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 version="1.0">
@@ -19,16 +24,13 @@
   <!--<xsl:output  encoding="UTF-8" indent="yes" />-->
 
     <!-- Including our others customized templates. -->
-  <xsl:include href="lfs-common.xsl"/>
+  <xsl:include href="common.xsl"/>
   <xsl:include href="pdf/lfs-admon.xsl"/>
   <xsl:include href="pdf/lfs-index.xsl"/>
   <xsl:include href="pdf/lfs-lists.xsl"/>
   <xsl:include href="pdf/lfs-mixed.xsl"/>
   <xsl:include href="pdf/lfs-pagesetup.xsl"/>
   <xsl:include href="pdf/lfs-xref.xsl"/>
-
-    <!-- The LFS book type to be processed (lfs, blfs, clfs, or hlfs) -->
-  <xsl:param name="book-type">lfs</xsl:param>
 
     <!-- Activating FOP-1 extensions. We use FOP-0.93 as the FO procesor. -->
   <xsl:param name="fop1.extensions" select="1"/>

@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='ISO-8859-1'?>
 
+<!--
+$LastChangedBy$
+$Date$
+-->
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:exsl="http://exslt.org/common"
@@ -7,12 +12,15 @@
                 version="1.0"
                 exclude-result-prefixes="cf exsl">
 
-   <!-- Top-level chunked templates.
-        Import customized chunks templates.
-        Replaces {docbook-xsl}/xhtml/chunkfast.xsl -->
+   <!-- Top-level chunked code for fast processing.
+        Import standart customized chunk code.
+        Replaces {docbook-xsl}/xhtml/chunkfast.xsl
+
+        Note: Using this file as the top-level for chunked output implies that
+              profiling must be done on a previous step. -->
 
     <!-- Our master chunking templates -->
-  <xsl:import href="lfs-chunked1.xsl"/>
+  <xsl:import href="chunk-master.xsl"/>
 
     <!-- Use chunk.fast code? 1 = yes, 0 = no -->
   <xsl:param name="chunk.fast" select="1"/>

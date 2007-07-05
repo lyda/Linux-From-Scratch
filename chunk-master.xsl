@@ -1,15 +1,21 @@
 <?xml version='1.0' encoding='ISO-8859-1'?>
 
+<!--
+$LastChangedBy$
+$Date$
+-->
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-   <!-- Chunked output templates.
-        Include customized chunks templates.
+   <!-- Top-level chunked code for normal processing.
+        Import customized output templates.
+        Include customized chunk templates.
         Replaces {docbook-xsl}/xhtml/chunk.xsl -->
 
     <!-- Our master non-chunking presentation templates -->
-  <xsl:import href="lfs-chunked2.xsl"/>
+  <xsl:import href="chunk-slave.xsl"/>
 
     <!-- Upstream chunk code named templates -->
   <xsl:import href="docbook-xsl-snapshot/xhtml/chunk-common.xsl"/>

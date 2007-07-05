@@ -1,11 +1,16 @@
 <?xml version='1.0' encoding='ISO-8859-1'?>
 
+<!--
+$LastChangedBy$
+$Date$
+-->
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
    <!-- Second level chunked output template.
-        Sets global params and include customized elements templates-->
+        Sets global params and include customized elements templates. -->
 
     <!-- Upstream XHTML presentation templates -->
   <xsl:import href="docbook-xsl-snapshot/xhtml/docbook.xsl"/>
@@ -14,16 +19,13 @@
   <xsl:param name="chunker.output.encoding" select="'ISO-8859-1'"/>
 
     <!-- Including our customized elements templates -->
-  <xsl:include href="lfs-common.xsl"/>
+  <xsl:include href="common.xsl"/>
   <xsl:include href="xhtml/lfs-admon.xsl"/>
   <xsl:include href="xhtml/lfs-mixed.xsl"/>
   <xsl:include href="xhtml/lfs-sections.xsl"/>
   <xsl:include href="xhtml/lfs-titles.xsl"/>
   <xsl:include href="xhtml/lfs-toc.xsl"/>
   <xsl:include href="xhtml/lfs-xref.xsl"/>
-
-    <!-- The LFS book type to be processed (lfs, blfs, clfs, or hlfs) -->
-  <xsl:param name="book-type">lfs</xsl:param>
 
     <!-- The CSS Stylesheets. We set here relative path from sub-dirs HTML files.
     The path from top-level HTML files (index.html, partX.html, etc) MUST be
