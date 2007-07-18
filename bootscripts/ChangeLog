@@ -1,3 +1,10 @@
+2007-07-18	Dan Nicholson	<dnicholson@linuxfromscratch.org>
+	* Makefile, lfs/init.d/consolelog: New bootscript controlling the
+	  kernel log level on the console. This is controlled by the LOGLEVEL
+	  variable in /etc/sysconfig/console.
+	* lfs/init.d/modules: Remove the log level handling since this is
+	  done in the consolelog script now.
+
 2007-06-16	Dan Nicholson	<dnicholson@linuxfromscratch.org>
 	* lfs/init.d/mountfs, lfs/init.d/mountkernfs, lfs/init.d/setclock,
 	  lfs/init.d/modules, lfs/sysconfig/network-devices/if{up,down}:
