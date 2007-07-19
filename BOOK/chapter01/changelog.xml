@@ -37,6 +37,30 @@
 -->
 
     <listitem>
+      <para>2007-07-17</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Upgrade to Man-Pages-2.62, fixes
+          <ulink url="&lfs-ticket-root;2049">#2049</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to M4-1.4.10, fixes
+          <ulink url="&lfs-ticket-root;2048">#2048</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Linux-2.6.22.1, fixes
+          <ulink url="&lfs-ticket-root;2044">#2044</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to E2fsprogs-1.40.2, fixes
+          <ulink url="&lfs-ticket-root;2042">#2042</ulink>.  Remove the
+          --disable-evms configure parameter as it is no longer recognised by
+          the configure script.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2007-07-14</para>
       <itemizedlist>
         <listitem>
