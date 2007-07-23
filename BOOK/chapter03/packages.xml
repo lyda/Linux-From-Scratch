@@ -230,14 +230,14 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry>
+<!--    <varlistentry>
       <term>GRUB (&grub-version;) - <token>&grub-size;</token>:</term>
       <listitem>
         <para>Home page: <ulink url="&grub-home;"/></para>
         <para>Download: <ulink url="&grub-url;"/></para>
         <para>MD5 sum: <literal>&grub-md5;</literal></para>
       </listitem>
-    </varlistentry>
+    </varlistentry> -->
 
     <varlistentry>
       <term>Gzip (&gzip-version;) - <token>&gzip-size;</token>:</term>

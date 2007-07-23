@@ -48,7 +48,7 @@ ln -sv /tools/bin/ld /tools/$(gcc -dumpmachine)/bin/ld</userinput></screen>
   </important>
 
 <!-- Ampersands are needed to allow copy and paste -->
-<screen><userinput>gcc -dumpspecs | sed 's@^/lib/ld-linux.so.2@/tools&amp;@g' \
+<screen><userinput>gcc -dumpspecs | sed 's@/lib/ld-linux-x86-64.so.2@/tools&amp;@g' \
   > `dirname $(gcc -print-libgcc-file-name)`/specs</userinput></screen>
 
   <para>During the build process, GCC runs a script
@@ -84,7 +84,7 @@ readelf -l a.out | grep ': /tools'</userinput></screen>
     and the output of the last command will be of the form:</para>
 
 <screen><computeroutput>[Requesting program interpreter:
-    /tools/lib/ld-linux.so.2]</computeroutput></screen>
+    /tools/lib/ld-linux-x86-64.so.2]</computeroutput></screen>
 
     <para>Note that <filename class="directory">/tools/lib</filename>
     appears as the prefix of the dynamic linker.</para>

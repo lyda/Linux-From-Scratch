@@ -86,9 +86,9 @@ sed 's/^XCFLAGS =$/&amp; -fomit-frame-pointer/' gcc/Makefile.in.tmp \
 
     <para>Apply the following patch to change the location of GCC's default
     dynamic linker (typically <filename
-    class="libraryfile">ld-linux.so.2</filename>):</para>
+    class="libraryfile">ld-linux-x86-64.so.2</filename>):</para>
 
-<screen><userinput>patch -Np1 -i ../&gcc-specs-patch;</userinput></screen>
+<screen><userinput>patch -Np1 -i ../&gcc-pure64-specs-patch;</userinput></screen>
 
     <para>The above patch also removes <filename
     class="directory">/usr/include</filename> from GCC's include search path.
@@ -116,7 +116,7 @@ cd ../gcc-build</userinput></screen>
     --with-local-prefix=/tools --enable-clocale=gnu \
     --enable-shared --enable-threads=posix \
     --enable-__cxa_atexit --enable-languages=c,c++ \
-    --disable-libstdcxx-pch</userinput></screen>
+    --disable-libstdcxx-pch --disable-multilib</userinput></screen>
 
     <variablelist>
       <title>The meaning of the new configure options:</title>
@@ -198,6 +198,11 @@ cd ../gcc-build</userinput></screen>
     <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
+
+    <para>Since we're not building a multilib system, let's move some
+	installed libraries to a more generic location:</para>
+<screen><userinput>cp -va /tools/lib64/* /tools/lib
+rm -rvf /tools/lib64</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="adjusting.xml"

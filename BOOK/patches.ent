@@ -43,11 +43,13 @@
 <!ENTITY gawk-segfault-patch-md5 "7679530d88bf3eb56c42eb6aba342ddb">
 <!ENTITY gawk-segfault-patch-size "1.3 KB">
 
+<!ENTITY gcc-pure64-patch "gcc-&gcc-version;-pure64-1.patch">
+<!ENTITY gcc-pure64-patch-md5 "cea9bf46663392d627de81e2456698e3">
+<!ENTITY gcc-pure64-patch-size "6.7 KB">
 
-<!ENTITY gcc-specs-patch "gcc-&gcc-version;-specs-1.patch">
-<!ENTITY gcc-specs-patch-md5 "a17be8ccfb978e73f382be5093dd8abd">
-<!ENTITY gcc-specs-patch-size "14.8 KB">
-
+<!ENTITY gcc-pure64-specs-patch "gcc-&gcc-version;-pure64_specs-1.patch">
+<!ENTITY gcc-pure64-specs-patch-md5 "99e0ae890fce0614be210e83f0a5b975">
+<!ENTITY gcc-pure64-specs-patch-size "15 KB">
 
 <!ENTITY glibc-branch_update-patch "glibc-&glibc-version;-branch_update-3.patch">
 <!ENTITY glibc-branch_update-patch-md5 "cbad3863a39eed9e52af083c5035f283">

@@ -37,6 +37,15 @@
 -->
 
     <listitem>
+      <para>2007-07-23</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Initial changes to build x86_64 natively.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2007-07-17</para>
       <itemizedlist>
         <listitem>

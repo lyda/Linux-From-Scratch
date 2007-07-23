@@ -79,7 +79,7 @@ mv glibc-libidn-&glibc-version; libidn</userinput></screen>
     to check the Glibc we have just installed with the following:</para>
 
 <screen><userinput>sed -i \
-'s|libs -o|libs -L/usr/lib -Wl,-dynamic-linker=/lib/ld-linux.so.2 -o|' \
+'s|libs -o|libs -L/usr/lib -Wl,-dynamic-linker=/lib/ld-linux-x86-64.so.2 -o|' \
         scripts/test-installation.pl</userinput></screen>
 
     <para>Apply a patch to obtain various fixes that the upstream maintainers

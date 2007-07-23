@@ -45,7 +45,8 @@ cd ../binutils-build</userinput></screen>
     <para>Prepare Binutils for compilation:</para>
 
 <screen><userinput>../binutils-&binutils-version;/configure --prefix=/tools \
-    --disable-nls --with-lib-path=/tools/lib</userinput></screen>
+    --disable-nls --with-lib-path=/tools/lib \
+    --disable-multilib</userinput></screen>
 
     <variablelist>
       <title>The meaning of the new configure options:</title>

@@ -37,6 +37,11 @@
   <sect2 role="installation">
     <title>Installation of GCC</title>
 
+    <para>Apply a small patch that changes the default location for
+    64-bit libraries:</para>
+
+<screen><userinput>patch -Np1 -i ../&gcc-pure64-patch;</userinput></screen>
+
     <para>The GCC documentation recommends building GCC outside of the
     source directory in a dedicated build directory:</para>
 
@@ -47,7 +52,7 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput>CC="gcc -B/usr/bin/" ../gcc-&gcc-version;/configure --prefix=/tools \
     --with-local-prefix=/tools --disable-nls --enable-shared \
-    --enable-languages=c</userinput></screen>
+    --enable-languages=c --disable-multilib</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
@@ -90,6 +95,13 @@ cd ../gcc-build</userinput></screen>
         <term><parameter>--enable-languages=c</parameter></term>
         <listitem>
           <para>This option ensures that only the C compiler is built.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-multilib</parameter></term>
+        <listitem>
+          <para>We currently only want to build support for 64-bit libraries.</para>
         </listitem>
       </varlistentry>
 
