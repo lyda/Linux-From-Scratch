@@ -101,11 +101,16 @@ mv glibc-libidn-&glibc-version; libidn</userinput></screen>
 <screen><userinput>mkdir -v ../glibc-build
 cd ../glibc-build</userinput></screen>
 
+    <para>Tell Glibc to install its libraries in a more generic location:</para>
+
+<screen><userinput>echo "slibdir=/lib" &gt; configparms</userinput></screen>
+
     <para>Prepare Glibc for compilation:</para>
 
 <screen><userinput>../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons \
-    --enable-kernel=2.6.0 --libexecdir=/usr/lib/glibc</userinput></screen>
+    --enable-kernel=2.6.0 --libexecdir=/usr/lib/glibc \
+    --libdir=/usr/lib</userinput></screen>
 
     <variablelist>
       <title>The meaning of the new configure options:</title>

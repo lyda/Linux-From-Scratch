@@ -47,9 +47,9 @@
 <!ENTITY gcc-pure64-patch-md5 "cea9bf46663392d627de81e2456698e3">
 <!ENTITY gcc-pure64-patch-size "6.7 KB">
 
-<!ENTITY gcc-pure64-specs-patch "gcc-&gcc-version;-pure64_specs-1.patch">
-<!ENTITY gcc-pure64-specs-patch-md5 "99e0ae890fce0614be210e83f0a5b975">
-<!ENTITY gcc-pure64-specs-patch-size "15 KB">
+<!ENTITY gcc-pure64-specs-patch "gcc-&gcc-version;-pure64_specs-2.patch">
+<!ENTITY gcc-pure64-specs-patch-md5 "95b4541d7fa0e9a11f23af6db8b303d8">
+<!ENTITY gcc-pure64-specs-patch-size "17 KB">
 
 <!ENTITY glibc-branch_update-patch "glibc-&glibc-version;-branch_update-3.patch">
 <!ENTITY glibc-branch_update-patch-md5 "cbad3863a39eed9e52af083c5035f283">

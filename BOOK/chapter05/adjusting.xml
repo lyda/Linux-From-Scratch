@@ -36,13 +36,13 @@ ln -sv /tools/bin/ld /tools/$(gcc -dumpmachine)/bin/ld</userinput></screen>
 
   <para>For the sake of accuracy, it is recommended to use a copy-and-paste
   method when issuing the following command. Be sure to visually inspect the
-  specs file and verify that all occurrences of <quote>/lib/ld-linux.so.2</quote>
-  have been replaced with <quote>/tools/lib/ld-linux.so.2</quote>:</para>
+  specs file and verify that all occurrences of <quote>/lib/ld-linux-x86-64.so.2</quote>
+  have been replaced with <quote>/tools/lib/ld-linux-x86-64.so.2</quote>:</para>
 
   <important>
     <para>If working on a platform where the name of the dynamic linker is
-    something other than <filename class="libraryfile">ld-linux.so.2</filename>,
-    replace <quote>ld-linux.so.2</quote> with the name of the platform's
+    something other than <filename class="libraryfile">ld-linux-x86-64.so.2</filename>,
+    replace <quote>ld-linux-x86-64.so.2</quote> with the name of the platform's
     dynamic linker in the following commands. Refer to <xref
     linkend="ch-tools-toolchaintechnotes" role=","/> if necessary.</para>
   </important>

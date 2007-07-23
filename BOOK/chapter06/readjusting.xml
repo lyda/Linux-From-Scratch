@@ -39,14 +39,14 @@ ln -sv /tools/bin/ld /tools/$(gcc -dumpmachine)/bin/ld</userinput></screen>
 
   <important>
     <para>If working on a platform where the name of the dynamic linker is
-    something other than <filename class="libraryfile">ld-linux.so.2</filename>,
-    substitute <quote>ld-linux.so.2</quote> with the name of the platform's
+    something other than <filename class="libraryfile">ld-linux-x86-64.so.2</filename>,
+    substitute <quote>ld-linux-x86-64.so.2</quote> with the name of the platform's
     dynamic linker in the following commands. Refer to <xref
     linkend="ch-tools-toolchaintechnotes" role=","/> if necessary.</para>
   </important>
 
 <screen><userinput>gcc -dumpspecs | sed \
-    -e 's@/tools/lib/ld-linux.so.2@/lib/ld-linux.so.2@g' \
+    -e 's@/tools/lib/ld-linux-x86-64.so.2@/lib/ld-linux-x86-64.so.2@g' \
     -e '/\*startfile_prefix_spec:/{n;s@.*@/usr/lib/ @}' \
     -e '/\*cpp:/{n;s@$@ -isystem /usr/include@}' &gt; \
     `dirname $(gcc --print-libgcc-file-name)`/specs</userinput></screen>
@@ -66,7 +66,7 @@ readelf -l a.out | grep ': /lib'</userinput></screen>
   and the output of the last command will be (allowing for
   platform-specific differences in dynamic linker name):</para>
 
-<screen os="c"><computeroutput>[Requesting program interpreter: /lib/ld-linux.so.2]</computeroutput></screen>
+<screen os="c"><computeroutput>[Requesting program interpreter: /lib/ld-linux-x86-64.so.2]</computeroutput></screen>
 
   <para>Note that <filename class="directory">/lib</filename> is now
   the prefix of our dynamic linker.</para>
@@ -99,7 +99,7 @@ readelf -l a.out | grep ': /lib'</userinput></screen>
   <para os="k">If everything is working correctly, there should be no errors,
   and the output of the last command will be:</para>
 
-<screen><computeroutput>SEARCH_DIR("/tools/i686-pc-linux-gnu/lib")
+<screen><computeroutput>SEARCH_DIR("/tools/x86_64-unknown-linux-gnu/lib")
 SEARCH_DIR("/usr/lib")
 SEARCH_DIR("/lib");</computeroutput></screen>
 
@@ -120,7 +120,7 @@ SEARCH_DIR("/lib");</computeroutput></screen>
   and the output of the last command will be (allowing for
   platform-specific differences in dynamic linker name):</para>
 
-<screen os="s"><computeroutput>found ld-linux.so.2 at /lib/ld-linux.so.2</computeroutput></screen>
+<screen os="s"><computeroutput>found ld-linux-x86-64.so.2 at /lib/ld-linux-x86-64.so.2</computeroutput></screen>
 
   <para os="t">If the output does not appear as shown above or is not received
   at all, then something is seriously wrong. Investigate and retrace the
