@@ -35,11 +35,6 @@
   <sect2 role="installation">
     <title>Installation of GCC</title>
 
-    <para>The following patch tells GCC to link to <filename class="directory">
-    /lib</filename> instead of <filename class="directory">/lib64</filename>.</para>
-
-<screen><userinput>patch -Np1 -i ../&gcc-pure64-patch;</userinput></screen>
-
     <para>Apply a <command>sed</command> substitution that will suppress the
     installation of <filename class="libraryfile">libiberty.a</filename>. The
     version of <filename class="libraryfile">libiberty.a</filename> provided by
@@ -190,7 +185,11 @@ cd ../gcc-build</userinput></screen>
     href="readjusting.xml"
     xpointer="xpointer(//*[@os='k'])"/>
 
-<screen><computeroutput>SEARCH_DIR("/usr/x86_64-unknown-linux-gnu/lib")
+<screen><computeroutput>SEARCH_DIR("/usr/x86_64-unknown-linux-gnu/lib64")
+SEARCH_DIR("/usr/local/lib64")
+SEARCH_DIR("/lib64")
+SEARCH_DIR("/usr/lib64")
+SEARCH_DIR("/usr/x86_64-unknown-linux-gnu/lib")
 SEARCH_DIR("/usr/local/lib")
 SEARCH_DIR("/lib")
 SEARCH_DIR("/usr/lib");</computeroutput></screen>

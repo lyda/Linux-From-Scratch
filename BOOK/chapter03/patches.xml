@@ -91,18 +91,10 @@
     </varlistentry>
 
     <varlistentry>
-      <term>GCC 64-bit Specs Patch - <token>&gcc-pure64-specs-patch-size;</token>:</term>
+      <term>GCC Specs Patch - <token>&gcc-specs-patch-size;</token>:</term>
       <listitem>
-        <para>Download: <ulink url="&patches-root;&gcc-pure64-specs-patch;"/></para>
-        <para>MD5 sum: <literal>&gcc-pure64-specs-patch-md5;</literal></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>GCC Pure64 Patch - <token>&gcc-pure64-patch-size;</token>:</term>
-      <listitem>
-        <para>Download: <ulink url="&patches-root;&gcc-pure64-patch;"/></para>
-        <para>MD5 sum: <literal>&gcc-pure64-patch-md5;</literal></para>
+        <para>Download: <ulink url="&patches-root;&gcc-specs-patch;"/></para>
+        <para>MD5 sum: <literal>&gcc-specs-patch-md5;</literal></para>
       </listitem>
     </varlistentry>
 

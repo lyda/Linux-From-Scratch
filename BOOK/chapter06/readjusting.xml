@@ -46,7 +46,7 @@ ln -sv /tools/bin/ld /tools/$(gcc -dumpmachine)/bin/ld</userinput></screen>
   </important>
 
 <screen><userinput>gcc -dumpspecs | sed \
-    -e 's@/tools/lib/ld-linux-x86-64.so.2@/lib/ld-linux-x86-64.so.2@g' \
+    -e 's@/tools/lib64/ld-linux-x86-64.so.2@/lib64/ld-linux-x86-64.so.2@g' \
     -e '/\*startfile_prefix_spec:/{n;s@.*@/usr/lib/ @}' \
     -e '/\*cpp:/{n;s@$@ -isystem /usr/include@}' &gt; \
     `dirname $(gcc --print-libgcc-file-name)`/specs</userinput></screen>
@@ -105,12 +105,12 @@ SEARCH_DIR("/lib");</computeroutput></screen>
 
   <para os="l">Next make sure that we're using the correct libc:</para>
 
-<screen os="m"><userinput>grep "/lib/libc.so.6 " dummy.log</userinput></screen>
+<screen os="m"><userinput>grep "/lib64/libc.so.6 " dummy.log</userinput></screen>
 
   <para os="n">If everything is working correctly, there should be no errors,
   and the output of the last command will be:</para>
 
-<screen os="o"><computeroutput>attempt to open /lib/libc.so.6 succeeded</computeroutput></screen>
+<screen os="o"><computeroutput>attempt to open /lib64/libc.so.6 succeeded</computeroutput></screen>
 
   <para os="p">Lastly, make sure GCC is using the correct dynamic linker:</para>
 

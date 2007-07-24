@@ -37,11 +37,6 @@
   <sect2 role="installation">
     <title>Installation of GCC</title>
 
-    <para>Apply a small patch that changes the default location for
-    64-bit libraries:</para>
-
-<screen><userinput>patch -Np1 -i ../&gcc-pure64-patch;</userinput></screen>
-
     <para>The GCC documentation recommends building GCC outside of the
     source directory in a dedicated build directory:</para>
 
