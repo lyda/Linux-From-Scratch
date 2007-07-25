@@ -102,7 +102,7 @@ sed 's/^XCFLAGS =$/&amp; -fomit-frame-pointer/' gcc/Makefile.in.tmp \
       build. Do not forget to apply it.</para>
     </important>
 
-    <para>Usetting the multlib spec for GCC ensures that it
+    <para>Unsetting the multlib spec for GCC ensures that it
     won't attempt to link against libraries on the host:</para>
 
 <screen><userinput>cp gcc/config/i386/t-linux64{,.tmp}
