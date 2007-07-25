@@ -116,6 +116,10 @@ cd ../binutils-build</userinput></screen>
 make -C ld LIB_PATH=/tools/lib
 cp -v ld/ld-new /tools/bin</userinput></screen>
 
+    <para>Finally, create a symlink to ensure the sanity of our toolchain:</para>
+
+<screen><userinput>ln -sv lib /tools/lib64</userinput></screen>
+
     <variablelist>
       <title>The meaning of the make parameters:</title>
 

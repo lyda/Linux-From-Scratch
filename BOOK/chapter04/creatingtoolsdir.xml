@@ -45,10 +45,4 @@
   (when we are still using some tools from the host) and in the next (when
   we are <quote>chrooted</quote> to the LFS partition).</para>
 
-  <para>Set up a lib dir and appropriate symlink for 64-bit usability.</para>
-
-<screen><userinput>mkdir -v /tools/lib
-ln -sv lib /tools/lib64</userinput></screen>
-  
-
 </sect1>

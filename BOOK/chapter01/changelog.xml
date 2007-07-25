@@ -36,6 +36,14 @@
     </listitem>
 -->
 
+    <listitem>
+      <para>2007-07-25</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Create the /tools/lib64 symlink after installing binutils.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>2007-07-24</para>
