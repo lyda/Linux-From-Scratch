@@ -40,6 +40,9 @@
       <para>2007-07-25</para>
       <itemizedlist>
         <listitem>
+          <para>[jhuntwork] - More accurate results for the sanity tests.</para>
+        </listitem>
+        <listitem>
           <para>[jhuntwork] - Create the /tools/lib64 symlink after installing binutils.</para>
         </listitem>
       </itemizedlist>

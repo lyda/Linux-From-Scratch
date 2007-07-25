@@ -154,9 +154,9 @@ cd ../gcc-build</userinput></screen>
     href="readjusting.xml"
     xpointer="xpointer(//*[@os='f'])"/>
 
-<screen><computeroutput>/usr/lib/gcc/x86_64-unknown-linux-gnu/&gcc-version;/../../../crt1.o succeeded
-/usr/lib/gcc/x86_64-unknown-linux-gnu/&gcc-version;/../../../crti.o succeeded
-/usr/lib/gcc/x86_64-unknown-linux-gnu/&gcc-version;/../../../crtn.o succeeded</computeroutput></screen>
+<screen><computeroutput>/usr/lib/gcc/x86_64-unknown-linux-gnu/&gcc-version;/../../../../lib64/crt1.o succeeded
+/usr/lib/gcc/x86_64-unknown-linux-gnu/&gcc-version;/../../../../lib64/crti.o succeeded
+/usr/lib/gcc/x86_64-unknown-linux-gnu/&gcc-version;/../../../../lib64/crtn.o succeeded</computeroutput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
     href="readjusting.xml"

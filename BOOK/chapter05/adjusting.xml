@@ -36,8 +36,8 @@ ln -sv /tools/bin/ld /tools/$(gcc -dumpmachine)/bin/ld</userinput></screen>
 
   <para>For the sake of accuracy, it is recommended to use a copy-and-paste
   method when issuing the following command. Be sure to visually inspect the
-  specs file and verify that all occurrences of <quote>/lib/ld-linux-x86-64.so.2</quote>
-  have been replaced with <quote>/tools/lib/ld-linux-x86-64.so.2</quote>:</para>
+  specs file and verify that all occurrences of <quote>/lib64/ld-linux-x86-64.so.2</quote>
+  have been replaced with <quote>/tools/lib64/ld-linux-x86-64.so.2</quote>:</para>
 
   <important>
     <para>If working on a platform where the name of the dynamic linker is
@@ -84,7 +84,7 @@ readelf -l a.out | grep ': /tools'</userinput></screen>
     and the output of the last command will be of the form:</para>
 
 <screen><computeroutput>[Requesting program interpreter:
-    /tools/lib/ld-linux-x86-64.so.2]</computeroutput></screen>
+    /tools/lib64/ld-linux-x86-64.so.2]</computeroutput></screen>
 
     <para>Note that <filename class="directory">/tools/lib</filename>
     appears as the prefix of the dynamic linker.</para>

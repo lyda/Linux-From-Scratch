@@ -66,7 +66,7 @@ readelf -l a.out | grep ': /lib'</userinput></screen>
   and the output of the last command will be (allowing for
   platform-specific differences in dynamic linker name):</para>
 
-<screen os="c"><computeroutput>[Requesting program interpreter: /lib/ld-linux-x86-64.so.2]</computeroutput></screen>
+<screen os="c"><computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput></screen>
 
   <para>Note that <filename class="directory">/lib</filename> is now
   the prefix of our dynamic linker.</para>
@@ -120,7 +120,7 @@ SEARCH_DIR("/lib");</computeroutput></screen>
   and the output of the last command will be (allowing for
   platform-specific differences in dynamic linker name):</para>
 
-<screen os="s"><computeroutput>found ld-linux-x86-64.so.2 at /lib/ld-linux-x86-64.so.2</computeroutput></screen>
+<screen os="s"><computeroutput>found ld-linux-x86-64.so.2 at /lib64/ld-linux-x86-64.so.2</computeroutput></screen>
 
   <para os="t">If the output does not appear as shown above or is not received
   at all, then something is seriously wrong. Investigate and retrace the
