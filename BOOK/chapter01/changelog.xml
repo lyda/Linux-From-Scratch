@@ -36,7 +36,8 @@
     </listitem>
 -->
 
-     <listitem>
+
+    <listitem>
       <para>2007-07-26</para>
       <itemizedlist>
         <listitem>
@@ -78,6 +79,16 @@
         <listitem>
           <para>[dnicholson] - Added a known failing test to the Ch. 6 Glibc
           page.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2007-07-18</para>
+      <itemizedlist>
+        <listitem>
+          <para>[dnicholson] - Described the configuration of the consolelog
+          bootscript.</para>
         </listitem>
       </itemizedlist>
     </listitem>
@@ -197,16 +208,6 @@
         <listitem>
           <para>[matthew] - Upgrade to Linux-2.6.21.5, fixes
           <ulink url="&lfs-ticket-root;2027">#2027</ulink>.</para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-
-    <listitem>
-      <para>2007-07-18</para>
-      <itemizedlist>
-        <listitem>
-          <para>[dnicholson] - Described the configuration of the consolelog
-          bootscript.</para>
         </listitem>
       </itemizedlist>
     </listitem>
