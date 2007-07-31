@@ -1,3 +1,9 @@
+2007-07-31	Dan Nicholson <dnicholson@linuxfromscratch.org>
+	* 25-lfs.rules: Changed the usb_device rule tto create /dev/bus/usb
+	  nodes if the usb_device in 2.6.22+ kernels. The rule was also changed
+	  to only trigger on "add" events. This change is not backwards
+	  compatible with older kernels.
+
 2007-06-12	Dan Nicholson <dnicholson@linuxfromscratch.org>
 	* 25-lfs.rules: Fix the CPUID nodes from cpu/%n/cpu to cpu/%n/cpuid,
 	  which is what's expected in userspace apps such as x86info.

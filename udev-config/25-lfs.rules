@@ -82,7 +82,7 @@ KERNEL=="djs",      MODE="0644"
 
 # USB devices go in their own subdirectory
 
-SUBSYSTEM=="usb_device", PROGRAM="/bin/sh -c 'X=%k; X=$${X#usbdev}; B=$${X%%%%.*} D=$${X#*.}; echo bus/usb/$$B/$$D'", NAME="%c"
+SUBSYSTEM=="usb", ACTION=="add", ENV{DEVTYPE}=="usb_device", NAME="bus/usb/$env{BUSNUM}/$env{DEVNUM}"
 KERNEL=="hiddev*",          NAME="usb/%k"
 KERNEL=="auer*",            NAME="usb/%k"
 KERNEL=="legousbtower*",    NAME="usb/%k"
