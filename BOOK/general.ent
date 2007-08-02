@@ -2,7 +2,7 @@
 <!ENTITY version "6.3-20070731">
 <!ENTITY releasedate "July 31, 2007">
 <!ENTITY milestone "6.3">
-<!ENTITY generic-version "6.3-rc1"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
+<!ENTITY generic-version "6.3-branch"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
 <!ENTITY lfs-ticket-root "http://wiki.linuxfromscratch.org/lfs/ticket/">
