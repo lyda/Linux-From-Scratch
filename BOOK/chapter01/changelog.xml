@@ -39,6 +39,10 @@
     <listitem>
       <para>2007-08-07</para>
       <itemizedlist>
+	<listitem>
+	  <para>[jhuntwork] - Add --disable-shared to gcc pass 1. Requires adding
+	  a libgcc_eh.a -> libgcc.a symlink.</para>
+	</listitem>
         <listitem>
           <para>[jhuntwork] - Since we're using HJL Binutils, add m4, bison and flex
 	  back to chatper 5.</para>
