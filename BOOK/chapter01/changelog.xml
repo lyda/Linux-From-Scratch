@@ -45,6 +45,10 @@
 	  creating an unwanted lib -> lib symlink inside of /tools/lib. Fix
 	  from Dan Nicholson.</para>
         </listitem>
+        <listitem>
+          <para>[dnicholson] - Added the <parameter>--disable-werror</parameter>
+          parameter to Binutils Pass 1.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
