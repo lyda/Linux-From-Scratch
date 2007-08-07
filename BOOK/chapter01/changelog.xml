@@ -37,6 +37,18 @@
 -->
 
     <listitem>
+      <para>2007-08-07</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Use '-n' when creating /tools/lib64 symlink.
+	  Will fail if that directory or symlink already exists, instead of
+	  creating an unwanted lib -> lib symlink inside of /tools/lib. Fix
+	  from Dan Nicholson.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2007-08-06</para>
       <itemizedlist>
         <listitem>
