@@ -36,20 +36,22 @@ ln -sv /tools/bin/ld /tools/$(gcc -dumpmachine)/bin/ld</userinput></screen>
 
   <para>For the sake of accuracy, it is recommended to use a copy-and-paste
   method when issuing the following command. Be sure to visually inspect the
-  specs file and verify that all occurrences of <quote>/lib64/ld-linux-x86-64.so.2</quote>
-  have been replaced with <quote>/tools/lib64/ld-linux-x86-64.so.2</quote>:</para>
+  specs file and verify that all occurrences of <quote>/lib/ld-linux.so.2</quote>
+  have been replaced with <quote>/tools/lib/ld-linux.so.2</quote>:</para>
 
   <important>
     <para>If working on a platform where the name of the dynamic linker is
-    something other than <filename class="libraryfile">ld-linux-x86-64.so.2</filename>,
-    replace <quote>ld-linux-x86-64.so.2</quote> with the name of the platform's
+    something other than <filename class="libraryfile">ld-linux.so.2</filename>,
+    replace <quote>ld-linux.so.2</quote> with the name of the platform's
     dynamic linker in the following commands. Refer to <xref
-    linkend="ch-tools-toolchaintechnotes" role=","/> if necessary.</para>
+    linkend="ch-tools-toolchaintechnotes" role=","/> if necessary. Additionally,
+    note that on 64-bit machines the linker may actually be expected in the
+    <filename class="directory">/lib64</filename> directory.</para>
   </important>
 
 <!-- Ampersands are needed to allow copy and paste -->
-<screen><userinput>gcc -dumpspecs | sed 's@/lib64/ld-linux-x86-64.so.2@/tools&amp;@g' \
-  > `dirname $(gcc -print-libgcc-file-name)`/specs</userinput></screen>
+<screen><userinput>gcc -dumpspecs | sed 's@/lib\(64\)\?/ld@/tools&amp;@g' \
+  &gt; `dirname $(gcc -print-libgcc-file-name)`/specs</userinput></screen>
 
   <para>During the build process, GCC runs a script
   (<command>fixincludes</command>) that scans the system for header files
@@ -84,9 +86,10 @@ readelf -l a.out | grep ': /tools'</userinput></screen>
     and the output of the last command will be of the form:</para>
 
 <screen><computeroutput>[Requesting program interpreter:
-    /tools/lib64/ld-linux-x86-64.so.2]</computeroutput></screen>
+    /tools/lib/ld-linux.so.2]</computeroutput></screen>
 
-    <para>Note that <filename class="directory">/tools/lib</filename>
+    <para>Note that <filename class="directory">/tools/lib</filename>, or
+    <filename class="directory">/tools/lib64</filename> for 64-bit machines
     appears as the prefix of the dynamic linker.</para>
 
     <para>If the output is not shown as above or there was no output at all,

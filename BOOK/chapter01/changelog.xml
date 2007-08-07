@@ -39,6 +39,12 @@
     <listitem>
       <para>2007-08-07</para>
       <itemizedlist>
+	<listitem>
+	  <para>[jhuntwork] - Upgraded to HJL Binutils-2.17.50.0.18</para>
+	</listitem>
+	<listitem>
+	  <para>[jhuntwork] - Update commands to work with both x86 and x86_64</para>
+	</listitem>
         <listitem>
           <para>[jhuntwork] - Use '-n' when creating /tools/lib64 symlink.
 	  Will fail if that directory or symlink already exists, instead of
@@ -58,6 +64,16 @@
         <listitem>
           <para>[dnicholson] - Fixed a typo and clarified text on the Perl
           page. Reported by Shawn.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2007-08-04</para>
+      <itemizedlist>
+        <listitem>
+          <para>[dnicholson] - Added the <parameter>--disable-werror</parameter>
+          parameter to Binutils Pass 1.</para>
         </listitem>
       </itemizedlist>
     </listitem>
