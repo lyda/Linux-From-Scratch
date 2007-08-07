@@ -190,19 +190,19 @@
 <!ENTITY gettext-ch6-du "65 MB">
 <!ENTITY gettext-ch6-sbu "1 SBU">
 
-<!ENTITY glibc-version "2.5">
-<!ENTITY glibc-size "14,963 KB">
+<!ENTITY glibc-version "2.5.1">
+<!ENTITY glibc-size "15,060 KB">
 <!ENTITY glibc-url "&gnu;glibc/glibc-&glibc-version;.tar.bz2">
-<!ENTITY glibc-md5 "1fb29764a6a650a4d5b409dda227ac9f">
+<!ENTITY glibc-md5 "10ea72e2c4d56c6aa13dabb7c4f9b195">
 <!ENTITY glibc-home "&gnu-software;libc/">
 <!ENTITY glibc-ch5-du "342 MB">
 <!ENTITY glibc-ch5-sbu "7 SBU">
 <!ENTITY glibc-ch6-du "556 MB testsuite included">
 <!ENTITY glibc-ch6-sbu "19.5 SBU testsuite included">
 <!ENTITY glibc-libidn-version "&glibc-version;">
-<!ENTITY glibc-libidn-size "100 KB">
-<!ENTITY glibc-libidn-url "&gnu;glibc/glibc-libidn-&glibc-libidn-version;.tar.bz2">
-<!ENTITY glibc-libidn-md5 "8787868ba8962d9b125997ec2f25ac01">
+<!ENTITY glibc-libidn-size "123 KB">
+<!ENTITY glibc-libidn-url "&gnu;glibc/glibc-libidn-&glibc-libidn-version;.tar.gz">
+<!ENTITY glibc-libidn-md5 "51b46f055908a5f8e409c4200d828093">
 <!ENTITY glibc-libidn-home " ">
 
 <!ENTITY grep-version "2.5.1a">
@@ -281,10 +281,10 @@
 <!ENTITY less-ch6-du "2.8 MB">
 <!ENTITY less-ch6-sbu "0.1 SBU">
 
-<!ENTITY lfs-bootscripts-version "20070420">
+<!ENTITY lfs-bootscripts-version "20070730">
 <!ENTITY lfs-bootscripts-size "39 KB">
-<!ENTITY lfs-bootscripts-url "http://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-&lfs-bootscripts-version;.tar.bz2">
-<!ENTITY lfs-bootscripts-md5 "e27ed8fc5f4438020b79c4fe6962a2ab">
+<!ENTITY lfs-bootscripts-url "&downloads-root;lfs-bootscripts-&lfs-bootscripts-version;.tar.bz2">
+<!ENTITY lfs-bootscripts-md5 "d50c72aa2f45c646f384a1ffeb20fafe">
 <!ENTITY lfs-bootscripts-home " ">
 <!ENTITY lfs-bootscripts-ch7-du "0.4 MB">
 <!ENTITY lfs-bootscripts-ch7-sbu "less than 0.1 SBU">
@@ -490,10 +490,10 @@
 <!ENTITY udev-ch6-du "5.8 MB">
 <!ENTITY udev-ch6-sbu "0.1 SBU">
 
-<!ENTITY udev-config "udev-config-20070304">
-<!ENTITY udev-config-size "12 KB">
-<!ENTITY udev-config-url "http://www.linuxfromscratch.org/lfs/downloads/development/&udev-config;.tar.bz2">
-<!ENTITY udev-config-md5 "5f387296f1771c1c6b652284cfab5d9b">
+<!ENTITY udev-config "udev-config-20070731">
+<!ENTITY udev-config-size "13 KB">
+<!ENTITY udev-config-url "&downloads-root;&udev-config;.tar.bz2">
+<!ENTITY udev-config-md5 "49c72e712f38c18884bd11a9a3b7e968">
 <!ENTITY udev-config-home " ">
 
 <!ENTITY util-linux-version "2.12r">

@@ -61,7 +61,7 @@
     <ulink url="&blfs-root;view/svn/general/libidn.html"/>).
     Unpack the tarball from within the Glibc source directory:</para>
 
-<screen><userinput>tar -xvf ../glibc-libidn-&glibc-version;.tar.bz2
+<screen><userinput>tar -xvf ../glibc-libidn-&glibc-version;.tar.gz
 mv glibc-libidn-&glibc-version; libidn</userinput></screen>
 
     <para>In the vi_VN.TCVN locale, <command>bash</command> enters an infinite loop
@@ -81,11 +81,6 @@ mv glibc-libidn-&glibc-version; libidn</userinput></screen>
 <screen><userinput>sed -i \
 's|libs -o|libs -L/usr/lib -Wl,-dynamic-linker=/lib/ld-linux-x86-64.so.2 -o|' \
         scripts/test-installation.pl</userinput></screen>
-
-    <para>Apply a patch to obtain various fixes that the upstream maintainers
-    have provided:</para>
-
-<screen><userinput>patch -Np1 -i ../&glibc-branch_update-patch;</userinput></screen>
 
     <para>The <command>ldd</command> shell script contains Bash-specific
     syntax. Change it's default program interpreter to <command>/bin/bash</command>

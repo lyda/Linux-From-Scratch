@@ -15,6 +15,11 @@
     <secondary>configuring</secondary>
   </indexterm>
 
+  <indexterm zone="ch-scripts-console">
+    <primary sortas="d-consolelog">consolelog</primary>
+    <secondary>configuring</secondary>
+  </indexterm>
+
   <para>This section discusses how to configure the <command>console</command>
   bootscript that sets up the keyboard map and the console font. If non-ASCII
   characters (e.g., the copyright sign, the British pound sign and Euro symbol)
