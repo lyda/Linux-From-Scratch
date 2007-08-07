@@ -55,10 +55,8 @@
 <!ENTITY bison-url "&gnu;bison/bison-&bison-version;.tar.bz2">
 <!ENTITY bison-md5 "c18640c6ec31a169d351e3117ecce3ec">
 <!ENTITY bison-home "&gnu-software;bison/">
-<!--
-<!ENTITY bison-ch5-du "">
-<!ENTITY bison-ch5-sbu "">
--->
+<!ENTITY bison-ch5-du "12.3 MB">
+<!ENTITY bison-ch5-sbu "0.2 SBU">
 <!ENTITY bison-ch6-du "12.3 MB">
 <!ENTITY bison-ch6-sbu "0.2 SBU">
 
@@ -151,10 +149,8 @@
 <!ENTITY flex-url "&sourceforge;flex/flex-&flex-version;.tar.bz2">
 <!ENTITY flex-md5 "343374a00b38d9e39d1158b71af37150">
 <!ENTITY flex-home "http://flex.sourceforge.net">
-<!--
-<!ENTITY flex-ch5-du "">
-<!ENTITY flex-ch5-sbu "">
--->
+<!ENTITY flex-ch5-du "8.4 MB">
+<!ENTITY flex-ch5-sbu "0.1 SBU">
 <!ENTITY flex-ch6-du "8.4 MB">
 <!ENTITY flex-ch6-sbu "0.1 SBU">
 
@@ -168,10 +164,10 @@
 <!ENTITY gawk-ch6-du "18.2 MB">
 <!ENTITY gawk-ch6-sbu "0.2 SBU">
 
-<!ENTITY gcc-version "4.1.2">
-<!ENTITY gcc-size "38,777 KB">
+<!ENTITY gcc-version "4.2.1">
+<!ENTITY gcc-size "43,029 KB">
 <!ENTITY gcc-url "&gnu;gcc/gcc-&gcc-version;/gcc-&gcc-version;.tar.bz2">
-<!ENTITY gcc-md5 "a4a3eb15c96030906d8494959eeda23c">
+<!ENTITY gcc-md5 "cba410e6ff70f7d7f4be7a0267707fd0">
 <!ENTITY gcc-home "http://gcc.gnu.org/">
 <!ENTITY gcc-ch5p1-du "655 MB">
 <!ENTITY gcc-ch5p1-sbu "9.2 SBU">

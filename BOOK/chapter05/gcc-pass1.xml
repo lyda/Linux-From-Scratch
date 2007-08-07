@@ -46,7 +46,7 @@ cd ../gcc-build</userinput></screen>
     <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>CC="gcc -B/usr/bin/" ../gcc-&gcc-version;/configure --prefix=/tools \
-    --with-local-prefix=/tools --disable-nls --enable-shared \
+    --with-local-prefix=/tools --disable-nls --disable-shared \
     --enable-languages=c --disable-multilib</userinput></screen>
 
     <variablelist>
@@ -75,14 +75,10 @@ cd ../gcc-build</userinput></screen>
       </varlistentry>
 
       <varlistentry>
-        <term><parameter>--enable-shared</parameter></term>
+        <term><parameter>--disable-shared</parameter></term>
         <listitem>
-          <para>This switch allows the building of <filename
-          class="libraryfile">libgcc_s.so.1</filename> and
-          <filename class="libraryfile">libgcc_eh.a</filename>.
-          Having <filename class="libraryfile">libgcc_eh.a</filename>
-          available ensures that the configure script for Glibc (the
-          next package we compile) produces the proper results.</para>
+          <para>This forces gcc to link its internal libraries statically. We do this
+	  to avoid possible issues with the host system.</para>
         </listitem>
       </varlistentry>
 
