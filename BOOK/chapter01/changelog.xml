@@ -40,6 +40,9 @@
       <para>2007-08-07</para>
       <itemizedlist>
 	<listitem>
+	  <para>[jhuntwork] - Upgraded to Glibc 2.6.1</para>
+	</listitem>
+	<listitem>
 	  <para>[jhuntwork] - Add --disable-shared to gcc pass 1. Requires adding
 	  a libgcc_eh.a -> libgcc.a symlink.</para>
 	</listitem>
