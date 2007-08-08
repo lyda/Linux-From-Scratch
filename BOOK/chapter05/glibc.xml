@@ -43,9 +43,15 @@
 <screen><userinput>mkdir -v ../glibc-build
 cd ../glibc-build</userinput></screen>
 
+    <para>On x86 machines Glibc needs to be built with the compliler
+    flag <quote>-march</quote> set to at least <quote>i486</quote>:</para>
+
+<screen><userinput>test $(uname -m | grep i[456]86) &amp;&amp; MARCH="-march=i486"</userinput></screen>
+
     <para>Next, prepare Glibc for compilation:</para>
 
-<screen><userinput>../glibc-&glibc-version;/configure --prefix=/tools \
+<screen><userinput>CC="gcc $MARCH" \
+    ../glibc-&glibc-version;/configure --prefix=/tools \
     --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --with-binutils=/tools/bin \
     --without-gd --with-headers=/tools/include \

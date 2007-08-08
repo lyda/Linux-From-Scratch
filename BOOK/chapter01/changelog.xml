@@ -40,6 +40,10 @@
       <para>2007-08-08</para>
       <itemizedlist>
 	<listitem>
+	  <para>[jhuntwork] - Add -march=i486 to Glibc for x86 builds as default of i386 is
+          incompatible.</para>
+        </listitem>
+	<listitem>
 	  <para>[jhuntwork] - Make the sed to Glibc's test-installation.pl file
 	  architecture independent.</para>
         </listitem>
