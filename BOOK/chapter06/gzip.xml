@@ -39,7 +39,7 @@
     by Gzip is incompatible with the version that current
     Glibc provides, so we'll rename the function:</para>
 
-<screen><userinput>for file gzip.c lib/utimens.{c,h} ; do \
+<screen><userinput>for file in gzip.c lib/utimens.{c,h} ; do \
    cp -v $file{,.orig}
    sed 's/futimens/gl_&amp;/' $file.orig &gt; $file
 done</userinput></screen>
