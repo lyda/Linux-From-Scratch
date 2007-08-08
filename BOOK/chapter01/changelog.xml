@@ -40,6 +40,10 @@
       <para>2007-08-07</para>
       <itemizedlist>
 	<listitem>
+	  <para>[jhuntwork] - Fix Coreutils-6.9 and Gzip-1.3.12 to work with Glibc-2.6.1.
+	  Rename the futimens function.</para>
+	</listitem>
+	<listitem>
 	  <para>[jhuntwork] - Use a loop, find and sed instead of the gcc specs patch</para>
 	</listitem>
 	<listitem>
