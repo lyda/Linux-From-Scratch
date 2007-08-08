@@ -129,11 +129,14 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput>make install</userinput></screen>
 
-    <para>Using --disable-shared means that the file
-    <filename class="libraryfile">libgcc_eh.so</filename>
-    isn't built and installed. The next package, Glibc, depends on this 
-    library, so to satisfy that dependency, we'll create a symlink to
-    <filename class="libraryfile">libgcc.a</filename>.</para>
+    <para>Using <command>--disable-shared</command> means that the file
+    <filename class="libraryfile">libgcc_eh.a</filename>
+    isn't created and installed. The next package, Glibc, depends on this 
+    library as it uses <command>-lgcc_eh</command> within its build system.
+    We can satisfy that dependency by creating a symlink to
+    <filename class="libraryfile">libgcc.a</filename>, since that file will
+    end up containing the objects normally contained in
+    <filename class="libraryfile">libgcc_eh.a</filename>.</para>
 
 <screen><userinput>ln -vs libgcc.a `gcc -print-libgcc-file-name | \
     sed 's/libgcc/&amp;_eh/'`</userinput></screen>
