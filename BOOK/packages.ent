@@ -198,7 +198,7 @@
 <!ENTITY glibc-libidn-version "&glibc-version;">
 <!ENTITY glibc-libidn-size "99 KB">
 <!ENTITY glibc-libidn-url "&gnu;glibc/glibc-libidn-&glibc-libidn-version;.tar.gz">
-<!ENTITY glibc-libidn-md5 "503f1315afd808728ebaa75b3d87a7d9">
+<!ENTITY glibc-libidn-md5 "f42ba45d685d51d9c0095c6706210a0d">
 <!ENTITY glibc-libidn-home " ">
 
 <!ENTITY grep-version "2.5.1a">
