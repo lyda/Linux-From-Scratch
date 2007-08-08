@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>2007-08-08</para>
+      <itemizedlist>
+	<listitem>
+	  <para>[jhuntwork] - Make the sed to Glibc's test-installation.pl file
+	  architecture independent.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2007-08-07</para>
       <itemizedlist>
 	<listitem>
