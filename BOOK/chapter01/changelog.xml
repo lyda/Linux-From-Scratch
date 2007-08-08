@@ -40,6 +40,9 @@
       <para>2007-08-07</para>
       <itemizedlist>
 	<listitem>
+	  <para>[jhuntwork] - Use a loop, find and sed instead of the gcc specs patch</para>
+	</listitem>
+	<listitem>
 	  <para>[jhuntwork] - Upgraded to Glibc 2.6.1</para>
 	</listitem>
 	<listitem>
