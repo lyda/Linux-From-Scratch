@@ -39,10 +39,7 @@
     by Coreutils is incompatible with the version that current
     Glibc provides, so we'll rename the function:</para>
 
-<screen><userinput>for file in src/{copy,touch}.c lib/utimens.{c,h} ; do \
-   cp -v $file{,.orig}
-   sed 's/futimens/gl_&amp;/' $file.orig &gt; $file
-done</userinput></screen>
+<screen><userinput>sed -i 's/futimens/gl_&amp;/' src/{copy,touch}.c lib/utimens.{c,h}</userinput></screen>
 
     <para>A known issue with the <command>uname</command> program from
     this package is that the <parameter>-p</parameter> switch always
