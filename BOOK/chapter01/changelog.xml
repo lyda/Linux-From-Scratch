@@ -36,16 +36,19 @@
     </listitem>
 -->
 
-
     <listitem>
       <para>2007-08-11</para>
       <itemizedlist>
+        <listitem>
+          <para>[dnicholson] - Changed the Bash testsuite standard input fix
+          to only affect the necessary test script.</para>
+        </listitem>
         <listitem>
           <para>[bdubbs] - Created LFS 6.3-rc-2..</para>
         </listitem>
         <listitem>
           <para>[bdubbs] - Upgrade to Linux-2.6.22.1, fixes
-                    <ulink url="&lfs-ticket-root;2044">#2059</ulink>.</para>
+          <ulink url="&lfs-ticket-root;2044">#2059</ulink>.</para>
         </listitem>
       </itemizedlist>
     </listitem>
