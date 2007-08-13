@@ -1,3 +1,6 @@
+2007-08-13	Dan Nicholson	<dnicholson@linuxfromscratch.org>
+	* lfs/init.d/checkfs: Don't suppress error messages from the screen.
+
 2007-07-18	Dan Nicholson	<dnicholson@linuxfromscratch.org>
 	* Makefile, lfs/init.d/consolelog: New bootscript controlling the
 	  kernel log level on the console. This is controlled by the LOGLEVEL
