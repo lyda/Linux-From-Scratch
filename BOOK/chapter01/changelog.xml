@@ -47,8 +47,8 @@
           <para>[bdubbs] - Created LFS 6.3-rc-2..</para>
         </listitem>
         <listitem>
-          <para>[bdubbs] - Upgrade to Linux-2.6.22.1, fixes
-          <ulink url="&lfs-ticket-root;2044">#2059</ulink>.</para>
+          <para>[bdubbs] - Upgrade to Linux-2.6.22.2, fixes
+          <ulink url="&lfs-ticket-root;2059">#2059</ulink>.</para>
         </listitem>
       </itemizedlist>
     </listitem>
