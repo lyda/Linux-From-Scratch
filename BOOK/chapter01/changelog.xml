@@ -37,6 +37,28 @@
 -->
 
     <listitem>
+      <para>2007-08-20</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bryan] - Fix typo in acknowledgements.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2007-08-19</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Upgrade to Linux-2.6.22.3, fixes
+             <ulink url="&lfs-ticket-root;2060">#2060</ulink>..</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Updated acknowledgements.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2007-08-13</para>
       <itemizedlist>
         <listitem>
