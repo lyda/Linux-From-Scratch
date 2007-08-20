@@ -24,6 +24,12 @@
 case "${1}" in
     start)
 
+        # Exit if there's no modules file or there are no
+        # valid entries
+        [ -r /etc/sysconfig/modules ] &&
+            egrep -qv '^($|#)' /etc/sysconfig/modules ||
+            exit 0
+
         # If proc is mounted, find the current kernel
         # message level 
         if [ -f /proc/sys/kernel/printk ]; then

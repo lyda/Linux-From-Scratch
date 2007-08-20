@@ -52,7 +52,7 @@ case "${1}" in
 
         # Note: -a option used to be -p; but this fails e.g.
         # on fsck.minix
-        fsck ${options} -a -A -C -T 2>/dev/null
+        fsck ${options} -a -A -C -T
         error_value=${?}
 
         if [ "${error_value}" = 0 ]
