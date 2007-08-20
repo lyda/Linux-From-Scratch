@@ -47,7 +47,7 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput>CC="gcc -B/usr/bin/" ../gcc-&gcc-version;/configure --prefix=/tools \
     --with-local-prefix=/tools --disable-nls --disable-shared \
-    --enable-languages=c --disable-multilib</userinput></screen>
+    --enable-languages=c --disable-multilib --with-arch=i486</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
@@ -93,6 +93,15 @@ cd ../gcc-build</userinput></screen>
         <term><parameter>--disable-multilib</parameter></term>
         <listitem>
           <para>We currently only want to build support for 64-bit libraries.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--with-arch=i486</parameter></term>
+        <listitem>
+    	  <para>On x86 machines Glibc needs to be built for a minimum architecture
+	  of <quote>i486</quote>. Setting this for the GCC build ensures that the
+	  entire system is built consistently.</para>
         </listitem>
       </varlistentry>
 

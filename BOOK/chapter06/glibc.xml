@@ -98,15 +98,9 @@ unset DL</userinput></screen>
 <screen><userinput>mkdir -v ../glibc-build
 cd ../glibc-build</userinput></screen>
 
-    <para>On x86 machines Glibc needs to be built with the compliler
-    flag <quote>-march</quote> set to at least <quote>i486</quote>:</para>
-
-<screen><userinput>test $(uname -m | grep i[456]86) &amp;&amp; MARCH="-march=i486"</userinput></screen>
-
     <para>Prepare Glibc for compilation:</para>
 
-<screen><userinput>CC="gcc $MARCH" \
-    ../glibc-&glibc-version;/configure --prefix=/usr \
+<screen><userinput>../glibc-&glibc-version;/configure --prefix=/usr \
     --disable-profile --enable-add-ons \
     --enable-kernel=2.6.0 --libexecdir=/usr/lib/glibc</userinput></screen>
 

@@ -40,6 +40,9 @@
       <para>2007-08-20</para>
       <itemizedlist>
         <listitem>
+          <para>[jhuntwork] - Use --with-arch=i486 on GCC instead of -march=i486 with Glibc.</para>
+        </listitem>
+        <listitem>
           <para>[bryan] - Fix typo in acknowledgements.</para>
         </listitem>
       </itemizedlist>

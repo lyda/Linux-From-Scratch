@@ -140,7 +140,8 @@ cd ../gcc-build</userinput></screen>
     --with-local-prefix=/tools --enable-clocale=gnu \
     --enable-shared --enable-threads=posix \
     --enable-__cxa_atexit --enable-languages=c,c++ \
-    --disable-libstdcxx-pch --disable-multilib</userinput></screen>
+    --disable-libstdcxx-pch --disable-multilib \
+    --with-arch=i486</userinput></screen>
 
     <variablelist>
       <title>The meaning of the new configure options:</title>
