@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>2007-08-27>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Upgrade to Linux-2.6.22.5. Fixes 
+          <ulink url="&lfs-ticket-root;2064">#2065</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2007-08-21</para>
       <itemizedlist>
         <listitem>
