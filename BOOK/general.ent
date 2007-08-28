@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "6.3-20070827">
-<!ENTITY releasedate "August 27, 2007">
+<!ENTITY version "6.3">
+<!ENTITY releasedate "August 28, 2007">
 <!ENTITY milestone "6.3">
-<!ENTITY generic-version "6.3-branch"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
+<!ENTITY generic-version "6.3"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
 <!ENTITY lfs-ticket-root "http://wiki.linuxfromscratch.org/lfs/ticket/">
