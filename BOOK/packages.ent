@@ -284,7 +284,7 @@
 <!ENTITY lfs-bootscripts-version "6.3">
 <!ENTITY lfs-bootscripts-size "39 KB">
 <!ENTITY lfs-bootscripts-url "&downloads-root;lfs-bootscripts-&lfs-bootscripts-version;.tar.bz2">
-<!ENTITY lfs-bootscripts-md5 "7c9d864b43bfb7f7a7f6c278686eed26">
+<!ENTITY lfs-bootscripts-md5 "462bca5b42e9b7eb313857e14c366340">
 <!ENTITY lfs-bootscripts-home " ">
 <!ENTITY lfs-bootscripts-ch7-du "0.4 MB">
 <!ENTITY lfs-bootscripts-ch7-sbu "less than 0.1 SBU">
@@ -496,7 +496,7 @@
 <!ENTITY udev-config "udev-config-6.3">
 <!ENTITY udev-config-size "13 KB">
 <!ENTITY udev-config-url "&downloads-root;&udev-config;.tar.bz2">
-<!ENTITY udev-config-md5 "e258e788940e4a96e1949b6b37057b57">
+<!ENTITY udev-config-md5 "d12ea80a5068df0e50306d787d197c62">
 <!ENTITY udev-config-home " ">
 
 <!ENTITY util-linux-version "2.12r">
