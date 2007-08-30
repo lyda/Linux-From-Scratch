@@ -57,8 +57,9 @@ cd ../binutils-build</userinput></screen>
       &amp;&amp; make install; }</userinput>.</para>
     </note>
 
-    <para>If our host is a multilib machine, we want to ensure that we
-    build 64-bit binaries, so we'll test for that and set a variable if so:</para>
+    <para>Test to see if the host is a multilib capable machine and set a variable
+    if it is. This ensures that only 64-bit binaries are built if using such a host.
+    </para>
 
 <screen><userinput>test $(uname -m | grep 64) &amp;&amp; M64="-m64"</userinput></screen>
 

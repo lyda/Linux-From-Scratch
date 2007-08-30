@@ -43,8 +43,8 @@
 <screen><userinput>mkdir -v ../gcc-build
 cd ../gcc-build</userinput></screen>
 
-    <para>If our host is a multilib machine, we want to ensure that we
-    build 64-bit binaries, so we'll test for that and set a variable if so.
+    <para>Test to see if the host is a multilib capable machine and set a variable 
+    if it is. This ensures that only 64-bit binaries are built if using such a host.
     Also, the --with-arch flag is only necessary for x86 machines.</para>
 
 <screen><userinput>case $(uname -m) in
