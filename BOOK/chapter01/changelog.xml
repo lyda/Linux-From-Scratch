@@ -42,6 +42,20 @@
         <listitem>
           <para>[jhuntwork] - Use --with-arch=i486 only for x86. Also force '-m64' for 64-bit builds.
 	  Lastly, use 'make' instead of 'make bootstrap' on gcc pass 1. The bootstrap is now default.</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+ 
+    <listitem>
+      <para>2007-08-27</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Upgrade to Linux-2.6.22.5. Fixes 
+          <ulink url="&lfs-ticket-root;2064">#2065</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[dnicholson] - Changed the Shadow download URL to a more
+          stable location.</para>
         </listitem>
       </itemizedlist>
     </listitem>
