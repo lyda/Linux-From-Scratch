@@ -72,13 +72,20 @@
 <screen><userinput>mkdir -v ../gcc-build
 cd ../gcc-build</userinput></screen>
 
+    <para>The --with-arch flag is only necessary for x86 machines.</para>
+
+<screen><userinput>case $(uname -m) in
+  x86) WITHARCH="--with-arch=i486" ;;
+esac</userinput></screen>
+
     <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/usr \
     --libexecdir=/usr/lib --enable-shared \
     --enable-threads=posix --enable-__cxa_atexit \
     --enable-clocale=gnu --enable-languages=c,c++ \
-    --disable-multilib --with-arch=i486</userinput></screen>
+    --disable-multilib $WITHARCH
+unset WITHARCH</userinput></screen>
 
     <para>Compile the package:</para>
 

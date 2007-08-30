@@ -134,6 +134,12 @@ cd ../gcc-build</userinput></screen>
     <para>Before starting to build GCC, remember to unset any environment
     variables that override the default optimization flags.</para>
 
+    <para>The --with-arch flag is only necessary for x86 machines.</para>
+
+<screen><userinput>case $(uname -m) in
+  x86) WITHARCH="--with-arch=i486" ;;
+esac</userinput></screen>
+
     <para>Now prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/tools \
@@ -141,7 +147,8 @@ cd ../gcc-build</userinput></screen>
     --enable-shared --enable-threads=posix \
     --enable-__cxa_atexit --enable-languages=c,c++ \
     --disable-libstdcxx-pch --disable-multilib \
-    --with-arch=i486</userinput></screen>
+    $WITHARCH
+unset WITHARCH</userinput></screen>
 
     <variablelist>
       <title>The meaning of the new configure options:</title>

@@ -43,11 +43,22 @@
 <screen><userinput>mkdir -v ../gcc-build
 cd ../gcc-build</userinput></screen>
 
+    <para>If our host is a multilib machine, we want to ensure that we
+    build 64-bit binaries, so we'll test for that and set a variable if so.
+    Also, the --with-arch flag is only necessary for x86 machines.</para>
+
+<screen><userinput>case $(uname -m) in
+  x86) WITHARCH="--with-arch=i486" ;;
+  x86_64) M64="-m64" ;;
+esac</userinput></screen>
+
     <para>Prepare GCC for compilation:</para>
 
-<screen><userinput>CC="gcc -B/usr/bin/" ../gcc-&gcc-version;/configure --prefix=/tools \
+<screen><userinput>CC="gcc -B/usr/bin/ $M64" ../gcc-&gcc-version;/configure --prefix=/tools \
     --with-local-prefix=/tools --disable-nls --disable-shared \
-    --enable-languages=c --disable-multilib --with-arch=i486</userinput></screen>
+    --enable-languages=c --disable-multilib \
+    $WITHARCH
+unset M64 WITHARCH</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
@@ -109,24 +120,7 @@ cd ../gcc-build</userinput></screen>
 
     <para>Continue with compiling the package:</para>
 
-<screen><userinput>make bootstrap</userinput></screen>
-
-    <variablelist>
-      <title>The meaning of the make parameter:</title>
-
-      <varlistentry>
-        <term><parameter>bootstrap</parameter></term>
-        <listitem>
-          <para>This target does not just compile GCC, but compiles it
-          several times. It uses the programs compiled in a first round
-          to compile itself a second time, and then again a third time.
-          It then compares these second and third compiles to make sure
-          it can reproduce itself flawlessly. This also implies that it
-          was compiled correctly.</para>
-        </listitem>
-      </varlistentry>
-
-    </variablelist>
+<screen><userinput>make</userinput></screen>
 
     <para>Compilation is now complete. At this point, the test suite would
     normally be run, but, as mentioned before, the test suite framework is

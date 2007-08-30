@@ -57,10 +57,16 @@ cd ../binutils-build</userinput></screen>
       &amp;&amp; make install; }</userinput>.</para>
     </note>
 
+    <para>If our host is a multilib machine, we want to ensure that we
+    build 64-bit binaries, so we'll test for that and set a variable if so:</para>
+
+<screen><userinput>test $(uname -m | grep 64) &amp;&amp; M64="-m64"</userinput></screen>
+
     <para>Now prepare Binutils for compilation:</para>
 
-<screen><userinput>CC="gcc -B/usr/bin/" ../binutils-&binutils-version;/configure \
-    --prefix=/tools --disable-nls --disable-werror</userinput></screen>
+<screen><userinput>CC="gcc -B/usr/bin/ $M64" ../binutils-&binutils-version;/configure \
+    --prefix=/tools --disable-nls --disable-werror
+unset M64</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
@@ -113,20 +119,21 @@ cd ../binutils-build</userinput></screen>
     tests at this point are minimal since the programs from this
     first pass will soon be replaced by those from the second.</para>
 
+    <para>Create a symlink to ensure the sanity of our toolchain:</para>
+
+<screen><userinput>mkdir -v /tools/lib
+ln -sv lib /tools/lib64</userinput></screen>
+
     <para>Install the package:</para>
 
 <screen><userinput>make install</userinput></screen>
 
-    <para>Next, prepare the linker for the <quote>Adjusting</quote> phase
+    <para>Finally, prepare the linker for the <quote>Adjusting</quote> phase
     later on:</para>
 
 <screen><userinput>make -C ld clean
 make -C ld LIB_PATH=/tools/lib
 cp -v ld/ld-new /tools/bin</userinput></screen>
-
-    <para>Finally, create a symlink to ensure the sanity of our toolchain:</para>
-
-<screen><userinput>ln -nsv lib /tools/lib64</userinput></screen>
 
     <variablelist>
       <title>The meaning of the make parameters:</title>
