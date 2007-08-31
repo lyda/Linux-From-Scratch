@@ -137,7 +137,7 @@ cd ../gcc-build</userinput></screen>
     <para>The --with-arch flag is only necessary for x86 machines.</para>
 
 <screen><userinput>case $(uname -m) in
-  x86) WITHARCH="--with-arch=i486" ;;
+  i?86) WITHARCH="--with-arch=i486" ;;
 esac</userinput></screen>
 
     <para>Now prepare GCC for compilation:</para>
