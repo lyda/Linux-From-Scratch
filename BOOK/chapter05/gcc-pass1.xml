@@ -118,7 +118,13 @@ unset M64 WITHARCH</userinput></screen>
 
     </variablelist>
 
-    <para>Continue with compiling the package:</para>
+    <para>The following command will compile GCC not once, but several times. It
+    uses the programs compiled in a first round to compile itself a second time,
+    and then again a third time. It then compares these second and third compiles
+    to make sure it can reproduce itself flawlessly. This is called
+    <quote>bootstrapping</quote>. Building GCC in this way ensures that it was
+    compiled correctly and is now the default configuration for the released
+    package. Continue with compiling by running:</para>
 
 <screen><userinput>make</userinput></screen>
 

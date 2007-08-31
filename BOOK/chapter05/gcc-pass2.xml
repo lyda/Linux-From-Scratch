@@ -147,7 +147,7 @@ esac</userinput></screen>
     --enable-shared --enable-threads=posix \
     --enable-__cxa_atexit --enable-languages=c,c++ \
     --disable-libstdcxx-pch --disable-multilib \
-    $WITHARCH
+    --disable-bootstrap $WITHARCH
 unset WITHARCH</userinput></screen>
 
     <variablelist>
@@ -200,6 +200,15 @@ unset WITHARCH</userinput></screen>
           <para>Do not build the pre-compiled header (PCH) for
           <filename class="libraryfile">libstdc++</filename>. It takes up a
           lot of space, and we have no use for it.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-bootstrap</parameter></term>
+        <listitem>
+          <para>Bootstrapping the compiler is now the default for GCC. However,
+	  our build method should provide us with a solid compiler without the
+	  need to bootstrap each time.</para>
         </listitem>
       </varlistentry>
 

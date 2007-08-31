@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>2007-08-31</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Add --disable-bootstrap flags to GCC pass 2 and chapter 6 GCC,
+          to achieve traditional LFS build methods with GCC 4.2.1.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2007-08-30</para>
       <itemizedlist>
         <listitem>
@@ -178,4 +188,5 @@
   </itemizedlist>
 
   <para>LFS 6.3 released August 28, 2007.</para>
+
 </sect1>
