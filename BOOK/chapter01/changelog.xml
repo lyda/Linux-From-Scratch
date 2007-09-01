@@ -40,6 +40,9 @@
       <para>2007-08-31</para>
       <itemizedlist>
         <listitem>
+          <para>[jhuntwork] - Update explanatory text for the use of -m64.</para>
+        </listitem>
+        <listitem>
           <para>[jhuntwork] - Update explanatory text for GCC's --with-arch parameter.</para>
         </listitem>
         <listitem>

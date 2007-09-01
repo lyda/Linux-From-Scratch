@@ -57,9 +57,8 @@ cd ../binutils-build</userinput></screen>
       &amp;&amp; make install; }</userinput>.</para>
     </note>
 
-    <para>Test to see if the host is a multilib capable machine and set a variable
-    if it is. This ensures that only 64-bit binaries are built if using such a host.
-    </para>
+    <para>Test to see if the host is a 64-bit capable machine and set a variable
+    if it is.</para>
 
 <screen><userinput>test $(uname -m | grep 64) &amp;&amp; M64="-m64"</userinput></screen>
 
@@ -73,13 +72,23 @@ unset M64</userinput></screen>
       <title>The meaning of the configure options:</title>
 
       <varlistentry>
-        <term><envar>CC="gcc -B/usr/bin/"</envar></term>
+        <term><envar>CC="gcc -B/usr/bin/ $M64"</envar></term>
         <listitem>
           <para>This forces <command>gcc</command> to prefer the linker from
           the host in <filename class="directory">/usr/bin</filename>. This
           is necessary on some hosts where the new <command>ld</command>
           built here is not compatible with the host's <command>gcc</command>.
           </para>
+	  <para>Also, if the cpu-type is 64-bit capable, the variable <envar>$M64</envar>
+	  will contain the parameter <parameter>-m64</parameter>. Otherwise, the
+	  variable is empty. The parameter forces <command>gcc</command> to build
+	  64-bit binaries. Using that parameter here and for the next package
+	  ensures creation of a linker, assembler and compiler that will in turn
+	  create only 64-bit binaries. This is necessary since currently this book
+	  does not support the creation of multilib systems, i.e., those with both
+	  32-bit and 64-bit libraries. This will only make a difference on hosts that
+	  are themselves multilib and employ a compiler that creates 32-bit binaries
+	  by default.</para>
         </listitem>
       </varlistentry>
 
