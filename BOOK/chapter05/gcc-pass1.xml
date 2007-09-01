@@ -110,9 +110,17 @@ unset M64 WITHARCH</userinput></screen>
       <varlistentry>
         <term><parameter>--with-arch=i486</parameter></term>
         <listitem>
-    	  <para>On x86 machines Glibc needs to be built for a minimum architecture
-	  of <quote>i486</quote>. Setting this for the GCC build ensures that the
-	  entire system is built consistently.</para>
+    	  <para>On x86 machines Glibc-&glibc-version; needs to be built for a
+	  minimum architecture of <quote>i486</quote>. In fact, Glibc developers suggest
+	  setting the compiler flag <parameter>-march=i486</parameter> when compiling it.
+	  However, by using the above parameter for the GCC build, we can set a default
+	  value for <parameter>-march</parameter> at the compiler level, ensuring that
+	  the entire system is built consistently, i.e., for the same cpu-type.
+	  Of course, values greater or more specific than <quote>i486</quote> could be
+	  used. See <command>man gcc</command> for other acceptable cpu-types.
+	  Keep in mind that using an incompatible cpu-type for the machine will result
+	  in breakage. The advantage of <quote>i486</quote> is that it is a generic
+	  option and will work for all modern x86 machines.</para>
         </listitem>
       </varlistentry>
 
