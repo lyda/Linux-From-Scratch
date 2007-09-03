@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>2007-09-03</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Remove -m64 from binutils and gcc pass 1. Tests show that the 32-bit binary
+	  versions still produce the wanted 64-bit code.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2007-08-31</para>
       <itemizedlist>
         <listitem>

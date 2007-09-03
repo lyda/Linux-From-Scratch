@@ -43,22 +43,17 @@
 <screen><userinput>mkdir -v ../gcc-build
 cd ../gcc-build</userinput></screen>
 
-    <para>Test to see if the host is a multilib capable machine and set a variable 
-    if it is. This ensures that only 64-bit binaries are built if using such a host.
-    Also, the --with-arch flag is only necessary for x86 machines.</para>
+    <para>Set the --with-arch flag if the machine is x86:</para>
 
-<screen><userinput>case $(uname -m) in
-  i?86) WITHARCH="--with-arch=i486" ;;
-  x86_64) M64="-m64" ;;
-esac</userinput></screen>
+<screen><userinput>test $(uname -m | grep i?86) &amp;&amp; WITHARCH="--with-arch=i486"</userinput></screen>
 
     <para>Prepare GCC for compilation:</para>
 
-<screen><userinput>CC="gcc -B/usr/bin/ $M64" ../gcc-&gcc-version;/configure --prefix=/tools \
+<screen><userinput>CC="gcc -B/usr/bin/" ../gcc-&gcc-version;/configure --prefix=/tools \
     --with-local-prefix=/tools --disable-nls --disable-shared \
     --enable-languages=c --disable-multilib \
     $WITHARCH
-unset M64 WITHARCH</userinput></screen>
+unset WITHARCH</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
