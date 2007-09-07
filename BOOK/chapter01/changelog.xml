@@ -36,6 +36,16 @@
     </listitem>
 -->
 
+     <listitem>
+      <para>2007-09-07</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Added sect1info metainformation blocks to packages
+          pages to help adding package manager support into jhalfs.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
     <listitem>
       <para>2007-09-03</para>
       <itemizedlist>
@@ -74,12 +84,12 @@
 	</listitem>
       </itemizedlist>
     </listitem>
- 
+
     <listitem>
       <para>2007-08-27</para>
       <itemizedlist>
         <listitem>
-          <para>[bdubbs] - Upgrade to Linux-2.6.22.5. Fixes 
+          <para>[bdubbs] - Upgrade to Linux-2.6.22.5. Fixes
           <ulink url="&lfs-ticket-root;2064">#2065</ulink>.</para>
         </listitem>
         <listitem>
