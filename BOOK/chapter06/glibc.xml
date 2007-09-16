@@ -91,7 +91,7 @@ sed -i &quot;s|libs -o|libs -L/usr/lib -Wl,-dynamic-linker=$DL -o|&quot; \
 unset DL</userinput></screen>
 
     <para>The <command>ldd</command> shell script contains Bash-specific
-    syntax. Change it's default program interpreter to <command>/bin/bash</command>
+    syntax. Change its default program interpreter to <command>/bin/bash</command>
     in case another <command>/bin/sh</command> is installed as described in the
     <ulink url="&blfs-root;view/svn/postlfs/shells.html">Shells</ulink>
     chapter of the BLFS book:</para>

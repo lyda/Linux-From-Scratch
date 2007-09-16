@@ -37,6 +37,16 @@
 -->
 
     <listitem>
+      <para>2007-09-16</para>
+      <itemizedlist>
+        <listitem>
+          <para>[manuel] - Updated Ncurses contents list and fixes some typos.
+          Thanks to Chris Staub for the patch.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
        <para>2007-09-15</para>
       <itemizedlist>
         <listitem>
