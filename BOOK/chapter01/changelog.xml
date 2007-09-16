@@ -125,32 +125,6 @@
       </itemizedlist>
     </listitem>
 
-    <listitem>
-      <para>2007-08-27</para>
-      <itemizedlist>
-        <listitem>
-          <para>[bdubbs] - Upgrade to Linux-2.6.22.5. Fixes
-          <ulink url="&lfs-ticket-root;2064">#2065</ulink>.</para>
-        </listitem>
-        <listitem>
-          <para>[dnicholson] - Changed the Shadow download URL to a more
-          stable location.</para>
-        </listitem>
-        <listitem>
-          <para>[dnicholson] - Updated the acknowledgements page again.</para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-
-    <listitem>
-      <para>2007-08-21</para>
-      <itemizedlist>
-        <listitem>
-          <para>[bdubbs] - Synced to 6.3 updates:  linux 2.6.22.4,
-          man-db patch, update acknowledgements page.</para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
 
     <listitem>
       <para>2007-08-20</para>
@@ -158,45 +132,12 @@
         <listitem>
           <para>[jhuntwork] - Use --with-arch=i486 on GCC instead of -march=i486 with Glibc.</para>
         </listitem>
-        <listitem>
-          <para>[bryan] - Fix typo in acknowledgements.</para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-
-    <listitem>
-      <para>2007-08-19</para>
-      <itemizedlist>
-        <listitem>
-          <para>[bdubbs] - Upgrade to Linux-2.6.22.3, fixes
-             <ulink url="&lfs-ticket-root;2060">#2060</ulink>..</para>
-        </listitem>
-        <listitem>
-          <para>[bdubbs] - Updated acknowledgements.</para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-
-    <listitem>
-      <para>2007-08-13</para>
-      <itemizedlist>
-        <listitem>
-          <para>[dnicholson] - Updated to LFS-Bootscripts-20070813.</para>
-        </listitem>
       </itemizedlist>
     </listitem>
 
     <listitem>
       <para>2007-08-11</para>
       <itemizedlist>
-	<listitem>
-          <para>[bdubbs] - Upgrade to Linux-2.6.22.2, fixes
-          <ulink url="&lfs-ticket-root;2059">#2059</ulink>.</para>
-        </listitem>
-        <listitem>
-          <para>[dnicholson] - Changed the Bash testsuite standard input fix
-          to only affect the necessary test script.</para>
-	</listitem>
 	<listitem>
 	  <para>[jhuntwork] - Add -march=i486 to Glibc for x86 builds as default of i386 is
           incompatible.</para>
