@@ -59,14 +59,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>DB Fixes Patch - <token>&db-fixes-patch-size;</token>:</term>
-      <listitem>
-        <para>Download: <ulink url="&patches-root;&db-fixes-patch;"/></para>
-        <para>MD5 sum: <literal>&db-fixes-patch-md5;</literal></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Diffutils Internationalization Fixes Patch - <token>&diffutils-i18n-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&diffutils-i18n-patch;"/></para>
@@ -191,22 +183,6 @@
       <listitem>
         <para>Download: <ulink url="&patches-root;&shadow-useradd-patch;"/></para>
         <para>MD5 sum: <literal>&shadow-useradd-patch-md5;</literal></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Sysklogd 8-Bit Cleanness Patch - <token>&sysklogd-8bit-patch-size;</token>:</term>
-      <listitem>
-        <para>Download: <ulink url="&patches-root;&sysklogd-8bit-patch;"/></para>
-        <para>MD5 sum: <literal>&sysklogd-8bit-patch-md5;</literal></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Sysklogd Fixes Patch - <token>&sysklogd-fixes-patch-size;</token>:</term>
-      <listitem>
-        <para>Download: <ulink url="&patches-root;&sysklogd-fixes-patch;"/></para>
-        <para>MD5 sum: <literal>&sysklogd-fixes-patch-md5;</literal></para>
       </listitem>
     </varlistentry>
 

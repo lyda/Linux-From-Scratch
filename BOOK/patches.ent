@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Start of Common Patches -->
-<!ENTITY bash-fixes-patch "bash-&bash-version;-fixes-5.patch">
-<!ENTITY bash-fixes-patch-md5 "70e2c3983575a8e82f8601a417e126f0">
-<!ENTITY bash-fixes-patch-size "32 KB">
+<!ENTITY bash-fixes-patch "bash-&bash-version;-fixes-6.patch">
+<!ENTITY bash-fixes-patch-md5 "b81a6b53cd361b3b2291a762dcba87d0">
+<!ENTITY bash-fixes-patch-size "24 KB">
 
 
 <!ENTITY bzip2-docs-patch "bzip2-&bzip2-version;-install_docs-1.patch">
@@ -22,11 +22,6 @@
 <!ENTITY coreutils-uname-patch "coreutils-&coreutils-version;-uname-1.patch">
 <!ENTITY coreutils-uname-patch-md5 "c05b735710fbd62239588c07084852a0">
 <!ENTITY coreutils-uname-patch-size "4.6 KB">
-
-
-<!ENTITY db-fixes-patch "db-&db-version;-fixes-1.patch">
-<!ENTITY db-fixes-patch-md5 "4d6a476c9ccd1bb9fba9de0b5229f0da">
-<!ENTITY db-fixes-patch-size "2.8 KB">
 
 
 <!ENTITY diffutils-i18n-patch "diffutils-&diffutils-version;-i18n-1.patch">
@@ -95,23 +90,14 @@
 <!ENTITY perl-libc-patch-size "1.1 KB">
 
 
-<!ENTITY readline-fixes-patch "readline-&readline-version;-fixes-3.patch">
-<!ENTITY readline-fixes-patch-md5 "dfa4b750f226cf9ea034ec753a78a742">
-<!ENTITY readline-fixes-patch-size "3.4 KB">
+<!ENTITY readline-fixes-patch "readline-&readline-version;-fixes-4.patch">
+<!ENTITY readline-fixes-patch-md5 "4da6bf2066a7603c7bb0ab1f52243316">
+<!ENTITY readline-fixes-patch-size "12.5 KB">
 
 
 <!ENTITY shadow-useradd-patch "shadow-&shadow-version;-useradd_fix-2.patch">
 <!ENTITY shadow-useradd-patch-md5 "5f35528f38d5432d5fa2dd79d04bdfdd">
 <!ENTITY shadow-useradd-patch-size "6.1 KB">
-
-
-<!ENTITY sysklogd-8bit-patch "sysklogd-&sysklogd-version;-8bit-1.patch">
-<!ENTITY sysklogd-8bit-patch-md5 "cc0d9c3bd67a6b6357e42807cf06073e">
-<!ENTITY sysklogd-8bit-patch-size "0.9 KB">
-
-<!ENTITY sysklogd-fixes-patch "sysklogd-&sysklogd-version;-fixes-2.patch">
-<!ENTITY sysklogd-fixes-patch-md5 "ed5b25ca9a4eeb4f4f82b300a27b1ef4">
-<!ENTITY sysklogd-fixes-patch-size "32 KB">
 
 
 <!ENTITY texinfo-multibyte-patch "texinfo-&texinfo-version;-multibyte-1.patch">
@@ -130,9 +116,9 @@
 <!ENTITY util-linux-lseek-patch-md5 "5d6c86321c1ea74d7ed7cf57861da423">
 <!ENTITY util-linux-lseek-patch-size "10 KB">
 
-<!ENTITY vim-fixes-patch "vim-&vim-version;-fixes-1.patch">
-<!ENTITY vim-fixes-patch-md5 "744bc215560d3fbe80bfef4bab270f9a">
-<!ENTITY vim-fixes-patch-size "19.6 KB">
+<!ENTITY vim-fixes-patch "vim-&vim-version;-fixes-2.patch">
+<!ENTITY vim-fixes-patch-md5 "4b33bda20c4e75601cd581b745477a2d">
+<!ENTITY vim-fixes-patch-size "294 KB">
 
 <!ENTITY vim-mandir-patch "vim-&vim-version;-mandir-1.patch">
 <!ENTITY vim-mandir-patch-md5 "b6426eb4192faba1e867ddd502323f5b">

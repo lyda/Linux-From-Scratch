@@ -49,17 +49,11 @@
 <screen><userinput>mkdir -v ../gcc-build
 cd ../gcc-build</userinput></screen>
 
-    <para>Set the --with-arch flag if the machine is x86:</para>
-
-<screen><userinput>test $(uname -m | grep i?86) &amp;&amp; WITHARCH="--with-arch=i486"</userinput></screen>
-
     <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>CC="gcc -B/usr/bin/" ../gcc-&gcc-version;/configure --prefix=/tools \
     --with-local-prefix=/tools --disable-nls --disable-shared \
-    --enable-languages=c --disable-multilib \
-    $WITHARCH
-unset WITHARCH</userinput></screen>
+    --enable-languages=c --disable-multilib</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
@@ -105,23 +99,6 @@ unset WITHARCH</userinput></screen>
         <term><parameter>--disable-multilib</parameter></term>
         <listitem>
           <para>We currently only want to build support for 64-bit libraries.</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>--with-arch=i486</parameter></term>
-        <listitem>
-    	  <para>On x86 machines Glibc-&glibc-version; needs to be built for a
-	  minimum architecture of <quote>i486</quote>. In fact, Glibc developers suggest
-	  setting the compiler flag <parameter>-march=i486</parameter> when compiling it.
-	  However, by using the above parameter for the GCC build, we can set a default
-	  value for <parameter>-march</parameter> at the compiler level, ensuring that
-	  the entire system is built consistently, i.e., for the same cpu-type.
-	  Of course, values greater or more specific than <quote>i486</quote> could be
-	  used. See <command>man gcc</command> for other acceptable cpu-types.
-	  Keep in mind that using an incompatible cpu-type for the machine will result
-	  in breakage. The advantage of <quote>i486</quote> is that it is a generic
-	  option and will work for all modern x86 machines.</para>
         </listitem>
       </varlistentry>
 

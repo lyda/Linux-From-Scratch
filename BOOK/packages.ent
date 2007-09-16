@@ -80,10 +80,10 @@
 <!ENTITY coreutils-ch6-du "72.4 MB">
 <!ENTITY coreutils-ch6-sbu "1.0 SBU">
 
-<!ENTITY db-version "4.5.20">
-<!ENTITY db-size "9,064 KB">
+<!ENTITY db-version "4.6.19">
+<!ENTITY db-size "11,600 KB">
 <!ENTITY db-url "http://download-east.oracle.com/berkeley-db/db-&db-version;.tar.gz">
-<!ENTITY db-md5 "b0f1c777708cb8e9d37fb47e7ed3312d">
+<!ENTITY db-md5 "89c7390ff120d5ebf3eccc5f97249e79">
 <!ENTITY db-home "http://www.oracle.com/technology/software/products/berkeley-db/index.html">
 <!ENTITY db-ch6-du "77 MB">
 <!ENTITY db-ch6-sbu "1.2 SBU">
@@ -187,7 +187,7 @@
 <!ENTITY gettext-ch6-sbu "1 SBU">
 
 <!ENTITY glibc-version "2.6.1">
-<!ENTITY glibc-size "15,397 KB">
+<!ENTITY glibc-size "15,398 KB">
 <!ENTITY glibc-url "&gnu;glibc/glibc-&glibc-version;.tar.bz2">
 <!ENTITY glibc-md5 "11cf6d3fc86dbe0890b8d00372eb6286">
 <!ENTITY glibc-home "&gnu-software;libc/">
@@ -196,9 +196,9 @@
 <!ENTITY glibc-ch6-du "556 MB testsuite included">
 <!ENTITY glibc-ch6-sbu "19.5 SBU testsuite included">
 <!ENTITY glibc-libidn-version "&glibc-version;">
-<!ENTITY glibc-libidn-size "99 KB">
-<!ENTITY glibc-libidn-url "&gnu;glibc/glibc-libidn-&glibc-libidn-version;.tar.gz">
-<!ENTITY glibc-libidn-md5 "f42ba45d685d51d9c0095c6706210a0d">
+<!ENTITY glibc-libidn-size "100 KB">
+<!ENTITY glibc-libidn-url "&gnu;glibc/glibc-libidn-&glibc-libidn-version;.tar.bz2">
+<!ENTITY glibc-libidn-md5 "503f1315afd808728ebaa75b3d87a7d9">
 <!ENTITY glibc-libidn-home " ">
 
 <!ENTITY grep-version "2.5.1a">
@@ -295,11 +295,11 @@
 
 <!ENTITY linux-major-version "2.6">
 <!ENTITY linux-minor-version "22">
-<!ENTITY linux-patch-version "5">
+<!ENTITY linux-patch-version "6">
 <!ENTITY linux-version "&linux-major-version;.&linux-minor-version;.&linux-patch-version;">
-<!ENTITY linux-size "44,053 KB">
+<!ENTITY linux-size "44,052 KB">
 <!ENTITY linux-url "&kernel;linux/kernel/v&linux-major-version;/linux-&linux-version;.tar.bz2">
-<!ENTITY linux-md5 "f36616d74f2fde72040bccf50db03522">
+<!ENTITY linux-md5 "20af4d1e05bd725e89b691da483276e9">
 <!ENTITY linux-home "http://www.kernel.org/">
 <!ENTITY linux-ch8-du "350 - 450 MB">
 <!ENTITY linux-ch8-sbu "1.5 - 3.5 SBU">
@@ -337,10 +337,10 @@
 <!ENTITY man-db-ch6-du "9 MB">
 <!ENTITY man-db-ch6-sbu "0.2 SBU">
 
-<!ENTITY man-pages-version "2.63">
-<!ENTITY man-pages-size "1,795 KB">
+<!ENTITY man-pages-version "2.64">
+<!ENTITY man-pages-size "1,799 KB">
 <!ENTITY man-pages-url "&kernel;linux/docs/manpages/Archive/man-pages-&man-pages-version;.tar.bz2">
-<!ENTITY man-pages-md5 "aeddbf93dbb0aeac1c8ad950e80aad54">
+<!ENTITY man-pages-md5 "80683dd76cd4eb5aed36ac4401aef4d6">
 <!ENTITY man-pages-home " ">
 <!ENTITY man-pages-ch6-du "37.4 MB">
 <!ENTITY man-pages-ch6-sbu "less than 0.1 SBU">
@@ -437,10 +437,10 @@
 <!ENTITY shadow-ch6-du "20.7 MB">
 <!ENTITY shadow-ch6-sbu "0.3 SBU">
 
-<!ENTITY sysklogd-version "1.4.1">
-<!ENTITY sysklogd-size "80 KB">
+<!ENTITY sysklogd-version "1.5">
+<!ENTITY sysklogd-size "85 KB">
 <!ENTITY sysklogd-url "http://www.infodrom.org/projects/sysklogd/download/sysklogd-&sysklogd-version;.tar.gz">
-<!ENTITY sysklogd-md5 "d214aa40beabf7bdb0c9b3c64432c774">
+<!ENTITY sysklogd-md5 "e053094e8103165f98ddafe828f6ae4b">
 <!ENTITY sysklogd-home "http://www.infodrom.org/projects/sysklogd/">
 <!ENTITY sysklogd-ch6-du "0.6 MB">
 <!ENTITY sysklogd-ch6-sbu "less than 0.1 SBU">

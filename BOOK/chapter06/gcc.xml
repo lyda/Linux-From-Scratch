@@ -78,19 +78,13 @@
 <screen><userinput>mkdir -v ../gcc-build
 cd ../gcc-build</userinput></screen>
 
-    <para>Set the --with-arch flag if the machine is x86:</para>
-
-<screen><userinput>test $(uname -m | grep i?86) &amp;&amp; WITHARCH="--with-arch=i486"</userinput></screen>
-
     <para>Prepare GCC for compilation:</para>
 
 <screen><userinput>../gcc-&gcc-version;/configure --prefix=/usr \
     --libexecdir=/usr/lib --enable-shared \
     --enable-threads=posix --enable-__cxa_atexit \
     --enable-clocale=gnu --enable-languages=c,c++ \
-    --disable-multilib --disable-bootstrap \
-    $WITHARCH
-unset WITHARCH</userinput></screen>
+    --disable-multilib --disable-bootstrap</userinput></screen>
 
     <para>Compile the package:</para>
 

@@ -36,6 +36,46 @@
     </listitem>
 -->
 
+    <listitem>
+       <para>2007-09-15</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Add latest upstream patches for Vim.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Sysklogd-1.5. Fixes
+          <ulink url="&lfs-ticket-root;2055">#2055</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Add latest upstream patches for Readline. Fixes
+          <ulink url="&lfs-ticket-root;2068">#2068</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Man-pages 2.64. Fixes
+          <ulink url="&lfs-ticket-root;2061">#2061</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to Linux-2.6.22.6. Fixes
+          <ulink url="&lfs-ticket-root;2070">#2070</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Remove --with-arch for GCC and adjust CFLAGS for
+	  Glibc instead.
+	  Thanks to Robert Connolly and Dan Nicholson for investigating how best
+	  to adjust CFLAGS, and Greg Schafer for showing the technical
+	  benefits of using CFLAGS with Glibc.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgrade to DB-4.6.19. Fixes
+          <ulink url="&lfs-ticket-root;2051">#2051</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Add latest upstream patches for Bash. Fixes
+          <ulink url="&lfs-ticket-root;2067">#2067</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
      <listitem>
       <para>2007-09-07</para>
       <itemizedlist>
