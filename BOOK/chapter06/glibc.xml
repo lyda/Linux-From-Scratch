@@ -106,7 +106,7 @@ cd ../glibc-build</userinput></screen>
 
     <para>Again, add the needed compiler flag to CFLAGS for x86 machines:</para>
 
-<screen><userinput remap="configure">uname -m | grep -q i?86 &amp;&amp;
+<screen><userinput remap="configure">uname -m | grep -q i[4-7]86 &amp;&amp;
 echo "CFLAGS += -march=i486" &gt; configparms</userinput></screen>
 
     <para>Prepare Glibc for compilation:</para>

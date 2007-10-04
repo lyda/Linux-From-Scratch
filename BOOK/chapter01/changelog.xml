@@ -37,6 +37,15 @@
 -->
 
      <listitem>
+      <para>2007-10-04</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Fixed grep syntax in Glibc.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+     <listitem>
       <para>2007-09-25</para>
       <itemizedlist>
         <listitem>
