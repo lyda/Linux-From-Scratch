@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!ENTITY version "SVN-JH-20070918">
-<!ENTITY releasedate "September 18, 2007">
+<!ENTITY version "SVN-JH-20071004">
+<!ENTITY releasedate "October 4, 2007">
 <!ENTITY milestone "7.0">
 <!ENTITY generic-version "development"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
 
