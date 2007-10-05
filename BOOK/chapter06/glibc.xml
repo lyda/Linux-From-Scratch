@@ -106,8 +106,8 @@ cd ../glibc-build</userinput></screen>
 
     <para>Again, add the needed compiler flags to CFLAGS for x86 machines:</para>
 
-<screen><userinput remap="configure">if [ uname -m | grep -q i[4-7]86 ]; do
-  echo "CFLAGS += -march=i486" &gt; configparms
+<screen><userinput remap="configure">case `uname -m` in
+  i?86) echo "CFLAGS += -march=i486 -mtune=native" &gt; configparms ;;
 done</userinput></screen>
 
     <para>Prepare Glibc for compilation:</para>
