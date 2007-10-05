@@ -104,10 +104,11 @@ unset DL</userinput></screen>
 <screen><userinput remap="pre">mkdir -v ../glibc-build
 cd ../glibc-build</userinput></screen>
 
-    <para>Again, add the needed compiler flag to CFLAGS for x86 machines:</para>
+    <para>Again, add the needed compiler flags to CFLAGS for x86 machines:</para>
 
-<screen><userinput remap="configure">uname -m | grep -q i[4-7]86 &amp;&amp;
-echo "CFLAGS += -march=i486" &gt; configparms</userinput></screen>
+<screen><userinput remap="configure">if [ uname -m | grep -q i[4-7]86 ]; do
+  echo "CFLAGS += -march=i486" &gt; configparms
+done</userinput></screen>
 
     <para>Prepare Glibc for compilation:</para>
 

@@ -37,6 +37,15 @@
 -->
 
      <listitem>
+      <para>2007-10-05</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Added -mtune to Glibc CFLAGS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+     <listitem>
       <para>2007-10-04</para>
       <itemizedlist>
         <listitem>
