@@ -108,7 +108,7 @@ cd ../glibc-build</userinput></screen>
 
 <screen><userinput remap="configure">case `uname -m` in
   i?86) echo "CFLAGS += -march=i486 -mtune=native" &gt; configparms ;;
-done</userinput></screen>
+esac</userinput></screen>
 
     <para>Prepare Glibc for compilation:</para>
 
