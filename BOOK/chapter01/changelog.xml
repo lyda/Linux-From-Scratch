@@ -40,6 +40,9 @@
       <para>2007-10-06</para>
       <itemizedlist>
         <listitem>
+          <para>[jhuntwork] - Made book buildable by powerpc.</para>
+        </listitem>
+        <listitem>
           <para>[jhuntwork] - Moved GCC's bootstrap to pass 2.</para>
         </listitem>
       </itemizedlist>

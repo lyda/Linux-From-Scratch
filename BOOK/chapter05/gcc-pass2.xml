@@ -89,7 +89,8 @@ sed 's@\./fixinc\.sh@-c true@' gcc/Makefile.in.orig &gt; gcc/Makefile.in</userin
     GCC. That is, all of the binaries created during the build will link
     against the new Glibc. Issue:</para>
 
-<screen><userinput remap="pre">for file in $(find gcc/config -name linux64.h -o -name linux.h)
+<screen><userinput remap="pre">for file in \
+ $(find gcc/config -name linux64.h -o -name linux.h -o -name sysv4.h)
 do
   cp -uv $file{,.orig}
   sed -e 's@/lib\(64\)\?\(32\)\?/ld@/tools&amp;@g' \
@@ -102,7 +103,8 @@ done</userinput></screen>
 
     <para>In case the above seems hard to follow, let's break it down a bit.
     First we find all the files under the gcc/config directory that are named
-    either <filename>linux.h</filename> or <filename>linux64.h</filename>.
+    either <filename>linux.h</filename>, <filename>linux64.h</filename> or
+    <filename>sysv4.h</filename>.
     For each file found, we copy it to a file of the same name but with an added
     suffix of <quote>.orig</quote>. Then the first sed expression prepends
     <quote>/tools</quote> to every instance of <quote>/lib/ld</quote>,
