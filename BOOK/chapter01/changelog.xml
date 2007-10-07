@@ -37,6 +37,15 @@
 -->
 
      <listitem>
+      <para>2007-10-06</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Moved GCC's bootstrap to pass 2.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+     <listitem>
       <para>2007-10-05</para>
       <itemizedlist>
         <listitem>

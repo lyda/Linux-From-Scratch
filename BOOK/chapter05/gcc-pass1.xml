@@ -53,7 +53,8 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput remap="configure">CC="gcc -B/usr/bin/" ../gcc-&gcc-version;/configure --prefix=/tools \
     --with-local-prefix=/tools --disable-nls --disable-shared \
-    --enable-languages=c --disable-multilib</userinput></screen>
+    --enable-languages=c --disable-multilib \
+    --disable-bootstrap</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
@@ -102,15 +103,18 @@ cd ../gcc-build</userinput></screen>
         </listitem>
       </varlistentry>
 
+      <varlistentry>
+        <term><parameter>--disable-bootstrap</parameter></term>
+        <listitem>
+          <para>Bootstrapping the compiler is now the default for GCC. However,
+          bootstrapping now would mean using our new Binutils to link against
+	  the host's libc, which in some cases produces unexpected results.</para>
+        </listitem>
+      </varlistentry>
+
     </variablelist>
 
-    <para>The following command will compile GCC not once, but several times. It
-    uses the programs compiled in a first round to compile itself a second time,
-    and then again a third time. It then compares these second and third compiles
-    to make sure it can reproduce itself flawlessly. This is called
-    <quote>bootstrapping</quote>. Building GCC in this way ensures that it was
-    compiled correctly and is now the default configuration for the released
-    package. Continue with compiling by running:</para>
+    <para>Continue with compiling by running:</para>
 
 <screen><userinput remap="make">make</userinput></screen>
 
