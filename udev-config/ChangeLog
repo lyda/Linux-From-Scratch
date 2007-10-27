@@ -1,3 +1,10 @@
+2007-10-27	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 25-lfs.rules: Some rules in here are duplicates of rules from udev's
+	  new 50-udev-defaults.rules file; remove them. Override permissions
+	  where needed elsewhere (and document overrides in comments).
+	* 26-modprobe.rules: Provided by udev's 80-drivers.rules and built-in
+	  modaliases for SCSI device-type modules in 2.6.22+ kernels; remove.
+
 2007-07-31	Dan Nicholson <dnicholson@linuxfromscratch.org>
 	* 25-lfs.rules: Changed the usb_device rule tto create /dev/bus/usb
 	  nodes if the usb_device in 2.6.22+ kernels. The rule was also changed
