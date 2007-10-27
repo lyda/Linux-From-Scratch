@@ -5,16 +5,16 @@ RULES_DIR = /etc/udev/rules.d
 INSTALL = install
 INSTALL_DATA = $(INSTALL) -m644
 RULES_FILES = \
-	25-lfs.rules \
-	26-modprobe.rules \
-	27-firmware.rules \
-	81-cdrom.rules
+	51-lfs.rules \
+	61-cdrom.rules \
+	81-firmware.rules
 DOC_FILES = $(RULES_FILES:.rules=.txt)
 
 EXTRA_DOC_FILES = \
 	05-udev-early.txt \
 	60-persistent-input.txt \
 	60-persistent-storage.txt \
+	80-drivers.txt \
 	95-udev-late.txt
 
 # Figure out where to install the docs

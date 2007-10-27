@@ -15,6 +15,8 @@
 	* doc/27-firmware.txt: Rename to 81-firmware.txt.
 	* doc/81-cdrom.txt: Rename to 61-cdrom.txt.
 
+	* Makefile: Use new filenames.
+
 2007-07-31	Dan Nicholson <dnicholson@linuxfromscratch.org>
 	* 25-lfs.rules: Changed the usb_device rule tto create /dev/bus/usb
 	  nodes if the usb_device in 2.6.22+ kernels. The rule was also changed
