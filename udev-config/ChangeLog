@@ -5,6 +5,16 @@
 	* 26-modprobe.rules: Provided by udev's 80-drivers.rules and built-in
 	  modaliases for SCSI device-type modules in 2.6.22+ kernels; remove.
 
+	* 25-lfs.rules: Move to 51-lfs.rules.
+	* 27-firmware.rules: Move to 81-firmware.rules.
+	* 81-cdrom.rules: Move to 61-cdrom.rules.
+
+	* doc/25-lfs.txt: Rename to 51-lfs.txt.
+	* doc/26-modprobe.txt: Rename to 80-drivers.txt, and modify to reflect
+	  the upstream rules.
+	* doc/27-firmware.txt: Rename to 81-firmware.txt.
+	* doc/81-cdrom.txt: Rename to 61-cdrom.txt.
+
 2007-07-31	Dan Nicholson <dnicholson@linuxfromscratch.org>
 	* 25-lfs.rules: Changed the usb_device rule tto create /dev/bus/usb
 	  nodes if the usb_device in 2.6.22+ kernels. The rule was also changed
