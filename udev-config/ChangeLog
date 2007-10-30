@@ -1,3 +1,8 @@
+2007-10-30	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 55-lfs.rules: Since the dialout group was renamed to uucp, delete
+	  the rules that override upstream's assignment of the dialout group.
+	  Replace "dialout" with "uucp" on the remaining rules.
+
 2007-10-29	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* 51-lfs.rules: Move to 55-lfs.rules.
 	* doc/51-lfs.rules: Move to doc/55-lfs.rules.
