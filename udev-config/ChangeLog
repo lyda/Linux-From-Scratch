@@ -1,3 +1,7 @@
+2007-10-29	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 51-lfs.rules: Move to 55-lfs.rules.
+	* doc/51-lfs.rules: Move to doc/55-lfs.rules.
+
 2007-10-27	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* 25-lfs.rules: Some rules in here are duplicates of rules from udev's
 	  new 50-udev-defaults.rules file; remove them. Override permissions
