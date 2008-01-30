@@ -15,10 +15,10 @@
 <!ENTITY autoconf-ch6-du "8.1 MB">
 <!ENTITY autoconf-ch6-sbu "less than 0.1 SBU">
 
-<!ENTITY automake-version "1.10">
-<!ENTITY automake-size "873 KB">
+<!ENTITY automake-version "1.10.1">
+<!ENTITY automake-size "897 KB">
 <!ENTITY automake-url "&gnu;automake/automake-&automake-version;.tar.bz2">
-<!ENTITY automake-md5 "0e2e0f757f9e1e89b66033905860fded">
+<!ENTITY automake-md5 "4510391e6b3edaa4cffb3ced87c9560c">
 <!ENTITY automake-home "&gnu-software;automake/">
 <!ENTITY automake-ch6-du "7.9 MB">
 <!ENTITY automake-ch6-sbu "less than 0.1 SBU">
@@ -136,10 +136,10 @@
 <!ENTITY file-ch6-du "7.9 MB">
 <!ENTITY file-ch6-sbu "0.1 SBU">
 
-<!ENTITY findutils-version "4.2.31">
-<!ENTITY findutils-size "1,296 KB">
+<!ENTITY findutils-version "4.2.32">
+<!ENTITY findutils-size "1,398 KB">
 <!ENTITY findutils-url "&gnu;findutils/findutils-&findutils-version;.tar.gz">
-<!ENTITY findutils-md5 "a0e31a0f18a49709bf5a449867c8049a">
+<!ENTITY findutils-md5 "aaa6beeb41a6f04963dff58f24a55b96">
 <!ENTITY findutils-home "&gnu-software;findutils/">
 <!ENTITY findutils-ch5-du "13.6 MB">
 <!ENTITY findutils-ch5-sbu "0.2 SBU">
@@ -296,12 +296,13 @@
 <!ENTITY libtool-ch6-sbu "0.1 SBU">
 
 <!ENTITY linux-major-version "2.6">
-<!ENTITY linux-minor-version "23">
-<!ENTITY linux-patch-version "14">
-<!ENTITY linux-version "&linux-major-version;.&linux-minor-version;.&linux-patch-version;">
-<!ENTITY linux-size "44,403 KB">
+<!ENTITY linux-minor-version "24">
+<!ENTITY linux-patch-version "">
+<!--<!ENTITY linux-version "&linux-major-version;.&linux-minor-version;.&linux-patch-version;">-->
+<!ENTITY linux-version "&linux-major-version;.&linux-minor-version;">
+<!ENTITY linux-size "45,642 KB">
 <!ENTITY linux-url "&kernel;linux/kernel/v&linux-major-version;/linux-&linux-version;.tar.bz2">
-<!ENTITY linux-md5 "63a6a28ad2480edcffbc09c008b0939d">
+<!ENTITY linux-md5 "3f23ad4b69d0a552042d1ed0f4399857">
 <!ENTITY linux-home "http://www.kernel.org/">
 <!ENTITY linux-ch8-du "350 - 450 MB">
 <!ENTITY linux-ch8-sbu "1.5 - 3.5 SBU">

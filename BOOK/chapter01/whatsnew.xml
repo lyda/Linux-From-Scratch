@@ -32,9 +32,9 @@
     <!--<listitem>
       <para>Autoconf &autoconf-version;</para>
     </listitem>-->
-    <!--<listitem>
+    <listitem>
       <para>Automake &automake-version;</para>
-    </listitem>-->
+    </listitem>
     <!--<listitem>
       <para>Bash &bash-version;</para>
     </listitem>-->
@@ -68,9 +68,9 @@
     <listitem>
       <para>File &file-version;</para>
     </listitem>
-    <!--<listitem>
+    <listitem>
       <para>Findutils &findutils-version;</para>
-    </listitem>-->
+    </listitem>
     <!--<listitem>
       <para>Flex &flex-version;</para>
     </listitem>-->
