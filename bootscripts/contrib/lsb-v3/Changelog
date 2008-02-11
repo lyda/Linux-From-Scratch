@@ -1,3 +1,4 @@
+20080210 - [dj] * Updated documentation
 20070820 - [dj] * Synced with LFS-bootscripts
 20070705 - [dj] * Synced with LFS-bootscripts
                 * Removed 'stty' from the environment setup as it breaks 

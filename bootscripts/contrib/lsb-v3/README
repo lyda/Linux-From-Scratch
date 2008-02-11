@@ -1,7 +1,7 @@
 LSB-V3 README
 
 The scripts contianed in this directory are a complete rewrite of the
-boot scripts from LFS-6.1 (updated for LFS-SVN about 2007-02-16).  As is
+boot scripts from LFS-6.1 (updated for LFS-SVN about 2007-08-20).  As is
 usually the case with a rewrite, there have been many changes:
 
 LSB Version 3.1 Compliant Scripts - Immediately noticable are the LSB headers
@@ -18,13 +18,18 @@ single command, so maybe no help at all WRT translated boot messages.
 LSB 3.1 Omissions - Unfortunately, this package is not completely LSB
 compliant as it lacks install-initd and remove-initd programs.  The current
 popular flavor of these programs is written in Python, which, as you should
-know, is not installed until BLFS.  I gave up on a bash version of these
-scripts when I lost scope about three bash arrays deep (hint: you only want
-to read from and write to disk one time at program start and end repectively).
-But do feel free to write a perl or bash implementation if you have the
-ability and patience to do so.  You might see a contrib directory appear in
-BLFS-Bootscripts someday in the future if there is any demand for the already
-writen Python version of these programs.
+know, is not installed until BLFS.  I began work on a bash implementation,
+with the original intent to use GNU make to procees the generated config
+file.  I later decided to use bash directly, but got lost in tab stops and
+have not yet had the time to correct for the change.  The gerneral operation
+of the scripts is correct, but parsing the generated temp file is broken ATM
+due to the change from tab to space delimiter.  Feel free to have a hack at
+the incomplete scripts I've placed in my home directory on quantum.  They
+have been heavily commented, and don't actually do anything as they are not
+yet working as expected.  The organize_links script is the one that does all
+of the magic voodoo for a complete reorder.  Keep in mind that this script
+would never be called if using only LFS/BLFS supplied scripts.
+http://www.linuxfromscratch.org/~dj/lsb-scripts/
 
 Distribution Independent - this original goal for the LFS scripts has been
 stretched even further by providing both a global rc config file that
@@ -69,8 +74,9 @@ flying fingers accustomed to it!  Of course, this is still configurable in
 
 LSB Functions - The previous lfs-bootscripts sourced a functions file
 located at /etc/rc.d/init.d/functions.  This file has been renamed
-lfs-functions to segregate it from the old.  Both old and new bootscripts
-can be used simultaneously in a SYS-V setup (with proper symlinks in place).
+<distro>-functions to segregate it from the old. The name is configurable
+by the rc.site configuration file.  Both old and new bootscripts can be
+used simultaneously in a SYS-V setup (with proper symlinks in place).
 LSB defined functions are used where possible, but the lfs-functions file
 provides, easy to use wraper functions that
 start/stop/reload/force-reload/restart programs, evaluate the numerical
@@ -88,7 +94,7 @@ completely removable) in the /etc/sysconfig/rc.site file.
 Complete Rewrite - Yep.  That doesn't mean that code wasn't reused when
 possible, so Alexander, Bryan, Dan, Gerard, Jeremy, Jim, Mathias, Matthew,
 Nathan, and countless other contributors (whose names I've forgotten and will
-promptly be reminded of (please)) are owed credit for these as well.  That
+promptly be reminded of (please)) are due credit for these as well.  That
 said, at very least, this is a complete reorganisation that I've tested to
 the best of my ability, but there probably are some hidden bugs that will
 come to lite when used more frequently.  Please give me a shout _when_ you
