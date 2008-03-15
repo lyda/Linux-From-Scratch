@@ -83,14 +83,14 @@ start_daemon()
         then
             # determine the pid by discovery
             pidlist=`pidofproc "${1}"`
+            retval="${?}"
         else
             # The PID file contains the needed PIDs
             # Note that by LSB requirement, the path must be given to pidofproc,
             # however, it is not used by the current implementation or standard.
             pidlist=`pidofproc -p "${pidfile}" "${1}"`
+            retval="${?}"
         fi
-
-        retval="${?}"
 
         # return a value ONLY 
         # It is the init script's (or distribution's functions) responsibilty
@@ -101,6 +101,12 @@ start_daemon()
                 # program is already running correctly, this is a 
                 # succesful start.
                 return 0
+                ;;
+
+            1)
+                # program is not running, but an invalid pid file exists
+                # remove the pid file and continue
+                rm -f "${pidfile}"
                 ;;
 
             3)
@@ -205,14 +211,14 @@ killproc()
     then
         # determine the pid by discovery
         pidlist=`pidofproc "${1}"`
+        retval="${?}"
     else
         # The PID file contains the needed PIDs
         # Note that by LSB requirement, the path must be given to pidofproc,
         # however, it is not used by the current implementation or standard.
         pidlist=`pidofproc -p "${pidfile}" "${1}"`
+        retval="${?}"
     fi
-
-    retval="${?}"
 
     # return a value ONLY
     # It is the init script's (or distribution's functions) responsibilty
@@ -222,6 +228,19 @@ killproc()
         0)
             # program is running correctly
             # do nothing here, let killproc continue.
+            ;;
+
+        1)
+            # program is not running, but an invalid pid file exists
+            # remove the pid file.
+            rm -f "${pidfile}"
+            # this is only a success if no signal was passed.
+            if [ -n "${nosig}" ]
+            then
+                return 0
+            else
+                return 7
+            fi
             ;;
 
         3)
@@ -339,6 +358,7 @@ local prefix
 local progname
 local pidlist
 local lpids
+local exitstatus="0"
 
     # Process arguments
     while true
@@ -395,6 +415,8 @@ local lpids
         kill -0 ${pid} 2> /dev/null
         if [ "${?}" = "0" ]; then
             lpids="${pids}${pid} "
+        else
+            exitstatus="1"
         fi
     done
 
@@ -402,6 +424,7 @@ local lpids
         return 3
     else
         echo "${lpids}"
+        return "${exitstatus}"
     fi
 }
 ################################################################################

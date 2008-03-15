@@ -1,5 +1,11 @@
+Change Log
+
+20080315 - [dj] * Added missing 'stale pid file' checking for pidofproc()
+
 20080210 - [dj] * Updated documentation
+
 20070820 - [dj] * Synced with LFS-bootscripts
+
 20070705 - [dj] * Synced with LFS-bootscripts
                 * Removed 'stty' from the environment setup as it breaks 
                   custom key configs when run from the CLI.
