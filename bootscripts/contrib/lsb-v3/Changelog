@@ -1,5 +1,7 @@
 Change Log
 
+20080315 - [dj] * Corrected test for $pidfile in pidofproc()
+
 20080315 - [dj] * Added missing 'stale pid file' checking for pidofproc()
 
 20080210 - [dj] * Updated documentation
