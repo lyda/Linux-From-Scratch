@@ -420,7 +420,7 @@ local exitstatus="0"
         fi
     done
 
-    if [ -z "${lpids}" -a -z "${pidfile}" ]; then
+    if [ -z "${lpids}" -a ! -f "${pidfile}" ]; then
         return 3
     else
         echo "${lpids}"
