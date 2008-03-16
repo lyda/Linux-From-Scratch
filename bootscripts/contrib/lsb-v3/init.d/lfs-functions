@@ -84,7 +84,7 @@ statusproc()
         log_warning_msg "Not running!"
     fi
 
-    exit "${STATUS}"
+    return "${STATUS}"
 }
 
 ############################### reloadproc() ##################################
