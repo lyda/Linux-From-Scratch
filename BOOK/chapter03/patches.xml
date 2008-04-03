@@ -19,6 +19,14 @@
   <variablelist role="materials">
 
     <varlistentry>
+      <term>Automake Test Suite Patch - <token>&automake-test-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&automake-test-patch;"/></para>
+        <para>MD5 sum: <literal>&automake-test-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Bash Upstream Fixes Patch - <token>&bash-fixes-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&bash-fixes-patch;"/></para>
@@ -51,14 +59,6 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Coreutils Suppress Uptime, Kill, Su Patch - <token>&coreutils-suppress-patch-size;</token>:</term>
-      <listitem>
-        <para>Download: <ulink url="&patches-root;&coreutils-suppress-patch;"/></para>
-        <para>MD5 sum: <literal>&coreutils-suppress-patch-md5;</literal></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
       <term>Coreutils Uname Patch - <token>&coreutils-uname-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&coreutils-uname-patch;"/></para>
@@ -83,7 +83,15 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Grep RedHat Fixes Patch - <token>&grep-fixes-patch-size;</token>:</term>
+      <term>Grep Debian Patch - <token>&grep-debian-patch-size;</token>;</term>
+      <listitem>
+	<para>Download: <ulink url="&patches-root;&grep-debian-patch;"/></para>
+	<para>MD5 sum: <literal>&grep-debian-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Grep Upstream Fixes Patch - <token>&grep-fixes-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&grep-fixes-patch;"/></para>
         <para>MD5 sum: <literal>&grep-fixes-patch-md5;</literal></para>
@@ -123,26 +131,10 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Kbd GCC-4.x Fix Patch - <token>&kbd-gcc4_fixes-patch-size;</token>:</term>
+      <term>Module-init-tools Man-Pages Patch - <token>&module-init-manpages-patch-size;</token>:</term>
       <listitem>
-        <para>Download: <ulink url="&patches-root;&kbd-gcc4_fixes-patch;"/></para>
-        <para>MD5 sum: <literal>&kbd-gcc4_fixes-patch-md5;</literal></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Mktemp Tempfile Patch - <token>&mktemp-tempfile-patch-size;</token>:</term>
-      <listitem>
-        <para>Download: <ulink url="&patches-root;&mktemp-tempfile-patch;"/></para>
-        <para>MD5 sum: <literal>&mktemp-tempfile-patch-md5;</literal></para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term>Module-init-tools Patch - <token>&module-init-modprobe-patch-size;</token>:</term>
-      <listitem>
-        <para>Download: <ulink url="&patches-root;&module-init-modprobe-patch;"/></para>
-        <para>MD5 sum: <literal>&module-init-modprobe-patch-md5;</literal></para>
+        <para>Download: <ulink url="&patches-root;&module-init-manpages-patch;"/></para>
+        <para>MD5 sum: <literal>&module-init-manpages-patch-md5;</literal></para>
       </listitem>
     </varlistentry>
 

@@ -60,20 +60,20 @@
 <!ENTITY bison-ch6-du "12.3 MB">
 <!ENTITY bison-ch6-sbu "0.2 SBU">
 
-<!ENTITY bzip2-version "1.0.4">
-<!ENTITY bzip2-size "822 KB">
+<!ENTITY bzip2-version "1.0.5">
+<!ENTITY bzip2-size "8,228 KB">
 <!ENTITY bzip2-url "http://www.bzip.org/&bzip2-version;/bzip2-&bzip2-version;.tar.gz">
-<!ENTITY bzip2-md5 "fc310b254f6ba5fbb5da018f04533688">
+<!ENTITY bzip2-md5 "3c15a0c8d1d3ee1c46a1634d00617b1a">
 <!ENTITY bzip2-home "http://www.bzip.org/">
-<!ENTITY bzip2-ch5-du "4.2 MB">
+<!ENTITY bzip2-ch5-du "4.8 MB">
 <!ENTITY bzip2-ch5-sbu "less than 0.1 SBU">
-<!ENTITY bzip2-ch6-du "5.3 MB">
+<!ENTITY bzip2-ch6-du "6.5 MB">
 <!ENTITY bzip2-ch6-sbu "less than 0.1 SBU">
 
-<!ENTITY coreutils-version "6.9">
-<!ENTITY coreutils-size "5,258 KB">
-<!ENTITY coreutils-url "&gnu;coreutils/coreutils-&coreutils-version;.tar.bz2">
-<!ENTITY coreutils-md5 "c9607d8495f16e98906e7ed2d9751a06">
+<!ENTITY coreutils-version "6.10">
+<!ENTITY coreutils-size "8,978 KB">
+<!ENTITY coreutils-url "&gnu;coreutils/coreutils-&coreutils-version;.tar.gz">
+<!ENTITY coreutils-md5 "eca0de1bf7389694305d7e52cd76a472">
 <!ENTITY coreutils-home "&gnu-software;coreutils/">
 <!ENTITY coreutils-ch5-du "67.6 MB">
 <!ENTITY coreutils-ch5-sbu "0.5 SBU">
@@ -109,10 +109,10 @@
 <!-- NOTE: When updating e2fsprogs, remember to check the list
      of acceptable features that can be shown by debugfs in
      chapter02/creatingfilesystem.xml -->
-<!ENTITY e2fsprogs-version "1.40.4">
-<!ENTITY e2fsprogs-size "3,954 KB">
+<!ENTITY e2fsprogs-version "1.40.6">
+<!ENTITY e2fsprogs-size "3,977 KB">
 <!ENTITY e2fsprogs-url "&sourceforge;e2fsprogs/e2fsprogs-&e2fsprogs-version;.tar.gz">
-<!ENTITY e2fsprogs-md5 "124d744bdf9d443591eb8193c085944b">
+<!ENTITY e2fsprogs-md5 "d219b7be4f7170400c646f5611c0b702">
 <!ENTITY e2fsprogs-home "http://e2fsprogs.sourceforge.net/">
 <!ENTITY e2fsprogs-ch5-du "31.2 MB">
 <!ENTITY e2fsprogs-ch5-sbu "0.4 SBU">
@@ -130,31 +130,31 @@
 
 <!ENTITY file-version "4.23">
 <!ENTITY file-size "551 KB">
-<!ENTITY file-url "ftp://ftp.gw.com/mirrors/pub/unix/file/file-&file-version;.tar.gz">
+<!ENTITY file-url "ftp://ftp.gw.com/mirrors/unix/file/file-&file-version;.tar.gz">
 <!ENTITY file-md5 "014a69979a8d5225a6ca2bcc4d7e967e">
 <!ENTITY file-home " ">
 <!ENTITY file-ch6-du "7.9 MB">
 <!ENTITY file-ch6-sbu "0.1 SBU">
 
-<!ENTITY findutils-version "4.2.32">
-<!ENTITY findutils-size "1,398 KB">
+<!ENTITY findutils-version "4.2.33">
+<!ENTITY findutils-size "1,421 KB">
 <!ENTITY findutils-url "&gnu;findutils/findutils-&findutils-version;.tar.gz">
-<!ENTITY findutils-md5 "aaa6beeb41a6f04963dff58f24a55b96">
+<!ENTITY findutils-md5 "b7e35aa175778c84942b1fee4144988b">
 <!ENTITY findutils-home "&gnu-software;findutils/">
 <!ENTITY findutils-ch5-du "13.6 MB">
 <!ENTITY findutils-ch5-sbu "0.2 SBU">
 <!ENTITY findutils-ch6-du "13.6 MB">
 <!ENTITY findutils-ch6-sbu "0.2 SBU">
 
-<!ENTITY flex-version "2.5.33">
-<!ENTITY flex-size "680 KB">
+<!ENTITY flex-version "2.5.34">
+<!ENTITY flex-size "1,225 KB">
 <!ENTITY flex-url "&sourceforge;flex/flex-&flex-version;.tar.bz2">
-<!ENTITY flex-md5 "343374a00b38d9e39d1158b71af37150">
+<!ENTITY flex-md5 "fbdabda79de417b863970eb03c0f53a3">
 <!ENTITY flex-home "http://flex.sourceforge.net">
 <!ENTITY flex-ch5-du "8.4 MB">
 <!ENTITY flex-ch5-sbu "0.1 SBU">
-<!ENTITY flex-ch6-du "8.4 MB">
-<!ENTITY flex-ch6-sbu "0.1 SBU">
+<!ENTITY flex-ch6-du "10.1 MB">
+<!ENTITY flex-ch6-sbu "0.2 SBU">
 
 <!ENTITY gawk-version "3.1.6">
 <!ENTITY gawk-size "1,818 KB">
@@ -166,10 +166,10 @@
 <!ENTITY gawk-ch6-du "18.2 MB">
 <!ENTITY gawk-ch6-sbu "0.2 SBU">
 
-<!ENTITY gcc-version "4.2.2">
-<!ENTITY gcc-size "43,110 KB">
+<!ENTITY gcc-version "4.2.3">
+<!ENTITY gcc-size "43,413 KB">
 <!ENTITY gcc-url "&gnu;gcc/gcc-&gcc-version;/gcc-&gcc-version;.tar.bz2">
-<!ENTITY gcc-md5 "7ae33781417a35a2eb03ee098a9f4490">
+<!ENTITY gcc-md5 "ef2a4d9991b3644115456ea05b2b8163">
 <!ENTITY gcc-home "http://gcc.gnu.org/">
 <!ENTITY gcc-ch5p1-du "655 MB">
 <!ENTITY gcc-ch5p1-sbu "9.2 SBU">
@@ -203,14 +203,14 @@
 <!ENTITY glibc-libidn-md5 "226809992fb1f3dc6ea23e0f26952ea4">
 <!ENTITY glibc-libidn-home " ">
 
-<!ENTITY grep-version "2.5.1a">
-<!ENTITY grep-size "516 KB">
+<!ENTITY grep-version "2.5.3">
+<!ENTITY grep-size "604 KB">
 <!ENTITY grep-url "&gnu;grep/grep-&grep-version;.tar.bz2">
-<!ENTITY grep-md5 "52202fe462770fa6be1bb667bd6cf30c">
+<!ENTITY grep-md5 "27061ce1fde82876970b6549a156da8b">
 <!ENTITY grep-home "&gnu-software;grep/">
-<!ENTITY grep-ch5-du "4.8 MB">
+<!ENTITY grep-ch5-du "6.9 MB">
 <!ENTITY grep-ch5-sbu "0.1 SBU">
-<!ENTITY grep-ch6-du "4.8 MB">
+<!ENTITY grep-ch6-du "7.2 MB">
 <!ENTITY grep-ch6-sbu "0.1 SBU">
 
 <!ENTITY groff-version "1.18.1.4">
@@ -263,12 +263,12 @@
 <!ENTITY iproute2-ch6-du "4.8 MB">
 <!ENTITY iproute2-ch6-sbu "0.2 SBU">
 
-<!ENTITY kbd-version "1.12">
-<!ENTITY kbd-size "618 KB">
-<!ENTITY kbd-url "&kernel;linux/utils/kbd/kbd-&kbd-version;.tar.bz2">
-<!ENTITY kbd-md5 "069d1175b4891343b107a8ac2b4a39f6">
+<!ENTITY kbd-version "1.13">
+<!ENTITY kbd-size "652 KB">
+<!ENTITY kbd-url "http://ftp.altlinux.com/pub/people/legion/kbd/kbd-&kbd-version;.tar.bz2">
+<!ENTITY kbd-md5 "2639fdfe2412b29cbf6936d7db91cee3">
 <!ENTITY kbd-home " ">
-<!ENTITY kbd-ch6-du "12.3 MB">
+<!ENTITY kbd-ch6-du "12.5 MB">
 <!ENTITY kbd-ch6-sbu "less than 0.1 SBU">
 
 <!ENTITY less-version "418">
@@ -287,22 +287,22 @@
 <!ENTITY lfs-bootscripts-ch7-du "0.4 MB">
 <!ENTITY lfs-bootscripts-ch7-sbu "less than 0.1 SBU">
 
-<!ENTITY libtool-version "1.5.24">
-<!ENTITY libtool-size "2,851 KB">
+<!ENTITY libtool-version "1.5.26">
+<!ENTITY libtool-size "2,893 KB">
 <!ENTITY libtool-url "&gnu;libtool/libtool-&libtool-version;.tar.gz">
-<!ENTITY libtool-md5 "d0071c890101fcf4f2be8934a37841b0">
+<!ENTITY libtool-md5 "aa9c5107f3ec9ef4200eb6556f3b3c29">
 <!ENTITY libtool-home "&gnu-software;libtool/">
 <!ENTITY libtool-ch6-du "16.6 MB">
 <!ENTITY libtool-ch6-sbu "0.1 SBU">
 
 <!ENTITY linux-major-version "2.6">
 <!ENTITY linux-minor-version "24">
-<!ENTITY linux-patch-version "">
-<!--<!ENTITY linux-version "&linux-major-version;.&linux-minor-version;.&linux-patch-version;">-->
-<!ENTITY linux-version "&linux-major-version;.&linux-minor-version;">
-<!ENTITY linux-size "45,642 KB">
+<!ENTITY linux-patch-version "2">
+<!ENTITY linux-version "&linux-major-version;.&linux-minor-version;.&linux-patch-version;">
+<!-- <!ENTITY linux-version "&linux-major-version;.&linux-minor-version;"> -->
+<!ENTITY linux-size "45,640 KB">
 <!ENTITY linux-url "&kernel;linux/kernel/v&linux-major-version;/linux-&linux-version;.tar.bz2">
-<!ENTITY linux-md5 "3f23ad4b69d0a552042d1ed0f4399857">
+<!ENTITY linux-md5 "dd573a2fae55624ed92fa49c17583964">
 <!ENTITY linux-home "http://www.kernel.org/">
 <!ENTITY linux-ch8-du "350 - 450 MB">
 <!ENTITY linux-ch8-sbu "1.5 - 3.5 SBU">
@@ -332,18 +332,18 @@
 <!ENTITY make-ch6-du "9.6 MB">
 <!ENTITY make-ch6-sbu "0.1 SBU">
 
-<!ENTITY man-db-version "2.5.0">
-<!ENTITY man-db-size "955 KB">
+<!ENTITY man-db-version "2.5.1">
+<!ENTITY man-db-size "1,624 KB">
 <!ENTITY man-db-url "http://savannah.nongnu.org/download/man-db/man-db-&man-db-version;.tar.gz">
-<!ENTITY man-db-md5 "c23b59726cebe0e0820ced2becf5f52d">
+<!ENTITY man-db-md5 "e592eefd14679575b776f60c6a48e781">
 <!ENTITY man-db-home "http://www.nongnu.org/man-db/">
 <!ENTITY man-db-ch6-du "9 MB">
 <!ENTITY man-db-ch6-sbu "0.2 SBU">
 
-<!ENTITY man-pages-version "2.76">
-<!ENTITY man-pages-size "1,816 KB">
+<!ENTITY man-pages-version "2.78">
+<!ENTITY man-pages-size "1,823 KB">
 <!ENTITY man-pages-url "&kernel;linux/docs/manpages/Archive/man-pages-&man-pages-version;.tar.bz2">
-<!ENTITY man-pages-md5 "788354eb0ab1fad2eab69ae671c5e68d">
+<!ENTITY man-pages-md5 "0b58773dbdc6eaeecadfad65b66bfb9a">
 <!ENTITY man-pages-home " ">
 <!ENTITY man-pages-ch6-du "37.4 MB">
 <!ENTITY man-pages-ch6-sbu "less than 0.1 SBU">
@@ -356,12 +356,12 @@
 <!ENTITY mktemp-ch6-du "0.4 MB">
 <!ENTITY mktemp-ch6-sbu "less than 0.1 SBU">
 
-<!ENTITY module-init-tools-version "3.2.2">
-<!ENTITY module-init-tools-size "166 KB">
-<!ENTITY module-init-tools-url "http://www.kerneltools.org/pub/downloads/module-init-tools/module-init-tools-&module-init-tools-version;.tar.bz2">
-<!ENTITY module-init-tools-md5 "a1ad0a09d3231673f70d631f3f5040e9">
-<!ENTITY module-init-tools-home "http://www.kerneltools.org/">
-<!ENTITY module-init-tools-ch6-du "7 MB">
+<!ENTITY module-init-tools-version "3.4">
+<!ENTITY module-init-tools-size "186 KB">
+<!ENTITY module-init-tools-url "http://www.kernel.org/pub/linux/kernel/people/jcm/module-init-tools/module-init-tools-&module-init-tools-version;.tar.bz2">
+<!ENTITY module-init-tools-md5 "db6ac059e80e8dd4389dbe81ee61f3c6">
+<!ENTITY module-init-tools-home "http://www.kerneltools.org/KernelTools.org">
+<!ENTITY module-init-tools-ch6-du "8 MB">
 <!ENTITY module-init-tools-ch6-sbu "less than 0.1 SBU">
 
 <!ENTITY ncurses-version "5.6">
@@ -466,10 +466,10 @@
 <!ENTITY tar-ch6-du "19.9 MB">
 <!ENTITY tar-ch6-sbu "0.3 SBU">
 
-<!ENTITY tcl-version "8.4.17">
-<!ENTITY tcl-size "3,567 KB">
+<!ENTITY tcl-version "8.4.18">
+<!ENTITY tcl-size "3,568 KB">
 <!ENTITY tcl-url "&sourceforge;tcl/tcl&tcl-version;-src.tar.gz">
-<!ENTITY tcl-md5 "d2af2c45189c8c7fd1bfdd2a19b0fa30">
+<!ENTITY tcl-md5 "7d8bc95036f797b1a2b62a5a382d2cc1">
 <!ENTITY tcl-home "http://tcl.sourceforge.net/">
 <!ENTITY tcl-ch5-du "24 MB">
 <!ENTITY tcl-ch5-sbu "0.3 SBU">

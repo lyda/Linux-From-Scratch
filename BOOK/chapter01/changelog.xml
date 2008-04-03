@@ -37,6 +37,136 @@
 -->
 
     <listitem>
+      <para>2008-03-30</para>
+      <itemizedlist>
+        <listitem>
+          <para>[dnicholson] - Added <parameter>--sysconfdir</parameter>
+          parameter to Man-db's configure command so that
+          <filename>man_db.conf</filename> is installed in <filename
+          class="directory">/etc</filename>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-03-27</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - Updated bzip2 to 1.0.5, fixes CVE-2008-1372.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-02-26</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - Corrected typo in name of ru-ms keymap.</para>
+	  <para>[ken] - Updated Kbd to 1.13.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-02-24</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Add --libexecdir parameter to Man-db's configure
+          command so that <command>globbing</command> and
+          <command>manconv</command> are installed into /usr/libexec/man-db.
+          Fixes <ulink url="&lfs-ticket-root;2153">#2153</ulink>.  Also, remove
+          the --enable-mb-groff parameter, as this is now detected
+          automatically.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-02-19</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - Updated Grep to 2.5.3, thanks to Matthew for the fix
+	  for automated builds.</para>
+	  <para>[ken] - Updated Flex to 2.5.34.</para>
+	  <para>[ken] - Updated Module-Init-Tools to 3.4.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-02-17</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Upgraded to latest upstream Vim patches.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to Tcl-8.4.18. Fixes
+          <ulink url="&lfs-ticket-root;2146">#2146</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to Man-pages-2.78. Fixes
+          <ulink url="&lfs-ticket-root;2152">#2152</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to Man-DB-2.5.1. Fixes
+          <ulink url="&lfs-ticket-root;2148">#2148</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to Linux-2.6.24.2. Fixes
+          <ulink url="&lfs-ticket-root;2147">#2147</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Now that <command>mktemp</command> is installed by
+          Coreutils in chapter 5, there is no need to fix up GCC's
+          <command>gccbug</command> in chapter 6.  Thanks to Greg Schafer for
+          the report.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to Findutils-4.2.33. Fixes
+          <ulink url="&lfs-ticket-root;2151">#2151</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to E2fsprogs-1.40.6. Fixes
+          <ulink url="&lfs-ticket-root;2149">#2149</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-02-07</para>
+      <itemizedlist>
+        <listitem>
+          <para>[matthew] - Added a patch to fix a known issue in the Automake
+          test suite. Fixes
+          <ulink url="&lfs-ticket-root;2143">#2143</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to Man-pages-2.77. Fixes
+          <ulink url="&lfs-ticket-root;2142">#2142</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to Libtool-1.5.26. Fixes
+          <ulink url="&lfs-ticket-root;2141">#2141</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to GCC-4.2.3. Fixes
+          <ulink url="&lfs-ticket-root;2140">#2140</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to Coreutils-6.10. Removed Mktemp-1.5 as
+          Coreutils provides its own implementation now. Removed the coreutils
+          binary suppression patch as the configure script can now be given a
+          list of programs not to install. Fixes
+          <ulink url="&lfs-ticket-root;2133">#2133</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[matthew] - Upgraded to E2fsprogs-1.40.5. Fixes
+          <ulink url="&lfs-ticket-root;2138">#2138</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2008-01-29</para>
       <itemizedlist>
         <listitem>

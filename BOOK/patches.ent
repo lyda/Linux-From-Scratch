@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Start of Common Patches -->
+<!ENTITY automake-test-patch "automake-&automake-version;-test_fix-1.patch">
+<!ENTITY automake-test-patch-md5 "4d8aa269951bb3cd876d2bb663cb04cc">
+<!ENTITY automake-test-patch-size "3 KB">
+
+
 <!ENTITY bash-fixes-patch "bash-&bash-version;-fixes-7.patch">
 <!ENTITY bash-fixes-patch-md5 "63ca4c26a1ae0c4a5b7da910d611d534">
 <!ENTITY bash-fixes-patch-size "55 KB">
@@ -17,12 +22,8 @@
 
 
 <!ENTITY coreutils-i18n-patch "coreutils-&coreutils-version;-i18n-1.patch">
-<!ENTITY coreutils-i18n-patch-md5 "806ce5bcb16a763a77bea411ec5ff637">
-<!ENTITY coreutils-i18n-patch-size "101 KB">
-
-<!ENTITY coreutils-suppress-patch "coreutils-&coreutils-version;-suppress_uptime_kill_su-1.patch">
-<!ENTITY coreutils-suppress-patch-md5 "e8ae92cdec364ca2a318f5c4c77bf032">
-<!ENTITY coreutils-suppress-patch-size "13 KB">
+<!ENTITY coreutils-i18n-patch-md5 "791df67d25a45d846c1af4dadf2612c8">
+<!ENTITY coreutils-i18n-patch-size "102 KB">
 
 <!ENTITY coreutils-uname-patch "coreutils-&coreutils-version;-uname-1.patch">
 <!ENTITY coreutils-uname-patch-md5 "c05b735710fbd62239588c07084852a0">
@@ -39,9 +40,13 @@
 <!ENTITY expect-spawn-patch-size "6.8 KB">
 
 
-<!ENTITY grep-fixes-patch "grep-&grep-version;-redhat_fixes-2.patch">
-<!ENTITY grep-fixes-patch-md5 "2c67910be2d0a54714f63ce350e6d8a6">
-<!ENTITY grep-fixes-patch-size "55 KB">
+<!ENTITY grep-debian-patch "grep-&grep-version;-debian_fixes-1.patch">
+<!ENTITY grep-debian-patch-md5 "337d017202d7e3b08d428a89da3ee572">
+<!ENTITY grep-debian-patch-size "27 KB">
+
+<!ENTITY grep-fixes-patch "grep-&grep-version;-upstream_fixes-1.patch">
+<!ENTITY grep-fixes-patch-md5 "44f9c5e7df7746e6115be47e5a068ab8">
+<!ENTITY grep-fixes-patch-size "5.8 KB">
 
 
 <!ENTITY groff-debian-patch "groff-&groff-version;-debian_fixes-1.patch">
@@ -59,21 +64,17 @@
 
 
 <!ENTITY kbd-backspace-patch "kbd-&kbd-version;-backspace-1.patch">
-<!ENTITY kbd-backspace-patch-md5 "692c88bb76906d99cc20446fadfb6499">
-<!ENTITY kbd-backspace-patch-size "11 KB">
-
-<!ENTITY kbd-gcc4_fixes-patch "kbd-&kbd-version;-gcc4_fixes-1.patch">
-<!ENTITY kbd-gcc4_fixes-patch-md5 "615bc1e381ab646f04d8045751ed1f69">
-<!ENTITY kbd-gcc4_fixes-patch-size "1.4 KB">
+<!ENTITY kbd-backspace-patch-md5 "fe51ec685687ce9d29463d786ba0c2d4">
+<!ENTITY kbd-backspace-patch-size "13 KB">
 
 
 <!ENTITY mktemp-tempfile-patch "mktemp-&mktemp-version;-add_tempfile-3.patch">
 <!ENTITY mktemp-tempfile-patch-md5 "65d73faabe3f637ad79853b460d30a19">
 <!ENTITY mktemp-tempfile-patch-size "3.5 KB">
 
-<!ENTITY module-init-modprobe-patch "module-init-tools-&module-init-tools-version;-modprobe-1.patch">
-<!ENTITY module-init-modprobe-patch-md5 "f1e452fdf3b8d7ef60148125e390c3e8">
-<!ENTITY module-init-modprobe-patch-size "1.2 KB">
+<!ENTITY module-init-manpages-patch "module-init-tools-&module-init-tools-version;-manpages-1.patch">
+<!ENTITY module-init-manpages-patch-md5 "2271047586981ae23adf01cc13d97791">
+<!ENTITY module-init-manpages-patch-size "35 KB">
 
 
 <!ENTITY ncurses-coverity-patch "ncurses-&ncurses-version;-coverity_fixes-1.patch">
@@ -101,9 +102,9 @@
 <!ENTITY udev-usbid-patch-size "3.2 KB">
 
 
-<!ENTITY vim-fixes-patch "vim-&vim-version;-fixes-5.patch">
-<!ENTITY vim-fixes-patch-md5 "61c8c6d7f6b56aa6fd0eb30081b36998">
-<!ENTITY vim-fixes-patch-size "308 KB">
+<!ENTITY vim-fixes-patch "vim-&vim-version;-fixes-6.patch">
+<!ENTITY vim-fixes-patch-md5 "a1e9ed80bac0ac8175bc3ed89867ca2e">
+<!ENTITY vim-fixes-patch-size "422 KB">
 
 <!ENTITY vim-mandir-patch "vim-&vim-version;-mandir-1.patch">
 <!ENTITY vim-mandir-patch-md5 "b6426eb4192faba1e867ddd502323f5b">
