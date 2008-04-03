@@ -42,6 +42,10 @@
         <listitem>
           <para>[jhuntwork] - Updated to linux-2.6.24.4, fixes #2157.</para>
         </listitem>
+        <listitem>
+          <para>[jhuntwork] - Added an upstream patch for db-4.6.21, thanks
+          Randy McMurchy for the report. Fixes #2164.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
@@ -71,6 +75,8 @@
       <itemizedlist>
         <listitem>
           <para>[ken] - Corrected typo in name of ru-ms keymap.</para>
+        </listitem>
+        <listitem>
 	  <para>[ken] - Updated Kbd to 1.13.</para>
         </listitem>
       </itemizedlist>
@@ -96,7 +102,11 @@
         <listitem>
           <para>[ken] - Updated Grep to 2.5.3, thanks to Matthew for the fix
 	  for automated builds.</para>
+        </listitem>
+        <listitem>
 	  <para>[ken] - Updated Flex to 2.5.34.</para>
+        </listitem>
+        <listitem>
 	  <para>[ken] - Updated Module-Init-Tools to 3.4.</para>
         </listitem>
       </itemizedlist>
