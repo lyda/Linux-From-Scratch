@@ -1,14 +1,13 @@
 #!/bin/bash
 # Begin /lib/lsb/manage-functions
 
-# /lib/lsb/manage_functions contains the functions used by 
+# /lib/lsb/manage-functions contains the functions used by 
 # /lib/lsb/install_initd and /lib/lsb/remove_initd as well as additional helper
 # functions for use in programs that would provide functionality similar to
 # the RedHat chkconfig utility, for instance.
 
-## Define rcbase for now
-## (this will go away when a config file is defined)
-rcbase=/etc/init.d
+# source the confif file
+. /etc/lsb/lsb-config
 
 # Define all arrays at script start to avoid scope issues
 # scriptlist is a list of valid scripts used as an index
@@ -26,7 +25,10 @@ declare -a fullheaders
 #                 done once                                                   #
 #                 Returns no value, but populates the variable ${scriptcount} #
 #                 and the arrays ${scriptlist} and ${fullheaders} for use     #
-#                 with other functions in this script.                        #
+#                 with other functions in this script.  This function is      #
+#                 called unconditionally at the end of this scrip and is      #
+#                 provided as a function only for the case that it needs to   #
+#                 be called again after other operations.                     #
 ###############################################################################
 get_headers()
 {
@@ -210,5 +212,7 @@ convert_lsb_should()
     done
     echo "${optprovideslist}" | sed -e "s/^[ \t]*//" -e sed "s/[ \t]*$//"
 }
+
+get_headers
 
 # End /lib/lsb/manage-functions

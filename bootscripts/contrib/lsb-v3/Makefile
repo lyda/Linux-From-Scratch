@@ -18,6 +18,7 @@ create-dirs:
 	install -d -m ${DIRMODE} ${EXTDIR}/init.d
 	install -d -m ${DIRMODE} ${EXTDIR}/sysconfig
 	install -d -m ${DIRMODE} ${DESTDIR}/lib/lsb
+	install -d -m ${DIRMODE} ${EXTDIR}/lsb/state
 
 create-service-dir:
 	install -d -m ${DIRMODE} ${EXTDIR}/sysconfig/network-devices/services
@@ -48,6 +49,7 @@ install: create-dirs create-service-dir create-boottemp-dir
 	install -m ${MODE} init.d/udev_retry        ${EXTDIR}/init.d/
 	install -m ${CONFMODE} lsb/init-functions   ${DESTDIR}/lib/lsb/
 	install -m ${CONFMODE} lsb/manage-functions ${DESTDIR}/lib/lsb/
+	install -m ${CONFMODE} etc/lsb-config       ${EXTDIR}/lsb/
 	ln -sf ../init.d/network     ${EXTDIR}/rc0.d/K80network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc0.d/K90sysklogd
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc0.d/S60sendsignals
@@ -93,7 +95,7 @@ install: create-dirs create-service-dir create-boottemp-dir
 	install                   -m ${MODE} sysconfig/network-devices/services/ipv4-static       ${EXTDIR}/sysconfig/network-devices/services/
 	install                   -m ${MODE} sysconfig/network-devices/services/ipv4-static-route ${EXTDIR}/sysconfig/network-devices/services/
 
-minimal: create-dirs create-service-dir
+minimal: create-dirs create-service-dir create-boottemp-dir
 	install -m ${MODE} init.d/checkfs           ${EXTDIR}/init.d/
 	install -m ${MODE} init.d/cleanfs           ${EXTDIR}/init.d/
 	install -m ${CONFMODE} init.d/lfs-functions ${EXTDIR}/init.d/
@@ -109,6 +111,7 @@ minimal: create-dirs create-service-dir
 	install -m ${MODE} init.d/udev              ${EXTDIR}/init.d/
 	install -m ${CONFMODE} lsb/init-functions   ${DESTDIR}/lib/lsb/
 	install -m ${CONFMODE} lsb/manage-functions ${DESTDIR}/lib/lsb/
+	install -m ${CONFMODE} etc/lsb-config       ${EXTDIR}/lsb/
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc0.d/S60sendsignals
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc0.d/S70mountfs
 	ln -sf ../init.d/swap        ${EXTDIR}/rc0.d/S80swap
@@ -126,6 +129,6 @@ minimal: create-dirs create-service-dir
 	ln -sf ../init.d/cleanfs     ${EXTDIR}/rcsysinit.d/S50cleanfs
 	if [ ! -f ${EXTDIR}/sysconfig/rc          ]; then install -m ${CONFMODE} sysconfig/rc          ${EXTDIR}/sysconfig/; fi
 
-.PHONY: all create-dirs create-service-dir \
+.PHONY: all create-dirs create-service-dir create-boottemp-dir \
 	install minimal 
 

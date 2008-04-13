@@ -1,7 +1,7 @@
 LSB-V3 README
 
 The scripts contianed in this directory are a complete rewrite of the
-boot scripts from LFS-6.1 (updated for LFS-SVN about 2007-08-20).  As is
+boot scripts from LFS-6.1 (updated for LFS-SVN about 2008-04-13).  As is
 usually the case with a rewrite, there have been many changes:
 
 LSB Version 3.1 Compliant Scripts - Immediately noticable are the LSB headers
@@ -19,17 +19,18 @@ LSB 3.1 Omissions - Unfortunately, this package is not completely LSB
 compliant as it lacks install-initd and remove-initd programs.  The current
 popular flavor of these programs is written in Python, which, as you should
 know, is not installed until BLFS.  I began work on a bash implementation,
-with the original intent to use GNU make to procees the generated config
-file.  I later decided to use bash directly, but got lost in tab stops and
-have not yet had the time to correct for the change.  The gerneral operation
-of the scripts is correct, but parsing the generated temp file is broken ATM
-due to the change from tab to space delimiter.  Feel free to have a hack at
-the incomplete scripts I've placed in my home directory on quantum.  They
-have been heavily commented, and don't actually do anything as they are not
-yet working as expected.  The organize_links script is the one that does all
-of the magic voodoo for a complete reorder.  Keep in mind that this script
-would never be called if using only LFS/BLFS supplied scripts.
-http://www.linuxfromscratch.org/~dj/lsb-scripts/
+and have provided the needed functions to parse the LSB headers in the
+manage-functions script (insalled by default into /lib/lsb).  Unfortunately,
+I have yet to complete the actual install-initd and remove-initd scripts,
+however, I do have an almost complete install-initd kept locally.  I am
+currently working on a separate script to completely rewrite the symlinks
+should LFS default values not prove sufficient when working with scripts in
+the wild.  I have not included either here because they are not yet complete
+or thoroughly tested, and due to the development process of lfs-bootscritps,
+would be included in a release tarball.  If you would like to assist with the
+development of these scripts, or would even just like to see what I have so
+far, please email me privately.  Of course, feel free to write your own if you
+do not like the manage-fucntions script (or bash).
 
 Distribution Independent - this original goal for the LFS scripts has been
 stretched even further by providing both a global rc config file that
@@ -44,10 +45,7 @@ Single Environment - The rc script has been rewritten completely to allow a
 single source of the boot configuration per runlevel change.  This config
 is inherited from rc's environment as opposed to being sourced everytime a
 script is run.  This results in a negledgable decrease in boot time, but
-it is just better in principle, assuming I didn't break anything.  For those
-familiar with the previous versions, the 'stty sane' bit comes to mind, but
-I haven't witnessed any dispaly amomolies, nor do I remember how to reproduce
-the situation that caused us to move that into the functions file before.
+it is just better in principle.
 
 Boot Logging - The previous incarnation of the boot log didn't begin
 recording events until the root filesystem was mounted read/write.  This has
@@ -74,15 +72,15 @@ flying fingers accustomed to it!  Of course, this is still configurable in
 
 LSB Functions - The previous lfs-bootscripts sourced a functions file
 located at /etc/rc.d/init.d/functions.  This file has been renamed
-<distro>-functions to segregate it from the old. The name is configurable
+$distro-functions to segregate it from the old. The name is configurable
 by the rc.site configuration file.  Both old and new bootscripts can be
 used simultaneously in a SYS-V setup (with proper symlinks in place).
-LSB defined functions are used where possible, but the lfs-functions file
+LSB defined functions are used where possible, but the $distro-functions file
 provides, easy to use wraper functions that
 start/stop/reload/force-reload/restart programs, evaluate the numerical
 LSB return values, and print status messages to the screen.  Both LFS
 functions and LSB functions are documented directly in the scritps located
-at /etc/init.d/lfs-functions and /lib/lsb/init-functions respectively.
+at /etc/init.d/$distro-functions and /lib/lsb/init-functions respectively.
 
 Pretier - Yeah, I just couldn't handle all the grey text...  By default,
 successful boot messages are prefixed with a single green astrik character,
