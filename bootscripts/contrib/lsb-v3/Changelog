@@ -1,4 +1,8 @@
-Change Log
+Changelog
+
+20080413 - [dj] * Added manage_functions script for use by scripts such as
+                  {install,remove}_initd or chkconfig, that need to parse the
+                  LSB headers.
 
 20080315 - [dj] * Corrected test for $pidfile in pidofproc()
                 * Replaced exit with return in statusproc() - (lfs-functions)

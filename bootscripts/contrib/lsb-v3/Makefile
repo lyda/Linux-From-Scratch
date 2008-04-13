@@ -47,6 +47,7 @@ install: create-dirs create-service-dir create-boottemp-dir
 	install -m ${MODE} init.d/udev              ${EXTDIR}/init.d/
 	install -m ${MODE} init.d/udev_retry        ${EXTDIR}/init.d/
 	install -m ${CONFMODE} lsb/init-functions   ${DESTDIR}/lib/lsb/
+	install -m ${CONFMODE} lsb/manage_functions ${DESTDIR}/lib/lsb/
 	ln -sf ../init.d/network     ${EXTDIR}/rc0.d/K80network
 	ln -sf ../init.d/sysklogd    ${EXTDIR}/rc0.d/K90sysklogd
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc0.d/S60sendsignals
@@ -107,6 +108,7 @@ minimal: create-dirs create-service-dir
 	install -m ${MODE} init.d/swap              ${EXTDIR}/init.d/
 	install -m ${MODE} init.d/udev              ${EXTDIR}/init.d/
 	install -m ${CONFMODE} lsb/init-functions   ${DESTDIR}/lib/lsb/
+	install -m ${CONFMODE} lsb/manage_functions ${DESTDIR}/lib/lsb/
 	ln -sf ../init.d/sendsignals ${EXTDIR}/rc0.d/S60sendsignals
 	ln -sf ../init.d/mountfs     ${EXTDIR}/rc0.d/S70mountfs
 	ln -sf ../init.d/swap        ${EXTDIR}/rc0.d/S80swap
