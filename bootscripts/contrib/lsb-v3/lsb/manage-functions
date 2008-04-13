@@ -176,7 +176,7 @@ convert_lsb_required()
             fi
         done
     done
-    echo "${reqprovideslist}" | sed -e "s/^[ \t]*//" -e sed "s/[ \t]*$//"
+    echo "${reqprovideslist}" | sed -e "s/^[ \t]*//" -e "s/^[ \t]*//"
 }
 
 ###############################################################################
@@ -210,7 +210,7 @@ convert_lsb_should()
             # No need to error or warn on should items, and it's messy if so!
         done
     done
-    echo "${optprovideslist}" | sed -e "s/^[ \t]*//" -e sed "s/[ \t]*$//"
+    echo "${optprovideslist}" | sed -e "s/^[ \t]*//" -e "s/[ \t]*$//"
 }
 
 get_headers
