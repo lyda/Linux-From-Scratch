@@ -3,12 +3,12 @@
 
 ### BEGIN INIT INFO
 # Provides:            swap
-# Required-Start:      mountkernfs
+# Required-Start:      mountkernfs udev
 # Should-Start:        lvm
 # Required-Stop:       $local_fs
 # Should-Stop:
-# Default-Start:       sysinit
-# Default-Stop:        0 6
+# Default-Start:       sysinit 0 6
+# Default-Stop:
 # Short-Description:   Mounts and unmounts swap partitions.
 # Description:         Mounts and unmounts swap partitions defined in 
 #                      /etc/fstab.

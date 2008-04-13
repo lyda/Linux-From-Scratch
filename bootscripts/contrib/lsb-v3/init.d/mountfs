@@ -3,15 +3,17 @@
 
 ### BEGIN INIT INFO
 # Provides:            $local_fs
-# Required-Start:      udev
-# Should-Start:        lvm checkfs
+# Required-Start:      udev checkfs
+# Should-Start:        lvm
 # Required-Stop:       sendsignals
 # Should-Stop:
-# Default-Start:       sysinit
-# Default-Stop:        0 6
-# Short-Description:   Mounts all local filesystems as defined in /etc/fstab.
+# Default-Start:       sysinit 0 6
+# Default-Stop:
+# Short-Description:   Mounts and unmounts all local filesystems.
 # Description:         Remounts root filesystem read/write and mounts all
-#                      remaining local filesystems defined in /etc/fstab.
+#                      remaining local filesystems defined in /etc/fstab on
+#                      start.  Rmounts root filesystem read-only and unmounts
+#                      remaining filesystems on stop.
 # X-LFS-Default-Start: S40
 # X-LFS-Default-Stop:  S70
 # X-LFS-Provided-By:   LFS

@@ -2,13 +2,13 @@
 # Begin /etc/init.d/reboot
 
 ### BEGIN INIT INFO
-# Provides:            halt
+# Provides:            reboot
 # Required-Start:
 # Should-Start:
 # Required-Stop:       localnet
 # Should-Stop:
-# Default-Start:
-# Default-Stop:        6
+# Default-Start:       6
+# Default-Stop:
 # Short-Description:   Reboots the system.
 # Description:         Reboots the System.
 # X-LFS-Default-Start:

@@ -2,19 +2,18 @@
 # Begin /etc/init.d/template
 
 ### BEGIN INIT INFO
-# Provides:            template (the name of the script unless LSB defined)
-# Required-Start:      $local_fs $time $syslog (itmes that must be started)
-# Should-Start:        $portmap $remote_fs $named (optional items started)
-# Required-Stop:       $network sendsignals (items that must be stopped)
-# Should-Stop:         $time (items that are optional but should be stopped)
-# Default-Start:       2 3 4 5
-# Default-Stop:        0 1 6
-# Short-Description:   Provides a template.
-# Description:         Provides a detailed template to create your own 
-#                      startup scripts.
-# X-LFS-Default-Start: S50
-# X-LFS-Default-Stop:  K25 (this can be an S value if run after K scripts)
-# X-LFS-Provided-By:   LFS (BOOK or Project - just an informative text field)
+# Provides:            template
+# Required-Start:
+# Should-Start:
+# Required-Stop:
+# Should-Stop:
+# Default-Start:
+# Default-Stop:
+# Short-Description:
+# Description: 
+# X-LFS-Default-Start:
+# X-LFS-Default-Stop:
+# X-LFS-Provided-By:
 ### END INIT INFO
 
 # Source the LSB init-functions, ours are pulled in from there.

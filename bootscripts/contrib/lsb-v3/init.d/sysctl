@@ -3,7 +3,7 @@
 
 ### BEGIN INIT INFO
 # Provides:            sysctl
-# Required-Start:      mountkernfs
+# Required-Start:      udev
 # Should-Start:
 # Required-Stop:
 # Should-Stop:

@@ -7,8 +7,8 @@
 # Should-Start:
 # Required-Stop:       $network
 # Should-Stop:         swap
-# Default-Start:       sysinit
-# Default-Stop:        0 6
+# Default-Start:       sysinit 0 6
+# Default-Stop:
 # Short-Description:   Starts the local network.
 # Description:         Sets the hostname of the machine and starts the 
 #                      loopback interface.

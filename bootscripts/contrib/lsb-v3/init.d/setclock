@@ -3,8 +3,8 @@
 
 ### BEGIN INIT INFO
 # Provides:            $time
-# Required-Start:      $local_fs
-# Should-Start:        udev_retry
+# Required-Start:      udev
+# Should-Start:
 # Required-Stop:
 # Should-Stop:
 # Default-Start:       sysinit

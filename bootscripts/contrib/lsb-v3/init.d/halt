@@ -7,8 +7,8 @@
 # Should-Start:
 # Required-Stop:       localnet
 # Should-Stop:
-# Default-Start:
-# Default-Stop:        0
+# Default-Start:       0
+# Default-Stop:
 # Short-Description:   Halts the system.
 # Description:         Halts the System.
 # X-LFS-Default-Start:
@@ -20,7 +20,7 @@
 
 case "${1}" in
     stop)
-        log_msg_success "Halting System..."
+        log_success_msg "Halting System..."
         halt -d -f -i -p
         ;;
     *)

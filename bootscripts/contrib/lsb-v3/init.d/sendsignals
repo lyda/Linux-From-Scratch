@@ -7,8 +7,8 @@
 # Should-Start:
 # Required-Stop:       $syslog
 # Should-Stop:
-# Default-Start:
-# Default-Stop:        0 6
+# Default-Start:       0 6
+# Default-Stop:
 # Short-Description:   Attempts to kill remaining processes.
 # Description:         Attempts to kill remaining processes.
 # X-LFS-Default-Start:
