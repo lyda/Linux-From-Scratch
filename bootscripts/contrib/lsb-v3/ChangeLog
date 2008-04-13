@@ -1,4 +1,4 @@
-Changelog
+ChangeLog
 
 20080413 - [dj] * Added manage_functions script for use by scripts such as
                   {install,remove}_initd or chkconfig, that need to parse the

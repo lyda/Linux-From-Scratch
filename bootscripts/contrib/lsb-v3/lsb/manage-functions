@@ -1,5 +1,5 @@
 #!/bin/bash
-# Begin /lib/lsb/manage_functions
+# Begin /lib/lsb/manage-functions
 
 # /lib/lsb/manage_functions contains the functions used by 
 # /lib/lsb/install_initd and /lib/lsb/remove_initd as well as additional helper
@@ -211,4 +211,4 @@ convert_lsb_should()
     echo "${optprovideslist}" | sed -e "s/^[ \t]*//" -e sed "s/[ \t]*$//"
 }
 
-
+# End /lib/lsb/manage-functions
