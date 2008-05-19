@@ -17,9 +17,8 @@ EXTRA_DOC_FILES = \
 	80-drivers.txt \
 	95-udev-late.txt
 
-# Figure out where to install the docs
-UDEV_VERSION = $(shell udevd --version)
-DOC_DIR = $(PREFIX)/share/doc/udev-$(UDEV_VERSION)
+# Location to install the docs
+DOC_DIR = $(PREFIX)/share/doc/udev-config
 
 all:
 
@@ -32,20 +31,12 @@ install-rules:
 	done;
 
 install-doc:
-	@if [ -z "$(UDEV_VERSION)" ]; then \
-		echo "Error: Can't get udev version from udevinfo" >&2; \
-		exit 1; \
-	fi
 	$(INSTALL) -d $(DESTDIR)$(DOC_DIR)
 	for doc in $(DOC_FILES); do \
 		$(INSTALL_DATA) doc/$$doc $(DESTDIR)$(DOC_DIR) || exit 1; \
 	done
 
 install-extra-doc:
-	@if [ -z "$(UDEV_VERSION)" ]; then \
-		echo "Error: Can't get udev version from udevinfo" >&2; \
-		exit 1; \
-	fi
 	$(INSTALL) -d $(DESTDIR)$(DOC_DIR)
 	for doc in $(EXTRA_DOC_FILES); do \
 		$(INSTALL_DATA) doc/$$doc $(DESTDIR)$(DOC_DIR) || exit 1; \

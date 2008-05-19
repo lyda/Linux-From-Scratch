@@ -1,3 +1,8 @@
+2008-04-02	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* Makefile: Make the package DESTDIR-friendly by installing the docs
+	  into a fixed $(PREFIX)/share/doc/udev-config directory, instead of
+	  trying to figure out what version of udev was just installed.
+
 2007-10-30	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* 55-lfs.rules: Since the dialout group was renamed to uucp, delete
 	  the rules that override upstream's assignment of the dialout group.
