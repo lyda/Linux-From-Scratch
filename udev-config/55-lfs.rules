@@ -89,7 +89,6 @@ SUBSYSTEM=="block", MODE="0660"
 # udev from creating them
 
 KERNEL=="dm-*",             OPTIONS+="ignore_device"
-KERNEL=="device-mapper",    OPTIONS+="ignore_device"
 
 # Tape devices
 

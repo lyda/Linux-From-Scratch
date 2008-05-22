@@ -1,3 +1,11 @@
+2008-05-21	Bryan Kadzban	<bryan@linuxfromscratch.org>
+	* 81-firmware.rules, doc/81-firmware.txt: Remove.  This rule is
+	  already handled by udev's 50-udev-default.rules file.  The docs
+	  can be added back later if needed.
+	* Makefile: Don't install the above deleted files.
+	* 55-lfs.rules: Remove the device-mapper rule, since the upstream
+	  50-udev-default.rules file handles it properly.
+
 2008-04-02	Bryan Kadzban	<bryan@linuxfromscratch.org>
 	* Makefile: Make the package DESTDIR-friendly by installing the docs
 	  into a fixed $(PREFIX)/share/doc/udev-config directory, instead of
