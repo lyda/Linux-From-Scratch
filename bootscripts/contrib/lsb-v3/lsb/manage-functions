@@ -215,4 +215,92 @@ convert_lsb_should()
 
 get_headers
 
+###############################################################################
+# get_lsb_required_value() - Additional function to simplify repetitive tasks #
+#                            Obtains the LSB Value of $1 for index of script  #
+#                            ($2) and immediately converts LSB defined        #
+#                            facilities (beginning with a '$' character) to a #
+#                            script name.  If the script is not found, then   #
+#                            the function exits with an error as per          #
+#                            convert_lsb_required.                            #
+###############################################################################
+get_lsb_required_value()
+{
+    local reqval
+    # Probably need some error checking in here
+    reqval=`echo "${fullheaders[${2}]}" | \
+        grep "^# ${1}" | \
+        sed -e "s@# ${1}:@@" \
+            -e "s/^[ \t]*//"`
+
+    # If $reqval contains a '$' charcter, then convert it to a script name
+    echo "${reqval}" | grep "\\$" 2>&1 > /dev/null
+    if test "${?}" -eq "0"
+    then
+        reqval=`convert_lsb_required "${reqval}"`
+    fi
+    echo "${reqval}"
+}
+
+###############################################################################
+# get_lsb_should_value() - Additional function to simplify repetitive tasks   #
+#                          Obtains the LSB Value of $1 for index of script    #
+#                          ($2) and immediately converts LSB defined          #
+#                          facilities (beginning with a '$' character) to a   #
+#                          script name.  If the script is not found, the      #
+#                          value is removed from the list as it is optional.  #
+###############################################################################
+get_lsb_should_value()
+{
+    local optval
+    local listitem
+    local optitem
+    # Probably need some error checking in here
+    optval=`echo "${fullheaders[${2}]}" | \
+        grep "^# ${1}" | \
+        sed -e "s@# ${1}:@@" \
+            -e "s/^[ \t]*//"`
+
+    # If $optval contains a '$' charcter, then convert it to a script name
+    echo "${optval}" | grep "\\$" 2>&1 > /dev/null
+    if test "${?}" -eq "0"
+    then
+        optval=`convert_lsb_should "${optval}"`
+        # if we still have a "$" character, then it's not found and it should
+        # be removed from the list (and it's trailing space if one exists)
+        # since it is optional
+        echo "${optval}" | grep "\\$" 2>&1 > /dev/null
+        if test "${?}" -eq "0"
+        then
+            # Remove the value
+            for listitem in ${optval} 
+            do
+                echo "${listitem}" | grep "\\$"
+                if test "${?}" -eq "0"
+                then
+                    optval=`echo "${optval}" | sed -e 's@${listitem} @@' \
+                                                   -e 's@${listitem}@@' | \
+                                sed -e "s@# ${1}:@@" \
+                                    -e "s/^[ \t]*//"`
+                fi
+            done
+        fi    
+    fi
+    # If a should start value does not have a script associted with it, then
+    # remove it (or it and trailing space) from the list
+    for optitem in ${otpval}
+    do
+        grep "${optitem}" "${statedir}/enabled-scripts" 2>&1 > /dev/null
+        if test "${?}" -ne "0"
+        then
+            optval=`echo "${optval}" | sed -e 's@${otpitem} @@' \
+                                           -e 's@${optitem}@@' | \
+                        sed -e "s@# ${1}:@@" \
+                            -e "s/^[ \t]*//"`
+        fi
+    done        
+
+    echo "${optval}"
+}
+
 # End /lib/lsb/manage-functions
