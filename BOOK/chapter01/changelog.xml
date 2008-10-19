@@ -38,6 +38,17 @@
 -->
 
     <listitem>
+      <para>2008-10-19</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Move GCC's bootstrap back to pass 1 to correspond more closely
+	  with trunk. Cross compilation methods in the future can address the issues originally
+	  bypassed by moving the bootstrap to pass 2.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2008-10-18</para>
       <itemizedlist>
         <listitem>
@@ -47,7 +58,6 @@
         </listitem>
       </itemizedlist>
     </listitem>
-
 
     <listitem>
       <para>2008-10-15</para>

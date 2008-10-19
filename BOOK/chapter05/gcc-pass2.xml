@@ -80,6 +80,16 @@ Ask your system administrator to create more.</computeroutput></screen>
 <screen><userinput remap="pre">cp -v gcc/Makefile.in{,.orig}
 sed 's@\./fixinc\.sh@-c true@' gcc/Makefile.in.orig &gt; gcc/Makefile.in</userinput></screen>
 
+    <para>The bootstrap build performed in <xref linkend="ch-tools-gcc-pass1"/>
+    built GCC with the <option>-fomit-frame-pointer</option> compiler flag.
+    Non-bootstrap builds omit this flag by default, so apply the following
+    <command>sed</command> to use it in order to ensure consistent compiler
+    builds:</para>
+
+<screen><userinput remap="pre">cp -v gcc/Makefile.in{,.tmp}
+sed 's/^XCFLAGS =$/&amp; -fomit-frame-pointer/' gcc/Makefile.in.tmp \
+  &gt; gcc/Makefile.in</userinput></screen>
+
     <para>The following command will change the location of GCC's default
     dynamic linker to use the one we installed in
     <filename class="directory">/tools</filename>. It also removes <filename
@@ -146,7 +156,8 @@ cd ../gcc-build</userinput></screen>
     --with-local-prefix=/tools --enable-clocale=gnu \
     --enable-shared --enable-threads=posix \
     --enable-__cxa_atexit --enable-languages=c,c++ \
-    --disable-libstdcxx-pch --disable-multilib</userinput></screen>
+    --disable-libstdcxx-pch --disable-multilib \
+    --disable-bootstrap</userinput></screen>
 
     <variablelist>
       <title>The meaning of the new configure options:</title>
@@ -201,15 +212,18 @@ cd ../gcc-build</userinput></screen>
         </listitem>
       </varlistentry>
 
+      <varlistentry>
+        <term><parameter>--disable-bootstrap</parameter></term>
+        <listitem>
+          <para>Bootstrapping the compiler is now the default for GCC. However,
+          our build method should provide us with a solid compiler without the
+          need to bootstrap each time.</para>
+        </listitem>
+      </varlistentry>
+
     </variablelist>
 
-    <para>The following command will compile GCC not once, but several times. It
-    uses the programs compiled in a first round to compile itself a second time,
-    and then again a third time. It then compares these second and third compiles
-    to make sure it can reproduce itself flawlessly. This is called
-    <quote>bootstrapping</quote>. Building GCC in this way ensures that it was
-    compiled correctly and is now the default configuration for the released
-    package. Continue with compiling by running:</para>
+    <para>Compile the package:</para>
 
 <screen><userinput remap="make">make</userinput></screen>
 
