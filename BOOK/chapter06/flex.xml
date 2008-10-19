@@ -49,7 +49,7 @@
 
 <screen><userinput remap="make">make</userinput></screen>
 
-    <para>To test the results, issue:</para>
+    <para>To test the results (about 0.5 SBU), issue:</para>
 
 <screen><userinput remap="test">make check</userinput></screen>
 
@@ -79,6 +79,13 @@ exec /usr/bin/flex -l "$@"
 # End /usr/bin/lex</literal>
 EOF
 chmod -v 755 /usr/bin/lex</userinput></screen>
+
+    <para>If desired, install the <filename>flex.pdf</filename> documentation
+    file:</para>
+
+<screen><userinput remap="install">mkdir -v /usr/share/doc/flex-&flex-version;
+cp    -v doc/flex.pdf \
+         /usr/share/doc/flex-&flex-version;</userinput></screen>
 
   </sect2>
 

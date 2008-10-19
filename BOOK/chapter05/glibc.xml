@@ -43,6 +43,11 @@
   <sect2 role="installation">
     <title>Installation of Glibc</title>
 
+    <para>Fix a potential issue if <filename>/etc/ld.so.preload</filename> is
+    used on the host system.</para>
+
+<screen><userinput remap="pre">sed -i 's@/etc/ld.so.preload@/tools/etc/ld.so.preload@' elf/rtld.c</userinput></screen>
+
     <para>The Glibc documentation recommends building Glibc outside of the source
     directory in a dedicated build directory:</para>
 
@@ -159,30 +164,8 @@ esac</userinput></screen>
 
 <screen><userinput remap="make">make</userinput></screen>
 
-    <para>Compilation is now complete. As mentioned earlier, running the
-    test suites for the temporary tools installed in this chapter is not
-    mandatory. To run the Glibc test suite (if desired), the following
-    command will do so:</para>
-
-<screen><userinput remap="test">make check</userinput></screen>
-
-    <para>For a discussion of test failures that are of particular
-    importance, please see <xref linkend="ch-system-glibc" role="."/></para>
-
-    <para>In this chapter, some tests can be adversely affected by
-    existing tools or environmental issues on the host system. Glibc test
-    suite failures in this chapter are typically not worrisome. The Glibc
-    installed in <xref linkend="chapter-building-system"/> is the one that
-    will ultimately end up being used, so that is the one that needs to pass
-    most tests (even in <xref linkend="chapter-building-system"/>, some
-    failures could still occur, for example, with the math tests).</para>
-
-    <para>When experiencing a failure, make a note of it, then continue by
-    reissuing the <command>make check</command> command. The test suite
-    should pick up where it left off and continue. This stop-start sequence
-    can be circumvented by issuing a <command>make -k check</command> command.
-    If using this option, be sure to log the output so that the log file can
-    be examined for failures later.</para>
+    <para>This package does come with a test suite, however, it cannot be
+    run at this time because we do not have a C++ compiler yet.</para>
 
     <para>The install stage of Glibc will issue a harmless warning at the
     end about the absence of <filename>/tools/etc/ld.so.conf</filename>.

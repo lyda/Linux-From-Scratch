@@ -486,7 +486,8 @@
 
         <seglistitem>
          <seg>Bash, Binutils, Coreutils, Diffutils, Findutils, Gawk, GCC,
-         Gettext, Glibc, Grep, Make, Patch, Perl, Sed, Tar, and Texinfo</seg>
+         Gettext, Glibc, GMP (Chapter 6), Grep, M4 (Chapter 5), Make,
+         MPFR (Chapter 6), Patch, Perl, Sed, Tar, and Texinfo</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -1072,7 +1073,7 @@
 
         <seglistitem>
          <seg>Bash, Berkeley DB, Binutils, Coreutils, Gawk, GCC, Glibc, Grep,
-         Groff, Make, and Sed</seg>
+         Groff, Make, Sed, and Zlib</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -1475,7 +1476,7 @@
         <segtitle>&before;</segtitle>
 
         <seglistitem>
-          <seg>File, Module-Init-Tools, and Util-Linux</seg>
+          <seg>File, Module-Init-Tools, Perl, and Util-Linux</seg>
         </seglistitem>
       </segmentedlist>
 

@@ -43,6 +43,14 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Binutils GCC 4.3 Patch - <token>&binutils-gcc-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&binutils-gcc-patch;"/></para>
+        <para>MD5 sum: <literal>&binutils-gcc-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Binutils Texinfo Version Patch - <token>&binutils-configure-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&binutils-configure-patch;"/></para>
@@ -58,11 +66,19 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry>
+    <!-- <varlistentry>
       <term>Coreutils Internationalization Fixes Patch - <token>&coreutils-i18n-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&coreutils-i18n-patch;"/></para>
         <para>MD5 sum: <literal>&coreutils-i18n-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry> -->
+
+    <varlistentry>
+      <term>Coreutils Old Kernel Patch - <token>&coreutils-old-kernel-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&coreutils-old-kernel-patch;"/></para>
+        <para>MD5 sum: <literal>&coreutils-old-kernel-patch-md5;</literal></para>
       </listitem>
     </varlistentry>
 
@@ -91,7 +107,31 @@
     </varlistentry>
 
     <varlistentry>
-      <term>Grep Debian Patch - <token>&grep-debian-patch-size;</token>;</term>
+      <term>Expect Tcl Patch - <token>&expect-tcl-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&expect-tcl-patch;"/></para>
+        <para>MD5 sum: <literal>&expect-tcl-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc Iconv Test Fixes Patch - <token>&glibc-iconv-test-fixes-patch-size;</token>:</term>
+      <listitem>
+	<para>Download: <ulink url="&patches-root;&glibc-iconv-test-fixes-patch;"/></para>
+	<para>MD5 sum: <literal>&glibc-iconv-test-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Glibc Ildoubl Test Fix Patch - <token>&glibc-ildoubl-test-fix-patch-size;</token>:</term>
+      <listitem>
+	<para>Download: <ulink url="&patches-root;&glibc-ildoubl-test-fix-patch;"/></para>
+	<para>MD5 sum: <literal>&glibc-ildoubl-test-fix-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Grep Debian Patch - <token>&grep-debian-patch-size;</token>:</term>
       <listitem>
 	<para>Download: <ulink url="&patches-root;&grep-debian-patch;"/></para>
 	<para>MD5 sum: <literal>&grep-debian-patch-md5;</literal></para>
@@ -163,6 +203,30 @@
     </varlistentry>
 
     <varlistentry>
+      <term>Perl Page Patch - <token>&perl-page-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&perl-page-patch;"/></para>
+        <para>MD5 sum: <literal>&perl-page-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Perl Security Patch - <token>&perl-security-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&perl-security-patch;"/></para>
+        <para>MD5 sum: <literal>&perl-security-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Procps Watch Patch - <token>&procps-watch-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&procps-watch-patch;"/></para>
+        <para>MD5 sum: <literal>&procps-watch-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
       <term>Readline Fixes Patch - <token>&readline-fixes-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&readline-fixes-patch;"/></para>
@@ -170,22 +234,13 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry>
+    <!-- <varlistentry>
       <term>Shadow Useradd Patch - <token>&shadow-useradd-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&shadow-useradd-patch;"/></para>
         <para>MD5 sum: <literal>&shadow-useradd-patch-md5;</literal></para>
       </listitem>
-    </varlistentry>
-
-
-    <varlistentry>
-      <term>Udev usb_id Segfault Patch - <token>&udev-usbid-patch-size;</token>:</term>
-      <listitem>
-        <para>Download: <ulink url="&patches-root;&udev-usbid-patch;"/></para>
-        <para>MD5 sum: <literal>&udev-usbid-md5;</literal></para>
-      </listitem>
-    </varlistentry>
+    </varlistentry> -->
 
 
     <varlistentry>

@@ -43,6 +43,15 @@
   <sect2 role="installation">
     <title>Installation of GCC</title>
 
+    <para>GCC now requires the GMP and MPFR packages. As these packages may
+    not be included in your host distribution, they will be built with
+    GCC.</para>
+
+<screen><userinput remap="pre">tar -jxf ../mpfr-&mpfr-version;.tar.bz2
+mv mpfr-&mpfr-version; mpfr
+tar -jxf ../gmp-&gmp-version;.tar.bz2
+mv gmp-&gmp-version; gmp</userinput></screen>
+
     <para>The GCC documentation recommends building GCC outside of the
     source directory in a dedicated build directory:</para>
 
@@ -52,9 +61,8 @@ cd ../gcc-build</userinput></screen>
     <para>Prepare GCC for compilation:</para>
 
 <screen><userinput remap="configure">CC="gcc -B/usr/bin/" ../gcc-&gcc-version;/configure --prefix=/tools \
-    --with-local-prefix=/tools --disable-nls --disable-shared \
-    --enable-languages=c --disable-multilib \
-    --disable-bootstrap</userinput></screen>
+    --with-local-prefix=/tools --disable-nls --disable-shared --disable-libssp \
+    --enable-languages=c</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure options:</title>
@@ -84,8 +92,9 @@ cd ../gcc-build</userinput></screen>
       <varlistentry>
         <term><parameter>--disable-shared</parameter></term>
         <listitem>
-          <para>This forces gcc to link its internal libraries statically. We do this
-	  to avoid possible issues with the host system.</para>
+          <para>This switch forces GCC to link its internal libraries
+          statically. We do this to avoid possible issues with the host
+          system.</para>
         </listitem>
       </varlistentry>
 
@@ -128,16 +137,15 @@ cd ../gcc-build</userinput></screen>
 
 <screen><userinput remap="install">make install</userinput></screen>
 
-    <para>Using <command>--disable-shared</command> means that the file
-    <filename class="libraryfile">libgcc_eh.a</filename>
-    isn't created and installed. The next package, Glibc, depends on this 
-    library as it uses <command>-lgcc_eh</command> within its build system.
-    We can satisfy that dependency by creating a symlink to
-    <filename class="libraryfile">libgcc.a</filename>, since that file will
-    end up containing the objects normally contained in
-    <filename class="libraryfile">libgcc_eh.a</filename>.</para>
+    <para>Using <parameter>--disable-shared</parameter> means that the
+    <filename>libgcc_eh.a</filename> file isn't created and installed. The
+    Glibc package depends on this library as it uses
+    <parameter>-lgcc_eh</parameter> within its build system. We can satisfy
+    that dependency by creating a symlink to <filename>libgcc.a</filename>,
+    since that file will end up containing the objects normally contained in
+    <filename>libgcc_eh.a</filename>.</para>
 
-<screen><userinput>ln -vs libgcc.a `gcc -print-libgcc-file-name | \
+<screen><userinput remap="install">ln -vs libgcc.a `gcc -print-libgcc-file-name | \
     sed 's/libgcc/&amp;_eh/'`</userinput></screen>
 
     <para>As a finishing touch, create a symlink. Many programs and scripts

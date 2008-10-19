@@ -81,7 +81,7 @@
 
     <para>Now make a necessary symbolic link:</para>
 
-<screen><userinput remap="install">ln -sv tclsh8.4 /tools/bin/tclsh</userinput></screen>
+<screen><userinput remap="install">ln -sv tclsh8.5 /tools/bin/tclsh</userinput></screen>
 
   </sect2>
 
@@ -93,8 +93,8 @@
       <segtitle>Installed library</segtitle>
 
       <seglistitem>
-        <seg>tclsh (link to tclsh8.4) and tclsh8.4</seg>
-        <seg>libtcl8.4.so</seg>
+        <seg>tclsh (link to tclsh8.5) and tclsh8.5</seg>
+        <seg>libtcl8.5.so</seg>
       </seglistitem>
     </segmentedlist>
 
@@ -103,12 +103,12 @@
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
-      <varlistentry id="tclsh8.4">
-        <term><command>tclsh8.4</command></term>
+      <varlistentry id="tclsh8.5">
+        <term><command>tclsh8.5</command></term>
         <listitem>
           <para>The Tcl command shell</para>
-          <indexterm zone="ch-tools-tcl tclsh8.4">
-            <primary sortas="b-tclsh8.4">tclsh8.4</primary>
+          <indexterm zone="ch-tools-tcl tclsh8.5">
+            <primary sortas="b-tclsh8.5">8.5</primary>
           </indexterm>
         </listitem>
       </varlistentry>
@@ -116,19 +116,19 @@
       <varlistentry id="tclsh">
         <term><command>tclsh</command></term>
         <listitem>
-          <para>A link to tclsh8.4</para>
+          <para>A link to tclsh8.5</para>
           <indexterm zone="ch-tools-tcl tclsh">
             <primary sortas="b-tclsh">tclsh</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
-      <varlistentry id="libtcl8.4.so">
-        <term><filename class="libraryfile">libtcl8.4.so</filename></term>
+      <varlistentry id="libtcl8.5.so">
+        <term><filename class="libraryfile">libtcl8.5.so</filename></term>
         <listitem>
           <para>The Tcl library</para>
-          <indexterm zone="ch-tools-tcl libtcl8.4.so">
-            <primary sortas="c-libtcl8.4.so">libtcl8.4.so</primary>
+          <indexterm zone="ch-tools-tcl libtcl8.5.so">
+            <primary sortas="c-libtcl8.5.so">libtcl8.5.so</primary>
           </indexterm>
         </listitem>
       </varlistentry>

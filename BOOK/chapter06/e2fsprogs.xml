@@ -46,7 +46,7 @@
     <para>Fix a hardcoded path to <filename>/bin/rm</filename> in E2fsprogs'
     testsuite:</para>
 
-    <screen><userinput remap="pre">sed -i -e 's@/bin/rm@/tools&amp;@' lib/blkid/test_probe.in</userinput></screen>
+    <screen><userinput remap="pre">sed -i 's@/bin/rm@/tools&amp;@' lib/blkid/test_probe.in</userinput></screen>
 
     <para>The E2fsprogs documentation recommends that the package be built in
     a subdirectory of the source tree: </para>
@@ -109,6 +109,27 @@ cd build</userinput></screen>
 
 <screen><userinput remap="install">make install-libs</userinput></screen>
 
+    <para>This package installs a gzipped
+    <filename class="extension">.info</filename> file but doesn't update the
+    system-wide <filename>dir</filename> file. Unzip this file and then update
+    the system <filename>dir</filename> file using the following
+    commands.</para>
+
+<screen><userinput remap="install">gunzip -v /usr/share/info/libext2fs.info.gz
+install-info --dir-file=/usr/share/info/dir \
+             /usr/share/info/libext2fs.info</userinput></screen>
+
+    <para>If desired, create and install some additional documentation by
+    issuing the following commands:</para>
+
+<screen><userinput remap="install">makeinfo -o      doc/com_err.info ../lib/et/com_err.texinfo
+install -v -m644 doc/com_err.info /usr/share/info
+install-info --dir-file=/usr/share/info/dir \
+             /usr/share/info/com_err.info
+
+install -v -m644 -D ../doc/libblkid.txt \
+        /usr/share/doc/e2fsprogs-&e2fsprogs-version;/libblkid.txt</userinput></screen>
+
   </sect2>
 
   <sect2 id="contents-e2fsprogs" role="content">
@@ -122,7 +143,7 @@ cd build</userinput></screen>
         <seg>badblocks, blkid, chattr, compile_et, debugfs, dumpe2fs, e2fsck,
         e2image, e2label, filefrag, findfs, fsck, fsck.ext2, fsck.ext3, logsave, lsattr,
         mk_cmds, mke2fs, mkfs.ext2, mkfs.ext3, mklost+found, resize2fs,
-        tune2fs, and uuidgen.</seg>
+        tune2fs, uuidd and uuidgen.</seg>
         <seg>libblkid.{a,so}, libcom_err.{a,so}, libe2p.{a,so},
         libext2fs.{a,so}, libss.{a,so}, and libuuid.{a,so}</seg>
       </seglistitem>
@@ -390,6 +411,17 @@ cd build</userinput></screen>
           class="filesystem">ext2</systemitem> file system</para>
           <indexterm zone="ch-system-e2fsprogs tune2fs">
             <primary sortas="b-tune2fs">tune2fs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="uuidd">
+        <term><command>uuidd</command></term>
+        <listitem>
+          <para>A daemon used by the UUID library to generate time-based
+          UUIDs in a secure and guranteed-unique fashion.</para>
+          <indexterm zone="ch-system-e2fsprogs uuidd">
+            <primary sortas="b-uuidd">uuidd</primary>
           </indexterm>
         </listitem>
       </varlistentry>

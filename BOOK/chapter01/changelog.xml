@@ -34,20 +34,408 @@
         </listitem>
       </itemizedlist>
     </listitem>
+
 -->
+
+    <listitem>
+      <para>2008-10-18</para>
+      <itemizedlist>
+        <listitem>
+          <para>[jhuntwork] - Fixed build locations of m4 so that it links against the
+          glibc built in /tools and so that no packages in chapter 6 hard-code references
+          to the temporarly location. Also made m4 a host prerequisite.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+
+    <listitem>
+      <para>2008-10-15</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Added --disable-libssp to glibc Pass 1 in Chapter 5
+          to eliminate a build failure on some systems.</para>
+        </listitem>
+        <listitem>
+          <para>[dj] - Updated to udev-config-20081015.</para>
+        </listitem>
+        <listitem>
+          <para>[dj] - Modified udev instructions following upstream
+          recommendations.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-10-13</para>
+      <itemizedlist>
+        <listitem>
+          <para>[randy] - Modified the Chapter 5 instructions so that instead
+          of building the GMP and MPFR packages separately for GCC Pass2, they
+          are built by GCC internally.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added a configure option to the Chapter 6 Gettext
+          instructions so that the documentation is installed in a versioned
+          directory.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-10-12</para>
+      <itemizedlist>
+        <listitem>
+          <para>[dj] - Updated to E2fsprogs-1.41.2.</para>
+        </listitem>
+        <listitem>
+          <para>[dj] - Corrected installation prefixes of Iproute2
+          package with DESTDIR and MANDIR paths. Thanks to Steffen Pankratz 
+          for the fix.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Modified the Chapter 6 GMP instructions to include a
+          method for determining all the tests in the test suite passed.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Modified the GCC search for correct headers command
+          to account for the new include-fixed directory.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added a patch to the Chapter 6 Binutils instructions
+          to correct some errors in the test suite.</para>
+        </listitem>
+        <listitem>
+          <para>[dj] - Corrected installation of udev rule files.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Moved the Chapter 6 M4 installation into alphabetical
+          order as it is installed in Chapter 5 now and therefore doesn't need
+          to precede the Bison installation.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Moved the Chapter 5 M4 installation to before GCC
+          Pass1 so that the internal GCC build of GMP will not fail in case
+          M4 doesn't exist on the host. Also updated GCC's dependencies to
+          reflect GMP and MPFR.</para>
+        </listitem>
+        <listitem>
+          <para>[dj] - Changed Chapter 5 GCC Pass 1 build to static.  Thanks to
+          Jeremy Huntwork for the suggestion and supporting text.</para>
+        </listitem>
+        <listitem>
+          <para>[dj] - Added note to Chapter 6 GCC about the new include-fixed
+          directory and changed the sample output to match.</para>
+        </listitem>
+        <listitem>
+          <para>[dj] - Added instruction to keep Chapter 5 Glibc from honoring
+          /etc/ld.so.preload.  Thanks to Alexander Patrakov for the fix.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added descriptions of the configure options used
+          in the GMP instructions and updated the installed library
+          descriptions.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-10-11</para>
+      <itemizedlist>
+        <listitem>
+          <para>[dj] - Removed the Chapter 5 Glibc test suite information as
+          it requires a working C++ compiler to run.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added three configure parameters to the Chapter 6
+          Util-linux-ng instructions so that additional programs are
+          installed. Also updated the installed programs list.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added a sed command to the Sysvinit instructions to
+          suppress the installation of the wall program and its man page as a
+          maintained version of this program is installed by
+          Util-linux-ng.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added commands to the Chapter 6 Binutils instructions
+          to suppress the installation of standards.info. Thanks to Greg
+          Schafer for contributing the fix.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added a patch to the Procps instructions to fix a
+          unicode related issue in the watch program.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added documentation installation commands to the
+          Chapter 6 Kbd instructions.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Modified the IPRoute2 installation command so that the
+          docs are installed in a versioned directory.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Modified the Groff installation command so that the
+          docs are installed in a standardized versioned directory.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added documentation installation commands to the
+          Chapter 6 Gawk instructions.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added commands to the Chapter 6 Flex instructions
+          to install a .pdf doc file.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added a parameter to the configure command in the
+          Automake instructions so that docs are installed in a versioned
+          directory.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Module-Init-Tools to 3.4.1.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added documentation installation commands to the
+          Chapter 6 Readline instructions.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added documentation installation commands to the
+          Chapter 6 Ncurses instructions.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-10-10</para>
+      <itemizedlist>
+        <listitem>
+          <para>[randy] - Added documentation enhancements to the E2fsprogs
+          package.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Removed an unnecessary parameter from the
+          Util-linux-ng Chapter 6 make command. Thanks to Greg Schafer for
+          pointing it out.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated the Perl instructions. Thanks to Greg Schafer
+          for pointing out the issues. This change also required that the Zlib
+          package is built right before the Perl package in Chapter 6.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Vim to 7.2.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Udev to 130.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-10-09</para>
+      <itemizedlist>
+        <listitem>
+          <para>[randy] - Updated File to 4.26</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Shadow to 4.1.2.1.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Man-DB to 2.5.2.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Iproute to 2.6.26.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added a command to the Inetutils instructions to
+          correct an issue with GCC-&gcc-version;.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-10-07</para>
+      <itemizedlist>
+        <listitem>
+          <para>[randy] - Updated Autoconf to 2.63.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Libtool to 2.2.6a.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Corrected the instruction to untar the E2fsprogs
+          tarball in Section 2.3. Thanks to William Immendorf for pointing
+          out the error.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Berkeley DB to 4.7.25.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Man-pages to 3.11.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Util-linux-ng to 2.14.1.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Texinfo to 4.13.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-10-06</para>
+      <itemizedlist>
+        <listitem>
+          <para>[robert] - Added -v to the cp command in the Chapter 5 Expect
+          instructions.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Tar to 1.20.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Perl to 5.10.0.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated M4 to 1.4.11 and added it to the Chapter 5
+          build as it is required by the GMP package in Chapter 6.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Findutils to 4.4.0.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-10-05</para>
+      <itemizedlist>
+        <listitem>
+          <para>[randy] - Updated E2fsprogs to 1.41.1.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added the Mktemp-1.5 package to the list of
+          removed items in the Chapter3 'What's new ...' page.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Coreutils to 6.12. Thanks to William
+          Immendorf for contributing a patch to add the mktemp program
+          information to the Coreutils page.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated the Bash Fixes patch to the -8 version.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added a patch to the Expect instructions to fix an
+          issue with recent Tcl versions.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Tcl to 8.5.4.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated the Linux kernel to 2.6.26.5.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated Glibc to a 2.8 snapshot taken on
+          9/29/2008. The tarball of this snapshot includes the libidn
+          data that previously was separately packaged.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Added the GMP and MPFR packages to the list of
+          packages in Chapter 3. Thanks to Lefteris Dimitroulakis for
+          pointing out the omission.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-10-03</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Added version check for Perl in Host System 
+          Requirements.</para>
+        </listitem>
+        <listitem>
+          <para>[randy] - Updated GCC to 4.3.2 which includes adding the
+          GMP-4.2.4 and MPFR-2.3.2 packages. This new version of GCC requires
+          the added packages. Thanks to DJ Lucas for the stimulus and initial
+          work resulting in this and all of the other package updates coming
+          up.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-07-11</para>
+      <itemizedlist>
+        <listitem>
+          <para>[ken] - Belatedly fixed known vulnerabilities in perl.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-06-03</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Added udev-config scripts to appendices.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Added lfs-bootscripts to appendices.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Updated license to Creative Commons with
+          extracted code under the MIT license.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2008-05-23</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bryan] - Install a few extra rules from the
+          etc/udev/packages directory in udev.  Thanks to Dan
+          Nicholson for noticing the issue.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+            
+    <listitem>
+      <para>2008-05-22</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bryan] - Updated Udev to 122, udev-config to
+          20080522, and lfs-bootscripts to 20080522.  Also made
+          persistent-net rules able to be pre-generated, using
+          udevadm test.  Fixes #2057, #2079 (I think), #2170, and
+          #2186.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>2008-04-23</para>
       <itemizedlist>
-	<listitem>
-	  <para>[jhuntwork] - Fixed behavior in kbd where man pages
+        <listitem>
+          <para>[jhuntwork] - Use -mtune=native for glibc. We don't
+          want our libc optimized for 486. It should be optimized
+          for the local machine.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Updated Autoconf to 2.62.</para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Updated E2fsprogs to 1.40.8. Fixes #2173.
+          </para>
+        </listitem>
+        <listitem>
+          <para>[jhuntwork] - Fixed behavior in kbd where man pages
           for optional programs that aren't built are installed.
-	  Thanks Greg Schafer for spotting this.
-	  </para>
-	</listitem>
+          Thanks Greg Schafer for spotting this.
+          </para>
+        </listitem>
         <listitem>
           <para>[jhuntwork] - Fixed kbd to install getkeycodes,
-	  setkeycodes and resizecons. Also moved loadkeys to /bin from
+          setkeycodes and resizecons. Also moved loadkeys to /bin from
           /usr/bin. Thanks, Greg Schafer.</para>
         </listitem>
       </itemizedlist>
