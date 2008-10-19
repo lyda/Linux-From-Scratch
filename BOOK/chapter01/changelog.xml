@@ -41,6 +41,19 @@
       <para>2008-10-19</para>
       <itemizedlist>
         <listitem>
+          <para>[randy] - Removed an unnecessary command from the Chapter 5
+          Perl instructions.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Updated the discussion in Chapter 1 explaining that the 
+          LiveCD is out of date.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Added a paragraph to the note in the packages page
+          explaining that bandwidth can be saved when making multiple updates within a
+          minor kernel release by downloading a base version and patches.</para>
+        </listitem>
+        <listitem>
           <para>[jhuntwork] - Move GCC's bootstrap back to pass 1 to correspond more closely
 	  with trunk. Cross compilation methods in the future can address the issues originally
 	  bypassed by moving the bootstrap to pass 2.</para>
@@ -54,7 +67,7 @@
         <listitem>
           <para>[jhuntwork] - Fixed build locations of m4 so that it links against the
           glibc built in /tools and so that no packages in chapter 6 hard-code references
-          to the temporarly location. Also made m4 a host prerequisite.</para>
+          to the temporary location. Also made m4 a host requirement.</para>
         </listitem>
       </itemizedlist>
     </listitem>
