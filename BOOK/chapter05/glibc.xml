@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-glibc" role="wrap">
+  <?dbhtml filename="glibc.html"?>
+
+  <sect1info condition="script">
+    <productname>glibc</productname>
+    <productnumber>&glibc-version;</productnumber>
+    <address>&glibc-url;</address>
+  </sect1info>
+
+  <title>Glibc-&glibc-version;</title>
+
+  <indexterm zone="ch-tools-glibc">
+    <primary sortas="a-Glibc">Glibc</primary>
+    <secondary>tools</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+    href="../chapter06/glibc.xml"
+    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&glibc-ch5-sbu;</seg>
+        <seg>&glibc-ch5-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Glibc</title>
+
+    <para>Fix a potential issue if <filename>/etc/ld.so.preload</filename> is
+    used on the host system.</para>
+
+<screen><userinput remap="pre">sed -i 's@/etc/ld.so.preload@/tools/etc/ld.so.preload@' elf/rtld.c</userinput></screen>
+
+    <para>The Glibc documentation recommends building Glibc outside of the source
+    directory in a dedicated build directory:</para>
+
+<screen><userinput remap="pre">mkdir -v ../glibc-build
+cd ../glibc-build</userinput></screen>
+
+    <para>Because Glibc no longer supports i386, its developers say to use the
+    compiler flag <parameter>-march=i486</parameter> when building it for x86
+    machines. There are several ways to accomplish that, but testing shows that
+    the flag is best placed inside the build variable <quote>CFLAGS</quote>.
+    Instead of overriding completely what Glibc's internal build system uses
+    for CFLAGS, append the new flag to the existing contents of CFLAGS by
+    making use of the special file <filename>configparms</filename>. The
+    -mtune=native flag is also necessary to reset a reasonable value for -mtune
+    that is changed when setting -march.</para>
+
+<screen><userinput remap="configure">echo "CFLAGS += -march=i486 -mtune=native" &gt; configparms</userinput></screen>
+
+    <para>Next, prepare Glibc for compilation:</para>
+
+<screen><userinput remap="configure">../glibc-&glibc-version;/configure --prefix=/tools \
+    --disable-profile --enable-add-ons \
+    --enable-kernel=2.6.0 --with-binutils=/tools/bin \
+    --without-gd --with-headers=/tools/include \
+    --without-selinux</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--disable-profile</parameter></term>
+        <listitem>
+          <para>This builds the libraries without profiling information. Omit
+          this option if profiling on the temporary tools is necessary.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-add-ons</parameter></term>
+        <listitem>
+          <para>This tells Glibc to use the NPTL add-on as its threading
+          library.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-kernel=2.6.0</parameter></term>
+        <listitem>
+          <para>This tells Glibc to compile the library with support
+          for 2.6.x Linux kernels.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--with-binutils=/tools/bin</parameter></term>
+        <listitem>
+          <para>While not required, this switch ensures that there are
+          no errors pertaining to which Binutils programs get used during the
+          Glibc build.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--without-gd</parameter></term>
+        <listitem>
+          <para>This prevents the build of the <command>memusagestat</command>
+          program, which insists on linking against the host's libraries
+          (libgd, libpng, libz, etc.).</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--with-headers=/tools/include</parameter></term>
+        <listitem>
+          <para>This tells Glibc to compile itself against the headers recently
+          installed to the tools directory, so that it knows exactly what
+          features the kernel has and can optimize itself accordingly.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--without-selinux</parameter></term>
+        <listitem>
+          <para>When building from hosts that include SELinux functionality
+          (e.g., Fedora Core 3), Glibc will build with support for SELinux.
+          As the LFS tools environment does not contain support for SELinux, a
+          Glibc compiled with such support will fail to operate correctly.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>During this stage the following warning might appear:</para>
+
+    <blockquote>
+<screen><computeroutput>configure: WARNING:
+*** These auxiliary programs are missing or
+*** incompatible versions: msgfmt
+*** some features will be disabled.
+*** Check the INSTALL file for required versions.</computeroutput></screen>
+    </blockquote>
+
+    <para>The missing or incompatible <command>msgfmt</command> program is
+    generally harmless, but it can sometimes cause issues when running the
+    test suite. This <command>msgfmt</command> program is part of the
+    Gettext package which the host distribution should provide. If
+    <command>msgfmt</command> is present but deemed incompatible, upgrade
+    the host system's Gettext package or continue without it and see if
+    the test suite runs without problems regardless.</para>
+
+    <para>Compile the package:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>This package does come with a test suite, however, it cannot be
+    run at this time because we do not have a C++ compiler yet.</para>
+
+    <para>The install stage of Glibc will issue a harmless warning at the
+    end about the absence of <filename>/tools/etc/ld.so.conf</filename>.
+    Prevent this warning with:</para>
+
+<screen><userinput remap="install">mkdir -v /tools/etc
+touch /tools/etc/ld.so.conf</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+    <para>Different countries and cultures have varying conventions for
+    how to communicate. These conventions range from the format for
+    representing dates and times to more complex issues, such as the
+    language spoken. The <quote>internationalization</quote> of GNU
+    programs works by locale.</para>
+
+    <note>
+      <para>If the test suites are not being run in this chapter (as per
+      the recommendation), there is no need to install the locales now.
+      The appropriate locales will be installed in the next chapter.
+      To install the Glibc locales anyway, use instructions from
+      <xref linkend="ch-system-glibc" role="."/></para>
+    </note>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in
+    <xref linkend="contents-glibc" role="."/></para>
+
+  </sect2>
+
+</sect1>

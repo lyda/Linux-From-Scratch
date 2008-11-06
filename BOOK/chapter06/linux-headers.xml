@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-linux-headers" role="wrap">
+  <?dbhtml filename="linux-headers.html"?>
+
+  <sect1info condition="script">
+    <productname>linux</productname>
+    <productnumber>&linux-version;</productnumber>
+    <address>&linux-url;</address>
+  </sect1info>
+
+  <title>Linux-&linux-version; API Headers</title>
+
+  <indexterm zone="ch-system-linux-headers">
+    <primary sortas="a-Linux">Linux</primary>
+    <secondary>API headers</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>The Linux API Headers expose the kernel's API for use by Glibc.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&linux-headers-ch6-sbu;</seg>
+        <seg>&linux-headers-ch6-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Linux API Headers</title>
+
+    <para>The Linux kernel needs to expose an Application Programming Interface
+    (API) for the system's C library (Glibc in LFS) to use.  This is done
+    by way of sanitizing various C header files that are shipped in the Linux
+    kernel source tarball.</para>
+
+    <para>First, make sure there are no stale files and dependencies lying around
+    from previous activity:</para>
+
+<screen><userinput remap="install">make mrproper</userinput></screen>
+
+    <para>Now test and extract the user-visible kernel headers from the source.
+    They are placed in an intermediate local directory and copied to the needed
+    location because the extraction process removes any existing files in 
+    the target directory.</para>
+
+<screen><userinput remap="install">make headers_check
+make INSTALL_HDR_PATH=dest headers_install
+cp -rv dest/include/* /usr/include</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-linux-headers" role="content">
+    <title>Contents of Linux API Headers</title>
+
+    <segmentedlist>
+      <segtitle>Installed headers</segtitle>
+
+      <seglistitem>
+        <seg>/usr/include/{asm{,-generic},linux,mtd,rdma,sound,video}/*.h</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="linux-headers">
+        <term><filename class="headerfile">/usr/include/{asm{,-generic},linux,mtd,rdma,sound}/*.h</filename></term>
+        <listitem>
+          <para>The Linux API headers</para>
+          <indexterm zone="ch-system-linux-headers linux-headers">
+            <!-- No /*.h here to prevent a PDF line overflow -->
+            <primary sortas="e-/usr/include/{asm{,-generic},linux,mtd,rdma,sound}">/usr/include/{asm{,-generic},linux,mtd,rdma,sound,video}</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

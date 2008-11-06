@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-grep" role="wrap">
+  <?dbhtml filename="grep.html"?>
+
+  <sect1info condition="script">
+    <productname>grep</productname>
+    <productnumber>&grep-version;</productnumber>
+    <address>&grep-url;</address>
+  </sect1info>
+
+  <title>Grep-&grep-version;</title>
+
+  <indexterm zone="ch-system-grep">
+    <primary sortas="a-Grep">Grep</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>The Grep package contains programs for searching through files.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&grep-ch6-sbu;</seg>
+        <seg>&grep-ch6-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Grep</title>
+
+    <para>The current Grep package has many bugs, especially in the support of
+    multibyte locales. The following consolidated patch from Debian fixes some of them,
+    improves the number of individual tests which are passed, and much improves the
+    speed in UTF-8 locales:</para>
+
+<screen><userinput remap="pre">patch -Np1 -i ../&grep-debian-patch;</userinput></screen>
+
+    <para>Upstream have fixed some of the documentation, and changed some of the
+    tests and the expected results in the newest test scripts.  This means that
+    not so many of the individual tests fail:</para>
+
+<screen><userinput remap="pre">patch -Np1 -i ../&grep-fixes-patch;</userinput></screen>
+
+    <para>Prepare Grep for compilation:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr \
+    --bindir=/bin \
+    --without-included-regex</userinput></screen>
+
+
+    <variablelist>
+      <title>The meaning of the configure switch:</title>
+      <varlistentry>
+        <term><parameter>--without-included-regex</parameter></term>
+        <listitem>
+          <para>The configure check for glibc's regex library is broken when
+          building against glibc-2.8.  This switch forces the use of glibc's
+          regex library.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+
+    <para>Compile the package:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>To test the results, issue:</para>
+
+<screen><userinput remap="test">make check || true</userinput></screen>
+
+    <para>There are known test failures in the <command>foad1.sh</command> and
+    <command>fmbtest.sh</command> tests.  The &quot;|| true&quot; construct is
+    used to avoid build automated build scripts failing due to the test failures.
+    A good run will show 2 failures from 14 tests, but if you look at the
+    output you will see in excess of forty individual tests which failed - these
+    are all in the new tests added since the previous version.</para>
+
+    <para>Install the package:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-grep" role="content">
+    <title>Contents of Grep</title>
+
+    <segmentedlist>
+      <segtitle>Installed programs</segtitle>
+
+      <seglistitem>
+        <seg>egrep, fgrep, and grep</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="egrep">
+        <term><command>egrep</command></term>
+        <listitem>
+          <para>Prints lines matching an extended regular expression</para>
+          <indexterm zone="ch-system-grep egrep">
+            <primary sortas="b-egrep">egrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fgrep">
+        <term><command>fgrep</command></term>
+        <listitem>
+          <para>Prints lines matching a list of fixed strings</para>
+          <indexterm zone="ch-system-grep fgrep">
+            <primary sortas="b-fgrep">fgrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grep">
+        <term><command>grep</command></term>
+        <listitem>
+          <para>Prints lines matching a basic regular expression</para>
+          <indexterm zone="ch-system-grep grep">
+            <primary sortas="b-grep">grep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

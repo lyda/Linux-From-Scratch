@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-scripts-network">
+  <?dbhtml filename="network.html"?>
+
+  <title>Configuring the network Script</title>
+
+  <indexterm zone="ch-scripts-network">
+    <primary sortas="d-network">network</primary>
+  <secondary>configuring</secondary></indexterm>
+
+  <para>This section only applies if a network card is to be
+  configured.</para>
+
+  <para>If a network card will not be used, there is likely no need to
+  create any configuration files relating to network cards. If that is
+  the case, remove the <filename class="symlink">network</filename>
+  symlinks from all run-level directories (<filename
+  class="directory">/etc/rc.d/rc*.d</filename>).</para>
+
+  <sect2>
+    <title>Creating stable names for network interfaces</title>
+
+    <para>With Udev and modular network drivers, the network interface numbering
+    is not persistent across reboots by default, because the drivers are loaded
+    in parallel and, thus, in random order. For example, on a computer having
+    two network cards made by Intel and Realtek, the network card manufactured
+    by Intel may become <filename class="devicefile">eth0</filename> and the
+    Realtek card becomes  <filename class="devicefile">eth1</filename>. In some
+    cases, after a reboot the cards get renumbered the other way around. To
+    avoid this, Udev comes with a script and some rules to assign stable names
+    to network cards based on their MAC address.</para>
+
+    <para>Pre-generate the rules to ensure the same names get assigned to the
+    same devices at every boot, including the first:</para>
+
+<screen><userinput>for NIC in /sys/class/net/* ; do
+    INTERFACE=${NIC##*/} udevadm test --action=add --subsystem=net $NIC
+done</userinput></screen>
+
+    <para>Now, inspect the <filename>/etc/udev/rules.d/70-persistent-net.rules</filename>
+    file, to find out which name was assigned to which network device:</para>
+
+<screen><userinput>cat /etc/udev/rules.d/70-persistent-net.rules</userinput></screen>
+
+    <para>The file begins with a comment block followed by two lines for each
+    NIC. The first line for each NIC is a commented description showing its
+    hardware IDs (e.g. its PCI vendor and device IDs, if it's a PCI card),
+    along with its driver in parentheses, if the driver can be found. Neither
+    the hardware ID nor the driver is used to determine which name to give an
+    interface; this information is only for reference. The second line is the
+    Udev rule that matches this NIC and actually assigns it a name.</para>
+
+    <para>All Udev rules are made up of several keys, separated by commas and
+    optional whitespace. This rule's keys and an explanation of each of them
+    are as follows:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para><literal>SUBSYSTEM=="net"</literal> - This tells Udev to ignore
+        devices that are not network cards.</para>
+      </listitem>
+      <listitem>
+        <para><literal>ACTION=="add"</literal> - This tells Udev to ignore this
+        rule for a uevent that isn't an add ("remove" and "change" uevents also
+        happen, but don't need to rename network interfaces).</para>
+      </listitem>
+      <listitem>
+        <para><literal>DRIVERS=="?*"</literal> - This exists so that Udev will
+        ignore VLAN or bridge sub-interfaces (because these sub-interfaces do
+        not have drivers). These sub-interfaces are skipped because the name
+        that would be assigned would collide with their parent devices.</para>
+      </listitem>
+      <listitem>
+        <para><literal>ATTR{address}</literal> - The value of this key is the
+        NIC's MAC address.</para>
+      </listitem>
+      <listitem>
+        <para><literal>ATTR{type}=="1"</literal> - This ensures the rule only
+        matches the primary interface in the case of certain wireless drivers,
+        which create multiple virtual interfaces. The secondary interfaces are
+        skipped for the same reason that VLAN and bridge sub-interfaces are
+        skipped: there would be a name collision otherwise.</para>
+      </listitem>
+      <listitem>
+        <para><literal>KERNEL=="eth*"</literal> - This key was added to the
+        Udev rule generator to handle machines that have multiple network
+        interfaces, all with the same MAC address (the PS3 is one such
+        machine).  If the independent interfaces have different basenames,
+        this key will allow Udev to tell them apart.  This is generally not
+        necessary for most Linux From Scratch users, but does not hurt.</para>
+      </listitem>
+      <listitem>
+        <para><literal>NAME</literal> - The value of this key is the name that
+        Udev will assign to this interface.</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>The value of <literal>NAME</literal> is the important part. Make sure
+    you know which name has been assigned to each of your network cards before
+    proceeding, and be sure to use that <literal>NAME</literal> value when
+    creating your configuration files below.</para>
+
+  </sect2>
+
+  <sect2>
+    <title>Creating Network Interface Configuration Files</title>
+
+    <para>Which interfaces are brought up and down by the network script
+    depends on the files and directories in the <filename
+    class="directory">/etc/sysconfig/network-devices</filename> hierarchy.
+    This directory should contain a sub-directory for each interface to be
+    configured, such as <filename>ifconfig.xyz</filename>, where
+    <quote>xyz</quote> is a network interface name. Inside this directory
+    would be files defining the attributes to this interface, such as its IP
+    address(es), subnet masks, and so forth.</para>
+
+    <para>The following command creates a sample <filename>ipv4</filename>
+    file for the <emphasis>eth0</emphasis> device:</para>
+
+<screen><userinput>cd /etc/sysconfig/network-devices
+mkdir -v ifconfig.eth0
+cat &gt; ifconfig.eth0/ipv4 &lt;&lt; "EOF"
+<literal>ONBOOT=yes
+SERVICE=ipv4-static
+IP=192.168.1.1
+GATEWAY=192.168.1.2
+PREFIX=24
+BROADCAST=192.168.1.255</literal>
+EOF</userinput></screen>
+
+    <para>The values of these variables must be changed in every file to match
+    the proper setup. If the <envar>ONBOOT</envar> variable is set to
+    <quote>yes</quote> the network script will bring up the Network Interface
+    Card (NIC) during booting of the system. If set to anything but
+    <quote>yes</quote> the NIC will be ignored by the network script and not
+    be brought up.</para>
+
+    <para>The <envar>SERVICE</envar> variable defines the method used for
+    obtaining the IP address. The LFS-Bootscripts package has a modular IP
+    assignment format, and creating additional files in the <filename
+    class="directory">/etc/sysconfig/network-devices/services</filename>
+    directory allows other IP assignment methods. This is commonly used for
+    Dynamic Host Configuration Protocol (DHCP), which is addressed in the
+    BLFS book.</para>
+
+    <para>The <envar>GATEWAY</envar> variable should contain the default
+    gateway IP address, if one is present. If not, then comment out the
+    variable entirely.</para>
+
+    <para>The <envar>PREFIX</envar> variable needs to contain the number of
+    bits used in the subnet. Each octet in an IP address is 8 bits. If the
+    subnet's netmask is 255.255.255.0, then it is using the first three octets
+    (24 bits) to specify the network number. If the netmask is 255.255.255.240,
+    it would be using the first 28 bits.  Prefixes longer than 24 bits are
+    commonly used by DSL and cable-based Internet Service Providers (ISPs).
+    In this example (PREFIX=24), the netmask is 255.255.255.0. Adjust the
+    <envar>PREFIX</envar> variable according to your specific subnet.</para>
+
+  </sect2>
+
+  <sect2 id="resolv.conf">
+    <title>Creating the /etc/resolv.conf File</title>
+
+    <indexterm zone="resolv.conf">
+      <primary sortas="e-/etc/resolv.conf">/etc/resolv.conf</primary>
+    </indexterm>
+
+    <para>If the system is going to be connected to the Internet, it will
+    need some means of Domain Name Service (DNS) name resolution to
+    resolve Internet domain names to IP addresses, and vice versa. This is
+    best achieved by placing the IP address of the DNS server, available
+    from the ISP or network administrator, into
+    <filename>/etc/resolv.conf</filename>. Create the file by running the
+    following:</para>
+
+<screen><userinput>cat &gt; /etc/resolv.conf &lt;&lt; "EOF"
+<literal># Begin /etc/resolv.conf
+
+domain <replaceable>&lt;Your Domain Name&gt;</replaceable>
+nameserver <replaceable>&lt;IP address of your primary nameserver&gt;</replaceable>
+nameserver <replaceable>&lt;IP address of your secondary nameserver&gt;</replaceable>
+
+# End /etc/resolv.conf</literal>
+EOF</userinput></screen>
+
+    <para>Replace <replaceable>&lt;IP address of the nameserver&gt;</replaceable>
+    with the IP address of the DNS most appropriate for the setup. There will
+    often be more than one entry (requirements demand secondary servers for
+    fallback capability). If you only need or want one DNS server, remove the
+    second <emphasis>nameserver</emphasis> line from the file. The IP address
+    may also be a router on the local network.</para>
+
+  </sect2>
+
+</sect1>
