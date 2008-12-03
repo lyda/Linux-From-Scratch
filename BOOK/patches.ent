@@ -25,9 +25,9 @@
 <!ENTITY bzip2-docs-patch-size "1.6 KB">
 
 
-<!-- <!ENTITY coreutils-i18n-patch "coreutils-&coreutils-version;-i18n-1.patch">
-<!ENTITY coreutils-i18n-patch-md5 "791df67d25a45d846c1af4dadf2612c8">
-<!ENTITY coreutils-i18n-patch-size "102 KB"> -->
+<!ENTITY coreutils-i18n-patch "coreutils-&coreutils-version;-i18n-2.patch">
+<!ENTITY coreutils-i18n-patch-md5 "2b6182f77f8b575e27d7743dd403104e">
+<!ENTITY coreutils-i18n-patch-size "104 KB">
 
 <!ENTITY coreutils-old-kernel-patch "coreutils-&coreutils-version;-old_build_kernel-1.patch">
 <!ENTITY coreutils-old-kernel-patch-md5 "5e8622abe6c6d81901b910383c6fb611">
@@ -53,7 +53,7 @@
 <!ENTITY expect-spawn-patch-size "6.8 KB">
 
 
-<!ENTITY expect-tcl-patch "expect-&expect-version;-tcl_8.5.4_fix-1.patch">
+<!ENTITY expect-tcl-patch "expect-&expect-version;-tcl_8.5.5_fix-1.patch">
 <!ENTITY expect-tcl-patch-md5 "6904a384960ce0e8f0d0b32f7903d7a1">
 <!ENTITY expect-tcl-patch-size "4.1 KB">
 
@@ -109,18 +109,9 @@
 <!ENTITY ncurses-coverity-patch-size "16.8 KB">
 
 
-<!ENTITY perl-libc-patch "perl-&perl-version;-libc-1.patch">
-<!ENTITY perl-libc-patch-md5 "3bf8aef1fb6eb6110405e699e4141f99">
-<!ENTITY perl-libc-patch-size "1.1 KB">
-
-<!ENTITY perl-page-patch "perl-&perl-version;-page-1.patch">
-<!ENTITY perl-page-patch-md5 "16abf98d92d896601250ca610243cdf5">
-<!ENTITY perl-page-patch-size "0.7 KB">
-
-<!ENTITY perl-security-patch "perl-&perl-version;-security_fix-1.patch">
-<!ENTITY perl-security-patch-md5 "4b1384ba595abd070824c2519d1d3176">
-<!ENTITY perl-security-patch-size "0.8 KB">
-
+<!ENTITY perl-consolidated-patch "perl-&perl-version;-consolidated-1.patch">
+<!ENTITY perl-consolidated-patch-md5 "d1bcffb5d671bd659f7ca5c451a0c752">
+<!ENTITY perl-consolidated-patch-size "7.1 KB">
 
 <!ENTITY procps-watch-patch "procps-&procps-version;-watch_unicode-1.patch">
 <!ENTITY procps-watch-patch-md5 "2e5b57608177bd54349c718db9b5843d">
@@ -141,6 +132,7 @@
 <!ENTITY vim-fixes-patch-md5 "4b526f493995d2eb6fd415eb62ff43d8">
 <!ENTITY vim-fixes-patch-size "29.3 KB">
 
-<!ENTITY vim-mandir-patch "vim-&vim-version;-mandir-1.patch">
+<!-- <!ENTITY vim-mandir-patch "vim-&vim-version;-mandir-1.patch">
 <!ENTITY vim-mandir-patch-md5 "b6426eb4192faba1e867ddd502323f5b">
-<!ENTITY vim-mandir-patch-size "4.2 KB">
+<!ENTITY vim-mandir-patch-size "4.2 KB"> -->
+

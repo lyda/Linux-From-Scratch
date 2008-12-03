@@ -66,13 +66,13 @@
       </listitem>
     </varlistentry>
 
-    <!-- <varlistentry>
+    <varlistentry>
       <term>Coreutils Internationalization Fixes Patch - <token>&coreutils-i18n-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&coreutils-i18n-patch;"/></para>
         <para>MD5 sum: <literal>&coreutils-i18n-patch-md5;</literal></para>
       </listitem>
-    </varlistentry> -->
+    </varlistentry>
 
     <varlistentry>
       <term>Coreutils Old Kernel Patch - <token>&coreutils-old-kernel-patch-size;</token>:</term>
@@ -117,24 +117,24 @@
     <varlistentry>
       <term>Glibc Iconv Test Fixes Patch - <token>&glibc-iconv-test-fixes-patch-size;</token>:</term>
       <listitem>
-	<para>Download: <ulink url="&patches-root;&glibc-iconv-test-fixes-patch;"/></para>
-	<para>MD5 sum: <literal>&glibc-iconv-test-fixes-patch-md5;</literal></para>
+        <para>Download: <ulink url="&patches-root;&glibc-iconv-test-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&glibc-iconv-test-fixes-patch-md5;</literal></para>
       </listitem>
     </varlistentry>
 
     <varlistentry>
       <term>Glibc Ildoubl Test Fix Patch - <token>&glibc-ildoubl-test-fix-patch-size;</token>:</term>
       <listitem>
-	<para>Download: <ulink url="&patches-root;&glibc-ildoubl-test-fix-patch;"/></para>
-	<para>MD5 sum: <literal>&glibc-ildoubl-test-fix-patch-md5;</literal></para>
+        <para>Download: <ulink url="&patches-root;&glibc-ildoubl-test-fix-patch;"/></para>
+        <para>MD5 sum: <literal>&glibc-ildoubl-test-fix-patch-md5;</literal></para>
       </listitem>
     </varlistentry>
 
     <varlistentry>
       <term>Grep Debian Patch - <token>&grep-debian-patch-size;</token>:</term>
       <listitem>
-	<para>Download: <ulink url="&patches-root;&grep-debian-patch;"/></para>
-	<para>MD5 sum: <literal>&grep-debian-patch-md5;</literal></para>
+        <para>Download: <ulink url="&patches-root;&grep-debian-patch;"/></para>
+        <para>MD5 sum: <literal>&grep-debian-patch-md5;</literal></para>
       </listitem>
     </varlistentry>
 
@@ -194,15 +194,23 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry>
+    <!-- <varlistentry>
       <term>Perl Libc Patch - <token>&perl-libc-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&perl-libc-patch;"/></para>
         <para>MD5 sum: <literal>&perl-libc-patch-md5;</literal></para>
       </listitem>
-    </varlistentry>
+    </varlistentry> -->
 
     <varlistentry>
+      <term>Perl Consolidated Patch - <token>&perl-consolidated-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&perl-consolidated-patch;"/></para>
+        <para>MD5 sum: <literal>&perl-consolidated-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <!-- <varlistentry>
       <term>Perl Page Patch - <token>&perl-page-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&perl-page-patch;"/></para>
@@ -216,7 +224,7 @@
         <para>Download: <ulink url="&patches-root;&perl-security-patch;"/></para>
         <para>MD5 sum: <literal>&perl-security-patch-md5;</literal></para>
       </listitem>
-    </varlistentry>
+    </varlistentry> -->
 
     <varlistentry>
       <term>Procps Watch Patch - <token>&procps-watch-patch-size;</token>:</term>
@@ -242,7 +250,6 @@
       </listitem>
     </varlistentry> -->
 
-
     <varlistentry>
       <term>Vim Fixes Patch - <token>&vim-fixes-patch-size;</token>:</term>
       <listitem>
@@ -251,13 +258,13 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry>
+    <!-- <varlistentry>
       <term>Vim Man Directories Patch - <token>&vim-mandir-patch-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&patches-root;&vim-mandir-patch;"/></para>
         <para>MD5 sum: <literal>&vim-mandir-patch-md5;</literal></para>
       </listitem>
-    </varlistentry>
+    </varlistentry> -->
 
   </variablelist>
 

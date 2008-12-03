@@ -70,7 +70,9 @@
 
 <screen><userinput remap="make">make</userinput></screen>
 
-    <para>To test the results, issue:</para>
+    <para>Compilation is now complete. As discussed earlier, running the test
+    suite is not mandatory for the temporary tools here in this chapter. To run
+    the Coreutils test suite anyway, issue the following command:</para>
 
 <screen><userinput remap="test">make RUN_EXPENSIVE_TESTS=yes check</userinput></screen>
 
@@ -84,11 +86,11 @@
 <screen><userinput remap="install">make install</userinput></screen>
 
     <para>The above command refuses to install <filename>su</filename>
-    because it cannot install it setuid root as a non-privileged user. By
-    manually installing it with a different name, we can use it for running
-    tests in the final system as a non-privileged user and we keep a possibly
-    useful <command>su</command> from our host first place in our PATH. Install
-    it with:</para>
+    because the program cannot be installed setuid root as a non-privileged
+    user. By manually installing it with a different name, we can use it for
+    running tests in the final system as a non-privileged user and we keep a
+    possibly useful <command>su</command> from our host first in our PATH.
+    Install it with:</para>
 
 <screen><userinput remap="install">cp -v src/su /tools/bin/su-tools</userinput></screen>
 
