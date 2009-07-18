@@ -30,7 +30,7 @@ export PATH=$PATH:$JAVA_HOME/bin:$FOP_HOME/bin
 #######################
 # These are the biggies
 stable=n                      # Is this the final release? 'y' or 'n' only
-version=6.1-testrelease       # x.y[.z-preX]
+version=6.5-rc1               # x.y[.z-preX]
 #######################
 
 workarea=~/RELEASE-${version} # This is where you will do all your work
@@ -39,12 +39,12 @@ book=LFS-BOOK-${version}      # I'm lazy, hence the shorthand :)
 group=lfswww                  # Which group will own the files after copying
 
 # Where the books are to be copied to
-view=/home/httpd/www.linuxfromscratch.org/lfs/view
-downloads=/home/httpd/www.linuxfromscratch.org/lfs/downloads
-archives=/home/httpd/archives.linuxfromscratch.org/lfs-museum
+view=/srv/www/www.linuxfromscratch.org/lfs/view
+downloads=/srv/www/www.linuxfromscratch.org/lfs/downloads
+archives=/srv/www/archives.linuxfromscratch.org/lfs-museum
 
-if [ "$host" != "belgarath" ]; then
-  echo -e "\n${red}*${white} This script must be run on ${red}belgarath${white}."
+if [ "$host" != "quantum" ]; then
+  echo -e "\n${red}*${white} This script must be run on ${red}quantum${white}."
   exit 1
 fi
 
@@ -110,27 +110,29 @@ make BASEDIR=$workarea NOCHUNKS_OUTPUT=$book-NOCHUNKS.html nochunks \
   >$workarea/nochunks.log 2>&1 || exit 9
 cd $workarea
 # Before bzipping the NOCHUNKS, create a text dump
-lynx -dump $book-NOCHUNKS.html >$book.txt
-sed -i.bak -e "/^   [0-9]\. /d" -e "/^  [0-9][0-9]\. /d" \
-  -e "/^ [0-9][0-9][0-9]\. /d" -e "/^[0-9][0-9][0-9][0-9]\. /d" \
-  $book.txt
-bzip2 $book.txt
+#lynx -dump $book-NOCHUNKS.html >$book.txt
+#sed -i.bak -e "/^   [0-9]\. /d" -e "/^  [0-9][0-9]\. /d" \
+#  -e "/^ [0-9][0-9][0-9]\. /d" -e "/^[0-9][0-9][0-9][0-9]\. /d" \
+#  $book.txt
+#bzip2 $book.txt
 bzip2 $book-NOCHUNKS.html || exit 29
 rm -rf images
 echo -e "${grn}*${yel} Successful!${norm}\n"
 
 # Finally, the PDF
 
-echo -e "${grn}*${white} Preparing ${grn}$book.pdf${white}...${norm}"
-cd $workarea/original
-make BASEDIR=$workarea PDF_OUTPUT=$book.pdf pdf >$workarea/pdf.log 2>&1 || exit 9
-echo -e "${grn}*${yel} Successful!${norm}\n"
+#echo -e "${grn}*${white} Preparing ${grn}$book.pdf${white}...${norm}"
+#cd $workarea/original
+#make BASEDIR=$workarea PDF_OUTPUT=$book.pdf pdf >$workarea/pdf.log 2>&1 || exit 9
+#echo -e "${grn}*${yel} Successful!${norm}\n"
 
 # Now that the books are finished, create the script that will copy all patches
 # to their proper location.
 
 echo -e "${grn}*${white} Creating ${grn}copy-lfs-patches.sh ${white}...${norm}"
 cd $workarea/original
+chmod u+x process-scripts.sh
+./process-scripts.sh
 xsltproc --xinclude stylesheets/patcheslist.xsl index.xml \
   >$workarea/copy-lfs-patches.sh || exit 39
 
@@ -143,8 +145,8 @@ cd $testarea
 tar jxf $workarea/$book-XML.tar.bz2
 tar jxf $workarea/$book-HTML.tar.bz2
 bzcat $workarea/$book-NOCHUNKS.html.bz2 >$book-NOCHUNKS.html
-bzcat $workarea/$book.txt.bz2 >$book.txt
-cp $workarea/$book.pdf .
+#bzcat $workarea/$book.txt.bz2 >$book.txt
+#cp $workarea/$book.pdf .
 
 # Now to cleanup
 echo -e "\n${grn}*${white} Cleaning up...${norm}"
@@ -213,10 +215,10 @@ for dir in $downloads $archives; do
   install -v -m 0664 -g $group $book-HTML.tar.bz2 \$dir/$version
   echo
   install -v -m 0664 -g $group $book-NOCHUNKS.html.bz2 \$dir/$version
-  echo
-  install -v -m 0664 -g $group $book.txt.bz2 \$dir/$version
-  echo
-  install -v -m 0664 -g $group $book.pdf \$dir/$version
+#  echo
+#  install -v -m 0664 -g $group $book.txt.bz2 \$dir/$version
+#  echo
+#  install -v -m 0664 -g $group $book.pdf \$dir/$version
   echo
 done
 
