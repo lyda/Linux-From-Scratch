@@ -3,7 +3,7 @@
 <!ENTITY releasedate "July 29, 2009">
 <!ENTITY copyrightdate "1999-2009"><!-- jhalfs needs a literal dash, not &ndash; -->
 <!ENTITY milestone "6.5">
-<!ENTITY generic-version "6.5-rc1"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
+<!ENTITY generic-version "6.5-rc2"> <!-- Use "development", "testing", or "x.y[-pre{x}]" -->
 
 <!ENTITY lfs-root "http://www.linuxfromscratch.org/">
 <!ENTITY lfs-ticket-root "http://wiki.linuxfromscratch.org/lfs/ticket/">
