@@ -23,9 +23,10 @@ grn="\e[01;32m"
 white="\e[1;37m"
 red="\e[01;31m"
 yel="\e[1;33m"
-export JAVA_HOME=/opt/javabin/java-1.4.2
-export FOP_HOME=/opt/javabin/fop-0.20.5
-export PATH=$PATH:$JAVA_HOME/bin:$FOP_HOME/bin
+
+export JAVA_HOME=/usr/jdk
+export FOP_HOME=/usr/fop
+export PATH=$PATH:$JAVA_HOME/bin:$FOP_HOME
 
 #######################
 # These are the biggies
@@ -121,10 +122,10 @@ echo -e "${grn}*${yel} Successful!${norm}\n"
 
 # Finally, the PDF
 
-#echo -e "${grn}*${white} Preparing ${grn}$book.pdf${white}...${norm}"
-#cd $workarea/original
-#make BASEDIR=$workarea PDF_OUTPUT=$book.pdf pdf >$workarea/pdf.log 2>&1 || exit 9
-#echo -e "${grn}*${yel} Successful!${norm}\n"
+echo -e "${grn}*${white} Preparing ${grn}$book.pdf${white}...${norm}"
+cd $workarea/original
+make BASEDIR=$workarea PDF_OUTPUT=$book.pdf pdf >$workarea/pdf.log 2>&1 || exit 9
+echo -e "${grn}*${yel} Successful!${norm}\n"
 
 # Now that the books are finished, create the script that will copy all patches
 # to their proper location.
@@ -146,7 +147,7 @@ tar jxf $workarea/$book-XML.tar.bz2
 tar jxf $workarea/$book-HTML.tar.bz2
 bzcat $workarea/$book-NOCHUNKS.html.bz2 >$book-NOCHUNKS.html
 #bzcat $workarea/$book.txt.bz2 >$book.txt
-#cp $workarea/$book.pdf .
+cp $workarea/$book.pdf .
 
 # Now to cleanup
 echo -e "\n${grn}*${white} Cleaning up...${norm}"
@@ -217,8 +218,8 @@ for dir in $downloads $archives; do
   install -v -m 0664 -g $group $book-NOCHUNKS.html.bz2 \$dir/$version
 #  echo
 #  install -v -m 0664 -g $group $book.txt.bz2 \$dir/$version
-#  echo
-#  install -v -m 0664 -g $group $book.pdf \$dir/$version
+  echo
+  install -v -m 0664 -g $group $book.pdf \$dir/$version
   echo
 done
 
