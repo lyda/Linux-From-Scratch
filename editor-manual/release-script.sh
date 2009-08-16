@@ -30,8 +30,8 @@ export PATH=$PATH:$JAVA_HOME/bin:$FOP_HOME
 
 #######################
 # These are the biggies
-stable=n                      # Is this the final release? 'y' or 'n' only
-version=6.5-rc1               # x.y[.z-preX]
+stable=y                      # Is this the final release? 'y' or 'n' only
+version=6.5                   # x.y[.z-preX]
 #######################
 
 workarea=~/RELEASE-${version} # This is where you will do all your work
@@ -193,6 +193,8 @@ fi
 install -dv -m 0775 -g $group $downloads/$version
 echo
 install -dv -m 0775 -g $group $archives/$version
+echo
+install -dv -m 0775 -g $group $view/$version
 echo
 
 # If this is a final release, recreate the needed symlinks
