@@ -238,7 +238,7 @@ chmod -R g+w $book-HTML
 chgrp -R $group $book-HTML
 
 cd $view
-tar jxf $downloads/$version/$book-HTML.tar.bz2
+tar -xjf $downloads/$version/$book-HTML.tar.bz2 --strip-components=1
 mv $book-HTML $version
 chmod -R g+w $version
 chgrp -R $group $version
