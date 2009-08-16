@@ -514,9 +514,9 @@
 <!ENTITY udev-ch6-sbu "0.2 SBU">
 
 <!ENTITY udev-config "udev-config-20090523"> <!-- Scripts depend on this format -->
-<!ENTITY udev-config-size "UDEV-SIZE KB">    <!-- Updated in Makefile -->
+<!ENTITY udev-config-size "13 KB">    <!-- Updated in Makefile -->
 <!ENTITY udev-config-url "&downloads-root;&udev-config;.tar.bz2">
-<!ENTITY udev-config-md5 "UDEV-MD5SUM">      <!-- Updated in Makefile -->
+<!ENTITY udev-config-md5 "f2972b6c3cfb21dc16f3127245e0369c">      <!-- Updated in Makefile -->
 <!ENTITY udev-config-home " ">
 
 <!ENTITY util-linux-ng-version "2.16">
