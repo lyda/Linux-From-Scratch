@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-grub" role="wrap">
+  <?dbhtml filename="grub.html"?>
+
+  <sect1info condition="script">
+    <productname>grub</productname>
+    <productnumber>&grub-version;</productnumber>
+    <address>&grub-url;</address>
+  </sect1info>
+
+  <title>GRUB-&grub-version;</title>
+
+  <indexterm zone="ch-system-grub">
+    <primary sortas="a-Grub">GRUB</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>The GRUB package contains the GRand Unified Bootloader.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&grub-ch6-sbu;</seg>
+        <seg>&grub-ch6-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of GRUB</title>
+
+    <para>Prepare GRUB for compilation:</para>
+
+<screen><userinput remap="configure">mkdir build
+cd build
+../configure --prefix=/usr           \
+             --sysconfdir=/etc       \
+             --disable-grub-emu      \
+             --disable-grub-emu-usb  \
+             --disable-grub-fstest   \
+             --disable-efiemu</userinput></screen>
+
+    <para>Using a separate build directory keeps the 2400 generated 
+    files out of the main directory and is recommended by the developers.
+    The --disable switches just minimize what is built by disabling
+    features and testing programs not really needed for LFS.</para>
+
+    <para>Compile the package:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>This package does not come with a test suite.</para>
+
+    <para>Install the package:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  <para>Using GRUB to make your LFS system bootable will be discussed in 
+  <xref linkend="ch-bootable-grub"/>.</para>
+
+  </sect2>
+
+  <sect2 id="contents-gRUB" role="content">
+    <title>Contents of GRUB</title>
+
+    <segmentedlist>
+      <segtitle>Installed programs</segtitle>
+      <segtitle>Installed directories</segtitle>
+
+      <seglistitem>
+        <seg>grub-editenv, grub-mkelfimage, grub-mkfont, grub-mkimage,
+        grub-mkrescue, grub-dumpbios, grub-install, grub-mkconfig, 
+        grub-mkdevicemap,  grub-probe, grub-setup</seg>
+
+        <seg>/usr/lib/grub, /etc/grub.d, /usr/share/grub, /usr/inclue/grub</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="grub-editenv">
+        <term><command>grub-editenv</command></term>
+        <listitem>
+          <para>A tool to edit the environment block</para>
+          <indexterm zone="ch-system-grub grub-editenv">
+            <primary sortas="b-grub-editenv">grub-editenv</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grub-mkelfimage">
+        <term><command>grub-mkelfimage</command></term>
+        <listitem>
+          <para>Make a bootable image of GRUB</para>
+          <indexterm zone="ch-system-grub grub-mkelfimage">
+            <primary sortas="b-grub-mkelfimage">grub-mkelfimage</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grub-mkfont">
+        <term><command>grub-mkfont</command></term>
+        <listitem>
+          <para>Update fonts for GRUB use</para>
+          <indexterm zone="ch-system-grub grub-mkfont">
+            <primary sortas="b-grub-mkfont">grub-mkfont</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grub-mkimage">
+        <term><command>grub-mkimage</command></term>
+        <listitem>
+          <para>Make a bootable image of GRUB</para>
+          <indexterm zone="ch-system-grub grub-mkimage">
+            <primary sortas="b-grub-mkimage">grub-mkimage</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grub-mkrescue">
+        <term><command>grub-mkrescue</command></term>
+        <listitem>
+          <para>Make a bootable image of GRUB suitable for a floppy disk</para>
+          <indexterm zone="ch-system-grub grub-mkrescue">
+            <primary sortas="b-grub-mkrescue">grub-mkrescue</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grub-dumpbios">
+        <term><command>grub-dumpbios</command></term>
+        <listitem>
+          <para>Create vbios and int10 dump</para>
+          <indexterm zone="ch-system-grub grub-dumpbios">
+            <primary sortas="b-grub-dumpbios">grub-dumpbios</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grub-install">
+        <term><command>grub-install</command></term>
+        <listitem>
+          <para>Install GRUB on your drive</para>
+          <indexterm zone="ch-system-grub grub-install">
+            <primary sortas="b-grub-install">grub-install</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grub-mkconfig">
+        <term><command>grub-mkconfig</command></term>
+        <listitem>
+          <para>Generate a grub config file</para>
+          <indexterm zone="ch-system-grub grub-mkconfig">
+            <primary sortas="b-grub-mkconfig">grub-mkconfig</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grub-mkdevicemap">
+        <term><command>grub-mkdevicemap</command></term>
+        <listitem>
+          <para>Generate a device map file automatically</para>
+          <indexterm zone="ch-system-grub grub-mkdevicemap">
+            <primary sortas="b-grub-mkdevicemap">grub-mkdevicemap</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grub-probe">
+        <term><command>grub-probe</command></term>
+        <listitem>
+          <para>Probe device information for a given path or device</para>
+          <indexterm zone="ch-system-grub grub-probe">
+            <primary sortas="b-grub-probe">grub-probe</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grub-setup">
+        <term><command>grub-setup</command></term>
+        <listitem>
+          <para>Set up images to boot from a device</para>
+          <indexterm zone="ch-system-grub grub-setup">
+            <primary sortas="b-grub-setup">grub-setup</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
