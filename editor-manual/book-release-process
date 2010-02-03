@@ -6,8 +6,11 @@
 
 1.  Ensure that all needed commits have been made by all editors.
 
-2,  Create a tag. All the following steps will be done on that tag (not on the
-    branch)
+2.  Create a tag. All the following steps will be done on that tag (not on the
+    branch):
+
+    svn mkdir svn+ssh://svn.linuxfromscratch.org/LFS/tags/[tag-name] -m "Create [tagname] directory
+    svn cp svn+ssh://svn.linuxfromscratch.org/LFS/trunk/BOOK svn+ssh://svn.linuxfromscratch.org/LFS/tags/[tagname]/BOOK
 
 3.  Change "version" entity to x.y
 
@@ -22,7 +25,7 @@
 ## WARNING ##
 #
 # From here on it is assumed that all scripts are run from your home directory
-# on belgarath. This is required to ease the automation of the release process.
+# on quantum. This is required to ease the automation of the release process.
 
 9.  Download release-script.sh from the editor-manual directory.
     ENSURE THAT YOU CHECK THE "version" AND "stable" VARIABLES! Then run the

@@ -30,8 +30,8 @@ export PATH=$PATH:$JAVA_HOME/bin:$FOP_HOME
 
 #######################
 # These are the biggies
-stable=y                      # Is this the final release? 'y' or 'n' only
-version=6.5                   # x.y[.z-preX]
+stable=n                      # Is this the final release? 'y' or 'n' only
+version=6.6-rc1                   # x.y[.z-preX]
 #######################
 
 workarea=~/RELEASE-${version} # This is where you will do all your work
@@ -97,6 +97,7 @@ echo -e "${grn}*${yel} Successful!${norm}\n"
 echo -e "${grn}*${white} Preparing ${grn}$book-HTML${white}...${norm}"
 cd $workarea/original
 make BASEDIR=$workarea/$book-HTML >$workarea/html.log 2>&1 || exit 9
+cp lfs-bootscripts-* udev-config-* ../
 cd $workarea
 tar cWf $book-HTML.tar $book-HTML || exit 19
 bzip2 $book-HTML.tar || exit 29
@@ -223,6 +224,7 @@ for dir in $downloads $archives; do
   echo
   install -v -m 0664 -g $group $book.pdf \$dir/$version
   echo
+  install -v -m 0664 -g $group lfs-bootscripts-* udev-config-* \$dir/$version
 done
 
 # Now untar a copy in both archives and in view
@@ -237,9 +239,9 @@ tar jxf $book-HTML.tar.bz2
 chmod -R g+w $book-HTML
 chgrp -R $group $book-HTML
 
-cd $view
+cd $view/$version
 tar -xjf $downloads/$version/$book-HTML.tar.bz2 --strip-components=1
-mv $book-HTML $version
+cd ..
 chmod -R g+w $version
 chgrp -R $group $version
 
