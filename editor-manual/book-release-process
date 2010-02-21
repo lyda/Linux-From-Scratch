@@ -10,7 +10,7 @@
     branch):
 
     svn mkdir svn+ssh://svn.linuxfromscratch.org/LFS/tags/[tag-name] -m "Create [tagname] directory
-    svn cp svn+ssh://svn.linuxfromscratch.org/LFS/trunk/BOOK svn+ssh://svn.linuxfromscratch.org/LFS/tags/[tagname]/BOOK
+    svn cp svn+ssh://svn.linuxfromscratch.org/LFS/trunk/BOOK svn+ssh://svn.linuxfromscratch.org/LFS/tags/[tagname]/BOOK -m "Create [tagname] tag"
 
 3.  Change "version" entity to x.y
 
@@ -65,7 +65,7 @@
     everything is ready, svn add all needed files/dirs and commit the
     changes.
 
-16. Create the /home/httpd/www.linuxfromscratch.org/lfs/build-logs/$version
+16. Create the /srv/www/www.linuxfromscratch.org/lfs/build-logs/$version
     directory and if it is a final release (i.e. not a pre-release), recreate
     the "stable" symlink to it. The build logs will be added by whoever is
     currently maintaining them. As of this writing it is Archaic. The maintainer
@@ -73,7 +73,8 @@
     release, but the "stable" symlink will not be made until release so ensure
     that is exists and points to the latest release.
 
-17. Add the release announcement to www2/lfs/news.html and commit the changes.
+17. Add the release announcement to www2/lfs/news.html, mention the release in
+    www2/lfs/read.html and commit the changes.
 
 18. Send an announcement email to the lfs-dev, lfs-support, lfs-announce,
     lfs-security, blfs-dev, blfs-support and website mailing lists.

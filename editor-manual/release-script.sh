@@ -31,7 +31,7 @@ export PATH=$PATH:$JAVA_HOME/bin:$FOP_HOME
 #######################
 # These are the biggies
 stable=n                      # Is this the final release? 'y' or 'n' only
-version=6.6-rc1                   # x.y[.z-preX]
+version=6.6-rc2                   # x.y[.z-preX]
 #######################
 
 workarea=~/RELEASE-${version} # This is where you will do all your work
