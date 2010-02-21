@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Start of Common Patches -->
+
+<!ENTITY bzip2-docs-patch "bzip2-&bzip2-version;-install_docs-1.patch">
+<!ENTITY bzip2-docs-patch-md5 "6a5ac7e89b791aae556de0f745916f7f">
+<!ENTITY bzip2-docs-patch-size "1.6 KB">
+
+
+<!ENTITY coreutils-i18n-patch "coreutils-&coreutils-version;-i18n-1.patch">
+<!ENTITY coreutils-i18n-patch-md5 "13699e7e1c2ab2165dbe9f35c047e804">
+<!ENTITY coreutils-i18n-patch-size "118 KB">
+
+<!ENTITY coreutils-uname-patch "coreutils-&coreutils-version;-uname-1.patch">
+<!ENTITY coreutils-uname-patch-md5 "510a730e7bc8fd92daaf47aad4dc1200">
+<!ENTITY coreutils-uname-patch-size "4.4 KB">
+
+
+<!ENTITY diffutils-i18n-patch "diffutils-&diffutils-version;-i18n-1.patch">
+<!ENTITY diffutils-i18n-patch-md5 "c8d481223db274a33b121fb8c25af9f7">
+<!ENTITY diffutils-i18n-patch-size "18 KB">
+
+
+<!ENTITY expect-spawn-patch "expect-&expect-version;-spawn-1.patch">
+<!ENTITY expect-spawn-patch-md5 "ef6d0d0221c571fb420afb7033b3bbba">
+<!ENTITY expect-spawn-patch-size "6.8 KB">
+
+
+<!ENTITY expect-tcl-patch "expect-&expect-version;-tcl_8.5.5_fix-1.patch">
+<!ENTITY expect-tcl-patch-md5 "6904a384960ce0e8f0d0b32f7903d7a1">
+<!ENTITY expect-tcl-patch-size "4.1 KB">
+
+
+<!ENTITY flex-gcc-patch "flex-&flex-version;-gcc44-1.patch">
+<!ENTITY flex-gcc-patch-md5 "ad9109820534278c6dd0898178c0788f">
+<!ENTITY flex-gcc-patch-size "1 KB">
+
+
+<!ENTITY gcc-startfiles-patch "gcc-&gcc-version;-startfiles_fix-1.patch">
+<!ENTITY gcc-startfiles-patch-md5 "799ef1971350d2e3c794f2123f247cc6">
+<!ENTITY gcc-startfiles-patch-size "1.5 KB">
+
+<!ENTITY gettext-upstream_fixes-patch "gettext-&gettext-version;-upstream_fixes-2.patch">
+<!ENTITY gettext-upstream_fixes-patch-md5 "ae64b6399ed6536e148e8386bcb91689">
+<!ENTITY gettext-upstream_fixes-patch-size "2.9 KB">
+
+
+<!ENTITY grep-debian-patch "grep-&grep-version;-debian_fixes-1.patch">
+<!ENTITY grep-debian-patch-md5 "337d017202d7e3b08d428a89da3ee572">
+<!ENTITY grep-debian-patch-size "27 KB">
+
+
+<!ENTITY grub-inode-patch "grub-&grub-version;-256byte_inode-1.patch">
+<!ENTITY grub-inode-patch-md5 "2482bef9c1866b4045767a56268ba673">
+<!ENTITY grub-inode-patch-size "4.8 KB">
+
+<!ENTITY grub-geometry-patch "grub-&grub-version;-disk_geometry-1.patch">
+<!ENTITY grub-geometry-patch-md5 "bf1594e82940e25d089feca74c6f1879">
+<!ENTITY grub-geometry-patch-size "28 KB">
+
+
+<!ENTITY kbd-backspace-patch "kbd-&kbd-version;-backspace-1.patch">
+<!ENTITY kbd-backspace-patch-md5 "f75cca16a38da6caa7d52151f7136895">
+<!ENTITY kbd-backspace-patch-size "12 KB">
+
+
+<!ENTITY patch-test-patch "patch-&patch-version;-test_fix-1.patch">
+<!ENTITY patch-test-patch-md5 "c51e1a95bfc5310635d05081472c3534">
+<!ENTITY patch-test-patch-size "1 KB">
+
+
+<!ENTITY perl-libc-patch "perl-&perl-version;-libc-1.patch">
+<!ENTITY perl-libc-patch-md5 "800dfd3c9618731ee5cf57f77a7942b4">
+<!ENTITY perl-libc-patch-size "1 KB">
+
+<!ENTITY procps-watch-patch "procps-&procps-version;-watch_unicode-1.patch">
+<!ENTITY procps-watch-patch-md5 "cd1a757e532d93662a7ed71da80e6b58">
+<!ENTITY procps-watch-patch-size "3.5 KB">
+
+
+<!-- <!ENTITY shadow-useradd-patch "shadow-&shadow-version;-useradd_fix-2.patch">
+<!ENTITY shadow-useradd-patch-md5 "5f35528f38d5432d5fa2dd79d04bdfdd">
+<!ENTITY shadow-useradd-patch-size "6.1 KB"> -->
+
+
+<!ENTITY vim-fixes-patch "vim-&vim-version;-fixes-5.patch">
+<!ENTITY vim-fixes-patch-md5 "3af30a47fbf94d141c4317bf87d28e25">
+<!ENTITY vim-fixes-patch-size "826 KB">
+
+<!-- <!ENTITY vim-mandir-patch "vim-&vim-version;-mandir-1.patch">
+<!ENTITY vim-mandir-patch-md5 "b6426eb4192faba1e867ddd502323f5b">
+<!ENTITY vim-mandir-patch-size "4.2 KB"> -->
+
+<!ENTITY zlib-fpic-patch "zlib-&zlib-version;-fPIC-1.patch">
+<!ENTITY zlib-fpic-patch-md5 "545d60b20bfde6f53023de44438cef59">
+<!ENTITY zlib-fpic-patch-size "21 KB">
+
