@@ -129,14 +129,16 @@ menuentry "GNU/Linux, Linux 2.6.28-11-server" {
         insmod ext2
         set root=(hd0,2)
         search --no-floppy --fs-uuid --set 6b4c0339-5501-4a85-8351-e398e5252be8
-        linux   /boot/vmlinuz-2.6.28-11-server root=UUID=6b4c0339-5501-4a85-8351-e398e5252be8 ro
+        linux   /boot/vmlinuz-2.6.28-11-server \
+                root=UUID=6b4c0339-5501-4a85-8351-e398e5252be8 ro
         initrd  /boot/initrd.img-2.6.28-11-server
 }
 menuentry "GNU/Linux, Linux 2.6.28-11-server (recovery mode)" {
         insmod ext2
         set root=(hd0,2)
         search --no-floppy --fs-uuid --set 6b4c0339-5501-4a85-8351-e398e5252be8
-        linux   /boot/vmlinuz-2.6.28-11-server root=UUID=6b4c0339-5501-4a85-8351-e398e5252be8 ro single
+        linux   /boot/vmlinuz-2.6.28-11-server \
+                root=UUID=6b4c0339-5501-4a85-8351-e398e5252be8 ro single
         initrd  /boot/initrd.img-2.6.28-11-server
 }
 ### END /etc/grub.d/10_linux ###
