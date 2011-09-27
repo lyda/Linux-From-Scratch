@@ -1,0 +1,7 @@
+[svn-remote "svn"]
+    url = svn://svn.linuxfromscratch.org/LFS
+    fetch = trunk:refs/remotes/svn/trunk
+    branches = branches/*:refs/remotes/svn/*
+    tags = tags/*:refs/remotes/svn/tags/*
+[svn]
+    authorsfile = /some/path/authors-transform.txt

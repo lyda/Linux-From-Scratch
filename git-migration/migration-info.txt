@@ -1,0 +1,260 @@
+Date: Sat, 24 Sep 2011 18:22:32 +0100
+Message-ID: <CADJ56BSYrSEABwDqwFNBiLOAjQxcLHb7LEMWx4ry5P3ucRi-Yg@mail.gmail.com>
+Subject: LFS on github (RFC)
+From: Kevin Lyda <kevin@ie.suberic.net>
+To: lfs-dev@linuxfromscratch.org
+
+[I originally sent this to lfs-chat based on a comment in the server thread
+in this list. Forwarding here (and fixing a few typos)...
+
+This mail is rather long.  It's so long that the tl;dr part is the
+following four paragraphs.  My apologies, but it takes that much to
+explain this.
+
+I've used LFS from time to time for work at two different companies.
+First as a quick way to a hermetic build environment and then as an
+educational tool.  I would really like to contribute back.  However I
+got distracted when I discovered subversion was still being used.  I'm
+currently getting better with git and thought it might be an
+interesting exercise to see how one ports a subversion repository to
+git.
+
+So I did: https://github.com/lyda/Linux-From-Scratch
+
+Now, let me say up front that this is a proof of concept and that it
+is up to yourselves if you want to use it (or rather a clone of it - I
+don't want the /lyda/ bit in that url...).  I can remove this from
+github even faster than I put it up there (for the record it took
+38.899 wall-clock seconds to push the full repo to github).  I can
+continue to use my private repo for development and push out
+commits/patches with git-svn.
+
+However it might be of interest to learn how I did this in case you'd
+like to do it yourselves and what further steps would be ideal to
+complete the migration to git.  The rest of this email will be very
+long and broken into the following sections: Stats, HOWTO, and Further
+Work.
+
+== Stats ==
+Size of git repo with svn/trunk (master) checked out and all
+branches/tags available: 30M (29M when checked out from github -
+git-svn longs aren't there)
+Size of svn repo with all branches/tags available: 283M
+Size of svn repo with just svn/trunk checked out: 13M
+
+I didn't time it, but it took several hours to git svn clone the LFS
+svn repository.  It takes less than a minute to git clone the LFS git
+repository.
+
+== HOWTO ==
+
+To grab what's on github just run:
+
+git clone git://github.com/lyda/Linux-From-Scratch.git
+
+Then add this to your .git/config:
+
+[svn-remote "svn"]
+       url = svn://svn.linuxfromscratch.org/LFS
+       fetch = trunk:refs/remotes/svn/trunk
+       branches = branches/*:refs/remotes/svn/*
+       tags = tags/*:refs/remotes/svn/tags/*
+[svn]
+       authorsfile = /some/path/authors-transform.txt
+
+Contact me off-list for the authors-transform.txt file.  People get
+cranky about email addresses posted on mailing lists.
+
+Once you have that you can do a git svn fetch.  The first time it runs
+it will take a long while to build all the bits git-svn needs (it will
+be almost entirely local work).  On my machine it took 21 minutes and
+was all local except for a quick check with the lfs subversion server
+to see if there had been new commits.  As time goes on there will be
+and there will be a bit more external work.
+
+To build the git repo directly from subversion I did the following.
+As I said, the git svn clone step takes a long, long time so it's
+probably best to avoid it.  However there were some choices I made
+that people might not agree with and might want to do differently.  I
+discuss that with comments broken out with ------- within the scripts
+below.
+
+# The following commands create the mapping between svn and git user names.
+svn co svn://svn.linuxfromscratch.org/LFS lfs.svn
+cd lfs.svn
+svn log -q \
+ | awk -F '|' \
+       '/^r/ {sub("^ ", "", $2);sub(" $", "", $2);print $2" = "$2" <"$2">"}'
+\
+ | sort -u > ../authors-transform.txt
+# edit ../authors-transform.txt
+#   Used
+http://www.linuxfromscratch.org/lfs/view/6.8/appendices/acknowledgements.html
+#   and other acknowledgement files to find addresses.
+#   Also used commands like:
+#     awk '"jon" == $3 { print $1 }' ../svn.log|xargs -n1 svn log -r
+#   to find log messages and then use that in a search.
+
+--------
+There's really no other way to do this.  I'm happy to mail this file
+to any developer that would want it.
+--------
+
+# The following will clone the svn repo and keep the metadata used
+# by git-svn.
+git svn clone \
+     -A authors-transform.txt \
+     --stdlayout \
+     --prefix=svn/ \
+     svn://svn.linuxfromscratch.org/LFS/ lfs.git
+
+--------
+Now there are many things here that one could do differently.
+
+First, I could have used --no-metadata.  To explain what that is, it's
+helpful to look at a commit in the LFS git repo.  Here's the current
+HEAD:
+
+commit 0e976ecfebf55dfc8f471394c46add3c73cce9c6
+Author: Bruce Dubbs <bdubbs@linuxfromscratch.org>
+Date:   Fri Sep 23 17:06:43 2011 +0000
+
+   Allow variables in rc.site to override defaults
+
+   git-svn-id: svn://svn.linuxfromscratch.org/LFS/trunk@9602
+4aa44e1e-78dd-0310-
+
+Note the git-svn-id thing tacked onto the end.  That was obviously not
+in Bruce's original commit.  That's used by git-svn to rebuild its
+mapping of svn and git - it's why you can clone from github and git
+svn fetch will work.
+
+However if you were to decide to ditch subversion entirely, this
+wouldn't really be required and --no-metadata will remove it.
+
+The --prefix=svn/ isn't required either.  It prefixes all tags with
+svn.  You might not want that.  Of course it's quite possible to to a
+mass change of tags.  See below for one example of doing that.
+
+Lastly this command might quit before completion due to a network
+issue.  If it does, merely do the following:
+
+git svn fetch
+
+and it will continue on.  When it completes run:
+
+git reset --hard
+
+and that will set up your working directory.
+--------
+
+# Copy the svnignore settings:
+# TODO: Include cd command.
+git svn show-ignore > .gitignore
+git add .gitignore
+git commit -m 'Convert svn:ignore properties to .gitignore.'
+
+--------
+I did not do this, but it's simple to do.  Currently the .gitignore
+file would contain:
+
+# /BOOK/
+/BOOK/*.bz2
+/BOOK/*swp
+
+# /BOOK/bootscripts/
+--------
+
+# Convert svn tags from lightweight git branches to git tags.
+# TODO: Is the ref correct here?  Shouldn't they be refs/svn/...?
+git for-each-ref --format='%(refname)' refs/heads/tags |
+cut -d / -f 4 |
+while read ref
+do
+ git tag "$ref" "refs/heads/tags/$ref";
+ git branch -D "tags/$ref";
+done
+
+--------
+I didn't do this either but it seems like a good thing to do.  I'm not
+sure the script is right though.  I think it needs to use
+refs/remotes/svn/tags/
+--------
+
+# Push to github:
+git remote add origin git@github.com:lyda/Linux-From-Scratch.git
+# Move all the remotes/svn/* tags into svn/* in order to push them to
+github:
+git for-each-ref --format='%(refname)' refs/remotes/svn \
+ | sed s-refs/remotes/-- \
+ | while read b; do
+     git branch -t $b remotes/$b
+   done
+# Tested with this command to make sure push would work:
+git push -n -u --mirror origin
+# It did so did real push:
+time git push -u --mirror origin
+
+== Future Work ==
+
+I would really suggest that the developers to a re-import as I
+describe above considering the options as I describe them.  I also
+would suggest a clean cut-over.  Close down subversion and switch to
+git on github (or gitorious - http://gitorious.org/).  The git hosts
+have nice issue trackers and wikis (which is itself a git repository)
+and has many of the tools you'd need.
+
+Doing the git-svn thing to fetch and dcommit changes is fiddly and
+prone to error and will not be a nice experience for people.  That
+said, what I've pushed to github should be able to do that for people.
+
+On the github side I think there are a number of useful tools you
+might consider.  First you can make a README.md file that will display
+on the opening page.  The discussion on lfs-chat about git workflow
+would make a fantastic README.md file to ease concerns about using a
+new VCS.  It is intimidating and I'm only just learning git.  Clear
+instructions for common workflows would lower the barrier to
+contributing.
+
+Speaking of barriers to entry, apparently github has subversion
+support.  Not sure if it is wise, but information about it is here:
+https://github.com/blog/644-subversion-write-support  I've never used
+it and have no idea how well it works (or even if it still works!).
+
+On the topic of development workflow/culture I don't think git
+requires a dictator for life person (mentioned on the lfs-dev list).
+With github you can have multiple committers to a tree.  Anyone can
+clone it and you can then do pull requests which makes it easier to
+send in contributions.  If someone's being a jerk, the non-jerks can
+clone the tree and announce they're the non-jerk lfs tree!  This seems
+easier than in the current system.
+
+BTW, I have no connection to github, they're just who I've used so
+far.  I'm guessing gitorious has similar features.
+
+Lasty, the created tags and branches have some flaws.  Some tags and
+branches were created multiple times and the conversion process
+reflects that in an odd way.  For example:
+
+ remotes/svn/6.1
+ remotes/svn/6.1@4846
+ remotes/svn/6.1@4851
+
+The "real" 6.1 I suspect is remotes/svn/6.1@4851.  After importing
+it's a simple matter of a few git branch commands to clean that up.
+However I left the tree on github in its post-import state so people
+could see what they get after importing.
+
+Anyway, thanks if you read this far and hope the info here was useful.
+ LFS has been an excellent tool for me at work.  You guys have done a
+fantastic job.  If this is not desired I'm happy to remove it.  If
+it's useful that's also great.  And if it's offensive/unwanted, please
+accept my apologies in advance.
+
+Kevin
+
+-- 
+Kevin Lyda
+Dublin, Ireland
+US Citizen overseas? We can vote.
+Register now: http://www.votefromabroad.org/
