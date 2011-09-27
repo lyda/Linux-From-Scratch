@@ -1,0 +1,15 @@
+authors-transform.txt
+  Place this file outside the tree or into the .git directory.
+  This might need to be updated with new author info from time to
+  time.
+
+add-to-.git__config
+  Add this contents of this file to the .git/config file.  Update
+  it with the path you put the authors-transform.txt file.
+
+migration-info.txt
+  A description of how the migration was done.
+
+mktracking-branches.sh
+  After cloning from github, run this to create the appropriate
+  tracking branches.
